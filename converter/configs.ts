@@ -1,9 +1,5 @@
 //
 
-import type {
-  AvendiaLanguage
-} from "./converter";
-
 
 export class AvendiaConfigs {
 
@@ -24,4 +20,5 @@ export class AvendiaConfigs {
 }
 
 
+export type AvendiaLanguage = "ja" | "en" | "common";
 export type AvendiaConfigsJson = typeof import("../config/default.json");

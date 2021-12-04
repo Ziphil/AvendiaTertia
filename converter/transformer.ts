@@ -4,8 +4,10 @@ import {
   DocumentTransformer
 } from "@zenml/zenml";
 import type {
-  AvendiaConverter,
   AvendiaLanguage
+} from "./configs";
+import type {
+  AvendiaConverter
 } from "./converter";
 import type {
   AvendiaDocument

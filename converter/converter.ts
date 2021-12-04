@@ -12,7 +12,8 @@ import {
 import pathUtil from "path";
 import AVENDIA_CONFIG_JSON from "../config/config.json";
 import {
-  AvendiaConfigs
+  AvendiaConfigs,
+  AvendiaLanguage
 } from "./configs";
 import {
   AvendiaDocument
@@ -111,6 +112,3 @@ export class AvendiaConverter {
   }
 
 }
-
-
-export type AvendiaLanguage = "ja" | "en" | "common";
