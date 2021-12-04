@@ -57,7 +57,7 @@ export class AvendiaConverter {
   }
 
   private async convertNormal(path: string, language: AvendiaLanguage): Promise<void> {
-    let extension = path.split(".").pop();
+    let extension = pathUtil.extname(path).slice(1);
     let outputPathSpecs = this.getOutputPathSpecs(path, language);
     let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       if (extension === "zml") {
