@@ -4,7 +4,6 @@ import {
   DOMImplementation
 } from "@zenml/xmldom";
 import {
-  DocumentTransformer,
   ZenmlParser
 } from "@zenml/zenml";
 import {
@@ -18,6 +17,9 @@ import {
 import {
   AvendiaDocument
 } from "./dom";
+import {
+  AvendiaTransformer
+} from "./transformer";
 
 
 export class AvendiaConverter {
@@ -25,7 +27,7 @@ export class AvendiaConverter {
   private configs: AvendiaConfigs;
   private pathSpecs: Array<[string, AvendiaLanguage]>;
   private parser: ZenmlParser;
-  private transformer: DocumentTransformer<AvendiaDocument>;
+  private transformer: AvendiaTransformer;
 
   public constructor() {
     this.configs = new AvendiaConfigs(AVENDIA_CONFIG_JSON);
@@ -59,9 +61,9 @@ export class AvendiaConverter {
     let outputPathSpecs = this.getOutputPathSpecs(path, language);
     let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       if (extension === "zml") {
-        let input = await fs.readFile(path, {encoding: "utf-8"});
-        let inputDocument = this.parser.tryParse(input);
-        let outputDocument = this.transformer.transform(inputDocument);
+        let inputString = await fs.readFile(path, {encoding: "utf-8"});
+        let inputDocument = this.parser.tryParse(inputString);
+        let outputDocument = this.transformer.transform(inputDocument, path, language);
         await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
         await fs.writeFile(outputPath, outputDocument.toString(), {encoding: "utf-8"});
       } else {
@@ -80,8 +82,9 @@ export class AvendiaConverter {
     return parser;
   }
 
-  private createTransformer(): DocumentTransformer<AvendiaDocument> {
-    let transformer = new DocumentTransformer(() => new AvendiaDocument({includeDeclaration: false}));
+  private createTransformer(): AvendiaTransformer {
+    let transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false}));
+    transformer.setConverter(this);
     transformer.regsiterTemplateManager(require("../template/common").default);
     transformer.regsiterTemplateManager(require("../template/content-index").default);
     transformer.regsiterTemplateManager(require("../template/fallback").default);

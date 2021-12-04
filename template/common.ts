@@ -11,6 +11,7 @@ import type {
 let manager = new DocumentTemplateManager<AvendiaDocument>();
 
 manager.registerElementRule("page", true, (transformer, document, element) => {
+  console.log(transformer.variables.path, transformer.variables.language);
   return transformer.apply(element, "page");
 });
 
