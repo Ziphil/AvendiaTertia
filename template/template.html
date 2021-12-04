@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="#{language}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=0.7">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Ziphil">
+    <meta property="og:url" content="#{converter.remote_url}">
+    <meta property="og:title" content="#{title}">
+    <meta property="og:description" content="#{title}">
+    <meta property="og:image" content="#{converter.remote_domain}material/logo/1.png">
+    <script src="#{converter.url_prefix}program/script/11.js"></script>
+#{header_string.strip.indent(4)}
+    <link rel="stylesheet" type="text/css" href="#{converter.url_prefix}style/1.css">
+    <title>#{page_title}</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="title">
+        <a href="#{converter.url_prefix}">Avendia<sup>19</sup></a>
+      </div>
+      <div class="language">
+        <a href="#{CONFIG.remote_domain(foreign_language)}">#{LANGUAGE_NAMES[foreign_language]}</a>
+      </div>
+    </header>
+
+    <nav class="menu">
+      <ul class="menu">
+        <li>
+          <a href="#{converter.url_prefix}conlang/">#{NAMES[:conlang][language]}</a>
+          <ul>
+            <li><a href="#{converter.url_prefix}conlang/grammer/">#{NAMES[:conlang_grammer][language]}</a></li>
+            <li><a href="#{converter.url_prefix}conlang/course/">#{NAMES[:conlang_course][language]}</a></li>
+            <li><a href="#{converter.url_prefix}conlang/database/">#{NAMES[:conlang_database][language]}</a></li>
+            <li><a href="#{converter.url_prefix}conlang/culture/">#{NAMES[:conlang_culture][language]}</a></li>
+            <li><a href="#{converter.url_prefix}conlang/work/">#{NAMES[:conlang_work][language]}</a></li>
+            <li><a href="#{converter.url_prefix}conlang/translation/">#{NAMES[:conlang_translation][language]}</a></li>
+            <li><a href="#{converter.url_prefix}conlang/theory/">#{NAMES[:conlang_theory][language]}</a></li>
+            <li><a href="#{converter.url_prefix}conlang/document/">#{NAMES[:conlang_document][language]}</a></li>
+            <li><a href="#{converter.url_prefix}conlang/table/">#{NAMES[:conlang_table][language]}</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#{converter.url_prefix}application/">#{NAMES[:application][language]}</a>
+          <ul>
+            <li><a href="#{converter.url_prefix}application/download/">#{NAMES[:application_download][language]}</a></li>
+            <li><a href="#{converter.url_prefix}application/web/">#{NAMES[:application_web][language]}</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#{converter.url_prefix}diary/">#{NAMES[:diary][language]}</a>
+          <ul>
+            <li><a href="#{converter.url_prefix}diary/conlang/">#{NAMES[:diary_conlang][language]}</a></li>
+            <li><a href="#{converter.url_prefix}diary/mathematics/">#{NAMES[:diary_mathematics][language]}</a></li>
+            <li><a href="#{converter.url_prefix}diary/language/">#{NAMES[:diary_language][language]}</a></li>
+            <li><a href="#{converter.url_prefix}diary/application/">#{NAMES[:diary_application][language]}</a></li>
+            <li><a href="#{converter.url_prefix}diary/game/">#{NAMES[:diary_game][language]}</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#{converter.url_prefix}other/">#{NAMES[:other][language]}</a>
+          <ul>
+            <li><a href="#{converter.url_prefix}other/mathematics/">#{NAMES[:other_mathematics][language]}</a></li>
+            <li><a href="#{converter.url_prefix}other/language/">#{NAMES[:other_language][language]}</a></li>
+            <li><a href="#{converter.url_prefix}other/tsolitaire/">#{NAMES[:other_tsolitaire][language]}</a></li>
+            <li><a href="#{converter.url_prefix}other/other/">#{NAMES[:other_other][language]}</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="breadcrumb">
+  #{navigation_string.strip.indent(4)}
+    </nav>
+
+    <article class="#{converter.main_type}">
+  #{main_string.strip.indent(4)}
+    </article>
+
+    <footer>
+      <div class="icon">
+        <a class="twitter" href="https://twitter.com/Ziphil" target="_blank"></a>
+        <a class="youtube" href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/" target="_blank"></a>
+        <a class="discord" href="https://discord.gg/qdRyE2ZExf" target="_blank"></a>
+        <a class="github" href="https://github.com/Ziphil" target="_blank"></a>
+      </div>
+      <div class="copyright">
+        Copyright © 2009–#{Time.now.year} Ziphil, All rights reserved.
+      </div>
+      <div class="counter">
+        <script src="http://counter1.fc2.com/counter.php?id=3102008"></script><noscript><img alt="counter" src="http://counter1.fc2.com/counter_img.php?id=3102008"></noscript> 
+      </div>
+    </footer>
+
+    <div class="top-link">
+      <a href="#top">TOP</a>
+    </div>
+
+  </body>
+</html>

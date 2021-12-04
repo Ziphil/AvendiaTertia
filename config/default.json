@@ -1,0 +1,36 @@
+{
+  "server": {
+    "host": "********",
+    "user": "********",
+    "password": "********"
+  },
+  "localDomain": {
+    "ja": "http://lbs.localhost",
+    "en": "http://en.lbs.localhost"
+  },
+  "remoteDomain": {
+    "ja": "http://ziphil.com",
+    "en": "http://en.ziphil.com"
+  },
+  "documentPath": {
+    "ja": "./document/ja",
+    "en": "./document/en",
+    "common": "./document/common"
+  },
+  "outputPath": {
+    "ja": "C:/Apache24/htdocs/lbs",
+    "en": "C:/Apache24/htdocs/lbs-en"
+  },
+  "remotePath": {
+    "ja": "",
+    "en": "_en"
+  },
+  "logPath": {
+    "ja": "./log/ja.txt",
+    "en": "./log/en.txt",
+    "error": "./log/error.txt"
+  },
+  "programPath": {
+    "ruby": "/usr/local/bin/ruby2.6"
+  }
+}

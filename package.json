@@ -1,0 +1,40 @@
+{
+  "name": "avendia",
+  "version": "0.0.0",
+  "author": "Ziphil",
+  "description": "",
+  "homepage": "https://github.com/Ziphil/AvendiaTertia",
+  "main": "dist/index.js",
+  "scripts": {
+    "develop": "webpack --config webpack-config.ts --watch",
+    "build": "webpack --config webpack-config.ts",
+    "start": "node dist/index.js"
+  },
+  "eslintConfig": {
+    "extends": "ziphil"
+  },
+  "devDependencies": {
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-node-externals": "^2.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.0.1",
+    "eslint-config-ziphil": "^1.2.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsdoc": "^36.1.1",
+    "source-map-loader": "^3.0.0",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.3.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-node-externals": "^3.0.0",
+    "webpack-shell-plugin-next": "^2.2.2"
+  },
+  "dependencies": {
+    "@zenml/xmldom": "0.0.0",
+    "@zenml/zenml": "0.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
