@@ -1,13 +1,15 @@
 //
 
 import {
-  DocumentTemplateManager,
-  SimpleDocument
+  DocumentTemplateManager
 } from "@zenml/zenml";
+import type {
+  AvendiaDocument
+} from "../converter/dom";
 
 
 const INLINE_ELEMENT_NAMES = ["x", "xn", "a"];
-let manager = new DocumentTemplateManager<SimpleDocument>();
+let manager = new DocumentTemplateManager<AvendiaDocument>();
 
 manager.registerElementRule(true, true, (transformer, document, element, scope) => {
   let self = document.createDocumentFragment();

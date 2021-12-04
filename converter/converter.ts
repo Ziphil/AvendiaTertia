@@ -5,7 +5,6 @@ import {
 } from "@zenml/xmldom";
 import {
   DocumentTransformer,
-  SimpleDocument,
   ZenmlParser
 } from "@zenml/zenml";
 import {
@@ -16,6 +15,9 @@ import AVENDIA_CONFIG_JSON from "../config/config.json";
 import {
   AvendiaConfigs
 } from "./configs";
+import {
+  AvendiaDocument
+} from "./dom";
 
 
 export class AvendiaConverter {
@@ -23,7 +25,7 @@ export class AvendiaConverter {
   private configs: AvendiaConfigs;
   private pathSpecs: Array<[string, AvendiaLanguage]>;
   private parser: ZenmlParser;
-  private transformer: DocumentTransformer<SimpleDocument>;
+  private transformer: DocumentTransformer<AvendiaDocument>;
 
   public constructor() {
     this.configs = new AvendiaConfigs(AVENDIA_CONFIG_JSON);
@@ -78,8 +80,8 @@ export class AvendiaConverter {
     return parser;
   }
 
-  private createTransformer(): DocumentTransformer<SimpleDocument> {
-    let transformer = new DocumentTransformer(() => new SimpleDocument({includeDeclaration: false}));
+  private createTransformer(): DocumentTransformer<AvendiaDocument> {
+    let transformer = new DocumentTransformer(() => new AvendiaDocument({includeDeclaration: false}));
     transformer.regsiterTemplateManager(require("../template/common").default);
     transformer.regsiterTemplateManager(require("../template/content-index").default);
     transformer.regsiterTemplateManager(require("../template/fallback").default);
