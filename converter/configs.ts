@@ -1,6 +1,7 @@
 //
 
 import pathUtil from "path";
+import AVENDIA_CONFIGS_JSON from "../config/config.json";
 
 
 export class AvendiaConfigs {
@@ -9,6 +10,10 @@ export class AvendiaConfigs {
 
   public constructor(json: AvendiaConfigsJson) {
     this.json = json;
+  }
+
+  public getRemoteDomain(language: AvendiaOutputLanguage): string {
+    return this.json.remoteDomain[language];
   }
 
   public getDocumentDirPath(language: AvendiaLanguage): string {
@@ -28,4 +33,6 @@ export class AvendiaConfigs {
 
 export type AvendiaLanguage = "ja" | "en" | "common";
 export type AvendiaOutputLanguage = Exclude<AvendiaLanguage, "common">;
-export type AvendiaConfigsJson = typeof import("../config/default.json");
+export type AvendiaConfigsJson = typeof AVENDIA_CONFIGS_JSON;
+
+export const AVENDIA_CONFIGS = new AvendiaConfigs(AVENDIA_CONFIGS_JSON);

@@ -7,13 +7,13 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Ziphil">
     <meta property="og:url" content="#{converter.remote_url}">
-    <meta property="og:title" content="#{title}">
-    <meta property="og:description" content="#{title}">
+    <meta property="og:title" content="{{= it.variables.title }}">
+    <meta property="og:description" content="{{= it.variables.title }}">
     <meta property="og:image" content="#{converter.remote_domain}material/logo/1.png">
     <script src="/program/script/11.js"></script>
 #{header_string.strip.indent(4)}
     <link rel="stylesheet" type="text/css" href="/style/1.css">
-    <title>#{page_title}</title>
+    <title>{{= it.variables.pageTitle }}</title>
   </head>
   <body>
 
@@ -22,7 +22,7 @@
         <a href="/">Avendia<sup>19</sup></a>
       </div>
       <div class="language">
-        <a href="#{CONFIG.remote_domain(foreign_language)}">#{LANGUAGE_NAMES[foreign_language]}</a>
+        <a href="{{= it.avendiaConfigs.getRemoteDomain(it.variables.foreignLanguage) }}">{{= it.translations.name[it.variables.foreignLanguage] }}</a>
       </div>
     </header>
 
@@ -72,11 +72,11 @@
     </nav>
 
     <nav class="breadcrumb">
-  #{navigation_string.strip.indent(4)}
+#{navigation_string.strip.indent(4)}
     </nav>
 
     <article class="#{converter.main_type}">
-  {{= it.document.toString() }}
+{{= it.document.toString() }}
     </article>
 
     <footer>

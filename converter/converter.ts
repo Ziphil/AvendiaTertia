@@ -10,9 +10,8 @@ import {
   promises as fs
 } from "fs";
 import pathUtil from "path";
-import AVENDIA_CONFIG_JSON from "../config/config.json";
 import {
-  AvendiaConfigs,
+  AVENDIA_CONFIGS,
   AvendiaLanguage,
   AvendiaOutputLanguage
 } from "./configs";
@@ -26,13 +25,11 @@ import {
 
 export class AvendiaConverter {
 
-  private configs: AvendiaConfigs;
-  private pathSpecs: Array<[string, AvendiaLanguage]>;
+  private pathSpecs: PathSpecs<AvendiaLanguage>;
   private parser: ZenmlParser;
   private transformer: AvendiaTransformer;
 
   public constructor() {
-    this.configs = new AvendiaConfigs(AVENDIA_CONFIG_JSON);
     this.pathSpecs = [["./document/ja/diary/index.zml", "ja"]];
     this.parser = this.createParser();
     this.transformer = this.createTransformer();
@@ -87,26 +84,24 @@ export class AvendiaConverter {
 
   private createTransformer(): AvendiaTransformer {
     let transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false}));
-    transformer.setConverter(this);
     transformer.regsiterTemplateManager(require("../template/common").default);
     transformer.regsiterTemplateManager(require("../template/content-index").default);
     transformer.regsiterTemplateManager(require("../template/fallback").default);
     return transformer;
   }
 
-  private getOutputPathSpecs(path: string, language: AvendiaLanguage): Array<[string, AvendiaLanguage]> {
-    let pathSpecs = [] as Array<[string, AvendiaLanguage]>;
-    let configs = this.configs;
+  private getOutputPathSpecs(path: string, language: AvendiaLanguage): PathSpecs<AvendiaOutputLanguage> {
+    let pathSpecs = [] as PathSpecs<AvendiaOutputLanguage>;
     let getOutputPath = function (outputLanguage: AvendiaOutputLanguage): string {
-      let outputPath = configs.replaceDocumentDirPath(path, language, outputLanguage);
+      let outputPath = AVENDIA_CONFIGS.replaceDocumentDirPath(path, language, outputLanguage);
       outputPath = outputPath.replace(/\.zml$/, ".html");
       outputPath = outputPath.replace(/\.scss$/, ".css");
       outputPath = outputPath.replace(/\.tsx?$/, ".js");
       return outputPath;
     };
     if (language === "common") {
-      pathSpecs.push([getOutputPath("ja"), language]);
-      pathSpecs.push([getOutputPath("en"), language]);
+      pathSpecs.push([getOutputPath("ja"), "ja"]);
+      pathSpecs.push([getOutputPath("en"), "en"]);
     } else {
       pathSpecs.push([getOutputPath(language), language]);
     }
@@ -114,3 +109,6 @@ export class AvendiaConverter {
   }
 
 }
+
+
+type PathSpecs<L> = Array<[string, L]>;

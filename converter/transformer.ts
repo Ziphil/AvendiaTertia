@@ -6,12 +6,9 @@ import {
 import dotjs from "dot";
 import TEMPLATE_HTML from "../template/template.html";
 import TRANSLATIONS from "../template/translations.json";
-import type {
-  AvendiaLanguage
+import {
+  AVENDIA_CONFIGS
 } from "./configs";
-import type {
-  AvendiaConverter
-} from "./converter";
 import type {
   AvendiaDocument
 } from "./dom";
@@ -19,7 +16,6 @@ import type {
 
 export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
 
-  private converter!: AvendiaConverter;
   private template: (...args: Array<any>) => string;
 
   public constructor(implementation: () => AvendiaDocument) {
@@ -32,8 +28,9 @@ export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
     let view = {
       configs: this.configs,
       variables: this.variables,
-      document,
-      translations: TRANSLATIONS
+      avendiaConfigs: AVENDIA_CONFIGS,
+      translations: TRANSLATIONS,
+      document
     };
     let output = this.template(view);
     return output;
@@ -45,10 +42,6 @@ export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
 
   protected resetVariables(variables?: any): void {
     this.variables = variables ?? {};
-  }
-
-  public setConverter(converter: AvendiaConverter): void {
-    this.converter = converter;
   }
 
 }
