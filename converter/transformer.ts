@@ -27,15 +27,8 @@ export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
     this.template = dotjs.template(TEMPLATE_HTML, {...dotjs.templateSettings, strip: false});
   }
 
-  public transform(input: Document, path?: string, language?: AvendiaLanguage): AvendiaDocument {
-    this.updateDocument();
-    this.resetVariables(path, language);
-    this.document.appendChild(this.apply(input, ""));
-    return this.document;
-  }
-
-  public transformFinalize(input: Document, path?: string, language?: AvendiaLanguage): string {
-    let document = this.transform(input, path, language);
+  public transformFinalize(input: Document, variables?: any): string {
+    let document = this.transform(input, variables);
     let view = {
       configs: this.configs,
       variables: this.variables,
@@ -50,8 +43,8 @@ export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
     this.configs = {};
   }
 
-  protected resetVariables(path?: string, language?: AvendiaLanguage): void {
-    this.variables = {path, language};
+  protected resetVariables(variables?: any): void {
+    this.variables = variables ?? {};
   }
 
   public setConverter(converter: AvendiaConverter): void {

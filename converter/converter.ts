@@ -62,9 +62,10 @@ export class AvendiaConverter {
     let outputPathSpecs = this.getOutputPathSpecs(path, language);
     let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       if (extension === "zml") {
+        let variables = {path, language: outputLanguage};
         let inputString = await fs.readFile(path, {encoding: "utf-8"});
         let inputDocument = this.parser.tryParse(inputString);
-        let outputString = this.transformer.transformFinalize(inputDocument, path, outputLanguage);
+        let outputString = this.transformer.transformFinalize(inputDocument, variables);
         await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
         await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
       } else {
