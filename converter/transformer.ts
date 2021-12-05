@@ -5,6 +5,7 @@ import {
 } from "@zenml/zenml";
 import dotjs from "dot";
 import TEMPLATE_HTML from "../template/template.html";
+import TRANSLATIONS from "../template/translations.json";
 import type {
   AvendiaLanguage
 } from "./configs";
@@ -35,7 +36,12 @@ export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
 
   public transformFinalize(input: Document, path?: string, language?: AvendiaLanguage): string {
     let document = this.transform(input, path, language);
-    let view = {configs: this.configs, variables: this.variables, document};
+    let view = {
+      configs: this.configs,
+      variables: this.variables,
+      document,
+      translations: TRANSLATIONS
+    };
     let output = this.template(view);
     return output;
   }
