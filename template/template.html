@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=0.7">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Ziphil">
-    <meta property="og:url" content="#{converter.remote_url}">
+    <meta property="og:url" content="{{= it.avendiaConfigs.getRemoteUrl(it.variables.path, it.variables.outputLanguage) }}">
     <meta property="og:title" content="{{= it.variables.title }}">
     <meta property="og:description" content="{{= it.variables.title }}">
-    <meta property="og:image" content="#{converter.remote_domain}material/logo/1.png">
+    <meta property="og:image" content="{{= it.avendiaConfigs.getRemoteDomain(it.variables.outputLanguage) }}/material/logo/1.png">
     <script src="/program/script/11.js"></script>
-#{header_string.strip.indent(4)}
+{{= it.headerNode?.toString() }}
     <link rel="stylesheet" type="text/css" href="/style/1.css">
     <title>{{= it.variables.pageTitle }}</title>
   </head>
@@ -72,10 +72,10 @@
     </nav>
 
     <nav class="breadcrumb">
-#{navigation_string.strip.indent(4)}
+{{= it.navigationNode?.toString() }}
     </nav>
 
-    <article class="#{converter.main_type}">
+    <article class="{{= it.variables.articleType }}">
 {{= it.document.toString() }}
     </article>
 

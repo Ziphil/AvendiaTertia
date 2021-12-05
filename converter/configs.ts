@@ -16,6 +16,13 @@ export class AvendiaConfigs {
     return this.json.remoteDomain[language];
   }
 
+  public getRemoteUrl(path: string, language: AvendiaOutputLanguage): string {
+    let documentDirPath = this.getDocumentDirPath(language);
+    let remoteDomain = this.getRemoteDomain(language);
+    let remoteUrl = path.replace(documentDirPath, remoteDomain).replace(/\.zml$/, ".html");
+    return remoteUrl;
+  }
+
   public getDocumentDirPath(language: AvendiaLanguage): string {
     return this.json.documentDirPath[language];
   }
