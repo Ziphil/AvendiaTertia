@@ -25,12 +25,12 @@ import {
 
 export class AvendiaConverter {
 
-  private pathSpecs: PathSpecs<AvendiaLanguage>;
+  private documentPathSpecs: PathSpecs<AvendiaLanguage>;
   private parser: ZenmlParser;
   private transformer: AvendiaTransformer;
 
   public constructor() {
-    this.pathSpecs = [["./document/ja/diary/index.zml", "ja"]];
+    this.documentPathSpecs = [["./document/ja/diary/index.zml", "ja"]];
     this.parser = this.createParser();
     this.transformer = this.createTransformer();
   }
@@ -40,28 +40,28 @@ export class AvendiaConverter {
   }
 
   public async executeNormal(): Promise<void> {
-    let promises = this.pathSpecs.map(async ([path, language]) => {
-      await this.saveNormal(path, language);
+    let promises = this.documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
+      await this.saveNormal(documentPath, documentLanguage);
     });
     await Promise.all(promises);
   }
 
-  private async saveNormal(path: string, language: AvendiaLanguage): Promise<void> {
+  private async saveNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     try {
-      await this.convertNormal(path, language);
-      await this.uploadNormal(path, language);
+      await this.convertNormal(documentPath, documentLanguage);
+      await this.uploadNormal(documentPath, documentLanguage);
     } catch (error) {
       console.log(error);
     }
   }
 
-  private async convertNormal(path: string, language: AvendiaLanguage): Promise<void> {
-    let extension = pathUtil.extname(path).slice(1);
-    let outputPathSpecs = this.getOutputPathSpecs(path, language);
+  private async convertNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
+    let extension = pathUtil.extname(documentPath).slice(1);
+    let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
     let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       if (extension === "zml") {
-        let variables = {path, language, outputPath, outputLanguage};
-        let inputString = await fs.readFile(path, {encoding: "utf-8"});
+        let variables = {path: documentPath, language: outputLanguage};
+        let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
         let inputDocument = this.parser.tryParse(inputString);
         let outputString = this.transformer.transformFinalize(inputDocument, variables);
         await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
@@ -73,7 +73,7 @@ export class AvendiaConverter {
     await Promise.all(promises);
   }
 
-  private async uploadNormal(path: string, language: AvendiaLanguage): Promise<void> {
+  private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
   }
 
   private createParser(): ZenmlParser {
@@ -90,20 +90,20 @@ export class AvendiaConverter {
     return transformer;
   }
 
-  private getOutputPathSpecs(path: string, language: AvendiaLanguage): PathSpecs<AvendiaOutputLanguage> {
-    let pathSpecs = [] as PathSpecs<AvendiaOutputLanguage>;
-    let getOutputPath = function (outputLanguage: AvendiaOutputLanguage): string {
-      let outputPath = AVENDIA_CONFIGS.replaceDocumentDirPath(path, language, outputLanguage);
+  private getOutputPathSpecs(documentPath: string, documentLanguage: AvendiaLanguage): PathSpecs<AvendiaOutputLanguage> {
+    let pathSpecs = [];
+    let getOutputPathSpec = function (outputLanguage: AvendiaOutputLanguage): PathSpec<AvendiaOutputLanguage> {
+      let outputPath = AVENDIA_CONFIGS.replaceDocumentDirPath(documentPath, documentLanguage, outputLanguage);
       outputPath = outputPath.replace(/\.zml$/, ".html");
       outputPath = outputPath.replace(/\.scss$/, ".css");
       outputPath = outputPath.replace(/\.tsx?$/, ".js");
-      return outputPath;
+      return [outputPath, outputLanguage];
     };
-    if (language === "common") {
-      pathSpecs.push([getOutputPath("ja"), "ja"]);
-      pathSpecs.push([getOutputPath("en"), "en"]);
+    if (documentLanguage === "common") {
+      pathSpecs.push(getOutputPathSpec("ja"));
+      pathSpecs.push(getOutputPathSpec("en"));
     } else {
-      pathSpecs.push([getOutputPath(language), language]);
+      pathSpecs.push(getOutputPathSpec(documentLanguage));
     }
     return pathSpecs;
   }
@@ -111,4 +111,5 @@ export class AvendiaConverter {
 }
 
 
-type PathSpecs<L> = Array<[string, L]>;
+type PathSpec<L> = [string, L];
+type PathSpecs<L> = Array<PathSpec<L>>;

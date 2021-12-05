@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
-<html lang="{{= it.variables.outputLanguage }}">
+<html lang="{{= it.variables.language }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=0.7">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Ziphil">
-    <meta property="og:url" content="{{= it.avendiaConfigs.getRemoteUrl(it.variables.path, it.variables.outputLanguage) }}">
+    <meta property="og:url" content="{{= it.avendiaConfigs.getRemoteUrl(it.variables.path, it.variables.language) }}">
     <meta property="og:title" content="{{= it.variables.title }}">
     <meta property="og:description" content="{{= it.variables.title }}">
-    <meta property="og:image" content="{{= it.avendiaConfigs.getRemoteDomain(it.variables.outputLanguage) }}/material/logo/1.png">
+    <meta property="og:image" content="{{= it.avendiaConfigs.getRemoteDomain(it.variables.language) }}/material/logo/1.png">
     <script src="/program/script/11.js"></script>
 {{= it.headerNode?.toString() }}
     <link rel="stylesheet" type="text/css" href="/style/1.css">
@@ -29,43 +29,43 @@
     <nav class="menu">
       <ul class="menu">
         <li>
-          <a href="/conlang/">{{= it.translations.conlang.index[it.variables.outputLanguage] }}</a>
+          <a href="/conlang/">{{= it.translations.conlang.index[it.variables.language] }}</a>
           <ul>
-            <li><a href="/conlang/grammer/">{{= it.translations.conlang.grammer[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/conlang/course/">{{= it.translations.conlang.course[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/conlang/database/">{{= it.translations.conlang.database[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/conlang/culture/">{{= it.translations.conlang.culture[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/conlang/work/">{{= it.translations.conlang.work[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/conlang/translation/">{{= it.translations.conlang.translation[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/conlang/theory/">{{= it.translations.conlang.theory[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/conlang/document/">{{= it.translations.conlang.document[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/conlang/table/">{{= it.translations.conlang.table[it.variables.outputLanguage] }}</a></li>
+            <li><a href="/conlang/grammer/">{{= it.translations.conlang.grammer[it.variables.language] }}</a></li>
+            <li><a href="/conlang/course/">{{= it.translations.conlang.course[it.variables.language] }}</a></li>
+            <li><a href="/conlang/database/">{{= it.translations.conlang.database[it.variables.language] }}</a></li>
+            <li><a href="/conlang/culture/">{{= it.translations.conlang.culture[it.variables.language] }}</a></li>
+            <li><a href="/conlang/work/">{{= it.translations.conlang.work[it.variables.language] }}</a></li>
+            <li><a href="/conlang/translation/">{{= it.translations.conlang.translation[it.variables.language] }}</a></li>
+            <li><a href="/conlang/theory/">{{= it.translations.conlang.theory[it.variables.language] }}</a></li>
+            <li><a href="/conlang/document/">{{= it.translations.conlang.document[it.variables.language] }}</a></li>
+            <li><a href="/conlang/table/">{{= it.translations.conlang.table[it.variables.language] }}</a></li>
           </ul>
         </li>
         <li>
-          <a href="/application/">{{= it.translations.application.index[it.variables.outputLanguage] }}</a>
+          <a href="/application/">{{= it.translations.application.index[it.variables.language] }}</a>
           <ul>
-            <li><a href="/application/download/">{{= it.translations.application.download[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/application/web/">{{= it.translations.application.web[it.variables.outputLanguage] }}</a></li>
+            <li><a href="/application/download/">{{= it.translations.application.download[it.variables.language] }}</a></li>
+            <li><a href="/application/web/">{{= it.translations.application.web[it.variables.language] }}</a></li>
           </ul>
         </li>
         <li>
-          <a href="/diary/">{{= it.translations.diary.index[it.variables.outputLanguage] }}</a>
+          <a href="/diary/">{{= it.translations.diary.index[it.variables.language] }}</a>
           <ul>
-            <li><a href="/diary/conlang/">{{= it.translations.diary.conlang[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/diary/mathematics/">{{= it.translations.diary.mathematics[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/diary/language/">{{= it.translations.diary.language[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/diary/application/">{{= it.translations.diary.application[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/diary/game/">{{= it.translations.diary.game[it.variables.outputLanguage] }}</a></li>
+            <li><a href="/diary/conlang/">{{= it.translations.diary.conlang[it.variables.language] }}</a></li>
+            <li><a href="/diary/mathematics/">{{= it.translations.diary.mathematics[it.variables.language] }}</a></li>
+            <li><a href="/diary/language/">{{= it.translations.diary.language[it.variables.language] }}</a></li>
+            <li><a href="/diary/application/">{{= it.translations.diary.application[it.variables.language] }}</a></li>
+            <li><a href="/diary/game/">{{= it.translations.diary.game[it.variables.language] }}</a></li>
           </ul>
         </li>
         <li>
-          <a href="/other/">{{= it.translations.other.index[it.variables.outputLanguage] }}</a>
+          <a href="/other/">{{= it.translations.other.index[it.variables.language] }}</a>
           <ul>
-            <li><a href="/other/mathematics/">{{= it.translations.other.mathematics[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/other/language/">{{= it.translations.other.language[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/other/tsolitaire/">{{= it.translations.other.tsolitaire[it.variables.outputLanguage] }}</a></li>
-            <li><a href="/other/other/">{{= it.translations.other.other[it.variables.outputLanguage] }}</a></li>
+            <li><a href="/other/mathematics/">{{= it.translations.other.mathematics[it.variables.language] }}</a></li>
+            <li><a href="/other/language/">{{= it.translations.other.language[it.variables.language] }}</a></li>
+            <li><a href="/other/tsolitaire/">{{= it.translations.other.tsolitaire[it.variables.language] }}</a></li>
+            <li><a href="/other/other/">{{= it.translations.other.other[it.variables.language] }}</a></li>
           </ul>
         </li>
       </ul>

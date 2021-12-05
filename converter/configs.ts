@@ -27,12 +27,12 @@ export class AvendiaConfigs {
     return this.json.documentDirPath[language];
   }
 
-  public getOutputDirPath(outputLanguage: AvendiaOutputLanguage): string {
-    return this.json.outputDirPath[outputLanguage];
+  public getOutputDirPath(language: AvendiaOutputLanguage): string {
+    return this.json.outputDirPath[language];
   }
 
-  public replaceDocumentDirPath(path: string, language: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): string {
-    return pathUtil.join(this.getOutputDirPath(outputLanguage), pathUtil.relative(this.getDocumentDirPath(language), path));
+  public replaceDocumentDirPath(documentPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): string {
+    return pathUtil.join(this.getOutputDirPath(outputLanguage), pathUtil.relative(this.getDocumentDirPath(documentLanguage), documentPath));
   }
 
 }
