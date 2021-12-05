@@ -29,12 +29,20 @@ let config = {
       {
         test: /\.js$/,
         enforce: "pre",
-        loader: "source-map-loader"
+        use: {
+          loader: "source-map-loader"
+        }
+      },
+      {
+        test: /\.html$/,
+        use: {
+          loader: "raw-loader"
+        }
       }
     ]
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".js", ".html"],
   },
   cache: true
 };

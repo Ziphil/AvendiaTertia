@@ -64,9 +64,9 @@ export class AvendiaConverter {
       if (extension === "zml") {
         let inputString = await fs.readFile(path, {encoding: "utf-8"});
         let inputDocument = this.parser.tryParse(inputString);
-        let outputDocument = this.transformer.transform(inputDocument, path, outputLanguage);
+        let outputString = this.transformer.transformFinalize(inputDocument, path, outputLanguage);
         await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
-        await fs.writeFile(outputPath, outputDocument.toString(), {encoding: "utf-8"});
+        await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
       } else {
         throw new Error("Unknown file type");
       }

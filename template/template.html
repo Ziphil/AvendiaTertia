@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="#{language}">
+<html lang="{{= it.variables.language }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=0.7">
@@ -76,7 +76,7 @@
     </nav>
 
     <article class="#{converter.main_type}">
-  #{main_string.strip.indent(4)}
+  {{= it.document.toString() }}
     </article>
 
     <footer>
@@ -87,7 +87,7 @@
         <a class="github" href="https://github.com/Ziphil" target="_blank"></a>
       </div>
       <div class="copyright">
-        Copyright © 2009–#{Time.now.year} Ziphil, All rights reserved.
+        Copyright © 2009–{{= new Date().getFullYear() }} Ziphil, All rights reserved.
       </div>
       <div class="counter">
         <script src="http://counter1.fc2.com/counter.php?id=3102008"></script><noscript><img alt="counter" src="http://counter1.fc2.com/counter_img.php?id=3102008"></noscript> 
