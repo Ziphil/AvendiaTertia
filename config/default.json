@@ -12,16 +12,16 @@
     "ja": "http://ziphil.com",
     "en": "http://en.ziphil.com"
   },
-  "documentPath": {
+  "documentDirPath": {
     "ja": "./document/ja",
     "en": "./document/en",
     "common": "./document/common"
   },
-  "outputPath": {
+  "outputDirPath": {
     "ja": "C:/Apache24/htdocs/lbs",
     "en": "C:/Apache24/htdocs/lbs-en"
   },
-  "remotePath": {
+  "remoteDirPath": {
     "ja": "",
     "en": "_en"
   },

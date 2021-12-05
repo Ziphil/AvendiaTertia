@@ -13,7 +13,8 @@ import pathUtil from "path";
 import AVENDIA_CONFIG_JSON from "../config/config.json";
 import {
   AvendiaConfigs,
-  AvendiaLanguage
+  AvendiaLanguage,
+  AvendiaOutputLanguage
 } from "./configs";
 import {
   AvendiaDocument
@@ -62,7 +63,7 @@ export class AvendiaConverter {
     let outputPathSpecs = this.getOutputPathSpecs(path, language);
     let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       if (extension === "zml") {
-        let variables = {path, language: outputLanguage};
+        let variables = {path, language, outputPath, outputLanguage};
         let inputString = await fs.readFile(path, {encoding: "utf-8"});
         let inputDocument = this.parser.tryParse(inputString);
         let outputString = this.transformer.transformFinalize(inputDocument, variables);
@@ -96,8 +97,8 @@ export class AvendiaConverter {
   private getOutputPathSpecs(path: string, language: AvendiaLanguage): Array<[string, AvendiaLanguage]> {
     let pathSpecs = [] as Array<[string, AvendiaLanguage]>;
     let configs = this.configs;
-    let getOutputPath = function (outputLanguage: Exclude<AvendiaLanguage, "common">): string {
-      let outputPath = pathUtil.join(configs.getOutputPath(outputLanguage), pathUtil.relative(configs.getDocumentPath(language), path));
+    let getOutputPath = function (outputLanguage: AvendiaOutputLanguage): string {
+      let outputPath = configs.replaceDocumentDirPath(path, language, outputLanguage);
       outputPath = outputPath.replace(/\.zml$/, ".html");
       outputPath = outputPath.replace(/\.scss$/, ".css");
       outputPath = outputPath.replace(/\.tsx?$/, ".js");

@@ -1,5 +1,7 @@
 //
 
+import pathUtil from "path";
+
 
 export class AvendiaConfigs {
 
@@ -9,16 +11,21 @@ export class AvendiaConfigs {
     this.json = json;
   }
 
-  public getDocumentPath(language: AvendiaLanguage): string {
-    return this.json["documentPath"][language];
+  public getDocumentDirPath(language: AvendiaLanguage): string {
+    return this.json.documentDirPath[language];
   }
 
-  public getOutputPath(language: Exclude<AvendiaLanguage, "common">): string {
-    return this.json["outputPath"][language];
+  public getOutputDirPath(outputLanguage: AvendiaOutputLanguage): string {
+    return this.json.outputDirPath[outputLanguage];
+  }
+
+  public replaceDocumentDirPath(path: string, language: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): string {
+    return pathUtil.join(this.getOutputDirPath(outputLanguage), pathUtil.relative(this.getDocumentDirPath(language), path));
   }
 
 }
 
 
 export type AvendiaLanguage = "ja" | "en" | "common";
+export type AvendiaOutputLanguage = Exclude<AvendiaLanguage, "common">;
 export type AvendiaConfigsJson = typeof import("../config/default.json");
