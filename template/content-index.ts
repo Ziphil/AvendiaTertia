@@ -1,14 +1,14 @@
 //
 
 import {
-  DocumentTemplateManager
+  TemplateManager
 } from "@zenml/zenml";
 import type {
   AvendiaDocument
 } from "../converter/dom";
 
 
-let manager = new DocumentTemplateManager<AvendiaDocument>();
+let manager = new TemplateManager<AvendiaDocument, {}, {}>();
 
 manager.registerElementRule("pb", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();

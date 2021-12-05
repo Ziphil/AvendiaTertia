@@ -1,20 +1,21 @@
 //
 
 import {
-  DocumentTransformer
+  BaseTransformer
 } from "@zenml/zenml";
 import dotjs from "dot";
 import TEMPLATE_HTML from "../template/template.html";
 import TRANSLATIONS from "../template/translations.json";
 import {
-  AVENDIA_CONFIGS
+  AVENDIA_CONFIGS,
+  AvendiaOutputLanguage
 } from "./configs";
 import type {
   AvendiaDocument
 } from "./dom";
 
 
-export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
+export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, {}, AvendiaTransformerVariables> {
 
   private template: (...args: Array<any>) => string;
 
@@ -23,7 +24,7 @@ export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
     this.template = dotjs.template(TEMPLATE_HTML, {...dotjs.templateSettings, strip: false});
   }
 
-  public transformFinalize(input: Document, variables?: any): string {
+  public transformFinalize(input: Document, variables?: AvendiaTransformerVariables): string {
     let document = this.transform(input, variables);
     let view = {
       configs: this.configs,
@@ -40,8 +41,17 @@ export class AvendiaTransformer extends DocumentTransformer<AvendiaDocument> {
     this.configs = {};
   }
 
-  protected resetVariables(variables?: any): void {
-    this.variables = variables ?? {};
+  protected resetVariables(variables?: AvendiaTransformerVariables): void {
+    this.variables = variables ?? {path: "", language: "ja"};
   }
 
 }
+
+
+export type AvendiaTransformerVariables = {
+  path: string,
+  language: AvendiaOutputLanguage,
+  foreignLanguage?: AvendiaOutputLanguage,
+  title?: string,
+  pageTitle?: string
+};

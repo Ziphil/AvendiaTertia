@@ -1,7 +1,7 @@
 //
 
 import {
-  DocumentTemplateManager
+  TemplateManager
 } from "@zenml/zenml";
 import type {
   AvendiaDocument
@@ -9,7 +9,7 @@ import type {
 
 
 const INLINE_ELEMENT_NAMES = ["x", "xn", "a"];
-let manager = new DocumentTemplateManager<AvendiaDocument>();
+let manager = new TemplateManager<AvendiaDocument, {}, {}>();
 
 manager.registerElementRule(true, true, (transformer, document, element, scope) => {
   let self = document.createDocumentFragment();
