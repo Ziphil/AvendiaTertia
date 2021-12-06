@@ -31,6 +31,16 @@ export class AvendiaConfigs {
     return this.json.outputDirPath[language];
   }
 
+  public findDocumentLanguage(path: string): AvendiaLanguage | null {
+    for (let [language, dirPath] of Object.entries(this.json.documentDirPath)) {
+      let relative = pathUtil.relative(dirPath, path);
+      if (!relative.startsWith("..")) {
+        return language as any;
+      }
+    }
+    return null;
+  }
+
   public replaceDocumentDirPath(documentPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): string {
     return pathUtil.join(this.getOutputDirPath(outputLanguage), pathUtil.relative(this.getDocumentDirPath(documentLanguage), documentPath));
   }

@@ -6,6 +6,7 @@ import {
 import {
   ZenmlParser
 } from "@zenml/zenml";
+import commandLineArgs from "command-line-args";
 import {
   promises as fs
 } from "fs";
@@ -25,18 +26,30 @@ import {
 
 export class AvendiaConverter {
 
-  private documentPathSpecs: PathSpecs<AvendiaLanguage>;
-  private parser: ZenmlParser;
-  private transformer: AvendiaTransformer;
+  private documentPathSpecs!: PathSpecs<AvendiaLanguage>;
+  private parser!: ZenmlParser;
+  private transformer!: AvendiaTransformer;
 
   public constructor() {
-    this.documentPathSpecs = [["./document/ja/diary/index.zml", "ja"]];
-    this.parser = this.createParser();
-    this.transformer = this.createTransformer();
   }
 
   public async execute(): Promise<void> {
-    await this.executeNormal();
+    let options = commandLineArgs([
+      {name: "documentPaths", multiple: true, defaultOption: true},
+      {name: "upload", alias: "u", type: Boolean},
+      {name: "history", alias: "h", type: Boolean},
+      {name: "watch", alias: "w", type: Boolean}
+    ]);
+    this.documentPathSpecs = this.getDocumentPathSpecs(options.documentPaths);
+    this.parser = this.createParser();
+    this.transformer = this.createTransformer();
+    if (options.history) {
+      throw new Error("history mode unimplemented");
+    } else if (options.watch) {
+      throw new Error("watch mode unimplemented");
+    } else {
+      await this.executeNormal();
+    }
   }
 
   public async executeNormal(): Promise<void> {
@@ -90,8 +103,23 @@ export class AvendiaConverter {
     return transformer;
   }
 
+  private getDocumentPathSpecs(documentPaths: Array<string>): PathSpecs<AvendiaLanguage> {
+    if (documentPaths.length >= 1) {
+      let documentPathSpecs = [] as PathSpecs<AvendiaLanguage>;
+      for (let documentPath of documentPaths) {
+        let documentLanguage = AVENDIA_CONFIGS.findDocumentLanguage(documentPath);
+        if (documentLanguage !== null) {
+          documentPathSpecs.push([documentPath, documentLanguage]);
+        }
+      }
+      return documentPathSpecs;
+    } else {
+      return [];
+    }
+  }
+
   private getOutputPathSpecs(documentPath: string, documentLanguage: AvendiaLanguage): PathSpecs<AvendiaOutputLanguage> {
-    let pathSpecs = [];
+    let outputPathSpecs = [];
     let getOutputPathSpec = function (outputLanguage: AvendiaOutputLanguage): PathSpec<AvendiaOutputLanguage> {
       let outputPath = AVENDIA_CONFIGS.replaceDocumentDirPath(documentPath, documentLanguage, outputLanguage);
       outputPath = outputPath.replace(/\.zml$/, ".html");
@@ -100,12 +128,12 @@ export class AvendiaConverter {
       return [outputPath, outputLanguage];
     };
     if (documentLanguage === "common") {
-      pathSpecs.push(getOutputPathSpec("ja"));
-      pathSpecs.push(getOutputPathSpec("en"));
+      outputPathSpecs.push(getOutputPathSpec("ja"));
+      outputPathSpecs.push(getOutputPathSpec("en"));
     } else {
-      pathSpecs.push(getOutputPathSpec(documentLanguage));
+      outputPathSpecs.push(getOutputPathSpec(documentLanguage));
     }
-    return pathSpecs;
+    return outputPathSpecs;
   }
 
 }
