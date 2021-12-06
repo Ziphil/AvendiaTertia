@@ -7,9 +7,7 @@ import {
   ZenmlParser
 } from "@zenml/zenml";
 import commandLineArgs from "command-line-args";
-import {
-  promises as fs
-} from "fs";
+import fs from "fs/promises";
 import pathUtil from "path";
 import managers from "../template";
 import {
