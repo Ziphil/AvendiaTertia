@@ -18,7 +18,6 @@ import {
 import {
   AvendiaDocument
 } from "./dom";
-
 import {
   AvendiaTransformer
 } from "./transformer";
