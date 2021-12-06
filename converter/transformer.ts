@@ -1,7 +1,8 @@
 //
 
 import {
-  BaseTransformer
+  BaseTransformer,
+  NodeLikeOf
 } from "@zenml/zenml";
 import dotjs from "dot";
 import TEMPLATE_HTML from "../template/template.html";
@@ -53,5 +54,8 @@ export type AvendiaTransformerVariables = {
   language: AvendiaOutputLanguage,
   foreignLanguage?: AvendiaOutputLanguage,
   title?: string,
-  pageTitle?: string
+  pageTitle?: string,
+  articleType?: string,
+  navigationNode?: NodeLikeOf<AvendiaDocument>,
+  headerNode?: NodeLikeOf<AvendiaDocument>
 };
