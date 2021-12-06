@@ -11,6 +11,7 @@ import {
   promises as fs
 } from "fs";
 import pathUtil from "path";
+import managers from "../template";
 import {
   AVENDIA_CONFIGS,
   AvendiaLanguage,
@@ -19,6 +20,7 @@ import {
 import {
   AvendiaDocument
 } from "./dom";
+
 import {
   AvendiaTransformer
 } from "./transformer";
@@ -97,9 +99,9 @@ export class AvendiaConverter {
 
   private createTransformer(): AvendiaTransformer {
     let transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false}));
-    transformer.regsiterTemplateManager(require("../template/common").default);
-    transformer.regsiterTemplateManager(require("../template/content-index").default);
-    transformer.regsiterTemplateManager(require("../template/fallback").default);
+    for (let manager of managers) {
+      transformer.regsiterTemplateManager(manager);
+    }
     return transformer;
   }
 

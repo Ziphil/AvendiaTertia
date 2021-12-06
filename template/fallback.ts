@@ -6,10 +6,13 @@ import {
 import type {
   AvendiaDocument
 } from "../converter/dom";
+import type {
+  AvendiaTransformerVariables
+} from "../converter/transformer";
 
 
 const INLINE_ELEMENT_NAMES = ["x", "xn", "a"];
-let manager = new TemplateManager<AvendiaDocument, {}, {}>();
+let manager = new TemplateManager<AvendiaDocument, {}, AvendiaTransformerVariables>();
 
 manager.registerElementRule(true, true, (transformer, document, element, scope) => {
   let self = document.createDocumentFragment();

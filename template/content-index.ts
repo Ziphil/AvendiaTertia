@@ -6,9 +6,12 @@ import {
 import type {
   AvendiaDocument
 } from "../converter/dom";
+import type {
+  AvendiaTransformerVariables
+} from "../converter/transformer";
 
 
-let manager = new TemplateManager<AvendiaDocument, {}, {}>();
+let manager = new TemplateManager<AvendiaDocument, {}, AvendiaTransformerVariables>();
 
 manager.registerElementRule("pb", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
