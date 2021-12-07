@@ -6,6 +6,7 @@ import {
 import {
   ZenmlParser
 } from "@zenml/zenml";
+import chalk from "chalk";
 import commandLineArgs from "command-line-args";
 import fs from "fs/promises";
 import pathUtil from "path";
@@ -28,8 +29,10 @@ export class AvendiaConverter {
   private documentPathSpecs!: PathSpecs<AvendiaLanguage>;
   private parser!: ZenmlParser;
   private transformer!: AvendiaTransformer;
+  private count: number;
 
   public constructor() {
+    this.count = 0;
   }
 
   public async execute(): Promise<void> {
@@ -56,14 +59,18 @@ export class AvendiaConverter {
       await this.saveNormal(documentPath, documentLanguage);
     });
     await Promise.all(promises);
+    this.printLast();
   }
 
   private async saveNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
+    let intervals = {convert: 0, upload: 0};
     try {
-      await this.convertNormal(documentPath, documentLanguage);
-      await this.uploadNormal(documentPath, documentLanguage);
+      intervals.convert = await AvendiaConverter.measure(() => this.convertNormal(documentPath, documentLanguage));
+      intervals.upload = await AvendiaConverter.measure(() => this.uploadNormal(documentPath, documentLanguage));
+      this.printNormal(documentPath, documentLanguage, intervals, true);
     } catch (error) {
       console.log(error);
+      this.printNormal(documentPath, documentLanguage, intervals, false);
     }
   }
 
@@ -86,6 +93,48 @@ export class AvendiaConverter {
   }
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
+  }
+
+  private printNormal(documentPath: string, documentLanguage: AvendiaLanguage, intervals: {convert: number, upload: number}, succeed: boolean): void {
+    let output = "";
+    let count = ++ this.count;
+    output += " ";
+    output += Math.min(count, 9999).toString().padStart(4);
+    output += " : ";
+    output += chalk.cyan(Math.min(intervals.convert, 9999).toString().padStart(4));
+    output += " + ";
+    output += chalk.magenta(Math.min(intervals.upload, 9999).toString().padStart(4));
+    output += "  |  ";
+    let codeArray = AVENDIA_CONFIGS.getSplitRelativeDocumentPath(documentPath, documentLanguage).map((segment) => {
+      let x = segment.replace(/\.\w+$/, "");
+      if (x === "index") {
+        return "  @";
+      } else if (x.match(/^\d+$/)) {
+        return parseInt(x, 10).toString().padStart(3);
+      } else if (x.match(/^[a-z]+$/)) {
+        return segment.substring(0, 3).padStart(3);
+      } else {
+        return "  ?";
+      }
+    });
+    let codeString = documentLanguage.substring(0, 2) + " " + codeArray.join(" ");
+    if (succeed) {
+      output += chalk.yellow(codeString);
+    } else {
+      output += chalk.bgYellow.black(codeString);
+    }
+    console.log(output);
+  }
+
+  private printLast(): void {
+    let output = "";
+    let count = this.count;
+    if (count > 0) {
+      output += "-".repeat(39);
+      output += "\n";
+      output += " ".repeat(27) + count.toString().padStart(5) + " files";
+    }
+    console.log(output);
   }
 
   private createParser(): ZenmlParser {
@@ -133,6 +182,14 @@ export class AvendiaConverter {
       outputPathSpecs.push(getOutputPathSpec(documentLanguage));
     }
     return outputPathSpecs;
+  }
+
+  private static async measure(callback: () => Promise<void>): Promise<number> {
+    let before = process.hrtime();
+    await callback();
+    let [elapsedSeconds, elapsedNanoseconds] = process.hrtime(before);
+    let interval = Math.floor(elapsedSeconds * 1000 + elapsedNanoseconds / 1000000);
+    return interval;
   }
 
 }
