@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=0.7">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Ziphil">
-    <meta property="og:url" content="{{= it.avendiaConfigs.getRemoteUrl(it.variables.path, it.variables.language) }}">
+    <meta property="og:url" content="{{= it.configs.getRemoteUrl(it.variables.path, it.variables.language) }}">
     <meta property="og:title" content="{{= it.variables.title }}">
     <meta property="og:description" content="{{= it.variables.title }}">
-    <meta property="og:image" content="{{= it.avendiaConfigs.getRemoteDomain(it.variables.language) }}/material/logo/1.png">
+    <meta property="og:image" content="{{= it.configs.getRemoteDomain(it.variables.language) }}/material/logo/1.png">
     <script src="/program/script/11.js"></script>
 {{= it.headerNode?.toString() }}
     <link rel="stylesheet" type="text/css" href="/style/1.css">
@@ -22,7 +22,7 @@
         <a href="/">Avendia<sup>19</sup></a>
       </div>
       <div class="language">
-        <a href="{{= it.avendiaConfigs.getRemoteDomain(it.variables.foreignLanguage) }}">{{= it.translations.name[it.variables.foreignLanguage] }}</a>
+        <a href="{{= it.configs.getRemoteDomain(it.variables.foreignLanguage) }}">{{= it.translations.name[it.variables.foreignLanguage] }}</a>
       </div>
     </header>
 

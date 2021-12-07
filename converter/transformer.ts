@@ -25,12 +25,12 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, {}, Ave
     this.template = dotjs.template(TEMPLATE_HTML, {...dotjs.templateSettings, strip: false});
   }
 
-  public transformFinalize(input: Document, variables?: AvendiaTransformerVariables): string {
-    let document = this.transform(input, variables);
+  public transformFinalize(...[input, configs]: Parameters<typeof this.transform>): string {
+    let document = this.transform(input, configs);
     let view = {
-      configs: this.configs,
+      environments: this.environments,
       variables: this.variables,
-      avendiaConfigs: AVENDIA_CONFIGS,
+      configs: AVENDIA_CONFIGS,
       translations: TRANSLATIONS,
       document
     };
@@ -38,8 +38,8 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, {}, Ave
     return output;
   }
 
-  protected resetConfigs(): void {
-    this.configs = {};
+  protected resetEnvironments(): void {
+    this.environments = {};
   }
 
   protected resetVariables(variables?: AvendiaTransformerVariables): void {
