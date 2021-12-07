@@ -9,6 +9,7 @@ import {
 import chalk from "chalk";
 import commandLineArgs from "command-line-args";
 import fs from "fs/promises";
+import glob from "glob-promise";
 import pathUtil from "path";
 import managers from "../template";
 import {
@@ -42,7 +43,7 @@ export class AvendiaConverter {
       {name: "history", alias: "h", type: Boolean},
       {name: "watch", alias: "w", type: Boolean}
     ]);
-    this.documentPathSpecs = this.getDocumentPathSpecs(options.documentPaths);
+    this.documentPathSpecs = await this.getDocumentPathSpecs(options.documentPaths ?? []);
     this.parser = this.createParser();
     this.transformer = this.createTransformer();
     if (options.history) {
@@ -86,7 +87,6 @@ export class AvendiaConverter {
         await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
         await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
       } else {
-        throw new Error("Unknown file type");
       }
     });
     await Promise.all(promises);
@@ -117,7 +117,7 @@ export class AvendiaConverter {
         return "  ?";
       }
     });
-    let codeString = documentLanguage.substring(0, 2) + " " + codeArray.join(" ");
+    let codeString = (documentLanguage.substring(0, 2) + " " + codeArray.join(" ")).padEnd(14);
     if (succeed) {
       output += chalk.yellow(codeString);
     } else {
@@ -151,19 +151,27 @@ export class AvendiaConverter {
     return transformer;
   }
 
-  private getDocumentPathSpecs(documentPaths: Array<string>): PathSpecs<AvendiaLanguage> {
+  private async getDocumentPathSpecs(documentPaths: Array<string>): Promise<PathSpecs<AvendiaLanguage>> {
+    let documentPathSpecs = [] as PathSpecs<AvendiaLanguage>;
     if (documentPaths.length >= 1) {
-      let documentPathSpecs = [] as PathSpecs<AvendiaLanguage>;
       for (let documentPath of documentPaths) {
         let documentLanguage = AVENDIA_CONFIGS.findDocumentLanguage(documentPath);
         if (documentLanguage !== null) {
           documentPathSpecs.push([documentPath, documentLanguage]);
         }
       }
-      return documentPathSpecs;
     } else {
-      return [];
+      let promises = AVENDIA_CONFIGS.getDocumentDirPathSpecs().map(async ([documentDirPath, documentLanguage]) => {
+        let matches = await glob(documentDirPath + "/**/*");
+        for (let match of matches) {
+          if (pathUtil.basename(match).match(/^(index|\d+)\.(\w+)$/)) {
+            documentPathSpecs.push([match, documentLanguage]);
+          }
+        }
+      });
+      await Promise.all(promises);
     }
+    return documentPathSpecs;
   }
 
   private getOutputPathSpecs(documentPath: string, documentLanguage: AvendiaLanguage): PathSpecs<AvendiaOutputLanguage> {
@@ -185,10 +193,10 @@ export class AvendiaConverter {
   }
 
   private static async measure(callback: () => Promise<void>): Promise<number> {
-    let before = process.hrtime();
+    let before = process.hrtime.bigint();
     await callback();
-    let [elapsedSeconds, elapsedNanoseconds] = process.hrtime(before);
-    let interval = Math.floor(elapsedSeconds * 1000 + elapsedNanoseconds / 1000000);
+    let after = process.hrtime.bigint();
+    let interval = Math.floor(Number(after - before) / 1000000);
     return interval;
   }
 

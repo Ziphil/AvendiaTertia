@@ -27,8 +27,8 @@ export class AvendiaConfigs {
     return this.json.documentDirPath[language];
   }
 
-  public getOutputDirPath(language: AvendiaOutputLanguage): string {
-    return this.json.outputDirPath[language];
+  public getDocumentDirPathSpecs(): Array<[string, AvendiaLanguage]> {
+    return Object.entries(this.json.documentDirPath).map(([language, dirPath]) => [dirPath, language]) as any;
   }
 
   public getRelativeDocumentPath(path: string, language: AvendiaLanguage): string {
@@ -37,6 +37,14 @@ export class AvendiaConfigs {
 
   public getSplitRelativeDocumentPath(path: string, language: AvendiaLanguage): Array<string> {
     return this.getRelativeDocumentPath(path, language).split(pathUtil.sep);
+  }
+
+  public getOutputDirPath(language: AvendiaOutputLanguage): string {
+    return this.json.outputDirPath[language];
+  }
+
+  public getRemoteDirPath(language: AvendiaOutputLanguage): string {
+    return this.json.remoteDirPath[language];
   }
 
   public findDocumentLanguage(path: string): AvendiaLanguage | null {
