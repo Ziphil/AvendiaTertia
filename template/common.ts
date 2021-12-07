@@ -40,7 +40,7 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
     if (virtualDepth >= 0) {
       let firstCategory = splitRelativePath[0];
       self.appendChild(document.createBreadcrumbItem(2, (itemSelf, linkSelf, nameSelf) => {
-        linkSelf.setAttribute("href", "../../" + firstCategory);
+        linkSelf.setAttribute("href", "/" + firstCategory);
         nameSelf.appendTextNode(ANY_TRANSLATIONS[firstCategory]["index"][language]);
       }));
     }
@@ -48,7 +48,7 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
       let firstCategory = splitRelativePath[0];
       let secondCategory = splitRelativePath[1];
       self.appendChild(document.createBreadcrumbItem(3, (itemSelf, linkSelf, nameSelf) => {
-        linkSelf.setAttribute("href", "../" + secondCategory);
+        linkSelf.setAttribute("href", "/" + firstCategory + "/" + secondCategory);
         nameSelf.appendTextNode(ANY_TRANSLATIONS[firstCategory][secondCategory][language]);
       }));
     }
