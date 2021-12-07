@@ -16,7 +16,7 @@ let manager = new TemplateManager<AvendiaDocument, {}, AvendiaTransformerVariabl
 manager.registerElementRule("pb", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
-    self.setAttribute("class", "index-container");
+    self.addClassName("index-container");
     self.appendChild(transformer.apply());
   });
   return self;
@@ -36,27 +36,27 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
     let annotation = null as string | null;
     if (element.tagName === "ab") {
       self.tagName = "a";
-      self.setAttribute("class", "index");
+      self.addClassName("index");
     } else if (element.tagName === "abo") {
       self.tagName = "a";
-      self.setAttribute("class", "index old");
+      self.addClassName("index old");
       annotation = "old";
     } else if (element.tagName === "aba") {
       self.tagName = "a";
-      self.setAttribute("class", "index ancient");
+      self.addClassName("index ancient");
       annotation = "ancient";
     } else if (element.tagName === "abd") {
       self.tagName = "div";
-      self.setAttribute("class", "index");
+      self.addClassName("index");
     }
     for (let i = 0 ; i < element.attributes.length ; i ++) {
       let attribute = element.attributes.item(i)!;
       if (attribute.name === "date") {
         self.appendElement("span", (self) => {
-          self.setAttribute("class", "date");
+          self.addClassName("date");
           if (attribute.value.match(/^\d+$/)) {
             self.appendElement("span", (self) => {
-              self.setAttribute("class", "hairia");
+              self.addClassName("hairia");
               self.appendTextNode(attribute.value);
             });
           } else {
@@ -68,12 +68,12 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
       }
     }
     self.appendElement("span", (self) => {
-      self.setAttribute("class", "content");
+      self.addClassName("content");
       self.appendChild(transformer.apply());
     });
     if (annotation !== null) {
       self.appendElement("span", (self) => {
-        self.setAttribute("class", "annotation");
+        self.addClassName("annotation");
         self.appendTextNode(annotation!);
       });
     }

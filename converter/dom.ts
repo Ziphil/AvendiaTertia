@@ -9,6 +9,12 @@ import {
 
 export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement> {
 
+  public addClassName(className: string): void {
+    let currentClassName = this.attributes.get("class");
+    let nextClassName = (currentClassName) ? currentClassName + " " + className : className;
+    this.attributes.set("class", nextClassName);
+  }
+
 }
 
 
