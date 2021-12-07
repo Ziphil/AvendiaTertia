@@ -71,7 +71,7 @@ export class AvendiaConverter {
     let intervals = {convert: 0, upload: 0};
     try {
       intervals.convert = await AvendiaConverter.measure(async () => {
-        await this.convertNormal(documentPath, documentLanguage);
+        await this.transformNormal(documentPath, documentLanguage);
       });
       intervals.upload = await AvendiaConverter.measure(async () => {
         await this.uploadNormal(documentPath, documentLanguage);
@@ -82,7 +82,7 @@ export class AvendiaConverter {
     }
   }
 
-  private async convertNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
+  private async transformNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let extension = pathUtil.extname(documentPath).slice(1);
     let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
     let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
