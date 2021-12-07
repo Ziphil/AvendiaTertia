@@ -11,7 +11,7 @@
     <meta property="og:description" content="{{= it.variables.title }}">
     <meta property="og:image" content="{{= it.configs.getRemoteDomain(it.variables.language) }}/material/logo/1.png">
     <script src="/program/script/11.js"></script>
-{{= it.headerNode?.toString() }}
+{{= it.variables.headerNode?.toString() }}
     <link rel="stylesheet" type="text/css" href="/style/1.css">
     <title>{{= it.variables.pageTitle }}</title>
   </head>
@@ -72,7 +72,7 @@
     </nav>
 
     <nav class="breadcrumb">
-{{= it.navigationNode?.toString() }}
+{{= it.variables.navigationNode?.toString() }}
     </nav>
 
     <article class="{{= it.variables.articleType }}">
