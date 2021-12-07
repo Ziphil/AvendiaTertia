@@ -15,7 +15,9 @@ import sass from "sass";
 import {
   SourceSpan as SassSourceSpan
 } from "sass";
+import webpack from "webpack";
 import managers from "../template";
+import WEBPACK_CONFIGS from "../webpack-document";
 import {
   AVENDIA_CONFIGS,
   AvendiaLanguage,
@@ -87,23 +89,62 @@ export class AvendiaConverter {
     let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
     let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       if (extension === "zml") {
-        let initialVariables = {path: documentPath, language: outputLanguage};
-        let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
-        let inputDocument = this.parser.tryParse(inputString);
-        let outputString = this.transformer.transformFinalize(inputDocument, {initialVariables});
-        await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
-        await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
+        await this.transformNormalZml(documentPath, outputPath, documentLanguage, outputLanguage);
       } else if (extension === "scss") {
-        let logMessage = function (message: string, options: {span?: SassSourceSpan}): void {
-          Function.prototype();
-        };
-        let options = {file: documentPath, logger: {debug: logMessage, warn: logMessage}};
-        let outputBuffer = sass.renderSync(options).css;
-        await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
-        await fs.writeFile(outputPath, outputBuffer);
+        await this.transformNormalScss(documentPath, outputPath, documentLanguage, outputLanguage);
+      } else if (extension === "ts") {
+        await this.transformNormalTs(documentPath, outputPath, documentLanguage, outputLanguage);
       }
     });
     await Promise.all(promises);
+  }
+
+  private async transformNormalZml(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
+    let initialVariables = {path: documentPath, language: outputLanguage};
+    let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
+    let inputDocument = this.parser.tryParse(inputString);
+    let outputString = this.transformer.transformFinalize(inputDocument, {initialVariables});
+    await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
+    await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
+  }
+
+  private async transformNormalScss(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
+    let logMessage = function (message: string, options: {span?: SassSourceSpan}): void {
+      Function.prototype();
+    };
+    let options = {
+      file: documentPath,
+      logger: {debug: logMessage, warn: logMessage}
+    };
+    let outputBuffer = sass.renderSync(options).css;
+    await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
+    await fs.writeFile(outputPath, outputBuffer);
+  }
+
+  private async transformNormalTs(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
+    let configs = {
+      ...WEBPACK_CONFIGS,
+      entry: {[pathUtil.basename(outputPath)]: "./" + documentPath},
+      output: {path: pathUtil.dirname(outputPath), filename: "[name]"},
+      cache: {
+        type: "filesystem",
+        cacheDirectory: pathUtil.join(pathUtil.dirname(outputPath), ".webpack_cache")
+      }
+    } as const;
+    let promise = new Promise<void>((resolve, reject) => {
+      webpack(configs, (error, stats) => {
+        if (error) {
+          reject(error);
+        } else if (stats?.hasErrors()) {
+          let error = new Error(stats.toString());
+          reject(error);
+        } else {
+          resolve();
+        }
+      });
+    });
+    await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
+    await promise;
   }
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "jsxFactory": "react.createElement",
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}
