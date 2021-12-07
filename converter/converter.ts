@@ -66,11 +66,14 @@ export class AvendiaConverter {
   private async saveNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let intervals = {convert: 0, upload: 0};
     try {
-      intervals.convert = await AvendiaConverter.measure(() => this.convertNormal(documentPath, documentLanguage));
-      intervals.upload = await AvendiaConverter.measure(() => this.uploadNormal(documentPath, documentLanguage));
+      intervals.convert = await AvendiaConverter.measure(async () => {
+        await this.convertNormal(documentPath, documentLanguage);
+      });
+      intervals.upload = await AvendiaConverter.measure(async () => {
+        await this.uploadNormal(documentPath, documentLanguage);
+      });
       this.printNormal(documentPath, documentLanguage, intervals, true);
     } catch (error) {
-      console.log(error);
       this.printNormal(documentPath, documentLanguage, intervals, false);
     }
   }
@@ -193,10 +196,10 @@ export class AvendiaConverter {
   }
 
   private static async measure(callback: () => Promise<void>): Promise<number> {
-    let before = process.hrtime.bigint();
+    let before = process.hrtime();
     await callback();
-    let after = process.hrtime.bigint();
-    let interval = Math.floor(Number(after - before) / 1000000);
+    let [elapsedSeconds, elapsedNanoseconds] = process.hrtime(before);
+    let interval = Math.floor(elapsedSeconds * 1000 + elapsedNanoseconds / 1000000);
     return interval;
   }
 
