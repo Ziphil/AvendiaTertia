@@ -11,6 +11,10 @@ import commandLineArgs from "command-line-args";
 import fs from "fs/promises";
 import glob from "glob-promise";
 import pathUtil from "path";
+import sass from "sass";
+import {
+  SourceSpan as SassSourceSpan
+} from "sass";
 import managers from "../template";
 import {
   AVENDIA_CONFIGS,
@@ -89,7 +93,14 @@ export class AvendiaConverter {
         let outputString = this.transformer.transformFinalize(inputDocument, {initialVariables});
         await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
         await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
-      } else {
+      } else if (extension === "scss") {
+        let logMessage = function (message: string, options: {span?: SassSourceSpan}): void {
+          Function.prototype();
+        };
+        let options = {file: documentPath, logger: {debug: logMessage, warn: logMessage}};
+        let outputBuffer = sass.renderSync(options).css;
+        await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
+        await fs.writeFile(outputPath, outputBuffer);
       }
     });
     await Promise.all(promises);
