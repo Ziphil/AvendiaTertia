@@ -26,23 +26,28 @@ manager.registerElementRule(true, "page", (transformer, document, element, scope
   return self;
 });
 
+manager.registerElementRule(true, true, (transformer, document, element, scope) => {
+  let self = document.createDocumentFragment();
+  return self;
+});
+
 manager.registerTextRule(true, (transformer, document, text) => {
   let content = text.data;
-  content.replace(/(、|。|」|』|〉)/g, (match) => match + " ");
-  content.replace(/(「|『|〈)/g, (match) => " " + match);
-  content.replace(/(、|。)\s+(」|』)/g, (match, before, after) => before + after);
-  content.replace(/(」|』|〉)\s+(、|。|,|\.)/g, (match, before, after) => before + after);
-  content.replace(/(\(|「|『)\s+(「|『)/g, (match, before, after) => before + after);
+  content = content.replace(/(、|。|」|』|〉)/g, (match) => match + " ");
+  content = content.replace(/(「|『|〈)/g, (match) => " " + match);
+  content = content.replace(/(、|。)\s+(」|』)/g, (match, before, after) => before + after);
+  content = content.replace(/(」|』|〉)\s+(、|。|,|\.)/g, (match, before, after) => before + after);
+  content = content.replace(/(\(|「|『)\s+(「|『)/g, (match, before, after) => before + after);
   if (!text.previousSibling?.isElement() || !INLINE_ELEMENT_NAMES.includes(text.previousSibling.tagName)) {
-    content.replace(/^\s+(「|『)/g, (match, paren) => paren);
+    content = content.replace(/^\s+(「|『)/g, (match, paren) => paren);
   }
   if (!text.nextSibling?.isElement() || !INLINE_ELEMENT_NAMES.includes(text.nextSibling.tagName)) {
-    content.replace(/(」|』)\s+$/g, (match, paren) => paren);
+    content = content.replace(/(」|』)\s+$/g, (match, paren) => paren);
   }
   if (text.previousSibling !== null) {
     let previousSibling = text.previousSibling;
     if (previousSibling.isElement() && previousSibling.tagName === "label") {
-      content.replace(/^\s+/g, "");
+      content = content.replace(/^\s+/g, "");
     }
   }
   return content;
