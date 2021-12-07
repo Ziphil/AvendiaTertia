@@ -49,23 +49,22 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
       self.tagName = "div";
       self.addClassName("index");
     }
-    for (let i = 0 ; i < element.attributes.length ; i ++) {
-      let attribute = element.attributes.item(i)!;
-      if (attribute.name === "date") {
-        self.appendElement("span", (self) => {
-          self.addClassName("date");
-          if (attribute.value.match(/^\d+$/)) {
-            self.appendElement("span", (self) => {
-              self.addClassName("hairia");
-              self.appendTextNode(attribute.value);
-            });
-          } else {
-            self.appendTextNode(attribute.value);
-          }
-        });
-      } else {
-        self.setAttribute(attribute.name, attribute.value);
-      }
+    if (element.hasAttribute("date")) {
+      let date = element.getAttribute("date");
+      self.appendElement("span", (self) => {
+        self.addClassName("date");
+        if (date.match(/^\d+$/)) {
+          self.appendElement("span", (self) => {
+            self.addClassName("hairia");
+            self.appendTextNode(date);
+          });
+        } else {
+          self.appendTextNode(date);
+        }
+      });
+    }
+    if (element.hasAttribute("href")) {
+      self.setAttribute("href", element.getAttribute("href"));
     }
     self.appendElement("span", (self) => {
       self.addClassName("content");

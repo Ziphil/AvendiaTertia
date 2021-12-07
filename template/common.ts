@@ -64,12 +64,12 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
       }
     }
   }));
-  navigationNode.appendChild(transformer.apply(element, "navigation"));
-  headerNode.appendChild(transformer.apply(element, "header"));
-  mainNode.appendChild(transformer.apply(element, "page"));
   transformer.variables.foreignLanguage = (language === "ja") ? "en" : "ja";
   transformer.variables.title = title;
   transformer.variables.pageTitle = ((title) ? title + " — " : "") + TRANSLATIONS.title[language];
+  navigationNode.appendChild(transformer.apply(element, "navigation"));
+  headerNode.appendChild(transformer.apply(element, "header"));
+  mainNode.appendChild(transformer.apply(element, "page"));
   transformer.variables.articleType = articleType;
   transformer.variables.navigationNode = navigationNode;
   transformer.variables.headerNode = headerNode;

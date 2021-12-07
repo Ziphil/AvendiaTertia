@@ -14,7 +14,7 @@ import type {
 const INLINE_ELEMENT_NAMES = ["x", "xn", "a"];
 let manager = new TemplateManager<AvendiaDocument, {}, AvendiaTransformerVariables>();
 
-manager.registerElementRule(true, "page", (transformer, document, element, scope) => {
+manager.registerElementRule(true, "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     for (let i = 0 ; i < element.attributes.length ; i ++) {
@@ -26,9 +26,8 @@ manager.registerElementRule(true, "page", (transformer, document, element, scope
   return self;
 });
 
-manager.registerElementRule(true, true, (transformer, document, element, scope) => {
-  let self = document.createDocumentFragment();
-  return self;
+manager.registerElementRule(true, true, () => {
+  return "";
 });
 
 manager.registerTextRule(true, (transformer, document, text) => {

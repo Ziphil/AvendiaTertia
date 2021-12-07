@@ -56,6 +56,7 @@ export type AvendiaTransformerVariables = {
   title?: string,
   pageTitle?: string,
   articleType?: string,
+  latest?: boolean,
   navigationNode?: NodeLikeOf<AvendiaDocument>,
   headerNode?: NodeLikeOf<AvendiaDocument>
 };
