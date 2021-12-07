@@ -19,7 +19,7 @@ export class AvendiaConfigs {
   public getRemoteUrl(path: string, language: AvendiaOutputLanguage): string {
     let documentDirPath = this.getDocumentDirPath(language);
     let remoteDomain = this.getRemoteDomain(language);
-    let remoteUrl = path.replace(documentDirPath, remoteDomain).replace(/\.zml$/, ".html");
+    let remoteUrl = remoteDomain + "/" + pathUtil.relative(documentDirPath, path).replace(/\\/g, "/").replace(/\.zml$/, ".html");
     return remoteUrl;
   }
 
