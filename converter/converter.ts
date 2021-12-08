@@ -7,6 +7,7 @@ import {
   ZenmlParser
 } from "@zenml/zenml";
 import chalk from "chalk";
+import chokidar from "chokidar";
 import commandLineArgs from "command-line-args";
 import fs from "fs/promises";
 import glob from "glob-promise";
@@ -33,9 +34,9 @@ import {
 
 export class AvendiaConverter {
 
-  private documentPathSpecs!: PathSpecs<AvendiaLanguage>;
   private parser!: ZenmlParser;
   private transformer!: AvendiaTransformer;
+  private options!: any;
   private count: number;
 
   public constructor() {
@@ -49,21 +50,46 @@ export class AvendiaConverter {
       {name: "history", alias: "h", type: Boolean},
       {name: "watch", alias: "w", type: Boolean}
     ]);
-    this.documentPathSpecs = await this.getDocumentPathSpecs(options.documentPaths ?? []);
     this.parser = this.createParser();
     this.transformer = this.createTransformer();
+    this.options = options;
     if (options.history) {
       throw new Error("history mode unimplemented");
     } else if (options.watch) {
-      throw new Error("watch mode unimplemented");
+      await this.executeWatch();
     } else {
       await this.executeNormal();
     }
   }
 
-  public async executeNormal(): Promise<void> {
-    let promises = this.documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
+  private async executeNormal(): Promise<void> {
+    let documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
+    let promises = documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
       await this.saveNormal(documentPath, documentLanguage);
+    });
+    await Promise.all(promises);
+    this.printLast();
+  }
+
+  private async executeWatch(): Promise<void> {
+    let promises = AVENDIA_CONFIGS.getDocumentDirPathSpecs().map(([documentDirPath, documentLanguage]) => {
+      let promise = new Promise((resolve, reject) => {
+        let watcher = chokidar.watch(documentDirPath, {persistent: true, ignoreInitial: true});
+        watcher.on("add", (documentPath) => {
+          if (this.checkValidDocumentPath(documentPath)) {
+            this.saveNormal(documentPath, documentLanguage);
+          }
+        });
+        watcher.on("change", (documentPath) => {
+          if (this.checkValidDocumentPath(documentPath)) {
+            this.saveNormal(documentPath, documentLanguage);
+          }
+        });
+        watcher.on("error", (error) => {
+          reject(error);
+        });
+      });
+      return promise;
     });
     await Promise.all(promises);
     this.printLast();
@@ -124,8 +150,8 @@ export class AvendiaConverter {
   private async transformNormalTs(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
     let configs = {
       ...WEBPACK_CONFIGS,
-      entry: {[pathUtil.basename(outputPath)]: "./" + documentPath},
-      output: {path: pathUtil.dirname(outputPath), filename: "[name]"},
+      entry: {[pathUtil.basename(outputPath, ".js")]: "./" + documentPath},
+      output: {path: pathUtil.dirname(outputPath), filename: "[name].js"},
       cache: {
         type: "filesystem",
         cacheDirectory: pathUtil.join(pathUtil.dirname(outputPath), ".webpack_cache")
@@ -211,16 +237,16 @@ export class AvendiaConverter {
     if (documentPaths.length >= 1) {
       for (let documentPath of documentPaths) {
         let documentLanguage = AVENDIA_CONFIGS.findDocumentLanguage(documentPath);
-        if (documentLanguage !== null) {
+        if (documentLanguage !== null && this.checkValidDocumentPath(documentPath)) {
           documentPathSpecs.push([documentPath, documentLanguage]);
         }
       }
     } else {
       let promises = AVENDIA_CONFIGS.getDocumentDirPathSpecs().map(async ([documentDirPath, documentLanguage]) => {
-        let matches = await glob(documentDirPath + "/**/*");
-        for (let match of matches) {
-          if (pathUtil.basename(match).match(/^(index|\d+)\.(\w+)$/)) {
-            documentPathSpecs.push([match, documentLanguage]);
+        let documentPaths = await glob(documentDirPath + "/**/*");
+        for (let documentPath of documentPaths) {
+          if (this.checkValidDocumentPath(documentPath)) {
+            documentPathSpecs.push([documentPath, documentLanguage]);
           }
         }
       });
@@ -245,6 +271,10 @@ export class AvendiaConverter {
       outputPathSpecs.push(getOutputPathSpec(documentLanguage));
     }
     return outputPathSpecs;
+  }
+
+  private checkValidDocumentPath(documentPath: string): boolean {
+    return pathUtil.basename(documentPath).match(/^(index|\d+)\.(\w+)$/) !== null;
   }
 
   private static async measure(callback: () => Promise<void>): Promise<number> {
