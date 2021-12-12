@@ -32,7 +32,7 @@ import {
 } from "./transformer";
 
 
-export class AvendiaConverter {
+export class AvendiaGenerator {
 
   private parser!: ZenmlParser;
   private transformer!: AvendiaTransformer;
@@ -98,10 +98,10 @@ export class AvendiaConverter {
   private async saveNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let intervals = {convert: 0, upload: 0};
     try {
-      intervals.convert = await AvendiaConverter.measure(async () => {
+      intervals.convert = await AvendiaGenerator.measure(async () => {
         await this.transformNormal(documentPath, documentLanguage);
       });
-      intervals.upload = await AvendiaConverter.measure(async () => {
+      intervals.upload = await AvendiaGenerator.measure(async () => {
         await this.uploadNormal(documentPath, documentLanguage);
       });
       this.printNormal(documentPath, documentLanguage, intervals, true);

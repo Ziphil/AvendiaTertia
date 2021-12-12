@@ -7,7 +7,7 @@ import externals from "webpack-node-externals";
 
 let config = {
   entry: {
-    index: ["./converter/index.ts"]
+    index: ["./generator/index.ts"]
   },
   output: {
     path: path.join(__dirname, "dist"),

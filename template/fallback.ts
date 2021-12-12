@@ -5,10 +5,10 @@ import {
 } from "@zenml/zenml";
 import type {
   AvendiaDocument
-} from "../converter/dom";
+} from "../generator/dom";
 import type {
   AvendiaTransformerVariables
-} from "../converter/transformer";
+} from "../generator/transformer";
 
 
 const INLINE_ELEMENT_NAMES = ["x", "xn", "a"];
