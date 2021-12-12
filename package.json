@@ -6,8 +6,8 @@
   "homepage": "https://github.com/Ziphil/AvendiaTertia",
   "main": "dist/index.js",
   "scripts": {
-    "develop": "webpack --config webpack-config.ts --watch",
-    "build": "webpack --config webpack-config.ts",
+    "develop": "webpack --config webpack-main.ts --watch",
+    "build": "webpack --config webpack-main.ts",
     "start": "node dist/index.js"
   },
   "eslintConfig": {
