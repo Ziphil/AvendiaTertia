@@ -26,8 +26,8 @@ manager.registerElementRule(true, "page", (transformer, document, element) => {
   return self;
 });
 
-manager.registerElementRule(true, true, () => {
-  return "";
+manager.registerElementRule(true, true, (transformer, document) => {
+  return document.createDocumentFragment();
 });
 
 manager.registerTextRule(true, (transformer, document, text) => {
@@ -49,7 +49,8 @@ manager.registerTextRule(true, (transformer, document, text) => {
       content = content.replace(/^\s+/g, "");
     }
   }
-  return content;
+  let self = document.createTextNode(content);
+  return self;
 });
 
 export default manager;

@@ -36,12 +36,12 @@ manager.registerElementRule("base", "header", (transformer, document, element) =
   return self;
 });
 
-manager.registerElementRule(true, "header", () => {
-  return "";
+manager.registerElementRule(true, "header", (transformer, document) => {
+  return document.createDocumentFragment();
 });
 
-manager.registerTextRule("header", () => {
-  return "";
+manager.registerTextRule("header", (transformer, document) => {
+  return document.createDocumentFragment();
 });
 
 export default manager;

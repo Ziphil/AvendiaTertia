@@ -28,12 +28,12 @@ manager.registerElementRule("ver", "navigation", (transformer, document, element
   return self;
 });
 
-manager.registerElementRule(true, "navigation", () => {
-  return "";
+manager.registerElementRule(true, "navigation", (transformer, document) => {
+  return document.createDocumentFragment();
 });
 
-manager.registerTextRule("navigation", () => {
-  return "";
+manager.registerTextRule("navigation", (transformer, document) => {
+  return document.createDocumentFragment();
 });
 
 export default manager;

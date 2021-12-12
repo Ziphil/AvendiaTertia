@@ -4,11 +4,14 @@ import {
   BaseDocument,
   BaseDocumentFragment,
   BaseElement,
+  BaseElementOptions,
+  BaseText,
+  BaseTextOptions,
   NodeLikeOf
 } from "@zenml/zenml";
 
 
-export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement> {
+export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
 
   public addClassName(className: string): void {
     let currentClassName = this.attributes.get("class");
@@ -19,7 +22,7 @@ export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocument
 }
 
 
-export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement> {
+export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
 
   public createBreadcrumb(callback?: (self: AvendiaElement) => void): NodeLikeOf<AvendiaDocument> {
     let self = this.createDocumentFragment();
@@ -57,13 +60,22 @@ export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocume
     return new AvendiaDocumentFragment(this);
   }
 
-  public createElement(tagName: string): AvendiaElement {
+  public createElement(tagName: string, options?: BaseElementOptions): AvendiaElement {
     return new AvendiaElement(this, tagName);
+  }
+
+  public createTextNode(content: string, options?: BaseTextOptions): AvendiaText {
+    return new AvendiaText(this, content, options);
   }
 
 }
 
 
-export class AvendiaDocumentFragment extends BaseDocumentFragment<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement> {
+export class AvendiaDocumentFragment extends BaseDocumentFragment<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
+
+}
+
+
+export class AvendiaText extends BaseText<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
 
 }
