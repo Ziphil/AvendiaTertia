@@ -7,11 +7,12 @@ import type {
   AvendiaDocument
 } from "../generator/dom";
 import type {
+  AvendiaTransformerEnvironments,
   AvendiaTransformerVariables
 } from "../generator/transformer";
 
 
-let manager = new TemplateManager<AvendiaDocument, {}, AvendiaTransformerVariables>();
+let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
 
 manager.registerElementRule("import-script", "header", (transformer, document, element) => {
   let self = document.createDocumentFragment();

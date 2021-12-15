@@ -4,6 +4,9 @@ import {
   BaseTransformer,
   NodeLikeOf
 } from "@zenml/zenml";
+import {
+  ZoticaResourceUtils
+} from "@zenml/zotica";
 import dotjs from "dot";
 import TEMPLATE_HTML from "../template/template.html";
 import TRANSLATIONS from "../template/translations.json";
@@ -16,7 +19,7 @@ import type {
 } from "./dom";
 
 
-export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, {}, AvendiaTransformerVariables> {
+export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables> {
 
   private template: (...args: Array<any>) => string;
 
@@ -39,7 +42,10 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, {}, Ave
   }
 
   protected resetEnvironments(): void {
-    this.environments = {};
+    this.environments = {
+      mathStyleString: ZoticaResourceUtils.getStyleString("/material/font/math.otf"),
+      mathScriptString: ZoticaResourceUtils.getScriptString()
+    };
   }
 
   protected resetVariables(variables?: AvendiaTransformerVariables): void {
@@ -49,6 +55,10 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, {}, Ave
 }
 
 
+export type AvendiaTransformerEnvironments = {
+  mathStyleString: string,
+  mathScriptString: string
+};
 export type AvendiaTransformerVariables = {
   path: string,
   language: AvendiaOutputLanguage,

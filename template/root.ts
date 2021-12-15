@@ -10,13 +10,14 @@ import type {
   AvendiaDocument
 } from "../generator/dom";
 import type {
+  AvendiaTransformerEnvironments,
   AvendiaTransformerVariables
 } from "../generator/transformer";
 import TRANSLATIONS from "./translations.json";
 
 
 const ANY_TRANSLATIONS = TRANSLATIONS as any;
-let manager = new TemplateManager<AvendiaDocument, {}, AvendiaTransformerVariables>();
+let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
 
 manager.registerElementRule("page", "", (transformer, document, element) => {
   let path = transformer.variables.path;

@@ -17,7 +17,8 @@ import {
   SourceSpan as SassSourceSpan
 } from "sass";
 import webpack from "webpack";
-import managers from "../template";
+import pluginManagers from "../plugin";
+import templateManagers from "../template";
 import WEBPACK_CONFIGS from "../webpack-document";
 import {
   AVENDIA_CONFIGS,
@@ -106,6 +107,7 @@ export class AvendiaGenerator {
       });
       this.printNormal(documentPath, documentLanguage, intervals, true);
     } catch (error) {
+      console.error(error);
       this.printNormal(documentPath, documentLanguage, intervals, false);
     }
   }
@@ -221,12 +223,15 @@ export class AvendiaGenerator {
   private createParser(): ZenmlParser {
     let implementation = new DOMImplementation();
     let parser = new ZenmlParser(implementation, {specialElementNames: {brace: "x", bracket: "xn", slash: "i"}});
+    for (let manager of pluginManagers) {
+      parser.registerPluginManager(manager);
+    }
     return parser;
   }
 
   private createTransformer(): AvendiaTransformer {
-    let transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false}));
-    for (let manager of managers) {
+    let transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false, html: true}));
+    for (let manager of templateManagers) {
       transformer.regsiterTemplateManager(manager);
     }
     return transformer;

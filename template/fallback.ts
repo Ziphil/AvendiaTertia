@@ -7,12 +7,13 @@ import type {
   AvendiaDocument
 } from "../generator/dom";
 import type {
+  AvendiaTransformerEnvironments,
   AvendiaTransformerVariables
 } from "../generator/transformer";
 
 
 const INLINE_ELEMENT_NAMES = ["x", "xn", "a"];
-let manager = new TemplateManager<AvendiaDocument, {}, AvendiaTransformerVariables>();
+let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
 
 manager.registerElementRule(true, "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
