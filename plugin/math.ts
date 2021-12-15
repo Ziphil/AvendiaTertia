@@ -1,6 +1,7 @@
 //
 
 import {
+  SimpleZenmlPlugin,
   ZenmlPluginManager
 } from "@zenml/zenml";
 import {
@@ -31,6 +32,16 @@ manager.registerPlugin("mb", new ZoticaZenmlPlugin((builder, tagName, marks, att
     }
   });
   return [self];
+}));
+
+manager.registerPlugin("mark", new SimpleZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
+  let nodes = childrenArgs[0] ?? [];
+  return nodes;
+}));
+
+manager.registerPlugin("raw", new SimpleZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
+  let nodes = childrenArgs[0] ?? [];
+  return nodes;
 }));
 
 export default manager;
