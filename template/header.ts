@@ -14,7 +14,7 @@ import type {
 
 let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
 
-manager.registerElementRule("import-script", "header", (transformer, document, element) => {
+manager.registerElementRule("use-script", "header", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("script", (self) => {
     let content = element.textContent;
