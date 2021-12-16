@@ -33,6 +33,7 @@ manager.registerElementRule(true, true, (transformer, document) => {
 
 manager.registerTextRule(true, (transformer, document, text) => {
   let content = text.data;
+  content = content.replace(/\uFEFF/gu, "");
   content = content.replace(/(、|。|」|』|〉)/g, (match) => match + " ");
   content = content.replace(/(「|『|〈)/g, (match) => " " + match);
   content = content.replace(/(、|。)\s+(」|』)/g, (match, before, after) => before + after);
