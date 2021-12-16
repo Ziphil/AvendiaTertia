@@ -13,90 +13,51 @@
     <script src="/program/script/11.js"></script>
 {{= it.variables.headerNode?.toString() }}
     <link rel="stylesheet" type="text/css" href="/style/1.css">
+    <link rel="stylesheet" media="all" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css">
     <title>{{= it.variables.pageTitle }}</title>
   </head>
   <body>
 
-    <header>
-      <div class="title">
-        <a href="/">Avendia<sup>19</sup></a>
-      </div>
-      <div class="language">
-        <a href="{{= it.configs.getRemoteDomain(it.variables.foreignLanguage) }}">{{= it.translations.name[it.variables.foreignLanguage] }}</a>
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a class="header-title" href="/">Avendia<span class="header-title-version">20</span></a>
+        </div>
+        <div class="header-right">
+          <nav class="header-list">
+            <a class="header-item" href="/conlang/">{{= it.translations.conlang.index[it.variables.language] }}</a>
+            <a class="header-item" href="/diary/">{{= it.translations.diary.index[it.variables.language] }}</a>
+            <a class="header-item" href="/application/">{{= it.translations.application.index[it.variables.language] }}</a>
+            <a class="header-item" href="/other/">{{= it.translations.other.index[it.variables.language] }}</a>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <nav class="menu">
-      <ul class="menu">
-        <li>
-          <a href="/conlang/">{{= it.translations.conlang.index[it.variables.language] }}</a>
-          <ul>
-            <li><a href="/conlang/grammer/">{{= it.translations.conlang.grammer[it.variables.language] }}</a></li>
-            <li><a href="/conlang/course/">{{= it.translations.conlang.course[it.variables.language] }}</a></li>
-            <li><a href="/conlang/database/">{{= it.translations.conlang.database[it.variables.language] }}</a></li>
-            <li><a href="/conlang/culture/">{{= it.translations.conlang.culture[it.variables.language] }}</a></li>
-            <li><a href="/conlang/work/">{{= it.translations.conlang.work[it.variables.language] }}</a></li>
-            <li><a href="/conlang/translation/">{{= it.translations.conlang.translation[it.variables.language] }}</a></li>
-            <li><a href="/conlang/theory/">{{= it.translations.conlang.theory[it.variables.language] }}</a></li>
-            <li><a href="/conlang/document/">{{= it.translations.conlang.document[it.variables.language] }}</a></li>
-            <li><a href="/conlang/table/">{{= it.translations.conlang.table[it.variables.language] }}</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="/application/">{{= it.translations.application.index[it.variables.language] }}</a>
-          <ul>
-            <li><a href="/application/download/">{{= it.translations.application.download[it.variables.language] }}</a></li>
-            <li><a href="/application/web/">{{= it.translations.application.web[it.variables.language] }}</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="/diary/">{{= it.translations.diary.index[it.variables.language] }}</a>
-          <ul>
-            <li><a href="/diary/conlang/">{{= it.translations.diary.conlang[it.variables.language] }}</a></li>
-            <li><a href="/diary/mathematics/">{{= it.translations.diary.mathematics[it.variables.language] }}</a></li>
-            <li><a href="/diary/language/">{{= it.translations.diary.language[it.variables.language] }}</a></li>
-            <li><a href="/diary/application/">{{= it.translations.diary.application[it.variables.language] }}</a></li>
-            <li><a href="/diary/game/">{{= it.translations.diary.game[it.variables.language] }}</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="/other/">{{= it.translations.other.index[it.variables.language] }}</a>
-          <ul>
-            <li><a href="/other/mathematics/">{{= it.translations.other.mathematics[it.variables.language] }}</a></li>
-            <li><a href="/other/language/">{{= it.translations.other.language[it.variables.language] }}</a></li>
-            <li><a href="/other/tsolitaire/">{{= it.translations.other.tsolitaire[it.variables.language] }}</a></li>
-            <li><a href="/other/other/">{{= it.translations.other.other[it.variables.language] }}</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
-    <nav class="breadcrumb">
+    <nav class="navigation">
+      <div class="navigation-inner">
 {{= it.variables.navigationNode?.toString() }}
+      </div>
     </nav>
 
-    <article class="{{= it.variables.articleType }}">
+    <article class="main">
 {{= it.document.toString() }}
     </article>
 
-    <footer>
-      <div class="icon">
-        <a class="twitter" href="https://twitter.com/Ziphil" target="_blank"></a>
-        <a class="youtube" href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/" target="_blank"></a>
-        <a class="discord" href="https://discord.gg/qdRyE2ZExf" target="_blank"></a>
-        <a class="github" href="https://github.com/Ziphil" target="_blank"></a>
+    <footer class="footer">
+      <div class="footer-icon-list">
+        <a class="footer-icon-item" data-brand="twitter" href="https://twitter.com/Ziphil" target="_blank"></a>
+        <a class="footer-icon-item" data-brand="youtube" href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/" target="_blank"></a>
+        <a class="footer-icon-item" data-brand="discord" href="https://discord.gg/qdRyE2ZExf" target="_blank"></a>
+        <a class="footer-icon-item" data-brand="github" href="https://github.com/Ziphil" target="_blank"></a>
       </div>
-      <div class="copyright">
+      <div class="footer-copyright">
         Copyright © 2009–{{= new Date().getFullYear() }} Ziphil, All rights reserved.
       </div>
-      <div class="counter">
+      <div class="footer-counter">
         <script src="http://counter1.fc2.com/counter.php?id=3102008"></script><noscript><img alt="counter" src="http://counter1.fc2.com/counter_img.php?id=3102008"></noscript> 
       </div>
     </footer>
-
-    <div class="top-link">
-      <a href="#top">TOP</a>
-    </div>
 
   </body>
 </html>
