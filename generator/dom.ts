@@ -7,6 +7,7 @@ import {
   BaseElementOptions,
   BaseText,
   BaseTextOptions,
+  NodeCallback,
   NodeLikeOf
 } from "@zenml/zenml";
 
@@ -17,6 +18,14 @@ export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocument
     let currentClassName = this.attributes.get("class");
     let nextClassName = (currentClassName) ? currentClassName + " " + className : className;
     this.attributes.set("class", nextClassName);
+  }
+
+  public insertHead<N extends AvendiaElement | AvendiaText>(child: N): N {
+    return this.fragment.insertHead(child);
+  }
+
+  public insertElementHead(tagName: string, callback?: NodeCallback<AvendiaElement>): AvendiaElement {
+    return this.fragment.insertElementHead(tagName, callback);
   }
 
 }
@@ -72,6 +81,30 @@ export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocume
 
 
 export class AvendiaDocumentFragment extends BaseDocumentFragment<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
+
+  public insertHead<N extends AvendiaElement | AvendiaText>(child: N): N {
+    let firstNode = this.nodes[0];
+    let firstSpace = null as string | null;
+    if (firstNode !== undefined && firstNode instanceof BaseText) {
+      let match = firstNode.content.match(/^\s+/);
+      if (match !== null) {
+        firstNode.content = firstNode.content.replace(/^\s+/, "");
+        firstSpace = match[0];
+      }
+    }
+    this.nodes.unshift(child);
+    if (firstSpace !== null) {
+      this.nodes.unshift(this.document.createTextNode(firstSpace));
+    }
+    return child;
+  }
+
+  public insertElementHead(tagName: string, callback?: NodeCallback<AvendiaElement>): AvendiaElement {
+    let element = this.document.createElement(tagName);
+    callback?.call(this, element);
+    this.insertHead(element);
+    return element;
+  }
 
 }
 
