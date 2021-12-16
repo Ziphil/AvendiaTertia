@@ -14,4 +14,9 @@ import type {
 
 let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
 
+manager.registerElementRule(["name", "ver"], "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  return self;
+});
+
 export default manager;
