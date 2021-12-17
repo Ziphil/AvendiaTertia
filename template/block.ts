@@ -55,6 +55,30 @@ manager.registerElementRule("p", "page", (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule(["ul", "ol"], "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement(element.tagName, (self) => {
+    self.addClassName("normal-list");
+    self.setAttribute("data-type", (element.tagName === "ul") ? "unordered" : "ordered");
+    if (element.getAttribute("col") === "2") {
+      self.setAttribute("data-column", "2");
+    } else if (element.getAttribute("col") === "3") {
+      self.setAttribute("data-column", "3");
+    }
+    self.appendChild(transformer.apply(element, "page.ul"));
+  });
+  return self;
+});
+
+manager.registerElementRule("li", "page.ul", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement(element.tagName, (self) => {
+    self.addClassName("normal-item");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule(["name", "ver", "use-script", "use-math"], "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   return self;
