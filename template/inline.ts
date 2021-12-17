@@ -59,6 +59,23 @@ manager.registerElementRule("h", ["page", "page.section-table"], (transformer, d
   return self;
 });
 
+manager.registerElementRule(["a", "ae", "an"], "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  let className = (element.tagName === "an") ? "hidden-link" : "link";
+  self.appendElement("a", (self) => {
+    self.addClassName(className);
+    if (element.hasAttribute("href")) {
+      self.setAttribute("href", element.getAttribute("href"));
+    }
+    if (element.tagName === "ae") {
+      self.setAttribute("target", "_blank");
+      self.setAttribute("rel", "noopener noreferrer");
+    }
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule(["sup", "sub"], ["page", "page.section-table"], (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
