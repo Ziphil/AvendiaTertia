@@ -4,7 +4,8 @@ import {
   TemplateManager
 } from "@zenml/zenml";
 import type {
-  AvendiaDocument
+  AvendiaDocument,
+  AvendiaElement
 } from "../generator/dom";
 import type {
   AvendiaTransformerEnvironments,
@@ -16,16 +17,22 @@ let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironment
 
 manager.registerElementRule(["h1", "h2"], "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
+  let className = (element.tagName === "h1") ? "section" : "subsection";
   self.appendElement(element.tagName, (self) => {
-    self.addClassName((element.tagName === "h1") ? "section" : "subsection");
+    let innerSelf = null as any as AvendiaElement;
+    self.addClassName(className);
     if (element.hasAttribute("id")) {
       self.setAttribute("id", element.getAttribute("id"));
     }
-    self.appendChild(transformer.apply());
+    self.appendElement("div", (self) => {
+      innerSelf = self;
+      self.addClassName(`${className}-inner`);
+      self.appendChild(transformer.apply());
+    });
     if (element.hasAttribute("num")) {
       self.setAttribute("id", element.getAttribute("num"));
-      self.insertElementHead("span", (self) => {
-        self.addClassName("head-number");
+      innerSelf.insertElementHead("span", (self) => {
+        self.addClassName(`${className}-number`);
         self.setAttribute("data-number", element.getAttribute("num"));
       });
     }

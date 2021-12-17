@@ -1,9 +1,10 @@
 //
 
-import commonManager from "./common";
+import blockManager from "./block";
 import contentIndexManager from "./content-index";
 import fallbackManager from "./fallback";
 import headerManager from "./header";
+import inlineManager from "./inline";
 import mathManager from "./math";
 import navigationManager from "./navigation";
 import rootManager from "./root";
@@ -11,7 +12,8 @@ import rootManager from "./root";
 
 let managers = [
   rootManager,
-  commonManager,
+  blockManager,
+  inlineManager,
   mathManager,
   contentIndexManager,
   navigationManager,
