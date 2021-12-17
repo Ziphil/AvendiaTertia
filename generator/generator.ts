@@ -9,6 +9,7 @@ import {
 import chalk from "chalk";
 import chokidar from "chokidar";
 import commandLineArgs from "command-line-args";
+import cssTreeUtil from "css-tree";
 import fs from "fs/promises";
 import glob from "glob-promise";
 import pathUtil from "path";
@@ -144,9 +145,19 @@ export class AvendiaGenerator {
       file: documentPath,
       logger: {debug: logMessage, warn: logMessage}
     };
-    let outputBuffer = sass.renderSync(options).css;
+    let cssString = sass.renderSync(options).css.toString("utf-8");
+    let cssTree = cssTreeUtil.parse(cssString);
+    cssTreeUtil.walk(cssTree, (node) => {
+      if (node.type === "Dimension") {
+        if (node.unit === "rpx") {
+          node.value = (parseFloat(node.value) / 16).toString();
+          node.unit = "rem";
+        }
+      }
+    });
+    let outputString = cssTreeUtil.generate(cssTree);
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
-    await fs.writeFile(outputPath, outputBuffer);
+    await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
   }
 
   private async transformNormalTs(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
