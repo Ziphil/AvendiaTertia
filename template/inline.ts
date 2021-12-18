@@ -50,6 +50,16 @@ manager.registerElementRule("k", ["page", "page.section-table"], (transformer, d
   return self;
 });
 
+manager.registerElementRule(["c", "m"], ["page", "page.section-table"], (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  let className = (element.tagName === "c") ? "code" : "monospace";
+  self.appendElement("code", (self) => {
+    self.addClassName(className);
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("h", ["page", "page.section-table"], (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
