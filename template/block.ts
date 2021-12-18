@@ -4,8 +4,7 @@ import {
   TemplateManager
 } from "@zenml/zenml";
 import type {
-  AvendiaDocument,
-  AvendiaElement
+  AvendiaDocument
 } from "../generator/dom";
 import type {
   AvendiaTransformerEnvironments,
@@ -180,6 +179,93 @@ manager.registerElementRule("ja", "page.xl.li", (transformer, document, element)
   let self = document.createDocumentFragment();
   self.appendElement("dd", (self) => {
     self.addClassName("sentence-nested-item");
+    self.appendChild(transformer.apply(element, "page"));
+  });
+  return self;
+});
+
+manager.registerElementRule("side", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("figure", (self) => {
+    self.addClassName("figure-container");
+    self.setBlockType("bordered", "bordered");
+    self.appendChild(transformer.apply(element, "page", {contained: true}));
+  });
+  return self;
+});
+
+manager.registerElementRule("img", "page", (transformer, document, element, scope, args) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("img", (self) => {
+    self.addClassName("image");
+    if (element.hasAttribute("src")) {
+      self.setAttribute("src", element.getAttribute("src"));
+    }
+    if (element.hasAttribute("alt")) {
+      self.setAttribute("alt", element.getAttribute("alt"));
+    } else {
+      self.setAttribute("alt", "");
+    }
+  });
+  if (!args?.contained) {
+    let innerSelf = self;
+    let containerSelf = document.createDocumentFragment();
+    containerSelf.appendElement("figure", (self) => {
+      self.addClassName("figure-container");
+      self.setBlockType("bordered", "bordered");
+      self.appendChild(innerSelf);
+    });
+    return containerSelf;
+  } else {
+    return self;
+  }
+});
+
+manager.registerElementRule("table", "page", (transformer, document, element, scope, args) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("table", (self) => {
+    self.addClassName("table");
+    self.appendChild(transformer.apply(element, "page.table"));
+  });
+  if (!args?.contained) {
+    let innerSelf = self;
+    let containerSelf = document.createDocumentFragment();
+    containerSelf.appendElement("figure", (self) => {
+      self.addClassName("figure-container");
+      self.setBlockType("bordered", "bordered");
+      self.appendChild(innerSelf);
+    });
+    return containerSelf;
+  } else {
+    return self;
+  }
+});
+
+manager.registerElementRule("caption", "page.table", (transformer, document, element, scope, args) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("caption", (self) => {
+    self.appendChild(transformer.apply(element, "page"));
+  });
+  return self;
+});
+
+manager.registerElementRule("tr", "page.table", (transformer, document, element, scope, args) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("tr", (self) => {
+    self.appendChild(transformer.apply(element, "page.table.tr"));
+  });
+  return self;
+});
+
+manager.registerElementRule(["th", "td"], "page.table.tr", (transformer, document, element, scope, args) => {
+  let self = document.createDocumentFragment();
+  self.appendElement(element.tagName, (self) => {
+    if (element.hasAttribute("row")) {
+      self.setAttribute("rowspan", element.getAttribute("row"));
+    }
+    if (element.hasAttribute("col")) {
+      self.setAttribute("colspan", element.getAttribute("col"));
+    }
     self.appendChild(transformer.apply(element, "page"));
   });
   return self;
