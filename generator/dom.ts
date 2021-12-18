@@ -20,6 +20,12 @@ export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocument
     this.attributes.set("class", nextClassName);
   }
 
+  public setBlockType(topBlockType: string, bottomBlockType: string): void {
+    this.addClassName("block");
+    this.setAttribute("data-top-block-type", topBlockType);
+    this.setAttribute("data-bottom-block-type", bottomBlockType);
+  }
+
   public insertHead<N extends AvendiaElement | AvendiaText>(child: N): N {
     return this.fragment.insertHead(child);
   }
@@ -63,6 +69,10 @@ export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocume
       });
     });
     return self;
+  }
+
+  public placeholder(): AvendiaElement {
+    return this.createElement("");
   }
 
   public createDocumentFragment(): AvendiaDocumentFragment {
