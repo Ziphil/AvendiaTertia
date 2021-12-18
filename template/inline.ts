@@ -76,10 +76,50 @@ manager.registerElementRule(["a", "ae", "an"], "page", (transformer, document, e
   return self;
 });
 
+manager.registerElementRule("fl", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("foreign");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
+manager.registerElementRule("em", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("em", (self) => {
+    self.addClassName("emphasis");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
+manager.registerElementRule("small", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("small");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("lys", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("lyrics-space");
+  });
+  return self;
+});
+
+manager.registerElementRule("red", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("redaction");
+    if (element.hasAttribute("len")) {
+      let length = parseInt(element.getAttribute("len"));
+      self.appendTextNode(" ".repeat(length));
+    }
+    self.appendChild(transformer.apply());
   });
   return self;
 });
