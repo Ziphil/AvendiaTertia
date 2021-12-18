@@ -33,7 +33,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       self.appendChild(document.createBreadcrumbItem(1, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
         linkSelf.setAttribute("href", "/");
-        nameSelf.appendTextNode(TRANSLATIONS.top[language]);
+        nameSelf.appendTextNode(TRANSLATIONS.page.top[language]);
       }));
     }
     if (virtualDepth >= 0) {
@@ -41,7 +41,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       self.appendChild(document.createBreadcrumbItem(2, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
         linkSelf.setAttribute("href", "/" + firstCategory);
-        nameSelf.appendTextNode(ANY_TRANSLATIONS[firstCategory]["index"][language]);
+        nameSelf.appendTextNode(ANY_TRANSLATIONS.page[firstCategory]["index"][language]);
       }));
     }
     if (virtualDepth >= 1) {
@@ -50,7 +50,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       self.appendChild(document.createBreadcrumbItem(3, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
         linkSelf.setAttribute("href", "/" + firstCategory + "/" + secondCategory);
-        nameSelf.appendTextNode(ANY_TRANSLATIONS[firstCategory][secondCategory][language]);
+        nameSelf.appendTextNode(ANY_TRANSLATIONS.page[firstCategory][secondCategory][language]);
       }));
     }
     if (virtualDepth >= 2) {

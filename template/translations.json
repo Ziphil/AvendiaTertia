@@ -1,42 +1,44 @@
 {
-  "name": {"ja": "日本語", "en": "English"},
+  "language": {"ja": "日本語", "en": "English"},
   "title": {"ja": "Avendia", "en": "Avendia"},
   "caption": {"ja": "人工言語シャレイア語", "en": "Sheleian Constructed Language"},
-  "top": {"ja": "トップ", "en": "Top"},
-  "conlang": {
-    "index": {"ja": "シャレイア語", "en": "Shaleian"},
-    "grammer": {"ja": "文法書", "en": "Grammar"},
-    "course": {"ja": "入門書", "en": "Introduction"},
-    "database": {"ja": "データベース", "en": "Database"},
-    "culture": {"ja": "文化", "en": "Culture"},
-    "work": {"ja": "創作", "en": "Works"},
-    "translation": {"ja": "翻訳", "en": "Translations"},
-    "theory": {"ja": "シャレイア語論", "en": "Studies"},
-    "document": {"ja": "資料", "en": "Documents"},
-    "table": {"ja": "一覧表", "en": "Tables"}
-  },
-  "application": {
-    "index": {"ja": "自作ソフト", "en": "Softwares"},
-    "download": {"ja": "ダウンロード", "en": "Download"},
-    "web": {"ja": "Web アプリ", "en": "Web application"}
-  },
-  "diary": {
-    "index": {"ja": "日記", "en": "Diary"},
-    "conlang": {"ja": "シャレイア語", "en": "Shaleian"},
-    "language": {"ja": "自然言語", "en": "Languages"},
-    "mathematics": {"ja": "数学", "en": "Mathematics"},
-    "application": {"ja": "プログラミング", "en": "Programming"},
-    "game": {"ja": "ゲーム制作", "en": "Game"}
-  },
-  "other": {
-    "index": {"ja": "その他", "en": "Others"},
-    "mathematics": {"ja": "数学", "en": "Mathematics"},
-    "language": {"ja": "自然言語", "en": "Languages"},
-    "tsolitaire": {"ja": "Tsolitaire", "en": "Tsolitaire"},
-    "other": {"ja": "その他", "en": "Others"}
-  },
-  "error": {
-    "index": {"ja": "エラー", "en": "Error"},
-    "error": {"ja": "エラー", "en": "Error"}
+  "page": {
+    "top": {"ja": "トップ", "en": "Top"},
+    "conlang": {
+      "index": {"ja": "シャレイア語", "en": "Shaleian"},
+      "grammer": {"ja": "文法書", "en": "Grammar"},
+      "course": {"ja": "入門書", "en": "Introduction"},
+      "database": {"ja": "データベース", "en": "Database"},
+      "culture": {"ja": "文化", "en": "Culture"},
+      "work": {"ja": "創作", "en": "Works"},
+      "translation": {"ja": "翻訳", "en": "Translations"},
+      "theory": {"ja": "シャレイア語論", "en": "Studies"},
+      "document": {"ja": "資料", "en": "Documents"},
+      "table": {"ja": "一覧表", "en": "Tables"}
+    },
+    "application": {
+      "index": {"ja": "自作ソフト", "en": "Softwares"},
+      "download": {"ja": "ダウンロード", "en": "Download"},
+      "web": {"ja": "Web アプリ", "en": "Web application"}
+    },
+    "diary": {
+      "index": {"ja": "日記", "en": "Diary"},
+      "conlang": {"ja": "シャレイア語", "en": "Shaleian"},
+      "language": {"ja": "自然言語", "en": "Languages"},
+      "mathematics": {"ja": "数学", "en": "Mathematics"},
+      "application": {"ja": "プログラミング", "en": "Programming"},
+      "game": {"ja": "ゲーム制作", "en": "Game"}
+    },
+    "other": {
+      "index": {"ja": "その他", "en": "Others"},
+      "mathematics": {"ja": "数学", "en": "Mathematics"},
+      "language": {"ja": "自然言語", "en": "Languages"},
+      "tsolitaire": {"ja": "Tsolitaire", "en": "Tsolitaire"},
+      "other": {"ja": "その他", "en": "Others"}
+    },
+    "error": {
+      "index": {"ja": "エラー", "en": "Error"},
+      "error": {"ja": "エラー", "en": "Error"}
+    }
   }
 }
