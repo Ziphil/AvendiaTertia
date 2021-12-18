@@ -76,6 +76,14 @@ manager.registerElementRule(["a", "ae", "an"], "page", (transformer, document, e
   return self;
 });
 
+manager.registerElementRule("lys", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("lyrics-space");
+  });
+  return self;
+});
+
 manager.registerElementRule(["sup", "sub"], ["page", "page.section-table"], (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
