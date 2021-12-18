@@ -85,7 +85,7 @@ manager.registerElementRule("li", "page.ul", (transformer, document, element) =>
 
 manager.registerElementRule("xl", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
-  self.appendElement("ul", (self) => {
+  self.appendElement("dl", (self) => {
     self.addClassName("sentence-list");
     self.setBlockType("bordered", "bordered");
     self.appendChild(transformer.apply(element, "page.xl"));
@@ -95,27 +95,24 @@ manager.registerElementRule("xl", "page", (transformer, document, element) => {
 
 manager.registerElementRule("li", "page.xl", (transformer, document, element) => {
   let self = document.createDocumentFragment();
-  self.appendElement("li", (self) => {
-    self.addClassName("sentence-item");
-    self.appendChild(transformer.apply(element, "page.xl.li"));
-  });
+  self.appendChild(transformer.apply(element, "page.xl.li"));
   return self;
 });
 
 manager.registerElementRule("sh", "page.xl.li", (transformer, document, element) => {
   let self = document.createDocumentFragment();
-  self.appendChild(transformer.apply(element, "page"));
+  self.appendElement("dt", (self) => {
+    self.addClassName("sentence-item");
+    self.appendChild(transformer.apply(element, "page"));
+  });
   return self;
 });
 
 manager.registerElementRule("ja", "page.xl.li", (transformer, document, element) => {
   let self = document.createDocumentFragment();
-  self.appendElement("ul", (self) => {
-    self.addClassName("sentence-nested-list");
-    self.appendElement("li", (self) => {
-      self.addClassName("sentence-nested-item");
-      self.appendChild(transformer.apply(element, "page"));
-    });
+  self.appendElement("dd", (self) => {
+    self.addClassName("sentence-nested-item");
+    self.appendChild(transformer.apply(element, "page"));
   });
   return self;
 });
