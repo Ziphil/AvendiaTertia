@@ -17,6 +17,7 @@ import contentIndexManager from "./content-index";
 import fallbackManager from "./fallback";
 import headerManager from "./header";
 import inlineBasicManager from "./inline/basic";
+import inlineGreekManager from "./inline/greek";
 import inlineLinkManager from "./inline/link";
 import inlineMathManager from "./inline/math";
 import navigationManager from "./navigation";
@@ -43,6 +44,7 @@ let managers = [
   blockMathManager,
   inlineBasicManager,
   inlineLinkManager,
+  inlineGreekManager,
   inlineMathManager,
   fallbackManager
 ];
