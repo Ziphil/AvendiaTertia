@@ -3,7 +3,8 @@
 import {
   BaseTransformer,
   LightTransformer,
-  NodeLikeOf
+  NodeLikeOf,
+  TemplateManager
 } from "@zenml/zenml";
 import {
   ZoticaResourceUtils
@@ -60,6 +61,11 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
       ...initialVariables
     };
   }
+
+}
+
+
+export class AvendiaTemplateManager extends TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables> {
 
 }
 
