@@ -1,0 +1,37 @@
+{
+  "prefix": {
+    "du": ["du", {"ja": "否", "en": "NEG"}],
+    "a": ["a", {"ja": "形", "en": "ADJ"}],
+    "o": ["o", {"ja": "副", "en": "ADV"}],
+    "e": ["e", {"ja": "副", "en": "ADV"}],
+    "i": ["i", {"ja": "非動修", "en": "NVM"}]
+  },
+  "suffix": {
+    "a": ["a", {"ja": "現", "en": "PRS"}],
+    "e": ["e", {"ja": "過", "en": "PST"}],
+    "i": ["i", {"ja": "未", "en": "FUT"}],
+    "o": ["o", {"ja": "通", "en": "DCH"}],
+    "f": ["f", {"ja": "開.自", "en": "INCP.INTR"}],
+    "c": ["c", {"ja": "経.自", "en": "PROG.INTR"}],
+    "k": ["k", {"ja": "完.自", "en": "PERF.INTR"}],
+    "t": ["t", {"ja": "継.自", "en": "CONT.INTR"}],
+    "p": ["p", {"ja": "終.自", "en": "TERM.INTR"}],
+    "s": ["s", {"ja": "無.自", "en": "INDF.INTR"}],
+    "v": ["v", {"ja": "開.他", "en": "INCP.TR"}],
+    "q": ["q", {"ja": "経.他", "en": "PROG.TR"}],
+    "g": ["g", {"ja": "完.他", "en": "PERF.TR"}],
+    "d": ["d", {"ja": "継.他", "en": "CONT.TR"}],
+    "b": ["b", {"ja": "終.他", "en": "TERM.TR"}],
+    "z": ["z", {"ja": "無.他", "en": "INDF.TR"}]
+  },
+  "fixed": {
+    "a": ["a", {"ja": "主", "en": "NOM"}],
+    "e": ["e", {"ja": "対", "en": "ACC"}],
+    "ca": ["ca", {"ja": "与", "en": "DAT"}],
+    "zi": ["zi", {"ja": "奪", "en": "ABL"}],
+    "li": ["li", {"ja": "被", "en": "PAT"}],
+    "pa": ["pa", {"ja": "疑", "en": "INT"}],
+    "kin": ["kin", {"ja": "節", "en": "COMP"}],
+    "'n": ["'n", {"ja": "節", "en": "COMP"}]
+  }
+}

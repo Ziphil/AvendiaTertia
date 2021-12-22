@@ -199,6 +199,15 @@ manager.registerElementRule("gloss", "page", (transformer, document, element) =>
   return self;
 });
 
+manager.registerElementRule("gloss", "page.xl.li", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("dd", (self) => {
+    self.addClassName("sentence-nested-item gloss");
+    self.appendChild(transformer.apply(element, "page.gloss"));
+  });
+  return self;
+});
+
 manager.registerElementRule("li", "page.gloss", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
