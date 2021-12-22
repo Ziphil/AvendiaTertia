@@ -43,6 +43,9 @@ let config = {
   },
   resolve: {
     extensions: [".ts", ".js", ".html"],
+    alias: {
+      "~": path.resolve(__dirname),
+    }
   },
   cache: true
 };

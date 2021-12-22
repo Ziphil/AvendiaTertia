@@ -41,15 +41,23 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
     return output;
   }
 
-  protected resetEnvironments(): void {
+  protected resetEnvironments(initialEnvironments?: Partial<AvendiaTransformerEnvironments>): void {
     this.environments = {
       mathStyleString: ZoticaResourceUtils.getStyleString("/material/font/math.otf"),
-      mathScriptString: ZoticaResourceUtils.getScriptString()
+      mathScriptString: ZoticaResourceUtils.getScriptString(),
+      ...initialEnvironments
     };
   }
 
-  protected resetVariables(variables?: AvendiaTransformerVariables): void {
-    this.variables = variables ?? {path: "", language: "ja"};
+  protected resetVariables(initialVariables?: Partial<AvendiaTransformerVariables>): void {
+    this.variables = {
+      path: "",
+      language: "ja",
+      number: {theorem: 0},
+      numbers: {theorem: new Map()},
+      namePrefixes: {theorem: new Map()},
+      ...initialVariables
+    };
   }
 
 }
@@ -68,5 +76,9 @@ export type AvendiaTransformerVariables = {
   articleType?: string,
   latest?: boolean,
   navigationNode?: NodeLikeOf<AvendiaDocument>,
-  headerNode?: NodeLikeOf<AvendiaDocument>
+  headerNode?: NodeLikeOf<AvendiaDocument>,
+  number: {theorem: number},
+  numbers: {theorem: Map<string, number>},
+  namePrefixes: {theorem: Map<string, string>},
+  numberPrefix?: string
 };

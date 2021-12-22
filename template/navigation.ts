@@ -13,10 +13,9 @@ import type {
   AvendiaTransformerEnvironments,
   AvendiaTransformerVariables
 } from "../generator/transformer";
-import TRANSLATIONS from "./translations.json";
+import TRANSLATIONS from "~/template/translations.json";
 
 
-const ANY_TRANSLATIONS = TRANSLATIONS as any;
 let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
 
 manager.registerElementFactory("navigation", (transformer, document, element) => {
@@ -41,7 +40,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       self.appendChild(document.createBreadcrumbItem(2, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
         linkSelf.setAttribute("href", "/" + firstCategory);
-        nameSelf.appendTextNode(ANY_TRANSLATIONS.page[firstCategory]["index"][language]);
+        nameSelf.appendTextNode(TRANSLATIONS.page[firstCategory]!["index"]![language]);
       }));
     }
     if (virtualDepth >= 1) {
@@ -50,7 +49,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       self.appendChild(document.createBreadcrumbItem(3, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
         linkSelf.setAttribute("href", "/" + firstCategory + "/" + secondCategory);
-        nameSelf.appendTextNode(ANY_TRANSLATIONS.page[firstCategory][secondCategory][language]);
+        nameSelf.appendTextNode(TRANSLATIONS.page[firstCategory]![secondCategory]![language]);
       }));
     }
     if (virtualDepth >= 2) {

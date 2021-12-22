@@ -40,5 +40,14 @@
       "index": {"ja": "エラー", "en": "Error"},
       "error": {"ja": "エラー", "en": "Error"}
     }
+  },
+  "math": {
+    "def": {"ja": "定義", "en": "Definition"},
+    "thm": {"ja": "定理", "en": "Theorem"},
+    "prp": {"ja": "命題", "en": "Proposition"},
+    "lem": {"ja": "補題", "en": "Lemma"},
+    "cor": {"ja": "系", "en": "Corollary"},
+    "axm": {"ja": "公理", "en": "Axiom"},
+    "proof": {"ja": "証明", "en": "Proof"}
   }
 }

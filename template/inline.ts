@@ -10,6 +10,9 @@ import type {
   AvendiaTransformerEnvironments,
   AvendiaTransformerVariables
 } from "../generator/transformer";
+import {
+  getNumber
+} from "./util";
 
 
 let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
@@ -134,10 +137,64 @@ manager.registerElementRule("red", "page", (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("label", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("label");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule(["sup", "sub"], ["page", "page.section-table"], (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName(element.tagName);
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
+manager.registerElementRule("math-inline", "page", (transformer, document, element, scope, args) => {
+  let self = document.createDocumentFragment();
+  self.appendChild(transformer.apply(element, "math-html"));
+  return self;
+});
+
+manager.registerElementRule("math-block", "page", (transformer, document, element, scope, args) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("math-container");
+    self.appendElement("span", (self) => {
+      self.addClassName("math");
+      self.appendChild(transformer.apply(element, "math-html"));
+    });
+  });
+  return self;
+});
+
+manager.registerElementRule("ref", "page", (transformer, document, element, scope, args) => {
+  let self = document.createDocumentFragment();
+  let referenceId = element.getAttribute("ref");
+  let rawType = element.getAttribute("type");
+  let noLink = element.hasAttribute("nolink");
+  self.appendElement((noLink) ? "span" : "a", (self) => {
+    if (!noLink) {
+      self.addClassName("link");
+      self.setAttribute("href", `#${referenceId}`);
+    }
+    self.appendTextNode(getNumber(transformer, element, "theorem", referenceId));
+  });
+  return self;
+});
+
+manager.registerElementRule(true, "math-html", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement(element.tagName, (self) => {
+    for (let i = 0 ; i < element.attributes.length ; i ++) {
+      let {name, value} = element.attributes.item(i)!;
+      self.setAttribute(name, value);
+    }
     self.appendChild(transformer.apply());
   });
   return self;

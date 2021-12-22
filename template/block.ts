@@ -10,6 +10,11 @@ import type {
   AvendiaTransformerEnvironments,
   AvendiaTransformerVariables
 } from "../generator/transformer";
+import {
+  getNumber,
+  setNumber
+} from "./util";
+import TRANSLATIONS from "~/template/translations.json";
 
 
 let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
@@ -77,7 +82,7 @@ manager.registerElementRule("li", "page.ul", (transformer, document, element) =>
   let self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     self.addClassName("normal-item");
-    self.appendChild(transformer.apply());
+    self.appendChild(transformer.apply(element, "page"));
   });
   return self;
 });
@@ -303,6 +308,49 @@ manager.registerElementRule(["pre", "samp"], "page", (transformer, document, ele
         }
       });
     });
+  });
+  return self;
+});
+
+manager.registerElementRule("thm", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  let id = element.getAttribute("id");
+  let nameElement = element.getChildElements("name")[0];
+  setNumber(transformer, element, "theorem", id);
+  self.appendElement("div", (self) => {
+    self.addClassName("theorem");
+    self.setBlockType("bordered", "bordered");
+    if (id !== "") {
+      self.setAttribute("id", id);
+    }
+    self.appendElement("span", (self) => {
+      self.addClassName("theorem-number-wrapper");
+      self.appendElement("span", (self) => {
+        self.addClassName("theorem-number");
+        self.appendTextNode(getNumber(transformer, element, "theorem", id));
+      });
+      if (nameElement !== undefined) {
+        self.appendElement("span", (self) => {
+          self.addClassName("theorem-name");
+          self.appendChild(transformer.apply(nameElement));
+        });
+      }
+    });
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
+manager.registerElementRule("prf", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("div", (self) => {
+    self.addClassName("proof");
+    self.setBlockType("text", "text");
+    self.appendElement("span", (self) => {
+      self.addClassName("proof-label");
+      self.appendTextNode(TRANSLATIONS.math.proof[transformer.variables.language]);
+    });
+    self.appendChild(transformer.apply());
   });
   return self;
 });

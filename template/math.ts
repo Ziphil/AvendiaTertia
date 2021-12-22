@@ -18,6 +18,9 @@ manager.registerElementRule("use-math", "header", (transformer, document, elemen
   let self = document.createDocumentFragment();
   let mathStyleString = transformer.environments.mathStyleString;
   let mathScriptString = transformer.environments.mathScriptString;
+  if (element.hasAttribute("prefix")) {
+    transformer.variables.numberPrefix = element.getAttribute("prefix");
+  }
   self.appendElement("style", (self) => {
     self.appendChild(document.createTextNode(mathStyleString, {raw: true}));
   });
