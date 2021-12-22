@@ -1,22 +1,15 @@
 //
 
 import {
-  TemplateManager
-} from "@zenml/zenml";
-import {
   AVENDIA_CONFIGS
 } from "../generator/configs";
-import type {
-  AvendiaDocument
-} from "../generator/dom";
-import type {
-  AvendiaTransformerEnvironments,
-  AvendiaTransformerVariables
+import {
+  AvendiaTemplateManager
 } from "../generator/transformer";
 import TRANSLATIONS from "~/template/translations.json";
 
 
-let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
+let manager = new AvendiaTemplateManager();
 
 manager.registerElementFactory("navigation", (transformer, document, element) => {
   let self = document.createDocumentFragment();

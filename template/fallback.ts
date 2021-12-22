@@ -1,14 +1,7 @@
 //
 
 import {
-  TemplateManager
-} from "@zenml/zenml";
-import type {
-  AvendiaDocument
-} from "../generator/dom";
-import type {
-  AvendiaTransformerEnvironments,
-  AvendiaTransformerVariables
+  AvendiaTemplateManager
 } from "../generator/transformer";
 
 
@@ -16,7 +9,7 @@ const INLINE_TAG_NAMES = ["x", "xn", "a"];
 const PARENT_TRIM_TAG_NAMES = ["li"];
 const PREVIOUS_SIBLING_TRIM_TAG_NAMES = ["label"];
 
-let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
+let manager = new AvendiaTemplateManager();
 
 manager.registerElementRule(true, true, (transformer, document) => {
   return document.createDocumentFragment();

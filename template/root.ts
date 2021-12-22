@@ -1,21 +1,14 @@
 //
 
 import {
-  TemplateManager
-} from "@zenml/zenml";
-import {
   AVENDIA_CONFIGS
 } from "../generator/configs";
-import type {
-  AvendiaDocument
-} from "../generator/dom";
-import type {
-  AvendiaTransformerEnvironments,
-  AvendiaTransformerVariables
+import {
+  AvendiaTemplateManager
 } from "../generator/transformer";
 
 
-let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
+let manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("page", "", (transformer, document, element) => {
   let path = transformer.variables.path;
