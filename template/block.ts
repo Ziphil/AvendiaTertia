@@ -286,7 +286,7 @@ manager.registerElementRule("img", "page", (transformer, document, element, scop
 manager.registerElementRule("table", "page", (transformer, document, element, scope, args) => {
   let self = document.createDocumentFragment();
   self.appendElement("table", (self) => {
-    self.addClassName("table");
+    self.addClassName("normal-table");
     self.appendChild(transformer.apply(element, "page.table"));
   });
   if (!args?.contained) {
@@ -306,7 +306,7 @@ manager.registerElementRule("table", "page", (transformer, document, element, sc
 manager.registerElementRule("caption", "page.table", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("caption", (self) => {
-    self.addClassName("table-caption");
+    self.addClassName("normal-table-caption");
     self.appendChild(transformer.apply(element, "page"));
   });
   return self;
