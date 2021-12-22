@@ -5,7 +5,6 @@ import contentIndexManager from "./content-index";
 import fallbackManager from "./fallback";
 import headerManager from "./header";
 import inlineManager from "./inline";
-import mathManager from "./math";
 import navigationManager from "./navigation";
 import rootManager from "./root";
 
@@ -14,7 +13,6 @@ let managers = [
   rootManager,
   blockManager,
   inlineManager,
-  mathManager,
   contentIndexManager,
   navigationManager,
   headerManager,

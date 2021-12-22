@@ -28,6 +28,22 @@ manager.registerElementRule("use-script", "header", (transformer, document, elem
   return self;
 });
 
+manager.registerElementRule("use-math", "header", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  let mathStyleString = transformer.environments.mathStyleString;
+  let mathScriptString = transformer.environments.mathScriptString;
+  if (element.hasAttribute("prefix")) {
+    transformer.variables.numberPrefix = element.getAttribute("prefix");
+  }
+  self.appendElement("style", (self) => {
+    self.appendChild(document.createTextNode(mathStyleString, {raw: true}));
+  });
+  self.appendElement("script", (self) => {
+    self.appendChild(document.createTextNode(mathScriptString, {raw: true}));
+  });
+  return self;
+});
+
 manager.registerElementRule("base", "header", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("base", (self) => {
