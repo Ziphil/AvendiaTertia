@@ -9,7 +9,7 @@ declare module "~/template/translations.json" {
     title: Translations,
     caption: Translations,
     page: {top: Translations} & {[K in string]?: {[L in string]?: Translations}},
-    math: {proof: Translations} & {[K in string]?: Translations}
+    math: {proof: Translations, equation: Translations} & {[K in string]?: Translations}
   };
 
   let json: TranslationsJson;

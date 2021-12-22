@@ -320,14 +320,14 @@ manager.registerElementRule("thm", "page", (transformer, document, element) => {
   self.appendElement("div", (self) => {
     self.addClassName("theorem");
     self.setBlockType("bordered", "bordered");
-    if (id !== "") {
+    if (element.hasAttribute("id")) {
       self.setAttribute("id", id);
     }
     self.appendElement("span", (self) => {
       self.addClassName("theorem-number-wrapper");
       self.appendElement("span", (self) => {
         self.addClassName("theorem-number");
-        self.appendTextNode(getNumber(transformer, element, "theorem", id));
+        self.appendTextNode(getNumber(transformer, element, "theorem", true, id));
       });
       if (nameElement !== undefined) {
         self.appendElement("span", (self) => {

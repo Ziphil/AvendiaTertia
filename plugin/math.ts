@@ -34,9 +34,14 @@ manager.registerPlugin("mb", new ZoticaZenmlPlugin((builder, tagName, marks, att
   return [self];
 }));
 
-manager.registerPlugin("mark", new SimpleZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
-  let nodes = childrenArgs[0] ?? [];
-  return nodes;
+manager.registerPlugin("mark", new ZoticaZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
+  let self = builder.createDocumentFragment();
+  builder.appendElement(self, "math-mark", (self) => {
+    for (let child of childrenArgs[0] ?? []) {
+      builder.appendChild(self, child);
+    }
+  });
+  return [self];
 }));
 
 manager.registerPlugin("raw", new SimpleZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {

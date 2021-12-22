@@ -2,6 +2,7 @@
 
 import {
   BaseTransformer,
+  LightTransformer,
   NodeLikeOf
 } from "@zenml/zenml";
 import {
@@ -53,15 +54,17 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
     this.variables = {
       path: "",
       language: "ja",
-      number: {theorem: 0},
-      numbers: {theorem: new Map()},
-      namePrefixes: {theorem: new Map()},
+      number: {theorem: 0, equation: 0, bibliography: 0},
+      numbers: {theorem: new Map(), equation: new Map(), bibliography: new Map()},
+      namePrefixes: {theorem: new Map(), equation: new Map(), bibliography: new Map()},
       ...initialVariables
     };
   }
 
 }
 
+
+export type AvendiaLightTransformer = LightTransformer<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>;
 
 export type AvendiaTransformerEnvironments = {
   mathStyleString: string,
@@ -77,8 +80,8 @@ export type AvendiaTransformerVariables = {
   latest?: boolean,
   navigationNode?: NodeLikeOf<AvendiaDocument>,
   headerNode?: NodeLikeOf<AvendiaDocument>,
-  number: {theorem: number},
-  numbers: {theorem: Map<string, number>},
-  namePrefixes: {theorem: Map<string, string>},
+  number: {theorem: number, equation: number, bibliography: number},
+  numbers: {theorem: Map<string, number>, equation: Map<string, number>, bibliography: Map<string, number>},
+  namePrefixes: {theorem: Map<string, string | null>, equation: Map<string, string | null>, bibliography: Map<string, string | null>},
   numberPrefix?: string
 };

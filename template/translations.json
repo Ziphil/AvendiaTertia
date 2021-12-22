@@ -48,6 +48,7 @@
     "lem": {"ja": "補題", "en": "Lemma"},
     "cor": {"ja": "系", "en": "Corollary"},
     "axm": {"ja": "公理", "en": "Axiom"},
-    "proof": {"ja": "証明", "en": "Proof"}
+    "proof": {"ja": "証明", "en": "Proof"},
+    "equation": {"ja": "式", "en": "Formula"}
   }
 }
