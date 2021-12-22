@@ -11,7 +11,7 @@ import type {
   AvendiaTransformerVariables
 } from "../generator/transformer";
 import {
-  MathReferenceType,
+  ReferenceType,
   getNumber,
   setNumber
 } from "./util";
@@ -200,7 +200,7 @@ manager.registerElementRule("ref", "page", (transformer, document, element, scop
   let self = document.createDocumentFragment();
   let referenceId = element.getAttribute("ref");
   let rawType = element.getAttribute("type");
-  let type = (rawType === "thm") ? "theorem" : (rawType === "eq") ? "equation" : "bibliography" as MathReferenceType;
+  let type = (rawType === "thm") ? "theorem" : (rawType === "eq") ? "equation" : "bibliography" as ReferenceType;
   let noLink = element.hasAttribute("nolink") || rawType !== "thm";
   let tagName = (noLink) ? "span" : "a";
   self.appendElement(tagName, (self) => {

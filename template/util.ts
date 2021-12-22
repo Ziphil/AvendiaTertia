@@ -6,26 +6,13 @@ import type {
 import TRANSLATIONS from "~/template/translations.json";
 
 
-export function createNamePrefix(transformer: AvendiaLightTransformer, element: Element, type: "theorem" | "equation" | "bibliography"): string | null {
-  if (type === "theorem") {
-    let theoremType = element.getAttribute("type");
-    let prefix = TRANSLATIONS.math[theoremType]?.[transformer.variables.language] ?? null;
-    return prefix;
-  } else if (type === "equation") {
-    let prefix = TRANSLATIONS.math.equation[transformer.variables.language] ?? null;
-    return prefix;
-  } else {
-    return null;
-  }
-}
-
-export function setNumber(transformer: AvendiaLightTransformer, element: Element, type: "theorem" | "equation" | "bibliography", id: string): void {
+export function setNumber(transformer: AvendiaLightTransformer, element: Element, type: ReferenceType, id: string): void {
   transformer.variables.number[type] ++;
   transformer.variables.numbers[type].set(id, transformer.variables.number[type]);
   transformer.variables.namePrefixes[type].set(id, createNamePrefix(transformer, element, type));
 }
 
-export function getNumber(transformer: AvendiaLightTransformer, element: Element, type: "theorem" | "equation" | "bibliography", clever: boolean, id: string): string {
+export function getNumber(transformer: AvendiaLightTransformer, element: Element, type: ReferenceType, clever: boolean, id: string): string {
   let getNumberSpec = function (): [string, string | null, string | null] {
     if (transformer.variables.numbers[type].has(id)) {
       let number = transformer.variables.numbers[type].get(id)!.toString();
@@ -67,4 +54,17 @@ export function getNumber(transformer: AvendiaLightTransformer, element: Element
   return string;
 }
 
-export type MathReferenceType = "theorem" | "equation" | "bibliography";
+function createNamePrefix(transformer: AvendiaLightTransformer, element: Element, type: ReferenceType): string | null {
+  if (type === "theorem") {
+    let theoremType = element.getAttribute("type");
+    let prefix = TRANSLATIONS.math[theoremType]?.[transformer.variables.language] ?? null;
+    return prefix;
+  } else if (type === "equation") {
+    let prefix = TRANSLATIONS.math.equation[transformer.variables.language] ?? null;
+    return prefix;
+  } else {
+    return null;
+  }
+}
+
+export type ReferenceType = "theorem" | "equation" | "bibliography";
