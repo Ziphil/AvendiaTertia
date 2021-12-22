@@ -11,6 +11,7 @@ import blockNormalTableManager from "./block/normal-table";
 import blockParagraphManager from "./block/paragraph";
 import blockProgramManager from "./block/program";
 import blockSectionManager from "./block/section";
+import blockSectionTableManager from "./block/section-table";
 import blockSentenceListManager from "./block/sentence-list";
 import blockTranslationListManager from "./block/translation-list";
 import contentIndexManager from "./content-index";
@@ -40,6 +41,7 @@ let managers = [
   blockImageManager,
   blockNormalTableManager,
   blockProgramManager,
+  blockSectionTableManager,
   blockMediaManager,
   blockMathManager,
   inlineBasicManager,

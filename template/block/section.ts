@@ -25,10 +25,10 @@ manager.registerElementRule(["h1", "h2"], "page", (transformer, document, elemen
     });
     if (element.hasAttribute("num")) {
       self.setAttribute("id", element.getAttribute("num"));
-      innerSelf.insertElementHead("span", (self) => {
+      innerSelf.insertHead(document.createElement("span", (self) => {
         self.addClassName(`${className}-number`);
         self.setAttribute("data-number", element.getAttribute("num"));
-      });
+      }));
     }
   });
   return self;

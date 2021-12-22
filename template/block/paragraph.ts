@@ -14,10 +14,10 @@ manager.registerElementRule("p", "page", (transformer, document, element) => {
     self.setBlockType("text", "text");
     self.appendChild(transformer.apply());
     if (element.hasAttribute("num")) {
-      self.insertElementHead("span", (self) => {
+      self.insertHead(document.createElement("span", (self) => {
         self.addClassName("paragraph-number");
         self.setAttribute("data-number", element.getAttribute("num"));
-      });
+      }));
     }
   });
   return self;

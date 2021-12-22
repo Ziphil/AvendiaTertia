@@ -29,10 +29,10 @@ manager.registerElementRule("use-math", "header", (transformer, document, elemen
     transformer.variables.numberPrefix = element.getAttribute("prefix");
   }
   self.appendElement("style", (self) => {
-    self.appendChild(document.createTextNode(mathStyleString, {raw: true}));
+    self.appendChild(document.createTextNode(mathStyleString, (self) => self.options.raw = true));
   });
   self.appendElement("script", (self) => {
-    self.appendChild(document.createTextNode(mathScriptString, {raw: true}));
+    self.appendChild(document.createTextNode(mathScriptString, (self) => self.options.raw = true));
   });
   return self;
 });

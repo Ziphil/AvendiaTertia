@@ -30,10 +30,6 @@ export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocument
     return this.fragment.insertHead(child);
   }
 
-  public insertElementHead(tagName: string, callback?: NodeCallback<AvendiaElement>): AvendiaElement {
-    return this.fragment.insertElementHead(tagName, callback);
-  }
-
 }
 
 
@@ -75,16 +71,16 @@ export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocume
     return this.createElement("");
   }
 
-  public createDocumentFragment(): AvendiaDocumentFragment {
+  protected prepareDocumentFragment(): AvendiaDocumentFragment {
     return new AvendiaDocumentFragment(this);
   }
 
-  public createElement(tagName: string, options?: BaseElementOptions): AvendiaElement {
+  protected prepareElement(tagName: string): AvendiaElement {
     return new AvendiaElement(this, tagName);
   }
 
-  public createTextNode(content: string, options?: BaseTextOptions): AvendiaText {
-    return new AvendiaText(this, content, options);
+  protected prepareTextNode(content: string): AvendiaText {
+    return new AvendiaText(this, content);
   }
 
 }
@@ -114,13 +110,6 @@ export class AvendiaDocumentFragment extends BaseDocumentFragment<AvendiaDocumen
       this.nodes.unshift(this.document.createTextNode(firstSpace));
     }
     return child;
-  }
-
-  public insertElementHead(tagName: string, callback?: NodeCallback<AvendiaElement>): AvendiaElement {
-    let element = this.document.createElement(tagName);
-    callback?.call(this, element);
-    this.insertHead(element);
-    return element;
   }
 
 }
