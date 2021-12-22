@@ -12,7 +12,10 @@ import type {
 } from "../generator/transformer";
 
 
-const INLINE_ELEMENT_NAMES = ["x", "xn", "a"];
+const INLINE_TAG_NAMES = ["x", "xn", "a"];
+const PARENT_TRIM_TAG_NAMES = ["li"];
+const PREVIOUS_SIBLING_TRIM_TAG_NAMES = ["label"];
+
 let manager = new TemplateManager<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>();
 
 manager.registerElementRule(true, "page", (transformer, document, element) => {
@@ -39,15 +42,21 @@ manager.registerTextRule(true, (transformer, document, text) => {
   content = content.replace(/(、|。)\s+(」|』)/g, (match, before, after) => before + after);
   content = content.replace(/(」|』|〉)\s+(、|。|,|\.)/g, (match, before, after) => before + after);
   content = content.replace(/(\(|「|『)\s+(「|『)/g, (match, before, after) => before + after);
-  if (!text.previousSibling?.isElement() || !INLINE_ELEMENT_NAMES.includes(text.previousSibling.tagName)) {
+  if (!text.previousSibling?.isElement() || !INLINE_TAG_NAMES.includes(text.previousSibling.tagName)) {
     content = content.replace(/^\s+(「|『)/g, (match, paren) => paren);
   }
-  if (!text.nextSibling?.isElement() || !INLINE_ELEMENT_NAMES.includes(text.nextSibling.tagName)) {
+  if (!text.nextSibling?.isElement() || !INLINE_TAG_NAMES.includes(text.nextSibling.tagName)) {
     content = content.replace(/(」|』)\s+$/g, (match, paren) => paren);
   }
-  if (text.previousSibling !== null) {
+  if (text.parentNode !== null && text.parentNode.isElement()) {
+    let parent = text.parentNode;
+    if (PARENT_TRIM_TAG_NAMES.includes(parent.tagName) && parent.firstChild === text) {
+      content = content.trimStart();
+    }
+  }
+  if (text.previousSibling !== null && text.previousSibling.isElement()) {
     let previousSibling = text.previousSibling;
-    if (previousSibling.isElement() && previousSibling.tagName === "label") {
+    if (PREVIOUS_SIBLING_TRIM_TAG_NAMES.includes(previousSibling.tagName)) {
       content = content.replace(/^\s+/g, "");
     }
   }
