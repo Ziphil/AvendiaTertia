@@ -246,7 +246,7 @@ manager.registerElementRule("table", "page", (transformer, document, element, sc
   }
 });
 
-manager.registerElementRule("caption", "page.table", (transformer, document, element, scope, args) => {
+manager.registerElementRule("caption", "page.table", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("caption", (self) => {
     self.addClassName("table-caption");
@@ -255,7 +255,7 @@ manager.registerElementRule("caption", "page.table", (transformer, document, ele
   return self;
 });
 
-manager.registerElementRule("tr", "page.table", (transformer, document, element, scope, args) => {
+manager.registerElementRule("tr", "page.table", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("tr", (self) => {
     self.appendChild(transformer.apply(element, "page.table.tr"));
@@ -263,7 +263,7 @@ manager.registerElementRule("tr", "page.table", (transformer, document, element,
   return self;
 });
 
-manager.registerElementRule(["th", "td"], "page.table.tr", (transformer, document, element, scope, args) => {
+manager.registerElementRule(["th", "td"], "page.table.tr", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     if (element.hasAttribute("row")) {
@@ -277,7 +277,7 @@ manager.registerElementRule(["th", "td"], "page.table.tr", (transformer, documen
   return self;
 });
 
-manager.registerElementRule(["pre", "samp"], "page", (transformer, document, element, scope, args) => {
+manager.registerElementRule(["pre", "samp"], "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   let lineTagName = (element.tagName === "pre") ? "code" : "samp";
   let lines = element.textContent?.split("\n") ?? [];
@@ -307,6 +307,48 @@ manager.registerElementRule(["pre", "samp"], "page", (transformer, document, ele
           });
         }
       });
+    });
+  });
+  return self;
+});
+
+manager.registerElementRule("pdf", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("object", (self) => {
+    self.addClassName("pdf");
+    self.setBlockType("bordered", "bordered");
+    self.setAttribute("data", element.getAttribute("src") + "#view=FitH&amp;statusbar=0&amp;toolbar=0&amp;navpanes=0&amp;messages=0");
+    self.setAttribute("type", "application/pdf");
+  });
+  return self;
+});
+
+manager.registerElementRule("slide", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("div", (self) => {
+    self.addClassName("slide");
+    self.setBlockType("bordered", "bordered");
+    self.appendElement("script", (self) => {
+      self.addClassName("speakerdeck-embed");
+      self.setAttribute("async", "async");
+      self.setAttribute("data-id", element.getAttribute("code"));
+      self.setAttribute("data-ratio", "1.33333333333333");
+      self.setAttribute("src", "http://speakerdeck.com/assets/embed.js");
+    });
+  });
+  return self;
+});
+
+manager.registerElementRule("youtube", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("div", (self) => {
+    self.addClassName("youtube");
+    self.setBlockType("bordered", "bordered");
+    self.appendElement("iframe", (self) => {
+      self.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+      self.setAttribute("allowfullscreen", "allowfullscreen");
+      self.setAttribute("frameborder", "0");
+      self.setAttribute("src", "https://www.youtube.com/embed/" + element.getAttribute("code"));
     });
   });
   return self;
