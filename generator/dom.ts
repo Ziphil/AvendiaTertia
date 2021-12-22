@@ -93,17 +93,24 @@ export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocume
 export class AvendiaDocumentFragment extends BaseDocumentFragment<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
 
   public insertHead<N extends AvendiaElement | AvendiaText>(child: N): N {
-    let firstNode = this.nodes[0];
-    let firstSpace = null as string | null;
-    if (firstNode !== undefined && firstNode instanceof BaseText) {
-      let match = firstNode.content.match(/^\s+/);
-      if (match !== null) {
-        firstNode.content = firstNode.content.replace(/^\s+/, "");
-        firstSpace = match[0];
+    let firstSpace = "";
+    for (let node of this.nodes) {
+      if (node instanceof BaseText) {
+        let match;
+        if ((match = node.content.match(/^\s*$/)) !== null) {
+          firstSpace += match[0];
+          node.content = "";
+        } else if ((match = node.content.match(/^\s+/)) !== null) {
+          firstSpace += match[0];
+          node.content = node.content.replace(/^\s+/, "");
+          break;
+        }
+      } else {
+        break;
       }
     }
     this.nodes.unshift(child);
-    if (firstSpace !== null) {
+    if (firstSpace !== "") {
       this.nodes.unshift(this.document.createTextNode(firstSpace));
     }
     return child;
