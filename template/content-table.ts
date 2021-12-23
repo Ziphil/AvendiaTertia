@@ -10,7 +10,7 @@ let manager = new AvendiaTemplateManager();
 manager.registerElementRule("pb", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
-    self.addClassName("index-container");
+    self.addClassName("content-table");
     self.appendChild(transformer.apply());
   });
   return self;
@@ -19,6 +19,7 @@ manager.registerElementRule("pb", "page", (transformer, document, element) => {
 manager.registerElementRule("hb", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("h1", (self) => {
+    self.addClassName("content-head");
     self.appendChild(transformer.apply());
   });
   return self;
@@ -27,26 +28,23 @@ manager.registerElementRule("hb", "page", (transformer, document, element) => {
 manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("a", (self) => {
-    let annotation = null as string | null;
+    self.addClassName("content-item");
     if (element.tagName === "ab") {
       self.tagName = "a";
-      self.addClassName("index");
     } else if (element.tagName === "abo") {
       self.tagName = "a";
-      self.addClassName("index old");
-      annotation = "old";
+      self.setAttribute("data-era", "old");
     } else if (element.tagName === "aba") {
       self.tagName = "a";
-      self.addClassName("index ancient");
-      annotation = "ancient";
+      self.setAttribute("data-era", "ancient");
     } else if (element.tagName === "abd") {
       self.tagName = "div";
-      self.addClassName("index");
+      self.setAttribute("data-disabled", "");
     }
     if (element.hasAttribute("date")) {
       let date = element.getAttribute("date");
       self.appendElement("span", (self) => {
-        self.addClassName("date");
+        self.addClassName("content-date");
         if (date.match(/^\d+$/)) {
           self.appendElement("span", (self) => {
             self.addClassName("hairia");
@@ -61,13 +59,13 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
       self.setAttribute("href", element.getAttribute("href"));
     }
     self.appendElement("span", (self) => {
-      self.addClassName("content");
+      self.addClassName("content-title");
       self.appendChild(transformer.apply());
     });
-    if (annotation !== null) {
+    if (self.getAttribute("data-era") !== null) {
       self.appendElement("span", (self) => {
-        self.addClassName("annotation");
-        self.appendTextNode(annotation!);
+        self.addClassName("content-era");
+        self.setAttribute("data-era", self.getAttribute("data-era")!);
       });
     }
   });
