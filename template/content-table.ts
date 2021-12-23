@@ -43,7 +43,7 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
     }
     if (element.hasAttribute("date")) {
       let date = element.getAttribute("date");
-      self.appendElement("span", (self) => {
+      self.appendElement("div", (self) => {
         self.addClassName("content-date");
         if (date.match(/^\d+$/)) {
           self.appendElement("span", (self) => {
@@ -58,12 +58,12 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
     if (element.hasAttribute("href")) {
       self.setAttribute("href", element.getAttribute("href"));
     }
-    self.appendElement("span", (self) => {
+    self.appendElement("div", (self) => {
       self.addClassName("content-title");
       self.appendChild(transformer.apply());
     });
     if (self.getAttribute("data-era") !== null) {
-      self.appendElement("span", (self) => {
+      self.appendElement("div", (self) => {
         self.addClassName("content-era");
         self.setAttribute("data-era", self.getAttribute("data-era")!);
       });
