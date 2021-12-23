@@ -16,3 +16,11 @@ declare module "~/template/translations.json" {
   export default json;
 
 }
+
+
+declare module "*.html" {
+
+  let html: string;
+  export default html;
+
+}
