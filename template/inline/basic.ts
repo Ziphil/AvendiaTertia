@@ -62,6 +62,20 @@ manager.registerElementRule("h", ["page", "page.section-table"], (transformer, d
   return self;
 });
 
+manager.registerElementRule("ch", ["page", "page.section-table"], (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  if (element.hasAttribute("c")) {
+    let codePoint = parseInt(element.getAttribute("c"), 16);
+    self.appendTextNode(String.fromCodePoint(codePoint));
+  } else if (element.hasAttribute("n")) {
+    let query = element.getAttribute("n");
+    if (query === "nbsp") {
+      self.appendTextNode(String.fromCodePoint(0xA0));
+    }
+  }
+  return self;
+});
+
 manager.registerElementRule("fl", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
