@@ -15,7 +15,7 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   let language = transformer.variables.language;
   let splitRelativePath = AVENDIA_CONFIGS.getSplitRelativeDocumentPath(path, language);
   let depth = splitRelativePath.length - 1;
-  let articleType = (depth >= 1 && depth <= 2 && path.match(/index\.zml$/)) ? "content-table" : "main";
+  let mainClassName = (depth >= 1 && depth <= 2 && path.match(/index\.zml$/)) ? "content-table-main" : "main";
   let navigationNode = document.createDocumentFragment();
   let headerNode = document.createDocumentFragment();
   let mainNode = document.createDocumentFragment();
@@ -23,8 +23,10 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   navigationNode.appendChild(transformer.call("navigation", element));
   navigationNode.appendChild(transformer.apply(element, "navigation"));
   headerNode.appendChild(transformer.apply(element, "header"));
-  mainNode.appendChild(transformer.apply(element, "page"));
-  transformer.variables.articleType = articleType;
+  mainNode.appendElement("article", (self) => {
+    self.addClassName(mainClassName);
+    self.appendChild(transformer.apply(element, "page"));
+  });
   transformer.variables.navigationNode = navigationNode;
   transformer.variables.headerNode = headerNode;
   return mainNode;
