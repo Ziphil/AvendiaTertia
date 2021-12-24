@@ -17,6 +17,7 @@ import blockTranslationListManager from "./block/translation-list";
 import contentTableManager from "./content-table";
 import fallbackManager from "./fallback";
 import headerManager from "./header";
+import htmlManager from "./html";
 import inlineBasicManager from "./inline/basic";
 import inlineGreekManager from "./inline/greek";
 import inlineLinkManager from "./inline/link";
@@ -48,6 +49,7 @@ let managers = [
   inlineLinkManager,
   inlineGreekManager,
   inlineMathManager,
+  htmlManager,
   fallbackManager
 ];
 

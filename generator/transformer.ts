@@ -32,15 +32,21 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
 
   public transformFinalize(...[input, configs]: Parameters<typeof this.transform>): string {
     let document = this.transform(input, configs);
-    let view = {
-      environments: this.environments,
-      variables: this.variables,
-      configs: AVENDIA_CONFIGS,
-      translations: TRANSLATIONS,
-      document
-    };
-    let output = this.template(view);
-    return output;
+    if (this.variables.mode === "page") {
+      let view = {
+        environments: this.environments,
+        variables: this.variables,
+        configs: AVENDIA_CONFIGS,
+        translations: TRANSLATIONS,
+        document
+      };
+      let output = this.template(view);
+      return output;
+    } else {
+      document.options.includeDeclaration = true;
+      let output = document.toString();
+      return output;
+    }
   }
 
   protected resetEnvironments(initialEnvironments?: Partial<AvendiaTransformerEnvironments>): void {
@@ -80,6 +86,7 @@ export type AvendiaTransformerVariables = {
   path: string,
   language: AvendiaOutputLanguage,
   foreignLanguage?: AvendiaOutputLanguage,
+  mode?: "page" | "html",
   title?: string,
   pageTitle?: string,
   latest?: boolean,

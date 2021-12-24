@@ -20,6 +20,7 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   let headerNode = document.createDocumentFragment();
   let mainNode = document.createDocumentFragment();
   transformer.variables.foreignLanguage = (language === "ja") ? "en" : "ja";
+  transformer.variables.mode = "page";
   navigationNode.appendChild(transformer.call("navigation", element));
   navigationNode.appendChild(transformer.apply(element, "navigation"));
   headerNode.appendChild(transformer.apply(element, "header"));
@@ -30,6 +31,17 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   transformer.variables.navigationNode = navigationNode;
   transformer.variables.headerNode = headerNode;
   return mainNode;
+});
+
+manager.registerElementRule("html", "", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  let language = transformer.variables.language;
+  transformer.variables.mode = "html";
+  self.appendElement("html", (self) => {
+    self.setAttribute("lang", language);
+    self.appendChild(transformer.apply(element, "html"));
+  });
+  return self;
 });
 
 export default manager;
