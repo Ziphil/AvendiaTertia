@@ -33,7 +33,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       self.appendChild(document.createBreadcrumbItem(2, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
         linkSelf.setAttribute("href", "/" + firstCategory);
-        nameSelf.appendTextNode(TRANSLATIONS.page[firstCategory]!["index"]![language]);
+        nameSelf.appendTextNode(TRANSLATIONS.page[firstCategory]!.index![language]);
       }));
     }
     if (virtualDepth >= 1) {
