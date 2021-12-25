@@ -22,24 +22,24 @@ manager.registerElementRule("page", "history", (transformer, document, element) 
   self.appendElement("ul", (self) => {
     self.addClassName("navigation-list");
     if (virtualDepth >= -1) {
-      self.appendElement("li", (itemSelf) => {
-        itemSelf.addClassName("navigation-item");
-        itemSelf.appendTextNode(TRANSLATIONS.page.top[language]);
+      self.appendElement("li", (self) => {
+        self.addClassName("navigation-item");
+        self.appendTextNode(TRANSLATIONS.page.top[language]);
       });
     }
     if (virtualDepth >= 0) {
       let firstCategory = splitRelativePath[0];
-      self.appendElement("li", (itemSelf) => {
-        itemSelf.addClassName("navigation-item");
-        itemSelf.appendTextNode(TRANSLATIONS.page[firstCategory]!.index![language]);
+      self.appendElement("li", (self) => {
+        self.addClassName("navigation-item");
+        self.appendTextNode(TRANSLATIONS.page[firstCategory]!.index![language]);
       });
     }
     if (virtualDepth >= 1) {
       let firstCategory = splitRelativePath[0];
       let secondCategory = splitRelativePath[1];
-      self.appendElement("li", (itemSelf) => {
-        itemSelf.addClassName("navigation-item");
-        itemSelf.appendTextNode(TRANSLATIONS.page[firstCategory]![secondCategory]![language]);
+      self.appendElement("li", (self) => {
+        self.addClassName("navigation-item");
+        self.appendTextNode(TRANSLATIONS.page[firstCategory]![secondCategory]![language]);
       });
     }
     if (virtualDepth >= 2) {
@@ -47,12 +47,12 @@ manager.registerElementRule("page", "history", (transformer, document, element) 
       let nameElement = element.getChildElements("name")[0];
       if (nameElement !== undefined) {
         title = nameElement.textContent ?? title;
-        self.appendElement("li", (itemSelf) => {
-          itemSelf.addClassName("navigation-item");
-          self.appendElement("a", (linkSelf) => {
-            linkSelf.addClassName("navigation-link");
-            linkSelf.setAttribute("href", convertedPath);
-            linkSelf.appendChild(transformer.apply(nameElement!, "page"));
+        self.appendElement("li", (self) => {
+          self.addClassName("navigation-item");
+          self.appendElement("a", (self) => {
+            self.addClassName("navigation-link");
+            self.setAttribute("href", convertedPath);
+            self.appendChild(transformer.apply(nameElement!, "page"));
           });
         });
       }
