@@ -47,6 +47,14 @@ export class AvendiaConfigs {
     return this.json.remoteDirPath[language];
   }
 
+  public getLogPath(language: AvendiaOutputLanguage): string {
+    return this.json.logPath[language];
+  }
+
+  public getErrorLogPath(): string {
+    return this.json.logPath.error;
+  }
+
   public findDocumentLanguage(path: string): AvendiaLanguage | null {
     for (let [language, dirPath] of Object.entries(this.json.documentDirPath)) {
       let relative = pathUtil.relative(dirPath, path);
