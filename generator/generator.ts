@@ -10,6 +10,7 @@ import chalk from "chalk";
 import chokidar from "chokidar";
 import commandLineArgs from "command-line-args";
 import cssTreeUtil from "css-tree";
+import dayjs from "dayjs";
 import fs from "fs/promises";
 import glob from "glob-promise";
 import pathUtil from "path";
@@ -56,7 +57,7 @@ export class AvendiaGenerator {
     this.transformer = this.createTransformer();
     this.options = options;
     if (options.history) {
-      throw new Error("history mode unimplemented");
+      await this.executeHistory();
     } else if (options.watch) {
       await this.executeWatch();
     } else {
@@ -97,6 +98,15 @@ export class AvendiaGenerator {
     this.printLast();
   }
 
+  private async executeHistory(): Promise<void> {
+    let documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
+    let promises = documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
+      await this.saveHistory(documentPath, documentLanguage);
+    });
+    await Promise.all(promises);
+    this.printLast();
+  }
+
   private async saveNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let intervals = {convert: 0, upload: 0};
     try {
@@ -110,6 +120,17 @@ export class AvendiaGenerator {
     } catch (error) {
       console.error(error);
       this.printNormal(documentPath, documentLanguage, intervals, false);
+    }
+  }
+
+  private async saveHistory(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
+    let intervals = {convert: 0, upload: 0};
+    try {
+      intervals.convert = await AvendiaGenerator.measure(async () => {
+        await this.transformHistory(documentPath, documentLanguage);
+      });
+    } catch (error) {
+      console.error(error);
     }
   }
 
@@ -128,6 +149,18 @@ export class AvendiaGenerator {
     await Promise.all(promises);
   }
 
+  private async transformHistory(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
+    let extension = pathUtil.extname(documentPath).slice(1);
+    if (documentLanguage !== "common") {
+      let outputPath = AVENDIA_CONFIGS.getLogPath(documentLanguage);
+      if (extension === "zml") {
+        await this.transformHistoryZml(documentPath, outputPath, documentLanguage, documentLanguage);
+      } else {
+        throw new Error("unknown extension");
+      }
+    }
+  }
+
   private async transformNormalZml(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
     let initialVariables = {path: documentPath, language: outputLanguage};
     let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
@@ -135,6 +168,19 @@ export class AvendiaGenerator {
     let outputString = this.transformer.transformFinalize(inputDocument, {initialVariables});
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
+  }
+
+  private async transformHistoryZml(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
+    let initialScope = "history";
+    let initialVariables = {path: documentPath, language: outputLanguage};
+    let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
+    let inputDocument = this.parser.tryParse(inputString);
+    let date = dayjs().subtract(6, "hour");
+    let dateString = (outputLanguage === "ja") ? date.format("YYYY/MM/DD") : date.format("DD/MMM/YYYY");
+    let outputString = this.transformer.transform(inputDocument, {initialScope, initialVariables}).toString().trim() + "\n";
+    let finalOutputString = dateString + "; " + outputString;
+    await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
+    await fs.appendFile(outputPath, finalOutputString, {encoding: "utf-8"});
   }
 
   private async transformNormalScss(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {

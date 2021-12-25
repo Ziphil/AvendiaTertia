@@ -16,11 +16,11 @@ manager.registerElementRule("history", ["page", "html"], (transformer, document,
   let language = transformer.variables.language;
   let size = parseInt(element.getAttribute("size"));
   let logPath = AVENDIA_CONFIGS.getLogPath(language);
-  let logEntries = fs.readFileSync(logPath, {encoding: "utf-8"}).split("\n").slice(0, size);
+  let entries = fs.readFileSync(logPath, {encoding: "utf-8"}).trim().split("\n").reverse().slice(0, size);
   self.appendElement("ul", (self) => {
     self.addClassName("history-list");
     self.setBlockType("text", "text");
-    for (let entry of logEntries) {
+    for (let entry of entries) {
       let [dateString, content] = entry.split(/\s*;\s*/, 2);
       self.appendElement("li", (self) => {
         self.addClassName("history-item");
