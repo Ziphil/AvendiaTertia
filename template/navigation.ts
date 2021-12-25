@@ -24,6 +24,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
     if (virtualDepth >= -1) {
       self.appendChild(document.createBreadcrumbItem(1, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
+        linkSelf.addClassName("navigation-link");
         linkSelf.setAttribute("href", "/");
         nameSelf.appendTextNode(TRANSLATIONS.page.top[language]);
       }));
@@ -32,6 +33,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       let firstCategory = splitRelativePath[0];
       self.appendChild(document.createBreadcrumbItem(2, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
+        linkSelf.addClassName("navigation-link");
         linkSelf.setAttribute("href", "/" + firstCategory);
         nameSelf.appendTextNode(TRANSLATIONS.page[firstCategory]!.index![language]);
       }));
@@ -41,6 +43,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       let secondCategory = splitRelativePath[1];
       self.appendChild(document.createBreadcrumbItem(3, (itemSelf, linkSelf, nameSelf) => {
         itemSelf.addClassName("navigation-item");
+        linkSelf.addClassName("navigation-link");
         linkSelf.setAttribute("href", "/" + firstCategory + "/" + secondCategory);
         nameSelf.appendTextNode(TRANSLATIONS.page[firstCategory]![secondCategory]![language]);
       }));
@@ -52,6 +55,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
         title = nameElement.textContent ?? title;
         self.appendChild(document.createBreadcrumbItem(4, (itemSelf, linkSelf, nameSelf) => {
           itemSelf.addClassName("navigation-item");
+          linkSelf.addClassName("navigation-link");
           linkSelf.setAttribute("href", convertedPath);
           nameSelf.appendChild(transformer.apply(nameElement!, "page"));
         }));
