@@ -43,6 +43,8 @@ manager.registerElementRule("page", "history", (transformer, document, element) 
       });
     }
     if (virtualDepth >= 2) {
+      let firstCategory = splitRelativePath[0];
+      let secondCategory = splitRelativePath[1];
       let convertedPath = path.match(/([0-9a-z\-]+)\.zml$/)![1] + ((element.getAttribute("link") === "c") ? ".cgi" : ".html");
       let nameElement = element.getChildElements("name")[0];
       if (nameElement !== undefined) {
@@ -51,7 +53,7 @@ manager.registerElementRule("page", "history", (transformer, document, element) 
           self.addClassName("navigation-item");
           self.appendElement("a", (self) => {
             self.addClassName("navigation-link");
-            self.setAttribute("href", convertedPath);
+            self.setAttribute("href", firstCategory + "/" + secondCategory + "/" + convertedPath);
             self.appendChild(transformer.apply(nameElement!, "page"));
           });
         });
