@@ -70,12 +70,12 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
 manager.registerElementRule("ver", "navigation", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
+    self.addClassName("navigation-version");
     let content = element.textContent;
     if (content === "*" || content?.match(/(5\s*代\s*5\s*期|S\s*代|Version\s*5\.5|Version\s*S)/)) {
-      self.addClassName("version");
       transformer.variables.latest = true;
     } else {
-      self.addClassName("version caution");
+      self.setAttribute("data-caution", "");
     }
     self.appendChild(transformer.apply(element, "page"));
   });
