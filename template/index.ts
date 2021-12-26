@@ -16,6 +16,7 @@ import blockSectionTableManager from "./block/section-table";
 import blockSentenceListManager from "./block/sentence-list";
 import blockTranslationListManager from "./block/translation-list";
 import contentTableManager from "./content-table";
+import errorManager from "./error";
 import fallbackManager from "./fallback";
 import headerManager from "./header";
 import historyManager from "./history";
@@ -33,6 +34,7 @@ let managers = [
   headerManager,
   navigationManager,
   contentTableManager,
+  errorManager,
   blockSectionManager,
   blockParagraphManager,
   blockNormalListManager,
