@@ -12,6 +12,18 @@ export class AvendiaConfigs {
     this.json = json;
   }
 
+  public getServerHost(): string {
+    return this.json.server.host;
+  }
+
+  public getServerUser(): string {
+    return this.json.server.user;
+  }
+
+  public getServerPassword(): string {
+    return this.json.server.password;
+  }
+
   public getRemoteDomain(language: AvendiaOutputLanguage): string {
     return this.json.remoteDomain[language];
   }
@@ -67,6 +79,10 @@ export class AvendiaConfigs {
 
   public replaceDocumentDirPath(documentPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): string {
     return pathUtil.join(this.getOutputDirPath(outputLanguage), pathUtil.relative(this.getDocumentDirPath(documentLanguage), documentPath));
+  }
+
+  public replaceOutputDirPath(outputPath: string, outputLanguage: AvendiaOutputLanguage): string {
+    return pathUtil.join(this.getRemoteDirPath(outputLanguage), pathUtil.relative(this.getOutputDirPath(outputLanguage), outputPath)).replaceAll(pathUtil.sep, "/");
   }
 
 }

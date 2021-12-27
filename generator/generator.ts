@@ -12,6 +12,7 @@ import commandLineArgs from "command-line-args";
 import cssTreeUtil from "css-tree";
 import dayjs from "dayjs";
 import fs from "fs/promises";
+import FtpClient from "ftp";
 import glob from "glob-promise";
 import pathUtil from "path";
 import sass from "sass";
@@ -39,6 +40,7 @@ export class AvendiaGenerator {
 
   private parser!: ZenmlParser;
   private transformer!: AvendiaTransformer;
+  private client!: FtpClient;
   private options!: any;
   private count: number;
 
@@ -55,6 +57,7 @@ export class AvendiaGenerator {
     ]);
     this.parser = this.createParser();
     this.transformer = this.createTransformer();
+    this.client = await this.createClient();
     this.options = options;
     if (options.history) {
       await this.executeHistory();
@@ -63,6 +66,7 @@ export class AvendiaGenerator {
     } else {
       await this.executeNormal();
     }
+    this.client.end();
   }
 
   private async executeNormal(): Promise<void> {
@@ -113,9 +117,11 @@ export class AvendiaGenerator {
       intervals.convert = await AvendiaGenerator.measure(async () => {
         await this.transformNormal(documentPath, documentLanguage);
       });
-      intervals.upload = await AvendiaGenerator.measure(async () => {
-        await this.uploadNormal(documentPath, documentLanguage);
-      });
+      if (this.options.upload) {
+        intervals.upload = await AvendiaGenerator.measure(async () => {
+          await this.uploadNormal(documentPath, documentLanguage);
+        });
+      }
       this.printNormal(documentPath, documentLanguage, intervals, true);
     } catch (error) {
       console.error(error);
@@ -233,6 +239,21 @@ export class AvendiaGenerator {
   }
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
+    let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
+    let promises = outputPathSpecs.map(([outputPath, outputLanguage]) => {
+      let remotePath = AVENDIA_CONFIGS.replaceOutputDirPath(outputPath, outputLanguage);
+      let promise = new Promise<void>((resolve, reject) => {
+        this.client.put(outputPath, remotePath, (error) => {
+          if (error) {
+            reject(error);
+          } else {
+            resolve();
+          }
+        });
+      });
+      return promise;
+    });
+    await Promise.all(promises);
   }
 
   private printNormal(documentPath: string, documentLanguage: AvendiaLanguage, intervals: {convert: number, upload: number}, succeed: boolean): void {
@@ -292,6 +313,24 @@ export class AvendiaGenerator {
       transformer.regsiterTemplateManager(manager);
     }
     return transformer;
+  }
+
+  private async createClient(): Promise<FtpClient> {
+    let client = new FtpClient();
+    let promise = new Promise<FtpClient>((resolve, reject) => {
+      client.connect({
+        host: AVENDIA_CONFIGS.getServerHost(),
+        user: AVENDIA_CONFIGS.getServerUser(),
+        password: AVENDIA_CONFIGS.getServerPassword()
+      });
+      client.on("ready", () => {
+        resolve(client);
+      });
+      client.on("error", (error) => {
+        reject(error);
+      });
+    });
+    return promise;
   }
 
   private async getDocumentPathSpecs(documentPaths: Array<string>): Promise<PathSpecs<AvendiaLanguage>> {
