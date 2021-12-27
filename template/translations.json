@@ -6,7 +6,7 @@
     "top": {"ja": "トップ", "en": "Top"},
     "conlang": {
       "index": {"ja": "シャレイア語", "en": "Shaleian"},
-      "grammer": {"ja": "文法書", "en": "Grammar"},
+      "grammar": {"ja": "文法書", "en": "Grammar"},
       "course": {"ja": "入門書", "en": "Introduction"},
       "database": {"ja": "データベース", "en": "Database"},
       "culture": {"ja": "文化", "en": "Culture"},
