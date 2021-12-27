@@ -2,6 +2,7 @@
 
 import blockDescriptionListManager from "./block/description-list";
 import blockFigureContainerManager from "./block/figure-container";
+import blockFormManager from "./block/form";
 import blockGlossManager from "./block/gloss";
 import blockHistoryManager from "./block/history";
 import blockImageManager from "./block/image";
@@ -46,6 +47,7 @@ let managers = [
   blockImageManager,
   blockNormalTableManager,
   blockProgramManager,
+  blockFormManager,
   blockSectionTableManager,
   blockMediaManager,
   blockHistoryManager,
