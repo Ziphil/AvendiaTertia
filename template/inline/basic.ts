@@ -62,7 +62,7 @@ manager.registerElementRule("h", ["page", "page.section-table"], (transformer, d
   return self;
 });
 
-manager.registerElementRule("ch", ["page", "page.section-table", "html"], (transformer, document, element) => {
+manager.registerElementRule("ch", true, (transformer, document, element) => {
   let self = document.createDocumentFragment();
   if (element.hasAttribute("c")) {
     let codePoint = parseInt(element.getAttribute("c"), 16);

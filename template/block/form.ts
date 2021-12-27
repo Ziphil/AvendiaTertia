@@ -43,7 +43,7 @@ manager.registerElementRule("td", "page.form-table.tr", (transformer, document, 
   return self;
 });
 
-manager.registerElementRule("input", "page", (transformer, document, element) => {
+manager.registerElementRule("input", ["page", "page.form"], (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("input", (self) => {
     self.addClassName("form-input");
@@ -54,12 +54,15 @@ manager.registerElementRule("input", "page", (transformer, document, element) =>
     if (element.hasAttribute("size")) {
       self.setAttribute("size", element.getAttribute("size"));
     }
+    if (element.hasAttribute("width")) {
+      self.setAttribute("style", `width: ${element.getAttribute("width")}em;`)
+    }
     self.appendChild(transformer.apply(element, "page"));
   });
   return self;
 });
 
-manager.registerElementRule("button", "page", (transformer, document, element) => {
+manager.registerElementRule("button", ["page", "page.form"], (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("button", (self) => {
     if (element.hasAttribute("id")) {
