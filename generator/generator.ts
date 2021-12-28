@@ -241,9 +241,8 @@ export class AvendiaGenerator {
   }
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
-    let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
-    let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
-      let remotePath = AVENDIA_CONFIGS.replaceOutputDirPath(outputPath, outputLanguage);
+    let remotePathSpecs = this.getRemotePathSpecs(documentPath, documentLanguage);
+    let promises = remotePathSpecs.map(async ([outputPath, remotePath]) => {
       await this.client.uploadFrom(outputPath, remotePath);
     });
     await Promise.all(promises);
@@ -357,6 +356,15 @@ export class AvendiaGenerator {
       outputPathSpecs.push(getOutputPathSpec(documentLanguage));
     }
     return outputPathSpecs;
+  }
+
+  private getRemotePathSpecs(documentPath: string, documentLanguage: AvendiaLanguage): Array<[string, string]> {
+    let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
+    let remotePathSpecs = outputPathSpecs.map(([outputPath, outputLanguage]) => {
+      let remotePath = AVENDIA_CONFIGS.replaceOutputDirPath(outputPath, outputLanguage);
+      return [outputPath, remotePath] as any;
+    });
+    return remotePathSpecs;
   }
 
   private checkValidDocumentPath(documentPath: string): boolean {
