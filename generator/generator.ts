@@ -126,8 +126,8 @@ export class AvendiaGenerator {
       }
       this.printNormal(documentPath, documentLanguage, intervals, true);
     } catch (error) {
-      console.error(error);
       this.printNormal(documentPath, documentLanguage, intervals, false);
+      await this.logError(documentPath, documentLanguage, error);
     }
   }
 
@@ -138,7 +138,7 @@ export class AvendiaGenerator {
         await this.transformHistory(documentPath, documentLanguage);
       });
     } catch (error) {
-      console.error(error);
+      await this.logError(documentPath, documentLanguage, error);
     }
   }
 
@@ -291,6 +291,20 @@ export class AvendiaGenerator {
       output += " ".repeat(27) + count.toString().padStart(5) + " files";
     }
     console.log(output);
+  }
+
+  private async logError(documentPath: string, documentLanguage: AvendiaLanguage, error: unknown): Promise<void> {
+    let output = ""
+    let logPath = AVENDIA_CONFIGS.getErrorLogPath();
+    output += `[${documentPath}]` + "\n";
+    if (error instanceof Error) {
+      output += error.message.trim() + "\n";
+      output += (error.stack ?? "").trim() + "\n";
+    } else {
+      output += ("" + error).trim() + "\n";
+    }
+    output += "\n";
+    await fs.appendFile(logPath, output, {encoding: "utf-8"});
   }
 
   private createParser(): ZenmlParser {
