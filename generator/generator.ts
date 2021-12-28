@@ -12,7 +12,9 @@ import commandLineArgs from "command-line-args";
 import cssTreeUtil from "css-tree";
 import dayjs from "dayjs";
 import fs from "fs/promises";
-import FtpClient from "ftp";
+import {
+  Client as FtpClient
+} from "basic-ftp";
 import glob from "glob-promise";
 import pathUtil from "path";
 import sass from "sass";
@@ -66,7 +68,7 @@ export class AvendiaGenerator {
     } else {
       await this.executeNormal();
     }
-    this.client.end();
+    this.client.close();
   }
 
   private async executeNormal(): Promise<void> {
@@ -240,18 +242,9 @@ export class AvendiaGenerator {
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
-    let promises = outputPathSpecs.map(([outputPath, outputLanguage]) => {
+    let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       let remotePath = AVENDIA_CONFIGS.replaceOutputDirPath(outputPath, outputLanguage);
-      let promise = new Promise<void>((resolve, reject) => {
-        this.client.put(outputPath, remotePath, (error) => {
-          if (error) {
-            reject(error);
-          } else {
-            resolve();
-          }
-        });
-      });
-      return promise;
+      await this.client.uploadFrom(outputPath, remotePath);
     });
     await Promise.all(promises);
   }
@@ -317,20 +310,12 @@ export class AvendiaGenerator {
 
   private async createClient(): Promise<FtpClient> {
     let client = new FtpClient();
-    let promise = new Promise<FtpClient>((resolve, reject) => {
-      client.connect({
-        host: AVENDIA_CONFIGS.getServerHost(),
-        user: AVENDIA_CONFIGS.getServerUser(),
-        password: AVENDIA_CONFIGS.getServerPassword()
-      });
-      client.on("ready", () => {
-        resolve(client);
-      });
-      client.on("error", (error) => {
-        reject(error);
-      });
+    await client.access({
+      host: AVENDIA_CONFIGS.getServerHost(),
+      user: AVENDIA_CONFIGS.getServerUser(),
+      password: AVENDIA_CONFIGS.getServerPassword()
     });
-    return promise;
+    return client;
   }
 
   private async getDocumentPathSpecs(documentPaths: Array<string>): Promise<PathSpecs<AvendiaLanguage>> {
