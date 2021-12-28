@@ -242,10 +242,13 @@ export class AvendiaGenerator {
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let remotePathSpecs = this.getRemotePathSpecs(documentPath, documentLanguage);
-    let promises = remotePathSpecs.map(async ([outputPath, remotePath]) => {
-      await this.client.uploadFrom(outputPath, remotePath);
-    });
-    await Promise.all(promises);
+    let promise = remotePathSpecs.reduce((promise, [outputPath, remotePath]) => {
+      let nextPromise = promise.then(async () => {
+        await this.client.uploadFrom(outputPath, remotePath)
+      });
+      return nextPromise;
+    }, Promise.resolve());
+    await promise;
   }
 
   private printNormal(documentPath: string, documentLanguage: AvendiaLanguage, intervals: {convert: number, upload: number}, succeed: boolean): void {
