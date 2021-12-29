@@ -28,6 +28,14 @@ manager.registerElementRule("sh", "page.xl.li", (transformer, document, element)
   self.appendElement("dt", (self) => {
     self.addClassName("sentence-item");
     self.appendChild(transformer.apply(element, "page"));
+    if (element.hasAttribute("mark")) {
+      let rawMark = element.getAttribute("mark");
+      let mark = (rawMark === "u") ? "ungrammatical" : "question";
+      self.insertHead(document.createElement("span", (self) => {
+        self.addClassName("sentence-mark");
+        self.setAttribute("data-mark", mark);
+      }));
+    }
   });
   return self;
 });
