@@ -52,7 +52,8 @@ manager.registerElementRule("blank", "page", (transformer, document, element) =>
 manager.registerElementRule("choice", "page.ql.li", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("dd", (self) => {
-    self.addClassName("quiz-choice-nested-item");
+    self.addClassName("quiz-nested-item");
+    self.setAttribute("data-unmarked", "");
     self.appendElement("ul", (self) => {
       self.addClassName("quiz-choice-list");
       self.appendChild(transformer.apply(element, "page.ql.li.choice"));

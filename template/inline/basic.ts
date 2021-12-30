@@ -124,6 +124,15 @@ manager.registerElementRule("red", "page", (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("box", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("box");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("label", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
