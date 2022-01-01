@@ -244,6 +244,7 @@ export class AvendiaGenerator {
     let remotePathSpecs = this.getRemotePathSpecs(documentPath, documentLanguage);
     let promise = remotePathSpecs.reduce((promise, [outputPath, remotePath]) => {
       let nextPromise = promise.then(async () => {
+        await this.createClient();
         await this.client.uploadFrom(outputPath, remotePath)
       });
       return nextPromise;
@@ -325,12 +326,14 @@ export class AvendiaGenerator {
   }
 
   private async createClient(): Promise<FtpClient> {
-    let client = new FtpClient();
-    await client.access({
-      host: AVENDIA_CONFIGS.getServerHost(),
-      user: AVENDIA_CONFIGS.getServerUser(),
-      password: AVENDIA_CONFIGS.getServerPassword()
-    });
+    let client = this.client ?? new FtpClient();
+    if (client.closed) {
+      await client.access({
+        host: AVENDIA_CONFIGS.getServerHost(),
+        user: AVENDIA_CONFIGS.getServerUser(),
+        password: AVENDIA_CONFIGS.getServerPassword(),
+      });
+    }
     return client;
   }
 
