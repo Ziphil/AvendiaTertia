@@ -19,7 +19,21 @@ manager.registerElementRule("ql", "page", (transformer, document, element) => {
 
 manager.registerElementRule("li", "page.ql", (transformer, document, element) => {
   let self = document.createDocumentFragment();
+  let answerElement = element.searchXpath("choice/li[@ans]")[0] as Element;
+  let answerNumber = (answerElement.searchXpath("preceding-sibling::li").length + 1).toString();
   self.appendChild(transformer.apply(element, "page.ql.li"));
+  self.appendChild(document.createElement("dd", (self) => {
+    self.addClassName("quiz-nested-item quiz-answer-item");
+    self.setAttribute("data-unmarked", "");
+    self.appendElement("span", (self) => {
+      self.addClassName("quiz-masked")
+      self.appendElement("span", (self) => {
+        self.addClassName("box");
+        self.appendTextNode(answerNumber);
+      });
+      self.appendChild(transformer.apply(answerElement, "page"));        
+    });
+  }));
   return self;
 });
 
@@ -54,7 +68,7 @@ manager.registerElementRule("choice", "page.ql.li", (transformer, document, elem
   self.appendElement("dd", (self) => {
     self.addClassName("quiz-nested-item");
     self.setAttribute("data-unmarked", "");
-    self.appendElement("ul", (self) => {
+    self.appendElement("ol", (self) => {
       self.addClassName("quiz-choice-list");
       self.appendChild(transformer.apply(element, "page.ql.li.choice"));
     });
