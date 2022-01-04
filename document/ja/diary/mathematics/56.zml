@@ -1,0 +1,123 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<奇妙テンソル積とバイノイダル圏>
+  \use-math|prefix="6"|;
+
+  \h1<日記 (2020 年 7 月 11 日)>
+  \p<
+    \a|href="42.html"|<4 月 16 日>では、バイノイダル圏を定義するために、それぞれの引数について別々に関手的である二項演算子を考えた。
+    このような形の演算について、ちょっとした事実をまとめておこうと思う。
+  >
+  \p<
+    これから考える概念は以下のようなものである。
+    簡単のため、豊穣圏ではなく普通の圏を考えることにする。
+    なお、圏 &m<\scr<A>> から得られる離散圏 (射を恒等射だけにしたもの) を &m<\lvert; \scr<A> \rvert;> で表すことにする。
+  >
+  \thm|type="def",id="binf"|<
+    \p<
+      圏 &m<\scr<A>, \scr<B>, \scr<C>> を考える。
+      2 つの関手 &m<\sb<F><\rm<L>>: \scr<A> \times; \lvert; \scr<B> \rvert; \to; \scr<C>> と &m<\sb<F><\rm<R>>: \lvert; \scr<A> \rvert; \times; \scr<B> \to; \scr<C>> について、任意の &m<\scr<A>> の対象 &m<A> と &m<\scr<B>> の対象 &m<B> に対して &m<\sb<F><\rm<L>> (A, B) = \sb<F><\rm<R>> (A, B)> が成り立っているとする。
+      このとき、組 &m<(\sb<F><\rm<L>>, \sb<F><\rm<R>>)> を\em<バイノイダル関手\fl<binoidal functor>> といい、&m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> で表す。
+    >
+  >
+  \p<
+    ここで &m<\scr<A> \rhombus; \scr<B>> という記号を用いたが、圏 &m<\scr<A>, \scr<B>> から別の圏 &m<\scr<A> \rhombus; \scr<B>> を実際に構成して、通常の意味での関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> が上の意味でのバイノイダル関手に一致するようにすることができる。
+    この圏上の演算は奇妙テンソル積と呼ばれる。
+  >
+  \thm|type="def",id="ften"|<
+    \p<
+      圏 &m<\scr<A>, \scr<B>> を考える。
+      &m<\bfrm<Cat>> において、押し出し
+      &mb<
+        \diag<
+          \v<\lvert; \scr<A> \rvert; \times; \lvert; \scr<B> \rvert;> \v<\lvert; \scr<A> \rvert; \times; \scr<B>> \br;
+          \v<\scr<A> \times; \lvert; \scr<B> \rvert;> \v<\scr<A> \rhombus; \scr<B>>
+          \ar|s="1",e="2",tip="hook"|; \ar|s="1",e="3",tip="hook"|;
+          \ar|s="2",e="4",dash|; \ar|s="3",e="4",dash|;
+        >
+      >
+      によって得られる圏 &m<\scr<A> \rhombus; \scr<B>> を、&m<\scr<A>> と &m<\scr<B>> の\em<奇妙テンソル積\fl<funny tensor product>> という。
+    >
+  >
+  \p<
+    このとき、次が成り立つ。
+  >
+  \thm|type="prp"|<
+    \p<
+      圏 &m<\scr<A>, \scr<B>, \scr<C>> を考える。
+      \ref|type="thm",ref="binf",nolink|; の意味におけるバイノイダル関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> を与えることは、\ref|type="thm",ref="ften",nolink|; の記号における通常の関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> を与えることと同値である。
+    >
+  >
+  \prf<
+    \p<
+      押し出しの普遍性から明らかである。
+    >
+  >
+  \p<
+    このことから、バイノイダル圏は以下のように簡潔に定義することができる。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<D>> の上に関手 &m<\bowtie|ord|;: \scr<D> \rhombus; \scr<D> \to; \scr<D>> が定まっているとき、&m<\scr<D>> を\em<バイノイダル圏\fl<binoidal category>> という。
+    >
+  >
+  \p<
+    ここからは本題とは外れる余談だが、上記で定義した奇妙テンソル積によって &m<\bfrm<Cat>> は対称モノイダル圏になる (単位元は &m<\bfrm<1>>)。
+    実は、これはさらに対称モノイダル閉圏になっている。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<B>, \scr<C>> と関手 &m<F, G: \scr<B> \to; \scr<C>> を考える。
+      &m<\scr<B>> の対象 &m<B> に対して &m<\scr<C>> の射 &m<\sb<`u><B>: FB \to; GB> が単に定まっている族 &m<(\sb<`u><B>) \sb<><B \in; \scr<B>>> を、&m<F> から &m<G> への\em<不自然変換\fl<unnatural transformation>> といい、&m<`u: F \vertraarr; G> で表す。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<B>, \scr<C>> に対し、圏 &m<\bfrm<UNat> (\scr<B>, \scr<C>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<UNat> (\scr<B>, \scr<C>)> の対象は、関手 &m<F: \scr<B> \to; \scr<C>> の全体とする。
+      >
+      \li<
+        &m<\bfrm<UNat> (\scr<B>, \scr<C>)> の 2 つの対象 &m<F, G> の間の射は、不自然変換 &m<`u: F \vertraarr; G> の全体とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      対称モノイダル圏 &m<(\bfrm<Cat>, \rhombus|ord|;)> は閉であり、圏 &m<\scr<B>, \scr<C>> の冪は &m<\bfrm<UNat> (\scr<B>, \scr<C>)> で与えられる。
+      すなわち、任意の圏 &m<\scr<A>, \scr<B>, \scr<C>> に対し、全単射
+      &mb<
+        \sb<\op<Hom>><\bfrm<Cat>> (\scr<A> \rhombus; \scr<B>, \scr<C>) \cong; \sb<\op<Hom>><\bfrm<Cat>> (\scr<A>, \bfrm<UNat> (\scr<B>, \scr<C>))
+      >
+      が全ての変数について自然に成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      容易である。
+    >
+  >
+  \p<
+    通常の直積によって対称モノイダル圏と見なした &m<(\bfrm<Cat>, \times|ord|;)> は閉であるから、これによって豊穣された圏を考えることができるが、&m<(\bfrm<Cat>, \times|ord|;)>-豊穣圏とは 2-圏のことであった。
+    上の命題により、奇妙テンソル積によって対称モノイダル圏と見なした &m<(\bfrm<Cat>, \rhombus|ord|;)> も閉であるから、これによって豊穣された圏も考えることができる。
+    これは 2-圏よりも弱い概念を与え、半双圏と呼ばれることがある。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<(\bfrm<Cat>, \rhombus|ord|;)>-豊穣圏のことを\em<半双圏\fl<sesquicategory>> という。
+    >
+  >
+  \p<
+    半双圏では合成の関手性が失われることになるので、半双圏は通常の 2-圏から 1-射と 2-射の合成の交換則 (例えば\a|href="18.html"|<ここ>の命題 1.8 を参照) を抜いたものと考えることができる。
+    半双圏は項書き換え系のモデルに使われるなどの応用があるらしい。
+  >
+
+>

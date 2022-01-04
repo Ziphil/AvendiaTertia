@@ -1,0 +1,21 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<飾詞>
+  \ver<5 代 4 期>
+
+  \h1<飾詞>
+  \table<
+    \tr<\th<飾詞>\th<意味>\th<由来>>
+    \tr<\td<{la+}>\td<～する人>\td<?>>
+    \tr<\td<{to+}>\td<～する物>\td<?>>
+    \tr<\td<{ve+}>\td<～する場所>\td<?>>
+    \tr<\td<{do+}>\td<～ではない>\td<`< {du} の母音変化>>
+    \tr<\td<{de+}>\td<～がない>\td<?>>
+    \tr<\td<{zi+}>\td<～の逆操作>\td<?>>
+    \tr<\td<{+eq}>\td<～するような>\td<`< {deq}>>
+  >
+
+>

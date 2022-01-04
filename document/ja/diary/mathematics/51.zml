@@ -1,0 +1,342 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<基数の定義と基本的な性質>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2020 年 6 月 8 日)>
+  \p<
+    \a|href="50.html"|<6 月 5 日>までの続き。
+    今回からは、基数の話をしていこうと思う。
+  >
+  \p<
+    順序数とは、整列集合の同型類の代表元と見なすことができた。
+    実際、\a|href="47.html#typ"|<定理 1.19> として示したように、任意の整列集合に対してそれと順序同型となるような順序数が一意に存在していた。
+    これと似て、基数とは、(順序が入っているとは限らない) 集合の等濃類の代表元と見なせるようなものである。
+    すなわち、任意の集合に対してそれとの間に全単射をもつような基数が一意に存在する。
+  >
+  \p<
+    まず、集合の間に全単射が存在するという性質に対して、名前と記号を用意しておく。
+  >
+  \thm|type="def"|<
+    \p<
+      集合 &m<X, Y> に対し、全単射 &m<f: X \to; Y> が存在するとき、&m<X> と &m<Y> は\em<等濃\fl<equipotent>> であるといい、&m<X \approx; Y> で表す。
+    >
+  >
+  \p<
+    さて、任意に集合 &m<X> が与えられたとして、それと等濃な基数をどのように対応付ければ良いだろうか。
+    もし &m<X> が整列集合であれば、カノニカルな順序集合であるところの順序数を対応付けることができる。
+    幸い\a|href="50.html#wellthm"|<定理 4.4> によって、&m<X> 上の整列順序は常に存在するので、&m<X> を整列集合と見なすことができ、ある順序数と対応付けることができる。
+    しかし、そのような整列順序は一意とは限らないので、整列順序のとり方によっては異なる順序数が対応してしまうことがあり得る。
+    そこで、&m<X> と対応し得る順序数のうち最小のものを考え、それを &m<X> に対応する基数として定めることにする。
+  >
+  \thm|type="lem"|<
+    \p<
+      集合 &m<X> に対し、順序数 &m<`k> であって、2 条件
+    >
+    \ul<
+      \li<
+        &m<X \approx; `k> が成り立つ。
+      >
+      \li<
+        順序数 &m<`b> が &m<X \approx; `b> を満たすならば、&m<`k \leq; `b> が成り立つ。
+      >
+    >
+    \p<
+      をともに満たすものが一意に存在する。
+      すなわち、&m<X> と等濃な順序数のうち最小のものが存在する。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        \array|align="rcl"|<
+          \c<\scr<F>> \c<\coloneqq;> \c<
+            \set<\op<ord> (X, \preceq|ord|;)><\array|align="l"|<
+              \cc<\preceq|ord|; \in; \frak<P> (X \times; X)>
+              \cc<&raw<&m<\preceq;> は &m<X> 上の整列順序>>
+            >>
+          > \br;
+          \c; \c<=> \c<
+            \set<`j><\array|align="l"|<
+              \cc<&raw<&m<`j> は順序数>>
+              \cc<&raw<&m<X \approx; `j> が成り立つ>>
+            >>
+          >
+        >
+      >
+      とおくと、置換公理図式によってこれは集合である。
+      \a|href="50.html#wellthm"|<定理 4.4> によって、&m<X> 上の整列順序は少なくとも 1 つ存在するから、&m<\scr<F> \neq; \empty;> である。
+      また、&m<\scr<F>> は順序数の大小関係について整列集合である。
+      したがって、&m<`k \coloneqq; \min; \scr<F>> がとれ、明らかにこれが存在を示したかったものである。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      集合 &m<X> に対し、&m<X \approx; `k> を満たすような最小の順序数 &m<`k> を &m<X> の\em<濃度\fl<cardinality>> といい、&m<\lvert; X \rvert;> や &m<\op<card> X> で表す。
+    >
+  >
+  \p<
+    この定義により、間に全単射が存在する 2 つの集合の濃度が等しくなることが分かる。
+    つまり、集合の濃度は、等濃であるという関係に関する同値類の代表元としてふさわしいということである。
+  >
+  \thm|type="thm",id="isocard"|<
+    \p<
+      集合 &m<X, Y> に対し、&m<X \approx; Y> と &m<\lvert; X \rvert; = \rvert; Y \rvert;> は同値である。
+    >
+  >
+  \prf<
+    \p<
+      定義から明らかである。
+    >
+  >
+  \p<
+    基数は、何らかの集合の濃度になっている順序数として定義される。
+    すなわち、基数は順序数の一部である。
+  >
+  \thm|type="def"|<
+    \p<
+      順序数 &m<`k> に対し、ある集合 &m<X> が存在して &m<\lvert; X \rvert; = `k> が成り立つとき、&m<`k> を\em<基数\fl<cardinal>> という。
+    >
+  >
+  \p<
+    与えられた順序数が基数であるかをチェックするための条件をいくつか揃えておこう。
+  >
+  \thm|type="thm",id="cardequiv"|<
+    \p<
+      順序数 &m<`k> に対し、5 条件
+    >
+    \ol<
+      \li<
+        &m<`k> は基数である。
+      >
+      \li<
+        &m<\lvert; `k \rvert; = `k> が成り立つ。
+      >
+      \li<
+        任意の順序数 &m<`b> に対し、&m<`b `< `k> ならば &m<`b `< \lvert; `k \rvert;> が成り立つ。
+      >
+      \li<
+        任意の順序数 &m<`b> に対し、&m<`b `< `k> ならば &m<\lvert; `b \rvert; `< \lvert; `k \rvert;> が成り立つ。
+      >
+      \li<
+        任意の順序数 &m<`b> に対し、&m<`b `< `k> ならば &m<\lvert; `b \rvert; \neq; \lvert; `k \rvert;> が成り立つ。
+      >
+    >
+    \p<
+      は全て互いに同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      基数の定義により、ある集合 &m<X> が存在して &m<\lvert; X \rvert; = `k> が成り立つ。
+      特に &m<X \approx; `k> が成り立つから、\ref|type="thm",ref="isocard"|; を使えば &m<\lvert; X \rvert; = \lvert; `k \rvert;> が得られる。
+      以上により、&m<\lvert; `k \rvert; = `k> が示された。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 3>
+      仮定から明らかである。
+    >
+    \p<
+      \label<条件 3 &m<\raarr;> 条件 4>
+      任意に順序数 &m<`b> をとる。
+      明らかに &m<`b \approx; `b> であるから、&m<\lvert; `b \rvert;> の最小性によって &m<\lvert; `b \rvert; \leq; `b> が成り立つ。
+      仮定から &m<`b `< \lvert; `k \rvert;> であったから、&m<\lvert; `b \rvert; `< \lvert; `k \rvert;> が示された。
+    >
+    \p<
+      \label<条件 4 &m<\raarr;> 条件 5>
+      明らかである。
+    >
+    \p<
+      \label<条件 5 &m<\raarr;> 条件 1>
+      仮定は、任意に順序数 &m<`b> に対して、
+      &mb<
+        `b `< `k \implies; `b \napprox; `k
+      >
+      であると述べている。
+      ところで &m<`k \approx; `k> であるから、上の主張と合わせれば、&m<`k> は &m<`k> 自身と等濃な最小の順序数であることになる。
+      したがって、濃度の定義により &m<\lvert; `k \rvert; = `k> が成り立ち、&m<`k> は基数である。
+    >
+  >
+  \p<
+    次の定理を証明する準備として、順序型をとる操作は包含関係を保存することを示しておこう。
+  >
+  \thm|type="thm",id="ordord"|<
+    \p<
+      整列集合 &m<X, Y> に対し、2 条件
+    >
+    \ul<
+      \li<
+        &m<\op<ord> Y \leq; \op<ord> X> が成り立つ。
+      >
+      \li<
+        狭義単調増加写像 &m<f: Y \to; X> が存在する。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      順序型の定義から、順序同型写像 &m<p: X \to; \op<ord> X> と &m<q: Y \to; \op<ord> Y> がとれる。
+      以降はこれを用いる。
+    >
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      仮定から &m<\op<ord> Y \subseteq; \op<ord> X> であるから、包含写像 &m<i: \op<ord> Y \hookrarr; \op<ord> X> が存在し、これは明らかに狭義単調増加である。
+      &m<\sp<p><-1>> と &m<q> は特に狭義単調増加でもあるから、合成 &m<\sp<p><-1> \circ; i \circ; q: Y \to; X> も狭義単調増加である。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      &m<p> と &m<\sp<q><-1>> は狭義単調増加だから、合成 &m<p \circ; f \circ; \sp<q><-1>: \op<ord> Y \to; \op<ord> X> も狭義単調増加である。
+      ここに\a|href="48.html#incord"|<補題 3.11> を使えば、&m<\op<ord> Y \leq; \op<ord> X> が得られる。
+    >
+  >
+  \p<
+    これと同様の性質が、濃度についても成り立つ。
+  >
+  \thm|type="thm",id="cardord"|<
+    \p<
+      集合 &m<X, Y> に対し、3 条件
+    >
+    \ol<
+      \li<
+        &m<\lvert; Y \rvert; \leq; \lvert; X \rvert;> が成り立つ。
+      >
+      \li<
+        単射 &m<f: Y \to; X> が存在する。
+      >
+      \li<
+        全射 &m<g: X \to; Y> が存在するか、&m<Y = \empty;> である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      濃度の定義から、全単射 &m<p: X \to; \lvert; X \rvert;> と &m<q: Y \to; \lvert; Y \rvert;> がとれる。
+      以降はこれを用いる。
+    >
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 3>
+      &m<Y = \empty;> の場合は条件 3 は明らかに成り立つから、&m<Y \neq; \empty;> の場合を考える。
+      元 &m<y \in; Y> を 1 つとって固定する。
+      仮定から &m<\lvert; Y \rvert; \subseteq; \lvert; X \rvert;> であることに注意して、
+      &mb<
+        \array|align="rrcl"|<
+          \c<g:> \c<X> \c<\longto;> \c<Y> \br;
+          \c; \c<x> \c<\longmapsto;> \c<\case<
+            \c<\sp<q><- 1> (p (x))> \c<(x \in; \sp<p><- 1> `[\lvert; Y \rvert;`])> \br;
+            \c<y> \c<(x \nin; \sp<p><- 1> `[\lvert; Y \rvert;`])> \br;
+          >>
+        >
+      >
+      とおく。
+      すると、
+      &mb<
+        Y = \sp<q><- 1> `[\lvert; Y \rvert;`] = (\sp<q><- 1> \circ; p) `[\sp<p><- 1> `[\lvert; Y \rvert;`]`] = g `[\sp<p><- 1> `[\lvert; Y \rvert;`]`] \subseteq; g `[X`]
+      >
+      が成り立つが、一方で &m<Y \supseteq; g `[X`]> でもあるから、&m<Y = g `[X`]> が得られる。
+      すなわち、&m<g> は全射である。
+    >
+    \p<
+      \label<条件 3 &m<\raarr;> 条件 2>
+      &m<Y = \empty;> の場合は一意な写像 &m<f: \empty; \to; X> が単射であるから、条件 2 が示された。
+      したがって、以下では &m<Y \neq; \empty;> とする。
+      このとき、仮定から全射 &m<g: X \to; Y> がとれる。
+      ここで、&m<`G: \frak<P> (X) \setminus; `{\empty;`} \to; X> を選択関数として、
+      &mb<
+        \array|align="rrcl"|<
+          \c<f:> \c<Y> \c<\longto;> \c<X> \br;
+          \c; \c<y> \c<\longmapsto;> \c<`G (\sp<g><- 1> `{y`})>
+        >
+      >
+      と定めると、これは単射になる。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      仮定から単射 &m<f: Y \to; X> をとる。
+      このとき、&m<p \circ; f: Y \to; \lvert; X \rvert;> も単射である。
+      したがって、これは像への全単射となるから、&m<Y \approx; (p \circ; f) `[Y`]> すなわち &m<\lvert; Y \rvert; = \lvert; (p \circ; f) `[Y`] \rvert;> が成り立つ。
+      これより、
+      &mb<
+        \lvert; Y \rvert; = \lvert; (p \circ; f) `[Y`] \rvert; = \lvert; \op<ord> [] (p \circ; f) `[Y`] \rvert; \leq; \op<ord> [] (p \circ; f) `[Y`]
+      >
+      が得られる。
+      一方で &m<(p \circ; f) `[Y`] \subseteq; \lvert; X \rvert;> であるが、これの包含写像が狭義単調増加であることから、\ref|type="thm",ref="ordord"|; によって、
+      &mb<
+        \op<ord> [] (p \circ; f) `[Y`] \leq; \op<ord> [] \lvert; X \rvert; = \lvert; X \rvert;
+      >
+      も得られる。
+      これらを合わせれば、&m<\lvert; Y \rvert; \leq; \lvert; X \rvert;> が示された。
+    >
+  >
+  \p<
+    この定理からすぐに、以下の Bernstein の定理が従う。
+  >
+  \thm|type="thm"|<
+    \name<Bernstein の定理\fl<—'s theorem>>
+    \p<
+      集合 &m<X, Y> をとる。
+      2 つの単射 &m<f: Y \to; X, g: X \to; Y> が存在するならば、&m<Y \approx; X> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="cardord"|; により、仮定は &m<\lvert; Y \rvert; \leq; \lvert; X \rvert;> かつ &m<\lvert; X \rvert; \leq; \lvert; Y \rvert;> が成り立つということである。
+      したがって &m<\lvert; Y \rvert; = \lvert; X \rvert;> であるから、&m<Y \approx; X> が得られた。
+    >
+  >
+  \p<
+    最後に、すでに知っている基数からそれより真に大きい基数を構成するための、以下の Cantor の定理を証明する。
+  >
+  \thm|type="thm"|<
+    \name<Cantor の定理\fl<—'s theorem>>
+    \p<
+      集合 &m<X> に対し、&m<\lvert; X \rvert; `< \lvert; \frak<P> (X) \rvert;> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      まず、写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<f:> \c<X> \c<\longto;> \c<\frak<P> (X)> \br;
+          \c; \c<x> \c<\longmapsto;> \c<`{x`}>
+        >
+      >
+      は明らかに単射だから、\ref|type="thm",ref="cardord"|; より &m<\lvert; X \rvert; \leq; \lvert; \frak<P> (X) \rvert;> が成り立つ。
+      したがって、あとは &m<\lvert; X \rvert; \neq; \lvert; \frak<P> (X) \rvert;> であることを示せば良い。
+    >
+    \p<
+      仮に &m<\lvert; X \rvert; = \lvert; \frak<P> (X) \rvert;> であるとすると、全単射 &m<f: X \to; \frak<P> (X)> が存在する。
+      そこで、
+      &mb<
+        Y \coloneqq; `{x \in; X \mid; x \nin; f (x)`} \subseteq; X
+      >
+      とおく。
+      もし &m<Y \in; \op<Im> f> であれば、ある &m<x \in; X> が存在して &m<f (x) = Y> が成り立つが、
+      &mb<
+        x \in; Y \iff; x \nin; f (x) \iff; x \nin; Y
+      >
+      が成り立ってしまうため、矛盾である。
+      これより、&m<Y \nin; \op<Im> f> であるから &m<f> は全射ではなく、したがって &m<f> は全単射でもない。
+      以上により、&m<\lvert; X \rvert; \neq; \lvert; \frak<P> (X) \rvert;> が示された。
+    >
+  >
+  \p<
+    次回は、基数の具体例として、自然数と自然数全体の集合が基数になることを示し、アレフ数とベート数を定義する。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="stw"|<K. Ciesielski (1997)『Set Theory for the Working Mathematician』Cambridge University Press>
+ >
+
+>

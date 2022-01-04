@@ -1,0 +1,355 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<アロー ＋ 適用計算>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2020 年 5 月 12 日)>
+  \p<
+    \a|href="44.html"|<4 月 18 日>までのアローに関する日記の続き。
+    これまでは、Haskell に定まったいるアローを形式化し、それに対応する圏論的構造を模索するという内容で、最終的に豊穣 Freyd 圏に辿り着いた。
+    ここからは、アローにさらなる構造を加えたシステムを取り上げ、その付加的構造に対応する圏論的構造を模索することを考える。
+    まずは、アローを値に適用するという操作そのものをアローとして扱うことを許したシステムを考える。
+  >
+  \p<
+    今回扱うのは、以下の型システムである。
+  >
+  \thm|type="def"|<
+    \p<
+      型システム &m<\bfrm<ArrowApply>> を &m<\bfrm<Arrow>> の拡張として以下のように定める。
+      まず、型については拡張せず、項 &m<M> について、
+      &mb<
+        \array|align="rcl"|<
+          \c<M> \c<\ccoloneqq;> \c<\cdots; \mid; \tt<app>> 
+        >
+      >
+      と拡張する。
+      次に、項の型割り当ての推論規則に、
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \tree<
+              \infr|n="0"|<\vdash; \srel; \tt<app>: `[`[A, B`] \times; A, B`]>
+            >
+          >
+        >
+      >
+      を追加する。
+      最後に、同じ型を割り当てられた項の間の等号に、
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;))) \gggt|bin|; \tt<app>> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> g. \sfun; F \gggt|bin|; g)) \gggt|bin|; \tt<app>> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt<app>> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> f. \sfun; f \gggt|bin|; G)) \gggt|bin|; \tt<app>> \c<=> \c<\tt<app> \gggt|bin|; G> \br;
+        >
+      >
+      を追加し、合同関係になるように拡張する。
+    >
+  >
+  \p<
+    これは Haskell での定義をそのまま写し取ったものであるが、実は同値な体系を別の方法で定式化することもできる。
+    それを示すのが、次の補題と命題である。
+  >
+  \thm|type="lem",id="shnat"|<
+    \p<
+      型システム &m<\bfrm<Arrow>> において、型多相な閉じた項 &m<\rm<sharp>> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<\rm<sharp>> \c<:> \c<`[A \times; B, C`] \buharprarr; (A \buharprarr; `[B, C`])> \br;
+          \c; \c<\equiv;> \c<\rm<`l> h. \sfun; \rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; h>
+        >
+      >
+      によって定めると、これは全ての型変数に関して自然である。
+      すなわち、3 種類の等式
+      &mb<
+        \array|align="rcl"|<
+          \c<\rm|fun|<sharp> (\tt|fun|<first> (\tt|fun|<arr> M) \gggt|bin|; H)> \c<=> \c<M \rhd|bin|; \rm|fun|<sharp> H> \br;
+          \c<\rm|fun|<sharp> (\tt|fun|<second> F \gggt|bin|; H)> \c<=> \c<\rm<`l> a. \sfun; F \gggt|bin|; \rm|fun|<sharp> H \sfun; a> \br;
+          \c<\rm|fun|<sharp> (H \gggt|bin|; G)> \c<=> \c<\rm<`l> a. \sfun; \rm|fun|<sharp> H \sfun; a \gggt|bin|; G>
+        >
+      >
+      が全て成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      省略する。
+    >
+  >
+  \thm|type="prp",id="equiv"|<
+    \p<
+      型システム &m<\bfrm<Arrow>> において、2 条件
+    >
+    \ol<
+      \li<
+        型多相な閉じた項 &m<\rm<app>: `[`[A, B`] \times; A, B`]> であって、3 種類の等式
+        &mb<
+          \array|align="rcl"|<
+            \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;))) \gggt|bin|; \rm<app>> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+            \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> g. \sfun; F \gggt|bin|; g)) \gggt|bin|; \rm<app>> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \rm<app>> \br;
+            \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> f. \sfun; f \gggt|bin|; G)) \gggt|bin|; \rm<app>> \c<=> \c<\rm<app> \gggt|bin|; G> \br;
+          >
+        >
+        を全て満たすものが存在する。
+      >
+      \li<
+        型多相な閉じた項 &m<\rm<flat>: (A \buharprarr; `[B, C`]) \buharprarr; `[A \times; B, C`]> であって、&m<\rm<sharp>> の逆関数となっているものが存在する。
+        すなわち、2 種類の等式
+        &mb<
+          \array|align="rcl"|<
+            \c<\rm|fun|<flat> (\rm|fun|<sharp> H)> \c<=> \c<H> \br;
+            \c<\rm|fun|<sharp> (\rm|fun|<flat> M)> \c<=> \c<M>
+          >
+        >
+        が全て満たされる。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \p<
+    これにより、アローの適用を行うアローの構造を加えた &m<\bfrm<ArrowApply>> を定義するにあたって、最初に行ったように 3 つの等式を満たす &m<\tt<app>> をプリミティブな演算として入れても良いし、上の定理中の 2 つの等式を満たす &m<\tt<flat>> をプリミティブな演算として入れても良いことになる。
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      まず、
+      &mb<
+        \array|align="rcl"|<
+          \c<\rm<flat>> \c<:> \c<(A \buharprarr; `[B, C`]) \buharprarr; `[A \times; B, C`]> \br;
+          \c; \c<\equiv;> \c<\rm<`l> m. \sfun; \tt|fun|<first> (\tt|fun|<arr> m) \gggt|bin|; \rm<app>>
+        >
+      >
+      とおく。
+      これが条件 2 にある 2 つの等式を満たすことを示す。
+    >
+    \p<
+      1 つ目の等式を示す。
+      まず、
+      &mb<
+        &mark<\sb<\wheart;><1>>
+        \array|align="cl"|<
+          \c; \c<\rm|fun|<flat> (\rm|fun|<sharp> H)> \br;
+          \c<[] => \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; H)) \gggt|bin|; \rm<app>>
+        >
+      >
+      である。
+      ここで、
+      &mb<
+        \array|align="cl"|<
+          \c; \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; H> \br;
+          \c<[] => \c<(\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;)) \rhd|bin|; (\rm<`l> f. \sfun; f \gggt|bin|; H)>
+        >
+      >
+      であるから、
+      &mb<
+        &mark<\sb<\wheart;><2>>
+        \array|align="cl"|<
+          \c; \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; H)) \gggt|bin|; \rm<app>> \br;
+          \c<[] => \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;)) \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> f. \sfun; f \gggt|bin|; H)) \gggt|bin|; \rm<app>> \br;
+          \c<[] => \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;)) \gggt|bin|; \rm<app> \gggt|bin|; H> \br;
+          \c<[] => \c<\tt|fun|<arr> \rm<id> \gggt|bin|; H> \br;
+          \c<[] => \c<H>
+        >
+      >
+      が成り立つ。
+      式 &m<\sb<\wheart;><1>, \sb<\wheart;><2>> を合わせれば、導きたかった式が得られる。
+    >
+    \p<
+      2 つ目の等式を示す。
+      まず、
+      &mb<
+        &mark<\sb<\wspade;><1>>
+        \array|align="cl"|<
+          \c; \c<\rm|fun|<sharp> (\rm|fun|<flat> M)> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> M) \gggt|bin|; \rm<app>> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; \tt|fun|<arr> (M \times; \rm<id>) \gggt|bin|; \rm<app>> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> ((\rm<`l> b. \sfun; \langle; a, b \rangle;) \rhd|bin|; (M \times; \rm<id>)) \gggt|bin|; \rm<app>> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; M a, b \rangle;) \gggt|bin|; \rm<app>>
+        >
+      >
+      が成り立つ。
+      さて、
+      &mb<
+        \rm<lu> \equiv; \rm<`l> b'. \sfun; \langle; \star|ord|;, b' \rangle;
+      >
+      とおくと、&m<\rm<lu>> と &m<\rm<snd>> は互いに逆関数になっているから、
+      &mb<
+        \array|align="cl"|<
+          \c; \c<\rm<`l> b. \sfun; \langle; M a, b \rangle;> \br;
+          \c<[] => \c<\rm<`l> b. \sfun; \langle; \tt|fun|<arr> \rm<lu> \gggt|bin|; \tt|fun|<arr> \rm<snd> \gggt|bin|; M a, b \rangle;> \br;
+          \c<[] => \c<(\rm<`l> b. \sfun; \langle; \tt|fun|<arr> \rm<lu>, b \rangle;) \rhd|bin|; ((\rm<`l> f. \sfun; f \gggt|bin|; \tt|fun|<arr> \rm<snd> \gggt|bin|; M a) \times; \rm<id>)>
+        > 
+      >
+      が成り立つ。
+      したがって、
+      &mb<
+        G \equiv; \tt|fun|<arr> \rm<snd> \gggt|bin|; M a
+      >
+      とおけば、
+      &mb<
+        &mark<\sb<\wspade;><2>>
+        \array|align="cl"|<
+          \c; \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; M a, b \rangle;) \gggt|bin|; \rm<app>> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; \tt|fun|<arr> \rm<lu>, b \rangle;) \gggt|bin|; \tt|fun|<arr> ((\rm<`l> f. \sfun; f \gggt|bin|; G) \times; \rm<id>) \gggt|bin|; \rm<app>> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; \tt|fun|<arr> \rm<lu>, b \rangle;) \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> f. \sfun; f \gggt|bin|; G)) \gggt|bin|; \rm<app>> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; \tt|fun|<arr> \rm<lu>, b \rangle;) \gggt|bin|; \rm<app> \gggt|bin|; G>
+        >
+      >
+      が成り立つ。
+      さらに、
+      &mb<
+        \array|align="cl"|<
+          \c; \c<\rm<`l> b. \sfun; \langle; \tt|fun|<arr> \rm<lu>, b \rangle;> \br;
+          \c<[] => \c<\rm<lu> \rhd|bin|; \rm<snd> \rhd|bin|; (\rm<`l> b. \sfun; \langle; \tt|fun|<arr> \rm<lu>, b \rangle;)> \br;
+          \c<[] => \c<\rm<lu> \rhd|bin|; ((\rm<`l> u. \sfun; \tt|fun|<arr> \rm<lu>) \times; \rm<id>)> \br;
+          \c<[] => \c<\rm<lu> \rhd|bin|; ((\rm<`l> u. \sfun; \tt|fun|<arr> (\rm<`l> b'. \sfun; \langle; \star|ord|;, b' \rangle;)) \times; \rm<id>)> \br;
+          \c<[] => \c<\rm<lu> \rhd|bin|; ((\rm<`l> u. \sfun; \tt|fun|<arr> (\rm<`l> b'. \sfun; \langle; u, b' \rangle;)) \times; \rm<id>)>
+        >
+      >
+      であるから、
+      &mb<
+        &mark<\sb<\wspade;><3>>
+        \array|align="cl"|<
+          \c; \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; \tt|fun|<arr> \rm<lu>, b \rangle;) \gggt|bin|; \rm<app> \gggt|bin|; G> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> \rm<lu> \gggt|bin|; \tt|fun|<arr> ((\rm<`l> u. \sfun; \tt|fun|<arr> (\rm<`l> b'. \sfun; \langle; u, b' \rangle;)) \times; \rm<id>) \gggt|bin|; \rm<app> \gggt|bin|; G> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> \rm<lu> \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> u. \sfun; \tt|fun|<arr> (\rm<`l> b'. \sfun; \langle; u, b' \rangle;)) \gggt|bin|; \rm<app> \gggt|bin|; G> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> \rm<lu> \gggt|bin|; \tt|fun|<arr> \rm<id> \gggt|bin|; G> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> \rm<lu> \gggt|bin|; G> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> \rm<lu> \gggt|bin|; \tt|fun|<arr> \rm<snd> \gggt|bin|; M a> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; M a> \br;
+          \c<[] => \c<M>
+        >
+      >
+      である。
+      式 &m<\sb<\wspade;><1>, \sb<\wspade;><2>, \sb<\wspade;><3>> を合わせれば、導きたかった式が得られる。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      この場合は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\rm<app>> \c<:> \c<`[`[A, B`] \times; A, B`]> \br;
+          \c; \c<\equiv;> \c<\rm|fun|<flat> \rm<id>>
+        >
+      >
+      とおけば良い。
+      これが条件 1 にある 3 つの等式を満たすことを示す。
+      仮定により &m<\rm<sharp>> は逆関数をもつから、示したい等式の両辺に &m<\rm<sharp>> を適用した等式を示せば良い。
+    >
+    \p<
+      1 つ目の等式を示す。
+      左辺に &m<\rm<sharp>> を適用したものは、
+      &mb<
+        \array|align="rl"|<
+          \c; \c<\rm|fun|<sharp> (\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;))) \gggt|bin|; \rm<app>)> \br;
+          \c<[] => \c<(\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;)) \rhd|bin|; \rm|fun|<sharp> \rm<app>> \br;
+          \c<[] => \c<(\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;)) \rhd|bin|; \rm|fun|<sharp> (\rm|fun|<flat> \rm<id>)> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;)>
+        >
+      >
+      と計算できる。
+      また、右辺に &m<\rm<sharp>> を適用したものは、
+      &mb<
+        \array|align="rl"|<
+          \c; \c<\rm|fun|<sharp> (\tt|fun|<arr> \rm<id>)> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; \tt|fun|<arr> \rm<id>> \br;
+          \c<[] => \c<\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;)>
+        >
+      >
+      と計算できる。
+      両者は一致しているので、これで示された。
+    >
+    \p<
+      2 つ目の等式を示す。
+      左辺に &m<\rm<sharp>> を適用したものは、
+      &mb<
+        \array|align="rl"|<
+          \c; \c<\rm|fun|<sharp> (\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> g. \sfun; F \gggt|bin|; g)) \gggt|bin|; \rm<app>)> \br;
+          \c<[] => \c<(\rm<`l> g. \sfun; F \gggt|bin|; g) \rhd|bin|; \rm|fun|<sharp> \rm<app>> \br;
+          \c<[] => \c<(\rm<`l> g. \sfun; F \gggt|bin|; g) \rhd|bin|; \rm|fun|<sharp> (\rm|fun|<flat> \rm<id>)> \br;
+          \c<[] => \c<\rm<`l> g. \sfun; F \gggt|bin|; g>
+        >
+      >
+      と計算できる。
+      また、右辺に &m<\rm<sharp>> を適用したものは、
+      &mb<
+        \array|align="rl"|<
+          \c; \c<\rm|fun|<sharp> (\tt|fun|<second> F \gggt|bin|; \rm<app>)> \br;
+          \c<[] => \c<\rm<`l> g. \sfun; F \gggt|bin|; \rm|fun|<sharp> \rm<app> \sfun; g> \br;
+          \c<[] => \c<\rm<`l> g. \sfun; F \gggt|bin|; \rm|fun|<sharp> (\rm|fun|<flat> \rm<id>) \sfun; g> \br;
+          \c<[] => \c<\rm<`l> g. \sfun; F \gggt|bin|; g>
+        >
+      >
+      と計算できる。
+      両者は一致しているので、これで示された。
+    >
+    \p<
+      3 つ目の等式も全く同様に示すことができる。
+    >
+  >
+  \p<
+    さて、\a|href="44.html#sc"|<定理 4.3> により、型システム &m<\bfrm<Arrow>> は豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> とちょうど対応することが分かっていた。
+    この対応を用いて、上の命題の条件 2 を圏の言葉で述べると次のようになる。
+    すなわち、&m<\scr<C>> の対象 &m<A, B, C> に対し、
+    &mb<
+      \sb<`f><ABC> = \overline<h: `[A \times; B, C`] \vdash; \rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; h: A \buharprarr; `[B, C`]>
+    >
+    と定めると、これが &m<\scr<C>> で逆射 &m<\sb<`c><ABC>: A \buharprarr; `[B, C`] \to; `[A \times; B, C`]> をもつ。
+    このとき、\ref|type="thm",ref="shnat"|; によって &m<\sb<`f><ABC>> は全ての変数について自然だから、特に &m<\scr<C>> における自然な同型
+    &mb<
+      `[A \times; B, C`] \cong; A \buharprarr; `[B, C`] 
+    >
+    が成り立つことになる。
+    これは、&m<\scr<C>>-豊穣関手 &m<J \text<-> \ltimes; B: \scr<C> \to; \scr<D>> および &m<`[B, \text<->`]: \scr<D> \to; \scr<C>> が &m<\scr<C>>-豊穣随伴を成すということである。
+    この随伴の単位は、
+    &mb<
+      \sb<`h><AB> = \overline<u: 1 \vdash; \rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;): A \buharprarr; `[B, A \times; B`]>
+    >
+    で与えられる。
+    また、随伴の余単位は、証明中で定義した &m<\overline<\rm<app>>> で与えられる。
+  >
+  \p<
+    以上の観察から、次のような圏を考えるのは自然であろう。
+  >
+  \thm|type="def"|<
+    \p<
+      豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> において、&m<\scr<C>>-豊穣関手 &m<J \text<-> \ltimes; B: \scr<C> \to; \scr<D>> および &m<`[B, \text<->`]: \scr<D> \to; \scr<C>> が &m<\scr<C>>-豊穣随伴を成しており、この随伴の単位が上記の &m<`h> で与えられるとする。
+      このとき、&m<(\scr<C>`; \scr<D>, J)> は\em<閉\fl<closed>> であるという。
+    >
+  >
+  \p<
+    そして、これまでの議論から直ちに以下が分かる。
+  >
+  \thm|type="thm"|<
+    \p<
+      &m<\bfrm<ArrowApply>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の閉である豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つための必要十分条件は、&m<\bfrm<ArrowApply>> で &m<M = N> が成り立つことである。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="44.html#sc"|<定理 4.3> と\ref|type="thm",ref="equiv"|; から従う。
+    >
+  >
+  \p<
+    ところで、今回扱った &m<\bfrm<ArrowApply>> の構造はモナドの構造と同値であることが、Lindley–Wadler–Yallop\ref|type="bib",ref="lioa"|; などによって証明されている。
+    型システムとしてのモナドは圏論としては強モナドと対応する (例えば \a|href="40.html"|<4 月 10 日>を参照) ので、これと今回の結果を合わせれば、以下が示せたことになる。
+  >
+  \thm|type="thm"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> 上において、強モナド &m<(\scr<C>`; M, `m, `h, `t)> と豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> の間には 1 対 1 対応が存在する。
+    >
+  >
+  \p<
+    なお、豊穣 Freyd 圏の間の関手を適切に定め、それによって豊穣 Freyd 圏が成す圏を考えれば、上の対応は圏同値に拡張することができる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="awcm"|<R. Atkey (2011)「What is a categorical model of arrows?」『Electronic Notes in Theoretical Computer Science』229:19–37>
+    \li|id="lioa"|<S. Lindley, P. Wadler, J. Yallop (2011)「Idioms are oblivious, arrows are meticulous, monads are promiscuous」『Electronic Notes in Theoretical Computer Science』229:97–117>
+  >
+
+>

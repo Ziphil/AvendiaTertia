@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.greek {
+  position: relative;
+}
+
+.greek-diacritic {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  &[data-position="above"] {
+    top: -0.015em;
+    left: 0.02em;
+  }
+  &[data-position="below"] {
+    left: 0.02em;
+    bottom: 0.075em;
+  }
+}

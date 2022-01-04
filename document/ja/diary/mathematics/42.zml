@@ -1,0 +1,228 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<アローの圏論的意味論 (その 2)>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2020 年 4 月 16 日)>
+  \p<
+    \a|href="41.html"|<4 月 15 日>の続き。
+    前回は、アローの形式化として型システム &m<\bfrm<Arrow>> を定義した。
+    今回は、この型システムに対応する圏として知られている Freyd 圏の定義を行う。
+  >
+  \p<
+    Freyd 圏を定義する準備として、まずはバイノイダル圏と前モノイダル圏を定義する。
+    これらは通常のモノイダル圏の定義を弱めたもので、Power–Robinson\ref|type="bib",ref="ppcn"|; によってプログラミング言語の表示的意味論を記述するために導入されたものである。
+    ここでは、カルテシアン閉圏 &m<\scr<C>> に対して &m<\scr<C>>-豊穣圏の文脈で定義を行う。
+    なお、&m<\scr<C>>-豊穣圏 &m<\scr<D>> の射対象は &m<`[\text<->, \text<->`]> で表す。
+  >
+  \thm|type="def"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> および &m<\scr<C>>-豊穣圏 &m<\scr<D>> を考える。
+      &m<\scr<D>> の対象 &m<A, B> に対し、&m<\scr<C>>-豊穣関手 &m<\text<-> \ltimes; B: \scr<D> \to; \scr<D>> および &m<A \rtimes; \text<->: \scr<D> \to; \scr<D>> がそれぞれ定まっていて、対象について &m<A \ltimes; B = A \rtimes; B> が成り立っているとする。
+      このとき、&m<\scr<D>> を\em<バイノイダル圏\fl<binoidal category>> という。
+    >
+  >
+  \p<
+    バイノイダル圏 &m<\scr<D>> の対象 &m<A, B> に対し、定義より &m<A \ltimes; B> と &m<A \rtimes; B> は等しいので、以降はこれを &m<A \bowtie; B> と書くことにする。
+  >
+  \p<
+    モノイダル圏とバイノイダル圏との違いについて述べておこう。
+    ここでは、簡単のため &m<\scr<C> = \bfrm<Set>> として、一般の豊穣圏ではなく通常の圏を考える。
+    モノイダル圏 &m<\scr<D>> では、演算が 2 変数関手 &m<\bowtie|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> として定まっているので、2 つの射 &m<f: A \to; A', g: B \to; B'> に対して射 &m<f \bowtie; g: A \bowtie; B \to; A' \bowtie; B'> が存在し、可換図式
+    &mb<
+      \diag<
+        \v<A \bowtie; B> \v<A' \bowtie; B> \br;
+        \v<A \bowtie; B'> \v<A' \bowtie; B'>
+        \ar|s="1",e="2"|<f \bowtie; \rm<id>> \ar|s="1",e="3",inv|<\rm<id> \bowtie; g>
+        \ar|s="3",e="4",inv|<f \bowtie; \rm<id>> \ar|s="2",e="4"|<\rm<id> \bowtie; g>
+      >
+    >
+    の共通の合成になっている。
+    しかし、バイモノイダル圏 &m<\scr<D>> では、演算が 2 変数関手として定まっているわけではなく、片方の変数をそれぞれ動かす 2 種類の関手が定まっているだけなので、&m<f \ltimes; \rm<id>> や &m<\rm<id> \rtimes; g> という射しか考えることはできず、変数を同時に動かす &m<f \bowtie; g> という射は必ずしも存在しない。
+    さらに、上の図式も一般には可換にならない。
+  >
+  \p<
+    これは、プログラミング言語の次のような特徴を反映したものであると解釈できる。
+    計算に副作用を許す場合、2 つの計算 &m<f, g> を行う順序を変えると、最終的な結果が異なる可能性がある。
+    例えば、&m<f, g> がともにコンソールにログを出力するような計算である場合、&m<f, g> の順序を逆にして実行すれば、最終的にコンソールに出力されるログも逆になる。
+    したがって、&m<f> を行った後に &m<g> を行う計算 (上の図式では右→下の順での合成に対応する) と &m<g> を行った後に &m<f> を行う計算 (上の図式では下→右の順での合成に対応する) が、必ずしも同一の計算になるとは限らない。
+    バイノイダル圏では、片方の変数のみを動かす関手を 2 つ用意することによって、この特徴を圏論側でも実現したのである。
+  >
+  \p<
+    別の計算との実行順序を変えても全体の計算が変わらないような計算には、特別な名前が付いている。
+  >
+  \thm|type="def"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> および &m<\scr<C>>-豊穣バイノイダル圏 &m<\scr<D>> を考える。
+      &m<\scr<C>> の対象 &m<X> および &m<\scr<D>> の対象 &m<A, A'> に対し、&m<\scr<C>> の射 &m<f: X \to; `[A, A'`]> をとる。
+      任意の &m<\scr<D>> の対象 &m<B, B'> に対し、図式
+      &mb<
+        \array|align="c"|<
+          \cc<\diag|hor="-24"|<
+            \v<X \times; `[B, B'`]> \v; \v<`[B, B'`] \times; X> \br;
+            \v<`[A, A'`] \times; `[B, B'`]> \v; \v<`[B, B'`] \times; `[A, A'`]> \br;
+            \v<`[A \bowtie; B, A' \bowtie; B`] \times; `[A' \bowtie; B, A' \bowtie; B'`]> \v; \v<`[A \bowtie; B, A \bowtie; B'`] \times; `[A \bowtie; B', A' \bowtie; B'`]> \br;
+            \v; \v<`[A \bowtie; B, A' \bowtie; B'`]> \v;
+            \ar|s="1",e="3"|;
+            \ar|s="1",e="4",inv|<f \times; \rm<id>> \ar|s="3",e="6"|<\rm<id> \times; f>
+            \ar|s="4",e="7",inv|<(\text<-> \ltimes; B) \sb<><AA'> \times; (A' \rtimes; \text<->) \sb<><BB'>> \ar|s="6",e="9"|<(A \rtimes; \text<->) \sb<><BB'> \times; (\text<-> \ltimes; B') \sb<><AA'>>
+            \ar|s="7",e="11"|; \ar|s="9",e="11"|;
+          >>
+          \cc<\diag|hor="-24"|<
+            \v<X \times; `[B, B'`]> \v; \v<`[B, B'`] \times; X> \br;
+            \v<`[A, A'`] \times; `[B, B'`]> \v; \v<`[B, B'`] \times; `[A, A'`]> \br;
+            \v<`[B \bowtie; A, B \bowtie; A'`] \times; `[B \bowtie; A', B' \bowtie; A'`]> \v; \v<`[B \bowtie; A, B' \bowtie; A`] \times; `[B' \bowtie; A, B' \bowtie; A'`]> \br;
+            \v; \v<`[B \bowtie; A, B' \bowtie; A'`]> \v;
+            \ar|s="1",e="3"|;
+            \ar|s="1",e="4",inv|<f \times; \rm<id>> \ar|s="3",e="6"|<\rm<id> \times; f>
+            \ar|s="4",e="7",inv|<(B \rtimes; \text<->) \sb<><AA'> \times; (\text<-> \ltimes; A') \sb<><BB'>> \ar|s="6",e="9"|<(\text<-> \ltimes; A) \sb<><BB'> \times; (B' \rtimes; \text<->) \sb<><AA'>>
+            \ar|s="7",e="11"|; \ar|s="9",e="11"|;
+          >>
+        >
+      >
+      がともに可換であるとき、&m<f> は\em<中心的\fl<central>> であるという。
+      なお、水平なラベルのない射は標準的な同型射であり、残りのラベルのない射は合成を表す射である。
+    >
+  >
+  \p<
+    これだけでは少し分かりづらいので、&m<\scr<C> = \bfrm<Set>> かつ &m<X = 1> の場合を考え、通常の圏の言葉で定義を言い直しておこう。
+    まずこの場合は、&m<\bfrm<Set>> の射 &m<f: 1 \to; `[A, A'`]> は &m<\scr<D>> の射 &m<f: A \to; A'> と同一視できる。
+    この同一視のもと、射 &m<f: A \to; A'> が中心的であることは、任意の射 &m<g: B \to; B'> に対して、
+    &mb<
+      \diag<
+        \v<A \bowtie; B> \v<A' \bowtie; B> \br;
+        \v<A \bowtie; B'> \v<A' \bowtie; B'>
+        \ar|s="1",e="2"|<f \ltimes; B> \ar|s="1",e="3",inv|<A \rtimes; g>
+        \ar|s="3",e="4",inv|<f \ltimes; B'> \ar|s="2",e="4"|<A' \rtimes; g>
+      > \qquad;
+      \diag<
+        \v<B \bowtie; A> \v<B \bowtie; A'> \br;
+        \v<B' \bowtie; A> \v<B' \bowtie; A'>
+        \ar|s="1",e="2"|<B \rtimes; f> \ar|s="1",e="3",inv|<g \ltimes; A>
+        \ar|s="3",e="4",inv|<B' \rtimes; f> \ar|s="2",e="4"|<g \ltimes; A'>
+      >
+    >
+    が可換であることと同値になる。
+    これは、定義の前に述べた通り、&m<f> と他の計算は順序を逆に実行しても同じ結果になるということを意味している。
+  >
+  \thm|type="def"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> および &m<\scr<C>>-豊穣バイノイダル圏 &m<\scr<D>> に対し、
+    >
+    \ul<
+      \li<
+        &m<\scr<D>> の対象 &m<\top;> が定まっている。
+      >
+      \li<
+        各対象 &m<A, B, C> に対して、中心的な 4 種類の &m<\scr<C>> の射
+        &mb<
+          \array|align="rrcl"|<
+            \c<\sb<`a><ABC>:> \c<1> \c<\to;> \c<`[(A \bowtie; B) \bowtie; C, A \bowtie; (B \bowtie; C)`]> \br;
+            \c<\sb<`l><A>:> \c<1> \c<\to;> \c<`[A, \top; \bowtie; A`]> \br;
+            \c<\sb<`r><A>:> \c<1> \c<\to;> \c<`[A, A \bowtie; \top;`]> \br;
+            \c<\sb<`s><AB>:> \c<1> \c<\to;> \c<`[A \bowtie; B, B \bowtie; A`]>
+          >
+        >
+        が定まっており、これらがそれぞれ同型な &m<\scr<C>>-豊穣自然変換を定める。
+      >
+    >
+    \p<
+      という構造が定まっており、モノイダル圏と同様の一貫性条件 (五角形図式と三角形図式に対応するもの) を満たすとする。
+      このとき、&m<\scr<D>> を\em<対称前モノイダル圏\fl<symmetric premonoidal category>> という。
+    >
+  >
+  \p<
+    対称前モノイダル関手は、対称前モノイダル圏の構造を全て保つ関手である。
+    Freyd 圏を考える上では、全ての構造を (同型ではなく) 等号として保つ場合のみを考えれば十分なので、その場合のみの定義を述べる。
+  >
+  \thm|type="def"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> をとる。
+      &m<\scr<C>>-豊穣対称前モノイダル圏 &m<\scr<D>', \scr<D>> の間の &m<\scr<C>>-豊穣関手 &m<J: \scr<D>' \to; \scr<D>> に対し、
+    >
+    \ul<
+      \li<
+        &m<J \top; = \top;> が等号として成り立つ。
+      >
+      \li<
+        &m<J> は対称前モノイダル圏に定まる 2 種類の演算を等号として保つ。
+        すなわち、任意の &m<\scr<D>'> の対象 &m<A, B> に対して、&m<J (A \bowtie; B) = JA \bowtie; JB> が成り立ち、さらに任意の &m<\scr<D>'> の対象 &m<A', B'> に対して、図式
+        &mb<
+          \diag|hor="thk"|<
+            \v<`[A, A'`]> \v<`[JA, JA'`]> \br;
+            \v<`[A \bowtie; B, A' \bowtie; B`]> \v<`[JA \bowtie; JB, JA' \bowtie; JB`]>
+            \ar|s="1",e="2"|<\sb<J><AA'>> \ar|s="3",e="4",inv|<\sb<J><A \bowtie; B, A' \bowtie; B>>
+            \ar|s="1",e="3",inv|<(\text<-> \ltimes; B) \sb<><AA'>> \ar|s="2",e="4"|<(\text<-> \ltimes; JB) \sb<><JA, JA'>>
+          > \qquad;
+          \diag|hor="thk"|<
+            \v<`[B, B'`]> \v<`[JB, JB'`]> \br;
+            \v<`[A \bowtie; B, A \bowtie; B'`]> \v<`[JA \bowtie; JB, JA \bowtie; JB'`]>
+            \ar|s="1",e="2"|<\sb<J><BB'>> \ar|s="3",e="4",inv|<\sb<J><A \bowtie; B, A \bowtie; B'>>
+            \ar|s="1",e="3",inv|<(A \rtimes; \text<->) \sb<><BB'>> \ar|s="2",e="4"|<(JA \rtimes; \text<->) \sb<><JB, JB'>>
+          >
+        >
+        がともに可換である。
+      >
+      \li<
+        &m<J> は対称前モノイダル圏に定まる 4 種類の構造射を等号として保つ。
+        例えば &m<`l> については、任意の &m<\scr<D>'> の対象 &m<A> に対して、図式
+        &mb<
+          \diag<
+            \v<\top;> \v; \br;
+            \v<`[\top;, \top; \bowtie; A`]> \v<`[\top;, \top; \bowtie; JA`]>
+            \ar|s="1",e="3",inv|<\sb<`l><A>> \ar|s="1",e="4"|<\sb<`l><JA>> \ar|s="3",e="4",inv|<\sb<J><\top;, \top; \bowtie; A>>
+          >
+        >
+        は可換である。
+        それ以外の種類の構造射についても同様の可換図式が成り立つ。
+      >
+    >
+    \p<
+      が全て成り立つとき、&m<J> を\em<厳密対称前モノイダル関手\fl<strict symmetric premonoidal functor>> という。
+    >
+  >
+  \p<
+    さて、カルテシアン閉圏 &m<\scr<C>> に対し、&m<\scr<C>> 自身はカルテシアン閉性によって &m<\scr<C>>-豊穣圏と見なせる。
+    さらに、&m<\scr<C>> は直積によって &m<\scr<C>>-豊穣対称前モノイダル圏の構造をもつ。
+    以降はこの構造を利用して、Freyd 圏は以下のように定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> および &m<\scr<C>>-豊穣対称前モノイダル圏 &m<\scr<D>> をとる。
+      &m<\scr<C>>-豊穣厳密対称前モノイダル関手 &m<J: \scr<C> \to; \scr<D>> が、2 条件
+    >
+    \ul<
+      \li<
+        &m<J> は対象上恒等写像である。
+        すなわち、&m<\scr<C>> と &m<\scr<D>> の対象は同一であり、任意の &m<\scr<C>> の対象 &m<A> に対して、&m<JA = A> が等号として成り立つ。
+      >
+      \li<
+        &m<J> の射の像は全ての中心的である。
+        すなわち、任意の &m<\scr<C>> の対象 &m<A, A'> に対して、&m<\scr<C>> の射 &m<\sb<J><AA'>: A \buharprarr; A' \to; `[A, A'`]> は中心的である。
+      >
+    >
+    \p<
+      を満たすとする。
+      このとき、&m<(\scr<C>`; \scr<D>, J)> を\em<豊穣 Freyd 圏\fl<enriched — category>> という。
+    >
+  >
+  \p<
+    Freyd 圏の気持ちを軽く述べておこう。
+    Freyd 圏を構成する 2 つの圏のうち、&m<\scr<C>> は通常の関数が住む圏で、&m<\scr<D>> は副作用のある計算が住む圏である。
+    副作用のある計算は順序を変えると結果が変わる可能性があるので、&m<\scr<D>> の方は (モノイダル圏ではなく) 前モノイダル圏になっているのである。
+    この間に定まる関手 &m<J> は、通常の関手を副作用付きの計算と見なすために使われるもので、モナドの &m<\tt<return>> やアローの &m<\tt<arr>> に対応するものである。
+    &m<J> の像が中心的であるという条件は、&m<J> の像は副作用付きの計算と見なしてはいるが実際には副作用がないので、他の計算との順序を自由に入れ替えられるいう性質を反映している。
+  >
+  \p<
+    次回はいよいよ Freyd 圏を用いたアローの解釈を行う。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ppcn"|<J. Power, E. Robinson (1997)「Premonoidal categories and notions of computation」『Mathematical Structures in Computer Science』7:453–468>
+    \li|id="pecs"|<J. Power, H. Thielecke (1997)「Environments, continuation semantics and indexed categories」『Theoretical Aspects of Computer Software』391–414>
+  >
+
+>

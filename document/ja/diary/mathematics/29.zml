@@ -1,0 +1,117 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<層の極限と余極限>
+  \use-math|prefix="4"|;
+
+  \h1<日記 (2019 年 8 月 7 日)>
+  \p<
+    前回は、層化関手が包含関手の左随伴になっていることを示した。
+    このことの 1 つの帰結として、層の圏が余完備であることが分かる。
+    ついでなので、層の圏の極限と余極限について、ここでまとめておく。
+  >
+  \thm|type="thm",id="lim"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      &m<\sb<\bfrm<Sh>><J> (\scr<C>)> は完備であり、包含関手 &m<\bf<i>: \sb<\bfrm<Sh>><J> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> は極限を保存する。
+      すなわち、&m<\sb<\bfrm<Sh>><J> (\scr<C>)> の極限は &m<\bfrm<PSh> (\scr<C>)> の極限として計算できる。
+    >
+  >
+  \prf<
+    \p<
+      図式 &m<`F: \scr<J> \to; \sb<\bfrm<Sh>><J> (\scr<C>)> をとり、これを前層の図式であると見なした極限を &m<P> とする。
+      すなわち、&m<P \coloneqq; \lim; (\bf<i> \circ; `F)> とおく。
+      &m<P> が層であることを示せば良い。
+    >
+    \p<
+      任意に被覆篩 &m<S \in; JC> をとる。
+      各 &m<j \in; \scr<J>> に対して &m<`F j> は層だから、\a|href="26.html#shfeq"|<命題 1.13> によって、
+      &mb<
+        \diag<
+          \v<(`F j) C> \v<\prod<f \in; S: D \to; C><> (`F j) D> \v< \prod<\stack<\cc<f \in; S: D \to; C> \cc<g: E \to; D>>><> (`F j) E>
+          \ar|s="1",e="2"|;
+          \ar|s="2",e="3",shift="3"|; \ar|s="2",e="3",shift="-3",inv|;
+        >
+      >
+      は等化子である。
+      なお、ここに出てくる射は命題の通りである。
+      ここで、等化子と任意の極限は交換するので、この図式全体の極限をとれば、
+      &mb<
+        \diag<
+          \v<PC> \v<\prod<f \in; S: D \to; C><> PD> \v< \prod<\stack<\cc<f \in; S: D \to; C> \cc<g: E \to; D>>><> PE>
+          \ar|s="1",e="2"|;
+          \ar|s="2",e="3",shift="3"|; \ar|s="2",e="3",shift="-3",inv|;
+        >
+      >
+      も等化子である。
+      すなわち、&m<P> は層である。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      &m<\sb<\bfrm<Sh>><J> (\scr<C>)> は余完備であり、層化関手 &m<\bf<a>: \sb<\bfrm<Sh>><J> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> は余極限を保存する。
+      さらに、&m<\sb<\bfrm<Sh>><J> (\scr<C>)> の余極限は &m<\bfrm<PSh> (\scr<C>)> の余極限として計算したものを層化することで得られる。
+    >
+  >
+  \prf<
+    \p<
+      図式 &m<`F: \scr<J> \to; \sb<\bfrm<Sh>><J> (\scr<C>)> および層 &m<G \in; \sb<\bfrm<Sh>><J> (\scr<C>)> をとる。
+      \a|href="28.html#adj"|<定理 3.5> で示した随伴 &m<\bf<a> \dashv; \bf<i>> を用いると、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<Hom> (\bf<a> \sfun; \op<colim> (\bf<i> \circ; `F), G)> \c<\cong;> \c<\op<Hom> (\op<colim> (\bf<i> \circ; `F), \bf<i> G)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (\bf<i> \circ; `F, \sb<`D><\bf<i> G>)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (`F, \sb<`D><G>)>
+        >
+      >
+      が成り立ち、これは &m<G> に関して自然である。
+      なお、&m<\sb<`D><\bf<i> G>, \sb<`D><G>> はそれぞれ &m<\bf<i> G, G> を値とする定値関手である。
+      この式の最左辺と最右辺を比べることで、
+      &mb<
+        \op<colim> `F = \bf<a> \sfun; \op<colim> (\bf<i> \circ; `F)
+      >
+      が得られる。
+      すなわち、&m<\sb<\bfrm<Sh>><J> (\scr<C>)> の余極限を計算するには、まず &m<\bfrm<PSh> (\scr<C>)> の余極限として計算して、その結果を層化すれば良い。
+      また、&m<\bf<a>: \sb<\bfrm<Sh>><J> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> が余極限を保存するのは、右随伴をもつことから従う。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      層化関手 &m<\bf<a>: \sb<\bfrm<Sh>><J> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> は有限極限を保存する。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="lim"|; によって &m<\sb<\bfrm<Sh>><J> (\scr<C>)> の極限は &m<\bfrm<PSh> (\scr<C>)> の極限として計算でき、層化はプラス構成 2 回として定義されていたので、プラス構成関手 &m<\sp<\text<->><+>: \bfrm<PSh> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> が有限極限を保存することを示せば良い。
+    >
+    \p<
+      有限図式 &m<`F: \scr<J> \to; \bfrm<PSh> (\scr<C>)> および対象 &m<C> をとる。
+      &m<\sp<JC><\circ;>> はフィルター圏であるから、&m<\scr<J>> 上の極限と &m<\sp<JC><\circ;>> 上の余極限は交換する。
+      このことから、
+      &mb<
+        \array|align="rcl"|<
+          \c<(\sb|fun|<\lim;><j> \sp<(`F j)><+>) C> \c<\cong;> \c<\sb|fun|<\lim;><j> \sp<(`F j)><+> C> \br;
+          \c; \c<=> \c<\sb|fun|<\lim;><j> \sb|fun|<\op<colim>><S> \op<Hom> (S, `F j)> \br;
+          \c; \c<\cong;> \c<\sb|fun|<\op<colim>><S> \sb|fun|<\lim;><j> \op<Hom> (S, `F j)> \br;
+          \c; \c<\cong;> \c<\sb|fun|<\op<colim>><S> \op<Hom> (S, \sb|fun|<\lim;><j>  `F j)> \br;
+          \c; \c<=> \c<\sp<(\sb|fun|<\lim;><j> `F j)><+> C>
+        >
+      >
+      が成り立つ。
+      すなわち、
+      &mb<
+        \sb|fun|<\lim;><j> \sp<(`F j)><+> \cong; \sp<(\sb|fun|<\lim;><j> `F j)><+>
+      >
+      であるが、これは &m<\sp<\text<->><+>> が &m<`F> の極限を保存することを意味している。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="sgl"|<S. MacLane, I. Moerdijk (1992)『Sheaves in Geometry and Logic』Springer>
+  >
+
+>

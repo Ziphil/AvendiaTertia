@@ -1,0 +1,62 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Unicode 転写>
+  \ver<5 代 4 期>
+
+  \h1<日記 (新 4 年 8 月 21 日, \h<1347>)>
+  \p<
+    サイトのトップページをよく分からない何かに変えました。
+  >
+  \p<
+    さて、シャレイア語には専用の文字があるので、それをコンピュータ上に表示するために専用のフォントが必要になります。
+    一応製作中ではあるんですが、あまり進んでいません。
+    その理由の 1 つに、シャレイア文字と似た形の文字が Unicode に収録されているため、既存のフォントでもシャレイア文字っぽく表示させることができるからです。
+    新しく作ったトップページの画像も、普通のフォントを利用して作りました。
+  >
+  \p<
+    ということで、それぞれのシャレイア文字に対応する Unicode の文字コードをまとめた表があると便利そうなので、ここに作っておきます。
+  >
+  \table<
+    \tr<\th<文字>\th<転写>\th<Unicode 名>\th<種類>>
+    \tr<\td<[s]>\td<l (U+006C)>\td<latin small letter l>\td<基本ラテン文字>>
+    \tr<\td<[z]>\td<d (U+0064)>\td<latin small letter d>\td<基本ラテン文字>>
+    \tr<\td<[t]>\td<h (U+0068)>\td<latin small letter h>\td<基本ラテン文字>>
+    \tr<\td<[d]>\td<ɴ (U+0274)>\td<latin letter small capital n>\td<IPA 拡張>>
+    \tr<\td<[k]>\td<q (U+0071)>\td<latin small letter q>\td<基本ラテン文字>>
+    \tr<\td<[g]>\td<ɡ (U+026A)>\td<latin small letter script g>\td<IPA 拡張>>
+    \tr<\td<[f]>\td<p (U+0070)>\td<latin small letter p>\td<基本ラテン文字>>
+    \tr<\td<[v]>\td<z (U+007A)>\td<latin small letter z>\td<基本ラテン文字>>
+    \tr<\td<[p]>\td<ʖ (U+0296)>\td<latin letter inverted glottal stop>\td<IPA 拡張>>
+    \tr<\td<[b]>\td<b (U+0062)>\td<latin small letter b>\td<基本ラテン文字>>
+    \tr<\td<[c]>\td<ə (U+0259)>\td<latin small letter schwa>\td<IPA 拡張>>
+    \tr<\td<[q]>\td<ʌ (U+028C)>\td<latin small letter turned v>\td<IPA 拡張>>
+    \tr<\td<[x]>\td<x (U+0078)>\td<latin small letter x>\td<基本ラテン文字>>
+    \tr<\td<[j]>\td<v (U+0076)>\td<latin small letter v>\td<基本ラテン文字>>
+    \tr<\td<[r]>\td<ɒ (U+0252)>\td<latin small letter turned alpha>\td<IPA 拡張>>
+    \tr<\td<[l]>\td<ȷ (U+0237)>\td<latin small letter dotless j>\td<ラテン文字拡張 B>>
+    \tr<\td<[m]>\td<ʒ (U+0292)>\td<latin small letter ezh>\td<IPA 拡張>>
+    \tr<\td<[n]>\td<s (U+0073)>\td<latin small letter s>\td<基本ラテン文字>>
+    \tr<\td<[h]>\td<φ (U+03C6)>\td<greek small letter phi>\td<基本ギリシャ文字>>
+    \tr<\td<[y]>\td<ɥ (U+0265)>\td<latin small letter turned h>\td<IPA 拡張>>
+    \tr<\td<[a]>\td<ı (U+0131)>\td<latin small letter dotless i>\td<ラテン文字拡張 A>>
+    \tr<\td<[e]>\td<c (U+0063)>\td<latin small letter c>\td<基本ラテン文字>>
+    \tr<\td<[i]>\td<o (U+006F)>\td<latin small letter o>\td<基本ラテン文字>>
+    \tr<\td<[o]>\td<u (U+0075)>\td<latin small letter u>\td<基本ラテン文字>>
+    \tr<\td<[u]>\td<n (U+006E)>\td<latin small letter n>\td<基本ラテン文字>>
+  >
+  \p<
+    IPA に対応したフォントであれば、上の文字は全て表示できるかと思います。
+    また、[h] を除いた全ての文字がラテン文字に分類されているので、同じフォントであれば統一感を崩さずに表示することができます。
+  >
+  \p<
+    大文字や一部の数字に対応する Unicode がありませんが、大文字はあまり使わないので大文字については問題ありません。
+    数字についても、Unicode の文字を少し改変するだけで作れるので、表示させようとすると作業量は増えますが、難しすぎるというわけでもないと思います。
+    もう 1 つの問題として、母音文字につけられるダイアクリティカルマークです。
+    [á] や [ò] などについては、Unicode 上にもダイアクリティカルマークがつけられたものが収録されているので良いんですが、[û] などはありません。
+    と言っても、やはりそれほど難しいわけではない作業で何とかなるので、大きな問題というわけではない気がします。
+  >
+
+>

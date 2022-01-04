@@ -1,0 +1,201 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<積分の雑多な話題>
+  \use-math;
+
+  \h1<初めに>
+  \p<
+    ここでは、不定積分
+    &mb<
+      I \coloneqq; \int; \sqrt<1 + \frac<1><\sp<x><2>>> dx
+    >
+    を求めてみる。
+    高校数学で登場する積分の中ではかなり面倒な方の部類に入るだろう。
+    久々に積分の計算をしたせいか、多少苦労してしまったので、まとめておく。
+  >
+  \h1<高校範囲での計算>
+  \p<
+    まず、&m<x `> 0> とする。
+    このとき、&m<x \eqqcolon; \tan; t \srel; (0 `< t `< `p `/ 2)> とおいて置換積分を行うと、
+    &mb<
+      \array|align="rcl"|<
+        \c<I> \c<=> \c<\int; \sqrt<1 + \frac<1><\sp|fun|<\tan;><2> t>> \sfun; \frac<1><\sp|fun|<\cos;><2> t> dt> \br;
+        \c; \c<=> \c<\int; \frac<1><\sin; t> \sfun; \frac<1><\sp|fun|<\cos;><2> t> dt> \br;
+        \c; \c<=> \c<\int; \frac<\sin; t><\sp|fun|<\sin;><2> t \sfun; \sp|fun|<\cos;><2> t> dt> \br;
+        \c; \c<=> \c<\int; \frac<\sin; t><(1 - \sp|fun|<\cos;><2> t) \sp|fun|<\cos;><2> t> dt>
+      >
+    >
+    となる。
+    ここでさらに &m<\cos; t \eqqcolon; y> とおいて置換積分すれば、
+    &mb<
+      I = [- \int; \frac<1><(1 - \sp<y><2>) \sp<y><2>> dy]
+    >
+    を得る。
+  >
+  \p<
+    さて、積分関数が &m<y> の有理式になったので、部分分数分解を行う。
+    ここで、
+    &mb<
+      \frac<1><(1 - \sp<y><2>) \sp<y><2>> = \frac<A><1 + y> + \frac<B><1 - y> + \frac<C><y> + \frac<D><\sp<y><2>>
+    >
+    とおき、分母を払うと、
+    &mb<
+      1 = (1 - y) \sp<y><2> A + (1 + y) \sp<y><2> B + (1 - \sp<y><2>) y C + (1 - \sp<y><2>) D
+    >
+    を得る。
+    この式に &m<y = 1, [-1], 0, 2> を代入すると、4 式
+    &mb<
+      \case<
+        \c<1 = 2 B> \br; \c<1 = 2 A> \br; \c<1 = D> \br; \c<1 = [-4] A + 12 B - 6 C - 3 D>
+      >
+    >
+    が成り立つことが分かるので、これを解いて、
+    &mb<
+      A = \frac<1><2> \qquad; B = \frac<1><2> \qquad; C = 0 \qquad; D = 1
+    >
+    を得る。
+    なお、これは必要条件に過ぎないので、十分性を確認するため、最初の式に代入して等号の成立を調べる。
+  >
+  \p<
+    さて、部分分数分解の結果を代入すれば、
+    &mb<
+      I = [- \int; \paren<\frac<1><2> \sfun; \frac<1><1 + y> + \frac<1><2> \sfun; \frac<1><1 - y> + \frac<1><\sp<y><2>>> dy]
+    >
+    となる。
+    &m<C> を積分定数としてこれを計算すれば、
+    &mb<
+      \array|align="rcl"|<
+        \c<I> \c<=> \c<[- \frac<1><2>] \log; \lvert; 1 + y \rvert; + \frac<1><2> \log; \lvert; 1 - y \rvert; + \frac<1><y> + C> \br;
+        \c; \c<=> \c<\frac<1><2> \log; \vert<\frac<1 - y><1 + y>> + \frac<1><y> + C>
+      >
+    >
+    を得る。
+  >
+  \p<
+    ここで &m<y `> 0> に注意すれば、
+    &mb<
+      y = \cos; t = \sqrt<\frac<1><1 + \sp|fun|<\tan;><2> t>> = \sqrt<\frac<1><1 + \sp<x><2>>>
+    >
+    であるので、変数をもとに戻して、
+    &mb<
+      \array|align="rcl"|<
+        \c<I> \c<=> \c<\frac<1><2> \log; \vert<\frac<1 - \sqrt<\frac<1><1 + \sp<x><2>>>><1 + \sqrt<\frac<1><1 + \sp<x><2>>>>> + \sqrt<1 + \sp<x><2>> + C> \br;
+        \c; \c<=> \c<\frac<1><2> \log; \frac<\sqrt<1 + \sp<x><2>> - 1><\sqrt<1 + \sp<x><2>> + 1> + \sqrt<1 + \sp<x><2>> + C> \br;
+        \c; \c<=> \c<\frac<1><2> \log; \frac<(\sqrt<1 + \sp<x><2>> - 1) \sp<><2>><\sp<x><2>> + \sqrt<1 + \sp<x><2>> + C> \br;
+        \c; \c<=> \c<\log; \frac<\sqrt<1 + \sp<x><2>> - 1><x> + \sqrt<1 + \sp<x><2>> + C>
+      >
+    >
+    となる。
+  >
+  \p<
+    次に &m<x `< 0> の場合を考える。
+    &m<x \eqqcolon; [- X]> とすれば &m<X `> 0> だから、これまでの計算結果を考えれば、
+    &mb<
+      I = \log; \frac<\sqrt<1 + \sp<X><2>> - 1><X> + \sqrt<1 + \sp<X><2>> + C
+    >
+    が成り立つ。
+    したがって、
+    &mb<
+      I = \log; \frac<\sqrt<1 + \sp<x><2>> - 1><-x> + \sqrt<1 + \sp<x><2>> + C
+    >
+    となる。
+  >
+  \p<
+    以上をまとめて、
+    &mb<
+      \int; \sqrt<1 + \frac<1><\sp<x><2>>> dx = \log; \frac<\sqrt<1 + \sp<x><2>> - 1><\lvert; x \rvert;> + \sqrt<1 + \sp<x><2>> + C
+    >
+    となる。
+  >
+  \h1<双曲線関数を用いる計算>
+  \p<
+    高校範囲ではないが、双曲線関数を用いると &m<I> の計算はいくぶん安易になる (はずだった)。
+  >
+  \p<
+    &m<x `> 0> として &m<x \eqqcolon; \sinh; t \srel; (t `> 0)> とおけば、
+    &mb<
+      \array|align="rcl"|<
+        \c<I> \c<=> \c<\int; \sqrt<1 + \frac<1><\sp|fun|<\sinh;><2> t>> \cosh; t \sfun; dt> \br;
+        \c; \c<=> \c<\int; \frac<\sqrt<1 + \sp|fun|<\sinh;><2> t>><\sinh; t> \cosh; t \sfun; dt> \br;
+        \c; \c<=> \c<\int; \frac<\sp|fun|<\cosh;><2> t><\sinh; t> dt> \br;
+        \c; \c<=> \c<\int; \frac<1 + \sp|fun|<\sinh;><2> t><\sinh; t> dt> \br;
+        \c; \c<=> \c<\int; \paren<\frac<1><\sinh; t> + \sinh; t> dt> \br;
+      >
+    >
+    を得る。
+  >
+  \p<
+    ここで、
+    &mb<
+      J \coloneqq; \int; \frac<1><\sinh; t> dt
+    >
+    とおいて、この &m<J> について考える。
+    双曲線関数を指数関数で表せば、
+    &mb<
+      \array|align="rcl"|<
+        \c<J> \c<=> \c<\int; \frac<2><\sp<e><t> - \sp<e><- t>> dt> \br;
+        \c; \c<=> \c<\int; \frac<2 \sp<e><t>><\sp<e><2 t> - 1> dt>
+      >
+    >
+    となる。
+    ここで &m<\sp<e><t> \eqqcolon; u> とおいて置換積分を行えば、
+    &mb<
+      \array|align="rcl"|<
+        \c<J> \c<=> \c<\int; \frac<2><\sp<u><2> - 1> du> \br;
+        \c; \c<=> \c<\int; \paren<\frac<1><u - 1> - \frac<1><u + 1>> du>
+      >
+    >
+    となり、&m<C> を積分定数としてさらに計算をすれば、
+    &mb<
+      \array|align="rcl"|<
+        \c<J> \c<=> \c<\log; \lvert; u - 1 \rvert; - \log; \lvert; u + 1 \rvert; + C> \br;
+        \c; \c<=> \c<\log; \vert<\frac<u - 1><u + 1>> + C>
+      >
+    >
+    を得る。
+    変数をもとに戻せば、
+    &mb<
+      J = \log; \vert<\frac<\sp<e><t> - 1><\sp<e><t> + 1>> + C
+    >
+    となる。
+    これをふまえると、&m<\sp<e><t> `> 1> より絶対値は外せるので、
+    &mb<
+      I = \log; \frac<\sp<e><t> - 1><\sp<e><t> + 1> + \cosh; t + C
+    >
+    となる。
+  >
+  \p<
+    さて、このままでは変数を &m<x> に戻せないので、少々の式変形を行う。
+    まず、log の中の分数の分子分母に &m<\sp<e><-t `/ 2>> をかければ、
+    &mb<
+      \array|align="rcl"|<
+        \c<I> \c<=> \c<\log; \frac<\sp<e><t `/ 2> - \sp<e><- t `/ 2>><\sp<e><t `/ 2> + \sp<e><- t `/ 2>> + \cosh; t + C> \br;
+        \c; \c<=> \c<\log; \tanh; \frac<t><2> + \cosh; t + C>
+      >
+    >
+    を得る。
+    さらに半角公式を用いて、
+    &mb<
+      \array|align="rcl"|<
+        \c<I> \c<=> \c<\log; \sqrt<\frac<\cosh; t - 1><\cosh; t + 1>> + \cosh; t + C> \br;
+        \c; \c<=> \c<\frac<1><2> \log; \frac<\cosh; t - 1><\cosh; t + 1> + \cosh; t + C> 
+      >
+    >
+    を得る。
+    最後に cosh を sinh に変換すれば、
+    &mb<
+      I = \frac<1><2> \log; \frac<\sqrt<\sp|fun|<\sinh;><2> t + 1> - 1><\sqrt<\sp|fun|<\sinh;><2> t + 1> + 1> + \sqrt<\sp|fun|<\sinh;><2> t + 1> + C
+    >
+    となる。
+    変数をもとに戻すと、
+    &mb<
+      I = \frac<1><2> \log; \frac<\sqrt<\sp<x><2> + 1> - 1><\sqrt<\sp<x><2> + 1> + 1> + \sqrt<\sp<x><2> + 1> + C
+    >
+    となり、前節と同等の結果を得る。
+    残りは前節の通りである。
+  >
+
+>

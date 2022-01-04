@@ -1,0 +1,592 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<コモナド理論概略>
+  \use-math;
+
+  \h1<日記 (2021 年 3 月 18 日)>
+  \p<
+    コモナド, 余 Eilenberg–Moore 圏, 余 Kleisli 圏, Beck のモナド性定理辺りを軽くまとめようと思う。
+    個人的にモナドよりコモナドの方がよく使うので、コモナドの言葉で議論を進めるが、モナドについても双対的な概念が存在して双対的な命題が成り立つ。
+  >
+  \p<
+    まずはコモナドの定義を復習しよう。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> 上の自己関手 &m<!: \scr<C> \to; \scr<C>> に対し、自然変換 &m<`d: ! \raarr; ! \circ; !, `e: ! \raarr; \rm<id>> が定まっており、任意の &m<\scr<C>> の対象 &m<A> に対して、図式
+      &mb<
+        \diag<
+          \v<!A> \v<!!A> \br;
+          \v<!!A> \v<!!!A>
+          \ar|s="1",e="2"|<\sb<`d><A>> \ar|s="1",e="3",inv|<\sb<`d><A>>
+          \ar|s="2",e="4"|<! \sb<`d><A>> \ar|s="3",e="4",inv|<\sb<`d><!A>> 
+        > \qquad;
+        \diag<
+          \v; \v<!A> \v; \br;
+          \v<!A> \v<!!A> \v<!A>
+          \ar|s="2",e="4",line="2",tip="none"|; \ar|s="2",e="6",line="2",tip="none"|;
+          \ar|s="2",e="5"|<\sb<`d><A>> \ar|s="5",e="4"|<! \sb<`e><A>> \ar|s="5",e="6",inv|<\sb<`e><!A>>
+        >
+      >
+      がともに可換であるとき、組 &m<(!, `d, `e)> を\em<コモナド\fl<comonad>> という。
+    >
+  >
+  \p<
+    コモナドがあるとその上の余代数を考えることができ、それら全体は余 Eilenberg–Moore 圏と呼ばれる圏を成す。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> に対し、圏 &m<\sp<\scr<C>><!>> を以下のように定義する。
+    >
+    \ul<
+      \li<
+        &m<\sp<\scr<C>><!>> の対象は、&m<\scr<C>> の対象 &m<A> および &m<\scr<C>> の射 &m<a: A \to; !A> から成る組 &m<(A, a)> であって、
+        &mb<
+          \diag<
+            \v<A> \v<!A> \br;
+            \v<!A> \v<!!A>
+            \ar|s="1",e="2"|<a> \ar|s="1",e="3",inv|<a>
+            \ar|s="2",e="4"|<! a> \ar|s="3",e="4",inv|<\sb<`d><A>> 
+          > \qquad;
+          \diag<
+            \v<A> \v; \br;
+            \v<!A> \v<A>
+            \ar|s="1",e="4",line="2",tip="none"|;
+            \ar|s="1",e="3",inv|<a> \ar|s="3",e="4",inv|<\sb<`e><A>>
+          >
+        >
+        がともに可換であるものとする。
+      >
+      \li<
+        &m<\sp<\scr<C>><!>> の 2 つの対象 &m<(A, a), (B, b)> の間の射は、&m<\scr<C>> の射 &m<f: A \to; B> であって、
+        &mb<
+          \diag<
+            \v<A> \v<B> \br;
+            \v<!A> \v<!B>
+            \ar|s="1",e="2"|<f> \ar|s="3",e="4",inv|<!f>
+            \ar|s="1",e="3",inv|<a> \ar|s="2",e="4"|<b>
+          >
+        >
+        が可換であるものとする。
+      >
+      \li<
+        &m<\sp<\scr<C>><!>> の射の合成は、&m<\scr<C>> の合成と同じとする。
+      >
+    >
+    \p<
+      このような圏 &m<\sp<\scr<C>><!>> を、&m<(!, `d, `e)> の\em<余 Eilenberg–Moore 圏\fl<co— category>> という。
+      また、&m<\sp<\scr<C>><!>> の対象は、&m<\scr<C>> 上の &m<!>-\em<余代数\fl<coalgebra>> と呼ばれる。
+    >
+  >
+  \p<
+    余 Eilenberg–Moore 圏ともとの圏の間には、次のような標準的な随伴が存在する。
+  >
+  \thm|type="prp",id="emadj"|<
+    \p<
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<F><!>:> \c<\sp<\scr<C>><!>> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<(A, a)> \vv<(B, b)> \ar|s="1",e="2"|<f>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<A> \vv<B> \ar|s="1",e="2"|<f>
+          >>>
+        > \qquad;
+        \array|align="rrcl"|<
+          \c<\sp<G><!>:> \c<\scr<C>> \c<\longto;> \c<\sp<\scr<C>><!>> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<A> \vv<B> \ar|s="1",e="2"|<f>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<(!A, \sb<`d><A>)> \vv<(!B, \sb<`d><B>)> \ar|s="1",e="2"|<!f>
+          >>> 
+        >
+      >
+      と定めると、これは随伴 &m<\sp<F><!> \dashv; \sp<G><!>> を成す。
+    >
+  >
+  \prf<
+    \p<
+      任意の &m<\sp<\scr<C>><!>> の対象 &m<(A, a)> および &m<\scr<C>> の対象 &m<B> に対し、自然な全単射
+      &mb<
+        \sb<\op<Hom>><\scr<C>> (A, B) \cong; \sb<\op<Hom>><\sp<\scr<C>><!>> ((A, a), (B, \sb<`d><B>))
+      >
+      が成立することを示せば良いが、この対応は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\scr<C>> (A, B)> \c<\longto;> \c<\sb<\op<Hom>><\sp<\scr<C>><!>> ((A, a), (B, \sb<`d><B>))> \br;
+          \c<f> \c<\longmapsto;> \c<!f \circ; a> \br;
+          \c<\sb<`e><B> \circ; g> \c<\longmappedfrom;> \c<g>
+        >
+      >
+      と具体的に得られる。
+    >
+  >
+  \p<
+    上の命題の状況において、&m<\sp<F><!>> は単なる忘却関手であり、それに右随伴 &m<\sp<G><!>> が存在していることから、この &m<\sp<G><!>> はいわゆる余自由構成を与えていることになる。
+    このことから、&m<(!A, \sb<`d><A>)> という形の余代数は、しばしば余自由余代数と呼ばれることがある。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> に対し、余自由 &m<!>-余代数の全体が成す &m<\sp<\scr<C>><!>> の充満部分圏を &m<\sb<\bfrm<F>><!> (\scr<C>)> で表す。
+    >
+  >
+  \p<
+    余自由余代数の圏は、余 Kleisli 圏と呼ばれる次のような圏と同値であることが知られている。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> に対し、圏 &m<\sb<\scr<C>><!>> を以下のように定義する。
+    >
+    \ul<
+      \li<
+        &m<\sb<\scr<C>><!>> の対象は、&m<\scr<C>> の対象と同じであるとする。
+      >
+      \li<
+        &m<\sb<\scr<C>><!>> の 2 つの対象 &m<A, B> の間の射は、&m<\scr<C>> の射 &m<f: !A \to; B> であるとする。
+        この形の射を &m<\sb<\scr<C>><!>> の射と見なすときは、区別のために上付き線を附して &m<\overline<f>: A \to; B> と書くことにする。
+      >
+      \li<
+        &m<\sb<\scr<C>><!>> の 2 つの射 &m<\overline<f>: A \to; B, \overline<g>: B \to; C> の合成は、
+        &mb<
+          \diag<
+            \v<!A> \v<!!A> \v<!B> \v<C>
+            \ar|s="1",e="2"|<\sb<`d><A>> \ar|s="2",e="3"|<!f> \ar|s="3",e="4"|<g>
+          >
+        >
+        であるとする。
+      >
+      \li<
+        &m<\sb<\scr<C>><!>> の対象 &m<A> 上の恒等射は、&m<\overline<\sb<`e><A>>: A \to; A> とする。
+      >
+    >
+    \p<
+      このような圏 &m<\scr<C>> を、&m<(!, `d, `e)> の\em<余 Kleisli 圏\fl<co— category>> という。
+    >
+  >
+  \thm|type="prp",id="kliso"|<
+    \p<
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> に対し、圏同値 &m<\sb<\scr<C>><!> \cong; \sb<\bfrm<F>><!> (\scr<C>)> が成立する。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        \array|align="rrcl"|<
+          \c<`F:> \c<\sb<\scr<C>><!>> \c<\longto;> \c<\sb<\bfrm<F>><!> (\scr<C>)> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<A> \vv<B> \ar|s="1",e="2"|<\overline<f>>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<(!A, \sb<`d><A>)> \vv<(!B, \sb<`d><B>)> \ar|s="1",e="2"|<!f \circ; \sb<`d><A>>
+          >>>
+        >
+      >
+      とおき、これが圏同値を与えることを示す。
+      そのためには、&m<`F> が本質的全射かつ忠実充満であることを示せば良い。
+      &m<\sb<\bfrm<F>><!> (\scr<C>)> の定義から、&m<`F> が本質的全射であることはすぐに分かる。
+    >
+    \p<
+      &m<`F> が忠実であることを示す。
+      &m<\sb<\scr<C>><!>> の射 &m<\overline<f>, \overline<g>: A \to; B> が &m<!f \circ; \sb<`d><A> = !g \circ; \sb<`d><A>> を満たしているとする。
+      このとき、
+      &mb<
+        \array|align="rl"|<
+          \c<f> \c<= f \circ; \sb<`e><!A> \circ; \sb<`d><A> = \sb<`e><!B> \circ; !f \circ; \sb<`d><A>> \br;
+          \c<g> \c<= g \circ; \sb<`e><!A> \circ; \sb<`d><A> = \sb<`e><!B> \circ; !g \circ; \sb<`d><A>> \br;
+        >
+      >
+      であるから、仮定より &m<f = g> を得る。
+      したがって、&m<`F> は忠実である。
+    >
+    \p<
+      &m<`F> が充満であることを示す。
+      &m<\sb<\bfrm<F>><!> (\scr<C>)> の射 &m<g: (!A, \sb<`d><A>) \to; (!B, \sb<`d><B>)> に対し、&m<f \coloneqq; \sb<`e><B> \circ; g: !A \to; B> とおくと、これは &m<\sb<\scr<C>><!>> の射 &m<\overline<f>: A \to; B> を定める。
+      さらに、
+      &mb<
+        !f \circ; \sb<`d><A> = ! \sb<`e><B> \circ; !g \circ; \sb<`d><A> = ! \sb<`e><B> \circ; \sb<`d><B> \circ; g = g
+      >
+      が成り立つから、&m<`F> は充満である。
+    >
+  >
+  \p<
+    余 Eilenberg–Moore 圏に標準的な随伴があったように、余 Kleisli 圏にも標準的な随伴が存在する。
+  >
+  \thm|type="prp",id="kladj"|<
+    \p<
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<F><!>:> \c<\sb<\scr<C>><!>> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<A> \vv<B> \ar|s="1",e="2"|<\overline<f>>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<!A> \vv<!B> \ar|s="1",e="2"|<!f \circ; \sb<`d><A>>
+          >>>
+        > \qquad;
+        \array|align="rrcl"|<
+          \c<\sb<G><!>:> \c<\scr<C>> \c<\longto;> \c<\sb<\scr<C>><!>> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<A> \vv<B> \ar|s="1",e="2"|<f>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<A> \vv<B> \ar|s="1",e="2"|<\overline<f \circ; \sb<`e><A>>>
+          >>> 
+        >
+      >
+      と定めると、これは随伴 &m<\sb<F><!> \dashv; \sb<G><!>> を成す。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="kliso"|; の圏同値を用いて &m<\sb<\scr<C>><!>> を &m<\sb<\bfrm<F>><!> (\scr<C>)> に置き換えれば、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sbsp<F><!><\pr;>:> \c<\sb<\bfrm<F>><!> (\scr<C>)> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<(!A, \sb<`d><A>)> \vv<(!B, \sb<`d><B>)> \ar|s="1",e="2"|<f>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<!A> \vv<!B> \ar|s="1",e="2"|<f>
+          >>>
+        > \qquad;
+        \array|align="rrcl"|<
+          \c<\sbsp<G><!><\pr;>:> \c<\scr<C>> \c<\longto;> \c<\sb<\bfrm<F>><!> (\scr<C>)> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<A> \vv<B> \ar|s="1",e="2"|<f>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<(!A, \sb<`d><A>)> \vv<(!B, \sb<`d><B>)> \ar|s="1",e="2"|<!f>
+          >>> 
+        >
+      >
+      が随伴になることを示せば良いことが分かる。
+      しかし、これは\ref|type="thm",ref="emadj"|; の随伴を &m<\sb<\bfrm<F>><!> (\scr<C>) \subseteq; \sp<\scr<C>><!>> に制限しただけであるから、明らかに随伴になっている。
+    >
+  >
+  \p<
+    以上により、コモナドから余 Eilenberg–Moore 圏との随伴と余 Kleisli 圏との随伴という 2 種類の随伴を構成することができた。
+    これとは逆に、任意の圏との随伴からコモナドを構成することもできる。
+  >
+  \p<
+    以下、関手 &m<F: \scr<D> \to; \scr<C>, G: \scr<C> \to; \scr<D>> が随伴 &m<F \dashv; G> を成していて、その単位と余単位がそれぞれ &m<`h: \op<id> \raarr; G \circ; F, `e: F \circ; G \raarr; \rm<id>> である状況を、&m<(F \dashv; G`; `h, `e): \scr<D> \to; \scr<C>> と表すことにする。
+    単位と余単位はしばしば省略する。
+  >
+  \thm|type="prp",id="comon"|<
+    \p<
+      随伴対 &m<(F \dashv; G`; `h, `e): \scr<D> \to; \scr<C>> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<!> \c<\coloneqq;> \c<F \circ; G: \scr<C> \to; \scr<C>> \br;
+          \c<`d> \c<\coloneqq;> \c<F * `h * G: F \circ; G \circ; F \circ; G \raarr; F \circ; G>
+        >
+      >
+      とおくと、&m<(!, `d, `e)> は &m<\scr<C>> 上のコモナドになる。
+    >
+  >
+  \prf<
+    \p<
+      定義に従って確かめれば良い。
+    >
+  >
+  \p<
+    コモナドから始めて余 Eilenberg–Moore 圏もしくは余 Kleisli 圏との随伴を作り、そこから再びコモナドを作り直すと、もとのコモナドと同じものが得られる。
+    すなわち、全てのコモナドは何らかの随伴対から標準的に得られるということである。
+    実際、余 Kleisli 圏は、この「全てのコモナドは何らかの随伴対から標準的に得られるか」という問いに対する答えとして Kleisli\ref|type="bib",ref="kesc"|; が考案したものである。
+  >
+  \thm|type="prp"|<
+    \p<
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> を考える。
+      余 Eilenberg–Moore 圏との随伴 &m<\sp<F><!> \dashv; \sp<G><!>: \sp<\scr<C>><!> \to; \scr<C>> と余 Kleisli 圏との随伴 &m<\sb<F><!> \dashv; \sb<G><!>: \sb<\scr<C>><!> \to; \scr<C>> は、いずれも上記の標準的な構成でもとのコモナド &m<(!, `d, `e)> を生成する。
+    >
+  >
+  \prf<
+    \p<
+      余 Eilenberg–Moore 圏との随伴について考える。
+      &m<\sp<F><!> \dashv; \sp<G><!>: \sp<\scr<C>><!> \to; \scr<C>> の単位と余単位をそれぞれ &m<`h': \rm<id> \raarr; \sp<G><!> \circ; \sp<A><!>, `e': \sp<F><!> \circ; \sp<G><!> \raarr; \rm<id>> とおく。
+      \ref|type="thm",ref="emadj"|; の証明における構成を見ると、&m<\sp<\scr<C>><!>> の対象 &m<(A, a)> に対し &m<\sbsp<`h><(A, a)><\pr;> = a> と書けることが分かる。
+      したがって、\ref|type="thm",ref="comon"|; の構成によって &m<`h'> から得られる自然変換を &m<`d'> とおくと、&m<\scr<C>> の対象 &m<A> に対して &m<\sbsp<`d><A><\pr;> = F \sbsp<`h><GA><\pr;> = \sb<`d><A>> が分かるから、&m<`d' = `d> が成り立つ。
+      さらに、再び\ref|type="thm",ref="emadj"|; の証明における構成を見れば、&m<`e' = `e> であることも分かる。
+      最後に、&m<! = \sp<G><!> \circ; \sp<F><!>> は構成から明らかである。
+    >
+    \p<
+      余 Kleisli 圏との随伴は余 Eilenberg–Moore 圏との随伴の制限として得られるものだったから、この場合も上と同様に示せる。
+    >
+  >
+  \p<
+    では逆に、随伴対から始めてコモナドを作り、そのコモナドから余 Eilenberg–Moore 圏や余 Kleisli 圏を作るともとに戻るかと言うと、こちらは残念ながらそうはならない。
+    しかし、次のような意味で、もとの随伴対は余 Eilenberg–Moore 圏と余 Kleisli 圏の中間には位置する。
+  >
+  \thm|type="prp",id="comp"|<
+    \p<
+      随伴対 &m<(F \dashv; G`; `h, `e): \scr<D> \to; \scr<C>> に対し、これが標準的に定めるコモナドを &m<(!, `d, `e)> とする。
+      ここで、
+      &mb<
+        \array|align="rrcl"|<
+          \c<L:> \c<\sb<\scr<C>><!>> \c<\longto;> \c<\scr<D>> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<A> \vv<B> \ar|s="1",e="2"|<\overline<f>>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<GA> \vv<GB> \ar|s="1",e="2"|<Gf \circ; \sb<`h><GA>>
+          >>>
+        > \qquad;
+        \array|align="rrcl"|<
+          \c<K:> \c<\scr<D>> \c<\longto;> \c<\sp<\scr<C>><!>> \br;
+          \c; \c<\tort<\diag|ver="thn"|<
+            \vv<X> \vv<Y> \ar|s="1",e="2"|<h>
+          >>> \c<\longmapsto;> \c<\tort<\diag|ver="thn"|<
+            \vv<(FX, F \sb<`h><X>)> \vv<(FY, F \sb<`h><Y>)> \ar|s="1",e="2"|<Fh>
+          >>>
+        >
+      >
+      と定めると、これらは関手であり、図式
+      &mb<
+        \diag<
+          \v<\sb|style="margin-bottom:-0.1em;"|<\scr<C>><!>> \v<\scr<D>> \v<\sp<\scr<C>><!>> \br;
+          \v<\scr<C>> \v<\scr<C>> \v<\scr<C>>
+          \ar|s="2",e="5",bend="-30",inv,name="f"|<F> \ar|s="5",e="2",bend="-30",inv,name="g"|<G>
+          \ar|s="1",e="4",bend="-30",inv,name="fb"|<\sb<F><!>> \ar|s="4",e="1",bend="-30",inv,name="gb"|<\sb<G><!>>
+          \ar|s="3",e="6",bend="-30",inv,name="fp"|<\sp<F><!>> \ar|s="6",e="3",bend="-30",inv,name="gp"|<\sp<G><!>>
+          \ar|s="1",e="2"|<L> \ar|s="2",e="3"|<K> \ar|s="1:t80",e="3:t20",bend="30"|<I>
+          \ar|s="4",e="5",line="2",tip="none"|; \ar|s="5",e="6",line="2",tip="none"|;
+          \ar|s="f:c",e="g:c",line="0",mark|<\dashv;> \ar|s="fb:c",e="gb:c",line="0",mark|<\dashv;> \ar|s="fp:c",e="gp:c",line="0",mark|<\dashv;>
+        >
+      >
+      において、上の部分は可換であり、下の四角形部分は左側同士もしくは右側同士でそれぞれ可換である。
+      なお、上記の &m<I: \sb<\scr<C>><!> \to; \sp<\scr<C>><!>> は、包含関手 &m<I': \sb<\bfrm<F>><!> (\scr<C>) \hookrarr; \sp<\scr<C>><!>> と圏同値 &m<\sb<\scr<C>><!> \cong; \sb<\bfrm<F>><!> (\scr<C>)> から誘導される関手である。
+    >
+  >
+  \prf<
+    \p<
+      可換性を単純に計算で確かめれば良い。
+    >
+  >
+  \p<
+    特定の条件のもとでは、上記の &m<K> が圏同値になることが知られている。
+    すなわち、その条件を満たすような随伴対は、あるコモナドの余 Eilenberg–Moore 圏として書けるということである。
+    この条件を記述するには分裂等化子と絶対等化子の概念が必要なので、まずはその準備をする。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の図式
+      &mb<
+        \diag<
+          \v<E> \v<A> \v<B>
+          \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
+          \ar|s="3",e="2",bend="-45",inv|<r> \ar|s="2",e="1",bend="-45",inv|<s>
+        >
+      >
+      において、
+      &mb<
+        f \circ; m = g \circ; m \qquad;
+        s \circ; m = \rm<id> \qquad;
+        r \circ; f = \rm<id> \qquad;
+        r \circ; g = m \circ; s
+      >
+      が全て成り立っているとき、図式
+      &mb<
+        \diag<
+          \v<E> \v<A> \v<B>
+          \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
+        >
+      >
+      を\em<分裂等化子\fl<split equaliser>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の等化子について、それが &m<\scr<C>> を定義域とする任意の関手で保存されるとき、それを\em<絶対等化子\fl<absolute equaliser>> という。
+    >
+  >
+  \thm|type="prp",id="splabs"|<
+    \p<
+      圏 &m<\scr<C>> における分裂等化子は、通常の極限の意味での等化子であり、さらに絶対等化子でもある。
+    >
+  >
+  \prf<
+    \p<
+      分裂等化子が等化子であることを示す。
+      図式
+      &mb<
+        \diag<
+          \v<E> \v<A> \v<B> \br;
+          \v<C>
+          \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
+          \ar|s="3",e="2",bend="-45",inv|<r> \ar|s="2",e="1",bend="-45",inv|<s>
+          \ar|s="4",e="2",inv|<p>
+        >
+      >
+      において、上部の水平な部分が分裂等化子であり、さらに &m<f \circ; p = g \circ; p> が成り立つとする。
+      このとき、射 &m<q: C \to; E> であって &m<m \circ; q = p> を満たすものが一意に存在することを示せば良い。
+      もしそのような &m<q> が存在したとすると、
+      &mb<
+        q = s \circ; m \circ; q = s \circ; p
+      >
+      であるから &m<q> は一意であり、さらに &m<q = s \circ; p> とおくことでそのような &m<q> が存在することも分かる。
+    >
+    \p<
+      分裂等化子が任意の関手で保存されることは、分裂等化子であるための条件が射の合成の間の等式として書かれていることから明らかである。
+    >
+  >
+  \p<
+    以上の準備のもとで、上記の &m<K> が圏同値になるための必要十分条件は次のように述べることができる。
+    この定理は Beck のモナド性定理として知られる。
+  >
+  \thm|type="thm"|<
+    \name<Beck のモナド性定理\fl<—'s monadicity theorem>>
+    \p<
+      随伴対 &m<(F \dashv; G`; `h, `e): \scr<D> \to; \scr<C>> に対し、これが標準的に定めるコモナドを &m<(!, `d, `e)> とし、さらに上記の通りに関手 &m<K: \scr<D> \to; \sp<\scr<C>><!>> をとる。
+      このとき、3 条件
+    >
+    \ol<
+      \li<
+        &m<K> は圏同値である。
+      >
+      \li<
+        任意の &m<\scr<D>> の平行な射 &m<h, k: X \to; Y> に対し、&m<\scr<C>> において &m<(Fh, Fk)> の絶対等化子が存在するならば、&m<\scr<D>> において &m<(h, k)> の等化子も存在し、&m<F> はこの等化子を保存かつ反射する。
+      >
+      \li<
+        任意の &m<\scr<D>> の平行な射 &m<h, k: X \to; Y> に対し、&m<\scr<C>> において &m<(Fh, Fk)> の分裂等化子が存在するならば、&m<\scr<D>> において &m<(h, k)> の等化子も存在し、&m<F> はこの等化子を保存かつ反射する。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      仮定から &m<K> は圏同値であって &m<\sp<F><!> \circ; K = F> であるから、&m<\sp<F><!>: \sp<\scr<C>><!> \to; \scr<C>> が条件 2 を満たすことを示せば良い。
+    >
+    \p<
+      任意に &m<\sp<\scr<C>><!>> の射 &m<f, g: (A, a) \to; (B, b)> をとり、&m<\scr<C>> において絶対等化子
+      &mb<
+        \diag<
+          \v<E> \v<A> \v<B>
+          \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
+        >
+      >
+      が存在したとする。
+      これは特に &m<!> で保存されるから、&m<\scr<C>> の図式
+      &mb<
+        \diag<
+          \v<E> \v<A> \v<B> \br;
+          \v<!E> \v<!A> \v<!B>
+          \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
+          \ar|s="4",e="5",inv|<!m> \ar|s="5",e="6",shift="3"|<!f> \ar|s="5",e="6",shift="-3",inv|<!g>
+          \ar|s="2",e="5"|<a> \ar|s="3",e="6"|<b> \ar|s="1",e="4",dash,inv|<e>
+        >
+      >
+      の下部の水平な部分は等化子である。
+      したがって、その普遍性により破線の射 &m<e: E \to; !E> が存在し、上の図式全体は可換である。
+      この図式の可換性から、&m<\sp<\scr<C>><!>> の射 &m<m: (E, e) \to; (A, a)> が得られ、&m<\sp<\scr<C>><!>> の図式
+      &mb<
+        \diag<
+          \v<(E, e)> \v<(A, a)> \v<(B, b)>
+          \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
+        >
+      >
+      は可換である。
+      これが &m<\sp<\scr<C>><!>> の等化子であることを示す。
+      &m<\sp<\scr<C>><!>> の射 &m<p: (C, c) \to; (A, a)> で &m<f \circ; p = g \circ; p> を満たすものをとると、&m<\scr<C>> において図式
+      &mb<
+        \diag<
+          \v<E> \v<A> \v<B> \br;
+          \v<C>
+          \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
+          \ar|s="4",e="2",inv|<p> \ar|s="4",e="1",dash|<q>
+        >
+      >
+      を可換にする破線の射 &m<q: C \to; E> が一意に存在する。
+      これが &m<\sp<\scr<C>><!>> の射でもあることを示せば良い。
+      ここで、
+      &mb<
+        !m \circ; e \circ; q = a \circ; m \circ; q = a \circ; p = !p \circ; c = !m \circ; !q \circ; c
+      >
+      が成り立つが、&m<!m> は余等化子であったから、分解の一意性によって &m<e \circ; q = !q \circ; c> が成り立つ。
+      すなわち、&m<\sp<\scr<C>><!>> の射 &m<q: (C, c) \to; (E, e)> が定まる。
+    >
+    \p<
+      &m<\sp<F><!>> が &m<(f, g)> の等化子を保存かつ反射するのは、構成から明らかである。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 3>
+      \ref|type="thm",ref="splabs"|; より分裂等化子は絶対等化子だから、これは明らかである。
+    >
+    \p<
+      \label<条件 3 &m<\raarr;> 条件 1>
+      &m<K> が本質的全射かつ忠実充満であることを示す。
+      ここで、\ref|type="thm",ref="comp"|; によって &m<K \circ; L = I> であり、&m<I> は充満部分圏の包含関手と同型であることから充満なので、&m<K> も充満である。
+      したがって、あとは &m<K> は忠実かつ本質的全射であることを示せば良い。
+    >
+    \p<
+      まず、&m<K> が本質的全射であることを示す。
+      任意に &m<\sp<\scr<C>><!>> の対象 &m<(A, a)> をとる。
+      &m<\scr<D>> の射 &m<\sb<`h><GA>, Ga: GA \to; GFGA> を考えると、&m<\scr<C>> の図式
+      &mb<
+        \diag<
+          \v<A> \v<FGA> \v<FGFGA>
+          \ar|s="1",e="2"|<a> \ar|s="2",e="3",shift="3"|<F \sb<`h><GA>> \ar|s="2",e="3",shift="-3",inv|<FGa>
+          \ar|s="3:t20",e="2",bend="-45",inv|<\sb<`e><FGA>> \ar|s="2:t10",e="1",bend="-45",inv|<\sb<`e><A>>
+        >
+      >
+      は分裂等化子になっている。
+      したがって仮定により、&m<\scr<D>> の等化子
+      &mb<
+        \diag<
+          \v<U> \v<GA> \v<GFGA>
+          \ar|s="1",e="2"|<n> \ar|s="2",e="3",shift="3"|<\sb<`h><GA>> \ar|s="2",e="3",shift="-3",inv|<Ga>
+        >
+      >
+      が存在する。
+      さらに、これは &m<F> で保存されるから、&m<\scr<C>> の同型射 &m<q: FU \to; A> が存在して &m<a \circ; q = Fn> が成り立つ。
+      すると、
+      &mb<
+        \array|align="rcl"|<
+          \c<a \circ; q> \c<=> \c<FG \sb<`e><A> \circ; FGa \circ; a \circ; q> \br;
+          \c; \c<=> \c<FG \sb<`e><A> \circ; FGa \circ; Fn> \br;
+          \c; \c<=> \c<FG \sb<`e><A> \circ; F \sb<`h><GA> \circ; Fn> \br;
+          \c; \c<=> \c<FG \sb<`e><A> \circ; FGFn \circ; F \sb<`h><U>> \br;
+          \c; \c<=> \c<FG \sb<`e><A> \circ; FGa \circ; FGq \circ; F \sb<`h><U>> \br;
+          \c; \c<=> \c<FGq \circ; F \sb<`h><U>>
+        >
+      >
+      であるから、&m<\sp<\scr<C>><!>> の射 &m<q: (FU, F \sb<`h><U>) \to; (A, a)> が得られ、さらにこれは同型射である。
+      したがって &m<KU = (FU, F \sb<`h><U>) \cong; (A, a)> となり、&m<K> は本質的全射である。
+    >
+    \p<
+      次に、&m<K> が忠実であることを示す。
+      \ref|type="thm",ref="comp"|; から &m<\sp<F><!> \circ; K = F> であるから、&m<F> が忠実であることを示せば十分である。
+      任意に &m<\scr<D>> の射 &m<h, k: X \to; Y> をとり、&m<Fh = Fk> であるとする。
+      このとき、
+      &mb<
+        \sb<`h><Y> \circ; h = GFh \circ; \sb<`h><X> = GFk \circ; \sb<`h><X> = \sb<`h><Y> \circ; k
+      >
+      であるから、&m<\sb<`h><Y>> が単射であることを示せば良い。
+      そこで、&m<\scr<D>> の射 &m<\sb<`h><GFY>, GF \sb<`h><Y>: GFY \to; GFGFY> を考えると、&m<\scr<C>> の図式
+      &mb<
+        \diag<
+          \v<FY> \v<FGFY> \v<FGFGFY>
+          \ar|s="1",e="2"|<F \sb<`h><Y>> \ar|s="2",e="3",shift="3"|<F \sb<`h><GFY>> \ar|s="2",e="3",shift="-3",inv|<FGF \sb<`h><Y>>
+          \ar|s="3:t20",e="2",bend="-45",inv|<\sb<`e><FGFY>> \ar|s="2:t10",e="1",bend="-45",inv|<\sb<`e><FY>>
+        >
+      >
+      は分裂等化子になっている。
+      したがって仮定により、&m<\scr<D>> で &m<(\sb<`h><GFY>, GF \sb<`h><Y>)> の等化子が存在して &m<F> で反射されるので、&m<\scr<D>> において
+      &mb<
+        \diag<
+          \v<Y> \v<GFY> \v<GFGFY>
+          \ar|s="1",e="2"|<\sb<`h><Y>> \ar|s="2",e="3",shift="3"|<\sb<`h><GFY>> \ar|s="2",e="3",shift="-3",inv|<GF \sb<`h><Y>>
+        >
+      >
+      が等化子であることが分かる。
+      これより特に &m<\sb<`h><Y>> は単射である。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 2』Cambridge University Press>
+    \li|id="kesc"|<H. Kleisli (1965)「Every standard construction is induced by a pair of adjoint functors」『Proceedings of the American Mathematical Society』16(3):544–546>
+  >
+
+>

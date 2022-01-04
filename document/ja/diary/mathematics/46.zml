@@ -1,0 +1,200 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<不動点演算子とトレース>
+  \use-math;
+
+  \h1<日記 (2020 年 5 月 31 日)>
+  \p<
+    再帰的定義は関数型プログラミングにおいて欠かせない重要な要素であるが、その実現方法には主に 2 種類ある。
+    1 つ目の方法は、不動点コンビネータを用いるものである。
+    例えば、以下は全ての要素が 0 であるような無限リストを作る Haskell のプログラムである。
+  >
+  \pre~*<
+    fix $ \list -`> 0 : list
+  >
+  \p<
+    Haskell では let 束縛における定義式でこれから定義する識別子が使えるので、以下のようにも書ける。
+    数学において形式的な計算体系を扱う場合、このような再帰的な let 束縛は、上記の不動点コンビネータを用いた式のシンタックスシュガーとすることも多い (例えば Pierce\ref|type="bib",ref="tpl"|; の 11.11 節ではそのような定義がなされている)。
+  >
+  \pre*<
+    let list = 0 : list in list
+  >
+  \p<
+    2 つ目の方法は、値のフィードバックを利用するものである。
+    Haskell では、この方法で再帰関数を定義するためのコンビネータとして \ae|href="https://hackage.haskell.org/package/base-4.14.0.0/docs/Control-Arrow.html#v:loop"|<\m<loop>> が用意されている。
+    これを用いて、全ての要素が 0 であるような無限リストは以下のようにも作ることができる。
+  >
+  \pre~*<
+    loop func $ 0
+      where func = \(a, l) -`> (l, a : l)
+  >
+  \p<
+    さて、この 2 つの再帰の方法それぞれに対して、その圏論的対応物がいくつか提唱されている。
+    この記事では、前者に対応するものとして Bloom–Ésik\ref|type="bib",ref="bfpo"|; による Conway 演算子を、後者に対応するものとして Joyal–Street–Verity\ref|type="bib",ref="jtmc"|; によるトレースを紹介し、その同値性を示す。
+    なお、以下では射の合成は左から右に行い、記号を変えて &m<\rcomp;> で表す。
+  >
+  \p<
+    まず、Bloom–Ésik による Conway 演算子の定義を行う。
+    これには様々な同値な定式化があるが、ここでは Hasegawa\ref|type="bib",ref="hmsg"|; に従って不動点演算子であることが分かりやすいものを採用する。
+  >
+  \thm|type="def"|<
+   \p<
+      カルテシアン圏 &m<\scr<C>> の対象 &m<A, X> に対し、関数
+      &mb<
+        \sbsp<\op|ord|<fix>><A><X>: \op<Hom> (A \times; X, X) \to; \op<Hom> (A, X)
+      >
+      が定まっており、7 条件
+    >
+    \ol<
+      \li<
+        任意の射 &m<f: A \times; X \to; X> に対し、
+        &mb<
+          (\sb<\rm<id>><A>, \sbsp<\op<fix>><A><X> f) \rcomp; f = \sbsp<\op<fix>><A><X> f
+        >
+        が成り立つ。
+        すなわち、&m<\op<fix>> はパラメータ付き不動点演算子である。
+      >
+      \li<
+        任意の射 &m<f: A \times; X \to; X, g: A' \to; A> に対し、
+        &mb<
+          \sbsp<\op<fix>><A'><X> ((g \times; \sb<\rm<id>><X>) \rcomp; f) = g \rcomp; \sbsp<\op<fix>><A><X> f
+        >
+        が成り立つ。
+        すなわち、&m<\op<fix>> は &m<A> に関して自然である。
+      >
+      \li<
+        任意の射 &m<f: A \times; X' \to; X, g: X \to; X'> に対し、
+        &mb<
+          \sbsp<\op<fix>><A><X'> (f \rcomp; g) = \sbsp<\op<fix>><A><X> ((\sb<\rm<id>><A> \times; g) \rcomp; f) \rcomp; g
+        >
+        が成り立つ。
+        すなわち、&m<\op<fix>> は &m<X> に関して自然である。
+      >
+      \li<
+        任意の射 &m<f: A \times; X \times; Y \to; X, g: A \times; X \times; Y \to; Y> に対し、
+        &mb<
+          \sbsp<\op<fix>><A><X \times; Y> (f, g) = (\sb<\rm<id>><A>, \sbsp<\op<fix>><A><X> ((\sb<\rm<id>><A \times; X>, \sbsp<\op<fix>><A \times; X><Y> g) \rcomp; f)) \rcomp; (\sb<\rm<snd>><AX>, \sbsp<\op<fix>><A \times; X><Y> g)
+        >
+        が成り立つ。
+      >
+    >
+    \p<
+      を全て満たすとする。
+      このとき、&m<\op<fix>> を \em<Conway 演算子\fl<— operator>> という。
+    >
+  >
+  \p<
+    次に、Joyal–Street–Verity によるトレースの定義を行う。
+    もともとの論文では、組み紐付きモノイダル圏 (テンソル積の左右を入れ替える射 &m<`s> が必ずしも &m<`s \rcomp; `s = \rm<id>> を満たさないもの) 上に定義されているが、ここでは簡単のため対称モノイダル圏上に定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<C>> の対象 &m<A, B, X> に対し、関数
+      &mb<
+        \sbsp<\op|ord|<tr>><AB><X>: \op<Hom> (A \otimes; X, B \otimes; X) \to; \op<Hom> (A, B)
+      >
+      が定まっており、7 条件
+    >
+    \ol<
+      \li<
+        任意の射 &m<f: A \otimes; X \to; B \otimes; X, g: A' \to; A> に対し、
+        &mb<
+          \sbsp<\op<tr>><A' B><X> ((g \otimes; \sb<\rm<id>><X>) \rcomp; f) = g \rcomp; \sbsp<\op<tr>><A B><X> f
+        >
+        が成り立つ。
+        すなわち、&m<\op<tr>> は &m<A> に関して自然である。
+      >
+      \li<
+        任意の射 &m<f: A \otimes; X \to; B \otimes; X, g: B \to; B'> に対し、
+        &mb<
+          \sbsp<\op<tr>><A B'><X> (f \rcomp; (g \otimes; \sb<\rm<id>><X>)) = \sbsp<\op<tr>><A B><X> f \rcomp; g
+        >
+        が成り立つ。
+        すなわち、&m<\op<tr>> は &m<B> に関して自然である。
+      >
+      \li<
+        任意の射 &m<f: A \otimes; X' \to; B \otimes; X, g: X \to; X'> に対し、
+        &mb<
+          \sbsp<\op<tr>><A B><X'> (f \rcomp; (\sb<\rm<id>><B> \otimes; g)) = \sbsp<\op<tr>><A B><X> ((\sb<\rm<id>><A> \otimes; g) \rcomp; f)
+        >
+        が成り立つ。
+        すなわち、&m<\op<tr>> は &m<X> に関して自然である。
+      >
+      \li<
+        任意の射 &m<f: A \to; B> に対し、
+        &mb<
+          \sbsp<\op<tr>><A B><\top;> (\sb<`r><A> \rcomp; f \rcomp; \sp<\sb<`r><B>><- 1>) = f
+        >
+        が成り立つ。
+        なお、&m<\sb<`r><A>: A \otimes; \top; \to; A> は対称モノイダル圏に定まる同型射である。
+      >
+      \li<
+        任意の射 &m<f: A \otimes; X \otimes; Y \to; B \otimes; X \otimes; Y> に対し、
+        &mb<
+          \sbsp<\op<tr>><A B><X> (\sbsp<\op<tr>><A \otimes; X, B \otimes; X><Y> f) = \sbsp<\op<tr>><AB><X \otimes; Y> f
+        >
+        が成り立つ。
+      >
+      \li<
+        任意の射 &m<f: A \otimes; X \to; B \otimes; X> に対し、
+        &mb<
+          \sbsp<\op<tr>><C \otimes; A, C \otimes; B><X> (\sb<\rm<id>><C> \otimes; f) = \sb<\rm<id>><C> \otimes; \sbsp<\op<tr>><A B><X> f
+        >
+        が成り立つ。
+      >
+      \li<
+        常に
+        &mb<
+          \sbsp<\op<tr>><X X><X> (\sb<`s><X>) = \sb<\rm<id>><X>
+        >
+        が成り立つ。
+        なお、&m<\sb<`s><X>: X \otimes; X \to; X \otimes; X> は対称モノイダル圏に定まるテンソル積の左右を入れ替える同型射である。
+      >
+    >
+    \p<
+      を全て満たすとする。
+      このとき、&m<\op<tr>> を\em<トレース\fl<trace>> という。
+    >
+  >
+  \p<
+    そして、この 2 つの概念は実質同じものである。
+  >
+  \thm|type="thm"|<
+    \p<
+      カルテシアン圏 &m<\scr<C>> において、Conway 演算子とトレースとの間には 1 対 1 対応がある。
+    >
+  >
+  \prf<
+    \p<
+      Conway 演算子 &m<\op<fix>> が与えられたとして、対象 &m<A, B, X> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sbsp<\op|ord|<tr>><AB><X>:> \c<\op<Hom> (A \times; X, B \times; X)> \c<\longto;> \c<\op<Hom> (A, B)> \br;
+          \c; \c<f> \c<\longmapsto;> \c<\sbsp<\op<fix>><A><B \times; X> ((\sb<\rm<id>><A> \times; \sb<\rm<snd>><BX>) \rcomp; f) \rcomp; \sb<\rm<fst>><BX>>
+        >
+      >
+      とおくと、これはトレースを定める。
+      逆に、トレース &m<\op<tr>> が与えられたとして、対象 &m<A, X> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sbsp<\op|ord|<fix>><A><X>:> \c<\op<Hom> (A \times; X, X)> \c<\longto;> \c<\op<Hom> (A, X)> \br;
+          \c; \c<f> \c<\longmapsto;> \c<\sbsp<\op<tr>><AA><X> (f, f)>
+        >
+      >
+      とおくと、これは Conway 演算子を定める。
+      さらに、これら 2 つの構成は互いに逆になっていることが確かめられる。
+      具体的な計算過程については、Hasegawa\ref|type="bib",ref="hmsg"|; の A.2 節を参照すると良い。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="bfpo"|<S. Bloom, Z. Ésik (1993)「Fixed-point operations on ccc's. part I」『Theoretical Computer Science』155(1):1–38>
+    \li|id="hmsg"|<M. Hasegawa (1997)「Models of sharing graphs: a categorical semantics of let and letrec」Ph. D. thesis, The University of Edinburgh>
+    \li|id="jtmc"|<A. Joyal, R. Street, D. Verity (1996)「Traced monoidal categories」『Mathematical Proceedings of the Cambridge Philosophical Society』119(3):447–468>
+    \li|id="tpl"|<B. C. Pierce (2002)『Types and Programming Languages』The MIT Press>
+  >
+
+>

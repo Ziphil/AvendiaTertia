@@ -1,0 +1,81 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Fonts>
+  \ver<Version S>
+
+  \h1<About licence>
+  \p<
+    The followin fonts are licensed under \ae|href="https://osdn.net/projects/opensource/wiki/SIL_Open_Font_License_1.1"|<SIL Open Font License 1.1> except for Shaleian family.
+    The author of these fonts is Ziphil Shaleiras.
+  >
+  \h1<Vekos family>
+  \img|src="../../file/other/57.png"|;
+  \p<
+    A standard sans-serif font family.
+    It consists of a total of 11 fonts: 9 fonts in 3 different weights and 3 different widths, and extra 2 fonts with stronger contrast between vertical and horizontal lines.
+  >
+  \ul|col="3"|<
+    \li<Vekos Regular>
+    \li<Vekos Bold>
+    \li<Vekos Thin>
+    \li<Vekos Condensed Regular>
+    \li<Vekos Condensed Bold>
+    \li<Vekos Condensed Thin>
+    \li<Vekos Expanded Regular>
+    \li<Vekos Expanded Bold>
+    \li<Vekos Expanded Thin>
+    \li<Vekos High Regular>
+    \li<Vekos High Bold>
+  >
+  \p<
+    It contains the alphabets, the numbers and some symbols.
+    The Shaleian script has no case distinction, but for convenience uppercase letters are assigned the same glyphs as lowercase letters.
+  >
+  \form<
+    \ae|href="https://drive.google.com/drive/folders/1rMHE0txxCf0_37C5bXHhY4m06BgQoQV8?usp=sharing"|<Download>　(ver 2.0.0)
+  >
+  \h1<Gilit family>
+  \img|src="../../file/other/58.png"|;
+  \p<
+    A font family characterized by its triangular shape.
+    It consists of the following 8 fonts:
+  >
+  \ul|col="3"|<
+    \li<Gilit Regular>
+    \li<Gilit Bold>
+    \li<Gilit Triangle Regular>
+    \li<Gilit Triangle Bold>
+    \li<Gilit Expanded Regular>
+    \li<Gilit Expanded Bold>
+    \li<Gilit Sprawled Expanded Regular>
+    \li<Gilit Sprawled Expanded Bold>
+  >
+  \p<
+    Those with “Triangle” in their names have equilateral triangle shapes, those with “Expanded” have a 2:3 aspect ratio, and the unmarked ones have a 1:1 aspect ratio.
+    Those with “Sprawled” in their names have longer descenders and ascenders.
+  >
+  \p<
+    Currently, only the alphabets and some symbols are included.
+    Letters with upper triangular shapes are assigned to lowercase letters and those with lower triangular shapes are to uppercase letters.
+    Thus you need to alternately type lowercase and uppercase letters (except immediately after [x], [j], [n] and [m]) to get the correct letterforms.
+  >
+  \form<
+    \ae|href="https://drive.google.com/drive/folders/1DpKt_rYgn9EMHUWOXudrzR3DxhScxVJV?usp=sharing"|<Download>　(ver 2.0.0)
+  >
+  \h1<Shaleian family>
+  \img|src="../../file/other/50.png"|;
+  \p<
+    It contains the alphabets, the numbers and some symbols.
+  >
+  \p<
+    This font was made by \ae|href="https://dirdam.github.io/"|<Adrï>.
+    The copyright of the font file belongs to Adrï.
+  >
+  \form<
+    \ae|href="https://drive.google.com/drive/folders/1_6-LM8VGyzmvhcWApXXUev0nrDq4w6Ms?usp=sharing"|<Download>
+  >
+
+>

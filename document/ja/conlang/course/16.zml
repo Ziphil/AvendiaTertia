@@ -1,0 +1,40 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<まとめ>
+  \ver<S 代>
+
+  \h1<概要>
+  \p<
+    プレゼンテーション形式のシャレイア語の入門書です。
+    Speaker Deck を利用しています。
+  >
+  \p<
+    各スライドの最初のページに、その課で扱っている内容に該当する\a|href="../grammar/5.html"|<文法書>の節番号を記してあります。
+    この入門書では初歩的な内容のみを説明しているので、扱っている内容に関するより詳しい説明が知りたい場合は、\a|href="../grammar/5.html"|<文法書>の該当節を参照してください。
+  >
+  \h1<スライド一覧>
+  \h2|num="1"|<文字と発音>
+  \slide|code="475e7ebdb828468fbb0a7e5a33df4256"|;
+  \h2|num="2"|<基本語順>
+  \slide|code="59afdb1c72e444d68dd81865bb7fe9ac"|;
+  \h2|num="3"|<不定詞の活用>
+  \slide|code="4eee7c7033b24cb0ab6ca7d35a1ca0a8"|;
+  \h2|num="4"|<時制と相と自他>
+  \slide|code="835c2cfdb29c461b887fa47348a2da34"|;
+  \h2|num="5"|<否定表現>
+  \slide|code="18b50d9fef844312a7b04e5938d9e0c4"|;
+  \h2|num="6"|<疑問表現>
+  \slide|code="0b333aa76e56416eb177f89a72fe2906"|;
+  \h2|num="7"|<接続詞>
+  \slide|code="f819ec94cb674607942d3dc4cd84fcfd"|;
+  \h2|num="8"|<{kin} 節>
+  \slide|code="38776ca2ed43473783e112321569b10b"|;
+  \h2|num="9"|<動詞の助動詞的用法>
+  \slide|code="2ae342e5d57044b8b67094a11096385a"|;
+  \h2|num="10"|<助詞句の順序>
+  \slide|code="78a698e53eed4637a1f702dd517692a3"|;
+
+>

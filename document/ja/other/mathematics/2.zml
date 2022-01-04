@@ -1,0 +1,253 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Hesse 行列と Jacobi 行列>
+  \use-math;
+
+  \h1<Hesse 行列>
+  \h2<2 変数関数の最大最小問題>
+  \p<
+    いきなり多変数関数を扱うのは難しいので、まずは 2 変数関数を考えることにする。
+    &m<\sp<C><2>> 級、すなわち 2 階連続的微分可能である 2 変数関数 &m<f (x, y)> について考える。
+    この最大点および最小点を求めるには、まずその候補となる極大点と極小点を求める必要がある。
+    そして、点 &m<(\sb<x><0>, \sb<y><0>)> が極大点もしくは極小点であるための必要条件は、
+    &mb|id="stat"|<
+      \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) = \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>) = 0
+    >
+    で与えられる。
+    この\ref|type="eq",ref="stat"|; を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の\em<停留点\fl<stationary point>> もしくは\em<臨界点\fl<critical point>> と呼ばれる。
+  >
+  \p<
+    さて、ここで問題となるのは、\ref|type="eq",ref="stat"|; が極大点や極小点を与える必要条件にすぎないということである。
+    すなわち、停留点が必ずしも極大点や極小点になるわけではないのである。
+    ここで、関数 &m<f (x, y)> についてより深い考察が必要になる。
+  >
+  \p<
+    関数の近似的な振る舞いを調べるのには、Taylor 展開が有効である。
+    そこで、関数 &m<f (x, y)> を点 &m<(\sb<x><0>, \sb<y><0>)> のまわりで Taylor 展開してみると、
+    &mb|id="taylor"|<
+      \array|align="rcl"|<
+        \c<f (\sb<x><0> + h, \sb<y><0> + k)> \c<=> \c<f (\sb<x><0>, \sb<y><0>)> \br;
+        \c; \c; \c<\quad; + h \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) + k \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>)> \br;
+        \c; \c; \c<\quad; + \frac<1><2> \paren<\sp<h><2> \frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)>> \br;
+        \c; \c; \c<\quad; + o (\sp<`r><2>)>
+      >
+    >
+    となる。
+    ここで &m<`r \coloneqq; \sqrt<\sp<h><2> + \sp<k><2>>> とした。
+  >
+  \p<
+    以下では\ref|type="eq",ref="stat"|; は成り立っているものとする。
+    このとき、\ref|type="eq",ref="taylor"|; は、
+    &mb<
+      f (\sb<x><0> + h, \sb<y><0> + k) - f (\sb<x><0>, \sb<y><0>) = \frac<1><2> \paren<\sp<h><2> \frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)> + o (\sp<`r><2>)
+    >
+    と書き直せる。
+    点 &m<(\sb<x><0>, \sb<y><0>)> の付近で、すなわち &m<h> と &m<k> が十分に小さいとき、この式の右辺が常に正ならば、&m<f (\sb<x><0> + h, \sb<y><0> + k) `> f (\sb<x><0>, \sb<y><0>)> が成り立つので、点 &m<(\sb<x><0>, \sb<y><0>)> の周りの点ではどこでも関数の値が大きいことになる。
+    したがって、点 &m<(\sb<x><0>, \sb<y><0>)> は極小点だと分かる。
+    逆に、右辺が常に正ならば、点 &m<(\sb<x><0>, \sb<y><0>)> は極大点であるということになる。
+  >
+  \p<
+    &m<h> と &m<k> が十分に小さいとき、&m<o (\sp<`r><2>)> は右辺の符号には影響しないほど小さくなれるので、右辺の符号の鍵を握るのは、
+    &mb|id="qf"|<
+      X \coloneqq; \sp<h><2> \frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)
+    >
+    の部分である。
+    ここで、式の簡略化のために、
+    &mb<
+      A \coloneqq; \frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>) \qquad;
+      B \coloneqq; \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) \qquad;
+      C \coloneqq; \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)
+    >
+    とおけば、\ref|type="eq",ref="qf"|; は、
+    &mb<
+      X = A \sp<h><2> + B hk + C \sp<k><2>
+    >
+    と書き表すことができる。
+  >
+  \p<
+    さて、&m<X> の符号を考察する。
+    &m<`l \coloneqq; h `/ k> とおいてしまえば、
+    &mb<
+      \sp<k><2> X = A \sp<`l><2> + 2 B `l + C
+    >
+    と書ける。
+    左辺は &m<`l> の 2 次式なので、符号の判別は判別式を用いれば簡単である。
+    すなわち、&m<A `> 0> であれば &m<AC - \sp<B><2> `> 0> のとき常に正であり、&m<A `< 0> であれば &m<AC - \sp<B><2> `> 0> のとき常に負になる。
+  >
+  \p<
+    このことから、&m<A `> 0> かつ &m<AC - \sp<B><2> `> 0>ならば、&m<X> は常に正で、したがって点 &m<(\sb<x><0>, \sb<y><0>)> は極小点になる。
+    一方、&m<A `< 0> かつ &m<AC - \sp<B><2> `> 0> ならば、&m<X> は常に負なので、点 &m<(\sb<x><0>, \sb<y><0>)> が極大点であることが分かる。
+  >
+  \p<
+    &m<AC - \sp<B><2>> という形が出てきたが、これは行列式を用いてわざわざ分かりにくい書き方をすれば、
+    &mb<
+      \vert<\matrix<\cc<A><B> \cc<B><C>>>
+    >
+    とも表せる。
+    &m<A, B, C> をもとに戻せば、
+    &mb<
+      \vert<\matrix<
+        \c<\frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>)> \c<\frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>)> \br;
+        \c<\frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>)> \c<\frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)>
+      >>
+    >
+    という、対称的な形が出てくる。
+    この行列を \em<Hesse 行列\fl<—sian matrix>> と呼び、&m<\scr<H> f (\sb<x><0>, \sb<y><0>)> と書く。
+    変数の値を明示せず、単に &m<\scr<H> f> と書くこともある。
+    また、Hesse 行列の行列式を \em<Hesse 行列式\fl<—sian determinant>> もしくは\em<ヘッシアン\fl<hessian>> と呼ぶ。
+  >
+  \p<
+    この Hesse 行列を用いると、これまで議論してきた極大極小条件を簡潔に記述することができる。
+    すなわち、&m<\sb<f><xx> `> 0> かつ &m<\det; \scr<H> f `> 0> を満たす停留点は極小点であり、&m<\sb<f><xx> `< 0> かつ &m<\det; \scr<H> f `> 0> を満たす停留点は極大点である。
+  >
+  \h2<一般の Hesse 行列>
+  \p<
+    Hesse 行列式を用いた極大極小の考察は、そのまま多変数関数へ一般化できる。
+  >
+  \p<
+    &m<\sp<C><2>> 級の &m<n> 変数関数 &m<f (\sb<x><1>, \sb<x><2>, \cdots;, \sb<x><n>)> の Hesse 行列は、
+    &mb<
+      \scr<H> f \coloneqq; \paren<\matrix<
+        \c<\frac<\sp<\partial;><2> f><\partial; \sp<\sb<x><1>><2>>> \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><1> \partial; \sb<x><2>>> \c<\cdots;> \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><1> \partial; \sb<x><n>>> \br;
+        \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><2> \partial; \sb<x><1>>> \c<\frac<\sp<\partial;><2> f><\partial; \sp<\sb<x><2>><2>>> \c<\cdots;> \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><2> \partial; \sb<x><n>>> \br;
+        \c<\vdots;> \c<\vdots;> \c<\ddots;> \c<\vdots;> \br;
+        \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><n> \partial; \sb<x><1>>> \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><n> \partial; \sb<x><2>>> \c<\cdots;> \c<\frac<\sp<\partial;><2> f><\partial; \sp<\sb<x><n>><2>>>
+      >>
+    >
+    で与えられる。
+    1 階導関数が全て 0 であるという条件のもとで、&m<\det; \scr<H> f `> 0> ならば、その点は極値を与えるといえる。
+  >
+  \p<
+    極大点なのか極小点なのかを判別するには、Hesse 行列の左上部分を取り出した行列
+    &mb<
+      \sb<\scr<H>><k> f \coloneqq; \paren<\matrix<
+        \c<\frac<\sp<\partial;><2> f><\partial; \sp<\sb<x><1>><2>>> \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><1> \partial; \sb<x><2>>> \c<\cdots;> \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><1> \partial; \sb<x><k>>> \br;
+        \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><2> \partial; \sb<x><1>>> \c<\frac<\sp<\partial;><2> f><\partial; \sp<\sb<x><2>><2>>> \c<\cdots;> \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><2> \partial; \sb<x><k>>> \br;
+        \c<\vdots;> \c<\vdots;> \c<\ddots;> \c<\vdots;> \br;
+        \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><k> \partial; \sb<x><1>>> \c<\frac<\sp<\partial;><2> f><\partial; \sb<x><k> \partial; \sb<x><2>>> \c<\cdots;> \c<\frac<\sp<\partial;><2> f><\partial; \sp<\sb<x><k>><2>>>
+      >>
+      \scas; (1 \leq; k \leq; n)
+    >
+    について考察する必要がある。
+    &m<k = 1, 2, \cdots;, n - 1> の全てに対し &m<\det; \sb<\scr<H>><k> f> の符号が正ならば、その点は極小だといえる。
+    一方、&m<\det; \sb<\scr<H>><k> f> の符号が &m<\sp<([- 1])><k>> の符号と一致していれば、その点は極大だといえる。
+  >
+  \h1<Jacobi 行列>
+  \h2<多変数から多変数への写像の表記>
+  \p<
+    これまでは、1 つの変数から 1 つの変数の値を定める関数や、複数の変数から 1 つの変数の値を定める関数を扱ってきたが、複数の変数から複数の変数を定める関数 (写像) を考えることもできる。
+    このような、複数の変数を定めるような写像について、微分という概念を考察したい。
+  >
+  \p<
+    簡単のため、まずは 2 変数から 2 変数への写像を考える。
+    2 つの変数 &m<(x, y)> があり、これを 2 つの変数 &m<(s, t)> に対応させる写像を考える。
+    この写像を記述するには、
+    &mb<
+      s = f (x, y) \qquad; t = g (x, y)
+    >
+    という、2 つの 2 変数関数が必要になる。
+  >
+  \p<
+    さて、これをより簡潔に記したい。
+    そこで、行列のように縦に並べ、さらに関数の引数も縦に並べて、少し気持ち悪いが、
+    &mb<
+      \paren<\matrix<\cc<s> \cc<t>>> = \paren<\matrix<\cc<f \paren<\matrix<\cc<x> \cc<y>>>> \cc<g \paren<\matrix<\cc<x> \cc<y>>>>>>
+    >
+    と書いてみる。
+    また、&m<(s, t)> と &m<(x, y)> を縦ベクトル扱いして、それぞれ &m<\bf<s>> と &m<\bf<x>> と書くことにすれば、
+    &mb<
+      \bf<s> = \paren<\matrix<\cc<f (\bf<x>)> \cc<g (\bf<x>)>>>
+    >
+    と表せる。
+    そしてさらに、この式の右辺は関数のベクトルだと考えることもできる。
+    したがって、これを &m<\bf<f> (\bf<x>)> と書くことにしてしまえば、
+    &mb<
+      \bf<s> = \bf<f> (\bf<x>)
+    >
+    と、あたかも 1 変数関数であるかのように表記できてしまう。
+  >
+  \p<
+    これと同じようにして、3 変数以上の場合も、ベクトルという概念を介して表記を簡明にすることができる。
+  >
+  \h2<写像の微分>
+  \p<
+    さて、普通の 2 変数関数の微分可能性 (全微分可能性) について、少し復習する。
+    2 変数関数 &m<f (x, y)> が点 &m<(\sb<x><0>, \sb<y><0>)> で微分可能であるというのは、十分小さな数 &m<h, k> に対し、&m<\sb<x><0>, \sb<y><0>> によってのみ決まる数 &m<\sb<f><x> (\sb<x><0>, \sb<y><0>), \sb<f><y> (\sb<x><0>, \sb<y><0>)> が存在して、
+    &mb|id="diff"|<
+      f (\sb<x><0> + h, \sb<y><0> + k) = h \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) + k \frac<\partial; f><\partial; y>(\sb<x><0>, \sb<y><0>) + o (`r)
+    >
+    と表せることをいうのであった。
+    なお、&m<`r \coloneqq; \sqrt<\sp<h><2> + \sp<k><2>>> である。
+  >
+  \p<
+    ところで、前項では、多変数をベクトルだとみなして表記を簡略化した。
+    ここでも同じようにして表記を変えてみる。
+  >
+  \p<
+    まず、上\ref|type="eq",ref="diff"|; は、
+    &mb<
+      f \paren<\matrix<\cc<\sb<x><0> + h> \cc<\sb<y><0> + k>>> = \paren<\matrix<\c<\frac<\partial; f><\partial; x> \paren<\matrix<\cc<\sb<x><0>> \cc<\sb<y><0>>>>> \c<\frac<\partial; f><\partial; y> \paren<\matrix<\cc<\sb<x><0>> \cc<\sb<y><0>>>>>>> \paren<\matrix<\cc<h> \cc<k>>> + o \vert<\matrix<\cc<h> \cc<k>>>
+    >
+    と書ける。
+    なお、右辺第 1 項は &m<1 \times; 2> 行列と &m<2 \times; 1> 行列の積で、右辺第 2 項の絶対値記号はベクトルの大きさを表すものとする。
+    ここでさらに、前項のように &m<(\sb<x><0>, \sb<y><0>)> を &m<\sb<\bf<x>><0>> とし、&m<(h, k)> を &m<\bf<h>> と書くことにすれば、
+    &mb|id="vec"|<
+      f (\sb<\bf<x>><0> + \bf<h>) = \paren<\matrix<\c<\frac<\partial; f><\partial; x> (\sb<\bf<x>><0>)> \c<\frac<\partial; f><\partial; y> (\sb<\bf<x>><0>)>>> \bf<h> + o \lvert; \bf<h> \rvert;
+    >
+    と書き表すことができる。
+  >
+  \p<
+    さて、こう書いてしまえば、多変数から多変数への写像の微分可能性も容易に定義できる。
+    例えば、前項に示した、2 変数から 2 変数への写像 &m<\bf<f> (\bf<x>)> を考えれば、\ref|type="eq",ref="vec"|; を参考にして、
+    &mb<
+      \bf<f> (\sb<\bf<x>><0> + \bf<h>) =
+      \paren<\matrix<
+        \c<\frac<\partial; f><\partial; x> (\sb<\bf<x>><0>)> \c<\frac<\partial; f><\partial; y> (\sb<\bf<x>><0>)> \br;
+        \c<\frac<\partial; g><\partial; x> (\sb<\bf<x>><0>)> \c<\frac<\partial; g><\partial; y> (\sb<\bf<x>><0>)> \br;
+      >>
+      \bf<h> + o \lvert; \bf<h> \rvert;
+    >
+    と表せることを、微分可能性の定義としても良さそうである。
+    このとき、右辺第 1 項に現れる行列を、\em<Jacobi 行列\fl<—bian matrix>> と呼び、&m<\scr<J> \bf<f> (\sb<\bf<x>><0>)> と書く。
+    単に &m<\scr<J> \bf<f>> とだけ書く場合もある。
+  >
+  \h2<一般の Jacobi 行列>
+  \p<
+    2 変数に限らず多変数の場合の写像でも、Jacobi 行列式は同様に定義される。
+    &m<m> 変数から &m<n> 変数への写像 &m<\bf<f> (\bf<x>)> が
+    &mb<
+      \bf<f> (\bf<x>) = \paren<\matrix<\cc<\sb<f><1> (\bf<x>)> \cc<\sb<f><2> (\bf<x>)> \cc<\vdots;> \cc<\sb<f><n> (\bf<x>)>>> \qquad;
+      \bf<x> = \paren<\matrix<\cc<\sb<x><1>> \cc<\sb<x><2>> \cc<\vdots;> \cc<\sb<x><n>>>>
+    >
+    によって表されるとき、写像 &m<\bf<f> (\bf<x>)> の Jacobi 行列は、
+    &mb<
+      \scr<J> \bf<f> \coloneqq; \paren<\matrix<
+        \c<\frac<\partial; \sb<f><1>><\partial; \sb<x><1>>> \c<\frac<\partial; \sb<f><1>><\partial; \sb<x><2>>> \c<\cdots;> \c<\frac<\partial; \sb<f><1>><\partial; \sb<x><m>>> \br;
+        \c<\frac<\partial; \sb<f><2>><\partial; \sb<x><1>>> \c<\frac<\partial; \sb<f><2>><\partial; \sb<x><2>>> \c<\cdots;> \c<\frac<\partial; \sb<f><2>><\partial; \sb<x><m>>> \br;
+        \c<\vdots;> \c<\vdots;> \c<\ddots;> \c<\vdots;> \br;
+        \c<\frac<\partial; \sb<f><n>><\partial; \sb<x><1>>> \c<\frac<\partial; \sb<f><n>><\partial; \sb<x><2>>> \c<\cdots;> \c<\frac<\partial; \sb<f><n>><\partial; \sb<x><m>>> \br;
+      >>
+    >
+    で定義される。
+  >
+  \p<
+    さて、この Jacobi 行列を用いることで、多変数から多変数への写像に関しても微分可能性を綺麗に定義できるわけである。
+    すなわち、写像 &m<\bf<f> (\bf<x>)> を考えるとき、微小量 &m<\bf<h>> に対して &m<\sb<\bf<x>><0>> にのみ関係する行列 &m<\scr<J> \bf<f> (\sb<\bf<x>><0>)> が存在し、
+    &mb<
+      \bf<f> (\sb<\bf<x>><0> + \bf<h>) = \scr<J> \bf<f> (\sb<\bf<x>><0>) \bf<h> + o \lvert; \bf<h> \rvert;
+    >
+    が成り立つとき、写像 &m<\bf<f> (\bf<x>)> は点 &m<\sb<\bf<x>><0>> で\em<微分可能\fl<differentiable>> というのである。
+  >
+  \p<
+    多変数のベクトル表記と Jacobi 行列を用いることで、多変数から多変数への写像の微分や積分も、通常の関数と同じように表記し扱うことができるようになる。
+  >
+  \h2<Jacobi 行列式>
+  \p<
+    Jacobi 行列の行列式を、\em<Jacobi 行列式\fl<—bian determinant>> や\em<ヤコビアン\fl<jacobian>> という。
+    ここでは詳しく述べないが、Jacobi 行列式は重積分の変数変換の際に用いられる。
+  >
+
+>

@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@import "../util/common.scss";
+@import "../main-module/variable.scss";
+
+
+$content-item-height: 90rpx;
+
+.content-table-main {
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 40rpx auto 0rpx auto;
+  padding: 5rpx 0rpx 10rpx 0rpx;
+  box-sizing: content-box;
+  @include smartphone {
+    width: 100%;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.content-table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx 30rpx;
+  @include small-screen {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.content-head {
+  margin-bottom: 15rpx;
+  font-size: 120%;
+  color: $blue-color;
+  &:not(:first-of-type) {
+    margin-top: 20rpx;
+  }
+}
+
+.content-item {
+  padding: 0rpx 32rpx;
+  height: $content-item-height;
+  color: $black-blue-color;
+  background-color: white;
+  box-shadow: 3rpx 3rpx 0rpx 0rpx $shadow-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.2s;
+  z-index: 0;
+  &:not([data-disabled]) {
+    cursor: pointer;
+  }
+  &[data-disabled] {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+  &:not([data-disabled]):hover {
+    color: white;
+  }
+  &::before {
+    top: 0rpx;
+    bottom: 0rpx;
+    left: calc(-100% + #{div($content-item-height * $skew-tan, 2)});
+    width: 100%;
+    background-color: $blue-color;
+    position: absolute;
+    transform: skew($skew-angle);
+    transition: left 0.2s;
+    z-index: -1;
+    content: "";
+  }
+  &:not([data-disabled]):hover::before {
+    left: calc(0% - #{div($content-item-height * $skew-tan, 2)} - 6rpx);
+  }
+  &::after {
+    top: 0rpx;
+    bottom: 0rpx;
+    right: calc(-100% + #{div($content-item-height * $skew-tan, 2)});
+    width: 100%;
+    background-color: $orange-color;
+    position: absolute;
+    transform: skew($skew-angle);
+    z-index: -2;
+    content: "";
+  }
+}
+
+.content-title {
+  font-size: 130%;
+  line-height: $small-line-height;
+}
+
+.content-date {
+  margin-bottom: 3rpx;
+  font-size: 80%;
+  opacity: 0.7;
+}

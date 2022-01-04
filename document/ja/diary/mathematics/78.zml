@@ -1,0 +1,336 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Chu 構成とダイアレクティカ圏の統一>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2021 年 6 月 7 日)>
+  \p<
+    Girard\ref|type="bib",ref="gllx"|; によって線型論理が導入されて以来、その圏論的意味論も様々な点から研究されてきた。
+    その最も基本的な結果として、(指数的演算子を除いた) 古典線型論理に対応する圏論的構造はスター自律圏であるということが知られている。
+    すると、そこから自然に生まれるのが、スター自律圏はどのような場面で現れるのか、すなわちスター自律圏の具体例やスター自律圏の構成方法にはどんなものがあるのかという疑問がある。
+  >
+  \p<
+    スター自律圏を構成する一般的な方法はいくつか知られており、その中で代表的なものとして、Chu\ref|type="bib",ref="csac"|; による Chu 構成と de Paiva\ref|type="bib",ref="pdcx"|; によるダイアレクティカ圏がある。
+    Chu 構成は、名前の通り Chu\ref|type="bib",ref="csac"|; によって導入された構成方法で、まさにスター自律圏を構成する方法として考えられた。
+    ダイアレクティカ圏は、de Paiva\ref|type="bib",ref="pdcx"|; によって導入された構成方法で、Gödel\ref|type="bib",ref="gueb"|; が考案したダイアレクティカ解釈を圏論的に再構築することで得られたものである。
+    この 2 つの構成方法は様々な点で似通ってはいるものの、モノダイル構造の定義が両者で少し異なっており、両者を統一して扱うことはそれほど単純ではなかった。
+  >
+  \p<
+    Shulman\ref|type="bib",ref="stcd"|; は、Chu 構成とダイアレクティカ圏が特殊な場合として出現するような非常に一般的な枠組みを構築することで、この問題を解決した。
+    この研究における主なアイデアは、モノイダル構造が異なるのが難点なのだから、モノイダル構造が存在する必要のない一般的な状況の上でまずは考え、モノイダル構造をそこから何らかの普遍性によって取り出そうというものである。
+    そこで Shulman が用いたのが、Szabo\ref|type="bib",ref="spxx"|; の多圏である。
+    多圏とは、通常の圏における射の始域と終域を単一の対象ではなく対象の有限列に一般化したものである。
+  >
+  \p<
+    この日記シリーズでは、Shulman によるこの結果の概略を何回かに分けてまとめるつもりである。
+    なお、一部の記号類は、このサイトの他のページで使われているものとの整合性をとるため、オリジナルのものから変更してある。
+  >
+  \p<
+    今回は、多圏の定義を復習し、それ上のテンソル積や内部冪を定義し、モノイダル閉圏やスター自律圏との関係を見る。
+    以下、単に列と言ったら有限列のことを指し、要素を列挙するときは山括弧で囲んで表すことにする。
+    また、複数の有限列の連結は単にコンマで繋げて書くことで表す。
+  >
+  \thm|type="def"|<
+    \p<
+      以下のデータが定まっているとする。
+    >
+    \ul<
+      \li<
+        集まり &m<\op<Ob> (\scr<C>)> が定まっている。
+        この元を &m<\scr<C>> の\em<対象\fl<object>> という。
+      >
+      \li<
+        &m<\scr<C>> の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> に対し、集合 &m<\sb<\op<Hom>><\scr<C>> (`G \mid; `D)> が定まっている。
+        この元を &m<\scr<C>> の\em<多射\fl<polymorphism>> といい、&m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> のように表す。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、元
+        &mb<
+          \sb<\rm<id>><A> \in; \sb<\op<Hom>><\scr<C>> (A \mid; A)
+        >
+        が定まっている。
+        これを &m<\scr<C>> における &m<A> 上の\em<恒等射\fl<identity>> という。
+      >
+      \li<
+        &m<\scr<C>> の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;, \langle; `L \rangle;, \langle; `L' \rangle;, \langle; `S \rangle;> および対象 &m<A> に対し、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\sb<\op<Hom>><\scr<C>> (`G \mid; `D, A, `D') \times; \sb<\op<Hom>><\scr<C>> (`L, A, `L' \mid; `S)> \c<\longto;> \c<\sb<\op<Hom>><\scr<C>> (`L, `G, `L' \mid; `D, `S, `D')> \br;
+            \c<(f, g)> \c<\longmapsto;> \c<f \sb<\rcomp;><A> g>
+          >
+        >
+        が定まっている。
+        これを &m<\scr<C>> の\em<合成\fl<composition>> という。
+      >
+      \li<
+        &m<\scr<C>> の対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;, `t: \langle; `D \rangle; \to; \langle; `D' \rangle;> に対し、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\sb<\op<Hom>><\scr<C>> (`G \mid; `D)> \c<\longto;> \c<\sb<\op<Hom>><\scr<C>> (`G' \mid; `D')> \br;
+            \c<f> \c<\longmapsto;> \c<`s \cdot; f \cdot; `t>
+          >
+        >
+        が定まっている。
+        これを &m<\scr<C>> の\em<交換\fl<exchange>> という。
+      >
+    >
+    \p<
+      これらのデータは、次の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        多射 &m<f: \langle; `G, A, `G' \rangle; \to; \langle; `D \rangle;> に対し、
+        &mb<
+          \sb<\rm<id>><A> \sb<\rcomp;><A> f  = f
+        >
+      >
+      \li<
+        多射 &m<f: \langle; `G \rangle; \to; \langle; `D, A, `D' \rangle;> に対し、
+        &mb<
+          f \sb<\rcomp;><A> \sb<\rm<id>><A> = f
+        >
+        が成り立つ。
+      >
+      \li<
+        多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> に対し、
+        &mb<
+          \sb<\rm<id>><\langle; `G \rangle;> \cdot; f \cdot; \sb<\rm<id>><\langle; `G \rangle;> = f
+        >
+        が成り立つ。
+      >
+      \li<
+        多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> および対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;>, &m<`s': \langle; \sp<`G><\ppr;> \rangle; \to; \langle; `G' \rangle;>, &m<`t: \langle; `D \rangle; \to; \langle; `D' \rangle;>, &m<`t': \langle; `D' \rangle; \to; \langle; \sp<`D><\ppr;> \rangle;> に対し、
+        &mb<
+          `s' \cdot; (`s \cdot; f \cdot; `t) \cdot; `t' = (`s' \rcomp; `s) \cdot; f \cdot; (`t \rcomp; `t')
+        >
+        が成り立つ。
+      >
+      \li<
+        多射 &m<f: \langle; `G \rangle; \to; \langle; `D, A, `D' \rangle;>, &m<g: \langle; `L, A, `L' \rangle; \to; \langle; `S, B, `S' \rangle;>, &m<h: \langle; `F, B, `F' \rangle; \to; \langle; `C \rangle;> に対し、
+        &mb<
+          (f \sb<\rcomp;><A> g) \sb<\rcomp;><B> h = f \sb<\rcomp;><A> (g \sb<\rcomp;><B> h)
+        >
+        が成り立つ。
+      >
+      \li<
+        多射 &m<f: \langle; `G \rangle; \to; \langle; `D, A, `D', B, \sp<`D><\ppr;> \rangle;>, &m<g: \langle; `L, A, `L' \rangle; \to; \langle; `S \rangle;>, &m<h: \langle; `F, B, `F' \rangle; \to; \langle; `C \rangle;> および対象列の置換 &m<`s: \langle; `F, `L, `G, `L', `F' \rangle; \to; \langle; `L, `F, `G, `F', `L' \rangle;> に対し、
+        &mb<
+          (f \sb<\rcomp;><A> g) \sb<\rcomp;><B> h = `s \cdot; ((f \sb<\rcomp;><B> h) \sb<\rcomp;><A> g)
+        >
+        が成り立つ。
+      >
+      \li<
+        多射 &m<f: \langle; `G \rangle; \to; \langle; `D, A, `D' \rangle;>, &m<g: \langle; `L \rangle; \to; \langle; `S, B, `S' \rangle;>, &m<h: \langle; `F, A, `F', B, \sp<`F><\ppr;> \rangle; \to; \langle; `C \rangle;> および対象列の置換 &m<`s: \langle; `S, `D, `C, `D', `S' \rangle; \to; \langle; `D, `S, `C, `S', `D' \rangle;> に対し、
+        &mb<
+          f \sb<\rcomp;><A> (g \sb<\rcomp;><B> h) = (g \sb<\rcomp;><B> (f \sb<\rcomp;><A> h)) \cdot; `s
+        >
+        が成り立つ。
+      >
+      \li<
+        多射 &m<f: \langle; `G \rangle; \to; \langle; `D, A, `D' \rangle;>, &m<g: \langle; `L, A, `L' \rangle; \to; \langle; `S \rangle;> および対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;>, &m<`t: \langle; `D, A, `D' \rangle; \to; \langle; `F, A, `F' \rangle;>, &m<`l: \langle; `C, A, `C' \rangle; \to; \langle; `L, A, `L' \rangle;>, &m<`m: \langle; `S \rangle; \to; \langle; `S' \rangle;> に対し、
+        &mb<
+          (`s \cdot; f \cdot; `t) \sb<\rcomp;><A> (`l \cdot; g \cdot; `m) = (`s \parallel|bin|; `l) \cdot; (f \sb<\rcomp;><A> g) \cdot; (`t \parallel|bin|; `m)
+        >
+        が成り立つ。
+        ここで、&m<`s \parallel|bin|; `l: \langle; `C, `G', `C' \rangle; \to; \langle; `L, `G, `L' \rangle;>, &m<`t \parallel|bin|; `m: \langle; `D, `S, `D' \rangle; \to; \langle; `F, `S', `F' \rangle;> はそれぞれ自然に定まる置換である。
+      >
+    >
+    \p<
+      このとき、&m<\scr<C>> を\em<対称多圏\fl<symmetric polycategory>> という。
+    >
+  >
+  \p<
+    上記定義で課されている条件により、ある多射から交換によって得られる多射はその始域と終域によってのみ決まり、交換は合成と両立している。
+    したがって、交換によって移り変わる多射は全て同一視しても良く、置換は全て省略することにする。
+  >
+  \p<
+    対称多圏の間の射は、通常の圏の間の関手と同様に、以下のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      対称多圏 &m<\scr<C>, \scr<D>> に対し、以下のデータが定まっているとする。
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<D>> の対象 &m<FA> が定まっている。
+      >
+      \li<
+        &m<\scr<C>> の多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> に対し、&m<\scr<D>> の多射 &m<Ff: F \langle; `G \rangle; \to; F \langle; `D \rangle;> が定まっている。
+        ここで、&m<F \langle; `G \rangle;>, &m<F \langle; `D \rangle;> はそれぞれ &m<\langle; `G \rangle;>, &m<\langle; `D \rangle;> の各要素を &m<F> で移して得られる列である。
+      >
+    >
+    \p<
+      これらのデータは、次の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、
+        &mb<
+          F \sb<\rm<id>><A> = \sb<\rm<id>><FA>
+        >
+        が成り立つ。
+      >
+      \li<
+        &m<\scr<C>> の多射 &m<f: \langle; `G \rangle; \to; \langle; `D, A, `D' \rangle;>, &m<g: \langle; `L, A, `L' \rangle; \to; \langle; `S \rangle;> に対し、
+        &mb<
+          F (f \sb<\rcomp;><A> g) = Ff \sb<\rcomp;><FA> Fg
+        >
+        が成り立つ。
+      >
+      \li<
+        &m<\scr<C>> の多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> および &m<\scr<C>> の対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;, `t: \langle; `D \rangle; \to; \langle; `D' \rangle;> に対し、
+        &mb<
+          F (`s \cdot; f \cdot; `t) = F`s \cdot; Ff \cdot; F`t
+        >
+        が成り立つ。
+        ここで、&m<F`s>, &m<F`t> はそれぞれ &m<`s>, &m<`t> の始域と終域の列を &m<F> で移したものに置き換えて得られる置換である。
+      >
+    >
+    \p<
+      このとき、&m<F> を\em<対称多関手\fl<symmetric polyfunctor>> といい、&m<F: \scr<C> \to; \scr<D>> で表す。
+    >
+  >
+  \p<
+    今後のため、いくつか用語を用意しておく。
+  >
+  \thm|type="def"|<
+    \p<
+      多圏 &m<\scr<C>> の多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> について、&m<`# \langle; `D \rangle; = 1> のときは &m<f> を特に\em<複射\fl<multimorphism>> という。
+      また、&m<`# \langle; `G \rangle; = `# \langle; `D \rangle; = 1> のときは &m<f> を単に\em<射\fl<morphism>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      多圏 &m<\scr<C>> をとる。
+      任意の &m<\scr<C>> の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> について、&m<`# \langle; `D \rangle; \neq; 1> ならば &m<\sb<\op<Hom>><\scr<C>> (`F \mid; `D) = \empty;> が成り立っているとする。
+      このとき、&m<\scr<C>> を\em<複圏\fl<multicategory>> という。
+    >
+  >
+  \p<
+    定義から、複圏とは複射しか存在しない多圏のことであり、Lambek\ref|type="bib",ref="ldsc"|; が導入した複圏と同じものになっている。
+    また、射しか存在しない多圏、すなわち任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> について &m<`# \langle; `G \rangle; \neq; 1> かつ &m<`# \langle; `D \rangle; \neq; 1> ならば &m<\op<Hom> (`G \mid; `D) = \empty;> であるような多圏は、通常の意味での圏と同じものになる。
+    この同一視により、通常の圏を多圏と見なすことができる。
+  >
+  \p<
+    多圏上においてテンソル積などの各種演算は次のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      対称多圏 &m<\scr<C>> の対象 &m<A, B> をとる。
+    >
+    \ul<
+      \li<
+        ある対象 &m<A \otimes; B> と多射 &m<\sb<`f><AB>: \langle; A, B \rangle; \to; \langle; A \otimes; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\op<Hom> (`G, A \otimes; B, `G' \mid; `D)> \c<\longto;> \c<\op<Hom> (`G, A, B, `G' \mid; `D)> \br;
+            \c<f> \c<\longmapsto;> \c<\sb<`f><AB> \sb<\rcomp;><A \otimes; B> f>
+          >     
+        >
+        が同型射になるとする。
+        このとき、&m<A \otimes; B> を &m<A> と &m<B> の\em<テンソル積\fl<tensor product>> という。
+      >
+      \li<
+        ある対象 &m<\top;> と多射 &m<\sb<`f><\top;>: \langle; \rangle; \to; \langle; \top; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\op<Hom> (`G, \top;, `G' \mid; `D)> \c<\longto;> \c<\op<Hom> (`G, `G' \mid; `D)> \br;
+            \c<f> \c<\longmapsto;> \c<\sb<`f><\top;> \sb<\rcomp;><\top;> f>
+          >     
+        >
+        が同型射になるとする。
+        このとき、&m<\top;> を\em<単位\fl<unit>> という。
+      >
+      \li<
+        ある対象 &m<A \oplus; B> と多射 &m<\sb<`c><AB>: \langle; A \oplus; B \rangle; \to; \langle; A, B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\op<Hom> (`G \mid; `D, A \oplus; B, `D')> \c<\longto;> \c<\op<Hom> (`G \mid; `D, A, B, `D')> \br;
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \oplus; B> \sb<`c><AB>>
+          >     
+        >
+        が同型射になるとする。
+        このとき、&m<A \oplus; B> を &m<A> と &m<B> の\em<余テンソル積\fl<cotensor product>> という。
+      >
+      \li<
+        ある対象 &m<\bot;> と多射 &m<\sb<`c><\bot;>: \langle; \bot; \rangle; \to; \langle; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\op<Hom> (`G \mid; `D, \bot;, `D')> \c<\longto;> \c<\op<Hom> (`G \mid; `D, `D')> \br;
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><\bot;> \sb<`c><\bot;>>
+          >     
+        >
+        が同型射になるとする。
+        このとき、&m<\bot;> を\em<余単位\fl<counit>> という。
+      >
+      \li<
+        ある対象 &m<A \brmulti; B> と多射 &m<\sb<`j><AB>: \langle; A \brmulti; B, A \rangle; \to; \langle; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\op<Hom> (`G \mid; `D, A \brmulti; B, `D')> \c<\longto;> \c<\op<Hom> (`G, A \mid; `D, B, `D')> \br;
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \brmulti; B> \sb<`j><AB>>
+          >     
+        >
+        が同型射になるとする。
+        このとき、&m<A \brmulti; B> を &m<A> と &m<B> の\em<冪\fl<exponential>> という。
+      >
+      \li<
+        ある対象 &m<\sp<A><\bot;>> と多射 &m<\sb<`h><A>: \langle; \rangle; \to; \langle; A, \sp<A><\bot;> \rangle;>, &m<\sb<`e><A>: \langle; \sp<A><\bot;>, A \rangle; \to; \langle; \rangle;> について、
+        &mb<
+          \sb<`h><A> \sb<\rcomp;><A> \sb<`e><A> = \sb<\rm<id>><\sp<A><\bot;>> \qquad;
+          \sb<`h><A> \sb<\rcomp;><\sp<A><\bot;>> \sb<`e><A> = \sb<\rm<id>><A>
+        >
+        がともに成り立つとする。
+        このとき、&m<\sp<A><\bot;>> を &m<A> の\em<双対\fl<dual>> という。
+      >
+    >
+    \p<
+      さらに、&m<\scr<C>> の任意の対象に対して上記の各演算が存在するとき、&m<\scr<C>> はその演算を\em<もつ\fl<has>> という。
+    >
+  >
+  \p<
+    通常のモノイダル圏のモノイダル構造 (テンソル積と単位) は、台となる圏に対して追加の情報として与えられるものであり、台となる圏だけで定まるものではない。
+    一方で、上で定義された対称多圏の各種演算は、存在すれば (同型の違いを除いて) 一意に定まるので、追加の情報というよりは性質である。
+  >
+  \p<
+    特定の演算をもつ対称複圏は、何らかの構造をもつ通常の圏と同一視できる。
+    よく知られているのが、以下の対応である。
+  >
+  \thm|type="prp"|<
+    \p<
+      1 対 1 対応
+      &mb<
+        \array|align="rcl"|<
+          \c<`{&raw<テンソル積, 単位をもつ対称複圏>`}> \c<\cong;> \c<`{&raw<対称モノイダル圏>`}> \br;
+          \c<`{&raw<テンソル積, 単位, 冪をもつ対称複圏>`}> \c<\cong;> \c<`{&raw<対称モノイダル閉圏>`}> \br;
+          \c<`{&raw<テンソル積, 単位, 余テンソル積, 余単位をもつ対称多圏>`}> \c<\cong;> \c<`{&raw<線型分配圏>`}> \br;
+          \c<`{&raw<テンソル積, 単位, 余テンソル積, 余単位, 双対をもつ対称多圏>`}> \c<\cong;> \c<`{&raw<スター自律圏>`}>
+        >
+      >
+      が成立する。
+    >
+  >
+  \prf<
+    \p<
+      Cockett–Seely\ref|type="bib",ref="cwdc"|; などを参照。
+    >
+  >
+  \p<
+    次回は、複圏上の加群を定義し、そこから新たな多圏が誘導されることを見る。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="csac"|<P.-H. Chu (1978)「Constructing &m<*>-autonomous categories」Ph. D. thesis, McGill University>
+    \li|id="cwdc"|<R. Cockett, R. Seely (1997)「Weakly distributive categories」『Journal of Pure and Applied Algebra』114(2):133–173>
+    \li|id="pdcx"|<P. C. V. de Paiva (1991)「The dialectica categories」Ph. D. thesis, The University of Cambridge>
+    \li|id="gllx"|<J. Y. Girard (1987)「Linear logic」『Theoretical Computer Science』50:1–101>
+    \li|id="gueb"|<K. Gödel (1958)「Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes」『Dialectica』280–287>
+    \li|id="ldsc"|<J. Lambek (1969)「Deductive systems and categories II: standard constructions and closed categories」『Lecture Notes in Mathematics』86:76–122>
+    \li|id="stcd"|<M. Shulman (2020)「The 2-Chu-dialectica construction and the polycategory of multivariable adjunctions」『Theory and Applications of Categories』35(4):89–136>
+    \li|id="spxx"|<M. E. Szabo (1975)「Polycategories」『Communications in Algebra』3(8):663–689>
+  >
+
+>

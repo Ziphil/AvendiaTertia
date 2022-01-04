@@ -1,0 +1,356 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<豊穣 Yoneda の補題>
+  \use-math|prefix="4"|;
+
+  \h1<日記 (2018 年 8 月 5 日)>
+  \p<
+    今回は、普通の圏論でも非常に重要な役割を果たす Yoneda の補題の豊穣圏バージョンを証明しようと思う。
+  >
+  \p<
+    ところで、モノイダル圏 &m<\scr<V>> に対して &m<\scr<V>>-豊穣関手圏が存在するためには、&m<\scr<V>> が完備かつ対称モノイダル閉である必要があった。
+    &m<\scr<V>> が対称モノイダル閉であると仮定するのは &m<\scr<V>> 自身を &m<\scr<V>>-豊穣圏と見なすのに不可欠なので仕方ないとしても、完備性まで仮定するのは少々強すぎるので、本題に移る前にこの過程を弱めるための準備をする。
+  >
+  \thm|type="prp",id="natiso"|<
+    \p<
+      完備対称モノイダル閉圏 &m<\scr<V>> をとり、&m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to; \scr<V>> を考える。
+      このとき、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
+      &mb<
+        \sb<\op<Hom>><\scr<V>> (X, \lbbracket; F, G \rbbracket; \sb<><\scr<C> \to; \scr<D>>) \cong; `{ \scr<V> \text<-豊穣自然変換 > `g: X \otimes; F \hyphen; \raarr; G `}
+      >
+      が成り立ち、&m<X> に関して自然である。
+    >
+  >
+  \p<
+    証明の前に、命題の意味を明確にしておこう。
+    まず、命題中に出てくる &m<\scr<V>>-豊穣関手 &m<X \otimes; F \hyphen;: \scr<C> \to; \scr<V>> の定義を明確にする。
+    &m<\scr<C>> の対象 &m<A, B> に対し &m<\scr<V>> の射 &m<(X \otimes; F \hyphen;) \sb<><AB>: \scr<C> (A, B) \to; (X \otimes; FA) \rmulti|bin|; (X \otimes; FB)> が定まっているはずである。
+    これは、&m<\sb<F><AB>: `[A, B`] \to; FA \rmulti|bin|; FB> とテンソル積の随伴で対応する射を &m<\sp<\sb<F><AB>><\flat;>: FA \otimes; `[A, B`] \to; FB> とするとき、&m<\sb<\rm<id>><X> \otimes; \sp<\sb<F><AB>><\flat;>: X \otimes; FA \otimes; `[A, B`] \to; X \otimes; FB> と対応する射として定める。
+    このようにすると、&m<X \otimes; F \hyphen;> は &m<\scr<V>>-豊穣関手の公理を満たす。
+    実際、任意の &m<\scr<C>> の対象 &m<A, B, C> に対し、&m<F> が &m<\scr<V>>-豊穣関手であることから、
+    &mb<
+      &mark<\sb<\wspade;><1>>
+      \diag|hor="thk"|<
+        \v<`[A, B`] \otimes; `[B, C`]> \v<`[A, C`]> \br;
+        \v<`[FA, FB`] \otimes; `[FB, FC`]> \v<`[FA, FB`]>
+        \ar|s="1",e="3",inv|<\sb<F><AB> \otimes; \sb<F><BC>> \ar|s="1",e="2"|<\sb<c><ABC>>
+        \ar|s="2",e="4"|<\sb<F><AC>> \ar|s="3",e="4",inv|<\sb<c><FA, FB, FC>>
+      >
+    >
+    は可換である。
+    テンソル積の随伴を用いると、この図式の可換性は、
+    &mb<
+      \diag|hor="thk"|<
+        \v<FA \otimes; `[A, B`] \otimes; `[B, C`]> \v; \v<FA \otimes; `[A, C`]> \br;
+        \v<FA \otimes; (FA \rmulti|bin|; FB) \otimes; (FB \rmulti|bin|; FC)> \v<FB \otimes; (FB \rmulti|bin|; FC)> \v<FC>
+        \ar|s="1",e="3"|<\rm<id> \otimes; \sb<c><ABC>> \ar|s="1",e="4",inv|<\rm<id> \otimes; \sb<F><AB> \otimes; \sb<F><BC>> \ar|s="3",e="6"|<\sp<\sb<F><AC>><\flat;>>
+        \ar|s="4",e="5",inv|<\sb<`e><FA, FB> \otimes; \rm<id>> \ar|s="5",e="6",inv|<\sb<`e><FB, FC>>
+      >
+    >
+    の可換性と同値である。
+    ここで定義から、例えば &m<\sp<\sb<F><AB>><\flat;> = \sb<`e><FA, FB> \circ; (\sb<\rm<id>><FA> \otimes; \sb<F><AB>)> であるから、上の図式において初めに下に行って右に行く合成は、
+    &mb<
+      &mark<\sb<\wspade;><2>>
+      \diag|hor="thk"|<
+        \v<FA \otimes; `[A, B`] \otimes; `[B, C`]> \v<FA \otimes; `[A, C`]> \br;
+        \v<FB \otimes; `[B, C`]> \v<FC>
+        \ar|s="1",e="2"|<\rm<id> \otimes; \sb<c><ABC>> \ar|s="1",e="3",inv|<\sp<\sb<F><AB>><\flat;> \otimes; \rm<id>>
+        \ar|s="2",e="4"|<\sp<\sb<F><AC>><\flat;>> \ar|s="3",e="4",inv|<\sp<\sb<F><BC>><\flat;>>
+      >
+    >
+    と書き換えられる。
+    この図式全体に左から &m<X> をテンソルし、図式 &m<\sb<\wspade;><1>> から図式 &m<\sb<\wspade;><2>> を得た操作と逆の操作を行えば、&m<X \otimes; F \hyphen;> が合成と可換であることを意味する図式が得られる。
+    他の図式の可換性についても同様の方法で確かめられる。
+  >
+  \p<
+    次に、命題中の全単射が &m<X> に関して自然であるとはどういうことなのか明確にする。
+    この全単射の右辺の集合を &m<SX> と書くことにすると、&m<\scr<V>> の対象 &m<X> に対し集合 &m<SX> を対応させる規則は、以下のように関手 &m<S: \sp<\scr<V>><\circ;> \to; \bfrm<Set>> に拡張できる。
+    &m<\scr<V>> の射 &m<f: Y \to; X> に対し、&m<\scr<V>>-豊穣自然変換 &m<`g: X \otimes; F \hyphen; \raarr; G> は、\a|href="14.html#nateq"|<命題 2.3> によって、&m<\scr<C>> の対象 &m<A> に対する &m<\scr<V>> の射 &m<\sb<`g><A>: X \otimes; FA \to; GA> の族であって、任意の &m<\scr<C>> の対象 &m<A, B> に対し、
+    &mb<
+      &mark<\wheart;>
+      \diag<
+        \v<`[A, B`]> \v<(X \otimes; FA) \rmulti|bin|; (X \otimes; FB)> \br;
+        \v<GA \rmulti|bin|; GB> \v<(X \otimes; FA) \rmulti|bin|; GB>
+        \ar|s="1",e="2"|<\sb<(X \otimes; F \hyphen;)><AB>> \ar|s="1",e="3",inv|<\sb<G><AB>>
+        \ar|s="2",e="4"|<\rm<id> \rmulti|bin|; \sb<`g><B>> \ar|s="3",e="4",inv|<\sb<`g><A> \rmulti|bin|; \rm<id>>
+      >
+    >
+    を可換にするものと見なせる。
+    ここで、&m<\scr<C>> の対象 &m<A> に対して &m<\sb<`d><A> \coloneqq; \sb<`g><A> \circ; (f \otimes; \sb<\rm<id>><FA>)> とおくと、これは &m<\scr<V>>-豊穣自然変換 &m<`d: Y \otimes; F \hyphen; \raarr; G> を定める。
+    実際、任意の &m<\scr<C>> の対象 &m<A, B> に対し、
+    &mb<
+      \diag|hor="thk"|<
+        \v<Y \otimes; FA \otimes; `[A, B`]> \v<Y \otimes; FB> \br;
+        \v<X \otimes; FA \otimes; `[A, B`]> \v<X \otimes; FB> \br;
+        \v<GA \otimes; `[A, B`]> \v<GB>
+        \ar|s="1",e="2"|<\rm<id> \otimes; \sp<\sb<F><AB>><\flat;>> \ar|s="1",e="3",inv|<f \otimes; \rm<id>>
+        \ar|s="2",e="4"|<f \otimes; \rm<id>>
+        \ar|s="3",e="4"|<\rm<id> \otimes; \sp<\sb<F><AB>><\flat;>> \ar|s="3",e="5",inv|<\sb<`g><A> \otimes; \rm<id>>
+        \ar|s="4",e="6"|<\sb<`g><B>> \ar|s="5",e="6",inv|<\sp<\sb<G><AB>><\flat;>>
+      >
+    >
+    を考えると、上側の矩形部分は明らかに可換で、下側の矩形部分は図式 &m<\wheart;> 全体をテンソル積の随伴で移したものなので可換である。
+    したがって、この図式の外周も可換であるが、これは &m<`d> の自然性を表す図式をテンソル積の随伴で移したものであるので、&m<`d> は &m<\scr<V>>-豊穣自然変換になっている。
+    以上により、&m<(Sf) `g \coloneqq; `d> と定めることで写像 &m<Sf: SX \to; SY> が定まり、これにより &m<S> は関手になる。
+    そして、命題中の全単射が自然であるとは、同型な自然変換 &m<\op<Hom> (\hyphen;, \lbbracket; F, G \rbbracket;) \raarr; S> が存在するということである。
+  >
+  \prf<
+    \p<
+      任意に &m<\scr<V>> の対象 &m<X> をとる。
+      \a|href="15.html"|<8 月 2 日>の命題 2 の証明と同様の議論により、同型の違いを除けば、&m<\op<Hom> (X, \lbbracket; F, G \rbbracket;)> の元は、&m<\scr<C>> の対象 &m<A> に対する &m<\scr<V>> の射 &m<\sb<m><A>: X \to; FA \rmulti|bin|; GA> の族であって、任意の &m<\scr<C>> の対象 &m<A, B> に対し、
+      &mb<
+        \diag|ver="vthn",hor="thk"|<
+          \v<`[A, B`] \otimes; X> \v<(FA \rmulti|bin|; FB) \otimes; (FB \rmulti|bin|; GB)> \v; \br;
+          \v; \v; \v<FA \rmulti|bin|; GB> \br;
+          \v<X \otimes; `[A, B`]> \v<(FA \rmulti|bin|; GA) \otimes; (GA \rmulti|bin|; GB)> \v;
+          \ar|s="1",e="2"|<\sb<F><AB> \otimes; \sb<m><B>> \ar|s="1",e="7",inv|<\sb<`s><`[A, B`], X>> \ar|s="2",e="6"|<\sb<c><FA, FB, GB>>
+          \ar|s="7",e="8",inv|<\sb<m><A> \otimes; \sb<G><AB>> \ar|s="8",e="6",inv|<\sb<c><FA, GA, GB>>
+        >
+      >
+      が可換になるものである。
+      この図式をテンソル積の随伴で移すと、
+      &mb<
+        \diag|hor="thk"|<
+          \v<FA \otimes; `[A, B`] \otimes; X> \v<FA \otimes; (FA \rmulti|bin|; FB) \otimes; (FB \rmulti|bin|; GB)> \v<FB \otimes; (FB \rmulti|bin|; GB)> \br;
+          \v; \v; \v<GB> \br;
+          \v<FA \otimes; X \otimes; `[A, B`]> \v<FA \otimes; (FA \rmulti|bin|; GA) \otimes; (GA \rmulti|bin|; GB)> \v<GA \otimes; (GA \rmulti|bin|; GB)>
+          \ar|s="1",e="2"|<\rm<id> \otimes; \sb<F><AB> \otimes; \sb<m><B>> \ar|s="1",e="7",inv|<\sb<`s><`[A, B`], X>>
+          \ar|s="2",e="3"|<\sb<`e><FA, FB> \otimes; \rm<id>> \ar|s="3",e="6"|<\sb<`e><FB, GB>>
+          \ar|s="7",e="8",inv|<\rm<id> \otimes; \sb<m><A> \otimes; \sb<G><AB>> \ar|s="8",e="9",inv|<\sb<`e><FA, GA> \otimes; \rm<id>>
+          \ar|s="9",e="6",inv|<\sb<`e><GA, GB>>
+        >
+      >
+      となる。
+      ここで、&m<\sb<m><A>> とテンソル積の随伴で対応する射を &m<\sb<`g><A>: X \otimes; FA \to; GA> とおく。
+      すなわち、&m<\sb<`g><A> = \sb<`e><FA, GA> \circ; (\sb<\rm<id>><FA> \otimes; \sb<m><A>)> が成り立つ。
+      この等式などを用いた上で、適切にテンソル積の順番を入れ替えると、上の図式は、
+      &mb<
+        \diag|hor="thk"|<
+          \v<X \otimes; FA \otimes; `[A, B`]> \v<X \otimes; FB> \br;
+          \v<GA \otimes; `[A, B`]> \v<GB>
+          \ar|s="1",e="2"|<\rm<id> \otimes; \sp<\sb<F><AB>><\flat;>> \ar|s="1",e="3",inv|<\sb<`g><A> \otimes; \rm<id>>
+          \ar|s="2",e="4"|<\sb<`g><B>> \ar|s="3",e="4",inv|<\sp<\sb<G><AB>><\flat;>>
+        >
+      >
+      と書き換えられる。
+      そして、これをテンソル積の随伴で移した図式が、まさに &m<`g> が &m<\scr<V>>-豊穣自然変換であることを表す図式である。
+      以上により、全単射
+      &mb<
+        \op<Hom> (X, \lbbracket; F, G \rbbracket;) \cong; SX
+      >
+      が示された。
+    >
+    \p<
+      この全単射の自然性を確かめる。
+      そのためには、任意の &m<\scr<V>> の射 &m<f: Y \to; X> に対し、
+      &mb<
+        \diag<
+          \v<\op<Hom> (X, \lbbracket; F, G \rbbracket;)> \v<SX> \br;
+          \v<\op<Hom> (Y, \lbbracket; F, G \rbbracket;)> \v<SY>
+          \ar|s="1",e="2"|; \ar|s="1",e="3",inv|<\hyphen; \circ; f>
+          \ar|s="2",e="4"|<S f> \ar|s="3",e="4"|;
+        >
+      >
+      が可換であることを示せば良い。
+      すなわち、上の記号において、族 &m<(\sb<m><A> \circ; f) \sb<><A \in; \scr<C>>> に対応するものが &m<(Sf) `g> であることを示す。
+      しかし、全単射の定義から、&m<(\sb<m><A> \circ; f) \sb<><A \in; \scr<C>>> に対応するのは、&m<\scr<V>> の各対象 &m<A> に対し &m<\sb<`g><A> \circ; (f \otimes; \sb<\rm<id>><FA>): Y \otimes; FA \to; GA> が定める &m<\scr<V>>-豊穣自然変換であり、これは &m<(Sf) `g> そのものである。
+      したがって、命題の全単射の自然性も示された。
+    >
+  >
+  \p<
+    上の命題の同型が成り立つかどうかというのは、&m<\scr<V>> が完備であるかどうかに関わらず言及することができる。
+    そこで、以下のように &m<\lbbracket; F, G \rbbracket;> を再定義することにする。
+  >
+  \thm|type="def",id="natobj"|<
+    \p<
+      対称モノイダル閉圏 &m<\scr<V>> をとり、&m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to; \scr<V>> を考える。
+      ある &m<\scr<V>> の対象 &m<N> が存在して、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
+      &mb<
+        \sb<\op<Hom>><\scr<V>> (X, N) \cong; `{\scr<V> \text<-豊穣自然変換 > `g: X \otimes; F \hyphen; \raarr; G `}
+      >
+      が &m<X> に関して自然に成り立つとする。
+      このとき、&m<N> を &m<F> から &m<G> への\em<自然変換対象\fl<natural transformation object>> といい、&m<\lbbracket; F, G \rbbracket; \sb<><\scr<C> \to; \scr<D>>> で表す。
+    >
+  >
+  \p<
+    この定義のもと、豊穣圏における Yoneda の補題は以下のように定式化できる。
+  >
+  \thm|type="thm"|<
+    \name<豊穣 Yoneda の補題\fl<enriched — lemma>>
+    \p<
+      対称モノイダル閉圏 &m<\scr<V>> をとり、&m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣関手 &m<F: \scr<C> \to; \scr<V>> を考える。
+      任意の &m<\scr<C>> の対象 &m<K> に対し、自然変換対象 &m<\lbbracket; `[K, \hyphen;`], F \rbbracket;> が常に存在し、同型
+      &mb<
+        \lbbracket; `[K, \hyphen;`], F \rbbracket; \cong; FK
+      >
+      が成り立つ。
+    >
+  >
+  \p<
+    まず、&m<\scr<V>>-豊穣関手 &m<`[K, \hyphen;`]: \scr<C> \to; \scr<V>> の射の対応を明確にしておく。
+    &m<\scr<C>> の対象 &m<A, B> に対する &m<\scr<V>> の射 &m<\sb<`[K, \hyphen;`]><AB>: `[A, B`] \to; `[K, A`] \rmulti|bin|; `[K, B`]> は、&m<\sb<c><KAB>: `[K, A`] \otimes; `[A, B`] \to; `[K, B`]> とテンソル積の随伴で対応する射とする。
+    これは &m<\scr<V>>-豊穣関手の公理を満たす。
+    例えば合成との可換性については、まず任意の &m<\scr<C>> の対象 &m<A, B, C> に対し、
+    &mb<
+      \diag|hor="thk"|<
+        \v<`[K, A`] \otimes; `[A, B`] \otimes; `[B, C`]> \v<`[K, A`] \otimes; `[A, C`]> \br;
+        \v<`[K, B`] \otimes; `[B, C`]> \v<`[K, C`]>
+        \ar|s="1",e="2"|<\rm<id> \otimes; \sb<c><ABC>> \ar|s="1",e="3",inv|<\sb<c><KAB> \otimes; \rm<id>>
+        \ar|s="2",e="4"|<\sb<c><KAC>> \ar|s="3",e="4",inv|<\sb<c><KBC>>
+      >
+    >
+    は可換である。
+    この図式において最初に下に行って右に行く合成は、
+    &mb<
+      \diag|hor="uthk"|<
+        \v<`[K, A`] \otimes; `[A, B`] \otimes; `[B, C`]> \v<`[K, A`] \otimes; `[A, C`]> \br;
+        \v<`[K, A`] \otimes; (`[K, A`] \rmulti|bin|; `[K, B`]) \otimes; (`[K, B`] \rmulti|bin|; `[K, C`])> \v<`[K, C`]>
+        \ar|s="1",e="2"|<\rm<id> \otimes; \sb<c><ABC>> \ar|s="1",e="3",inv|<\rm<id> \otimes; \sb<`[K, \hyphen;`]><AB> \otimes; \sb<`[K, \hyphen;`]><BC>>
+        \ar|s="2",e="4"|<\sb<c><KAC>> \ar|s="3",e="4",inv|<\sb<`e><`[K, B`], `[K, C`]> \circ; (\sb<`e><`[K, A`], `[K, B`]> \otimes; \rm<id>)>
+      >
+    >
+    と書き換えることができる。
+    この図式全体をテンソル積の随伴で移せば、
+    &mb<
+      \diag|hor="vthk"|<
+        \v<`[A, B`] \otimes; `[B, C`]> \v<`[A, C`]> \br;
+        \v<(`[K, A`] \rmulti|bin|; `[K, B`]) \otimes; (`[K, B`] \rmulti|bin|; `[K, C`])> \v<`[K, A`] \rmulti|bin|; `[K, C`]>
+        \ar|s="1",e="2"|<\sb<c><ABC>> \ar|s="1",e="3",inv|<\sb<`[K, \hyphen;`]><AB> \otimes; \sb<`[K, \hyphen;`]><BC>>
+        \ar|s="2",e="4"|<\sb<`[K, \hyphen;`]><AC>> \ar|s="3",e="4",inv|<\sb<c><`[K, A`], `[K, B`], `[K, C`]>>
+      >
+    >
+    となり、これは &m<`[K, \hyphen;`]> が合成と可換であることを表す図式である。
+    他の &m<\scr<V>>-豊穣関手の公理についても同様である。
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="natobj"|; により、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
+      &mb<
+        \op<Hom> (X, FK) \cong; `{ \scr<V> \text<-豊穣自然変換 > `g: X \otimes; `[K, \hyphen;`] \raarr; F `}
+      >
+      が &m<X> に関して自然に成り立てば良い。
+    >
+    \p<
+      &m<\scr<V>> の射 &m<h: X \to; FK> をとる。
+      &m<\scr<C>> の対象 &m<A> に対し、合成
+      &mb<
+        \diag<
+          \v<X \otimes; `[K, A`]> \v<FK \otimes; `[K, A`]> \v<FA>
+          \ar|s="1",e="2"|<h \otimes; \rm<id>> \ar|s="2",e="3"|<\sp<\sb<F><KA>><\flat;>>
+        >
+      >
+      を &m<\sb<`g><A>> とおく。
+      このとき、&m<\scr<C>> の対象 &m<A, B> に対して、図式
+      &mb<
+        &mark<\wclub;>
+        \diag|hor="thk"|<
+          \v<X \otimes; `[K, A`] \otimes; `[A, B`]> \v<X \otimes; `[K, B`]> \br;
+          \v<FK \otimes; `[K, A`] \otimes; `[A, B`]> \v<FK \otimes; `[K, B`]> \br;
+          \v<FA \otimes; `[A, B`]> \v<FB>
+          \ar|s="1",e="2"|<\rm<id> \otimes; \sb<c><KAB>> \ar|s="1",e="3",inv|<h \otimes; \rm<id>> \ar|s="2",e="4"|<h \otimes; \rm<id>>
+          \ar|s="3",e="4"|<\rm<id> \otimes; \sb<c><KAB>> \ar|s="3",e="5",inv|<\sp<\sb<F><KA>><\flat;> \otimes; \rm<id>>
+          \ar|s="4",e="6"|<\sp<\sb<F><KB>><\flat;>> \ar|s="5",e="6",inv|<\sp<\sb<F><AB>><\flat;>>
+        >
+      >
+      を考えると、上側の矩形部分は明らかに可換で、下側の矩形部分は図式 &m<\sb<\wspade;><2>> を得たのと全く同じようにして可換である。
+      この外周をテンソル積の随伴で移すと、
+      &mb<
+        \sp<\sb<(X \otimes; `[K, \hyphen;`])><AB>><\flat;> = \sb<\rm<id>><X> \otimes; \sp<\sb<`[K, \hyphen;`]><AB>><\flat;> = \sb<\rm<id>><X> \otimes; \sb<c><KAB>
+      >
+      であることに注意して、
+      &mb<
+        \diag|hor="thk"|<
+          \v<`[A, B`]> \v<(X \otimes; `[K, A`]) \rmulti|bin|; (X \otimes; `[K, B`])> \br;
+          \v<FA \rmulti|bin|; FB> \v<(X \otimes; `[K, A`]) \rmulti|bin|; FB>
+          \ar|s="1",e="2"|<\sb<(X \otimes; `[K, \hyphen;`])><AB>> \ar|s="1",e="3",inv|<\sb<F><AB>>
+          \ar|s="2",e="4"|<\rm<id> \rmulti|bin|; \sb<`g><B>> \ar|s="3",e="4",inv|<\sb<`g><A> \rmulti|bin|; \rm<id>>
+        >
+      >
+      を得る。
+      以上で、&m<\scr<V>>-豊穣自然変換 &m<`g: X \otimes; `[K, \hyphen;`] \raarr; F> が定まった。
+    >
+    \p<
+      逆に、&m<\scr<V>>-豊穣自然変換 &m<`g: X \otimes; `[K, \hyphen;`] \raarr; F> をとる。
+      合成
+      &mb<
+        \diag<
+          \v<X> \v<X \otimes; 1> \v<X \otimes; `[K, K`]> \v<FK>
+          \ar|s="1",e="2"|<\sp<\sb<`r><X>><- 1>> \ar|s="2",e="3"|<\rm<id> \otimes; \sb<j><X>> \ar|s="3",e="4"|<\sb<`g><K>>
+        >
+      >
+      を &m<h> とおけば、射 &m<h: X \to; FK> が得られる。
+    >
+    \p<
+      この 2 つの操作は互いに逆になっていることが、以下のようにして分かる。
+      &m<\scr<V>> の射 &m<h: X \to; FK> に対し、図式
+      &mb<
+        \diag<
+          \v<X> \v<X \otimes; 1> \v<X \otimes; `[K, K`]> \br;
+          \v<FK> \v<FK \otimes; 1> \v<FK \otimes; `[K, K`]> \br;
+          \v; \v<FK \otimes; (FK \rmulti|bin|; FK)> \v; \br;
+          \v; \v<FK> \v;
+          \ar|s="1",e="2"|<\sp<\sb<`r><X>><- 1>> \ar|s="1",e="4",inv|<h>
+          \ar|s="2",e="3"|<\rm<id> \otimes; \sb<j><K>> \ar|s="2",e="5"|<h \otimes; \rm<id>> \ar|s="3",e="6"|<h \otimes; \rm<id>>
+          \ar|s="4",e="5"|<\sp<\sb<`r><FK>><- 1>> \ar|s="4",e="11",bend="-30",inv|<\rm<id>> \ar|s="5",e="6"|<\rm<id> \otimes; \sb<j><K>> \ar|s="5",e="8",inv|<\rm<id> \otimes; \sb<j><FK>>
+          \ar|s="6",e="8"|<\rm<id> \otimes; \sb<F><KK>> \ar|s="6",e="11",bend="30"|<\sp<\sb<F><KK>><\flat;>>
+          \ar|s="8",e="11"|<\sb<`e><FK, FK>>
+        >
+      >
+      は可換であることがすぐに分かる。
+      この図式の外周の可換性は &m<h> から始めて操作を 2 回行うともとに戻ることを意味している。
+      &m<\scr<V>>-豊穣自然変換 &m<`g: X \otimes; `[K, \hyphen;`] \raarr; F> に対しては、&m<\scr<C>> の対象 &m<A> に対し、
+      &mb<
+        \diag|hor="thk"|<
+          \v<X \otimes; `[K, A`]> \v<X \otimes; 1 \otimes; `[K, A`]> \v<X \otimes; `[K, K`] \otimes; `[K, A`]> \br;
+          \v; \v<X \otimes; `[K, A`]> \v<FK \otimes; `[K, A`]> \br;
+          \v; \v<FA> \v;
+          \ar|s="1",e="2"|<\sp<\sb<`r><X>><- 1> \otimes; \rm<id>> \ar|s="1",e="5",inv|<\rm<id>>
+          \ar|s="2",e="3"|<\rm<id> \otimes; \sb<j><K> \otimes; \rm<id>> \ar|s="3",e="6"|<\sb<`g><K> \otimes; \rm<id>> \ar|s="3",e="5"|<\rm<id> \otimes; \sb<c><KKA>>
+          \ar|s="5",e="8"|<\sb<`g><A>> \ar|s="6",e="8"|<\sp<\sb<F><KA>><\flat;>>
+        >
+      >
+      は可換である。
+      実際、右側の平行四辺形部分は &m<\wclub;> を得たのと同じ方法で可換であり、中央の三角形部分は明らかに可換である。
+      これより、&m<`g> から操作を 2 回行ってももとに戻ることが分かる。
+    >
+    \p<
+      以上により、&m<\scr<V>> の対象 &m<X> に対して、
+      &mb<
+        \op<Hom> (X, FK) \cong; `{ \scr<V> \text<-豊穣自然変換 > `g: X \otimes; `[K, \hyphen;`] \raarr; F `}
+      >
+      が示された。
+      あとはこの全単射が &m<X> に関して自然であることを示せば良い。
+      そのためには、\ref|type="thm",ref="natiso"|; のときと同様に上の式の右辺を &m<SX> と書くことにしたとき、
+      &mb<
+        \diag<
+          \v<\op<Hom> (X, FK)> \v<SX> \br;
+          \v<\op<Hom> (Y, FK)> \v<SY>
+          \ar|s="1",e="2"|; \ar|s="1",e="3",inv|<\hyphen; \circ; f>
+          \ar|s="2",e="4"|<S f> \ar|s="3",e="4"|;
+        >
+      >
+      が可換であることを確かめれば良い。
+      すなわち、&m<\scr<V>> の射 &m<h: X \to; FK> に対応する &m<\scr<V>>-豊穣自然変換を &m<`g: X \otimes; `[K, \hyphen;`] \raarr; F> として、&m<h \circ; f> と対応するのが &m<(Sf) `g> であることを示せば良い。
+      しかし、&m<h \circ; f> に対応するのは、&m<\scr<C>> の各対象 &m<A> に対して &m<\sb<`g><A> \circ; (f \otimes; \sb<\rm<id>><FA>): Y \otimes; `[K, A`] \to; FA> が定める &m<\scr<V>>-豊穣自然変換であり、これは &m<(Sf) `g> である。
+      よって、示したかった自然性も得られた。
+    >
+  >
+  \p<
+    ここで証明した豊穣 Yoneda の補題
+    &mb<
+      \lbbracket; `[K, \hyphen;`], F \rbbracket; \cong; FK
+    >
+    は、実は &m<K> に関して自然である。
+    さらに、&m<\scr<V>> が完備ならば、豊穣関手圏 &m<\bfrm<Fun> (\scr<C>, \scr<V>)> が存在するので、この同型が &m<F> に関して自然であるという言及もでき、実際に自然になっている (はずである)。
+    この自然性の証明をするには、実際にやってみると分かるが、非常に煩雑な計算を行う必要がある。
+    暇潰しにでもどうだろうか。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 2』Cambridge University Press>
+  >
+
+>

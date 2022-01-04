@@ -1,0 +1,177 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<余自由余代数の構成>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2019 年 11 月 9 日)>
+  \p<
+    \a|href="31.html"|<11 月 8 日>の準備を引き継いで、本題であった余自由余代数の構成を行う。
+    記号などは \a|href="31.html"|<11 月 8 日>と同じものを用いる。
+  >
+  \p<
+    まず、自由性の定義をおさらいしておく。
+    自由代数とは、忘却関手の左随伴関手によって与えられるものであった。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<U: \bfrm<Alg> \to; \bfrm<Vect>> を忘却関手とし、随伴
+      &mb<
+        \diag<
+          \v<\bfrm<Alg>> \v<\bfrm<Vect> \vph<\bfrm<Alg>>>
+          \ar|s="1:r60",e="2:l60",bend="-40",name="a",inv|<U> \ar|s="2:l40",e="1:r40",bend="-40",name="i",inv|<T>
+          \ar|s="a:c",e="i:c",line="0",mark|<\g|rotate="90"|<\dashv;>>
+        >
+      >
+      を考える。
+      線型空間 &m<V> に対し、&m<TV> を &m<V> 上の\em<自由代数\fl<free algebra>> という。
+    >
+  >
+  \p<
+    よく知られているように、自由代数はテンソル代数として与えられる。
+    すなわち、線型空間 &m<V> に対して、
+    &mb<
+      TV \coloneqq; \bigoplus<n \in; \bb<N>> \sp<V><\otimes; n> = \bigoplus<n \in; \bb<N>> (\un<\underbrace<V \otimes; \cdots; \otimes; V>><n \text< 個>>)
+    >
+    である。
+  >
+  \p<
+    今構成しようとしている余自由余代数とは、この双対的概念である。
+    すなわち、忘却関手の右随伴関手によって与えられるものである。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<U: \bfrm<Coalg> \to; \bfrm<Vect>> を忘却関手とし、随伴
+      &mb<
+        \diag<
+          \v<\bfrm<Coalg>> \v<\bfrm<Vect> \vph<\bfrm<Coalg>>>
+          \ar|s="1:r40",e="2:l40",bend="40",name="a"|<U> \ar|s="2:l60",e="1:r60",bend="40",name="i"|<C>
+          \ar|s="a:c",e="i:c",line="0",mark|<\g|rotate="90"|<\dashv;>>
+        >
+      >
+      を考える。
+      線型空間 &m<V> に対し、&m<CV> を &m<V> 上の\em<余自由余代数\fl<cofree coalgebra>> という。
+    >
+  >
+  \p<
+    定義はこれで良いのだが、議論を簡単にするために初等的に言い換えた定義も述べておく。
+    これが上の定義と同値であることは簡単に示せる。
+  >
+  \thm|type="def"|<
+    \p<
+      線型空間 &m<V> をとり、余代数 &m<C> と線型写像 &m<`p: C \to; V> を考える。
+      任意の余代数 &m<D> と線型写像 &m<s: D \to; V> に対し、図式
+      &mb<
+        \diag<
+          \v<D> \v; \br;
+          \v<C> \v<V>
+          \ar|s="1",e="4"|<s> \ar|s="3",e="4",inv|<`p> \ar|s="1",e="3",dash,inv|<\tilde<s>>
+        >
+      >
+      を可換にする余代数の射 &m<\tilde<s>: D \to; C> が一意に存在するとする。
+      このとき、組 &m<(C, `p)> を &m<V> 上の\em<余自由余代数\fl<cofree coalgebra>> という。
+    >
+  >
+  \p<
+    では、余自由余代数の構成に取り掛かる。
+    まず、任意の線型空間 &m<V> に対し、その二重双対空間 &m<\sp<V><**>> 上の余自由余代数が構成できる。
+  >
+  \thm|type="thm",id="cof"|<
+    \p<
+      線型空間 &m<V> をとる。
+      &m<`i: \sp<V><*> \hookrarr; T (\sp<V><*>)> をテンソル代数の標準的な埋め込みとし、合成
+      &mb<
+        \diag<
+          \v<T (\sp<V><*>) \sp<><\diamond;>> \v<T (\sp<V><*>) \sp<><*>> \v<\sp<V><**>>
+          \ar|s="1",e="2",tip="hook"|; \ar|s="2",e="3"|<\sp<`i><*>>
+        >
+      >
+      を &m<`p: T (\sp<V><*>) \sp<><\diamond;> \to; \sp<V><**>> とおくと、&m<(T (\sp<V><*>) \sp<><\diamond;>, `p)> は &m<\sp<V><**>> 上の余自由余代数である。
+    >
+  >
+  \prf<
+    \p<
+      線型空間 &m<X, Y> をとる。
+      線型写像 &m<s: X \to; \sp<Y><*>> に対し、合成
+      &mb<
+        \diag<
+          \v<Y> \v<\sp<Y><**>> \v<\sp<X><*>>
+          \ar|s="1",e="2",tip="tail"|<i> \ar|s="2",e="3"|<\sp<s><*>>
+        >
+      >
+      を &m<\widehat<s>: Y \to; \sp<X><*>> と書くことにすると、この操作は、全単射
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\bfrm<Vect>> (X, \sp<Y><*>)> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<Vect>> (Y, \sp<X><*>)> \br;
+          \c<s> \c<\longmapsto;> \c<\widehat<s>> \br;
+          \c<\widehat<t>> \c<\longmappedfrom;> \c<t>
+        >
+      >
+      を与える。
+    >
+    \p<
+      任意に余代数 &m<D> と線型写像 &m<s: D \to; \sp<V><**>> をとる。
+      上の全単射とテンソル代数の普遍性と\a|href="31.html#madj"|<定理 1.12> を順に使うことで、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\bfrm<Vect>> (D, \sp<V><**>)> \c<\cong;> \c<\sb<\op<Hom>><\bfrm<Vect>> (\sp<V><*>, \sp<D><*>)> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><\bfrm<Alg>> (T (\sp<V><*>), \sp<D><*>)> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><\bfrm<Coalg>> (D, T (\sp<V><*>) \sp<><\diamond;>)>
+        >
+      >
+      が得られる。
+      この同型における &m<s> の像を &m<\tilde<s>> とおくと、&m<`p \circ; \tilde<s> = s> が成り立つ。
+      したがって、&m<(T (\sp<V><*>) \sp<><\diamond;>, `p)> は余自由である。
+    >
+  >
+  \p<
+    さて、&m<V> が有限次元であれば &m<V \cong; \sp<V><**>> であるから、これで &m<V> 上の余自由余代数が構成できたことになる。
+    &m<V> が無限次元の場合は、もう一段階必要となる。
+    その一段階を与えるのが、次の補題である。
+  >
+  \thm|type="lem",id="sub"|<
+    \p<
+      線型空間 &m<X> とその部分空間 &m<Y> を考える。
+      &m<(C', `p)> を &m<X> 上の余自由余代数とするとき、
+      &mb<
+        C \coloneqq; \bigcup<\stack<\cc<E \subseteq; C' \text< 部分余代数>> \cc<`p (E) \subseteq; Y>>> E
+      >
+      とおくと、&m<(C, `p \sb<\rvert;><C>)> は &m<Y> 上の余自由余代数である。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      線型空間 &m<V> をとる。
+      \ref|type="thm",ref="cof",nolink|; の通りに &m<`p> をとり、標準的に &m<V \subseteq; \sp<V><**>> と見なすとき、
+      &mb<
+        C \coloneqq; \bigcup<\stack<\cc<E \subseteq; T (\sp<V><*>) \sp<><\diamond;> \text< 部分余代数>> \cc<`p (E) \subseteq; V>>> E
+      >
+      とおくと、&m<(C, `p \sb<\rvert;><C>)> は &m<V> 上の余自由余代数である。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="cof"|; と\ref|type="thm",ref="sub"|; を組み合わせれば良い。
+    >
+  >
+  \p<
+    \ref|type="thm",ref="sub"|; の証明はまだ私もきちんと行ってないので省略したが、たぶんそんなに難しくないと思うので、できたらこの日記に追記しておこうと思う。
+  >
+  \p<
+    この 2 日間で述べた余自由余代数の構成は、Sweedler\ref|type="bib",ref="hax"|; によるものである。
+    これ以外にもいくつか (当然同型だが) 別の構成方法は知られている。
+    例えば Block–Leroux\ref|type="bib",ref="bgdc"|; は、表現可能な線型写像という概念を定義し、多項式環からテンソル代数への表現可能な線型写像が成す空間として構成している。
+    この構成は Sweedler のものよりもシンプルだが、表現可能性という条件がそれほど構成的でないのが欠点に思える。
+    また、Murfet\ref|type="bib",ref="mscc"|; は、局所コホモロジーを用いたアプローチを行っている。
+    これは私の知識が足りず全く理解できていない。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hax"|<M. E. Sweedler (1969)『Hopf Algebras』Cornell University>
+    \li|id="bgdc"|<R. E. Block, P. Leroux (1985)「Generalized dual coalgebras of algebras, with application to cofree coalgebras」『Journal of Pure and Applied Algebra』36:15–21>
+    \li|id="mscc"|<D. Murfet (2015)「On Sweedler's cofree cocommutative coalgebra」『Journal of Pure and Applied Algebra』219(12):5289–5304>
+  >
+
+>

@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$proof-horizontal-padding: 12rpx;
+
+.theorem {
+  --background-color: #{$block-background-color};
+  margin-left: 0rpx - $main-horizontal-padding;
+  margin-right: 0rpx - $main-horizontal-padding;
+  padding: $block-vertical-padding $main-horizontal-padding;
+  background-color: $block-background-color;
+  @include smartphone {
+    margin-left: 0rpx - $main-smartphone-horizontal-padding;
+    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+  }
+}
+
+.theorem-number-wrapper {
+  margin-right: $blank-margin;
+  color: $blue-color;
+  line-height: $line-height;
+  float: left;
+  &::after {
+    content: "."
+  }
+}
+
+.theorem-name {
+  &::before {
+    content: " [";
+  }
+  &::after {
+    content: "]";
+  }
+}
+
+.proof {
+  padding-left: $proof-horizontal-padding;
+  border-left: 3rpx $blue-color double;
+}
+
+.proof-label {
+  margin-right: $blank-margin;
+  color: $blue-color;
+  line-height: $line-height;
+  float: left;
+  &::after {
+    content: "."
+  }
+}

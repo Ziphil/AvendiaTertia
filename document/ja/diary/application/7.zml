@@ -1,0 +1,104 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<ABC089-D: 累積和>
+  \use-math;
+
+  \h1<日記 (2018 年 3 月 4 日)>
+  \p<
+    ABC089 に出てきました。
+    結果は、4 問正解 1000 点で 1159 人中 331 位でした。
+    レートは 948 (緑) に微増しました。
+  >
+  \p<
+    さて、ABC089 の D 問題についてまとめましょう。
+    問題は\ae|href="https://beta.atcoder.jp/contests/abc089/tasks/abc089_d"|<こちら>です。
+    魔法少女になります。
+  >
+  \p<
+    愚直にやると、&m<i> 回目の実技試験において、特定の数字が書かれているマスの検索を &m<(\sb<R><i> - \sb<L><i>) `/ D> 回行う必要があります。
+    検索も何も工夫しなければ &m<O (HW)> かかり、検索回数も最大で &m<O (HW)> です。
+    この操作を &m<Q> 回やるので、全体の計算量は最大で &m<O (\sp<H><2> \sp<W><2> Q)> です。
+    なんか無理そうです。
+  >
+  \p<
+    そこで &m<A> をそのまま保持するのではなく、各数に対してそれが書かれるマスの座標を保持するようにしましょう。
+    このようにすることで検索の手間が省けるので、計算量が &m<O (HWQ)> になります。
+    これでもまだ微妙に遅く、実際 TLE します。
+    ということで、さらなる高速化をする必要があります。
+  >
+  \p<
+    &m<x> が書かれているマスから &m<x + D> が書かれているマスに駒を動かすのに必要な魔力を &m<M (x)> とおくと、&m<i> 回目の実技試験で消費する魔力は、
+    &mb<
+      M (\sb<L><i>) + M (\sb<L><i> + D) + M (\sb<L><i> + 2 D) + \cdots; + M (\sb<R><i> - D)
+    >
+    で求まります。
+    ここで、各 &m<x> に対して &m<\sb<m><x> = x % D> とおき、
+    &mb<
+      \sb<M><\rm<acc>> (x) = M (m) + M (m + D) + M (m + 2 D) + \cdots; + M (x - D)
+    >
+    と定めれば、先程の消費魔力は &m<\sb<M><\rm<acc>> (\sb<R><i>) - \sb<M><\rm<acc>> (\sb<L><i>)> と書けます。
+    したがって、&m<\sb<M><\rm<acc>> (x)> をあらかじめ計算しておけば、各実技試験での消費魔力は &m<O (1)> で求めることができます。
+    &m<\sb<M><\rm<acc>> (x)> の計算は &m<O (HW)> でできるので、全体の計算量は &m<O (HW + Q)> となり、高速化できました。
+  >
+  \p<
+    このように、特定の和を何度も計算するような場合は、適当な始点から累積した和をあらかじめ計算しておくことで、その累積和の差を計算するだけで求めたい部分和を計算することができます。
+  >
+  \p<
+    ということで、全てのテストケースに通るプログラムが以下のような感じです。
+  >
+  \pre~*<
+    public void run() {
+      BetterScanner scanner = new BetterScanner(System.in);
+
+      int h = scanner.nextInt();
+      int w = scanner.nextInt();
+      int d = scanner.nextInt();
+
+      // 各数に対してそれが書かれる座標を保持
+      int[][] poss = new int[2][h * w];
+      for (int i = 0 ; i `< h ; i ++) {
+        for (int j = 0 ; j `< w ; j ++) {
+          int num = scanner.nextInt() - 1;
+          poss[0][num] = i;
+          poss[1][num] = j;
+        }
+      }
+
+      // 累積和を計算
+      long[] accs = new long[h * w];
+      for (int k = 0 ; k `< d ; k ++) {
+        long acc = 0;
+        for (int num = k + d ; num `< h * w ; num += d) {
+          int diffX = poss[0][num - d] - poss[0][num];
+          int diffY = poss[1][num - d] - poss[1][num];
+          if (diffX `< 0) {
+            diffX = -diffX;
+          }
+          if (diffY `< 0) {
+            diffY = -diffY;
+          }
+          acc += diffX + diffY;
+          accs[num] = acc;
+        }
+      }
+
+      int q = scanner.nextInt();
+      StringBuilder output = new StringBuilder();
+      for (int k = 0 ; k `< q ; k ++) {
+        int l = scanner.nextInt() - 1;
+        int r = scanner.nextInt() - 1;
+        long result = accs[r] - accs[l];
+        output.append(result).append("\n");
+      }
+      System.out.println(output.toString());
+    }
+  >
+  \p<
+    ちなみに本番では、最初の 2 重ループの順番を逆にしていて、実時間とペナルティ合わせて 45 分を無に帰しました。
+    つらいです。
+  >
+
+>

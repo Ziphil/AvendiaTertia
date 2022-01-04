@@ -1,0 +1,207 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<アローの圏論的意味論>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2020 年 4 月 15 日)>
+  \p<
+    Haskell などの純粋関数型言語で副作用を伴う計算 (アクション) を扱う構造には、よく知られているモナドの他にアローというものがある。
+    これは、Hughes\ref|type="bib",ref="hgma"|; によってモナドの一般化として導入された概念である。
+    相変わらず私は型システムを見ると圏論的意味論が気になる人間なので、このアローの圏論的意味論についてこれから触れていこうと思う。
+  >
+  \p<
+    まず、アローを考える前に、ベースとなる型システムの定式化を行っておく。
+    ここでは、通常の単純型付きラムダ計算の体系に直積を追加したものを用いる。
+  >
+  \thm|type="def"|<
+    \p<
+      型システム &m<\sb<\rm<`l>><1 \times|ord|;>> を以下のように定める。
+      まず、型 &m<A> と項 &m<M> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<A> \c<\ccoloneqq;> \c<`a \mid; 1 \mid; A \times; A \mid; A \buharprarr; A> \br;
+          \c<M> \c<\ccoloneqq;> \c<a \mid; \star|ord|; \mid; \langle; M, M \rangle; \mid; \tt|fun|<fst> M \mid; \tt|fun|<snd> M \mid; \rm<`l> a. \sfun; M \mid; M M> 
+        >
+      >
+      で定める。
+      ここで、&m<`a> と &m<a> はそれぞれ原子型と変項を表す。
+      次に、項の型割り当ての推論規則を、
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \tree<
+              \infr|n="0"|<`G, a: A, `G' \vdash; a: A>
+            >
+          >
+          \cc<
+            \tree<
+              \infr|n="0"|<\vdash; \srel; \star|ord|;: 1>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A> \axm<`G \vdash; N: B>
+              \infr|n="2"|<`G \vdash; \langle; M, N \rangle;: A \times; B>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; M: A \times; B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<fst> M: A>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; M: A \times; B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<snd> M: B>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G, a: A \vdash; M: B>
+              \infr|n="1"|<`G \vdash; \rm<`l>a. \sfun; M: A \buharprarr; B>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; M: A \buharprarr; B> \axm<`G \vdash; N: `# A>
+              \infr|n="2"|<`G \vdash; MN: B>
+            >
+          >
+        >
+      >
+      で定める。
+      最後に、同じ型を割り当てられた項の間の等号を、
+      &mb<
+        \array|align="rcl"|<
+          \c<\star|ord|;> \c<=> \c<M> \br;
+          \c<\tt|fun|<fst> \langle; M, N \rangle;> \c<=> \c<M> \br;
+          \c<\tt|fun|<snd> \langle; M, N \rangle;> \c<=> \c<N> \br;
+          \c<\langle; \tt|fun|<fst> M, \tt|fun|<snd> M \rangle;> \c<=> \c<M> \br;
+          \c<(\rm<`l> a. \sfun; M) N> \c<=> \c<M `[ a \coloneqq; N `]> \br;
+          \c<\rm<`l> a. M a> \c<=> \c<M>
+        >
+      >
+      で定め、合同関係になるように拡張する。
+      ただし、最後の等式において &m<M> は自由変項に &m<a> を含まないものとする。
+    >
+  >
+  \p<
+    型システムの圏論的意味論とは、型システムに定まっている型と項をそれぞれ特定の圏の対象と射に対応させることを考えるものである。
+    この対応は解釈と呼ばれ、次のように定式化される。
+    なお、解釈は 2 重の角括弧 (いわゆるオックスフォードブラケット) で囲んで表記するのが通例だが、表記が煩雑になるのを防ぐため、ここではオーバーラインで表記することにする。
+  >
+  \thm|type="def"|<
+    \p<
+      型システム &m<\frak<T>> を考える。
+      有限直積をもつ圏 &m<\scr<C>> に対し、変換 &m<\overline<\hyphen;>> が、
+    >
+    \ul<
+      \li<
+        &m<\frak<T>> の型 &m<A> に対し、&m<\scr<C>> の対象 &m<\overline<A>> が定まっている。
+      >
+      \li<
+        &m<\frak<T>> における項の型割り当て &m<`G \vdash; M: A> に対し、&m<\scr<C>> の射 &m<\overline<`G \vdash; M: A>: \overline<`G> \to; \overline<A>> が定まっている。
+        ここで、&m<`G \equiv; \sb<b><1>: \sb<B><1>, \cdots;, \sb<b><n>: \sb<B><n>> と書くとき、&m<\overline<`G> = \overline<\sb<B><1>> \times; \cdots; \times; \overline<\sb<B><n>>> と定めた。
+        なお、記法を簡略化して、&m<\overline<`G \vdash; M: A>> の代わりに単に &m<\overline<M>> と書くこともある。
+      >
+    >
+    \p<
+      を満たすように定まっている。
+      このとき、&m<\overline<\hyphen;>> を &m<\frak<T>> の &m<\scr<C>> での\em<解釈\fl<interpretation>> という。
+    >
+  >
+  \p<
+    型システムの圏論的意味論は、単純型付きラムダ計算とカルテシアン閉圏がちょうど対応するという、Lambek\ref|type="bib",ref="llcc"|; による有名な結果が起源である。
+    この結果は次のように述べることができる。
+  >
+  \thm|type="thm",id="equiv"|<
+    \p<
+      単純型付きラムダ計算 &m<\sb<\rm<`l>><1 \times|ord|;>> は、任意のカルテシアン閉圏で標準的な解釈をもつ。
+      さらに、&m<\sb<\rm<`l>><1 \times|ord|;>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、&m<\sb<\rm<`l>><1 \times|ord|;>> において &m<M = N> が成り立つための必要十分条件は、任意のカルテシアン閉圏において &m<\overline<M> = \overline<N>> が成り立つことである。
+    >
+  >
+  \p<
+    さて、本題に移ろう。
+    Hughes によって導入されたアローの定式化として、以下のような &m<\sb<\rm<`l>><1 \times|ord|;>> を拡張した型システムを考えることにする。
+    基本的に Haskell における定義をそのまま写し取っただけである。
+  >
+  \thm|type="def",id="arr"|<
+    \p<
+      型システム &m<\bfrm<Arrow>> を &m<\sb<\rm<`l>><1 \times|ord|;>> の拡張として以下のように定める。
+      まず、型 &m<A> と項 &m<M> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<A> \c<\ccoloneqq;> \c<\cdots; \mid; `[A, A`]> \br;
+          \c<M> \c<\ccoloneqq;> \c<\cdots; \mid; \tt|fun|<arr> M \mid; M \gggt|bin|; M \mid; \tt|fun|<first> M> 
+        >
+      >
+      と拡張する。
+      次に、項の型割り当ての推論規則に、
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A \buharprarr; B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<arr> M: `[A, B`]>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; F: `[A, B`]> \axm<`G \vdash; G: `[B, C`]>
+              \infr|n="2"|<`G \vdash; F \gggt|bin|; G: `[A, C`]>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; F: `[A, B`]>
+              \infr|n="1"|<`G \vdash; \tt|fun|<first> F: `[A \times; C, B \times; C`]>
+            >
+          >
+        >
+      >
+      を追加する。
+      最後に、同じ型を割り当てられた項の間の等号に、
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<arr> \rm<id> \gggt|bin|; F> \c<=> \c<F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> \rm<id>> \c<=> \c<F> \br;
+          \c<(F \gggt|bin|; G) \gggt|bin|; H> \c<=> \c<F \gggt|bin|; (G \gggt|bin|; H)> \br;
+          \c<\tt|fun|<arr> (M \rhd|bin|; N)> \c<=> \c<\tt|fun|<arr> M \gggt|bin|; \tt|fun|<arr> N> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> M)> \c<=> \c<\tt|fun|<arr> (M \times; \rm<id>)> \br;
+          \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<arr> (\rm<id> \times; M)> \c<=> \c<\tt|fun|<arr> (\rm<id> \times; M) \gggt|bin|; \tt|fun|<first> F> \br;
+          \c<\tt|fun|<first> (F \gggt|bin|; G)> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<first> G> \br;
+          \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<arr> \rm<fst>> \c<=> \c<\tt|fun|<arr> \rm<fst> \gggt|bin|; F> \br;
+          \c<\tt|fun|<first> (\tt|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<first> F> \br;
+        >
+      >
+      を追加し、合同関係になるように拡張する。
+      ここで、
+      &mb<
+        \array|align="rcl"|<
+          \c<\rm<id>> \c<:> \c<A \buharprarr; A> \br;
+          \c; \c<\equiv;> \c<\rm<`l> a. \sfun; a> \br;
+          \c<\rm<fst>> \c<:> \c<A \times; B \buharprarr; A> \br;
+          \c; \c<\equiv;> \c<\rm<`l> p. \sfun; \tt|fun|<fst> p> \br;
+          \c<\rm<assoc>> \c<:> \c<(A \times; B) \times; C \buharprarr; A \times; (B \times; C)> \br;
+          \c; \c<\equiv;> \c<\rm<`l> p. \sfun; \langle; \tt|fun|<fst> (\tt|fun|<fst> p), \langle; \tt|fun|<snd> (\tt|fun|<fst> p), \tt|fun|<snd> p) \rangle; \rangle;> \br;
+          \c<\rhd|ord|;> \c<:> \c<(A \buharprarr; B) \times; (B \buharprarr; C) \buharprarr; (A \buharprarr; C)> \br;
+          \c; \c<\equiv;> \c<\rm<`l> m. \sfun; \rm<`l> n. \sfun; \rm<`l> a. \sfun; n (m a)> \br;
+          \c<\times|ord|;> \c<:> \c<(A \buharprarr; B) \times; (B \buharprarr; D) \buharprarr; (A \times; C \buharprarr; B \times; D)> \br;
+          \c; \c<\equiv;> \c<\rm<`l> m. \sfun; \rm<`l> n. \sfun; \rm<`l> p. \sfun; \langle; m (\tt|fun|<fst> p), n (\tt|fun|<snd> p) \rangle;> \br;
+        >
+      >
+      で定めている。
+      すなわち順に、恒等関数, 直積から第 1 成分への射影関数, 3 つの直積の結合を変える関数, 関数の合成演算, 関数の直積演算である。
+    >
+  >
+  \p<
+    我々の課題は、&m<\sb<\rm<`l>><1 \times|ord|;>> にカルテシアン閉圏が対応したのと同様の意味で、&m<\bfrm<Arrow>> に対応する圏のクラスを見出すことである。
+    そのような圏のクラスとは Freyd 圏であるという研究がすでに存在しており、Jacobs–Heunen–Hasuo\ref|type="bib",ref="jcsa"|; や Atkey\ref|type="bib",ref="awcm"|; で詳しく述べられているので、これらを参考にしつつ次回以降まとめていこうと思う。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="awcm"|<R. Atkey (2011)「What is a categorical model of arrows?」『Electronic Notes in Theoretical Computer Science』229:19–37>
+    \li|id="hgma"|<J. Hughes (2000)「Generalising monads to arrows」『Science of Computer Programming』37:67–111>
+    \li|id="jcsa"|<B. Jacobs, C. Heunen, I. Hasuo (2009)「Categorical semantics for arrows」『Journal of Functional Programming』19:403–438>
+    \li|id="llcc"|<J. Lambek (1980)「From lambda calculus to cartesian closed categories」『To H. B. Curry: Essays on Combinatory Logic, Lambda Calculus and Formalism』376–402>
+  >
+
+>

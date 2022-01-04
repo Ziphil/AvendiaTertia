@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import "util/reset.scss";
+@import "util/common.scss";
+@import "util/font.scss";
+@import "main-module/variable.scss";
+@import "main-module/footer.scss";
+@import "main-module/navigation.scss";
+@import "main-module/content-table.scss";
+@import "main-module/error.scss";
+@import "main-module/block/main.scss";
+@import "main-module/block/section.scss";
+@import "main-module/block/paragraph.scss";
+@import "main-module/block/normal-list.scss";
+@import "main-module/block/description-list.scss";
+@import "main-module/block/translation-list.scss";
+@import "main-module/block/sentence-list.scss";
+@import "main-module/block/gloss.scss";
+@import "main-module/block/quiz-list.scss";
+@import "main-module/block/figure-container.scss";
+@import "main-module/block/image.scss";
+@import "main-module/block/normal-table.scss";
+@import "main-module/block/program.scss";
+@import "main-module/block/form.scss";
+@import "main-module/block/section-table.scss";
+@import "main-module/block/media.scss";
+@import "main-module/block/math.scss";
+@import "main-module/inline/basic.scss";
+@import "main-module/inline/link.scss";
+@import "main-module/inline/greek.scss";
+@import "main-module/inline/math.scss";
+
+@include desktop {
+  @import "main-module/header.scss";
+}
+@include smartphone {
+  @import "main-module/smartphone-header.scss";
+}
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @include scrollbar(5rpx, 0rpx, transparent, $orange-color);
+  @include text-size-adjust;
+  margin: 0rpx;
+  padding: 0rpx;
+  color: $text-color;
+  font-family: $serif-font-family;
+  font-weight: $serif-font-weight;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  line-height: 1;
+  text-decoration-skip-ink: none;
+  background-color: $page-background-color;
+  overflow-x: auto;
+  overflow-y: scroll;
+}

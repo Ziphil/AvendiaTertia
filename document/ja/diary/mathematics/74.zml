@@ -1,0 +1,177 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<二重貼り合わせ圏>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2021 年 3 月 12 日)>
+  \p<
+    Hyland–Schalk\ref|type="bib",ref="hgom"|; の二重貼り合わせ圏についてまとめる。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>, \scr<S>> と関手 &m<F: \scr<C> \to; \scr<S>, G: \scr<C> \to; \sp<\scr<S>><\circ;>> に対し、圏 &m<\bfrm<Gl> (\scr<C>`; F, G)> を以下のように定義する。
+    >
+    \ul<
+      \li<
+        &m<\bfrm<Gl> (\scr<C>`; F, G)> の対象は、&m<\scr<C>> の対象 &m<A> および &m<\scr<S>> の対象 &m<S, \bar<S>> および &m<\scr<S>> の射 &m<s: S \to; FA, \bar<s>: \bar<S> \to; GA> から成る 5 つ組 &m<(A`; S, \bar<S>, s, \bar<s>)> とする。 
+      >
+      \li<
+        &m<\bfrm<Gl> (\scr<C>`; F, G)> の 2 つの対象 &m<(A`; S, \bar<S>, s, \bar<s>), (B`; T, \bar<T>, t, \bar<t>)> の間の射は、&m<\scr<C>> の射 &m<f: A \to; B> および &m<\scr<S>> の射 &m<h: S \to; T, \bar<h>: \bar<T> \to; \bar<S>> から成る 3 つ組 &m<(f`; h, \bar<h>)> であって、図式
+        &mb<
+          \diag<
+            \v<S> \v<T> \br;
+            \v<FA> \v<FB>
+            \ar|s="1",e="2"|<h> \ar|s="3",e="4",inv|<F f>
+            \ar|s="1",e="3",inv|<s> \ar|s="2",e="4"|<t>
+          > \qquad;
+          \diag<
+            \v<\bar<T>> \v<\bar<S>> \br;
+            \v<GB> \v<GA>
+            \ar|s="1",e="2"|<\bar<h>> \ar|s="3",e="4",inv|<G f>
+            \ar|s="1",e="3",inv|<\bar<t>> \ar|s="2",e="4"|<\bar<s>>
+          >
+        >
+        がともに可換であるものとする。
+      >
+    >
+    \p<
+      この圏 &m<\bfrm<Gl> (\scr<C>`; F, G)> を、&m<F> と &m<G> による\em<二重貼り合わせ圏\fl<double gluing category>> という。
+    >
+  >
+  \p<
+    もとの圏が対称モノイダル閉圏で、さらにいくつかの条件が満たされていれば、二重貼り合わせ圏もまた対称モノイダル閉圏になる。
+  >
+  \thm|type="thm",id="moncl"|<
+    \p<
+      圏 &m<\scr<C>, \scr<S>> と関手 &m<F: \scr<C> \to; \scr<S>, G: \scr<C> \to; \sp<\scr<S>><\circ;>> が、条件
+    >
+    \ul<
+      \li<
+        &m<\scr<C>, \scr<S>> はともに対称モノイダル閉圏である。
+      >
+      \li<
+        &m<\scr<S>> は引き戻しをもつ。
+      >
+      \li<
+        &m<F: \scr<C> \to; \scr<S>> はモノイダル関手である。
+        すなわち、&m<\scr<C>> の対象 &m<A, B> に対して &m<\scr<S>> の射 &m<\sb<\tilde<`x>><AB>: FA \otimes; FB \to; F (A \otimes; B), `x: \top; \to; F \top;> が定まっており、適切な整合性条件を満たす。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A, B> に対して &m<\scr<S>> の射 &m<\sb<`k><AB>: FA \otimes; G (A \otimes; B) \to; GB> が定まっており、これは &m<A, B> 両方に関して自然である。
+        さらに、&m<\scr<C>> の対象 &m<A, B, C> に対して、
+        &mb<
+          \diag<
+            \v<FA \otimes; FB \otimes; G (A \otimes; B \otimes; C)> \v<FB \otimes; FA \otimes; G (A \otimes; B \otimes; C)> \br;
+            \v; \v<FB \otimes; G (B \otimes; C)> \br;
+            \v<F (A \otimes; B) \otimes; G (A \otimes; B \otimes; C)> \v<GC>
+            \ar|s="1",e="2"|<`s \otimes; \rm<id>> \ar|s="1",e="5",inv|<\tilde<`x> \otimes; \rm<id>>
+            \ar|s="2",e="4"|<\rm<id> \otimes; `k> \ar|s="4",e="6"|<`k> \ar|s="5",e="6",inv|<`k>
+          > \qquad;
+          \diag|ver="thn"|<
+            \v<\top; \otimes; GA> \v; \br;
+            \v; \v<GA> \br;
+            \v<F \top; \otimes; G (\top; \otimes; A)>
+            \ar|s="1",e="4"|<`l> \ar|s="1",e="5",inv|<`x \otimes; G \sp<`l><-1>> \ar|s="5",e="4",inv|<`k>
+          >
+        >
+        がともに可換である。
+        この射を &m<F> と &m<G> の\em<簡約射\fl<contraction>> と呼ぶ。
+      >
+    >
+    \p<
+      を満たすとする。
+      このとき、&m<\bfrm<Gl> (\scr<C>`; F, G)> は対称モノイダル閉圏であり、その構造は &m<\scr<C>> への忘却関手で厳密に保たれるようにとれる。
+    >
+  >
+  \prf<
+    \p<
+      与えられた条件のもと、&m<\bfrm<Gl> (\scr<C>`; F, G)> のテンソル積およびその随伴を明示的に与えることができる。
+      ここでは省略する。
+    >
+  >
+  \p<
+    多くの線型論理の興味深いモデルが、二重貼り合わせ圏の部分圏として現れることが知られている。
+    そのうちの興味深いケースとして、&m<\scr<S> \coloneqq; \bfrm<Set>> とし、&m<\scr<C>> の対象 &m<\bbot;> を固定して、
+    &mb<
+      \array|align="rcl"|<
+        \c<F> \c<\coloneqq;> \c<\op<Hom> (\top;, \hyphen;): \scr<C> \to; \bfrm<Set>> \br;
+        \c<G> \c<\coloneqq;> \c<\op<Hom> (\hyphen;, \bbot;): \scr<C> \to; \sp<\bfrm<Set>><\circ;>>
+      >
+    >
+    とした場合の &m<\bfrm<Gl> (\scr<C>`; F, G)> について取り上げる。
+    いくつかの線型論理のモデルは、この圏の対象 &m<(A`; S, \bar<S>, s, \bar<s>)> のうち &m<s> と &m<\bar<s>> がともに単射であるもの全体が成す充満部分圏 &m<\bfrm<Gl> (\scr<C>`, \bbot;)> の更なる部分圏として表すことができる。
+    ここで出てきた &m<\bfrm<Gl> (\scr<C>`, \bbot;)> は、以下のように明示的に書き下すことができる。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> とその対象 &m<\bbot;> に対し、圏 &m<\bfrm<Gl> (\scr<C>, \bbot;)> を以下のように定義する。
+    >
+    \ul<
+      \li<
+        &m<\bfrm<Gl> (\scr<C>, \bbot;)> の対象は、&m<\scr<C>> の対象 &m<A> および部分集合 &m<S \subseteq; \op<Hom> (\top;, A), \bar<S> \subseteq; \op<Hom> (A, \bbot;)> から成る 3 つ組 &m<(A`; S, \bar<S>)> とする。 
+      >
+      \li<
+        &m<\bfrm<Gl> (\scr<C>, \bbot;)> の 2 つの対象 &m<(A`; S, \bar<S>), (B`; T, \bar<T>)> の間の射は、&m<\scr<C>> の射 &m<f: A \to; B> であって、任意の &m<\scr<C>> の射 &m<s: \top; \to; A, \bar<t>: B \to; \bbot;> に対し、
+        &mb<
+          \array|align="rcl"|<
+            \c<s \in; S> \c<\implies;> \c<s \rcomp; f \in; T> \br;
+            \c<\bar<t> \in; \bar<T>> \c<\implies;> \c<f \rcomp; \bar<t> \in; \bar<S>>
+          >
+        >
+        を満たすものとする。
+      >
+    >
+  >
+  \p<
+    もとの圏が対称モノイダル閉圏ならば、この圏も対称モノイダル閉圏になる。
+  >
+  \thm|type="thm",id="moncls"|<
+    \p<
+      圏 &m<\scr<C>> とその対象 &m<\bbot;> をとる。
+      &m<\scr<C>> が対称モノイダル閉圏ならば、&m<\bfrm<Gl> (\scr<C>`; F, G)> も対称モノイダル閉圏であり、その構造は &m<\scr<C>> への忘却関手で厳密に保たれるようにとれる。
+    >
+  >
+  \prf<
+    \p<
+      仮定から &m<\scr<C>> はモノイダル閉圏であり、さらに &m<\bfrm<Set>> も直積に関してモノイダル閉圏である。
+      さらに、&m<\scr<C>> の対象 &m<A, B> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<\tilde<`x>><AB>:> \c<\op<Hom> (\top;, A) \times; \op<Hom> (\top;, B)> \c<\longto;> \c<\op<Hom> (\top;, A \otimes; B)> \br;
+          \c; \c<(s, t)> \c<\longmapsto;> \c<\tort<\diag|bl|<
+            \v<\top; \cong; \top; \otimes; \top;> \v<A \otimes; B>
+            \ar|s="1",e="2"|<s \otimes; t>
+          >>>
+        >
+      >
+      とおくと、これによって &m<F = \op<Hom> (\top;, \hyphen;)> はモノイダル関手になる。
+      また、&m<\scr<C>> の対象 &m<A, B> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<`k><AB>:> \c<\op<Hom> (\top;, A) \times; \op<Hom> (A \otimes; B, \bbot;)> \c<\longto;> \c<\op<Hom> (B, \bbot;)> \br;
+          \c; \c<(s, \bar<u>)> \c<\longmapsto;> \c<\tort<\diag|bl|<
+            \v<B \cong; \top; \otimes; B> \v<A \otimes; B> \v<\bbot;>
+            \ar|s="1",e="2"|<s \otimes; \rm<id>> \ar|s="2",e="3"|<\bar<u>>
+          >>>
+        >
+      >
+      とおくと、これは &m<F = \op<Hom> (\top;, \hyphen;)> と &m<G = \op<Hom> (\hyphen;, \bbot;)> の簡約射の公理を満たす。
+      以上によって、\ref|type="thm",ref="moncl"|; を使えば &m<\bfrm<Gl> (\scr<C>`; F, G)> も対称モノイダル閉圏になることが分かる。
+    >
+    \p<
+      さらに、この部分圏である &m<\bfrm<Gl> (\scr<C>, \bbot;)> は、今与えられた &m<\bfrm<Gl> (\scr<C>`; F, G)> のモノイダル構造に関して閉じていることが確かめられる。
+      したがって、&m<\bfrm<Gl> (\scr<C>, \bbot;)> も対称モノイダル閉圏である。
+    >
+  >
+  \p<
+    次回は、\ref|type="thm",ref="moncls"|; で与えられる &m<\bfrm<Gl> (\scr<C>, \bbot;)> のモノイダル構造を具体的に書き下し、特定の条件のもとではこれがさらに線型圏になることを示す予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hgom"|<M. Hyland, A. Schalk (2003)「Glueing and orthogonality for models of linear logic」『Theoretical Computer Science』294:183–231>
+  >
+
+>

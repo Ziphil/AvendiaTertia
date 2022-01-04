@@ -1,0 +1,48 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Zotica>
+  \use-math;
+
+  \h1<概要>
+  \p<
+    Zotica とは、ブラウザ上で数式を綺麗に表示するためのマークアップ言語とレンダリングエンジンのセットです。
+    名前は古典ギリシャ語の ζωτικός から付けました。
+  >
+  \p<
+    マークアップ言語の部分は、\a|href="7.html"|<ZenML> 内に埋め込んで使われることを想定しているため、ZenML とほぼ同等の構文になっています。
+    レンダリングエンジンの部分は、TeX と同程度の品質の数式を、本文フォントと同じフォントで違和感なく組めることを目標にしています。
+  >
+  \p<
+    以下は Zotica 用マークアップ言語 (ZenML ver 1.1 文法) による記述の例です。
+  >
+  \pre~*<
+    ## 2 次方程式の解の公式
+    x = \frac`<- b \pm; \sqrt`<\sp`<b`>`<2`> - 4 ac`>`>`<2 a`>
+    ## 区分求積法
+    \un`<\lim;`>`<n \to; \infty;`> \frac`<1`>`<n`> \sum`<k = 0`>`<n - 1`> f \paren`<\frac`<k`>`<n`>`> = \int`<0`>`<1`> f (x) dx
+    ## コーシーの積分公式
+    F (z) = \frac`<1`>`<2 ``p i`> \oint`<C`> \frac`<F (``z)`>`<``z - z`> d ``z
+  >
+  \p<
+    Zotica の処理系を通すと、以下のような数式を表示できる HTML 要素に変換されます。
+  >
+  &mb<
+    \array|align="c"|<
+      \cc<x = \frac<- b \pm; \sqrt<\sp<b><2> - 4 ac>><2 a>>
+      \cc<\un<\lim;><n \to; \infty;> \frac<1><n> \sum<k = 0><n - 1> f \paren<\frac<k><n>> = \int<0><1> f (x) dx>
+      \cc<F (z) = \frac<1><2 `p i> \oint<C> \frac<F (`z)><`z - z> d `z>
+    >
+  >
+  \h1<詳細>
+  \p<
+    現在開発中です。
+    詳細は GitHub ページをご覧ください。
+  >
+  \form<
+    \ae|href="https://github.com/Ziphil/ZenithalMathWeb"|<GitHub ページ>
+  >
+
+>

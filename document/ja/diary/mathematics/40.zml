@@ -1,0 +1,268 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<モナドと強モナド>
+  \use-math;
+
+  \h1<日記 (2020 年 4 月 10 日)>
+  \p<
+    Haskell などの純粋関数型言語では、全ての関数は純粋である必要があるので、副作用を伴う計算 (アクション) をそのまま扱うことはできない。
+    そのような言語でアクションを扱う方法として、モナドというものがある。
+    これは、各型 &m<A> に対して副作用の内容を包んだ値を扱える新しい型 &m<`# A> を用意しておき、副作用のある関数が返す値として &m<A> 型の値ではなく &m<`# A> 型の値にするというアイデアである。
+    もちろん、&m<`# A> としてどんな型を用いても良いというわけではなく、このアイデアがうまく動くためには、次に述べる 2 種類の操作が定まっている必要がある。
+  >
+  \p<
+    まず、副作用がない関数もアクションの一種として扱えるように、&m<A> 型の値から &m<`# A> 型の値を作る操作 &m<`h> が必要である。
+    また、何らかのアクションを実行して得られた &m<`# A> 型の値を用いて別のアクションを実行できるように、任意のアクション &m<f: A \to; `# B> を引数の型が副作用付きの型になった &m<\sp<f><*>: `# A \to; `# B> に変換する操作 &m<\sp<\text<->><*>> も必要である。
+    さらに、詳細は省略するが、この 2 つの操作が互いによく振る舞うように、いくつかの条件 (いわゆるモナド則) が満たされている必要がある。
+  >
+  \p<
+    このような組 &m<(`#, `h, \sp<\text<->><*>)> は Kleisli トリプルと呼ばれ、計算の概念を圏論的に扱う枠組みとして、Moggi\ref|type="bib",ref="mncm"|; の研究以来注目されてきた。
+    Kleisli トリプルはモナドという概念と等価であることが知られており、それゆえに、このアイデアをプログラミング言語に落とし込んだものもモナドと呼ばれている。
+    圏論的には、Kleisli トリプルよりモナドの方が扱いやすいため、以降はモナドの方を扱うことにする。
+  >
+  \p<
+    モナドとは、以下で定義される概念である。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> 上の自己関手 &m<`#: \scr<C> \to; \scr<C>> を考える。
+      対象 &m<A> に対し、自然な射 &m<\sb<`m><A>: `#`# A \to; `# A, \sb<`h><A>: A \to; `# A> が定まっていて、任意の対象 &m<A> に対し、図式
+      &mb<
+        \diag<
+          \v<`#`#`# A> \v<`#`# A> \br;
+          \v<`#`# A> \v<`# A>
+          \ar|s="1",e="2"|<\sb<`m><`# A>> \ar|s="1",e="3",inv|<`# \sb<`m><A>>
+          \ar|s="2",e="4"|<\sb<`m><A>> \ar|s="3",e="4",inv|<\sb<`m><A>>
+        > \qquad;
+        \diag<
+          \v<`# A> \v<`#`# A> \v<`# A> \br;
+          \v; \v<`# A> \v;
+          \ar|s="1",e="2"|<\sb<`h><`# A>> \ar|s="3",e="2",inv|<`# \sb<`h><A>>
+          \ar|s="2",e="5"|<\sb<`m><A>> \ar|s="1",e="5",line="2",tip="none"|; \ar|s="3",e="5",line="2",tip="none"|;
+        >
+      >
+      が全て可換であるとする。
+      このとき、&m<(`#, `m, `h)> を\em<モナド\fl<monad>> という。
+    >
+  >
+  \p<
+    Haskell などに導入されているモナドの圏論的解釈を考えると、確かにそれは圏論の意味でのモナドになっているのだが、実はより狭い概念である強モナドになっている。
+    強モナドとは、以下で定義される概念で、モナドに追加の構造を加えたものである。
+  >
+  \thm|type="def"|<
+    \p<
+      有限直積をもつ圏 &m<\scr<C>> 上のモナド &m<(`#, `m, `h)> を考える。
+      対象 &m<A, B> に対し、両方の変数に関して自然な射 &m<\sb<`t><AB>: A \times; `# B \to; `# (A \times; B)> が定まっていて、任意の対象 &m<A, B, C> に対し、図式
+      &mb<
+        \array|align="c"|<
+          \c<\diag<
+            \v<(A \times; B) \times; `# C> \v; \v<`# ((A \times; B) \times; C)> \br;
+            \v<A \times; (B \times; `# C)> \v<A \times; `# (B \times; C)> \v<`# (A \times; (B \times; C))>
+            \ar|s="1",e="3"|<\sb<`t><A \times; B, C>>
+            \ar|s="4",e="5",inv|<\rm<id> \times; \sb<`t><BC>> \ar|s="5",e="6",inv|<\sb<`t><A, B \times; C>>
+            \ar|s="1",e="4"|; \ar|s="3",e="6"|;
+          >> \br;
+          \c<\diag|hor="thn"|<
+            \v; \v<`# A> \v; \br;
+            \v<1 \times; `# A> \v; \v<`# (1 \times; A)>
+            \ar|s="4",e="6",inv|<\sb<`t><1 A>>
+            \ar|s="2",e="4"|; \ar|s="2",e="6"|;
+          >> \br;
+          \c<\diag<
+            \v<A \times; `#`# B> \v<`# (A \times; `# B)> \v<`#`# (A \times; B)> \br;
+            \v<A \times; `# B> \v; \v<`# (A \times; B)>
+            \ar|s="1",e="2"|<\sb<`t><A, `# B>> \ar|s="2",e="3"|<`# \sb<`t><AB>>
+            \ar|s="4",e="6",inv|<\sb<`t><AB>>
+            \ar|s="1",e="4",inv|<\rm<id> \times; \sb<`m><B>> \ar|s="3",e="6"|<\sb<`m><A \times; B>>
+          >> \br;
+          \c<\diag|hor="thn"|<
+            \v; \v<A \times; B> \v; \br;
+            \v<A \times; `# B> \v; \v<`# (A \times; B)>
+            \ar|s="4",e="6",inv|<\sb<`t><AB>>
+            \ar|s="2",e="4",inv|<\rm<id> \times; \sb<`h><B>> \ar|s="2",e="6"|<\sb<`h><A \times; B>>
+          >>
+        >
+      >
+      が全て可換であるとする。
+      このとき、&m<(`#, `h, `m)> を\em<強モナド\fl<strong monad>> といい、&m<`t> を\em<強度\fl<strength>> という。
+    >
+  >
+  \p<
+    それでは、なぜただのモナドではなく強モナドに対応するのだろうか。
+    その理由を観察するため、モナドをもつプログラミング言語と強モナドをもつ圏との対応を実際に示してみよう。
+    そのために、まずモナドをもつプログラミング言語を型システムとして形式化する。
+  >
+  \thm|type="def"|<
+    \p<
+      型システム &m<\bfrm<Monad>> を以下のように定める。
+      まず、型 &m<A> と項 &m<M> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<A> \c<\o|rel|<::=>> \c<`a \mid; 1 \mid; A \times; A \mid; `# A> \br;
+          \c<M> \c<\o|rel|<::=>> \c<a \mid; \star|ord|; \mid; \langle; M, M \rangle; \mid; \tt|fun|<fst> M \mid; \tt|fun|<snd> M \mid; \tt|fun|<return> M \mid; M `{ a \mapsto; M `}> 
+        >
+      >
+      で定める。
+      ここで、&m<`a> と &m<a> はそれぞれ原子型と変項を表す。
+      次に、項の型割り当ての推論規則を、
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \tree<
+              \infr|n="0"|<`G, a: A, `G' \vdash; a: A>
+            >
+          >
+          \cc<
+            \tree<
+              \infr|n="0"|<\vdash; \srel; \star|ord|;: 1>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A> \axm<`G \vdash; N: B>
+              \infr|n="2"|<`G \vdash; \langle; M, N \rangle;: A \times; B>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; M: A \times; B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<fst> M: A>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; M: A \times; B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<snd> M: B>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A>
+              \infr|n="1"|<`G \vdash; \tt|fun|<return> M: `# A>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; M: `# A> \axm<`G, a: A \vdash; N: `# B>
+              \infr|n="2"|<`G \vdash; N `{ a \mapsto; M `}: `# B>
+            >
+          >
+        >
+      >
+      で定める。
+      最後に、同じ型を割り当てられた項の間の等号を、
+      &mb<
+        \array|align="rcl"|<
+          \c<\star|ord|;> \c<=> \c<M> \br;
+          \c<\tt|fun|<fst> \langle; M, N \rangle;> \c<=> \c<M> \br;
+          \c<\tt|fun|<snd> \langle; M, N \rangle;> \c<=> \c<N> \br;
+          \c<\langle; \tt|fun|<fst> M, \tt|fun|<snd> M \rangle;> \c<=> \c<M> \br;
+          \c<M `{ a \mapsto; N `{ b \mapsto; P `}`}> \c<=> \c<(M `{ a \mapsto; N `}) `{ b \mapsto; P `}> \br;
+          \c<M `{ a \mapsto; \tt|fun|<return> N `}> \c<=> \c<M `[ a \coloneqq; N `]> \br;
+          \c<(\tt|fun|<return> a) `{ a \mapsto; M `}> \c<=> \c<M>
+        >
+      >
+      で定め、合同関係になるように拡張する。
+    >
+  >
+  \p<
+    形式理論における型 &m<`# A> がモナド型を表していて、&m<\tt|fun|<return> M> と &m<N `{ a \mapsto; M `}> はそれぞれモナドの return と bind に対応するものである。
+    &m<N `{ a \mapsto; M `}> の代わりに &m<M \g|bin|<\gt|ord|; \s|t="-thk"|; \gt|ord|; \s|t="-vthk"|; \eq|ord|;> \rm<`l> a. \sfun; N> と書けば、 Haskell に慣れている人にとって意図が分かりやすいであろう。
+    また、等号の定義の最後の 3 つの式は、モナド則を表現している。
+  >
+  \p<
+    型システムと圏との対応は、次のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      型システム &m<\frak<T>> を考える。
+      有限直積をもつ圏 &m<\scr<C>> に対し、変換 &m<\overline<\hyphen;>> が、
+    >
+    \ul<
+      \li<
+        &m<\frak<T>> の型 &m<A> に対し、&m<\scr<C>> の対象 &m<\overline<A>> が定まっている。
+      >
+      \li<
+        &m<\frak<T>> における項の型割り当て &m<`G \vdash; M: A> に対し、&m<\scr<C>> の射 &m<\overline<`G \vdash; M: A>: \overline<`G> \to; \overline<A>> が定まっている。
+        ここで、&m<`G \equiv; \sb<b><1>: \sb<B><1>, \cdots;, \sb<b><n>: \sb<B><n>> と書くとき、&m<\overline<`G> = \overline<\sb<B><1>> \times; \cdots; \times; \overline<\sb<B><n>>> と定めた。
+        なお、記法を簡略化して、&m<\overline<`G \vdash; M: A>> の代わりに単に &m<\overline<M>> と書くこともある。
+      >
+    >
+    \p<
+      を満たすように定まっている。
+      このとき、&m<\overline<\hyphen;>> を &m<\frak<T>> の\em<解釈\fl<interpretation>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      型システム &m<\frak<T>> を考える。
+      有限直積をもつ圏 &m<\scr<C>> と解釈 &m<\overline<\hyphen;>> が、次の条件を満たすとする。
+      すなわち、&m<\frak<T>> における同じ型をもつ任意の型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、&m<\frak<T>> において &m<M = N> ならば &m<\scr<C>> の射として &m<\overline<M> = \overline<N>> が成り立つ。
+      このとき、&m<(\scr<C>, \overline<\hyphen;>)> を &m<\frak<T>> の\em<モデル\fl<model>> という。
+    >
+  >
+  \p<
+    では、圏が強モナドをもつときに、それが型システム &m<\bfrm<Monad>> のモデルになることを示そう。
+  >
+  \thm|type="thm"|<
+    \p<
+      有限直積をもつ圏 &m<\scr<C>> が強モナド &m<(`#, `m, `h, `t)> をもつとする。
+      このとき、&m<\scr<C>> は &m<\bfrm<Monad>> のモデルである。
+    >
+  >
+  \prf<
+    \p<
+      まず、型の解釈を
+      &mb<
+        \array|align="c"|<
+          \cc<\overline<1> = 1>
+          \cc<
+            \overline<A \times; B> = \overline<A> \times; \overline<B> \qquad;
+            \overline<`# A> = `# \overline<A>
+          >
+        >
+      >
+      によって再帰的に定める。
+      原子型の解釈は自由に選んで良い。
+    >
+    \p<
+      次に、項の解釈も再帰的に定める。
+      bind に対応する型割り当て規則以外の場合は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\overline<`G, a: A, `G' \vdash; a: A>> \c<=> \c<\sb<\rm<pr>><\overline<A>>> \br;
+          \c<\overline<[\vdash;] \srel; \star|ord|;: 1>> \c<=> \c<\sb<\rm<id>><1>> \br;
+          \c<\overline<`G \vdash; \langle; M, N \rangle;: A \times; B>> \c<=> \c<(\overline<`G \vdash; M: A>, \overline<`G \vdash; N: B>)> \br;
+          \c<\overline<`G \vdash; \tt|fun|<fst> M: A>> \c<=> \c<\sb<\rm<pr>><\overline<A>> \circ; \overline<`G \vdash; M: A \times; B>> \br;
+          \c<\overline<`G \vdash; \tt|fun|<snd> M: B>> \c<=> \c<\sb<\rm<pr>><\overline<B>> \circ; \overline<`G \vdash; M: A \times; B>> \br;
+          \c<\overline<`G \vdash; \tt|fun|<return> M: `# A>> \c<=> \c<\sb<`h><\overline<A>> \circ; \overline<`G \vdash; M: A>> \br;
+        >
+      >
+      によって定める。
+      なお、式中の &m<\rm<pr>> で書かれた射は、直積からの適切な射影を表す。
+      bind に対応する型割り当てについては、強モナドに定まっている強度を用いて、
+      &mb<
+        \overline<`G \vdash; N `{ a \mapsto; M `}: `# B> =
+        \tort<\diag<
+          \v<\overline<`G>> \v<\overline<`G> \times; `# \overline<A>>
+          \v<`# (\overline<`G> \times; \overline<A>)> \v<`# `# \overline<B>> \v<`# \overline<B>>
+          \ar|s="1",e="2"|<(\rm<id>, \overline<M>)> \ar|s="2",e="3"|<\sb<`t><\overline<`G>, \overline<A>>>
+          \ar|s="3",e="4"|<`# \overline<N>> \ar|s="4",e="5"|<\sb<`m><\overline<B>>>
+        >>
+      >
+      と定める。
+    >
+    \p<
+      このようにすると解釈 &m<\overline<\hyphen;>> が定まり、これは項の等号を保存することが (手間はかかるが) 難しくない計算で確かめられる。
+      以上により、&m<(\scr<C>, \overline<\hyphen;>)> はモデルになる。
+    >
+  >
+  \p<
+    この証明において強モナドに定まった強度が必要なのは、&m<N `{ a \mapsto; M `}> という形の項の解釈を定める箇所である。
+    このような項を解釈するためには、2 つの射 &m<m: \overline<`G> \to; `# \overline<A>, n: \overline<`G> \times; \overline<A> \to; `# \overline<B>> を用いて &m<\overline<`G> \to; `# \overline<B>> という形の射を作る必要がある。
+    &m<m> と &m<n> を組み合わせてこの形の射を作ろうとすると、&m<n> の始域を &m<\overline<`G> \times; \overline<A>> から &m<\overline<`G> \times; `# \overline<A>> にしたいが、モナドの構造を用いて対象の全体に &m<`#> を付けることはできても、直積の片方にのみ &m<`#> を付けることは一般には不可能である。
+    そこで、&m<\overline<`G> \times; `# \overline<A> \to; `# (\overline<`G> \times; \overline<A>)> という形の射、すなわち強度が必要になるのである。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="mncm"|<E. Moggi (1991)「Notions of computation and monads」『Information and Computation』93:55–92>
+  >
+
+>

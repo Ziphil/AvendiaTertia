@@ -1,0 +1,182 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<lens の仕組みを理解したい>
+
+  \h1<日記 (2019 年 4 月 25 日)>
+  \p<
+    Haskell には \ae|href="https://hackage.haskell.org/package/lens"|<lens> という非常に便利なパッケージがあり、これを用いると、値の属性を取り出したり変更したりするのが簡単にできるようになります。
+    ただ、機能が豊富すぎてどこで何をしてるのかよく分からないし、型を見ても抽象的でよく分からないし、何となく使えるけどどういう仕組みになってるのか一見した限りでは全然掴めません。
+    ということで、ちょっとずつ何をやってるのか理解しようという試みです。
+  >
+  \p<
+    そもそも lens はどういうライブラリなのかという話ですが、これはオブジェクト指向におけるゲッターとセッターのようなものを扱えるようにするものです。
+    例えば、以下のようなレコード型があるとしましょう。
+  >
+  \pre~*<
+    data Person = Person {_name :: Name, _age :: Int}
+    data Name = Name {_first :: String, _family :: String}
+  >
+  \p<
+    \m<Person> 型の値が渡されたとき、その各フィールドの値を取り出したり変更したりする関数が欲しいとします。
+    これは以下のように実装できます。
+  >
+  \pre~*<
+    -- _name フィールドの取り出しと変更
+    getName :: Person -`> Name
+    getName = _name
+    setName :: Person -`> Name -`> Person
+    setName person newName = person {_name = newName}  
+    -- _age フィールドの取り出しと変更
+    getAge :: Person -`> Int
+    getAge = _age
+    setAge :: Person -`> Int -`> Person
+    setAge person newAge = person {_age = newAge}  
+  >
+  \p<
+    同様に、\m<Name> 型の値からフィールドの値を取り出したり変更したりする関数として、\m<getFirst>, \m<setFirst>, \m<getFamily>, \m<setFamily> も定義できます。
+  >
+  \p<
+    一般に、ゲッターは \m<s -`> a> という形の型で表され、セッターは \m<s -`> a -`> s> という形の型で表されます。
+    \m<s> が全体のオブジェクトの型を表し、\m<a> はそのオブジェクトの今取り扱いたい一部分の型を指します。
+  >
+  \p<
+    さて、それでは、\m<Person> 型の値が渡されたとき、\m<_name> フィールドの値のさらに \m<_first> フィールドの値を扱いたい場合はどうなるでしょうか。
+    要するに、ネストされたレコード型の奥の方のフィールドを操作したいわけです。
+    すでに \m<Person> 型の \m<_name> フィールドを扱う関数 (\m<getName>, \m<setName>) と、\m<Name> 型の \m<_first> フィールドを扱う関数 (\m<getFirst>, \m<setFirst>) は作ってあるので、汎用性を考えると、できればこれらの関数の組み合わせで実現したいです。
+    実際、これは以下のようにすれば可能です。
+  >
+  \pre~*<
+    -- 順にゲッターを呼び出す
+    getNameFirst :: Person -`> String
+    getNameFirst = getFirst . getName
+    -- 一度 _name フィールドの値を getName で取得して _first フィールドを setFirst で変更する
+    -- これで得られた変更後の値を setName で置き換える
+    -- ちょっと長い･･･
+    setNameFirst :: Person -`> String -`> Person
+    setNameFirst person = setName person . setFirst (getName person)
+  >
+  \p<
+    ゲッターの方は良いですが、セッターの方はちょっと長いですね。
+    ネストしたレコード型を操作したいときに毎回これを書くのはちょっと嫌です。
+    ただ幸い、すでに定義された関数の組み合わせだけで書けているので、以下のようなヘルパー関数を用意しておけば、毎回この定義を書く必要はなくなります。
+  >
+  \pre~*<
+    -- ゲッターとセッターをまとめて扱うための型シノニム
+    -- s 型に含まれる a 型の値を操作する
+    type Getset s a = (s -`> a, s -`> a -`> s)
+    -- ゲッターとセッターの合成
+    (@.) :: Getset s a -`> Getset a u -`> Getset s u
+    (outerGet, outerSet) @. (innerGet, innerSet) = (compGet, compSet)
+      where
+        compGet = innerGet . outerGet
+        compSet obj = outerSet obj . innerSet (innerGet obj)
+  >
+  \p<
+    こうすれば、上の \m<getNameFirst> と \m<setNameFirst> は \c<(getName, setName) @. (getFirst, setFirst)> で得られます。
+    これによって、ゲッターとセッターを最初からまとめてタプルとして定義しておけば、あとは \m<@.> で組み合わせることで、いくらでも深い位置にあるフィールドを操作できるようになります。
+  >
+  \p<
+    ついでに、ゲッターとセッターを実際に適用するヘルパー関数も作ってみましょう。
+  >
+  \pre~*<
+    -- ゲッターを利用する
+    (^.) :: s -`> Getset s a -`> a
+    obj ^. (get, set) = get obj
+    -- セッターを利用する
+    -- ゲッターセッターのタプルと新しい値を受け取る
+    -- 更新前のオブジェクトから更新後のオブジェクトを作る関数を返す
+    (.~) :: Getset s a -`> a -`> (s -`> s)
+    (get, set) .~ newVal = \obj -`> set obj newVal
+  >
+  \p<
+    こうすると、以下のように非常に簡潔にネストされたフィールドの値を取得したり変更したりできます。
+  >
+  \pre~*<
+    -- ゲッターセッターのタプルとして定義
+    getsetName :: Getset Person Name
+    getsetName = (getName, setName)
+    getsetFirst :: Getset Name String
+    getsetFirst = (getFirst, setFirst)
+    -- もととなるオブジェクトの定義
+    person = Person {_name = Name {_first = "Taro", _family = "Sato"}, _age = 14}
+    -- 値の取得
+    first = person ^. (getsetName @. getsetFirst)
+    -- 値の変更
+    -- & は $ を左右反転したもの
+    newPerson = person & (getsetName @. getsetFirst) .~ "Jiro"
+  >
+  \p<
+    画期的!
+    ･･･ですが、実はさらにこれを画期的にする魔法のような型があって、それが lens パッケージに定義されている \m<Lens'> です。
+  >
+  \pre~*<
+    type Lens' s a = forall f. Functor f =`> (a -`> f a) -`> (s -`> f s)
+  >
+  \p<
+    この型ですが、先程定義した \m<Getset s a> と同型です。
+    例えば、\m<Getset s a> から \m<Lens' s a> へは以下のように変換できます。
+  >
+  \pre~*<
+    toLens :: Getset s a -`> Lens' s a
+    toLens (get, set) = \func sVal -`> set sVal <$`> func (get sVal)
+  >
+  \p<
+    逆に、\m<Lens' s a> から \m<Getset s a> への変換については、ゲッターは \m<f> を \m<Const a> だと思うことで、セッターは \m<f> を \m<Identity> だと思うことで、それぞれ以下のように作ることができます。
+  >
+  \pre~*<
+    -- ゲッターを作る
+    -- ((a -`> Const a a) -`> (s -`> Const a s)) -`> (s -`> a) だと思っている
+    toGet :: Lens' s a -`> (s -`> a)
+    toGet lens = \sVal -`> getConst $ lens Const sVal 
+    -- セッターを作る
+    -- ((a -`> Identity a) -`> (s -`> Identity s)) -`> (s -`> a -`> s) だと思っている
+    toSet :: Lens' s a -`> (s -`> a -`> s)
+    toSet lens = \sVal aVal -`> runIdentity $ lens (Identity . const aVal) sVal
+  >
+  \p<
+    これらは互いに逆の構成になっていて、例えば、ゲッターとセッターから \m<toLens> でレンズを作り、そこから \m<toGet> と \m<toSet> でゲッターとセッターを作り直すと、もとと同じ関数が得られます。
+    レンズから始めた場合ももとに戻ります。
+  >
+  \p<
+    ということで、\m<Getset s a> と \m<Lens' s a> は実質同じであることが分かったわけですが、ではなぜ \m<Lens' s a> の方を使うのでしょうか。
+    その 1 つの利点として、合成が関数適用で済ませられるという点があります。
+    \m<Lens' s a> は \m<(a -`> f a) -`> (s -`> f s)> という関数を受け取って関数を返す関数型として定義されていますが、よく見るとこの関数型の始域と終域は同じ形をしています。
+    つまり、\m<Lens' s a> 型と \m<Lens' a u> 型は普通に関数合成することができます。
+  >
+  \p<
+    ちょっと計算してみましょう。
+    以下のようなゲッターセッターのタプルがあったとします。
+  >
+  \pre~*<
+    (outerGet, outerSet) :: Getset S A
+    (innerGet, innerSet) :: Getset A U
+  >
+  \p<
+    ここから \m<toLens> でレンズを作って、関数合成してみます。
+  >
+  \pre~*<
+      toLens (outerGet, outerSet) . toLens (innerGet, innerSet)
+    ≡ \func -`> toLens (outerGet, outerSet) $ (toLens (innerGet, innerSet)) func
+    ≡ \func -`> toLens (outerGet, outerSet) $ \aVal -`> innerSet aVal <$`> func (innerGet aVal)
+    ≡ \func -`> \sVal -`> outerSet sVal <$`> (\aVal -`> innerSet aVal <$`> func (innerGet aVal)) (outerGet sVal)
+    ≡ \func sVal -`> outerSet sVal <$`> innerSet (outerGet sVal) <$`> func (innerGet (outerGet sVal))
+    ≡ \func sVal -`> outerSet sVal . innerSet (outerGet sVal) <$`> func ((innerGet . outerGet) sVal)
+  >
+  \p<
+    ここに出てくる \c<outerSet sVal . innerSet (outerGet sVal)> と \c<innerGet . outerGet>、どこかで見たことありますね。
+    \m<@.> の定義です。
+    つまり、ゲッターとセッターを \m<Lens' s a> 型として扱っておくことで、ゲッターとセッターの合成がただの関数合成として実現できるわけです。
+  >
+  \p<
+    ･･･ということで、lens パッケージに定義されている \m<Lens'> 型がどうしてあんな形なのかについて、素朴なゲッターとセッターのタプル型と同値であるという点と、合成が関数適用でできるという点から見てみました。
+    それ以外にもこの形の利点はありますが、それはまた別の機会にまとめられたら良いなと思います。
+  >
+  \h1<追記 (2019 年 4 月 29 日)>
+  \p<
+    \a|href="21.html"|<4 月 29 日>に続きます。
+  >
+
+>

@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+@import "util/reset.scss";
+@import "util/common.scss";
+@import "util/font.scss";
+@import "application-module/common.scss";
+
+
+body {
+  @include body;
+  @include text-size-adjust;
+}
+
+div.title {
+  margin: 30px 0px 0px 0px;
+  padding: 0px;
+  font: italic 700 48px "Alegreya";
+  color: hsl(28, 54%, 33%);
+  line-height: 1;
+  text-align: center;
+}
+
+div.content {
+  margin: 40px 0px 40px 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+div.content div#board {
+  @include box;
+  width: 600px;
+  height: 600px;
+  margin: 0px 30px;
+  padding: 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+}
+
+div.content div#board div.tile,
+div.content div.right div.next-container div.next div#next-tile {
+  width: 100px;
+  height: 100px;
+  background-color: hsl(28, 80%, 98%);
+  position: relative;
+}
+
+div.content div#board div.tile.alternative {
+  background-color: hsl(28, 80%, 97%);
+}
+
+div.content div#board div.tile div.background,
+div.content div#board div.tile div.highlight,
+div.content div.right div.next-container div.next div#next-tile div.background {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+div.content div#board div.tile div.background.hover {
+  opacity: 0.2;
+  z-index: 1;
+}
+
+div.content div#board div.tile div.information,
+div.content div.right div.next-container div.next div#next-tile div.information {
+  margin: 3px 0px 0px 5px;
+  padding: 0px;
+  font: 16px $monospace-font-family;
+  color: white;
+  line-height: 1.2;
+  text-shadow: 1px 1px 0 hsl(28, 54%, 33%), -1px 1px 0 hsl(28, 54%, 33%), 1px -1px 0 hsl(28, 54%, 33%), -1px -1px 0 hsl(28, 54%, 33%);
+  position: absolute;
+  z-index: 3;
+}
+
+div.content div#board div.tile div.highlight {
+  background-color: hsla(180, 100%, 50%, 0.2);
+}
+
+div.content div#board div.stone {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 10;
+}
+
+div.content div#board div#mask {
+  width: 700px;
+  height: 700px;
+  font: italic 700 64px "Alegreya";
+  color: white;
+  line-height: 1;
+  border-radius: 15px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+}
+
+div.content div.right {
+  height: 700px;
+  margin: 0px 30px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.content div.right div.next-container {
+  @include box;
+  margin: 0px 0px 25px 0px;
+  padding: 20px 20px;
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+div.content div.right div.next-container div.next {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.content div.right div.next-container div.next div.next-label {
+  margin: 0px;
+  padding: 0px 3px;
+  font: italic 400 24px "Alegreya";
+  color: hsl(28, 54%, 33%);
+  line-height: 1;
+  text-align: left;
+}
+
+div.content div.right div.next-container div.next div#next-tile {
+  margin: 3px 0px 3px 0px;
+  padding: 0px;
+}
+
+div.content div.right div.next-container div.next div.next-guide {
+  font: italic 400 14px "Alegreya";
+  color: hsl(28, 54%, 33%);
+  line-height: 1;
+  text-align: center;
+}
+
+div.content div.right div.next-container div.number {
+  margin: 0px 0px;
+  padding: 0px;
+}
+
+div.content div.right div.next-container div.number div#remaining-size {
+  @include tnum-variant;
+  width: 75px;
+  font: italic 700 64px "Alegreya";
+  color: hsl(28, 54%, 33%);
+  line-height: 1;
+  text-align: right;
+}
+
+div.content div.right div.next-container div#remaining {
+  width: 150px;
+  height: 150px;
+  margin: 0px 0px 0px 20px;
+  padding: 0px 0px 0px 20px;
+  border-left: 1px hsl(0, 0%, 90%) solid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+div.content div.right div.next-container div#remaining div.tile {
+  width: 25px;
+  height: 25px;
+  background-color: hsl(28, 80%, 98%);
+}
+
+div.content div.right div.next-container div#remaining div.tile.alternative {
+  background-color: hsl(28, 80%, 97%);
+}
+
+div.content div.right div.next-container div#remaining div.tile div.background {
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+}
+
+div.content div.right div.time {
+  @include box;
+  margin: 0px 0px 25px 0px;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+div.content div.right div.time div.time-label {
+  margin: 25px 20px 0px 0px;
+  padding: 0px;
+  font: italic 400 24px "Alegreya";
+  color: hsl(28, 54%, 33%);
+  line-height: 1;
+}
+
+div.content div.right div.time div#minute,
+div.content div.right div.time div.colon,
+div.content div.right div.time div#second {
+  @include tnum-variant;
+  margin: 0px;
+  padding: 0px;
+  font: italic 700 64px "Alegreya";
+  color: hsl(28, 54%, 33%);
+}
+
+div.content div.right div.time div.colon {
+  margin: 0px 5px;
+}
+
+div.content div.right div.button {
+  margin: 0px 0px 25px 0px;
+  padding: 0px;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+div.content div.right div.button input[type="button"] {
+  @include button(hsl(28, 54%, 33%));
+  margin: 0px 0px 10px 0px;
+}
+
+div.content div.right div.button input[type="button"].large {
+  @include large-button(hsl(28, 54%, 33%), 180px);
+  margin: 0px 0px 10px 0px;
+}
+
+div.content div.right div.button input[type="button"].disabled {
+  @include button(hsl(240, 0%, 60%));
+  margin: 0px 0px 10px 0px;
+}
+
+div.content div.right div.button button {
+  @include twitter-button;
+}
+
+div.content div.right div.check {
+  margin: 0px 0px 25px 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+div.content div.right div.check hr {
+  width: 0px;
+  height: 1em;
+  margin: 0px 5px;
+  border: 0px;
+  border-right: 1px hsl(0, 0%, 90%) solid;
+  display: inline-block;
+}
+
+div.content div.right div.check input[type="checkbox"] {
+  @include checkbox(hsl(28, 54%, 33%));
+}
+
+div.content div.right div.history {
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 700px;
+}
+
+div.content div.right div.history textarea {
+  @include box;
+  width: 100%;
+  height: 100%;
+  margin: 0px 0px;
+  padding: 20px 20px;
+  font: 16px $monospace-font-family;
+  line-height: 1.2;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+  display: block;
+}
+
+div.rule,
+div.caution {
+  margin: 40px 0px 40px 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.rule div ul,
+div.caution div ul {
+  margin: 0px 10px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+div.rule div li,
+div.caution div li {
+  font: 14px $serif-font-family;
+  color: black;
+  line-height: 1.4;
+}
+
+div.caution div li {
+  color: red;
+}
+
+div.caution div li a {
+  color: red;
+  text-decoration: underline;
+}
+
+div.rule div hr,
+div.caution div hr {
+  margin: 3px 0px;
+  border: 0px;
+  border-top: 1px hsl(0, 0%, 90%) solid;
+}

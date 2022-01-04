@@ -1,0 +1,206 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<下方射と上方射の Haskell 実装>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2019 年 11 月 28 日)>
+  \p<
+    \a|href="22.html"|<11 月 16 日>では、下方射と上方射の数学的な定式化を行った。
+    今回は、これらを Haskell でどう定義できるかを見ていきたいと思う。
+  >
+  \p<
+    実装を見る前に、始代数の重要な性質を 1 つ証明する。
+  >
+  \thm|type="prp",id="iniso"|<
+    \p<
+      圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
+      &m<F>-代数 &m<(S, `s)> が始代数ならば、&m<`s> は同型射である。
+    >
+  >
+  \prf<
+    \p<
+      &m<(S, `s)> が &m<F>-始代数であるとする。
+      &m<(F S, F `s)> は &m<F>-代数であるから、図式
+      &mb<
+        \diag<
+          \v<F S> \v<FF S> \br;
+          \v<S> \v<F S>
+          \ar|s="1",e="2"|<Ff> \ar|s="3",e="4",inv|<f>
+          \ar|s="1",e="3",inv|<`s> \ar|s="2",e="4"|<F `s>
+        >
+      >
+      を可換にする射 &m<f> が一意に存在する。
+      すると、
+      &mb<
+        \diag<
+          \v<F S>  \v<F S> \br;
+          \v<S> \v<S>
+          \ar|s="1",e="2"|<F (`s \circ; f)> \ar|s="3",e="4",inv|<`s \circ; f>
+          \ar|s="1",e="3",inv|<`s> \ar|s="2",e="4"|<`s>
+        >
+      >
+      が可換になるから、&m<`s \circ; f: S \to; S> は代数の射である。
+      一方、&m<\rm<id>: S \to; S> も明らかに代数の射である。
+      このような射は一意でなければならないので、&m<`s \circ; f = \rm<id>> が成り立つ。
+      また、最初の図式の可換性により、&m<f \circ; `s = F (`s \circ; f) = \rm<id>> も成り立つ。
+      以上により、&m<f> は &m<`s> の逆射になるから、&m<`s> は同型射である。
+    >
+  >
+  \p<
+    つまり、&m<F>-始代数 &m<(S, `s)> は &m<S \cong; F S> を満たすということなので、&m<F> の不動点であると見なすことができる。
+    さらに、別の &m<F>-代数があるとそれに向かって射が伸びることから、&m<F>-始代数は &m<F> の不動点の中でも最小不動点であると言うことができる。
+    双対的に、&m<F>-終余代数は &m<F> の最大不動点である。
+  >
+  \p<
+    では、これをもとに Haskell で実装していこう。
+    以下では GHC 拡張の MultiParamTypeClasses と FlexibleInstances あたりの機能を利用するので、実行したい場合はこれらを有効にしておくこと。
+  >
+  \p<
+    まず、型情報を読みやすくするため、代数の型 \m<f a -`> a> に \m<Algebra f a> という別名を付けておく。
+  >
+  \pre*<
+    type Algebra f a = f a -`> a
+  >
+  \p<
+    関手 \m<f> に対する始代数は、以下のように定義できる。
+  >
+  \pre~*<
+    class Functor f =`> Fix f s where
+      inF :: f s -`> s
+      outF :: s -`> f s
+  >
+  \p<
+    既存の型を始代数と見なせるように、ここでは型クラスとして定義することにした。
+    この実装は、先程述べた始代数 (や終余代数) が関手の不動点になっているという観察から来ている。
+    \m<s> と \m<inF> のペアが始代数であり、\m<outF> が \m<inF> の逆射を与えているわけである。
+    ただし、実際に逆射になっているかどうかを Haskell の型で確認させることはできないので、この点は実装者に委ねられていることには注意すること。
+  >
+  \p<
+    下方射の実装は以下のようになる。
+  >
+  \pre~*<
+    cata :: Fix f s =`> Algebra f a -`> s -`> a
+    cata alg = alg . fmap (cata alg) . outF
+  >
+  \p<
+    この式はまさに、下方射が満たすべき可換図式
+    &mb<
+      \diag|hor="vthk"|<
+        \v<\tt<f s>>  \v<\tt<f a>> \br;
+        \v<\tt<s>> \v<\tt<a>>
+        \ar|s="1",e="2"|<\tt<fmap (cata alg)>> \ar|s="3",e="4",inv|<\tt<cata alg>>
+        \ar|s="1",e="3",shift="-3",inv|<\tt<inF>> \ar|s="3",e="1",shift="-3",inv|<\tt<outF>> \ar|s="2",e="4"|<\tt<alg>>
+      >
+    >
+    そのものである。
+    定義式の右辺に \m<cata alg> が出てきてしまっているが、Haskell では遅延評価が採用されているので、これで定義が可能なのである。
+  >
+  \p<
+    では、この下方射の実装を実際に使ってみよう。
+    \a|href="22.html"|<11 月 16 日>と同じく、ある &m<V> を固定して、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<F><V>:> \c<A> \c<\longmapsto;> \c<1 + V \times; A>
+      >
+    >
+    という形の関手を考えることにする。
+    この関手は以下のように実装できる。
+  >
+  \pre~*<
+    data FList v a = Nil | Cons v a
+    instance Functor (FList v) where
+      -- fmap :: (a -`> b) -`> FList v a -`> FList v b
+      fmap func Nil = Nil
+      fmap func (Cons val rest) = Cons val (func rest)
+  >
+  \p<
+    &m<\sb<F><V>>-始代数とは &m<V> の要素から成るリストであった。
+    実際、以下のようにリスト型を \m<Fix> のインスタンスにすることができる。
+  >
+  \pre~*<
+    instance Fix (FList v) [v] where
+      -- inF :: FList v [v] -`> [v]
+      inF Nil = []
+      inF (Cons val rest) = val : rest
+      -- outF :: [v] -`> FList v [v]
+      outF [] = Nil
+      outF (val : rest) = Cons val rest
+  >
+  \p<
+    下方射を得るためには、別の &m<\sb<F><V>>-代数が必要である。
+    ここでは、&m<V> を \m<Int> とし、0 を初期値とした加算を行う代数を考えてみる。
+  >
+  \pre~*<
+    algPlus :: Algebra (FList Int) Int
+    algPlus Nil = 0
+    algPlus (Cons val rest) = val + rest
+  >
+  \p<
+    では、\m<algPlus> による下方射に適当なリストを渡して実行してみよう。
+  >
+  \pre~*<
+    cata algPlus ([8, 7, 4, 6, 9] :: [Int])
+    cata algPlus ([128, 580, 401, 952, 757] :: [Int])
+  >
+  \samp~*<
+    34
+    2818
+  >
+  \p<
+    この通り、リストに含まれる数値の和が得られた。
+  >
+  \p<
+    さらに、特に &m<V> がユニット型の場合は、&m<\sb<F><V>>-始代数は自然数全体になる。
+    実際、以下のように \m<Fix> のインスタンスを定義することが可能だある。
+    なお、Haskell には自然数型が存在しないので \m<Int> で代用し、負数が渡された場合の挙動は考えないことにする。
+  >
+  \pre~*<
+    instance Fix (FList ()) Int where
+      -- inF :: FList () Int -`> Int 
+      inF Nil = 0
+      inF (Cons _ num) = num + 1
+      -- outF :: Int -`> FList () Int
+      outF 0 = Nil
+      outF num = Cons () (num - 1)
+  >
+  \p<
+    代数としては、何らかの関数を固定した上で、1 を初期値としてその関数を適用するようなものを考えてみる。
+  >
+  \pre~*<
+    algRep :: (Int -`> Int) -`> Algebra (FList ()) Int
+    algRep func Nil = 1
+    algRep func (Cons _ num) = func num
+  >
+  \p<
+    実行する。
+  >
+  \pre~*<
+    cata (algRep (* 2)) (10 :: Int)
+    cata (algRep (+ 4)) (1000 :: Int)
+  >
+  \samp~*<
+    1024
+    4001
+  >
+  \p<
+    このように \m<cata (algRep func)> は引数に渡された回数分だけ 1 に \m<func> を適用する関数になる。
+  >
+  \p<
+    さて、終余代数と上方射もほとんど同様に実装できる。
+    Haskell では、上で定義した \m<Fix f t> のインスタンスが始代数としても終余代数としても振る舞うという性質があるため、以下のようにすれば良い。
+  >
+  \pre~*<
+    type Coalgebra f c = c -`> f c
+
+    ana :: Fix f t =`> Coalgebra f c -`> c -`> t
+    ana coalg = inF . fmap (ana coalg) . coalg
+  >
+  \p<
+    \m<Fix f t> が始代数にも終余代数にもなるという事実は、更なる「何とか morpshism」であるところの hylomorphism や metamorphism を定義するのに重要になってくる。
+    これについては次の機会で触れたいと思う。
+  >
+
+>

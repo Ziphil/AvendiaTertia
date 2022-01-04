@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$translation-list-column-gap: 15px;
+
+.translation-list {
+  line-height: $line-height;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: ($translation-list-column-gap * 2);
+  position: relative;
+  &::before {
+    top: 0rpx;
+    bottom: 0rpx;
+    left: 50%;
+    border-right: 1rpx $blue-color solid;
+    position: absolute;
+    content: "";
+  }
+}

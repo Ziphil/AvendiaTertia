@@ -1,0 +1,548 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "util/reset.scss";
+@import "util/common.scss";
+@import "util/font.scss";
+
+
+@function custom-gradient($color, $hue-offset) {
+  $begin-color: adjust-hue($color, - div($hue-offset, 2));
+  $end-color: adjust-hue($color, div($hue-offset, 2));
+  @return linear-gradient(to right bottom, $begin-color, $end-color);
+}
+
+
+$primary-hue: 280;
+$secondary-hue: 60;
+
+$head-background-color: hsl($primary-hue, 50%, 40%);
+$highlight-color: hsl($primary-hue, 50%, 40%);
+$black-color: hsl($primary-hue, 30%, 20%);
+
+$page-background: hsl($primary-hue, 20%, 98%);
+$navigation-background-color: hsl($primary-hue, 50%, 20%);
+$hovered-box-background-color: hsl($primary-hue, 20%, 90%);
+$head-background: custom-gradient($head-background-color, -40);
+$hovered-button-background-color: hsl($secondary-hue, 50%, 90%);
+$footer-background-color: hsl($primary-hue, 50%, 20%);
+
+$title-color: hsl($primary-hue, 20%, 90%);
+$section-color: $highlight-color;
+$subsection-color: $highlight-color;
+$explanation-color: $black-color;
+$version-color: $page-background;
+$date-color: $highlight-color;
+$link-color: $highlight-color;
+$note-version-color: hsl($primary-hue, 20%, 60%);
+$copyright-color: hsl($primary-hue, 20%, 90%);
+
+$navigation-line-border-color: rgba($hovered-box-background-color, 0.5);
+$section-border-color: hsl($primary-hue, 20%, 90%);
+$image-border-color: $highlight-color;
+$history-border-color: $highlight-color;
+
+$navigation-title-font-size: 45px;
+$box-font-size: 18px;
+$title-font-size: 180px;
+$top-version-font-size: 40px;
+$copy-font-size: 40px;
+$button-font-size: 22px;
+$section-font-size: 45px;
+$subsection-font-size: 35px;
+$explanation-font-size: 18px;
+$license-name-font-size: 16px;
+$note-version-font-size: 16px;
+$version-font-size: 24px;
+$date-font-size: 16px;
+$contact-link-font-size: 22px;
+$contact-icon-font-size: 18px;
+$copyright-font-size: 18px;
+
+$line-height: 1.6;
+$copy-line-height: 1.2;
+
+$content-vertical-margin: 80px;
+$section-vertical-margin: 50px;
+$feature-vertical-margin: 35px;
+$subsection-vertical-margin: 20px;
+$explanation-horizontal-margin: 40px;
+$vertical-margin: 15px;
+$text-horizontal-margin: 7%;
+
+$content-width: 80vw;
+$content-max-width: 900px;
+$content-min-width: 560px;
+$navigation-height: 70px;
+$box-width: 140px;
+$button-width: 180px;
+$button-height: 45px;
+$version-width: 100px;
+$version-height: 35px;
+$footer-height: 50px;
+
+
+@mixin small-screen {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+
+body {
+  @include text-size-adjust;
+  @include lnum-variant;
+  margin: 0px;
+  padding: 0px;
+  font-family: $serif-font-family;
+  font-weight: $serif-font-weight;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  background: $page-background;
+  overflow-y: scroll;
+}
+
+div.navigation {
+  width: 100%;
+  height: $navigation-height;
+  margin: 0px;
+  padding: 0px;
+  background: $navigation-background-color;
+  border-bottom: 1px $navigation-background-color solid;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+}
+
+a.title {
+  margin: 0px 0px 0px 50px;
+  padding: 0px;
+  font-family: "Alegreya";
+  font-size: $navigation-title-font-size;
+  color: $title-color;
+  text-decoration: none;
+  line-height: $navigation-height;
+  letter-spacing: -0.05em;
+  display: block;
+}
+
+div.box {
+  margin: 0px 50px 0px 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.box a {
+  width: $box-width;
+  height: $navigation-height;
+  font-family: $serif-font-family;
+  font-size: $box-font-size;
+  color: $hovered-box-background-color;
+  line-height: $navigation-height;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+div.box a:hover {
+  color: $navigation-background-color;
+  background-color: $hovered-box-background-color;
+}
+
+div.box div.line {
+  width: 0px;
+  height: div($navigation-height, 3);
+  margin: 0px -1px;
+  padding: 0px;
+  border-right: 1px $navigation-line-border-color solid;
+  display: block;
+  content: ""
+}
+
+div.head {
+  margin: ($navigation-height + 1px) 0px $content-vertical-margin 0px;
+  padding: 80px 0px;
+  background: $head-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include small-screen {
+    flex-direction: column;
+  }
+}
+
+div.logo {
+  margin: 0px 50px 0px 50px;
+  padding: 0px;
+  text-align: center;
+}
+
+div.logo div.title {
+  margin: -10px 0px 10px 0px;
+  font-family: "Alegreya";
+  font-size: $title-font-size;
+  color: $title-color;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+div.logo div.version {
+  font-family: "Alegreya";
+  font-size: $top-version-font-size;
+  color: $title-color;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+div.information {
+  margin: 0px 50px 0px 50px;
+  padding: 0px;
+  text-align: center;
+}
+
+div.information div.copy {
+  font-family: "Alegreya";
+  font-size: $copy-font-size;
+  font-style: italic;
+  color: $title-color;
+  line-height: $copy-line-height;
+  @include small-screen {
+    display: none;
+  }
+}
+
+div.information div.download {
+  margin: 25px 0px 0px 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+div.information div.download a.button {
+  width: $button-width;
+  height: $button-height;
+  margin: 4px 10px;
+  padding: 0px;
+  font-family: "Alegreya";
+  font-size: $button-font-size;
+  font-style: italic;
+  color: $hovered-button-background-color;
+  text-decoration: none;
+  text-align: center;
+  line-height: $button-height;
+  border: 1px $hovered-button-background-color solid;
+  border-radius: $button-height;
+  background-color: transparent;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+div.information div.download a.button:hover {
+  color: $head-background-color;
+  background-color: $hovered-button-background-color;
+}
+
+div.content {
+  width: $content-width;
+  max-width: $content-max-width;
+  min-width: $content-min-width;
+  margin: $content-vertical-margin auto;
+  padding: 0px 0px;
+  text-align: center;
+}
+
+h1 {
+  margin: $section-vertical-margin 0px;
+  padding: 0px;
+  font-family: "Alegreya";
+  font-size: $section-font-size;
+  font-weight: normal;
+  font-style: italic;
+  color: $section-color;
+  line-height: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1::before {
+  width: 150px;
+  height: 1px;
+  margin: 0px 20px 0px 0px;
+  border-top: 1px $section-border-color solid;
+  display: inline-block;
+  content: "";
+}
+
+h1::after {
+  width: 150px;
+  height: 1px;
+  margin: 0px 0px 0px 20px;
+  border-top: 1px $section-border-color solid;
+  display: inline-block;
+  content: "";
+}
+
+div.feature {
+  width: 100%;
+  margin: $feature-vertical-margin 0px;
+  padding: 0px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include small-screen {
+    flex-direction: column-reverse;
+  }
+}
+
+div.feature:nth-of-type(even) {
+  flex-direction: row-reverse;
+  @include small-screen {
+    flex-direction: column-reverse;
+  }
+}
+
+div.feature div.image {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.feature div.image img {
+  margin: 0px;
+  padding: 0px;
+  border: 1px $image-border-color solid;
+  display: block;
+}
+
+div.feature div.image img +img {
+  margin: 10px 0px 0px 0px;
+}
+
+div.feature div.explanation {
+  margin: 0px 0px 0px $explanation-horizontal-margin;
+  padding: 0px;
+  flex-grow: 1;
+  @include small-screen {
+    margin: 0px 0px $feature-vertical-margin * 0.9 0px;
+  }
+}
+
+div.feature:nth-of-type(even) div.explanation {
+  margin: 0px $explanation-horizontal-margin 0px 0px;
+  @include small-screen {
+    margin: 0px 0px $feature-vertical-margin * 0.9 0px;
+  }
+}
+
+div.feature div.explanation h2 {
+  margin: 0px 0px $subsection-vertical-margin 0px;
+  padding: 0px;
+  font-family: $serif-font-family;
+  font-size: $subsection-font-size;
+  font-weight: normal;
+  color: $subsection-color;
+  line-height: 1;
+  @include small-screen {
+    text-align: center;
+  }
+}
+
+div.feature div.explanation p {
+  font-family: $serif-font-family;
+  font-size: $explanation-font-size;
+  color: $explanation-color;
+  line-height: $line-height;
+  text-align: justify;
+}
+
+div.license {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+div.license p {
+  margin: $vertical-margin $text-horizontal-margin;
+  padding: 0px;
+  font-family: $serif-font-family;
+  font-size: $explanation-font-size;
+  color: $explanation-color;
+  line-height: $line-height;
+  text-align: justify;
+  @include small-screen {
+    margin: $vertical-margin 0px;
+  }
+}
+
+div.license table {
+  margin: $vertical-margin auto;
+  padding: 0px;
+  border-collapse: collapse;
+}
+
+div.license table tr th {
+  margin: 0px;
+  padding: 8px 0px 0px 0px;
+  font-family: $serif-font-family;
+  font-size: $license-name-font-size;
+  font-weight: normal;
+  color: $explanation-color;
+  line-height: $line-height;
+  text-align: left;
+}
+
+div.license table tr:first-child th {
+  padding: 0px;
+}
+
+div.license table tr td {
+  margin: 0px;
+  padding: 0px 15px 0px 20px;
+  font-family: $serif-font-family;
+  font-size: $explanation-font-size;
+  line-height: $line-height;
+  text-align: left;
+}
+
+div.license table tr td:last-child {
+  padding: 0px 0px 0px 15px;
+  font-size: $note-version-font-size;
+  color: $note-version-color;
+}
+
+div.license table tr td a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+div.history {
+  margin: 0px 0px 0px div($version-width, 2);
+  padding: 0px;
+  border-left: 5px $history-border-color solid;
+  text-align: left;
+  display: inline-block;
+}
+
+div.history div.header {
+  margin: 0px 0px 0px 0px - div($version-width + 5px, 2);
+  padding: 0px;
+}
+
+div.history div.header div.version {
+  width: $version-width;
+  height: $version-height;
+  margin: 0px 15px 0px 0px;
+  font-family: "Alegreya";
+  font-size: $version-font-size;
+  color: $version-color;
+  letter-spacing: -0.02em;
+  line-height: $version-height;
+  text-align: center;
+  border-radius: $version-height;
+  background-color: $history-border-color;
+  display: inline-block;
+}
+
+div.history div.header div.date {
+  font-family: $serif-font-family;
+  font-size: $date-font-size;
+  color: $date-color;
+  line-height: $version-height;
+  display: inline-block;
+}
+
+div.history ul {
+  margin: 10px 0px 10px 25px;
+  padding: 0px;
+  list-style-type: none;
+  display: inline-block;
+}
+
+div.history ul li {
+  font-family: $serif-font-family;
+  font-size: $explanation-font-size;
+  color: $explanation-color;
+  line-height: $line-height;
+}
+
+div.contact {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+div.contact p {
+  margin: $vertical-margin $text-horizontal-margin;
+  padding: 0px;
+  font-family: $serif-font-family;
+  font-size: $explanation-font-size;
+  color: $explanation-color;
+  line-height: $line-height;
+  text-align: justify;
+  @include small-screen {
+    margin: $vertical-margin 0px;
+  }
+}
+
+div.contact div.address {
+  margin: $vertical-margin 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+div.contact div.address a {
+  font-family: $serif-font-family;
+  font-size: $contact-link-font-size;
+  color: $link-color;
+  line-height: $line-height;
+  text-decoration: none;
+}
+
+div.contact div.address a.twitter::before {
+  @include icon-font;
+  margin: 0px 5px 0px 0px;
+  font-weight: normal;
+  content: "\F099";
+}
+
+div.footer {
+  width: 100%;
+  height: $footer-height;
+  margin: $content-vertical-margin 0px 0px 0px;
+  padding: 0px;
+  background: $footer-background-color;
+}
+
+div.copyright {
+  margin: 0px 0px 0px 50px;
+  padding: 0px;
+  font-family: $serif-font-family;
+  font-size: $copyright-font-size;
+  color: $copyright-color;
+  text-decoration: none;
+  line-height: $footer-height;
+}
+
+span.japanese {
+  font-family: $japanese-serif-font-family !important;
+}
+
+sup {
+  font-size: 70%;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
+}
+
+sub {
+  font-size: 70%;
+  vertical-align: baseline;
+  position: relative;
+  top: 0.2em;
+}

@@ -1,0 +1,78 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<連結辞の形とタデックの有無による意味の違い>
+  \ver<S 代>
+
+  \h1<日記 (\h<3398>)>
+  \p<
+    いつも更新日記では考察課題ばかり挙げていますが、今回は考察課題ではなくちょっとした発見です。
+  >
+  \p<
+    連結辞には ({o} を除いて) 標準形と別形という 2 つの形があって、使われ方に違いがあり、どちらかを使う方がもう一方を使うよりも自然という状況が多くの場合で生じます。
+    しかし、標準形も別形も文法的機能は同じなので、これらを入れ替えたとしても、不自然にはなりますが意味に違いが生じないことがほとんどです。
+    ただ、従属節の中で使われた場合に限って、標準形を使うか別形を使うかで意味の違いが生じることがあり得ます。
+    このことについては、すでに\a|href="../../conlang/theory/25.html"|<シャレイア語論>にまとめられています。
+  >
+  \p<
+    この意味の違いが生じる状況をもう一度考察してみることにします。
+    シャレイア語論では、次のような状況が例として挙げられています (文構造はそのままに内容をシンプルにしてあります)。
+  >
+  \xl<
+    \li<\sh<{salat e adupadit a kin sokat a ces e cal, ò kelitat e tel.}>\ja<彼がそれを知っているということも私が安心しているということもあり得ない。>>
+    \li<\sh<{salat e adupadit a kin sokat a ces e cal, lo kelitat e tel.}>\ja<彼がそれを知っているということはあり得ず、私は安心している。>>
+  >
+  \p<
+    この意味の違いが生じる理由は、{ò} と {lo} が繋ぐ範囲の大きさとして想定されるものが異なるからだと説明することができます。
+    {ò} は繋ぐ範囲が比較的狭く捉えられがちで、{lo} は広く捉えられがちです。
+    そのため、上の例では、{ò} を使うと {sokat a ces e cal} と {kelitat e tel} が繋がれていると解釈されますが、{lo} を使うと {salat e adupadit a kin sokat a ces e cal} と {kelitat e tel} が繋がれていると解釈されるため、意味の違いが生じるわけです。
+  >
+  \p<
+    さて、この説明はその通りだと思うのですが、{ò} と {lo} の違いに加えてタデックの有無も意味の違いに大きく関与してると思うんですよね。
+    試しに上の文の {ò} もしくは {lo} の前のタデックを消してみましょう。
+  >
+  \xl<
+    \li<\sh<{salat e adupadit a kin sokat a ces e cal ò kelitat e tel.}>>
+    \li<\sh<{salat e adupadit a kin sokat a ces e cal lo kelitat e tel.}>>
+  >
+  \p<
+    こうなると、{lo} を使った方も {sokat a ces e cal} と {kelitat e tel} を繋いでいると解釈しても十分自然だと感じられます。
+    もちろん、{salat} ～ {e cal} と {kelitat e tel} を繋いでいると解釈するのも自然だと思います。
+    {ò} を使った方は、変わらず {sokat a ces e cal} と {kelitat e tel} だけを繋いでいるとするのが自然で、{salat} ～ {e cal} と {kelitat e tel} を繋ぐとは解釈できない気がします。
+  >
+  \p<
+    次は、ここから {kin} の後にタデックを加えてみます。
+  >
+  \xl<
+    \li<\sh<{salat e adupadit a kin, sokat a ces e cal ò kelitat e tel.}>>
+    \li<\sh<{salat e adupadit a kin, sokat a ces e cal lo kelitat e tel.}>>
+  >
+  \p<
+    こうなると文面上で {kin} の後で一度切れてますから、{salat} ～ {e cal} を 1 つのまとまりと見なすのは不自然で、どちらの文も {sokat a ces e cal} と {kelitat e tel} を繋いでいるとしか解釈できないでしょう。
+  >
+  \p<
+    では、{kin} の後と連結辞の後の両方にタデックを打つとどうなるでしょう。
+  >
+  \xl<
+    \li<\sh<{salat e adupadit a kin, sokat a ces e cal, ò kelitat e tel.}>>
+    \li<\sh<{salat e adupadit a kin, sokat a ces e cal, lo kelitat e tel.}>>
+  >
+  \p<
+    こうなると、字面上では {salat e adupadit a kin} と {sokat a ces e cal} と {kelitat e tel} の 3 つに分かれるので、1 つ目と 2 つ目を合わせた {salat} ～ {e cal} と 3 つ目の {kelitat e tel} が連結されてると見なすのも、1 つ目の {salat e adupadit a kin} に続く従属節として 2 つ目と 3 つ目を合わせた {sokat} ～ {e tel} があると見なすのも、どちらも自然です。
+    どちらになるかは連結辞として {ò} が使われているか {lo} が使われているかが決めることになり、{ò} なら後者で、{lo} なら前者になります。
+  >
+  \p<
+    ということで、タデックの有無もかなり意味に関与することが分かったわけですが、そう考えると最初の文でちょっと不自然なんですよね。
+  >
+  \xl<
+    \li<\sh<{salat e adupadit a kin sokat a ces e cal, ò kelitat e tel.}>>
+  >
+  \p<
+    {ò} の前にタデックを置くということは、{salat} ～ {e cal} と {kelitat e tel} という 2 つのまとまりに分けたということになり、この 2 つのまとまりは最も外側に (別の {kin} 節や限定節の中ではなく) 置かれているので、連結辞には {lo} を使うのが自然なはずです。
+    要するに、タデックの置き方と連結辞の選択がミスマッチしてるんですよね。
+    非文とまでは言いませんが、たぶん読むときに混乱すると思うので、このタデックと連結辞の選択は避けた方が良い気がします。
+  >
+
+>

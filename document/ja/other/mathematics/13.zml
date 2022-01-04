@@ -1,0 +1,780 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<プロモノイダル圏>
+  \use-math;
+
+  \h1<初めに>
+  \p<
+    この文書は、Day によるプロモノイダル圏の理論を簡潔にまとめたものである。
+    各種定理の証明方法は概ね Day\ref|type="bib",ref="dcbc"|; の論文に従っているが、議論の流れや細かい記号などは変更してある部分がある。
+  >
+  \h1<準備>
+  \h2<モノイダル圏>
+  \p<
+    まずは、通常のモノイダル圏について復習しておく。
+    ここではモノイダル圏の各種性質については触れず、定義のみを確認するに留める。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<D>> をとり、関手 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> と対象 &m<\top;> を考える。
+      ここで、&m<\scr<D>> の対象 &m<A, B, C> に対して、3 種類の同型射
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<\bar<`a>><A, B, C>:> \c<(A \otimes; B) \otimes; C> \c<\to;> \c<A \otimes; (B \otimes; C)> \br;
+          \c<\sb<\bar<`l>><A>:> \c<\top; \otimes; A> \c<\to;> \c<A> \br; 
+          \c<\sb<\bar<`r>><A>:> \c<A \otimes; \top;> \c<\to;> \c<A>
+        >
+      >
+      が定まっており、各変数に関して自然であるとする。
+      さらに、任意の &m<\scr<D>> の対象 &m<A, B, C, D> に対して、
+      &mb<
+        &mark<\rm<M>>
+        \array|align="c"|<
+          \cc<
+            \diag|hor="thn"|<
+              \v<((A \otimes; B) \otimes; C) \otimes; D> \v; \v<(A \otimes; (B \otimes; C)) \otimes; D> \br;
+              \v<(A \otimes; B) \otimes; (C \otimes; D)> \v; \v<A \otimes; ((B \otimes; C) \otimes; D)> \br;
+              \v; \v<A \otimes; (B \otimes; (C \otimes; D))>
+              \ar|s="1",e="4",inv|<\bar<`a>> \ar|s="1",e="3"|<\bar<`a> \otimes; \rm<id>>
+              \ar|s="3",e="6"|<\bar<`a>> \ar|s="4",e="8",inv|<\bar<`a>> \ar|s="6",e="8"|<\rm<id> \otimes; \bar<`a>>
+            >
+          >
+          \cc<
+            \diag|hor="thn"|<
+              \v<(A \otimes; \top;) \otimes; B> \v; \v<A \otimes; (\top; \otimes; B)> \br;
+              \v; \v<A \otimes; B>
+              \ar|s="1",e="3"|<\bar<`a>> \ar|s="1",e="5",inv|<\bar<`r> \otimes; \rm<id>>
+              \ar|s="3",e="5"|<\rm<id> \otimes; \bar<`l>>
+            >
+          >
+        >
+      >
+      がともに可換であるとする。
+      このような自然な写像の組 &m<(\bar<`a>, \bar<`l>, \bar<`r>)> を組 &m<(\scr<D>, \otimes|ord|;, \top;)> 上の\em<モノイダル整合構造\fl<monoidal coherent structure>> という。
+      さらに、これら全てのデータの組 &m<(\scr<D>, \otimes|ord|;, \top;, \bar<`a>, \bar<`l>, \bar<`r>)> を\em<モノイダル圏\fl<monoidal category>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<D>> をとり、関手 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> を考える。
+      任意の &m<\scr<D>> の対象 &m<A> に対し、片方の変数を固定した関手 &m<A \otimes; \hyphen;> と &m<\hyphen; \otimes; A> がどちらも右随伴をもつとき、&m<\otimes;> は\em<双閉\fl<biclosed>> であるという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<D>> に定まる演算 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> が双閉であるとき、&m<\scr<D>> は\em<双閉\fl<biclosed>> であるという。
+    >
+  >
+  \h2<コエンド>
+  \p<
+    プロモノイダル圏の定義にはコエンドを用いるため、ここで定義を確認しておく。
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<K: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<S>> をとる。
+      &m<\scr<S>> の対象 &m<S> に対し、&m<\scr<C>> の対象 &m<X> で添字付けられた &m<\scr<S>> の双自然な射の族 &m<\sb<`f><X>: K (X, X) \to; S> を考える。
+      任意の &m<\scr<S>> の対象 &m<T> と同様の双自然な射の族 &m<\sb<`c><X>: K (X, X) \to; T> に対し、&m<\scr<S>> の射 &m<h: S \to; T> が一意に存在し、&m<\scr<C>> の各対象 &m<X> に対して、
+      &mb<
+        \diag<
+          \v<K (X, X)> \v<S> \br;
+          \v; \v<T>
+          \ar|s="1",e="2"|<`f> \ar|s="1",e="4",inv|<`c> \ar|s="2",e="4"|<h>
+        >
+      >
+      が可換であるとき、&m<S> を &m<K> の\em<コエンド\fl<coend>> といい、
+      &mb<
+        S \coloneqq; \int<><X> K (X, X)
+      >
+      で表す。
+    >
+  >
+  \p<
+    エンドはコエンドの双対概念として定義される。
+    ここでは明示的な定義を省略する。
+  >
+  \p<
+    以降では、&m<\bfrm<Set>> への 2 つの関手 &m<K: \sp<\scr<C>><\circ;> \to; \bfrm<Set>, L: \scr<C> \to; \bfrm<Set>> の直積で表される関手のコエンドを考えることが多い。
+    そこで、記号を簡単にするため、
+    &mb<
+      KX \sp<\times;><X> LX \coloneqq; \int<><X> (K X \times; L X)
+    >
+    と略記する。
+  >
+  \h2<テンソル対象>
+  \thm|type="def"|<
+    \p<
+      関手 &m<K: \scr<C> \to; \scr<S>> をとる。
+      任意の &m<\scr<C>> の対象 &m<X> に対し、関手 &m<\sb<\op<Hom>><\scr<S>> (KX, \hyphen;): \scr<S> \to; \bfrm<Set>> が左随伴をもつとき、&m<\scr<S>> は &m<K>-\em<テンソル付き\fl<tensored>> であるという。
+      また、この左随伴は &m<\hyphen; \odot; KX: \bfrm<Set> \to; \scr<S>> で表し、この値を\em<テンソル対象\fl<tensor object>> という。
+    >
+  >
+  \p<
+    すなわち、&m<\scr<C>> の対象 &m<X> と &m<\scr<S>> の対象 &m<S> と &m<\bfrm<Set>> の対象 &m<T> に対し、全単射
+    &mb<
+      \sb<\op<Hom>><\scr<S>> (T \odot; KX, S) \cong; \sb<\op<Hom>><\bfrm<Set>> (T, \sb<\op<Hom>><\scr<S>> (KX, S))
+    >
+    が成り立ち、&m<T, S> に関して自然である。
+    さらに、これが &m<X> に関しても自然になるように、2 変数の関手 &m<\hyphen; \odot; K \hyphen;: \bfrm<Set> \times; \scr<C> \to; \scr<S>> を構成することができる。
+  >
+  \p<
+    テンソル対象をとる操作は余極限の一種なので、&m<\scr<S>> が余完備であれば、任意の関手 &m<K: \scr<C> \to; \scr<S>> に対して &m<\scr<S>> は &m<K>-テンソル付きである。
+    特に &m<\bfrm<Set>> はテンソル付きで、テンソル対象は積で与えられる。
+  >
+  \h2<Yoneda 射>
+  \p<
+    関手 &m<M: \scr<C> \to; \scr<D>, K: \scr<D> \to; \scr<S>> をとり、さらに &m<\scr<C>> の対象 &m<X> と &m<\scr<D>> の対象 &m<A> をとる。
+    このとき、&m<K> によって写像
+    &mb<
+      \sb<K><MX, A>: \sb<\op<Hom>><\scr<D>> (MX, A) \longto; \sb<\op<Hom>><\scr<S>> (KMX, KA)
+    >
+    が誘導される。
+    ここで、&m<\scr<S>> が &m<(K \circ; M)>-テンソル付きであるとすると、テンソル対象の定義により、この写像に対応する &m<\scr<S>> の射として、
+    &mb<
+      \sbsp<`z><X, A><K, M>: \sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX \longto; KA
+    >
+    がある。
+    これは &m<X> に関して双自然なので、コエンドの普遍性により、
+    &mb<
+      \sbsp<z><A><K, M>: \int<><X> (\sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX) \longto; KA
+    >
+    が得られる。
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<M: \scr<C> \to; \scr<D>, K: \scr<D> \to; \scr<S>> を考え、&m<\scr<S>> は &m<(K \circ; M)>-テンソル付きであるとする。
+      &m<\scr<D>> の対象 &m<A> に対し、上記によって得られる射
+      &mb<
+        \sbsp<z><A><K, M>: \int<><X> (\sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX) \longto; KA
+      >
+      を、一般に \em<Yoneda 射\fl<— morphism>> という。
+    >
+  >
+  \p<
+    &m<M> が恒等関手の場合、Yoneda 射は同型になる。
+  >
+  \thm|type="prp",id="rep"|<
+    \p<
+      関手 &m<K: \scr<D> \to; \scr<S>> を考える。
+      任意の &m<\scr<D>> の対象 &m<A> に対し、&m<M = \sb<\rm<id>><\scr<D>>> としたときの Yoneda 射
+      &mb<
+        \sbsp<z><A><K>: \int<><X> (\sb<\op<Hom>><\scr<D>> (X, A) \odot; KX) \longto; KA
+      >
+      は同型射である。
+    >
+  >
+  \prf<
+    \p<
+      射 &m<\sb<`z><X>: \sb<\op<Hom>><\scr<D>> (X, A) \odot; KX \to; KA> がコエンドの普遍性を満たすことを示す。
+      任意に双自然な射の族 &m<\sb<`f><X>: \sb<\op<Hom>><\scr<D>> (X, A) \odot; KX \to; S> をとる。
+      このとき、任意の &m<\scr<D>> の対象 &m<X> に対し、
+      &mb<
+        \diag<
+          \v<\op<Hom> (X, A) \odot; KX> \v<KA> \br;
+          \v; \v<S>
+          \ar|s="1",e="2"|<`z> \ar|s="1",e="4",inv|<`f> \ar|s="2",e="4",dash|<h>
+        >
+      >
+      を可換にするような &m<h> が一意に存在することを示せば良い。
+      テンソル対象の対応によって、これは、
+      &mb<
+        \diag<
+          \v<\op<Hom> (X, A)> \v<\op<Hom> (KX, KA)> \br;
+          \v; \v<\op<Hom> (KX, S)>
+          \ar|s="1",e="2"|<K> \ar|s="1",e="4",inv|<\tilde<`f>> \ar|s="2",e="4",dash|<h \circ; \hyphen;>
+        >
+      >
+      を可換にするような &m<h> が一意に存在することと同値である。
+      ここで、テンソル対象によって &m<\sb<`f><X>> と対応する写像を &m<\sb<\tilde<`f>><X>> で書いた。
+      この図式は &m<h \coloneqq; \sb<\tilde<`f>><A> \sb<\rm<id>><A>> とおくと可換になり、&m<`f> の双自然性から、そのような &m<h> はこれのみである。
+      以上で示された。
+    >
+  >
+  \p<
+    これ以降、&m<z> は常に Yoneda 射を表すものとする。
+    添字は多くの場合で省略する。
+    また、以降の議論では &m<\scr<S>> が &m<\bfrm<Set>> である場合が多く使われるが、&m<\bfrm<Set>> のテンソル対象は積で与えられるので、このときの Yoneda 射は、
+    &mb<
+      \sbsp<z><A><K, M>: \sb<\op<Hom>><\scr<D>> (MX, A) \sp<\times;><X> KMX \longto; KA
+    >
+    という形になる。
+  >
+  \h2<稠密関手>
+  \thm|type="def"|<
+    \p<
+      関手 &m<M: \scr<C> \to; \scr<D>> をとる。
+      任意の &m<\scr<D>> の対象 &m<A, B> に対し、写像
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\scr<D>> (A, B)> \c<\longto;> \c<\op<Nat> (\sb<\op<Hom>><\scr<D>> (M \hyphen;, A), \sb<\op<Hom>><\scr<D>> (M \hyphen;, B))> \br;
+          \c<h> \c<\longmapsto;> \c<h \circ; \hyphen;>
+        >
+      >
+      が全単射であり、それが &m<A, B> に関して自然であるとき、&m<M> は\em<稠密\fl<dense>> であるという。
+    >
+  >
+  \thm|type="prp",id="denseequiv"|<
+    \p<
+      関手 &m<M: \scr<C> \to; \scr<D>> をとり、&m<\scr<D>> が &m<M>-テンソル付きであるとする。
+      このとき、2 条件
+    >
+    \ul<
+      \li<
+        &m<M> は稠密である。
+      >
+      \li<
+        任意の &m<\scr<D>> の対象 &m<A> に対し、&m<\scr<C>> の対象 &m<X> で添字付けられた恒等写像と対応する射の族
+        &mb<
+          \sb<`z><X>: \sb<\op<Hom>><\scr<D>> (MX, A) \odot; MX \longto; A
+        >
+        はコエンドを定める。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb<`z><X>> がコエンドを定めるとは、任意の双自然な射の族 &m<\sb<`f><X>: \sb<\op<Hom>><\scr<D>> (MX, A) \odot; MX \to; B> に対し、全ての &m<\scr<C>> の対象 &m<X> について、
+      &mb<
+        \diag<
+          \v<\op<Hom> (MX, A) \odot; MX> \v<A> \br;
+          \v; \v<B>
+          \ar|s="1",e="2"|<`z> \ar|s="1",e="4",inv|<`f> \ar|s="2",e="4",dash|<h>
+        >
+      >
+      を可換にする &m<h> が一意に存在するということである。
+      しかしこのことは、テンソル対象の対応を考えると、任意の自然な射の族 &m<\sb<`c><X>: \sb<\op<Hom>><\scr<D>> (MX, A) \to; \sb<\op<Hom>><\scr<D>> (MX, B)> に対して、
+      &mb<
+        \diag<
+          \v<\op<Hom> (MX, A)> \v<\op<Hom> (MX, A)> \br;
+          \v; \v<\op<Hom> (MX, B)>
+          \ar|s="1",e="2",line="2",tip="none"|; \ar|s="1",e="4",inv|<`c> \ar|s="2",e="4"|<h \circ; \hyphen;>
+        >
+      >
+      を可換にする &m<h> が一意に存在するということと同値である。
+      これは、まさに &m<M> が稠密であるということである。
+    >
+  >
+  \thm|type="prp",id="lift"|<
+    \p<
+      関手の図式
+      &mb<
+        \diag<
+          \v<\scr<C>> \v<\scr<D>> \v<\scr<E>>
+          \ar|s="1",e="2"|<M>
+          \ar|s="2",e="3",shift="3"|<K> \ar|s="2",e="3",shift="-3",inv|<L>
+          \ar|s="3",e="2",bend="-50",inv|<R>
+        >
+      >
+      において、&m<M> は稠密で、&m<R> は &m<K> の右随伴であるとする。
+      このとき、任意の自然変換 &m<`f: K \circ; M \raarr; L \circ; M> に対し、自然変換 &m<`c: K \raarr; L> が一意に存在し、&m<`f = `c * M> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      随伴 &m<K \dashv; R> の単位と余単位をそれぞれ &m<`h: \sb<\rm<id>><\scr<D>> \raarr; R \circ; K, `e: K \circ; R \raarr; \sb<\rm<id>><\scr<E>>> で表すことにする。
+    >
+    \p<
+      任意の自然変換 &m<`f: K \circ; M \raarr; L \circ; M> をとる。
+      &m<\scr<C>> の対象 &m<X> と &m<\scr<D>> の対象 &m<A> に対し、合成
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<Hom> (MX, A)> \c<\diag<\v; \v; \ar|s="1",e="2"|<R \circ; L>>> \c<\op<Hom> (RLMX, RLA)> \br;
+          \c; \c<\diag<\v; \v; \ar|s="1",e="2"|<\hyphen; \circ; R \sb<`f><X>>>> \c<\op<Hom> (RKMX, RLA)> \br;
+          \c; \c<\diag<\v; \v; \ar|s="1",e="2"|<\hyphen; \circ; \sb<`h><MX>>>> \c<\op<Hom> (MX, RLA)>
+        >
+      >
+      を考え、これを &m<\sb<`b><X, A>> とおく。
+      &m<\sb<`b><X, A>> は &m<X> に関して自然なので、&m<M> の稠密性を保証するエンドの普遍性によって、これに対応する射として &m<\sb<`g><A>: A \to; RLA> が得られ、&m<\sb<`b><X, A> = \sb<`g><A> \circ; \hyphen;> が成り立つ。
+      &m<\sb<`g><A>> はさらに &m<A> に関して自然なので、自然変換 &m<`g: \sb<\op<id>><\scr<D>> \raarr; R \circ; L> を定める。
+    >
+    \p<
+      ここで、随伴の性質によって、
+      &mb<
+        &mark<\wspade;>
+        \array|align="rcl"|<
+          \c<\op<Nat> (K, L)> \c<\longto;> \c<\op<Nat> (\sb<\rm<id>><\scr<D>>, R \circ; L)> \br;
+          \c<`c> \c<\longmapsto;> \c<(R * `c) \circ; `h>
+        >
+      >
+      は全単射である。
+      そこで、上で構成した &m<`g: \sb<\op<id>><\scr<D>> \raarr; R \circ; L> に対応する自然変換を &m<`c: K \raarr; L> とすると、これが存在を示したかったものになる。
+    >
+    \p<
+      実際、&m<\scr<C>> の対象 &m<X> に対し、上の構成で &m<A = MX> とおいて &m<\sb<`b><X, MX>> の &m<\sb<\rm<id>><MX>> での値を考えると、
+      &mb<
+        \sb<`g><MX> = \sb<`b><X, MX> \sb<\rm<id>><MX> = R \sb<`f><X> \circ; \sb<`h><MX>
+      >
+      が得られる。
+      一方、&m<`c> は全単射 &m<\wspade;> によって &m<`g> と対応する自然変換であったから、
+      &mb<
+        \sb<`g><MX> = R \sb<`c><MX> \circ; \sb<`h><MX>
+      >
+      が成り立つ。
+      この 2 つの式を比べると、随伴の性質によって &m<\sb<`f><X> = \sb<`c><MX>> が分かり、したがって &m<`f = `c * M> が示された。
+    >
+  >
+  \h1<プロモノイダル圏>
+  \h2<定義>
+  \p<
+    プロモノイダル圏は、通常のモノイダル圏の構造を定める関手 &m<\otimes|ord|;: \scr<C> \times; \scr<C> \to; \scr<C>, \top;: \bfrm<1> \to; \scr<C>> の代わりに、プロ関手 &m<P: \scr<C> \times; \scr<C> \vertrarr; \scr<C>, J: \bfrm<1> \vertrarr; \scr<C>> を考えたときに得られるものである。
+    ここでは、プロ関手の言葉は使わず、通常の関手の言葉で定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> をとり、関手 &m<P: \sp<\scr<C>><\circ;> \times; \scr<C> \times; \scr<C> \to; \bfrm<Set>, J: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> を考える。
+      ここで、&m<\scr<C>> の対象 &m<A, B, C, Z> に対して、3 種類の同型写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<`a><A, B, C, Z>:> \c<P (X, A, B) \sp<\times;><X> P (Z, X, C)> \c<\to;> \c<P (X, B, C) \sp<\times;><X> P (Z, A, X)> \br;
+          \c<\sb<`l><A, Z>:> \c<JX \sp<\times;><X> P (Z, X, A)> \c<\to;> \c<\op<Hom> (Z, A)> \br; 
+          \c<\sb<`r><A, Z>:> \c<JX \sp<\times;><X> P (Z, A, X)> \c<\to;> \c<\op<Hom> (Z, A)>
+        >
+      >
+      が定まっており、各変数に関して自然であるとする。
+      さらに、任意の &m<\scr<C>> の対象 &m<A, B, C, D, Z> に対して、
+      &mb<
+        &mark<\rm<P>>
+        \array|align="c"|<
+          \cc<
+            \diag|hor="-72"|<
+              \v; \v<P (X, A, B) \sp<\times;><X> P (Y, X, C) \sp<\times;><Y> P (Z, Y, D)> \v; \br;
+              \v<P (X, B, C) \sp<\times;><X> P (Y, A, X) \sp<\times;><Y> P (Z, Y, D)> \v; \v<P (X, A, B) \sp<\times;><X> P (Y, C, D) \sp<\times;><Y> P (Z, X, Y)> \br;
+              \v<P (X, B, C) \sp<\times;><X> P (Y, X, D) \sp<\times;><Y> P (Z, A, Y)> \v; \v<P (X, C, D) \sp<\times;><X> P (Y, A, B) \sp<\times;><Y> P (Z, Y, X)> \br;
+              \v; \v<P (X, C, D) \sp<\times;><X> P (Y, B, X) \sp<\times;><Y> P (Z, A, Y)> \v;
+              \ar|s="2",e="4",inv|<`a \times; \rm<id>> \ar|s="2",e="6"|<\rm<id> \times; `a>
+              \ar|s="4",e="7",inv|<\rm<id> \times; `a> \ar|s="6",e="9",line="2",tip="none"|;
+              \ar|s="7",e="11",inv|<`a \times; \rm<id>> \ar|s="9",e="11"|<\rm<id> \times; `a>
+            >
+          >
+          \cc<
+            \diag|hor="non"|<
+              \v<JX \sp<\times;><X> P (Y, A, X) \sp<\times;><Y> P (Z, Y, B)> \v; \v<JX \sp<\times;><X> P (Y, X, B) \sp<\times;><Y> P (Z, A, Y)> \br;
+              \v<\op<Hom> (Y, A) \sp<\times;><Y> P (Z, Y, B)> \v; \v<\op<Hom> (Y, B) \sp<\times;><Y> P (Z, A, Y)> \br;
+              \v; \v<P (Z, A, B)> \v;
+              \ar|s="1",e="3"|<\rm<id> \times; `a>
+              \ar|s="1",e="4",inv|<`r \times; \rm<id>> \ar|s="3",e="6"|<`l \times; \rm<id>>
+              \ar|s="4",e="8",inv|<z> \ar|s="6",e="8"|<z>
+            >
+          >
+        >
+      >
+      がともに可換であるとする。
+      このような自然な写像の組 &m<(`a, `l, `r)> を組 &m<(\scr<C>, P, J)> 上の\em<プロモノイダル整合構造\fl<promonoidal coherent structure>> という。
+      さらに、これら全てのデータの組 &m<(\scr<C>, P, J, `a, `l, `r)> を\em<プロモノイダル圏\fl<promonoidal category>> という。
+    >
+  >
+  \p<
+    プロモノイダル圏と通常のモノイダル圏との関係は、以下に続く 2 つの定理によって述べることができる。
+  >
+  \thm|type="thm",id="rela"|<
+    \p<
+      圏 &m<\scr<D>> をとり、関手 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> と対象 &m<\top;> を考える。
+      さらに、関手 &m<M: \scr<C> \to; \scr<D>> をとり、
+      &mb<
+        \array|align="rrcl"|<
+          \c<P:> \c<\sp<\scr<C>><\circ;> \times; \scr<C> \times; \scr<C>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<(Z, A, B)> \c<\longmapsto;> \c<\sb<\op<Hom>><\scr<D>> (MZ, MA \otimes; MB)>
+        > \qquad;
+        \array|align="rrcl"|<
+          \c<J:> \c<\sp<\scr<C>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<Z> \c<\longmapsto;> \c<\sb<\op<Hom>><\scr<D>> (MZ, \top;)>
+        >
+      >
+      と定める。
+      条件
+    >
+    \ol<
+      \li<
+        &m<M> は忠実充満である。
+      >
+      \li<
+        任意の &m<\scr<C>> の対象 &m<A, Z> および &m<\scr<D>> の対象 &m<D> に対し、
+        &mb<
+          \array|align="rrcl"|<
+            \c<z:> \c<\sb<\op<Hom>><\scr<D>> (MX, D) \sp<\times;><X> \sb<\op<Hom>><\scr<D>> (MZ, MX \otimes; MA)> \c<\longto;> \c<\sb<\op<Hom>><\scr<D>> (MZ, D \otimes; MA)> \br;
+            \c<z:> \c<\sb<\op<Hom>><\scr<D>> (MX, D) \sp<\times;><X> \sb<\op<Hom>><\scr<D>> (MZ, MA \otimes; MX)> \c<\longto;> \c<\sb<\op<Hom>><\scr<D>> (MZ, MA \otimes; D)>
+          >
+        >
+        の形の Yoneda 射は同型である。
+      >
+    >
+    \p<
+      がともに成り立つならば、&m<(\scr<D>, \otimes|ord|;, \top;)> 上のモノイダル整合構造は &m<(\scr<C>, P, J)> 上のプロモノイダル整合構造を誘導する。
+    >
+  >
+  \prf<
+    \p<
+      &m<(\scr<D>, \otimes|ord|;, \top;)> 上のモノイダル整合構造 &m<(\bar<`a>, \bar<`l>, \bar<`r>)> をとる。
+      &m<\scr<C>> の対象 &m<A, B, C, Z> に対し、以下の 3 つの図式を考える。
+      &mb<
+        &mark<\rm<C>>
+        \array|align="c"|<
+          \cc<
+            \diag|hor="vthn"|<
+              \v<P (X, A, B) \sp<\times;><X> P (Z, X, C)> \v<P (X, B, C) \sp<\times;><X> P (Z, A, X)> \br;
+              \v<\op<Hom> (MX, MA \otimes; MB) \sp<\times;><X> \op<Hom> (MZ, MX \otimes; MC)> \v<\op<Hom> (MX, MB \otimes; MC) \sp<\times;><X> \op<Hom> (MZ, MA \otimes; MX)> \br;
+              \v<\op<Hom> (MZ, (MA \otimes; MB) \otimes; MC)> \v<\op<Hom> (MZ, MA \otimes; (MB \otimes; MC))>
+              \ar|s="1",e="2"|<`a> \ar|s="1",e="3",line="2",tip="none"|; \ar|s="2",e="4",line="2",tip="none"|;
+              \ar|s="3",e="5",inv|<z> \ar|s="4",e="6"|<z> \ar|s="5",e="6",inv|<\bar<`a> \circ; \hyphen;>
+            >
+          >
+          \cc<
+            \diag|hor="sthn"|<
+              \v<JX \sp<\times;><X> P (Z, X, A)> \v<\op<Hom> (Z, A)> \br;
+              \v<\op<Hom> (MX, \top;) \sp<\times;><X> \op<Hom> (MZ, MX \otimes; MA)> \v; \br;
+              \v<\op<Hom> (MZ, \top; \otimes; MA)> \v<\op<Hom> (MZ, MA)>
+              \ar|s="1",e="2"|<`l> \ar|s="1",e="3",line="2",tip="none"|; \ar|s="2",e="6"|<M>
+              \ar|s="3",e="5",inv|<z> \ar|s="5",e="6",inv|<\bar<`l> \circ; \hyphen;>
+            >
+          >
+          \cc<
+            \diag|hor="sthn"|<
+              \v<JX \sp<\times;><X> P (Z, A, X)> \v<\op<Hom> (Z, A)> \br;
+              \v<\op<Hom> (MX, \top;) \sp<\times;><X> \op<Hom> (MZ, MA \otimes; MX)> \v; \br;
+              \v<\op<Hom> (MZ, MA \otimes; \top;)> \v<\op<Hom> (MZ, MA)>
+              \ar|s="1",e="2"|<`r> \ar|s="1",e="3",line="2",tip="none"|; \ar|s="2",e="6"|<M>
+              \ar|s="3",e="5",inv|<z> \ar|s="5",e="6",inv|<\bar<`r> \circ; \hyphen;>
+            >
+          >
+        >
+      >
+      与えられた条件によって、これらの図式中の垂直方向の射は全て同型である。
+      したがって、これらの図式を可換にするような自然な同型写像 &m<`a, `l, `r> が存在する。
+      これが &m<(\scr<C>, P, J)> 上のプロモノイダル整合構造 &m<(`a, `l, `r)> になることを示す。
+    >
+    \p<
+      定理の 2 つ目の条件のもとでは、プロモノイダル整合構造を定める図式 P の可換性は、
+      &mb<
+        &mark<\rm<M>'>
+        \array|align="c"|<
+          \cc<
+            \diag|hor="-72"|<
+              \v<\op<Hom> (MZ, ((MA \otimes; MB) \otimes; MC) \otimes; MD)> \v; \v<\op<Hom> (MZ, (MA \otimes; (MB \otimes; MC)) \otimes; MD)> \br;
+              \v<\op<Hom> (MZ, (MA \otimes; MB) \otimes; (MC \otimes; MD))> \v; \v<\op<Hom> (MZ, MA \otimes; ((MB \otimes; MC) \otimes; MD))> \br;
+              \v; \v<\op<Hom> (MZ, MA \otimes; (MB \otimes; (MC \otimes; MD)))>
+              \ar|s="1",e="4",inv|<\bar<`a> \circ; \hyphen;> \ar|s="1",e="3"|<(\bar<`a> \otimes; \rm<id>) \circ; \hyphen;>
+              \ar|s="3",e="6"|<\bar<`a> \circ; \hyphen;> \ar|s="4",e="8",inv|<\bar<`a> \circ; \hyphen;> \ar|s="6",e="8"|<(\rm<id> \otimes; \bar<`a>) \circ; \hyphen;>
+            >
+          >
+          \cc<
+            \diag|hor="-24"|<
+              \v<\op<Hom> (MZ, (MA \otimes; \top;) \otimes; MB)> \v; \v<\op<Hom> (MZ, MA \otimes; (\top; \otimes; MB))> \br;
+              \v; \v<\op<Hom> (MZ, MA \otimes; MB)>
+              \ar|s="1",e="3"|<\bar<`a> \circ; \hyphen;> \ar|s="1",e="5",inv|<(\bar<`r> \otimes; \rm<id>) \circ; \hyphen;>
+              \ar|s="3",e="5"|<(\rm<id> \otimes; \bar<`l>) \circ; \hyphen;>
+            >
+          >
+        >
+      >
+      の可換性と同値になる。
+      今回の場合、モノイダル整合構造を定める図式 M が可換であることから、上の図式も可換になる。
+      よって、組 &m<(`a, `l, `r)> はプロモノイダル整合構造となる。
+    >
+  >
+  \p<
+    特に、この定理からモノイダル圏はプロモノイダル圏になることが分かる。
+  >
+  \thm|type="cor",id="monpro"|<
+    \p<
+      上記の構成により、任意のモノイダル圏はプロモノイダル圏の構造をもつ。
+    >
+  >
+  \prf< 
+    \p<
+      モノイダル圏 &m<\scr<D>> をとる。
+      &m<M = \sb<\rm<id>><\scr<D>>> とすると、\ref|type="thm",ref="rep"|; によって、\ref|type="thm",ref="rela"|; の条件中にある Yoneda 射は同型になる。
+      したがって、\ref|type="thm",ref="rela"|; を適用すれば良い。
+    >
+  >
+  \p<
+    さらにいくつかの条件を課すことで、逆にプロモノイダル構造からモノイダル構造を得ることができ、これらの構造は 1 対 1 に対応する。
+  >
+  \thm|type="thm",id="relb"|<
+    \p<
+      圏 &m<\scr<D>> をとり、関手 &m<\otimes;: \scr<D> \times; \scr<D> \to; \scr<D>> と対象 &m<\top;> を考える。
+      さらに、関手 &m<M: \scr<C> \to; \scr<D>> をとり、上記の通りに &m<P, J> を定める。
+      上記定理の条件に加え、さらに条件
+    >
+    \ol<
+      \li<
+        &m<M> は稠密である。
+      >
+      \li<
+        &m<\otimes;> は双閉である。
+      >
+    >
+    \p<
+      がともに成り立つならば、&m<(\scr<D>, \otimes;, \top;)> 上のモノイダル整合構造と &m<(\scr<C>, P, J)> 上のプロモノイダル整合構造の間には全単射が存在する。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="rela"|; の逆の構成を行う。
+      &m<(\scr<C>, P, J)> 上のプロモノイダル整合構造 &m<(`a, `l, `r)> をとる。
+      ここで、図式 C の垂直な射は全て同型だから、これらの図式を可換にするような自然な同型写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sbsp<\bar<`a>><A, B, C><\pr;>:> \c<(MA \otimes; MB) \otimes; MC> \c<\to;> \c<MA \otimes; (MB \otimes; MC)> \br;
+          \c<\sbsp<\bar<`l>><A><\pr;>:> \c<\top; \otimes; MA> \c<\to;> \c<MA> \br; 
+          \c<\sbsp<\bar<`r>><A><\pr;>:> \c<MA \otimes; \top;> \c<\to;> \c<MA>
+        >
+      >
+      が得られる。
+      ここで\ref|type="thm",ref="lift"|; を用いると、これらの自然な同型写像は、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<\bar<`a>><A, B, C>:> \c<(A \otimes; B) \otimes; C> \c<\to;> \c<A \otimes; (B \otimes; C)> \br;
+          \c<\sb<\bar<`l>><A>:> \c<\top; \otimes; A> \c<\to;> \c<A> \br; 
+          \c<\sb<\bar<`r>><A>:> \c<A \otimes; \top;> \c<\to;> \c<A>
+        >
+      >
+      に持ち上げることができる。
+      例えば、&m<\bar<`l>> を得るには以下のようにすれば良い。
+      &m<K \coloneqq; \top; \otimes; \hyphen;, L \coloneqq; \sb<\rm<id>><\scr<D>>> とおくと、仮定によって &m<M> は稠密で &m<K> は右随伴をもつので、\ref|type="thm",ref="lift"|; の条件が満たされる。
+      そこで、自然変換 &m<\bar<`l>': K \circ; M \raarr; L \circ; M> に対して\ref|type="thm",ref="lift"|; を使えば、自然変換 &m<\bar<`l>: K \raarr; L> であって &m<\bar<`l>' = \bar<`l> * M> なるものが得られる。
+    >
+    \p<
+      さて、このように定めると、&m<\bar<`a>, \bar<`l>, \bar<`r>> は図式 &m<\rm<M>'> を可換にする。
+      ここで、&m<M> は稠密なので、これらの図式の可換性は図式 M の可換性と同値になり、組 &m<(\bar<`a>, \bar<`l>, \bar<`r>)> はモノイダル整合構造となる。
+    >
+  >
+  \h2<モノイダル圏への埋め込み>
+  \p<
+    前節では、モノイダル圏がそこへの忠実充満関手がある圏にプロモノイダル構造を誘導することを見た。
+    すると逆に、プロモノイダル圏から初めて、そこから何らかのモノイダル圏を構成してそこに忠実充満関手が作れるかという疑問が生じる。
+    これは、Yoneda 埋め込みを考えることで可能である。
+  >
+  \p<
+    以降、簡単のため &m<\widehat<\scr<C>> \coloneqq; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> と書く。
+  >
+  \thm|type="lem",id="yonffd"|<
+    \p<
+      圏 &m<\scr<C>> をとる。
+      Yoneda 埋め込み &m<\bf<y>: \scr<C> \to; \widehat<\scr<C>>> は忠実充満かつ稠密である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\bf<y>> が忠実充満であることは、Yoneda の補題から従うよく知られた事実である。
+      &m<\bf<y>> が稠密であることを示す。
+    >
+    \p<
+      &m<\widehat<\scr<C>>> の対象 &m<F> をとる。
+      まず、Yoneda の補題によって、
+      &mb<
+        \int<><X> (\op<Hom> (\bf<y> X, F) \odot; \bf<y> X) \cong; \int<><X> (FX \odot; \bf<y> X)
+      >
+      が成り立つ。
+      &m<\scr<C>> の対象 &m<Z> に対して、この右辺の &m<Z> での値を考えると、\ref|type="thm",ref="rep"|; によって、
+      &mb<
+        \array|align="rcl"|<
+          \c<\paren<\int<><X> (FX \odot; \bf<y> X)> Z> \c<\cong;> \c<\int<><X> (FX \odot; \bf<y> X) Z> \br;
+          \c; \c<\cong;> \c<\int<><X> (FX \times; \op<Hom> (Z, X))> \br;
+          \c; \c<\cong;> \c<FZ>
+        >
+      >
+      が分かる。
+      したがって、
+      &mb<
+        \int<><X> (\op<Hom> (\bf<y> X, F) \odot; \bf<y> X) \cong; F
+      >
+      が示された。
+      このコエンドを与える射は\ref|type="thm",ref="denseequiv"|; のものと同一なので、\ref|type="thm",ref="denseequiv"|; によって &m<\bf<y>> は稠密である。
+    >
+  >
+  \p<
+    プロモノイダル圏の演算を定める関手 &m<P> からモノイダル圏の演算を定める関手 &m<\otimes;> を構成する式は、以下のように畳み込みの形で与えられる。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> をとり、関手 &m<P: \sp<\scr<C>><\circ;> \times; \scr<C> \times; \scr<C> \to; \bfrm<Set>> を考える。
+      &m<\widehat<\scr<C>>> の対象 &m<F, G> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<F \otimes; G:> \c<\sp<\scr<C>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<Z> \c<\longmapsto;> \c<\int<><X> \int<><Y> (FX \times; GY \times; P (Z, X, Y))>
+        >
+      >
+      とおくと、これは関手 &m<\otimes;: \widehat<\scr<C>> \times; \widehat<\scr<C>> \to; \widehat<\scr<C>>> を定める。
+      これを &m<P> による \em<Day 畳み込み\fl<— convolution>> という。
+    >
+  >
+  \p<
+    この Day 畳み込みは\ref|type="thm",ref="rela"|; および\ref|type="thm",ref="relb"|; の条件を満たす。
+    これを続く 2 つの補題で証明する。
+  >
+  \thm|type="lem",id="dayconvcl"|<
+    \p<
+      圏 &m<\scr<C>> をとり、関手 &m<P: \sp<\scr<C>><\circ;> \times; \scr<C> \times; \scr<C> \to; \bfrm<Set>> を考える。
+      このとき、&m<P> による Day 畳み込み &m<\otimes;> は双閉である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\widehat<\scr<C>>> の対象 &m<F, H> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<F \brmulti; H:> \c<\sp<\scr<C>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<Y> \c<\longmapsto;> \c<\int<X> \int<Z> (P (Z, X, Y) \buharprarr; (FX \buharprarr; HZ))>
+        >
+      >
+      とすると、これは関手 &m<\bmulti|ord|;: \widehat<\scr<C>> \sp<><\circ;> \times; \widehat<\scr<C>> \to; \widehat<\scr<C>>> を定める。
+      ここで、&m<\buharprarr;> は集合の冪を表す。
+      このとき、任意の &m<\widehat<\scr<C>>> の対象 &m<F, G, H> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<Hom> (F \otimes; G, H)> \c<\cong;> \c<\int<Z> \op<Hom> ((F \otimes; G) Z, HZ)> \br;
+          \c; \c<=> \c<\int<Z> \op<Hom> \paren<\int<><X> \int<><Y> (FX \times; GY \times; P (Z, X, Y)), HZ>> \br;
+          \c; \c<\cong;> \c<\int<Z> \int<X> \int<Y> \op<Hom> (FX \times; GY \times; P (Z, X, Y), HZ)> \br;
+          \c; \c<\cong;> \c<\int<Z> \int<X> \int<Y> \op<Hom> (GY, P (Z, X, Y) \buharprarr; (FX \buharprarr; HZ))> \br;
+          \c; \c<\cong;> \c<\int<Y> \op<Hom> \paren<GY, \int<X> \int<Z> (P (Z, X, Y) \buharprarr; (FX \buharprarr; HZ))>> \br;
+          \c; \c<=> \c<\int<Y> \op<Hom> (GY, (F \brmulti; H) Y)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (G, F \brmulti; H)>
+        >
+      >
+      が成り立ち、この同型は &m<G, H> に関して自然である。
+      これはすなわち、関手 &m<F \otimes; \hyphen;: \widehat<\scr<C>> \to; \widehat<\scr<C>>> は右随伴 &m<F \brmulti; \hyphen;: \widehat<\scr<C>> \to; \widehat<\scr<C>>> をもつことを意味している。
+      &m<\hyphen; \otimes; F> についても同様である。
+    >
+  >
+  \thm|type="lem",id="yoniso"|<
+    \p<
+      圏 &m<\scr<C>> をとり、関手 &m<P: \sp<\scr<C>><\circ;> \times; \scr<C> \times; \scr<C> \to; \bfrm<Set>> を考える。
+      &m<P> による Day 畳み込みを &m<\otimes;> とするとき、任意の &m<\scr<C>> の対象 &m<A, Z> および &m<\widehat<\scr<C>>> の対象 &m<F> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<z:> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> X, F) \sp<\times;><X> \sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> X \otimes; \bf<y> A)> \c<\longto;>
+          \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, F \otimes; \bf<y> A)> \br;
+          \c<z:> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> X, F) \sp<\times;><X> \sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; \bf<y> X)> \c<\longto;>
+          \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; F)>
+        >
+      >
+      の形の Yoneda 射は同型である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<C>> の対象 &m<A, Z> をとる。
+      \ref|type="thm",ref="dayconvcl"|; によって、関手 &m<\hyphen; \otimes; \bf<y> A: \widehat<\scr<C>> \to; \widehat<\scr<C>>> は右随伴をもつ。
+      さらに、関手 &m<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \hyphen;): \widehat<\scr<C>> \to; \bfrm<Set>> も右随伴をもつ。
+      実際、
+      &mb<
+        \array|align="rrcl"|<
+          \c<L:> \c<\bfrm<Set>> \c<\longto;> \c<\widehat<\scr<C>>> \br;
+          \c; \c<S> \c<\longmapsto;> \c<\sb<\op<Hom>><\scr<C>> (\hyphen;, Z) \buharprarr; S>
+        >
+      >
+      とすると、これは &m<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \hyphen;)> の右随伴になる。
+      したがって、これらの合成
+      &mb<
+        K \coloneqq; \sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \hyphen; \otimes; \bf<y> A): \widehat<\scr<C>> \to; \bfrm<Set>
+      >
+      は右随伴をもち、余極限を保存する。
+      特に、&m<K> はコエンドとテンソル積と交換する。
+    >
+    \p<
+      さて、任意に &m<\widehat<\scr<C>>> の対象 &m<F> をとる。
+      \ref|type="thm",ref="yonffd"|; によって &m<\bf<y>> は稠密なので、\ref|type="thm",ref="denseequiv"|; を使うと、
+      &mb<
+        F \cong; \int<><X> (\op<Hom> (\bf<y> X, F) \odot; \bf<y> X)
+      >
+      が成り立つことが分かる。
+      この両辺に &m<K> を適用すると、&m<K> がコエンドとテンソル積と交換することから、
+      &mb<
+        \array|align="rcl"|<
+          \c<KF> \c<\cong;> \c<K \paren<\int<><X> (\op<Hom> (\bf<y> X, F) \odot; \bf<y> X)>> \br;
+          \c; \c<\cong;> \c<\int<><X> K (\op<Hom> (\bf<y> X, F) \odot; \bf<y> X)> \br;
+          \c; \c<\cong;> \c<\int<><X> (\op<Hom> (\bf<y> X, F) \times; K \bf<y> X)>
+        >
+      >
+      が得られる。
+      すなわち、
+      &mb<
+        \op<Hom> (\bf<y> Z, F \otimes; \bf<y> A) \cong; \op<Hom> (\bf<y> X, F) \sp<\times;><X> \op<Hom> (\bf<y> Z, \bf<y> X \otimes; \bf<y> A)
+      >
+      が成り立つ。
+      さらに、射の構成を追うことで、この同型を与える射が Yoneda 射になっていることが分かる。
+      以上により、補題中の 1 つ目の射が同型であることが示された。
+      2 つ目の射についても同様である。
+    >
+  >
+  \p<
+    以上により、\ref|type="thm",ref="relb"|; を用いる準備が整った。
+  >
+  \thm|type="thm",id="funccat"|<
+    \p<
+      圏 &m<\scr<C>> をとり、関手 &m<P: \sp<\scr<C>><\circ;> \times; \scr<C> \times; \scr<C> \to; \bfrm<Set>, J: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> を考える。
+      &m<P> による Day 畳み込みを &m<\otimes;> とするとき、&m<(\widehat<\scr<C>>, \otimes;, J)> 上のモノイダル整合構造と &m<(\scr<C>, P, J)> 上のプロモノイダル整合構造の間には全単射が存在する。
+    >
+  >
+  \prf<
+    \p<
+      まず、\ref|type="thm",ref="rela"|; の通りに &m<\otimes|ord|;, J> から &m<P', J'> を構成する。
+      すなわち、
+      &mb<
+        \array|align="rrcl"|<
+          \c<P':> \c<\sp<\scr<C>><\circ;> \times; \scr<C> \times; \scr<C>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<(Z, A, B)> \c<\longmapsto;> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; \bf<y> B)>
+        > \qquad;
+        \array|align="rrcl"|<
+          \c<J':> \c<\sp<\scr<C>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<Z> \c<\longmapsto;> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, J)>
+        >
+      >
+      と定める。
+      すると、&m<\scr<C>> の対象 &m<A, B, Z> に対し、 Day 畳み込みの定義と\ref|type="thm",ref="rep"|; によって、
+      &mb<
+        \array|align="rcl"|<
+          \c<P' (Z, A, B)> \c<=> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; \bf<y> B)> \br;
+          \c; \c<\cong;> \c<(\bf<y> A \otimes; \bf<y> B) Z> \br;
+          \c; \c<=> \c<\int<><X> \int<><Y> (\op<Hom> (X, A) \times; \op<Hom> (Y, B) \times; P (Z, X, Y))> \br;
+          \c; \c<\cong;> \c<P (Z, A, B)>
+        >
+      >
+      が成り立つ。
+      すなわち、&m<P> と &m<P'> は同型である。
+      さらに、Yoneda の補題によって、&m<J> と &m<J'> も同型であることが分かる。
+    >
+    \p<
+      さて、\ref|type="thm",ref="yonffd"|;, \ref|type="thm",ref="dayconvcl"|;, \ref|type="thm",ref="yoniso"|; によって、\ref|type="thm",ref="rela"|;, \ref|type="thm",ref="relb"|; の計 4 条件が全て成り立つことが分かっている。
+      したがって、\ref|type="thm",ref="relb"|; を用いれば、この定理の主張が示される。
+    >
+  >
+  \p<
+    モノイダル圏はプロモノイダル圏であったから、この定理から特にモノイダル圏がモノイダル双閉圏に埋め込めることが従う。
+  >
+  \thm|type="cor"|<
+    \p<
+      任意のモノイダル圏は、あるモノイダル双閉圏にモノイダル構造を保って埋め込める。
+    >
+  >
+  \prf<
+    \p<
+     モノイダル圏 &m<\scr<C>> をとる。
+      \ref|type="thm",ref="monpro"|; によって、&m<\scr<C>> はプロモノイダル圏の構造をもつ。
+      \ref|type="thm",ref="funccat"|; を用いて、この構造に対応する &m<\widehat<\scr<C>>> 上のモノイダル圏の構造をとると、Yoneda 埋め込み &m<\bf<y>: \scr<C> \to; \widehat<\scr<C>>> によって、&m<\scr<C>> は &m<\widehat<\scr<C>>> に埋め込める。
+      \ref|type="thm",ref="dayconvcl"|; によって、&m<\widehat<\scr<C>>> 上のモノイダル圏の構造は双閉であり、構成から明らかに &m<\bf<y>> はモノイダル圏の構造を保存する。
+      以上により、主張が示された。
+    >
+  >
+  \p<
+    モノイダル圏 &m<\scr<C>> に対し、この系でモノイダル双閉圏 &m<\widehat<\scr<C>>> に定まっている演算は、&m<\widehat<\scr<C>>> の対象 &m<F, G> に対し、
+    &mb<
+      \array|align="rrcl"|<
+        \c<F \otimes; G:> \c<\sp<\scr<C>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+        \c; \c<Z> \c<\longmapsto;> \c<\int<><X> \int<><Y> (FX \times; GY \times; \sb<\op<Hom>><\scr<C>> (Z, X \otimes; Y))>
+      >
+    >
+    と明示的に書ける。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="dcbc"|<B. J. Day (1970)「Construction of biclosed categories」Ph. D. Thesis, University of New South Wales>
+  >
+
+>

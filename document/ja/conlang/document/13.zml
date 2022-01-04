@@ -1,0 +1,539 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<用語集>
+  \ver<S 代>
+  \use-math;
+
+  \h1<目次>
+  \section-table;
+  \h1<語彙的品詞>
+  \h2|id="lc"|<語彙的品詞\fl<lexical category>>
+  \p<
+    各単語にちょうど 1 つ割り当てられている分類。
+    \an|href="#vi"|<動辞>, \an|href="#ni"|<名辞>, \an|href="#bi"|<副辞>, \an|href="#func"|<機能辞>, \an|href="#part"|<助接辞>, \an|href="#conn"|<連結辞>, 間投辞の 7 種類がある。
+  >
+  \h2|id="s"|<品詞\fl<sort>>
+  \p<
+    \an|href="#lc"|<語彙的品詞>の別名。
+  >
+  \h2|id="i"|<不定辞\fl<infinitive>>
+  \p<
+    いわゆる (機能語と比較した) 内容語に相当する\an|href="#s"|<語彙的品詞>。
+    \an|href="#vi"|<動辞>, \an|href="#ni"|<名辞>, \an|href="#bi"|<副辞>の 3 種類にさらに分かれる。
+  >
+  \h2|id="vi"|<動辞\fl<verbal>>
+  \p<
+    動詞, 名詞, 形容詞, 副詞の 4 種類の文法的品詞をとることができる\an|href="#i"|<不定辞>。
+    副詞として使われるときは、必ず\an|href="#vb"|<動詞修飾副詞>になる。
+  >
+  \h2|id="ni"|<名辞\fl<nominal>>
+  \p<
+    名詞のみを文法的品詞としてとることができる\an|href="#i"|<不定辞>。
+  >
+  \h2|id="bi"|<副辞\fl<adverbial>>
+  \p<
+    副詞のみを文法的品詞としてとることができる\an|href="#i"|<不定辞>。
+    副詞として使われるときは、\an|href="#mb"|<修飾詞修飾副詞>もしくは\an|href="#sb"|<特殊副詞>になる。
+  >
+  \h2|id="func"|<機能辞\fl<functional>>
+  \p<
+    {pa} もしくは {kin} のこと。
+  >
+  \h2|id="ifunc"|<疑問機能辞\fl<interrogative functional>>
+  \p<
+    {pa} のこと。
+    節の初めに置いて、その節が疑問文 (もしくは反語文) であることを明示する。
+  >
+  \h2|id="cfunc"|<節化機能辞\fl<clausal functional>>
+  \p<
+    {kin} のこと。
+    節の前に置くことで、名詞節を作る。
+  >
+  \h2|id="part"|<助接辞\fl<particle>>
+  \p<
+    助詞, 接続詞の 2 種類の文法的品詞をとることができる\an|href="#s"|<語彙的品詞>。
+    その用法に応じて、\an|href="#npart"|<一般助接辞>と\an|href="#spart"|<特殊助接辞>に分けられる。
+  >
+  \h2|id="npart"|<一般助接辞\fl<normal particle>>
+  \p<
+    \an|href="#stem"|<語幹>だけで用いることができる\an|href="#part"|<助接辞>。
+    多くの助接詞はここに分類される。
+  >
+  \h2|id="bpart"|<基本助接辞\fl<basic particle>>
+  \p<
+    \an|href="#npart"|<一般助接辞>のうち {a}, {e}, {ca}, {zi}, {li} の 5 つの総称。
+    この 5 つは、助詞として用いられたときの意味が、助詞自身によって決められるのではなく、修飾している動詞によって決められるという特徴がある。
+  >
+  \h2|id="spart"|<特殊助接辞\fl<special particle>>
+  \p<
+    \an|href="#stem"|<語幹>だけでは用いることができない、すなわち常に\an|href="#nvmpart"|<非動詞修飾形>で用いられる\an|href="#part"|<助接辞>。
+    ただし、\an|href="#vmpart"|<動詞修飾形>を用いる特殊構文もとれるので、あくまで上の分類方法は原則である。
+  >
+  \h2|id="conn"|<連結辞\fl<connective>>
+  \p<
+    常に接続詞として使われる\an|href="#s"|<語彙的品詞>。
+    このとき、同じ種類の語句を繋げて 1 つの意味のまとまりを作る役割を果たす。
+    {o}, {á}, {é}, {à} とその\an|href="#afconn"|<別形>である {lo}, {lá}, {lé}, {dà} の 8 つのみ。
+  >
+  \h1<語彙的品詞 (旧名称)>
+  \h2|id="io"|<不定詞\fl<infinitive>>
+  \p<
+    \an|href="i"|<不定辞>の別名。
+  >
+  \h2|id="vio"|<動詞型不定詞\fl<verbal infinitive>>
+  \p<
+    \an|href="vi"|<動辞>の別名。
+  >
+  \h2|id="nio"|<名詞型不定詞\fl<nominal infinitive>>
+  \p<
+    \an|href="ni"|<名辞>の別名。
+  >
+  \h2|id="bio"|<副詞型不定詞\fl<adverbial infinitive>>
+  \p<
+    \an|href="bi"|<副辞>の別名。
+  >
+  \h2|id="funco"|<機能詞\fl<functional>>
+  \p<
+    \an|href="func"|<機能辞>の別名。
+  >
+  \h2|id="ifunco"|<疑問機能詞\fl<interrogative functional>>
+  \p<
+    \an|href="ifunc"|<疑問機能辞>の別名。
+  >
+  \h2|id="cfunco"|<節化機能詞\fl<clausal functional>>
+  \p<
+    \an|href="cfunc"|<節化機能辞>の別名。
+  >
+  \h2|id="parto"|<助接詞\fl<particle>>
+  \p<
+    \an|href="part"|<助接辞>の別名。
+  >
+  \h2|id="nparto"|<一般助接詞\fl<normal particle>>
+  \p<
+    \an|href="npart"|<一般助接辞>の別名。
+  >
+  \h2|id="bparto"|<基本助接詞\fl<basic particle>>
+  \p<
+    \an|href="bpart"|<基本助接辞>の別名。
+  >
+  \h2|id="sparto"|<特殊助接詞\fl<special particle>>
+  \p<
+    \an|href="i"|<特殊助接辞>の別名。
+  >
+  \h2|id="conno"|<連結詞\fl<connective>>
+  \p<
+    \an|href="i"|<連結辞>の別名。
+  >
+  \h1<文法的品詞>
+  \h2|id="gc"|<文法的品詞\fl<grammatical category>>
+  \p<
+    文中の単語がどのような役割を果たしているかを表す分類。
+    動詞, 名詞, 形容詞, 副詞, 助詞, 接続詞, 間投詞の 7 種類がある。
+    他の言語の文脈で「品詞」と呼ばれるものは、シャレイア語ではこの文法的品詞に当たるので注意すること。
+  >
+  \p<
+    文中での単語の役割を表すので、文なしで単語だけを取り出して、その単語の文法的品詞が何かを問うことはできない。
+    例えば「動詞 {sôd} は～」のように、単語だけで文法的品詞が決まっているかのように述べることがあるが、これは「{sôd} が動詞として使われたときは～」を省略して言っているにすぎない。
+  >
+  \p<
+    1 つの単語が文中でとることができる文法的品詞は、その単語の語彙的品詞によって決まっている。
+  >
+  \h2|id="c"|<品詞用法\fl<category>>
+  \p<
+    \an|href="#gc"|<文法的品詞>の別名。
+  >
+  \h2|id="mod"|<修飾詞\fl<modificative>>
+  \p<
+    形容詞と副詞の総称。
+  >
+  \h2|id="vb"|<動詞修飾副詞\fl<verb-modifying adverb>>
+  \p<
+    動詞を修飾する副詞。
+    さらに \an|href="#vba"|<I 型>と \an|href="#vbb"|<II 型>に分かれる。
+    必ず\an|href="#vi"|<動辞>由来になる。
+  >
+  \h2|id="mb"|<修飾詞修飾副詞\fl<modificative-modifying adverb>>
+  \p<
+    \an|href="#mod"|<修飾詞>を修飾する副詞。
+    「とても ({bam})」や「最も ({hiv})」などが該当する。
+    必ず\an|href="#vi"|<副辞>由来になる。
+  >
+  \h2|id="sb"|<特殊副詞\fl<special adverb>>
+  \p<
+    様々な\an|href="#c"|<文法的品詞>の単語を修飾し得る副詞。
+    動詞修飾副詞にも修飾詞修飾副詞にも分類できない副詞がここに分類される。
+    「だけ ({tut})」などが該当する。
+    必ず\an|href="#vi"|<副辞>由来になる。
+  >
+  \h2|id="ab"|<形容詞修飾副詞\fl<adjective-modifying adverb>>
+  \p<
+    \an|href="#mb"|<修飾詞修飾副詞>の別名。
+    実際は副詞も修飾できるにも関わらず、この名前では形容詞のみを修飾するかのような印象を与えるので、\h<2157> 以降あまりこの用語を使わないようになった。
+  >
+  \h2|id="ba"|<A 型副詞\fl<adverb of type A>>
+  \p<
+    \an|href="#vb"|<動詞修飾副詞>の別名。
+  >
+  \h2|id="bb"|<B 型副詞\fl<adverb of type B>>
+  \p<
+    \an|href="#mb"|<修飾詞修飾副詞>の別名。
+  >
+  \h2|id="bc"|<C 型副詞\fl<adverb of type C>>
+  \p<
+    \an|href="#sb"|<特殊副詞>の別名。
+  >
+  \h1<動詞と形容詞の意味関係>
+  \h2|id="cna"|<継続主格型\fl<continuous-nominative>>
+  \p<
+    形容詞として使った場合の被修飾語が、動詞として継続相で使った場合の {a} 句に対応するもの。
+  >
+  \h2|id="caa"|<継続対格型\fl<continuous-accusative>>
+  \p<
+    形容詞として使った場合の被修飾語が、動詞として継続相で使った場合の {e} 句に対応するもの。
+  >
+  \h2|id="pna"|<経過主格型\fl<progressive-nominative>>
+  \p<
+    形容詞として使った場合の被修飾語が、動詞として経過相で使った場合の {a} 句に対応するもの。
+  >
+  \h2|id="paa"|<経過対格型\fl<progressive-accusative>>
+  \p<
+    形容詞として使った場合の被修飾語が、動詞として経過相で使った場合の {e} 句に対応するもの。
+  >
+  \h1<形容詞と副詞の意味関係>
+  \h2|id="vba"|<I 型\fl<of type I>>
+  \p<
+    副詞として使われると、動詞が表す動作の様子を表すもの。
+  >
+  \p<
+    \h<2684> に形容詞と副詞の意味関係の分類の改定を行った際、従来 I 型に分類されていたものは III 型, III＋ 型, IV 型, V 型に再分類されたため、現在この用語が使われることはない。
+  >
+  \h2|id="vbb"|<II 型\fl<of type II>>
+  \p<
+    副詞として使われると、文構造上は動詞を修飾するが、意味的には形容詞として使われたときの意味で文全体を修飾するもの。
+    「ときどき ({têl})」や「突然 ({bazis})」などが該当する。
+  >
+  \h2|id="vbbp"|<II＋ 型\fl<of type II+>>
+  \p<
+    \an|href="#vbb"|<II 型>とほぼ同じだが、形容詞としてコト名詞だけでなくモノ名詞も修飾できるもの。
+    「良い ({sas})」などが該当する。
+  >
+  \h2|id="vbc"|<III 型\fl<of type III>>
+  \p<
+    副詞として使われると、被修飾語の動作の様子を表し、形容詞として使われると、何らかの省略された動詞による限定節と同じ意味だと解釈されるもの。
+    「速く ({vit})」や「急に ({bâl})」などが該当する。
+  >
+  \h2|id="vbcp"|<III＋ 型\fl<of type III+>>
+  \p<
+    \an|href="#vbc"|<III 型>とほぼ同じだが、形容詞としてモノ名詞だけでなくコト名詞も修飾できるもの。
+    「安定して ({kòq})」などが該当する。
+  >
+  \h2|id="vbd"|<IV 型\fl<of type IV>>
+  \p<
+    副詞としての意味が、動作そのものの様子ではなく動作を行っているものの様子を表し、動詞として使われると、副詞のときの意味の様子で何かを行うことを意味するもの。
+    「元気に ({dalaz})」や「真剣に ({cazec})」などが該当する。
+  >
+  \h2|id="vbe"|<V 型\fl<of type V>>
+  \p<
+    副詞としての意味が、動作そのものの様子ではなく動作を行っているものの様子を表し、動詞として使われると、副詞のときの意味の様子に対象を変化させることを意味するもの。
+    「楽しげに ({rahas})」や「ヒラヒラと ({halfet})」などが該当する。
+  >
+  \h2|id="baa"|<A\sub<1> 型\fl<of type A\sub<1>>>
+  \p<
+    \an|href="#vb"|<I 型>の別名。
+    この名称は、形容詞と副詞の意味上の関係を表しているにも関わらず、「A\sub<1> 型副詞」のように副詞そのものの分類であるかのように使われていた。
+  >
+  \h2|id="bab"|<A\sub<2> 型\fl<of type A\sub<2>>>
+  \p<
+    \an|href="#vb"|<II 型>の別名。
+    この名称は、形容詞と副詞の意味上の関係を表しているにも関わらず、「A\sub<2> 型副詞」のように副詞そのものの分類であるかのように使われていた。
+  >
+  \h1<時制>
+  \h2|id="prsts"|<現在時制\fl<present tense>>
+  \p<
+    現在の 1 点を表す時制。
+    他の言語の現在時制と違い、現在を含む期間を表すわけではなく、現在という 1 点のみを表すので注意。
+    ただし、従属節で使われた場合は、主節の動詞の時制と相が表す期間を指すようになる。
+  >
+  \h2|id="pstts"|<過去時制\fl<past tense>>
+  \p<
+    過去の期間を表す時制。
+  >
+  \h2|id="futts"|<未来時制\fl<future tense>>
+  \p<
+    未来の期間を表す時制。
+  >
+  \h2|id="dchts"|<通時時制\fl<diachronic tense>>
+  \p<
+    時間を問わず成立する物事に言及するときや、時間を特に指定せずに動作だけを表したいときに用いる時制。
+  >
+  \h1<相>
+  \h2|id="incpas"|<開始相\fl<inceptive aspect>>
+  \p<
+    動作が開始する瞬間を表す相。
+  >
+  \h2|id="progas"|<経過相\fl<progressive aspect>>
+  \p<
+    動作が開始してから完了するまでの期間を表す相。
+  >
+  \h2|id="perfas"|<完了相\fl<perfect aspect>>
+  \p<
+    動作が完了する瞬間を表す相。
+  >
+  \h2|id="contas"|<継続相\fl<continuous aspect>>
+  \p<
+    動作が完了してからその後の状態が終わるまでの期間を表す相。
+  >
+  \h2|id="termas"|<終了相\fl<terminative aspect>>
+  \p<
+    動作が完了した後の状態が途切れる瞬間を表す相。
+  >
+  \h2|id="indfas"|<無相\fl<indefinite aspect>>
+  \p<
+    動作を始めてから完了するまでの一連を表したいときや、動作の局面を特に指定せずに動作そのものを表したいときに用いる相。
+  >
+  \h2|id="puncas"|<瞬間相\fl<punctual aspect>>
+  \p<
+    \an|href="#incpas"|<開始相>, \an|href="perfas"|<完了相>, \an|href="#termas"|<終了相>の総称。
+    動作の進行の中の 1 点を表す。
+  >
+  \h2|id="durtas"|<期間相\fl<durative aspect>>
+  \p<
+    \an|href="#progas"|<経過相>, \an|href="contss"|<継続相>の総称。
+    動作の進行の中のある期間を表す。
+  >
+  \h1<格>
+  \h2|id="nomcs"|<主格\fl<nominative case>>
+  \p<
+    {a} で表される格。
+    動作の主語を表す。
+  >
+  \h2|id="acccs"|<対格\fl<accusative case>>
+  \p<
+    {e} で表される格。
+    動作の目的語を表す。
+  >
+  \h2|id="datcs"|<与格\fl<dative case>>
+  \p<
+    {ca} で表される格。
+    動作の相手や到達点を表すことが多い。
+  >
+  \h2|id="ablcs"|<奪格\fl<ablative case>>
+  \p<
+    {zi} で表される格。
+    動作の起点を表すことが多いが、例外も多い。
+  >
+  \h2|id="patcs"|<被格\fl<patientive case>>
+  \p<
+    {li} で表される格。
+    動詞が他動詞として使われているときにのみ用いられ、その動作を行うのを手助けする相手を表す。
+  >
+  \h1<特殊構文>
+  \h2|id="pusev"|<動詞の助動詞的用法\fl<auxiliary use of verbs>>
+  \p<
+    主節の動詞を修飾する助詞句が {kin} 節句以外に多くとも 1 つしかなく、その助詞句と同じものが {kin} 節の動詞にも付随している場合、その助詞句と {kin} を省略できる構文。
+    もしくは、主節に {kin} 節句以外の助詞句がない場合に、{kin} を省略できる構文。
+    文法書の\a|href="../grammar/6.html#35"|<該当項目>を参照。
+  >
+  \h2|id="buseconj"|<接続詞の副詞的用法\fl<adverbial use of conjunctions>>
+  \p<
+    接続詞によって 2 つの節が繋がれているとき、接続詞の前で文を一度切り、次の文を接続詞を文頭にして始めることができる構文。
+    文法書の\a|href="../grammar/6.html#46"|<該当項目>を参照。
+  >
+  \h2|id="nrusea"|<形容詞の非限定用法\fl<nonrestrictive use of adjectives>>
+  \p<
+    形容詞の前後にタデックを打つことで、それが修飾する名詞の範囲を限定せずに名詞の補足説明をすることができる構文。
+    文法書の\a|href="../grammar/6.html#62"|<該当項目>を参照。
+  >
+  \h2|id="nruserc"|<限定節の非限定用法\fl<nonrestrictive use of relative clauses>>
+  \p<
+    限定節全体の前後にタデックを打つことで、それが修飾する名詞の範囲を限定せずに名詞の補足説明をすることができる構文。
+    文法書の\a|href="../grammar/6.html#43"|<該当項目>を参照。
+  >
+  \h1<代辞>
+  \h2|id="pro"|<代辞\fl<proform>>
+  \p<
+    文章中ですでに出てきた (もしくはしばしばすぐ直後に出てくる) 別の単語を指し示す役割がある単語の総称。
+    \an|href="#fpro"|<近接>, \an|href="#qpro"|<遠方>, \an|href="#cpro"|<指示>, \an|href="#ppro"|<疑問>, \an|href="#dpro"|<不在>, \an|href="#zpro"|<不定>, \an|href="#kpro"|<特定>, \an|href="#rpro"|<任意>, \an|href="#mpro"|<同種>, \an|href="#vpro"|<一般>の 10 種類に分類され、全部で 41 個ある。
+    それぞれの種類に対して、人を表す単語, 物を表す単語, 事を表す単語, 場所を表す単語, 他の名詞を修飾するときに使う単語の 5 つが用意されている (一部欠けている部分もある)。
+    一覧は、文法書の\a|href="../grammar/6.html#65"|<該当項目>を参照。
+  >
+  \h2|id="proo"|<代詞\fl<proform>>
+  \p<
+    \an|href="#pro"|<代辞>の別名。
+  >
+  \h2|id="fpro"|<近接の代辞\fl<proximal proform>>
+  \p<
+    筆者 (話者) から物理的にもしくは心理的に近いものを指すときに用いる\an|href="#pro"|<代辞>。
+    英語の this などに相当する。
+    {fes}, {fit}, {fal}, {fêd}, {fik} の 5 個で、全て頭文字が [f] である。
+  >
+  \h2|id="qpro"|<遠方の代辞\fl<distal proform>>
+  \p<
+    筆者 (話者) から物理的にもしくは心理的に遠いものを指すときに用いる\an|href="#pro"|<代辞>。
+    英語の that などに相当する。
+    {qos}, {qut}, {qel}, {qôd}, {quk} の 5 個で、全て頭文字が [q] である。
+  >
+  \h2|id="cpro"|<指示の代辞\fl<demonstrative proform>>
+  \p<
+    それ以前までの文脈で出てきたものと全く同じものを指すときに用いる\an|href="#pro"|<代辞>。
+    英語の he や it などに相当する。
+    {ces}, {cit}, {cal}, {cêd}, {cik} の 5 個で、全て頭文字が [c] である。
+  >
+  \h2|id="ppro"|<疑問の代辞\fl<interrogative proform>>
+  \p<
+    疑問文を作る\an|href="#pro"|<代辞>。
+    英語の what や who などに相当するが、英語とは違って語順の変化は起こらない。
+    {pas}, {pet}, {pil}, {pâd}, {pek} の 5 個で、全て頭文字が [p] である。
+    これ以外にも疑問文を作る単語は存在するが、それは疑問の代辞に含めない。
+  >
+  \h2|id="dpro"|<不在の代辞\fl<negative proform>>
+  \p<
+    存在しないこともしくは 0 個のものが存在することを意味する\an|href="#pro"|<代辞>。
+    英語の nobody や nothing などに相当する。
+    {dus}, {dat}, {dol}, {dûd}, {dak} の 5 個で、全て頭文字が [d] である。
+  >
+  \h2|id="zpro"|<不定の代辞\fl<indefinite proform>>
+  \p<
+    何かに特定はしないが漠然と人や物全般を指す\an|href="#pro"|<代辞>。
+    \an|href="#rc"|<限定節>の被修飾語として使われることが多い。
+    {zis}, {zat}, {zel}, {zîd}, {zak} の 5 個で、全て頭文字が [z] である。
+  >
+  \h2|id="kpro"|<特定の代辞\fl<assertive proform>>
+  \p<
+    ある特定のものを表してはいるが具体的にそれが何であるかには言及しないときに用いる\an|href="#pro"|<代辞>。
+    「例のあれ」のような表現に近い。
+    {kos}, {kut}, {kel}, {kôd}, {kuk} の 5 個で、全て頭文字が [k] である。
+  >
+  \h2|id="rpro"|<任意の代辞\fl<elective proform>>
+  \p<
+    どんなものであっても良いことを表す\an|href="#pro"|<代辞>。
+    英語の anyone や anything などに相当する。
+    {ris}, {rat}, {rel}, {rîd}, {rak} の 5 個で、全て頭文字が [r] である。
+  >
+  \h2|id="mpro"|<同種の代辞\fl<substitutive proform>>
+  \p<
+    文脈上で前に出てきた名詞を受け、それと同じ名詞で表される別の個体を表す\an|href="#pro"|<代辞>。
+    同じ名詞が繰り返し使われるのを避けるために用いられる。
+    物を表す {met} のみがある。 
+  >
+  \h2|id="vpro"|<一般の代辞\fl<generic proform>>
+  \p<
+    一般論を表現するときに用いる\an|href="#pro"|<代辞>。
+    人を表す {ves} のみがある。 
+  >
+  \h1<その他の文法用語>
+  \h2|id="pp"|<助詞句\fl<prepositional phrase>>
+  \p<
+    助詞と名詞 (形容詞のこともある) から成る句。
+    使われている助詞が例えば {ca} である場合は、「{ca} 句」のように助詞を明示して呼ぶこともある。
+  >
+  \h2|id="rc"|<限定節\fl<relative clause>>
+  \p<
+    1 つの節がもう 1 つの節の中の名詞を修飾するしているときの、修飾している側の節。
+    英語の関係詞節に相当するが、シャレイア語には関係詞が存在しないのでこの名前で呼んでいる。
+  >
+  \h2|id="kc"|<{kin} 節\fl<{kin}-clause>>
+  \p<
+    節の前に {kin} をつけて名詞節化したもの。
+    英語の that 節に相当する。
+  >
+  \h2|id="kcp"|<{kin} 節句\fl<{kin}-clausal phrase>>
+  \p<
+    助詞と {kin} 節から成る\an|href="#pp"|<助詞句>。
+  >
+  \h2|id="pexp"|<受動相当表現\fl<passive-like expression>>
+  \p<
+    シャレイア語には受動態を表現する特別な構文はなく、語順を調整して何が話題で何が新情報かを変えることで、受け身のようなニュアンスを出す。
+    この方法を、受動態の構文がある別の言語と比較して、このように呼ぶ。
+  >
+  \h2|id="sfconn"|<連結辞の標準形\fl<standard form of connective>>
+  \p<
+    {o}, {á}, {é}, {à} のことで、\an|href="#afconn"|<別形>と比較してこう呼ばれる。
+    主に語句と語句を繋げるときに使われる。
+  >
+  \h2|id="afconn"|<連結辞の別形\fl<alternative form of connective>>
+  \p<
+    {lo}, {lá}, {lé}, {dà} のこと。
+    主に節と節を繋げるときに使われる。
+  >
+  \h2|id="vmpart"|<助接辞の動詞修飾形\fl<verb-modifying form of particle>>
+  \p<
+    助接辞の\an|href="#stem"|<語幹>そのままの形。
+  >
+  \h2|id="ppart"|<助接辞の原形\fl<plain form of particle>>
+  \p<
+    \an|href="#vmpart"|<助接辞の動詞修飾形>の別名。
+  >
+  \h2|id="nvmpart"|<助接辞の非動詞修飾形\fl<nonverb-modifying form of particle>>
+  \p<
+    助接辞の前に活用接頭辞の {i} がついた形。
+  >
+  \h2|id="deco"|<飾詞\fl<decorative>>
+  \p<
+    単語の前や後ろについて合成語を作る形態素。
+    単語として扱うことはない。
+    また、名前から紛らわしいが、\an|href="#lc"|<語彙的品詞>でも\an|href="#gc"|<文法的品詞>でもない。
+  >
+  \p<
+    S 代からは、全ての合成語は既存の単語の\an|href="#celem"|<合成成分>を組み合わせて作ることになったため、これはなくなった。
+  >
+  \h2|id="qdeco"|<準飾辞\fl<quasidecorative>>
+  \p<
+    既存の単語の\an|href="#celem"|<合成成分>のうち、よく他の単語と合成されて新しい合成語を作るもの。
+    「～語」を表す {qilox} 由来の [qil] や、「～の程度」を表す {takit} 由来の [tak] などがある。
+    単語として扱うことはなく、\an|href="#lc"|<語彙的品詞>でも\an|href="#gc"|<文法的品詞>でもない。
+  >
+  \p<
+    S 代で\an|href="#deco"|<飾詞>が廃止されたが、よく使われる特定の単語の合成成分が似たような役割を果たしていることから、こう呼ぶようになった。
+  >
+  \h2|id="qdecoo"|<準飾詞\fl<quasidecorative>>
+  \p<
+    \an|href="qdeco"|<準飾辞>の別名。
+  >
+  \h2|id="nabl"|<名辞化アプラウト\fl<nominalising ablaut>>
+  \p<
+    [a] → [e] → [i] → [a] および [o] → [u] → [o] という規則のもと、最後の音節の母音を交代させることで、\an|href="#vi"|<動辞>から\an|href="#ni"|<名辞>を作ること。
+  >
+  \h2|id="nablo"|<名詞化アプラウト\fl<nominalising ablaut>>
+  \p<
+    \an|href="#nabl"|<名辞化アプラウト>の別名。
+  >
+  \h2|id="vabl"|<動辞化アプラウト\fl<verbifying ablaut>>
+  \p<
+    [a] → [i] → [e] → [a] および [o] → [u] → [o] という規則のもと、最後の音節の母音を交代させることで、\an|href="#vi"|<名辞>から\an|href="#ni"|<動辞>を作ること。
+    \an|href="#nabl"|<名辞化アプラウト>に比べて、これによって作られる単語は少ない。
+  >
+  \h2|id="vablo"|<動詞化アプラウト\fl<verbifying ablaut>>
+  \p<
+    \an|href="#vabl"|<動辞化アプラウト>の別名。
+  >
+  \h2|id="stem"|<語幹\fl<stem>>
+  \p<
+    活用接辞がつけられる前の形。
+    辞書の見出し語になる。
+    ただし、辞書には {i} として載っている単語は、本来 ∅ (何もなし) が語幹で、それの\an|href="#nvmpart"|<非動詞修飾形>が {i} なのだが、∅ は見出し語にしづらいという事情があり {i} が見出し語になっている。
+  >
+  \h2|id="celem"|<合成成分\fl<composition element>>
+  \p<
+    ある単語から合成語を作るときに、合成要素となるその単語の一部分。
+    基本的に、単語の最初の音節から単語の途中 (もしくは最後) の音節までが合成成分になる。
+    例えば、{kedpasif} という単語は、{kedet} の合成成分である [ked] と {pasif} の合成成分である {pasif} を組み合わせて作られた合成語である。
+  >
+  \h1<その他の文化的用語>
+  \h2|id="trph"|<変音符\fl<transphonemic mark>>
+  \p<
+    新シャレイア文字において、[z], [d], [g], [v], [b], [q], [j], [r], [m], [h] の 10 文字の右下に書かれる縦線のこと。
+    この縦線が付いた文字は縦線を除いた文字の有声音か類似の音を表すので、このように呼ばれる。
+    なお、変音符付きの文字は、変音付を除いた部分と変音符の 2 文字と扱われることはなく、まとめて 1 つの文字として扱われる。
+  >
+  \h2|id="msq"|<文字魔方陣\fl<magic square of letters>>
+  \p<
+    8 方位を表す単語と 1 桁の数を表す単語は頭文字が対応しており、その対応通りに数字を並べ、中央に 5 を置くことで、&m<3 × 3> の魔方陣ができる。
+    さらに、その頭文字に対応する文字をこの魔方陣上に並べると、非常に対称的に文字が並ぶ。
+    このときにできる魔方陣のことをこう呼ぶ。
+  >
+
+>

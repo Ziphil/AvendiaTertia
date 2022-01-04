@@ -1,0 +1,67 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<『shiny smile』>
+  \ver<S 代>
+
+  \h1<対訳>
+  \trans<
+    \li<\ja<お気に入りのリボン>\sh<{e lofyet hilefat e a tel,}>>
+    \li<\ja<うまく結べなくて>\sh<{vofekes odukezel a tel,}>>
+    \li<\ja<何度も解いてやり直し>\sh<{ce vomes zivfekos a'l e't la tal avôl.}>>
+    \li<\ja<夢に似てるよ>\sh<{kàfat a kel e zeref,}>>
+    \li<\ja<簡単じゃないんだ>\sh<{kife salat a cal e adurafef.}>>
+    \li<\ja<妥協しない\lys;追求したい>\sh<{dufoqonis a tel. zerafis okôk a tel.}>>
+    \li<\ja<頑張るコト探して\lys;ねぇ\lys;走るよ>\sh<{cife palevac a'l e calit acál, sefê, vilisac a'l.}>>
+    \li<\ja<君まで届きたい\lys;裸足のままで>\sh<{fi nolet anafot edif, rafat zêfis a'l ca loc.}>>
+    \li<\ja<坂道続いても諦めたりしない>\sh<{bari locafic a nitez, zedat dufoqonis a'l okôk.}>>
+    \li<\ja<手に入れたいものを数え上げて>\sh<{fétat loskotis a tel e zel rafat kufis e a'l.}>>
+    \li<\ja<いつだってピカピカでいたい>\sh<{rafat salot a'l te lôk arak e ayelnas.}>>
+    \li<\ja<私\lys;shiny smile>\sh<{e socavhâr i tel.}>>
+    \li<\ja<君まで届きたい\lys;裸足のままで>\sh<{fi nolet anafot edif, rafat zêfis a'l ca loc.}>>
+    \li<\ja<坂道続いても諦めたりしない>\sh<{bari locafic a nitez, zedat dufoqonis a'l okôk.}>>
+    \li<\ja<手に入れたいものを数え上げて>\sh<{fétat loskotis a tel e zat rafat kufis e a'l.}>>
+    \li<\ja<いつだってピカピカでいたい>\sh<{rafat salot a'l te lôk arak e ayelnas.}>>
+    \li<\ja<私>\sh<{sê, a tel.}>>
+    \li<\ja<君へと届きたい\lys;転びそうでも>\sh<{fi padat edif ica becam, rafat zêfis a'l ca loc.}>>
+    \li<\ja<ブレーキを我慢して石ころをかわして>\sh<{bari qetit a kadeg avôl, zedat dutidikis a'l okôk.}>>
+    \li<\ja<泣きそうな思いを乗り越えたら>\sh<{fétat zehavis a tel e rîf dorisiz a li tel.}>>
+    \li<\ja<いつだってキラキラでいるよ>\sh<{zedat salot a'l te lôk arak e alikxel.}>>
+    \li<\ja<私\lys;君と\lys;shiny smile>\sh<{ofelaz. e socavhâr i loc.}>>
+  >
+  \h1<概要>
+  \el<
+    \li<\et<タイトル>\ed<『shiny smile』>>
+    \li<\et<収録メディア>\ed<ゲーム『アイドルマスター Live For You!』>>
+    \li<\et<抜粋箇所>\ed<ショートバージョン部分>>
+    \li<\et<作詞者>\ed<朝日祭\small<様>>>
+    \li<\et<作曲者>\ed<Yoshi \small<様>>>
+    \li<\et<翻訳日>\ed<\h<1398> (初版 \h<1357>)>>
+  >
+  \p<
+    響の誕生日記念翻訳です。
+    メロディーに合わせて音節の数を合わせてあるので、実際に翻訳文を歌うこともできます。
+  >
+  \h1<考察点>
+  \p<
+    2 フレーズ目だが、3 フレーズ目が反復表現なのでここも反復表現にすべきなのかもしれないが、音節数の関係で無理だった。
+  >
+  \p<
+    4 フレーズ目は {kàf} を動詞として用いているが、どちらかというと {kel} の性質として「似ている」ということを述べたいので、形容詞として使う方が良いと思う。
+    しかし、そうすると音節数が足りないので断念した。
+  >
+  \p<
+    5 フレーズ目の {du arafef}, 6 フレーズ目の {zerafis okôk}, 7 フレーズ目の {e calit acál} がそれぞれ 1 音節ずつ原曲より多い。
+    ただし、どの部分にも長めの音符があるので、そこに 2 音節を当てれば無理なく歌える。
+  >
+  \p<
+    19 フレーズ目の「石ころをかわして」の部分だが、直訳しようとすると反復表現にする必要があり音節数が足りないので、別の訳し方にした。
+  >
+  \p<
+    タイトルにもなっている「shiny smile」は今回訳した歌詞の中で 2 回用いられているが、smile に当たるシャレイア語が {socavhâr} と 3 音節もあり長いので、shiny に相当する部分を入れることができなかった。
+    曲名なのに申し訳ない気分である。
+  >
+
+>

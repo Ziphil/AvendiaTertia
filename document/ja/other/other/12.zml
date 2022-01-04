@@ -1,0 +1,164 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<ポイントフリー Haskell メモ>
+
+  \h1<概要>
+  \p<
+    Haskell における関数の定義方法として、ポイントフリースタイルというものがあります。
+    これは、仮引数を使わずに関数適用と合成だけで関数を定義するスタイルのことで、こちらの方がより簡潔に分かりやすいコードになることがあります。
+    このページには、仮引数を使った関数定義をポイントフリースタイルに書き換えるときに使えそうなテクニックをまとめてあります。
+  >
+  \p<
+    なお、ポイントフリースタイルにすることでかえって式が煩雑になることも多いです。
+    このページに記載したテクニックは、ポイントフリースタイルでより見やすくなるであろうパターンのみに絞っています。
+  >
+  \p<
+    各項目において、コードの 1 行目が仮引数による定義で、2 行目以降がそれをポイントフリースタイルに書き換えた定義です。
+    概ね、以下のように関数名や変数名を使い分けています。
+  >
+  \ul<
+    \li<\m<hoge>, \m<fuga> ･･･ そこで定義する関数>
+    \li<\m<x>, \m<y>, \m<z> ･･･ 仮引数 (これを消したい)>
+    \li<\m<f>, \m<g>, \m<h> ･･･ すでに別の場所で定義されている関数>
+    \li<\m<s>, \m<t>, \m<u> ･･･ すでに別の場所で定義されている定数>
+    \li<\m~<#> ･･･ すでに別の場所で定義されている演算子>
+  >
+  \h1<関数合成の応用>
+  \h2<合成の基本>
+  \pre~*<
+    hoge x = g (f x)
+    hoge = g . f
+  >
+  \p<
+    全ての基本。
+    引数に順に関数を適用する場合は、関数合成の演算子である \m<.> を用いることができる。
+  >
+  \h2<合成する最初の関数が 2 引数以上の場合>
+  \pre~*<
+    hoge x y = g (f x y)
+    hoge = (g .) . f
+  >
+  \p<
+    合成する関数がともに 1 引数なら上のように \m<.> で繋げれば良いが、合成する最初の関数が 2 引数の場合は少し複雑になる。
+  >
+  \pre~*<
+    hoge x y = g (x # y)
+    hoge = (g .) . (#)
+  >
+  \p<
+    このパターンは \m<f> が演算子の場合も多そう。
+  >
+  \pre~*<
+    hoge x y z = g (f x y z)
+    hoge = ((g .) .) . f
+  >
+  \p<
+    最初の関数が 3 引数の場合はこうなる。
+    4 引数以上の場合がどうなるかは省略するが、括弧と \m<.> が増えるだけである。
+  >
+  \pre~*<
+    infixr 9 .^
+    (.^) :: (c -`> d) -`> (a -`> b -`> c) -`> (a -`> b -`> d)
+    (.^) = (.) . (.)
+    infixr 9 .^^
+    (.^^) :: (d -`> e) -`> (a -`> b -`> c -`> d) -`> (a -`> b -`> e)
+    (.^^) = (.) . (.) . (.)
+  >
+  \p<
+    多変数関数と 1 変数関数の合成のために、専用の演算子を用意しておくのもアリかもしれない。
+  >
+  \h2<2 つの値に同じ関数を適用してさらに関数を適用する>
+  \pre~*<
+    hoge x y = g (f x) (f y)
+    hoge = on g f
+    hoge = (. f) . g . f
+    hoge = curry $ uncurry g . f *** f
+  >
+  \p<
+    2 つの値を取ってそれぞれに同じ関数を適用し、それらの結果を別の 2 引数関数に渡すには、\ae|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Data-Function.html#v:on"|<\m<on>> を使えば良い。
+    3 行目は関数合成だけで書いたもので、2 つの値に適用する関数が異なっている場合にも応用が効くが、何をしてるのか分かりづらいのでやめた方が良さそう。
+    4 行目は \m<***> とカリー化を利用したもので、これも 2 つの値への関数が異なっている場合にも使えるが、ちょっと冗長な気がする。
+  >
+  \pre~*<
+    hoge x y = f x # f y
+    hoge = on (#) f
+  >
+  \p<
+    \m<g> が演算子の場合も多いと思う。
+  >
+  \h1<引数を複数回使うもの>
+  \h2<2 つの関数をそれぞれ適用したものをさらに関数に適用する>
+  \pre~*<
+    hoge x = f (g x) (h x)
+    hoge = liftA2 f g h
+  >
+  \p<
+    1 つの引数に対して 2 つの関数を別々に適用し、それらの結果を別の 2 引数関数に渡す場合、このように \ae|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Applicative.html#v:liftA2"|<\m<liftA2>> が利用できる。
+    本来この関数は、普通の二項演算を \m<Applicative> の文脈の二項演算に持ち上げるための関数だが、ここでは \m<(-`>) r> が \m<Applicative> のインスタンスであることを利用して、\m<(a -`> b -`> c) -`> (r -`> a) -`> (r -`> b) -`> (r -`> c)> 型の関数として用いている。
+  >
+  \pre~*<
+    hoge x = (g x, h x)
+    hoge = liftA2 (,) g h
+    hoge = g &&& h
+  >
+  \p<
+    特に \m<f> がタプルを構成する \m<(,)> の場合は、\c<liftA2 (,)> と書いても良いが、\ae|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Arrow.html#v:-38--38--38-"|<\m~<&&&>> を使うとさらに簡潔になる。 
+  >
+  \pre~*<
+    hoge x = (g x) (h x)
+    hoge = liftA2 ($) g h 
+    hoge = ap g h
+  >
+  \p<
+    さらに \m<f> が関数適用の場合は、\c<liftA2 ($)> の代わりに、\ae|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Monad.html#v:ap"|<\m<ap>> が使える。
+  >
+  \h2<タプルの要素それぞれに関数を適用する>
+  \pre~*<
+    hoge (x, y) = (f x, g y)
+    hoge = f *** g 
+  >
+  \p<
+    タプルの左右それぞれの要素に別々の関数を適用して、その結果から成る新たなタプルを得ることについては、まさにその用途のための \ae|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Arrow.html#v:-42--42--42-"|<\m<***>> がある。
+  >
+  \pre~*<
+    hoge (x, y) = (f x, y)
+    hoge = f *** id
+    hoge = first f
+    fuga (x, y) = (x, g y)
+    fuga = id *** g
+    fuga = second g
+  >
+  \p<
+    タプルの要素の一方にのみ関数を適用する場合は、\c<f *** id> や \c<id *** g> などとしても良いが、\ae|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Arrow.html#v:first"|<\m<first>> と \ae|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Arrow.html#v:second"|<\m<second>> も使える。
+  >
+  \pre~*<
+    hoge (x, y) = h (f x) (g y)
+    hoge = uncurry h . f *** g
+    hoge = uncurry $ (. g) . h . f
+  >
+  \p<
+    応用例として、タプルのそれぞれの要素に関数を適用して、その結果を 2 変数関数に渡す例を挙げた。
+    \m<uncurry> で 2 変数関数からタプルを取る関数に変換して、\m<***> を用いて作ったタプルからタプルへの関数と合成している。
+    \m<***> を用いなくても 3 行目のように書けるが、こちらは何をしているのかパッと見で分かりづらい。
+  >
+  \h2<1 つの引数を複製して渡す>
+  \pre~*<
+    hoge x = f x x
+    hoge = join f
+  >
+  \p<
+    1 つの引数を複製して 2 引数関数に渡す場合、\ae|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Monad.html#v:join"|<\m<join>> が利用できる。
+    この関数は二重のモナドを一重にするもので、ここでは \m<(-`>) r> が \m<Monad> のインスタンスであることを利用して、\m<(r -`> r -`> a) -`> (r -`> a)> 型の関数として用いている。
+  >
+  \pre~*<
+    hoge x = f x x x
+    hoge = join $ join f
+  >
+  \p<
+    3 つにコピーしたいなら \m<join> を繋げれば良い。
+  >
+
+>

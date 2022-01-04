@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$normal-list-column-gap: 30px;
+
+.normal-list {
+  line-height: $line-height;
+  column-gap: $normal-list-column-gap;
+  text-align: justify;
+  list-style: none;
+  &[data-column="2"] {
+    column-count: 2;
+  }
+  &[data-column="3"] {
+    column-count: 3;
+    @include smartphone {
+      column-count: 2;
+    }
+  }
+}
+
+.normal-list[data-type="unordered"] >.normal-item,
+.normal-list[data-type="unordered"] .normal-list >.normal-item {
+  margin-left: $bullet-width + $blank-margin;
+  &::before {
+    @include icon-font;
+    width: fix-em($bullet-width, 90%);
+    margin-right: fix-em($blank-margin, 90%);
+    margin-left: fix-em(0em - $bullet-width - $blank-margin, 90%);
+    font-size: 90%;
+    color: $blue-color;
+    text-align: right;
+    display: inline-block;
+    content: "\F0DA";
+  }
+}
+
+.normal-list[data-type="ordered"] {
+  counter-reset: normal-list;
+}
+
+.normal-list[data-type="ordered"] >.normal-item {
+  margin-left: 1em + $bordered-blank-margin;
+  counter-increment: normal-list;
+  &::before {
+    @include box($blue-color, false);
+    margin-left: fix-em(0em - 1em - $bordered-blank-margin, 80%);
+    margin-right: fix-em($bordered-blank-margin, 80%);
+    content: counter(normal-list);
+  }
+}

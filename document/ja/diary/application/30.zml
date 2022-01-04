@@ -1,0 +1,298 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<レンズからオプティックへ>
+  \use-math|prefix="4"|;
+
+  \h1<日記 (2021 年 10 月 12 日)>
+  \p<
+    今回は、\a|href="29.html"|<10 月 10 日>で紹介したコエンドレンズを一般化したオプティックを定義する。
+    さらに、\a|href="28.html"|<10 月 9 日>で紹介したレンズのプロ関手エンコーディングを、オプティックに対しても使えるように一般化する。
+  >
+  \p<
+    以降の議論ではモノイダル圏の作用を用いるので、まずはそれについて復習しておく。
+    なお、モノイダル圏の演算は常に &m<\otimes;> で表し、その単位対象は &m<\top;> で表す。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> およびモノイダル圏 &m<\scr<K>> をとる。
+      &m<\bfrm<End> (\scr<C>)> を合成に関してモノイダル圏と見なすとき、強モノイダル関手 &m<\oslash;: \scr<K> \to; \bfrm<End> (\scr<C>)> のことを &m<\scr<K>> の &m<\scr<C>> への\em<作用\fl<action>> という。
+    >
+  >
+  \p<
+    モノイダル圏の作用 &m<\oslash;: \scr<K> \to; \bfrm<End> (\scr<C>)> があると、各 &m<\scr<K>> の対象 &m<K> に対して &m<\bfrm<End> (\scr<C>)> の対象 &m<K \oslash; \hyphen;> が定まる。
+    これは関手 &m<K \oslash; \hyphen;: \scr<C> \to; \scr<C>> であるから、さらに &m<\scr<C>> の対象 &m<X> があれば &m<\scr<C>> の対象 &m<K \oslash; X> が定まる。
+    &m<\oslash;: \scr<K> \to; \bfrm<End> (\scr<C>)> が強モノイダル関手であることから、この演算は &m<\scr<K>> のモノイダル構造と次の意味で適合している。
+    すなわち、任意の &m<\scr<K>> の対象 &m<K, L> と &m<\scr<C>> の対象 &m<X> に対し、
+    &mb<
+      K \oslash; (L \oslash; X) \cong; (K \otimes; L) \oslash; X \qquad;
+      \top; \oslash; X \cong; X
+    >
+    が成り立つ。
+    逆に言えば、モノイダル圏 &m<\scr<K>> の圏 &m<\scr<C>> への作用とは、&m<\scr<K>> の対象と &m<\scr<C>> の対象から &m<\scr<C>> の対象を得る演算であって、両方の変数に関して関手性があり上記の形の自然同型をもつようなもののことである。
+  >
+  \p<
+    さて、レンズのコエンドによる表現について思い出そう。
+    コエンドレンズとは、対象 &m<S, \bar<S>, A, \bar<A>> に対し、
+    &mb<
+      \sb<\op<Lens>><\scr<C>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<C>> (\op<Hom> (S, K \times; A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))
+    >
+    というコエンドで書かれた集合の元であった。
+    この形を見ると、コエンドをとっている &m<K> が動く圏を &m<\bar<\scr<C>>> ではなく別のモノイダル圏 &m<\scr<K>> にして、コエンド内部の &m<K \times; \hyphen;> の部分をモノイダル圏の作用 &m<K \oslash; \hyphen;> に置き換えることができそうである。
+    さらに、コエンド内部に &m<K \times; \hyphen;> の形は 2 ヶ所あるが、これをモノイダル圏の作用で書き換えるときに同じ作用にする必要もなさそうである。
+    加えて、コエンド内部には 2 つの射集合があるが、これを別々の圏でとることもできそうである。
+    以上の観察から、レンズは次のように一般化できる。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>, \bar<\scr<C>>> とモノイダル圏 &m<\scr<K>> について、&m<\scr<K>> の &m<\scr<C>> への作用 &m<\oslash|ord|;: \scr<K> \to; \bfrm<End> (\scr<C>)> および &m<\scr<K>> の &m<\bar<\scr<C>>> への作用 &m<\obackslash|ord|;: \scr<K> \to; \bfrm<End> (\bar<\scr<C>>)> が定まっているとする。
+      これらの組 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> を\em<オプティック領域\fl<optic domain>> と呼ぶ。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      このとき、&m<\scr<C>> の対象 &m<S, A> と &m<\bar<\scr<C>>> の対象 &m<\bar<S>, \bar<A>> に対し、
+      &mb<
+        \sb<\rm<Optic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<K>> (\sb<\op<Hom>><\scr<C>> (S, K \oslash; A) \times; \sb<\op<Hom>><\bar<\scr<C>>> (K \obackslash; \bar<A>, \bar<S>))
+      >
+      の元 &m<`g> を\em<コエンドオプティック\fl<coend optic>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
+    >
+  >
+  \p<
+    圏 &m<\scr<C>> は有限積をもてば、その積によって &m<\scr<C>> をモノイダル圏と見なすことができ、さらにその積は作用 &m<\times;: \scr<C> \to; \bfrm<End> (\scr<C>)> を定める。
+    このセッティングのものでのオプティックがレンズである。
+    すなわち、対象 &m<S, \bar<S>, A, \bar<A>> に対し、
+    &mb<
+      \sb<\op<Optic>><(\scr<C>, \scr<C>, \scr<C>`; \times|ord|;, \times|ord|;)> (S, \bar<S>`; A, \bar<A>) \cong; \sb<\op<Lens>><\scr<C>> (S, \bar<S>`; A, \bar<A>)
+    >
+    が成り立つ。
+  >
+  \p<
+    コエンドオプティックの合成がコエンドレンズと同様に定められ、コエンドオプティックを射とする圏が定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      圏 &m<\bfrm<COptic> (\scr<W>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<COptic> (\scr<W>)> の対象は、&m<\scr<C>> の対象と &m<\bar<\scr<C>>> の対象の組 &m<(S, \bar<S>)> の全体とする。
+      >
+      \li<
+        &m<\bfrm<COptic> (\scr<W>)> の 2 つの対象 &m<(S, \bar<S>), (A, \bar<A>)> の間の射は、コエンドオプティック &m<`g: (S, \bar<S>) \to; (A, \bar<A>)> の全体とする。
+        すなわち、
+        &mb<
+          \sb<\op<Hom>><\bfrm<COptic> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>)) = \int<><K \in; \scr<K>> (\op<Hom> (S, K \oslash; A) \times; \op<Hom> (K \obackslash; \bar<A>, \bar<S>))
+        >
+        である。
+      >
+      \li<
+        &m<\bfrm<COptic> (\scr<W>)> の射の合成は、コエンドレンズと同様に定めたコエンドオプティックの合成とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    このように一般化されたオプティックについても、プロ関手によるエンコーディングをすることができる。
+    その方法は \a|href="28.html"|<10 月 9 日>で触れたものとほぼ同じで、積だった箇所をモノイダル圏の作用に置き換えれば良いだけである。
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      さらに、プロ関手 &m<P: \bar<\scr<C>> \vertrarr; \scr<C>> をとる。
+      対象 &m<M, X, \bar<X>> に対し、全ての変数に関して自然な射
+      &mb<
+        \sb<`j><M X \bar<X>>: P (X, \bar<X>) \longto; P (M \oslash; X, M \obackslash; \bar<X>)
+      >
+      が定まっていて、任意の対象 &m<M, N, X, \bar<X>> に対し、図式
+      &mb<
+        \array|align="c"|<
+          \c<\diag|hor="thk"|<
+            \v<P (X, \bar<X>)> \v<P ((M \otimes; N) \oslash; X, (M \otimes; N) \obackslash; \bar<X>)> \br;
+            \v<P (N \oslash; X, N \obackslash; \bar<X>)> \v<P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))>
+            \ar|s="1",e="2"|<\sb<`j><M \otimes; N, X, \bar<X>>>
+            \ar|s="1",e="3",inv|<\sb<`j><N X \bar<X>>> \ar|s="3",e="4",inv|<\sb<`j><M, N \oslash; X, N \obackslash; \bar<X>>>
+            \ar|s="2",e="4"|;
+          >> \br;
+          \c<\diag|hor="vthn"|<
+            \v<P (X, \bar<X>)> \v; \v<P (\top; \oslash; X, \top; \obackslash; \bar<X>)> \br;
+            \v; \v<P (X, \bar<X>)> \v;
+            \ar|s="1",e="3"|<\sb<`j><\top; X \bar<X>>>
+            \ar|s="1",e="5",tip="none",line="2"|; \ar|s="3",e="5"|;
+          >>
+        >
+      >
+      が全て可換であるとする。
+      なお、ラベルのない射は標準的な同型射を表している。
+      このとき、&m<`j> を &m<P> に対する \em<Tambara 構造\fl<— structure>> といい、組 &m<(P, `j)> を \em<Tambara 加群\fl<— module>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      さらに、Tambara 加群 &m<(P, `j), (Q, `z): \bar<\scr<C>> \vertrarr; \scr<C>> および自然変換 &m<`u: P \raarr; Q> をとる。
+      任意の対象 &m<M, X, \bar<X>> に対し、
+      &mb<
+        \diag|hor="thk"|<
+          \v<P (X, \bar<X>)> \v<Q (X, \bar<X>)> \br;
+          \v<P (M \oslash; X, M \obackslash; \bar<X>)> \v<Q (M \oslash; X, M \obackslash; \bar<X>)>
+          \ar|s="1",e="2"|<\sb<`u><X \bar<X>>> \ar|s="3",e="4",inv|<\sb<`u><M \times; X, M \times; \bar<X>>>
+          \ar|s="1",e="3",inv|<\sb<`j><M X \bar<X>>> \ar|s="2",e="4"|<\sb<`z><M X \bar<X>>>
+        >
+      >
+      が可換であるとき、&m<`u> を \em<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `j) \raarr; (Q, `z)> で表す。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      圏 &m<\bfrm<Tamb> (\scr<W>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<Tamb> (\scr<W>)> の対象は、&m<\scr<C>> 上の Tambara 加群 &m<(P, `j)> の全体とする。
+      >
+      \li<
+        &m<\bfrm<Tamb> (\scr<W>)> の 2 つの対象 &m<(P, `j), (Q, `z)> の間の射は、Tambara 加群の射 &m<`u: (P, `j) \raarr; (Q, `z)> の全体とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      対象 &m<A, \bar<A>> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\hyphen; (A, \bar<A>):> \c<\bfrm<Tamb> (\scr<W>)> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<(P, `j)> \c<\longmapsto;> \c<P (A, \bar<A>)>
+        >
+      >
+      とおく。
+      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> を\em<プロ関手オプティック\fl<profunctor optic>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      圏 &m<\bfrm<POptic> (\scr<W>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<POptic> (\scr<W>)> の対象は、&m<\scr<C>> の対象と &m<\bar<\scr<C>>> の対象の組 &m<(S, \bar<S>)> の全体とする。
+      >
+      \li<
+        &m<\bfrm<POptic> (\scr<W>)> の 2 つの対象 &m<(S, \bar<S>), (A, \bar<A>)> の間の射は、プロ関手オプティック &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> の全体とする。
+        すなわち、
+        &mb<
+          \sb<\op<Hom>><\bfrm<POptic> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<W>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))
+        >
+        である。
+      >
+      \li<
+        &m<\bfrm<POptic> (\scr<W>)> の射の合成は、通常の自然変換の合成を逆向きに行うものとする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    コエンドオプティックとプロ関手オプティックが等価であることは、\a|href="28.html"|<10 月 9 日>で行った議論のように表現可能性を介して証明することができる。
+    ただし、証明は一般のオプティックの場合に適用できるように少し変える必要がある。
+  >
+  \thm|type="thm",id="rep"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      対象 &m<A, \bar<A>> に対し、関手 &m<\hyphen; (A, \bar<A>): \bfrm<Tamb> (\scr<W>) \to; \bfrm<Set>> は表現可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\op<Hom> (A, \hyphen; \bar<A>): \bfrm<StrEnd> (\bar<\scr<C>>) \to; \bfrm<Set>> の表現対象を具体的に構成する。
+      まず、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<W><A \bar<A>>:> \c<\sp<\scr<C>><\circ;> \times; \bar<\scr<C>>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<(X, \bar<X>)> \c<\longmapsto;> \c<\sb<\rm<Optic>><\scr<W>> (X, \bar<X>`; A, \bar<A>)>
+        >
+      >
+      とおく。
+      さらに、対象 &m<M, X, \bar<X>> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sbsp<`x><M X \bar<X>><A \bar<A>>:> \c<\sb<\rm<Optic>><\scr<W>> (X, \bar<X>`; A, \bar<A>)> \c<\longto;> \c<\sb<\rm<Optic>><\scr<W>> (M \oslash; X, M \obackslash; \bar<X>`; A, \bar<A>)> \br;
+          \c; \c<\langle; l, r \rangle; \sb<><K>> \c<\longmapsto;> \c<\langle; \sb<\rm<id>><M> \oslash; l, \sb<\rm<id>><M> \obackslash; r \rangle; \sb<><M \otimes; K>>
+        >
+      >
+      とおくと、これは全ての変数に関して自然であり、さらに Tambara 構造の公理を満たす。
+      したがって、&m<(\sp<W><A \bar<A>>, \sp<`x><A \bar<A>>)> は Tambara 加群である。
+    >
+    \p<
+      すると、この &m<(\sp<W><A \bar<A>>, \sp<`x><A \bar<A>>)> が実際に &m<\op<Hom> (A, \hyphen; \bar<A>): \bfrm<Tamb> (\scr<W>) \to; \bfrm<Set>> の表現対象であること、すなわち
+      &mb<
+        \sb<\op<Hom>><\bfrm<Tamb> (\scr<W>)> ((\sp<W><A \bar<A>>, \sp<`x><A \bar<A>>), \hyphen;) \cong; \hyphen; (A, \bar<A>)
+      >
+      が成り立つ。
+      ここでは証明は省略する。
+    >
+  >
+  \thm|type="thm",id="homiso"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      対象 &m<S, \bar<S>, A, \bar<A>> に対し、全単射
+      &mb<
+        \sb<\op<Hom>><\bfrm<POptic> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>)) \cong; \sb<\op<Hom>><\bfrm<COptic> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>))
+      >
+      が存在する。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="rep"|; と Yoneda の補題により、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\bfrm<POptic> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>))> \c<=> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<W>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<W>), \bfrm<Set>`]> (\op<Hom> ((\sp<L><A \bar<A>>, \sp<`x><A \bar<A>>), \hyphen;), \hyphen; (S, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\sp<W><A \bar<A>> (S, \bar<S>)> \br;
+          \c; \c<=> \c<\sb<\rm<Optic>><\scr<W>> (S, \bar<S>`; A, \bar<A>)> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><\bfrm<COptic> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>))>
+        >
+      >
+      が成り立つ。
+    >
+  >
+  \thm|type="thm",id="catequiv"|<
+    \p<
+      オプティック領域 &m<\scr<W>> をとる。
+      圏同型
+      &mb<
+        \bfrm<POptic> (\scr<W>) \cong; \bfrm<COptic> (\scr<W>)
+      >
+      が成立する。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
+    >
+  >
+  \p<
+    以上が、レンズを一般化したオプティックの定義とそのプロ関手エンコーディングの概要である。
+    次回は、オプティックの具体例として、レンズの他にも様々な有用なデータ形式が得られることを見る予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cpoc"|<B. Clarke et al (2020)「Profunctor optics, a categorical update」arXiv:2001.07488>
+    \li|id="rcox"|<M. Riley (2018)「Categories of optics」arXiv:1809.00738>
+  >
+
+>

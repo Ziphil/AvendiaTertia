@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.main {
+  --background-color: #{$main-background-color};
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 40rpx auto 0rpx auto;
+  padding: $main-vertical-padding $main-horizontal-padding;
+  box-sizing: content-box;
+  background-color: $main-background-color;
+  overflow: hidden;
+  @include smartphone {
+    width: 100%;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.block[data-bottom-block-type="text"] +.block[data-top-block-type="text"] {
+  margin-top: $block-vertical-margin;
+}
+
+.block[data-bottom-block-type="text"] +.block[data-top-block-type="bordered"],
+.block[data-bottom-block-type="bordered"] +.block[data-top-block-type="text"] {
+  margin-top: $block-vertical-margin + $additional-block-vertical-margin;
+}
+
+.block[data-bottom-block-type="bordered"] +.block[data-top-block-type="bordered"] {
+  margin-top: $block-vertical-margin + $additional-block-vertical-margin * 2;
+}

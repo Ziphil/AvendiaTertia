@@ -1,0 +1,325 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<順序数の演算>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2020 年 5 月 31 日)>
+  \p<
+    \a|href="47.html"|<5 月 29 日>の続きだが、自然数 (と言っても 0 と 1 だけだが) を使うので \a|href="49.html"|<6 月 1 日>を先に読んだ方が良いかもしれない。
+    今回は、順序数の演算を定義する。
+  >
+  \p<
+    順序数の演算を定義する方法は様々あるが、ここでは順序集合として演算した結果に適切な整列順序を入れたものの順序型をとるという方法を採用する。
+    そのために、まずは順序集合の演算を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      半順序集合 &m<X, Y> に対し、
+      &mb<
+        X \sqcup; Y \coloneqq; (`{0`} \times; X) \cup; (`{1`} \times; Y)
+      >
+      とおき、この上の関係 &m<\preceq;> を、
+      &mb<
+        (i, x) \preceq; (i', x') \coloniff; i `< i' \scor; (i = i' \scand; x \preceq; x')
+      >
+      で定める。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      半順序集合 &m<X, Y> に対し、集合としての直積 &m<X \times; Y> 上の関係 &m<\preceq;> を、
+      &mb<
+        (x, y) \preceq; (x', y') \coloniff; x \prec; x' \scor; (x = x' \scand; y \preceq; y')
+      >
+      で定める。
+      この関係は\em<辞書式順序\fl<lexicographic order>> と呼ばれる。
+    >
+  >
+  \thm|type="lem"|<
+    \p<
+      半順序集合 &m<X, Y> に対し、&m<X \sqcup; Y, X \times; Y> 上の上記の関係は半順序である。
+      さらに、&m<X, Y> に定まる順序がともに整列順序であれば、&m<X \sqcup; Y, X \times; Y> 上の上記の関係もまた整列順序である。
+    >
+  >
+  \prf<
+    \p<
+      省略する。
+    >
+  >
+  \p<
+    以降、特に断らなければ、半順序集合 &m<X, Y> に対し、&m<X \sqcup; Y, X \times; Y> と書いたらそれぞれ上記の関係によって半順序集合であると見なす。
+    上の補題によって、&m<X, Y> がともに整列集合であれば、&m<X \sqcup; Y, X \times; Y> もともに整列集合である。
+    このことを用いて、順序数の和と積が定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      順序数 &m<`a, `b> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<`a + `b> \c<\coloneqq;> \c<\op<ord> (`a \sqcup; `b)> \br;
+          \c<`a \cdot; `b> \c<\coloneqq;> \c<\op<ord> (`b \times; `a)>
+        >
+      >
+      と定め、それぞれ &m<`a, `b> の\em<和\fl<sum>> と\em<積\fl<product>> という。 
+    >
+  >
+  \p<
+    順序数の積の定義には特に注意すること。
+    &m<`a \cdot; `b> は、&m<`a \times; `b> の順序型ではなく &m<`b \times; `a> の順序型である。
+    後で見るように、順序数の積は一般に可換ではないので、この違いは本質的である。
+  >
+  \p<
+    以降、この演算の性質をいくつか示す。
+    \a|href="49.html"|<6 月 1 日>では、順序数 &m<`a> の後続数を &m<`a \cup; `{`a`}> として定義したが、この後続数は右から 1 をたすことで得られる。
+  >
+  \thm|type="thm"|<
+    \p<
+      順序数 &m<`a> に対し、
+      &mb<
+        `a + 1 = `a \cup; `{`a`}
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      演算の定義から、順序同型
+      &mb<
+        (`{0`} \times; `a) \cup; (`{1`} \times; 1) \cong; `a \cup; `{`a`}
+      >
+      が成り立つことを示せば良い。
+      そのためには順序同型写像を具体的に構成すれば良いが、写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<f:> \c<(`{0`} \times; `a) \cup; (`{1`} \times; 1)> \c<\longto;> \c<`a \cup; `{`a`}> \br;
+          \c; \c<(0, `j)> \c<\longmapsto;> \c<`j> \br;
+          \c; \c<(1, 0)> \c<\longmapsto;> \c<`a>
+        >
+      >
+      を考えると、これが順序同型になっている。
+    >
+  >
+  \p<
+    次に、演算の結合性と分配性を示す。
+  >
+  \thm|type="thm"|<
+    \p<
+      順序数 &m<`a, `b, `g> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<(`a + `b) + `g> \c<=> \c<`a + (`b + `g)> \br;
+          \c<(`a \cdot; `b) \cdot; `g> \c<=> \c<`a \cdot; (`b \cdot; `g)>
+        >
+      >
+      がともに成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      前定理の証明と同様、順序同型写像を具体的に構成する。
+      1 つ目の同型については、
+      &mb<
+        \array|align="rrcl"|<
+          \c<f:> \c<(`a \sqcup; `b) \sqcup; `g> \c<\longto;> \c<`a \sqcup; (`b \sqcup; `g)> \br;
+          \c; \c<(0, (0, `j))> \c<\longmapsto;> \c<(0, `j)> \br;
+          \c; \c<(0, (1, `h))> \c<\longmapsto;> \c<(1, (0, `h))> \br;
+          \c; \c<(1, `z)> \c<\longmapsto;> \c<(1, (1, `z))> \br;
+        >
+      >
+      が順序同型を与える。
+      また、2 つ目の同型については、
+      &mb<
+        \array|align="rrcl"|<
+          \c<f:> \c<`g \times; (`b \times; `a)> \c<\longto;> \c<(`g \times; `b) \times; `a> \br;
+          \c; \c<((`z, `h), `j)> \c<\longmapsto;> \c<(`z, (`h, `j))>
+        >
+      >
+      が順序同型を与える。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      順序数 &m<`a, `b, `g> に対し、
+      &mb<
+        `g \cdot; (`a + `b) = `g \cdot; `a + `g \cdot; `b
+      >
+      がともに成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<f:> \c<(`a \sqcup; `b) \times; `g> \c<\longto;> \c<(`a \times; `g) \sqcup; (`b \times; `g)> \br;
+          \c; \c<((i, `j), `z)> \c<\longmapsto;> \c<(i, (`j, `z))>
+        >
+      >
+      が順序同型を与える。
+    >
+  >
+  \p<
+    なお、右から積に対する分配法則は一般に成り立たないことには注意すべきである。
+    左からの演算については、通常の自然数の演算と同じ性質が順序数の演算についても成り立つことが多いが、右からの演算については、自然数で成り立っても順序数では成り立たないことがよくある。
+  >
+  \p<
+    さらに、演算が順序を保つことを示す。
+    そのため、順序数の大小関係を示すための道具となる補題を用意する。
+  >
+  \thm|type="lem",id="segone"|<
+    \p<
+      整列集合 &m<X> の真の切片 &m<S \subset; X> は、ある元 &m<x \in; X> について &m<S = O (x)> と書ける。
+    >
+  >
+  \prf<
+    \p<
+      &m<X \setminus; S \neq; \empty;> であるから、&m<x \coloneqq; \min; (X \setminus; S)> がとれる。
+      この &m<x> について &m<S = O (x)> であることを示す。
+    >
+    \p<
+      任意に &m<y \in; S> をとる。
+      ここで、仮に &m<y \nin; O (x)> であるとすると、全順序性から &m<y \succeq; x> が成り立つが、&m<S> は切片なので &m<x \in; S> となる。
+      しかし、定義から &m<x \in; X \setminus; S> であるから、これは矛盾である。
+      したがって、&m<y \in; O (x)> が得られ、&m<S \subseteq; O (x)> が分かった。
+    >
+    \p<
+      逆に任意に &m<y \in; O (x)> をとる。
+      仮に &m<y \nin; S> であったとすると、&m<y \in; X \setminus; S> であるから、&m<x> の最小性によって &m<y \succeq; x> がともに成り立つ。
+      しかし、&m<y \in; O (x)> より &m<y \prec; x> でもあるから、これは矛盾である。
+      したがって、&m<y \in; S> が得られ、&m<S \supseteq; O (x)> も分かった。
+    >
+  >
+  \thm|type="lem",id="segord"|<
+    \p<
+      順序数 &m<`a> に対し、&m<`a> の任意の切片はまた順序数である。
+    >
+  >
+  \prf<
+    \p<
+      &m<`a> の任意の切片 &m<S> をとる。
+      &m<S = `a> であれば、&m<`a> は順序数だから &m<S> も順序集である。
+      &m<S \neq; `a> であれば、\ref|type="thm",ref="segone"|; によって、ある元 &m<`j \in; `a> に対して &m<S = O (`j)> と書ける。
+      一方、\a|href="47.html#segid"|<補題 1.13> によって、&m<O (`j) = `j> も成り立つ。
+      これにより &m<S = `j> が得られたが、\a|href="47.html#elemord"|<定理 1.6> によって &m<`j> は順序数だから、&m<S> も順序数である。
+    >
+  >
+  \thm|type="lem",id="wellinc"|<
+    \p<
+      整列集合 &m<X> 上の狭義単調増加写像 &m<f: X \to; X> をとる。
+      このとき、任意の &m<x \in; X> に対して &m<x \preceq; f (x)> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        Z \coloneqq; `{x \in; X \mid; x \preceq; f (x)`} \subseteq; X
+      >
+      とおく。
+      &m<Z = X> であることを示せばよいが、これを超限帰納法によって示す。
+    >
+    \p<
+      任意に &m<x \in; X> をとり、&m<O (x) \subseteq; Z> であるとする。
+      ここで、&m<f (x) \in; O (x)> であると仮定する。
+      すると、定義から &m<f (x) \prec; x> であるが、&m<f> は狭義単調増加なので &m<f (f (x)) \prec; f (x)> が成り立つ。
+      一方、&m<O (x) \subseteq; Z> より &m<f (x) \in; Z> だから、&m<f (f (x)) \succeq; f (x)> も成り立つことになるが、これは矛盾である。
+      したがって、&m<f (x) \nin; O (x)> が得られた。
+      ところでこれは &m<f (x) \succeq; x> であるという意味なので、&m<x \in; Z> が示された。
+    >
+  >
+  \thm|type="lem",id="incord"|<
+    \p<
+      順序数 &m<`a, `b> について、狭義単調増加写像 &m<f: `a \to; `b> が存在すれば &m<`a \leq; `b> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      仮に &m<`a \leq; `b> ではないとすると、\a|href="47.html#tri"|<定理 1.9> によって &m<`a `> `b> が成り立つ。
+      これはすなわち &m<`a \supset; `b> であるということなので、&m<f> の終域を拡張して &m<f: `a \to; `a> と見なせる。
+      ところで、&m<`a `> `b> は &m<`a \ni; `b> でもあるということなので、\ref|type="thm",ref="wellinc"|; を適用すれば &m<`b \leq; f (`b)> を得る。
+      しかし、もともと &m<f> の終域は &m<`b> であったから、&m<f (`b) \in; `b> すなわち &m<f (`b) `< `b> が成り立つはずである。
+      これは矛盾である。
+      以上により、&m<`a \leq; `b> が示された。
+    >
+  >
+  \p<
+    以上の準備のもと、以下が示せる。
+  >
+  \thm|type="thm",id="arithord"|<
+    \p<
+      順序数 &m<`a, `b, `g> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<`a `< `b> \c<\implies;> \c<`g + `a `< `g + `b> \br;
+          \c<`a `< `b> \c<\implies;> \c<`a + `g \leq; `b + `g> \br;
+          \c<`a `< `b \scand; `g `> 0> \c<\implies;> \c<`g \cdot; `a `< `g \cdot; `b> \br;
+          \c<`a `< `b> \c<\implies;> \c<`a \cdot; `g \leq; `b \cdot; `g>
+        >
+      >
+      が全て成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      1 つ目の主張を示す。
+      &m<`a `< `b> であるとすると &m<`a \subset; `b> であるから、包含写像
+      &mb<
+        f: (`{0`} \times; `g) \cup; (`{1`} \times; `a) \to; (`{0`} \times; `g) \cup; (`{1`} \times; `b)
+      >
+      が存在する。
+      さて、\a|href="47.html#isoim"|<補題 1.17> を用いると、
+      &mb<
+        \array|align="rcl"|<
+          \c<`g + `a> \c<\cong;> \c<(`{0`} \times; `g) \cup; (`{1`} \times; `a)> \br;
+          \c; \c<\cong;> \c<f ((`{0`} \times; `g) \cup; (`{1`} \times; `a))>
+        >
+      >
+      が成り立ち、さらに &m<`a \in; `b> であるから、
+      &mb<
+        \array|align="rcl"|<
+          \c<f ((`{0`} \times; `g) \cup; (`{1`} \times; `a))> \c<=> \c<O ((1, `a))> \br;
+          \c; \c<\subset;> \c<(`{0`} \times; `g) \cup; (`{1`} \times; `b)> \br;
+          \c; \c<\cong;> \c<`g + `b>
+        >
+      >
+      が成り立つ。
+      以上の議論をまとめれば、 &m<`g + `b> の真の切片 &m<S \subset; `g + `b> が存在して &m<S \cong; `g + `a> が成り立つということが示せたことになる。
+      \ref|type="thm",ref="segord"|; によって &m<S> はある順序数と同型であるが、&m<S \cong; `g + `a> であるからその順序数とは &m<`g + `a> である。
+      したがって、&m<`g + `a \subset; `g + `b> すなわち &m<`g + `a `< `g + `b> が示された。
+    >
+    \p<
+      2 つ目の主張を示す。
+      &m<`a `< `b> であるとすると &m<`a \subset; `b> であるから、包含写像
+      &mb<
+        f: (`{0`} \times; `a) \cup; (`{1`} \times; `g) \to; (`{0`} \times; `b) \cup; (`{1`} \times; `g)
+      >
+      が存在する。
+      これは明らかに狭義単調増加写像である。
+      したがって、これに適切な順序同型写像を合成することで、狭義単調増加写像 &m<f': `a + `g \to; `b + `g> が得られるので、\ref|type="thm",ref="incord"|; によって &m<`a + `g \leq; `b + `g> である。
+    >
+    \p<
+      3 つ目の主張を示す。
+      &m<`a `< `b> より &m<`a \subset; `b> であるから、包含写像 &m<f: `a \times; `g \to; `b \times; `g> が存在する。
+      さらに &m<`g `> 0> より &m<`g \ni; 0> であることを利用すれば、この写像の像は &m<O ((`a, 0))> と書けるので、1 つ目の主張を示したときと同じ議論によって &m<`g \cdot; `a `< `g \cdot; `b> が示せる。
+    >
+    \p<
+      4 つ目の主張は、2 つ目の主張と同様に包含写像を考えれば良い。
+    >
+  >
+  \p<
+    この定理から、和と (0 でない) 積は広義には順序を保ち、さらに左からの和と積については狭義にも順序を保つことが分かる。
+    しかし、2 番目と 4 番目の主張において右辺の不等号を等号なしにしたものは一般に成り立たないので、右からの和と積については狭義には順序を保たない。
+  >
+  \h1<追記 (2020 年 6 月 1 日)>
+  \p<
+    自然数に関する記事を新しく書いたので、このページの自然数に関する記述は削除し、代わりに新しく書いたページを参照するよう勧める文言を追加した。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="stw"|<K. Ciesielski (1997)『Set Theory for the Working Mathematician』Cambridge University Press>
+ >
+
+>

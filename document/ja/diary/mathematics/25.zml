@@ -1,0 +1,227 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<線型関手の圏と集合族の圏>
+  \use-math|prefix="6"|;
+
+  \h1<日記 (2019 年 1 月 21 日)>
+  \p<
+    久しぶりに解析的関手や正規関手に触れることになったので、分かったことをまとめるため、1 年ほど前の日記の続きを書いていこうと思う。
+  >
+  \p<
+    各種概念の定義や性質については過去の日記に説明を譲ることにする。
+    私が復習するに当たって説明が少し不十分だと感じた部分については、追記として加筆しておいた。
+    1 つだけ以降の議論で重要になる定理があるので、ここでも繰り返しておく。
+    以下は、前に示した\a|href="4.html#main"|<定理 4.7> である。
+    今後の議論の都合上、式の右辺の直積の左右を逆にしてある。
+  >
+  \thm|type="thm",id="nf"|<
+    \p<
+      圏同値
+      &mb<
+        \sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>> \cong; \sp<\bfrm<Set>><B \times; \op<exp> A>
+      >
+      が成立する。
+    >
+  >
+  \p<
+    正規関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> に対し、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\widetilde<F>:> \c<B \times; \op<exp> A> \c<\longrarr;> \c<\bfrm<Set>> \br;
+        \c; \c<(b, `g)> \c<\longmapsto;> \c<`# `{ (`g, c) \text< の形の > \bfrm<El> (\sp<F><b>) \text< の正規対象の同型類> `}>
+      >
+    >
+    とおき、逆に関手 &m<M: B \times; \op<exp> A \to; \bfrm<Set>> に対しては、各 &m<b \in; B> に対して、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sp<\widetildebelow<M>><b>:> \c<\sp<\bfrm<Set>><A>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+        \c; \c<X> \c<\longmapsto;> \c<\coprod<`g \in; \op<exp> A><> (M (b, `g) \times; \sb<\op<Hom>><\sp<\bfrm<Set>><A>> (`g, X))>
+      >
+    >
+    とおく。
+    すると、これらが定理中の圏同値の対象の対応を与えるのであった。
+  >
+  \p<
+    さて、正規関手の特徴付けとして、フィルター余極限と広義引き戻しを保つというものがあったのを思い出そう。
+    この条件を少し厳しくして、フィルター余極限だけでなく全ての (小さな) 余極限を保つ関手を考える。
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> をとる。
+      &m<F> が余極限と広義引き戻しを保つとき、&m<F> は\em<線型\fl<linear>> であるという。
+    >
+  >
+  \p<
+    さらに、このような関手が成す圏も考える。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<LF>>> を、
+    >
+    \ul<
+      \li<
+        対象は、線型関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> 全体とする。
+      >
+      \li<
+        2 つの対象 &m<F, G> の間の射は、カルテシアン自然変換 &m<`n: F \to; G> の同値類全体とする。
+      >
+    >
+    \p<
+      として定義する。
+      ここで、カルテシアン自然変換の同値性は、&m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> を定義したときと同じものであるとする。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\sb<\bfrm<CAAcc>><\text<LF>>> を、
+    >
+    \ul<
+      \li<
+        対象は、集合 &m<A> に対して &m<\sp<\bfrm<Set>><A>> という形の圏全体とする。
+      >
+      \li<
+        2 つの対象 &m<\sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B>> の間の射は、線型関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> の同型類全体とする。
+      >
+    >
+    \p<
+      として定義する。
+    >
+  >
+  \p<
+    以上のようにすると、\ref|type="thm",ref="nf"|; と同様の形の圏同値が線型関手に関しても存在する。
+  >
+  \thm|type="thm",id="lnf"|<
+    \p<
+      圏同値
+      &mb<
+        \sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<LF>> \cong; \sp<\bfrm<Set>><B \times; A>
+      >
+      が成立する。
+    >
+  >
+  \prf<
+    \p<
+      まず、線型関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\widetilde<F>:> \c<B \times; A> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<(b, a)> \c<\longmapsto;> \c<`# `{ (`{a`}, c) \text< の形の > \bfrm<El> (\sp<F><b>) \text< の正規対象の同型類> `}>
+        >
+      >
+      とおき、逆に関手 &m<M: B \times; A \to; \bfrm<Set>> に対しては、各 &m<b \in; B> に対して、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<\widetildebelow<M>><b>:> \c<\sp<\bfrm<Set>><A>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<X> \c<\longmapsto;> \c<\coprod<a \in; A><> (M (b, a) \times; X a)>
+        >
+      >
+      とおく。
+      すると、\ref|type="thm",ref="nf"|; の証明と同様にして、これらの対応が定理中の圏同値を与えることが示せる。
+      詳細はここでは省略することにする。
+    >
+  >
+  \p<
+    さて、この定理によって、線型関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> は集合族 &m<\widetilde<F> \in; \sp<\bfrm<Set>><B \times; A>> と同一視できることが分かった。
+    この &m<\widetilde<F>> は、&m<B> の元と &m<A> の元という 2 つのパラメータに対して集合が 1 つ定まっているものなので、行に &m<B> の元が対応して列に &m<A> の元が対応するような無限の大きさの集合値行列だと思うことができる。
+    実際、このようにして行列だと思うことには意味があり、例えば以下の命題が成り立つ。
+  >
+  \thm|type="prp"|<
+    \p<
+      線型関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>, G: \sp<\bfrm<Set>><B> \to; \sp<\bfrm<Set>><C>> に対し、その合成に対応する行列は、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\widetilde<G \circ; F>:> \c<C \times; A> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<(c, a)> \c<\longmapsto;> \c<\coprod<b \in; B><> (\widetilde<G> (c, b) \times; \widetilde<F> (b, a))>
+        >
+      >
+      で与えられる。
+    >
+  >
+  \prf<
+    \p<
+      各 &m<X \in; \sp<\bfrm<Set>><A>> と &m<c \in; C> に対して、定義に従って計算すると、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sp<(G \circ; F)><c> X> \c<\cong;> \c<\coprod<b \in; B><> (\widetilde<G> (c, b) \times; (F X) b)> \br;
+          \c; \c<\cong;> \c<\coprod<b \in; B><> \coprod<a \in; A><> (\widetilde<G> (c, b) \times; \widetilde<F> (b, a) \times; X a)> \br;
+          \c; \c<\cong;> \c<\coprod<a \in; A><> \paren<\paren<\coprod<b \in; B><> (\widetilde<G> (c, b) \times; \widetilde<F> (b, a))> \times; X a>>
+        >
+      >
+      となる。
+      したがって、命題が示された。
+    >
+  >
+  \p<
+    この命題を踏まえて、直積上の集合族の合成を以下のように定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      集合族 &m<M \in; \sp<\bfrm<Set>><B \times; A>, N \in; \sp<\bfrm<Set>><C \times; B>> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<N \circ; M:> \c<C \times; A> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<(c, a)> \c<\longmapsto;> \c<\coprod<b \in; B><> (N (c, b) \times; M (b, a))>
+        >
+      >
+      として集合族 &m<N \circ; M \in; \sp<\bfrm<Set>><C \times; A>> を定義し、これを &m<M> と &m<N> の\em<合成\fl<composition>> という。
+    >
+  >
+  \p<
+    この合成の式は、通常の行列の積と全く同じ形をしており、上の定理から関手と集合族の同一視と両立している。
+    線型代数の理論においては、線型空間の間の線型写像は基底を固定すれば行列と同一視でき、写像の合成と集合の積はこの同一視と両立しているが、まさに同じことが線型関手と集合族の間にも成立するのである。
+    そこで、以降は &m<B \times; A \to; \bfrm<Set>> の形の集合族のことを、単に行列と呼ぶことにする。
+  >
+  \p<
+    なお、線型関手が行列に似ているので、線型関手の名前は線型代数から来ているように思えるが、実際にはおそらく線型論理から来ている。
+    これは今後の日記で扱うが、線型関手を射とする圏 &m<\sb<\bfrm<CAAcc>><\text<LF>>> は、線型論理の圏論的モデルになるのである。
+  >
+  \h1<追記 (2019 年 4 月 7 日)>
+  \p<
+    本文で述べたように、集合族 &m<M \in; \sp<\bfrm<Set>><B \times; A>> と線型関手 &m<\widetildebelow<M>: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> は同一視でき、&m<M> は行が &m<B> の元を表し列が &m<A> の元を表す行列だと見なせる。
+    例えば、&m<A> が 3 元集合で &m<B> が 2 元集合であるとし、&m<A \eqqcolon; `{ \sb<a><1>, \sb<a><2>, \sb<a><3> `}>, &m<B \eqqcolon; `{ \sb<b><1>, \sb<b><2> `}> と表すことにすれば、
+    &mb<
+      M = 
+      \paren<\matrix<
+        \c<M (\sb<b><1>, \sb<a><1>)> \c<M (\sb<b><1>, \sb<a><2>)> \c<M (\sb<b><1>, \sb<a><3>)> \br;
+        \c<M (\sb<b><2>, \sb<a><1>)> \c<M (\sb<b><2>, \sb<a><2>)> \c<M (\sb<b><2>, \sb<a><3>)>
+      >>
+    >
+    と書き表すことができる。
+  >
+  \p<
+    このような見方をした場合、集合族 &m<X \in; \sp<\bfrm<Set>><A>> は列ベクトルだと見なすと都合が良い。
+    実際、集合族 &m<M \in; \sp<\bfrm<Set>><B \times; A>> が与えられたとき、&m<M> と対応する線型関手 &m<\widetildebelow<M>: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> の &m<X> における値を &m<Y \in; \sp<\bfrm<Set>><B>> とすると、
+    &mb<
+      \array|align="rrcl"|<
+        \c<Y:> \c<B> \c<\longrarr;> \c<\bfrm<Set>> \br;
+        \c; \c<b> \c<\longmapsto;> \c<\coprod<a \in; A><> (M (b, a) \times; X a)>
+      >
+    >
+    が成り立つ。
+    この右辺は線型代数の理論における行列と列ベクトルの積に非常に似ている。
+    先程と同じく例えば &m<A \eqqcolon; `{ \sb<a><1>, \sb<a><2>, \sb<a><3> `}>, &m<B \eqqcolon; `{ \sb<b><1>, \sb<b><2> `}> の場合であれば、上の関係は、
+    &mb<
+      \paren<\matrix<
+        \c<Y \sb<b><1>> \br; \c<Y \sb<b><2>>
+      >>
+      =
+      \paren<\matrix<
+        \c<M (\sb<b><1>, \sb<a><1>)> \c<M (\sb<b><1>, \sb<a><2>)> \c<M (\sb<b><1>, \sb<a><3>)> \br;
+        \c<M (\sb<b><2>, \sb<a><1>)> \c<M (\sb<b><2>, \sb<a><2>)> \c<M (\sb<b><2>, \sb<a><3>)>
+      >>
+      \paren<\matrix<
+        \c<X \sb<a><1>> \br; \c<X \sb<a><2>> \br; \c<X \sb<a><3>>
+      >>
+    >
+    とより行列らしく書ける。
+    この式の右辺は、通常の行列の積のように計算し、数の和と積と代わりに集合の直和と直積を用いることにすれば、完全に正当化できる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="htaa"|<R. Hasegawa (2006)「Two applications of analytic functors」『Theoretical Computer Science』272:113–175>
+  >
+
+>

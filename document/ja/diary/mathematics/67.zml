@@ -1,0 +1,129 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<直交クラスと反射的部分圏>
+  \use-math|prefix="11"|;
+
+  \h1<日記 (2020 年 9 月 30 日)>
+  \p<
+    今日は、直交クラスが反射的部分圏になることを示し、さらにそれ自身が局所表示可能圏になることを示す。
+  >
+  \thm|type="thm",id="orthrefl"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-局所表示可能圏 &m<\scr<C>> の &m<`k>-直交クラスは &m<\scr<C>> の反射的部分圏である。
+    >
+  >
+  \prf<
+    \p<
+      証明の方針としては、超限帰納法を用いて包含関手の左随伴を具体的に構成するか、到達可能圏の純粋部分対象の理論を用いるかのどちらかが考えられる。
+      どちらの方針もそれなりに長い議論が必要なので、ここでは省略することにする。
+      詳細は Adámek–Rosický\ref|type="bib",ref="lpa"|; に記載があり、前者の方針は定理 1.38 として、後者の方針については定理 2.48 として証明されている。
+    >
+  >
+  \p<
+    なお、Adámek–Rosický\ref|type="bib",ref="lpa"|; では、この定理の逆として、&m<`k>-局所表示可能圏 &m<\scr<C>> の反射的部分圏で &m<`k>-有向余極限に関して閉じているものは &m<\scr<C>> の &m<`k>-直交クラスになると主張されている。
+    しかし、その証明は間違っており、さらに &m<`k = \sb<\aleph;><0>> のときに反例があることが後に分かっている。
+    &m<`k `> \sb<\aleph;><0>> のときはこの主張は正しく、Hébert–Rosický\ref|type="bib",ref="huoc"|; によって証明されている。
+    また、これは後で示すが、&m<\scr<C>> が前層圏である場合は &m<`k = \sb<\aleph;><0>> のときを含めて成立する (と私は思っている)。
+  >
+  \thm|type="lem",id="reflpres"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-局所表示可能圏 &m<\scr<C>> の反射的部分圏 &m<\scr<A>> について、&m<\scr<A>> が &m<`k>-有向余極限に関して閉じているとする。
+      このとき、&m<\scr<C>> の対象 &m<C> に関する反射を &m<\sb<`h><C>: C \to; \sp<C><*>> で表すと、 &m<C> が &m<\scr<C>> で &m<`k>-表示可能ならば、&m<\sp<C><*>> は &m<\scr<A>> で &m<`k>-表示可能である。
+    >
+  >
+  \prf<
+    \p<
+      任意に &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<A>> をとり、その余極限余錐を &m<(\sb<a><i>: Fi \to; A) \sb<><i \in; \scr<I>>> とおく。
+      さらに、&m<\scr<A>> の射 &m<f: \sp<C><*> \to; A> をとる。
+      &m<\scr<A>> は &m<`k>-有向余極限に関して閉じているから、&m<(\sb<a><i>: Fi \to; A) \sb<><i \in; \scr<I>>> は &m<\scr<C>> 内の余錐としても余極限になっている。
+      したがって、仮定から &m<C> は &m<\scr<C>> で &m<`k>-表示可能だから、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<h: C \to; Fi> が存在して、
+      &mb<
+        &mark<\wheart;>
+        \diag<
+          \v<C> \v<\sp<C><*>> \v<A> \br;
+          \v; \v<Fi>
+          \ar|s="1",e="2"|<\sb<`h><C>> \ar|s="2",e="3"|<f>
+          \ar|s="1",e="5",inv|<h> \ar|s="5",e="3",inv|<\sb<a><i>>
+        >
+      >
+      は可換である。
+      さらに、反射の普遍性により、&m<\scr<A>> の射 &m<g: \sp<C><*> \to; Fi> が存在して、
+      &mb<
+        \diag<
+          \v<C> \v<Fi> \br;
+          \v<\sp<C><*>>
+          \ar|s="1",e="2"|<h> \ar|s="3",e="2",inv|<g> \ar|s="1",e="3",inv|<\sb<`h><C>>
+        >
+      >
+      も可換になる。
+      すると、
+      &mb<
+        \sb<`h><C> \rcomp; f = h \rcomp; \sb<a><i> = \sb<`h><C> \rcomp; (g \rcomp; \sb<a><i>)
+      >
+      が成り立つから、反射に関する分解の一意性から &m<f = g \rcomp; \sb<a><i>> が分かり、これが示したかった分解である。
+      このような分解の本質的一意性は、図式 &m<\wheart;> の分解の本質的一意性から従う。
+      以上により、&m<\sp<C><*>> は &m<\scr<A>> で &m<`k>-表示可能である。
+    >
+  >
+  \thm|type="thm",id="refllp"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-局所表示可能圏 &m<\scr<C>> の反射的部分圏 &m<\scr<A>> について、&m<\scr<A>> が &m<`k>-有向余極限に関して閉じているならば、&m<\scr<A>> も &m<`k>-局所表示可能である。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        \scr<B> \coloneqq; `{\sp<C><*> \in; \scr<A> \mid; &raw<&m<C> は &m<\scr<C>> の &m<`k>-表示可能対象>`}
+      >
+      とおくと、\a|href="60.html#pressm"|<定理 4.5> によって &m<\scr<C>> の &m<`k>-表示可能対象は同型の違いを除いて集合サイズしかないから、&m<\scr<B>> は本質的小である。
+      また、\ref|type="thm",ref="reflpres"|; によって &m<\scr<B>> の元は全て &m<\scr<A>> の &m<`k>-表示可能対象である。
+      したがって、あとは任意の &m<\scr<A>> の対象が &m<\scr<B>> の元から成る &m<`k>-有向図式の余極限として書けることを示せば良い。
+    >
+    \p<
+      任意に &m<\scr<A>> の対象 &m<A> をとる。
+      &m<\scr<C>> は &m<`k>-局所表示可能だから、ある &m<`k>-表示可能対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> によって &m<A = \op<colim> F> と書ける。
+      この余極限余錐を &m<(\sb<c><i>: Fi \to; A) \sb<><i \in; \scr<I>>> とおく。
+      反射の普遍性を用いると、各 &m<\scr<I>> の対象 &m<i> に対し、&m<\scr<A>> の射 &m<\sb<a><i>: \sp<Fi><*> \to; A> が存在して、
+      &mb<
+        \diag<
+          \v<Fi> \v<A> \br;
+          \v<\sp<Fi><*>>
+          \ar|s="1",e="2"|<\sb<c><i>> \ar|s="3",e="2",inv|<\sb<a><i>> \ar|s="1",e="3",inv|<\sb<`h><C>>
+        >
+      >
+      が可換である。
+      すると、反射に関する分解の一意性によって、族 &m<(\sb<a><i>: \sp<Fi><*> \to; A) \sb<><i \in; \scr<I>>> は関手 &m<\sp<F \hyphen;><*>: \scr<I> \to; \scr<A>> の余錐になり、さらに余極限にもなっていることが容易に分かる。
+      これにより、&m<A> が &m<\scr<B>> の元の &m<`k>-有向余極限として書けた。
+    >
+  >
+  \p<
+    以上をまとめると、次の定理が得られる。
+  >
+  \thm|type="thm",id="refllp"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-局所表示可能圏 &m<\scr<C>> の &m<`k>-直交クラスはまた &m<`k>-局所表示可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<C>> の &m<`k>-直交クラス &m<\scr<A>> をとる。
+      すると、\ref|type="thm",ref="orthrefl"|; によって &m<\scr<A>> は &m<\scr<C>> の反射的部分圏である。
+      また、\a|href="66.html#orthcol"|<定理 10.7> によって &m<\scr<A>> は &m<`k>-有向余極限に関して閉じている。
+      したがって、\ref|type="thm",ref="refllp"|; によって &m<\scr<A>> は &m<`k>-局所表示可能である。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+    \li|id="huoc"|<M. Hébert, J. Rosický (2001)「Uncountable orthogonality is a closure property」『Bulletin of the London Mathematical Society』33(6):685–688>
+  >
+
+>

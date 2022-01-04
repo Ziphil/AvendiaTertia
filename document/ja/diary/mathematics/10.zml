@@ -1,0 +1,243 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<カルテシアン射とファイブレーション>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2018 年 6 月 27 日)>
+  \p<
+    今後しばらく、最近私が勉強している依存型の圏論的意味論についてまとめていこうと思う。
+    特に、Jacobs\ref|type="bib",ref="clt"|; が提唱したファイブレーションと内包圏を用いたものに触れていくつもりである。
+    余力があれば他のモデルについてもまとめたいとは思っているが、おそらく思っただけになると思う。
+  >
+  \p<
+    なお、このまとめは日本語で書こうと思っているので、各種概念の名称も日本語に翻訳していくつもりである。
+    ただし、定訳がまだ存在していない概念名が多いので、できるだけ他の文献で使われている訳語を採用しようとは思っているが、見つからなかった場合は独自に訳語を当てる。
+  >
+  \p<
+    初めに、基本的な道具であるファイブレーションを定義する。
+    これは Grothendieck\ref|type="bib",ref="gerg"|; が降下理論の文脈で導入した概念だが、型理論の文脈でも有用であることが分かり広く使われている。
+    定義のため、まずはカルテシアン射に関する準備をする。
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<p: \scr<E> \to; \scr<B>> を考える。
+      &m<\scr<E>> の射 &m<f: X \to; Y> が以下の条件を満たすとする。
+      すなわち、&m<\scr<E>> の射 &m<g: Z \to; Y> であって、ある &m<\scr<B>> の射 &m<w: pZ \to; pX> によって &m<pg = pf \circ; w> と分解できるものに対し、&m<\scr<E>> の射 &m<h: Z \to; X> であって、&m<ph = w> かつ &m<f \circ; h = g> をともに満たすものが唯一存在する。
+      このとき、&m<f> は &m<p> に関して\em<カルテシアン\fl<cartesian>> であるという。
+      図式では、
+      &mb<
+        \diag<
+          \v<Z> \v; \br;
+          \v<X> \v<Y>
+          \ar|s="1",e="3",dash,inv|<h> \ar|s="1",e="4"|<g> \ar|s="3",e="4",inv|<f>
+        > \qquad;
+        \diag<
+          \v<pZ> \v; \br;
+          \v<pX> \v<pY>
+          \ar|s="1",e="3",inv|<w> \ar|s="1",e="4"|<pg> \ar|s="3",e="4",inv|<pf>
+        >
+      >
+      と表せる。
+    >
+  >
+  \p<
+    言い換えれば、&m<f: X \to; Y> がカルテシアンであるというのは、何らかの &m<g: Z \to; Y> が、&m<p> で移した先の &m<\scr<B>> で &m<f> を経由するなら、もとの &m<\scr<E>> でも同様に &m<f> を経由する、ということである。
+  >
+  \p<
+    カルテシアン射の普遍性によって、関手で移した先が同じであるようなカルテシアン射は同型の違いを除いて高々 1 つしか存在しない。
+  >
+  \thm|type="prp",id="uniqcart"|<
+    \p<
+      関手 &m<p: \scr<E> \to; \scr<B>> を考える。
+      &m<\scr<E>> の射 &m<f: X \to; Y, f': X' \to; Y> がともにカルテシアンであって &m<pf = pf'> を満たすならば、ある &m<\scr<E>> の同型射 &m<`f: X \to; X'> が存在して、&m<f' \circ; `f = f> となる。
+    >
+  >
+  \prf<
+    \p<
+      圏論でよくある普遍性を使う議論ですぐできるので、ここでは省略する。
+    >
+  >
+  \p<
+    さて、ファイブレーションは、終域の圏の任意の射に対して、そのカルテシアンな持ち上げをとることができる関手として定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<p: \scr<E> \to; \scr<B>> に対し、任意の &m<\scr<B>> の射 &m<u: I \to; J> および &m<\scr<E>> の対象 &m<Y> で &m<pY = J> を満たすものに対し、&m<\scr<E>> のカルテシアン射 &m<f: X \to; Y> であって &m<pf = u> を満たすものが存在するとする。
+      このとき、&m<p> を\em<ファイブレーション\fl<fibration>> という。
+      また、&m<f> を &m<p> に沿った &m<u> の\em<持ち上げ\fl<lifting>> といい、&m<f> の定義域を &m<\sp<u><*> Y> で表し、&m<f> 自身は &m<\sb<\overline<u>><Y>> で表す。
+    >
+  >
+  \p<
+    \ref|type="thm",ref="uniqcart"|; によって、ファイブレーションに沿った持ち上げは同型の違いを除いて一意に定まる。
+  >
+  \p<
+    以降では、ファイブレーションを表すときは矢印の上に丸を付けて &m<p: \scr<E> \ring<\to;> \scr<B>> のように表すことにする。
+  >
+  \p<
+    いくつかファイブレーションの例を挙げよう。
+    まず、最も基本的なファイブレーションである終域ファイブレーションを紹介する。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> に対し、圏 &m<\sp<\scr<C>><\to;>> を、
+    >
+    \ul<
+      \li<
+        &m<\sp<\scr<C>><\to;>> の対象は、&m<\scr<C>> の射 &m<f: X \to; Y> 全体とする。
+      >
+      \li<
+        &m<\sp<\scr<C>><\to;>> の 2 つの対象 &m<f: X \to; Y, f': X' \to; Y'> の間の射は、図式
+        &mb<
+          \diag<
+            \v<X> \v<X'> \br;
+            \v<Y> \v<Y>
+            \ar|s="1",e="2"|<h> \ar|s="1",e="3",inv|<f> \ar|s="2",e="4"|<f'> \ar|s="3",e="4",inv|<k>
+          >
+        >
+        を可換にするような射の組 &m<(h, k)> 全体とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    このように作った圏 &m<\sp<\scr<C>><\to;>> に対し、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\op|ord|<cod>:> \c<\sp<\scr<C>><\to;>> \c<\longto;> \c<\scr<C>> \br;
+        \c; \c<\ltort; f: X \to; Y \rtort;> \c<\longmapsto;> \c<X>
+      >
+    >
+    という関手が考えられる。
+    すると、この関手に関するカルテシアン射は引き戻しとちょうど対応する。
+  >
+  \thm|type="prp",id="arcart"|<
+    \p<
+      圏 &m<\scr<C>> をとる。
+      図式
+      &mb<
+        \diag<
+          \v<X> \v<X'> \br;
+          \v<Y> \v<Y>
+          \ar|s="1",e="2"|<h> \ar|s="1",e="3",inv|<f> \ar|s="2",e="4"|<f'> \ar|s="3",e="4",inv|<k>
+        >
+      >
+      によって定められる &m<\sp<\scr<C>><\to;>> の射 &m<(h, k): f \to; f'> に対し、&m<(h, k)> が &m<\op|ord|<cod>: \sp<\scr<C>><\to;> \to; \scr<C>> に関してカルテシアンであるための必要十分条件は、上の図式が引き戻しとなることである。
+    >
+  >
+  \prf<
+    \p<
+      カルテシアン性の定義と引き戻しの普遍性が同じであることを確認すれば良い。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      圏 &m<\scr<C>> をとる。
+      関手 &m<\op|ord|<cod>: \sp<\scr<C>><\to;> \to; \scr<C>> がファイブレーションであるための必要十分条件は、&m<\scr<C>> が引き戻しをもつことである。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="arcart"|; より明らかである。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> は引き戻しをもつとする。
+      ファイブレーション &m<\op|ord|<cod>: \sp<\scr<C>><\to;> \ring<\to;> \scr<C>> を &m<\scr<C>> に付随する\em<終域ファイブレーション\fl<codomain fibration>> という。
+    >
+  >
+  \p<
+    もう 1 つの例として、対象の族が作るファイブレーションを挙げておく。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> に対し、圏 &m<\bfrm<Fam> (\scr<C>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<Fam> (\scr<C>)> の対象は、何らかの集合 &m<I> で添字付けられた &m<\scr<C>> の対象の族 &m<(\sb<X><i>) \sb<><i \in; I>> 全体とする。
+      >
+      \li<
+        &m<\bfrm<Fam> (\scr<C>)> の 2 つの対象 &m<(\sb<X><i>) \sb<><i \in; I>, (\sb<Y><j>) \sb<><j \in; J>> の間の射は、写像 &m<u: I \to; J> および各 &m<i \in; I> に対する &m<\scr<C>> の射 &m<\sb<f><i>: \sb<X><i> \to; \sb<Y><u (i)>> の族の組 &m<(u, (\sb<f><i>) \sb<><i \in; I>)> の全体とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    この &m<\bfrm<Fam> (\scr<C>)> に対しては、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\op|ord|<ind>:> \c<\bfrm<Fam> (\scr<C>)> \c<\longto;> \c<\bfrm<Set>> \br;
+        \c; \c<(\sb<X><i>) \sb<><i \in; I>> \c<\longmapsto;> \c<I>
+      >
+    >
+    という関手が考えられ、これはファイブレーションになる。
+  >
+  \thm|type="prp"|<
+    \p<
+      圏 &m<\scr<C>> をとる。
+      関手 &m<\op|ord|<ind>: \bfrm<Fam> (\scr<C>) \to; \bfrm<Set>> は常にファイブレーションである。
+    >
+  >
+  \prf<
+    \p<
+      写像 &m<u: I \to; J> と対象族 &m<(\sb<Y><j>) \sb<><j \in; J>> に対し、終域を &m<(\sb<Y><j>) \sb<><j \in; J>> とするような &m<u> の持ち上げが存在すれば良い。
+      そのような射は、&m<(u, (\sb<\rm<id>><u (i)>) \sb<><i \in; I>): (\sb<Y><u (i)>) \sb<><i \in; I> \to; (\sb<Y><j>) \sb<><j \in; J>> によって与えられる。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> をとる。
+      ファイブレーション &m<\op|ord|<ind>: \bfrm<Fam> (\scr<C>) \ring<\to;> \bfrm<Set>> を &m<\scr<C>> に付随する\em<族ファイブレーション\fl<family fibration>> という。
+    >
+  >
+  \p<
+    さて、ファイブレーションと言うからにはファイバーを気にしたくなるが、ここでのファイブレーションは圏から圏への関手なので、ファイバーも圏になる。
+    これは以下のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      ファイブレーション &m<p: \scr<E> \ring<\to;> \scr<B>> を考える。
+      &m<\scr<B>> の各対象 &m<I> に対し、圏 &m<\sb<\scr<E>><I>> を、
+    >
+    \ul<
+      \li<
+        &m<\sb<\scr<E>><I>> の対象は、&m<\scr<E>> の対象 &m<X> であって &m<pX = I> を満たすもの全体とする。
+      >
+      \li<
+        &m<\sb<\scr<E>><I>> の 2 つの対象 &m<X, Y> の間の射は、&m<\scr<E>> の射 &m<f: X \to; Y> であって &m<pf = \sb<\rm<id>><I>> を満たすもの全体とする。
+      >
+    >
+    \p<
+      として定義する。
+      この &m<\sb<\scr<E>><I>> を &m<I> 上の\em<ファイバー圏\fl<fibre category>> という。
+    >
+  >
+  \p<
+    このことから、ファイブレーション &m<p: \scr<E> \ring<\to;> \scr<B>> があるとき、&m<\scr<E>> の対象 &m<X> で &m<pX = I> を満たすもの (すなわち &m<\sb<\scr<E>><I>> の対象) を、単に &m<I> 上の対象と呼ぶことがある。
+    また、何らかのファイバー圏に入る射に関しては、以下の用語も用意しておく。
+  >
+  \thm|type="def"|<
+    \p<
+      ファイブレーション &m<p: \scr<E> \ring<\to;> \scr<B>> を考える。
+      &m<\scr<E>> の射 &m<f: X \to; Y> が &m<p> によって恒等射に移るとき、&m<f> は\em<垂直\fl<vertical>> であるという。
+    >
+  >
+  \p<
+    終域ファイブレーション &m<\op|ord|<cod>: \sp<\scr<C>><\to;> \to; \scr<C>> を考えると、ある対象 &m<I> の上のファイバー圏 &m<\sp<\scr<C>><\to;> \sb<><I>> はスライス圏 &m<\scr<C> `/ I> に一致していることが分かる。
+    また、族ファイブレーション &m<\op|ord|<ind>: \bfrm<Fam> (\scr<C>) \to; \bfrm<Set>> に関しては、集合 &m<I> 上のファイバー圏 &m<\bfrm<Fam> (\scr<C>) \sb<><I>> は関手圏 &m<\sp<\scr<C>><I>> に一致している。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="gerg"|<A. Grothendieck, M. Raynaud (1971)『Revêtements étales et groupe fondamental』Springer>
+    \li|id="clt"|<B. Jacobs (1999)『Categorical Logic and Type Theory』North Holland>
+  >
+
+>

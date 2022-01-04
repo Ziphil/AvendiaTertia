@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.paragraph {
+  line-height: $line-height;
+  text-align: justify;  
+}
+
+.paragraph-number {
+  @include box($gray-color, true);
+  margin-right: fix-em($bordered-blank-margin, 80%);
+  &::before {
+    content: attr(data-number);
+  }
+}

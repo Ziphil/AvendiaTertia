@@ -1,0 +1,363 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Chu 構成上の余自由コモノイド>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2020 年 10 月 11 日)>
+  \p<
+    \a|href="39.html"|<4 月 8 日>には Chu 構成を導入し、それがスター自律圏になること、すなわち線型論理の否定演算子に対応する演算を定められることを示した。
+    したがって、さらにこれが線型圏の構造をもってくれれば非常に嬉しいのだが、実は Chu 構成のベースとなる圏に多少の条件を課せばそれが可能であることが Barr\ref|type="bib",ref="bacm"|; によって知られている。
+    この証明は以下の 3 ステップから成る。
+  >
+  \ol<
+    \li<
+      ベースとなる圏上に余自由前コモノイドが存在することを示す。
+      さらに、自由前コモノイドによるスライス圏上に (特定の演算を入れると) 自由前モノイドが存在することを示す。
+    >
+    \li<
+      上記の結果を組み合わせることで、Chu 構成上に余自由前コモノイドを構成する。
+    >
+    \li<
+      余自由前コモノイドの部分対象として余自由コモノイドを構成する。
+    >
+  >
+  \p<
+    \a|href="38.html#lafont"|<定理 3.4> によって余自由コモノイドが存在すれば線型圏になるので、これによって Chu 構成に線型圏の構造が定められたことになる。
+    今日は、この 2 ステップ目の詳細をまとめようと思う。
+  >
+  \p<
+    まず、上記の説明で出てきた前コモノイドを定義する。
+    これは普通のコモノイドから結合性や単位性の条件を除いたもので、以下のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> に関手 &m<\otimes|ord|;: \scr<C> \times; \scr<C> \to; \scr<C>> と対象 &m<\top;> が定まっているとする。
+      対象 &m<A> に 2 つの射 &m<d: A \to; A \otimes; A, e: A \to; \top;> が単に定まっているとき、組 &m<(A, d, e)> を\em<前コモノイド\fl<precomonoid>> という。
+    >
+  >
+  \p<
+    前モノイドはこの双対概念である。
+    &m<\scr<C>> 上の前コモノイドが成す圏を &m<\bfrm<PComon> (\scr<C>)> と書き、前モノイドが成す圏を &m<\bfrm<PMon> (\scr<C>)> と書くことにする。
+  >
+  \p<
+    さて、Chu 構成を考えるため、引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> を固定する。
+    &m<\scr<C>> 上の前コモノイド &m<(A, d, e)> をとり、記号の簡単のため &m<\sp<A><\bbot;> \coloneqq; A \brmulti; \bbot;> と書くことにする。
+    このとき、&m<\bfrm<Chu> (\scr<C>, \bbot;)> に定まっているテンソル積を使うことで、スライス圏 &m<\scr<C> `/ \sp<A><\bbot;>> 上に新たな演算を定義することができる。
+  >
+  \p<
+    &m<\bfrm<Chu> (\scr<C>, \bbot;)> の 2 つの対象で第 1 成分が &m<A> のもの &m<(A, \bar<A>, a), (A, \bar<B>, b)> をとる。
+    この 2 つの対象のテンソル積を考えると、その第 1 成分は単純に &m<A \otimes; A> であり、その第 2 成分は &m<\bar<A> \sp<*><A> \bar<B>> と書くことにすれば、
+    &mb<
+      \diag<
+        \v<\bar<A> \sp<*><A> \bar<B>> \v<A \brmulti; \bar<A>> \br;
+        \v<A \brmulti; \bar<B>> \v<(A \otimes; A) \brmulti; \bbot;>
+        \ar|s="1",e="2",dash|; \ar|s="1",e="3",dash|;
+        \ar|s="2",e="4"|<\widehat<a>> \ar|s="3",e="4",inv|<\widehat<b>>
+      >
+    >
+    という引き戻しによって定まるのであった。
+    この図式の等しい合成を &m<\sp<x><\sharp;>: \bar<A> \sp<*><A> \bar<B> \to; (A \otimes; A) \brmulti; \bbot;> と書く。
+    さて、今は &m<A> に前コモノイドの構造 &m<(A, d, e)> が定まっているとしているので、特に射 &m<d: A \to; A \otimes; A> が定まっている。
+    すると、合成
+    &mb<
+      \diag<
+        \v<\bar<A> \sp<*><A> \bar<B>> \v<(A \otimes; A) \brmulti; \bbot;> \v<A \brmulti; \bbot;>
+        \ar|s="1",e="2"|<\sp<x><\sharp;>> \ar|s="2",e="3"|<d \brmulti; \bbot;>
+      >
+    >
+    が考えられる。
+  >
+  \p<
+    さて、&m<\bfrm<Chu> (\scr<C>, \bbot;)> の対象 &m<(A, \bar<A>, a)> とは、&m<\scr<C>> の 2 つの対象 &m<A, \bar<A>> と射 &m<a: A \otimes; \bar<A> \to; \bbot;> の組であった。
+    テンソル積の転置によって、この射 &m<a> はその転置 &m<\sp<a><\sharp;>: A \to; \bar<A> \brmulti; \bbot;> と 1 対 1 に対応する。
+    すなわち、これによって &m<\bfrm<Chu> (\scr<C>, \bbot;)> の対象 &m<(A, \bar<A>, a)> は &m<\scr<C> `/ \sp<A><\bbot;>> の対象 &m<(\bar<A>, \sp<a><\sharp;>)> と 1 対 1 に対応する。
+  >
+  \p<
+    以上のことを踏まえると、上記の議論は全て &m<\scr<C> `/ \sp<A><\bbot;>> における話に言い換えることができる。
+    すなわち、&m<\scr<C> `/ \sp<A><\bbot;>> の 2 つの対象 &m<(\bar<A>, \sp<a><\sharp;>), (\bar<B>, \sp<b><\sharp;>)> をとると、ここから別の &m<\scr<C> `/ \sp<A><\bbot;>> の対象 &m<(\bar<A> \sp<*><A> \bar<B>, (d \brmulti; \bbot;) \circ; \sp<x><\sharp;>)> を定義できるということである。
+    これは、&m<\scr<C> `/ \sp<A><\bbot;>> の対象上に二項演算
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sp<*><A>:> \c<\scr<C> `/ \sp<A><\bbot;> \times; \scr<C> `/ \sp<A><\bbot;>> \c<\longto;> \c<\scr<C> `/ \sp<A><\bbot;>> \br;
+        \c; \c<((\bar<A>, \sp<a><\sharp;>), (\bar<B>, \sp<b><\sharp;>))> \c<\longmapsto;> \c<(\bar<A> \sp<*><A> \bar<B>, (d \brmulti; \bbot;) \circ; \sp<x><\sharp;>)>
+      >
+    >
+    が定まったということであり、さらに定義からこれは自然に関手になる。
+  >
+  \p<
+    さらに、射 &m<e: A \to; \top;> も定まっているから、合成
+    &mb<
+      \diag<
+        \v<\bbot;> \v<\top; \brmulti; \bbot;> \v<A \brmulti; \bbot;>
+        \ar|s="1",e="2"|; \ar|s="2",e="3"|<e \brmulti; \bbot;>
+      >
+    >
+    を考えることができ、これによって &m<\scr<C> `/ \sp<A><\bbot;>> の対象 &m<(\bbot;, e \brmulti; \bbot;)> が得られる。
+  >
+  \p<
+    以上によって、&m<\scr<C> `/ \sp<A><\bbot;>> 上には演算 &m<\sp<\ast|ord|;><A>> と対象 &m<(\bbot;, e \brmulti; \bbot;)> が定まっていることになるので、これらに関する前モノイドを考えることができる。
+    なお、ここで注意しなければならないのは、この演算 &m<\sp<\ast|ord|;><A>> が一般には結合的でも単位的でもないという点である。
+    したがって、&m<\sp<\ast|ord|;><A>> に関する前モノイドを考えることはできるが、&m<\sp<\ast|ord|;><A>> に関するモノイドを考えることはできない。
+  >
+  \p<
+    次に、&m<\bfrm<Chu> (\scr<C>, \bbot;)> 上の前コモノイドについて考えよう。
+    これは、&m<\bfrm<Chu> (\scr<C>, \bbot;)> の対象 &m<(A, \bar<A>, a)> に対し、&m<\bfrm<Chu> (\scr<C>, \bbot;)> における 2 つの射
+    &mb<
+      \array|align="rrcl"|<
+        \c<\hat<d>:> \c<(A, \bar<A>, a)> \c<\to;> \c<(A, \bar<A>, a) \otimes; (A, \bar<A>, a)> \br;
+        \c<\hat<e>:> \c<(A, \bar<A>, a)> \c<\to;> \c<(\top;, \bbot;, \sb<`l><\bbot;>)>
+      >
+    >
+    が定まったものであった。
+    &m<\bfrm<Chu> (\scr<C>, \bbot;)> の射の定義によって、これらを与えることは、&m<\scr<C>> における 4 つの射
+    &mb<
+      \array|align="rrcl"|<
+        \c<d:> \c<A> \c<\to;> \c<A \otimes; A> \br;
+        \c<m:> \c<\bar<A> \sp<*><A> \bar<A>> \c<\to;> \c<\bar<A>> \br;
+        \c<e:> \c<A> \c<\to;> \c<\top;> \br;
+        \c<u:> \c<\bbot;> \c<\to;> \c<\bar<A>>
+      >
+    >
+    であって、
+    &mb<
+      \diag<
+        \v<A \otimes; (\bar<A> \sp<*><A> \bar<A>)> \v<A \otimes; \bar<A>> \br;
+        \v<(A \otimes; A) \otimes; (\bar<A> \sp<*><A> \bar<A>)> \v<\bbot;>
+        \ar|s="1",e="3",inv|<d \otimes; \rm<id>> \ar|s="1",e="2"|<\rm<id> \otimes; m>
+        \ar|s="2",e="4"|<a> \ar|s="3",e="4",inv|<x>
+      > \qquad;
+      \diag<
+        \v<A \otimes; \bbot;> \v<A \otimes; \bar<A>> \br;
+        \v<\top; \otimes; \bbot;> \v<\bbot;>
+        \ar|s="1",e="3",inv|<e \otimes; \rm<id>> \ar|s="1",e="2"|<\rm<id> \otimes; u>
+        \ar|s="2",e="4"|<a> \ar|s="3",e="4",inv|;
+      > 
+    >
+    を可換にするものを与えることと同値である。
+    テンソル積の転置によって、この 2 つの可換性は、
+    &mb<
+      \diag|hor="vthn"|<
+        \v<\bar<A> \sp<*><A> \bar<A>> \v; \v<\bar<A>> \br;
+        \v<(A \otimes; A) \brmulti; \bbot;> \v; \v;\br;
+        \v; \v<A \brmulti; \bbot;>
+        \ar|s="1",e="3"|<m>
+        \ar|s="1",e="4",inv|<\sp<x><\sharp;>> \ar|s="4",e="8",inv|<d \brmulti; \bbot;> \ar|s="3",e="8"|<\sp<a><\sharp;>>
+      > \qquad;
+      \diag|hor="vthn"|<
+        \v<\bbot;> \v; \v<\bar<A>> \br;
+        \v<\top; \brmulti; \bbot;> \v; \v;\br;
+        \v; \v<A \brmulti; \bbot;>
+        \ar|s="1",e="3"|<u>
+        \ar|s="1",e="4",inv|; \ar|s="4",e="8",inv|<e \brmulti; \bbot;> \ar|s="3",e="8"|<\sp<a><\sharp;>>
+      > \qquad;
+    >
+    の可換性と同値である。
+    ここで、&m<\bar<A> \sp<*><A> \bar<A>> はこの左側の図式の左側の射によって &m<\scr<C> `/ \sp<A><\bbot;>> の対象と見なしていたことを思い出すと、左側の図式の可換性は &m<m: (\bar<A>, \sp<a><\sharp;>) \sp<*><A> (\bar<A>, \sp<a><\sharp;>) \to; (\bar<A>, \sp<a><\sharp;>)> が &m<\scr<C> `/ \sp<A><\bbot;>> の射になっていることを意味している。
+    同様にして、右側の図式の可換性は &m<u: (\bbot;, e \brmulti; \bbot;) \to; (\bar<A>, \sp<a><\sharp;>)> が &m<\scr<C> `/ \sp<A><\bbot;>> の射になっていることを意味する。
+    すなわち、&m<((\bar<A>, \sp<a><\sharp;>), m, u)> は &m<\scr<C> `/ \sp<A><\bbot;>> の前モノイドである。
+  >
+  \p<
+    以上の観察から、次の命題が得られる。
+  >
+  \thm|type="prp",id="chuslice"|<
+    \p<
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、忘却関手 &m<Z: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\scr<C>)> を考える。
+      このとき、任意の &m<\bfrm<PComon> (\scr<C>)> の対象 &m<(A, d, e)> に対し、圏同型
+      &mb<
+        \sp<Z><- 1> (A, d, e) \cong; &m<\bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>)> \sp<><\circ;>
+      >
+      が成立する。
+    >
+    \p<
+      これは次のように初等的に述べることもできる。
+      すなわち、対象について、
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> 上の前コモノイド &m<(A, d, e)> および &m<\scr<C> `/ \sp<A><\bbot;>> 上の前モノイド &m<((\bar<A>, \sp<a><\sharp;>), m, u)> の組を 1 つ与える。
+      >
+      \li<
+        &m<\bfrm<Chu> (\scr<C>, \bbot;)> 上の前コモノイド &m<((A, \bar<A>, a), (d, m), (e, u))> を 1 つ与える。
+      >
+    >
+    \p<
+      は同じことである。
+      また、
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> 上の前コモノイド &m<(A, d, e)> に対し、&m<\scr<C> `/ \sp<A><\bbot;>> 上の前モノイドの射 &m<\bar<f>: ((\bar<B>, \sp<b><\sharp;>), m', u') \to; ((\bar<A>, \sp<a><\sharp;>), m, u)> を 1 つ与える。
+      >
+      \li<
+        &m<\bfrm<Chu> (\scr<C>, \bbot;)> 上の射 &m<(\rm<id>, \bar<f>): ((A, \bar<A>, a), (d, m), (e, u)) \to; ((A, \bar<B>, b), (d, m'), (e, u'))> を 1 つ与える。
+      >
+    >
+    \p<
+      は同じことである。
+    >
+  >
+  \prf<
+    \p<
+      上記の議論から明らかである。
+    >
+  >
+  \p<
+    さて、我々の目標は、忘却関手 &m<U: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<Chu> (\scr<C>, \bbot;)> の右随伴関手を構成することである。
+    実は今までの議論によって、これを構成するという作業は、忘却関手 &m<V: \bfrm<PComon> (\scr<C>) \to; \scr<C>> の右随伴関手を構成するという作業と、&m<\scr<C>> の各前コモノイド &m<(A, d, e)> に対して忘却関手 &m<\sb<W><A>: \bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>) \to; \scr<C> `/ \sp<A><\bbot;>> の左随伴関手を構成するという作業の、2 ステップに分割することができる。
+    実際、次の定理が成り立つ。
+  >
+  \thm|type="thm",id="adjcomp"|<
+    \p<
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、2 条件
+    >
+    \ul<
+      \li<
+        忘却関手 &m<V: \bfrm<PComon> (\scr<C>) \to; \scr<C>> の右随伴関手 &m<R: \scr<C> \to; \bfrm<PComon> (\scr<C>)> が存在する。
+      >
+      \li<
+        &m<\scr<C>> の各前コモノイド &m<(A, d, e)> に対し、忘却関手 &m<\sb<W><A>: \bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>) \to; \scr<C> `/ \sp<A><\bbot;>> の左随伴関手 &m<\sb<L><A>: \scr<C> `/ \sp<A><\bbot;> \to; \bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>)> が存在する。
+      >
+    >
+    \p<
+      が成り立っているとする。
+      このとき、忘却関手 &m<U: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<Chu> (\scr<C>, \bbot;)> の右随伴関手が存在する。
+    >
+  >
+  \prf<
+    \p<
+      以降、&m<\scr<X> \coloneqq; \bfrm<Chu> (\scr<C>, \bbot;)> とおき、&m<\scr<X>> の対象 &m<(A, \bar<A>, a)> を任意にとる。
+      まず &m<RA \eqqcolon; (X, d, e)> と書けば、随伴 &m<V \dashv; R> の余単位から &m<\scr<C>> の射 &m<`j: X \to; A> がとれる。
+      さらにこれを用いて &m<\sb<L><RA> (\bar<A>, \sp<`j><\bbot;> \circ; \sp<a><\sharp;>) \eqqcolon; ((\bar<X>, \sp<x><\sharp;>), m, u)> と書けば、同様に随伴 &m<\sb<L><RA> \dashv; \sb<W><RA>> の単位から &m<\scr<C> `/ \sp<X><\bbot;>> の射 &m<\bar<`j>: (\bar<A>,  \sp<`j><\bbot;> \circ; \sp<a><\sharp;>) \to; (\bar<X>, \sp<x><\sharp;>)> がとれる。
+    >
+    \p<
+      任意に &m<\bfrm<PComon> (\scr<X>)> の対象 &m<((B, \bar<B>, b), (d', m'), (e', u'))> および &m<\scr<X>> の射 &m<(f, \bar<f>): (B, \bar<B>, b) \to; (A, \bar<A>, a)> をとる。
+      このとき、
+      &mb<
+        \diag<
+          \v<(B, \bar<B>, b)> \v; \br;
+          \v<(X, \bar<X>, x)> \v<(A, \bar<A>, a)>
+          \ar|s="1",e="4"|<(f, \bar<f>)> \ar|s="3",e="4",inv|<(`j, \bar<`j>)>
+          \ar|s="1",e="3",inv,dash|<(g, \bar<g>)>
+        >
+      >
+      を可換にするような &m<\bfrm<PComon> (\scr<X>)> の射 &m<(g, \bar<g>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((X, \bar<X>, x), (d, m), (e, u))> が唯一存在することを示せば良い。
+      実際、そうすれば
+      &mb<
+        \array|align="rrcl"|<
+          \c<`V:> \c<\bfrm<Chu> (\scr<C>, \bbot;)> \c<\longto;> \c<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> \br;
+          \c; \c<(A, \bar<A>, a)> \c<\longmapsto;> \c<((X, \bar<X>, x), (d, m), (e, u))>
+        >
+      >
+      が求めたい右随伴関手を与える。
+    >
+    \p<
+      まず、&m<\scr<C>> の射 &m<f: B \to; A> があるから、&m<`j> の普遍性によって、
+      &mb<
+        \diag<
+          \v<B> \v; \br;
+          \v<X> \v<A>
+          \ar|s="1",e="4"|<f> \ar|s="3",e="4",inv|<`j>
+          \ar|s="1",e="3",inv,dash|<g>
+        >
+      >
+      を可換にする &m<\bfrm<PComon> (\scr<C>)> の射 &m<g: (B, d', e') \to; (X, d, e)> が唯一存在する。
+      ここで、&m<\scr<C>> での引き戻し
+      &mb<
+        \diag<
+          \v<\bar<Y>> \v<\sp<X><\bbot;>> \br;
+          \v<\bar<B>> \v<\sp<B><\bbot;>>
+          \ar|s="1",e="3",inv,dash|<\bar<p>> \ar|s="1",e="2",dash|<\sp<y><\sharp;>>
+          \ar|s="2",e="4"|<\sp<g><\bbot;>> \ar|s="3",e="4",inv|<\sp<b><\sharp;>>
+        >
+      >
+      を計算すると、&m<\scr<X>> での押し出し
+      &mb<
+        \diag<
+          \v<(B, \sp<B><\bbot;>, \sb<`e><B>)> \v<(B, \bar<B>, b)> \br;
+          \v<(X, \sp<X><\bbot;>, \sb<`e><X>)> \v<(X, \bar<Y>, y)>
+          \ar|s="1",e="3",inv|<(g, \sp<g><\bbot;>)> \ar|s="1",e="2"|<(\rm<id>, \sp<b><\sharp;>)>
+          \ar|s="2",e="4"|<(g, \bar<p>)> \ar|s="3",e="4",inv|<(\rm<id>, \sp<y><\sharp;>)>
+        >
+      >
+      が得られる。
+      ところが、
+      &mb<
+        \array|align="rrcl"|<
+          \c<(g, \sp<g><\bbot;>):> \c<((B, \sp<B><\bbot;>, \sb<`e><B>), (d', \sp<d><\pr; \bbot;>), (e', \sp<e><\pr; \bbot;>))> \c<\longto;> \c<((X, \sp<X><\bbot;>, \sb<`e><X>), (d, \sp<d><\bbot;>), (e, \sp<e><\bbot;>))> \br;
+          \c<(\rm<id>, \sp<b><\sharp;>):> \c<((B, \sp<B><\bbot;>, \sb<`e><B>), (d', \sp<d><\pr; \bbot;>), (e', \sp<e><\pr; \bbot;>))> \c<\longto;> \c<((B, \bar<B>, b), (d', m'), (e', u'))>
+        >
+      >
+      はともに &m<\bfrm<PComon> (\scr<X>)> の射でもある。
+      忘却関手 &m<U: \bfrm<PComon> (\scr<X>) \to; \scr<X>> は余極限を生成することは容易に分かるから、これより上の図式が &m<\bfrm<PComon> (\scr<X>)> の可換図式になるような &m<(X, \bar<Y>, y)> 上の前コモノイドの構造が唯一定まる。
+      その構造を &m<((X, \bar<Y>, y), (\sp<d><\ppr;>, \sp<m><\ppr;>), (\sp<e><\ppr;>, \sp<u><\ppr;>))> と書く。
+      すなわち、&m<\bfrm<PComon> (\scr<X>)> での押し出し
+      &mb<
+        \diag<
+          \v<((B, \sp<B><\bbot;>, \sb<`e><B>), (d', \sp<d><\pr; \bbot;>), (e', \sp<e><\pr; \bbot;>))>
+          \v<((B, \bar<B>, b), (d', m'), (e', u'))> \br;
+          \v<((X, \sp<X><\bbot;>, \sb<`e><X>), (d, \sp<d><\bbot;>), (e, \sp<e><\bbot;>))>
+          \v<((X, \bar<Y>, y), (\sp<d><\ppr;>, \sp<m><\ppr;>), (\sp<e><\ppr;>, \sp<u><\ppr;>))>
+          \ar|s="1",e="3",inv|<(g, \sp<g><\bbot;>)> \ar|s="1",e="2"|<(\rm<id>, \sp<b><\sharp;>)>
+          \ar|s="2",e="4"|<(g, \bar<p>)> \ar|s="3",e="4",inv|<(\rm<id>, \sp<y><\sharp;>)>
+        >
+      >
+      を得た。
+      ここで、この下側の水平な射に注目すると、その第 1 成分は恒等写像だから、&m<\sp<d><\ppr;> = d> および &m<\sp<e><\ppr;> = e> が分かる。
+    >
+    \p<
+      さて、引き戻しの普遍性によって、
+      &mb<
+        \diag<
+          \v<\bar<A>> \v<\sp<A><\bbot;>> \v; \br;
+          \v; \v<\bar<Y>> \v<\sp<X><\bbot;>> \br;
+          \v; \v<\bar<B>> \v<\sp<B><\bbot;>>
+          \ar|s="5",e="8"|<\bar<p>> \ar|s="5",e="6"|<\sp<y><\sharp;>>
+          \ar|s="6",e="9"|<\sp<g><\bbot;>> \ar|s="8",e="9",inv|<\sp<b><\sharp;>>
+          \ar|s="1",e="8",bend="-30",inv|<\bar<f>>
+          \ar|s="1",e="2"|<\sp<a><\sharp;>> \ar|s="2",e="6"|<\sp<`j><\bbot;>>
+          \ar|s="1",e="5",dash|<\bar<q>>
+        >
+      >
+      を可換にする &m<\scr<C>> の射 &m<\bar<q>: \bar<A> \to; \bar<Y>> が存在する。
+      この図式の平行四辺形部分の可換性によって、これは &m<\scr<C> `/ \sp<X><\bbot;>> の射 &m<\bar<q>: (\bar<A>, \sp<`j><\bbot;> \circ; \sp<a><\sharp;>) \to; (\bar<Y>, \sp<y><\sharp;>)> とも見なせる。
+      すると、&m<\bar<`j>> の普遍性によって、
+      &mb<
+        \diag<
+          \v<(\bar<A>, \sp<`j><\bbot;> \circ; \sp<a><\sharp;>)> \v<(\bar<X>, \sp<x><\sharp;>)> \br;
+          \v; \v<(\bar<Y>, \sp<y><\sharp;>)>
+          \ar|s="1",e="2"|<\bar<`j>> \ar|s="1",e="4",inv|<\bar<q>>
+          \ar|s="2",e="4",dash|<\bar<r>>
+        >
+      >
+      を可換にする &m<\bfrm<PMon> (\scr<C> `/ \sp<X><\bbot;>)> の射 &m<\bar<r>: ((\bar<X>, \sp<x><\sharp;>), m, u) \to; ((\bar<Y>, \sp<y><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>)> が存在する。
+      \ref|type="thm",ref="chuslice"|; によって、これは &m<\bfrm<PComon> (\scr<X>)> の射
+      &mb<
+        (\rm<id>, \bar<r>): ((X, \bar<Y>, \sp<y><\sharp;>), (d, \sp<m><\ppr;>), (e, \sp<u><\ppr;>)) \longto; ((X, \bar<X>, \sp<x><\sharp;>), (d, m), (e, u))
+      >
+      がとれたということである。
+      すると、&m<\bfrm<PComon> (\scr<X>)> の射
+      &mb<
+        (\rm<id>, \bar<r>) \circ; (g, \bar<p>): ((B, \bar<B>, b), (d', m'), (e', u')) \longto; ((X, \bar<X>, x), (d, m), (e, u))
+      >
+      が得られ、この合成を &m<(g, \bar<g>)> と書くことにすれば、
+      &mb<
+        \diag<
+          \v<(B, \bar<B>, b)> \v; \br;
+          \v<(X, \bar<X>, x)> \v<(A, \bar<A>, a)>
+          \ar|s="1",e="4"|<(f, \bar<f>)> \ar|s="3",e="4",inv|<(`j, \bar<`j>)>
+          \ar|s="1",e="3",inv|<(g, \bar<g>)>
+        >
+      >
+      は可換である。
+      このような射の一意性は、議論の途中でとった射の一意性から従う。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="bacm"|<M. Barr (1990)「Accessible categories and models of linear logic」『Journal of Pure and Applied Algebra』69:219–232>
+  >
+
+>

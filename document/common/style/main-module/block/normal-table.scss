@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$normal-table-cell-vertical-padding: 1rpx;
+$normal-table-cell-horizontal-padding: 10rpx;
+
+.normal-table {
+  line-height: $line-height;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.normal-table-caption {
+  margin-top: -$additional-block-vertical-margin;
+  text-align: center;
+}
+
+.normal-table th,
+.normal-table td {
+  padding: $normal-table-cell-vertical-padding $normal-table-cell-horizontal-padding;
+  border: 1rpx $block-background-color solid;
+}
+
+.normal-table th {
+  background-color: $block-background-color;
+}

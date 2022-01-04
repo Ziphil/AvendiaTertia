@@ -1,0 +1,368 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+
+  \hb<概要>
+  \pb<
+    \ab|href="281.html"|<更新日記とは>
+    \ab|href="205.html"|<考察課題まとめ>
+  >
+  \hb<S 代 6 期>
+  \pb<
+    \ab|href="300.html",date="3629"|<間違えやすいシャレイア語>
+    \ab|href="299.html",date="3586"|<{ò} と {iva}>
+    \ab|href="298.html",date="3577"|<IWCC の YouTube ミラー配信の方法について>
+    \ab|href="297.html",date="3563"|<ディカックの正確な用法>
+    \ab|href="296.html",date="3562"|<概念の側面について>
+    \ab|href="295.html",date="3523"|<シャレイア語のロゴの色について>
+    \ab|href="294.html",date="3484"|<音写規則に関する考察と変更>
+    \ab|href="293.html",date="3470"|<{á} が節を繋いでいる場合の {pa} の付け方>
+    \ab|href="292.html",date="3446"|<S 代 7 期でやりたいこと>
+    \ab|href="291.html",date="3445"|<擬音語の扱い>
+    \ab|href="290.html",date="3431"|<[w] なんてなかった>
+    \ab|href="289.html",date="3430"|<動詞と形容詞の意味関係の曖昧性>
+    \ab|href="288.html",date="3408"|<辞典の英語データ作成について>
+    \ab|href="287.html",date="3398"|<限定節で {cok} を使う例とタデックの有無との関係>
+    \ab|href="286.html",date="3398"|<連結辞の形とタデックの有無による意味の違い>
+    \ab|href="285.html",date="3360"|<辞書形式の変更について>
+    \ab|href="284.html",date="3350"|<{a} 句のモノコトについて>
+    \ab|href="283.html",date="3348"|<間投詞に係る修飾語句について>
+    \ab|href="282.html",date="3330"|<任意の修飾語句内で被修飾語を {cok} で表す案 (その 2)>
+    \ab|href="280.html",date="3323"|<任意の修飾語句内で被修飾語を {cok} で表す案>
+    \ab|href="279.html",date="3321"|<ハイリア暦の年号について>
+    \ab|href="278.html",date="3316"|<音素の明度と並列の順番>
+    \ab|href="277.html",date="3315"|<S 代 6 期へ>
+  >
+  \hb<S 代 5 期>
+  \pb<
+    \ab|href="276.html",date="3313"|<{o} は並列か連言か (その 2)>
+    \ab|href="275.html",date="3310"|<辞書編集作業の結果報告>
+    \ab|href="274.html",date="3259"|<頻度と蓋然性を表す副詞>
+    \ab|href="273.html",date="3251"|<並列の順番について>
+    \ab|href="272.html",date="3223"|<動詞を名詞化した際の修飾語句について>
+    \ab|href="271.html",date="3209"|<接続法的なニュアンスを表す副詞>
+    \ab|href="270.html",date="3166"|<「見える」や「聞こえる」について>
+    \ab|href="269.html",date="3151"|<長母音と二重母音の転写>
+    \ab|href="268.html",date="3151"|<文末の上昇調を表すパデック>
+    \ab|href="267.html",date="3147"|<命令表現的な遊離助詞句>
+    \ab|href="266.html",date="3122"|<ディスコースマーカー的副詞の位置について>
+    \ab|href="265.html",date="3122"|<辞書編集作業の結果報告>
+    \ab|href="264.html",date="3102"|<他動詞の {a} 句に理由などを置けるか>
+    \ab|href="263.html",date="3102"|<「溶ける」や「乾かす」の自動詞の意味>
+    \ab|href="262.html",date="2997"|<シャレイア語の cm 分類>
+    \ab|href="261.html",date="2956"|<動詞型不定辞の見直し>
+    \ab|href="260.html",date="2951"|<動詞省略で現れる基本助接詞の非動詞修飾形>
+    \ab|href="259.html",date="2896"|<親族名詞について>
+    \ab|href="258.html",date="2891"|<シャレイア語の韻文の形式>
+    \ab|href="257.html",date="2888"|<動物や植物などの造語について>
+    \ab|href="256.html",date="2793"|<一般的な意味とは違うことを表す記号>
+    \ab|href="255.html",date="2753"|<{kin} 節の独立>
+    \ab|href="254.html",date="2724"|<最上表現における比較対象の曖昧性>
+    \ab|href="253.html",date="2723"|<{sela} の使い方について>
+    \ab|href="252.html",date="2719"|<IV 型関係再考>
+    \ab|href="251.html",date="2713"|<準飾辞と別の単語の一部分を合成できるか>
+    \ab|href="250.html",date="2701"|<{s'} に詠嘆の意味はあるのか>
+    \ab|href="249.html",date="2698"|<通時時制無相の意味>
+    \ab|href="248.html",date="2692"|<語彙的品詞の名称変更>
+    \ab|href="247.html",date="2688"|<より細かい時代区分>
+  >
+  \hb<S 代 4 期>
+  \pb<
+    \ab|href="246.html",date="2686"|<副詞解決編>
+    \ab|href="245.html",date="2663"|<「イベント事をする」の意味の単語>
+    \ab|href="244.html",date="2659"|<約物に関する諸問題>
+    \ab|href="243.html",date="2658"|<次の文との繋がりを表すデック類>
+    \ab|href="242.html",date="2598"|<{nis} の意味について>
+    \ab|href="241.html",date="2594"|<{qe} と {se} の使い分け>
+    \ab|href="240.html",date="2592"|<移動動詞の経路を表す助接詞>
+    \ab|href="239.html",date="2586"|<{vo} と場所っぽくない名詞>
+    \ab|href="238.html",date="2584"|<「一層～になる」の表現方法>
+    \ab|href="237.html",date="2583"|<モノかコトかで別扱い>
+    \ab|href="236.html",date="2580"|<節全体を否定する構文の冗長性>
+    \ab|href="235.html",date="2567"|<材料を表す {i} とその代替表現>
+    \ab|href="234.html",date="2566"|<「～の体系」を表す名詞について>
+    \ab|href="233.html",date="2558"|<発音の整理>
+    \ab|href="232.html",date="2541"|<ラクットの転写について>
+    \ab|href="231.html",date="2516"|<割合の表現>
+    \ab|href="230.html",date="2509"|<文字の名称 (その 2)>
+    \ab|href="229.html",date="2495"|<[z] 系代詞と [v] 系代詞の使い分け>
+    \ab|href="228.html",date="2479"|<{pil} を用いた疑問詞疑問文への答え方>
+    \ab|href="227.html",date="2474"|<{o} は並列か連言か>
+    \ab|href="226.html",date="2471"|<「元気な声」をどう表現するか>
+    \ab|href="225.html",date="2457"|<「上」は絶対的か相対的か>
+    \ab|href="224.html",date="2437"|<中断と延長を表す約物>
+    \ab|href="223.html",date="2436"|<日本語の「新しい」に対応する単語 (その 2)>
+    \ab|href="222.html",date="2434"|<性格を表す形容詞>
+    \ab|href="221.html",date="2434"|<副詞の再分類>
+    \ab|href="220.html",date="2423"|<日本語の「新しい」に対応する単語>
+    \ab|href="219.html",date="2423"|<片方が限定節の被修飾語になっている重言>
+    \ab|href="218.html",date="2420"|<後ろの語句を指す {cit} や {cal}>
+    \ab|href="217.html",date="2407"|<「娘を産む」は結果目的語か>
+  >
+  \hb<S 代 3 期>
+  \pb<
+    \ab|href="216.html",date="2402"|<数詞解決編>
+    \ab|href="215.html",date="2396"|<相が時制に完全に包含されることを表す助接詞>
+    \ab|href="214.html",date="2393"|<結局 {ke} って {kin} 節をとるんですかね>
+    \ab|href="213.html",date="2393"|<感情動詞は主語に人もとれるか>
+    \ab|href="212.html",date="2393"|<知覚動詞は目的語に {kin} 節もとれるか>
+    \ab|href="211.html",date="2391"|<数詞の表記における形容詞接辞>
+    \ab|href="210.html",date="2365"|<数詞に関しての現在の考え>
+    \ab|href="209.html",date="2347"|<状態や結果を表す助接詞>
+    \ab|href="208.html",date="2342"|<どの名詞に対応しているか曖昧な単語>
+    \ab|href="207.html",date="2341"|<{yekuf} の問題について>
+    \ab|href="206.html",date="2340"|<動詞を使うか副詞を使うか>
+    \ab|href="204.html",date="2333"|<主節が継続相の場合の従属節の時制の基準>
+    \ab|href="203.html",date="2236"|<{la} と {le} の違い>
+    \ab|href="202.html",date="2234"|<「秒」は助数詞か>
+    \ab|href="201.html",date="2227"|<{kin} 節を置く位置の名詞>
+    \ab|href="200.html",date="2227"|<語順と意味の構造が異なる例>
+    \ab|href="199.html",date="2210"|<非動詞修飾形が作る節の時制>
+    \ab|href="198.html",date="2189"|<{met} の形容詞版>
+    \ab|href="197.html",date="2189"|<省略された助詞句の解釈に矛盾する事象>
+    \ab|href="196.html",date="2185"|<噛み合わない形容詞と副詞>
+    \ab|href="195.html",date="2185"|<程度名詞は {izi} 句要求か>
+    \ab|href="194.html",date="2163"|<完了の意味を伴わない継続相>
+    \ab|href="193.html",date="2156"|<副詞のまとめ>
+    \ab|href="192.html",date="2152"|<単位と数の表現方法>
+    \ab|href="191.html",date="2152"|<文字の名称>
+    \ab|href="190.html",date="2148"|<二重母音の音写方法の変更>
+    \ab|href="189.html",date="2143"|<意志を表さない {a} 句>
+  >
+  \hb<S 代 2 期>
+  \pb<
+    \ab|href="188.html",date="2137"|<新しい文字 (その 2)>
+    \ab|href="187.html",date="2133"|<新しい文字>
+    \ab|href="186.html",date="2129"|<天候表現の主語>
+    \ab|href="185.html",date="2115"|<助詞句を伴う間投詞>
+    \ab|href="184.html",date="2115"|<遊離助詞句>
+    \ab|href="183.html",date="2114"|<「品詞」と「品詞用法」>
+    \ab|href="182.html",date="2112"|<{vom} の省略>
+    \ab|href="181.html",date="2109"|<1 回の反復>
+    \ab|href="180.html",date="2108"|<反復表現の否定>
+    \ab|href="179.html",date="2104"|<シャレイア語とは何なのか>
+    \ab|href="178.html",date="2099"|<{i} の新しい用法>
+    \ab|href="177.html",date="2094"|<限定節に被修飾語が 2 つある場合>
+    \ab|href="176.html",date="2023"|<「そのような」>
+    \ab|href="175.html",date="2000"|<{teca} と期間相>
+    \ab|href="174.html",date="1982"|<記数法と命数法>
+    \ab|href="173.html",date="1943"|<改定するならやりたいこと>
+    \ab|href="172.html",date="1889"|<アイマス翻訳企画完成>
+    \ab|href="171.html",date="1886"|<A 型副詞以外を修飾する B 型副詞>
+    \ab|href="170.html",date="1869"|<時刻と時間の表現>
+    \ab|href="169.html",date="1868"|<疑問文の 2 通りの解釈>
+    \ab|href="168.html",date="1864"|<{loc} は {ces} で受けないのか>
+    \ab|href="167.html",date="1863"|<会話文の前のタデックについて>
+    \ab|href="166.html",date="1850"|<話法と日時表現>
+    \ab|href="165.html",date="1836"|<振り返りとか今後についてとか>
+    \ab|href="164.html",date="1790"|<動詞型不定詞の B 型副詞用法>
+    \ab|href="163.html",date="1767"|<[c] と [q] の発音>
+    \ab|href="162.html",date="1767"|<「修飾は限定」則>
+    \ab|href="161.html",date="1723"|<翻訳後日談>
+    \ab|href="160.html",date="1706"|<{doq} の用法>
+    \ab|href="159.html",date="1699"|<基本助接詞の見直し>
+    \ab|href="158.html",date="1695"|<ドイツ語の gern 的なもの>
+    \ab|href="157.html",date="1641"|<動詞の期間相と状態>
+    \ab|href="156.html",date="1623"|<形容詞の基準の省略>
+    \ab|href="155.html",date="1574"|<遊離助詞句の疑問文>
+    \ab|href="154.html",date="1569"|<否定文を受ける {l}>
+    \ab|href="153.html",date="1566"|<指示対象の区別>
+    \ab|href="152.html",date="1565"|<翻訳後日談>
+    \ab|href="151.html",date="1562"|<{a} 句と意志>
+    \ab|href="150.html",date="1536"|<合成成分について>
+    \ab|href="147.html",date="1533"|<翻訳後日談>
+    \ab|href="149.html",date="1525"|<形容詞の用法>
+    \ab|href="148.html",date="1525"|<特殊助接詞再考>
+    \ab|href="146.html",date="1514"|<修飾関係への文法の制約>
+    \ab|href="145.html",date="1513"|<名詞型不定詞の形容詞用法>
+    \ab|href="144.html",date="1509"|<単語合成の考え方の変更>
+    \ab|href="143.html",date="1503"|<「～のように」に相当する助接詞>
+    \ab|href="142.html",date="1503"|<[w] の使い道>
+    \ab|href="141.html",date="1501"|<{kin} 節をとる動詞>
+    \ab|href="140.html",date="1490"|<助接詞再考>
+    \ab|href="139.html",date="1484"|<接続詞の非動詞修飾形>
+    \ab|href="138.html",date="1483"|<大きな数の表現>
+  >
+  \hb<S 代 1 期>
+  \pb<
+    \ab|href="137.html",date="1469"|<最近考えていること>
+    \ab|href="136.html",date="1452"|<日時表現>
+    \ab|href="135.html",date="1442"|<間接疑問文の意味>
+    \ab|href="134.html",date="1440"|<新年とか>
+    \ab|href="132.html",date="1432"|<翻訳後日談>
+    \ab|href="133.html",date="1431"|<助詞句の省略規則>
+    \ab|href="131.html",date="1419"|<数詞再考>
+    \ab|href="130.html",date="1415"|<頻度の副詞>
+    \ab|href="129.html",date="1414"|<助詞と接続詞の関係>
+    \ab|href="128.html",date="1406"|<名詞用法再考>
+    \ab|href="127.html",date="1406"|<{te} の用法>
+    \ab|href="126.html",date="1398"|<5 代 5 期シャレイア語>
+  >
+  \hb<5 代 4 期>
+  \pb<
+    \ab|href="125.html",date="1378"|<反復表現を使うか使わないか>
+    \ab|href="124.html",date="1377"|<年齢表現>
+    \ab|href="123.html",date="1371"|<{kin} 節内の複文でのタデック>
+    \ab|href="122.html",date="1368"|<長い母音の短母音化>
+    \ab|href="121.html",date="1355"|<外来語の転写規則>
+    \ab|href="120.html",date="1352"|<パングラム>
+    \ab|href="119.html",date="1347"|<Unicode 転写>
+    \ab|href="118.html",date="1340"|<辞典の改良>
+    \ab|href="117.html",date="1320"|<{cit} と {cal}>
+    \ab|href="116.html",date="1319"|<合成語の作り方>
+    \ab|href="115.html",date="1319"|<リンゴをより食べたい 55 文>
+    \ab|href="114.html",date="1318"|<特殊助接詞の構文解釈>
+    \ab|href="113.html",date="1316"|<新しい二重母音体系 (その 3)>
+    \ab|href="112.html",date="1315"|<新しい二重母音体系 (その 2)>
+    \ab|href="111.html",date="1311"|<結果目的語>
+    \ab|href="110.html",date="1309"|<「～日前」の表現>
+    \ab|href="109.html",date="1307"|<シャレイア語のロゴ>
+    \ab|href="108.html",date="1307"|<新しい二重母音体系>
+    \ab|href="107.html",date="1305"|<接辞のつけ方>
+    \ab|href="106.html",date="1305"|<文字の頻度 (その 2)>
+    \ab|href="105.html",date="1303"|<連結詞の別形>
+    \ab|href="104.html",date="1301"|<時制と相の対応関係>
+    \ab|href="103.html",date="1299"|<非制限用法の副詞>
+    \ab|href="102.html",date="1298"|<シャレイア語のリズム (その 2)>
+    \ab|href="101.html",date="1295"|<副詞の種類>
+    \ab|href="100.html",date="1293"|<修飾の順番>
+    \ab|href="99.html",date="1293"|<{te} と {teku} の違い>
+    \ab|href="98.html",date="1293"|<特殊な助接詞の扱い>
+    \ab|href="97.html",date="1287"|<5 代 4 期シャレイア語>
+  >
+  \hb<5 代 3 期>
+  \pb<
+    \ab|href="96.html",date="1285"|<形容詞に見られる能格性>
+    \ab|href="95.html",date="1285"|<名詞修飾の助詞 (その 2)>
+    \ab|href="94.html",date="1284"|<形容詞の並列>
+    \ab|href="93.html",date="1283"|<名詞化アプラウトによる同音異義語>
+    \ab|href="92.html",date="1283"|<名詞修飾の助詞>
+    \ab|href="91.html",date="1283"|<形容詞の比較構文 (その 2)>
+    \ab|href="90.html",date="1280"|<動詞型不定詞の名詞用法 (その 2)>
+    \ab|href="89.html",date="1278"|<反復表現の縮約形>
+    \ab|href="88.html",date="1272"|<PDIC 対応>
+    \ab|href="87.html",date="1270"|<口語表現>
+    \ab|href="86.html",date="1266"|<助動詞的用法と副詞句>
+    \ab|href="85.html",date="1265"|<{la} と {ila} の用法>
+    \ab|href="84.html",date="1253"|<W\sub<3> 代まとめ>
+    \ab|href="81.html",date="1250"|<翻訳後日談>
+    \ab|href="83.html",date="1245"|<シャレイア語の響き>
+    \ab|href="82.html",date="1239"|<新正書法>
+    \ab|href="80.html",date="1224"|<モユネ分類>
+    \ab|href="79.html",date="1223"|<二重母音の表記法>
+    \ab|href="77.html",date="1216"|<翻訳後日談>
+    \ab|href="78.html",date="1209"|<単語の長さ>
+    \ab|href="76.html",date="1202"|<翻訳作業>
+  >
+  \hb<W\sub<3> 代 1 期>
+  \pb<
+    \ab|href="75.html",date="1184"|<6 代 1 期シャレイア語>
+  >
+  \hb<5 代 2 期>
+  \pb<
+    \ab|href="74.html",date="1176"|<数詞再考>
+    \ab|href="73.html",date="1175"|<{feli} の語法>
+    \ab|href="72.html",date="1168"|<叙述の現在時制での無相>
+    \ab|href="71.html",date="1167"|<現在時制無相>
+    \ab|href="70.html",date="1142"|<動詞の活用短語尾>
+    \ab|href="69.html",date="1140"|<会話表現の正書法>
+    \ab|href="68.html",date="1139"|<固有名詞>
+    \ab|href="67.html",date="1136"|<5 代 2 期文法書>
+    \ab|href="66.html",date="1102"|<命令表現の冗長性>
+    \ab|href="65.html",date="1090"|<二重母音用の合字>
+    \ab|href="64.html",date="1087"|<形容詞と動詞>
+    \ab|href="30.html",date="1078"|<過去データの整理>
+    \ab|href="29.html",date="1067"|<「仲が良い」>
+    \ab|href="28.html",date="1064"|<移動の動詞>
+    \ab|href="27.html",date="1056"|<形容詞の比較構文>
+    \ab|href="26.html",date="1052"|<動詞形不定詞の名詞用法>
+    \ab|href="25.html",date="1049"|<回想>
+    \ab|href="24.html",date="1037"|<最近のこと>
+  >
+  \hb<5 代 1 期>
+  \pb<
+    \ab|href="23.html",date="1000"|<1000>
+    \ab|href="22.html",date="976"|<前置副詞>
+    \ab|href="21.html",date="968"|<物議を醸した例文たち>
+    \ab|href="20.html",date="965"|<語義詳細と意味対応の崩壊>
+    \ab|href="19.html",date="964"|<{e xer}>
+    \ab|href="18.html",date="962"|<『不思議の国のアリス』の翻訳>
+    \ab|href="17.html",date="956"|<文法書完成>
+    \ab|href="16.html",date="952"|<文法書について>
+    \ab|href="15.html",date="951"|<シャレイア文字は混乱するか>
+    \ab|href="14.html",date="941"|<限定節の曖昧性と有名な猫>
+    \ab|href="13.html",date="939"|<通時時制>
+    \ab|href="12.html",date="938"|<反復表現に決着を>
+    \ab|href="11.html",date="936"|<形容詞の用法>
+    \ab|href="10.html",date="934"|<強調構文の考察>
+    \ab|href="9.html",date="929"|<シャレイア語入門>
+    \ab|href="8.html",date="919"|<無生物の主語>
+    \ab|href="7.html",date="916"|<反復表現再考>
+    \ab|href="6.html",date="915"|<何を自動詞とするか>
+    \ab|href="5.html",date="914"|<反復表現の {fum}, {piv}, {dok}>
+    \ab|href="4.html",date="913"|<相の考察>
+    \ab|href="3.html",date="911"|<5 周年記念>
+    \ab|href="2.html",date="853"|<5 代 1 期シャレイア語>
+    \ab|href="1.html",date="841"|<言語仕様の変更>
+  >
+  \hb<3 代 6 期>
+  \pb<
+    \ab|href="63.html",date="?"|<翻訳実況 (その 8)>
+    \ab|href="62.html",date="?"|<翻訳実況 (その 7)>
+    \ab|href="61.html",date="?"|<シャレイア語の変化>
+  >
+  \hb<3 代 5 期>
+  \pb<
+    \ab|href="60.html",date="413"|<文法書の間違い>
+    \ab|href="59.html",date="406"|<翻訳実況 (その 6)>
+    \ab|href="58.html",date="406"|<最近の考察対象>
+    \ab|href="57.html",date="404"|<翻訳実況 (その 5)>
+    \ab|href="56.html",date="404"|<1000 語達成>
+    \ab|href="55.html",date="399"|<翻訳実況 (その 4)>
+    \ab|href="54.html",date="398"|<翻訳実況 (その 3)>
+    \ab|href="53.html",date="397"|<翻訳実況 (その 2)>
+    \ab|href="52.html",date="391"|<翻訳実況>
+    \ab|href="51.html",date="356"|<『不思議の国のアリス』の翻訳>
+    \ab|href="50.html",date="345"|<?>
+    \ab|href="49.html",date="342"|<?>
+    \ab|href="48.html",date="338"|<動詞型不定詞か名詞型不定詞か>
+    \ab|href="47.html",date="334"|<デザイン変更>
+    \ab|href="46.html",date="301"|<3 代 5 期シャレイア語>
+  >
+  \hb<3 代 4 期>
+  \pb<
+    \ab|href="45.html",date="280"|<?>
+    \ab|href="44.html",date="276"|<3 代 5 期へ>
+    \ab|href="43.html",date="262"|<文字の頻度>
+  >
+  \hb<3 代 3 期>
+  \pb<
+    \ab|href="42.html",date="244"|<認知言語学的考察>
+  >
+  \hb<3 代 2 期>
+  \pb<
+    \ab|href="41.html",date="212"|<新しい翻訳>
+    \ab|href="40.html",date="210"|<造語時の考察>
+  >
+  \hb<3 代 1 期>
+  \pb<
+    \ab|href="39.html",date="204"|<3 代の不満点>
+    \ab|href="38.html",date="195"|<「本を読み終わる」について>
+    \ab|href="37.html",date="192"|<3 代 1 期シャレイア語>
+  >
+  \hb<2 代 7 期>
+  \pb<
+    \ab|href="36.html",date="184"|<辞書改訂>
+  >
+  \hb<2 代 6 期>
+  \pb<
+    \ab|href="35.html",date="180"|<似た意味の単語>
+    \ab|href="34.html",date="167"|<?>
+    \ab|href="33.html",date="165"|<ヴァルティアの地図>
+    \ab|href="32.html",date="160"|<3 代への変更案>
+    \ab|href="31.html",date="158"|<シャレイア語のリズム>
+  >
+
+>

@@ -1,0 +1,159 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<テンソル対象>
+  \use-math|prefix="6"|;
+
+  \h1<日記 (2018 年 9 月 4 日)>
+  \p<
+    前回は、通常の圏と同様の形式の極限として、2-圏の錐状極限について触れた。
+    そこでは、2-極限における重みとして &m<\bfrm<1>> への定値関手を用いた。
+    今度は、2-極限を考える関手の定義域となる圏が &m<\bfrm<1>> である場合を考えてみよう。
+    ここで &m<\bfrm<1>> は、対象として &m<\star|ord|;> のみをもち、1-射と 2-射として恒等射のみをもつとすれば、2-圏になることに注意してほしい。
+  >
+  \p<
+    2-圏 &m<\scr<C>> に対して、2-関手 &m<F: \bfrm<1> \to; \scr<C>> を考える。
+    普通の関手と同様に、&m<F> は &m<\star|ord|;> の像だけで定まるので、ある &m<\scr<C>> の対象 &m<\bar<F>> と同一視できる。
+    同様に、2-関手 &m<W: \bfrm<1> \to; \bfrm<Cat>> もある圏 &m<\bar<W>> と同一視できる。
+    この &m<F> と &m<W> によって定まる極限は、以下に定義するように余テンソル対象と呼ばれる。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \bfrm<1> \to; \scr<C>, W: \bfrm<1> \to; \bfrm<Cat>> があるとする。
+      上記の通り &m<\bar<F>> と &m<\bar<W>> を定めたとき、&m<\sb<\lim;><W> F> を &m<\bar<F>> と &m<\bar<W>> の\em<余テンソル対象\fl<cotensor object>> といい、&m<\bar<W> \pitchfork; \bar<F>> で表す。
+    >
+  >
+  \p<
+    余極限の場合も同様である。
+    このとき、重みとして &m<W: \bfrm<1> \to; \bfrm<Cat>> の代わりに &m<W: \sp<\bfrm<1>><\rm<op>> \to; \bfrm<Cat>> を考える必要があるが、&m<\bfrm<1>> と &m<\sp<\bfrm<1>><\rm<op>>> は全く同じ 2-圏なので、この違いを意識する必要はない。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \bfrm<1> \to; \scr<C>, W: \bfrm<1> \to; \bfrm<Cat>> があるとする。
+      上記の通り &m<\bar<F>> と &m<\bar<W>> を定めたとき、&m<\sb<\op<colim>><W> F> を &m<\bar<F>> と &m<\bar<W>> の\em<テンソル対象\fl<tensor object>> といい、&m<\bar<W> \odot; \bar<F>> で表す。
+    >
+  >
+  \p<
+    極限で定義される方が余テンソル対象で、余極限で定義される方がテンソル対象である。
+    非常にややこしいが、おそらく歴史的事情なので諦めよう。
+    なお、余テンソル対象を冪対象といい、テンソル対象を余冪対象という流儀もある。
+    こちらの用語が余計な混乱を招かなくて良いのだが、積の右随伴として定義される冪対象と紛らわしくなるので、この日記シリーズでは使わないことにした。
+  >
+  \p<
+    この定義によって、&m<\bar<F>> と &m<\bar<W>> の余テンソル対象とは、任意の &m<\scr<C>> の対象 &m<A> に対し、圏の同型
+    &mb<
+      \array|align="rcl"|<
+        \c<`[A, \bar<W> \pitchfork; \bar<F>`] \sb<><\scr<C>>> \c<\cong;> \c<\lbbracket; W, `[A, F \hyphen;`] \sb<><\scr<C>> \rbbracket; \sb<><\bfrm<1> \to; \bfrm<Cat>>>  \br;
+        \c; \c<\cong;> \c<`[\bar<W>, `[A, \bar<F>`] \sb<><\scr<C>>`] \sb<><\bfrm<Cat>>>
+      >
+    >
+    が &m<A> に関して自然に成り立つものだと述べることもできる。
+    同様にして、テンソル対象については、圏の同型
+    &mb<
+      `[\bar<W> \odot; \bar<F>, A`] \sb<><\scr<C>> \cong; `[\bar<W>, `[\bar<F>, A`] \sb<><\scr<C>> `] \sb<><\bfrm<Cat>>
+    >
+    が &m<A> に関して自然に成り立つものである。
+  >
+  \p<
+    さて、テンソル対象に関する重要な命題の 1 つとして、&m<\bfrm<2>> とのテンソル積をもつ 2-圏では、柱の 2 次元的普遍性が 1 次元的普遍性から自動的に成り立つというものを挙げておこう。
+    ここで &m<\bfrm<2>> とは、対象として &m<\sb<\star|ord|;><0>, \sb<\star|ord|;><1>> の 2 つをもち、恒等射以外の射として &m<!: \sb<\star|ord|;><0> \to; \sb<\star|ord|;><1>> のみをもつ通常の圏とする。
+    &m<\bfrm<2>> は以下のような性質をもつ。
+  >
+  \thm|type="lem",id="le"|<
+    \p<
+      通常の関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<\op<Hom>><\bfrm<Cat>> (\bfrm<2>, \hyphen;):> \c<\bfrm<Cat>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<\scr<X>> \c<\longmapsto;> \c<\sb<\op<Hom>><\bfrm<Cat>> (\bfrm<2>, \scr<X>)> 
+        >
+      >
+      は同型射を反射する。
+    >
+  >
+  \prf<
+    \p<
+      関手 &m<S: \scr<X> \to; \scr<Y>> に対し、写像 &m<S \circ; \hyphen;: \op<Hom> (\bfrm<2>, \scr<X>) \to; \op<Hom> (\bfrm<2>, \scr<Y>)> が全単射であるとする。
+      このとき、&m<S> が同型射になることを示せば良い。
+      そのために、&m<S> の逆射 &m<T: \scr<Y> \to; \scr<X>> を構成する。
+    >
+    \p<
+      任意の &m<\scr<Y>> の射 &m<f: X \to; Y> に対して、関手 &m<\widetilde<f>: \bfrm<2> \to; \scr<Y>> を
+      &mb<
+        \widetilde<f> \sb<\star|ord|;><0> \coloneqq; X \qquad;
+        \widetilde<f> \sb<\star|ord|;><1> \coloneqq; Y \qquad;
+        \widetilde<f> ! \coloneqq; f
+      >
+      によって定める。
+      &m<S \circ; \hyphen;> は全単射だから、関手 &m<\sb<U><f>: \bfrm<2> \to; \scr<X>> であって &m<S \circ; \sb<U><f> = \widetilde<f>> となるものが一意に存在する。
+      そこで、&m<\scr<X>> の射 &m<\sb<U><f> !: \sb<U><f> \sb<\star|ord|;><0> \to; \sb<U><f> \sb<\star|ord|;><1>> を &m<Tf> とおけば、これによって &m<T> の対象と射の対応が定まる。
+      この対応が関手になることは容易に確かめることができ、補題が示された。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Cat>> に対し、柱 &m<`h: W \raarr; `[L, F \hyphen;`]> を考える。
+      2 条件
+    >
+    \ul<
+      \li<
+        &m<`h> は 1 次元的普遍性を満たす。
+      >
+      \li<
+        任意の &m<\scr<C>> の対象 &m<A> に対して &m<\bfrm<2> \odot; A> が存在する。
+      >
+    >
+    \p<
+      がともに成り立つとすると、&m<`h> は 2 次元的普遍性も満たす。
+    >
+  >
+  \prf<
+    \p<
+      &m<`h> が 1 次元的普遍性を満たすとは、任意の &m<\scr<C>> の対象 &m<A> に対して、集合の間の写像
+      &mb<
+        &mark<\wspade;>
+        \array|align="rrcl"|<
+          \c<T:> \c<`[A, L`] \sp<><0>> \c<\longto;> \c<\lbbracket; W, `[A, F \hyphen;`] \rbbracket; \sp<><0>> \br;
+          \c; \c<f> \c<\longmapsto;> \c<\sp<f><*> \dot<\circ;> `h>
+        >
+      >
+      が &m<A> に関して自然な全単射になっているということであった。
+      添字の 0 は、それが圏ではなく (対象だけを考えて) 集合であることを意味している。
+      この写像は、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<T:> \c<`[A, L`]> \c<\longto;> \c<\lbbracket; W, `[A, F \hyphen;`] \rbbracket;> \br;
+          \c; \c<f> \c<\longmapsto;> \c<\sp<f><*> \dot<\circ;> `h> \br;
+          \c; \c<`a> \c<\longmapsto;> \c<\sp<`a><*> \hat<\ast;> `h>
+        >
+      >
+      に拡張できる。
+      ここで、&m<\sp<f><*>> や &m<\sp<`a><*>> は \a|href="21.html"|<8 月 30 日>で定義したものと同じである。
+      この拡張した &m<T> が同型射であることが &m<`h> が 2 次元的普遍性を満たすということなので、これを示す。
+    >
+    \p<
+      &m<\bfrm<Set>> における図式
+      &mb<
+        \diag<
+          \v<`[\bfrm<2>, `[A, L`]`] \sp<><0>> \v<`[\bfrm<2>, \lbbracket; W, `[A, F \hyphen;`] \rbbracket;`] \sp<><0>> \br;
+          \v; \v<\lbbracket; W, `[\bfrm<2>, `[A, F \hyphen;`]`] \rbbracket; \sp<><0>> \br;
+          \v<`[\bfrm<2> \odot; A, L`] \sp<><0>> \v<\lbbracket; W, `[\bfrm<2> \odot; A, F \hyphen;`] \rbbracket; \sp<><0>>
+          \ar|s="1",e="2"|<T \circ; \hyphen;> \ar|s="1",e="5"|; \ar|s="2",e="4"|; \ar|s="4",e="6"|; \ar|s="5",e="6"|;
+        >
+      >
+      を考える。
+      ここで、左の垂直な射と右下の垂直な射は、&m<\bfrm<2> \odot; A> の定義にある同型が定める射である。
+      また、下の水平な射は同型射 &m<\wspade;> そのものであり、右上の垂直な射は自然に定まる同型射である。
+      すなわち、この図式において、上の水平な射以外は全て同型射である。
+      さらに、具体的に対象の行き先を調べることで、この図式は可換であることが示せる。
+      以上により、図式中の &m<T \circ; \hyphen;> も同型射となり、\ref|type="thm",ref="le"|; によって &m<T> 自身も同型射になる。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="keot"|<G. M. Kelly (1989)「Elementary observations on 2-categorical limits」『Bulletin of the Australian Mathematical Society』39:301–317>
+  >
+
+>

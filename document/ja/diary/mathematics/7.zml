@@ -1,0 +1,237 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<線型項と簡約>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2018 年 2 月 28 日)>
+  \p<
+    前回は自然演繹スタイルの直観主義線型論理を定義した。
+    ところで、Curry–Howard 対応として知られているように、何らかの論理体系があれば、型と項がそれぞれ論理式と証明に対応するような計算模型があるはずである。
+    そこで今回は、直観主義線型論理に対応する計算模型とその型付け規則を定義する。
+  >
+  \p<
+    項の定義にも様々なバリエーションがあり、広く受け入れられている定義というのは特にないようである。
+    ここでは Bierman\ref|type="bib",ref="bill"|; の定義を用いる。
+    項の定義を個別に行うことはただ冗長なだけなのでここではせず、型付け規則と同時に項も定義することにする。
+  >
+  \p<
+    以降、&m<\sb<M><1>, \cdots;, \sb<M><k>> のような列を簡単に &m<\vec<M>> と書く省略記法を採用する。
+  >
+  \thm|type="def"|<
+    \p<
+      直観主義線型論理に関する項の型付け規則を以下によって定める。
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \tree<
+              \infr|n="0"|<x: A \vdash; x: A><\rm<Axiom>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\sb<`G><1> \vdash; \sb<M><1>: \sb<A><1>> \axm<\cdots;> \axm<\sb<`G><k> \vdash; \sb<M><k>: \sb<A><k>>
+              \infr|n="3"|<\sb<`G><1>, \cdots;, \sb<`G><k> \vdash; \tt|fun|<true> \vec<M>: 1><\sb<1><\rm<I>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\sb<`G><1> \vdash; \sb<M><1>: \sb<A><1>> \axm<\cdots;> \axm<\sb<`G><k> \vdash; \sb<M><k>: \sb<A><k>> \axm<`D \vdash; N: 0>
+              \infr|n="4"|<\sb<`G><1>, \cdots;, \sb<`G><k>, `D \vdash; \tt|fun|<false> \vec<M> \sfun; \tt|fun|<for> N: B>
+            >
+          >
+          \cc<
+            \tree<
+              \infr|n="0"|<\vdash; \srel; \star|ord|;: \top;><\sb<\top;><\rm<I>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: \top;> \axm<`D \vdash; N: A>
+              \infr|n="2"|<`G, `D \vdash; \tt|fun|<let> \star|ord|; \rmap|bin|; M \sfun; \tt|fun|<in> N : A><\sb<\top;><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A> \axm<`G \vdash; N: B>
+              \infr|n="2"|<`G \vdash; \langle; M, N \rangle;: A \times; B><\sb<\times;><\rm<I>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A \times; B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<fst> M: A><\sb<\times;><\rm<EL>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; M: A \times; B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<snd> M: B><\sb<\times;><\rm<ER>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A>
+              \infr|n="1"|<`G \vdash; \tt|fun|<inl> M: A + B><\sb<+><\rm<IL>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; M: B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<inr> M: A + B><\sb<+><\rm<IR>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A + B> \axm<`D, x: A \vdash; N: C> \axm<`D, y: B \vdash; P: C>
+              \infr|n="3"|<`G, `D \vdash; \tt|fun|<case> M \sfun; \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|; N \mid|bin|; \tt|fun|<inr> y \rmap|bin|; P: C><\sb<+><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A> \axm<`D \vdash; N: B>
+              \infr|n="2"|<`G, `D \vdash; M \otimes; N: A \otimes; B><\sb<\otimes;><\rm<I>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A \otimes; B> \axm<`D, x: A, y: B \vdash; N: C>
+              \infr|n="2"|<`G, `D \vdash; \tt|fun|<let> x \otimes; y \rmap|bin|; M \sfun; \tt|fun|<in> N: C><\sb<\otimes;><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G, x: A \vdash; M: B>
+              \infr|n="1"|<`G \vdash; \rm<`l> x \o|ord,t="txt"|<:> \sfun; A. \sfun; B: A \rmulti|bin|; B><\sb<\rmulti;><\rm<I>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A \rmulti|bin|; B> \axm<`D \vdash; N: A>
+              \infr|n="2"|<`G, `D \vdash; MN: B><\sb<\rmulti;><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\sb<`G><1> \vdash; \sb<M><1>: ! \sb<A><1>> \axm<\cdots;> \axm<\sb<`G><k> \vdash; \sb<M><k>: !\sb<A><k>> \axm<! \sb<x><1>: \sb<A><1>, \cdots;, ! \sb<x><k>: \sb<A><k> \vdash; N: B>
+              \infr|n="4"|<\sb<`G><1>, \cdots;, \sb<`G><k> \vdash; \tt|fun|<promote> \vec<x> \rmap|bin|; \vec<M> \sfun; \tt|fun|<in> N: !B><\sb<!><\rm<P>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: !A> \axm<`D \vdash; N: B>
+              \infr|n="2"|<`G, `D \vdash; \tt|fun|<discard> M \sfun; \tt|fun|<in> N: B><\sb<!><\rm<W>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: !A> \axm<`D, x: !A, y: !A \vdash; N: B>
+              \infr|n="2"|<`G, `D \vdash; \tt|fun|<copy> x, y \rmap|bin|; M \sfun; \tt|fun|<in> N: B><\sb<!><\rm<C>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: !A>
+              \infr|n="1"|<`G \vdash; \tt|fun|<derelict> M: A><\sb<!><\rm<D>>>
+            >
+          >
+        >
+      >
+      以上によって定義される項を\em<線型項\fl<linear term>> という。
+    >
+  >
+  \p<
+    以下で定める省略記法もしばしば用いる。
+    &mb<
+      \array|align="rcl"|<
+        \c<\tt|fun|<discard> \vec<M> \sfun; \tt|fun|<in> N> \c<\equiv;>
+        \c<\tt|fun|<discard> \sb<M><1> \sfun; \tt|fun|<in> \ph; (\tt|fun|<discard> \sb<M><2> \sfun; \tt|fun|<in> \ph; (\cdots; (\tt|fun|<discard> \sb<M><k> \sfun; \tt|fun|<in> N) \cdots;))> \br;
+        \c<\tt|fun|<copy> \vec<x>, \vec<y> \rmap|bin|; \vec<M> \sfun; \tt|fun|<in> N> \c<\equiv;>
+        \c<\tt|fun|<copy> \sb<x><1>, \sb<y><1> \rmap|bin|; \sb<M><1> \sfun; \tt|fun|<in> \ph; (\tt|fun|<copy> \sb<x><2>, \sb<y><2> \rmap|bin|; \sb<M><2> \sfun; \tt|fun|<in> \ph; (\cdots; (\tt|fun|<copy> \sb<x><k>, \sb<y><k> \rmap|bin|; \sb<M><k> \sfun; \tt|fun|<in> N) \cdots;))>
+      >
+    >
+  >
+  \p<
+    さて、項の簡約規則についても、Bierman 自身が様々な種類のものを与えている。
+    ここでは、その中で最も基本となる &m<`b>-簡約のみを考える。 
+    これは、論理結合子を導入した後すぐに除去するという無駄な証明過程を取り除くことに対応している。
+  >
+  \thm|type="def"|<
+    \p<
+      線型項の簡約規則を以下によって定める。
+      &mb<
+        \array|align="rcl"|<
+          \c<(\rm<`l> x \o|ord,t="txt"|<:> \sfun; A. \sfun; B) N> \c<\sb<\squigrarr;><`b>> \c<M `[x \coloneqq; N`]> \br;
+          \c<\tt|fun|<let> \star|ord|; \rmap|bin|; \star|ord|; \sfun; \tt|fun|<in> M> \c<\sb<\squigrarr;><`b>> \c<M> \br;
+          \c<\tt|fun|<let> x \otimes; y \rmap|bin|; M \otimes; N \sfun; \tt|fun|<in> P> \c<\sb<\squigrarr;><`b>> \c<P `[x \coloneqq; M, y \coloneqq; N`]> \br;
+          \c<\tt|fun|<fst> \langle; M, N \rangle;> \c<\sb<\squigrarr;><`b>> \c<M> \br;
+          \c<\tt|fun|<snd> \langle; M, N \rangle;> \c<\sb<\squigrarr;><`b>> \c<N> \br;
+          \c<\tt|fun|<case> \ph; (\tt|fun|<inl> M) \sfun; \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|; N \mid|bin|; \tt|fun|<inr> y \rmap|bin|; P> \c<\sb<\squigrarr;><`b>> \c<N `[x \coloneqq; M`]> \br;
+          \c<\tt|fun|<case> \ph; (\tt|fun|<inr> M) \sfun; \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|; N \mid|bin|; \tt|fun|<inr> y \rmap|bin|; P> \c<\sb<\squigrarr;><`b>> \c<P `[y \coloneqq; M`]> \br;
+          \c<\tt|fun|<derelict> \ph; (\tt|fun|<promote> \vec<x> \rmap|bin|; \vec<M> \sfun; \tt|fun|<in> N)> \c<\sb<\squigrarr;><`b>> \c<N `[\vec<x> \coloneqq; \vec<M>`]> \br;
+          \c<\tt|fun|<discard> \ph; (\tt|fun|<promote> \vec<x> \rmap|bin|; \vec<M> \sfun; \tt|fun|<in> N) \sfun; \tt|fun|<in> P> \c<\sb<\squigrarr;><`b>> \c<\tt|fun|<discard> \vec<M> \sfun; \tt|fun|<in> P> \br;
+          \c<\tt|fun|<copy> y, z \rmap|bin|; (\tt|fun|<promote> \vec<x> \rmap|bin|; \vec<M> \sfun; \tt|fun|<in> N) \sfun; \tt|fun|<in> P> \c<\sb<\squigrarr;><`b>> \c<\tt|fun|<copy> \vec<u>, \vec<v> \rmap|bin|; \vec<M> \sfun; \tt|fun|<in> P `[y \coloneqq; Y, z \coloneqq; Z`]>
+        >
+      >
+      なお、最後の式において、
+      &mb<
+        \array|align="rcl"|<
+          \c<Y> \c<\equiv;> \c<\tt|fun|<promote> \vec<x> \rmap|bin|; \vec<u> \sfun; \tt|fun|<in> N> \br;
+          \c<Z> \c<\equiv;> \c<\tt|fun|<promote> \vec<x> \rmap|bin|; \vec<v> \sfun; \tt|fun|<in> N>
+        >
+      >
+      とおいた。
+      以上によって定義される簡約を &m<`b>-\em<簡約\fl<reduction>> という。
+    >
+  >
+  \p<
+    項の代入の定義はここでは省略する。
+    これは、以下の定理が示すように、代入によって型が変わらないよううまく定義されている。
+    線型論理に対応する項の定義は、実は Abramsky\ref|type="bib",ref="acil"|; などが Bierman より前に行っていたが、この型付け体系は代入による型の不変性が成立しないことが、後に Wadler\ref|type="bib",ref="wtns"|; によって証明された。
+    Bierman の定義では、この問題が解消されている。
+  >
+  \thm|type="thm"|<
+    \p<
+      型割り当て &m<`G, x: A \vdash; M: B> と &m<`D \vdash; N: A> がともに導出可能であれば、&m<`G, `D \vdash; M `[x \coloneqq; N`]: B> も導出可能である。
+    >
+  >
+  \p<
+    また、ここでは証明しないが、&m<`b>-簡約によって型が変わることもない。
+  >
+  \thm|type="thm"|<
+    \p<
+      型割り当て &m<`G \vdash; M: A> が導出可能で、さらに &m<M \sb<\squigrarr;><`b> N> が成り立つならば、&m<`G \vdash; N: A> も導出可能である。
+    >
+  >
+  \p<
+    さて、線型項と &m<`b>-簡約の圏論的モデルを構成することが今後の目標だが、圏論的モデルとは何なのかを以下に定義する。
+  >
+  \p<
+    モデルには対称モノイダル圏を用いるが、モノイダル圏のテンソル積は常に &m<\otimes;> で表し、これに対する単位元は &m<\top;> で表す。
+    代わりに終対象を &m<1> で表すことにする。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<C>> を考える。
+      各論理式 &m<A> に対し、対象 &m<\lbbracket; A \rbbracket;> が 1 つ定まっているとする。
+      さらに、文脈 &m<`G \equiv; \sb<x><1>: \sb<A><1>, \cdots;, \sb<x><k>: \sb<A><k>> に対し、
+      &mb<
+        \lbbracket; `G \rbbracket; = \lbbracket; \sb<A><1> \rbbracket; \otimes; \cdots; \otimes; \lbbracket; \sb<A><k> \rbbracket;
+      >
+      とおくと、各型割り当て &m<`G \vdash; M: A> に対し、射 &m<\lbbracket; M \rbbracket;: \lbbracket; `G \rbbracket; \to; \lbbracket; A \rbbracket;> が 1 つ定まっているとする。
+      このとき、&m<\scr<C>> を\em<線型構造\fl<linear structure>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<C>> を考える。
+      &m<\scr<C>> が線型構造であって、任意の &m<`b>-簡約 &m<M \sb<\squigrarr;><`b> N> に対して &m<\lbbracket; M \rbbracket; = \lbbracket; N \rbbracket;> が成り立っているとする。
+      このとき、&m<\scr<C>> を\em<線型モデル\fl<linear model>> という。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="acil"|<S. Abramsky (1993)「Computational interpretations of linear logic」『Theoretical Computer Science』111:3–57>
+    \li|id="bill"|<G. M. Bierman (1993)「On intuitionistic linear logic』Ph. D. thesis, The University of Cambridge>
+    \li|id="wtns"|<P. Wadler (1992)『There's no substitute for linear logic』Workshop on Mathematical Foundations of Programming Language Semantics>
+  >
+
+>

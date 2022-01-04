@@ -1,0 +1,52 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<辞典データダウンロード>
+  \ver<S 代>
+
+  \h1<概要>
+  \p<
+    シャレイア語の辞書データがダウンロードできます。
+  >
+  \h1<ダウンロード>
+  \h2<新シャレイア語辞典形式>
+  \p<
+    全てのデータが含まれます。
+    閲覧には \ae|href="https://github.com/Ziphil/ZpdicShaleian"|<ZpDIC for Shaleian> をご利用ください。
+  >
+  \form<
+    \a|href="https://dic.ziphil.com/api/dictionary/download?kind=single"|<ダウンロード>
+  > 
+  \h2<旧シャレイア語辞典形式>
+  \p<
+    日本語のデータのみから成り、英語のデータは含まれていません。
+    閲覧には \a|href="../../application/download/2.html"|<ZpDIC> をご利用ください。
+  >
+  \form<
+    \a|href="https://dic.ziphil.com/api/dictionary/download?kind=oldShaleian"|<ダウンロード>
+  >
+  \h2<OneToMany-JSON 形式>
+  \p<
+    造語日などの一部のデータは含まれていません。
+    シャレイア語辞典形式からの自動生成なので、体裁などが見にくくなってしまっている可能性があります。 
+  >
+  \p<
+    現在準備中です。
+  >
+  \h2<PDIC 形式>
+  \p<
+    造語日などの一部のデータは含まれていません。
+    シャレイア語辞典形式からの自動生成なので、体裁などが見にくくなってしまっている可能性があります。
+  >
+  \p<
+    このデータは Unicode 版用のものなので、Unicode 版ではない PDIC では正常に読み込めません。
+    また、古いバージョンの PDIC を使っている場合、データを読み込むときにエラーが出る場合があります。
+    その場合は、最新版の PDIC にアップロードするようお願いします。
+  >
+  \p<
+    現在準備中です。
+  >
+
+>

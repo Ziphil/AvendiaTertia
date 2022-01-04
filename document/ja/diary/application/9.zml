@@ -1,0 +1,81 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<AGC023-C: 階乗の逆元>
+  \use-math;
+
+  \h1<日記 (2018 年 3 月 13 日)>
+  \p<
+    今日は AGC023 があったんですが、そこの C 問題で階乗の逆元の求め方が分からず戸惑ってしまったので、簡単にまとめておきます。
+    問題は\ae|href="https://beta.atcoder.jp/contests/agc023/tasks/agc023_c"|<こちら>です。
+  >
+  \p<
+    面倒なので詳細は省きますが、どんな順列に対しても、そのスコア &m<s> は必ず &m<(N + 1) `/ 2 \leq; s \leq; N - 1> の範囲になります。
+    また、この範囲の &m<s> に対し、スコア &m<s> 以下の順列の個数は &m<(s - 1)! s! `/ (2s - N)!> で求まります。
+    ということで、階乗の積や商を求めることができればこの問題は解けるのですが、普通に計算したら 8 バイト整数の範囲すら超えるので、&m<\sp<10><9> + 7> を法とする積や商の求め方を知っている必要があります。
+    以下、&m<P = \sp<10><9> + 7> とし、合同式は &m<P> を法とします。
+  >
+  \p<
+    まず、2 つの数 &m<a> と &m<b> の積を mod &m<P> のもとで計算するのは簡単で、普通に積を計算した後に &m<P> での剰余をとるだけです。
+    では、&m<a> と &m<b> の商はどうするかというと、&m<b> の逆元を計算して、これと &m<a> との積を計算します。
+    &m<P> は素数なのでフェルマーの小定理を使うと、&m<b> の逆元は &m<\sp<b><P - 2>> で求まることが分かるので、積の計算に帰着できます。
+    愚直に &m<P - 2> 回積を計算するのは効率が悪いので、以下のように二分累乗法を用いましょう。
+  >
+  \pre~*<
+    public static final int MOD = 1000000007;
+
+    public long pow(long a, long b) {
+      if (b == 0) {
+        return 1;
+      } else if (b % 2 == 0) {
+        long d = pow(a, b / 2);
+        return (d * d) % MOD;
+      } else {
+        long d = pow(a, b - 1);
+        return (a * d) % MOD;
+      }
+    }
+  >
+  \p<
+    さて、すでに述べたように、この問題では階乗の積や商の計算を何度も行うので、あらかじめ階乗とその逆元の値を計算しておきます。
+    階乗の逆元は、毎回階乗の &m<P - 2> 乗を計算するよりも、&m<\sp<n !><- 1> = \sp<(n + 1)!><- 1> \cdot; (n + 1)> という関係を使うことで、より効率的に計算できます。
+  >
+  \pre~*<
+    public long[][] calcFact(int n) {
+      long[] fact = new long[n];
+      long[] invfact = new long[n];
+      fact[0] = 1;
+      for (int i = 1 ; i `< n ; i ++) {
+        fact[i] = (fact[i - 1] * i) % MOD;
+      }
+      invfact[n - 1] = pow(fact[n - 1], MOD - 2);
+      for (int i = n - 2 ; i `>= 0 ; i --) {
+        invfact[i] = invfact[i + 1] * (i + 1) % MOD;
+      }
+      return new long[][]{fact, invfact};
+    }
+  >
+  \p<
+    というわけで、あとはこれらのメソッドを使って解答を計算するだけです。
+  >
+  \pre~*<
+    public void run() {
+      BetterScanner scanner = new BetterScanner(System.in);
+
+      int n = scanner.nextInt();
+      long[][] fact = calcFact(n);
+
+      long res = 0;
+      long prev = 0;
+      for (int s = (n + 1) / 2 ; s `<= n - 1 ; s ++) {
+        long val = fact[0][s - 1] * fact[0][s] % MOD * fact[1][2 * s - n] % MOD;
+        res = (s * (val - prev + MOD) % MOD + res) % MOD;
+        prev = val;
+      }
+      System.out.println(res);
+    }
+  >
+
+>

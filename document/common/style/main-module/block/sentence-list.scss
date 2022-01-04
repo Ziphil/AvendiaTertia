@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$sentence-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
+
+.sentence-list {
+  --background-color: #{$block-background-color};
+  margin-left: 0rpx - $main-horizontal-padding;
+  margin-right: 0rpx - $main-horizontal-padding;
+  padding: $block-vertical-padding $main-horizontal-padding;
+  line-height: $line-height;
+  text-align: justify;
+  background-color: $block-background-color;
+  @include smartphone {
+    margin-left: 0rpx - $main-smartphone-horizontal-padding;
+    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+  }
+}
+
+.sentence-nested-list {
+  text-align: justify;
+  list-style: none;
+}
+
+.sentence-item {
+  margin-left: $bullet-width + $blank-margin;
+  &::before {
+    @include icon-font;
+    width: fix-em($bullet-width, 90%);
+    margin-right: fix-em($blank-margin, 90%);
+    margin-left: fix-em(0em - $bullet-width - $blank-margin, 90%);
+    font-size: 90%;
+    color: $blue-color;
+    text-align: right;
+    display: inline-block;
+    content: "\F0DA";
+  }
+}
+
+.sentence-nested-item {
+  margin-left: $sentence-nested-list-marker-width + $blank-margin;
+  &::before {
+    @include icon-font;
+    width: fix-em($sentence-nested-list-marker-width, 90%);
+    margin-right: fix-em($blank-margin, 90%);
+    margin-left: fix-em(0em - $sentence-nested-list-marker-width - $blank-margin, 90%);
+    font-size: 90%;
+    color: $blue-color;
+    text-align: right;
+    display: inline-block;
+    content: "\F061";
+  }
+}
+
+.sentence-mark {
+  margin-right: 0.1em;
+  color: $blue-color;
+  &[data-mark="ungrammatical"]::before {
+    content: "*";
+  }
+  &[data-mark="question"]::before {
+    content: "?";
+  }
+}

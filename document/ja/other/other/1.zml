@@ -1,0 +1,371 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<リンク集>
+
+  \h1<人工言語>
+  \p<
+    2021 年 3 月時点で私が把握している人工言語 (主に日本の Twitter で活動しているもの) のリストです。
+    専用のホームページがあるなど、ネット上でまとまった情報が得られるもののみを記載してあります。
+    すでに制作が停止されているものも含めています。
+    敬称略。
+  >
+  \p<
+    日本の人工言語のリストとして、スライムさんによる\ae|href="https://sites.google.com/site/moyacilang/conlanglist"|<リスト>もあります。
+    こちらの方は情報がまとまったサイトがないものも含まれており、このページよりも網羅的です。
+  >
+  \table<
+    \tr<\th<言語名>\th<製作者名>\th<Twitter>\th<ホームページ>>
+    \tr<
+      \td<シャレイア語>
+      \td<Ziphil Shaleiras>
+      \td<\ae|href="https://twitter.com/Ziphil"|<@Ziphil>>
+      \td<\ae|href="http://ziphil.com"|<Avendia 19>>
+    >
+    \tr<
+      \td<アルカ>
+      \td<seren arbazard>
+      \td<>
+      \td<\ae|href="http://conlinguistics.org/arka/"|<人工言語アルカ公式サイト>>
+    >
+    \tr<
+      \td<凪霧>
+      \td<鮎川早月>
+      \td<>
+      \td<\ae|href="http://maykloaayukawa.wix.com/nagili"|<人工言語 凪霧>>
+    >
+    \tr<
+      \td<リパライン語>
+      \td<Fafs F. Sashimi>
+      \td<\ae|href="https://twitter.com/sashimiwiki"|<@sashimiwiki>>
+      \td<\ae|href="https://sites.google.com/site/3tvalineparine/home"|<【人工言語】リパライン語>>
+    >
+    \tr<
+      \td<ユーゴック語>
+      \td<KPHT=YY>
+      \td<\ae|href="https://twitter.com/yuugokku_2"|<@yuugokku_2>>
+      \td<\ae|href="https://sites.google.com/site/yuugokku/"|<Raz Goodisdisree>>
+    >
+    \tr<
+      \td<パイグ語>
+      \td<S.Y>
+      \td<\ae|href="https://twitter.com/S_Y15"|<@S_Y15>>
+      \td<\ae|href="https://sites.google.com/site/syxobo/"|<越淮書房>>
+    >
+    \tr<
+      \td<バート語>
+      \td<sozysozbot>
+      \td<\ae|href="https://twitter.com/sosoBOTpi"|<@sosoBOTpi>>
+      \td<\ae|href="http://jurliyuuri.com/bhaataan/index.html"|<bhaataan>>
+    >
+    \tr<
+      \td<ピース語>
+      \td<Caligula=Armjanskaja>
+      \td<\ae|href="https://twitter.com/Tsapsaanja"|<@Tsapsaanja>>
+      \td<\ae|href="https://sites.google.com/site/tsapsaanja/"|<ピース語設定資料集>>
+    >
+    \tr<
+      \td<ミュ語>
+      \td<nymwa>
+      \td<\ae|href="https://twitter.com/nymwa"|<@nymwa>>
+      \td<>
+    >
+    \tr<
+      \td<イジェール語>
+      \td<Zaslon>
+      \td<\ae|href="https://twitter.com/Zaslon"|<@Zaslon>>
+      \td<\ae|href="https://zaslon.info/idyer/"|<Starlight Ensign>>
+    >
+    \tr<
+      \td<Varhil>
+      \td<へだる>
+      \td<\ae|href="https://twitter.com/hedalu244"|<@hedalu244>>
+      \td<\ae|href="https://hedalu244.github.io/varhil/"|<Varhil>>
+    >
+    \tr<
+      \td<ミザソーグ語>
+      \td<蒼山菘>
+      \td<\ae|href="https://twitter.com/nanakusa_003"|<@nanakusa_003>>
+      \td<>
+    >
+    \tr<
+      \td<カルコレーシュ語>
+      \td<らんべ>
+      \td<\ae|href="https://twitter.com/lambeluza"|<@lambeluza>>
+      \td<\ae|href="https://sites.google.com/view/calcoradish/"|<らんべの箱庭>>
+    >
+    \tr<
+      \td<セルナーダ語>
+      \td<梅津裕一>
+      \td<\ae|href="https://twitter.com/u1_umetsu"|<@u1_umetsu>>
+      \td<\ae|href="https://sites.google.com/view/yurfa/"|<セルナーダ語文法>>
+    >
+    \tr<
+      \td<アルファ祖語 (＋ 他)>
+      \td<pianists>
+      \td<\ae|href="https://twitter.com/pianists_s"|<@pianists_s>>
+      \td<\ae|href="https://pianists.github.io/PsMemoBlog/conworld/"|<仮想世界アルビス>>
+    >
+    \tr<
+      \td<wentiay-bangao>
+      \td<skytomo>
+      \td<\ae|href="https://twitter.com/skytomo221"|<@skytomo221>>
+      \td<\ae|href="https://skytomo221.github.io/wentiay-bangao/ja/"|<wentiay-bangao>>
+    >
+    \tr<
+      \td<レーゲン語>
+      \td<ヴァイウリア>
+      \td<\ae|href="https://twitter.com/lenqeetaszaves"|<@lenqeetaszaves>>
+      \td<\ae|href="https://sites.google.com/view/leigenlenq/"|<Xoikfilt le Leigenlenq!>>
+    >
+    \tr<
+      \td<ボウニム語>
+      \td<澵井 莉寧>
+      \td<\ae|href="https://twitter.com/ArIBakaRina"|<@ArIBakaRina>>
+      \td<\ae|href="http://zpdic.ziphil.com/dictionary/iximi"|<ボウニム語辞書 (博日辞書)>>
+    >
+    \tr<
+      \td<フーリカ語>
+      \td<さいは>
+      \td<\ae|href="https://twitter.com/pomepomekanom"|<@pomepomekanom>>
+      \td<>
+    >
+    \tr<
+      \td<スヮドゥン語族>
+      \td<りめすとり>
+      \td<\ae|href="https://twitter.com/rhemestry"|<@rhemestry>, \ae|href="https://twitter.com/tsarhfis"|<@tsarhfis>>
+      \td<\ae|href="https://swadunlanguages.miraheze.org/wiki"|<スヮドゥン語族 Wiki>>
+    >
+    \tr<
+      \td<ノユラ語>
+      \td<k.ast>
+      \td<\ae|href="https://twitter.com/Asterisk6446229"|<@Asterisk6446229>>
+      \td<>
+    >
+    \tr<
+      \td<鴬語>
+      \td<やみせふぇ>
+      \td<\ae|href="https://twitter.com/phenyllithium"|<@phenyllithium>>
+      \td<\ae|href="https://w.atwiki.jp/phenyllithium"|<鴬語 @ ウィキ>>
+    >
+    \tr<
+      \td<ネサルゼルデ語>
+      \td<Nihil>
+      \td<\ae|href="https://twitter.com/Nihil_2000"|<@Nihil_2000>>
+      \td<\ae|href="https://nethalzerde.jimdofree.com/"|<Conlang Neþalzerde>>
+    >
+    \tr<
+      \td<ウィラ語>
+      \td<人工言語ウィラ語たん>
+      \td<\ae|href="https://twitter.com/wilaselija_ba"|<@wilaselija_ba>>
+      \td<\ae|href="https://w.atwiki.jp/wilaseli/"|<wilaseli @ ウィキ>>
+    >
+    \tr<
+      \td<メイユラング>
+      \td<WYU>
+      \td<\ae|href="https://twitter.com/aila_sunfa"|<@aila_sunfa>>
+      \td<\ae|href="http://www44.atwiki.jp/meijulange/"|<メイユラング文法等解説>>
+    >
+    \tr<
+      \td<エミュンス語>
+      \td<Lunias Jivejils>
+      \td<\ae|href="https://twitter.com/Jivejils"|<@Jivejils>>
+      \td<\ae|href="https://www65.atwiki.jp/gionshantveed/pages/216.html"|<gionshantveed @ ウィキ>>
+    >
+    \tr<
+      \td<ダン=ラ=ハン語>
+      \td<えかとん>
+      \td<\ae|href="https://twitter.com/GSVNNS_E"|<@GSVNNS_E>>
+      \td<>
+    >
+    \tr<
+      \td<柳霞>
+      \td<高木柳沙>
+      \td<>
+      \td<\ae|href="https://sites.google.com/site/rengongyanyuliuxia/"|<人工言語 柳霞>>
+    >
+    \tr<
+      \td<レイア語>
+      \td<Calnos Aqua>
+      \td<\ae|href="https://twitter.com/Qunoxts"|<@Qunoxts>>
+      \td<>
+    >
+    \tr<
+      \td<ゼノス語>
+      \td<ヘイル>
+      \td<\ae|href="https://twitter.com/XENOSLANGUAGE"|<@XENOSLANGUAGE>>
+      \td<\ae|href="http://xylops.cswiki.jp/"|<CSwiki>>
+    >
+    \tr<
+      \td<シャカル>
+      \td<文津言比古>
+      \td<\ae|href="https://twitter.com/22kotofiko"|<@22kotofiko>>
+      \td<\ae|href="https://sakar-conlang.jimdofree.com/"|<人工言語 シャカル>>
+    >
+    \tr<
+      \td<マクシャギュア語>
+      \td<りよこ>
+      \td<>
+      \td<\ae|href="https://saelawhiz.blog.fc2.com/"|<saela* blog>>
+    >
+    \tr<
+      \td<タコ語>
+      \td<apupuna>
+      \td<\ae|href="https://twitter.com/apupuna1"|<@apupuna1>>
+      \td<\ae|href="https://sites.google.com/site/rengongyanyuapupunayu/"|<apupuna の人工言語関連>>
+    >
+    \tr<
+      \td<ヒッタン語>
+      \td<Sirnoka>
+      \td<\ae|href="https://twitter.com/koridentetsu"|<@koridentetsu>>
+      \td<\ae|href="http://souzoumap.webcrow.jp/"|<想像地図研究所>>
+    >
+    \tr<
+      \td<ウリ語 (＋ 他)>
+      \td<თარბოში>
+      \td<\ae|href="https://twitter.com/urigokaihatu"|<@urigokaihatu>>
+      \td<\ae|href="https://kartolitan.com/"|<たるぼしとジョージア語たん>>
+    >
+    \tr<
+      \td<クシモードス語>
+      \td<べぃこん>
+      \td<\ae|href="https://twitter.com/Bacon_Ryohei"|<@Bacon_Ryohei>>
+      \td<\ae|href="https://sites.google.com/site/kuximoodos2official/"|<【人工言語】クシモードス語>>
+    >
+    \tr<
+      \td<ラシュレーモ請願語>
+      \td<シャルエ>
+      \td<\ae|href="https://twitter.com/N_OFZV_HLT"|<@N_OFZV_HLT>>
+      \td<\ae|href="https://n-ofzv-hlt.jimdo.com/"|<薨樹庵>>
+    >
+    \tr<
+      \td<シュライ語>
+      \td<海野陸人>
+      \td<\ae|href="https://twitter.com/Wmino_RIkto"|<@Wmino_RIkto>>
+      \td<\ae|href="https://www65.atwiki.jp/xlai_waeg/"|<xlai_waeg @ ウィキ>>
+    >
+    \tr<
+      \td<キリエニア語>
+      \td<þoþufa>
+      \td<\ae|href="https://twitter.com/n_langvo"|<@n_langvo>>
+      \td<\ae|href="https://killiena.wordpress.com/"|<Killiena>>
+    >
+    \tr<
+      \td<フィダーヌス語>
+      \td<Fidanus>
+      \td<\ae|href="https://twitter.com/FidaanasaUduhos"|<@FidaanasaUduhos>>
+      \td<\ae|href="https://fidanus.wixsite.com/hebfid"|<hebfid>>
+    >
+    \tr<
+      \td<derle>
+      \td<dali-einerZy>
+      \td<\ae|href="https://twitter.com/einerzy"|<@einerzy>>
+      \td<\ae|href="https://sites.google.com/site/einerzypa/"|<人工言語 derle とその関連>>
+    >
+    \tr<
+      \td<サイパオプ語>
+      \td<>
+      \td<>
+      \td<\ae|href="https://sites.google.com/view/pergatte/"|<サイパオプのすべて>>
+    >
+    \tr<
+      \td<るる語>
+      \td<多々井ゆかり>
+      \td<\ae|href="https://twitter.com/rafenemine"|<@rafenemine>>
+      \td<>
+    >
+    \tr<
+      \td<LANDI>
+      \td<清水隆紀>
+      \td<\ae|href="https://twitter.com/tokipona_landi"|<@tokipona_landi>>
+      \td<\ae|href="https://twitter.com/tokipona_landi/status/1239864526318661633"|<人工言語 LANDI>>
+    >
+    \tr<
+      \td<翊天語>
+      \td<Xotarios>
+      \td<\ae|href="https://twitter.com/Xotarios"|<@Xotarios>>
+      \td<\ae|href="https://xotarios.world/"|<XOTARIOS>>
+    >
+    \tr<
+      \td<テトテ語>
+      \td<kakjeka>
+      \td<\ae|href="https://twitter.com/kakjeka"|<@kakjeka>>
+      \td<>
+    >
+    \tr<
+      \td<クレリカ>
+      \td<デネブ>
+      \td<\ae|href="https://twitter.com/qothr"|<@qothr>>
+      \td<\ae|href="http://yuhr.lv9.org/qr/"|<人工言語クレリカ>>
+    >
+    \tr<
+      \td<シャハヤ>
+      \td<>
+      \td<>
+      \td<\ae|href="https://sites.google.com/site/chry7511/"|<Chry>>
+    >
+    \tr<
+      \td<シヴァン>
+      \td<そぶろ>
+      \td<\ae|href="https://twitter.com/soblo_xivan"|<@soblo_xivan>>
+      \td<\ae|href="http://www27.atwiki.jp/sobloxivanamna"|<人工言語シヴァン 総合サイト>>
+    >
+    \tr<
+      \td<テベリス>
+      \td<らいしゅ>
+      \td<\ae|href="https://twitter.com/Difalth"|<@Difalth>>
+      \td<\ae|href="https://sites.google.com/site/thebehlis/"|<人工言語テベリス>>
+    >
+    \tr<
+      \td<アリニア>
+      \td<鮎川早月>
+      \td<>
+      \td<\ae|href="https://sites.google.com/site/afariayugaishuo/"|<人工言語アリニア>>
+    >
+    \tr<
+      \td<波藍 (＋ 他)>
+      \td<faras palt>
+      \td<\ae|href="https://twitter.com/Faras_Tilasos"|<@Faras_Tilasos>>
+      \td<\ae|href="https://sites.google.com/site/faraspalt/"|<Faras' Room>>
+    >
+    \tr<
+      \td<アーティフィガッシュ>
+      \td<キューマン・エノビクト>
+      \td<\ae|href="https://twitter.com/QmanEnobikto"|<@QmanEnobikto>>
+      \td<\ae|href="https://artifigush.jimdo.com/"|<A'tef'g's>>
+    >
+    \tr<
+      \td<ハルマット (＋ 他)>
+      \td<>
+      \td<>
+      \td<\ae|href="https://sites.google.com/site/ryuniparutoyuwiki/"|<リュニパルト語 wiki>>
+    >
+    \tr<
+      \td<橋若子>
+      \td<>
+      \td<>
+      \td<\ae|href="https://sites.google.com/site/hasiwako/"|<人工言語橋若子 wiki>>
+    >
+    \tr<
+      \td<モヤシ語>
+      \td<スライムさん>
+      \td<\ae|href="https://twitter.com/slaimsan"|<@slaimsan>>
+      \td<\ae|href="https://sites.google.com/site/moyacilang/"|<Kisfil (モヤシ語)>>
+    >
+    \tr<
+      \td<ムトン語>
+      \td<>
+      \td<>
+      \td<\ae|href="https://sites.google.com/site/7kfdepgo/"|<ムトン語>>
+    >
+    \tr<
+      \td<xāna palādi>
+      \td<シャーナ>
+      \td<\ae|href="https://twitter.com/xaana_palaadi"|<@xaana_palaadi>>
+      \td<\ae|href="https://sites.google.com/site/xaanapalaadi/"|<xaana palaadi>>
+    >
+  >
+
+>

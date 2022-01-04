@@ -1,0 +1,59 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<画像のフィルタリング>
+
+  \h1<日記 (2014 年 9 月 21 日)>
+  \p<
+    さて、\a|href="12.html"|<9 月 20 日>にゴール画面を作ったんですが、そのときのスコアの文字色には赤と青の 2 種類があります。
+    普通なら赤と青の 2 種類の画像データを用意するところですが、色が違うだけなのに別の画像データとして扱いたくありません。
+    片方を修正するときにもう片方も同じように修正するのは面倒ですからね。
+    そこで、白文字のデータを作って、プログラムの方でそれを色調変換させてみました。
+  >
+  \p<
+    色調変換に限らず、\m<BufferedImage> インスタンスのフィルタリングには \m<BufferedImageOp> インターフェースを継承したクラスを用います。
+    その中で色調変換をするのは \m<RescaleOp> クラスです。
+    画像を rescale するのではなく、画像のピクセルダータの RGBA 値を rescale します。
+    使い方はこんな感じ。
+    例によって Java ではなく JRuby です。
+  >
+  \pre~*<
+    scales = [red_scale, green_scale, blue_scale, alpha_scale]
+    offsets = [red_offset, green_offset, blue_offset, alpha_offset]
+    new_image = RescaleOp.new(scales.to_java("float"), offsets.to_java("float"), nil).filter(image, nil)
+  >
+  \p<
+    シンプルです。
+    画像の各ドットの R, G, B, A それぞれに対し、それを \m<scale> 倍して \m<offset> を加えた値の RGBA 値をもつ画像を生成します。
+    なお、上の例はピクセルデータが 8 ビット RGBA で管理されている \m<BufferedImage> インスタンスをフィルタリングするもので、モノクロ画像などの他の形式の場合は、\m<scales> や \m<offsets> の配列のサイズを変える必要があります。
+  >
+  \p<
+    そんなわけで、いちいちこんなものを書くのは面倒なので、まあ、クラスを拡張しますよね。
+    モンキーパッチです。
+  >
+  \pre~*<
+    class BufferedImage
+      def rescale_color(scales, offsets)
+        operation = RescaleOp.new(scales.to_java("float"), offsets.to_java("float"), nil)
+        return operation.filter(self, nil)
+      end
+      def rescale_color!(scales, offsets)
+        operation = RescaleOp.new(scales.to_java("float"), offsets.to_java("float"), nil)
+        operation.filter(self, self)
+      end
+    end
+  >
+  \p<
+    ちなみに、\m<RescaleOp`#filter> メソッドは、第 1 引数の画像をフィルタリングしたものを返しつつ、第 2 引数の画像にもフィルタリング結果を描画します。
+    そのため、第 1 引数と第 2 引数に同じインスタンスを指定すれば、破壊的にフィルタリングが可能です。
+    そんなわけで、破壊メソッドと非破壊メソッドを用意しました。
+  >
+  \p<
+    ところで、\c<scales.to_java("float")> というコードがありますが、これで Ruby の配列を Java の配列に変換しておかないとエラーになります。
+    JRuby では Ruby の Integer や Float などを自動的に Java のクラスのインスタンスに変換してくれますが、配列は自動じゃないようです。
+    知らなくて変なエラーが出て焦りました。
+  >
+
+>

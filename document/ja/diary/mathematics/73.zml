@@ -1,0 +1,261 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<安定写像のトレースと整合空間の冪>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2021 年 2 月 4 日)>
+  \p<
+    今日は、安定写像のトレースという概念を導入して、整合空間の冪を定義する。
+  >
+  \p<
+  >
+  \thm|type="def"|<
+    \p<
+      整合空間 &m<A, B> の間の写像 &m<f: A \to; B> をとる。
+      各 &m<a \in; A> および &m<y \in; \lvert; B \rvert;> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<fin> (a)> \c<\coloneqq;> \c<`{\ring<a> \mid; &raw<&m<\ring<a> \subseteq; a> は有限集合>`}> \br;
+          \c<\op<elfin> (a, y)> \c<\coloneqq;> \c<`{\ring<a> \mid; \ring<a> \in; \op<fin> (a), y \in; f (\ring<a>)`}>
+        >
+      >
+      と定める。
+      なお、&m<\op<fin> (a)> の元は &m<a> の\em<有限近似\fl<finite approximant>> と呼ばれる。
+    >
+  >
+  \p<
+    整合空間 &m<A> とその元 &m<a \in; A> に対し、明らかに &m<\op<fin> (a) \subseteq; A> は有向であり、&m<a = \bigcup|in|<\ring<a> \in; \op<fin> (a)> \ring<a>> である。
+    したがって、別の整合空間 &m<B> への安定写像 &m<f: A \to; B> に対し、&m<f> の連続性によって、&m<f (a) = \bigcup|in|<\ring<a> \in; \op<fin> (a)> f (\ring<a>)> が成り立つ。
+    すなわち、安定写像 &m<f> による &m<a> の像は &m<\op<fin> (a)> の元の像から一意に定まる。
+    この意味で &m<\op<fin> (a)> の元は &m<a> の近似なのである。
+  >
+  \p<
+    近似の概念を用いることで、安定写像の特徴付けが得られる。
+    これを示すため、補題を 2 つ用意しておく。
+  >
+  \thm|type="lem",id="minmin"|<
+    \p<
+      整合空間 &m<A, B> の間の写像 &m<f: A \to; B> をとり、さらに &m<a \in; A> および &m<y \in; \lvert; B \rvert;> をとる。
+      このとき、&m<\op<elfin> (a, y)> に極小元が存在するならば、それは最小元である。
+    >
+  >
+  \prf<
+    \p<
+      極小元 &m<\ring<a> \in; \op<elfin> (a, y)> をとる。
+      任意の &m<a' \in; \op<elfin> (a, y)> に対し、&m<\ring<a> \cup; a' \subseteq; a> かつ &m<a \in; A> だから、&m<\ring<a> \cup; a' \in; A> である。
+      したがって、&m<f> の安定性により、&m<f (\ring<a> \cap; a') = f (\ring<a>) \cap; f (a')> が成り立つ。
+      &m<\ring<a>> と &m<a'> のとり方から &m<y \in; f (\ring<a>)> と &m<y \in; f (a')> であるから、今得られた等式によって、&m<y \in; f (\ring<a> \cap; a')> を得る。
+      これより、&m<\ring<a> \cap; a' \in; \op<elfin> (a, y)> が成り立つ。
+      ここで、&m<\ring<a> \cap; a' \subseteq; \ring<a>> であって &m<\ring<a>> は極小だから、&m<\ring<a> \cap; a' = \ring<a>> でなければならない。
+      すなわち、&m<\ring<a> \subseteq; a'> である。
+      以上により、&m<\ring<a>> は最小である。
+    >
+  >
+  \thm|type="lem",id="finex"|<
+    \p<
+      集合の集合 &m<A> とその有向部分集合 &m<S \subseteq; A> をとる。
+      元 &m<\ring<a> \in; A> に対し、&m<\ring<a>> が有限集合で &m<\ring<a> \subseteq; \bigcup|in|<a \in; S> a> ならば、ある &m<a \in; S> が存在して &m<\ring<a> \subseteq; a> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      各 &m<x \in; \ring<a>> に対し、仮定からある &m<\sb<a><x> \in; S> が存在して &m<x \in; \sb<a><x>> が成り立つ。
+      &m<\ring<a>> は有限集合で &m<S> は有向だから、ある &m<a \in; S> によって、任意の &m<x \in; \ring<a>> に対して &m<\sb<a><x> \subseteq; a> が成り立つようにできる。
+      すると、任意の &m<x \in; \ring<a>> に対して &m<x \in; a> が成り立つから、&m<\ring<a> \subseteq; a> である。
+    >
+  >
+  \p<
+    以上の補題を用いると、以下のような安定写像の特徴付けが得られる。
+  >
+  \thm|type="prp",id="stbapp"|<
+    \p<
+      整合空間 &m<A, B> の間の写像 &m<f: A \to; B> をとる。
+      このとき、2 条件
+    >
+    \ol<
+      \li<
+        &m<f> は安定である。
+      >
+      \li<
+        &m<f> は単調である。
+        さらに、任意の &m<a \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<y \in; f (a)> であれば、&m<\op<elfin> (a, y)> に包含関係に関する最小元が存在する。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      まず、定義から &m<f> は単調である。
+      そこで次に、任意に &m<a \in; A> および &m<y \in; \lvert; B \rvert;> をとり、&m<y \in; f (a)> が成り立っているとする。
+      すでに述べたように、&m<f> の連続性によって、&m<f (a) = \bigcup|in|<\ring<a> \in; \op<fin> (a)> f (\ring<a>)> が成り立つ。
+      したがって、ある &m<\ring<a> \in; \op<fin> (a)> が存在して &m<y \in; f (\ring<a>)> である。
+      すなわち、&m<\ring<a> \in; \op<elfin> (a, y)> が成り立つ。
+    >
+    \p<
+      ここで &m<\op<elfin> (\ring<a>, y)> を考えると、&m<\ring<a>> が有限集合であることから &m<\op<elfin> (\ring<a>, y)> も有限集合である。
+      したがって、&m<\op<elfin> (\ring<a>, y)> には必ず極小元が存在するが、\ref|type="thm",ref="minmin"|; によってそれは最小元である。
+      &m<\ring<a> \subseteq; a> より &m<\op<elfin> (\ring<a>, y)> の最小元は &m<\op<elfin> (a, y)> の最小元でもあるから、これで示された。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      仮定からすでに &m<f> は単調だから、あとは &m<f> の連続性と安定性を示せば良い。
+    >
+    \p<
+      まず、&m<f> の連続性を示す。
+      任意に有向部分集合 &m<S \subseteq; A> をとると、&m<f> の単調性によって &m<\bigcup|in|<a \in; S> f (a) \subseteq; f (\bigcup|in|<a \in; S> a)> は成り立つから、この逆の包含関係を示せば良い。
+      そこで、&m<\bar<a> \coloneqq; \bigcup|in|<a \in; S> a> とおき、&m<y \in; f (\bar<a>)> をとる。
+      仮定から最小元 &m<\ring<a> \in; \op<elfin> (\bar<a>, y)> がとれるが、&m<\ring<a>> は有限集合で &m<\ring<a> \subseteq; \bigcup|in|<a \in; S> a> であるから、\ref|type="thm",ref="finex"|; によって、ある &m<a \in; S> が存在して &m<\ring<a> \subseteq; a> が成り立つ。
+      &m<f> の単調性から &m<f (\ring<a>) \subseteq; f (a)> なので &m<y \in; f (a)> が得られ、これより &m<y \in; \bigcup|in|<a \in; S> f (a)> が分かる。
+      以上により、&m<f (\bigcup|in|<a \in; S> a) \subseteq; \bigcup|in|<a \in; S> f (a)> である。
+    >
+    \p<
+      次に、&m<f> の安定性を示す。
+      任意に元 &m<a, a' \in; A> をとり、&m<a \cup; a' \in; A> であるとする。
+      &m<f> の単調性によって &m<f (a \cap; a') \subseteq; f (a) \cap; f (a')> は成り立つから、この逆の包含関係を示せば良い。
+      そこで、&m<y \in; f (a) \cap; f (a')> をとる。
+      仮定から、最小元 &m<\ring<a> \in; \op<elfin> (a, y)> と &m<\ring<a>' \in; \op<elfin> (a, y)> がとれるが、&m<a \subseteq; a \cup; a'> かつ &m<a' \subseteq; a \cup; a'> より、この 2 元は &m<\op<elfin> (a \cup; a', y)> の最小元でもある。
+      最小元は一意であるから &m<\ring<a> = \ring<a>'> が成り立つ。
+      したがって、&m<\ring<a> \subseteq; a \cap; a'> が得られ、&m<f> の単調性から &m<f (\ring<a>) \subseteq; f (a \cap; a')> であるから、&m<y \in; f (a \cap; a')> が分かる。
+      以上により、&m<f (a) \cap; f (a') \subseteq; f (a \cap; a')> である。
+    >
+  >
+  \p<
+    この命題を踏まえて、安定写像のトレースを以下のように定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      整合空間 &m<A, B> の間の安定写像 &m<f: A \to; B> をとる。
+      ある &m<\ring<a> \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<(\ring<a>, y)> が &m<\op<elfin> (\ring<a>, y)> の最小元であるとき、組 &m<(\ring<a>, y)> を &m<f> の\em<トレース\fl<trace>> という。
+      また、&m<f> のトレース全体の集合を &m<\op<tr> (f)> で表す。
+    >
+  >
+  \p<
+    トレースからはもとの安定写像を復元することができる。
+  >
+  \thm|type="thm",id="trres"|<
+    \p<
+      整合空間 &m<A, B> の間の安定写像 &m<f: A \to; B> を考える。
+      任意の &m<a \in; A> に対し、
+      &mb<
+        f (a) = `{y \mid; &raw<ある &m<\ring<a> \in; \op<fin> (a)> に対して &m<(\ring<a>, y) \in; \op<tr> (f)>>`}
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      右辺の集合を &m<g (a)> と書くことにし、両方の包含関係を示す。
+    >
+    \p<
+      任意の &m<y \in; f (a)> に対し、\ref|type="thm",ref="stbapp"|; によって、最小元 &m<\ring<a> \in; \op<elfin> (a, y)> がとれる。
+      しかし &m<\ring<a> \subseteq; a> だから、&m<\ring<a>> は &m<\op<elfin> (\ring<a>, y)> の最小元でもある。
+      これより &m<(\ring<a>, y) \in; \op<tr> (f)> であり、&m<y \in; g (a)> が得られた。
+      以上により、&m<f (a) \subseteq; g (a)> である。
+    >
+    \p<
+      逆に &m<y \in; g (a)> をとると、ある &m<\ring<a> \in; \op<fin> (a)> が存在して &m<(\ring<a>, y) \in; \op<tr> (f)> が成り立つ。
+      したがって特に &m<y \in; f (\ring<a>)> であるが、&m<f> の単調性によって &m<f (\ring<a>) \subseteq; f (a)> だから、&m<y \in; f (a)> が成り立つ。
+      以上により、&m<g (a) \subseteq; f (a)> である。
+    >
+  >
+  \p<
+    さて、今日の本題は、整合空間 &m<A, B> に対してその冪 &m<A \buharprarr; B> を定義することであった。
+    これを素朴に安定写像 &m<f: A \to; B> 全体の集合としたいところだが、安定写像自身は集合ではないので、集合の集合である整合空間と見なすことはできない。
+    しかし、\ref|type="thm",ref="trres"|; によって安定写像と 1 対 1 に対応することが分かったトレースは集合なので、安定写像自身ではなくそのトレースの全体の集合を考えることで、整合空間の枠組みに入れることができる。
+    すなわち、
+    &mb<
+      A \buharprarr; B \coloneqq; `{\op<tr> (f) \mid; &raw<&m<f: A \to; B> は安定>`}
+    >
+    と定義するのである。
+    幸運なことに、これは整合空間になるための条件を満たしている。
+  >
+  \p<
+    これを定義として議論を終わりにしても良いのだが、整合空間は反射的無向グラフとも見なせるので、そのように見なしたときの &m<A \buharprarr; B> がどのように表せるかも気になるところである。
+    ここで、&m<A> に属する有限集合全体を &m<\lvert; !A \rvert;> と書くことにすれば、安定写像 &m<f: A \to; B> のトレース &m<\op<tr> (f)> は &m<\lvert; !A \rvert; \times; \lvert; B \rvert;> の部分集合である。
+    したがってこの問題は、&m<\lvert; !A \rvert; \times; \lvert; B \rvert;> にどのような整合関係を定めれば、その整合的な部分集合全体が上で定めた &m<A \buharprarr; B> に一致するか、と言い換えることができる。
+  >
+  \p<
+    いきなり &m<\lvert; !A \rvert; \times; \lvert; B \rvert;> 上の整合関係を定めても良いが、まず &m<\lvert; !A \rvert;> 上の整合関係を定め、次にそれを用いて &m<\lvert; !A \rvert; \times; \lvert; B \rvert;> に整合関係を定めることにする。
+  >
+  \thm|type="def"|<
+    \p<
+      整合空間 &m<A> に対し、
+      &mb<
+        \lvert; !A \rvert; \coloneqq; `{\ring<a> \mid; &raw<&m<\ring<a> \in; A> は有限集合>`}
+      >
+      と定義する。
+      さらに、&m<\lvert; !A \rvert;> 上の対称二項関係 &m<\sb<\closure|ord|;><!A>> を、各トークン &m<\ring<a>, \ring<a>' \in; \lvert; A \rvert;> に対し、
+      &mb<
+        \ring<a> \sb<\closure;><!A> \ring<a>' \coloniff; \ring<a> \cup; \ring<a>' \in; A
+      >
+      で定義する。
+      これによって定まる整合空間 &m<!A> を &m<A> の\em<線型化\fl<linearisation>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      整合空間 &m<A, B> に対し、
+      &mb<
+        \lvert; A \buharprarr; B \rvert; \coloneqq; \lvert; !A \rvert; \times; \lvert; B \rvert;
+      >
+      と定義する。
+      さらに、&m<\lvert; A \buharprarr; B \rvert;> 上の対称二項関係 &m<\sb<\closure|ord|;><A \buharprarr; B>> を、各トークン &m<\ring<a>, \ring<a>' \in; \lvert; A \rvert;> と &m<y, y' \in; \lvert; B \rvert;> に対し、
+      &mb<
+        (\ring<a>, y) \sb<\closure;><A \buharprarr; B> (\ring<a>', y') \coloniff;
+        \ltort; \ring<a> \sb<\closure;><!A> \ring<a>' \implies; y \sb<\closure;><B> y' \rtort; \scand; \ltort; \ring<a> \sb<\frown;><!A> \ring<a>' \implies; y \sb<\frown;><B> y' \rtort;
+      >
+      で定義する。
+      これによって定まる整合空間 &m<A \buharprarr; B> を &m<A> と &m<B> の\em<冪\fl<exponential>> という。
+    >
+  >
+  \p<
+    これは実際に我々の欲しい空間になっている。
+  >
+  \thm|type="thm",id="trexp"|<
+    \p<
+      整合空間 &m<A, B> に対し、
+      &mb<
+        A \buharprarr; B = `{\op<tr> (f) \mid; &raw<&m<f: A \to; B> は安定>`}
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      右辺の集合をここでは &m<C> と書くことにし、両方の包含関係を示す。
+      証明は非常に素直にできるので、ここでは方針を述べるに留める。
+    >
+    \p<
+      任意に &m<c \in; A \buharprarr; B> をとり、
+      &mb<
+        \array|align="rrcl"|<
+          \c<f:> \c<A> \c<\longto;> \c<B> \br;
+          \c; \c<a> \c<\longmapsto;> \c<`{y \mid; &raw<ある &m<\ring<a> \in; \op<fin> (a)> に対して &m<(\ring<a>, y) \in; c>>`}>
+        >
+      >
+      とおく。
+      すると、これは矛盾なく定義された安定写像であり、さらに\ref|type="thm",ref="trres"|; を使うと &m<c = \rm<tr> (f)> が示せるので、&m<c \in; C> が分かる。
+      以上により、&m<A \buharprarr; B \subseteq; C> である。
+    >
+    \p<
+      逆に &m<c \in; C> をとると、ある安定写像 &m<f: A \to; B> が存在して &m<c = \rm<tr> (f)> と書ける。
+      さらに、&m<\rm<tr> (f) \subseteq; \lvert; A \buharprarr; B \rvert;> が整合的であることは容易に分かるから、&m<\rm<tr> (f) \in; A \buharprarr; B> が分かる。
+      以上により、&m<C \subseteq; A \buharprarr; B> である。
+    >
+  >
+  \p<
+    これが実際に圏論的にも &m<\bfrm<Coh>> における冪になっているのだが、長くなったのでその証明は次回に回すことにする。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="gllx"|<J. Y. Girard (1987)「Linear logic」『Theoretical Computer Science』50:1–101>
+    \li|id="ptx"|<J. Y. Girard, Y. Lafont, P. Taylor (1989)『Proofs and Types』Cambridge University Press>
+  >
+
+>

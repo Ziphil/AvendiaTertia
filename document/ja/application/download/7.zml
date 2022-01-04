@@ -1,0 +1,56 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Zenithal Markup Language>
+
+  \h1<概要>
+  \p<
+    Zenithal Markup Language (ZenML) は、XML とほぼ同等の表現力をもった汎用マークアップ言語です。
+    XML から離れすぎず、かつ XML の冗長性などの欠点を取り除いて読みやすい言語にすることを目標にしています。
+  >
+  \p<
+    このサイトは、ZenML で書かれた原稿を HTML に変換することで作成しています。
+    詳細は\ae|href="https://github.com/Ziphil/AvendiaNew"|<こちら>をご覧ください。
+  >
+  \p<
+    以下は ZenML ドキュメント (ver 1.1 文法) の例です。
+  >
+  \pre~*<
+    \zml?|version="1.1"|;
+    \xml?|version="1.0",encoding="UTF-8"|;
+
+    
+    \body<
+      \h1<見出し`>
+      ## XML では書けない行コメントが書けます
+      \p|id="hoge"|<
+        XHTML を ZenML で書いた例です。
+        特殊文字のエスケープは分かりやすくなっています: ``&, ``<, ```>。
+      `>
+      \table|id="foo",class="bar"|<
+        \tr<
+          ## こんな感じで同じ名前のタグが並ぶなら 2 回目以降の名前を省略できます
+          \th+<見出し`><見出し`><見出し`><見出し`><見出し`>
+        `>
+        \tr<
+          \td+<表組`><表組`><表組`><表組`><表組`>
+        `>
+      `>
+      ## マクロで XML への変換時に多彩な要素に変換できます
+      &macro|arg="value"|<first`><second`>
+    `>
+  >
+  \p<
+    ZenML を XML の構文木に変換する Ruby スクリプトを公開しています。
+  >
+  \h1<ダウンロード>
+  \p<
+    ZenML の仕様や処理系は GitHub で公開しています。
+  >
+  \form<
+    \ae|href="https://github.com/Ziphil/Zenithal"|<GitHub ページ>
+  >
+
+>

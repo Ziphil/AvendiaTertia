@@ -1,0 +1,15 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Internal server error>
+  \base|href="/error/"|;
+
+  \error<
+    \code<500>
+    \message<kOdAt Vo LiVaT\br;E zEl AqIlÔt>
+    \desc<An error has occurred on the server>
+  >
+
+>

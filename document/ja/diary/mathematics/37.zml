@@ -1,0 +1,277 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<集合の圏の随伴による特徴付け>
+  \use-math;
+
+  \h1<日記 (2020 年 3 月 14 日)>
+  \p<
+    集合と写像が成す圏 &m<\bfrm<Set>> は最も基本的な圏の 1 つであるということに異論はないと思うが、この &m<\bfrm<Set>> の特徴付け、すなわちある圏が &m<\bfrm<Set>> と圏同値であるための必要十分条件として、以下が知られている。
+  >
+  \thm|type="thm",id="main"|<
+    \p<
+      局所小圏 &m<\scr<A>> が &m<\bfrm<Set>> と圏同値であるための必要十分条件は、共変 Yoneda 埋め込み関手 &m<Y: \scr<A> \to; \sp<\bfrm<Set>><\sp<\scr<A>><\circ;>>> を右端とする長さ 5 の随伴列 &m< U \dashv; V \dashv; W \dashv; X \dashv; Y> が存在することである。
+    >
+  >
+  \p<
+    この定理は、Wood\ref|type="bib",ref="wsrt"|; によって予想され、Rosebrugh–Wood\ref|type="bib",ref="racc"|; によって証明されたものである。
+    この事実が何に使えるのかはよく分からないが、とにかく結果の意味不明さに興味をもったので、日記としてまとめながら証明を追ってみようと思う。
+  >
+  \p<
+    今日は定理の証明の前半部分として、主張の必要性、すなわち &m<\bfrm<Set>> において問題の随伴列が構成できることを示す。
+    これは、以下の 3 つの補題から従う。
+  >
+  \thm|type="lem",id="adj"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>> について、&m<\scr<C>> が小圏で &m<\scr<D>> が局所小圏ならば、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<F><*>:> \c<\sp<\bfrm<Set>><\sp<\scr<D>><\circ;>>> \c<\longto;> \c<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> \br;
+          \c; \c<Q> \c<\longmapsto;> \c<Q \circ; F>
+        >
+      >
+      は右随伴と左随伴をもつ。
+      すなわち、随伴列 &m<\exists; F \dashv; \sp<F><*> \dashv; \forall; F> が存在する。
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<D>> の対象 &m<D> に対し、コンマ圏 &m<D \darr|bin|; F> を考える。
+      これは次のような圏である。
+    >
+    \ul<
+      \li<
+        &m<D \darr|bin|; F> の対象は、&m<\scr<C>> の対象 &m<C> および &m<\scr<D>> の射 &m<f: D \to; FC> の組 &m<(C, f)> である。
+      >
+      \li<
+        &m<D \darr|bin|; F> の 2 つの対象 &m<(C, f), (C', f')> の間の射は、&m<\scr<C>> の射 &m<h: C \to; C'> であって、図式
+        &mb<
+          \diag|hor="thn"|<
+            \v; \v<D> \v; \br;
+            \v<FC> \v; \v<FC'>
+            \ar|s="2",e="4",inv|<f> \ar|s="2",e="6"|<f'> \ar|s="4",e="6",inv|<Fh>
+          >
+        >
+        を可換にするものである。
+      >
+    >
+    \p<
+      このコンマ圏を用いて、関手 &m<\exists; F> を次のように定義する。
+      &mb<
+        \array|align="rrcl"|<
+          \c<\exists; F:> \c<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> \c<\longto;> \c<\sp<\bfrm<Set>><\sp<\scr<D>><\circ;>>> \br;
+          \c; \c<P> \c<\longmapsto;> \c<\tort<
+            \array|align="rcl"|<
+              \c<\sp<\scr<D>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+              \c<D> \c<\longmapsto;> \c<\un<\colim;><(C, f) \in; D \darr|bin|; F> PC>
+            >
+          >>
+        >
+      >
+      &m<\scr<C>> が小圏で &m<\scr<D>> が局所小圏であることから &m<D \darr|bin|; F> は小圏であり、&m<\bfrm<Set>> は余完備であるから、式中の余極限は常に存在する。
+      この &m<\exists; F> が &m<\sp<F><*>> の左随伴関手を与える。
+      それを示すには、&m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の対象 &m<P> と &m<\sp<\bfrm<Set>><\sp<\scr<D>><\circ;>>> の対象 &m<Q> に対し、集合としての自然な同型
+      &mb<
+        &mark<\wheart;>
+        \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> (P, \sp<F><*> Q) \cong; \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\scr<D>><\circ;>>> ((\exists; F) P, Q)
+      >
+      を示せば良い。
+    >
+    \p<
+      まず、左辺の集合の元 (すなわち自然変換) &m<`a: P \raarr; \sp<F><*> Q> をとる。
+      &m<\scr<D>> の対象 &m<D> および &m<D \darr|bin|; F> の対象 &m<(C, f)> に対し、
+      &mb<
+        \sbsp<`u><D><(C, f)> \coloneqq; Qf \circ; \sb<`a><C>: PC \to; QD
+      >
+      とおく。
+      ここで、任意の &m<D \darr|bin|; F> の射 &m<h: (C, f) \to; (C', f')> に対して、図式
+      &mb<
+        \diag|hor="thn"|<
+          \v<PC'> \v; \v<PC> \br;
+          \v<QFC'> \v; \v<QFC> \br;
+          \v; \v<QD> \v;
+          \ar|s="1",e="4",inv|<\sb<`a><C'>> \ar|s="3",e="6"|<\sb<`a><C>> \ar|s="1",e="3"|<Ph> \br;
+          \ar|s="4",e="8",inv|<Qf'> \ar|s="6",e="8",inc|<Qf> \ar|s="4",e="6"|<QFh>
+        >
+      >
+      は可換であるが、この図式の外側の可換性は &m<\sbsp<`u><D><(C, f)>> たちが &m<\sb<\colim;><(C, f)> PC> に関する余錐であることを意味している。
+      したがって、余極限の普遍性によって、写像 &m<\sb<`b><D>: \sb<\colim;><(C, f)> PC \to; QD> が得られる。
+      これは &m<D> に関して自然であることが容易に確かめられるので、自然変換 &m<`b: (\exists; F) P \raarr; Q> が得られた。
+    >
+    \p<
+      逆に、自然変換 &m<`b: (\exists; F) P \raarr; Q> が与えられたとする。
+      これは、&m<\scr<D>> の各対象 &m<D> に対して、写像 &m<\sb<`b><D>: \sb<\colim;><(C, f)> PC \to; QD> が定まっているものである。
+      さらに余極限の構造射との合成により、&m<D \darr|bin|; F> の各対象 &m<(C, f)> に対して、射 &m<\sbsp<`u><D><(C, f)>: PC \to; QD> が得られる。
+      ここで、特に &m<D \coloneqq; FC> および &m<f \coloneqq; \sb<\rm<id>><FC>> とおけば、射
+      &mb<
+        \sb<`a><C> \coloneqq; \sbsp<`u><FC><(C, \rm<id>)>: PC \to; QFC
+      >
+      が得られる。
+      これは &m<C> に関して自然であることが容易に確かめられるので、自然変換 &m<`a: P \raarr; \sp<F><*> Q> が得られた。
+      以上の構成は互いに逆になっているので、式 &m<\wheart;> が示された。
+    >
+    \p<
+      なお、右随伴関手 &m<\forall; F> の構成は同様であるため省略する。 
+    >
+  >
+  \thm|type="lem",id="adjprev"|<
+    \p<
+      局所小圏の間の関手 &m<F: \scr<C> \to; \scr<D>, G: \scr<D> \to; \scr<C>> について、随伴 &m<F \dashv; G> が成立していれば &m<\sp<F><*> \dashv; \sp<G><*>> も成立する。
+    >
+  >
+  \prf<
+    \p<
+      随伴 &m<F \dashv; G> の余単位を &m<`e: F \circ; G \raarr; \sb<\op<id>><\scr<D>>> とおくと、&m<P> との合成によって、&m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の射
+      &mb<
+        \sbsp<`h><P><\pr;> \coloneqq; P * \sb<`e><>: P \to; P \circ; F \circ; G
+      >
+      が得られる。
+      &m<P \circ; F \circ; G = \sp<G><*> \sp<F><*> P> であり、上の射は &m<P> に関して自然だから、自然変換 &m<`h': \sb<\op<id>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> \raarr; \sp<G><*> \circ; \sp<F><*>> が誘導される。
+      同様にして、随伴 &m<F \dashv; G> の単位 &m<`h: \sb<\op<id>><\scr<C>> \raarr; G \circ; F> からは、自然変換 &m<`e': \sp<F><*> \circ; \sp<G><*> \raarr; \sb<\op<id>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>>> が誘導される。
+      さらに、&m<`h> と &m<`e> が随伴の三角可換図式を満たすことから、&m<`h'> と &m<`e'> も随伴の三角可換図式を満たすことが従う。
+      以上により、&m<\sp<F><*> \dashv; \sp<G><*>> が成り立つ。
+    >
+  >
+  \thm|type="lem",id="yoneda"|<
+    \p<
+      小圏 &m<\scr<C>> 上の Yoneda 埋め込み関手を &m<Y: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> とし、圏 &m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> 上の Yoneda 埋め込み関手を &m<Z: \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>> \to; \sp<\bfrm<Set>><\sp<(\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>)><\circ;>>>  とする。
+      このとき、随伴 &m<\sp<Y><*> \dashv; Z> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      記号の簡略化のため &m<\bfrm<P> \scr<C> \coloneqq; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> とおく。
+      &m<\bfrm<PP> \scr<C>> の対象 &m<`F> と &m<\bfrm<P> \scr<C>> の対象 &m<P> に対し、集合としての自然な同型
+      &mb<
+        &mark<\wheart;>
+        \sb<\op<Hom>><\bfrm<P> \scr<C>> (\sp<Y><*> `F, P) \cong; \sb<\op<Hom>><\bfrm<PP> \scr<C>> (`F, ZP)
+      >
+      を示せば良い。
+    >
+    \p<
+      左辺の集合の元 &m<`a: \sp<Y><*> `F \raarr; P> をとる。
+      &m<\bfrm<P> \scr<C>> の対象 &m<R> および &m<\scr<C>> の対象 &m<C> に対し、&m<`F R> の元 &m<a> および &m<RC> の元 &m<b> をとる。
+      Yoneda の補題によって &m<RC \cong; \op<Hom> (YC, R)> が成り立つから、この全単射を通して &m<b> と対応する射を &m<\widetilde<b>: YC \to; R> とおく。
+      すると、
+      &mb<
+        \sbsp<h><R, C><b> \coloneqq; \sb<`a><C> \circ; `F \widetilde<b>: `F R \to; PC
+      >
+      が得られるから、この写像による &m<a> の像を &m<b> に対応させる写像として、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sbsp<`g><R, C><a>:> \c<QC> \c<\longto;> \c<PC> \br;
+          \c; \c<b> \c<\longmapsto;> \c<\sbsp<h><R, C><b> a>
+        >
+      >
+      が定義できる。
+      これは &m<C> に関して自然であることが分かるので、自然変換 &m<\sbsp<`g><R><a>: R \raarr; P> が得られる。
+      すると、これを &m<a> に対応させる写像として、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<`j><R>:> \c<`F R> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<P> \scr<C>> (R, P) > \br;
+          \c; \c<a> \c<\longmapsto;> \c<\sbsp<`g><R><a>>
+        >
+      >
+      が定義できる。
+      &m<\op<Hom> (R, P) = (ZP) R> であることと、この写像が &m<R> に関して自然であることから、自然変換 &m<`j: `F \raarr; ZP> が得られた。
+    >
+    \p<
+      逆に、自然変換 &m<`j: `F \raarr; ZP> が与えられたとする。
+      &m<\scr<C>> の対象 &m<C> に対して、Yoneda の補題により &m<(ZP) (YC) = \op<Hom> (YC, P) \cong; PC> であるから、 この自然変換の &m<YC>-成分は、
+      &mb<
+        \sb<`a><C> \coloneqq; \sb<`j><YC>: `F YC \to; PC
+      >
+      という形の写像を与える。
+      これは &m<C> に関して自然であるから、自然変換 &m<`a: \sp<Y><*> `F \raarr; P> が得られた。
+      以上の構成は互いに逆になっているので、式 &m<\wheart;> が示された。
+    >
+  >
+  \p<
+    以上の補題を用いると、\ref|type="thm",ref="main"|; の主張の必要性が証明できる。
+  >
+  \thm|type="prp"|<
+    \p<
+      &m<\bfrm<Set>> 上の共変 Yoneda 埋め込み関手 &m<Y: \bfrm<Set> \to; \sp<\bfrm<Set>><\sp<\bfrm<Set>><\circ;>>> について、それを右端とする長さ 5 の随伴列 &m< U \dashv; V \dashv; W \dashv; X \dashv; Y> が存在する。
+    >
+  >
+  \prf<
+    \p<
+      以下、圏 &m<\scr<C>> 上の Yoneda 埋め込み関手を &m<\sb<Y><\scr<C>>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> で表すことにする。
+      また、対象と射を全くもたない圏を &m<\bfrm<0>> で表し、対象と射をそれぞれ 1 つしかもたない圏を &m<\bfrm<1>> で表す。
+    >
+    \p<
+      まず &m<\sb<Y><\bfrm<0>>> に\ref|type="thm",ref="adj"|; を適用すると &m<\exists; \sb<Y><\bfrm<0>> \dashv; \sp<\sb<Y><\bfrm<0>>><*>> が得られる。
+      さらに\ref|type="thm",ref="yoneda"|; を適用すれば &m<\sp<\sb<Y><\bfrm<0>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<0>><\circ;>>>> が得られる。
+      ところで &m<\sp<\bfrm<Set>><\sp<\bfrm<0>><\circ;>> \cong; \bfrm<1>> であるから、最終的に &m<\exists; \sb<Y><\bfrm<0>> \dashv; \sp<\sb<Y><\bfrm<0>>><*> \dashv; \sb<Y><\bfrm<1>>> が得られたことになる。
+    >
+    \p<
+      この随伴列に\ref|type="thm",ref="adjprev"|; を適用すると &m<(\exists; \sb<Y><\bfrm<0>>) \sp<><*> \dashv; \sp<\sb<Y><\bfrm<0>>><**> \dashv; \sb<Y><\bfrm<1>> \sp<><*>> が得られる。
+      さらにこの両端の関手について、\ref|type="thm",ref="adj"|; によって &m<\exists; \exists; \sb<Y><\bfrm<0>> \dashv; (\exists; \sb<Y><\bfrm<0>>) \sp<><*>> が得られ、\ref|type="thm",ref="yoneda"|; によって &m<\sp<\sb<Y><\bfrm<1>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<1>><\circ;>>>> が得られる。
+      ところで &m<\sp<\bfrm<Set>><\sp<\bfrm<1>><\circ;>> \cong; \bfrm<Set>> であることから、結局、
+      &mb<
+        \exists; \exists; \sb<Y><\bfrm<0>> \dashv; (\exists; \sb<Y><\bfrm<0>>) \sp<><*> \dashv; \sp<\sb<Y><\bfrm<0>>><**> \dashv; \sb<Y><\bfrm<1>> \sp<><*> \dashv; \sb<Y><\bfrm<Set>>
+      >
+      が示され、この随伴列が存在を示したかったものである。
+    >
+  >
+  \p<
+    ということで、&m<\bfrm<Set>> 上の共変 Yoneda 埋め込み関手 &m<Y: \bfrm<Set> \to; \sp<\bfrm<Set>><\sp<\bfrm<Set>><\circ;>>> に関する随伴列 &m< U \dashv; V \dashv; W \dashv; X \dashv; Y> が構成できた。
+    ･･･のだが、構成が抽象的でよく分からないので、具体的な形も書いておこう。
+    導出過程は省略するが、上の証明の構成から、それほど難しいわけではない計算で全て導出できる。
+  >
+  \p<
+    まず、&m<V> と &m<X> はそれぞれ与えられた前層に &m<0> と &m<1> を代入する関手である。
+    &mb<
+      \array|align="cc"|<
+        \c<
+          \array|align="rrcl"|<
+            \c<V:> \c<\sp<\bfrm<Set>><\sp<\bfrm<Set>><\circ;>>> \c<\longto;> \c<\bfrm<Set>> \br;
+            \c; \c<P> \c<\longmapsto;> \c<P 0>
+          >
+          \qquad;
+        >
+        \c<
+          \array|align="rrcl"|<
+            \c<X:> \c<\sp<\bfrm<Set>><\sp<\bfrm<Set>><\circ;>>> \c<\longto;> \c<\bfrm<Set>> \br;
+            \c; \c<P> \c<\longmapsto;> \c<P 1>
+          >
+        >
+      >
+    >
+    真ん中の &m<W> は集合から定値前層を作る関手である。
+    &mb<
+      \array|align="rrcl"|<
+        \c<W:> \c<\bfrm<Set>> \c<\longto;> \c<\sp<\bfrm<Set>><\sp<\bfrm<Set>><\circ;>>> \br;
+        \c; \c<A> \c<\longmapsto;> \c<\tort<
+          \array|align="rcl"|<
+            \c<\sp<\bfrm<Set>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+            \c<> \c<\longmapsto;> \c<A>
+          >
+        >>
+      >
+    >
+    一番左の &m<U> は以下の通りである。
+    &mb<
+      \array|align="rrcl"|<
+        \c<U:> \c<\bfrm<Set>> \c<\longto;> \v<\sp<\bfrm<Set>><\sp<\bfrm<Set>><\circ;>>> \br;
+        \c; \c<A> \c<\longmapsto;> \c<\tort<
+          \array|align="rcl"|<
+            \c<\sp<\bfrm<Set>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+            \c<B> \c<\longmapsto;> \c<\op<Hom> (B, A) \times; A>
+          >
+        >>
+      >
+    >
+  >
+  \p<
+    では次回は、\ref|type="thm",ref="main"|; の主張の十分性の方の証明を行おうと思う。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="wsrt"|<R. J. Wood (1982)「Some remarks on total categories」『Journal of Algebra』75:538–545>
+    \li|id="racc"|<R. Rosebrugh, R. J. Wood (1984)「An adjoint characterization of the category of sets」『Proceedings of the American Mathematical Society』122:409–413>
+  >
+
+>

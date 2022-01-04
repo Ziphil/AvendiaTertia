@@ -1,0 +1,218 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<2-関手の 2-圏>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2018 年 8 月 29 日)>
+  \p<
+    通常の圏の場合と同じように、2つ の 2-圏の間の 2-弛緩関手と 2-弛緩自然変換は圏を成す。
+    実は、この圏は自然に 2-圏に拡張できる。
+    この 2-圏の 2-射に相当する概念が、以下で定義する自然調整である。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> と 2-弛緩関手 &m<F, G: \scr<C> \to; \scr<D>> と 2-弛緩自然変換 &m<`s, `t: F \raarr; G> に対し、&m<`J> が
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<D>> の 2-射 &m<\sb<`J><A>: \sb<`s><A> \raarr; \sb<`t><A>> が定まっている。
+      >
+    >
+    \p<
+      という情報から成り、任意の &m<\scr<C>> の 1-射 &m<f: A \to; B> に対し、2 通りの 2-射の合成
+      &mb<
+        \diag|hor="thk"|<
+          \v<FA> \v<GA> \br;
+          \v<FB> \v<GB>
+          \ar|s="1",e="3",inv|<Ff> \ar|s="2",e="4"|<Gf>
+          \ar|s="1:t80",e="2:t20",bend="50"|<\sb<`s><A>>
+          \ar|s="3",e="4",pos="60"|<\sb<`s><B>> \ar|s="3",e="4",line="0",name="a",inv|;
+          \ar|s="3:b80",e="4:b20",bend="-50",inv|<\sb<`t><B>> \ar|s="3:b80",e="4:b20",bend="-50",line="0",name="b"|;
+          \ar|s="2:w",e="3",line="2",inv|<\sb<`n><AB>> \ar|s="a:c",e="b:c",line="2"|<\sb<`J><B>>
+        > \qquad;
+        \diag|hor="thk"|<
+          \v<FA> \v<GA> \br;
+          \v<FB> \v<GB>
+          \ar|s="1",e="3",inv|<Ff> \ar|s="2",e="4"|<Gf>
+          \ar|s="1:t80",e="2:t20",bend="50"|<\sb<`s><A>> \ar|s="1:t80",e="2:t20",bend="50",line="0",name="b",inv|;
+          \ar|s="1",e="2",pos="40",inv|<\sb<`t><A>> \ar|s="1",e="2",line="0",name="a"|;
+          \ar|s="3:b80",e="4:b20",bend="-50",inv|<\sb<`t><B>>
+          \ar|s="2",e="3:e",line="2"|<\sb<`n><AB>> \ar|s="b:c",e="a:c",line="2"|<\sb<`J><B>>
+        >
+      >
+      が等しいとする。
+      このとき、&m<`J> を\em<自然調整\fl<natural modification>> といい、&m<`J: `s \raaarr; `t> で表す。
+    >
+  >
+  \p<
+    特に、上の状況で &m<`s, `t> がともに厳密であれば、&m<`J> が満たすべき条件は、任意の &m<\scr<C>> の 1-射 &m<f: A \to; B> に対して、
+    &mb<
+      \diag|hor="med"|<
+        \v<FA> \v<FB> \v<GB>
+        \ar|s="1",e="2"|<Ff>
+        \ar|s="2:r10",e="3:l10",bend="40"|<\sb<`s><B>> \ar|s="2:r90",e="3:l90",bend="-40",inv|<\sb<`t><B>>
+        \ar|s="2:r10",e="3:l10",bend="40",line="0",name="h",inv|; \ar|s="2:r90",e="3:l90",bend="-40",line="0",name="k"|;
+        \ar|s="h:c",e="k:c",line="2"|<\sb<`J><B>>
+      > \qquad;
+      \diag|hor="med"|<
+        \v<FA> \v<GA> \v<GB>
+        \ar|s="2",e="3"|<Gf>
+        \ar|s="1:r10",e="2:l10",bend="40"|<\sb<`s><A>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<`t><A>>
+        \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
+        \ar|s="h:c",e="k:c",line="2"|<\sb<`J><A>>
+      >
+    >
+    が等しいことと言い換えることができる。
+  >
+  \p<
+    定義の状況は、2-圏の図式では
+    &mb<
+      \diag|hor="thk"|<
+        \v<\scr<C>> \v<\scr<D>>
+        \ar|s="1",e="2",bend="40"|<F>
+        \ar|s="1",e="2",bend="40",line="0",pos="20",name="a",inv|; \ar|s="1",e="2",bend="40",line="0",pos="80",name="c",inv|;
+        \ar|s="1",e="2",bend="-40",inv|<G>
+        \ar|s="1",e="2",bend="-40",line="0",pos="20",name="b"|; \ar|s="1",e="2",bend="-40",line="0",pos="80",name="d"|;
+        \ar|s="a:c",e="b:c",line="2",inv|<`s> \ar|s="a:c",e="b:c",line="0",name="e"|;
+        \ar|s="c:c",e="d:c",line="2"|<`t> \ar|s="c:c",e="d:c",line="0",name="f",inv|;
+        \ar|s="e:c",e="f:c",line="3"|<`J>
+      >
+    >
+    のように書く。
+  >
+  \p<
+    2-圏の 2-射に 2 種類の合成があったのと同様、自然調整にも 2 種類の合成がある。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> において、2-弛緩関手 &m<F, G: \scr<C> \to; \scr<D>> および 2-弛緩自然変換 &m<`s, `t, `r: F \raarr; G> および自然調整 &m<`J: `s \raaarr; `t, `C: `t \raaarr; `r> をとる。
+      &m<\scr<C>> の対象 &m<A> に対し、
+      &mb<
+        (`C \hat<\circ;> `J) \sb<><A> \coloneqq; \sb<`C><A> \dot<\circ;> \sb<`J><A>: \sb<`s><A> \raarr; \sb<`r><A>
+      >
+      によって定まる自然調整 &m<`C \hat<\circ;> `J: `s \raaarr; `r> を、&m<`J> と &m<`C> の\em<垂直合成\fl<vertical composition>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> において、2-弛緩関手 &m<F, G, H: \scr<C> \to; \scr<D>> および 2-弛緩自然変換 &m<`s, `t: F \raarr; G> と &m<`r, `f: G \raarr; H> および自然調整 &m<`J: `s \raaarr; `t, `C: `r \raaarr; `f> をとる。
+      &m<\scr<C>> の対象 &m<A> に対し、
+      &mb<
+        (`C \hat<*> `J) \sb<><A> \coloneqq; \sb<`C><A> * \sb<`J><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`f><A> \circ; \sb<`t><A>
+      >
+      によって定まる自然調整 &m<`C \hat<*> `J: `r \dot<\circ;> `s \raaarr; `f \dot<\circ;> `t> を、&m<`J> と &m<`C> の\em<水平合成\fl<horizontal composition>> という。
+    >
+  >
+  \p<
+    この 2 種類の合成は、図式で表せば、
+    &mb<
+      \array|align="rcl"|<
+        \c<
+          \tort<\diag|hor="vthk"|<
+            \v<\scr<C>> \v<\scr<D>>
+            \ar|s="1",e="2",bend="40"|<F>
+            \ar|s="1",e="2",bend="40",line="0",pos="20",name="a",inv|; \ar|s="1",e="2",bend="40",line="0",pos="50",name="c",inv|; \ar|s="1",e="2",bend="40",line="0",pos="80",name="x",inv|;
+            \ar|s="1",e="2",bend="-40",inv|<G>
+            \ar|s="1",e="2",bend="-40",line="0",pos="20",name="b"|; \ar|s="1",e="2",bend="-40",line="0",pos="50",name="d"|; \ar|s="1",e="2",bend="-40",line="0",pos="80",name="y"|;
+            \ar|s="a:c",e="b:c",line="2",inv|<`s> \ar|s="a:c",e="b:c",line="0",name="e"|;
+            \ar|s="c:c",e="d:c",line="2",name="f",inv|; \ar|s="c:c",e="d:c",line="0",name="g"|;
+            \ar|s="x:c",e="y:c",line="2"|<`r> \ar|s="x:c",e="y:c",line="0",name="h",inv|;
+            \ar|s="e:c",e="f:c",line="3"|<`J> \ar|s="g:c",e="h:c",line="3"|<`C>
+          >>
+        >
+        \c<\sfun; \longmapsto; \sfun;>
+        \c<
+          \tort<\diag|hor="vthk"|<
+            \v<\scr<C>> \v<\scr<D>>
+            \ar|s="1",e="2",bend="40"|<F>
+            \ar|s="1",e="2",bend="40",line="0",pos="25",name="a",inv|; \ar|s="1",e="2",bend="40",line="0",pos="50",name="c",inv|; \ar|s="1",e="2",bend="40",line="0",pos="75",name="x",inv|;
+            \ar|s="1",e="2",bend="-40",inv|<G>
+            \ar|s="1",e="2",bend="-40",line="0",pos="25",name="b"|; \ar|s="1",e="2",bend="-40",line="0",pos="50",name="d"|; \ar|s="1",e="2",bend="-40",line="0",pos="75",name="y"|;
+            \ar|s="a:c",e="b:c",line="2",inv|<`s> \ar|s="a:c",e="b:c",line="0",name="e"|;
+            \ar|s="x:c",e="y:c",line="2"|<`r> \ar|s="x:c",e="y:c",line="0",name="h",inv|;
+            \ar|s="e:c",e="h:c",line="3"|<`C \hat<\circ;> `J>
+          >>
+        > \br;
+        \c<
+          \tort<\diag|hor="vthk"|<
+            \v<\scr<C>> \v<\scr<D>>
+            \ar|s="1:r10",e="2:l10",bend="50"|<F>
+            \ar|s="1:r10",e="2:l10",bend="50",line="0",pos="30",name="a",inv|; \ar|s="1:r10",e="2:l10",bend="50",line="0",pos="70",name="c",inv|;
+            \ar|s="1",e="2",line="1",pos="32",name="b"|; \ar|s="1",e="2",line="0",pos="68",name="d"|;
+            \ar|s="1",e="2",line="0",pos="32",name="e",inv|; \ar|s="1",e="2",line="0",pos="68",name="g",inv|;
+            \ar|s="1:r90",e="2:l90",bend="-50",inv|<H>
+            \ar|s="1:r90",e="2:l90",bend="-50",line="0",pos="30",name="f"|; \ar|s="1:r90",e="2:l90",bend="-50",line="0",pos="70",name="h"|;
+            \ar|s="a:c",e="b:c",line="2",inv|<`s> \ar|s="a:c",e="b:c",line="0",name="w"|;
+            \ar|s="c:c",e="d:c",line="2"|<`t> \ar|s="c:c",e="d:c",line="0",name="x",inv|;
+            \ar|s="e:c",e="f:c",line="2",inv|<`r> \ar|s="e:c",e="f:c",line="0",name="y"|;
+            \ar|s="g:c",e="h:c",line="2"|<`f> \ar|s="g:c",e="h:c",line="0",name="z",inv|;
+            \ar|s="w:c",e="x:c",line="3"|<`J> \ar|s="y:c",e="z:c",line="3",inv|<`C>
+          >>
+        >
+        \c<\sfun; \longmapsto; \sfun;>
+        \c<
+          \tort<\diag|hor="vthk"|<
+            \v<\scr<C>> \v<\scr<D>>
+            \ar|s="1",e="2",bend="40"|<F>
+            \ar|s="1",e="2",bend="40",line="0",pos="25",name="a",inv|; \ar|s="1",e="2",bend="40",line="0",pos="75",name="c",inv|;
+            \ar|s="1",e="2",bend="-40",inv|<H>
+            \ar|s="1",e="2",bend="-40",line="0",pos="25",name="f"|; \ar|s="1",e="2",bend="-40",line="0",pos="75",name="h"|;
+            \ar|s="a:c",e="f:c",line="2",inv|<`r \dot<\circ;> `s> \ar|s="a:c",e="f:c",line="0",name="w"|;
+            \ar|s="c:c",e="h:c",line="2"|<`f \dot<\circ;> `t> \ar|s="c:c",e="h:c",line="0",name="x",inv|;
+            \ar|s="w:c",e="x:c",line="3"|<`C \hat<*> `J>
+          >>
+        >
+      >
+    >
+    となる。
+    図式を見ると、垂直合成は水平に合成していて水平合成は垂直に合成しているので、名前を逆にした方が良い気もするが、2-自然変換との用語の一貫性の方を重視してこの名前になっている。
+  >
+  \p<
+    水平合成において、片方が恒等射になっている場合も見ておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> において、2-弛緩関手 &m<F, G, H: \scr<C> \to; \scr<D>> および 2-弛緩自然変換 &m<`s: F \raarr; G> と &m<`r, `f: G \raarr; H> および自然調整 &m<`C: `r \raaarr; `f> をとる。
+      &m<\scr<C>> の対象 &m<A> に対し、
+      &mb<
+        (`C \hat<\ast;> `s) \sb<><A> \coloneqq; \sb<`C><A> \ast; \sb<`s><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`f><A> \circ; \sb<`s><A>
+      >
+      によって定まる自然調整 &m<`C \hat<\ast;> `s: `r \dot<\circ;> `s \raaarr; `f \dot<\circ;> `s> を、&m<`s> と &m<`C> の\em<左髭結合\fl<left whiskering>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> において、2-弛緩関手 &m<F, G, H: \scr<C> \to; \scr<D>> および 2-弛緩自然変換 &m<`s, `t: F \raarr; G> と &m<`r: G \raarr; H> および自然調整 &m<`J: `s \raaarr; `t> をとる。
+      &m<\scr<C>> の対象 &m<A> に対し、
+      &mb<
+        (`r \hat<\ast;> `J) \sb<><A> \coloneqq; \sb<`r><A> \ast; \sb<`J><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`r><A> \circ; \sb<`t><A>
+      >
+      によって定まる自然調整 &m<`r \hat<\ast;> `J: `r \dot<\circ;> `s \raaarr; `r \dot<\circ;> `t> を、&m<`J> と &m<`r> の\em<右髭結合\fl<right whiskering>> という。
+    >
+  >
+  \p<
+    2-圏 &m<\scr<C>, \scr<D>> を固定すれば、これらの合成によって、&m<\scr<C>> と &m<\scr<D>> の間の 2-弛緩関手と 2-弛緩自然変換と自然調整は 2-圏を成す。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> をとる。
+      &m<\scr<C>> と &m<\scr<D>> の間の 2-弛緩関手と 2-弛緩自然変換と自然調整が成す 2-圏を &m<\sb<\bfrm<Fun>><\rm<lax>> (\scr<C>, \scr<D>)> で表す。
+      さらに、2-擬関手と 2-擬自然変換のみを考えたものを &m<\sb<\bfrm<Fun>><\rm<ps>> (\scr<C>, \scr<D>)> で表し、2-関手と 2-自然変換のみを考えたものを &m<\bfrm<Fun> (\scr<C>, \scr<D>)> で表す。
+    >
+  >
+  \p<
+    モノイダル圏 &m<\scr<V>> が完備対称モノイダル閉であるとき、&m<\scr<V>>-豊穣関手と &m<\scr<V>>-豊穣自然変換は &m<\scr<V>>-豊穣圏を成すのであった。
+    この &m<\scr<V>>-豊穣圏の射対象は、\a|href="15.html#nat"|<8 月 2 日>の議論を見ると分かるように、特定の図式の等化子として定義された。
+    2-圏は &m<\bfrm<Cat>>-豊穣圏であり、&m<\bfrm<Cat>> は完備カルテシアン閉だから、この構成を追うことでも 2-関手が成す 2-圏が得られるが、これは上記の定義に一致する。
+    このことからも、自然調整の定義が妥当であることが納得できるだろう。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 1』Cambridge University Press>
+    \li|id="hctt"|<K. Honigs『Coherence Theorems in Two-Dimensional Category Theory』`<http:`/`/www.math.utah.edu`/~honigs`/coherence_essay.pdf`>>
+  >
+
+>

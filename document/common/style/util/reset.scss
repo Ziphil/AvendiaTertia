@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+a,
+input[type="button"],
+button {
+  cursor: pointer;
+}

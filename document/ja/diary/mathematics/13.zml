@@ -1,0 +1,260 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<豊穣圏の定義>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2018 年 7 月 31 日)>
+  \p<
+    豊穣圏について軽く勉強したので、概念の整理と細かい条件の確認という 2 つの目的のもと、少しずつまとめていこうと思う。
+    なお、私が豊穣圏を勉強したのは、豊穣圏について知りたかったというよりは 2-圏について知るための下準備という側面が強いので、まとめると言っても豊穣圏の深いところまで立ち入ることはしないと思う。
+  >
+  \p<
+    さて、普通の圏には、対象と呼ばれるものの集まりと 2 つの対象の間の射の集合が定まっているのであった。
+    ここで、射の集合 (すなわち &m<\bfrm<Set>> の対象) を何らかの圏の対象に置き換えて一般化したものが、これから考える豊穣圏である。
+    ただし、射を表す対象が属する圏は本当に何でも良いわけではなく、ある程度の構造が定まっている必要である。
+    そこで、まずは射の対象が属する圏がもつべき構造について触れていく。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<V>> に、
+    >
+    \ul<
+      \li<
+        関手 &m<[\otimes;]: \scr<V> \times; \scr<V> \to; \scr<V>> が定まっている。
+      >
+      \li<
+        &m<\scr<V>> の対象 &m<1> が定まっている。
+      >
+      \li<
+        &m<\scr<V>> の各対象 &m<X, Y, Z> に対して同型射 &m<\sb<`a><XYZ>: (X \otimes; Y) \otimes; Z \to; X \otimes; (Y \otimes; Z)> が定まっており、&m<X, Y, Z> のそれぞれに関して自然である。
+      >
+      \li<
+        &m<\scr<V>> の各対象 &m<X> に対して同型射 &m<\sb<`l><X>: 1 \otimes; X \to; X> が定まっており、&m<X> に関して自然である。
+      >
+      \li<
+        &m<\scr<V>> の各対象 &m<X> に対して同型射 &m<\sb<`r><X>: X \otimes; 1 \to; X> が定まっており、&m<X> に関して自然である。
+      >
+    >
+    \p<
+      という追加の情報が定まっており、任意の &m<\scr<V>> の対象 &m<X, Y, Z, W> に対して、
+      &mb<
+        \array|align="c"|<
+          \c<
+            \diag|hor="thk",ver="vthn"|<
+              \v; \v<(X \otimes; (Y \otimes; Z)) \otimes; W> \v<X \otimes; ((Y \otimes; Z) \otimes; W)> \br;
+              \v<((X \otimes; Y) \otimes; Z) \otimes; W> \v; \v; \br;
+              \v; \v<(X \otimes; Y) \otimes; (Z \otimes; W)> \v<X \otimes; (Y \otimes; (Z \otimes; W))>
+              \ar|s="2",e="3"|<\sb<`a><X, Y \otimes; Z, W>> \ar|s="3",e="9"|<\rm<id> \otimes; \sb<`a><YZW>>
+              \ar|s="4",e="8",inv|<\sb<`a><X \otimes; Y, Z, W>> \ar|s="4",e="2"|<\sb<`a><XYZ> \otimes; \rm<id>>
+              \ar|s="8",e="9",inv|<\sb<`a><X, Y, Z \otimes; W>>
+            >
+          > \br;
+          \c<
+            \diag<
+              \v<(X \otimes; 1) \otimes; Y> \v; \br;
+              \v<X \otimes; (1 \otimes; Y)> \v<X \otimes; Y>
+              \ar|s="1",e="3",inv|<\sb<`a><X1Y>> \ar|s="1",e="4"|<\sb<`r><X> \otimes; \rm<id>> \ar|s="3",e="4",inv|<\rm<id> \otimes; \sb<`l><Y>>
+            >
+          >
+        >
+      >
+      がともに可換であるとする。
+      このとき、&m<\scr<V>> を\em<モノイダル圏\fl<monoidal category>> という。
+      また、&m<\otimes;> を &m<\scr<V>> の\em<テンソル積\fl<tensor product>> といい、&m<1> を &m<\scr<V>> の\em<単位対象\fl<unit object>> という。
+    >
+  >
+  \p<
+    ここではテンソル積の単位対象の記号として 1 を用いたが、1 は終対象を表すこともあるので、それと明確に区別したい場合、私は &m<\ring<1>> と書くことがある。
+    ただし、これは一般的な記号ではない。
+  >
+  \p<
+    豊穣圏を定義するだけであれば、射を表す対象が属する圏にはモノイダル圏の構造が定まっていれば十分ではあるが、豊穣圏についてのより深い考察をするにはもう少し良い性質をもっている必要が出てくる。
+    そのため、豊穣圏の定義の前に、その辺りの良い性質についてもまとめて触れておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> に、さらに
+    >
+    \ul<
+      \li<
+        &m<\scr<V>> の各対象 &m<X, Y> に対して同型射 &m<\sb<`s><XY>: X \otimes; Y \to; Y \otimes; X> が定まっており、&m<X, Y> のそれぞれに関して自然である。
+      >
+    >
+    \p<
+      という追加の情報が定まっており、任意の &m<\scr<V>> の対象 &m<X, Y, Z> に対して、
+      &mb<
+        \array|align="c"|<
+          \c<
+            \diag<
+              \v<(X \otimes; Y) \otimes; Z> \v<X \otimes; (Y \otimes; Z)> \v<(Y \otimes; Z) \otimes; X> \br;
+              \v<(Y \otimes; X) \otimes; Z> \v<Y \otimes; (X \otimes; Z)> \v<Y \otimes; (Z \otimes; X)>
+              \ar|s="1",e="2"|<\sb<`a><XYZ>> \ar|s="1",e="4",inv|<\sb<`s><XY> \otimes; \rm<id>> \ar|s="2",e="3"|<\sb<`s><X, Y \otimes; Z>> \ar|s="3",e="6"|<\sb<`a><YZX>>
+              \ar|s="4",e="5",inv|<\sb<`a><YXZ>> \ar|s="5",e="6",inv|<\rm<id> \otimes; \sb<`s><XZ>>
+            >
+          > \br;
+          \c<
+            \diag<
+              \v<X \otimes; Y> \v; \br;
+              \v<Y \otimes; X> \v<X \otimes; Y>
+              \ar|s="1",e="3",inv|<\sb<`s><XY>> \ar|s="1",e="4"|<\rm<id>> \ar|s="3",e="4",inv|<\sb<`s><YX>>
+            >
+          >
+        >
+      >
+      がともに可換であるとする。
+      このとき、&m<\scr<V>> は\em<対称\fl<symmetric>> であるという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> を考える。
+      任意の &m<\scr<V>> の対象 &m<Y> に対し、関手 &m<\text<-> \otimes; Y: \scr<V> \to; \scr<V>> が右随伴をもつとき、&m<\scr<V>> は\em<閉\fl<closed>> であるという。
+      この右随伴関手は &m<Y \rmulti|bin|; \text<->: \scr<V> \to; \scr<V>> で表す。
+    >
+  >
+  \p<
+    ここで用いた &m<\rmulti;> という記号は、モノイダル圏のテンソル積の右随伴の記号としてはあまり一般的なものではない。
+    しかし、線型論理の圏論的モデルを考えるときに、&m<\rmulti;> で表される論理結合子がテンソル積の右随伴で解釈されるので、ここではその記号を流用することにした。
+  >
+  \p<
+    定義より、&m<\scr<V>> がモノイダル閉圏ならば、随伴の定義によって、任意の対象 &m<X, Y, Z> に対して、
+    &mb<
+      \sb<\op<Hom>><\scr<V>> (X \otimes; Y, Z) \cong; \sb<\op<Hom>><\scr<V>> (X, Y \rmulti|bin|; Z)
+    >
+    という全単射が存在し、&m<X, Z> の両方に関して自然である。
+    さらに、この対応が &m<Y> に関しても自然になるように、関手 &m<[\rmulti;]: \sp<\scr<V>><\circ;> \times; \scr<V> \to; \scr<V>> に作ることができる。
+    この関手の性質について述べておくべきことはいくつかあるが、適宜 Borceux\ref|type="bib",ref="hca"|; などを参照することにして、ここでは省略する。
+  >
+  \p<
+    また、&m<\scr<V>> が対称モノイダル閉圏であれば、2 つの関手 &m<\text<-> \otimes; Y> と &m<Y \otimes; \text<->> は同型なので、どちらの右随伴も &m<Y \rmulti|bin|; \text<->> である。
+    したがって、任意の対象 &m<X, Y, Z> に対して、
+    &mb<
+      \sb<\op<Hom>><\scr<V>> (Y \otimes; X, Z) \cong; \sb<\op<Hom>><\scr<V>> (X, Y \rmulti|bin|; Z)
+    >
+    という全単射も存在する。
+    そこで、以降で対称モノイダル閉圏について考えるときは、&m<f: X \to; Y \rmulti|bin|; Z> という形の射と随伴で対応する射と言った場合、&m<g: X \otimes; Y \to; Z> という形のものと &m<g': Y \otimes; X \to; Z> という形のもののどちらか一方を文脈に応じて指すことにする。
+  >
+  \p<
+    さて、任意の有限直積をもつ圏は、直積をテンソル積だと見なすと対称モノイダル圏の公理を全て満たす。
+    このように見なしたものに関しては、特別な名前が付いている。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<V>> は有限直積をもつとする。
+      このとき、直積と終対象によって &m<\scr<V>> を対称モノイダル圏と見なしたものを、\em<カルテシアン圏\fl<cartesian category>> と呼ぶ。
+    >
+  >
+  \p<
+    例えば、集合の圏 &m<\bfrm<Set>> や小圏の圏 &m<\bfrm<Cat>> は、カルテシアン圏であってさらに閉でもある。
+    位相空間の圏 &m<\bfrm<Top>> は、カルテシアン圏ではあるが閉にはなっていない。
+    何らかの体 &m<K> 上のベクトル空間の圏 &m<\sb<\bfrm<Vect>><K>> は、通常のテンソル積をテンソル積とし、&m<K> 自身を &m<K>-ベクトル空間と見なしたものを単位対象とすると、対称モノイダル圏になる。
+  >
+  \p<
+    さて、以上の準備のもとで豊穣圏を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> に対し、&m<\scr<C>> が
+    >
+    \ul<
+      \li<
+        集まり &m<\op<Ob> (\scr<C>)> が定まっている。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C>)> の元 &m<A, B> に対し、&m<\scr<V>> の対象 &m<`[A, B`] \sb<><\scr<C>>> が定まっている。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C>)> の元 &m<A, B, C> に対し、&m<\scr<V>> の射 &m<\sb<c><ABC>: `[A, B`] \sb<><\scr<C>> \otimes; `[B, C`] \sb<><\scr<C>> \to; `[A, C`] \sb<><\scr<C>>> が定まっている。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C>)> の元 &m<A> に対し、&m<\scr<V>> の射 &m<\sb<j><A>: 1 \to; `[A, A`] \sb<><\scr<C>>> が定まっている。
+      >
+    >
+    \p<
+      という情報から成り、任意の &m<\op<Ob> (\scr<C>)> の元 &m<A, B, C, D> に対して、
+      &mb<
+        \array|align="c"|<
+          \c<
+            \diag|hor="thk",ver="vthn"|<
+              \v<(`[A, B`] \otimes; `[B, C`]) \otimes; `[C, D`]> \v<`[A, C`] \otimes; `[C, D`]> \v; \br;
+              \v; \v; \v<`[A, D`]> \br;
+              \v<`[A, B`] \otimes; (`[B, C`] \otimes; `[C, D`])> \v<`[A, B`] \otimes; `[B, D`]> \v;
+              \ar|s="1",e="7",inv|<\sb<`a><`[A, B`], `[B, C`], `[C, D`]>> \ar|s="1",e="2"|<\sb<c><ABC> \otimes; \rm<id>> \ar|s="2",e="6"|<\sb<c><ACD>>
+              \ar|s="7",e="8",inv|<\rm<id> \otimes; \sb<c><BCD>> \ar|s="8",e="6",inv|<\sb<c><ABD>>
+            >
+          > \br;
+          \c<
+            \diag<
+              \v<1 \otimes; `[A, B`]> \v; \br;
+              \v<`[A, A`] \otimes; `[A, B`]> \v<`[A, B`]>
+              \ar|s="1",e="3",inv|<\sb<j><A> \otimes; \rm<id>> \ar|s="1",e="4"|<\sb<`l><`[A, B`]>>
+              \ar|s="3",e="4",inv|<\sb<c><AAB>>
+            > \qquad;
+            \diag<
+              \v<`[A, B`] \otimes; 1> \v; \br;
+              \v<`[A, B`] \otimes; `[B, B`]> \v<`[A, B`]>
+              \ar|s="1",e="3",inv|<\rm<id> \otimes; \sb<j><B>> \ar|s="1",e="4"|<\sb<`r><`[A, B`]>>
+              \ar|s="3",e="4",inv|<\sb<c><ABB>>
+            >
+          >
+        >
+      >
+      が全て可換であるとする。
+      このとき、&m<\scr<C>> を &m<\scr<V>>-\em<豊穣圏\fl<enriched category>> という。
+      また、&m<\op<Ob> (\scr<C>)> の元を &m<\scr<C>> の\em<対象\fl<object>> といい、対象 &m<A, B> に対する &m<`[A, B`]> を &m<\scr<C>> の\em<射対象\fl<homomorphism object>> という。
+    >
+  >
+  \p<
+    すでに述べたように、&m<\bfrm<Set>> は直積と終対象によってモノイダル圏と見なせる。
+    そこで、上の定義において &m<\scr<V> = \bfrm<Set>> とし、各 &m<A, B, C> に対する &m<\sb<c><ABC>> を射の合成だと思い、各 &m<A> に対する &m<\sb<j><A>> を恒等射を与える写像だと思うと、定義の中の 3 つの図式の可換性は、射の合成が結合的であることと恒等射との合成は変化しないことを述べているに過ぎない。
+    したがって、&m<\bfrm<Set>>-豊穣圏は通常の圏そのものである。
+  >
+  \p<
+    さて、&m<\bfrm<Set>> そのものが圏 (すなわち &m<\bfrm<Set>>-豊穣圏) であるように、&m<\scr<V>> が対称モノイダル閉圏であれば、&m<\scr<V>> 自身も &m<\scr<V>>-豊穣圏と見なせる。
+  >
+  \thm|type="prp"|<
+    \p<
+      対称モノイダル閉圏 &m<\scr<V>> をとる。
+      &m<\scr<V>> の対象 &m<X, Y> に対し、
+      &mb<
+        `[X, Y`] \sb<><\scr<V>> \coloneqq; X \rmulti|bin|; Y
+      >
+      とおく。
+      さらに、&m<\scr<V>> の対象 &m<X, Y, Z> に対して &m<\sb<c><XYZ>: (X \rmulti|bin|; Y) \otimes; (Y \rmulti|bin|; Z) \to; (X \rmulti|bin|; Z)> を、
+      &mb<
+        \diag<
+          \v<X \otimes; ((X \rmulti|bin|; Y) \otimes; (Y \rmulti|bin|; Z))> \v<(X \otimes; (X \rmulti|bin|; Y)) \otimes; (Y \rmulti|bin|; Z)>
+          \v<Y \otimes; (Y \rmulti|bin|; Z)> \v<Z>
+          \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sb<`e><XY> \otimes; \rm<id>> \ar|s="3",e="4"|<\sb<`e><YZ>>
+        >
+      >
+      とテンソル積の随伴で対応する射であるとする。
+      ここで、&m<\sb<`e><XY>, \sb<`e><YZ>> はテンソル積の随伴の余単位とする。
+      さらに、&m<\scr<V>> の対象 &m<X> に対して &m<\sb<j><X>: 1 \to; X \rmulti|bin|; X> を、
+      &mb<
+        \diag<
+          \v<1 \otimes; X> \v<X>
+          \ar|s="1",e="2"|<\sb<`l><X>>
+        >
+      >
+      とテンソル積の随伴で対応する射と定める。
+      以上のデータにより、&m<\scr<V>> は &m<\scr<V>>-豊穣圏になる。
+    >
+  >
+  \prf<
+    \p<
+      豊穣圏の定義にある図式の可換性を示せば良いが、それは単純な計算でできるのでここでは省略する。
+    >
+  >
+  \p<
+    以降、何も断りがなくても、対称モノイダル閉圏 &m<\scr<V>> をこの命題が定める構造によって &m<\scr<V>>-豊穣圏と見なすことにする。 
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 2』Cambridge University Press>
+  >
+
+>

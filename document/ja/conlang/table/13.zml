@@ -1,0 +1,58 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<単位>
+  \ver<5 代 4 期>
+  \use-math;
+
+  \h1<単位>
+  \p<
+    シャレイア語では現実世界の国際単位系を用いる。
+    質量は 1 kg を基準と考えるが、シャレイア語では接頭辞をつけない形で表現される。
+  >
+  \table<
+    \tr<\th<単語>\th<略称>\th<定義>\th<物理量>>
+    \tr<\td<{lôt}>\td<[l]>\td<1 m>\td<長さ>>
+    \tr<\td<{dok}>\td<[d]>\td<1 kg>\td<質量>>
+    \tr<\td<{tît}>\td<[t]>\td<1 s>\td<時間>>
+    \tr<\td<*>\td<*>\td<1 A>\td<電流>>
+    \tr<\td<*>\td<*>\td<1 K>\td<温度>>
+    \tr<\td<*>\td<*>\td<1 cd>\td<光度>>
+    \tr<\td<*>\td<*>\td<1 mol>\td<物質量>>
+    \tr<\td<*>\td<*>\td<1 &m<\rm<m> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2> = \rm<N>>>\td<力>>
+    \tr<\td<*>\td<*>\td<1 &m<\sp<\rm<m>><-1> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2> = \rm<Pa>>>\td<圧力>>
+    \tr<\td<*>\td<*>\td<1 &m<\sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2> = \rm<J>>>\td<エネルギー, 仕事>>
+    \tr<\td<*>\td<*>\td<1 &m<\sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3> = \rm<W>>>\td<仕事率>>
+    \tr<\td<*>\td<*>\td<1 &m<\rm<s> \cdot; \rm<A> = \rm<C>>>\td<電荷>>
+    \tr<\td<*>\td<*>\td<1 &m<\sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3> \cdot; \sp<\rm<A>><-1> = \rm<V>>>\td<電位差>>
+    \tr<\td<*>\td<*>\td<1 &m<\sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3> \cdot; \sp<\rm<A>><-2> = \rm<Ω>>>\td<電気抵抗>>
+    \tr<\td<*>\td<*>\td<1 &m<\sp<\rm<s>><-1> = \rm<Hz>>>\td<周波数>>
+    \tr<\td<*>\td<*>\td<1 rad>\td<平面角>>
+    \tr<\td<*>\td<*>\td<1 sr>\td<立体角>>
+    \tr<\td<*>\td<*>\td<1 °C>\td<セルシウス温度>>
+  >
+  \h1<接頭辞>
+  \p<
+    シャレイア語は数を 4 桁で区切って読むので、それに合わせて 4 の倍数乗の接頭辞が用意されている。
+  >
+  \table<
+    \tr<\th<接辞>\th<略称>\th<量>\th<>>
+    \tr<\td<[ri]>\td<[r]>\td<&m<\sp<10><24>>>\td<1 Y>>
+    \tr<\td<[xa]>\td<[x]>\td<&m<\sp<10><20>>>\td<100 Z>>
+    \tr<\td<[pi]>\td<[p]>\td<&m<\sp<10><16>>>\td<10 P>>
+    \tr<\td<[yo]>\td<[y]>\td<&m<\sp<10><12>>>\td<1 T>>
+    \tr<\td<[qe]>\td<[q]>\td<&m<\sp<10><8>>>\td<100 M>>
+    \tr<\td<[ti]>\td<[t]>\td<&m<\sp<10><4>>>\td<10 k>>
+    \tr<\td<[no]>\td<[n]>\td<&m<\sp<10><2>>>\td<1 h>>
+    \tr<\td<[mu]>\td<[m]>\td<&m<\sp<10><-2>>>\td<1 c>>
+    \tr<\td<[da]>\td<[d]>\td<&m<\sp<10><-4>>>\td<100 µ>>
+    \tr<\td<[ci]>\td<[c]>\td<&m<\sp<10><-8>>>\td<10 n>>
+    \tr<\td<[hu]>\td<[h]>\td<&m<\sp<10><-12>>>\td<1 p>>
+    \tr<\td<[ba]>\td<[b]>\td<&m<\sp<10><-16>>>\td<100 a>>
+    \tr<\td<[je]>\td<[j]>\td<&m<\sp<10><-20>>>\td<10 z>>
+    \tr<\td<[la]>\td<[l]>\td<&m<\sp<10><-24>>>\td<1 y>>
+  >
+
+>

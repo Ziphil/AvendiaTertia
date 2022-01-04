@@ -1,0 +1,1845 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Version S>
+  \ver<Version S>
+
+  \h1<Contents>
+  \section-table;
+  \h1<Introduction>
+  \h2|num="1"|<Effective date>
+  \p<
+    The grammar of version S of the Shaleian language has been used since 26`/09`/04 of the Hairia calendar (07`/Nov`/2015 of the Gregorian calendar).
+    Note that sentences written before that date are based on an older grammar and cannot be interpreted using the current one.
+  >
+  \h2|num="2"|<Note on notation>
+  \p<
+    In this document, all sentences in Shaleian are written in a Latin transliteration.
+    In order to avoid confusion, a roman typeface is used for the normal text, while a sans-serif typeface is used for words or sentences in Shaleian.
+  >
+  \h2|num="3"|<Note on reading>
+  \p<
+    The sections in this document are arranged in such an order that it is easy for advenced learners to check the grammar, not for beginners to learn the language for the first time.
+    Beginners are recommended to read the \a|href="../course/27.html"|<introduction> first.
+  >
+  \p<
+    Since this document is meant to explain the grammar of Shaleian language, it does not deal with detailed usages such as collocations except for ones closely related to the structure of sentences.
+    All explanations are based on the written language.
+    Expressions peculiar to the spoken language will be taken up separately in \a|href="#67"|<Section 67> and \a|href="#68"|<Section 68>.
+  >
+  \h2|num="4"|<Changes from version 5.4>
+  \p<
+    Changes from version 5.4 are listed below:
+  >
+  \ul<
+    \li<long vowels and diphthongs are shortened (\a|href="#11"|<Section 11>)>
+    \li<the consonant inserted between adjacent vowels is changed (\a|href="#12"|<Section 12>)>
+    \li<the position of stress is changed (\a|href="#14"|<Section 14>)>
+    \li<the pronunciations of stressed vowels are changed (\a|href="#14"|<Section 14>)>
+    \li<the negative becomes a prefix (\a|href="#24"|<Section 24>)>
+    \li<short forms for cardinal and ordinal numerals (\a|href="#49"|<Section 49>)>
+    \li<expression of time (\a|href="#51"|<Section 51>)>
+    \li<abbreviations for dates and times (\a|href="#56"|<Section 56>)>
+  >
+  \h1<Letters>
+  \h2|num="5"|<Alphabets>
+  \p<
+    The Shaleian language is written with the 26 letters in the “Shaleian alphabet”.
+    These are all phonograms`; namely, each letter corresponds to exactly one phoneme.
+    See \a|href="#10"|<Section 10> for the details of this correspondence.
+  >
+  \p<
+    Since the Shaleian alphabet is unique to Shaleian language, it is, of course, not covered by Unicode.
+    Therefore, it is difficult to input or display the script on computers. 
+    For this reason, the Latin alphabet, with each letter corresponding to a Shaleian letter, is often used instead. 
+    This notation is called the “Latin transliteration” (or the “romanisation”).
+    The transliteration is also used to make sentences easier to read for beginners not familiar with the Shaleian alphabet.
+  >
+  \p<
+    The small letters are listed as follows.
+    A figure at the center of each cell illustrates the shape of a Shaleian letter, with its Latin transliteration at the top-left corner.
+  >
+  \img|src="../../file/character/20.png"|;
+  \p<
+    Furthermore, some letters can receive diacritical marks.
+    See \a|href="#8"|<Section 8> for details.
+  >
+  \p<
+    In 15`/10`/06 of the Hairia calendar (29`/Nov`/2017 of the Gregorian calendar), the letterforms of the Shaleian alphabet were revised`; the forms listed on this page are the post-revision forms. From this revision on, the new forms are used as the primary forms, but the old forms may be used as well.
+    Consult \a|href="5.html"|<the grammar before the revision> for the old alphabet.
+  >
+  \h2|num="6"|<Numerals>
+  \p<
+    Shaleian adopts the decimal numeral system for denoting numbers.
+    Therefore there are ten digits, which are listed below.
+    The pronunciation and usage of the numerals will be explained in \a|href="#48"|<Section 48> and \a|href="#49"|<Section 49>.
+  >
+  \img|src="../../file/character/22.png"|;
+  \p<
+    Numerals are written sometimes in digits such as {dev il'}[6] or {ben ic'}[12], and sometimes in their pronunciation such as {dev il'aric} or {ben ic'atisetqec}.
+  >
+  \h2|num="7"|<Punctuation marks>
+  \p<
+    Shaleian language mainly uses the punctuation marks listed below: 
+  >
+  \img|src="../../file/character/23.png"|;
+  \p<
+    Each mark is used as follows:
+  >
+  \table<
+    \tr<\th<trans>\th<name>\th<role>>
+    \tr<\td<[.]>\td<{dek}>\td<indicates the end of a sentence>>
+    \tr<\td<[,]>\td<{tadek}>\td<indicates a pause in a sentence>>
+    \tr<\td<[!]>\td<{vadek}>\td<indicates the end of a sentence with emphasis>>
+    \tr<\td<[?]>\td<{padek}>\td<indicates the end of a interrogative sentence>>
+    \tr<\td<[']>\td<{nôk}>\td<indicates an abbreviation>>
+    \tr<\td<[ʻ]>\td<{dikak}>\td<marks the following word as a proper noun>>
+    \tr<\td<[-]>\td<{fêk}>\td<makes a compound word>>
+    \tr<\td<[:]>\td<{kaltak}>\td<partitions data>>
+    \tr<\td<[…]>\td<{fôhak}>\td<indicates a silence or a lingering>>
+    \tr<\td<[« »]>\td<{rakut}>\td<specifies that the expression inside is a dialogue>>
+    \tr<\td<[“ ”]>\td<{vakut}>\td<specifies the expression inside is a quotation or emphasised>>
+  >
+  \p<
+    Points contained in deks, tadeks, vadeks and padeks are sometimes written by hand with a sweeping stroke like commas.
+  >
+  \p<
+    Tadeks indicate a pause in a sentence, but their use is restricted to certain positions and therefore are not completely free.
+    They are, for example, put after a nonrestrictive use of a relative clause, mentioned in \a|href="#43"|<Section 43>, or an adverbial use of a conjunction, mentioned in \a|href="#43"|<Section 44>.
+    Nôks are used in place of the omitted letters when an abbreviation occurs.
+    Contractions will be explained in more detail in \a|href="#55"|<Section 55>.
+    Dikaks are put immediately before a word and indicate that it is a proper noun such as a person's name.
+    The uses of fêks and kaltaks will be dealt with in \a|href="#57"|<Section 57> and \a|href="#56"|<Section 56>, respectively.
+  >
+  \p<
+    Both rakuts and vakuts correspond to quotation marks.
+    The former are used only for conversations, while the latter are for quotations and emphases.
+  >
+  \h2|num="8"|<Diacritical marks>
+  \p<
+    The five letters [a], [e], [i], [o] and [u] are sometimes used with one of the three diacritical marks as displayed in the following table.
+    Letters with and without diacritics are treated as distinct letters.
+  >
+  \img|src="../../file/character/21.png"|;
+  \p<
+    Diacritics are not omitted in a normal text, but sometimes omitted when some decoration is applied to letters with them, such as in a poster.
+  >
+  \h2|num="9"|<Alternative transliteration>
+  \p<
+    As mentioned in \a|href="#8"|<Section 8>, the transliteration of Shaleian alphabets uses Latin alphabets with diacritical marks, such as [â] or [á].
+    In the case where technical difficulties prevent the use of diacritics, the alternative notation, listed below, may be used.
+  >
+  \table<
+    \tr<\th<formal>\th<alternative>>
+    \tr<\td<[â] (U+00E2)>\td<[aa]>>
+    \tr<\td<[ê] (U+00EA)>\td<[ee]>>
+    \tr<\td<[î] (U+00EE)>\td<[ii]>>
+    \tr<\td<[ô] (U+00F4)>\td<[oo]>>
+    \tr<\td<[û] (U+00FB)>\td<[uu]>>
+    \tr<\td<[á] (U+00E1)>\td<[ai]>>
+    \tr<\td<[é] (U+00E9)>\td<[ei]>>
+    \tr<\td<[í] (U+00ED)>\td<[ie]>>
+    \tr<\td<[à] (U+00E0)>\td<[au]>>
+    \tr<\td<[è] (U+00F8)>\td<[eu]>>
+    \tr<\td<[ì] (U+00EC)>\td<[iu]>>
+    \tr<\td<[ò] (U+00F2)>\td<[oa]>>
+    \tr<\td<[ù] (U+00F9)>\td<[ua]>>
+    \tr<\td<[ʻ] (U+02BB)>\td<[']>>
+  >
+  \p<
+    The alternative notation should be avoided as much as possible. It is highly recommended to use the formal transliteration unless technical issues prevent its use.
+  >
+  \h1<Pronunciation>
+  \h2|num="10"|<Letters and their pronunciation>
+  \p<
+    Shaleian uses the following consonants.
+    A letter at the left of a phonetic symbol indicates the (transliteration of) the corresponding Shaleian letter.
+  >
+  \img|src="../../file/other/36.png"|;
+  \p<
+    The letter [l] has complementary allophones`; it is pronounced `/l`/ when a vowel follows it, and `/ɾ`/ otherwise.
+    The phoneme `/w`/ appears only between a succession of certain letters (see \a|href="#12"|<Section 12> for details).
+    The usage of `/ɴ`/ will be explained later.
+  >
+  \p<
+    The vowels are listed below.
+    The pronunciation of letters with diacritics will be explained in \a|href="#11"|<Section 11>.
+  >
+  \img|src="../../file/other/60.png"|;
+  \p<
+    The four vowels `/ɪ`/, `/ʊ`/, `/ɐ`/ and `/ə`/ appear as the second vowel of a diphthong, mentioned in \a|href="#11"|<Section 11>, and do not appear alone.
+  >
+  \p<
+    Basically, all letters are pronounced according to the correspondence of letters and phonemes displayed in the preceding tables, except when some phonological changes (described in \a|href="#12"|<Section 12>) occur.
+    There are, however, a small number of exceptions.
+    For example, {kin} is pronounced `/kiɴ`/`; the phoneme `/ɴ`/ appears only in {kin} and its abbreviation {'n}.
+    The letter [h] also has a phonological exception.
+    When it is placed at the end of a syllable, it may be pronounced `/h`/, but in most cases, it is not pronounced at all.
+  >
+  \h2|num="11"|<Long vowels and diphthongs>
+  \p<
+    The letters [â], [ê], [î], [ô] and [û] originally represent long vowels and are pronounced slightly longer than those without diacritics.
+    Recently, however, they have been shortened and normally pronounced just like letters without diacritics.
+  >
+  \p<
+    The other letters, [á], [é], [í], [à], [è], [ì], [ò] and [ù], are originally pronounced as in the table below.
+    Each of these diphthongs forms one syllable.
+  >
+  \table<
+    \tr<\th<letter>\th<pronunciation>>
+    \tr<\td<[á]>\td<`/aɪ`/>>
+    \tr<\td<[é]>\td<`/eɪ`/>>
+    \tr<\td<[í]>\td<`/iə`/>>
+    \tr<\td<[à]>\td<`/aʊ`/>>
+    \tr<\td<[è]>\td<`/eʊ`/>>
+    \tr<\td<[ì]>\td<`/iʊ`/>>
+    \tr<\td<[ò]>\td<`/ɔɐ`/>>
+    \tr<\td<[ù]>\td<`/uɐ`/>>
+  >
+  \p<
+    As is the case with the long vowels, these diphthongs have been also pronounced in the same way as the corresponding short vowels in many cases.
+    Even in such a case, however, the three connectives with diacritics ({ò}, {á}, {é} and {à}) and their alternative forms ({lá}, {lé} and {dà}) are pronounced according to the table above in order to distinguish them from other words.
+  >
+  \h2|num="12"|<Phonological changes of consecutive vowels>
+  \p<
+    When one of the following eight patterns of consecutive vowels appears within a single word, it is pronounced with a certain semivowel inserted between its first and second vowels.
+    These patterns are seen in words borrowed from other languages.
+  >
+  \table<
+    \tr<\th<pattern>\th<pronunciation>>
+    \tr<\td<[ia]>\td<`/ija`/>>
+    \tr<\td<[ie]>\td<`/ije`/>>
+    \tr<\td<[io]>\td<`/ijɔ`/>>
+    \tr<\td<[iu]>\td<`/iju`/>>
+    \tr<\td<[ua]>\td<`/uwa`/>>
+    \tr<\td<[ue]>\td<`/uwe`/>>
+    \tr<\td<[ui]>\td<`/uwi`/>>
+    \tr<\td<[uo]>\td<`/uwɔ`/>>
+  >
+  \p<
+    If two vowels are adjacent between two words (rather than within a single word), or in other words, if a word ending with a vowel precedes a word starting with a vowel, then `/l`/ is inserted between those two vowels in order to avoid the hiatus. 
+    However, `/l`/ is not inserted if the second word is a proper noun. 
+  >
+  \h2|num="13"|<Syllable structure>
+  \p<
+    Every syllable in Shaleian takes one of the following four forms: V, CV, VC and CVC.
+    Two (or more) consonants cannot be adjacent within a single syllable.
+    Every long vowel or diphthong is counted as a single vowel, and consecutive vowels form distinct syllables.
+  >
+  \p<
+    If a word contains consecutive consontants within a syllable when borrowed from a foreign language, [e] is inserted between the consonants as appropriate to divide the syllable.
+  >
+  \h2|num="14"|<Accent>
+  \p<
+    In Shaleian, accent is produced through stress, not through pitch.
+    Accented vowels are pronounced slightly longer than other vowels.
+  >
+  \p<
+    Every word has an accent on the last vowel of its stem.
+    Here, a “stem” means the part of a word obtained by removing all attached inflected affixes and negative prefixes from it.
+  >
+  \h1<Parts of speech>
+  \h2|num="15"|<Sorts and categories>
+  \p<
+    Shaleian has seven parts of speech: verbal infinitives, nominal infinitives, adverbial infinitives, functionals, particles, connectives and interjections.
+    These are called “sorts” in Shaleian.
+    Every word is classified into exactly one sort, and no words belong to two or more sorts.
+    For example, the word {yerif} is a verbal infinitive, and it is not simultaneously classified as a nominal infinitive or in any other sort.
+  >
+  \p<
+    On the other hand, the same word in Shaleian may play multiple different roles in sentences.
+    Such a role in sentences is called a “category”.
+    There are seven kinds of categories: verbs, nouns, adjectives, adverbs, prepositions, conjunctions and interjections.
+    Every word may be used in multiple categories.
+    For example, {yerif}, whose sort is verbal infitive, has four categories: verb, noun, adjective and adverb.
+  >
+  \p<
+    As shown in this table, the categories a word can take are completely determined by its sort.
+    A word cannot be used in a category not allowed by its sort.
+  >
+  \table<
+    \tr<\th<sort>\th<category>>
+    \tr<\td<verbal infinitive>\td<verb, noun, adjective, adverb>>
+    \tr<\td<nominal infinitive>\td<noun>>
+    \tr<\td<adverbial infinitive>\td<adverb>>
+    \tr<\td<functional>\td<adverb>>
+    \tr<\td<particle>\td<preposition, conjunction>>
+    \tr<\td<connective>\td<conjunction>>
+    \tr<\td<interjection>\td<interjection>>
+  >
+  \p<
+    However, the frequency at which a word is used in a given category depends on the particular word.
+    For example, {yerif}, which is a verbal infinitive, is mostly used as an adjective but only rarely as a verb.
+    On the other hand, {kût}, which is also a verbal infinitive, is mostly used as a verb but only rarely as an adjective.
+  >
+  \h2|num="16"|<Decoratives>
+  \p<
+    In Shaleian, morphemes that are placed before or after other words and change their meanings, usually called prefixes or suffixes, are called “decoratives”. 
+    Decoratives do not include inflected affixes.
+    Since they are not independent words, they are not classified into any sort.
+  >
+  \h1<Inflections>
+  \h2|num="17"|<Inflections of verbal infinitives>
+  \p<
+    Verbal infinitives change their form depending on their categories in sentences.
+    To put it simply, they are inflected by attaching prefixes or suffixes to their stems, which are listed as headwords in dictionaries.
+  >
+  \p<
+    When a verbal infinitive is used as a verb, it is conjugated by attaching two suffixes to its stem. 
+    The first one indicates its tense, and the second one indicates its aspect and transitivity.
+    The following table shows the tense suffixes:
+  >
+  \table<
+    \tr<\th<suffix>\th<tense>>
+    \tr<\td<[a]>\td<present>>
+    \tr<\td<[e]>\td<past>>
+    \tr<\td<[i]>\td<future>>
+    \tr<\td<[o]>\td<indeterminate>>
+  >
+  \p<
+    The following table shows the aspect-transitivity suffixes:
+  >
+  \table<
+    \tr<\th<suffix>\th<aspect, transitivity>>
+    \tr<\td<[f]>\td<inceptive, intransitive>>
+    \tr<\td<[c]>\td<progressive, intransitive>>
+    \tr<\td<[k]>\td<perfect, intransitive>>
+    \tr<\td<[t]>\td<continuous, intransitive>>
+    \tr<\td<[p]>\td<terminative, intransitive>>
+    \tr<\td<[s]>\td<indeterminate, intransitive>>
+    \tr<\td<[v]>\td<inceptive, transitive>>
+    \tr<\td<[q]>\td<progressive, transitive>>
+    \tr<\td<[g]>\td<perfect, transitive>>
+    \tr<\td<[d]>\td<continuous, transitive>>
+    \tr<\td<[b]>\td<terminative, transitive>>
+    \tr<\td<[z]>\td<indeterminate, transitive>>
+  >
+  \p<
+    For example, when the verbal infinitive {sâf} is used as an intransitive verb with the past tense and the terminative aspect, it is conjugated {sâfep}. 
+  >
+  \p<
+    When a verbal infinitive appears as an adjective or an adverb, one of the following prefixes is attached before it.
+  >
+  \table<
+    \tr<\th<prefix>\th<category>>
+    \tr<\td<[a]>\td<adjective>>
+    \tr<\td<[o]>\td<adverb>>
+  >
+  \p<
+    The meanings of tenses, aspects, and transitivities of verbs are explained in \a|href="#32"|<Sections 32>–\a|href="#34"|<34>.
+  >
+  \h2|num="18"|<Inflections of adverbial infinitives>
+  \p<
+    Adverbial infinitives are used only as adverbs.
+    They always appear with inflected prefixes [e] and do not appear independently without prefixes.
+  >
+  \h2|num="19"|<Inflections of particles>
+  \p<
+    Particles are divided into two types.
+    One comprises those which can be used as prepositions in the form of their stems, or in other words headwords of dictionaries.
+    The other consists of those which cannot be used alone as prepositions and always appear with inflected prefixes.
+    Particles of the former type are called “normal particles”, and those of the latter type are called “special particles”.
+  >
+  \p<
+    When normal particles are used without prefixes, they form phrases which modify verbs, but when the inflected prefix [i] is attached to them, they form phrases which modify words other than verbs.
+    For example, the particle {te} forms a prepositional phrase modifying a verb in the form of {te}, while it modifies a nonverb, such as a noun, in the form of {ite}.
+    The form to which the prefix [i] is attached is called a “nonverb-modifying form”.
+  >
+  \p<
+    Special particles, as prepositions, cannot be used independently and always appear with the prefix [i].
+  >
+  \p<
+    Both normal and special particles are used in the form of their stems when they are used as conjunctions.
+  >
+  \p<
+    We will discuss the basic use of prepositions in \a|href="#20"|<Section 20> and \a|href="#21"|<Section 21>, and nonverb-modifying forms in \a|href="#36"|<Section 36> and \a|href="#63"|<Section 63>.
+  >
+  \h1<Basic sentence structure>
+  \h2|num="20"|<Preposition + noun>
+  \p<
+    In Shaleian, nouns are always used with prepositions put before them, and do not appear independently.
+    Such a cluster of a preposition and a noun is called a “prepositional phrase”.
+    Terms such as “{a}-phrase” or “{te}-phrase” are used to explicitly express the preposition used in such a phrase.
+  >
+  \p<
+    Prepositions indicate the grammatical cases of the accompanying nouns.
+  >
+  \xl<
+    \li<\sh<{câses a tel e yaf.}>\ja<I met my sister.>>
+  >
+  \p<
+    The sentence above has two prepositional phrases: {a tel} and {e yaf}.
+    The preposition {a} included in the phrase {a tel} indicates that {tel} is used as a subject of the sentence, and the {e} in {e yaf} indicates that {yaf} is an object of the verb.
+  >
+  \p<
+    Nouns are always accompanied with prepositions, but not all prepositions are used with nouns only.
+    When (and only when) prepositions qualify certain verbs, they may take adjectives as complements.
+  >
+  \xl<
+    \li<\sh<{salat a nayef aquk e abig.}>\ja<That flower is blue.>>
+  >
+  \p<
+    Here the adjective {abig} accompanies with the preposition {e}.
+    Along with {sal}, the verb {nis} also allows such prepositional phrases.
+  >
+  \p<
+    There are two kinds of prepositions: one modifies verbs by forming a prepositional phrase, while the other modifies nonverbs.
+    A preposition of the former kind is called a “verb-modifying preposition”, and the latter kind of preposition is called a “nonverb-modifying preposition”.
+  >
+  \xl<
+    \li<\sh<{qetat a nîl i tel vo fîc ica fêd.}>\ja<My brother is around here.>>
+  >
+  \p<
+    In this sentence, the nonverb-modifying preposition {i} modifies {nîl} in the form of {i tel}.
+    In addition, {ica}, which is inflected to be used as a nonverb-modifying preposition, modifies {fîc} in the form of {ica fêd}.
+  >
+  \h2|num="21"|<Verb + prepositional phrase>
+  \p<
+    At a basic level, every sentence in Shaleian consists of a verb at the beginning with verb-modifying prepositional phrases lined up after it. 
+  >
+  \xl<
+    \li<\sh<{cates a tel.}>\ja<I walked.>>
+  >
+  \p<
+    In the sentence above, the verb {cates} is put at the beginning of the sentence and followed by the prepositional phrase {a tel}, which modifies it and expresses its subject.
+  >
+  \p<
+    There can be more than one element modifying a verb.
+    In this case, the elements modifying the verb are lined up one after another.
+  >
+  \xl<
+    \li<\sh<{feges a tel e dezet vo vosis afik.}>\ja<I bought a chair at this shop.>>
+  >
+  \p<
+    In this sentence, the verb {feges} is modified by three postposed elements: {a tel}, indicating the subject, {e dezet}, indicating the object, and {vo vosis afik}, indicating the place.
+    Here one can freely choose the order of modifying elements.
+    Therefore this sentence can be rewritten as {feges vo vosis afik a tel e dezet}.
+    Note that the grammar does not restrict the order of prepositional phrases, but the nuance of a sentence changes depending on which phrase is placed first, as explained more fully in \a|href="#23"|<Section 23>.
+  >
+  \h2|num="22"|<Adjectives and adverbs>
+  \p<
+    In general, modifiers follow their heads, in the same way that phrases modifying verbs are put after the verbs.
+    This rule applies to nouns and adjectives as well: adjectives are placed after nouns that they modify.
+  >
+  \xl<
+    \li<\sh<{lices a tel e nayef azaf.}>\ja<I looked at a red flower.>>
+  >
+  \p<
+    In the example above, the adjective {azef} qualifies the preceding noun {nayef}.
+    When more than one adjectives modify a noun, they are placed in a row, just as verb-modifying phrases are put after verbs.
+    The order of adjectives makes almost no difference in nuance.
+  >
+  \xl<
+    \li<\sh<{kûtat a tel e dev axodol ajôm.}>\ja<I have an expensive black pen.>>
+  >
+  \p<
+    In this sentence, the two adjectives {axodol} and {ajôm} modify the noun {dev}.
+    One can change the latter half of it into {e dev ajôm axodol} without changing its nuance.
+    Note that qualifying proforms, introduced in \a|href="#65"|<Section 65>, are placed after other adjectives qualifying the same noun.
+  >
+  \xl<
+    \li<\sh<{salat e ayerif a nayef anav afik.}>\ja<This yellow flower is beautiful.>>
+  >
+  \p<
+    Since the word {afik} in this example is a qualifying proform, it is put at the very end of the adjectives.
+    It is ungrammatical to change the {e}-phrase into {a nayef afik anav}.
+  >
+  \p<
+    When an adverb modifies an adjective, it is put after the adjective according to the rule of placing modifiers after heads.
+  >
+  \xl<
+    \li<\sh<{séqes a tel ca ces e xoq anisxok ebam.}>\ja<I gave him a very interesting book.>>
+  >
+  \p<
+    In this sentence, the adjective {anisxok} qualifies the preceding noun {xoq}, and the adverb {ebam} qualifies {anisxok} similarly.
+  >
+  \p<
+    When adverbs modify a verb, they are placed between the verb and the first prepositional phrase or at the end of the sentence.
+    They cannot be put between two prepositional phrases unless they are used as insertions, mentioned in \a|href="#58"|<Section 58>.
+  >
+  \xl<
+    \li<\sh<{vilises omêl a tel.}>\ja<I ran slowly.>>
+  >
+  \p<
+    In the example above, the adverb {omêl} is interposed between the verb and the first prepositional phrase, and modifies the verb {vilises}.
+  >
+  \h2|num="23"|<Order of prepositional phrases>
+  \p<
+    As mentioned in \a|href="#21"|<Section 21>, prepositional phrases can be ordered freely.
+    There is, however, a convention for ordering prepositional phrases.
+  >
+  \p<
+    In Shaleian, a focus falls on the end of a sentence`; the beginning introduces a topic and the end offers information about it.
+    Therefore, prepositional phrases are ordered so that the topic, which has already been brought up in the context, comes at the beginning, and new information, which has not yet been mentioned, comes at the end.
+  >
+  \xl<
+    \li<\sh<{qoletes a tel e zeqil. séqes e cit ca tel a refet.}>\ja<I sold a table. It was given to me by my friend.>>
+  >
+  \p<
+    When the first sentence is about to be written, there is no prior information.
+    In such a case, the subject is usually placed at the first.
+    The sentence then gives information {zeqil} to the reader at the end to convey the information that “a table was sold”.
+    Thus, since the phrase {e cit} appears at the first prepositional phrase of the second sentence, the reader can easily understand that this “{cit}” is the table mentioned in the previous sentence.
+    Moreover, since {e refet} comes at the end, the reader obtains new information that the table was given by a friend of “{tel}”.
+  >
+  \p<
+    Here, the prepositional phrases in the second sentence are transposed:
+  >
+  \xl<
+    \li<\sh<{qoletes a tel e zeqil. séqes a refet ca tel e cit.}>\ja<I sold a table. My friend gave me that table.>>
+  >
+  \p<
+    When the reader begins to read the modified version of the second sentence, he`/she would suddenly get the new information of “a friend” while “a desk” is in his`/her head.
+    As a result, he`/she might wonder “what happened to the desk?” and get confused.
+    When the reader finishes reading the second sentence, he`/she would finally realise that this sentence is about the desk mentioned previously. 
+    Thus, the reader has trouble understanding the sentences.
+  >
+  \p<
+    As stated above, prepositional phrases are ordered so that the reader can smoothly obtain information.
+  >
+  \h1<Negatives>
+  \h2|num="24"|<Normal negatives>
+  \p<
+    Negatives can be made by attaching the prefix [du], which indicates negation, to the verbs of affirmative sentences.
+    Since [du] is a prefix, no space is inserted between [du] and the negated word.
+  >
+  \xl<
+    \li<\sh<{dusâfat a tel e loc.}>\ja<I do not like you.>>
+  >
+  \p<
+    The negative [du] can negate words other than verbs, such as adjectives and adverbs.
+    In such a case, [du] is placed after any inflected prefixes.
+  >
+  \xl<
+    \li<\sh<{câses a tel te tazik e fér aduhál.}>\ja<I met a girl who is not cute yersterday.>>
+  >
+  \p<
+    In this example, the adjective {ahál} is negated to mean “not cute”.
+  >
+  \p<
+    When [du] is attached to nouns, it gives the meaning of “something other than …”.
+  >
+  \xl<
+    \li<\sh<{salot a tel e dutific.}>\ja<I am not a child.>>
+  >
+  \p<
+    In this case, by negating the noun {tific}, not the verb, the sentence implies that “{tel}” is something other than a child, that is, a grown-up.
+  >
+  \h2|num="25"|<Partial and total negation>
+  \p<
+    The negative [du] negates only the single word following it.
+    One can apply this property to construct sentences with partial or total negation.
+  >
+  \p<
+    Placing the negative before a verb in a usual manner forms total negation.
+  >
+  \xl<
+    \li<\sh<{dudéxat ovák a ces.}>\ja<He is never sleeping.>>
+  >
+  \p<
+    In this sentence, [du] negates only {déxat}, and {dudéxat} alone stands for “not sleeeping”.
+    Since the phrase “not sleeping” is qualified by {ovák}, meaning “always”, the whole sentence means “always not sleeping” or “always awake”.
+  >
+  \p<
+    On the other hand, when [du] is attached to a word representing “all” or “nothing”, it forms partial negation.
+  >
+  \xl<
+    \li<\sh<{déxat oduvák a ces.}>\ja<He is not always sleeping.>>
+  >
+  \p<
+    In this case, [du] negates only {ovák} to form {oduvák}, which means “not always” or “with a temporal exception”.
+    {oduvák} then modifies {déxat}, meaning “sleeping”, and thus these words together mean “sleeping with a temporal exception” or “not always sleeping”.
+  >
+  \p<
+    The following list shows words which form partial negation in this way.
+  >
+  \table<
+    \tr<\th<word>\th<meaning>>
+    \tr<\td<{aduves}>\td<not all …>>
+    \tr<\td<{odukôt}>\td<not necessarily …>>
+    \tr<\td<{oduvák}>\td<not always …>>
+    \tr<\td<{oduvop}>\td<will never … again>>
+  >
+  \p<
+    By negating the whole {kin}-clause in the form of {dules/os/ e kin} […], one can also make a sentence with partial negation.
+  >
+  \xl<
+    \li<\sh<{dulesot e kin déxas ovák a ces.}>\ja<He is not always sleeping.>>
+  >
+  \p<
+    In the sentence above, the {kin}-clause, meaning “he is always sleeping”, is negated`; therefore, the whole sentence forms a partial negation meaning “he is not always sleeping”.
+  >
+  \h2|num="26"|<Negative words>
+  \p<
+    Shaleian has several words which have a negative meaning without the negative prefix.
+    Such words are called “negative words”.
+    As an example, {dus} means “zero people” or “nobody”.
+  >
+  \xl<
+    \li<\sh<{keqit a dus e sod afik.}>\ja<Nobody will live in this house.>>
+  >
+  \p<
+    Some words that represent zero can be replaced with the negtive prefix and a noun without changing their meanings.
+  >
+  \xl<
+    \li<\sh<{dukeqit a ris e sod afik.}>\ja<Nobody will live in this house.>>
+  >
+  \p<
+    The following table displays the major negative words.
+    Each negative word is fixed to be used as a certain category, which is also listed below.
+  >
+  \table<
+    \tr<\th<word>\th<meaning>\th<category>>
+    \tr<\td<{dus}>\td<nobody>\td<noun>>
+    \tr<\td<{dat}>\td<nothing (for objects)>\td<noun>>
+    \tr<\td<{dol}>\td<nothing (for events)>\td<noun>>
+    \tr<\td<{dûd}>\td<no place>\td<noun>>
+    \tr<\td<{dak}>\td<no>\td<adjective>>
+    \tr<\td<{dûg}>\td<never (for probability)>\td<adverb>>
+    \tr<\td<{dum}>\td<never (for frequency)>\td<adverb>>
+  >
+  \p<
+    The first five words in the table are proforms, discussed in \a|href="#65"|<Section 65>.
+    As mentioned above, one can replace them with the negative prefix and an elective proform for these negative words.
+  >
+  \h2|num="27"|<Double negation>
+  \p<
+    When a negative word, explained in \a|href="#26"|<Section 26>, and the negative prefix are used simultaneously to form a double negative, the sentence makes strong affirmation.
+  >
+  \xl<
+    \li<\sh<{dusalat a dol e asokes.}>\ja<Nothing is not important.>>
+  >
+  \p<
+    This sentence means “everything is important”.
+    By using double negation, one can claim more strongly than simply saying {salat a zel aves e asokes}.
+  >
+  \h1<Questions>
+  \h2|num="28"|<Polar questions>
+  \p<
+    Polar questions ask whether something is true or not`; the reply is expected to be either “yes” or “no”.
+    One can construct such a question by placing {pa} before the verb of a sentence which represents what one wants to verify.
+    The word {pa} is named an “interrogative adverb”.
+    In addition to that, the dek at the end of the sentence is exchanged for a padek.
+    No changes in word order are made.
+  >
+  \xl<
+    \li<\sh<{pa kilat lakos a loc qi qixaléh?}>\ja<Can you speak Shaleian?>>
+  >
+  \p<
+    Questions are read with rising intonation.
+  >
+  \p<
+    One uses {ya} or {du} to answer polar questions.
+    They are both interjections, discussed in \a|href="#65"|<Section 65>.
+    The answer {ya} is used when what the question asks is true, while {du} is used when it is false.
+  >
+  \xl<
+    \li<\sh<{pa séqes ca loc a ces e gisol?} `/ {du.}>\ja<Did you get money from him? `/ No.>>
+  >
+  \p<
+    Pay special attention to answering {ya} or {du} when the question is a negative sentence.
+    One uses {ya} when the sentence obtained by removing {pa} from the question is correct, and {du} otherwise.
+    Therefore, they are used in a different manner from English “yes” and “no”.
+  >
+  \xl<
+    \li<\sh<{pa dusâfakes a loc e dat?} `/ {ya.}>\ja<Don't you like dogs? `/ No.>>
+  >
+  \p<
+    In this example, the sentence obtained by removing {pa} has the meaning “you do not like dogs”, so a person who answered {ya} does not like them.
+  >
+  \h2|num="29"|<Nonpolar questions>
+  \p<
+    Questions with interrogatives can be constructed by replacing what one wants to ask with an appropriate interrogative and placing {pa} before the verb in the same way as making polar questions.
+    Moreover, the dek at the end of the sentence is replaced with a padek.
+    The sentence is read with rising intonation.
+  >
+  \xl<
+    \li<\sh<{pa salot a loc e pas?}>\ja<Who are you?>>
+    \li<\sh<{pa sâfat a loc e fakel apéf?}>\ja<What sort of woman do you like?>>
+  >
+  \p<
+    The following table shows the main interrogative words.
+    Each word is used only in certain categories, so the categories are also listed.
+  >
+  \table<
+    \tr<\th<word>\th<meaning>\th<category>>
+    \tr<\td<{pas}>\td<who>\td<noun>>
+    \tr<\td<{pet}>\td<what, which (for objects)>\td<noun>>
+    \tr<\td<{pil}>\td<what, which (for events)>\td<noun>>
+    \tr<\td<{pâd}>\td<where>\td<noun>>
+    \tr<\td<{pek}>\td<what kind of>\td<adjective>>
+    \tr<\td<{péf}>\td<how>\td<adjective, adverb>>
+  >
+  \p<
+    One can form interrogative phrases not included in the table above by combining prepositions and interrogative pronouns.
+    For example, combining the interrogative {pil} with the preposition {vade}, indicating a reason, yields a phrase meaning “for what reason” or “why”.
+  >
+  \xl<
+    \li<\sh<{pa qoletes a loc e sod vade pil?}>\ja<Why did you sell your house?>>
+  >
+  \p<
+    Examples of interrogative phrases made after this method are the following:
+  >
+  \table<
+    \tr<\th<phrase>\th<meaning>>
+    \tr<\td<{te pet}>\td<when, what time>>
+    \tr<\td<{vade pil}>\td<why, for what reason>>
+    \tr<\td<{qi pil}>\td<how, by what means>>
+  >
+  \p<
+    To answer a nonpolar question for which the answer is a noun, one uses a phrase in the form of a preposition + a noun.
+  >
+  \xl<
+    \li<\sh<{pa lanes a loc ca amerikas te pet?} `/ {te tazik.}>\ja<When did you go to America? `/ Yesterday.>>
+  >
+  \p<
+    In most cases where the interrogative word is {pil}, the answer is a nominal clause.
+    In this case, one answers with the form of a preposition + {kin} + a clause.
+  >
+  \xl<
+    \li<\sh<{pa leses a loc te tazik e pil?} `/ {e kin câses a tel e ʻyutih.}>\ja<What did you do yesterday? `/ I met Yutia.>>
+  >
+  \p<
+    When an interrogative adjective is used, the answer is also an adjective.
+    In this case, one answers with the form of a preposition + a noun + an adjective.
+    One cannot answer with only an adjective.
+  >
+  \xl<
+    \li<\sh<{pa sâfat a loc e zas apéf?} `/ {e zas asafey.}>\ja<What kind of people do you like? `/ Those who are friendly.>>
+  >
+  \h2|num="30"|<Choice questions>
+  \p<
+    Choice questions, which require choosing one (or more) among several alternatives, can be constructed by creating a nonpolar question and specifying the alternatives with the preposition {ive}. 
+    Since the {ive}-phrase qualifies the interrogative, it is put immediately after the interrogative.
+    The alternatives are connected by the conjunction {o}.
+    When there are more than two alternatives, {o} is interposed between each of the options.
+    Shelaian has no equivalent for the word “which”, so {pas}, {pet} or {pil} is used instead.
+  >
+  \xl<
+    \li<\sh<{pa sâfat a loc e pet ive zef o bag o nev?}>\ja<Which do you like, red, blue or yellow?>>
+  >
+  \p<
+    There is another way to construct a choice question: two or more sentences can be connected with the conjunction {á}, which means “or”.
+    Note that the interrogative adverb {pa} is needed for the sentence after each {á}.
+  >
+  \xl<
+    \li<\sh<{pa salat a qut e ahap emic, á pa salat a fit e ahap emic?}>\ja<Is that cheaper, or is this cheaper?>>
+  >
+  \p<
+    This sentence is redundant because of repeated phrases, so one of the common phrases is usually omitted as in the following:
+  >
+  \xl<
+    \li<\sh<{pa salat a qut e ahap emic, á pa lat a fit?}>\ja<Is that cheaper, or is this?>>
+  >
+  \p<
+    The latter of the phrases {e ahap emic} shared by the two clauses is omitted and the proverb {l} is used instead.
+    The use of such an omission will be discussed in detail in \a|href="#54"|<Section 54>.
+  >
+  \p<
+    Since the last sentence is still redundant, the two clauses are often integrated into one clause as in the following: 
+  >
+  \xl<
+    \li<\sh<{pa salat e ahap omic a qut á fit?}>\ja<Which is cheaper, this or that?>>
+  >
+  \p<
+    As another form of choice questions, there are those which require choosing an affirmative or a negative, namely, those meaning “whether or not …”.
+    These are constructed by connecting affirmative and negative questions with the conjunction {á}. 
+  >
+  \xl<
+    \li<\sh<{pa debat e loc, á pa dudebat e loc?}>\ja<Are you tired, or aren't you tired?>>
+  >
+  \p<
+    To avoid redundancy, the common phrase is omitted by the second clause to form the following sentence:
+  >
+  \xl<
+    \li<\sh<{pa debat e loc, á pa dulat?}>\ja<Are you tired, or not?>>
+  >
+  \p<
+    Otherwise one can move {dulat} in the second clause just behind the verb in the first clause, as in the following sentence.
+    This form is preferred when the first clause is long.
+  >
+  \xl<
+    \li<\sh<{pa debat á dulat e loc?}>\ja<Are you tired or not?>>
+  >
+  \h2|num="31"|<Indirect questions>
+  \p<
+    In the case where a nonpolar or choice question forms a part of a sentence, it can be embedded after the interrogative adverb {pa} is removed from it.
+  >
+  \p<
+    For example, consider the following question:
+  >
+  \xl<
+    \li<\sh<{pa qetat a sod i loc vo pâd?}>\ja<Where is your house?>>
+  >
+  \p<
+    To embed this question in another sentence, one removes {pa} from it and use a {kin}-clause as follows.
+    Note that since the new sentence is not a question, we put a dek at the end, not a padek.
+  >
+  \xl<
+    \li<\sh<{sokat a tel e kin qetat a sod i loc vo pâd.}>\ja<I know where your house is.>>
+  >
+  \p<
+    We will discuss in \a|href="#47"|<Section 47> the details of the conjunction {kin} used in this sentence.
+  >
+  \p<
+    Polar questions are embedded in a sentence in a different way.
+    As an example, we construct an indirect question using the following sentence:
+  >
+  \xl<
+    \li<\sh<{pa kavat a loc e nîl?}>\ja<Do you have brothers?>>
+  >
+  \p<
+    We first rewrite this sentence by using an expression with the conjunction {á} meaning “whether or not …”, as explained in \a|href="#30"|<Section 30>.
+  >
+  \xl<
+    \li<\sh<{pa kavat a loc e nîl á pa dulat?}>\ja<Do you have brothers or not?>>
+  >
+  \p<
+    Next, we embed the rewritten question in the same manner as other types of questions.
+    The two interrogative adverbs {pa} must be removed.
+  >
+  \xl<
+    \li<\sh<{dusokat a tel e kin kavat a loc e nîl á dulat.}>\ja<I don't know whether or not you have brothers.>>
+  >
+  \h1<Usages of verbs>
+  \h2|num="32"|<Tenses>
+  \p<
+    Shelaian has four tenses: present, past, future and indeterminate.
+  >
+  \p<
+    The present tense is used to express what is happening at the current moment.
+  >
+  \xl<
+    \li<\sh<{xôyak a tel e sokul.}>\ja<I have finished tidying up the room.>>
+  >
+  \p<
+    The past tense is for events which happened in the past.
+    Events expressed in the past tense do not have any relationship to the present time.
+  >
+  \xl<
+    \li<\sh<{zedotes a tel e miv aquk.}>\ja<I tore that paper.>>
+  >
+  \p<
+    In this case, since the past tense is used, it expresses only that the paper was torn at a certain point in the past, and it does not mention whether the paper is still torn or restored at the present time.
+    On the other hand, if the verb were {zedotat} with the present tense and the continuous aspect, it would express that the paper remains torn now.
+  >
+  \p<
+    Sentences with the future tense express events which will happen in the future.
+    Note that the future tense does not imply intention unlike English “will”.
+  >
+  \xl<
+    \li<\sh<{cákis a ces ca fêd te loj i saq.}>\ja<He will come here at night tomorrow.>>
+  >
+  \p<
+    The indeterminate tense is used for facts which hold at any time.
+  >
+  \xl<
+    \li<\sh<{vahixos okôt a laxol.}>\ja<Human beings certainly die.>>
+  >
+  \p<
+    It can also express facts which hold for a relatively long period of time.
+    For example, the fact that “he can speak Shaleian” will become false when he dies, but it is unchangeably true for the long period during which he is alive.
+    Thus, it can be expressed with the indeterminate tense.
+  >
+  \p<
+    The indeterminate tense is also used to express just an action without specifying when it is done.
+  >
+  \xl<
+    \li<\sh<{sâfat a tel e kin likomos a tel e nayef.}>\ja<I like to look at flowers.>>
+  >
+  \p<
+    In this example, “looking at flowers” indicates an action neither in the present time nor in the past, but an action itself of looking at flowers.
+    In such a case, the indeterminate tense is appropriate.
+  >
+  \h2|num="33"|<Aspects>
+  \p<
+    Shaleian has six aspects: inceptive, progressive, perfect, continuous, terminative and indeterminate.
+    Among these, the inceptive, perfect and terminative aspects represent a certain moment in time, and are termed generically “momentaneous aspects”.
+    The progressive and continuous aspects represent a certain period of time, and are called collectively “durative aspects”.
+  >
+  \p<
+    First, we look at the momentaneous aspects.
+    The inceptive aspect indicates the moment at which an act begins.
+  >
+  \xl<
+    \li<\sh<{lîdaf a tel e xoq afik.}>\ja<I have just started to read this book.>>
+  >
+  \p<
+    This sentence says that the present is exactly the instant at which the act of “reading the book” begins.
+  >
+  \p<
+    The perfect aspect indicates the moment at which an act is completed.
+  >
+  \xl<
+    \li<\sh<{feketak a tel te sot.}>\ja<I have just got up now.>>
+  >
+  \p<
+    The terminative aspect indicates the moment at which the state after an act is finished ceases to hold.
+  >
+  \p<
+    Next, we look at the durative aspects.
+    The progressive aspect represents the period from the start of an act until its completion, or in other words the interval between the inceptive and perfect aspects.
+  >
+  \xl<
+    \li<\sh<{terac a tel te sot e rix.}>\ja<I am drinking water now.>>
+  >
+  \p<
+    The continuous aspect represents the period from the completion of an act until the end of the state after the completion, that is to say, the interval between the perfect and terminative aspects.
+  >
+  \xl<
+    \li<\sh<{déqat a tel.}>\ja<I am sitting down.>>
+  >
+  \p<
+    The indeterminate aspect is rather peculiar.
+    It represents a whole act between the inceptive and perfect aspects.
+  >
+  \xl<
+    \li<\sh<{sôdes a tel e ric te tazik.}>\ja<I ate fish yesterday.>>
+  >
+  \p<
+    It is also used to express an action itself represented by a verb without specifying its aspect.
+    This use is similar to using the indeterminate tense when one does not want to specify the time as explained in \a|href="#32"|<Section 32>.
+  >
+  \xl<
+    \li<\sh<{haros e tel a kin lanos a'l ca zîdsax.}>\ja<I feel pleasure in going to school.>>
+  >
+  \p<
+    The following is a summary of the use of the aspects taking the verb “sitting down” as an example.
+    When “sitting down” is used with the inceptive aspect, it indicates the instant someone begins to bend his`/her knees to sit down.
+    The progressive aspect indicates the period from the beginning of bending his`/her knees until his`/her buttocks get on the seat, and the perfect aspect represents that moment of getting seated.
+    Since the continuous aspect represents the period in which the state caused by the act continues, it expresses that his`/her buttocks are on the seat at that time.
+    The terminative aspect indicates the moment his`/her buttocks get apart from the seat.
+    The indeterminate aspect represents the interval between the moment of beginning to bend his`/her knees and that of putting his`/her buttocks on the seat, or it expresses the act “sitting down” itself without mentioning its aspect.
+  >
+  \p<
+    Some of other languages use an aspect to express iteration, but Shelaian does not treat it as an aspect.
+    We will discuss in \a|href="#37"|<Section 37> how to express iteration.
+  >
+  \h2|num="34"|<Transitivities>
+  \p<
+    Actions are divided into two groups.
+    One consists of those which one can carry out all by oneself, while the other consists of those of helping someone to do something.  
+    In Shaleian, verbs for the former and the latter are called “intransitive” and “transitive” respectively.
+    For example, “lie down” is an intransitive verb and “lay down” is a transitive one.
+  >
+  \p<
+    Note that the notion of intransitive and transitive verbs in Shaleian is completely different from that which concerns the existence of an object.
+    Also take account of the difference between transitive verbs and causative expressions: a transitive verb means “to help someone to achieve it”, while a causative expression means “to make someone do it without assisting”.
+    Consider for example the distinction between “put someone to sleep” and “make someone sleep”.
+  >
+  \p<
+    Shelaian uses the same word for intransitive and transitive verbs, and distinguishes them by its conjugation.
+    See \a|href="#17"|<Section 17> for how verbs are conjugated.
+  >
+  \p<
+    Objects of assistance of a transitive verb are indicated by a {li}-phrase.
+  >
+  \xl<
+    \li<\sh<{déxes a del.}>\ja<I slept.>>
+    \li<\sh<{déxez a del li yaf.}>\ja<I helped my sister sleep.>>
+  >
+  \h1<Special verb structures>
+  \h2|num="35"|<Auxiliary uses of verbs>
+  \p<
+    Some verbs that can take a {kin}-clausal phrase allow omitting the {kin} and accompanying preposition.
+    This is called an “auxilirary use of a verb”.
+  >
+  \p<
+    We will explain the expression of possibility as a representative example of such a use.
+    To express possibility, the verb {kil}, which means “be able to do …”, is used as follows:
+  >
+  \xl<
+    \li<\sh<{kilat a tel e kin ricamos a tel.}>\ja<I can swin.>>
+  >
+  \p<
+    Suppose that either there are no prepositional phrases, aside from the {kin}-clausal phrase, in the main clause, or there is at most one such prepositional phrase in the main clause that occurs in the same form in the {kin}-clause.
+    Under these conditions, one can omit the prepositional phrase and {kin} in the main clause, as in the following sentence.
+    The phrase in the {kin}-clause that is the same as the omitted one tends to be moved immediately after the verb.
+  >
+  \xl<
+    \li<\sh<{kilat ricamos a tel.}>\ja<I can swim.>>
+  >
+  \p<
+    In the case where the verb in the main clause has more than one prepositional phrases other than a {kin}-clausal phrase, such as in the sentence below, an auxilirary use is forbidden.
+  >
+  \xl<
+    \li<\sh<{kiles a tel te tazik e kin ricamos a tel.}>\ja<I came to be able to swim yesterday.>>
+  >
+  \p<
+    This expression is also used to form imperative sentences.
+    Sheleian verbs do not have imperative forms, so the verb {dit}, meaning “order to do …”, is used together with the lexical verb.
+    Here, {dit} appears as an intransitive verb with the present tense and the continuous aspect. 
+    One cannot omit the object of the command.
+  >
+  \xl<
+    \li<\sh<{ditat lanis a loc e zîdsax.}>\ja<Go to school.>>
+  >
+  \p<
+    Since this is rather verbose, {ditat} is often abbreviated to {di'}.
+    In spoken language, {ditat} itself is sometimes omitted. 
+    We will see this phenomenon in \a|href="#68"|<Section 68>.
+  >
+  \p<
+    Verbs which allow the auxilirary use are limited`; that is, meeting the conditions does not automatically allow its use.
+    Verbs which allow the auxiliary use include {kil}, {qif}, {raf}, {doz} and {vom}.
+  >
+  \h2|num="36"|<Verbal infinitives as nouns>
+  \p<
+    Verbal infinitives that are not conjugated at all can be used as nouns meaning “the act of doing …”, that is to say, as gerunds.
+  >
+  \p<
+    A nominal use of a verbal infinitive replaces a {kin}-clause by a nominal phrase without {kin}.
+    We will take the following sentence as an example:
+  >
+  \xl<
+    \li<\sh<{salot e abûd a kin folesos a zis e kadeg ca zis.}>\ja<It is bad to throw a stone at someone.>>
+  >
+  \p<
+    This sentence uses the verbal form {folsesos} of the verbal infinitive {foles} in the {kin}-clause.
+    By changing the verb into the nominal {foles}, as well as changing the prepositions in phrases qualifying it into their nonverb-modifying forms, one can make a sentence which has the same meaning as the previous one.
+    At this time, prepositional phrases that contain obvious elements such as {tel} or {zis} may be omitted.
+  >
+  \xl<
+    \li<\sh<{salot e abûd a foles ie kadeg ica zis.}>\ja<It is bad to throw a stone at someone.>>
+  >
+  \p<
+    However, this nominal use is not so frequently used.
+    There is a tendency to avoid it when there are many prepositional phrases qualifying the nominalised verbal infinitive.
+  >
+  \h2|num="37"|<Expression of iteration>
+  \p<
+    To express the repetion of an action, the verb {vom}, which means “to repeat”, is used.
+    The verb {vom} often takes the auxiliary use, explained in \a|href="#35"|<Section 35>.
+    The beginning, continuance and completion of an iteration are expressed by conjugating {vom} in the inceptive, progressive and perfect aspect, repsectively.
+  >
+  \xl<
+    \li<\sh<{vomak lîdos a tel e xoq afik.}>\ja<I have finished reading this book.>>
+  >
+  \p<
+    Note that the completion of an iteration and the perfect aspect have different meanings.
+    Since the example above expresses an iteration, it indicates that the last iteration of repeating the action “to read the book” has been completed.
+    If it began with {lîdak a tel} with the perfect aspect, it would express that the one-time action “to read the book” has been finished. 
+    The former expression implies that “I” have read all the way through the book, while the latter implies that “I” have simply finished the one-time action without mentioning whether or not “I” have read through the book.
+  >
+  \p<
+    Habits are a kind of iteration, so they are also expressed with {vom}.
+    Habits that are still being kept at the present are expressed with {vom} conjugated in the present tense and the progressive aspect.
+    Habtis in the past are similarly expressed with {vom} in the past tense and the progressive aspect.
+  >
+  \xl<
+    \li<\sh<{vomac vilisos a tel te pôd atov.}>\ja<I run every day.>>
+  >
+  \h1<Passives>
+  \h2|num="38"|<Passive-like expressions>
+  \p<
+    Shaleian does not distinguish between the active and passive voices.
+    The difference between the active and passive voices is that the topic of a sentence with the active voice is the subject, while that of a sentence with the passive voice is the object.
+    As mentioned in \a|href="#23"|<Section 23>, one can specify the topic by exchanging the prepositional phrases.
+    For that reason, different structures are not needed to distinguish the two voices.
+  >
+  \xl<
+    \li<\sh<{sâfat e ces a zis aves.}>\ja<He is loved by everyone.>>
+  >
+  \p<
+    In this example, the {e}-phrase, which indicates the object, expresses the topic, giving a similar meaning as the passive voice.
+  >
+  \p<
+    Such an expression is sometimes called a “passive-like expression” in comparison to other languages which have the passive voice, but note that it is not syntactically special in Shaleian.
+  >
+  \h1<Comparison>
+  \h2|num="39"|<Comparatives>
+  \p<
+    To express which of two items being compared is greater by some standard, one uses the adverb {emic}, meaning “more”, and the conjunction {ni}, the Shaleian equivalent of “than”.
+  >
+  \p<
+    In order to form an expression for comparison, one first makes a sentence without the object of the comparison.
+  >
+  \xl<
+    \li<\sh<{salat a kadeg afik e adôg.}>\ja<This stone is heavy.>>
+  >
+  \p<
+    Then one makes a sentence mentioning the object of the comparison.
+    This sentence must have the same structure as the first one.
+  >
+  \xl<
+    \li<\sh<{salat a doldaz e adôg.}>\ja<Elephants are heavy.>>
+  >
+  \p<
+    Finally, one puts the conjunction {ni} before the sentence about the object of the comparison and joins it to the first sentence.
+    At the same time, {mic}, which means “more”, is placed after the adjective or adverb that expresses the standard of the comparison in the first sentence.
+    The word {mic} is used as an adverb and put immediately after the word indicating the standard.
+  >
+  \xl<
+    \li<\sh<{salat a kadeg afik e adôg emic, ni salat a doldaz e adôg.}>\ja<This stone is heavier than elephants are.>>
+  >
+  \p<
+    Since the repeated expressions in this sentence are redundant, the common part is omitted from the {ni}-clause.
+    Note that verbs cannot be omitted, so the proverb {l} is used instead.
+    We will explain the proverb later in \a|href="#54"|<Section 54>.
+  >
+  \xl<
+    \li<\sh<{salat a kadag afik e adôg emic, ni lat a doldaz.}>\ja<This stone is heavier than elephants are.>>
+  >
+  \p<
+    If it is sufficient to mention a single noun as the object of comparison as in the example above, then {ni} can be changed into its nonverb-modifying form, {ini}, with the noun as the object.
+    Here, the {ini}-phrase is moved to lie immediately after {emic}.
+  >
+  \xl<
+    \li<\sh<{salat a kadag afik e adôg emic ini doldaz.}>\ja<This stone is heavier than an elephant.>>
+  >
+  \p<
+    The particle {ile}, the nonverb-modifying form of {le}, is used to show the degree by which something differs from the object of comparison.
+  >
+  \xl<
+    \li<\sh<{salat a tel e alot emic ile mulôt il'}[25 ]{ini ces.}>\ja<I am 25 cm taller than him.>>
+  >
+  \p<
+    Comparative constructions are also used to express a factor by which one thing exceeds another, with an {ile}-phrase being used for the factor.
+  >
+  \xl<
+    \li<\sh<{kilat vilisos a tel ovit emic ile vâl il'aqot ini ces.}>\ja<I can run twice as fast as him.>>
+  >
+  \p<
+    {ni}- or {ini}-phrases can be omitted.
+    In this case, the sentence shows a vague comparison, such as one comparing something to the average.
+  >
+  \xl<
+    \li<\sh<{salot a zecel afik e avituf emic.}>\ja<This problem is simpler.>>
+  >
+  \p<
+    This sentence means that the problem in question is simple compared to other existing problems.
+  >
+  \p<
+    Up to now, we have been looking at examples where the object of comparison can be in an {ini}-phrase, but there are natural examples where this is not the case.
+    We show such an example below.
+  >
+  \xl<
+    \li<\sh<{salot a xoq aquk e anisxok.}>\ja<That book is interesting.>>
+  >
+  \p<
+    Below is another sentence related to the object of comparison.
+  >
+  \xl<
+    \li<\sh<{revat a loc e'n salot a xoq aquk e anisxok.}>\ja<You think that book is interesting.>>
+  >
+  \p<
+    When these two sentences are linked together in a comparative construction, we get the following.
+  >
+  \xl<
+    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n salot a xoq aquk e anisxok.}>\ja<That book is more interesting than you think that book is interesting.>>
+  >
+  \p<
+    Eliding the shared parts gives us the final result.
+  >
+  \xl<
+    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n lot.}>\ja<This book is more interesting than you think.>>
+  >
+  \p<
+    To express a comparative construction meaning “less”, one uses {domic} instead of {mic}.
+  >
+  \xl<
+    \li<\sh<{salot a loc e asokes edomic ini ces.}>\ja<You are less important than him.>>
+  >
+  \h2|num="40"|<Equatives>
+  \p<
+    Sentences expressing that two things are roughly equal by some measure can be formed in a similar way as comparatives.
+    The adverb {evêl} is used to mean “about equal”.
+  >
+  \p<
+    We explain how to construct such a sentence.
+    First, we form a sentence without the object of comparison.
+  >
+  \xl<
+    \li<\sh<{salot a qos e ahál.}>\ja<That person is cute.>>
+  >
+  \p<
+    Next, we create a sentence about the object of comparison with the same structure as the first one.
+  >
+  \xl<
+    \li<\sh<{salot a fakrêy i tel e ahál.}>\ja<My girlfriend is cute.>>
+  >
+  \p<
+    Finally, we attach the conjunction {ni} to the sentence with the object of comparison and link it to the first sentence.
+    Then we attach {vêl}, meaning “about equal”, after the word that expresses the standard of comparison.
+  >
+  \xl<
+    \li<\sh<{salot a qos e ahál evêl, ni salot a fakrêy i tel e ahál.}>\ja<That person is as cute as my girlfiend is cute.>>
+  >
+  \p<
+    If we omit the redundant items in the {ni}-clause or replace it with an {ini}-phrase to avoid redundancy, then we get the following sentence.
+  >
+  \xl<
+    \li<\sh<{salot a qos e ahál evêl, ni salot a fakrêy i tel.}>\ja<That person is as cute as my girlfiend is.>>
+    \li<\sh<{salot a qos e ahál evêl ini fakrêy i tel.}>\ja<That person is as cute as my girlfiend.>>
+  >
+  \p<
+    Instead of using an {ini}-phrase as described above, one can also join the items being compared with the conjunction {o}.
+  >
+  \xl<
+    \li<\sh<{salot a qos o fakrêy i tel e ahál evêl.}>\ja<That person and my girlfiend are about equally cute.>>
+  >
+  \p<
+    In the example using {ini}, only the subject {qos} is the topic, but in the example using {o}, both {qos} and {fakrêy i tel} are the topic.
+    This is how the two expressions differ in nuance.
+  >
+  \h2|num="41"|<Superlatives>
+  \p<
+    The adverb {ehiv}, meaning “the most”, and the preposition {ive}, meaning “within”, are used to express that something is the greatest within a certain range.
+  >
+  \p<
+    As shown below, a superlative sentence is constructed by first creating an ordinary sentence without the group being compared to.
+  >
+  \xl<
+    \li<\sh<{kilat vilisos a fes ovit.}>\ja<This person can run quickly.>>
+  >
+  \p<
+    Next, the adjective or adverb {hiv}, meaning “the most”, is attached to the standard of comparison, and the range of comparison is expressed in an {ive}-phrase. The {ive}-phrase immediately follows {ehiv}.
+  >
+  \xl<
+    \li<\sh<{kilat vilisos a fes ovit ehiv ive refet i tel.}>\ja<Out of all my friends, this person can run the fastest.>>
+  >
+  \p<
+    The superlative construction is also used to express that something is at a certain rank within the range.
+    The rank is expressed with an {ile}-phrase.
+  >
+  \xl<
+    \li<\sh<{pa salot a solkut apek e avâc ehiv ile cav axal?}>\ja<Which country is the fifth biggest?>>
+  >
+  \p<
+    Furthermore, the {ive}-phrase showing the range of comparison can be omitted as in the above example.
+    When it is omitted, the range is assumed from context.
+  >
+  \p<
+    To show that something is the least instead of the greatest, one uses {dohiv}, meaning “the least”, instead of {hiv}.
+    {dohiv} is used in exactly the same way as {domic}.
+  >
+  \h1<Relative constructions>
+  \h2|num="42"|<Relative constructions>
+  \p<
+    Two sentences can be joined to form one in which one sentence modifies a noun in the other.
+    This is called a “relative construction” in Shaleian.
+  >
+  \p<
+    We give an example of how to construct such a sentence.
+    First, we start off with the prerequisite sentence below.
+  >
+  \xl<
+    \li<\sh<{salot a qos e qazek.}>\ja<That person is a man.>>
+  >
+  \p<
+    The following clause should modify {qazek} in the previous sentence.
+  >
+  \xl<
+    \li<\sh<{câses a tel e ces te tazik.}>\ja<I met him yesterday.>>
+  >
+  \p<
+    If we suppose that the word {ces} in the second sentence represents {qazek} in the first sentence, then we can join these two sentences to mean “that person is the man whom I met yesterday”.
+    To do so, we first note that the second sentence is the one to modify a noun and omit the noun with the same meaning as the modified word.
+    The lone preposition that arises is moved to be immediately after the verb.
+    The modifying sentence is then placed immediately after the modified word.
+    The clause modifying the noun is thus called a “relative clause”.
+  >
+  \xl<
+    \li<\sh<{salot a qos e qazek câses e a tel te tazik.}>\ja<That person is the man whom I met yesterday.>>
+  >
+  \p<
+    When the preposition accompanying the omitted noun modifies the head noun, as shown below, changing its position itself changes the meaning.
+    In that case, the entire prepositional phrase of the modifying verb that contains the modified noun is moved immediately after the verb.
+  >
+  \xl<
+    \li<\sh<{sokat a tel e tiqat salot a qâz i e lasác.}>\ja<I know a boy whose father is a teacher.>>
+  >
+  \p<
+    If we had moved only {i} in the preceding example, we would have {salot i a qâz} and the reader would not understand what {i} was modifying.
+    Therefore, we move {a qâz i} in its entirety to lie immediately after the verb.
+  >
+  \p<
+    If the noun modified by a relative clause is modified by other adjectives, then the relative clause is placed in the back, in the order noun + adjective + relative clause.
+  >
+  \xl<
+    \li<\sh<{qetat vo sokul i tel a zeqil avaf ebam séqes e ca tel a ces.}>\ja<Inside my room, there is a very large desk that I received from him.>>
+  >
+  \p<
+    In this example, {zeqil} is modified by two items: the adjective {avaf ebam} and the relative clause from {séqes} on.
+  >
+  \p<
+    The tense within a relative clause shows time relative to the tense of the main clause.
+    For instance, if the main clause were in the past tense and the relative clause were in the present, then the relative clause would represent the present within the past and therefore describe an event that had occurred the past.
+  >
+  \h2|num="43"|<Nonrestrictive relative clauses>
+  \p<
+    Relative clauses fundamentally restrict the nouns that they modify.
+    To put it another way, the noun “man” in {qazek câses e a tel}, which refers to a broad set of objects, is restricted, and its meaning is narrowed to “a man whom I met”.
+    On the other hand, if we inserted a tadek before the verb starting the relative clause, then the relative clause would add supplementary information without narrowing the meaning of the noun. 
+    This is called a “nonrestrictive relative clause”.
+  >
+  \xl<
+    \li<\sh<{salat e aqobit a beqas aquk, salat a e qazrêy i refet i tel.}>\ja<That man, who is my friend's boyfriend, is unfriendly.>>
+  >
+  \p<
+    If additional prepositional phrases are added after a nonrestrictive relative clause, then a tadek is required a the end of the relative clause.
+  >
+  \xl<
+    \li<\sh<{salat a beqas aquk, salat a e qazrêy i refet i tel, e aqobit.}>\ja<That man, who is my friend's boyfriend, is unfriendly.>>
+  >
+  \p<
+    This use of a nonrestrictive relative clause appears when the modified noun is limited to one referent with words such as {fik} or {cik} or by being a proper noun.
+  >
+  \h1<Conjunctions>
+  \h2|num="44"|<Connectives>
+  \p<
+    Shaleian has five connectives: {o}, {ò}, {é}, {á} and {à}, which connect two phrases or clauses in an equal relationship.
+    For that reason, the meaning does not change, even if the phrases or clauses connected are switched in order.
+    Out of these, {ò}, {é}, {á} and {à} have alternate forms {lo}, {lé}, {lá} and {dà}, which are used only to connect a clause to another clause.
+  >
+  \p<
+    When a connective connects two phrases, it can be inserted between the words to be connected.
+  >
+  \xl<
+    \li<\sh<{cikekat a tel e dev o miv.}>\ja<I have a pen and some paper.>>
+  >
+  \p<
+    Not only can nouns be connected, as above, but also other kinds of phrases such as adjectives and verbs.
+  >
+  \xl<
+    \li<\sh<{debat o dojat e tel.}>\ja<I'm tired and worn down.>>
+  >
+  \p<
+    When a connective connects two sentences, it is placed before the sentence, and a tadek is inserted between the two clauses.
+    If the connective phrase is short, this tadek may be omitted at one's discretion.
+  >
+  \xl<
+    \li<\sh<{kavat a tel e xoq avôl, dà dulîdes a tel e met arak.}>\ja<I have a lot of books, but I haven't read any of them.>>
+  >
+  \h2|num="45"|<Particles>
+  \p<
+    Particles can be used both as prepositions and conjunctions, but see \a|href="#20"|<Section 20> and \a|href="#21"|<Section 21> for the use of particles as prepositions.
+    In this section, we explain how particles are used as conjunctions.
+  >
+  \p<
+    The basic use of particles as conjunctions is to connect two clauses.
+    That is, the conjunction is attached before one of the clauses, and a tadek is inserted between the two clauses.
+    The clause with the particle used as the conjunction is called a “conjunction clause”.
+  >
+  \xl<
+    \li<\sh<{kavat a tel e xoq avôl, vade sêfat a tel e met.}>\ja<I have a lot of books because I like them.>>
+  >
+  \p<
+    Unlike with connectives, the entire conjunction clause can be moved before the main clause.
+  >
+  \xl<
+    \li<\sh<{vade sêfat a tel e xoq, kavat a tel e met avôl.}>\ja<Because I like books, I have a lot of them.>>
+  >
+  \p<
+    Furthermore, the tense of a conjunction clause, unlike that of a relative clause, is not decided relatively.
+    In other words, a conjunction phrase in the past tense shows a past action, and one in the future tense shows a future action, regardless of the tense in the main clause.
+  >
+  \p<
+    When the entire conjunction clause is modified by some kind of word, that word immediately follows the conjunction.
+  >
+  \xl<
+    \li<\sh<{kômot a ces e levlis, te edif ricamos a ces.}>\ja<He wears glasses, even when he is swimming.>>
+  >
+  \h2|num="46"|<Adverbial uses of conjunctions>
+  \p<
+    Although the function of a conjunction is to join two clauses in a single sentence, there are situations when it merely has the meaning of connecting two separate sentences.
+    This is called an “adverbial use of a conjunction”.
+    In cases where one is used as such, a tadek is always placed immediately after the connective or particle used as a conjunction.
+  >
+  \xl<
+    \li<\sh<{kavat a tel e xoq avôl. vade, sêfat a tel e met.}>\ja<I have a lot of books. That's because I like them.>>
+  >
+  \p<
+    In the example above, the conjunction {vade} does not connect clauses because the sentence is cut off mid-way.
+    However, it shows the relationship between the meanings of the former sentence and the latter one`; namely that of effect and cause.
+    If the tadek immediately following the conjunction used adverbially is removed, and the dek of the preceding sentence is changed into a tadek, the resulting sentence follows the ordinary use of a conjunction to join together two clauses.
+  >
+  \h2|num="47"|<The conjunction {kin}>
+  \p<
+    Shaleian has a special conjunction, {kin}.
+    This conjunction means “the action of …” or “the state of …” and has the function of nominalising clauses.
+    It takes the roles of the “to”-infinitive, the “that”-clause and the “wh”-interrogative clause of English.
+    The nominalised clause is called a “{kin}-clause”, and the prepositional phrase to which the {kin}-clause is attached is called a “{kin}-clause phrase”.
+  >
+  \xl<
+    \li<\sh<{salot e asas a kin feraces a ces ca fax.}>\ja<It was good that he helped his mother.>>
+  >
+  \p<
+    In the example above, the clause under {feraces} has been nominalised and become the object of {a}.
+  >
+  \p<
+    If the entire content of a {kin}-clause is modified by some word, that modifier is placed immediately after the {kin}.
+  >
+  \xl<
+    \li<\sh<{haros e tel a kin etut yepelos a'l.}>\ja<The only thing that makes me happy is singing.>>
+  >
+  \p<
+    If {etut} were placed immediately after {etut} in the above sentence, it would not modify the entire {kin}-clause but rather only {yepelos}, and the sentence would mean “I feel good just by singing”.
+  >
+  \p<
+    {kin} can also be used to form indirect questions, as explained in \a|href="#31"|<Section 31>.
+  >
+  \p<
+    Although {kin} is a conjunction, it does not have the role of connecting two items as other conjunctions do.
+    The tense within a {kin} clause is relative to that of the main clause, as with restrictive clauses.
+  >
+  \h1<Numerals>
+  \h2|num="48"|<Numbers>
+  \p<
+    Shaleian uses a base-10 system for counting.
+    The numbers from 0 to 9 are read as in the table below.
+  >
+  \table<
+    \tr<\th<word>\th<number>>
+    \tr<\td<{nof}>\td<0>>
+    \tr<\td<{tis}>\td<1>>
+    \tr<\td<{qec}>\td<2>>
+    \tr<\td<{yos}>\td<3>>
+    \tr<\td<{piv}>\td<4>>
+    \tr<\td<{xal}>\td<5>>
+    \tr<\td<{ric}>\td<6>>
+    \tr<\td<{sez}>\td<7>>
+    \tr<\td<{kaq}>\td<8>>
+    \tr<\td<{von}>\td<9>>
+  >
+  \p<
+    Numbers with no more than four digits can be read by attaching the aforementioned numerals for each digit with the unit words shown below.
+    If there are digits with value 0, then they are not read.
+  >
+  \table<
+    \tr<\th<word>\th<number>>
+    \tr<\td<[et]>\td<10>>
+    \tr<\td<[il]>\td<100>>
+    \tr<\td<[as]>\td<1000>>
+  >
+  \p<
+    For instance, 3487 is {yosaspivilkaqetsez}.
+  >
+  \p<
+    To read a number with five or more digits, one splits the digits into four-digit groups from the least significant end and reads each group of digits using the case above, with the unit words below between the groups.
+    When such numerals are spelt out, fêks are placed immediately after the words listed below.
+  >
+  \table<
+    \tr<\th<word>\th<number>>
+    \tr<\td<[otik]>\td<ten thousand (10\sup<4>)>>
+    \tr<\td<[oqek]>\td<one hundred million (10\sup<8>)>>
+    \tr<\td<[oyok]>\td<one trillion (10\sup<12>)>>
+    \tr<\td<[opik]>\td<ten quadrillion (10\sup<16>)>>
+    \tr<\td<[oxak]>\td<one hundred quintillion (10\sup<20>)>>
+  >
+  \p<
+    For instance, 517002 is {saletisotik-seqasqot}.
+  >
+  \p<
+    The numeral system described above is similar to that of Japanese.
+    However, in Japanese, 51000 and 120 are read not as “五万一千” or “一百二十” but rather as “五万千” or “百二十”`; the “1” digits are elided in Japanese, but {tis} cannot be omitted in Shaleian.
+    For instance, 10 is {tiset}, and 11101 is {tisotik-tisastisiltis}.
+  >
+  \p<
+    When writing large numerals with digits, they are written with a space between groups of four digits, as in [51 7002], in order to make it easy to discern the size of the number.
+  >
+  \h2|num="49"|<Use of numerals>
+  \p<
+    At the core, numerals are used as adjectives.
+    Therefore, they appear with the inflectional prefix [a].
+    Furthermore, this conjugated form still shows only the numeral itself.
+  >
+  \p<
+    Cardinal numerals are expressed by prefixing {il'} to the numeral conjugated as an adjective.
+    Although this is a contraction of {avôl ile lêk}, the unabbreviated form is not used except with a special meaning such as emphasis.
+    The same form is used, whether the numeral is used as an adjective or as an adverb, and it follows the noun.
+  >
+  \xl<
+    \li<\sh<{kavat a tel e refet il'atisil.}>\ja<I have 100 friends.>>
+  >
+  \p<
+    Ordinal numerals are expressed by prefixing {ic'} to the numeral.
+    Although this is a contraction of {acál ile cav}, the unabbreviated form is rarely used as is the case with cardinal numerals.
+    They are used in the same way as cardinal numerals, following the noun.
+  >
+  \xl<
+    \li<\sh<{ditat kòdas a loc e kofet i fax o qâz ca miv ic'afex.}>\ja<Write your mother's and father's names on the third sheet of paper.>>
+  >
+  \h2|num="50"|<Nominal forms of numerals>
+  \p<
+    As described in \a|href="#49"|<Section 49>, the numeral used in cardinal and ordinal numerals are adjectives.
+    Numerals used as such follow the reading rules described in \a|href="#48"|<Section 48> and may be spelt out or read.
+  >
+  \p<
+    On the other hand, when one wants to use a numeral as a noun, such as when showing the idea of “3” itself, the reading of the number changes.
+    To be specific, the vowel of the final syllable is mutated according to the rules [a] → [e] → [i] → [a] and [o] → [u] → [o].
+    For example, 67 as an adjective is {ricetsez}, but as a noun, it is {ricetsiz}.
+  >
+  \xl<
+    \li<\sh<{salot a ricetsiz e atûl emic ini tisal.}>\ja<67 is smaller than 100.>>
+  >
+  \h2|num="51"|<Dates and times>
+  \p<
+    To express dates, one uses ordinal numerals and connects the unit + {ac'} + numeral into a group.
+    The units are lined up from the smallest first.
+    For instance, “April 17” would be expressed as {taq ac'}[17 ]{ben ac'}[4].
+  >
+  \p<
+    To express times, {tat ile} is followed by the unit and the numeral.
+    Unlike with dates, the units are lined up from the largest first.
+    For instance, the time “8:12” would be expressed as {tat ile tef}[ 8 ]{meris}[ 12].
+  >
+  \p<
+    Although nouns are placed in succession in all sorts of expressions, these expressions of dates and times are recognised as a special case.
+  >
+  \h1<Omission and abbreviation>
+  \h2|num="52"|<Omission of prepositional phrases>
+  \p<
+    Prepositional phrases, unlike verbs, are not always required in Shaleian.
+    Consequently, they can be omitted freely according to grammar.
+    However, the {a}-phrase, which shows the subject`; the {e}-phrase, which shows the object`; and the {li}-phrase, which shows the subject when a verb is used as a transitive verb are not omitted very aggressively.
+  >
+  \p<
+    A prepositional phrase that is not explicitly specified is interpreted to govern a pronoun of indefinite meaning, as explained in \a|href="#65"|<Section 65>.
+  >
+  \xl<
+    \li<\sh<{bozetes e tel.}>\ja<I was hit.>>
+  >
+  \p<
+    In this example, the {a}-phrase showing the subject is omitted, and the one who performed the hitting is not explicit.
+    In this case, the reader understands that the writer was hit by some particular person but is not referencing the attacker.
+    To put it in other words, it is thought to be omitting {a zis} or {a zat}.
+  >
+  \h2|num="53"|<Omission of repeated elements>
+  \p<
+    Repeating words or phrases is considered verbose and disliked in Shaleian.
+    For that reason, the repeated part is omitted from its second appearance forward.
+    Because verbs are generally not allowed to be omitted in Shaleian, they are replaced with the proverb {l} when they should be omitted.
+    In addition, when the same word appears several times, it is replaced with a pronoun of the same kind from its second appearance onward, as described in \a|href="#65"|<Section 65>, avoiding its repetition.
+    Furthermore, negative adverbs are not omitted, even when they are repeated.
+    See \a|href="#54"|<Section 54> for information on the proverb {l}.
+  >
+  \xl<
+    \li<\sh<{nises a hîx zi abig ca azaf, ce nises a hîx zi azaf ca ajôm.}>\ja<The sky changed from blue to red, and the sky changed from red to black.>>
+  >
+  \p<
+    In this example, the verb {nises} and the prepositional phrase {a hîx} exist in both the former and latter clauses.
+    For that reason, they are omitted as shown below.
+  >
+  \xl<
+    \li<\sh<{nises a hîx zi abig ca azav, ce les zi azaf ca ajôm.}>\ja<The sky changed from blue to red, and then from red to black.>>
+  >
+  \p<
+    First, {a hîx} is removed from the latter clause, and {nises} is changed to {les} by using the proverb.
+  >
+  \p<
+    In comparative and equative expressions, explained in \a|href="#39"|<Sections 39> and \a|href="#40"|<40>, the object of comparison is shown using the conjunction {ini}.
+    As an exception, the verb in such an {ini}-clause may be omitted.
+  >
+  \h2|num="54"|<The proverb {l}>
+  \p<
+    When a verb is repeated, its second occurrence onward is replaced by {l}, known as the “proverb”, avoiding the repetition.
+    This {l} stands in for the verb in the clause immediately preceding it and all prepositional phrases that modify it.
+  >
+  \xl<
+    \li<\sh<{kavat a tel e monaf. lat a ʻmelfih avoc.}>\ja<I have a cat. Melfia does too.>>
+  >
+  \p<
+    In the above example, {lat} stands for {kavat e monaf}.
+  >
+  \h2|num="55"|<Abbreviated forms>
+  \p<
+    The first-person pronoun {tel}, the second-person pronoun {loc}, as well as {ces} and {cit}, which refer to a person or object mentioned earlier, occur frequently in sentences.
+    In order to reduce verbosity, they are often abbreviated as {'l}, {'c}, {'s} and {'t}, respectively, starting from their second occurrence in the same clause.
+    In this case, there is no space between the preposition being attached to and the abbreviated form.
+    In addition, these abbreviations can be used only from the second occurrence onward within a sentence`; they cannot be used at their first occurrence.
+    Moreover, they are rarely used except immediately after the six prepositions {a}, {e}, {li}, {ca}, {zi} and {i}.
+  >
+  \xl<
+    \li<\sh<{sâfat a tel e kin catos a'l vo fecil ica sod.}>\ja<I like walking in the surroundings of my house.>>
+  >
+  \p<
+    Furthermore, {kin}-clauses are used often`; thus, {kin} is often abbreviated to {'n}.
+    This abbreviation can be used even for the first occurrence of {kin} in a sentence.
+  >
+  \xl<
+    \li<\sh<{cipases a tel ca ces e'n fegis a's e dev.}>\ja<I asked him to buy a pen.>>
+  >
+  \h2|num="56"|<Abbereviations for dates and times>
+  \p<
+    Expressions for dates and times can be abbreviated by writing the numerals separated by kaltaks.
+    In this case, the year takes four digits and other numerals take two digits`; if a numeral does not have enough digits, then it is padded with the digit [0] on the left.
+    As explained in \a|href="#51"|<Section 51>, dates are written with the smallest unit first in Shaleian.
+    Note that this order is opposite of the Japanese order.
+  >
+  \xl<
+    \li<\sh<{zêfes a tel vo fêd te}[ 12:05.]>\ja<I arrived at 12:05.>>
+  >
+  \p<
+    The expression [12:05] in the above example is short for “five minutes after twelve o'clock”, or in other words, {tat ile tef}[ 12 ]{meris}[ 5], but it could also stand for “May 12”, or {taq ac'}[12 ]{ben ac'}[5].
+    They cannot be distinguished from the abbreviation alone, only from the context.
+  >
+  \p<
+    When reading this abbreviation aloud, the numerals delimited by the kaltaks are pronounced in succession.
+    For instance, [12:05] would be read as {tisetqic-xel}.
+  >
+  \h2|num="57"|<Creating compounds>
+  \p<
+    When one wants to show a noun modified by an adjective clause or such, there are times when repeating it would become too verbose, and using {ces} or {cit} in its place would raise ambiguity about what the pronouns are referring to.
+    In this case, the noun in question and the words considered the most important among the modifying elements are connected into one word with fêks, and the resulting word can be used as a pronoun.
+    For example, if an earlier sentence contained the noun phrase {zas kilat lakos a qi qixaléh}, then that person could be referred to again by using {zas-qixaléh}, connecting {zas} with a word from one of the modifying elements, {qixaléh}.
+  >
+  \h1<Rhetorical expressions>
+  \h2|num="58"|<Insertion>
+  \p<
+    As explained in \a|href="#20"|<Section 20>, an adverb modifying a verb falls immediately after the verb or at the end of a sentence`; however, they can also be placed between two prepositional phrases, provided that tadeks are placed before and after the adverbial phrase.
+    This is called an “insertion of an adverb”.
+  >
+  \xl<
+    \li<\sh<{lanes a tel, otet, ca cêd.}>\ja<I go there, sometimes.>>
+  >
+  \p<
+    When an adverb is used in the middle of a sentence as such, it has a nuance of clarifying the verb in a complementary way.
+    In the above example, the main information is “I go there”, but the information of “sometimes” is felt to be added against that.
+  >
+  \h2|num="59"|<Emphasis>
+  \p<
+    By moving a verb-modifying prepositional phrase placed after an ordinary verb before the verb and placing a tadek after it, that prepositional phrase can be emphasized.
+  >
+  \xl<
+    \li<\sh<{e ʻmelfih, cafeles a tel.}>\ja<Melfia is the one I called.>>
+  >
+  \p<
+    An adverb modifying a verb can also be emphasized in the same way.
+  >
+  \xl<
+    \li<\sh<{okôk, ditat lesis a'c e cal.}>\ja<Make sure to do that.>>
+  >
+  \p<
+    A verb-modifying prepositional phrase or adverb can also be emphasized by placing it at the end of a sentence and placing a tadek before it.
+    Compared to moving it before the verb as described earlier, this method gives less emphasis and is used for reminders of new information at the end of a sentence and such.
+  >
+  \xl<
+    \li<\sh<{raflesec a tel te cal, e ʻmelfih.}>\ja<The person I talked to back then was Melfia.>>
+  >
+  \p<
+    Adverbs and adjectives that modify something other than a verb cannot be emphasized in this way.
+  >
+  \h2|num="60"|<Admiration>
+  \p<
+    An expression of admiration is formed by using {s'e} followed by an adjective or noun.
+  >
+  \xl<
+    \li<\sh<{s'e ayerif.}>\ja<How beautiful.>>
+    \li<\sh<{s'e neyef ayerif.}>\ja<What a beautiful flower.>> 
+  >
+  \p<
+    The {s'e} used in this construction is an abbreviation of {salat e} and canb e used only in admirative expressions.
+  >
+  \h2|num="61"|<Irony>
+  \p<
+    When the padek at the end of an interrogative sentence (explained in \a|href="#28"|<Sections 28>–\a|href="#30"|<30>) is replaced with a dek, it becomes an expression of irony that shows that the content of the question is false.
+    When read aloud, the sentence lacks any rising intonation at its end.
+  >
+  \xl<
+    \li<\sh<{pa kilat lesos a pas e cal.}>\ja<Who could do that.>>
+  >
+  \h1<Other special expressions>
+  \h2|num="62"|<Nonrestrictive uses of adjectives>
+  \p<
+    Although adjectives have the function of restricting the nouns that they modify, an adjective can be made to not restrict its heads by placing tadeks before and after it.
+    If the adjective occurs at the end of a sentence, it simply receives a tadek before it.
+    In this case, the adjective is understood to supplement the meaning of a noun.
+    This construction is called a “nonrestrictive use of an adjective”. The change in meaning is the same as that of nonrestrictive relative clauses, explained in \a|href="#43"|<Section 43>.
+  >
+  \xl<
+    \li<\sh<{kavat a ces e yaf, ahál.}>\ja<I have a younger sister, who is cute.>>
+  >
+  \h2|num="63"|<Alternative expressions for relative clauses>
+  \p<
+    Some relative clauses can be expressed more concisely by using nonverb-modifying forms of particles.
+  >
+  \p<
+    Consider the following sentence as an example.
+  >
+  \xl<
+    \li<\sh<{salet e alot a qazek qetat a vo vosis afik.}>\ja<The man who was in this store was tall.>>
+  >
+  \p<
+    By omitting the verb in this relative clause and changing the prepositions of the prepositional phrases modifying the verb to be in their nonverb-modifying forms, we can express the sentence without using relative clauses.
+  >
+  \xl<
+    \li<\sh<{salet e alot a qazek ivo vosis afik.}>\ja<The man in this store is tall.>>
+  >
+  \p<
+    This expression can be used as long as the sentence remains unambiguous when the verb is omitted.
+    In most such cases, the omitted element is recognised as {qet}, and the prepositions used in such cases are often {ivo}, {ite}, {ifi} or {ide}.
+  >
+  \h2|num="64"|<Clarification of pauses>
+  \p<
+    When a prepositional phrase with a noun phrase modified by a long relative clause occurs in the middle of a sentence, it can become hard to discern where the prepositional phrase ends.
+  >
+  \xl<
+    \li<\sh<{câses a tel e tiqat lanes a e zîdsax te tazît.}>\ja<I met a boy who was going to school yesterday.>>
+  >
+  \p<
+    In the example above, it is unclear whether the relative clause under {lanes}, modifying {tiqat}, ends at {e zîdsax} or at {te tazît}.
+    If the relative clause ends at {e zîdsax}, then a tadek can be inserted after the delimited part in order to make this divide clear.
+  >
+  \xl<
+    \li<\sh<{câses a tel e tiqat lanes a e zîdsax, te tazît.}>\ja<Yesterday, I met a boy who was going to school.>>
+  >
+  \p<
+    In addition, this use of the tadek tends to be kept at a minimum.
+    If the prepositional phrase were moved immediately after {te tazît} or {a tel} in the above sentence, then no explicit demarcation would be necessary.
+    However, if {te tazît} were new information to be presented to the reader, then it is preferred to be at the end of the sentence as explained in \a|href="#23"|<Section 23>, and a tadek is likely to be used for clarification.
+  >
+  \h1<Other important words>
+  \h2|num="65"|<Proforms>
+  \p<
+    The words in the table below are collectively called “proforms” in Shaleian.
+    As shown in the table, there are ten kinds of meanings and five kinds of targets indicated by these words, with a total of 41 proforms.
+    Note that the term “proform” is a generic term for the words in the table, and it represents neither sort nor category.
+  >
+  \table<
+    \tr<\th<>\th<[f]->\th<[q]->\th<[c]->\th<[p]->\th<[d]->\th<[z]->\th<[k]->\th<[r]->\th<[m]->\th<[v]->>
+    \tr<\th<person>\td<{fes}>\td<{qos}>\td<{ces}>\td<{pas}>\td<{dus}>\td<{zis}>\td<{kos}>\td<{ris}>\td<>\td<{ves}>>
+    \tr<\th<object>\td<{fit}>\td<{qut}>\td<{cit}>\td<{pet}>\td<{dat}>\td<{zat}>\td<{kut}>\td<{rat}>\td<{met}>\td<>>
+    \tr<\th<event>\td<{fal}>\td<{qel}>\td<{cal}>\td<{pil}>\td<{dol}>\td<{zel}>\td<{kel}>\td<{rel}>\td<>\td<>>
+    \tr<\th<place>\td<{fêd}>\td<{qôd}>\td<{cêd}>\td<{pâd}>\td<{dûd}>\td<{zîd}>\td<{kôd}>\td<{rîd}>\td<>\td<>>
+    \tr<\th<qualifying>\td<{fik}>\td<{quk}>\td<{cik}>\td<{pek}>\td<{dak}>\td<{zak}>\td<{kuk}>\td<{rak}>\td<>\td<>>
+  >
+  \p<
+    Since proforms with a common meaning share the first letter, such groups are sometimes named after that letter. For example, the group with {fes}, {fit}, {fal}, {fêd} and {fik} are sometimes called “[f]-proforms”.
+    They can also be named after what they indicate, as listed in the following. The proforms in aforementioned group are called the “proximal proforms”.
+  >
+  \table<
+    \tr<\th<kind>\th<name>>
+    \tr<\td<[f]->\td<proximal>>
+    \tr<\td<[q]->\td<distal>>
+    \tr<\td<[c]->\td<demonstrative>>
+    \tr<\td<[p]->\td<interrogative>>
+    \tr<\td<[d]->\td<negative>>
+    \tr<\td<[z]->\td<indefinite>>
+    \tr<\td<[k]->\td<assertive>>
+    \tr<\td<[r]->\td<elective>>
+    \tr<\td<[m]->\td<substitutive>>
+    \tr<\td<[v]->\td<generic>>
+  >
+  \p<
+    Proforms indicating persons, objects, events or places can be used only as nouns, while qualifying ones can be used only as adjectives.
+  >
+  \p<
+    Proximal and distal proforms show whether something is near or far from the writer.
+    This distance can refer to physical distance, but also to psychological distance.
+    There is no distinction between genders as in English “he” or “she”.
+  >
+  \xl<
+    \li<\sh<{salot a qos e qâz i tel.}>\ja<That person is my father.>>
+  >
+  \p<
+    The demonstrative proforms refer to something mentioned in an earlier context.
+    It corresponds to Japanese “それ” or “そこ”.
+  >
+  \xl<
+    \li<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>\ja<Because this painting is very important and expensive, please take good care of it.>>
+  >
+  \p<
+    Interrogative proforms are described in \a|href="#29"|<Section 29>, and negative proforms in \a|href="#25"|<Section 25>.
+  >
+  \p<
+    The indefinite proforms refer to something in general without specifying a particular instance thereof.
+    For instance, {zas} refers to people in general without pointing to anyone specifically.
+    They are almost always modified by another word and vaguely indicate “people”, “things” and so on.
+  >
+  \xl<
+    \li<\sh<{pa salat e pas a zas xarat e a ces?}>\ja<Who is it whom he loves?>>
+  >
+  \p<
+    The assertive proforms are used when there is a particular instance of something but what it is specifically is not referenced.
+    In this case, the person using one does not need to know what is being referred to specifically, and the only requirement is that there is exactly one referent.
+    In other words, its meaning is equivalent to “some” in English.
+  >
+  \xl<
+    \li<\sh<{vade cipases a kos ca loc, ditat delizis a loc zi ces.}>\ja<Since someone has asked you, please follow their order.>>
+  >
+  \p<
+    The elective proforms has the meaning of “any”.
+    They are often used to express compromise.
+  >
+  \xl<
+    \li<\sh<{bari kodis e rel, xarit a tel e loc.}>\ja<Even if anything happens, I'll still love you.>>
+  >
+  \p<
+    There is only one substitutive proform, {met}, which takes a noun mentioned earlier in context.
+    However, {met} does not refer to the same thing as the earlier noun, but rather a different instance of the same noun.
+    It is roughly equivalent to “one” or “ones” in English.
+  >
+  \xl<
+    \li<\sh<{kûtat a nîl i tel e sokul iku ces, dà dulat a tel e met.}>\ja<My older brother has his own room, but I don't.>>
+  >
+  \p<
+    There is only one generic pronoun, {ves}, which refers to a person.
+    It is used to describe a common opinion.
+    Its usage is similar to that of “on” in French.
+  >
+  \xl<
+    \li<\sh<{qîlos a ves e dev so kòdos a ces e lakad.}>\ja<One uses a pen to write characters.>>
+  >
+  \p<
+    With the exception of the demonstrative proforms, two or more instances of a proform in the same context refer to different objects.
+    When {fes} is used twice, for example, the first {fes} refers to a different person than the second.
+  >
+  \xl<
+    \li<\sh<{bozetes a fes e fes.}>\ja<This person hit that person.>>
+  >
+  \p<
+    In this sentence, the person doing the hitting and the person being hit are different.
+    On the other hand, if the second {fes} were changed to {ces}, the {ces} would refer to the first {fes}, showing that a person hit themselves.
+  >
+  \h2|num="66"|<Interjections>
+  \p<
+    In Shaleian, interjections are treated similarly to adverbs.
+    In other words, they can be placed right after a verb or at the end of a sentence, as well as inserted as described in \a|href="#58"|<Section 58> or emphasized as described in \a|href="#59"|<Section 59>.
+    However, they differ from adverbs in that they require tadeks before and after them, regardless of where they fall.
+  >
+  \xl<
+    \li<\sh<{pa lesac, sê, e pil a loc?}>\ja<Hey, what are you doing?>>
+  >
+  \p<
+    If the {sê} in the above sentence were an adverb, then it would not need tadeks because it immediately follows the verb.
+  >
+  \h1<Colloquial expressions>
+  \h2|num="67"|<Increased use of abbreviations>
+  \p<
+    Abbreviations are used frequently in colloquial language.
+    Although the abbreviations for items such as {tel} and {ces} can, as explained in \a|href="#55"|<Section 55>, be used from their second occurrence onward within a clause, they are sometimes used from even the first occurrence colloquially.
+    Furthermore, in compositions that put importance on rhythm, such as song lyrics and poetry, these abbreviations are sometimes sued on the first occurrence in order to preserve the rhythm.
+  >
+  \h2|num="68"|<Imperatives>
+  \p<
+    As explained in \a|href="#35"|<Section 35>, the verb {dit} is used to indicate commands, but this verb is sometimes omitted in colloquial language, such that the imperative sentence starts abruptly with the verb.
+    Furthermore, if the target of command is the second-person pronoun {loc}, it is often abbreviated to {'c}.
+  >
+  \xl<
+    \li<\sh<{pariqaf a'c!}>\ja<Go away!>>
+  >
+  \h1<Detailed explanations for categories>
+  \h2|num="69"|<Verbal infinitives>
+  \p<
+    As explained in \a|href="#15"|<Section 15>, verbal infinitives can be used in four different categories: verbs, nouns, adjectives, and adverbs.
+    However, these categories are related and do not indicate completely different things`; the verbal meaning is used as a basis for the meaning given when a verbal infinitive is used in another category.
+    To be concrete, the noun has the meaning of “the action of doing …”, the adjective “of the state of doing …” or “of the state of being …ed”, and the adverb “in a state of doing …” or “in a state of being …ed”.
+    The meaning given to the adjectival or adverbial usage is decided between either of the options described above according to the word.
+  >
+  \p<
+    We explain this more concretely using the verb {xôy} as an example.
+    {xôy} is a verbal infinitive, and its meaning as a verb is “to tidy up”.
+    Therefore, it means “the act of tidying up” itself when used as a noun.
+    As an adjective, it means “that is tidied up”, or in other words, “tidy”.
+    Moreover, as ana adverb, it has the meaning of “in a tidy state”.
+  >
+  \p<
+    In addition, the adjectival usage means “of the state of doing …” or “of the state of being …ed”.
+    As a result, if the word is used as a verb in a relative clause with the progressive or continuous aspect, then it carries a similar meaning as the adjectival usage.
+    However, these two constructions differ in nuance: the sentence with a verb used as such shows a temporary state, while one with an adjective indicates a permanent property of a noun.
+  >
+
+>

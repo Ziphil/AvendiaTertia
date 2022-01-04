@@ -1,0 +1,190 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<直積とスマッシュ積>
+  \use-math;
+
+  \h1<日記 (2019 年 11 月 11 日)>
+  \p<
+    今日は、いくつかの完備順序集合を組み合わせてより複雑な完備順序集合を作る方法に触れる。
+  >
+  \p<
+    まずは直積である。
+    これは、集合としての通常の直積に、成分ごとの順序を入れたものである。
+  >
+  \thm|type="def",id="prod"|<
+    \p<
+      完備順序集合 &m<D, E> に対し、
+      &mb<
+        D \times; E \coloneqq; `{ (d, e) \mid; d \in; D, e \in; E `}
+      >
+      とおき、&m<D \times; E> 上の順序を
+      &mb<
+        (d, e) \sqsubseteq; (d', e') \coloniff; d \sqsubseteq; d' \scand; e \sqsubseteq; e'
+      >
+      で定める。
+      この &m<D \times; E> を &m<D> と &m<E> の\em<直積\fl<direct product>> という。
+    >
+  >
+  \p<
+    この直積 &m<D \times; E> には、2 つの射影
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<`p><1>:> \c<D \times; E> \c<\longto;> \c<D> \br;
+        \c; \c<(d, e)> \c<\longmapsto;> \c<d>
+      > \qquad;
+      \array|align="rrcl"|<
+        \c<\sb<`p><2>:> \c<D \times; E> \c<\longto;> \c<E> \br;
+        \c; \c<(d, e)> \c<\longmapsto;> \c<e>
+      >
+    >
+    が定義できる。
+    以下に示すように、これは連続になっている。
+  >
+  \thm|type="prp",id="proddir"|<
+    \p<
+      完備順序集合 &m<D, E> をとる。
+      &m<D \times; E> について、以下が成り立つ。
+    >
+    \ol<
+      \li<
+        &m<D \times; E> の部分集合 &m<S> をとる。
+        &m<S> が有向ならば、&m<\sb<`p><1> (S)> と &m<\sb<`p><2> (S)> はともに有向である。
+      >
+      \li<
+        &m<D \times; E> は完備であり、有向部分集合 &m<S> の上限は、
+        &mb<
+          \bigsqcup<(a, b) \in; S> (a, b) = \paren<\bigsqcup<(a, b) \in; S> a, \bigsqcup<(a, b) \in; S> b>
+        >
+        によって計算できる。
+        さらに、&m<D, E> がともに点付きであれば、&m<D \times; E> も点付きであり、最小元は &m<(\bot;, \bot;)> で与えられる。
+      >
+    >
+  >
+  \prf<
+    \p<
+      順序の定義から明らかである。
+    >
+  >
+  \thm|type="prp",id="prodmor"|<
+    \p<
+      完備順序集合 &m<D, E> をとる。
+      射影 &m<\sb<`p><1>: D \times; E \to; D, \sb<`p><2>: D \times; E \to; E> はともに連続である。
+      さらに、&m<D, E> がともに点付きであれば、これらは厳密である。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="proddir"|; から従う。
+    >
+  >
+  \thm|type="prp",id="prodind"|<
+    \p<
+      完備順序集合 &m<D, E, F> と写像 &m<f: D \times; E \to; F> をとる。
+      &m<f> が連続であるための必要十分条件は、任意の &m<d \in; D, e \in; E> に対し、片方の変数を固定した写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<f><d>:> \c<E> \c<\longto;> \c<F> \br;
+          \c; \c<e> \c<\longmapsto;> \c<f (d, e)>
+        > \qquad;
+        \array|align="rrcl"|<
+          \c<\sb<f><e>:> \c<D> \c<\longto;> \c<F> \br;
+          \c; \c<d> \c<\longmapsto;> \c<f (d, e)>
+        >
+      >
+      がともに連続であることである。
+    >
+  >
+  \prf<
+    \p<
+      任意の &m<d \in; D, e \in; E> に対して &m<\sb<f><d>, \sb<f><e>> が全て連続であるとする。
+      この連続性と\ref|type="thm",ref="proddir"|; によって、&m<D \times; E> の有向部分集合 &m<S> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\bigsqcup<(a, b) \in; S> f (a, b)> \c<=> \c<\bigsqcup<a \in; \sb<`p><1> (S)> \bigsqcup<b \in; \sb<`p><2> (T)> \sb<f><a> (b)> \br;
+          \c; \c<=> \c<\bigsqcup<a \in; \sb<`p><1> (S)> \sb<f><a> \paren<\bigsqcup<b \in; \sb<`p><2> (T)> b>> \br;
+          \c; \c<=> \c<\bigsqcup<a \in; \sb<`p><1> (S)> \sb<f><\bigsqcup|in|<b> b> (a)> \br;
+          \c; \c<=> \c<\sb<f><\bigsqcup|in|<b> b> \paren<\bigsqcup<a \in; \sb<`p><1> (S)> a>> \br;
+          \c; \c<=> \c<f \paren<\bigsqcup<a \in; \sb<`p><1> (S)> a, \bigsqcup<b \in; \sb<`p><2> (T)> b>> \br;
+          \c; \c<=> \c<f \paren<\bigsqcup<(a, b) \in; S> (a, b)>>
+        >
+      >
+      が成り立つ。
+      したがって、&m<f> は連続である。
+    >
+    \p<
+      逆に、&m<f> が連続であるとする。
+      任意の &m<d \in; D> および 有向部分集合 &m<B \subseteq; E> に対し、再び\ref|type="thm",ref="proddir"|; によって、
+      &mb<
+        \array|align="rcl"|<
+          \c<\bigsqcup<b \in; B> \sb<f><d> (b)> \c<=> \c<\bigsqcup<b \in; B> f (d, b)> \br;
+          \c; \c<=> \c<f \paren<d, \bigsqcup<b \in; B> b>> \br;
+          \c; \c<=> \c<\sb<f><d> \paren<\bigsqcup<b \in; B> b>>
+        >
+      >
+      が成り立つから、&m<\sb<f><d>> は連続である。
+      任意の &m<e \in; E> に対する &m<\sb<f><e>> の連続性も同様である。
+    >
+  >
+  \p<
+    積に似た構造として、以下で定義するスマッシュ積もよく考えられる。
+    これは、直積においてどちらかの成分に &m<\bot;> が含まれているものを全て同一視して得られるものである。
+  >
+  \thm|type="def",id="prod"|<
+    \p<
+      点付き完備順序集合 &m<D, E> に対し、
+      &mb<
+        D \otimes; E \coloneqq; (D \times; E) `/ \sim|ord|;
+      >
+      とおく。
+      ここで、&m<D \times; E> 上の関係 &m<\sim;> は、
+      &mb<
+        (d, e) \sim; (d', e') \coloniff; \case<
+          \c<d = d' \scand; e = e'> \c<(d \neq; \bot; \scand; e \neq; \bot; \scand; d' \neq; \bot; \scand; e' \neq; \bot;)> \br;
+          \c<d = \bot; \scor; e = \bot;> \c<(d' = \bot; \scor; e' = \bot;)> \br;
+          \c<d' = \bot; \scor; e' = \bot;> \c<(d = \bot; \scor; e = \bot;)> \br;
+        >
+      >
+      を満たす最小の同値関係とする。
+      さらに、&m<D \otimes; E> 上の順序を
+      &mb<
+        `[d, e`] \sqsubseteq; `[d', e'`] \coloniff; \case<
+          \c<d \sqsubseteq; d' \scand; e \sqsubseteq; e'> \c<(d \neq; \bot; \scand; e \neq; \bot; \scand; d' \neq; \bot; \scand; e' \neq; \bot;)> \br;
+          \c<d = \bot; \scor; e = \bot;> \c<(d' = \bot; \scor; e' = \bot;)> \br;
+          \c<\rm<True>> \c<(d = \bot; \scor; e = \bot;)> \br;
+        >
+      >
+      で定める。
+      この &m<D \times; E> を &m<D> と &m<E> の\em<スマッシュ積\fl<smash product>> という。
+    >
+  >
+  \p<
+    定義からは少し分かりづらいが、&m<D \otimes; E> を定めている同値関係 &m<\sim;> は、任意の &m<d \in; D, e \in; E> に対し、
+    &mb<
+      (d, \bot;) \sim; (\bot;, e) \sim; (\bot;, \bot;)
+    >
+    を満たす最小の同値関係である。
+    そして、&m<D \otimes; E> 上の順序 &m<\sqsubseteq;> は、ほとんど直積上の成分ごとの順序と同じだが、成分に &m<\bot;> がある場合は他のどの元よりも小さい (か等しい) としたものである。
+  >
+  \p<
+    スマッシュ積 &m<D \otimes; E> にも、2 つの射影
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<`p><1>:> \c<D \otimes; E> \c<\longto;> \c<D> \br;
+        \c; \c<`[d, e`]> \c<\longmapsto;> \c<\case<\cc<d><(`[d, e`] \neq; \bot;)> \cc<\bot;><(`[d, e`] = \bot;)>>>
+      > \qquad;
+      \array|align="rrcl"|<
+        \c<\sb<`p><2>:> \c<D \otimes; E> \c<\longto;> \c<E> \br;
+        \c; \c<`[d, e`]> \c<\longmapsto;> \c<\case<\cc<e><(`[d, e`] \neq; \bot;)> \cc<\bot;><(`[d, e`] = \bot;)>>>
+      >
+    >
+    が定義できる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="adtx"|<S. Abramsky, A. Jung (1994)「Domain theory」『Handbook of Logic in Computer Science』3:1–168>
+  >
+
+>

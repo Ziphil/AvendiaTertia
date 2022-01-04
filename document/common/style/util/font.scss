@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+
+@font-face {
+  font-family: "Alegreya";
+  src: url("../material/font/3.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Alegreya";
+  src: url("../material/font/4.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaErEBBsBhlBjvfkSLk_xHM8pxULg.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Alegreya";
+  src: url("../material/font/5.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaBrEBBsBhlBjvfkSLhx6g.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alegreya";
+  src: url("../material/font/6.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaGrEBBsBhlBjvfkSpa4r3Owp4.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vekos Web";
+  src: url("../material/font/7.woff") format("woff"), url("../material/font/7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilit Web";
+  src: url("../material/font/8.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilit Web";
+  src: url("../material/font/9.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}

@@ -1,0 +1,273 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<重み付き極限>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2018 年 8 月 6 日)>
+  \p<
+    今回は、豊穣圏における極限について触れようと思う。
+    その前に、後の議論で必要になるため、少々概念の準備をする。
+  >
+  \p<
+    普通の圏論においては射の向きを全て反対にした反転圏が定義できたが、豊穣圏においても同じようなものが定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<V>> に対し、&m<\scr<V>>-豊穣圏 &m<\scr<C>> をとる。
+      新たな &m<\scr<V>>-豊穣圏 &m<\sp<\scr<C>><\circ;>> を、
+    >
+    \ul<
+      \li<
+        &m<\op<Ob> (\sp<\scr<C>><\circ;>) \coloneqq; \op<Ob> (\scr<C>)> とする。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C>)> の元 &m<A, B> に対し、&m<`[A, B`] \sb<><\sp<\scr<C>><\circ;>> \coloneqq; `[B, A`] \sb<><\scr<C>>> とする。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C>)> の元 &m<A, B, C> に対し、&m<\scr<V>> の射 &m<\sb<\tilde<c>><ABC>> を、合成
+        &mb<
+          \diag<
+            \v<`[B, A`] \sb<><\scr<C>> \otimes; `[C, B`] \sb<><\scr<C>>> \v<`[C, B`] \sb<><\scr<C>> \otimes; `[B, A`] \sb<><\scr<C>>> \v<`[C, A`] \sb<><\scr<C>>>
+            \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sb<c><CBA>>
+          >
+        >
+        で定める。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C>)> の元 &m<A> に対し、&m<\scr<V>> の射 &m<\sb<\tilde<j>><A>> を、
+        &mb<
+          \diag<
+            \v<1> \v<`[A, A`] \sb<><\scr<C>>>
+            \ar|s="1",e="2"|<\sb<j><A>>
+          >
+        >
+        と同じであると定める。
+      >
+    >
+    \p<
+      によって定義する。
+      この &m<\sp<\scr<C>><\circ;>> を &m<\scr<C>> の\em<反転圏\fl<opposite category>> という。
+    >
+  >
+  \p<
+    さらに、普通の圏論における圏の直積のようなものも定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<V>> に対し、&m<\scr<V>>-豊穣圏 &m<\scr<C>, \scr<D>> をとる。
+      新たな &m<\scr<V>>-豊穣圏 &m<\scr<C> \otimes; \scr<D>> を、
+    >
+    \ul<
+      \li<
+        &m<\op<Ob> (\scr<C> \otimes; \scr<D>) \coloneqq; \op<Ob> (\scr<C>) \times; \op<Ob> (\scr<D>)> とする。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C> \otimes; \scr<D>)> の元 &m<(A, A'), (B, B')> に対し、&m<`[(A, A'), (B, B')`] \sb<><\scr<C> \otimes; \scr<D>> \coloneqq; `[A, B`] \sb<><\scr<C>> \otimes; `[A', B'`] \sb<><\scr<D>>> とする。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C> \otimes; \scr<D>)> の元 &m<(A, A'), (B, B'), (C, C')> に対し、&m<\scr<V>> の射 &m<\sb<\tilde<c>><(A, A'), (B, B'), (C, C')>> を、合成
+        &mb<
+          \diag|hor="med,thk"|<
+            \v<`[A, B`] \sb<><\scr<C>> \otimes; `[A', B'`] \sb<><\scr<D>> \otimes; `[B, C`] \sb<><\scr<C>> \otimes; `[B', C'`] \sb<><\scr<D>>>
+            \v<`[A, B`] \sb<><\scr<C>> \otimes; `[B, C`] \sb<><\scr<C>> \otimes; `[A', B'`] \sb<><\scr<D>> \otimes; `[B', C'`] \sb<><\scr<D>>>
+            \v<`[A, C`] \sb<><\scr<C>> \otimes; `[A', C'`] \sb<><\scr<D>>>
+            \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sb<c><ABC> \otimes; \sb<c><A' B' C'>>
+          >
+        >
+        で定める。
+      >
+      \li<
+        &m<\op<Ob> (\scr<C> \otimes; \scr<D>)> の元 &m<(A, A')> に対し、&m<\scr<V>> の射 &m<\sb<\tilde<j>><(A, A')>> を、合成
+        &mb<
+          \diag<
+            \v<1> \v<1 \otimes; 1> \v<`[A, A`] \sb<><\scr<C>> \otimes; `[A', A'`] \sb<><\scr<D>>>
+            \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sb<j><A> \otimes; \sb<j><A'>>
+          >
+        >
+        で定める。
+      >
+    >
+    \p<
+      によって定義する。
+      この &m<\scr<C> \otimes; \scr<D>> を &m<\scr<C>, \scr<D>> の\em<テンソル積\fl<tensor product>> という。
+    >
+  >
+  \p<
+    準備が終わったところで豊穣圏での極限を考えたいが、まずは普通の圏での極限について軽く復習しておこう。
+    関手 &m<F: \scr<J> \to; \scr<C>> の極限とは、&m<\scr<C>> の対象 &m<L> であって、任意の &m<\scr<C>> の対象 &m<A> に対し、全単射
+    &mb<
+      \sb<\op<Hom>><\scr<C>> (A, L) \cong; \sb<\op<Nat>><\scr<J> \to; \scr<C>> (\sb<`D><A>, F)
+    >
+    が &m<A> に関して自然に成り立つものことであった。
+    ここで、&m<\sb<`D><A>: \scr<J> \to; \scr<C>> は &m<A> に値をもつ定値関手である。
+    これをそのまま &m<\scr<V>>-豊穣圏に拡張したいところではあるが、定値関手の定義が一般にはうまくいかない。
+    定値 &m<\scr<V>>-豊穣関手 &m<\sb<`D><A>: \scr<J> \to; \scr<C>> を作るには、&m<\scr<J>> の対象 &m<I, J> に対して &m<(\sb<`D><A>) \sb<><IJ>: `[I, J`] \to; `[A, A`]> を適切に定める必要があるが、これがうまく定義できないのである。
+  >
+  \p<
+    ところが、もう 1 つ関手 &m<W: \scr<J> \to; \bfrm<Set>> を用意して、&m<W> の要素圏 &m<\bfrm<El> (W)> を考えることで、上の右辺の自然変換対象を、豊穣圏でも意味をなせる自然変換対象に書き換えることができる。
+    そのことを述べるのが以下の命題である。
+  >
+  \thm|type="prp"|<
+    \p<
+      関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Set>> をとる。
+      任意の &m<\scr<C>> の対象 &m<A> に対し、全単射
+      &mb<
+        \sb<\op<Nat>><\bfrm<El> (W) \to; \scr<C>> (\sb<`D><A>, F \circ; U) \cong; \sb<\op<Nat>><\scr<J> \to; \bfrm<Set>> (W, \op<Hom> (A, F \hyphen;))
+      >
+      が成り立ち、これは &m<A> に関して自然である。
+      ここで、&m<\sb<`D><A>: \bfrm<El> (W) \to; \scr<C>> は &m<A> に値をもつ定値関手であり、&m<U: \bfrm<El> (W) \to; \scr<J>> は忘却関手である。
+    >
+  >
+  \p<
+    すなわち、関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Set>> に対し、&m<F \circ; U: \bfrm<El> (W) \to; \scr<C>> の極限は、&m<\scr<C>> の対象 &m<L> であって、任意の &m<\scr<C>> の対象 &m<A> に対し、 
+    &mb<
+      \sb<\op<Hom>><\scr<C>> (A, L) \cong; \sb<\op<Nat>><\scr<J> \to; \bfrm<Set>> (W, \op<Hom> (A, F \hyphen;))
+    >
+    が &m<A> に関して自然に成り立つものとして特徴づけることができるわけである。
+    この式であれば、そのまま &m<\scr<V>>-豊穣圏に拡張できる。
+  >
+  \p<
+    ここで気になるのが、この形で &m<\scr<V>>-豊穣圏の極限を定義してしまうと、極限が考えられる関手が &m<F \circ; U: \bfrm<El> (W) \to; \scr<C>> という形のものに制限されてしまうので、&m<\bfrm<Set>>-豊穣圏としての通常の圏の完全な一般化になっていないのではないかということである。
+    しかし、上の状態において、&m<W> を 1 点集合への定値関手とすれば、&m<\bfrm<El> (W)> は &m<\scr<J>> と圏同型であり、この同型を同一視すれば &m<U = \sb<\rm<id>><\scr<J>>> となる。
+    したがって、&m<F \circ; U> の形の関手のみを考えることは、実は何の制限にもなっていないのである。
+  >
+  \p<
+    以上の考察のもと、豊穣圏における極限は以下のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル閉圏 &m<\scr<V>> をとる。
+      &m<\scr<V>>-豊穣小圏 &m<\scr<J>> および &m<\scr<V>>-豊穣圏 &m<\scr<C>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \scr<V>> があるとする。
+      さらに、任意の &m<\scr<C>> の対象 &m<A> に対して &m<\lbbracket; W, `[A, F \hyphen;`] \sb<><\scr<C>> \rbbracket; \sb<><\scr<J> \to; \scr<V>>> が存在するとする。
+      ある &m<\scr<C>> の対象 &m<L> が存在し、任意の &m<\scr<C>> の対象 &m<A> に対して、同型
+      &mb<
+        `[A, L`] \sb<><\scr<C>> \cong; \lbbracket; W, `[A, F \hyphen;`] \sb<><\scr<C>> \rbbracket; \sb<><\scr<J> \to; \scr<V>>
+      >
+      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の\em<重み付き極限\fl<weighted limit>> といい、&m<\sb|fun|<\lim;><W> F> で表す。
+    >
+  >
+  \p<
+    すでに述べたように、上の定義において、&m<\scr<V> = \bfrm<Set>> として &m<W> を 1 点集合への定値関手とすれば、&m<W> による重み付き極限は通常の極限に一致する。
+  >
+  \p<
+    この定義における同型の自然性についてもその意味を明確にしておかなければならない。
+    まず、&m<\scr<C>> の対象 &m<A> に対して &m<SA \coloneqq; \lbbracket; W, `[A, F \hyphen;`] \rbbracket;> とおく。
+    この対応は &m<\scr<V>>-豊穣関手 &m<S: \sp<\scr<C>><\circ;> \to; \scr<V>> に拡張できる。
+    これを示すには、&m<\scr<C>> の対象 &m<A, B> に対し、射
+    &mb<
+      \sb<S><AB>: `[B, A`] \longto; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \rmulti|bin|; \lbbracket; W, `[B, F \hyphen;`] \rbbracket;
+    >
+    を構成する必要がある。
+  >
+  \p<
+    初めに、豊穣 Yoneda の補題により、同型射
+    &mb<
+      \sb<f><AB>: `[B, A`] \longto; \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket;
+    >
+    が存在する。
+    &m<\scr<V>>-豊穣関手 &m<`[A, \hyphen;`]: \scr<C> \to; \scr<V>> の明確の定義は \a|href="16.html"|<8 月 5 日>にすでにしているので、そちらを参照してほしい。
+    次に、
+    &mb<
+      \sb<g><AB>: \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket; \longto; \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket;
+    >
+    を構成する。
+    &m<\scr<V>> の対象 &m<X> に対し、&m<\scr<V>>-豊穣自然変換 &m<`g: X \otimes; `[A, \hyphen;`] \raarr; `[B, \hyphen;`]> をとる。
+    &m<\scr<J>> の対象 &m<I> に対して &m<\sb<`d><I> \coloneqq; \sb<`g><FI>> とおくと、これらは &m<\scr<V>>-豊穣自然変換 &m<`d: X \otimes; `[A, F \hyphen;`] \raarr; `[B, F \hyphen;`]> を定める。
+    &m<`g> を &m<`d> に移す操作は、写像
+    &mb<
+      \sb<\tilde<g>><AB>: \op<Hom> (X, \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket; ) \longto; \op<Hom> (X, \lbbracket; `[A, F \hyphen; `], `[B, F \hyphen;`] \rbbracket;)
+    >
+    を 1 つ定める。
+    この写像は、定義から明らかに &m<X> に関して自然である。
+    したがって、通常の Yoneda の補題によって、構成したかった &m<\sb<g><AB>> が得られる。
+    最後に、
+    &mb<
+      \sb<h><AB>: \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket; \longto; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \rmulti|bin|; \lbbracket; W, `[B, F \hyphen;`] \rbbracket;
+    >
+    を構成する。
+    &m<\scr<V>> の対象 &m<X> に対し、&m<\scr<V>>-豊穣自然変換 &m<`d: X \otimes; `[A, F \hyphen;`] \raarr; `[B, F \hyphen;`]> をとる。
+    それとは別に、&m<\lbbracket; W, `[A, F \hyphen;`] \rbbracket;> の等化子としての構造射の 1 つ &m<\sb<m><I>: \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \to; WI \rmulti|bin|; `[A, FI`]> をとる。
+    これとテンソル積の随伴で対応する射を &m<\sp<\sb<m><I>><\flat;>: \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \otimes; WI \to; `[A, FI`]> とする。
+    このとき、合成
+    &mb<
+      \diag<
+        \v<X \otimes; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \otimes; WI>  \v<X \otimes; `[A, FI`]> \v<`[B, FI`]>
+        \ar|s="1",e="2"|<\rm<id> \otimes; \sp<\sb<m><I>><\flat;>> \ar|s="2",e="3"|<\sb<`d><I>> 
+      >
+    >
+    を &m<\sb<`z><I>> とおくと、これらは &m<\scr<V>>-豊穣自然変換 &m<`z: X \otimes; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \otimes; W \hyphen; \raarr; `[B, F \hyphen;`]> を定める。
+    &m<`d> を &m<`z> に移す操作は、写像
+    &mb<
+      \sb<\tilde<h>><AB>: \op<Hom> (X, \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket; ) \longto; \op<Hom> (X \otimes; \lbbracket; W, `[A, F \hyphen;`] \rbbracket;, \lbbracket; W, `[B, F \hyphen;`] \rbbracket;)
+    >
+    を 1 つ定める。
+    この写像も明らかに &m<X> に関して自然なので、再び Yoneda の補題により、構成したかった &m<\sb<h><AB>> が得られる。
+    以上により、&m<\sb<f><AB>, \sb<g><AB>, \sb<h><AB>> を順に合成したものを &m<\sb<S><AB>> とすれば、&m<S> は &m<\scr<V>>-豊穣関手の公理を全て満たす。
+  >
+  \p<
+    &m<\scr<V>>-豊穣関手 &m<`[\hyphen;, L`]: \sp<\scr<C>><\circ;> \to; \scr<V>> の定義は、&m<`[L, \hyphen;`]: \scr<C> \to; \scr<V>> とほとんど同じなので、ここでは省略することにする。
+  >
+  \p<
+    以上の準備のもとで、定義の中の同型が自然であるとは、&m<\scr<V>>-豊穣自然変換 &m<`F: `[\hyphen;, L`] \raarr; S> が存在して、その各成分が全て同型射であるという意味である。
+    すなわち、&m<\scr<C>> の各対象 &m<A> に対して &m<\scr<V>> の同型射 &m<\sb<`F><A>: `[A, L`] \to; SA> が存在し、任意の &m<\scr<C>> の対象 &m<A, B> に対して、
+    &mb<
+      \diag<
+        \v<`[B, A`]> \v<`[A, L`] \rmulti|bin|; `[B, L`]> \br;
+        \v<SA \rmulti|bin|; SB> \v<`[A, L`] \rmulti|bin|; GB>
+        \ar|s="1",e="2"|<\sb<`[\hyphen;, L`]><AB>> \ar|s="1",e="3",inv|<\sb<S><AB>>
+        \ar|s="2",e="4"|<\rm<id> \rmulti|bin|; \sb<`F><B>> \ar|s="3",e="4",inv|<\sb<`F><A> \rmulti|bin|; \rm<id>>
+      >
+    >
+    が可換であるということである。
+  >
+  \p<
+    余極限については、以下のように定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル閉圏 &m<\scr<V>> をとる。
+      &m<\scr<V>>-豊穣小圏 &m<\scr<J>> および &m<\scr<V>>-豊穣圏 &m<\scr<C>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \scr<J> \to; \scr<C>, W: \sp<\scr<J>><\circ;> \to; \scr<V>> があるとする。
+      さらに、任意の &m<\scr<C>> の対象 &m<A> に対して &m<\lbbracket; W, `[F \hyphen;, A`] \sb<><\scr<C>> \rbbracket; \sb<><\sp<\scr<J>><\circ;> \to; \scr<V>>> が存在するとする。
+      ある &m<\scr<C>> の対象 &m<L> が存在し、任意の &m<\scr<C>> の対象 &m<A> に対して、同型
+      &mb<
+        `[L, A`] \sb<><\scr<C>> \cong; \lbbracket; W, `[F \hyphen;, A`] \sb<><\scr<C>> \rbbracket; \sb<><\sp<\scr<J>><\circ;> \to; \scr<V>>
+      >
+      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の\em<重み付き余極限\fl<weighted colimit>> といい、&m<\sb|fun|<\op<colim>><W> F> で表す。
+    >
+  >
+  \p<
+    さてこれまで、&m<\scr<V>>-豊穣圏 &m<\scr<C>> の対象 &m<K> に対し、射対象による &m<\scr<V>>-豊穣関手 &m<`[K, \hyphen;`]: \scr<C> \to; \scr<V>> および &m<`[\hyphen;, K`]: \sp<\scr<C>><\circ;> \to; \scr<V>> をしばしば考えた。
+    これは射対象の始域もしくは終域のどちらか一方を固定しているが、同時に動かすこともできる。
+    具体的には、&m<\scr<C>> の対象 &m<A, B> に対し、&m<(A, B)> を &m<\sp<\scr<C>><\circ;> \otimes; \scr<C>> の対象だと思うと、&m<(A, B)> を &m<`[A, B`]> に移す対応は、&m<\scr<V>>-豊穣関手 &m<\sp<\scr<C>><\circ;> \otimes; \scr<C> \to; \scr<V>> に容易に拡張できる。
+    以降、これを &m<\widetilde<\scr<C>>> で表すことにする。
+    この関手は、非常に重要な形の極限を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル閉圏 &m<\scr<V>> を考える。
+      &m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \sp<\scr<C>><\circ;> \otimes; \scr<C> \to; \scr<D>> をとる。
+      重み付き極限 &m<\sb|fun|<\lim;><\widetilde<\scr<C>>> F> を &m<F> の\em<エンド\fl<end>> といい、&m<\int|in|<\scr<C>><> F> で表す。
+    >
+  >
+  \p<
+    余極限の方にも同様の概念がある。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル閉圏 &m<\scr<V>> を考える。
+      &m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \scr<C> \otimes; \sp<\scr<C>><\circ;> \to; \scr<D>> をとる。
+      重み付き余極限 &m<\sb|fun|<\op<colim>><\widetilde<\scr<C>>> F> を &m<F> の\em<コエンド\fl<coend>> といい、&m<\int|in|<><\scr<C>> F> で表す。
+    >
+  >
+  \p<
+    エンドとコエンドは様々な極限の計算に有用であるが、それについては機会があったときにまとめたいと思う。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 2』Cambridge University Press>
+  >
+
+>

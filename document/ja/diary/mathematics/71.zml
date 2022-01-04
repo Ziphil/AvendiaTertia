@@ -1,0 +1,218 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<整合空間と安定写像>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2021 年 2 月 1 日)>
+  \p<
+    整合空間は、線型論理の創始者でもある Girard によって、線型論理の表示的意味論を与えるために導入されたものである。
+    この日記シリーズでは、整合空間とその間の射である安定写像について軽く議論しつつ、整合空間が成す圏について考察し、最終的に線型論理との関係について触れるつもりである。
+  >
+  \p<
+    まず、整合空間を定義する。
+  >
+  \thm|type="def",id="cohsp"|<
+    \p<
+      集合から成る集合 &m<A> が、2 条件
+    >
+    \ol<
+      \li<
+        任意の &m<a \in; A> に対し、&m<a' \subseteq; a> ならば &m<a' \in; A> が成り立つ。
+      >
+      \li<
+        任意に部分集合 &m<S \subseteq; A> をとり、任意の 2 元 &m<a, a' \in; S> が &m<a \cup; a' \in; A> を常に満たすとする。
+        このとき、&m<\bigcup|in|; S \in; A> が成り立つ。
+      >
+    >
+    \p<
+      を満たすとする。
+      このとき、&m<A> を\em<整合空間\fl<coherence space>> という。
+    >
+  >
+  \p<
+    Girard の慣習に従って、整合空間の元は小文字で書く。
+    しかし、整合空間の元は集合なのでそこからさらに元をとることもできるし、整合空間の元同士で合併などを計算することもできることには注意すること (数学が基礎としているところの集合論では全ては集合なので当たり前なのだが)。
+  >
+  \p<
+    整合空間の定義に関していくつか注意を述べておく。
+    まず、2 つ目の項目で部分集合 &m<S \subseteq; A> に課された条件は、任意の 2 元 &m<a, a' \in; S> に対して &m<a \cup; a'> が &m<A> に属していれば良く &m<S> に属する必要はないので、単に &m<S> が有向であるということよりも強い条件である。
+    また、この項目において &m<S = \empty;> とおくことで、&m<\empty; \in; A> であることが分かる。
+  >
+  \p<
+    整合空間は、反射的無向グラフとも見なすことができる。
+    ここで、反射的無向グラフとは、グラフ理論における (2 頂点の間の辺が高々 1 本である) 無向グラフであって、全ての頂点に対して自分自身から自分自身への辺が存在するものである。
+    すなわち、頂点が成す集合と、頂点が辺で結ばれていることを表す反射的かつ対称な二項関係の組である。
+    以降はこの見方をし、反射的無向グラフと言ったら、何らかの集合とその上の反射的かつ対称な二項関係の組を表すものとする。
+  >
+  \thm|type="def"|<
+    \p<
+      整合空間 &m<A> に対し、
+      &mb<
+        \lvert; A \rvert; \coloneqq; `{ x \mid; `{x`} \in; A`}
+      >
+      と定義し、&m<\lvert; A \rvert;> 上の二項関係 &m<\closure|ord|;> を、
+      &mb<
+        x \closure; x' \coloniff; `{x, x'`} \in; A
+      >
+      で定める。
+      このとき、反射的無向グラフ &m<(\lvert; A \rvert;, \closure|ord|;)> を &m<A> の\em<網\fl<web>> といい、&m<\op<web> (A)> で表す。
+    >
+  >
+  \p<
+    整合空間からその網を得る操作は可逆である。
+    この逆の操作は、反射的無向グラフのクリーク全体をとることで実現される。
+  >
+  \thm|type="def"|<
+    \p<
+      反射的無向グラフ &m<(G, \closure|ord|;)> の頂点から成る集合 &m<a \subseteq; G> を考える。
+      任意の 2 頂点 &m<x, x' \in; a> に対して &m<x \closure; x'> が成り立つとき、&m<a> を &m<G> の\em<クリーク\fl<clique>> という。
+      &m<G> のクリーク全体の集合を &m<\op<clique> (G)> で表す。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      整合空間からその網を得る操作と、反射的無向グラフからそのクリーク全体の集合をとる操作は、互いに逆である。
+      すなわち、全単射
+      &mb<
+        \array|align="rcl"|<
+          \c<&m<`{&raw<整合空間>`}>> \c<\longto;> &m<`{&raw<反射的無向グラフ>`}> \br;
+          \c<A> \c<\longmapsto;> \c<\op<web> (A)> \br;
+          \c<\op<clique> (G)> \c<\longmappedfrom;> \c<G>
+        >
+      >
+      が存在する。
+    >
+  >
+  \prf<
+    \p<
+      容易である。
+    >
+  >
+  \p<
+    以上のことから、整合空間を定義するには、\ref|type="thm",ref="cohsp"|; の 2 条件を満たす集合を与えるか、反射的無向グラフを与えるかすれば良い。
+    また、与えられた整合空間の元を 1 つ与えるのと、その整合空間の網のクリークを 1 つ与えるのは同じことである。
+    以降、整合空間とその網は断りなく同一視する。
+  >
+  \p<
+    いくつか用語を定義しておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      整合空間 &m<A> に対し、以下のように用語を定める。
+    >
+    \ul<
+      \li<
+        &m<\lvert; A \rvert;> の元を &m<A> の\em<トークン\fl<token>> という。
+      >
+      \li<
+        トークン &m<x, x' \in; \lvert; A \rvert;> に対し、上で定まる関係 &m<\closure|ord|;> について &m<x \closure; x'> が成り立つとき、&m<x> と &m<x'> は\em<整合的\fl<coherent>> であるという。
+      >
+      \li<
+        部分集合 &m<a \subseteq; \lvert; A \rvert;> に対し、&m<a> の任意の 2 元が整合的であるとき、&m<a> 自身も\em<整合的\fl<coherent>> であるという。
+      >
+    >
+    \p<
+      さらに、&m<\lvert; A \rvert;> 上の関係 &m<\frown|ord|;, \smile|ord|;, \asymp|ord|;> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<x \frown; x'> \c<\coloniff;> \c<x \closure; x' \scand; x \neq; x'> \br;
+          \c<x \smile; x'> \c<\coloniff;> \c<x \closure;\not|style="margin-left:-0.68em;margin-right:0.15em;"|; x'> \br;
+          \c<x \asymp; x'> \c<\coloniff;> \c<x \closure;\not|style="margin-left:-0.68em;margin-right:0.15em;"|; x' \scor; x = x'> \br;
+        >
+      >
+      で定め、これらを満たすトークンをそれぞれ\em<狭義整合的\fl<strictly coherent>>, \em<狭義非整合的\fl<strictly incoherent>>, \em<非整合的\fl<incoherent>> であるという。
+    >
+  >
+  \p<
+    この用語を用いれば、整合空間の網のクリークとは、その整合空間のトークンから成る整合的な集合のことである。
+    したがって、整合空間の元を 1 つ与えることは、トークンから成る整合的な集合を 1 つ与えることだと言い換えることもできる。
+  >
+  \p<
+    次に、整合空間の間の射となる安定写像を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      整合空間 &m<A, B> の間の写像 &m<f: A \to; B> が、3 条件
+    >
+    \ol<
+      \li<
+        任意の &m<a, a' \in; A> に対し、&m<a \subseteq; a'> ならば &m<f (a) \subseteq; f (a')> が成り立つ。
+      >
+      \li<
+        任意の有向部分集合 &m<S \subseteq; A> に対し、&m<f (\bigcup|in|<a \in; S> a) = \bigcup|in|<a \in; S> f (a)> が成り立つ。
+      >
+      \li<
+        任意の &m<a, a' \in; A> に対し、&m<a \cup; a' \in; A> ならば &m<f (a \cap; a') = f (a) \cap; f (a')> が成り立つ。
+      >
+    >
+    \p<
+      を満たすとき、&m<f> は\em<安定\fl<stable>> であるという。
+      また、これらの条件をそれぞれ\em<単調性\fl<monotonicity>>, \em<連続性\fl<continuity>>, \em<安定性\fl<stability>> という。
+    >
+  >
+  \p<
+    単調性と連続性は、Scott 領域の間の射を定義するときも使われているよく知られた条件である。
+    整合空間の安定写像の定義には安定性が追加で課されているが、この安定性が整合空間の理論において非常に重要な役割を果たすことが知られている。
+  >
+  \p<
+    なお、有向部分集合 &m<S \subseteq; A> に対して、&m<f (\bigcup|in|<a \in; S> a) = \bigcup|in|<a \in; S> f (a)> が成り立つことが &m<\bigcup|in|<a \in; S> f (a) \in; B> であることを含意していることを踏まえると、連続性から単調性が従うことが分かる。
+    したがって、写像が安定であることの定義に単調性と連続性を両方課すのは冗長である。
+    しかし、ある写像が安定であることを示す際、たいていの場合で単調性が自明で、連続性を示すときに単調性を使うことが多いため、ここでは単調性と連続性を両方を条件として書いた。
+  >
+  \p<
+    すでに述べたように、任意の整合空間には &m<\empty;> が元として属するが、安定写像が &m<\empty;> を保存する必要はない。
+    これを条件として課さないのは、領域理論において Scott 連続関数に最小元の保存を課さないのと同じ理由で、不動点を考える際に不都合が生じるからである。
+  >
+  \p<
+    安定写像についてまず分かることととして、これは合成に関して閉じている。
+  >
+  \thm|type="prp"|<
+    \p<
+      整合空間 &m<A, B, C> および写像 &m<f: A \to; B, g: B \to; C> をとる。
+      &m<f> と &m<g> がともに安定ならば、&m<g \circ; f> も安定である。
+    >
+  >
+  \prf<
+    \p<
+      &m<g \circ; f> が上記の 3 条件を満たすことを示せば良いが、単調性は明らかなので、連続性と安定性を示す。
+    >
+    \p<
+      &m<g \circ; f> の連続性を示す。
+      任意の有向部分集合 &m<S \subseteq; A> に対し、まず &m<f> が安定だから &m<f (\bigcup|in|<a \in; S> a) = \bigcup|in|<a \in; S> f (a)> が成り立つ。
+      ここで、&m<T \coloneqq; `{f (a) \mid; a \in; S`}> が有向であることが示されれば、&m<g> が安定であることから、
+      &mb<
+        g (\bigcup|in|<a \in; S> f (a)) = g (\bigcup|in|<b \in; T> b) = \bigcup|in|<b \in; T> g (b) = \bigcup|in|<a \in; S> g (f (a))
+      >
+      が成り立つので、最初の式と合わせて &m<g (f (\bigcup|in|<a \in; S> a)) = \bigcup|in|<a \in; S> g (f (a))> が得られる。
+      したがって、&m<T> が有向であることを示せば良い。
+      任意の &m<a, a' \in; S> に対し、&m<S> の有向性によって &m<a \subseteq; \bar<a>> かつ &m<a' \subseteq; \bar<a>> を満たすような &m<\bar<a> \in; S> が存在する。
+      このとき、&m<f> の単調性から &m<f (a) \subseteq; f (\bar<a>)> かつ &m<f (a') \subseteq; f (\bar<a>)> が成り立つ。
+      したがって、&m<T> は有向である。
+    >
+    \p<
+      次に、&m<g \circ; f> の安定性を示す。
+      任意の &m<a, a' \in; A> であって &m<a \cup; a' \in; A> を満たすものをとる。
+      &m<f> の安定性から &m<f (a \cap; a') = f (a) \cap; f (a')> が成り立つ。
+      また、&m<f> の単調性から &m<f (a) \subseteq; f (a \cup; a')> および &m<f (a') \subseteq; f (a \cup; a')> が成り立つから、&m<f (a) \cup; f (a') \subseteq; f (a \cup; a')> が得られる。
+      ここで、&m<B> は整合空間であって &m<f (a \cup; a') \in; B> だから、&m<f (a) \cup; f (a') \in; B> が分かる。
+      したがって、&m<g> の安定性から &m<g (f (a) \cap; f (a')) = g (f (a)) \cap; g (f (a'))> が成り立つ。
+      最初に得られた式と合わせて、&m<g (f (a \cap; a')) = g (f (a)) \cap; g (f (a'))> を得る。
+    >
+  >
+  \p<
+    これにより、整合空間と安定写像は圏を成すので、以降これを &m<\bfrm<Coh>> で表す。
+  >
+  \p<
+    次回から何回かに分けて、&m<\bfrm<Coh>> の積と冪の具体的な形を与えることで &m<\bfrm<Coh>> がカルテシアン閉であることを示す。
+    さらに、積とは異なる演算を与えて、その演算に関して &m<\bfrm<Coh>> がモノイダル閉であることも示す。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="gllx"|<J. Y. Girard (1987)「Linear logic」『Theoretical Computer Science』50:1–101>
+    \li|id="ptx"|<J. Y. Girard, Y. Lafont, P. Taylor (1989)『Proofs and Types』Cambridge University Press>
+  >
+
+>

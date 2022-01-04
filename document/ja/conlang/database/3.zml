@@ -1,0 +1,47 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<ハイリア暦変換>
+  \ver<>
+  \use-script|src="1.js"|;
+
+  \h1<日付変換フォーム>
+  \form-table<
+    \tr<
+      \td<旧ハイリア暦: \ch|n="nbsp"|;>
+      \td<\input|id="old-hairian-year",width="3"|; 年 \input|id="old-hairian-month",width="2.5"|; 月 \input|id="old-hairian-day",width="2.5"|; 日>
+      \td<　>
+      \td<\button|id="old-hairian"|<変換>>
+    >
+    \tr<
+      \td<新ハイリア暦: \ch|n="nbsp"|;>
+      \td<\input|id="new-hairian-year",width="3"|; 年 \input|id="new-hairian-month",width="2.5"|; 月 \input|id="new-hairian-day",width="2.5"|; 日>
+      \td<　>
+      \td<\button|id="new-hairian"|<変換>>
+    >
+    \tr<
+      \td<グレゴリオ暦: \ch|n="nbsp"|;>
+      \td<\input|id="gregorian-year",width="3"|; 年 \input|id="gregorian-month",width="2.5"|; 月 \input|id="gregorian-day",width="2.5"|; 日>
+      \td<　>
+      \td<\button|id="gregorian"|<変換>>
+    >
+    \tr<
+      \td<ハイリア数: \ch|n="nbsp"|;>
+      \td<\h<\input|id="hairia-day",width="3"|;>>
+      \td<　>
+      \td<\button|id="hairia"|<変換>>
+    >
+  >
+  \h1<概要>
+  \p<
+    新旧ハイリア暦とグレゴリオ暦の相互変換を行います。
+  >
+  \p<
+    年数に 0 以下の数が現れる際は、その解釈に注意してください。
+    年数に「1」を入力すると紀元後 1 年の意味になるので、「0」を入力するとその 1 年前である紀元前 1 年の意味になり、「-1」を入力するとさらに 1 年前である紀元前 2 年の意味になります。
+    このように、年数欄における正でない整数は、紀元前としての実際の表記と数が 1 ずれるので注意してください。
+  >
+
+>

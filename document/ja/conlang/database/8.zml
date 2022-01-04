@@ -1,0 +1,23 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<PDF 版辞典>
+  \ver<S 代>
+
+  \h1<閲覧>
+  \p<
+    PDF 版のシャレイア語辞典を閲覧できます。
+    更新は手動なので、常に最新のデータであるわけではありません。
+  >
+  \pdf|src="../../file/dictionary/1.pdf"|;
+  \h1<PDF ダウンロード>
+  \p<
+    ブラウザが PDF ファイルの表示に対応していない場合は、以下のリンクから PDF ファイルを直接ダウンロードしてください。
+  >
+  \form<
+    \a|href="../../file/dictionary/1.pdf"|<ダウンロード>
+  >
+
+>

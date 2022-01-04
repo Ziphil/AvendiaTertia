@@ -1,0 +1,285 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<部分対象分類子>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2019 年 8 月 25 日)>
+  \p<
+    まず、部分対象分類子の定義を確認しておく。
+  >
+  \thm|type="def"|<
+    \p<
+      有限完備な圏 &m<\scr<F>> をとる。
+      終対象からの射 &m<\top;: 1 \to; `V> が\em<部分対象分類子\fl<subobject classifier>> であるとは、任意の単射 &m<m: M \tailrarr; F> に対し、射 &m<`x: F \to; `V> が一意に存在して、図式
+      &mb<
+        \diag<
+          \v<M> \v<1> \br;
+          \v<F> \v<`V>
+          \ar|s="1",e="2"|; \ar|s="1",e="3",tip="tail",inv|<m>
+          \ar|s="2",e="4"|<\top;> \ar|s="3",e="4",inv|<`x>
+        >
+      >
+      が引き戻しとなることである。
+    >
+  >
+  \p<
+    定義に厳密に従えば、部分対象分類子とは上記の性質を満たす射 &m<\top;: 1 \to; `V> のことだが、しばしば &m<`V> だけを指して部分対象分類子と言うことがある。
+  >
+  \p<
+    定義によって、部分対象分類子 &m<\top;: 1 \to; `V> があると、任意の対象 &m<F> に対して、&m<F> の部分対象と &m<F> から &m<`V> への射が 1 対 1 に対応する。
+    以降、これによって対応するものを、
+    &mb<
+      \array|align="rcl"|<
+        \c<\op<Sub> (F)> \c<\longrarr;> \c<\op<Hom> (F, `V)> \br;
+        \c<M> \c<\longmapsto;> \c<\sb|fun|<\op<char>><F> M> \br;
+        \c<\sb|fun|<\op<sub>><F> `x> \c<\longmappedfrom;> \c<`x>
+      >
+    >
+    と書くことにする。
+    添字の &m<F> はしばしば省略する。
+  >
+  \p<
+    層の圏の部分対象分類子は、閉篩の全体として定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      &m<C> 上の篩 &m<S> が &m<J> に関して\em<閉\fl<closed>> であるとは、任意の射 &m<f: D \to; C> に対して、&m<\sp<f><*> S \in; JD> ならば &m<f \in; S> が成り立つことである。
+    >
+  >
+  \p<
+    なお、層の概念はもともと位相空間 (の開集合系) の上に定義されたものだったが、その位相空間における閉集合とここで定義した閉篩には特段関係があるわけではない。
+  >
+  \thm|type="prp",id="clstab"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      &m<C> 上の篩 &m<S> と射 &m<h: D \to; C> に対し、&m<S> が閉ならば &m<\sp<h><*> S> も閉である。
+    >
+  >
+  \prf<
+    \p<
+      定義から容易に分かる。
+    >
+  >
+  \p<
+    任意の篩から閉篩を作ることもできる。
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      &m<C> 上の篩 &m<S> に対し、
+      &mb<
+        \overline<S> \coloneqq; `{ f \mid; \op<cod> f = C, \sp<f><*> S \in; J (\op<dom> f) `}
+      >
+      を &m<S> の\em<閉包\fl<closure>> という。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      &m<C> 上の篩 &m<S> に対し、&m<\overline<S>> は &m<S> を含む最小の閉篩である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\overline<S>> が篩であることは &m<J> の安定性からすぐに分かる。
+    >
+    \p<
+      &m<\overline<S>> が閉篩であることを示す。
+      任意に射 &m<f: D \to; C> をとり、&m<\sp<f><*> \overline<S> \in; JD> であるとする。
+      さらに任意の射 &m<h \in; \sp<f><*> \overline<S>: E \to; D> をとると、&m<f \circ; h \in; \overline<S>> であるから、&m<\sp<h><*> (\sp<f><*> S) \in; JE> が成り立つ。
+      よって、&m<J> の推移性によって &m<\sp<f><*> S \in; JD> が得られ、すなわち &m<f \in; \overline<S>> である。
+      これより、&m<\overline<S>> は閉篩である。
+    >
+    \p<
+      &m<\overline<S>> の最小性を示す。
+      &m<S> を含む閉篩 &m<T> をとる。
+      任意の射 &m<f \in; \overline<S>> に対し、定義から &m<\sp<f><*> S \in; JD> が成り立つが、&m<S \subseteq; T> より &m<\sp<f><*>S \subseteq; \sp<f><*> T> であるから、\a|href="26.html#shvup"|<命題 1.6> によって &m<\sp<f><*> T \in; JD> も成り立つ。
+      今 &m<T> は閉だったので、&m<f \in; T> である。
+      以上によって &m<\overline<S> \subseteq; T> が示されたので、&m<\overline<S>> は &m<S> を含む最小の閉篩である。
+    >
+  >
+  \thm|type="prp",id="starpres"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      &m<C> 上の篩 &m<S> および射 &m<h: D \to; C> に対し、&m<\overline<\sp<h><*> S> = \sp<h><*> \overline<S>> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<S \subseteq; \overline<S>> であるから &m<\sp<h><*> S \subseteq; \sp<h><*> \overline<S>> であるが、\ref|type="thm",ref="clstab"|; によって右辺は閉なので、両辺の閉包をとれば &m<\overline<\sp<h><*> S> \subseteq; \sp<h><*> \overline<S>> を得る。
+      逆に、任意に &m<f \in; \sp<h><*> \overline<S>: E \to; D> をとると、&m<h \circ; f \in; \overline<S>> より &m<\sp<f><*> (\sp<h><*> S) \in; JE> であるから、すなわち &m<f \in; \overline<\sp<h><*> S>> が成り立つ。
+      これより、&m<\overline<\sp<h><*> S> \supseteq; \sp<h><*> \overline<S>> も示された。
+    >
+  >
+  \p<
+    \ref|type="thm",ref="clstab"|; によって、篩が閉であるという性質は引き戻しによって保存されるので、対象に対してその上の閉篩を返す対応は関手になる。
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> に対して、
+      &mb<
+        \array|align="rrcl"|<
+          \c<`V:> \c<\sp<\scr<C>><\circ;>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<C> \c<\longmapsto;> \c<`{ C \text< 上の > J \text< に関して閉である篩> `}>
+        >
+      >
+      と定義する。
+      なお、射は篩の引き戻しに対応するものとする。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      景 &m<(\scr<C>, J)> に対して、上記の &m<`V> は層である。
+    >
+  >
+  \prf<
+    \p<
+      任意に被覆篩 &m<W \in; JC> をとる。
+      &mb<
+        &mark<♤>
+        \text<-> \circ; W: \op<Hom> (\bf<y> C, `V) \to; \op<Hom> (W, `V)
+      >
+      が全単射であることを示せば良い。
+    >
+    \p<
+      写像 &m<♤> が単射であることを示す。
+      そのために、自然変換 &m<a, a': \bf<y> C \to; `V> をとり、&m<a \circ; W = a' \circ; W> を満たすとする。
+      すなわち、任意の &m<f \in; W: D \to; C> に対して &m<\sb<a><D> f = \sbsp<a><D><\pr;> f> が成り立つとする。
+      ここで、Yoneda 同型によって &m<a, a'> と対応する元をそれぞれ &m<S, S' \in; `V C> とすると、この条件は &m<\sp<f><*> S = \sp<f><*> S'> と同値になる。
+    >
+    \p<
+      さて、任意に &m<f \in; W \cap; S: D \to; C> をとると、今述べたことから、
+      &mb<
+        \sp<f><*> S' = \sp<f><*> S = \sb<\top;><D> \in; JD
+      >
+      が成り立つ。
+      &m<S'> は閉なので、これより &m<f \in; S'> が得られる。
+      したがって、&m<W \cap; S \subseteq; W \cap; S'> が成り立つ。
+      同じ議論を &m<S> と &m<S'> を逆にして行えば &m<W \cap; S \supseteq; W \cap; S'> も得られるので、結局 &m<W \cap; S = W \cap; S'> が成り立つ。
+    >
+    \p<
+      任意に &m<f \in; S: D \to; C> をとる。
+      &m<J> の安定性によって &m<\sp<f><*> W \in; JD> であり、&m<\sp<f><*> S = \sb<\top;><D> \in; JD> でもあるから、上の議論の結果と合わせて、
+      &mb<
+        \sp<f><*> (W \cap; S') = \sp<f><*> (W \cap; S) = \sp<f><*> W \cap; \sp<f><*> S \in; JD
+      >
+      が得られる。
+      さらに &m<\sp<f><*> (W \cap; S') \subseteq; \sp<f><*> S'> なので、&m<\sp<f><*> S' \in; JD> も分かる。
+      &m<S'> は閉なので、これより &m<f \in; S'> が得られる。
+      したがって、&m<S \subseteq; S'> が成り立つ。
+      同様にして &m<S \supseteq; S'> も得られるので、結局 &m<S = S'> が成り立つ。
+      すなわち &m<a = a'> であり、写像 &m<♤> の単射性が示された。
+    >
+    \p<
+      次に、写像 &m<♤> が全射であることを示す。
+      そこで、自然変換 &m<a: W \to; `V> をとる。
+      すると、各射 &m<f \in; W: D \to; C> に対して、元 &m<\sb<a><D> f \in; `V D> が定まっていることになる。
+      これを改めて &m<\sb<S><f>> と書くことにする。
+    >
+    \p<
+      ここで、
+      &mb<
+        U \coloneqq; `{ f \circ; g \mid; f \in; W, g \in; \sb<S><f> `} \subseteq; \bf<y> C
+      >
+      と定める。
+      任意に &m<f \in; W> および &m<g \in; \sp<f><*> U> をとる。
+      すると、&m<f \circ; g \in; U> であるから、定義によってある &m<f' \in; W: D' \to; C> と &m<g' \in; \sb<S><f'>: E \to; D'> が存在し、&m<f \circ; g = f' \circ; g'> が成り立つ。
+      このとき、&m<a> の自然性を用いると、
+      &mb<
+        \sp<g><*> \sb<S><f> = \sb<S><f \circ; g> = \sb<S><f' \circ; g'> = \sp<g><\pr; *> \sb<S><f'> = \sb<\top;><E>
+      >
+      が成り立つから、&m<g \in; \sb<S><f>> である。
+      以上により、&m<\sp<f><*> U \subseteq; \sb<S><f>> が示された。
+      逆の包含関係である &m<\sp<f><*> U \supseteq; \sb<S><f>> は明らかに成り立つので、&m<\sp<f><*> U = \sb<S><f>> が成り立つ。
+    >
+    \p<
+      さて、&m<\sb<S><f>> は閉であることと\ref|type="thm",ref="starpres"|; を用いると、
+      &mb<
+        \sp<f><*> \overline<U> = \overline<\sp<f><*> U> = \overline<\sb<S><f>> = \sb<S><f>
+      >
+      が成り立つ。
+      &m<\overline<U>> は閉だから &m<\overline<U> \in; `V C> であり、Yoneda 同型によってこれと対応する射を &m<\bar<a>: \bf<y> C \to; `V> とすると、上の式によって &m<\bar<a> \circ; W = a> が成り立つ。
+      これより、写像 &m<♤> の全射性も示された。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      各対象 &m<C> に対して、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<\top;><C>:> \c<1> \c<\longrarr;> \c<`V C> \br;
+          \c; \c<\star|ord|;> \c<\longmapsto;> \c<\sb<\top;><C>>
+        >
+      >
+      とすることで定まる自然変換 &m<\top;: 1 \to; `V> は、&m<\sb<\bfrm<Sh>><J> (\scr<C>)> の部分対象分類子である。
+    >
+  >
+  \p<
+    ここで、部分対象分類子と極大篩の記号としてともに &m<\top;> を用いている。
+    記号の濫用ではあるが、集合の元と 1 からその集合への射は同一視できる上、文脈から十分区別できると判断し、このような記号の使い方をした。
+  >
+  \prf<
+    \p<
+      層 &m<F> をとり、さらにその部分層 &m<m: M \hookrarr; F> をとる。
+      ここで、自然変換 &m<`x: F \to; `V> が存在して、図式
+      &mb<
+        \diag<
+          \v<M> \v<1> \br;
+          \v<F> \v<`V>
+          \ar|s="1",e="2"|; \ar|s="1",e="3",tip="tail",inv|<m>
+          \ar|s="2",e="4"|<\top;> \ar|s="3",e="4",inv|<`x>
+        >
+      >
+      が &m<\sb<\bfrm<Sh>><J> (\scr<C>)> における引き戻しであるとする。
+      すなわち、部分対象分類子が定める対応によって、部分対象 &m<M> と対応する射 &m<`x> が存在したとする。
+      すると、\a|href="29.html#lim"|<定理 4.1> によって、層の極限は前層の極限として計算でき、前層の極限は各点で計算できるため、各対象 &m<C> に対し、
+      &mb<
+        \diag<
+          \v<MC> \v<1> \br;
+          \v<FC> \v<`V C>
+          \ar|s="1",e="2"|; \ar|s="1",e="3",tip="tail",inv|<\sb<m><C>>
+          \ar|s="2",e="4"|<\sb<\top;><C>> \ar|s="3",e="4",inv|<\sb<`x><C>>
+        >
+      >
+      は &m<\bfrm<Set>> における引き戻しである。
+      これは、任意の元 &m<a \in; FC> に対し、
+      &mb<
+        a \in; MC \iff; \sb<`x><C> a = \sb<\top;><C>
+      >
+      が成り立つことと同値である。
+      ここで、射 &m<f: D \to; C> をとると、この同値性と &m<`x> の自然性によって、
+      &mb<
+        \array|align="rcl"|<
+          \c<(F f) a \in; MD> \c<\iff;> \c<\sb<`x><D> ((F f) a) = \sb<\top;><D>> \br;
+          \c; \c<\iff;> \c<\sp<f><*> (\sb<`x><C> a) = \sb<\top;><D>> \br;
+          \c; \c<\iff;> \c<f \in; \sb<`x><C> a >
+        >
+      >
+      が得られる。
+      逆に、&m<f = \sb<\rm<id>><C>> とおけば、上の同値性からその前の同値性も得られる。
+      以上のことから、部分対象分類子が定める対応で &m<M> と対応する &m<`x> は、もし存在するとすれば、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<`x><C>:> \c<FC> \c<\longrarr;> \c<`V C> \br;
+          \c; \c<a> \c<\longmapsto;> \c<`{ f \mid; (F f) a \in; M (\op<cod> f) `}>
+        >
+      >
+      という形でなければならない。
+      一方で、この式は実際に自然変換 &m<`x: F \to; `V> を定める。
+      すなわち、定理は示された。
+    >
+  >
+  \p<
+    次回は、層の圏における冪対象について触れたいと思う。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="sgl"|<S. MacLane, I. Moerdijk (1992)『Sheaves in Geometry and Logic』Springer>
+  >
+
+>

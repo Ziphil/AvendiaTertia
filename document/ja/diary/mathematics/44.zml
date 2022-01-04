@@ -1,0 +1,250 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<アローの圏論的意味論 (その 4)>
+  \use-math|prefix="4"|;
+
+  \h1<日記 (2020 年 4 月 18 日)>
+  \p<
+    \a|href="43.html"|<4 月 18 日>の続き。
+    前回は、アローを Freyd 圏上で解釈し、アロー則が Freyd 圏の射としても成り立つことを示した。
+    今回はその逆で、任意の Freyd 圏の射として等しいなら、アローの型システムの項として等しくなることを示す。
+  >
+  \p<
+    まず準備として、型システム &m<\bfrm<Arrow>> に関する性質を 1 つ証明する。
+    &m<\bfrm<Arrow>> には、 与えられた計算を左側の成分にのみ適用する直積の間の計算を作る &m<\tt<first>> がプリミティブな演算として定まっていた。
+    ここで当然、 与えられた計算を右側の成分に適用する計算を作る演算は定めないのかという疑問が生じるが、これは実は &m<\tt<first>> を用いて作ることができる。
+  >
+  \thm|type="prp",id="second"|<
+    \p<
+      &m<\bfrm<Arrow>> において、型多相な閉じた項 &m<\rm<second>> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<\rm<second>> \c<:> \c<`[A, B`] \buharprarr; `[C \times; A, B \times; A`]> \br;
+          \c; \c<\equiv;> \c<\rm<`l> f. \sfun; \tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<first> f \gggt|bin|; \tt|fun|<arr> \rm<swap>>
+        >
+      >
+      と定めと、
+      &mb<
+        \array|align="rcl"|<
+          \c<\rm|fun|<second> (\tt|fun|<arr> M)> \c<=> \c<\tt|fun|<arr> (\rm<id> \times; M)> \br;
+          \c<\rm|fun|<second> F \gggt|bin|; \tt|fun|<arr> (M \times; \rm<id>)> \c<=> \c<\tt|fun|<arr> (M \times; \rm<id>) \gggt|bin|; \rm|fun|<second> F> \br;
+          \c<\rm|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<second> G> \br;
+          \c<\rm|fun|<second> F \gggt|bin|; \tt|fun|<arr> \rm<snd>> \c<=> \c<\tt|fun|<arr> \rm<snd> \gggt|bin|; F> \br;
+          \c<\rm|fun|<second> (\rm|fun|<second> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \rm|fun|<second> F> \br;
+        >
+      >
+      が成り立つ。
+      ここで、
+      &mb<
+        \array|align="rcl"|<
+          \c<\rm<swap>> \c<:> \c<A \times; B \buharprarr; B \times; A> \br;
+          \c; \c<\equiv;> \c<\rm<`l> p. \sfun; \langle; \tt|fun|<snd> p, \tt|fun|<fst> p \rangle;> \br;
+          \c<\rm<snd>> \c<:> \c<A \times; B \buharprarr; B> \br;
+          \c; \c<\equiv;> \c<\rm<`l> p. \sfun; \tt|fun|<snd> p> \br;
+        >
+      >
+      と定めている。
+      すなわち順に、直積の左右を入れ替える関数, 直積から第 2 成分への射影関数である。
+    >
+  >
+  \prf<
+    \p<
+      計算するだけなので省略する。
+    >
+  >
+  \p<
+    この逆に、&m<\bfrm<Arrow>> のプリミティブな項として &m<\tt<first>> の代わりに上記の 5 つの等式を満たす &m<\tt<second>> を導入した場合でも、同様の方法で &m<\rm|tt|<first>> を定義することができ、それは \a|href="41.html#arr"|<定義 1.4> 中の後半 5 つの等式を満たす。
+    したがって、&m<\bfrm<Arrow>> を定義するときに、&m<\tt<first>> のみをプリミティブな項として入れるか、&m<\tt<second>> のみをプリミティブな項として入れるか、もしくは両方とも入れるかは、単に慣習の問題であって、どれを採用しても結局同値な体系になる。
+    これ以降では、利便性のため &m<\tt<second>> もプリミティブに入っていたものとして議論する。
+  >
+  \p<
+    さて、以上の準備のもと、前回の結果の逆が示せる。
+    これを証明するにあたっての核となる箇所は、&m<\bfrm<Arrow>> において特定の等式が成立することを確かめるところであるが、これはただ計算すれば良いだけので、示すべき等式を挙げるだけに留めて計算の過程は省略する。
+  >
+  \thm|type="prp",id="comp"|<
+    \p<
+      &m<\bfrm<Arrow>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つならば、&m<\bfrm<Arrow>> で &m<M = N> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      圏 &m<\scr<C>> を以下のように定める。
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象は、&m<\bfrm<Arrow>> の型全体とする。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A, B> の間の射は、&m<\bfrm<Arrow>> の型割り当て &m<a: A \vdash; M: B> の等号 (および自由変項 &m<a> の名前の変更) による同値類全体とする。
+        この同値類は &m<`{a: A \vdash; M: B`}> もしくはより簡潔に &m<`{M`}> で表す。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A> 上の恒等射は、&m<`{a: A \vdash; a: A`}> とする。
+      >
+      \li<
+        &m<\scr<C>> の射 &m<`{a: A \vdash; M: B`}> および &m<`{b: B \vdash; N: C`}> の合成は、&m<`{a: A \vdash; N `[b \coloneqq; M`]: C`}> とする。
+      >
+    >
+    \p<
+      よく知られているように、このように定めると実際に圏を成し、いわゆる &m<\bfrm<Arrow>> の構文圏と呼ばれるものになる。
+      さらに、&m<\bfrm<Arrow>> は &m<\sb<\rm<`l>><1 \times;>> を部分システムとして含むので、これはカルテシアン閉圏になっている。
+    >
+    \p<
+      続いて、&m<\scr<C>>-豊穣圏 &m<\scr<D>> を以下のように定める。
+    >
+    \ul<
+      \li<
+        &m<\scr<D>> の対象は、&m<\scr<C>> の対象全体とする。
+        すなわち、&m<\bfrm<Arrow>> の型全体である。
+      >
+      \li<
+        &m<\scr<D>> の対象 &m<A, B> に対し、その間の射対象を &m<`[A, B`] = `[A, B`]> で定める。
+      >
+      \li<
+        &m<\scr<D>> の対象 &m<A> に対し、恒等射を定める射を、
+        &mb<
+          \sb<j><A> = `{u: 1 \vdash; \tt|fun|<arr> \rm<id>: `[A, A`]`}
+        >
+        とする。
+      >
+      \li<
+        &m<\scr<D>> の対象 &m<A, B, C> に対し、合成を定める射を、
+        &mb<
+          \sb<c><ABC> = `{p: `[A, B`] \times; `[B, C`] \vdash; \tt|fun|<fst> p \gggt|bin|; \tt|fun|<snd> p: `[A, C`]`}
+        >
+        とする。
+      >
+    >
+    \p<
+      これが実際に &m<\scr<C>>-豊穣圏を定めるためには、3 つの等式
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<arr> \rm<id> \gggt|bin|; F> \c<=> \c<F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> \rm<id>> \c<=> \c<F> \br;
+          \c<(F \gggt|bin|; G) \gggt|bin|; H> \c<=> \c<F \gggt|bin|; (G \gggt|bin|; H)>
+        >
+      >
+      が成り立つ必要があるが、これはまさに &m<\bfrm<Arrow>> の公理の一部そのものであるから成り立つ。
+    >
+    \p<
+      次に、&m<\scr<D>> にバイノイダル圏の構造を定める。
+      &m<\scr<D>> の対象 &m<A, B> に対して &mb<A \ltimes; B = A \rtimes; B = A \times; B> とし、さらに &m<\scr<D>> の対象 &m<A', B'> に対して、
+      &mb<
+        \array|align="rcl"|<
+          \c<(\text<-> \ltimes; B) \sb<><AA'>> \c<=> \c<`{f: `[A, A'`] \vdash; \tt|fun|<first> f: `[A \times; B, A' \times; B`]`}> \br;
+          \c<(A \rtimes; \text<->) \sb<><BB'>> \c<=> \c<`{f: `[B, B'`] \vdash; \tt|fun|<second> f: `[A \times; B, A \times; B'`]`}> \br;
+        >
+      >
+      と定める。
+      これが関手 &m<\text<-> \ltimes; B> と &m<A \rtimes; \text<->> を定めるための条件は、4 つの等式
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<first> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\tt|fun|<first> (F \gggt|bin|; G)> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<first> G> \br;
+          \c<\tt|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<second> G>
+        >
+      >
+      に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と\ref|type="thm",ref="second"|; の一部そのものである。
+    >
+    \p<
+      さらに、&m<\scr<D>> に前モノイダル圏の構造を定める。
+      まず、&m<\top; = 1> とおく。
+      さらに、前モノイダル圏に必要な 4 種類の構造射を、&m<\scr<D>> の対象 &m<A, B, C> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<`a><ABC>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<assoc>: `[(A \times; B) \times; C, A \times; (B \times; C)`]`}> \br;
+          \c<\sb<`l><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;) : `[A, 1 \times; A`]`}> \br;
+          \c<\sb<`r><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;) : `[A, A \times; 1`]`}> \br;
+          \c<\sb<`s><AB>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<swap>: `[A \times; B, B \times; A`]`}>
+        >
+      >
+      で定める。
+      これらがそれぞれ各変数について自然であることは、7 つの等式
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<first> (\tt|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<first> F> \br;
+          \c<\tt|fun|<second> (\tt|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<first> (\tt|fun|<second> F)> \br;
+          \c<\tt|fun|<second> (\tt|fun|<second> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<second> F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;) \gggt|bin|; \tt|fun|<second> F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;) \gggt|bin|; \tt|fun|<first> F> \br;
+          \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<second> F> \br;
+          \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<first> F>
+        >
+      >
+      に帰着され、さらに、これらがそれぞれ中心的であることは、8 つの等式
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<first> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> \rm<assoc>)> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> \rm<assoc>)> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;)) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;))> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;)) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;))> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;)) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;))> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;)) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;))> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> \rm<swap>)> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> \rm<swap>)>
+        >
+      >
+      に帰着される。
+      これらの等式は全て簡単な計算によって導かれる。
+    >
+    \p<
+      最後に、Freyd 圏の構造を定める。
+      &m<\scr<D>> の対象 &m<A, B> に対して、
+      &mb<
+        \sb<J><AB> = `{m: A \buharprarr; B \vdash; \tt|fun|<arr> m: `[A, B`]`}
+      >
+      と定める。
+      これが対象上恒等的であるための条件は、2 つの等式
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<arr> \rm<id>> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\tt|fun|<arr> (M \rhd|bin|; N)> \c<=> \c<\tt|fun|<arr> M \gggt|bin|; \tt|fun|<arr> N>
+        >
+      >
+      に帰着される。
+      また、これが前モノイダル圏の構造を保つことは、2 つの等式
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<arr> (M \times; \rm<id>)> \c<=> \c<\tt|fun|<first> (\tt|fun|<arr> M)> \br;
+          \c<\tt|fun|<arr> (\rm<id> \times; M)> \c<=> \c<\tt|fun|<second> (\tt|fun|<arr> M)>
+        >
+      >
+      に帰着され、さらに、これが中心的であることは、2 つの等式
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<first> (\tt|fun|<arr> M) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> M)> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> M) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> M)>
+        >
+      >
+      に帰着される。
+      これらの等式も全て簡単な計算によって導かれる。
+    >
+    \p<
+      以上により、豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> が得られ、定義によって &m<\bfrm<Arrow>> のこの圏への解釈はほぼ恒等写像になっていることが分かる。
+      したがって、型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つとすると、特に今定義した &m<(\scr<C>`; \scr<D>, J)> においても &m<\overline<M> = \overline<N>> となり、それはすなわち &m<\bfrm<Arrow>> で &m<M = N> が成り立つということである。
+    >
+  >
+  \p<
+    以上で、圏論側で等式が成り立てば型システム側でも成り立つこと (完全性) も示されたことになる。
+    前回の結果と合わせれば、以下が得られる。
+  >
+  \thm|type="thm",id="sc"|<
+    \p<
+      &m<\bfrm<Arrow>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つための必要十分条件は、&m<\bfrm<Arrow>> で &m<M = N> が成り立つことである。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="43.html#sound"|<命題 3.1> と\ref|type="thm",ref="comp"|; から従う。
+    >
+  >
+  \p<
+    これで、アローの圏論的対応物を見つけるという当初の目標が達成されたことになる。
+    次回以降は、アローに付加的な構造を加えたものについて、同様に圏論的対応物を探す話をしていきたいと思う。
+  >
+
+>

@@ -1,0 +1,271 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<局所表示可能圏の完備性>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2020 年 8 月 3 日)>
+  \p<
+    今日は、局所表示可能圏が完備であることを見る。
+  >
+  \p<
+    まずは準備として、稠密部分圏に関する性質を証明する。
+  >
+  \thm|type="def",id="den"|<
+    \p<
+      圏 &m<\scr<C>> とその小部分圏 &m<\scr<S> \subseteq; \scr<C>> をとる。
+      &m<\scr<C>> の任意の対象 &m<C> に対し、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<G:> \c<\scr<S> `/ C> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<\ltort; s: S \to; C \rtort;> \c<\longmapsto;> \c<S>
+        >
+      >
+      の余錐 &m<(s: Gs \to; C) \sb<><s \in; \scr<S> `/ C>> が余極限になるとき、&m<\scr<S>> は\em<稠密\fl<dense>> であるという。
+    >
+  >
+  \thm|type="def",id="ryon"|<
+    \p<
+      圏 &m<\scr<C>> とその小部分圏 &m<\scr<S> \subseteq; \scr<C>> に対し、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\bf<z>:> \c<\scr<C>> \c<\longto;> \c<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> \br;
+          \c; \c<C> \c<\longmapsto;> \c<\tort<
+            \array|align="rcl"|<
+              \c<\sp<\scr<S>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+              \c<S> \c<\longmapsto;> \c<\op<Hom> (S, C)>
+            >
+          >>
+        >
+      >
+      を\em<制限 Yoneda 埋め込み\fl<restricted — embedding>>という。
+    >
+  >
+  \p<
+    &m<\scr<S>> と &m<\bf<z>> には以下の関係がある。
+  >
+  \thm|type="lem",id="denff"|<
+    \p<
+      圏 &m<\scr<C>> とその小部分圏 &m<\scr<S> \subseteq; \scr<C>> に対し、2 条件
+    >
+    \ol<
+      \li<
+        &m<\scr<S>> は稠密である。
+      >
+      \li<
+        &m<\bf<z>> は忠実充満である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      まず、\ref|type="thm",ref="den"|; 中の関手 &m<G: \scr<S> `/ C \to; \scr<C>> について、&m<G> の余錐 &m<(\sb<d><s>: Gs \to; D) \sb<><s \in; \scr<S> `/ C>> と自然変換 &m<d: \bf<z> C \raarr; \bf<z> D> は同じものであることが観察できる。
+    >
+    \p<
+      &m<\scr<S>> が稠密であるということは、余錐 &m<(s: Gs \to; C) \sb<><s \in; \scr<S> `/ C>> が余極限であることであった。
+      これはすなわち、任意の余錐 &m<(\sb<d><s>: Gs \to; D) \sb<><s \in; \scr<S> `/ C>> に対し、射 &m<h: C \to; D> が一意に存在して、各 &m<\scr<S> `/ C> の対象 &m<s> に対して &m<s \rcomp; h = \sb<d><s>> が成り立つということである。
+      上の観察により、このことは、任意の自然変換 &m<d: \bf<z> C \raarr; \bf<z> D> に対し、射 &m<h: C \to; D> が一意に存在して、&m<\bf<z> h = d> が成り立つということである。
+      これは、&m<\bf<z>> が忠実充満であることを意味する。
+    >
+  >
+  \p<
+    さらに、&m<\bf<z>> の性質を 2 つ示す。
+  >
+  \thm|type="lem",id="monopres"|<
+    \p<
+      圏 &m<\scr<C>> とその小部分圏 &m<\scr<S> \subseteq; \scr<C>> に対し、関手 &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は単射を保存する。
+    >
+  >
+  \prf<
+    \p<
+      任意に &m<\scr<C>> の単射 &m<f: C \to; D> をとる。
+      このとき、&m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> で &m<\bf<z> f: \bf<z> C \to; \bf<z> D> が単射であることを示せば良いが、そのためには各 &m<\scr<S>> の対象 &m<S> に対して &m<\bfrm<Set>> で &m<(\bf<z> f) \sb<><S>: \op<Hom> (S, C) \to; \op<Hom> (S, D)> が単射であることを示せば良い。
+      この &m<(\bf<z> f) \sb<><S>> は &m<f> を後ろに合成するという写像であるが、&m<f> は単射だったから、&m<(\bf<z> f) \sb<><S>> も明らかに単射である。
+    >
+  >
+  \thm|type="lem",id="leftadj"|<
+    \p<
+      圏 &m<\scr<C>> とその小部分圏 &m<\scr<S> \subseteq; \scr<C>> に対し、&m<\scr<C>> が余完備ならば、関手 &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は左随伴をもつ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の対象 &m<P> に対し、元の圏からの忘却関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<F:> \c<\bfrm<El> (P)> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<(S, s)> \c<\longmapsto;> \c<S>
+        >
+      >
+      を考えると、仮定から &m<\scr<C>> は余完備なので、この余極限 &m<(\sb<c><(S, s)>: F (S, s) \to; C) \sb<><(S, s) \in; \bfrm<El> (P)>> がとれる。
+      さらに、各 &m<\scr<S>> の対象 &m<S> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<`h><S>:> \c<PS> \c<\longto;> \c<\op<Hom> (S, C)> \br;
+          \c; \c<s> \c<\longmapsto;> \c<\sb<c><(S, s)>>
+        >
+      >
+      とおくと、これは &m<S> について自然であるから、&m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の射 &m<`h: P \to; \bf<z> C> が得られる。
+      これが &m<P> からの普遍射であることを示せば良い。
+    >
+    \p<
+      任意に &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の射 &m<`h': P \to; \bf<z> C'> をとる。
+      このとき、&m<(\sbsp<`h><S><\pr;> s: F (S, s) \to; C') \sb<><(S, s) \in; \bfrm<El> (P)>> は &m<F> の余錐になる。
+      したがって、余極限の普遍性によって、射 &m<h: C \to; C'> が一意に存在して、任意の &m<\bfrm<El> (P)> の対象 &m<(S, s)> に対し、&m<\scr<C>> での図式
+      &mb<
+        \diag<
+          \v<F (S, s)> \v<C> \br;
+          \v; \v<C'>
+          \ar|s="1",e="2"|<\sb<c><(S, s)>> \ar|s="1",e="4",inv|<\sbsp<`h><S><\pr;> s> \ar|s="2",e="4"|<h>
+        >
+      >
+      が可換になる。
+      これは、&m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> での図式
+      &mb<
+        \diag<
+          \v<F> \v<\bf<z> C> \br;
+          \v; \v<\bf<z> C'>
+          \ar|s="1",e="2"|<`h> \ar|s="1",e="4",inv|<`h'> \ar|s="2",e="4"|<\bf<z> h>
+        >
+      >
+      が可換であると言い換えることができ、このことは &m<`h> が普遍射であることを意味する。
+    >
+  >
+  \p<
+    では、到達可能圏についての議論に戻ろう。
+    \a|href="60.html#presdef"|<定義 4.6> では、&m<`k>-到達可能圏 &m<\scr<C>> の &m<`k>-表示可能対象の同型類の代表元全体を &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> と定義したが、これが稠密になっている。
+  >
+  \thm|type="thm",id="presden"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-到達可能圏 &m<\scr<C>> に対し、&m<\sb<\bfrm<Pres>><`k> (\scr<C>)> は稠密である。
+    >
+  >
+  \prf<
+    \p<
+      まず、\a|href="60.html#sm"|<定理 4.7> により &m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> は小である。
+      &m<\scr<C>> の任意の対象 &m<C> をとり、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<G:> \c<\scr<S> `/ C> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<\ltort; s: S \to; C \rtort;> \c<\longmapsto;> \c<S>
+        >
+      >
+      を考える。
+    >
+    \p<
+      &m<\scr<C>> は &m<`k>-到達可能だから、&m<`k>-表示可能対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> によって &m<C = \op<colim> F> と書ける。
+      この余極限余錐を &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> とおく。
+      このとき、
+      &mb<
+        \array|align="rrcl"|<
+          \c<H:> \c<\scr<I>> \c<\longto;> \c<\scr<S> `/ C> \br;
+          \c; \c<i> \c<\longmapsto;> \c<\sb<c><i>>
+        >
+      >
+      は関手であり、&m<H \rcomp; G = F> が成り立つ。
+      したがって、&m<H> が終であることが示されれば、&m<\op<colim> G = \op<colim> F = C> となって &m<\scr<S>> が稠密であることが示される。
+      \a|href="57.html#fineq"|<定理 1.6> により、任意に &m<\scr<S> `/ C> の対象 &m<s: S \to; C> をとって、&m<s \darr|bin|; H> が連結であることを示せば良い。
+    >
+    \p<
+      まず、&m<s \darr|bin|; H> が空でないことを示す。
+      &m<S> は &m<\scr<S>> の対象より &m<`k>-表示可能で &m<C> は &m<`k>-有向余極限だから、ある &m<\scr<I>> の対象 &m<i> が存在して、
+      &mb<
+        \diag|hor="thn"|<
+          \v<S> \v; \v<C> \br;
+          \v; \v<Fi>
+          \ar|s="1",e="3"|<s> \ar|s="1",e="5",dash,inv|<g> \ar|s="5",e="3",inv|<\sb<c><i>>
+        >
+      >
+      と分解できる。
+      この &m<g> は、&m<\scr<S> `/ C> の射 &m<g: s \to; Hi> と見なせ、したがって &m<s \darr|bin|; H> の対象である。
+      これより、&m<s \darr|bin|; H> は空でない。
+    >
+    \p<
+      次に、任意に &m<s \darr|bin|; H> の対象 &m<g: s \to; Hi, g': s \to; Hi'> をとり、&m<g> と &m<g'> が &m<s \darr|bin|; H> の射で結ばれることを示す。
+      &m<\scr<S> `/ C> の射として &m<g: s \to; Hi>, &m<g': s \to; Hi'> であるから、&m<\scr<C>> の射としては &m<g: S \to; Fi>, &m<g': S \to; Fi'> であり、
+      &mb<
+        s = g \rcomp; \sb<c><i> = g' \rcomp; \sb<c><i'>
+      >
+      が成り立つ。
+      すなわち、&m<s> の 2 通りの分解が存在することになるので、そのような分解が本質的に一意であることから、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であって、
+      &mb<
+        g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rcomp; F \ltort; i' \hookrarr; \bar<i> \rtort;
+      >
+      が成り立つ。
+      この等しい射を &m<\bar<g>: S \to; F \bar<i>> とおく。
+      すると、
+      &mb<
+        \bar<g> \rcomp; \sb<c><\bar<i>> = g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; \rcomp; \sb<c><\bar<i>> = g \rcomp; \sb<c><i> = s
+      >
+      であるから、&m<\scr<S> `/ C> の射 &m<\bar<g>: s \to; H \bar<i>> と見なすことができ、したがって &m<\bar<g>> は &m<s \darr|bin|; H> の対象である。
+      さらに、&m<\scr<I>> の射 &m<u: i \hookrarr; \bar<i>>, &m<u': i' \hookrarr; \bar<i>> はそれぞれ &m<s \darr|bin|; H> の射 &m<u: g \to; \bar<g>>, &m<u': g' \to; \bar<g>> と見なすことができる。
+      したがって、&m<g> と &m<g'> が &m<s \darr|bin|; H> の射で結ばれた。
+      以上により、&m<s \darr|bin|; H> は連結である。
+    >
+  >
+  \p<
+    ここで、次のよく知られた性質を思い出そう。
+  >
+  \thm|type="prp",id="compsub"|<
+    \p<
+      圏 &m<\scr<D>> の反射的部分圏 &m<\scr<C> \subseteq; \scr<D>> をとる。
+      &m<\scr<D>> が完備ならば、&m<\scr<C>> も完備である。
+    >
+  >
+  \p<
+    以上で示した性質を使うと、全ての &m<`k>-局所表示可能圏が完備であることが示せる。
+  >
+  \thm|type="thm",id="prescomp"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      全ての &m<`k>-局所表示可能圏は完備である。
+    >
+  >
+  \prf<
+    \p<
+      &m<`k>-局所表示可能圏 &m<\scr<C>> をとり、&m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とおく。
+      さらに、制限 Yoneda 埋め込み &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考える。
+      \ref|type="thm",ref="presden"|; により &m<\scr<S>> は稠密だから、\ref|type="thm",ref="denff"|; により &m<\bf<z>> は忠実充満である。
+      さらに、&m<\scr<C>> は余完備だから、\ref|type="thm",ref="leftadj"|; により &m<\bf<z>> は左随伴をもつ。
+      以上により、&m<\scr<C>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の反射的部分圏と圏同値である。
+      &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は完備だから、最後に\ref|type="thm",ref="compsub"|; を使えば &m<\scr<C>> も完備であることが従う。
+    >
+  >
+  \p<
+    ついでに、全ての &m<`k>-到達可能圏が冪化可能であることも示せる。
+    こちらは余完備性を使わないので、&m<`k>-局所表示可能とは限らなくても &m<`k>-到達可能であれば成り立つ。
+  >
+  \thm|type="thm",id="preswellp"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      全ての &m<`k>-到達可能圏は冪化可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<`k>-到達可能圏 &m<\scr<C>> をとり、&m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とおき、制限 Yoneda 埋め込み &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考える。
+      \ref|type="thm",ref="presden"|; と\ref|type="thm",ref="denff"|; によって &m<\bf<z>> は忠実充満で、\ref|type="thm",ref="monopres"|; によって &m<\bf<z>> は単射を保存する。
+      したがって、任意の &m<\scr<C>> の対象 &m<C> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<Ш:> \c<\sb<\op<Sub>><\scr<C>> (C)> \c<\longto;> \c<\sb<\op<Sub>><\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> (\bf<z> C)> \br;
+          \c; \c<m> \c<\longmapsto;> \c<\bf<z> m>
+        >
+      >
+      は全単射である。
+      &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は冪化可能なので &m<\op<Sub> (\bf<z> C)> は集合サイズだから、これより &m<\op<Sub> (C)> も集合サイズである。
+      以上により、&m<\scr<C>> は冪化可能である。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>

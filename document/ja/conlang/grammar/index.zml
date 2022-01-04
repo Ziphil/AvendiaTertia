@@ -1,0 +1,32 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+
+  \hb<HTML 形式>
+  \pb<
+    \ab|href="6.html"|<S 代 (最新版)>
+    \abo|href="4.html"|<5 代 4 期>
+    \abo|href="3.html"|<5 代 3 期>
+    \abo|href="2.html"|<5 代 2 期>
+    \abo|href="1.html"|<5 代 1 期>
+    \abd<4 代 1 期>
+    \aba|href="7.html"|<3 代 6 期>
+  >
+  \hb<PDF 形式>
+  \pb<
+    \abd<4 代 1 期>
+    \aba|href="../../file/grammar/8.pdf"|<3 代 6 期>
+    \aba|href="../../file/grammar/7.pdf"|<3 代 5 期>
+    \aba|href="../../file/grammar/6.pdf"|<3 代 4 期>
+    \aba|href="../../file/grammar/5.pdf"|<3 代 3 期>
+    \aba|href="../../file/grammar/4.pdf"|<3 代 2 期>
+    \aba|href="../../file/grammar/3.pdf"|<3 代 1 期>
+    \aba|href="../../file/grammar/2.pdf"|<2 代 7 期>
+    \aba|href="../../file/grammar/1.pdf"|<2 代 6 期>
+    \abd<2 代 5 期>
+    \aba|href="../../file/grammar/9.pdf"|<2 代 4 期>
+  >
+
+>

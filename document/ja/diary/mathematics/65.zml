@@ -1,0 +1,182 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<前層圏の局所表示可能性>
+  \use-math|prefix="9"|;
+
+  \h1<日記 (2020 年 9 月 12 日)>
+  \p<
+    今日は、前層圏が局所表示可能であることを示し、それと前回までの結果を合わせて、局所表示可能であることと到達可能かつ完備であることが同値であることを示す。
+  >
+  \p<
+    まず、前層圏の局所表示可能性を示す。
+    ここで、通常の慣習に従って、&m<\sb<\aleph;><0>>-表示可能であることを有限表示可能であると言っている。
+    これ以外の用語についても、付随する正則基数が &m<\sb<\aleph;><0>> であることを「有限」を接頭して表すことにする。
+    また、小圏 &m<\scr<S>> 上の Yoneda 埋め込みを &m<\bf<y>: \scr<S> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> で表す。
+  >
+  \thm|type="lem",id="reppres"|<
+    \p<
+      小圏 &m<\scr<S>> 上の前層圏 &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考える。
+      任意の &m<\scr<S>> の対象 &m<S> に対し、表現可能関手 &m<\bf<y> S> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> で有限表示可能である。
+    >
+  >
+  \prf<
+    \p<
+      定義から、&m<\bf<y> S> が有限表示可能であるとは、関手 &m<\op<Hom> (\bf<y> S, \hyphen;): \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>> \to; \bfrm<Set>> が有限有向余極限を保存することであった。
+      Yoneda の補題によって、この関手は、与えられた前層をそれによる &m<S> の像に送る関手と同型である。 
+      &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の余極限は各点で計算されるから、この関手は明らかに全ての余極限を保存し、特に有限有向余極限を保存する。
+      以上で定理が示された。
+    >
+  >
+  \thm|type="thm",id="replp"|<
+    \p<
+      小圏 &m<\scr<S>> 上の前層圏 &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は有限局所表示可能である。
+    >
+  >
+  \prf<
+    \p<
+      まず、&m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は余完備である。
+      したがって、\a|href="60.html#exgen"|<定理 4.10> によって、あとは &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> が有限表示可能対象から成る極限的生成子をもつことを示せば良い。
+      ここで、
+      &mb<
+        \scr<A> \coloneqq; `{\bf<y> S \in; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>> \mid; &raw<&m<S> は &m<\scr<S>> の対象>`}
+      >
+      とおくと、&m<\scr<S>> が小であることから &m<\scr<A>> も小で、さらに\ref|type="thm",ref="reppres"|; によって &m<\scr<A>> の元は全て有限表示可能である。
+      以降、&m<\scr<A>> が極限的生成子であることを示す。
+    >
+    \p<
+      まず、&m<\scr<A>> が生成子であることを示す。
+      射 &m<f, f': P \to; Q> をとり、任意の &m<\scr<S>> の対象 &m<S> と任意の射 &m<s: \bf<y> S \to; P> に対して &m<s \rcomp; f = s \rcomp; f'> であると仮定する。
+      Yoneda の補題によって射 &m<s: \bf<y> S \to; P> と元 &m<s \in; PS> を同一視すれば、この仮定は、任意の &m<\scr<S>> の対象 &m<S> と任意の元 &m<s \in; PS> に対して &m<\sb<f><S> s = \sbsp<f><S><\pr;> s> であるということである。
+      したがって、&m<f = f'> が成り立つ。
+    >
+    \p<
+      次に、&m<\scr<A>> が極限的であることを示す。
+      部分対象 &m<m: M \tailrarr; P> をとり、任意の &m<\scr<S>> の対象 &m<S> と任意の射 &m<s: \bf<y> S \to; P> に対して &m<s> は &m<m> を経由して分解されると仮定する。
+      この分解を、
+      &mb<
+        \diag|hor="thn"|<
+          \v<\bf<y> S> \v; \v<P> \br;
+          \v; \v<M>
+          \ar|s="1",e="3"|<s> \ar|s="1",e="5",inv|<g> \ar|s="5",e="3",tip="tail",inv|<m>
+        >
+      >
+      とおく。
+      ここで、&m<t \coloneqq; \sb<g><S> \sb<\rm<id>><S>> とおくと、上の図式の可換性によって &m<\sb<m><S> t = \sb<s><S> \sb<\rm<id>><S>> が成り立つ。
+      再び Yoneda の補題によって射 &m<s: \bf<y> S \to; P> と元 &m<s \in; PS> を同一視すれば、これは &m<\sb<m><S> t = s> が成り立つということである。
+      すなわち、写像 &m<\sb<m><S>: MS \tailrarr; PS> による &m<s> の逆像がとれたことになる。
+      &m<s> は任意だったからこれより &m<\sb<m><S>> は全単射で、&m<S> も任意だから &m<m> は同型射である。
+    >
+  >
+  \p<
+    この結果と前回までの議論を用いると、到達可能性に完備性もしくは余完備性を課すと局所表示可能性と同値になることが分かる。
+    その前に、制限 Yoneda 埋め込みの性質を 1 つ証明しておく。
+  >
+  \thm|type="lem",id="colpres"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> とその小部分圏 &m<\scr<S> \subseteq; \scr<C>> に対し、制限 Yoneda 埋め込み &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考える。
+      このとき、2 条件
+    >
+    \ol<
+      \li<
+        &m<\scr<S>> の対象は全て &m<\scr<C>> で &m<`k>-表示可能である。
+      >
+      \li<
+        &m<\bf<z>> は &m<`k>-有向余極限を保存する。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      これを示すには、&m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> および &m<\scr<S>> の対象 &m<S> に対して、2 条件
+    >
+    \ol<
+      \li<
+        任意の &m<\scr<C>> の射 &m<f: S \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: S \to; Fi> が存在して &m<f = g \rcomp; \sb<d><i>> が成り立つ。
+        さらに、そのような &m<i> は本質的に一意である。
+      >
+      \li<
+        &m<\bfrm<Set>> における余錐 &m<((\bf<z> \sb<d><i>) \sb<><S>: \op<Hom> (S, Fi) \to; \op<Hom> (S, D)) \sb<><i \in; \scr<I>>> は余極限である。
+      >
+    >
+    \p<
+      が同値であることを示せば良い。
+      実際、任意の &m<(\sb<d><i>) \sb<><i \in; \scr<I>>> に対して上の条件 1 が成り立つことは &m<S> が &m<`k>-表示可能であることの言い換えであるから、任意の &m<(\sb<d><i>) \sb<><i \in; \scr<I>>> と &m<S> に対して上の条件 1 が成り立つことは補題中の条件 1 が成り立つことと同値である。
+      さらに、&m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の余極限は各点で計算されるので、任意の &m<S> に対して上の条件 2 が成り立つことは &m<\bf<z>> が &m<(\sb<d><i>) \sb<><i \in; \scr<I>>> を保存することの言い換えであるから、任意の &m<(\sb<d><i>) \sb<><i \in; \scr<I>>> と &m<S> に対して上の条件 2 が成り立つことは補題中の条件 2 が成り立つことと同値である。
+    >
+    \p<
+      ところが、\a|href="57.html#setcol"|<補題 1.2> の &m<\bfrm<Set>> における余極限の具体的な表示を用いると、これが同値であることはすぐに分かる。
+      したがって、補題が示された。
+    >
+  >
+  \p<
+    また、次のよく知られた命題も思い出そう。
+  >
+  \thm|type="prp",id="adj"|<
+    \name<随伴関手定理\fl<adjoint functor theorem>>
+    \p<
+      関手 &m<`F: \scr<C> \to; \scr<D>> に対し、&m<\scr<C>> が完備で &m<`F> が極限を保存し解集合条件を満たすとき、&m<`F> は左随伴をもつ。
+    >
+  >
+  \thm|type="prp",id="cocompsub"|<
+    \p<
+      圏 &m<\scr<D>> の反射的部分圏 &m<\scr<C> \subseteq; \scr<D>> をとる。
+      &m<\scr<D>> が余完備ならば、&m<\scr<C>> も余完備である。
+    >
+  >
+  \p<
+    以上の準備のもとで、次が示せる。
+  >
+  \thm|type="thm",id="accpreseq"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> に対し、3 条件
+    >
+    \ol<
+      \li<
+        &m<\scr<C>> は &m<`k>-局所表示可能である。
+      >
+      \li<
+        &m<\scr<C>> は &m<`k>-到達可能かつ完備である。
+      >
+      \li<
+        &m<\scr<C>> は &m<`k>-到達可能かつ余完備である。
+      >
+    >
+    \p<
+      は全て同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      \a|href="61.html#prescomp"|<定理 5.8> から従う。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 3>
+      &m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とおき、制限 Yoneda 埋め込み &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考える。
+      \ref|type="thm",ref="colpres"|; によって &m<\bf<z>> は &m<`k>-有向余極限を保存し、\ref|type="thm",ref="replp"|; と\a|href="62.html#lock"|<定理 6.1> によって &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は &m<`k>-到達可能である。
+      したがって、&m<\bf<z>> は &m<`k>-到達可能である。
+      これにより、\a|href="64.html#solset"|<定理 8.5> が使えて &m<\bf<z>> が解集合条件を満たすことが分かる。
+      また、&m<\bf<z>> が極限を保存することも容易に分かる。
+      以上によって、\ref|type="thm",ref="adj"|; が使えて &m<\bf<z>> は左随伴をもつ。
+      さらに、\a|href="61.html#presden"|<定理 5.6> と\a|href="61.html#denff"|<補題 5.3> によって &m<\bf<z>> は忠実充満であるから、&m<\scr<C>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の反射的部分圏と圏同値になる。
+      したがって、\ref|type="thm",ref="cocompsub"|; が使えて &m<\scr<C>> が余完備であることが示される。
+    >
+    \p<
+      \label<条件 3 &m<\raarr;> 条件 1>
+      定義から明らかである。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>

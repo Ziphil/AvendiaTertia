@@ -1,0 +1,84 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Groovy の AST 変換>
+
+  \h1<日記 (2016 年 6 月 11 日)>
+  \p<
+    Groovy は JVM 上で動くスクリプト言語です。
+    文法がほとんど Java と同じなので覚えるのも簡単で、Java のライブラリがそのまま使えて便利です。
+    さらに、スクリプト言語というと実行速度が怪しまれますが、静的コンパイルを行うことで (動的型付け言語としての機能が制限されますが) Java 並の速度が出ます。
+    ということで、Groovy の宣伝でした。
+  >
+  \p<
+    さて、Groovy ではプリミティブ型は必ずそのラッパークラスとして扱われます (厳密には微妙に違うみたいですけど)。
+    つまり、\m<int> 型で変数を宣言しても内部では \m<Integer> 型として扱われるので、普通に \m<toString> メソッドなどが呼べます。
+    それなら、\c<int> なんて書いて変数を宣言せずに \c<Integer> と書いた方が統一感が出るし良いと思いませんか?
+    結局は同じなのでどちらで書いても良いんですが、1 つだけ注意点があります。
+  >
+  \p<
+    例えば、Java で書かれたクラスに \m<int> を引数にとるメソッド \m<foo> が定義されていたとして、Groovy でこのクラスのサブクラスを作り、メソッド \m<foo> をオーバーライドすることを考えます。
+    このとき、当たり前といえば当たり前ですが、引数の型を \m<Integer> にするとオーバーライドだと見なされません。
+    でも、こういうときだけ \m<int> にするのもなんか統一感がなくて気持ち悪いですよね?
+  >
+  \p<
+    こんなときに登場するのが、AST 変換です。
+    これは何かというと、バイトコードにコンパイルするときに、ソースコードから生成された構文木に手を加えられる機能です。
+    これを用いて、\m<Integer> 型のメソッド引数をコンパイル時に \m<int> 型にしてしまいましょう。
+  >
+  \p<
+    まずは、どのメソッドの引数の型を変換するかを指定するアノテーションを作ります。
+    いたって普通です。
+  >
+  \pre~*<
+    @Retention(RetentionPolicy.SOURCE)
+    @Target([ElementType.METHOD])
+    @GroovyASTTransformationClass(["ziphilib.transform.ConvertPrimitiveTransformation"])
+    @CompileStatic
+    public @interface ConvertPrimitive {
+    }
+  >
+  \p<
+    \m<GroovyASTTransformationClass> というアノテーションが重要で、構文木に手を加えるときのその内容が書かれたクラスをこれで指定します。
+  >
+  \p<
+    さて、引数の型を置き換えるためのクラスが以下です。
+    \m<visit> メソッドが実際に構文木を書き換えている部分です。
+  >
+  \pre~*<
+    @GroovyASTTransformation(phase=CompilePhase.SEMANTIC_ANALYSIS)
+    @CompileStatic
+    public class ConvertPrimitiveTransformation implements ASTTransformation {
+      public void visit(ASTNode[] nodes, SourceUnit sourceUnit) {
+        MethodNode method = (MethodNode)nodes[1]
+        method.getParameters().each() { Parameter parameter -`>
+          String typeName = parameter.getType().getName()
+          if (typeName == "java.lang.Integer") {
+            parameter.setType(ClassHelper.make("int"))
+          }
+        }
+      }
+    }
+  >
+  \p<
+    まず、\m<GroovyASTTransformation> というアノテーションですが、これは構文木をバイトコードにするどの段階で \m<visit> メソッドを実行するかを指定しています。
+    詳しくは別のところを見てください。
+  >
+  \p<
+    で、実際の処理内容が書かれる \m<visit> メソッドですが、引数として \m<nodes> と \m<sourceUnit> が渡されます。
+    \m<nodes> は要素数が 2 の配列で、使われたアノテーションそのものの構文木データと、そのアノテーションがつけられたメソッドなどの構文木データが、順に格納されています。
+    今回はメソッドの内容 (引数の型) を書き換えるので、2 番目の要素を使います。
+    ここで得られたメソッドの構文木データ \m<method> から、\m<getParameters> メソッドで引数データを取得します。
+    \m<each> メソッドを用いて、各引数データ \m<parameter> それぞれに対して処理を行います。
+    さて、\m<parameter> から \m<getType> メソッドで引数の型データを取得し、\m<getName> メソッドでその名前を取得します。
+    ここで得られる型の名前は、パッケージ名を含む完全修飾名です。
+    これが \m<Integer> だったときに、\m<int> に変換したいわけです。
+    そこで、\m<int> 型を表す型データが必要なわけですが、それは \m<ClassHelper> クラスの静的メソッド \m<make> を使うと簡単に作れます。
+  >
+  \p<
+    とそんなわけで、やりたいことをするコードが書けたので、これをコンパイルして、型を変換したいメソッドに \m<ConvertPrimitive> アノテーションをつけておけば、めでたく変換されます。
+  >
+
+>

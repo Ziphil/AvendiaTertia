@@ -1,0 +1,96 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=1170px"|;
+    \script|src="../../program/script/10.js"|;
+    \link|rel="stylesheet",type="text/css",href="../../style/7.css"|;
+    \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
+    \title<Tsolitaire>
+  >
+  \body<
+
+    \div|class="title"|<
+      Tsolitaire
+    >
+
+    \div|class="caution"|<
+      \div<
+        \ul<
+          \li<Tsolitaire は\a|href="https://ziphil.github.io/Tsolitaire/",target="_blank"|<こちら>に移動しました。>
+          \li<このページは互換性のために残しておきますが、現在メンテナンスされていません。>
+        >
+        \hr;
+        \ul<
+          \li<Tsolitaire has been moved \a|href="https://ziphil.github.io/Tsolitaire/",target="_blank"|<here>.>
+          \li<This page will be left for compatibility, but not maintained anymore.>
+        >
+      >
+    >
+
+    \div|class="content"|<
+      \div|id="board"|<
+        \div|id="mask"|<Game Over>
+      >
+      \div|class="right"|<
+        \div|class="next-container"|<
+          \div|class="next"|<
+            \div|class="next-label"|<Next>
+            \div|id="next-tile"|;
+            \div|class="next-guide"|<Click to Rotate>
+          >
+          \div|class="number"|<
+            \div|id="remaining-size"|<35>
+          >
+          \div|id="remaining"|;
+        >
+        \div|class="time"|<
+          \div|class="time-label"|<Time>
+          \div|id="minute"|<00>
+          \div|class="colon"|<:>
+          \div|id="second"|<00>
+        >
+        \div|class="button"|<
+          \input|id="undo",type="button",value="Undo"|;\ch|c="3000"|;\input|id="redo",type="button",value="Redo"|;\br;
+          \input|id="start",class="large",type="button",value="Start Game"|;\ch|c="3000"|;\input|id="load",class="large",type="button",value="Load Record"|;\br;
+          \button|id="tweet",type="button"|<Tweet>
+        >
+        \div|class="check"|<
+          \div<
+            \input|type="checkbox",name="show-suggest",id="show-suggest",checked|;\label|for="show-suggest"|<サジェスト表示\hr;Show suggestion>\br;
+            \input|type="checkbox",name="show-remaining",id="show-remaining",checked|;\label|for="show-remaining"|<残りタイル表示\hr;Show remaining tiles>\br;
+            \input|type="checkbox",name="show-mask",id="show-mask",checked|;\label|for="show-mask"|<ゲームオーバー表示\hr;Show gameover overlay>\br;
+            \input|type="checkbox",name="show-information",id="show-information"|;\label|for="show-information"|<タイル情報表示\hr;Show tile information>
+          >
+        >
+        \div|class="history"|<
+          \textarea|id="history"|;
+        >
+      >
+    >
+
+    \div|class="rule"|<
+      \div<
+        \ul<
+          \li<タイルを駒がある場所に置くと、タイルに書かれた道に沿って駒が動きます。>
+          \li<駒を道に沿って動かすと盤外に出てしまう場合や、駒と駒がぶつかってしまう場合は、タイルを置くことができません。>
+          \li<駒が面していない場所にも、タイルを置くことはできません。>
+          \li<全てのタイルを置いて 8 つの駒を 1 箇所に集めることができればクリアです。>
+          \li<盤面上で左クリックすることでタイルを設置でき、右クリックすることでタイルを時計回りに回転ができます。>
+        >
+        \hr;
+        \ul<
+          \li<When you put the tile in front of a stone, the stone will move along the path on the tile.>
+          \li<You cannot put the tile, if some stone goes out of the board or two stones collide with each other after moving along the path.>
+          \li<You also cannot put the tile on the cell which is not adjacent to any stone.>
+          \li<If you are able to gather all the eight stones around a cell, you will win the game.>
+          \li<Left-click on the board to place the next tile, or right-click to rotate it clockwise.>
+        >
+      >
+    >
+
+  >
+>

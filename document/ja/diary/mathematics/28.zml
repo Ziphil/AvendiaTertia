@@ -1,0 +1,255 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<層化関手と随伴>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2019 年 8 月 2 日)>
+  \p<
+    前回は、景 &m<(\scr<C>, J)> に対して、前層から層を作る関手 &m<\bf<a>: \bfrm<PSh> (\scr<C>) \to; \sb<\bfrm<Sh>><J> (\scr<C>)> を定義した。
+    今回は、これが包含関手 &m<\bf<i>: \sb<\bfrm<Sh>><J> (\scr<C>) \hookrarr; \bfrm<PSh> (\scr<C>)> の左随伴になっていることを示す。
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> と対象 &m<C> に対し、射 &m<\sb<`h><PC>: PC \to; \sp<P><+> C> を、合成
+      &mb<
+        \diag|ver="27"|<
+          \v<PC> \v<\op<Hom> (\bf<y> C, P)> \v; \br;
+          \v; \v<\op<Hom> (\sb<\top;><C>, P)> \v<\sb|fun|<\op<colim>><S> \op<Hom> (S, P)> \br;
+          \v; \v; \v<\sp<P><+> C>
+          \ar|s="1",e="2"|<\sb<y><PC>> \ar|s="5",e="6",inv|<\sb<i><\sb<\top;><C>>>
+          \ar|s="2",e="5",line="2",tip="none"|; \ar|s="6",e="9",line="2",tip="none"|;
+        >
+      >
+      として定める。
+      ここで、&m<\sb<y><PC>> は Yoneda の定理による同型射で、&m<\sb<i><\sb<\top;><C>>> は余極限に定まる構造射の 1 つである。
+      これが定める自然変換を &m<\sb<`h><P>: P \to; \sp<P><+>> とする。
+    >
+  >
+  \p<
+    層化関手の随伴性の証明に直接は関係してこないが、&m<\sb<`h><P>> が単射もしくは同型射かどうかは &m<P> が分離前層になるか層になるかに密接に関わるので、ここで証明しておく。
+  >
+  \thm|type="prp",id="sepmono"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、&m<P> が分離前層であることと &m<\sb<`h><P>: P \to; \sp<P><+>> が単射であることは同値である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb<`h><P>: P \to; \sp<P><+>> が単射であるとは、任意の対象 &m<C> に対して &m<\sb<`h><PC>: PC \to; \sp<P><+> C> が単射であるということである。
+      ここで、各対象 &m<C> に対し、定義から &m<\sb<`h><PC> = \sb<i><\sb<\top;><C>> \circ; \sb<y><PC>> であって &m<\sb<y><PC>> は同型射だから、&m<\sb<`h><PC>> が単射であることと &m<\sb<i><\sb<\top;><C>>> が単射であることは同値である。
+      したがって、&m<P> が分離前層であることと、任意の対象 &m<C> に対して &m<\sb<i><\sb<\top;><C>>: \op<Hom> (\sb<\top;><C>, P) \to; \sp<P><+> C> が単射であることが同値になることを示す。
+    >
+    \p<
+      &m<P> が分離前層であると仮定する。
+      任意の対象 &m<C> をとり、射 &m<a, a': \sb<\top;><C> \to; P> が &m<\sb<i><\sb<\top;><C>> a = \sb<i><\sb<\top;><C>> a'> を満たすとする。
+      これは、&m<\sp<P><+> C> を定める同値関係において &m<a, a'> が同値であるということなので、ある被覆篩 &m<S \in; JC> が存在して &m<a \circ; S = a' \circ; S> が成り立つ。
+      仮定から &m<P> は分離前層なので &m<\text<-> \circ; S> は単射であるから、これより &m<a = a'> を得る。
+      以上で、&m<\sb<i><\sb<\top;><C>>> は単射である。
+    >
+    \p<
+      逆に、任意の対象 &m<C> に対して &m<\sb<i><\sb<\top;><C>>> が単射であると仮定する。
+      任意の被覆篩 &m<S \in; JC> に対し、
+      &mb<
+        \diag<
+          \v<\op<Hom> (\sb<\top;><C>, P)> \v<\sp<P><+> C> \br;
+          \v<\op<Hom> (S, P)> \v;
+          \ar|s="1",e="2"|<\sb<i><\sb<\top;><C>>> \ar|s="1",e="3",inv|<\text<-> \circ; S> \ar|s="3",e="2",inv|<\sb<i><S>>
+        >
+      >
+      は可換であるが、仮定から &m<\sb<i><\sb<\top;><C>>> は単射なので &m<\text<-> \circ; S> も単射である。
+      よって、&m<P> は分離前層である。
+    >
+  >
+  \thm|type="prp",id="shiso"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、&m<P> が層であることと &m<\sb<`h><P>: P \to; \sp<P><+>> が同型射であることは同値である。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="sepmono"|; のときと同様に、&m<P> が層であることと、任意の対象 &m<C> に対して &m<\sb<i><\sb<\top;><C>>: \op<Hom> (\sb<\top;><C>, P) \to; \sp<P><+> C> が全単射であることが同値になることを示す。
+    >
+    \p<
+      &m<P> が層であると仮定する。
+      任意の対象 &m<C> をとる。
+      元 &m<`a \in; \sp<P><+> C> をとり、これがある被覆篩 &m<S \in; JC> に対して &m<a: S \to; P> で代表されるとすると、&m<`a = \sb<i><S> a> である。
+      仮定から &m<P> は層なので &m<\text<-> \circ; S> は全単射であるから、ある &m<a': \sb<\top;><C> \to; P> が存在して &m<a = a' \circ; S> が成り立つ。
+      したがって &m<`a = \sb<i><S> (a' \circ; S) = \sb<i><\sb<\top;><C>> a'> であるから、&m<\sb<i><\sb<\top;><C>>> が全射であることが示された。  
+      \ref|type="thm",ref="sepmono"|; によって &m<\sb<i><\sb<\top;><C>>> はすでに単射なので、&m<\sb<i><\sb<\top;><C>>> は全単射である。
+    >
+    \p<
+      逆に、任意の対象 &m<C> に対して &m<\sb<i><\sb<\top;><C>>> が全単射であると仮定する。
+      任意に被覆篩 &m<S \in; JC> をとり、さらに射 &m<a: S \to; P> をとる。
+      仮定から &m<\sb<i><\sb<\top;><C>>> が全単射なので、ある &m<a': \sb<\top;><C> \to; P> が存在して &m<\sb<i><S> a = \sb<i><\sb<\top;><C>> a'> が成り立つ。
+      これは、&m<\sp<P><+> C> において &m<a, a'> が同値であるということなので、ある被覆篩 &m<T \in; JC> が存在し、&m<T \subseteq; S> であって、
+      &mb<
+        \diag|ver="vthn"|<
+          \v; \v<S> \v; \br;
+          \v<T> \v; \v<P> \br;
+          \v; \v<\sb<\top;><C>> \v;
+          \ar|s="4",e="2",tip="hook"|; \ar|s="4",e="8",tip="hook"|;
+          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<a'>
+        >
+      >
+      が可換である。
+      ここで、任意の射 &m<f \in; S: D \to; C> に対し、図式
+      &mb<
+        \diag|ver="thn"|<
+          \v<\sp<f><*> T> \v; \v<\bf<y> D> \v<S> \v<P> \br;
+          \v; \v<T> \v; \v; \v; \br;
+          \v<\bf<y> D> \v; \v<\bf<y> D> \v<\sb<\top;><C>> \v<P> \br;
+          \v; \v<\bf<y> C> \v; \v; \v;
+          \ar|s="1",e="3",tip="hook"|; \ar|s="1",e="7",inv|<f \circ; \text<->> \ar|s="1",e="11",tip="hook"|;
+          \ar|s="3",e="4"|<f \circ; \text<->> \ar|s="4",e="5"|<a> \ar|s="5",e="15",line="2",tip="none"|;
+          \ar|s="7",e="4",tip="hook"|;
+          \ar|s="11",e="13",line="2",tip="none"|; \ar|s="11",e="17",inv|<f \circ; \text<->>
+          \ar|s="13",e="14"|<f \circ; \text<->> \ar|s="14",e="15"|<a'>
+          \ar|s="17",e="14",line="2",tip="none"|;
+          \ar|s="7",e="17",tip="hook"|;
+        >
+      >
+      を考えると、左の四角形は &m<\sp<f><*> T> の定義によって可換であり、上下の三角形は明らかに可換で、折れ曲がった長方形は上の図式と同じものなので可換である。
+      したがって、横に長い長方形も可換である。
+      ここで、\ref|type="thm",ref="sepmono"|; によって &m<P> が分離前層であることは分かっているので、写像
+      &mb<
+        \text<-> \circ; \sp<f><*> T: \op<Hom> (\bf<y> D, P) \to; \op<Hom> (\sp<f><*> T, P)
+      >
+      は単射である。
+      この事実と上の図式の可換性を踏まえると、
+      &mb<
+        \diag|ver="vthn"|<
+          \v; \v<S> \v; \br;
+          \v<\bf<y> D> \v; \v<P> \br;
+          \v; \v<\sb<\top;><C>> \v;
+          \ar|s="4",e="2"|<f \circ; \text<->> \ar|s="4",e="8",inv|<f \circ; \text<->>
+          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<a'>
+        >
+      >
+      が可換であることが分かる。
+      この図式において &m<\sb<\rm<id>><D>> の行き先を見ることで、&m<\sb<a><D> f = \sbsp<a><D><\pr;> f> が得られる。
+      &m<f> は &m<S> に属する任意の射であったから、これによって &m<a = a' \circ; S> が得られ、&m<\text<-> \circ; S> が全射であることが示された。
+      \ref|type="thm",ref="sepmono"|; によって &m<\text<-> \circ; S> はすでに単射なので、&m<\text<-> \circ; S> は全単射となり、&m<P> は層である。
+    >
+  >
+  \p<
+    前層 &m<P> に対して定義した射 &m<\sb<`h><P>: P \to; \sp<P><+>> は、層への射に関して普遍性をもつ。
+    これが随伴性の鍵となる。
+  >
+  \thm|type="prp",id="univ"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> と層 &m<F: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、任意の自然変換 &m<`f: P \to; F> は、
+      &mb<
+        \diag<
+          \v<P> \v<\sp<P><+>> \br;
+          \v; \v<F>
+          \ar|s="1",e="2"|<\sb<`h><P>> \ar|s="1",e="4",inv|<`f> \ar|s="2",e="4",dash|<\tilde<`f>>
+        >
+      >
+      を可換にする自然変換 &m<\tilde<`f>> によって、&m<\sb<`h><P>> を通して一意的に分解される。
+    >
+  >
+  \prf<
+    \p<
+      任意の対象 &m<C> とそれ上の被覆篩 &m<S \in; JC> をとる。
+      &m<F> は層であるから、包含射による写像
+      &mb<
+        \text<-> \circ; S: \op<Hom> (\bf<y> C, F) \to; \op<Hom> (S, F)
+      >
+      は全単射であり、したがって逆写像をもつ。
+      これを用いて、合成
+      &mb<
+        \diag<
+          \v<\op<Hom> (S, P)> \v<\op<Hom> (S, F)> \v<\op<Hom> (\bf<y> C, F)> \v<FC>
+          \ar|s="1",e="2"|<`f \circ; \text<->> \ar|s="2",e="3"|<\sp<(\text<-> \circ; S)><- 1>> \ar|s="3",e="4"|<\sp<\sb<y><FC>><- 1>>
+        >
+      >
+      を考えると、これらは関手 &m<\op<Hom> (\text<->, P): \sp<JC><\circ;> \to; \bfrm<Set>> の余錐となる。
+      したがって、この余極限である &m<\sp<P><+> C> からの一意的な射 &m<\sb<\tilde<`f>><C>: \sp<P><+> C \to; FC> が存在する。
+      これは &m<C> に関して自然なので、自然変換 &m<\tilde<`f>: \sp<P><+> \to; F> が得られる。
+    >
+    \p<
+      さて、定義によって、各対象 &m<C> に対し、
+      &mb<
+        \diag<
+          \v<\op<Hom> (S, P)> \v; \v; \v<\sp<P><+> C> \br;
+          \v; \v<\op<Hom> (S, F)> \v<\op<Hom> (\bf<y> C, F)> \v<FC>
+          \ar|s="1",e="6",inv|<`f \circ; \text<->> \ar|s="1",e="4"|<\sb<i><S>> \ar|s="4",e="8"|<\sb<\tilde<`f>><C>>
+          \ar|s="6",e="7",inv|<\sp<(\text<-> \circ; S)><- 1>> \ar|s="7",e="8",inv|<\sp<\sb<y><FC>><- 1>>
+        >
+      >
+      は可換である。
+      ここで特に &m<S = \sb<\top;><C>> とおけば、図式
+      &mb<
+        \diag<
+          \v<PC> \v<\op<Hom> (\sb<\top;><C>, P)> \v<\sp<P><+> C> \br;
+          \v<FC> \v<\op<Hom> (\bf<y> C, F)> \v<FC>
+          \ar|s="1",e="2"|<\sb<y><PC>> \ar|s="1",e="4",inv|<\sb<`f><C>> \ar|s="2",e="3"|<\sb<i><\sb<\top;><C>>> \ar|s="2",e="5",inv|<`f \circ; \text<->>
+          \ar|s="3",e="6"|<\sb<\tilde<`f>><C>> \ar|s="4",e="5",inv|<\sb<y><FC>> \ar|s="5",e="6",inv|<\sp<\sb<y><FC>><- 1>>
+        >
+      >
+      の右側の四角形の可換性が得られるが、この左側の四角形も明らかに可換なので、全体も可換である。
+      これはすなわち、ここで構成した &m<\tilde<`f>: \sp<P><+> \to; C> が命題の主張の図式を可換にしていることを意味する。
+    >
+    \p<
+      &m<\tilde<`f>> の一意性は、余極限が誘導する射の一意性から従う。
+    >
+  >
+  \thm|type="thm",id="adj"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      関手の随伴
+      &mb<
+        \diag<
+          \v<\bfrm<PSh> (\scr<C>) \vph<\sb<\bfrm<Sh>><J> (\scr<C>)>> \v<\sb<\bfrm<Sh>><J> (\scr<C>)>
+          \ar|s="1:r40",e="2:l40",bend="40",name="a"|<\bf<a>> \ar|s="2:l60",e="1:r60",tip="hook",bend="40",name="i"|<\bf<i>>
+          \ar|s="a:c",e="i:c",line="0",mark|<\g|rotate="90"|<\dashv;>>
+        >
+      >
+      が成立する。
+      すなわち、&m<\sb<\bfrm<Sh>><J> (\scr<C>)> は &m<\bfrm<PSh> (\scr<C>)> の反射的部分圏である。
+    >
+  >
+  \prf<
+    \p<
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、合成
+      &mb<
+        \diag<
+          \v<P> \v<\sp<P><+>> \v<\sp<P><++>>
+          \ar|s="1",e="2"|<\sb<`h><P>> \ar|s="2",e="3"|<\sb<`h><\sp<P><+>>>
+        >
+      >
+      を &m<\sb<\bar<`h>><P>> とおく。
+      \ref|type="thm",ref="univ"|; を 2 回使うことで、任意の層 &m<F: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> への自然変換 &m<`f: P \to; F> は、
+      &mb<
+        \diag<
+          \v<P> \v<\bf<a> P> \br;
+          \v; \v<F>
+          \ar|s="1",e="2"|<\sb<\bar<`h>><P>> \ar|s="1",e="4",inv|<`f> \ar|s="2",e="4",dash|<\tilde<`f>>
+        >
+      >
+      を可換にする自然変換 &m<\tilde<`f>> によって、&m<\sb<\bar<`h>><P>> を通して一意的に分解される。
+      これは、定理の主張にある随伴が、&m<\bar<`h>> を単位として成立することを意味する。
+    >
+  >
+  \p<
+    以上で、層化関手をプラス構成を経由して定義し、それが包含関手の左随伴になっていることを証明した。
+    MacLane–Moerdijk\ref|bib="sgl"|; ではこれを行うのに適合族やその融合を陽に扱っていたが、この日記では試しにそれを避けてみた。
+    本当なら、プラス構成で用いた余極限の具体的な表示を使わずに、全て射だけの言葉で証明したかったが、あまりうまくいかず、中途半端な感じになってしまった。
+    この辺りの議論はもうちょっとシンプルにやりたい。
+  >
+  \p<
+    次回は、層の圏 &m<\sb<\bfrm<Sh>><J> (\scr<C>)> の極限と余極限について触れる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="sgl"|<S. MacLane, I. Moerdijk (1992)『Sheaves in Geometry and Logic』Springer>
+  >
+  
+>

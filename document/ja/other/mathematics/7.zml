@@ -1,0 +1,1060 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<正規化定理>
+  \use-math;
+
+  \h1<初めに>
+  \p<
+    以下で扱う型は、全て Church 式の単純型とする。
+    すなわち、ラムダ項の各変項にはちょうど 1 つの型が定められており、正しく型付けできない項は初めから排除する。
+    なお、原始型は 1 個でも無限個でも良い。
+  >
+  \p<
+    &m<x, y, z, \cdots;> などのラテン小文字後半はラムダ項の変項を表し、&m<M, N, P, \cdots;> などのラテン大文字後半はラムダ項を表す。
+    &m<a, b, c, \cdots;> などのラテン小文字前半は原始型定数を表し、&m<A, B, C, \cdots;> などのラテン小文字前半は型を表す。
+    また、変項やラムダ項の型を明示して、&m<\sp<x><A>> や &m<\sp<M><A \buharprarr; B>> などと書くことがある。
+  >
+  \p<
+    あるラムダ項 &m<X> に部分項として &m<P> が出現しているとき、それを &m<X `[P`]> で表す。
+    このとき、出現 &m<P> (位置を区別する) を別のラムダ項 &m<Q> にそのまま置き換えたものを &m<X `[Q`]> と書く。
+    例えば、
+    &mb<
+      X `[\rm<`l> x. \sfun; xy`] \equiv; (\rm<`l> z. \sfun; (\rm<`l> x. \sfun; xy)) (\rm<`l> w. \sfun; w)
+  >
+    とおくとき、
+    &mb<
+      X `[z`] \equiv; (\rm<`l> z. \sfun; z) (\rm<`l> w. \sfun; w)
+  >
+    である。
+    ラムダ項の置き換えにより、&m<z> が新たに束縛されていることに注意すること。
+  >
+  \p<
+    なお、このノートのテーマである正規化可能性とは、以下で定義される性質である。
+  >
+  \thm|type="def"|<
+    \p<
+      ラムダ項 &m<M> に対し、&m<M \sb<\headrarr;><`b> N> であって &m<N> が &m<`b>-正規形であるようなラムダ項 &m<N> が存在するとき、&m<M> は &m<`b>-\em<弱正規化可能\fl<weakly normalisable>> であるという。
+      &m<`b `h>-\em<弱正規化可能>であることも同様に定義される。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      ラムダ項 &m<M> に対し、&m<M> から始まる任意の &m<`b>-簡約の列 
+      &mb<
+        M \sb<\to;><`b> \sb<N><1> \sb<\to;><`b> \sb<N><2> \sb<\to;><`b> \cdots;
+      >
+      は必ず有限回のうちに &m<`b>-正規形で止まるとき、&m<M> は &m<`b>-\em<強正規化可能\fl<strongly normalisable>> であるという。
+      &m<`b `h>-\em<強正規化可能>であることも同様に定義される。
+    >
+  >
+  \h1<弱正規化定理>
+  \p<
+    以下の証明は、各ラムダ項に順序数を割り当て、特定の方法で簡約を行うとその順序数が真に減少することを利用するものである。
+    そのために、&m<`b>-簡約によって &m<`b>-基がどのように消えたり生まれたりするかを詳しく調べる。
+    この証明は、Barendregt\ref|type="bib",ref="bt"|; および Lévy\ref|type="bib",ref="levy"|; を参考にした。
+  >
+  \p<
+    なお、この節では単に &m<`b>-基と言ったらその &m<`b>-基の出現のことであるとする。
+    したがって、同じ形の &m<`b>-基でも場所が異なるものは別物だと見なす。
+  >
+  \thm|type="def"|<
+    \p<
+      ラムダ項 &m<M> に含まれる &m<`b>-基 &m<R \equiv; (\rm<`l> x. \sfun; P) Q> を &m<R' \equiv; P `[x \coloneqq; Q`]> に簡約して得られるラムダ項を &m<N> とする。
+      また、&m<M> に含まれる &m<`b>-基 &m<S> をとる。
+      このとき、&m<R> による &m<S> の\em<残基\fl<residue>> を以下によって定義する。
+    >
+    \p<
+      &m<R> と &m<S> が同じであるとき。
+      このときは、&m<S> の残基は存在しない。
+    >
+    \p<
+      &m<R> と &m<S> が別の位置にあるとき。
+      このとき、&m<R> の簡約により &m<S> は変化しないので、&m<S> はそのまま &m<N> に部分項として含まれる。
+      この &m<N> に含まれる出現 &m<S> を、&m<S> の残基とする。
+  >
+    \p<
+      &m<S> が &m<R> を含むとき。
+      &m<M \equiv; X `[S`], S \equiv; Y `[R`]> と書けるから、&m<N \equiv; X `[Y `[R'`]`]> と書ける。
+      &m<S' \equiv; Y `[R'`]> とおくと &m<N \equiv; X `[S'`]> となるが、このような出現 &m<S'> を &m<S> の残基とする。
+  >
+    \p<
+      &m<R> が &m<S> を含み、特に &m<P> が &m<S> を含むとき。
+      &m<M \equiv; X `[R`], P \equiv; Y `[S`]> と書けるから、&m<R' \equiv; Y `[S`] `[x \coloneqq; Q`]> である。
+      したがって、&m<S' \equiv; S `[x \coloneqq; Q`]> とおくと &m<N \equiv; X `[Y `[S'`] `[x \coloneqq; Q`]`]> となるが、このような出現 &m<S'> を &m<S> の残基とする。
+    >
+    \p<
+      &m<R> が &m<S> を含み、特に &m<Q> が &m<S> を含むとき。
+      &m<M \equiv; X `[R`], Q \equiv; Y `[S`]> と書けるから、&m<N \equiv; X `[P `[x \coloneqq; D`[S`]`]`]> と書ける。
+      この &m<P `[x \coloneqq; D`[S`]`]> に含まれる &m<S> の形をした出現 (複数個もしくは 0 個になり得る) を、&m<S> の残基とする。
+    >
+  >
+  \p<
+    残基については一般論を見るよりは具体例を見るのが分かりやすいので、各場合におけるシンプルな例を 1 つずつ挙げておく。
+    &m<R> と &m<S> が別の位置にあるときというのは、
+    &mb<
+      (\un<\undergroup<(\rm<`l> x. \sfun; xy) x>><R>) (\un<\undergroup<(\rm<`l> z. \sfun; xz) z>><S> w) \sb<\to;><`b> (xy) (\un<\undergroup<(\rm<`l> z. \sfun; xz) z>><&raw<&m<S> の残基>> w)
+    >
+    などの場合である。
+    &m<S> が &m<R> を含むときというのは、
+    &mb<
+      \un<\undergroup<(\rm<`l> y. \sfun; \ov<\overgroup<(\rm<`l> x. \sfun; xy) x>><R>) z>><S> w \sb<\to;><`b> \un<\undergroup<(\rm<`l> y. \sfun; xy) z>><&raw<&m<S> の残基>> w
+    >
+    などである。
+    &m<R \equiv; (\rm<`l> x. \sfun; P) Q> の &m<P> が &m<S> を含むときは、
+    &mb<
+      \ov<\overgroup<(\rm<`l> x. \sfun; \un<\undergroup<(\rm<`l> y. \sfun; y) x>><S> w) z>><R> \sb<\to;><`b> \un<\undergroup<(\rm<`l> y. \sfun; y) z>><&raw<&m<S> の残基>> w
+    >
+    などの場合である。
+    最後に、&m<R \equiv; (\rm<`l> x. \sfun; P) Q> の &m<Q> が &m<S> を含むときは、
+    &mb<
+      \ov<\overgroup<(\rm<`l> x. \sfun; wxx) (\un<\undergroup<(\rm<`l> y. \sfun; y) z>><S>)>><R> \sb<\to;><`b> w (\un<\undergroup<(\rm<`l> y. \sfun; y) z>><&raw<&m<S> の残基>>) (\un<\undergroup<(\rm<`l> y. \sfun; y) z>><&raw<&m<S> の残基>>)
+    >
+    などである。
+    このときは、&m<P> に出現する &m<x> の個数分だけ残基が生じる。
+  >
+  \p<
+    &m<`b>-基 &m<R> を簡約することで、すでに存在していた別の &m<`b>-基 &m<S> が変形する可能性があるが、その変形した結果というのが &m<S> の残基であると解釈できる。
+    一方、&m<`b>-基の簡約によって、全く新しい &m<`b>-基が生じることもある。
+  >
+  \thm|type="def"|<
+    \p<
+      ラムダ項 &m<M> に含まれる &m<`b>-基 &m<R> を簡約して得られるラムダ項を &m<N> とする。
+      このとき、&m<N> に含まれる &m<`b>-基であって、&m<M> に含まれるどんな &m<`b>-基の残基でもないようなものを、&m<R> によって\em<生成された基\fl<created redex>> という。
+    >
+  >
+  \p<
+    3 つほど例を挙げる。
+    簡約 
+    &mb<
+      (\rm<`l> x. \sfun; X `[x T`]) (\rm<`l> y. \sfun; U) \sb<\to;><`b> X `[(\rm<`l> y. \sfun; U) T`]
+    >
+    では、&m<(\rm<`l> x. \sfun; X `[x T`]) (\rm<`l> y. \sfun; U)> の簡約により &m<(\rm<`l> y. \sfun; U) T> が生成されている。
+    次に、
+    &mb<
+      (\rm<`l> x. \sfun; (\rm<`l> y. \sfun; U)) QT \sb<\to;><`b> (\rm<`l> y. \sfun; U `[x \coloneqq; Q`]) T
+    >
+    では、&m<(\rm<`l> x. \sfun; (\rm<`l> y. \sfun; U)) Q> の簡約により &m<(\rm<`l> y. \sfun; U `[x \coloneqq; Q`]) T> が生成されている。
+    最後に、
+    &mb<
+      (\rm<`l> x. \sfun; x) (\rm<`l> y. \sfun; U) T \sb<\to;><`b> (\rm<`l> y. \sfun; U) T
+    >
+    では、&m<(\rm<`l> x. \sfun; x) (\rm<`l> y. \sfun; U)> の簡約により &m<(\rm<`l> y. \sfun; U) T> が生成されている。
+  >
+  \p<
+    さて、&m<`b>-簡約により新たに &m<`b>-基が生成されるパターンを 3 つ挙げたが、実は &m<`b>-基が生成されるときは必ずこの 3 パターンのどれかになる。
+    このことを以下に 2 つの補題を示しながら証明する。
+  >
+  \thm|type="lem",id="levylema"|<
+    \p<
+      ラムダ項 &m<M> に含まれる &m<`b>-基 &m<R \equiv; (\rm<`l> x. \sfun; P) Q> を簡約して得られるラムダ項を &m<N> とする。
+      &m<M> は &m<`b>-基でなく &m<N> は &m<`b>-基であるとすると、
+    >
+    \ul<
+      \li<
+        &m<M \equiv; RT> かつ &m<P \equiv; \rm<`l> y. \sfun; U> と表せる。
+      >
+      \li<
+        &m<M \equiv; RT> かつ &m<P \equiv; x, Q \equiv; \rm<`l> y. \sfun; U> と表せる。
+      >
+    >
+    \p<
+      のどちらか一方である。
+    >
+  >
+  \prf<
+    \p<
+      &m<N> は &m<`b>-基なので、&m<N \equiv; (\rm<`l> y. \sfun; X) Y> とおく。
+      また、&m<R' \equiv; P `[x \coloneqq; Q`]> とおく。
+      &m<M> の最も外側の構造によって場合分けする。
+    >
+    \p<
+      \label<場合 1>
+      &m<M \equiv; R> のとき。
+      &m<M> が &m<`b>-基ではないので、これはあり得ない。
+    >
+    \p<
+      \label<場合 2>
+      &m<M \equiv; \rm<`l> w. \sfun; X `[R`]> と書けるとき。
+      &m<N \equiv; \rm<`l> w. \sfun; X `[R'`]> となるが、&m<N> は &m<(\rm<`l> y. \sfun; X) Y> の形なので、これはあり得ない。
+    >
+    \p<
+      \label<場合 3>
+      &m<M \equiv; T X `[R`]> と書けるとき。
+      &m<N \equiv; T X `[R'`]> となり &m<N \equiv; (\rm<`l> y. \sfun; X) Y> であったから、&m<T \equiv; \rm<`l> y. \sfun; X> である。
+      したがって &m<M \equiv; (\rm<`l> y. \sfun; X) X `[R`]> となるが、&m<M> は &m<`b>-基ではないのでこれは不可能である。
+    >
+    \p<
+      \label<場合 4>
+      &m<M \equiv; X `[R`] T> と書けるとき。
+      &m<N \equiv; X `[R'`] T> となり &m<N \equiv; (\rm<`l> y. \sfun; X) Y> であったから、&m<X `[R'`] \equiv; \rm<`l> y. \sfun; X> である。
+      &m<X> に &m<R'> が含まれているとすると、&m<X `[R'`] \equiv; \rm<`l> y. \sfun; Y `[R'`]> と書けて &m<M \equiv; (\rm<`l> y. \sfun; Y `[R`]) T> となるが、&m<M> は &m<`b>-基ではないので矛盾である。
+      これより &m<R' \equiv; X `[R'`] \equiv; \rm<`l> y. \sfun; X> でなければならず、&m<M \equiv; RT> となる。
+      ここで &m<R' \equiv; P `[x \coloneqq; Q`]> だったから、
+    >
+    \ul<
+      \li<
+        &m<P \equiv; \rm<`l> y. \sfun; U> と表され &m<U `[x \coloneqq; P`] \equiv; X> が成り立つ。
+      >
+      \li<
+        &m<P \equiv; x> であり &m<Q \equiv; \rm<`l> y. \sfun; X> である。
+      >
+    >
+    \p<
+      のいずれかである。
+      このそれぞれが、補題の主張のそれぞれの場合に対応している。
+    >
+  >
+  \thm|type="lem",id="levylemb"|<
+    \p<
+      ラムダ項 &m<M, N> を考える。
+      &m<M> は &m<`b>-基でなく &m<M `[x \coloneqq; N`]> は &m<`b>-基であるとすると、
+    >
+    \ul<
+      \li<
+        &m<M \equiv; xT> かつ &m<N \equiv; \rm<`l> y. \sfun; U> と表せる。
+      >
+      \li<
+        &m<M \equiv; x> である。
+      >
+    >
+    \p<
+      のどちらか一方である。
+    >
+  >
+  \prf<
+    \p<
+      &m<M> の最も外側の構造によって場合分けする。
+    >
+    \p<
+      \label<場合 1>
+      &m<M> が変項の場合。
+      &m<M \equiv; y> で &m<y \nequiv; x> あれば &m<M `[x \coloneqq; N`] \equiv; N> であるから、これが &m<`b>-基であるとすると &m<M> が &m<`b>-基でないことに矛盾する。
+      したがって、&m<M \equiv; x> であり、補題の主張の 2 番目の場合に相当する。
+    >
+    \p<
+      \label<場合 2>
+      &m<M \equiv; \rm<`l> w. \sfun; T> と書けるとき。
+      &m<M `[x \coloneqq; N`] \equiv; \rm<`l> w. \sfun; T `[x \coloneqq; N`]> であるが、これは &m<`b>-基になり得ない。
+      したがって、この場合は不可能である。
+    >
+    \p<
+      \label<場合 3>
+      &m<M \equiv; VT> と書けるとき。
+      さらに &m<V> の構造によって場合分けをする。
+      &m<V \equiv; XY> と書ける場合は &m<M \equiv; XYT> となるが、このとき &m<M `[x \coloneqq; N`]> は &m<`b>-基になり得ず矛盾である。
+      &m<V \equiv; \rm<`l> v. \sfun; X> と書ける場合は &m<M \equiv; (\rm<`l> v. \sfun; X) T> となり、&m<M> が &m<`b>-基でないことに矛盾する。
+      以上により、&m<V> は変項でなければならない。
+      &m<V \equiv; v> かつ &m<v \nequiv; x> であれば &m<M `[x \coloneqq; N`] \equiv; v T `[x \coloneqq; N`]> となるが、これは &m<`b>-基にはなり得ないので矛盾である。
+      よって &m<V \equiv; x> である。
+      このとき &m<M `[x \coloneqq; N`] \equiv; N T `[x \coloneqq; N`]> となるが、これは &m<`b>-基であるから、&m<N \equiv; \rm<`l> y. \sfun; U> の形でなければならない。
+      これが補題の主張の 1 番目の場合に相当している。
+    >
+  >
+  \thm|type="lem",id="levy"|<
+    \p<
+      &m<`b>-簡約により新たな &m<`b>-基が生成されるとき、その &m<`b>-簡約について、
+    >
+    \ul<
+      \li<
+        &m<(\rm<`l> x. \sfun; X `[x T`]) (\rm<`l> y. \sfun; U) \sb<\to;><`b> X `[(\rm<`l> y. \sfun; U) T`]> の形である。
+      >
+      \li<
+        &m<(\rm<`l> x. \sfun; (\rm<`l> y. \sfun; U)) QT \sb<\to;><`b> (\rm<`l> y. \sfun; U `[x \coloneqq; Q`]) T> の形である。
+      >
+      \li<
+        &m<(\rm<`l> x. \sfun; x) (\rm<`l> y. \sfun; U) T \sb<\to;><`b> (\rm<`l> y. \sfun; U) T> の形である。
+      >
+    >
+    \p<
+      のいずれかである。
+    >
+  >
+  \prf<
+    \p<
+      ラムダ項 &m<M> に含まれる &m<`b>-基 &m<R \equiv; (\rm<`l> x. \sfun; P) Q> を簡約して得られるラムダ項を &m<N> とする。
+      また、&m<S> を &m<R> によって生成される &m<`b>-基とする。
+      &m<R' \equiv; P `[x \coloneqq; Q`]> とおく。
+      また、&m<M \equiv; Y `[R`], N \equiv; Z `[S`]> と表す。
+      &m<R'> と &m<S> の位置によって場合分けする。
+    >
+    \p<
+      \label<場合 1>
+      &m<R'> と &m<S> が別の位置にあるとき。
+      このとき、&m<S> は &m<M> にもそのまま出現しており、それの残基が &m<S> なので、この場合は不可能である。
+    >
+    \p<
+      \label<場合 2>
+      &m<S> が &m<R'> を含むとき。
+      &m<M \equiv; Z `[S'`]> となるような &m<S'> がある。
+      このとき、&m<S'> には &m<R> が含まれ、この &m<R> を簡約すると &m<S> になる。
+      また、&m<S'> が &m<`b>-基だとすると &m<S> は &m<S'> の残基になってしまい矛盾するので、&m<S'> は &m<`b>-基ではない。
+      したがって\ref|type="thm",ref="levylema"|; が適用できる。
+    >
+    \p<
+      &m<S' \equiv; (\rm<`l> x. \sfun; P) Q T> かつ &m<P \equiv; \rm<`l> y. \sfun; U> となるときは、
+      &mb<
+        \array|align="rcl"|<
+          \c<M> \c<\equiv;> \c<Z `[(\rm<`l> x. \sfun; (\rm<`l> y. \sfun; U)) Q T`]> \br;
+          \c<N> \c<\equiv;> \c<Z `[(\rm<`l> y. \sfun; U `[x \coloneqq; Q`]) T`]>
+        >
+      >
+      となり、補題の主張の 2 番目のパターンになる。
+      一方、&m<S' \equiv; (\rm<`l> x. \sfun; P) Q T> かつ &m<P \equiv; x, Q \equiv; \rm<`l> y. \sfun; U> となるときは、
+      &mb<
+        \array|align="rcl"|<
+          \c<M> \c<\equiv;> \c<Z `[(\rm<`l> x. \sfun; x) (\rm<`l> y. \sfun; U) T`]> \br;
+          \c<N> \c<\equiv;> \c<Z `[(\rm<`l> y. \sfun; U) T`]>
+        >
+      >
+      となり、補題の主張の 3 番目のパターンになる。
+    >
+    \p<
+      \label<場合 3>
+      &m<R'> が &m<S> を含むとき。
+      まず、&m<S> は &m<Q> には含まれない。
+      なぜなら、もしそうだとすると &m<S> が残基になって矛盾するからである。
+      したがって、&m<P> の部分項 &m<P'> であって &m<P' `[x \coloneqq; Q`] \equiv; S> なるものが存在する。
+      ここで、まず &m<P' \nequiv; x> が分かる。
+      さらに &m<P'> は &m<`b>-基ではない。
+      これは、もしそうだとすると &m<S> が残基になって矛盾するからである。
+      以上により、\ref|type="thm",ref="levylemb"|; が適用でき、&m<P' \nequiv; x> であることから、&m<P' \equiv; xT> かつ &m<Q \equiv; \rm<`l> y. \sfun; U> と表せる。
+      &m<P \equiv; X `[P'`]> と書けば、
+      &mb<
+        \array|align="rcl"|<
+          \c<M> \c<\equiv;> \c<Y `[(\rm<`l> x. \sfun; X `[xT`]) (\rm<`l> y. \sfun; U)`]> \br;
+          \c<N> \c<\equiv;> \c<Y `[X `[(\rm<`l> y. \sfun; U) T`]`]>
+        >
+      >
+      となり、補題の主張の 1 番目のパターンになる。
+    >
+  >
+  \p<
+    以上によって、&m<`b>-基の簡約により、それ以外の &m<`b>-基がどう変化し、またどのような &m<`b>-基が生成されるかが分かった。
+  >
+  \p<
+    さて、型の複雑度を測る一種の指標として、深さの概念を導入する。
+  >
+  \thm|type="def"|<
+    \p<
+      型 &m<A> に対し、&m<\op<dpt> (A)> を以下によって再帰的に定義する。
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<dpt> (a)> \c<=> \c<1> \br;
+          \c<\op<dpt> (A \buharprarr; B)> \c<=> \c<\max; (\op<dpt> (A), \op<dpt> (B)) + 1>
+        >
+      >
+      このとき、&m<\op<dpt> (A)> を &m<A> の\em<深さ\fl<depth>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      &m<`b>-基 &m<R \equiv; (\rm<`l> \sp<x><A>. \sfun; \sp<P><B>) \sp<Q><A>> に対し、
+      &mb<
+        \op<dpt> (R) = \op<dpt> (A \buharprarr; B)
+      >
+      と定義し、&m<\op<dpt> (R)> を &m<R> の\em<深さ\fl<depth>> という。
+    >
+  >
+  \thm|type="lem",id="lemresidue"|<
+    \p<
+      ラムダ項 &m<M> に含まれる &m<`b>-基 &m<R> を簡約することを考える。
+      &m<M> に含まれる &m<`b>-基 &m<S> をとり、&m<R> による &m<S> の残基の 1 つを &m<S'> とする。
+      このとき、&m<S> と &m<S'> について、その全体の型と束縛変項の型は等しい。
+      特に &m<\op<dpt> (S) = \op<dpt> (S')> である。
+    >
+  >
+  \prf<
+    \p<
+      残基の定義から明らかである。
+    >
+  >
+  \thm|type="lem",id="lemredex"|<
+    \p<
+      あるラムダ項に含まれる &m<`b>-基 &m<R> を簡約した結果、&m<`b>-基 &m<S> が生成されたとする。
+      このとき、&m<\op<dpt> (R) `> \op<dpt> (S)> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="levy"|; の 3 パターンを全て調べれば良い。
+    >
+    \p<
+      \label<場合 1>
+      1 番目のパターンは、
+      &mb<
+        (\rm<`l> \sp<x><A \buharprarr; B>. \sfun; X `[\sp<x><A \buharprarr; B> \sp<T><A>`] \sp<><C>) (\rm<`l> \sp<y><A>. \sfun; \sp<U><B>) \sb<\to;><`b> X `[(\rm<`l> \sp<y><A>. \sfun; \sp<U><B>) \sp<T><A>`] \sp<><C>
+      >
+      と型付けられているはずである。
+      この場合において、簡約した &m<`b>-基の深さ &m<R> と生成された &m<`b>-基 &m<S> の深さは、
+      &mb<
+        \op<dpt> (R) = \op<dpt> ((A \buharprarr; B) \buharprarr; C) \qquad; \op<dpt> (S) = \op<dpt> (A \buharprarr; B)
+      >
+      であり、深さの定義から &m<\op<dpt> (R) `> \op<dpt> (S)> である。
+    >
+    \p<
+      \label<場合 2>
+      2 番目のパターンは、
+      &mb<
+        (\rm<`l> \sp<x><A>. \sfun; (\rm<`l> \sp<y><B>. \sfun; \sp<U><C>)) \sp<Q><A> \sp<T><B> \sb<\to;><`b> (\rm<`l> \sp<y><B>. \sfun; U `[\sp<x><A> \coloneqq; \sp<Q><A>`] \sp<><C>) \sp<T><B>
+      >
+      となり、このとき、
+      &mb<
+        \op<dpt> (R) = \op<dpt> (A \buharprarr; (B \buharprarr; C)) \qquad; \op<dpt> (S) = \op<dpt> (B \buharprarr; C)
+      >
+      である。
+    >
+    \p<
+      \label<場合 3>
+      3 番目のパターンは、
+      &mb<
+        (\rm<`l> \sp<x><A \buharprarr; B>. \sfun; \sp<x><A \buharprarr; B>) (\rm<`l> \sp<y><A>. \sfun; \sp<U><B>) \sp<T><A> \sb<\to;><`b> (\rm<`l> \sp<y><A>. \sfun; \sp<U><B>) \sp<T><A>
+      >
+      であり、
+      &mb<
+        \op<dpt> (R) = \op<dpt> ((A \buharprarr; B) \buharprarr; (A \buharprarr; B)) \qquad; \op<dpt> (S) = \op<dpt> (A \buharprarr; B)
+      >
+      となる。
+      これらの場合も、深さの定義から &m<\op<dpt> (R) `> \op<dpt> (S)> が成り立つ。
+    >
+  >
+  \p<
+    以下では順序数を扱うが、順序数の和については、表記の順番に関わらず &m<`v> の指数が大きいものから順に和をとることにする。
+    例えば、&m<\sp<`v><2> + \sp<`v><3> + \sp<`v><3>> と書かれていても &m<\sp<`v><3> + \sp<`v><3> + \sp<`v><2> = \sp<`v><3> 2 + \sp<`v><2>> のことであると解釈する。
+  >
+  \thm|type="def"|<
+    \p<
+      ラムダ項 &m<M> に対し、順序数 &m<\op<ord> (M)> を、
+      &mb<
+        \op<ord> (M) = \sum<R> \sp<`v><\op<dpt> (R)>
+      >
+      と定義する。
+      なお、和は &m<M> に部分項として出現する全ての &m<`b>-基 &m<R> を回るものとする。
+    >
+  >
+  \p<
+    例えば、
+    &mb<
+      M \equiv; (\rm<`l> \sp<y><a \buharprarr; a \buharprarr; a>. \sfun; \sp<y><a \buharprarr; a \buharprarr; a> ((\rm<`l> \sp<x><a>. \sfun; \sp<x><a>) \sp<x><a>) ((\rm<`l> \sp<x><a>. \sfun; \sp<x><a>) \sp<x><a>)) \sp<y><a \buharprarr; a \buharprarr; a>
+    >
+    に含まれる &m<`b>-基は、
+    &mb<
+      \array|align="rcl"|<
+        \c<\sb<R><1>> \c<\equiv;> \c<(\rm<`l> \sp<y><a \buharprarr; a \buharprarr; a>. \sfun; \sp<y><a \buharprarr; a \buharprarr; a> ((\rm<`l> \sp<x><a>. \sfun; \sp<x><a>) \sp<x><a>) ((\rm<`l> \sp<x><a>. \sfun; \sp<x><a>) \sp<x><a>)) \sp<y><a \buharprarr; a \buharprarr; a>> \br;
+        \c<\sb<R><2>> \c<\equiv;> \c<(\rm<`l> \sp<x><a>. \sfun; \sp<x><a>) \sp<x><a>>
+      >
+    >
+    の 2 種類だが、&m<\sb<R><2>> は 2 回出現しているので、
+    &mb<
+      \array|align="rcl"|<
+        \c<\op<ord> (M)> \c<=> \c<\sp<`v><\op<dpt> (\sb<R><1>)> + \sp<`v><\op<dpt> (\sb<R><2>)> + \sp<`v><\op<dpt> (\sb<R><2>)>> \br;
+        \c; \c<=> \c<\sp<`v><\op<dpt> ((a \buharprarr; a \buharprarr; a) \buharprarr; a)> + \sp<`v><\op<dpt> (a \buharprarr; a)> + \sp<`v><\op<dpt> (a \buharprarr; a)>> \br;
+        \c; \c<=> \c<\sp<`v><4> + \sp<`v><2> 2>
+      >
+    >
+    となる。
+  >
+  \p<
+    以上の準備により、任意のラムダ項が正規形をもつことが示される。
+  >
+  \thm|type="thm",id="wnt"|<
+    \name<弱正規化定理 \fl<weak normalisation theorem>>
+    \p<
+      任意の型付きラムダ項は &m<`b>-弱正規化可能である。
+    >
+  >
+  \prf<
+    \p<
+      ラムダ項 &m<M> が &m<`b>-正規形ではないとする。
+      &m<M> に部分項として含まれる &m<`b>-基のうち、その深さが最大のものの中で最も右にあるものを &m<R> とする。
+      ここで、&m<`b>-基 &m<(\rm<`l> x. \sfun; P) Q> の位置は &m<\rm<`l>> の位置で判断するものとする。
+      このとき、&m<M> に含まれる &m<R> を簡約したものを &m<\op<red> (M)> と書くことにする。
+    >
+    \p<
+      &m<M> に含まれる &m<R> 以外の &m<`b>-基のうち、&m<Q> に含まれないものを &m<\sb<S><1>, \cdots;, \sb<S><l>> とし、&m<Q> に含まれるもの &m<\sb<T><1>, \cdots;, \sb<T><m>> とする。
+      &m<R> による &m<\sb<S><1>, \cdots;, \sb<S><l>> の残基はそれぞれ 1 つなので、各 &m<\sb<S><i>> の残基を &m<\sbsp<S><i><\pr;>> とおく。
+      一方、&m<R> による &m<\sb<T><1>, \cdots;, \sb<T><m>> の残基は複数になり得る。
+      そこで、各 &m<\sb<T><i>> の残基を &m<\sbsp<T><i 1><\pr;>, \cdots;, \sbsp<T><i \sb<k><i>><\pr;>> とおくことにする。
+      また、&m<R> によって生成される &m<\op<red> (M)> 内の &m<`b>-基を &m<\sbsp<U><1><\pr;>, \cdots;, \sbsp<U><n><\pr;>> とする。
+      このとき、&m<\op<red> (M)> に含まれる &m<`b>-基は、&m<\sbsp<S><1><\pr;>, \cdots;, \sbsp<S><l><\pr;>, \sbsp<T><1><\pr;>, \cdots;, \sbsp<T><m><\pr;>, \sbsp<U><1><\pr;>, \cdots;, \sbsp<U><n><\pr;>> で全てである。
+    >
+    \p<
+      \ref|type="thm",ref="lemresidue"|; より、&m<\op<dpt> (\sbsp<S><i><\pr;>) = \op<dpt> (\sb<S><i>)> また &m<\op<dpt> (\sbsp<T><ij><\pr;>) = \op<dpt> (\sb<T><i>)> である。
+      さらに、各 &m<\sb<T><i>> は &m<Q> に含まれているので、&m<R> より右側にある。
+      &m<R> は最も右側にとっていたので、&m<\op<dpt> (\sbsp<T><ij><\pr;>) = \op<dpt> (\sb<T><i>) `<\op<dpt> (R)> が成り立つ。
+      また、\ref|type="thm",ref="lemredex"|; より、&m<\op<dpt> (\sbsp<U><i><\pr;>) `<\op<dpt> (R)> も成り立つ。
+      したがって、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<ord> (\op<red> (M))> \c<=> \c<\sum<i = 1><l> \sp<`v><\op<dpt> (\sbsp<S><i><\pr;>)> + \sum<i = 1><m> \sum<j = 1><\sb<k><i>> \sp<`v><\op<dpt> (\sbsp<T><ij><\pr;>)> + \sum<i = 1><n> \sp<`v><\op<dpt> (\sbsp<U><i><\pr;>)>> \br;
+          \c; \c<\leq;> \c<\sum<i = 1><l> \sp<`v><\op<dpt> (\sb<S><i>)> + \sum<i = 1><m> \sp<`v><\op<dpt> (\sb<T><i>)> + \sum<i = 1><m> \sum<j = 1><\sb<k><i>> \sp<`v><\op<dpt> (\sbsp<T><ij><\pr;>)> + \sum<i = 1><n> \sp<`v><\op<dpt> (\sbsp<U><i><\pr;>)>> \br;
+          \c; \c<\leq;> \c<\sum<i = 1><l> \sp<`v><\op<dpt> (\sb<S><i>)> + \sum<i = 1><m> \sp<`v><\op<dpt> (\sb<T><i>)> + \sum<i = 1><m> \sum<j = 1><\sb<k><i>> \sp<`v><\op<dpt> (R) - 1> + \sum<i = 1><n> \sp<`v><\op<dpt> (R) - 1>> \br;
+          \c; \c<=> \c<\sum<i = 1><l> \sp<`v><\op<dpt> (\sb<S><i>)> + \sum<i = 1><m> \sp<`v><\op<dpt> (\sb<T><i>)> + \sp<`v><\op<dpt> (R) - 1> (\sb<k><1> + \cdots; + \sb<k><m> + n)> \br;
+          \c; \c<`<> \c<\sum<i = 1><l> \sp<`v><\op<dpt> (\sb<S><i>)> + \sum<i = 1><m> \sp<`v><\op<dpt> (\sb<T><i>)> + \sp<`v><\op<dpt> (R)>> \br;
+          \c; \c<=> \c<\op<ord> (M)>
+        >
+      >
+      が分かる。
+    >
+    \p<
+      以上により、&m<`b>-簡約の列 
+      &mb<
+        M \sb<\to;><`b> \op<red> (M) \sb<\to;><`b> \op<red> (\op<red> (M)) \sb<\to;><`b> \cdots;
+      >
+      が無限に続くと仮定すると、順序数の無限減少列 
+      &mb<
+        \op<ord> (M) `> \op<ord> (\op<red> (M)) `> \op<ord> (\op<red> (\op<red> (M))) `> \cdots;
+      >
+      を得るが、これは不可能である。
+      これにより、上記の &m<`b>-簡約の列は有限回のうちに &m<`b>-正規形で止まる。
+    >
+  >
+  \thm|type="thm"|<
+    \name<弱正規化定理 \fl<weak normalisation theorem>>
+    \p<
+      任意の型付きラムダ項は &m<`b `h>-弱正規化可能である。
+    >
+  >
+  \prf<
+    \p<
+      任意にラムダ項 &m<M> をとる。
+      \ref|type="thm",ref="wnt"|; により、&m<M> は &m<`b>-正規形 &m<N> をもつ。
+      &m<`h>-簡約により &m<`b>-基が新たに生じることはなく、さらにラムダ項の長さは減少するので、&m<N> から始まる &m<`h>-簡約列は有限回のうちに &m<`b `h>-正規形 &m<L> で止まる。
+      &m<M \sb<\headrarr;><`b> N \sb<\headrarr;><`h> L> であるから、&m<L> は &m<M> の &m<`b `h>-正規形である。
+    >
+  >
+  \h1<強正規化定理 (Tait)>
+  \p<
+    以下の証明は、強正規化可能性と似た強計算可能性というクラスを考え、それについて調べることで強正規化定理を示すものである。
+    この証明は、Tait による証明を修正したもので、その証明の流れは Hindley\ref|type="bib",ref="jrh"|; を参考にした。
+  >
+  \p<
+    なお、&m<`b>-簡約に関する強正規化定理を示すまでは、単に強正規化可能と言ったら &m<`b>-簡約に関して強正規化可能であることとする。
+    すなわち、そのラムダ項から始まるどんな &m<`b>-簡約列も有限のうちに &m<`b>-正規形で止まることを意味する。
+  >
+  \p<
+    まず初めに、強計算可能性を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      ラムダ項 &m<M> が\em<強計算可能 \fl<strongly computable>> であることを、以下によって型に関して再帰的に定義する。
+    >
+    \ul<
+      \li<
+        &m<\sp<M><a>> が強計算可能であるとは、&m<\sp<x><a>> が強正規化可能であることである。
+      >
+      \li<
+        &m<\sp<M><A \buharprarr; B>> が強計算可能であるとは、任意のラムダ項 &m<\sp<N><A>> に対して、&m<N> が強計算可能ならば &m<MN> が強計算可能であることである。
+      >
+    >
+  >
+  \thm|type="lem",id="athrfiv"|<
+    \p<
+      型 &m<A> を 
+      &mb<
+        A \equiv; \sb<A><1> \buharprarr; \cdots; \buharprarr; \sb<A><n> \buharprarr; a \scas; (n \geq; 0)
+      >
+      と表す。
+      このとき、ラムダ項 &m<\sp<M><A>> に対して 2 つの条件 
+    >
+    \ul<
+      \li<
+        &m<\sp<M><A>> は強計算可能である。
+      >
+      \li<
+        任意のラムダ項 &m<\sp<\sb<N><1>><\sb<A><1>>, \cdots;, \sp<\sb<N><n>><\sb<A><n>>> に対して、&m<\sb<N><1>, \cdots;, \sb<N><n>> が全て強計算可能ならば、&m<M \sb<N><1> \cdots; \sb<N><n>> も強計算可能である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      初めに、1 つ目の条件から 2 つ目の条件を導く。
+      これは &m<n> に関する帰納法による。
+    >
+    \p<
+      &m<n = 0> のときは、証明すべきことはない。
+      &m<n \geq; 1> のとき、任意に強計算可能なラムダ項 &m<\sp<\sb<N><1>><\sb<A><1>>, \cdots;, \sp<\sb<N><n>><\sb<A><n>>> をとる。
+      &m<A' \equiv; \sb<A><2> \buharprarr; \cdots; \buharprarr; \sb<A><n> \buharprarr; a> とおくと &m<A \equiv; \sb<A><1> \buharprarr; A'> である。
+      &m<M> は強計算可能だから、強計算可能性の定義から &m<M \sb<N><1>> も強計算可能である 
+      &m<M \sb<N><1>> は型 &m<A'> だから、帰納法の仮定により &m<(M \sb<N><1>) \sb<N><2> \cdots; \sb<N><n>> は強計算可能である。
+      以上により 2 つ目の条件が示された。
+    >
+    \p<
+      逆に、2 つ目の条件から 1 つ目の条件を導く。
+      これも &m<n> に関する帰納法による。
+    >
+    \p<
+      &m<n = 0> のときは、証明すべきことはない。
+      &m<n \geq; 1> のとき、&m<A' \equiv; \sb<A><2> \buharprarr; \cdots; \buharprarr; \sb<A><n> \buharprarr; a> とおくと &m<A \equiv; \sb<A><1> \buharprarr; A'> である。
+      任意に強計算可能なラムダ項 &m<\sp<\sb<N><1>><\sb<A><1>>> をとる。
+      仮定から、任意の強計算可能なラムダ項 &m<\sp<\sb<N><2>><\sb<A><2>>, \cdots;, \sp<\sb<N><n>><\sb<A><n>>> に対して &m<(M \sb<N><1>) \sb<N><2> \cdots; \sb<N><n>> は強計算可能である。
+      &m<M \sb<N><1>> は型 &m<A'> だから、帰納法の仮定より &m<M \sb<N><1>> は強計算可能である。
+      &m<\sb<N><1>> は任意だったから、強計算可能性の定義により &m<M> も強計算可能である。
+      以上により 1 つ目の条件が示された。
+    >
+  >
+  \p<
+    次に、強正規化可能性についての補題をいくつか用意しておく。
+  >
+  \thm|type="lem",id="athreig"|<
+    \p<
+      ラムダ項 &m<M> が強正規化可能ならば、&m<M> の任意の部分項も強正規化可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<M> のある部分項 &m<N> が強正規化可能でないとすると、&m<N> から始まる無限の長さの &m<`b>-簡約列が存在する。
+      これと同じ簡約を &m<M> から始めれば、&m<M> から始まる無限の長さの &m<`b>-簡約列が得られ、&m<M> が強正規化可能であることに矛盾する。
+    >
+  >
+  \thm|type="lem",id="athrnin"|<
+    \p<
+      ラムダ項 &m<M, P> に対し、&m<M `[x \coloneqq; P`]> が強正規化可能ならば、&m<M> も強正規化可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<M> が正規化可能でないとすると、&m<M> から始まる無限の長さの &m<`b>-簡約列 
+      &mb<
+        M \sb<\to;><`b> \sb<M><1> \sb<\to;><`b> \sb<M><2> \sb<\to;><`b> \cdots;
+    >
+      が存在する。
+      このとき、
+      &mb<
+        M `[x \coloneqq; P`] \sb<\to;><`b> \sb<M><1> `[x \coloneqq; P`] \sb<\to;><`b> \sb<M><2> `[x \coloneqq; P`] \sb<\to;><`b> \cdots;
+    >
+      も正しい &m<`b>-簡約列であるから、&m<M `[x \coloneqq; P`]> が強正規化可能であることに矛盾する。
+    >
+  >
+  \p<
+    以下の補題により、強計算可能性と強正規化可能性が結びつく。
+  >
+  \thm|type="lem",id="athrten"|<
+    \p<
+      型 &m<A> に対し、2 つの主張 
+    >
+    \ul<
+      \li<
+        ラムダ項 &m<(x \sb<M><1> \cdots; \sb<M><n>) \sp<><A>> について、&m<\sb<M><1>, \cdots;, \sb<M><n>> が強正規化可能ならば、&m<x \sb<M><1> \cdots; \sb<M><n>> は強計算可能である。
+      >
+      \li<
+        ラムダ項 &m<\sp<M><A>> について、&m<M> が強計算可能ならば &m<M> は強正規化可能である。
+      >
+    >
+    \p<
+      がともに成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<A> の構造に関する帰納法により、2 つの主張を同時に示す。
+    >
+    \p<
+      &m<A> が原始型のとき。
+      &m<\sb<M><1>, \cdots;, \sb<M><n>> が強正規化可能だとすると、&m<x \sb<M><1> \cdots; \sb<M><n>> も強正規化可能である。
+      &m<x \sb<M><1> \cdots; \sb<M><n>> の型は原始型だから、強計算可能性の定義により &m<x \sb<M><1> \cdots; \sb<M><n>> は強計算可能である。
+      2 つ目の主張は、強計算可能性の定義から明らかである。
+    >
+    \p<
+      &m<A \equiv; B \buharprarr; C> のとき。
+      &m<\sb<M><1>, \cdots;, \sb<M><n>> が強正規化可能であるとする。
+      さらに、任意に強計算可能なラムダ項 &m<\sp<N><B>> をとる。
+      2 つ目の主張に関する帰納法の仮定により、&m<N> は強正規化可能である。
+      1 つ目の主張に関する帰納法の仮定により、&m<x \sb<M><1> \cdots; \sb<M><n> N> は強計算可能である。
+      &m<N> は任意だったから、強計算可能性の定義により &m<x \sb<M><1> \cdots; \sb<M><n>> は強計算可能である。
+    >
+    \p<
+      &m<\sp<M><A>> が強計算可能であるとする。
+      &m<M> に出現しない変項 &m<\sp<x><B>> を 1 つとると、1 つ目の主張に関する帰納法の仮定によって &m<x> は強計算可能である。
+      したがって、強計算可能性の定義から &m<Mx> も強計算可能である。
+      &m<Mx> は型 &m<C> だから、2 つ目の主張に関する帰納法の仮定により、&m<Mx> は強正規化可能である。
+      したがって、\ref|type="thm",ref="athreig"|; により、その部分項である &m<M> も強正規化可能である。
+    >
+  >
+  \thm|type="lem",id="athrele"|<
+    \p<
+      ラムダ項 &m<\sp<M><A> `[\sp<x><B> \coloneqq; \sp<P><B>`]> について、2 つの条件
+    >
+    \ul<
+      \li<
+        &m<M `[x \coloneqq; P`]> は強計算可能である。
+      >
+      \li<
+        &m<x \nin; \op<FV> (M)> ならば &m<P> は強計算可能である。
+      >
+    >
+    \p<
+      がともに成り立っているならば、&m<(\rm<`l> x. \sfun; M) P> は強計算可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<A> を 
+      &mb<
+        A \equiv; \sb<A><1> \buharprarr; \cdots; \buharprarr; \sb<A><n> \buharprarr; a
+      >
+      と表す。
+      また、任意に強計算可能なラムダ項 &m<\sp<\sb<N><1>><\sb<A><1>>, \cdots;, \sp<\sb<N><n>><\sb<A><n>>> をとる。
+      &m<M `[x \coloneqq; P`]> は強計算可能だから、\ref|type="thm",ref="athrfiv"|; によって &m<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> も強計算可能である。
+      &m<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> の型は原始型 &m<a> なので、強計算可能性の定義により、これは強正規化可能でもある。
+      したがって、\ref|type="thm",ref="athreig"|; によって、その部分項である &m<M `[x \coloneqq; P`], \sb<N><1>, \cdots;, \sb<N><n>> は全て強正規化可能である。
+      さらに\ref|type="thm",ref="athrnin"|; により、&m<M> も強正規化可能である。
+      また、&m<x \in; \op<FV> (M)> であれば &m<M `[x \coloneqq; P`]> に &m<P> が部分項として含まれるから、&m<M `[x \coloneqq; P`]> が強正規化可能であることから &m<P> も強正規化可能である。
+      一方で &m<x \nin; \op<FV> (M)> であれば、仮定によって &m<P> は強計算可能だから、\ref|type="thm",ref="athrten"|; を用いて &m<P> は強正規化可能でもある。
+      よって、どちらの場合でも &m<P> は強正規化可能である。
+    >
+    \p<
+      以上により、&m<M `[x \coloneqq; P`], M, P, \sb<N><1>, \cdots;, \sb<N><n>> は全て強正規化可能である。
+      もし &m<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> から始まる無限の長さの &m<`b>-簡約列が存在したとすれば、その全ての &m<`b>-簡約が &m<M, P, \sb<N><1>, \cdots;, \sb<N><n>> の中で行われることはない。
+      すなわち、そのような無限の長さの &m<`b>-簡約列は、
+      &mb<
+        \array|align="rcl"|<
+          \c<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> \c<\sb<\headrarr;><`b>> \c<(\rm<`l> x. \sfun; M') P' \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
+          \c; \c<\sb<\to;><`b>> \c<M' `[x \coloneqq; P'`] \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
+          \c; \c<\sb<\to;><`b>> \c<\cdots;>
+        >
+      >
+      という形になっているはずである。
+      ここで、&m<M \sb<\headrarr;><`b> M', P \sb<\headrarr;><`b> P'> などとおいている。
+      したがって、この簡約列を用いて、
+      &mb<
+        \array|align="rcl"|<
+          \c<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> \c<\sb<\headrarr;><`b>> \c<M' `[x \coloneqq; P'`] \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
+          \c; \c<\sb<\to;><`b>> \c<\cdots;>
+        >
+      >
+      という無限の長さの &m<`b>-簡約列を構成することができるが、これは &m<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> が強正規化可能であることに矛盾する。
+      以上により、&m<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> は強正規化可能である。
+      &m<\sb<N><1>, \cdots;, \sb<N><n>> は任意だったから、\ref|type="thm",ref="athrfiv"|; によって &m<(\rm<`l> x. \sfun; M) P> は強正規化可能である。
+    >
+  >
+  \thm|type="lem",id="athrtwe"|<
+    \p<
+      ラムダ項 &m<\sp<M><A>> を考える。
+      任意の変項 &m<\sp<\sb<x><1>><\sb<B><1>>, \cdots;, \sp<\sb<x><n>><\sb<B><n>>> と任意のラムダ項 &m<\sp<\sb<P><1>><\sb<B><1>>, \cdots;, \sp<\sb<P><n>><\sb<B><n>>> に対し、&m<\sb<P><1>, \cdots;, \sb<P><n>> は強計算可能であり、各 &m<i> で &m<\sb<x><1>, \cdots;, \sb<x><i - 1> \nin; \op<FV> (\sb<N><i>)> が成り立っているとする。
+      このとき、
+      &mb<
+        \widetilde<M> \equiv; M `[\sb<x><n> \coloneqq; \sb<P><n>`] \cdots; `[\sb<x><1> \coloneqq; \sb<P><1>`]
+      >
+      は強計算可能である。
+      なお、&m<n \geq; 1> とする。
+    >
+  >
+  \prf<
+    \p<
+      &m<M> の構造に関する帰納法による。
+    >
+    \p<
+      \label<場合 1>
+      ある &m<i> について &m<M \equiv; \sb<x><i>> のとき。
+      このとき、&m<\widetilde<M> \equiv; \sb<P><i>> である。
+      仮定から &m<\sb<P><i>> は強計算可能なので、&m<\widetilde<M>> も強計算可能である。
+    >
+    \p<
+      \label<場合 2>
+      &m<M \equiv; y> であって &m<y> はどの &m<\sb<x><i>> とも等しくないとき。
+      このとき、&m<\widetilde<M> \equiv; y> であるから、\ref|type="thm",ref="athrten"|; によって &m<M> は強計算可能である。
+    >
+    \p<
+      \label<場合 3>
+      &m<M \equiv; UV> のとき。
+      このとき、&m<\widetilde<M> \equiv; \widetilde<U> \widetilde<V>> であり、帰納法の仮定から &m<\widetilde<U>> と &m<\widetilde<V>> はともに強計算可能である。
+      したがって、強計算可能性の定義より &m<\widetilde<M>> も強計算可能である。
+    >
+    \p<
+      \label<場合 4>
+      &m<M \equiv; \rm<`l> \sp<y><B>. \sfun; \sp<U><C>> のとき。
+      &m<M> に適当な &m<`a>-変換を施して、&m<y> は &m<\sb<x><1>, \cdots;, \sb<x><n>, \sb<P><1>, \cdots;, \sb<P><n>> のいずれにも自由に出現しないものとする。
+      すると、&m<\widetilde<M> \equiv; \rm<`l> y. \sfun; \widetilde<U>> が成り立つ。
+    >
+    \p<
+      任意に強計算可能なラムダ項 &m<\sp<N><B>> をとる。
+      ここで、
+      &mb<
+        \array|align="rcl"|<
+          \c<\widetilde<M> N> \c<\equiv;> \c<(\rm<`l> y. \sfun; \widetilde<U>) N> \br;
+          \c; \c<\sb<\to;><`b>> \c<\widetilde<U> `[y \coloneqq; N`]> \br;
+          \c; \c<\equiv;> \c<U `[\sb<x><n> \coloneqq; \sb<P><n>`] \cdots; `[\sb<x><1> \coloneqq; \sb<P><1>`] `[y \coloneqq; N`]>
+        >
+      >
+      であるが、&m<N, \sb<P><1>, \cdots;, \sb<P><n>> は強計算可能であって、各 &m<i> で &m<y \nin; \op<FV> (\sb<P><i>)> だから、帰納法の仮定が適用できて、上式の最右辺は強計算可能である。
+      したがって、\ref|type="thm",ref="athrele"|; によって &m<(\rm<`l> y. \sfun; \widetilde<U>) N \equiv; \widetilde<M> N> も強計算可能である。
+    >
+  >
+  \thm|type="thm",id="snt"|<
+    \name<強正規化定理 \fl<strong normalisation theorem>>
+    \p<
+      任意の型付きラムダ項 は &m<`b>-強正規化可能である。
+    >
+  >
+  \prf<
+    \p<
+      任意にラムダ項 &m<M> をとると、\ref|type="thm",ref="athrtwe"|; において、&m<n = 1> として &m<\sb<P><1> \equiv; \sb<x><1>> とすれば &m<\widetilde<M> \equiv; M> だから、&m<M> が強計算可能である。
+      したがって、\ref|type="thm",ref="athrten"|; により &m<M> は強正規化可能である。
+    >
+  >
+  \thm|type="thm"|<
+    \name<強正規化定理 \fl<strong normalisation theorem>>
+    \p<
+      任意の型付きラムダ項は &m<`b `h>-強正規化可能である。
+    >
+  >
+  \prf<
+    \p<
+      上記の\ref|type="thm",ref="snt"|; の証明において、&m<`b>-簡約に関する強正規化可能性を &m<`b `h>-簡約に関する強正規化可能性だと思って読めば、そのままそれが証明として成立する。
+      ただし、\ref|type="thm",ref="athrele"|; の証明だけは以下の修正を要する。
+    >
+    \p<
+      \ref|type="thm",ref="athrele"|; の証明において、&m<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> から始まる無限の長さの &m<`b `h>-簡約列は、上の証明で述べた形の他に、
+      &mb<
+        \array|align="rcl"|<
+          \c<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> \c<\sb<\headrarr;><`b `h>> \c<(\rm<`l> x. \sfun; M') P' \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
+          \c; \c<\equiv;> \c<(\rm<`l> x. \sfun; Tx) P' \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
+          \c; \c<\sb<\to;><`h>> \c<T P' \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
+          \c; \c<\sb<\to;><`b `h>> \c<\cdots;>
+        >
+      >
+      という形があり得る。
+      ここで、&m<M' \equiv; Tx> かつ &m<x \nin; \op<FV> (T)> であり、&m<M \sb<\headrarr;><`b `h> M', P \sb<\headrarr;><`b `h> P'> などとおいている。
+      この場合は、
+      &mb<
+        \array|align="rcl"|<
+          \c<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> \c<\sb<\headrarr;><`b `h>> \c<M' `[x \coloneqq; P'`] \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
+          \c; \c<\equiv;> \c<T P' \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
+          \c; \c<\sb<\to;><`b `h>> \c<\cdots;>
+        >
+      >
+      という無限の長さの &m<`b `h>-簡約列が構成できるので、同様に矛盾する。
+      残りの証明の部分は、上で述べた通りである。
+    >
+  >
+  \h1<強正規化定理 (Statman)>
+  \p<
+    以下の証明は、上で述べた弱正規化定理の証明と同じように、&m<`b>-簡約および &m<`h>-簡約によってラムダ項がどのように変わるかを詳細に調べることによって行うものである。
+    前項で述べた Tait の証明のようなテクニカルな部分はないが、単純型以外の他の型理論への応用が狭いという難点がある。
+    以下に述べる証明は Statman による証明を修正したもので、その証明の流れは Barendregt\ref|type="bib",ref="bt"|; を参考にした。
+  >
+  \p<
+    まず、&m<`b>-簡約について詳しく調べるため、&m<`b>-基をいくつかに分類する。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<`b>-基 &m<R \equiv; (\rm<`l> x. \sfun; P) Q> を考える。
+      &m<x \in; \op<FV> (P)> であるとき &m<R> を &m<\sb<`b><\rm<I>>>-\em<基 \fl<redex>> といい、&m<x \nin; \op<FV> (P)> であるとき &m<R> を &m<\sb<`b><\rm<K>>>-\em<基>という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      &m<`b>-基 &m<R \equiv; (\rm<`l> x. \sfun; P) Q> を考え、これが &m<\sb<`b><\rm<K>>>-基であるとする。
+      &m<x> と &m<P> の型がともに原始型であるとき &m<R> を &m<\sbsp<`b><\rm<K>><\circ;>>-\em<基>といい、そうでないとき &m<\sbsp<`b><\rm<K>><+>>-\em<基>という。
+    >
+  >
+  \p<
+    &m<\sb<\to;><`b>> が &m<`b>-基の簡約を表すのと同じように、基の名前を矢印の右下に書いてその種類の基の 1 回の簡約を表す。
+    例えば &m<\sb<\to;><\sb<`b><\rm<I>>>> は &m<\sb<`b><\rm<I>>>-基の 1 回の簡約を表し、&m<\sb<\to;><\sbsp<`b><\rm<K>><\circ;>>> は &m<\sbsp<`b><\rm<K>><\circ;>>-基の 1 回の簡約を表す。
+    また、&m<\sb<\to;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>>> は &m<\sb<`b><\rm<I>>>-基もしくは &m<\sbsp<`b><\rm<K>><+>>-基の 1 回の簡約を表すものとする。
+    さらに、&m<\to;> を &m<\headrarr;> に変えたものは、その簡約を複数回 (0 回も可) 行ったことを表す。
+  >
+  \p<
+    &m<\sb<`b><\rm<I>>>-簡約については、以下の定理が知られている。
+  >
+  \thm|type="thm"|<
+    \name<保存定理\fl<conservation theorem>>
+    \p<
+      ラムダ項 &m<M, N> に対し、&m<M \sb<\to;><\sb<`b><\rm<I>>> N> であるとする。
+      このとき、&m<M> から始まる無限の長さの &m<\sb<`b><\rm<I>>>-簡約が存在するならば、&m<N> から始まる無限の長さの &m<\sb<`b><\rm<I>>>-簡約も存在する。
+    >
+  >
+  \prf<
+    \p<
+      Barendregt\ref|type="bib",ref="bu"|; の定理 11.3.4 を参照。
+    >
+  >
+  \thm|type="lem",id="step7"|<
+    \p<
+      ラムダ項 &m<M, N> に対し、&m<M \sb<\headrarr;><`b> N> が成り立っているならば、あるラムダ項 &m<Y> が存在して &m<M \sb<\headrarr;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y \sb<\headrarr;><\sbsp<`b><\rm<K>><\circ;>> N> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<M \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> X \sb<\to;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> N> であるとき、あるラムダ項 &m<Y> によって &m<M \sb<\to;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> N> とできることを示せば、これによって &m<\sbsp<`b><\rm<K>><\circ;>>-簡約を次々と後に移動させることができるので、補題の主張が示される。
+      以下、&m<M \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> X> のときに簡約された &m<`b>-基を &m<R \equiv; (\rm<`l> x. \sfun; P) Q> とし、&m<X \sb<\to;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> N> のときに簡約された &m<`b>-基を &m<S \equiv; (\rm<`l> y. \sfun; U) V> とする。
+    >
+    \p<
+      &m<\sbsp<`b><\rm<K>><\circ;>>-簡約によって、新たな &m<`b>-基が生成されることはない。
+      実際、\ref|type="thm",ref="levy"|; の 3 パターンのうちどれを見ても、簡約されている &m<`b>-基が &m<\sbsp<`b><\rm<K>><\circ;>>-基になることはできない。
+      したがって、&m<S> は &m<M> に含まれるある &m<`b>-基 &m<S'> の残基である。
+      &m<R> と &m<S'> の位置関係によって場合分けする。
+    >
+    \p<
+      \label<場合 1>
+      &m<R> と &m<S'> が別の位置にあるとき。
+      このとき、&m<S' \equiv; S> である。
+      また、&m<R> の簡約により &m<S> は変化せず、&m<S> の簡約によっても &m<R> は変化しないから、&m<M> において先に &m<S> を簡約したものを &m<Y> とすれば、&m<Y> にそのまま含まれている &m<R> を簡約すると &m<N> になる。
+      このとき、&m<M \sb<\to;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> N> であるから、主張が示された。
+    >
+    \p<
+      \label<場合 2>
+      &m<S'> が &m<R> を含むとき。
+      このとき、&m<M \equiv; X `[S'`], S' \equiv; Y `[R`]> と書け、&m<N \equiv; C`[U`[y \coloneqq; V`]`]> である。
+      &m<R \equiv; (\rm<`l> x. \sfun; P) Q> は &m<\sbsp<`b><\rm<K>><\circ;>>-基なので &m<x \nin; \op<FV> (P)> であるから、&m<R> を簡約すると &m<P> になる。
+      したがって、&m<S'> の残基が &m<S> なので、&m<S \equiv; Y `[P`]> が成り立つ。
+      &m<P> の型は原始型だから &m<P \equiv; S> となることはないので、&m<P> は &m<U> か &m<V> のどちらかに含まれる。
+      これに応じてさらに場合分けをする。
+    >
+    \p<
+      &m<P> が &m<U> に含まれているときは、&m<U \equiv; Z `[P`]> と書ける。
+      このとき、&m<S \equiv; (\rm<`l> y. \sfun; Z `[P`]) V> であるから &m<S' \equiv; (\rm<`l> y. \sfun; Z `[R`]) V> が分かる。
+      したがって、&m<M \equiv; X `[S'`]> であったから、&m<Y \equiv; X `[E`[R`]`[y \coloneqq; V`]`]> とおけば、&m<S> を簡約することで &m<M \sb<\to;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y> が成り立つ。
+      また、&m<Y> に含まれる &m<R> を簡約することで &m<Y \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> X `[E`[P`] `[y \coloneqq; V`]`]> となるが、&m<U \equiv; Z `[P`]> および &m<N \equiv; C`[U`[y \coloneqq; V`]`]> なので、&m<Y \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> N> である。
+      以上で、主張が示された。
+    >
+    \p<
+      また、&m<P> が &m<V> に含まれているときは、&m<V \equiv; Z `[P`]> と書ける。
+      このとき、&m<S \equiv; (\rm<`l> y. \sfun; U) Z `[P`]> であるから &m<S' \equiv; (\rm<`l> y. \sfun; U) Z `[R`]> が分かる。
+      したがって、&m<Y \equiv; X `[U `[y \coloneqq; E`[R`]`]`]> とおけば、上の場合と同様にして &m<M \sb<\to;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> N> が成り立つ。
+    >
+    \p<
+      \label<場合 3>
+      &m<R> が &m<S'> を含むとき。
+      &m<S'> は &m<P> か &m<Q> のどちらかに含まれるが、&m<R> を簡約すると &m<Q> は消えるので、&m<S'> が &m<Q> に含まれているとすると &m<S'> の残基は存在せず矛盾する。
+      したがって、&m<S'> は &m<P> に含まれる。
+      また、&m<R> の簡約により &m<P> は変化しないので、&m<S' \equiv; S> である。
+      以上により、&m<M \equiv; X `[R`], P \equiv; Y `[S`]> と書ける。
+    >
+    \p<
+      &m<\sp<S><\ppr;> \equiv; U `[y \coloneqq; V`]> とおく。
+      &m<M \equiv; X `[(\rm<`l> x. \sfun; Y `[S`]) Q`]> だから、&m<Y \equiv; X `[(\rm<`l> x. \sfun; Y `[\sp<S><\ppr;>`]) Q`]> とおけば &m<S> の簡約により &m<M \sb<\to;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y> が成り立つ。
+      &m<x \nin; \op<FV> (P) = \op<FV> (Y `[S`])> であり、簡約によって自由変項は増加しないので、&m<x \nin; \op<FV> (Y `[\sp<S><\ppr;>`])> である。
+      したがって、&m<Y> に含まれる &m<(\rm<`l> x. \sfun; Y `[\sp<S><\ppr;>`]) Q> を簡約することで &m<Y \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> X `[Y `[\sp<S><\ppr;>`]`]> を得る。
+      &m<N \equiv; X `[Y `[\sp<S><\ppr;>`]`]> だから &m<Y \sb<\to;><\sbsp<`b><\rm<K>><\circ;>> N> となり、主張が示された。
+    >
+  >
+  \p<
+    一般のラムダ項を調べる前に、しばらく以下のような特殊なラムダ項について考える。
+  >
+  \thm|type="def"|<
+    \p<
+      ラムダ項 &m<M> に含まれる &m<\rm<`l> x. \sfun; P> という形の部分項について、&m<x \in; \op<FV> (P)> であるか &m<x> と &m<P> の型がともに原始型であるとする。
+      このとき、&m<M> は\em<単純\fl<simple>> であるという。
+    >
+  >
+  \thm|type="lem",id="stepsix"|<
+    \p<
+      ラムダ項 &m<M> が単純ならば、&m<M> は &m<\sb<`b><\rm<I>>>-強正規化可能である。
+    >
+  >
+  \thm|type="lem",id="stepeig"|<
+    \p<
+      ラムダ項 &m<M> が単純ならば、&m<`{N \mid; M \sb<\headrarr;><`b> N`}> は有限集合である。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        \array|align="rcl"|<
+          \c<\scr<X>> \c<=> \c<`{N \mid; M \sb<\headrarr;><`b> N`}> \br;
+          \c<\sb<\scr<Y>><1>> \c<=> \c<`{Y \mid; M \sb<\headrarr;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y`}> \br;
+          \c<\sb<\scr<Y>><2> (Y)> \c<=> \c<`{N \mid; Y \sb<\headrarr;><\sbsp<`b><\rm<K>><\circ;>> N`}>
+        >
+      >
+      とおく。
+    >
+    \p<
+      &m<M> は単純だから、&m<M> に含まれる &m<`b>-基は &m<\sb<`b><\rm<I>>>-基か &m<\sbsp<`b><\rm<K>><\circ;>>-基のどちらかである。
+      &m<\sb<`b><\rm<I>>>-簡約によって &m<\sbsp<`b><\rm<K>><+>>-簡約が生じることはないので、&m<M \sb<\headrarr;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y> ならば &m<M \sb<\headrarr;><\sb<`b><\rm<I>>> Y> である。
+      \ref|type="thm",ref="stepsix"|; により、&m<M> から始まる全ての &m<\sb<`b><\rm<I>>>-簡約列は有限の長さなので、&m<M \sb<\headrarr;><\sb<`b><\rm<I>>> Y> を満たす &m<Y> は有限個しかない。
+      したがって、&m<\sb<\scr<Y>><1>> は有限集合である。
+    >
+    \p<
+      また、&m<\sbsp<`b><\rm<K>><\circ;>>-簡約はラムダ項の長さを真に小さくするので、無限の長さの &m<\sbsp<`b><\rm<K>><\circ;>>-簡約列は作られ得ない。
+      したがって、&m<\sb<\scr<Y>><2> (Y)> も有限集合である。
+    >
+    \p<
+      ここで、任意の &m<N \in; \scr<X>> に対し、\ref|type="thm",ref="step7"|; によってあるラムダ項 &m<Y> が存在して、&m<M \sb<\headrarr;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y \sb<\headrarr;><\sbsp<`b><\rm<K>><\circ;>> N> が成り立つ。
+      すなわち、&m<Y \in; \sb<\scr<Y>><1>> および &m<N \in; \sb<\scr<Y>><2> (Y)> が成り立つ。
+      これにより、
+      &mb<
+        \scr<X> \subseteq; \bigcup<Y \in; \sb<\scr<Y>><1>> \sb<\scr<Y>><2> (Y)
+    >
+      が示された。
+      ここで、上に示したように &m<\sb<\scr<Y>><1>> と &m<\sb<\scr<Y>><2> (Y)> は全て有限集合なので、上式の右辺も有限集合である。
+      したがって、その部分集合である &m<\scr<X>> も有限集合である。
+    >
+  >
+  \thm|type="lem",id="steptwo"|<
+    \p<
+      循環する &m<`b>-簡約の列 
+      &mb<
+        M \sb<\to;><`b> \sb<M><1> \sb<\to;><`b> \sb<M><2> \sb<\to;><`b> \cdots; \sb<\to;><`b> \sb<M><n> \sb<\to;><`b> M
+      >
+      は存在しない。
+    >
+  >
+  \thm|type="lem",id="stepnin"|<
+    \p<
+      ラムダ項 &m<M> に対し、&m<M> が単純ならば &m<M> は &m<`b>-強正規化可能である。
+    >
+  >
+  \thm|type="lem",id="stepthr"|<
+    \p<
+      ラムダ項 &m<M, N, X> に対し、&m<M \sb<\headrarr;><`h> X \sbsp<\headrarr;><`b><+> N> が成り立っているならば、あるラムダ項 &m<Y> が存在して &m<M \sbsp<\headrarr;><`b><+> Y \sb<\headrarr;><`h> N> が成り立つ。
+      なお、&m<\sbsp<\headrarr|ord|;><`b><+>> は 1 回以上の &m<`b>-簡約を表す。
+    >
+  >
+  \prf<
+    \p<
+      Barendregt\ref|type="bib",ref="bu"|; の系 15.1.6 を参照。
+    >
+  >
+  \thm|type="lem",id="stepten"|<
+    \p<
+      ラムダ項 &m<M> に対し、&m<M> が単純ならば &m<M> は &m<`b `h>-強正規化可能である。
+    >
+  >
+  \thm|type="thm",id="sntb"|<
+    \name<強正規化定理 \fl<strong normalisation theorem>>
+    \p<
+      任意のラムダ項は &m<`b `h>-強正規化可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<M> に含まれる &m<R \equiv; \rm<`l> \sp<x><A>. \sfun; \sp<P><B>> という形の部分項を考える。
+      まず、
+      &mb<
+        \array|align="rcl"|<
+          \c<A> \c<\equiv;> \c<\sb<A><1> \buharprarr; \cdots; \buharprarr; \sb<A><m> \buharprarr; a> \br;
+          \c<B> \c<\equiv;> \c<\sb<B><1> \buharprarr; \cdots; \buharprarr; \sb<B><n> \buharprarr; b> \br;
+        >
+      >
+      と表し、
+      &mb<
+        R' \equiv; \rm<`l> \sp<x><A>. \sfun; \rm<`l> \sp<\sb<y><1>><\sb<B><1>> \cdots; \sp<\sb<y><n>><\sb<B><n>>. \sfun; (\rm<`l> \sp<z><a>. \sfun; P \sp<\sb<y><1>><\sb<B><1>> \cdots; \sp<\sb<y><n>><\sb<B><n>>) (\sp<x><A> \sp<\sb<u><1>><\sb<A><1>> \cdots; \sp<\sb<u><m>><\sb<A><m>>)
+      >
+      とおく。
+      ここで、&m<\sb<y><1>, \cdots;, \sb<y><n>, \sb<u><1>, \cdots;, \sb<u><m>, z> は &m<M> に含まれていない新たな変項であるとする。
+      このとき、&m<R' \sb<\headrarr;><`b `h> R> が成り立ち、&m<R'> は単純である。
+      したがって、&m<M> に含まれる全ての &m<R \equiv; \rm<`l> x. \sfun; P> に対して上記のような &m<R'> を作り、各 &m<R> を &m<R'> に置き換えたものを &m<M'> とすれば、&m<M' \sb<\headrarr;><`b `h> M> であって、&m<M'> は単純である。
+      \ref|type="thm",ref="stepten"|; により、
+      &mb<
+        M' \sb<\headrarr;><`b `h> M \sb<\to;><`b `h> \sb<M><1> \sb<\to;><`b `h> \sb<M><2> \sb<\to;><`b `h> \cdots;
+      >
+      という列は有限回で止まるから、定理の主張が従う。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="bu"|<H. P. Barendregt (1984)『The Lambda Calculus: Its Syntax and Semantics』North Holland>
+    \li|id="bt"|<H. P. Barendregt, W. Dekkers, R. Statman (2013)『Lambda Calculus with Types』Cambridge University Press>
+    \li|id="levy"|<J. J. Lévy (1978)「Réductions correctes et optimales dans le lambda-calcul」Ph. D. thesis, Université de Paris VII>
+    \li|id="jrh"|<J. R. Hindley, J. P. Seldin (2008)『Lambda-Calculus and Combinators: an Introduction』Cambridge University Press>
+  >
+
+>

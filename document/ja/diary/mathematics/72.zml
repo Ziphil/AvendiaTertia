@@ -1,0 +1,268 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<整合空間の直積と直和>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2021 年 2 月 3 日)>
+  \p<
+    今日は、前回定義した整合空間と安定写像の圏 &m<\bfrm<Coh>> における積を具体的に定義する。
+  >
+  \p<
+    整合空間の直積は以下のように定義する。
+    ここでは、整合空間をトークンの反射的無向グラフだと見なし、トークンの集合とそれ上の反射的対称二項関係を定めることで定義する。
+    以降、集合 &m<X, Y> に対して、記号の簡単のため &m<X \sqcup; Y \coloneqq; (`{1`} \times; X) \cup; (`{2`} \times; Y)> と書く。
+  >
+  \thm|type="def",id="cohprod"|<
+    \p<
+      整合空間 &m<A, B> に対し、
+      &mb<
+        \lvert; A \times; B \rvert; \coloneqq; \lvert; A \rvert; \sqcup; \lvert; B \rvert;
+      >
+      と定義する。
+      さらに、&m<\lvert; A \times; B \rvert;> 上の対称二項関係 &m<\sb<\closure|ord|;><A \times; B>> を、各トークン &m<x, x' \in; \lvert; A \rvert;> と &m<y, y' \in; \lvert; B \rvert;> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<(1, x) \sb<\closure;><A \times; B> (1, x')> \c<\coloniff;> \c<x \sb<\closure;><A> x'> \br;
+          \c<(2, y) \sb<\closure;><A \times; B> (2, y')> \c<\coloniff;> \c<y \sb<\closure;><B> y'> \br;
+          \c<(1, x) \sb<\closure;><A \times; B> (2, y)> \c<\coloniff;> \c<\rm<True>>
+        >
+      >
+      で定義する。
+      これによって定まる整合空間 &m<A \times; B> を &m<A> と &m<B> の\em<直積\fl<direct product>> という。
+    >
+  >
+  \p<
+    すなわち、2 つの整合空間の直積とは、2 つの整合空間をグラフと見なして単純に並べ、片方のグラフの全ての頂点からもう一方のグラフの全ての頂点への辺を追加したものである。
+  >
+  \p<
+    整合空間は特定の条件を満たす集合の集合とも見なせたのであったが、この見方をすると、整合空間の直積の次のように書ける。
+  >
+  \thm|type="prp"|<
+    \p<
+      整合空間 &m<A, B> に対し、
+      &mb<
+        A \times; B = `{a \sqcup; b \mid; a \in; A, b \in; B`}
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\lvert; A \times; B \rvert;> の整合的な部分集合が、ある &m<a \in; A> と &m<b \in; B> に対して &m<a \sqcup; b> の形で書け、さらにこのような形のものしかないことを示せば良い。
+    >
+    \p<
+      まず、&m<A \times; B> の整合関係の定義により、任意の &m<a \in; A> と &m<b \in; B> に対して、部分集合 &m<a \sqcup; b \subseteq; \lvert; A \times; B \rvert;> が整合的なのは明らかである。
+      逆に、任意に整合的な部分集合 &m<c \subseteq; \lvert; A \times; B \rvert;> をとり、
+      &mb<
+        \array|align="rcl"|<
+          \c<a> \c<\coloneqq;> \c<`{x \mid; (1, x) \in; c`}> \br;
+          \c<b> \c<\coloneqq;> \c<`{y \mid; (2, y) \in; c`}> \br;
+        >
+      >
+      とおけば、&m<c = a \sqcup; b> であって、部分集合 &m<a \subseteq; \lvert; A \rvert;> および &m<b \subseteq; \lvert; B \rvert;> はともに整合的である。
+      以上で示された。
+    >
+  >
+  \p<
+    以降、これが圏論的な積になっていることを示すのだが、そのためには直積から各成分への射影を定義する必要がある。
+    この準備として、トークン集合の間の写像から誘導される整合空間の間の安定写像に関する一般論について先に述べておく。
+  >
+  \thm|type="prp",id="dirimg"|<
+    \p<
+      整合空間 &m<A, B> に対し、写像 &m<u: \lvert; A \rvert; \to; \lvert; B \rvert;> を考える。
+      &m<u> が単射であり、さらに任意の &m<x, x' \in; \lvert; A \rvert;> に対して
+      &mb<
+        x \sb<\closure;><A> x' \implies; u (x) \sb<\closure;><B> u (x')
+      >
+      が成り立っているとき、写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<u><*>:> \c<A> \c<\longto;> \c<B> \br;
+          \c; \c<a> \c<\longmapsto;> \c<`{u (x) \mid; x \in; a`}>
+        >
+      >
+      は安定である。
+    >
+  >
+  \prf<
+    \p<
+      定義に従って 3 つの条件を確かめれば良い。
+    >
+  >
+  \thm|type="prp",id="invimg"|<
+    \p<
+      整合空間 &m<A, B> に対し、写像 &m<u: \lvert; A \rvert; \to; \lvert; B \rvert;> を考える。
+      任意の &m<x, x' \in; \lvert; A \rvert;> に対して
+      &mb<
+        u (x) \sb<\closure;><B> u (x') \implies; x \sb<\closure;><A> x'
+      >
+      が成り立っているとき、写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<u><*>:> \c<B> \c<\longto;> \c<A> \br;
+          \c; \c<b> \c<\longmapsto;> \c<`{x \mid; u (x) \in; b`}>
+        >
+      >
+      は安定である。
+    >
+  >
+  \prf<
+    \p<
+      前の命題と同じく、定義に従って 3 つの条件を確かめれば良い。
+    >
+  >
+  \p<
+    さて、直積からの射影を定義しよう。
+    整合空間 &m<A, B> に対し、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<u><1>:> \c<\lvert; A \rvert;> \c<\longto;> \c<\lvert; A \times; B \rvert;> \br;
+        \c; \c<x> \c<\longmapsto;> \c<(1, x)>
+      > \qquad;
+      \array|align="rrcl"|<
+        \c<\sb<u><2>:> \c<\lvert; B \rvert;> \c<\longto;> \c<\lvert; A \times; B \rvert;> \br;
+        \c; \c<y> \c<\longmapsto;> \c<(2, y)>
+      >
+    >
+    はともに\ref|type="thm",ref="invimg"|; の条件を満たすから、安定写像 &m<\sb<`p><1>: A \times; B \to; A> と &m<\sb<`p><2>: A \times; B \to; B> が誘導される。
+    具体的には、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<`p><1>:> \c<A \times; B> \c<\longto;> \c<A> \br;
+        \c; \c<a \sqcup; b> \c<\longmapsto;> \c<a>
+      > \qquad;
+      \array|align="rrcl"|<
+        \c<\sb<`p><2>:> \c<A \times; B> \c<\longto;> \c<B> \br;
+        \c; \c<a \sqcup; b> \c<\longmapsto;> \c<b>
+      >
+    >
+    と書ける。
+    これが、実際に積の普遍性をもつ。
+  >
+  \thm|type="thm",id="prod"|<
+    \p<
+      整合空間 &m<A, B> に対し、上記で定めた直積と射影 &m<(A \times; B, \sb<`p><1>, \sb<`p><2>)> は、圏 &m<\bfrm<Coh>> における積である。
+    >
+  >
+  \prf<
+    \p<
+      積の普遍性を確かめれば良い。
+      任意の整合空間 &m<C> および安定写像 &m<f: C \to; A> と &m<g: C \to; B> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<h:> \c<C> \c<\longto;> \c<A \times; B> \br;
+          \c; \c<c> \c<\longmapsto;> \c<f (c) \sqcup; g (c)>
+        >
+      >
+      と定義すると、これは明らかに安定で、
+      &mb<
+        \diag<
+          \v; \v<C> \v; \br;
+          \v; \v<A \times; B> \v; \br;
+          \v<A> \v; \v<B>
+          \ar|s="2",e="7",bend="-20",inv|<f> \ar|s="2",e="9",bend="20"|<g>
+          \ar|s="5",e="7"|<\sb<`p><1>> \ar|s="5",e="9",inv|<\sb<`p><2>>
+          \ar|s="2",e="5"|<h>
+        >
+      >
+      は可換である。
+      さらに明らかに、&m<h> はこれを可換にするような一意な射である。
+    >
+  >
+  \p<
+    さて、整合空間をグラフとして見れば、整合空間の直積とは、グラフを単に並べた後に、片方のグラフの頂点からもう一方のグラフの頂点への辺を全て追加したものであった。
+    これと同様に、グラフを単に並べるだけで、新しい辺を全く追加しないという演算も考えられる。
+    この演算は整合空間の直和と呼ばれる。
+  >
+  \thm|type="def",id="cohprod"|<
+    \p<
+      整合空間 &m<A, B> に対し、
+      &mb<
+        \lvert; A + B \rvert; \coloneqq; \lvert; A \rvert; \sqcup; \lvert; B \rvert;
+      >
+      と定義する。
+      さらに、&m<\lvert; A \times; B \rvert;> 上の対称二項関係 &m<\sb<\closure|ord|;><A \times; B>> を、各トークン &m<x, x' \in; \lvert; A \rvert;> と &m<y, y' \in; \lvert; B \rvert;> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<(1, x) \sb<\closure;><A \times; B> (1, x')> \c<\coloniff;> \c<x \sb<\closure;><A> x'> \br;
+          \c<(2, y) \sb<\closure;><A \times; B> (2, y')> \c<\coloniff;> \c<y \sb<\closure;><B> y'> \br;
+          \c<(1, x) \sb<\closure;><A \times; B> (2, y)> \c<\coloniff;> \c<\rm<False>>
+        >
+      >
+      で定義する。
+      これによって定まる整合空間 &m<A + B> を &m<A> と &m<B> の\em<直和\fl<direct sum>> という。
+    >
+  >
+  \p<
+    集合の集合としては、次のように書ける。
+  >
+  \thm|type="prp",id="sumset"|<
+    \p<
+      整合空間 &m<A, B> に対し、
+      &mb<
+        A + B = `{`{1`} \times; a \mid; a \in; A`} \cup; `{`{2`} \times; b \mid; b \in; B`}
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      容易である。
+    >
+  >
+  \p<
+    直和への包含射は、直積からの射影と同様に定義される。
+    ただし、\ref|type="thm",ref="invimg"|; ではなく\ref|type="thm",ref="dirimg"|; を用いる。
+    整合空間 &m<A, B> に対し、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<u><1>:> \c<\lvert; A \rvert;> \c<\longto;> \c<\lvert; A + B \rvert;> \br;
+        \c; \c<x> \c<\longmapsto;> \c<(1, x)>
+      > \qquad;
+      \array|align="rrcl"|<
+        \c<\sb<u><2>:> \c<\lvert; B \rvert;> \c<\longto;> \c<\lvert; A + B \rvert;> \br;
+        \c; \c<y> \c<\longmapsto;> \c<(2, y)>
+      >
+    >
+    はともに\ref|type="thm",ref="dirimg"|; の条件を満たすから、安定写像 &m<\sb<`i><1>: A \to; A + B> と &m<\sb<`i><2>: B \to; A + B> が誘導される。
+    具体的には、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<`i><1>:> \c<A> \c<\longto;> \c<A + B> \br;
+        \c; \c<a> \c<\longmapsto;> \c<`{1`} \times; a>
+      > \qquad;
+      \array|align="rrcl"|<
+        \c<\sb<`i><2>:> \c<B> \c<\longto;> \c<A + B> \br;
+        \c; \c<b> \c<\longmapsto;> \c<`{2`} \times; b>
+      >
+    >
+    である。
+  >
+  \p<
+    さて、残念なことに、整合空間の直和は圏論的な余積ではない。
+    余積にならないことは以下の観察から分かる。
+    整合空間 &m<A, B> に対し、\ref|type="thm",ref="sumset"|; によって、
+    &mb<
+      A + B = `{`{1`} \times; a \mid; a \in; A`} \cup; `{`{2`} \times; b \mid; b \in; B`}
+    >
+    と書けるわけだが、この右辺の 2 つの集合は実は非交ではなく、&m<\empty;> が両方に属してしまっている。
+    そのため、別の整合空間 &m<C> および安定写像 &m<f: A \to; C> と &m<g: B \to; C> に対して、&m<f (\empty;) = g (\empty;)> が成り立っていない限り適切な写像 &m<h: A + B \to; C> を定義できない。
+  >
+  \p<
+    以上の理由から、通常の論理の意味論を整合空間で展開する際に、選言の解釈としては直和は役に立たない。
+    しかし、後述する線型化と組み合わせることによって、完璧とまでは言えないが十分意味のある選言の解釈が可能になる。
+    また、通常の論理ではなく線型論理を考えるのであれば、弱化規則と縮約規則が制限されているという制約 (いわゆる線型性) のおかげで、この直和を加法的選言の解釈として使うことができる。
+  >
+  \p<
+    次回は、安定写像のトレースという概念を導入し、それを用いて整合空間の冪を定義することで、&m<\bfrm<Coh>> がカルテシアン閉であることを示す。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="gllx"|<J. Y. Girard (1987)「Linear logic」『Theoretical Computer Science』50:1–101>
+    \li|id="ptx"|<J. Y. Girard, Y. Lafont, P. Taylor (1989)『Proofs and Types』Cambridge University Press>
+  >
+
+>

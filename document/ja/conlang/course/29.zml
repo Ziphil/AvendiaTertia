@@ -1,0 +1,31 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<『シャレイア語 最重要 600 語』>
+  \ver<S 代>
+
+  \h1<情報>
+  \p<
+    シャレイア語の基礎語を集めた単語帳です。
+  >
+  \p<
+    現在執筆中です。
+    以下の PDF ファイルも随時更新されます。
+  >
+  \h1<PDF ファイル>
+  \pdf|src="../../file/course/3.pdf"|;
+  \p<
+    以下のリンクから PDF ファイルを直接ダウンロードすることもできます。
+  >
+  \form<
+    \a|href="../../file/course/3.pdf"|<ダウンロード>
+  >
+  \h1<組版について>
+  \p<
+    この本の本文は、全て XSL-FO を用いて組版しました。
+    本の原稿は \ae|href="https://github.com/Ziphil/ShaleianWordbook"|<GitHub> で公開しています。
+  >
+
+>

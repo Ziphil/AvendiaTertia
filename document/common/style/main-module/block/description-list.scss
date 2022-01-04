@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.description-list {
+  width: max-content;
+  max-width: 100%;
+  line-height: $line-height;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.description-left {
+  margin-left: $bullet-width + $blank-margin;
+  &::before {
+    @include icon-font();
+    width: fix-em($bullet-width, 90%);
+    margin-right: fix-em($blank-margin, 90%);
+    margin-left: fix-em(0em - $bullet-width - $blank-margin, 90%);
+    font-size: 90%;
+    color: $blue-color;
+    text-align: right;
+    display: inline-block;
+    content: "\F0DA";
+  }
+}
+
+.description-right {
+  &::before {
+    @include icon-font;
+    margin: 0em fix-em($blank-margin, 90%);
+    color: mix($blue-color, $header-background-color, 50%);
+    font-size: 90%;
+    content: "\F105";
+  }
+}

@@ -1,0 +1,178 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<終関手と余極限>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2020 年 7 月 27 日)>
+  \p<
+    最近、Adámek–Rosický\ref|type="bib",ref="lpa"|; をのんびり読み始めたので、重要な部分をまとめていこうと思う。
+  >
+  \p<
+    このシリーズを通して則ることにする記号に関する慣習について補足しておく。
+    射の合成は原則として左から右に記し、混乱を避けるために通常の記号から変えて &m<\rcomp;> で表す。
+    圏は基本的にスクリプト体で表し、その対象はラテン大文字で表す。
+    ただし、極限や余極限を考える際の図式の形となるつもりの圏 (だいたいの場合 &m<\scr<I>> か &m<\scr<K>> で表す) については、その対象は添字であるという気持ちがあるので、例外的にラテン小文字で表す。
+  >
+  \p<
+    これからの議論は、他の圏論に関する議論と比べて、何らかのものの集まりが集合サイズかどうかに注意する必要がある場面が多い。
+    なお、全ての圏は局所小であるとするので、固定した 2 つの対象の間の射の集まりは常に集合サイズである。
+  >
+  \p<
+    今日は、終関手の定義とその特徴付けについて触れる。
+  >
+  \thm|type="def"|<
+    \p<
+      小圏の間の関手 &m<H: \scr<K> \to; \scr<I>> をとる。
+      任意の関手 &m<F: \scr<I> \to; \scr<C>> に対し、&m<\op<colim> F> と &m<\op<colim> (H \rcomp; F)> のうちどちらか一方が存在するならばもう一方も存在し、そのとき自然な射 &m<\op<colim> (H \rcomp; F) \to; \op<colim> F> は同型射であるとする。
+      このとき、&m<H> は\em<終\fl<final>> であるという。
+    >
+  >
+  \p<
+    定義から、終関手 &m<H: \scr<K> \to; \scr<I>> があると、&m<\scr<I>> 上のある余極限を計算する際に、考えている図式を &m<H> で制限して &m<\scr<K>> 上の余極限として計算しても良いということになる。
+  >
+  \p<
+    終関手は、順序理論における共終写像の圏論への一般化である。
+    共終写像の英訳は cofinal mapping であるが、この cofinal に使われてる接頭辞の co- は、圏論的な双対を意味するものではなく、cooperate や coworker にあるような「共に」や「互いに」を意味するものである。
+    圏論では co- を双対概念に対して使うのがお決まりなので、cofinal という用語をそのまま使ってしまうと混乱が生じ得るため、co- を外して単に final と呼ぶことも多い。
+    なお、この final の双対概念は (当然 cofinal ではなく) initial と呼ばれる。
+    さらに加えて、終関手は終対象 (英語では terminal とすることが多い) とはあまり関係していないことにも注意したい。
+  >
+  \p<
+    終関手の特徴付けとしてコンマ圏を用いたものも知られている。
+    コンマ圏を用いた条件を終関手の定義とする文献も多い。
+    この同値性を示すため、いくつか補題を用意する。
+  >
+  \thm|type="lem",id="setcol"|<
+    \p<
+      小図式 &m<F: \scr<K> \to; \bfrm<Set>> の余極限は、
+      &mb<
+        \op<colim> F = \paren<\coprod<k \in; \scr<K>> Fk> `/ \sim|ord|;
+      >
+      として具体的に与えられる。
+      ここで、同値関係 &m<\sim;> は、&m<x \in; Fk> と &m<x' \in; Fk'> に対して、
+      &mb<
+        x \sim; x' \implied; &raw<ある &m<\scr<I>> の射 &m<u: k \to; k'> について &m<(Fu) x = x'>>
+      >
+      を満たす最小の同値関係である。
+    >
+  >
+  \prf<
+    \p<
+      余極限の普遍性を愚直に確かめれば良い。
+    >
+  >
+  \thm|type="lem",id="onep"|<
+    \p<
+      小圏 &m<\scr<I>> とその対象 &m<i> に対し、表現可能関手 &m<\op<Hom> (i, \hyphen;): \scr<I> \to; \bfrm<Set>> の余極限は 1 点集合である。
+    >
+  >
+  \prf<
+    \p<
+      集合 &m<C> を像とする定値関手を &m<\sb<`D><C>: \scr<I> \to; \bfrm<Set>> で表すと、&m<\op<Hom> (i, \hyphen;)> の余錐 &m<(\sb<c><j>: \op<Hom> (i, j) \to; C) \sb<><j \in; \scr<I>>> とは自然変換 &m<c: \op<Hom> (i, \hyphen;) \raarr; \sb<`D><C>> に他ならない。
+      Yoneda の補題によって、そのような自然変換は元 &m<\tilde<c> \in; C> と対応し、任意の &m<\scr<I>> の射 &m<f: i \to; j> に対して &m<\sb<c><j> f = \tilde<c>> が成り立つ。
+      これはすなわち、図式
+      &mb<
+        \diag<
+          \v<\op<Hom> (i, j)> \v<1> \br;
+          \v; \v<C>
+          \ar|s="1",e="2"|<!> \ar|s="2",e="4"|<\tilde<c>> \ar|s="1",e="4",inv|<\sb<c><j>>
+        >
+      >
+      が可換であるということである。
+      さらに、これを可換にするような &m<\tilde<c>> は明らかに一意である。
+      このことは、自明な余錐 &m<(!: \op<Hom> (i, j) \to; 1) \sb<><j \in; \scr<I>>> が余極限であることを意味している。
+    >
+  >
+  \p<
+    以上の準備のもと、終関手であることが特定のコンマ圏の連結性と同値であることが示せる。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の対象上の同値関係 &m<\sim;> を、対象 &m<C, C'> に対して、
+      &mb<
+        C \sim; C' \implied; \multi<f><><><><\exists;>: C \to; C'
+      >
+      を満たす最小の同値関係として定義する。
+      対象 &m<C, C'> が &m<C \sim; C'> を満たすとき、&m<C> と &m<C'> は\em<射で結ばれる\fl<connected by morphisms>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> に対し、&m<\scr<C>> が空でなく、任意の &m<\scr<C>> の 2 つの対象が射で結ばれるとき、&m<\scr<C>> は\em<連結\fl<connected>> であるという。
+    >
+  >
+  \thm|type="thm",id="fineq"|<
+    \p<
+      小圏の間の関手 &m<H: \scr<K> \to; \scr<I>> に対し、2 条件
+    >
+    \ol<
+      \li<
+        &m<H> は終関手である。
+      >
+      \li<
+        任意の &m<\scr<I>> の対象 &m<i> に対し、コンマ圏 &m<i \darr|bin|; H> は連結である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      任意に &m<\scr<I>> の対象 &m<i> をとり、&m<F \coloneqq; \op<Hom> (i, \hyphen;): \scr<I> \to; \bfrm<Set>> とおく。
+      \ref|type="thm",ref="setcol"|; により、
+      &mb<
+        \op<colim> (H \rcomp; F) = \paren<\coprod<k \in; \scr<K>> \op<Hom> (i, Hk)> `/ \sim|ord|;
+      >
+      と書け、ここでの同値関係 &m<\sim;> は、&m<x: i \to; Hk> と &m<x': i \to; Hk'> に対して、
+      &mb<
+        x \sim; x' \implied; \multi<u><><><><\exists;>: k \to; k' \ssbin; x \rcomp; Hu = x'
+      >
+      を満たす最小の同値関係である。
+      ここで、&m<x \rcomp; Hu = x'> が成り立つことは、&m<i \darr|bin|; H> の射として &m<u: x \to; x'> であることと同値である。
+      したがって、&m<x \sim; x'> であるとは、&m<i \darr|bin|; H> において &m<x> と &m<x'> が射で結ばれることを意味している。
+    >
+    \p<
+      一方、仮定から &m<\op<colim> F \cong; \op<colim> (H \rcomp; F)> が成り立つが、\ref|type="thm",ref="onep"|; によって &m<\op<colim> F = 1> であるから、&m<\op<colim> (H \rcomp; F) = 1> も成り立つ。
+      これにより、上の表示を使うと、任意の &m<\coprod|in|<k \in; \scr<K>> \op<Hom> (i, Hk)> の元が &m<\sim;> で結ばれるということが分かるが、&m<\sim;> とは 2 つの元が &m<i \darr|bin|; H> の射で結ばれるという関係であった。
+      したがって、&m<i \darr|bin|; H> の任意の対象が射で結ばれることになり、さらに &m<i \darr|bin|; H> は空でないので、&m<i \darr|bin|; H> は連結である。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      任意に関手 &m<F: \scr<I> \to; \scr<C>> をとる。
+      余極限とは余錐が成す圏の始対象であったから、&m<H \rcomp; F> の余錐が成す圏と &m<F> の余錐が成す圏が圏同値であることを示せば良い。
+      今の場合、特に圏同型であることが示せる。
+    >
+    \p<
+      任意に &m<H \rcomp; F> の余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>> をとる。
+      &m<\scr<I>> の各対象 &m<i> に対し、仮定から &m<i \darr|bin|; H> は空ではないので、&m<\scr<K>> の対象 &m<\sb<k><i>> と射 &m<\sb<x><i>: i \to; H \sb<k><i>> が存在する。
+      ここで &m<\sb<\tilde<c>><i> \coloneqq; F \sb<x><i> \rcomp; \sb<c><\sb<k><i>>> とおくと、これは &m<\sb<k><i>> と &m<\sb<x><i>> によらずに &m<i> だけで決まる。
+      実際、&m<\scr<K>> の対象 &m<\sb<k><i>>, &m<\sbsp<k><i><\pr;>> と射 &m<\sb<x><i>: i \to; H \sb<k><i>>, &m<\sbsp<x><i><\pr;>: i \to; H \sbsp<k><i><\pr;>> をとると、&m<i \darr|bin|; H> が連結であることから、&m<\sb<x><i>> と &m<\sbsp<x><i><\pr;>> は &m<i \darr|bin|; H> の射で結ばれる。
+      一般性を失わず、射 &m<u: \sb<x><i> \to; \sbsp<x><i><\pr;>> が存在するとして良い。
+      すると、&m<(\sb<c><k>) \sb<><k \in; \scr<K>>> が余錐であることから、
+      &mb<
+        F \sb<x><i> \rcomp; \sb<c><\sb<k><i>> = F \sb<x><i> \rcomp; Fu \rcomp; \sb<c><\sbsp<k><i><\pr;>> = F \sbsp<x><i><\pr;> \rcomp; \sb<c><\sbsp<k><i><\pr;>>
+      >
+      が得られた。
+      以上により、&m<\scr<I>> の各対象 &m<i> に対して射 &m<\sb<\tilde<c>><i>: Fi \to; C> が定められたが、これらは &m<F> の余錐 &m<(\sb<\tilde<c>><i>: Fi \to; C) \sb<><i \in; \scr<I>>> を構成することが容易に示せる。
+    >
+    \p<
+      逆に、&m<F> の余錐 &m<(\sb<\tilde<c>><i>: Fi \to; C) \sb<><i \in; \scr<I>>> が与えられたとする。
+      このときは、&m<\scr<K>> の各対象 &m<k> に対して &m<\sb<c><k> \coloneqq; \sb<\tilde<c>><Hk>> とおけば、これらは &m<H \rcomp; F> の余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>> を構成する。
+      さらに、これは上記と逆の構成になっている。
+    >
+    \p<
+      また、&m<H \rcomp; F> の 2 つの余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>, (\sbsp<c><k><\pr;>: FHk \to; C') \sb<><k \in; \scr<K>>> から、上記の構成で &m<F> の余錐 &m<(\sb<\tilde<c>><i>: Fi \to; C) \sb<><i \in; \scr<I>>, (\sbsp<\tilde<c>><i><\pr;>: Fi \to; C') \sb<><i \in; \scr<I>>> をそれぞれ構成すると、前者 2 つの余錐の間の射はそのまま後者 2 つの余錐の間の射になる。
+      以上のことから、&m<H \rcomp; F> の余錐が成す圏と &m<F> の余錐が成す圏は圏同型であることが従う。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>

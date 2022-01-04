@@ -1,0 +1,247 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<篩と層>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2019 年 7 月 27 日)>
+  \p<
+    2 年ほど前に層とトポスについて MacLane–Moerdijk\ref|type="bib",ref="clt"|; を読んで勉強したが、忘れつつあるので少しずつ復習しようと思う。
+    今日は、層の定義を思い出す。
+  >
+  \p<
+    層とは、&m<\bfrm<Set>> への反変関手であって特定の性質を満たすものである。
+    その性質は、考えている圏に定まるある種の位相に関して貼り合わせ条件を満たすこととして定義される。
+    そして、ここで用いる位相というのは、篩という概念の集まりとして定義される。
+    そこで、まずは篩の定義の確認から始め、圏上の位相を定義し、最終的に層を定義する。
+  >
+  \p<
+    以降、&m<\bf<y>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> は共変 Yoneda 埋め込みを表すとする。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の対象 &m<C> に対し、&m<\bf<y> C> の部分関手を &m<C> 上の\em<篩\fl<sieve>> という。
+    >
+  >
+  \p<
+    より初等的に言い換えれば、&m<S> が &m<C> 上の篩であるとは、&m<S> が &m<C> を終域とする射の集まりであって、任意の射の前合成に関して閉じていることである。 
+    以降、&m<C> 上の篩は、&m<\bf<y> C> の部分関手として扱うことも、今述べたような &m<C> を終域とする射の集まりとして扱うこともある。
+  >
+  \p<
+    さらに、&m<S> が &m<C> 上の篩であるとき、定義から包含射 &m<S \hookrarr; \bf<y> C> があるわけだが、しばしばこの包含射と &m<S> 自身を同一視して、この包含射も &m<S> で表すことがある。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の対象 &m<C> に対し、&m<\bf<y> C> 自身を &m<C> 上の\em<極大篩\fl<maximal sieve>> といい、&m<\sb<\top;><C>> で表す。
+    >
+  >
+  \p<
+    上で述べた初等的な言い換えをすれば、極大篩 &m<\sb<\top;><C>> とは &m<C> を終域とする全ての射の集まりである。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の射 &m<h: D \to; C> をとる。
+      &m<C> 上の篩 &m<S> に対し、&m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> における引き戻し
+      &mb<
+        \diag<
+          \v<\sp<h><*> S> \v<S> \br;
+          \v<\bf<y> D> \v<\bf<y> C>
+          \ar|s="1",e="2",dash|; \ar|s="1",e="3",dash|;
+          \ar|s="2",e="4",tip="hook"|; \ar|s="3",e="4",inv|<\bf<y> h>
+        >
+      >
+      で定まる &m<D> 上の篩 &m<\sp<h><*> S> を、&m<h> による &m<S> の\em<引き戻し\fl<pullback>> という。
+    >
+  >
+  \p<
+    引き戻しの初等的な言い換えも確認しておこう。
+  >
+  \thm|type="prp"|<
+    \p<
+      圏 &m<\scr<C>> の射 &m<h: D \to; C> をとる。
+      &m<C> 上の篩 &m<S> に対し、その &m<h> による引き戻しは、
+      &mb<
+        \sp<h><*> S = `{ f \mid; \op<cod> f = D, h \circ; f \in; S `}
+      >
+      と書ける。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> における極限は各点で計算できることに注意すれば、明らかである。
+    >
+  >
+  \p<
+    次に、圏上に位相を定義する。
+    詳しくは述べないが、これは通常の位相空間上の開集合系を圏に一般化したものになっている。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> をとる。
+      各対象 &m<C> に対して &m<C> 上の篩の集まり &m<JC> を定める対応を考えるとき、この対応 &m<J> が \em<Grothendieck 位相\fl<— topology>> であるとは、3 条件
+    >
+    \ol<
+      \li<
+        任意の対象 &m<C> に対し、&m<\sb<\top;><C> \in; JC> が成り立つ。
+      >
+      \li<
+        任意の射 &m<h: D \to; C> に対し、&m<S \in; JC> ならば &m<\sp<h><*> S \in; JD> が成り立つ。
+      >
+      \li<
+        篩 &m<S \in; JC> をとる。
+        &m<C> 上の篩 &m<T> について、任意の &m<h \in; S: D \to; C> に対して &m<\sp<h><*> T \in; JD> が成り立つならば、&m<T \in; JC> が成り立つ。  
+      >
+    >
+    \p<
+      が全て満たされることをいう。
+      また、各対象 &m<C> に対して、&m<JC> の元を &m<C> の\em<被覆篩\fl<covering sieve>> という。 
+      さらに、上記の 2 番目と 3 番目の条件は、それぞれ\em<安定性\fl<stability>> および\em<推移性\fl<transitivity>> と呼ばれる。
+    >
+  >
+  \p<
+    定義からすぐ分かることとして、Grothendieck 位相は上向きの包含関係と共通部分をとる操作に関して閉じている。
+  >
+  \thm|type="prp",id="shvup"|<
+    \p<
+      圏 &m<\scr<C>> の Grothendieck 位相 &m<J> をとる。
+      &m<\scr<C>> の任意の対象 &m<C> 上の篩 &m<S, T> に対して、&m<S \subseteq; T> かつ &m<S \in; JC> ならば、&m<T \in; JC> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意に &m<h \in; S: D \to; C> をとる。
+      すると &m<\sp<h><*> S = \sb<\top;><D>> であるが、仮定によって &m<\sp<h><*> S \subseteq; \sp<h><*> T> が成り立つから、&m<\sp<h><*> T = \sb<\top;><D>> である。
+      したがって、&m<\sp<h><*> T \in; JD> となる。
+      &m<J> の推移性によって、これより &m<T \in; JC> が得られる。 
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      圏 &m<\scr<C>> の Grothendieck 位相 &m<J> をとる。
+      &m<\scr<C>> の任意の対象 &m<C> 上の篩 &m<S, T> に対して、&m<S, T \in; JC> ならば、&m<S \cap; T \in; JC> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意に &m<h \in; S: D \to; C> をとる。
+      すると &m<\sp<h><*> (S \cap; T) = \sp<h><*> T> であり、仮定と &m<J> の安定性によって &m<\sp<h><*> T \in; JD> であるから、&m<\sp<h><*> (S \cap; T) \in; JD> が成り立つ。
+      これより、&m<J> の推移性によって、&m<S \cap; T \in; JC> が得られる。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> に対し、関手 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> を &m<\scr<C>> 上の\em<前層\fl<presheaf>> という。
+    >
+  >
+  \p<
+    前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> が 1 つ定まっているとき、射 &m<f: D \to; C> と元 &m<a \in; PC> に対し、&m<a \cdot; f \coloneqq; (Pf) a> と書くことがある。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> とその上の Grothendieck 位相 &m<J> の組 &m<(\scr<C>, J)> を\em<景\fl<site>> という。
+    >
+  >
+  \thm|type="def",id="sheaf"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      関手 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> が &m<\scr<C>> 上の\em<層\fl<sheaf>> であるとは、任意の被覆篩 &m<S \in; JC> と任意の自然変換 &m<a: S \to; P> に対し、図式
+      &mb<
+        \diag<
+          \v<S> \v<P> \br;
+          \v<\bf<y> C> \v;
+          \ar|s="1",e="2"|<a> \ar|s="1",e="3",tip="hook"|; \ar|s="3",e="2",dash|;
+        >
+      >
+      を可換にする破線の自然変換が一意に存在することである。
+    >
+  >
+  \p<
+    この条件は、より初等的に言い換えることもできる。
+    そのためにいくつか概念を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとり、前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> および被覆篩 &m<S \in; JC> を考える。
+      各射 &m<f \in; S: D \to; C> に対して元 &m<\sb<a><f> \in; PD> を定めている族 &m<(\sb<a><f>) \sb<><f \in; S>> が &m<S> に関する &m<P> の\em<適合族\fl<matching family>> であるとは、篩に属する任意の射 &m<f \in; S: D \to; C> と任意の射 &m<g: E \to; D> に対し、&m<\sb<a><f> \cdot; g = \sb<a><f \circ; g>> が成り立つことである。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとり、前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> および被覆篩 &m<S \in; JC> を考え、その適合族 &m<(\sb<a><f>) \sb<><f \in; S>> をとる。
+      元 &m<\bar<a> \in; PC> が &m<(\sb<a><f>) \sb<><f \in; S>> の\em<融合\fl<amalgamation>> であるとは、任意の射 &m<f \in; S: D \to; C> に対し、&m<\bar<a> \cdot; f = \sb<a><f>> が成り立つことである。
+    >
+  >
+  \thm|type="prp",id="shfeq"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、4 条件
+    >
+    \ol<
+      \li<
+        &m<P> は層である。
+      >
+      \li<
+        任意の被覆篩 &m<S \in; JC> に対し、それが誘導する写像
+        &mb<
+          \text<-> \circ; S: \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> (\bf<y> C, P) \to; \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> (S, P)
+        >
+        は全単射である。
+      >
+      \li<
+        任意の被覆篩 &m<S \in; JC> とその適合族 &m<(\sb<a><f>) \sb<><f \in; S>> に対し、その融合が一意に存在する。
+      >
+      \li<
+        任意の被覆篩 &m<S \in; JC> に対し、図式
+        &mb<
+          \diag<
+            \v<PC> \v<\prod<f \in; S: D \to; C><> PD> \v< \prod<\stack<\cc<f \in; S: D \to; C> \cc<g: E \to; D>>><> PE>
+            \ar|s="1",e="2"|<e>
+            \ar|s="2",e="3",shift="3"|<p> \ar|s="2",e="3",shift="-3",inv|<q>
+          >
+        >
+        は &m<\bfrm<Set>> における等化子である。
+        ここで &m<e, p, q> は、
+        &mb<
+          \array|align="rcrcl"|<
+            \c<e> \c<:> \c<\bar<a>> \c<\longmapsto;> \c<(\bar<a> \cdot; f) \sb<><f>> \br;
+            \c<p> \c<:> \c<(\sb<a><f>) \sb<><f>> \c<\longmapsto;> \c<(\sb<a><f \circ; g>) \sb<><f, g>> \br;
+            \c<q> \c<:> \c<(\sb<a><f>) \sb<><f>> \c<\longmapsto;> \c<(\sb<a><f> \cdot; g) \sb<><f, g>>
+          >
+        >
+        で定まる写像である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      1 番目と 2 番目の主張は単なる言い換えで、3 番目と 4 番目の主張も言い換えである。
+      1 番目と 3 番目の主張の同値性は、&m<S> に関する &m<P> の適合族 &m<(\sb<a><f>) \sb<><f \in; S>> が自然変換 &m<a: S \to; P> と同じものであることに注意すれば、容易に証明できる。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> に対し、&m<\scr<C>> 上の前層とその間の自然変換から成る圏を &m<\bfrm<PSh> (\scr<C>)> で表す。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> に対し、&m<\scr<C>> 上の層とその間の自然変換から成る &m<\bfrm<PSh> (\scr<C>)> の充満部分圏を &m<\sb<\bfrm<Sh>><J> (\scr<C>)> で表す。
+    >
+  >
+  \p<
+    定義から &m<\sb<\bfrm<Sh>><J> (\scr<C>)> は &m<\bfrm<PSh> (\scr<C>)> の充満部分圏なので、包含関手 &m<\bf<i>: \sb<\bfrm<Sh>><J> (\scr<C>) \hookrarr; \bfrm<PSh> (\scr<C>)> が存在する。
+    この関手には左随伴が存在することが知られている。
+    つまり、任意の前層から層を構成できるということである。
+    これについては次回で取り扱う。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="clt"|<S. MacLane, I. Moerdijk (1992)『Sheaves in Geometry and Logic』Springer>
+  >
+
+>

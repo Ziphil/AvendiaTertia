@@ -1,0 +1,199 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<正規関手を射とするカルテシアン閉圏>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2018 年 2 月 7 日)>
+  \p<
+    これまでどこに向かって進んでるのか分からない感じのこの日記だが、今回でようやく 1 つのメインとなる結果が出る。
+  >
+  \p<
+    以下のような圏を考える。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\sb<\bfrm<CAAcc>><\text<NF>>> を、
+    >
+    \ul<
+      \li<
+        対象は、集合 &m<A> に対して &m<\sp<\bfrm<Set>><A>> という形の圏全体とする。
+      >
+      \li<
+        2 つの対象 &m<\sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B>> の間の射は、正規関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> の同型類全体とする。
+      >
+    >
+    \p<
+      として定義する。
+    >
+  >
+  \p<
+    奇妙な名前だが、これは以下の定理をもとにしている。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> が、4 条件
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> は全ての有限極限をもつ。
+      >
+      \li<
+        &m<\scr<C>> は全ての小さな余積をもち、その余積は非交かつ普遍的である。
+      >
+      \li<
+        上記の 2 条件が満たされるとき &m<\sb<\op<Sub>><\scr<C>> (1)> は束の構造をもつが、&m<\sb<\op<Sub>><\scr<C>> (1)> の原子元の全体は高々集合の大きさである。
+      >
+      \li<
+        &m<\scr<C>> の任意の対象は &m<\sb<\op<Sub>><\scr<C>> (1)> の原子元の余積と同型である。
+      >
+    >
+    \p<
+      を全て満たすとき、&m<\scr<C>> は\em<完備原子的到達可能\fl<complete atomic accessible>> であるという。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      任意の完備原子的到達可能圏 &m<\scr<C>> に対し、ある集合 &m<A> が存在して、圏同値 &m<\scr<C> \cong; \sp<\bfrm<Set>><A>> が成り立つ。
+    >
+  >
+  \p<
+    さて、ここまでの議論は以下の定理を示すのが 1 つの目標だったのである。
+  >
+  \thm|type="thm"|<
+    \p<
+      圏 &m<\sb<\bfrm<CAAcc>><\text<NF>>> はカルテシアン閉である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb<\bfrm<CAAcc>><\text<NF>>> の対象 &m<\sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B>> に対し、その積と冪は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sp<\bfrm<Set>><A> \times; \sp<\bfrm<Set>><B>> \c<=> \c<\sp<\bfrm<Set>><A + B>> \br;
+          \c<\sp<\bfrm<Set>><A> \uharprarr|bin|; \sp<\bfrm<Set>><B>> \c<=> \c<\sp<\bfrm<Set>><\op<exp> A \times; B>>
+        >
+      >
+      で与えられる。
+      積が上の形で与えられることは明らかなので、冪が上の形で与えられることを示す。
+    >
+    \p<
+      &m<\sb<\bfrm<CAAcc>><\text<NF>>> の別の対象 &m<\sp<\bfrm<Set>><C>> に対し、\a|href="4.html#main"|<定理 4.7> を用いると、圏同値
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<`[ \sp<\bfrm<Set>><C>, \sp<\bfrm<Set>><\op<exp> A \times; B> `]><\text<NF>>> \c<\cong;> \c<\sp<\bfrm<Set>><\op<exp> C \times; (\op<exp> A \times; B)>> \br;
+          \c; \c<\cong;> \c<\sp<\bfrm<Set>><\op<exp> (C + A) \times; B>> \br;
+          \c; \c<\cong;> \c<\sb<`[ \sp<\bfrm<Set>><C + A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> \br;
+          \c; \c<=> \c<\sb<`[ \sp<\bfrm<Set>><C> \times; \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>>
+        >
+      >
+      が成立することが分かる。
+      これはすなわち、集合としての同型
+      &mb<
+        \sb<\op<Hom>><\sb<\bfrm<CAAcc>><\text<NF>>> (\sp<\bfrm<Set>><C>, \sp<\bfrm<Set>><\op<exp> A \times; B>) \cong; \sb<\op<Hom>><\sb<\bfrm<CAAcc>><\text<NF>>> (\sp<\bfrm<Set>><C> \times; \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B>)
+      >
+      が成り立つことを意味している。
+      したがって、冪は上に示した形で与えられる。
+    >
+  >
+  \p<
+    これで &m<\sb<\bfrm<CAAcc>><\text<NF>>> のカルテシアン閉性が示されたが、冪対象に関する上の同型がいまいち具体的にどうなっているのか分からない。
+    そこで、上の証明における対象の対応を追って、冪の余単位を具体的に計算してみる。
+    そうあってほしい結果がそのまま得られる。
+  >
+  \thm|type="prp"|<
+    \p<
+      カルテシアン閉圏 &m<\sb<\bfrm<CAAcc>><\text<NF>>> の冪の余単位は、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\rm<ev>:> \c<\sp<\bfrm<Set>><\op<exp> A \times; B> \times; \sp<\bfrm<Set>><A>> \c<\longrarr;> \c<\sp<\bfrm<Set>><B>> \br;
+          \c; \c<(M, X)> \c<\longmapsto;> \c<\widetildebelow<M> X>
+        >
+      >
+      で与えられる。
+    >
+  >
+  \prf<
+    \p<
+      簡単のため &m<C \coloneqq; \op<exp> A \times; B> とおく。
+      上の証明の圏同値
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<`[ \sp<\bfrm<Set>><C>, \sp<\bfrm<Set>><C> `]><\text<NF>>> \c<\cong;> \c<\sp<\bfrm<Set>><\op<exp> C \times; C>> \br;
+          \c; \c<\cong;> \c<\sp<\bfrm<Set>><\op<exp> (C + A) \times; B>> \br;
+          \c; \c<\cong;> \c<\sb<`[ \sp<\bfrm<Set>><C + A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> \br;
+          \c; \c<=> \c<\sb<`[ \sp<\bfrm<Set>><C> \times; \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>>
+        >
+      >
+      において、&m<\sb<\rm<id>><\sp<\bfrm<Set>><C>> \in; \sb<`[ \sp<\bfrm<Set>><C>, \sp<\bfrm<Set>><C> `]><\text<NF>>> と対応するものが求めたい余単位である。
+    >
+    \p<
+      まず、最初の圏同値で &m<\sb<\rm<id>><\sp<\bfrm<Set>><C>>> と対応するのは、
+      &mb<
+        \array|align="rrcl"|<
+          \c<N:> \c<\op<exp> C \times; C> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<(`d, c)> \c<\longmapsto;> \c<\case<\cc<1><(`d = `{ c `})> \cc<0><(\text<上記以外>)>>>
+        >
+      >
+      である。
+      実際、各 &m<c \in; C> と &m<M \in; \sp<\bfrm<Set>><C>> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sp<\widetildebelow<N>><c> M> \c<=> \c<\coprod<`d \in; \op<exp> C><> (\op<Hom> (`d, M) \times; N (`d, c))> \br;
+          \c; \c<\cong;> \c<\op<Hom> (`{ c `}, M)> \br;
+          \c; \c<\cong;> \c<M c>
+        >
+      >
+      であるから、&m<\widetildebelow<N> = \sb<\rm<id>><\sp<\bfrm<Set>><C>>> である。
+    >
+    \p<
+      次の圏同値でこの &m<N> と対応するのは、同じ記号を使うが、
+      &mb<
+        \array|align="rrcl"|<
+          \c<N:> \c<\op<exp> (C + A) \times; B> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<(\varepsilon;, b)> \c<\longmapsto;> \c<\case<\cc<1><(\varepsilon; = `g \cup; `{ (`g, b) `}, `g \in; \op<exp> A)> \cc<0><(\text<上記以外>)>>>
+        >
+      >
+      である。
+      このことは、全単射
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<exp> C \times; (\op<exp> A \times; B)> \c<\longrarr;> \c<\op<exp> (C + A) \times; B> \br;
+          \c<(`d, (`g, b))> \c<\longmapsto;> \c<(`d \cup; `g, b)>
+        >
+      >
+      を考えれば明らかである。
+    >
+    \p<
+      さらに次の圏同値でこの &m<N> と対応するものは、各 &m<b \in; B> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<\widetildebelow<N>><b>:> \c<\sp<\bfrm<Set>><C + A>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<Y> \c<\longmapsto;> \c<\coprod<\varepsilon; \in; \op<exp> (C + A)><> (\op<Hom> (\varepsilon;, Y) \times; N (\varepsilon;, b))>
+        >
+      >
+      で与えられるが、これは、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<\widetildebelow<N>><b>:> \c<\sp<\bfrm<Set>><C> \times; \sp<\bfrm<Set>><A>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<(M, X)> \c<\longmapsto;> \c<\coprod<`g \in; \op<exp> A><> (\op<Hom> (`g, X) \times; M (`g, b))>
+        >
+      >
+      とも書ける。
+      実際、最初の表示の余積においては、&m<`g \in; \op<exp> A> に対して &m<\varepsilon; = `g \cup; `{ (`g, b) `}> という形の場合しか考えなくて良く、このとき、
+      &mb<
+        \op<Hom> (`g \cup; `{ (`g, b) `}, (M, X)) \cong; \op<Hom> (`g, X) \times; M (`g, b)
+      >
+      が成り立つから、上の 2 つの表示は等しい。
+      さらに、上の 2 つ目の表示の右辺は &m<\sp<\widetildebelow<M>><b> X> そのものである。
+      以上により、命題が示された。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="htaa"|<R. Hasegawa (2006)「Two applications of analytic functors」『Theoretical Computer Science』272:113–175>
+  >
+
+>

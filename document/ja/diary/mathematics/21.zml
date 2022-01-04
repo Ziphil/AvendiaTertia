@@ -1,0 +1,192 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<2-極限>
+  \use-math|prefix="4"|;
+
+  \h1<日記 (2018 年 8 月 30 日)>
+  \p<
+    今回から 2-圏における極限を扱っていこうと思う。
+    まずは簡単のため、2-関手と 2-自然変換のみを考え、一般の 2-弛緩関手や 2-弛緩自然変換については触れないでおく。
+  >
+  \p<
+    2-圏は &m<\bfrm<Cat>>-豊穣圏だから、2-圏における極限としては &m<\bfrm<Cat>>-豊穣圏での重み付き極限を考えれば良い。
+    では、改めて定義を述べよう。
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Cat>> があるとする。
+      ある &m<\scr<C>> の対象 &m<L> が存在し、任意の &m<\scr<C>> の対象 &m<A> に対して、圏の同型
+      &mb<
+        `[A, L`] \sb<><\scr<C>> \cong; \lbbracket; W, `[A, F \hyphen;`] \sb<><\scr<C>> \rbbracket; \sb<><\scr<J> \to; \bfrm<Cat>>
+      >
+      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の 2-\em<極限\fl<limit>> といい、&m<\sb<\lim;><W> F> で表す。
+    >
+  >
+  \p<
+    この定義中の同型の右辺は、&m<`s: W \raarr; `[A, F \hyphen;`]> という形の 2-自然変換とその間の自然調整が成す圏であるが、今後の議論のため、この形の 2-自然変換に名前を付けておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Cat>> をとる。
+      &m<\scr<C>> の対象 &m<A> に対して、2-自然変換 &m<`s: W \raarr; `[A, F \hyphen;`]> を &m<F> と &m<W> に関する\em<柱\fl<cylinder>> という。
+    >
+  >
+  \p<
+    通常の圏における極限が普遍性をもつ錐で特徴付けられたのと同様に、2-圏における 2-極限も普遍性をもつ柱として特徴付けられる。
+    ただし、2-圏には 1-射と 2-射があるため、普遍性も 1 次元的なものと 2 次元的なものの 2 つから成る。
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Cat>> に対し、柱 &m<`h: W \raarr; `[L, F \hyphen;`]> が以下の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        任意の柱 &m<`s: W \raarr; `[A, F \hyphen;`]> に対し、ある &m<\scr<C>> の 1-射 &m<f: A \to; L> が一意に存在し、2 つの図式
+        &mb<
+          \diag|hor="thk"|<
+            \v<\scr<J>> \v<\bfrm<Cat> \vph<\scr<J>>>
+            \ar|s="1:r0",e="2:l0",bend="50"|<W> \ar|s="1:r100",e="2:l100",bend="-50",inv|<`[A,  F \hyphen;`]>
+            \ar|s="1:r0",e="2:l0",bend="50",line="0",name="f",inv|; \ar|s="1:r100",e="2:l100",bend="-50",line="0",name="h"|;
+            \ar|s="1",e="2",name="gu"|; \ar|s="1",e="2",line="0",name="gd",inv|;
+            \ar|s="f:c",e="gu:c",line="2"|<`h> \ar|s="gd:c",e="h:c",line="2"|<\sp<f><*>>
+          > \qquad;
+          \diag|hor="thk"|<
+            \v<\scr<J>> \v<\bfrm<Cat> \vph<\scr<J>>>
+            \ar|s="1:r20",e="2:l20",bend="30"|<W> \ar|s="1:r80",e="2:l80",bend="-30",inv|<`[A,  F \hyphen;`]>
+            \ar|s="1:r20",e="2:l20",bend="30",line="0",name="f",inv|; \ar|s="1:r80",e="2:l80",bend="-30",line="0",name="h"|;
+            \ar|s="f:c",e="h:c",line="2"|<`s>
+          >
+        >
+        は等しい。
+        ここで、2-自然変換 &m<\sp<f><*>: `[L, F \hyphen;`] \raarr; `[A, F \hyphen;`]> は、&m<\scr<J>> の各対象 &m<I> に対し、
+        &mb<
+          \array|align="rrcl"|<
+            \c<(\sp<f><*>) \sb<><I>:> \c<`[L, FI`]> \c<\longto;> \c<`[A, FI`]> \br;
+            \c; \c<h> \c<\longmapsto;> \c<h \circ; f> \br;
+            \c; \c<`a> \c<\longmapsto;> \c<`a \ast; f>
+          >
+        >
+        で定義されるものとする。
+      >
+    >
+    \p<
+      このとき、&m<`h> は \em<1 次元的普遍性\fl<one-dimensional universality>> を満たすという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Cat>> に対し、柱 &m<`h: W \raarr; `[L, F \hyphen;`]> が 1 次元的普遍性を満たし、さらに以下の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        任意の柱 &m<`s, `t: W \raarr; `[A, F \hyphen;`]> と任意の自然調整 &m<`J: `s \raaarr; `t> に対し、ある &m<\scr<C>> の 2-射 &m<`a: f \raarr; g> が一意に存在し、2 つの図式
+        &mb<
+          \diag|hor="vthk"|<
+            \v<\scr<J>> \v<\bfrm<Cat> \vph<\scr<J>>>
+            \ar|s="1:r10",e="2:l10",bend="50"|<W>
+            \ar|s="1:r10",e="2:l10",bend="50",line="0",pos="50",name="p",inv|;
+            \ar|s="1",e="2",line="1",pos="50",name="q"|;
+            \ar|s="1",e="2",line="0",pos="32",name="e",inv|; \ar|s="1",e="2",line="0",pos="68",name="g",inv|;
+            \ar|s="1:r90",e="2:l90",bend="-50",inv|<`[A,  F \hyphen;`]>
+            \ar|s="1:r90",e="2:l90",bend="-50",line="0",pos="30",name="f"|; \ar|s="1:r90",e="2:l90",bend="-50",line="0",pos="70",name="h"|;
+            \ar|s="p:c",e="q:c",line="2",inv|<`h>
+            \ar|s="e:c",e="f:c",line="2",pos="30",inv|<\sp<f><*>> \ar|s="e:c",e="f:c",line="0",name="y"|;
+            \ar|s="g:c",e="h:c",pos="30",line="2"|<\sp<g><*>> \ar|s="g:c",e="h:c",line="0",name="z",inv|;
+            \ar|s="y:c",e="z:c",line="3",inv|<\sp<`a><*>>
+          > \qquad;
+          \diag|hor="thk"|<
+            \v<\scr<J>> \v<\bfrm<Cat> \vph<\scr<J>>>
+            \ar|s="1:r10",e="2:l10",bend="40"|<W>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",pos="25",name="a",inv|; \ar|s="1:r10",e="2:l10",bend="40",line="0",pos="75",name="c",inv|;
+            \ar|s="1:r90",e="2:l90",bend="-40",inv|<`[A,  F \hyphen;`]>
+            \ar|s="1:r90",e="2:l90",bend="-40",line="0",pos="25",name="f"|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",pos="75",name="h"|;
+            \ar|s="a:c",e="f:c",line="2",inv|<`s> \ar|s="a:c",e="f:c",line="0",name="w"|;
+            \ar|s="c:c",e="h:c",line="2"|<`t> \ar|s="c:c",e="h:c",line="0",name="x",inv|;
+            \ar|s="w:c",e="x:c",line="3"|<`J>
+          >
+        >
+        は等しい。
+        ここで、&m<\scr<C>> の 1-射 &m<f, g> は &m<`h> の 1 次元的普遍性によりそれぞれ &m<`s, `t> から得られるものとする。
+        さらに、自然調整 &m<\sp<`a><*>: \sp<f><*> \raaarr; \sp<g><*>> は、&m<\scr<J>> の各対象 &m<I> において、通常の自然変換
+        &mb<
+          (\sp<`a><*>) \sb<><I>: (\sp<f><*>) \sb<><I> \raarr; (\sp<g><*>) \sb<><I>: `[L, FI`] \to; `[A, FI`]
+        >
+        をもつが、これは &m<\scr<C>> の 1-射 &m<h: L \to; FI> に対し、
+        &mb<
+          (\sp<`a><*>) \sb<><I, h> \coloneqq; h \ast; `a: h \circ; f \raarr; h \circ; g: A \to; FI
+        >
+        で定義されるものとする。
+      >
+    >
+    \p<
+      このとき、&m<`h> は \em<2 次元的普遍性\fl<two-dimensional universality>> を満たすという。
+    >
+  >
+  \p<
+    簡単に言ってしまえば、ある柱 &m<`h> が 1 次元的普遍性を満たすとは、他のどんな柱も &m<`h> との合成で得られるということであり、&m<`h> が 2 次元的普遍性を満たすとは、他のどんな柱の間の自然調整も &m<`h> との左髭結合で得られるということである。
+  >
+  \p<
+    さて、この 2 種類の普遍性を満たす柱は 2-極限を定める。
+  >
+  \thm|type="prp",id="limuniv"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Cat>> があるとする。
+      このとき、
+    >
+    \ul<
+      \li<
+        ある柱 &m<`h: W \raarr; `[L, F \hyphen;`]> が 1 次元的普遍性と 2 次元的普遍性をともに満たすならば、&m<\sb<\lim;><W> F> は存在し、&m<L \cong; \sb<\lim;><W> F> が成り立つ。
+      >
+      \li<
+        &m<L \coloneqq; \sb<\lim;><W> F> が存在するならば、圏の同型
+        &mb<
+          `[L, L`] \cong; \lbbracket; W, `[L, F \hyphen;`] \rbbracket;
+        >
+        が成り立つが、これにおいて &m<\sb<\rm<id>><L>> に対応する柱 &m<`h: W \raarr; `[L, F \hyphen;`]> は 1 次元的普遍性と 2 次元的普遍性をともに満たす。
+      >
+    >
+    \p<
+      がともに成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      概略だけ述べる。
+    >
+    \p<
+      柱 &m<`h: W \raarr; `[L, F \hyphen;`]> が 1 次元的普遍性を満たすとする。
+      任意に柱 &m<`s: W \raarr; `[A, F \hyphen;`]> をとると、&m<`h> の 1 次元的普遍性によって、&m<\scr<C>> の 1-射 &m<f: A \to; L> が得られる。
+      さらに別の柱 &m<`t: W \raarr; `[A, F \hyphen;`]> をとり、これと対応する &m<\scr<C>> の 1-射を &m<g: A \to; L> とする。
+      ここで、自然調整 &m<`J: `s \raaarr; `t> をとると、今度は &m<`h> の 2 次元的普遍性によって、&m<\scr<C>> の 2-射 &m<`a: f \raarr; g> が得られる。
+      これらの対応により、通常の関手
+      &mb<
+        &mark<\wspade;>
+        \array|align="rcl"|<
+          \c<\lbbracket; W, `[A, F \hyphen;`] \rbbracket;> \c<\longto;> \c<`[A, L`]> \br;
+          \c<`s> \c<\longmapsto;> \c<f> \br;
+          \c<`J> \c<\longmapsto;> \c<`a>
+        >
+      >
+      が定まることが容易に分かる。
+      さらに、この対応は普遍性の定義から 1 対 1 なので、これは圏の同型を与える。
+      したがって、&m<L \cong; \sb<\lim;><W> F> が成り立つ。
+    >
+    \p<
+      次に、&m<L \coloneqq; \sb<\lim;><W> F> が存在したとする。
+      このとき、&m<\scr<C>> の対象 &m<A> に対して、圏の同型
+      &mb<
+        \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \cong; `[A, L`]
+      >
+      が成り立つが、式 &m<\wspade;> と同じ対応によって、&m<`h> に関する 1 次元的普遍性と 2 次元的普遍性が要求する &m<\scr<C>> の 1-射や 2-射が得られる。
+      これらが実際に普遍性が要求する条件を満たすかどうかは、上の同型の &m<A> に関する自然性から分かる。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="keot"|<G. M. Kelly (1989)「Elementary observations on 2-categorical limits」『Bulletin of the Australian Mathematical Society』39:301–317>
+  >
+
+>

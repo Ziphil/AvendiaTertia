@@ -1,0 +1,372 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<層化関手>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2019 年 8 月 1 日)>
+  \p<
+    前回は、景 &m<(\scr<C>, J)> に対して、それ上の層の圏 &m<\sb<\bfrm<Sh>><J> (\scr<C>)> を前層の圏の充満部分圏として定義した。
+    今回は、任意の前層から層を構成する方法を紹介する。
+  >
+  \p<
+    本題となる定義の前に、Grothendieck 位相に関して補足をしておく。
+    景 &m<(\scr<C>, J)> の対象 &m<C> に対し、&m<JC> は &m<C> 上の篩の集まりであり、&m<C> 上の篩とは &m<\bf<y> C> の部分関手であった。
+    つまり、&m<JC> の元は全て &m<\bfrm<PSh> (\scr<C>)> の対象になっている。
+    さらに、&m<JC> には包含関係が定まっているが、これを定める包含射は &m<\bfrm<PSh> (\scr<C>)> の射でもある。
+    したがって、&m<JC> は &m<\bfrm<PSh> (\scr<C>)> の部分圏だと見なすことができる。
+  >
+  \p<
+    まず、プラス構成と呼ばれる構成方法を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<P><+>:> \c<\sp<\scr<C>><\circ;>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<C> \c<\longmapsto;> \c<\un|fun|<\op<colim>><S \in; \sp<JC><\circ;>> \sb<\op<Hom>><\bfrm<PSh> (\scr<C>)> (S, P)>
+        >
+      >
+      と定める。
+      すると、これは関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<\text<->><+>:> \c<\bfrm<PSh> (\scr<C>)> \c<\longrarr;> \c<\bfrm<PSh> (\scr<C>)> \br;
+          \c; \c<P> \c<\longmapsto;> \c<\sp<P><+>>
+        >
+      >
+      を定めるが、これを\em<プラス構成関手\fl<plus construction functor>> という。
+      射の対応は明らかな方法で定める。
+      なお、最初の式の右辺は関手 &m<\sb<\op<Hom>><\bfrm<PSh> (\scr<C>)> (\text<->, P): \sp<JC><\circ;> \to; \bfrm<Set>> の余極限である。
+    >
+  >
+  \p<
+    プラス構成を定める余極限は、以下のように具体的に書くこともできる。
+    続く命題の証明には、この表示を用いる。
+  >
+  \thm|type="prp"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> および対象 &m<C> に対し、&m<\sp<P><+> C> は直和の剰余集合として
+      &mb<
+        \sp<P><+> C \cong; \frac<\coprod<S \in; JC><> \sb<\op<Hom>><\bfrm<PSh> (\scr<C>)> (S, P)><\approx;>
+      >
+      と書ける。
+      ここで、2 つの自然変換 &m<a: S \to; P, a': S' \to; P> が &m<a \approx; a'> を満たすとは、ある &m<T \in; JC> が存在して、&m<T \subseteq; S> かつ &m<T \subseteq; S'> が成り立ち、さらに 
+      &mb<
+        \diag|ver="vthn"|<
+          \v; \v<S> \v; \br;
+          \v<T> \v; \v<P> \br;
+          \v; \v<S'> \v;
+          \ar|s="4",e="2",tip="hook"|; \ar|s="4",e="8",tip="hook"|;
+          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<a'>
+        >
+      >
+      が可換であることと定める。
+      さらに、射 &m<h: D \to; C> に対して定まる写像 &m<\sp<P><+> h: \sp<P><+> C \to; \sp<P><+> D> は、自然変換 &m<a: S \to; P> で代表される元を、合成
+      &mb<
+        \diag<
+          \v<\sp<h><*> S> \v<S> \v<P>
+          \ar|s="1",e="2"|<h \circ; \text<->> \ar|s="2",e="3"|<a>
+        >
+      >
+      で代表される元に移す。
+    >
+  >
+  \prf<
+    \p<
+      余極限の普遍性を定義に従って確かめれば良い。
+    >
+  >
+  \p<
+    任意の前層からプラス構成を 1 回行うだけでは層になるとは限らないが、以下で定義する分離前層になることは保証される。
+    分離前層が層と異なるのは、自然変換の持ち上げが必ずしも存在するとは限らない点である。
+  >
+  \thm|type="def",id="sepsheaf"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> が\em<分離\fl<separated>> であるとは、任意の被覆篩 &m<S \in; JC> と任意の自然変換 &m<a: S \to; P> に対し、図式
+      &mb<
+        \diag<
+          \v<S> \v<P> \br;
+          \v<\bf<y> C> \v;
+          \ar|s="1",e="2"|<a> \ar|s="1",e="3",tip="hook"|; \ar|s="3",e="2",dash|;
+        >
+      >
+      を可換にする破線の自然変換は存在すれば一意になることである。
+    >
+  >
+  \p<
+    層の場合と同様に、分離性と同値になるいくつかの言い換えも挙げておく。
+  >
+  \thm|type="prp",id="equiv"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、3 条件
+    >
+    \ol<
+      \li<
+        &m<P> は分離である。
+      >
+      \li<
+        任意の被覆篩 &m<S \in; JC> に対し、それが誘導する写像
+        &mb<
+          \text<-> \circ; S: \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> (\bf<y> C, P) \to; \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> (S, P)
+        >
+        は単射である。
+      >
+      \li<
+        任意の被覆篩 &m<S \in; JC> とその適合族 &m<(\sb<a><f>) \sb<><f \in; S>> に対し、その融合は存在すれば一意である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="26.html#shfeq"|<命題 1.13> と同様である。
+    >
+  >
+  \p<
+    すでに述べたように、任意の前層からプラス構成を 1 回行うだけでは分離前層にしかならない。
+    しかし、ここからさらにプラス構成を行うと層になる。
+    これによって、前層から層を構成することができるのである。
+  >
+  \thm|type="prp"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、&m<\sp<P><+>> は分離前層である。
+    >
+  >
+  \prf<
+    \p<
+      任意に被覆篩 &m<W \in; JC> をとる。
+      \ref|type="thm",ref="equiv"|; によって、
+      &mb<
+        \text<-> \circ; W: \op<Hom> (\bf<y> C, \sp<P><+>) \to; \op<Hom> (W, \sp<P><+>)
+      >
+      が単射であることを示せば良い。
+      そこで、自然変換 &m<`a, `a': \bf<y> C \to; \sp<P><+>> をとり、これらが &m<`a \circ; W = `a' \circ; W> を満たすとする。
+      すなわち、任意の &m<f \in; W: D \to; C> に対し、
+      &mb<
+        &mark<♡>
+        \sb<(`a \circ; W)><D> f = \sb<(`a' \circ; W)><D> f \in; \sp<P><+> D
+      >
+      が成り立つとする。
+    >
+    \p<
+      さて、Yoneda 同型によって &m<`a, `a'> と対応する元をそれぞれ &m<\hat<`a>, \sp<\hat<`a>><\pr;> \in; \sp<P><+> C> とし、これらがそれぞれある被覆篩 &m<S, S' \in; JC> に対して &m<a: S \to; P, a': S' \to; P> で代表されるとする。
+      すると、仮定 &m<♡> は、2 つの自然変換
+      &mb<
+        \diag<
+          \v<\sp<f><*> S> \v<S> \v<P>
+          \ar|s="1",e="2"|<f \circ; \text<->> \ar|s="2",e="3"|<a>
+        >
+        \qquad;
+        \diag<
+          \v<\sp<f><*> S'> \v<S'> \v<P>
+          \ar|s="1",e="2"|<f \circ; \text<->> \ar|s="2",e="3"|<a'>
+        >
+      >
+      が &m<\sp<P><+> D> を定める同値関係において同値であるということである。
+      それはすなわち、ある被覆篩 &m<\sb<T><f> \in; JD> が存在し、&m<\sb<T><f> \subseteq; \sp<f><*> S> かつ &m<\sb<T><f> \subseteq; \sp<f><*> S'> であって、
+      &mb<
+        \diag|ver="vthn"|<
+          \v; \v<\sp<f><*> S> \v<S> \v; \br;
+          \v<\sb<T><f>> \v; \v; \v<P> \br;
+          \v; \v<\sp<f><*> S'> \v<S'> \v;
+          \ar|s="2",e="3"|<f \circ; \text<->> \ar|s="3",e="8"|<a>
+          \ar|s="5",e="2",tip="hook"|; \ar|s="5",e="10",tip="hook"|;
+          \ar|s="10",e="11",inv|<f \circ; \text<->> \ar|s="11",e="8",inv|<a'>
+        >
+      >
+      が可換になるということである。
+      ここで、
+      &mb<
+        U \coloneqq; `{ f \circ; g \mid; f \in; W, g \in; \sb<T><f> `} \subseteq; \bf<y> C
+      >
+      と定めると、これは位相の推移性によって被覆篩になっており、&m<U \subseteq; S> かつ &m<U \subseteq; S'> であり、さらに
+      &mb<
+        \diag|ver="vthn"|<
+          \v; \v<S> \v; \br;
+          \v<U> \v; \v<P> \br;
+          \v; \v<S'> \v;
+          \ar|s="4",e="2",tip="hook"|; \ar|s="4",e="8",tip="hook"|;
+          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<a'>
+        >
+      >
+      が可換である。
+      これはすなわち、&m<a, a'> が &m<\sp<P><+> C> を定める同値関係において同値であることを意味する。
+      したがって、&m<`a = `a'> が成り立つ。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、&m<P> が分離前層ならば &m<\sp<P><+>> は層である。
+    >
+  >
+  \prf<
+    \p<
+      任意に被覆篩 &m<W \in; JC> をとる。
+      \a|href="26.html#shfeq"|<命題 1.13> によって、
+      &mb<
+        &mark<♤>
+        \text<-> \circ; W: \op<Hom> (\bf<y> C, \sp<P><+>) \to; \op<Hom> (W, \sp<P><+>)
+      >
+      が全射であることを示せば良い。
+      そこで、自然変換 &m<`a: W \to; \sp<P><+>> をとる。
+      すると、各射 &m<f \in; W: D \to; C> に対して、元 &m<\sb<`a><D> f \in; \sp<P><+> D> が定まっていることになる。 
+      これが、被覆篩 &m<\sb<S><f> \in; JD> によって &m<\sb<a><f>: \sb<S><f> \to; P> で代表されているとする。
+    >
+    \p<
+      さて、&m<a> の自然性によって、任意の射 &m<g: E \to; D> に対し、
+      &mb<
+        \diag<
+          \v<WD> \v<\sp<P><+> D> \br;
+          \v<WE> \v<\sp<P><+> E> \br;
+          \ar|s="1",e="2"|<\sb<`a><D>> \ar|s="1",e="3",inv|<Wg>
+          \ar|s="2",e="4"|<\sp<P><+> g> \ar|s="3",e="4",inv|<\sb<`a><E>>
+        >
+      >
+      は可換である。
+      これは、各射 &m<f \in; W: D \to; C> について、&m<(\sp<P><+> g) (\sb<`a><D> f) = \sb<`a><E> (f \circ; g)> が成り立つということである。
+      さらにこれは、2 つの自然変換
+      &mb<
+        \diag<
+          \v<\sp<g><*> \sb<S><f>> \v<\sb<S><f>> \v<P>
+          \ar|s="1",e="2"|<g \circ; \text<->> \ar|s="2",e="3"|<\sb<a><f>> 
+        >
+        \qquad;
+        \diag<
+          \v<\sb<S><f \circ; g>> \v<P>
+          \ar|s="1",e="2"|<\sb<a><f \circ; g>>
+        >
+      >
+      が &m<\sp<P><+> E> において同値であるということである。
+      したがって、ある被覆篩 &m<\sb<T><fg> \in; JE> が存在し、&m<\sb<T><fg> \subseteq; \sp<g><*> \sb<S><f>> かつ &m<\sb<T><fg> \subseteq; \sb<S><f \circ; g>> であって、
+      &mb<
+        \diag|ver="vthn"|<
+          \v; \v<\sp<g><*> \sb<S><f>> \v<\sb<S><f>> \v; \br;
+          \v<\sb<T><fg>> \v; \v; \v<P> \br;
+          \v; \v; \v<\sb<S><f \circ; g>> \v;
+          \ar|s="2",e="3"|<g \circ; \text<->> \ar|s="3",e="8"|<\sb<a><f>>
+          \ar|s="5",e="2",tip="hook"|; \ar|s="5",e="11",tip="hook"|;
+          \ar|s="11",e="8",inv|<\sb<a><f \circ; g>>
+        >
+      >
+      は可換である。
+    >
+    \p<
+      さて、
+      &mb<
+        U \coloneqq; `{ f \circ; g \mid; f \in; W, g \in; \sb<S><f> `} \subseteq; \bf<y> C
+      >
+      と定めると、これは位相の推移性によって被覆篩である。
+      そこで、自然変換 &m<\bar<a>: U \to; P> を、各対象 &m<E> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<\bar<a>><E>:> \c<UE> \c<\longrarr;> \c<PE> \br;
+          \c; \c<f \circ; g> \c<\longmapsto;> \c<\sb<a><f> g \scas; (f \in; S, g \in; \sb<S><f>, \op<cod> g = E)>
+        >
+      >
+      で定める。
+    >
+    \p<
+      この &m<\sb<\bar<a>><E>> が矛盾なく定義できていることを確かめる。
+      そこで、&m<f, f' \in; W> および &m<g \in; \sb<S><f>, g' \in; \sb<S><f'>> をとり、&m<f \circ; g = f' \circ; g'> を満たすとする。
+      このとき、Yoneda 同型によって &m<\sb<a><f> g, \sb<a><f'> g'> と対応する元をそれぞれ &m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>: \bf<y> E \to; P> とし、&m<\sb<\check<a>><fg> = \sb<\check<a>><f' g'>> を示せば良い。
+      今 &m<P> は分離前層だから、包含射が誘導する写像
+      &mb<
+        &mark<♡>
+        \op<Hom> (\bf<y> E, P) \to; \op<Hom> (\sb<V><fg> \cap; \sb<V><f' g'>, P)
+      >
+      は単射なので、&m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>> をそれぞれこの写像で移した先が等しいことを示せば十分である。
+      そのために、図式
+      &mb<
+        \diag|ver="sthn"|<
+          \v; \v; \v<\sp<g><*> \sb<S><f>> \v<\sb<S><f>> \v; \br;
+          \v; \v<\sb<T><fg>> \v; \v; \v<P> \br;
+          \v; \v; \v; \v<\sb<S><f \circ; g>> \v; \br;
+          \v<\sb<T><fg> \cap; \sb<T><f' g'>> \v; \v; \v; \v; \br;
+          \v; \v; \v; \v<\sb<S><f' \circ; g'>> \v; \br;
+          \v; \v<\sb<T><f' g'>> \v; \v; \v<P> \br;
+          \v; \v; \v<\sp<g><\pr;*> \sb<S><f'>> \v<\sb<S><f'>> \v;
+          \ar|s="3",e="4"|<g \circ; \text<->> \ar|s="4",e="10"|<\sb<a><f>>
+          \ar|s="7",e="3",tip="hook"|; \ar|s="7",e="14",tip="hook"|; \ar|s="10",e="30",tip="none",line="2"|;
+          \ar|s="14",e="24",tip="none",line="2"|; \ar|s="14",e="10",inv|<\sb<a><f \circ; g>>
+          \ar|s="16",e="7",tip="hook"|; \ar|s="16",e="27",tip="hook"|;
+          \ar|s="24",e="30"|<\sb<a><f' \circ; g'>>
+          \ar|s="27",e="33",tip="hook"|; \ar|s="27",e="24",tip="hook"|;
+          \ar|s="33",e="34",inv|<g' \circ; \text<->> \ar|s="34",e="30",inv|<\sb<a><f'>>
+        >
+      >
+      を考えると、これは &m<\sb<T><fg>, \sb<T><f' g'>> の定義から可換である。
+      したがって、図式
+      &mb<
+        \diag|ver="thn,sthn,sthn,thn"|<
+          \v; \v; \v<\bf<y> E> \v; \br;
+          \v; \v<\sp<g><*> \sb<S><f>> \v<\sb<S><f>> \v; \br;
+          \v<\sb<T><fg> \cap; \sb<T><f' g'>> \v; \v; \v<P> \br;
+          \v; \v<\sp<g><\pr;*> \sb<S><f'>> \v<\sb<S><f'>> \v; \br;
+          \v; \v; \v<\bf<y> E> \v;
+          \ar|s="3",e="12",bend="20"|<\sb<\check<a>><fg>>
+          \ar|s="6",e="7"|<g \circ; \text<->> \ar|s="7",e="12"|<\sb<a><f>>
+          \ar|s="9",e="6",tip="hook"|; \ar|s="9",e="14",tip="hook"|; \ar|s="9",e="3",tip="hook",bend="20"|; \ar|s="9",e="19",tip="hook",bend="-20"|;
+          \ar|s="14",e="15",inv|<g' \circ; \text<->> \ar|s="15",e="12",inv|<\sb<a><f'>>
+          \ar|s="19",e="12",bend="-20",inv|<\sb<\check<a>><f' g'>>
+        >
+      >
+      も可換である。
+      実際、中央の六角形は上の図式の外側と同じものなので可換であり、上下にある部分は &m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>> の定義から可換である。
+      そして、この可換性は &m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>> を写像 &m<♡> で移した先が等しいということを意味しているので、示したかったことが示された。
+    >
+    \p<
+      以上によって、自然変換 &m<\bar<a>: U \to; P> が得られた。
+      すると、定義によって、任意の射 &m<f \in; W: D \to; C> に対し、2 つの自然変換
+      &mb<
+        \diag<
+          \v<\sp<f><*> U> \v<U> \v<P>
+          \ar|s="1",e="2"|<f \circ; \text<->> \ar|s="2",e="3"|<\bar<a>>
+        >
+        \qquad;
+        \diag<
+          \v<\sb<S><f>> \v<P>
+          \ar|s="1",e="2"|<\sb<a><f>>
+        >
+      >
+      は全く同じになっているので、&m<\sp<P><+> D> の元としても等しい。
+      &m<\bar<a>> によって代表される元を &m<\hat<\bar<`a>> \in; \sp<P><+> C> とおき、さらに Yoneda 同型で対応する自然変換を &m<\bar<`a>: \bf<y> C \to; \sp<P><+>> とおけば、このことは &m<\sb<\bar<`a>><D> f = \sb<`a><D> f> が成り立つことを意味している。
+      すなわち、&m<\bar<`a> \circ; S = \bar<`a>> であるから、写像 &m<♤> は全射である。
+    >
+  >
+  \p<
+    この 2 つの命題によって、層化関手を定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      景 &m<(\scr<C>, J)> をとる。
+      関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\bf<a>:> \c<\bfrm<PSh> (\scr<C>)> \c<\longrarr;> \c<\sb<\bfrm<Sh>><J> (\scr<C>)> \br;
+          \c; \c<P> \c<\longmapsto;> \c<\sp<P><++>>
+        >
+      >
+      を\em<層化関手\fl<sheafification functor>> という。
+    >
+  >
+  \p<
+    次回は、この層化関手が包含関手 &m<\bf<i>: \sb<\bfrm<Sh>><J> (\scr<C>) \hookrarr; \bfrm<PSh> (\scr<C>)> の左随伴になっていることを証明する。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="clt"|<S. MacLane, I. Moerdijk (1992)『Sheaves in Geometry and Logic』Springer>
+  >
+
+>

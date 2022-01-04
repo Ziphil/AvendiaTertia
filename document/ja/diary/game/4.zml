@@ -1,0 +1,45 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<煩雑なコード>
+
+  \h1<日記 (2014 年 7 月 21 日)>
+  \p<
+    座標の問題は解決しました。
+    といっても、適当にやってたらなぜか直ったというダメなパターンなので、後でちゃんと何が起こっているか理解しておきます。
+  >
+  \p<
+    それでですね、エンティティーの判定処理が完成したので、そろそろ敵キャラを追加する時期かなーと思っているんですが、どうもこの判定処理がごちゃごちゃしてまして･･･。
+    見れば分かります。
+  >
+  \pre~*<
+    front_tiles = (@by..@fby).select{|s| tilemap.wall?(@rbx + 1, s)}
+    front_entities = entities.select{|s| @rx `<= s.x `&`& @y `<= s.fy `&`& @fy `>= s.y}
+    tile_distance = (@rbx + 1) * TILE_WIDTH - @rx
+    entity_distance = front_entities.map{|s| s.x - @rx}.min
+    distances = []
+    distances `<`< tile_distance unless front_tiles.empty?
+    distances `<`< entity_distance unless front_entities.empty?
+    distance = distances.min
+    if distance
+      @x += [@vx, distance].min
+    else
+      @x += @vx
+    end
+    if distance `&`& distance == 0
+      @vx = 0
+    end
+  >
+  \p<
+  何というか、後で機能追加したいときに修正しようとして、意味不明なことになりそうなコードなんですよね。
+  コードがそんなにきれいじゃないんです。
+  むしろ汚い。
+  >
+  \p<
+  正常に動いてますし、何が起こっているか私も把握してますから問題はないんですけど、もうちょっと簡潔にならないものですかねぇ･･･。
+  そんなわけで、今日はこの部分をあれこれと弄っていたら、寝る時間になりました。
+  >
+
+>

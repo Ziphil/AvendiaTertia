@@ -1,0 +1,115 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<TableView に任意のペインを表示>
+
+  \h1<日記 (2016 年 6 月 3 日)>
+  \p<
+    始めに言っておくと、使っている言語は Groovy です。
+    メソッドが追加されていたりセミコロンがいらなかったり、Java とは微妙に違いますが、ほぼ Java のコードとして読めると思います。
+  >
+  \p<
+    人工言語用の辞書アプリを JavaFX で作っているんですが、検索結果を表にして表示したかったので TableView を用いています。
+    表示する単語データはただのテキストでも良いんですが、やっぱりいろいろとカスタマイズしたいので、適当なペイン (\m<VBox> など) 上にデータをレイアウトして、それを表示したくなりました。
+    しかし、少なくとも自分の環境では問題が起こりました。
+  >
+  \p<
+    しかし、なぜかおかしなことになります。
+    \m<TableView> のセルに \m<VBox> などのペインを表示するということ自体は簡単です。
+    \m<TableView> のデフォルトのセルファクトリは、表示するデータが \m<Pane> クラスのオブジェクトならそれをグラフィックとして表示し、それ以外なら \m<toString> メソッドを呼び出してそれをテキストとして表示するようになっているためです。
+    したがって、単にセルに使うデータとして \m<Pane> オブジェクトを指定すれば良いだけです。
+  >
+  \img|src="../../file/application/1.png"|;
+  \p<
+    なぜかセルの高さが無駄に大きくなってしまいます。
+    状況をいろいろ調べてみると、どうやらセルに表示している一番外側のペインの高さがおかしくなっているようです。
+    それなら、一番外側のペインの高さを内側の要素の高さに設定してやれば良いじゃんないかと思い、\m<TableCell> を自作しました。
+  >
+  \pre~*<
+    public class ContentCell extends TableCell`<WordModel, Region`> {
+      private VBox container = new VBox()
+      protected void updateItem(Region region, boolean isEmpty) {
+        super.updateItem(region, isEmpty)
+        if (isEmpty || region == null) {
+          setText(null)
+          setGraphic(null)
+        } else {
+          container.getChildren().clear()
+          container.getChildren().add(region)
+          container.prefHeightProperty().bind(region.heightProperty())
+          setGraphic(container)
+        }
+      }
+    }
+  >
+  \p<
+    データのアップデートが必要になったら、\m<ContentCell> が保持している \m<container> に子要素としてペインを追加し、追加したペインの高さと \m<container> の高さをバインドすることで、何とかしようとしています。
+  >
+  \pre~*<
+    contentRegionColumn.setCellFactory() { TableColumn`<WordModel, Region`> column -`>
+      return new ContentCell()
+    }
+  >
+  \p<
+    そして、作った \m<ContentCell> クラスを使用するように、セルファクトリを設定します。
+    このコードはコントローラの \m<initialize> メソッドの中にでも追加しておきます。
+  >
+  \p<
+    さて、これを実行してみると、一見うまくいったように見えますが、ちょっとテーブルを動かしてみると微妙にうまくいっていないことに気がつきます。
+  >
+  \img|src="../../file/application/2.png"|;
+  \p<
+    こんな感じで、テーブルの要素をフィルタリングしたりしてこれまで表示されていなかったセルが表示されるようになると、高さがうまく変更されません。
+  >
+  \p<
+    こんな感じで迷宮入りして 3 日くらい試行錯誤したんですが、ようやく高さを良い感じに設定することができました。
+    まず、\m<ContentCell> クラスの \m<updateItem> が呼ばれたら、即座に表示するペインの高さを変更してやれば良いわけです。
+    子ノードから適切な高さを計算する \m<Parent`#computePrefHeight> というメソッドがあるので、それを使いたいわけですが、これは残念ながら protected なので、新たにクラスを作成してその中で呼び出ます。
+    さらに、セルの幅が変わるとそれに応じてペインの高さも変える必要があるので、\m<prefWidthProperty> が変更されたときにも高さを再計算するようにしておきます。
+  >
+  \pre~*<
+    public class UtilityBox extends VBox {
+      public UtilityBox() {
+        super()
+        prefWidthProperty().addListener() { ObservableValue observable, Double oldValue, Double newValue -`>
+          setPrefHeight(computePrefHeight(newValue))
+        }
+      }
+      public void updatePrefWidth(Double width) {
+        setPrefHeight(computePrefHeight(width))
+      }
+    }
+  >
+  \p<
+    上の \m<updatePrefWidth> というのが高さを計算するメソッドです。
+    これを使うように、\m<ContentCell`#updateItem> を書き換えます。
+  >
+  \pre~*<
+    protected void updateItem(Region region, boolean isEmpty) {
+      super.updateItem(region, isEmpty)
+      if (isEmpty || region == null) {
+        setText(null)
+        setGraphic(null)
+      } else {
+        UtilityBox box = (UtilityBox)region
+        box.prefWidthProperty().bind(getTableColumn().widthProperty())
+        box.updatePrefWidth(getTableColumn().getWidth())
+        setGraphic(region)
+      }
+    }
+  >
+  \p<
+    ペインの幅はテーブルの列の幅と同じになってほしいので、テーブルの列を取得してバインドしておきます。
+  >
+  \p<
+    これで目的は達成されたわけですが、どうも回りくどいことをしてる気がするんですよね。
+  >
+  \h1<日記 (2016 年 6 月 5 日)>
+  \p<
+    これでもスクロールするときにうまく表示されていないことに気づいてしまいました。
+    単語データの表示には \m<TableView> ではなく \m<ListView> を使うようにしたので、とりあえずこの問題は保留にしておきます。
+  >
+
+>

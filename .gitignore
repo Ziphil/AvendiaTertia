@@ -1,7 +1,6 @@
 node_modules
 dist
 coverage
-document
 log
 config/config.json
 *.code-workspace

@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.math-container {
+  margin: ($block-vertical-margin + $additional-block-vertical-margin - 2rpx) 0rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.math-inner-container {
+  @include scrollbar(0rpx, 0rpx, transparent, transparent);
+  margin: 0rpx auto;
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.math {
+  margin: 0rpx auto;
+  padding: 2rpx 2rpx;
+  display: block;
+}
+
+.math-mark {
+  @include box($blue-color, true);
+  left: 0rpx;
+  position: absolute;
+}
+
+math-i:not(.fun):not(.rm)[data-cont="f"] {
+  padding-left: 0.15em;
+  padding-right: 0.1em;
+}
+
+math-i.tt {
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
+  font-weight: $monospace-font-weight;
+  letter-spacing: $monospace-letter-spacing;
+}
+
+math-o[data-cont=":"] {
+  font-family: "Zotica Math Web" !important;
+}
+
+.reference[data-type="bibliography"] {
+  font-size: 80%;
+  color: $blue-color;
+  vertical-align: 0.3906em;
+  &::before {
+    content: "†";
+  }
+}

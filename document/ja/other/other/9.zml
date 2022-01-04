@@ -1,0 +1,494 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<デザインチェック>
+  \use-math|prefix="8"|;
+
+  \h1<目次>
+  \section-table;
+  \h1|id="first"|<第 1 見出し>
+  \p<
+    第 1 見出しの直後に段落があるパターンです。
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  >
+  \h1<{qilxaléh} を含む見出し>
+  \p<
+    この下に段落が連続します。
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  >
+  \p<
+    段落の連続です。
+    ついでにインライン要素のテストもします。
+    シャレイア語として {valek iqi /S/ o /Z/} や [sal/os/] などが書けます。 
+    ハイリア数は \h<3617> のように H が上付きになります。
+  >
+  \p<
+    これは\a|href="/"|<リンク ygp リンク>や \a|href="/"|<\h<2859>> です。
+    \ae|href="https://google.com"|<外部リンク>もあります。
+    このように\an|href="/"|<隠されたリンク>も書けます。
+    リンクテキストの途中で\a|href="/"|<改行が入った場合に意図通りに表示されるかをテストします>。
+  >
+  \p<
+    テキストの強調や外国語表記のテストです。
+    \em<モノイダル整合構造\fl<monoidal coherent structure>> とは、次のような 3 つの自然変換の組である。
+  >
+  \p<
+    シャレイア語の資料にはときどき個人名が含まれているので、\red|len="180"|;のように削除してください。
+    かえって怪しさが増してる感じがしますが気にしてはいけません。
+  >
+  \p<
+    マクロを使って \ch|c="1A2"|; などの特殊文字が入力できます。
+  >
+  \h1|id="sec"|<見出し>
+  \h2|id="subsec"|<直後に subsection>
+  \p<
+    subsection 語の段落です。
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \h2<2 つ目の subsection>
+  \p<
+    subsection 語の段落です。
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \h1<番号付きサブセクション>
+  \h2|num="1"|<番号付き>
+  \p|num="1"|<
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+  >
+  \p|num="2"|<
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \p|num="43"|<
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \h2|num="24"|<番号付き>
+  \p<
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \h1<リスト>
+  \h2|id="ul"|<番号なし>
+  \p<
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+  >
+  \ul<
+    \li<番号なしリスト 1>
+    \li<番号なしリスト 2>
+    \li<sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo>
+  >
+  \p<
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+  >
+  \ul|col="3"|<
+    \li<番号なしリスト 1>
+    \li<番号なしリスト 2>
+    \li<番号なしリスト 3>
+    \li<番号なしリスト 4>
+    \li<番号なしリスト 5>
+    \li<番号なしリスト 6>
+    \li<番号なしリスト 7>
+    \li<番号なしリスト 8>
+    \li<番号なしリスト 9>
+    \li<番号なしリスト 10>
+  >
+  \h2|id="ol"|<番号あり>
+  \ol<
+    \li<番号なしリスト 1>
+    \li<番号なしリスト 2>
+    \li<sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo>
+  >
+  \p<
+    This is an awesome paragraph.
+  >
+  \ol|col="3"|<
+    \li<番号なしリスト 1>
+    \li<番号なしリスト 2>
+    \li<番号なしリスト 3 はときどきある非常に長い箇条書きの項目ですが良い感じに表示されると嬉しいです>
+    \li<番号なしリスト 4>
+    \li<番号なしリスト 5>
+    \li<番号なしリスト 6>
+    \li<番号なしリスト 7>
+    \li<番号なしリスト 8>
+    \li<番号なしリスト 9>
+    \li<番号なしリスト 10>
+  >
+  \h1|id="el"|<定義リスト>
+  \p<
+    項目名とその説明のリストです。
+  >
+  \el<
+    \li<\et<タイトル>\ed<『ONLY MY NOTE』>>
+    \li<\et<収録メディア>\ed<ゲーム『アイドルマスター ワンフォーオール』>>
+    \li<\et<抜粋箇所>\ed<ショートバージョン部分>>
+    \li<\et<作詞者>\ed<marhy>>
+    \li<\et<作曲者>\ed<内田哲也>>
+    \li<\et<翻訳日>\ed<\h<1216>>>
+  >
+  \h1|id="trans"|<対訳>
+  \p<
+    歌詞の翻訳などでは、原文と訳文を並べて表示したくなります。
+  >
+  \trans<
+    \li<\ja<歌詞 1>\sh<{salat a fit e lêdik il'atis,}>>
+    \li<\ja<歌詞 2>\sh<{lo salat a fit e lêdik il'aqec.}>>
+    \li<\ja<歌詞 3>\sh<{lo salat a fit e lêdik il'ayos.}>>
+    \li<
+      \ja<これは信じられないほどとてつもなく長い歌詞です\lys;これは信じられないほどとてつもなく長い歌詞です>
+      \sh<{salot a fit e zat salot a e zat salot a e zat salot a e fit, lo salot a fit e zat salot a e zat salot a e zat salot a e fit}>
+    >
+  >
+  \h1|id="xl"|<例文の箇条書き>
+  \h2<リスト>
+  \p<
+    言語サイトなので、文章の途中に例文が挟まるときがあります。
+    グロスも書けます。
+  >
+  \xl<
+    \li<\sh<{kiles a tel te tazît e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
+    \li<\sh|mark="u"|<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>\ja<この絵画はとても重要で高価なものなので、大切に扱いなさい。>>
+    \li<\sh<{kiles a tel te tazît e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
+    \li<\sh|mark="q"|<{kiles a tel te tazît e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
+    \li<
+      \sh<{kiles a tel te tazît e kin duricamos a tel.}>
+      \ja<私は昨日泳ぐことができるようになった。>
+      \gloss<
+        &lig|conj="-es"|<\sh<{kil}>\ex<可能になる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{tazît}>\ex<昨日>>
+        &lig|auto="e"|;
+        &lig|auto="kin"|;
+        &lig|conj="du-os"|<\sh<{ricam}>\ex<泳ぐ>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|punc="."|;
+      >
+    >
+    \li<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>>
+  >
+  \h2<単独グロス>
+  \p<
+    グロスは単独で置くこともできます。
+    たぶんやらないけど。
+  >
+  \gloss<
+    \li<\sh<{καὶ}>\bs<{καί}>\ex<そして>>
+    \li<\sh<{ἐκάλεσεν}>\bs<{καλέω}>\ex<呼ぶ\mph<|直.能.ア1.三単>>>
+    \li<\sh<{ὁ}>\bs<{ὁ}>\ex<\mph<冠|男.単.主>>>
+    \li<\sh<{Θεὸς}>\bs<{Θεός}>\ex<神\mph<|単.主>>>
+    \li<\sh<{τὸ}>\bs<{ὁ}>\ex<\mph<冠|中.単.対>>>
+    \li<\sh<{στερέωμα}>\bs<{στερέωμα}>\ex<大空\mph<|単.対>>>
+    \li<\sh<{οὐρανόν}>\bs<{οὐρανός}>\ex<天\mph<|単.対>>>
+    \li|punc="."|<\sh<[.]>>
+    \li<\sh<{καὶ}>\bs<{καί}>\ex<そして>>
+    \li<\sh<{εἶδεν}>\bs<{ὁράω}>\ex<見る\mph<|直.能.ア2.三単>>>
+    \li<\sh<{ὁ}>\bs<{ὁ}>\ex<\mph<冠|男.単.主>>>
+    \li<\sh<{Θεός}>\bs<{Θεός}>\ex<神\mph<|単.主>>>
+    \li|punc=","|<\sh<[,]>>
+    \li<\sh<{ὅτι}>\bs<{ὅτι}>\ex<～ということを>>
+    \li<\sh<{καλόν}>\bs<{καλός}>\ex<良い\mph<|中.単.主>>>
+    \li|punc=","|<\sh<[,]>>
+    \li<\sh<{καὶ}>\bs<{καί}>\ex<そして>>
+    \li<\sh<{ἐγένετο}>\bs<{γίγνομαι}>\ex<なる\mph<|直.中.ア.三単>>>
+    \li<\sh<{ἑσπέρᾱ}>\bs<{ἑσπέρᾱ}>\ex<晩\mph<|単.主>>>
+    \li<\sh<{καὶ}>\bs<{καί}>\ex<そして>>
+    \li<\sh<{ἐγένετο}>\bs<{γίγνομαι}>\ex<なる\mph<|直.中.ア.三単>>>
+    \li<\sh<{πρωΐ}>\bs<{πρωΐ}>\ex<朝>>
+    \li|punc=","|<\sh<[,]>>
+    \li<\sh<{ἡμέρᾱ}>\bs<{ἡμέρᾱ}>\ex<日\mph<|単.主>>>
+    \li<\sh<{δευτέρᾱ}>\bs<{δεύτερος}>\ex<2 番目の\mph<|女.単.主>>>
+    \li|punc="."|<\sh<[.]>>
+  >
+  \h1|id="quiz"|<クイズ>
+  \p<
+    Discord で出題しているシャレイア語のクイズをここでも表示したいですよね。
+  >
+  \ql<
+    \li<
+      \sh<{vilises a tel vo naflat \blank;.}>
+      \ja<私は公園で昨日走った。>
+      \choice<\li<{tazît}>\li<{ca tazît}>\li<{te tazît}>\li<{e tazît}>>
+    >
+  >
+  \h1|id="img"|<画像>
+  \p<
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+  >
+  \img|src="../../file/other/29.png"|;
+  \p<
+    画像は横に並べることができます。
+    メインエリアからはみ出す場合は、スクロールができるようになります。
+  >
+  \side<
+    \img|src="../../file/other/29.png"|;
+    \img|src="../../file/other/41.png"|;
+    \img|src="../../file/other/60.png"|;
+  >
+  \h1|id="table"|<表>
+  \p<
+    表が書けます。
+  >
+  \table<
+    \tr<\th;\th<列 1>\th<列 2>>
+    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
+    \tr<\th<見出しセル>\td<普通のセルのものすごく長めの列>\td<普通のセル>>
+    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセルのものすごく長めの列>>
+  >
+  \p<
+    ZenML の \m<k> 要素を使うと行間が広くなるらしいので、検証してください。
+    現在は、\m<k> 要素の変換先に該当する \m<.japanese> セレクタに行間設定をすることで修正してあります。
+  >
+  \table<
+    \tr<\th<列 1>\th<列 2>\th<列 3>>
+    \tr<\td<\k<△>おかしい>\td<普通のセル>\td<普通のセル>>
+    \tr<\td<\k<△>おかしい>\td<普通のセルの長めの列>\td<普通のセル>>
+    \tr<\td<\k<△>おかしい>\td<普通のセル>\td<普通のセルの長めの列>>
+  >
+  \p<
+    セルの結合をしても正しく表示されるか確認してください。
+    また、キャプションが付いた場合の余白の大きさも適切か確認してください。
+  >
+  \table<
+    \caption<キャプション>
+    \tr<\th;\th<見出し列 1>\th<見出し列 2>\th<見出し列 3>\th<見出し列 4>>
+    \tr<\th;\th|col="2"|<結合セル>\th<見出し列 3>\th<見出し列 4>>
+    \tr<\th|row="2"|<見出し行 1>\td<セル>\td|col="2",row="2"|<セル>\td<セル>>
+    \tr<\td<セル>\td<セル>>
+    \tr<\th<見出し行 3>\td<セル>\td<セル>\td<セル>\td<セル>>
+  >
+  \p<
+    表を横に並べることもできます。
+  >
+  \side<
+    \table<
+      \tr<\th<見出し>\th<見出し>\th<見出し>>
+      \tr<\td<中身>\td<結構長めの中身>\td<中身>>
+      \tr<\td<結構長めのさらに長いとても長い中身>\td<中身>\td<結構長めの中身>>
+    >
+    \table<
+      \tr<\th<見出し>\th<見出し>\th<見出し>>
+      \tr<\td<中身>\td<結構長めのさらに長いとても長い中身>\td<中身>>
+      \tr<\td<結構長めの中身>\td<中身>\td<結構長めの中身>>
+    >
+  >
+  \h1|id="pre"|<ソースコード>
+  \p<
+    等幅フォントで表示させます。
+    コード中の変数は \m<variable> のように書き、実際のコードをそのまま引用する際は \c<1 + "sas"> のようにします。
+  >
+  \pre~*<
+    variable = 1 + "sas"
+    puts(variable)
+    def indent
+      indented_block.each do |i|
+        i += 1
+        this_is_a_very_long_line(this_is_a_very_long_identifier_in_a_very_long_line) + this_is_a_very_long_line
+      end
+    end
+
+    this_is_a_very_long_line(this_is_a_very_long_identifier_in_a_very_long_line.this_is_a_very_long_identifier_in_a_very_long_line) + this_is_a_very_long_line
+  >
+  \samp~*<
+    ****.rb:11:in ``+': String can't be coerced into Integer (TypeError)
+      from ****:11:in ``<main`>'
+  >
+  \h1<メディア>
+  \h2|id="pdf"|<PDF>
+  \pdf|src="../../file/course/4.pdf"|;
+  \h2|id="slide"|<Speaker Deck スライド>
+  \slide|code="4eee7c7033b24cb0ab6ca7d35a1ca0a8"|;
+  \h2|id="youtube"|<YouTube 動画>
+  \youtube|code="gHh-x4N8Y-8"|;
+  \h1|id="form"|<フォーム>
+  \p<
+    フォームでありがちなボタンを表示できます。
+    \m<a> 要素を使うものと \m<button> 要素を使うもので 2 種類ありますが、見た目が同じになっているか確認してください。
+  >
+  \form<
+    \ae|href="http://google.com"|<ボタン>　\button<ボタン>　(ver 2.0.0)
+  >
+  \p<
+    テキストフィールドも表示できます。
+  >
+  \form<
+    \input|size="20"|;
+  >
+  \h1|id="thm"|<定理環境>
+  \thm|type="def",id="def"|<
+    \p<
+      整合空間 &m<A, B> の間の写像 &m<f: A \to; B> をとる。
+      各 &m<a \in; A> および &m<y \in; \lvert; B \rvert;> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<fin> (a)> \c<\coloneqq;> \c<`{\ring<a> \mid; &raw<&m<\ring<a> \subseteq; a> は有限集合>`}> \br;
+          \c<\op<elfin> (a, y)> \c<\coloneqq;> \c<`{\ring<a> \mid; \ring<a> \in; \op<fin> (a), y \in; f (\ring<a>)`}>
+        >
+      >
+      と定める。
+      なお、&m<\op<fin> (a)> の元は &m<a> の\em<有限近似\fl<finite approximant>> と呼ばれる。
+    >
+  >
+  \p<
+    整合空間 &m<A> とその元 &m<a \in; A> に対し、明らかに &m<\op<fin> (a) \subseteq; A> は有向であり、&m<a = \bigcup|in|<\ring<a> \in; \op<fin> (a)> \ring<a>> である。
+    したがって、別の整合空間 &m<B> への安定写像 &m<f: A \to; B> に対し、&m<f> の連続性によって、&m<f (a) = \bigcup|in|<\ring<a> \in; \op<fin> (a)> f (\ring<a>)> が成り立つ。
+    すなわち、安定写像 &m<f> による &m<a> の像は &m<\op<fin> (a)> の元の像から一意に定まる。
+    この意味で &m<\op<fin> (a)> の元は &m<a> の近似なのである。
+  >
+  \thm|type="lem",id="minmin"|<
+    \p<
+      整合空間 &m<A, B> の間の写像 &m<f: A \to; B> をとり、さらに &m<a \in; A> および &m<y \in; \lvert; B \rvert;> をとる。
+      このとき、&m<\op<elfin> (a, y)> に極小元が存在するならば、それは最小元である。
+    >
+  >
+  \prf<
+    \p<
+      極小元 &m<\ring<a> \in; \op<elfin> (a, y)> をとる。
+      任意の &m<a' \in; \op<elfin> (a, y)> に対し、&m<\ring<a> \cup; a' \subseteq; a> かつ &m<a \in; A> だから、&m<\ring<a> \cup; a' \in; A> である。
+      したがって、&m<f> の安定性により、&m<f (\ring<a> \cap; a') = f (\ring<a>) \cap; f (a')> が成り立つ。
+      &m<\ring<a>> と &m<a'> のとり方から &m<y \in; f (\ring<a>)> と &m<y \in; f (a')> であるから、今得られた等式によって、&m<y \in; f (\ring<a> \cap; a')> を得る。
+      これより、&m<\ring<a> \cap; a' \in; \op<elfin> (a, y)> が成り立つ。
+      ここで、&m<\ring<a> \cap; a' \subseteq; \ring<a>> であって &m<\ring<a>> は極小だから、&m<\ring<a> \cap; a' = \ring<a>> でなければならない。
+      すなわち、&m<\ring<a> \subseteq; a'> である。
+      以上により、&m<\ring<a>> は最小である。
+    >
+  >
+  \p<
+    \ref|type="thm",ref="def"|; と\ref|type="thm",ref="minmin"|; を用いると、以下のような安定写像の特徴付けが得られる。
+    また、\ref|type="thm",ref="test"|; のように後から出てくる定理も参照できるか調べる。
+  >
+  \thm|type="prp",id="stbapp"|<
+    \name<すごい定理\fl<awesome theorem>>
+    \p<
+      整合空間 &m<A, B> の間の写像 &m<f: A \to; B> をとる。
+      このとき、2 条件
+    >
+    \ol<
+      \li<
+        あいうえお。
+        &m<f> は安定である。
+      >
+      \li<
+        &m<f> は単調である。
+        さらに、任意の &m<a \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<y \in; f (a)> であれば、&m<\op<elfin> (a, y)> に包含関係に関する最小元が存在する。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      まず、定義から &m<f> は単調である。
+      そこで次に、任意に &m<a \in; A> および &m<y \in; \lvert; B \rvert;> をとり、&m<y \in; f (a)> が成り立っているとする。
+      すでに述べたように、&m<f> の連続性によって、&m<f (a) = \bigcup|in|<\ring<a> \in; \op<fin> (a)> f (\ring<a>)> が成り立つ。
+      したがって、ある &m<\ring<a> \in; \op<fin> (a)> が存在して &m<y \in; f (\ring<a>)> である。
+      すなわち、&m<\ring<a> \in; \op<elfin> (a, y)> が成り立つ。
+    >
+    \p<
+      ここで &m<\op<elfin> (\ring<a>, y)> を考えると、&m<\ring<a>> が有限集合であることから &m<\op<elfin> (\ring<a>, y)> も有限集合である。
+      したがって、&m<\op<elfin> (\ring<a>, y)> には必ず極小元が存在するが、\ref|type="thm",ref="minmin"|; によってそれは最小元である。
+      &m<\ring<a> \subseteq; a> より &m<\op<elfin> (\ring<a>, y)> の最小元は &m<\op<elfin> (a, y)> の最小元でもあるから、これで示された。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      仮定からすでに &m<f> は単調だから、あとは &m<f> の連続性と安定性を示せば良い。
+    >
+    \p<
+      まず、&m<f> の連続性を示す。
+      任意に有向部分集合 &m<S \subseteq; A> をとると、&m<f> の単調性によって &m<\bigcup|in|<a \in; S> f (a) \subseteq; f (\bigcup|in|<a \in; S> a)> は成り立つから、この逆の包含関係を示せば良い。
+      そこで、&m<\bar<a> \coloneqq; \bigcup|in|<a \in; S> a> とおき、&m<y \in; f (\bar<a>)> をとる。
+      仮定から最小元 &m<\ring<a> \in; \op<elfin> (\bar<a>, y)> がとれるが、&m<\ring<a>> は有限集合で &m<\ring<a> \subseteq; \bigcup|in|<a \in; S> a> であるから、\ref|type="thm",ref="finex"|; によって、ある &m<a \in; S> が存在して &m<\ring<a> \subseteq; a> が成り立つ。
+      &m<f> の単調性から &m<f (\ring<a>) \subseteq; f (a)> なので &m<y \in; f (a)> が得られ、これより &m<y \in; \bigcup|in|<a \in; S> f (a)> が分かる。
+      以上により、&m<f (\bigcup|in|<a \in; S> a) \subseteq; \bigcup|in|<a \in; S> f (a)> である。
+    >
+    \p<
+      次に、&m<f> の安定性を示す。
+      任意に元 &m<a, a' \in; A> をとり、&m<a \cup; a' \in; A> であるとする。
+      &m<f> の単調性によって &m<f (a \cap; a') \subseteq; f (a) \cap; f (a')> は成り立つから、この逆の包含関係を示せば良い。
+      そこで、&m<y \in; f (a) \cap; f (a')> をとる。
+      仮定から、最小元 &m<\ring<a> \in; \op<elfin> (a, y)> と &m<\ring<a>' \in; \op<elfin> (a, y)> がとれるが、&m<a \subseteq; a \cup; a'> かつ &m<a' \subseteq; a \cup; a'> より、この 2 元は &m<\op<elfin> (a \cup; a', y)> の最小元でもある。
+      最小元は一意であるから &m<\ring<a> = \ring<a>'> が成り立つ。
+      したがって、&m<\ring<a> \subseteq; a \cap; a'> が得られ、&m<f> の単調性から &m<f (\ring<a>) \subseteq; f (a \cap; a')> であるから、&m<y \in; f (a \cap; a')> が分かる。
+      以上により、&m<f (a) \cap; f (a') \subseteq; f (a \cap; a')> である。
+    >
+  >
+  \thm|type="axm"|<
+    \p<
+      この公理には ID 指定がありません。
+    >
+  >
+  \thm|type="thm",id="test"|<
+    \p<
+      あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+      あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    >
+  >
+  \p<
+    いきなり多変数関数を扱うのは難しいので、まずは 2 変数関数を考えることにする。
+    &m<\sp<C><2>> 級、すなわち 2 階連続的微分可能である 2 変数関数 &m<f (x, y)> について考える。
+    この最大点および最小点を求めるには、まずその候補となる極大点と極小点を求める必要がある。
+    そして、点 &m<(\sb<x><0>, \sb<y><0>)> が極大点もしくは極小点であるための必要条件は、
+    &mb|id="stat"|<
+      \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) = \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>) = 0
+    >
+    で与えられる。
+    この\ref|type="eq",ref="stat"|; を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の停留点である。
+  >
+  \p<
+    以下の\ref|type="eq",ref="taylor"|; を見よ。
+  >
+  \p<
+    関数の近似的な振る舞いを調べるのには、Taylor 展開が有効である。
+    そこで、関数 &m<f (x, y)> を点 &m<(\sb<x><0>, \sb<y><0>)> のまわりで Taylor 展開してみると、
+    &mb|id="taylor"|<
+      f (\sb<x><0> + h, \sb<y><0> + k) = f (\sb<x><0>, \sb<y><0>)
+      + h \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) + k \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>)
+      + \frac<1><2> \paren<\sp<h><2> \frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)>
+      + \frac<1><6> \paren<\sp<h><3> \frac<\sp<\partial;><3> f><\partial; \sp<x><3>> (\sb<x><0>, \sb<y><0>) + 3 \sp<h><2> k \frac<\sp<\partial;><3> f><\partial; \sp<x><2> \partial; y> (\sb<x><0>, \sb<y><0>) + 3 h \sp<k><2> \frac<\sp<\partial;><3> f><\partial; x \partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>) + \sp<k><3> \frac<\sp<\partial;><3> f><\partial; \sp<y><3>> (\sb<x><0>, \sb<y><0>)>
+      + o (\sp<`r><3>)
+    >
+    となる。
+    ここで &m<`r \coloneqq; \sqrt<\sp<h><2> + \sp<k><2>>> とした。
+  >
+  \p<
+    さて、この Jacobi 行列を用いることで、多変数から多変数への写像に関しても微分可能性を綺麗に定義できるわけである。
+    すなわち、写像 &m<\bf<f> (\bf<x>)> を考えるとき、微小量 &m<\bf<h>> に対して &m<\sb<\bf<x>><0>> にのみ関係する行列 &m<\scr<J> \bf<f> (\sb<\bf<x>><0>)> が存在し、
+    &mb<
+      &mark<\wheart;>
+      \bf<f> (\sb<\bf<x>><0> + \bf<h>) = \scr<J> \bf<f> (\sb<\bf<x>><0>) \bf<h> + o \lvert; \bf<h> \rvert;
+    >
+    が成り立つとき、写像 &m<\bf<f> (\bf<x>)> は点 &m<\sb<\bf<x>><0>> で微分可能というのである。
+  >
+  \p<
+    スター自律圏を構成する一般的な方法はいくつか知られており、その中で代表的なものとして、Chu\ref|type="bib",ref="csac"|; による Chu 構成と de Paiva\ref|type="bib",ref="pdcx"|; によるダイアレクティカ圏がある。
+    Chu 構成は、名前の通り Chu\ref|type="bib",ref="csac"|; によって導入された構成方法で、まさにスター自律圏を構成する方法として考えられた。
+    ダイアレクティカ圏は、de Paiva\ref|type="bib",ref="pdcx"|; によって導入された構成方法で、Gödel\ref|type="bib",ref="gueb"|; が考案したダイアレクティカ解釈を圏論的に再構築することで得られたものである。
+    この 2 つの構成方法は様々な点で似通ってはいるものの、モノダイル構造の定義が両者で少し異なっており、両者を統一して扱うことはそれほど単純ではなかった。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="csac"|<P.-H. Chu (1978)「Constructing &m<*>-autonomous categories」Ph. D. thesis, McGill University>
+    \li|id="pdcx"|<P. C. V. de Paiva (1991)「The dialectica categories」Ph. D. thesis, The University of Cambridge>
+    \li|id="spxx"|<M. E. Szabo (1975)「Polycategories」『Communications in Algebra』3(8):663–689>
+    \li|id="gueb"|<K. Gödel (1958)「Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes」『Dialectica』280–287>
+  >
+
+>

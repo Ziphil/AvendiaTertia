@@ -1,0 +1,122 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Haskell との出会いとか \m<guard> とか>
+
+  \h1<日記 (2019 年 3 月 7 日)>
+  \p<
+    昨日から、かねてからやりたいと言っておいて手を付けてなかった Haskell の勉強を始めました。
+    ただ目的がないと飽きるので、手始めに Tsuro の実装をすることにしました。
+    書いたコードは \ae|href="https://gist.github.com/Ziphil/cd367da4dcae3310a111483e2d597536"|<Gist> に置いてあります。
+  >
+  \p<
+    さて、特定の条件を満たしていたら何らかの値を返し、満たしていなかったら \m<Nothing> を返すような式を書きたかったので、私は愚直に以下のようにしました。
+  >
+  \pre~*<
+    if y `> 0
+      then Just (x, y - 1)
+      else Nothing
+  >
+  \p<
+    すると、\ae|href="https://twitter.com/sosoBOTpi/status/1103616878138793984"|<Twitter> で hsjoihs さんから、これは \c~<guard (y `> 0) `>`> Just (x, y - 1)> とも書けることを教えてもらいました。
+    知らない関数と知らない演算子が出てきた (というか勉強 2 日目なのでほぼ知らないんですが) ので、どんな働きをするのかを調べました。
+    とりあえず、なぜそのような定義がなされているのかなどは考えずに、この式が上の式と同じ挙動になることを理解するのを目標にします。
+  >
+  \p<
+    まず、\m<guard> 関数ですが、以下のような定義になっています。
+  >
+  \pre~*<
+    guard :: Alternative f =`> Bool -`> f ()
+    guard True = pure ()
+    guard False = empty
+  >
+  \p<
+    \m<()> はユニット型で、まあ、終対象です。
+    \m<Alternative> は \m<Applicative> を継承する型クラスです。
+    知らない型クラスが 2 つ出てきたわけですが、順に見ていくことにします。
+  >
+  \p<
+    \m<Applicative> クラスは \m<Functor> クラスを拡張したもので、以下のように定義されています。
+    他にも関数が定義されていますが、最小限実装しないといけない関数は以下で示されている 2 つです (本当はもう 1 パターンありますがここでは無視しました)。
+  >
+  \pre~*<
+    class Functor f =`> Applicative f where
+      pure :: a -`> f a
+      (`<*`>) :: f (a -`> b) -`> f a -`> f b
+      -- 他の定義
+  >
+  \p<
+    \m<Maybe> では以下のように実装されています。
+    分かりやすく型注釈を付けてあります。
+  >
+  \pre~*<
+    instance Applicative Maybe where
+      pure :: a -`> Maybe a
+      pure = Just
+      (`<*`>) :: Maybe (a -`> b) -`> Maybe a -`> Maybe b
+      Just func `<*`> val = fmap func val
+      Nothing `<*`> _ = Nothing
+  >
+  \p<
+    \m<Alternative> クラスは \m<Applicative> クラスをさらに拡張したもので、モノイド演算っぽいものが定義されています。
+    \m<empty> が単位元で、\m<(`<|`>)> が演算ですね。
+  >
+  \pre~*<
+    class Applicative f =`> Alternative f where
+      empty :: f a
+      (`<|`>) :: f a -`> f a -`> f a
+      -- 他の定義
+  >
+  \p<
+    \m<Maybe> では以下のように実装されています。
+  >
+  \pre~*<
+    instance Alternative Maybe where
+      empty :: Maybe a
+      empty = Nothing
+      (`<|`>) :: Maybe a -`> Maybe a -`> Maybe a 
+      Nothing `<|`> right = right
+      left `<|`> _ = left
+  >
+  \p<
+    ･･･ということで、実際の実装と見比べれば、\m<Maybe> 上では \m<guard> は以下のように定義されているのと同等であることが分かります。
+  >
+  \pre~*<
+    guard :: Bool -`> Maybe ()
+    guard True = Just ()
+    guard False = Nothing
+  >
+  \p<
+    次は \m<`>`>> です。
+    これは \m<Monad> クラスに定義されているもので、デフォルトでは \m<`>`>=> を用いて以下のように定義されています。
+    分かりやすいように括弧を補ったり変数名を変えたりしてます。
+  >
+  \pre~*<
+    (`>`>) :: Monad m =`> m a -`> m b -`> m b
+    left `>`> right = left `>`>= (\_ -`> right)
+  >
+  \p<
+    \c~<\_ -`> right> というのは定値のラムダ式なので、\m<Maybe> 上での \m<`>`>> は実質以下と同じです。
+  >
+  \pre~*<
+    (`>`>) :: Maybe a -`> Maybe b -`> Maybe b
+    Just left `>`> right = right
+    Nothing `>`> right = Nothing
+  >
+  \p<
+    以上で \m<Maybe> 上での \m<guard> と \m<`>`>> の挙動が分かったので、これらを合わせれば以下のように評価されることが分かります。
+  >
+  \ul<
+    \li<\c<guard True `>`> right> → \c<Just () `>`> right> → \c<right>>
+    \li<\c<guard False `>`> right> → \c<Nothing `>`> right> → \c<Nothing>>
+  >
+  \p<
+    これで晴れて、\m<guard> を用いた表現が一番最初の表現と同等であることが分かりました。
+  >
+  \p<
+    今回いろいろ調べて \m<Functor>, \m<Applicative>, \m<Monad>, \m<Alternative> などの型クラスがたくさん出てきましたが、まだ感覚が掴めてないので、これから勉強したいと思います。
+  >
+
+>

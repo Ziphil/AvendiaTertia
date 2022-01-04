@@ -1,0 +1,489 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<代数と余代数>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2019 年 11 月 8 日)>
+  \p<
+    最近、モノイダル圏上に定義される余自由余代数の具体的な構成に興味が出てきた。
+    そこで、とりあえず最も基本的な例として、線型空間の圏における余自由余代数について少し勉強したので、軽くまとめておこうと思う。
+    以降の議論は、Sweedler\ref|type="bib",ref="hax"|; によるものである。
+  >
+  \p<
+    余代数の前に、代数の定義をおさらいしておく。
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> の対象 &m<A> に対し、2 つの射 &m<`m: A \otimes; A \to; A, `h: 1 \to; A> が定まっていて、図式
+      &mb<
+        \diag<
+          \v<A \otimes; A \otimes; A> \v<A \otimes; A> \br;
+          \v<A \otimes; A> \v<A>
+          \ar|s="1",e="2"|<`m \otimes; \rm<id>> \ar|s="1",e="3",inv|<\rm<id> \otimes; `m>
+          \ar|s="2",e="4"|<`m> \ar|s="3",e="4",inv|<`m>
+        > \qquad;
+        \diag<
+          \v<1 \otimes; A> \v<A \otimes; A> \v<A \otimes; 1> \br;
+          \v; \v<A> \v;
+          \ar|s="1",e="2"|<`h \otimes; \rm<id>> \ar|s="3",e="2",inv|<\rm<id> \otimes; `h>
+          \ar|s="2",e="5"|<`m> \ar|s="1",e="5"|; \ar|s="3",e="5"|; 
+        >
+      >
+      がともに可換であるとする。
+      このとき、3 つ組 &m<(A, `m, `h)> を &m<\scr<V>> の\em<代数\fl<algebra>> もしくは\em<モノイド\fl<monoid>> という。
+    >
+  >
+  \p<
+    余代数は、単に代数の圏論的双対である。
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> の対象 &m<C> に対し、2 つの射 &m<`d: C \to; C \otimes; C, `e: C \to; 1> が定まっていて、図式
+      &mb<
+        \diag<
+          \v<C> \v<C \otimes; C> \br;
+          \v<C \otimes; C> \v<C \otimes; C \otimes; C>
+          \ar|s="1",e="2"|<`d> \ar|s="1",e="3",inv|<`d>
+          \ar|s="2",e="4"|<\rm<id> \otimes; `d> \ar|s="3",e="4",inv|<`d \otimes; \rm<id>>
+        > \qquad;
+        \diag<
+          \v; \v<C> \v; \br;
+          \v<1 \otimes; C> \v<C \otimes; C> \v<C \otimes; 1>
+          \ar|s="5",e="4"|<`e \otimes; \rm<id>> \ar|s="5",e="6",inv|<\rm<id> \otimes; `e>
+          \ar|s="2",e="5"|<`d> \ar|s="2",e="4"|; \ar|s="2",e="6"|; 
+        >
+      >
+      がともに可換であるとする。
+      このとき、3 つ組 &m<(C, `d, `e)> を &m<\scr<V>> の\em<余代数\fl<coalgebra>> もしくは\em<コモノイド\fl<comonoid>> という。
+    >
+  >
+  \p<
+    何らかの数学的概念を定義したらその間の射も定義するのが通例なので、代数の間の射と余代数の間の射を定義しておく。
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> の代数 &m<(C, `m, `h), (D, `m', `h')> に対し、ある射 &m<s: C \to; D> が、図式
+      &mb<
+        \diag<
+          \v<C \otimes; C> \v<D \otimes; D> \br;
+          \v<C> \v<D>
+          \ar|s="1",e="2"|<s \otimes; s> \ar|s="3",e="4",inv|<s>
+          \ar|s="1",e="3",inv|<`m> \ar|s="2",e="4"|<`m'>
+        > \qquad;
+        \diag|hor="thn"|<
+          \v; \v<1> \v; \br;
+          \v<C> \v; \v<D>
+          \ar|s="4",e="6",inv|<s> \ar|s="2",e="4",inv|<`h> \ar|s="2",e="6"|<`h'>
+        >
+      >
+      がともに可換であるとする。
+      このとき、&m<s> を &m<(C, `m, `h)> から &m<(D, `m', `h')> への\em<代数の射\fl<algebra morphism>> という。
+    >
+  >
+  \p<
+    余代数の射は代数の射の双対として同様に定義される。
+    ほとんど自明だと思うので、定義を書き下すことはしないことにする。
+  >
+  \p<
+    ここから先では、ある体 &m<\bb<K>> を固定し、&m<\bb<K>>-線型空間が成す圏 &m<\bfrm<Vect>> の代数や余代数を考える。
+    &m<\bfrm<Vect>> のモノイダル圏としての構造は、通常のテンソル積で定めることにする。
+    このようにすると、上の定義に従った代数は、よく知られている代数 (多元環とも呼ばれる概念) に一致する。
+  >
+  \p<
+    通常の慣習に則って、代数 &m<(A, `m, `h)> の元 &m<a, a'> に対し、
+    &mb<
+      a a' \coloneqq; `m (a \otimes; a') \qquad;
+      1 \coloneqq; `h (1)
+    >
+    と書く。
+    また、余代数 &m<(C, `d, `e) > の元 &m<c> に対しては、&m<C \otimes; C> の元 &m<`d (c)> が定まる。
+    テンソル積の定義によって、この元は &m<C> の元 2 つのテンソル積の有限和で書くことができる。
+    その表示を、 
+    &mb<
+      \sum<c> (\sb<c><(1)> \otimes; \sb<c><(2)>) \coloneqq; `d (c)
+    >
+    で表すことにする。
+  >
+  \p<
+    代数と代数の射が成す圏は &m<\bfrm<Alg>> で表し、余代数と余代数の射が成す圏は &m<\bfrm<Coalg>> で表す。
+    それぞれ、付随して定まっている射の情報を忘れることで、忘却関手 &m<U: \bfrm<Alg> \to; \bfrm<Vect>> と &m<U: \bfrm<Coalg> \to; \bfrm<Vect>> が考えられる。
+  >
+  \p<
+    まず最初に、余代数から代数を作ること、またその逆に代数から余代数を作ることを考える。
+  >
+  \p<
+    余代数から代数を構成するのは非常に簡単である。
+    まず、任意の線型空間 &m<X, Y> に対し、その双対空間をそれぞれ &m<\sp<X><*>, \sp<Y><*>> と書くことにすると、線型写像
+    &mb<
+      \array|align="rrcl"|<
+        \c<`j:> \c<\sp<X><*> \otimes; \sp<Y><*>> \c<\longto;> \c<\sp<(X \otimes; Y)><*>> \br;
+        \c; \c<f \otimes; g> \c<\longmapsto;> \c<\tort<
+          \array|align="rcl"|<
+            \c<X \otimes; Y> \c<\longto;> \c<\bb<K>> \br;
+            \c<x \otimes; y> \c<\longmapsto;> \c<f (x) g (y)>
+          >
+        >>
+      >
+    >
+    が定まる。
+    これは一般に単射で、&m<X> と &m<Y> がともに有限次元ならば全単射になる。
+    これを用いて、余代数 &m<(C, `d, `e)> に対し、
+    &mb<
+      \diag<
+        \v<\sp<C><*> \otimes; \sp<C><*>> \v<\sp<(C \otimes; C)><*>> \v<\sp<C><*>>
+        \ar|s="1",e="2"|<`j> \ar|s="2",e="3"|<\sp<`d><*>>
+      > \qquad;
+      \diag<
+        \v<\bb<K>> \v<\sp<\bb<K>><*>> \v<\sp<C><*>>
+        \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sp<`e><*>>
+      >
+    >
+    をそれぞれ &m<`m, `h> とおけば、&m<(\sp<C><*>, `m, `h)> は代数になることが容易に確かめられる。
+    これにより、反変関手
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sp<\hyphen;><*>: > \c<\sp<\bfrm<Coalg>><\circ;>> \c<\longto;> \c<\bfrm<Alg>> \br;
+        \c; \c<(C, `d, `e)> \c<\longmapsto;> \c<(\sp<C><*>, `m, `h)>
+      >
+    >
+    が定まる。
+  >
+  \p<
+    逆に代数から余代数を構成するのはこれほど簡単ではない。
+    同様の構成をしようとすると、&m<`j> が一般に全単射にならないので破綻する。
+    そこで、一工夫が必要となる。
+  >
+  \p<
+    まず、補助的な定義を 2 つ行う。
+  >
+  \thm|type="def"|<
+    \p<
+      線型空間 &m<X> の部分空間 &m<Y> をとる。
+      商空間 &m<X `/ Y> が有限次元であるとき、&m<Y> は\em<余有限\fl<cofinite>> であるという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      代数 &m<A> の線型空間としての部分空間 &m<I> をとる。
+      任意の &m<a \in; A> と &m<u \in; I> について、&m<ua \in; I> および &m<au \in; I> が成り立つとき、&m<I> を &m<A> の\em<イデアル\fl<ideal>> という。
+    >
+  >
+  \p<
+    代数から余代数を構成するにあたって、以下で定義する双対空間の部分空間が重要な役割を果たす。
+  >
+  \thm|type="def"|<
+    \p<
+      代数 &m<A> に対し、
+      &mb<
+        \sp<A><\diamond;> \coloneqq; `{ f \in; \sp<A><*> \mid; A \text< の余有限イデアル > I \text< が存在して > I \subseteq; \op<Ker> f `}
+      >
+      と定める。
+    >
+  >
+  \p<
+    &m<A> が有限次元であれば、&m<A> の任意のイデアルは余有限であり、特に &m<0> が余有限になる。
+    したがって、任意の &m<f \in; \sp<A><*>> に対して &m<\op<Ker> f> は余有限なイデアルである 0 を必ず含むので、&m<\sp<A><\diamond;> = \sp<A><*>> が成り立つ。
+    &m<A> が有限次元でない場合は、一般に &m<\sp<A><\diamond;> \subsetneq; \sp<A><*>> である。
+  >
+  \p<
+    これに余代数の構造を定めていくのだが、まずこれが線型空間になっていることを示す。
+  >
+  \thm|type="lem",id="close"|<
+    \p<
+      代数 &m<A> に対し、&m<\sp<A><\diamond;>> は通常の和とスカラー倍について線型空間である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<A><\diamond;>> がスカラー倍で閉じていることは、任意の &m<f \in; \sp<A><*>> とスカラー &m<k \in; \bb<K> \setminus; `{0`}> に対して &m<\op<Ker> f = \op<Ker> kf> であることからすぐに分かる。
+      以下、&m<\sp<A><\diamond;>> が和で閉じていることを示す。
+    >
+    \p<
+      任意に元 &m<f, g \in; \sp<A><\diamond;>> をとると、&m<A> の余有限イデアル &m<I \subseteq; \op<Ker> f> および &m<J \subseteq; \op<Ker> g> がとれる。
+      ここで、&m<p: A `/ (I \cap; J) \to; A `/ I> を自然に定まる写像とすると、これは明らかに全射であるから &m<\op<Im> p = A `/ I> が分かる。
+      また、&m<\op<Ker> p \cong; I `/ (I \cap; J) \cong; (I + J) `/ J> も成り立つ。
+      したがって、&m<I> と &m<J> は余有限であるから、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<dim> A `/ (I \cap; J)> \c<=> \c<\op<dim> \op<Ker> p + \op<dim> \op<Im> p> \br;
+          \c; \c<=> \c<\op<dim> [(I + J) `/ J] + \op<dim> A `/ I> \br;
+          \c; \c<\leq;> \c<\op<dim> A `/ J + \op<dim> A `/ I> \br;
+          \c; \c<`<> \c<\infty;>
+        >
+      >
+      が分かり、これより &m<I \cap; J> も余有限である。
+      &m<I \cap; J \subseteq; \op<Ker> (f + g)> であるから、これより &m<f + g \in; \sp<A><\diamond;>> が得られた。
+      以上で、&m<\sp<A><\diamond;>> は和に関して閉じている。
+    >
+  >
+  \p<
+    次に分かることとして、この構成はテンソル積をとる操作と可換である。
+  >
+  \thm|type="lem",id="com"|<
+    \p<
+      代数 &m<A, B> をとる。
+      &m<`j> によって &m<\sp<A><*> \otimes; \sp<B><*> \subseteq; \sp<(A \otimes; B)><*>> と見なすとき、&m<\sp<A><\diamond;> \otimes; \sp<B><\diamond;> = \sp<(A \otimes; B)><\diamond;>> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意に元 &m<h \in; \sp<(A \otimes; B)><\diamond;>> をとると、&m<A \otimes; B> の余有限イデアル &m<K \subseteq; \op<Ker> h> がとれる。
+      これに対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<I> \c<\coloneqq;> \c<`{ a \in; A \mid; a \otimes; 1 \in; K `}> \br;
+          \c<J> \c<\coloneqq;> \c<`{ b \in; B \mid; 1 \otimes; b \in; K `}>
+        >
+      >
+      とおくと、まずこれらはどちらもイデアルである。
+      ここで、
+      &mb<
+        \array|align="rrcl"|<
+          \c<s:> \c<A> \c<\longto;> \c<A \otimes; B> \br;
+          \c; \c<a> \c<\longmapsto;> \c<a \otimes; 1>
+        > \qquad;
+        \array|align="rrcl"|<
+          \c<p:> \c<A \otimes; B> \c<\longto;> \c<(A \otimes; B) `/ K>  \br;
+          \c; \c<a \otimes; b> \c<\longmapsto;> \c<`[a \otimes; b`]>
+        >
+      >
+      とおくと、&m<I = \sp<s><-1> (K) = \op<Ker> (p \circ; s)> であるから、準同型定理によって &m<A `/ I \cong; \op<Im> (p \circ; s) \subseteq; (A \otimes; B) `/ K> が成り立つ。
+      &m<K> は余有限であったので、&m<(A \otimes; B) `/ K> は有限次元であり、その部分空間となる &m<A `/ I> も有限次元であり、したがって &m<I> は余有限である。
+      同様の議論により、&m<J> も余有限であることが分かる。
+    >
+    \p<
+      さて、&m<q: A \otimes; B \headrarr; A `/ I \otimes; B `/ J> を商空間への射影のテンソル積とすると、&m<I> と &m<J> の定義によって、
+      &mb<
+        \diag|hor="thn"|<
+          \v<A \otimes; B> \v; \v<\bb<K>> \br;
+          \v; \v<A `/ I \otimes; B `/ J> \v;
+          \ar|s="1",e="3"|<h> \ar|s="1",e="5",tip="head",inv|<q> \ar|s="5",e="3",dash,inv|<h'>
+        >
+      >
+      を可換にする線型写像 &m<h'> が存在する。
+      これは元 &m<h' \in; \sp<(A `/ I \otimes; B `/ J)><*>> が定めるが、今 &m<A `/ I> と &m<B `/ J> は有限次元であることが分かっているので、&m<\sp<(A `/ I \otimes; B `/ J)><*> \cong; \sp<(A `/ I)><*> \otimes; \sp<(B `/ J)><*>> が成り立ち、&m<h' \in; \sp<(A `/ I)><*> \otimes; \sp<(B `/ J)><*>> と見なせる。
+      そこで、&m<\sbsp<f><i><\pr;> \in; \sp<(A `/ I)><*>> と &m<\sbsp<g><i><\pr;> \in; \sp<(B `/ J)><*>> たちによって、
+      &mb<
+        h' \eqqcolon; \sum<i> (\sbsp<f><i><\pr;> \otimes; \sbsp<g><i><\pr;>)
+      >
+      と表す。
+    >
+    \p<
+      &m<r: A \headrarr; A `/ I> を射影として &m<\sb<f><i> \coloneqq; \sbsp<f><i><\pr;> \circ; r> とおくと、&m<\sb<f><i> \in; \sp<A><*>> が定まる。
+      明らかに &m<I \subseteq; \op<Ker> \sb<f><i>> であって、&m<I> は余有限だったので、&m<\sb<f><i> \in; \sp<A><\diamond;>> が成り立つ。
+      同様にして &m<\sb<g><i> \in; \sp<B><\diamond;>> も定めると、
+      &mb<
+        h = \sum<i> (\sb<f><i> \otimes; \sb<g><i>)
+      >
+      と書ける。
+      したがって、&m<h \in; \sp<A><\diamond;> \otimes; \sp<B><\diamond;>> が成り立つ。
+      以上により、&m<\sp<A><\diamond;> \otimes; \sp<B><\diamond;> \supseteq; \sp<(A \otimes; B)><\diamond;>> が示された。
+    >
+    \p<
+      逆に任意に &m<f \in; \sp<A><\diamond;>> と &m<g \in; \sp<B><\diamond;>> をとる。
+      このとき、余有限イデアル &m<I \subseteq; \op<Ker> f> と &m<J \subseteq; \op<Ker> g> がとれる。
+      すると、
+      &mb<
+        K \coloneqq; A \otimes; J + I \otimes; B \subseteq; \op<Ker> (f \otimes; g)
+      >
+      が分かる。
+      この &m<K> はまず明らかにイデアルである。
+      さらに、上と同じ &m<q: A \otimes; B \headrarr; A `/ I \otimes; B `/ J> をとれば、準同型定理によって &m<(A \otimes; B) `/ K \cong; \op<Im> q \subseteq; A `/ I \otimes; B `/ J> が成り立つが、この右辺は有限次元なので、&m<(A \otimes; B) `/ K> も有限次元で、&m<K> は余有限である。
+      したがって、&m<f \otimes; g \in; \sp<(A \otimes; B)><\diamond;>> が成り立つ。
+      以上により、&m<\sp<A><\diamond;> \otimes; \sp<B><\diamond;> \subseteq; \sp<(A \otimes; B)><\diamond;>> も示された。
+    >
+  >
+  \thm|type="lem",id="multi"|<
+    \p<
+      代数 &m<(A, `m, `h)> をとる。
+      &m<`j> によって &m<\sp<A><*> \otimes; \sp<A><*> \subseteq; \sp<(A \otimes; A)><*>> と見なすとき、&m<\sp<`m><*> (\sp<A><\diamond;>) \subseteq; \sp<A><\diamond;> \otimes; \sp<A><\diamond;>> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意に元 &m<f \in; \sp<A><\diamond;>> をとる。
+      すると、定義によってある &m<A> の余有限イデアル &m<I \subseteq; \op<Ker> f> が存在する。
+      任意の &m<a \in; A> および &m<u \in; I> に対し、&m<I \subseteq; \op<Ker> f> によって、
+      &mb<
+        \sp<`m><*> (f) (a \otimes; u) = f (`m (a \otimes; u)) = f (au) = 0
+      >
+      であるから、&m<A \otimes; I \subseteq; \op<Ker> \sp<`m><*> (f)> が成り立つ。
+      同様の計算により &m<I \otimes; A \subseteq; \op<Ker> \sp<`m><*> (f)> も成り立つ。
+      したがって、&m<K \coloneqq; A \otimes; I + I \otimes; A> とおけば &m<K \subseteq; \op<Ker> \sp<`m><*> (f)> が成り立つ。
+      \ref|type="thm",ref="com"|; の証明で行った議論と同様にして、&m<K> は余有限イデアルであることが分かるので、&m<\sp<`m><*> (f) \in; \sp<(A \otimes; A)><\diamond;>> が得られる。
+      以上により、\ref|type="thm",ref="com"|; を用いて &m<\sp<`m><*> (\sp<A><\diamond;>) \subseteq; \sp<(A \otimes; A)><\diamond;> = \sp<A><\diamond;> \otimes; \sp<A><\diamond;>> が示された。
+    >
+  >
+  \p<
+    \ref|type="thm",ref="multi"|; によって、代数 &m<(A, `m, `h)> があると、
+    &mb<
+      \array|align="rrcl"|<
+        \c<`d:> \c<\sp<A><\diamond;>> \c<\longto;> \c<\sp<A><\diamond;> \otimes; \sp<A><\diamond;>> \br;
+        \c; \c<f> \c<\longmapsto;> \c<\sp<`m><*> (f)>
+      >
+    >
+    が定義できることが分かる。
+    また、
+    &mb<
+      \array|align="rrcl"|<
+        \c<`e:> \c<\sp<A><\diamond;>> \c<\longto;> \c<\bb<K>> \br;
+        \c; \c<f> \c<\longmapsto;> \c<f (1)>
+      >
+    >
+    とおく。
+    すると、これらの射は &m<\sp<A><\diamond;>> に余代数の構造を定める。
+  >
+  \thm|type="prp"|<
+    \p<
+      代数 &m<(A, `m, `h)> に対し、上記で定義した &m<(\sp<A><\diamond;>, `d, `e)> は余代数の定義を満たす。
+    >
+  >
+  \prf<
+    \p<
+      定義に従えば、容易に確かめられる。
+    >
+  >
+  \p<
+    この命題により、反変関手
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sp<\hyphen;><\diamond;>:> \c<\bfrm<Alg>> \c<\longto;> \c<\sp<\bfrm<Coalg>><\circ;>> \br;
+        \c; \c<(A, `m, `h)> \c<\longmapsto;> \c<(\sp<A><\diamond;>, `d, `e)>
+      >
+    >
+    が定まる。
+  >
+  \p<
+    ここまでで、余代数から代数を構成し、その逆に代数から余代数を構成することができると分かった。
+    実は、この 2 つの構成は互いに随伴の関係になっている。
+    それを証明するため、補題を 1 つ用意する。
+  >
+  \thm|type="lem",id="psi"|<
+    \p<
+      余代数 &m<C> をとる。
+      &m<i: C \tailrarr; \sp<C><**>> を標準的な埋め込みとしたとき、&m<\op<Im> i \subseteq; \sp<C><* \diamond;>> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      作用 &m<\sp<C><*> \curverarr; \sp<C><**>> を、 
+      &mb<
+        \array|align="rrcl"|<
+          \c<\cdot;:> \c<\sp<C><*> \times; \sp<C><**>> \c<\longto;> \c<\sp<C><**>> \br;
+          \c; \c<(f, v)> \c<\longmapsto;> \c<\tort<
+            \array|align="rcl"|<
+              \c<\sp<C><*>> \c<\longto;> \c<\bb<K>> \br;
+              \c<f'> \c<\longmapsto;> \c<v (f' f)>
+            >
+          >>
+        >
+      >
+      で定める。
+      なお、&m<f' f> とは、&m<\sp<C><*>> の代数としての &m<f'> と &m<f> の積である。
+    >
+    \p<
+      任意に &m<c \in; C> と &m<f \in; \sp<C><*>> をとる。
+      すると、各 &m<f' \in; \sp<C><*>> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<(f \cdot; i (c)) (f')> \c<=> \c<i (c) (f' f)> \br;
+          \c; \c<=> \c<(f' f) c> \br;
+          \c; \c<=> \c<\sum<c> f' (\sb<c><(1)>) f (\sb<c><(2)>)>
+        >
+      >
+      が成り立つ。
+      したがって、
+      &mb<
+        f \cdot; i (c) = \sum<c> i (\sb<c><(1)>) f (\sb<c><(2)>)
+      >
+      と書ける。
+      したがって、&m<c \in; C> を固定すると、&m<\sp<C><*> \cdot; i (c)> は &m<i (\sb<c><(1)>)> たちで張られる線型空間に含まれるので、&m<\sp<C><*> \cdot; i (c)> は有限次元である。
+    >
+    \p<
+      &m<V \coloneqq; \sp<C><*> \cdot; i (c) \subseteq; \sp<C><**>> とおき、
+      &mb<
+        I \coloneqq; `{ f \in; \sp<C><*> \mid; f \cdot; V = 0 `}
+      >
+      と定めると、これはイデアルである。
+      さらに、
+      &mb<
+        \array|align="rrcl"|<
+          \c<s:> \c<\sp<C><*>> \c<\longto;> \c<\op<End> (V)> \br;
+          \c; \c<f> \c<\longmapsto;> \c<\tort<
+            \array|align="rcl"|<
+              \c<V> \c<\longto;> \c<V> \br;
+              \c<v> \c<\longmapsto;> \c<f \cdot; v>
+            >
+          >>
+        >
+      >
+      とおくと、&m<I \cong; \op<Ker> s> と書ける。
+      したがって、&m<\sp<C><*> `/ I \cong; \op<Im> s \subseteq; \op<End> (V)> であり、&m<V> が有限次元であることから &m<\op<End> (V)> も有限次元なので、&m<\sp<C><*> `/ I> も有限次元で、&m<I> は余有限である。
+    >
+    \p<
+      ここで、任意の &m<u \in; I> に対し、&m<i (c) \in; V> であるから、
+      &mb<
+        i (c) (u) = (u \cdot; i (c)) (1) = 0
+      >
+      が成り立つ。
+      したがって、&m<I \subseteq; \op<Ker> i (c)> であって &m<I> は余有限だったので、&m<i (c) \in; \sp<C><* \diamond;>> が成り立つ。
+    >
+  >
+  \thm|type="thm",id="madj"|<
+    \p<
+      関手の随伴
+      &mb<
+        \diag<
+          \v<\bfrm<Alg> \vph<\sp<\bfrm<Coalg>><\circ;>>> \v<\sp<\bfrm<Coalg>><\circ;>>
+          \ar|s="1:r40",e="2:l40",bend="40",name="a"|<\sp<\hyphen;><\diamond;>> \ar|s="2:l60",e="1:r60",bend="40",name="i"|<\sp<\hyphen;><*>>
+          \ar|s="a:c",e="i:c",line="0",mark|<\g|rotate="90"|<\dashv;>>
+        >
+      >
+      が成立する。
+      すなわち、任意の代数 &m<A> と余代数 &m<C> に対し、自然な全単射
+      &mb<
+        \sb<\op<Hom>><\bfrm<Alg>> (A, \sp<C><*>) \cong; \sb<\op<Hom>><\bfrm<Coalg>> (C, \sp<A><\diamond;>)
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      余代数 &m<C> に対して、\ref|type="thm",ref="psi"|; によって &m<i: C \to; \sp<C><**>> の終域を狭めたものを &m<`c: C \to; \sp<C><* \diamond;>> とおく。
+      また、代数 &m<A> に対しては、&m<j: \sp<A><\diamond;> \hookrarr; \sp<A><*>> を包含写像として、合成
+      &mb<
+        \diag<
+          \v<A> \v<\sp<A><**>> \v<\sp<A><\diamond; *>> \br;
+          \ar|s="1",e="2",tip="tail"|<i> \ar|s="2",e="3"|<\sp<j><*>>
+        >
+      >
+      を &m<`f: A \to; \sp<A><\diamond; *>> とおく。
+      すると、示したい全単射は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\bfrm<Alg>> (A, \sp<C><*>)> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<Coalg>> (C, \sp<A><\diamond;>)> \br;
+          \c<s> \c<\longmapsto;> \c<\sp<s><\diamond;> \circ; `c> \br;
+          \c<\sp<t><*> \circ; `f> \c<\longmappedfrom;> \c<t>
+        >
+      >
+      で与えられる。
+    >
+  >
+  \p<
+    この随伴を使うことで余自由な余代数を構成することができるのだが、長くなったのでそれについては後日触れることにする。
+  >
+  \h1<追記 (2020 年 2 月 10 日)>
+  \p<
+    \ref|type="thm",ref="close"|; とその証明を付け足し、その他の箇所で説明が曖昧だった点を修正しました。
+    この補題の証明のアイデアと説明が曖昧な点の指摘は、\ae|href="https://twitter.com/wktkshn"|<@wktkshn> 氏によるものです。
+    この場を借りて感謝します。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hax"|<M. E. Sweedler (1969)『Hopf Algebras』Cornell University>
+  >
+
+>

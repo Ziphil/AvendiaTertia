@@ -1,0 +1,35 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<“Introduction to Shaleian”>
+  \ver<Version S>
+
+  \h1<Overview>
+  \p<
+    This is an introductory book (in Japanese) on Shaleian grammar for beginners.
+    It covers all the grammar explained on this site and is organised in the order of difficulty so that the readers can easily understand the contents without any prior knowledge.
+    You can learn all the basics of Shaleian grammar with this book alone.
+  >
+  \p<
+    The book is available on Amazon.
+    The link below will take you to the Amazon product page.
+  >
+  \form<
+    \ae|href="https://www.amazon.co.jp/dp/B07KGYPSS3/"|<Product page>
+  >
+  \h1<PDF file>
+  \p<
+    The PDF file of the upcoming second edition is available for free. 
+    Compared to the first edition (which is currently available in book form), typographical errors have been corrected and some sections have been rewritten according to the latest grammar.
+  >
+  \pdf|src="../../file/course/4.pdf"|;
+  \p<
+    You can also download the PDF file directly from the link below.
+  >
+  \form<
+    \a|href="../../file/course/4.pdf"|<Download>
+  >
+
+>

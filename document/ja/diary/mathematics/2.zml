@@ -1,0 +1,317 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<解析的関手の 2 通りの表現>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2018 年 2 月 3 日)>
+  \p<
+    前回は、表現可能関手を適当な群でわったものの余積として解析的関手を定義したが、このような関手は別の形の余積でも表すことができる。
+    今回はそれについて触れていきたいと思う。
+  >
+  \p<
+    まず初めに、前回忘れていた定義をしておく。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<\sb<\rm<id>><X>: X \to; X> が &m<X> の弱正規形であるとき、&m<X> を\em<弱正規対象\fl<weak normal object>> という。
+    >
+  >
+  \p<
+    さて、解析的関手の間の射として、以下に定義する自然変換を考える。
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<F, G: \scr<C> \to; \scr<D>> の間の自然変換 &m<`n: F \to; G> を考える。
+      任意の &m<\scr<C>> の射 &m<u: S \to; T> に対し、図式
+      &mb<
+        \diag<
+          \v<FS> \v<GS> \br;
+          \v<FT> \v<GT>
+          \ar|s="1",e="2"|<\sb<`n><S>> \ar|s="1",e="3",inv|<Fu>
+          \ar|s="3",e="4",inv|<\sb<`n><T>> \ar|s="2",e="4"|<Gu>
+        >
+      >
+      が弱引き戻しであるとき、&m<`n> は\em<弱カルテシアン\fl<weak cartesian>> であるという。
+    >
+  >
+  \p<
+    今後用いるいくつかの圏を定義しておく。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\sb<`[ \sp<\bfrm<Set>><A>, \bfrm<Set> `]><\text<AF>>> を、
+    >
+    \ul<
+      \li<
+        対象は、解析的関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> 全体とする。
+      >
+      \li<
+        2 つの対象 &m<F, G> の間の射は、弱カルテシアン自然変換 &m<`n: F \to; G> 全体とする。
+      >
+    >
+    \p<
+      として定義する。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> を、
+    >
+    \ul<
+      \li<
+        対象は、&m<A> の元から成る有限多重集合 &m<`g> 全体とする。
+      >
+      \li<
+        2 つの対象 &m<`g, `d> の間の射は、&m<`g = `d> ならば &m<`g> に属する各元を同じ元に移す &m<`g> 上の置換全体とし、&m<`g \neq; `d> ならば射は存在しないとする。
+      >
+    >
+    \p<
+      として定義する。
+    >
+  >
+  \p<
+    &m<A> の元から成る有限多重集合は &m<\sp<\bfrm<Set>><A>> のある対象と同一視できることを思い出せば、&m<\bfrm<Nat> (\sp<\bfrm<Set>><A>) \subseteq; \sp<\bfrm<Set>><A>> と見なすことができる。
+    この同一視のもと、&m<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> の対象 &m<`g> に対し、&m<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> での &m<`g> 上の自己射は &m<\sp<\bfrm<Set>><A>> における &m<`g> 上の自己同型射全体と言うことができる。
+  >
+  \p<
+    この記事のメインとなるのが、次の定理である。
+  >
+  \thm|type="thm",id="main"|<
+    \p<
+      圏同値
+      &mb<
+        \sb<`[ \sp<\bfrm<Set>><A>, \bfrm<Set> `]><\text<AF>> \cong; \sp<\bfrm<Set>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)>
+      >
+      が成立する。
+    >
+  >
+  \prf<
+    \p<
+      解析的関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<F><\sharp;>:> \c<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<`g> \c<\longmapsto;> \c<\coprod<c><> \sb<\op<Aut>><\bfrm<El> (F)> ((`g, c)) \backslash; \sb<\op<Aut>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)> (`g)>
+        >
+      >
+      と定める。
+      ここで、右辺の余積は、&m<(`g, c)> という形の &m<\bfrm<El> (F)> の弱正規対象を全て考え、その各同型類の代表元 &m<c> を回るものとする。
+      また、右辺の余積の中身は、左からの自然な群作用 &m<\op<Aut> ((`g, c)) \curverarr; \op<Aut> (`g)> による商集合である。
+    >
+    \p<
+      これにより、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<\text<->><\sharp;>:> \c<\sb<`[ \sp<\bfrm<Set>><A>, \bfrm<Set> `]><\text<AF>>> \c<\longrarr;> \c<\sp<\bfrm<Set>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)>> \br;
+          \c; \c<F> \c<\longmapsto;> \c<\sp<F><\sharp;>>
+        >
+      >
+      が定まった。
+      射の対応は、自然に決まる通りである。
+    >
+    \p<
+      逆に、関手 &m<G: \bfrm<Nat> (\sp<\bfrm<Set>><A>) \to; \bfrm<Set>> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<G><\flat;>:> \c<\sp<\bfrm<Set>><A>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<X> \c<\longmapsto;> \c<\coprod<`g><> \sb<\op<Aut>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)> (`g) \backslash; (\sb<\op<Hom>><\sp<\bfrm<Set>><A>> (`g, X) \times; G `g)> 
+        >
+      >
+      と定める。
+      ここで、右辺の余積は、全ての &m<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> の対象 &m<`g> を回るものとする。
+      また、右辺の余積の中身は、左からの群作用
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<Aut> (`g) \times; (\op<Hom> (`g, X) \times; G `g)> \c<\longrarr;> \c<\op<Hom> (`g, X) \times; G `g> \br;
+          \c<(p, (f, x))> \c<\longmapsto;> \c<(f \circ; \sp<p><- 1>, (Gp) x)>
+        >
+      >
+      による商集合である。
+    >
+    \p<
+      この &m<\sp<G><\flat;>> は解析的関手になっている。
+      実際、&m<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> の対象 &m<`g> と群作用 &m<\op<Aut> (`g) \curverarr; G `g> の軌道 &m<V> に対し、何らかの &m<\sb<x><V> \in; V> を 1 つ選んで固定し、
+      &mb<
+        \sb<K><V> \coloneqq; `{ p \in; \op<Aut> (`g) \mid; p \cdot; \sb<x><V> = \sb<x><V> `}
+      >
+      とおけば、
+      &mb<
+        \sp<G><\flat;> X \cong; \coprod<(`g, V)><> \sb<K><V> \backslash; \sb<\op<Hom>><\sp<\bfrm<Set>><A>> (`g, X)
+      >
+      が成り立つ。
+      この余積は、上記の全ての対 &m<(`g, V)> を回るものとする。
+    >
+    \p<
+      この同型は、以下のように確かめることができる。
+      まず、&m<\sb<K><V>> は固定部分群だから、剰余群 &m<\op<Aut> (`g) `/ \sb<K><V>> が考えられ、集合としての同型
+      &mb<
+        G `g \cong; \coprod<V><> \op<Aut> (`g) `/ \sb<K><V>
+      >
+      が成り立つ。
+      これを用いると、商集合をとる操作と積をとる操作がともに余積と交換することから、
+      &mb<
+        \array|align="rcl"|<
+          \c<\coprod<`g><> \op<Aut> (`g) \backslash; (\op<Hom> (`g, X) \times; G `g)>
+          \c<\cong;> \c<\coprod<`g><> \op<Aut> (`g) \backslash; \paren<\op<Hom> (`g, X) \times; \coprod<V><> \op<Aut> (`g) `/ \sb<K><V>>> \br;
+          \c; \c<\cong;> \c<\coprod<`g><> \coprod<V><> \op<Aut> (`g) \backslash; (\op<Hom> (`g, X) \times; \op<Aut> (`g) `/ \sb<K><V>)>
+        >
+      >
+      が分かる。
+      さらに、少し考えれば、
+      &mb<
+        \coprod<`g><> \coprod<V><> \op<Aut> (`g) \backslash; (\op<Hom> (`g, X) \times; \op<Aut> (`g) `/ \sb<K><V>) \cong; \coprod<(`g, V)><> \sb<K><V> \backslash; \op<Hom> (`g, X)
+      >
+      も成り立つことが分かる。
+      これで、示したかった同型が示せた。
+    >
+    \p<
+      続いて、射の対応を定める。
+      別の関手 &m<G': \bfrm<Nat> (\sp<\bfrm<Set>><A>) \to; \bfrm<Set>> があったとし、自然変換 &m<`n: G \to; G'> を考える。
+      ここで、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sbsp<`j><X><\flat;>:> \c<\sp<G><\flat;> X> \c<\longrarr;> \c<\sp<G><\pr; \flat;> X> \br;
+          \c; \c<`[f, x`] @ `g> \c<\longmapsto;> \c<`[f, \sb<`j><`g> x`] @ `g>
+        >
+      >
+      として、自然変換 &m<\sp<`j><\flat;>: \sp<G><\flat;> \to; \sp<G><\pr; \flat;>> を定める。
+    >
+    \p<
+      この &m<\sp<`j><\flat;>> は、以下に示すように弱カルテシアンになる。
+      そのためには、任意の射 &m<u: X \to; Y> に対し、図式
+      &mb<
+        \diag<
+          \v<\sp<G><\flat;> X> \v<\sp<G><\pr; \flat;> X> \br;
+          \v<\sp<G><\flat;> Y> \v<\sp<G><\pr; \flat;> Y>
+          \ar|s="1",e="2"|<\sbsp<`j><X><\flat;>> \ar|s="1",e="3",inv|<\sp<G><\flat;> u>
+          \ar|s="3",e="4",inv|<\sbsp<`j><Y><\flat;>> \ar|s="2",e="4"|<\sp<G><\pr; \flat;> u>
+        >
+      >
+      が弱引き戻しであることを示せば良い。
+      そこで、任意に &m<`[g, x`] \in; \sp<G><\flat;> Y> と &m<`[f, y`] \in; \sp<G><\pr; \flat;> X> であって、
+      &mb<
+        \sbsp<`j><Y><\flat;> `[g, x`] = (\sp<G><\flat;> u) `[f, y`]
+      >
+      を満たしているものをとる。
+      &m<\sp<`j><\flat;>> と &m<\sp<G><\flat;>> の定義から、この等式は
+      &mb<
+        `[g, \sb<`j><`g> x`] = `[u \circ; f, y`]
+      >
+      が成り立つということである。
+      したがって、群作用の定義により、ある &m<p \in; \op<Aut> (`g)> が存在して、
+      &mb<
+        g = u \circ; f \circ; \sp<p><- 1> \qquad; \sb<`j><`g> x = (H p) y
+      >
+      が成り立つ。
+      このとき、&m<`[f, (G \sp<p><- 1>) x`] \in; \sp<G><\flat;> X> を考えると、簡単な計算により、
+      &mb<
+        (\sp<G><\flat;> u) `[f, (G \sp<p><- 1>) x`] = `[g, x`] \qquad; \sbsp<`j><X><\flat;> `[f, (G \sp<p><- 1>) x`] = `[f, y`] 
+      >
+      がともに成り立つことが分かる。
+      これはすなわち、上の四角形の図式が &m<\bfrm<Set>> で弱引き戻しであることを意味している。
+    >
+    \p<
+      以上により、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<\text<->><\flat;>:> \c<\sp<\bfrm<Set>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)>> \c<\longrarr;> \c<\sb<`[ \sp<\bfrm<Set>><A>, \bfrm<Set> `]><\text<AF>>> \br;
+          \c; \c<G> \c<\longmapsto;> \c<\sp<G><\flat;>>
+        >
+      >
+      も定まった。
+    >
+    \p<
+      この 2 つの関手は同型の違いを除いて互いに逆になっている。
+      これについては、今は少し時間がないのでまた後日に。
+      もしくは、私のノートの p5745 と p5746 を参照。
+    >
+  >
+  \p<
+    ということで、解析的関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> は、有限対象の族 &m<(\sb<S><i>) \sb<><i \in; I>> と群の族 &m<(\sb<K><i>) \sb<><i \in; I>> による
+    &mb<
+      FX \cong; \coprod<i \in; I><> \sb<K><i> \backslash; \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)
+    >
+    という表示と、ある関手 &m<\sp<F><\sharp;>: \bfrm<Nat> (\sp<\bfrm<Set>><A>) \to; \bfrm<Set>> による
+    &mb<
+      FX \cong; \coprod<`g \in; \bfrm<Nat> (\sp<\bfrm<Set>><A>)><> \op<Aut> (`g) \backslash; (\op<Hom> (`g, X) \times; \sp<F><\sharp;> `g)
+    >
+    という表示の、2 通りに表現できることが分かった。
+    特に後半の表示において &m<A = 1> とすれば、&m<\bfrm<Nat> (\sp<\bfrm<Set>><1>)> の対象は自然数全体になり、自然数 &m<n> に対して &m<\op<Hom> (n, X)> は &m<\sp<X><n>> と同型なので、
+    &mb<
+      FX \cong; \coprod<n \in; \bb<N>><> \op<Aut> (n) \backslash; (\sp<X><n> \times; \sp<F><\sharp;> n)
+    >
+    と書けることになる。
+    &m<`# \op<Aut> (n) = n!> であることを踏まえると、何となく &m<\sp<F><\sharp;> n> を係数とする &m<F> の Taylor 展開の形に似ている。
+    これが、ここまで考えてきた関手が解析的と呼ばれる所以である。
+  >
+  \h1<追記 (2019 年 1 月 21 日)>
+  \p<
+    \ref|type="thm",ref="main"|; の証明中に出てくる関手について、その定義をより明確にしておこう。
+  >
+  \p<
+    まず、解析的関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> をとる。
+    ここから関手 &m<\sp<F><\sharp;>> を作ったのだが、&m<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> の対象 &m<`g> に対して、
+    &mb<
+      \sp<F><\sharp;> `g = \coprod<c><> \sb<\op<Aut>><\bfrm<El> (F)> ((`g, c)) \backslash; \sb<\op<Aut>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)> (`g)
+    >
+    と定義したのであった。
+    余積の中の商集合は、群作用
+    &mb<
+      \array|align="rcl"|<
+        \c<\op<Aut> ((`g, c)) \times; \op<Aut> (`g)> \c<\longrarr;> \c<\op<Aut> (`g)> \br;
+        \c<(u, p)> \c<\longmapsto;> \c<p \circ; \sp<u><- 1>>
+      >
+    >
+    によるものである。
+    また、この関手の射の対応は、&m<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> の射 &m<h: `g \to; `g> に対して、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sp<F><\sharp;> f:> \c<\sp<F><\sharp;> `g> \c<\longrarr;> \c<\sp<F><\sharp;> `g> \br;
+        \c; \c<`[p`] @ c> \c<\longmapsto;> \c<`[h \circ; p`] @ c>
+      >
+    >
+    で定義する。
+  >
+  \p<
+    以上によって、関手 &m<\sp<\text<->><\sharp;>> が対象の上に定義できる。
+    この関手の射の対応は以下のようになる。
+    別の解析的関手 &m<F': \sp<\bfrm<Set>><A> \to; \bfrm<Set>> があったとし、弱カルテシアン自然変換 &m<`n: F \to; F'> をとる。
+    このとき、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sbsp<`n><`g><\sharp;>:> \c<\sp<F><\sharp;> `g> \c<\longrarr;> \c<\sp<F><\pr; \sharp;> `g> \br;
+        \c; \c<`[p`] @ c> \c<\longmapsto;> \c<`[p`] @ c'>
+      >
+    >
+    である。
+    ここで、&m<c'> は &m<\bfrm<El> (F')> の弱正規対象 &m<(`g, \sb<`n><`g> c)> を属する同型類の代表元とする。
+  >
+  \p<
+    さて、次に関手 &m<G: \bfrm<Nat> (\sp<\bfrm<Set>><A>) \to; \bfrm<Set>> をとる。
+    ここからは解析的関手 &m<\sp<G><\flat;>> を作った。
+    これは、&m<\sp<\bfrm<Set>><A>> の対象 &m<X> に対し、
+    &mb<
+      \sp<G><\flat;> X = \coprod<`g><> \sb<\op<Aut>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)> (`g) \backslash; (\sb<\op<Hom>><\sp<\bfrm<Set>><A>> (`g, X) \times; G `g)
+    >
+    としたのであった。
+    この関手の射の対応は、&m<\sp<\bfrm<Set>><A>> の射 &m<h: X \to; Y> に対し、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sp<G><\flat;> f:> \c<\sp<G><\flat;> X> \c<\longrarr;> \c<\sp<G><\flat;> Y> \br;
+        \c; \c<`[f, x`] @ `g> \c<\longmapsto;> \c<`[h \circ; f, x`] @ `g>
+      >
+    >
+    である。
+  >
+  \p<
+    以上によって、関手 &m<\sp<\text<->><\flat;>> が対象の上に定義できるわけだが、これの射の対応は本文中に書いた通りである。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="htaa"|<R. Hasegawa (2006)「Two applications of analytic functors」『Theoretical Computer Science』272:113–175>
+  >
+
+>

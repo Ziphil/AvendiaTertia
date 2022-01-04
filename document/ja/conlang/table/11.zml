@@ -1,0 +1,62 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<助接詞と連結詞>
+  \ver<5 代 3 期>
+
+  \h1<助接詞>
+  \table<
+    \tr<\th<語>\th<意味>\th<>>
+    \tr<\td<{a}>\td<～は, ～が>\td<主語>>
+    \tr<\td<{e}>\td<～を>\td<目的語>>
+    \tr<\td<{li}>\td<～に>\td<対象>>
+    \tr<\td<{zi}>\td<～から>\td<出発点, 起点>>
+    \tr<\td<{ca}>\td<～に, ～へ>\td<相手, 到達点, 目的地>>
+    \tr<\td<{i}>\td<～の>\td<連体修飾>>
+    \tr<\td<{iku}>\td<～の>\td<所有>>
+    \tr<\td<{ive}>\td<～という>\td<内容>>
+    \tr<\td<{te}>\td<～に>\td<時刻>>
+    \tr<\td<{tezi}>\td<～の前に>\td<*>>
+    \tr<\td<{teca}>\td<～の後に>\td<*>>
+    \tr<\td<*>\td<～の間に>\td<*>>
+    \tr<\td<{zite}>\td<～から, ～以来>\td<期間開始点>>
+    \tr<\td<{cate}>\td<～まで>\td<期間終了点>>
+    \tr<\td<{kute}>\td<～の間>\td<期間>>
+    \tr<\td<*>\td<～までに>\td<期限>>
+    \tr<\td<{vo}>\td<～で>\td<場所>>
+    \tr<\td<{voku}>\td<～の中で>\td<*>>
+    \tr<\td<{cali}>\td<～に向かって>\td<方向>>
+    \tr<\td<{qi}>\td<～で>\td<道具, 手段>>
+    \tr<\td<{fe}>\td<～と>\td<仲間>>
+    \tr<\td<{la}>\td<～で>\td<個数, 量>>
+    \tr<\td<{fi}>\td<～とともに>\td<同伴物>>
+    \tr<\td<{de}>\td<～なしで>\td<*>>
+    \tr<\td<{vade}>\td<～なので, ～だから>\td<理由>>
+    \tr<\td<{bava}>\td<～なのに>\td<逆説理由>>
+    \tr<\td<{ziqo}>\td<～というのも, ～なのは>\td<結果>>
+    \tr<\td<{ri}>\td<もし～>\td<仮定>>
+    \tr<\td<{bari}>\td<たとえ～>\td<逆接仮定>>
+    \tr<\td<{so}>\td<～のために>\td<目的>>
+    \tr<\td<{sora}>\td<～のために>\td<目的対象>>
+    \tr<\td<{feli}>\td<～のように>\td<比況>>
+    \tr<\td<{lati}>\td<～するほど>\td<程度>>
+    \tr<\td<{ce}>\td<そして～>\td<後続>>
+    \tr<\td<{cife}>\td<～しながら>\td<同時, 並列>>
+    \tr<\td<{fa}>\td<～しながら>\td<付帯状況>>
+    \tr<\td<{tazi}>\td<～にとって>\td<判断基準>>
+    \tr<\td<{loke}>\td<～について>\td<話題>>
+    \tr<\td<{ni}>\td<～より, ～と比べて>\td<比較対象>>
+    \tr<\td<{kude}>\td<～の中で>\td<比較範囲>>
+  >
+  \h1<連結詞>
+  \table<
+    \tr<\th<語>\th<意味>\th<>>
+    \tr<\td<{o} ({lo})>\td<と>\td<連言並列>>
+    \tr<\td<{é} ({lé})>\td<または>\td<選言並列>>
+    \tr<\td<{á} ({lá})>\td<か>\td<選択>>
+    \tr<\td<{à} ({dà})>\td<しかし>\td<逆接>>
+  >
+
+>

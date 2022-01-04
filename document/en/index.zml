@@ -1,0 +1,205 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \script|src="program/script/12.js"|;
+    \link|rel="stylesheet",type="text/css",href="style/8.css"|;
+    \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
+    \title<Avendia>
+  >
+  \body<
+
+    \div|class="header-block centralize"|<
+      \div|class="header"|<
+        \div|class="header-background"|<
+          \img|class="header-logo",src="material/logo/2.svg"|;
+        >
+        \div|class="header-content"|<
+          \div|class="header-title",data-content="Avendia"|<Avendia>
+          \div|class="header-flavor",data-content="FeTiCwaT cA cOk A sWElWEf"|<FeTiCwaT cA cOk A sWElWEf>
+        >
+      >
+    >
+
+    \div|class="card-table-block centralize"|<
+      \div|class="card-table"|<
+        \a|class="card-item",id="course",href="conlang/course/"|<
+          \div|class="card-title"|<
+            \div|class="card-title-japanese"|<Introduction>
+          >
+          \div|class="card-explanation"|<
+            \div|class="card-explanation-text"|<
+              You can read an introduction of Shaleian grammar.
+              It has also been published as a book.
+            >
+          >
+        >
+        \a|class="card-item",id="database",href="conlang/database/"|<
+          \div|class="card-title"|<
+            \div|class="card-title-japanese"|<Database>
+          >
+          \div|class="card-explanation"|<
+            \div|class="card-explanation-text"|<
+              You can browse the Shaleian dictionary and download Shaleian fonts.
+            >
+          >
+        >
+        \a|class="card-item",id="translation",href="conlang/translation/"|<
+          \div|class="card-title"|<
+            \div|class="card-title-japanese"|<Translations>
+          >
+          \div|class="card-explanation"|<
+            \div|class="card-explanation-text"|<
+              You can read Shaleian translations of various novels and songs, including those related to “The Idolmaster”.
+            >
+          >
+        >
+        \a|class="card-item",id="work",href="conlang/work/"|<
+          \div|class="card-title"|<
+            \div|class="card-title-japanese"|<Works>
+          >
+          \div|class="card-explanation"|<
+            \div|class="card-explanation-text"|<
+              You can read original texts written in Shaleian language.
+            >
+          >
+        >
+        \a|class="card-item",id="theory",href="conlang/theory/"|<
+          \div|class="card-title"|<
+            \div|class="card-title-japanese"|<Studies>
+          >
+          \div|class="card-explanation"|<
+            \div|class="card-explanation-text"|<
+              A collection of detailed explanations of grammar and word usage in Shaleian language.
+            >
+          >
+        >
+        \a|class="card-item",id="diary",href="diary/conlang/"|<
+          \div|class="card-title"|<
+            \div|class="card-title-japanese"|<Diary>
+          >
+          \div|class="card-explanation"|<
+            \div|class="card-explanation-text"|<
+              A journal describing the  discussions in creating Shaleian language.
+              You can get a glimpse of the creation process.
+            >
+          >
+        >
+      >
+    >
+
+    \div|class="introduction-block"|<
+      \div|class="introduction"|<
+        \h1|class="introduction-header"|<
+          \span|class="introduction-header-text"|<Conlang>
+        >
+        \div|class="introduction-content"|<
+          \div|class="introduction-explanation"|<
+            \p|class="introduction-paragraph"|<
+              “Conlang” is an abbreviation of “constructed language”.
+              Constructed languages are those which are intentionally created by human beings, as opposed to naturally created languages such as Japanese or English.
+              There are various types of constructed languages, one of which is called “international auxiliary languages” for communicating with people who do not have a common mother tongue.
+              Another type of them is “artificial languages”, which are created to enjoy the creation itself or to make novels or other works more realistic.
+              Shaleian language, introduced on this website, is classified as an artificial language.
+            >
+            \p|class="introduction-paragraph"|<
+              Languages are greatly influenced by culture.
+              Conversely, by looking at a language, we can sense the culture behind those who speak and write it.
+              Shaleian language is created as a kind of self-expression by actively reflecting my own way of perceiving the world.
+              As already mentioned, Shaleian language is an artificial language, and in this very sense, it is actually a kind of art.
+              For more information about the language, please visit \a|class="link",href="conlang/document/16.html"|<here>.
+            >
+            \p|class="introduction-paragraph"|<
+              The text \span|class="large-screen"|<on the right>\span|class="small-screen"|<below> is the first part of “Alice's Adventures in Wonderland”, translated into Shaleian.  
+              You can read the full translation \a|class="link",href="conlang/translation/44.html"|<here>.
+            >
+          >
+          \div|class="introduction-sample-container"|<
+            \div|class="introduction-sample"|<
+              \div|class="introduction-sample-inner"|<
+                \p|class="introduction-paragraph"|<
+                  e ʻalis, pôzac ovel ebam zi'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.
+                  zesqikas a ces la tal al'atis é al'aqec e xoq lîdac e a hinof, dà dukavat a cit e qinat o lek.
+                  lo, revas a ces.
+                  «pa salot e pil a sokus i xoq ide qinat o lek?»
+                >
+                \p|class="introduction-paragraph"|<
+                  ce, soxas a ces qi soxot — duqifat lîgifas a's e cal, vade meberat o folnasat ovel ebam e's a zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.
+                  te cal, cákas obâl cife vilis ca fîc ica ces a hapet axac kavat a e lisaz ahafas.
+                >
+                \p|class="introduction-paragraph"|<
+                  dusalat a cal e aniszaz ebam….
+                >
+              >
+            >
+          >
+        >
+      >
+    >
+
+    \div|class="count-table-block centralize"|<
+      \div|class="count-table-container"|<
+        \div|class="count-table",data-size="large"|<
+          \div|class="count-text"|<\span|class="large-screen"|<Current words>\span|class="small-screen"|<Words>>
+          \div|class="count-number",id="whole-count"|<?>
+        >
+        \div|class="count-table",data-size="small"|<
+          \div|class="count-text"|<In the last week>
+          \div|class="count-number"|<\span|class="count-plus"|<+>\span|id="week-count"|<?>>
+          \div|class="count-text"|<In the last month>
+          \div|class="count-number"|<\span|class="count-plus"|<+>\span|id="month-count"|<?>>
+          \div|class="count-text"|<In the last year>
+          \div|class="count-number"|<\span|class="count-plus"|<+>\span|id="year-count"|<?>>
+        >
+      >
+    >
+
+    \div|class="separator-block centralize"|<
+      \div|class="separator"|<
+        \div|class="separator-mark"|;
+      >
+    >
+
+    \div|class="other-block centralize"|<
+      \div|class="other"|<
+        \div|class="other-column"|<
+          \div|class="other-header"|<
+            \span|class="other-header-text"|<Contact>
+          >
+          \div|class="contact-table"|<
+            \a|class="contact-icon",data-brand="twitter",href="https://twitter.com/Ziphil",target="_blank"|;
+            \div|class="contact-explanation"|<
+              I mainly work on Twitter.
+              The fastest and most reliable way to contact me is via Twitter.
+            >
+            \a|class="contact-icon",data-brand="youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank"|;
+            \div|class="contact-explanation"|<
+              The creation process of Shaleian language may be broadcast on YouTube Live.
+              The schedule will be announced on Twitter and Discord.
+            >
+            \a|class="contact-icon",data-brand="discord",href="https://discord.gg/qdRyE2ZExf",target="_blank"|;
+            \div|class="contact-explanation"|<
+              There is a Discord server for Shaleian language.
+              Here I accept questions and regularly give quizzes.
+            >
+            \a|class="contact-icon",data-brand="github",href="https://github.com/Ziphil",target="_blank"|;
+            \div|class="contact-explanation"|<
+              Most of the data on Shaleian language are managed on GitHub.
+            >
+          >
+        >
+        \div|class="other-column"|<
+          \div|class="other-header"|<
+            \div|class="other-header-text"|<Change log>
+          >
+          \history|size="5"|;
+        >
+      >
+    >
+
+  >
+>

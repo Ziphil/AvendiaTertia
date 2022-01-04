@@ -1,0 +1,189 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<表示可能対象>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2020 年 7 月 30 日)>
+  \p<
+    今日は、表示可能対象の定義をして、それが余極限に関して閉じていることを見る。
+  >
+  \thm|type="def"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> の対象 &m<C> について、表現可能関手 &m<\op<Hom> (C, \hyphen;): \scr<C> \to; \bfrm<Set>> が &m<`k>-有向余極限を保存するとき、&m<C> は &m<`k>-\em<表示可能\fl<presentable>> であるという。
+    >
+  >
+  \thm|type="lem",id="preseq"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> の対象 &m<C> に対し、3 条件
+    >
+    \ol<
+      \li<
+        &m<C> は &m<`k>-表示可能である。
+      >
+      \li<
+        &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> をとる。
+        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rcomp; \sb<d><i>> という分解ができる。
+        さらに、任意の &m<\scr<I>> の対象 &m<i, i'> と &m<\scr<C>> の射 &m<g: C \to; Fi, g': C \to; Fi'> について &m<f = g \rcomp; \sb<d><i> = g' \rcomp; \sb<d><i'>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であって &m<g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort;> が成り立つ。
+      >
+      \li<
+        &m<`k>-フィルター図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> をとる。
+        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rcomp; \sb<d><i>> という分解ができる。
+        さらに、任意の &m<\scr<I>> の対象 &m<i, i'> と &m<\scr<C>> の射 &m<g: C \to; Fi, g': C \to; Fi'> について &m<f = g \rcomp; \sb<d><i> = g' \rcomp; \sb<d><i'>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> と射 &m<u: i \to; \bar<i>, u': i' \to; \bar<i>> が存在して、&m<g \rcomp; Fu = g' \rcomp; Fu'> が成り立つ。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="57.html#setcol"|<補題 1.2> を用いて &m<\bfrm<Set>> での余極限を書き下すと証明できる。
+      条件 3 との同値性については、\a|href="58.html#fd"|<定理 2.8> によって &m<`k>-有向余極限と &m<`k>-フィルター余極限が同じものであることを利用する。
+      詳細は省略する。
+    >
+  >
+  \p<
+    この補題により、ある対象 &m<C> が &m<`k>-表示可能であることの良い換えとして、その &m<C> から何らかの &m<`k>-有向余極限への射が、その余極限を構成している射の 1 つを経由する形で本質的に一意に分解できると言うことができる。
+    ここで「本質的に一意」と言っているのは、2 種類の分解 &m<g: C \to; Fi, g': C \to; Fi'> が与えられたら、より大きな &m<\bar<i>> のもとでは &m<g, g'> は等しくなるという意味である。
+  >
+  \p<
+    表示可能性についてすぐに分かるのは、紐付けられた基数を大きくしても良いということである。
+  >
+  \thm|type="thm",id="presup"|<
+    \p<
+      正則基数 &m<`k, `l> をとり、&m<`k \leq; `l> であるとする。
+      圏 &m<\scr<C>> の対象 &m<C> に対し、&m<C> が &m<`k>-表示可能であれば &m<C> は &m<`l>-表示可能でもある。
+    >
+  >
+  \prf<
+    \p<
+      &m<`l>-有向余極限は明らかに &m<`k>-有向余極限である。
+      したがって、&m<\op<Hom> (C, \hyphen;)> が &m<`k>-有向余極限を保存するならば、それは &m<`l>-有向余極限も保存する。
+    >
+  >
+  \p<
+    次に、表示可能な対象は紐付けられた基数サイズの余極限について閉じていることを示す。
+  >
+  \thm|type="thm",id="prescol"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> において、&m<`k>-表示可能な対象の &m<`k>-小余極限はまた &m<`k>-表示可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<`k>-小図式 &m<G: \scr<K> \to; \scr<C>> の余極限 &m<(\sb<c><k>: Gk \to; C) \sb<><k \in; \scr<K>>> で、&m<\scr<K>> の各対象 &m<k> について &m<\scr<C>> で &m<Gk> が &m<`k>-表示可能であるものをとる。
+      このとき、&m<C> も &m<`k>-表示可能であることを示せば良い。
+      そのために\ref|type="thm",ref="preseq"|; を用いる。
+    >
+    \p<
+      &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> および &m<\scr<C>> の射 &m<f: C \to; D> をとる。
+      &m<f> が本質的に一意に分解できることを示せば良い。
+      まず、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rcomp; f: Gk \to; D> を考えると、&m<Gk> が &m<`k>-表示可能で &m<D> が &m<`k>-有向余極限であることから、\ref|type="thm",ref="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<j><k>> が存在して、
+      &mb<
+        \diag<
+          \v<Gk> \v<C> \v<D> \br;
+          \v; \v<F \sb<j><k>> \v;
+          \ar|s="1",e="2"|<\sb<c><k>> \ar|s="2",e="3"|<f>
+          \ar|s="1",e="5",dash,inv|; \ar|s="5",e="3",inv|<\sb<d><\sb<j><k>>>
+        >
+      >
+      という分解が存在する。
+      ここで、&m<\scr<K>> が &m<`k>-小であることから &m<\scr<K>> の対象の個数は &m<`k> 未満であり、&m<\scr<I>> は &m<`k>-有向なので、&m<`{\sb<j><k>`} \sb<><k \in; \scr<K>>> の上界 &m<\bar<j>> が存在する。
+      さらに、この &m<\bar<j>> について、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rcomp; f> は、
+      &mb<
+        \diag<
+          \v<Gk> \v<C> \v<D> \br;
+          \v; \v<F \bar<j>> \v;
+          \ar|s="1",e="2"|<\sb<c><k>> \ar|s="2",e="3"|<f>
+          \ar|s="1",e="5",dash,inv|<\sb<g><k>> \ar|s="5",e="3",inv|<\sb<d><\bar<j>>>
+        >
+      >
+      と一斉に分解できる。
+    >
+    \p<
+      次に、&m<\scr<K>> の射 &m<u: k \to; k'> をとる。
+      すると、&m<(\sb<c><k>) \sb<><k \in; \scr<K>>> が &m<G> の余錐であることから、
+      &mb<
+        Gu \rcomp; \sb<g><k'> \rcomp; \sb<d><\bar<j>> =  Gu \rcomp; \sb<c><k'> \rcomp; f = \sb<c><k> \rcomp; f = \sb<g><k> \rcomp; \sb<d><\bar<j>>
+      >
+      が成り立つ。
+      これはつまり、&m<\sb<c><k> \rcomp; f> の &m<\sb<d><\bar<j>>> を経由する分解が、&m<\sb<g><k>> によるものと &m<Gu \rcomp; \sb<g><k'>> によるものの 2 通りあるということである。
+      そのような分解は本質的に一意であったから、ある &m<\scr<I>> の対象 &m<\sb<i><u>> が存在して、&m<\bar<j> \leq; \sb<i><u>> が成り立ち、
+      &mb<
+        \diag<
+          \v<Gk> \v<Gk'> \v<F \bar<j>> \br;
+          \v<F \bar<j>> \v; \v<F \sb<i><u>>
+          \ar|s="1",e="2"|<Gu> \ar|s="2",e="3"|<\sb<g><k'>> \ar|s="3",e="6"|;
+          \ar|s="1",e="4",inv|<\sb<g><k>> \ar|s="4",e="6"|;
+        >
+      >
+      が可換である。
+      &m<\scr<K>> が &m<`k>-小であることから &m<\scr<K>> の射の個数は &m<`k> 未満であり、&m<\scr<I>> は &m<`k>-有向なので、&m<`{\sb<i><u>`} \sb<><u: k \to; k' \in; \scr<K>>> の上界 &m<\bar<i>> が存在する。
+      そして、この &m<\bar<i>> について、&m<\scr<K>> の各射 &m<u: k \to; k'> に対して、
+      &mb<
+        \diag<
+          \v<Gk> \v<Gk'> \v<F \bar<j>> \br;
+          \v<F \bar<j>> \v; \v<F \bar<i>>
+          \ar|s="1",e="2"|<Gu> \ar|s="2",e="3"|<\sb<g><k'>> \ar|s="3",e="6"|;
+          \ar|s="1",e="4",inv|<\sb<g><k>> \ar|s="4",e="6"|;
+        >
+      >
+      が一斉に可換になる。
+      このことは、&m<(\sb<g><k> \rcomp; F \ltort; \bar<j> \hookrarr; \bar<i> \rtort;: Gk \to; F \bar<j>) \sb<><k \in; \scr<K>>> が &m<G> の余錐になることを意味している。
+    >
+    \p<
+      これにより、余極限の普遍性から、ある射 &m<g: C \to; F \bar<i>> が存在し、任意の &m<\scr<K>> の各対象 &m<k> に対し、
+      &mb<
+        \diag|ver="vthn"|<
+          \v<Gk> \v; \v<C> \br;
+          \v; \v<F \bar<j>> \v; \br;
+          \v; \v; \v<F \bar<i>> 
+          \ar|s="1",e="3"|<\sb<c><k>> \ar|s="3",e="9"|<g>
+          \ar|s="1",e="5",inv|<\sb<g><k>> \ar|s="5",e="9",inv|;
+        >
+      >
+      は可換である。
+      したがって、
+      &mb<
+        \sb<c><k> \rcomp; f = \sb<g><k> \rcomp; \sb<d><\bar<j>> = \sb<g><k> \rcomp; F \ltort; \bar<j> \hookrarr; \bar<i> \rtort; \rcomp; \sb<d><\bar<i>> = \sb<c><k> \rcomp; g \rcomp; \sb<d><\bar<i>>
+      >
+      が成り立つ。
+      &m<(\sb<c><k>) \sb<><k \in; \scr<K>>> は余極限だったので、分解の一意性により、&m<f = g \rcomp; \sb<d><\bar<i>>> が成り立つ。
+      これが、可能であることを示したかった &m<f> の分解である。
+    >
+    \p<
+      次に、&m<f> の分解が本質的に一意であることを示す。
+      &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g, g': C \to; Fi> を用いて、&m<f = g \rcomp; \sb<d><i> = g' \rcomp; \sb<d><i>> という 2 通りの分解ができたとする。
+      すると、任意の &m<\scr<K>> の対象 &m<k> に対して、&m<\sb<c><k> \rcomp; f: Gk \to; D> の 2 通りの分解
+      &mb<
+        \sb<c><k> \rcomp; f = \sb<c><k> \rcomp; g \rcomp; \sb<d><i> = \sb<c><k> \rcomp; g' \rcomp; \sb<d><i>
+      >
+      が存在することになる。
+      &m<Gk> は &m<`k>-表示可能で &m<D> は &m<`k>-有向余極限なので、\ref|type="thm",ref="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<i>> が存在して、
+      &mb<
+        \sb<c><k> \rcomp; g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = \sb<c><k> \rcomp; g' \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort;
+      >
+      が成り立つ。
+      &m<(\sb<c><k>) \sb<><k \in; \scr<K>>> は余極限だったので、これより
+      &mb<
+        g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort;
+      >
+      が成り立つが、これは &m<f> の分解が本質的に一意であるということである。
+    >
+  >
+  \h1<追記 (2020 年 8 月 5 日)>
+  \p<
+    \ref|type="thm",ref="preseq"|; にフィルター余極限の場合の条件を追加した。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>

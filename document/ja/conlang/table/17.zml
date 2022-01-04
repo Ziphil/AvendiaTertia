@@ -1,0 +1,29 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<準飾辞>
+  \ver<S 代>
+
+  \h1<準飾辞>
+  \p<
+    既存の単語の合成成分のうち、生産性をもったものを一覧する。
+  >
+  \table<
+    \tr<\th<単語>\th<意味>\th<語源>>
+    \tr<\td<{zis+}>\td<～する人>\td<`< {zis}>>
+    \tr<\td<{zat+}>\td<～する物>\td<`< {zat}>>
+    \tr<\td<{zîd+}>\td<～する場所>\td<`< {zîd}>>
+    \tr<\td<{doq+}>\td<～ではない>\td<`< {doq}>>
+    \tr<\td<{tud+}>\td<～がない>\td<`< {tud}>>
+    \tr<\td<{zif+}>\td<～を戻す, ～の逆操作を行う>\td<`< {zifcit}>>
+    \tr<\td<{nis+}>\td<～するような, ～を誘う>\td<`< {nis}>>
+    \tr<\td<{qil+}>\td<～の言語>\td<`< {qilox}>>
+    \tr<\td<{kos+}>\td<～するための施設, ～の施設>\td<`< {kosoc}>>
+    \tr<\td<{qik+}>\td<～するための機械, ～する機械>\td<`< {qikal}>>
+    \tr<\td<{fet+}>\td<～のようなもの, ～に似たもの>\td<`< {fetus}>>
+    \tr<\td<{+qix}>\td<電子～>\td<`< {qixov}>>
+  >
+
+>

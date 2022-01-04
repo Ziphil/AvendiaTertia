@@ -1,0 +1,56 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<助接詞>
+  \ver<5 代 1 期>
+
+  \h1<助接詞>
+  \table<
+    \tr<\th<助詞>\th<意味>\th<>>
+    \tr<\td<{a}>\td<～は, ～が>\td<主語>>
+    \tr<\td<{e}>\td<～を>\td<目的語>>
+    \tr<\td<{i}>\td<～に>\td<他動詞の対象>>
+    \tr<\td<{do}>\td<～から>\td<出発点, 起点>>
+    \tr<\td<{ca}>\td<～に, ～へ>\td<相手, 到達点, 目的地>>
+    \tr<\td<{li}>\td<～の>\td<連体修飾>>
+    \tr<\td<{ku}>\td<～の>\td<所有>>
+    \tr<\td<{di}>\td<～という>\td<内容>>
+    \tr<\td<{te}>\td<～に>\td<時刻>>
+    \tr<\td<*>\td<～の前に>\td<*>>
+    \tr<\td<*>\td<～の後に>\td<*>>
+    \tr<\td<*>\td<～の間に>\td<*>>
+    \tr<\td<{vo}>\td<～で>\td<場所>>
+    \tr<\td<{voca}>\td<～の上で>\td<*>>
+    \tr<\td<{vode}>\td<～の下で>\td<*>>
+    \tr<\td<*>\td<～の中で>\td<*>>
+    \tr<\td<*>\td<～の外で>\td<*>>
+    \tr<\td<*>\td<～のこちら側で>\td<*>>
+    \tr<\td<*>\td<～の向こう側で>\td<*>>
+    \tr<\td<{ga}>\td<～で>\td<道具>>
+    \tr<\td<{fe}>\td<～と>\td<仲間>>
+    \tr<\td<{ve}>\td<～で>\td<個数, 量>>
+    \tr<\td<{se}>\td<～とともに>\td<同伴物>>
+    \tr<\td<{bu}>\td<～なしで>\td<*>>
+    \tr<\td<{o}>\td<～と>\td<連言並列>>
+    \tr<\td<{fa}>\td<～または>\td<選言並列>>
+    \tr<\td<{pe}>\td<～か>\td<選択>>
+    \tr<\td<{bi}>\td<しかし～>\td<逆接>>
+    \tr<\td<{zale}>\td<～なので, ～だから>\td<理由>>
+    \tr<\td<{sale}>\td<～なので, ～だから>\td<弱理由>>
+    \tr<\td<*>\td<～なのに>\td<逆説理由>>
+    \tr<\td<{veni}>\td<～というのも, ～なのは>\td<結果>>
+    \tr<\td<{feni}>\td<～というのも, ～なのは>\td<弱結果>>
+    \tr<\td<*>\td<～なのに>\td<逆説結果>>
+    \tr<\td<{ci}>\td<～そして>\td<後続>>
+    \tr<\td<{po}>\td<もし～>\td<仮定>>
+    \tr<\td<{bapo}>\td<たとえ～>\td<逆接仮定>>
+    \tr<\td<{cilo}>\td<～のために>\td<目的>>
+    \tr<\td<{ni}>\td<～より, ～と比べて>\td<比較対象>>
+    \tr<\td<{kude}>\td<～の中で>\td<比較範囲>>
+    \tr<\td<*>\td<～のように>\td<比況>>
+    \tr<\td<*>\td<～について>\td<話題>>
+  >
+
+>

@@ -1,0 +1,538 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<オプティックとモナド代数>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2022 年 1 月 3 日)>
+  \p<
+    前回までの日記で、レンズの様々なエンコーディング方法に触れ、これらが全て等価であることを示した。
+    さらに、レンズを一般化してオプティックという概念を導入し、レンズの場合と同様にコエンドによるエンコーディングとプロ関手を用いたエンコーディングを定式化し、これらが等価であることも示した。
+  >
+  \p<
+    このオプティックの 2 つのエンコーディングが等価であることは \a|href="30.html"|<10 月 12 日>ですでに示したが、今日は Román\ref|type="bib",ref="rpot"|; による別の証明をまとめようと思う。
+    この証明は、前回の証明よりも見通しが良く、Tambara 加群がコモナド余代数やモナド代数として実現できることに注目しているという特徴がある。
+  >
+  \p<
+    初めに定義の確認をしておこう。
+    オプティックは、次のようにモノイダル圏が 2 つの圏に作用しているという状況で定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> およびモノイダル圏 &m<\scr<K>> をとる。
+      &m<\bfrm<End> (\scr<C>)> を合成に関してモノイダル圏と見なすとき、強モノイダル関手 &m<\oslash;: \scr<K> \to; \bfrm<End> (\scr<C>)> のことを &m<\scr<K>> の &m<\scr<C>> への\em<作用\fl<action>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>, \bar<\scr<C>>> とモノイダル圏 &m<\scr<K>> について、&m<\scr<K>> の &m<\scr<C>> への作用 &m<\oslash|ord|;: \scr<K> \to; \bfrm<End> (\scr<C>)> および &m<\scr<K>> の &m<\bar<\scr<C>>> への作用 &m<\obackslash|ord|;: \scr<K> \to; \bfrm<End> (\bar<\scr<C>>)> が定まっているとする。
+      これらの組 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> を\em<オプティック領域\fl<optic domain>> と呼ぶ。
+    >
+  >
+  \p<
+    コエンドを用いたオプティックの定義は次のようであった。
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      このとき、&m<\scr<C>> の対象 &m<S, A> と &m<\bar<\scr<C>>> の対象 &m<\bar<S>, \bar<A>> に対し、
+      &mb<
+        \sb<\rm<COptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<K>> (\sb<\op<Hom>><\scr<C>> (S, K \oslash; A) \times; \sb<\op<Hom>><\bar<\scr<C>>> (K \obackslash; \bar<A>, \bar<S>))
+      >
+      の元 &m<`g> を\em<コエンドオプティック\fl<coend optic>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
+    >
+  >
+  \p<
+    一方、オプティックにはプロ関手を用いたエンコーディングもあり、これは Tambara 加群の圏上の自然変換として実現される。
+  >
+  \thm|type="def",id="tamb"|<
+    \p<
+      オプティック領域 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      さらに、プロ関手 &m<P: \bar<\scr<C>> \vertrarr; \scr<C>> をとる。
+      対象 &m<M, X, \bar<X>> に対し、全ての変数に関して自然な射
+      &mb<
+        \sb<`j><M X \bar<X>>: P (X, \bar<X>) \longto; P (M \oslash; X, M \obackslash; \bar<X>)
+      >
+      が定まっていて、任意の対象 &m<M, N, X, \bar<X>> に対し、図式
+      &mb<
+        &mark<\wheart;>
+        \array|align="c"|<
+          \c<\diag|hor="vthn"|<
+            \v<P (X, \bar<X>)> \v; \v<P (\top; \oslash; X, \top; \obackslash; \bar<X>)> \br;
+            \v; \v<P (X, \bar<X>)> \v;
+            \ar|s="1",e="3"|<\sb<`j><\top; X \bar<X>>>
+            \ar|s="1",e="5",tip="none",line="2"|; \ar|s="3",e="5"|;
+          >> \br;
+          \c<\diag|hor="thk"|<
+            \v<P (X, \bar<X>)> \v<P ((M \otimes; N) \oslash; X, (M \otimes; N) \obackslash; \bar<X>)> \br;
+            \v<P (N \oslash; X, N \obackslash; \bar<X>)> \v<P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))>
+            \ar|s="1",e="2"|<\sb<`j><M \otimes; N, X, \bar<X>>>
+            \ar|s="1",e="3",inv|<\sb<`j><N X \bar<X>>> \ar|s="3",e="4",inv|<\sb<`j><M, N \oslash; X, N \obackslash; \bar<X>>>
+            \ar|s="2",e="4"|;
+          >>
+        >
+      >
+      が全て可換であるとする。
+      なお、ラベルのない射は標準的な同型射を表している。
+      このとき、&m<`j> を &m<P> に対する \em<Tambara 構造\fl<— structure>> といい、組 &m<(P, `j)> を \em<Tambara 加群\fl<— module>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      さらに、Tambara 加群 &m<(P, `j), (Q, `z): \bar<\scr<C>> \vertrarr; \scr<C>> および自然変換 &m<`u: P \raarr; Q> をとる。
+      任意の対象 &m<M, X, \bar<X>> に対し、
+      &mb<
+        \diag|hor="thk"|<
+          \v<P (X, \bar<X>)> \v<Q (X, \bar<X>)> \br;
+          \v<P (M \oslash; X, M \obackslash; \bar<X>)> \v<Q (M \oslash; X, M \obackslash; \bar<X>)>
+          \ar|s="1",e="2"|<\sb<`u><X \bar<X>>> \ar|s="3",e="4",inv|<\sb<`u><M \times; X, M \times; \bar<X>>>
+          \ar|s="1",e="3",inv|<\sb<`j><M X \bar<X>>> \ar|s="2",e="4"|<\sb<`z><M X \bar<X>>>
+        >
+      >
+      が可換であるとき、&m<`u> を \em<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `j) \raarr; (Q, `z)> で表す。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      圏 &m<\bfrm<Tamb> (\scr<W>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<Tamb> (\scr<W>)> の対象は、&m<\scr<C>> 上の Tambara 加群 &m<(P, `j)> の全体とする。
+      >
+      \li<
+        &m<\bfrm<Tamb> (\scr<W>)> の 2 つの対象 &m<(P, `j), (Q, `z)> の間の射は、Tambara 加群の射 &m<`u: (P, `j) \raarr; (Q, `z)> の全体とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      オプティック領域 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      このとき、&m<\scr<C>> の対象 &m<S, A> と &m<\bar<\scr<C>>> の対象 &m<\bar<S>, \bar<A>> に対し、
+      &mb<
+        \sb<\rm<POptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<(P, `j) \in; \bfrm<Tamb> (\scr<W>)> \op<Hom> (P (A, \bar<A>), P (S, \bar<S>))
+      >
+      の元 &m<`f> を\em<プロ関手オプティック\fl<profunctor optic>> と呼ぶ。
+    >
+  >
+  \p<
+    上記の定義において、&m<\sb<\rm<POptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>)> は射集合のエンドとして定義されているので、これは自然変換の全体である。
+    具体的には、Tambara 加群 &m<(P, `j)> に対して、構造射 &m<`j> を忘れて &m<(A, \bar<A>)> での像を返す関手を
+    &mb<
+      \array|align="rrcl"|<
+        \c<\hyphen; (A, \bar<A>):> \c<\bfrm<Tamb> (\scr<W>)> \c<\longto;> \c<\bfrm<Set>> \br;
+        \c; \c<(P, `j)> \c<\longmapsto;> \c<P (A, \bar<A>)>
+      >
+    >
+    と書くことにすると、自然変換 &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> がプロ関手オプティックである。
+  >
+  \p<
+    さて、オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> 上の Tambara 加群 &m<(P, `j)> の構造射 &m<`j> とは、対象 &m<M, X, \bar<X>> に対する
+    &mb<
+      \sb<`j><M X \bar<X>>: P (X, \bar<X>) \longto; P (M \oslash; X, M \obackslash; \bar<X>)
+    >
+    という形の自然な写像の族であった。
+    これは、特に &m<M> に関する自然性から、対象 &m<X, \bar<X>> に対する
+    &mb<
+      \sb<`j><X \bar<X>>: P (X, \bar<X>) \longto; \int<M \in; \scr<K>> P (M \oslash; X, M \obackslash; \bar<X>)
+    >
+    という形の自然な写像の族と 1 対 1 に対応する。
+    この右辺を簡単のため &m<\sb<`F><\scr<W>> P (X, \bar<X>)> と書くことにする。
+    すると、上記の &m<\sb<`j><X \bar<X>>> は &m<X> と &m<\bar<X>> に関して自然だったから、これは &m<`j: P \raarr; \sb<`F><\scr<W>> P> という自然変換と 1 対 1 に対応する。
+    これで、Tambara 加群 &m<(P, `j)> の構造射 &m<`j> が、&m<P> 自身から &m<P> が定める別のプロ関手への自然変換であることが分かった。
+  >
+  \p<
+    そこで、今 &m<\sb<`F><\scr<W>>> と書いたプロ関手からプロ関手を得る操作に注目することにしよう。
+    これは、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<`F><\scr<W>>:> \c<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \c<\longto;> \c<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \br;
+        \c; \c<P> \c<\longmapsto;> \c<\tort<\array|align="rcl"|<
+          \c<\sp<\scr<C>><\circ;> \times; \bar<\scr<C>>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c<(X, \bar<X>)> \c<\longmapsto;> \c<\int<M \in; \scr<K>> P (M \oslash; X, M \obackslash; \bar<X>)>
+        >>>
+      >
+    >
+    という &m<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> 上の自己関手を定める。
+    次に示すように、これはコモナドの構造をもつ。
+  >
+  \thm|type="prp"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      上記で定まる &m<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> 上の自己関手 &m<\sb<`F><\scr<W>>> はコモナドの構造をもつ。
+    >
+  >
+  \prf<
+    \p<
+      まず、余単位 &m<`e: \sb<\rm<id>><\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \raarr; `F> を定める。
+      これを定めるには、プロ関手 &m<P> と対象 &m<X, \bar<X>> に対して、写像 &m<\sb<`e><P X \bar<X>>: `F P (X, \bar<X>) \to; P (X, \bar<X>)> を全変数に関して自然になるように定めれば良い。
+      そこで、合成
+      &mb<
+        \diag<
+          \v<\int<M> P (M \oslash; X, M \obackslash; \bar<X>)> \v<P (\top; \oslash; X, \top; \obackslash; \bar<X>)> \v<P (X, \bar<X>)>
+          \ar|s="1",e="2"|<\sb<\rm<pr>><\top;>> \ar|s="2",e="3"|;
+        >
+      >
+      を &m<\sb<`e><P X \bar<X>>> と定める。
+    >
+    \p<
+      次に、余乗法 &m<`d: `F \circ; `F \raarr; `F> を定める。
+      そのために、プロ関手 &m<P> と対象 &m<X, \bar<X>> に対して、写像 &m<\sb<`d><P X \bar<X>>: `F P (X, \bar<X>) \to; `F `F P (X, \bar<X>)> を全変数に関して自然になるように定める。
+      エンドの普遍性から、任意の対象 &m<M, N> に対し、図式
+      &mb<
+        \diag<
+          \v<\int<M> P (M \oslash; X, M \obackslash; \bar<X>)> \v<\int<N> \int<M> P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))> \br;
+          \v<P (M \otimes; N) \oslash; X, (M \otimes; N) \oslash; X> \v<P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))>
+          \ar|s="1",e="2",dash|<\sb<`d><P X \bar<X>>>
+          \ar|s="1",e="3",inv|<\sb<\rm<pr>><M \otimes; N>> \ar|s="2",e="4"|<\sb<\rm<pr>><M> \circ; \sb<\rm<pr>><N>>
+          \ar|s="3",e="4"|;
+        >
+      >
+      を可換にする破線の射がとれる。
+      これを &m<\sb<`d><P X \bar<X>>> と定める。
+    >
+    \p<
+      後は、今定めた &m<`e> と &m<`d> がコモナドの公理を満たすことを確かめれば良い。
+      詳細は省略する。
+    >
+  >
+  \p<
+    すでに述べたように、オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> 上の Tambara 加群 &m<(P, `j)> の構造射 &m<`j> は、自然変換 &m<`j: P \raarr; \sb<`F><\scr<W>> P> と見なせる。
+    この &m<`j> が本当に Tambara 加群の構造射になるためには、さらに\ref|type="thm",ref="tamb"|; 中の図式 &m<\wheart;> を可換にする必要があるが、実は &m<`j> がこの図式を可換にすることと &m<`j> が &m<\sb<`F><\scr<W>>> 上のコモナド余代数になることが同値になっている。
+    すなわち、&m<\scr<W>> 上の Tambara 加群と &m<\sb<`F><\scr<W>>> 上の余代数は 1 対 1 に対応する。
+    この対応は、さらに圏同値にもなる。
+  >
+  \thm|type="thm"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> に対し、圏同値
+      &mb<
+        \bfrm<Tamb> (\scr<W>) \cong; \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`F><\scr<W>>>
+      >
+      が成立する。
+      なお、右辺は &m<\sb<`F><\scr<W>>> 上の余 Eilenberg–Moore 圏である。
+    >
+  >
+  \prf<
+    \p<
+      プロ関手 &m<P: \bar<\scr<C>> \vertrarr; \scr<C>> および自然変換 &m<`j: P \raarr; `F P> をとる。
+      &m<`j> が &m<`F> 上のコモナド余代数であるための条件は、2 つの図式
+      &mb<
+        &mark<\wspade;>
+        \diag<
+          \v<P> \v<`F P> \br;
+          \v; \v<P>
+          \ar|s="1",e="2"|<`j> \ar|s="2",e="4"|<\sb<`e><P>> \ar|s="1",e="4",line="2",tip="none"|;
+          \ar|s="3",e="4",line="0",tip="none",inv|<\vph<`F `j>>
+        > \qquad;
+        \diag<
+          \v<P> \v<`F P> \br;
+          \v<`F P> \v<`F `F P>
+          \ar|s="1",e="2"|<`j> \ar|s="1",e="3",inv|<`j>
+          \ar|s="2",e="4"|<\sb<`d><P>> \ar|s="3",e="4",inv|<`F `j>
+        >
+      >
+      が可換であることである。
+    >
+    \p<
+      まず、式 &m<\wspade;> の左側の図式について考える。
+      これは、任意の対象 &m<X, \bar<X>> に対して、図式
+      &mb<
+        &mark<\sbsp<\wspade;><1><\pr;>>
+        \diag<
+          \v<P (X, \bar<X>)> \v<\int<M> P (M \oslash; X, M \obackslash; \bar<X>)> \br;
+          \v; \v<P (X, \bar<X>)>
+          \ar|s="1",e="2"|<\sb<`j><X \bar<X>>>
+          \ar|s="2",e="4"|<\sb<`e><P X \bar<X>>>
+          \ar|s="1",e="4",line="2",tip="none"|;
+        >
+      >
+      が可換であることと同値である。
+      この図式の可換性が、図式
+      &mb<
+        &mark<\sbsp<\wheart;><1><\pr;>>
+        \diag|hor="vthn"|<
+          \v<P (X, \bar<X>)> \v; \v<P (\top; \oslash; X, \top; \obackslash; \bar<X>)> \br;
+          \v; \v<P (X, \bar<X>)> \v;
+          \ar|s="1",e="3"|<\sb<`j><\top; X \bar<X>>>
+          \ar|s="1",e="5",tip="none",line="2"|; \ar|s="3",e="5"|;
+        >
+      >
+      の可換性と同値であることを示す。
+      ここで、
+      &mb<
+        \diag<
+          \v<P (X, \bar<X>)> \v<\int<M> P (M \oslash; X, M \obackslash; \bar<X>)> \br;
+          \v; \v<P (\top; \oslash; X, \top; \obackslash; \bar<X>)> \br;
+          \v; \v<P (X, \bar<X>)>
+          \ar|s="1",e="2"|<\sb<`j><X \bar<X>>> \ar|s="1",e="4",inv|<\sb<`z><\top; X \bar<X>>>
+          \ar|s="2",e="4"|<\sb<\rm<pr>><\top;>> \ar|s="4",e="6"|;
+          \ar|s="1",e="6",line="2",tip="none",bend="-30"|;
+          \ar|s="2:b73",e="6:ne",bend="60"|<\sb<`e><P X \bar<X>>>
+        >
+      >
+      を考えると、この図式の最も外側部分が図式 &m<\sbsp<\wspade;><1><\pr;>> であり、この図式の左下にある三角形部分が図式 &m<\sbsp<\wheart;><1><\pr;>> である。
+      一方で、この図式の残りの部分は定義から可換だから、これにより 2 つの図式 &m<\sbsp<\wspade;><1><\pr;>> と &m<\sbsp<\wheart;><1><\pr;>> の可換性は同値である。
+    >
+    \p<
+      次に、式 &m<\wspade;> の右側の図式について考える。
+      これは、任意の対象 &m<X, \bar<X>> に対して、図式
+      &mb<
+        &mark<\sbsp<\wspade;><2><\pr;>>
+        \diag<
+          \v<P (X, \bar<X>)> \v<\int<M> P (M \oslash; X, M \obackslash; \bar<X>)> \br;
+          \v<\int<M> P (M \oslash; X, M \obackslash; \bar<X>)> \v<\int<N> \int<M> P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))>
+          \ar|s="1",e="2"|<\sb<`j><X \bar<X>>> \ar|s="1",e="3",inv|<\sb<`j><X \bar<X>>>
+          \ar|s="2",e="4"|<\sb<`d><P X \bar<X>>> \ar|s="3",e="4",inv|<\sb<(`F `j)><X \bar<X>>>
+        >
+      >
+      が可換であることと同値である。
+      この図式の可換性が、任意の対象 &m<M, N> に対して図式
+      &mb<
+        &mark<\sbsp<\wheart;><2><\pr;>>
+        \diag|hor="thk"|<
+          \v<P (X, \bar<X>)> \v<P ((M \otimes; N) \oslash; X, (M \otimes; N) \obackslash; \bar<X>)> \br;
+          \v<P (N \oslash; X, N \obackslash; \bar<X>)> \v<P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))>
+          \ar|s="1",e="2"|<\sb<`j><M \otimes; N, X, \bar<X>>>
+          \ar|s="1",e="3",inv|<\sb<`j><N X \bar<X>>> \ar|s="3",e="4",inv|<\sb<`j><M, N \oslash; X, N \obackslash; \bar<X>>>
+          \ar|s="2",e="4"|;
+        >
+      >
+      が可換になることと同値であることを示す。
+      ここで、2 つの図式
+      &mb<
+        \array|align="c"|<
+          \c<
+            \diag<
+              \v<P (X, \bar<X>)> \v<\int<M> P (M \oslash; X, M \obackslash; \bar<X>)> \v<\int<N> \int<M> P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))> \br;
+              \v; \v<P ((M \otimes; N) \oslash; X, (M \otimes; N) \obackslash; \bar<X>)> \v<\int<M> P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))> \br;
+              \v; \v; \v<P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))>
+              \ar|s="1",e="2"|<\sb<`j><X \bar<X>>> \ar|s="1",e="5",inv|<\sb<`j><M \otimes; N, X, \bar<X>>> \ar|s="5",e="9",inv|;
+              \ar|s="2",e="3"|<\sb<`d><P X \bar<X>>>
+              \ar|s="2",e="5"|<\sb<\rm<pr>><M \otimes; N>> \ar|s="3",e="6"|<\sb<\rm<pr>><N>> \ar|s="6",e="9"|<\sb<\rm<pr>><M>>
+            >
+          > \br;
+          \c<
+            \diag<
+              \v<P (X, \bar<X>)> \v<\int<M> P (M \oslash; X, M \obackslash; \bar<X>)> \v<\int<N> \int<M> P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))> \br;
+              \v; \v<P (N \oslash; X, N \obackslash; \bar<X>)> \v<\int<M> P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))> \br;
+              \v; \v; \v<P (M \oslash; (N \oslash; X), M \obackslash; (N \obackslash; \bar<X>))>
+              \ar|s="1",e="2"|<\sb<`j><X \bar<X>>> \ar|s="1",e="5",inv|<\sb<`j><N X \bar<X>>> \ar|s="5",e="9",inv|<\sb<`j><M, N \oslash; X, N \obackslash; \bar<X>>>
+              \ar|s="2",e="3"|<\sb<(`F `j)><X \bar<X>>>
+              \ar|s="2",e="5"|<\sb<\rm<pr>><N>> \ar|s="3",e="6"|<\sb<\rm<pr>><N>> \ar|s="6",e="9"|<\sb<\rm<pr>><M>>
+            >
+          >
+        >
+      >
+      は可換である。
+      図式 &m<\sbsp<\wspade;><2><\pr;>> が可換であることは、このそれぞれの図式について左上から右上を経由して右下へ進む経路が等しいことと同値である。
+      また、図式 &m<\sbsp<\wheart;><2><\pr;>> が可換であることは、このそれぞれの図式について左上から右下へ斜めに進む経路が等しいことと同値である。
+      この図式は全て可換だったから、これにより 2 つの図式 &m<\sbsp<\wspade;><2><\pr;>> と &m<\sbsp<\wheart;><2><\pr;>> の可換性は同値である。
+    >
+    \p<
+      以上により、式 &m<\wspade;> 中の 2 つの図式と式 &m<\wheart;> 中の 2 つの図式の可換性は同値である。
+      すなわち、&m<`j> を自然変換 &m<`j: P \raarr; `F P> と見なしたときに &m<`j> が &m<`F> 上のコモナド余代数になることと、&m<`j> を\ref|type="thm",ref="tamb"|; にあるような写像の族と見なしたときに &m<`j> が Tambara 加群になることは同値である。
+      これより、&m<`F> 上のコモナド余代数 &m<(P, `j)> と Tambara 加群 &m<(P, `j)> は 1 対 1 に対応する。
+    >
+    \p<
+      また、この対応は関手に拡張され、それが定理中の圏同値を与えることが示せる。
+      この詳細は省略する。
+    >
+  >
+  \p<
+    加えて、この関手は左随伴をもつ。
+  >
+  \thm|type="thm",id="adj"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> に対し、&m<\sb<`F><\scr<W>>> は左随伴をもつ。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        \array|align="cl"|<
+          \c; \c<\sb<\op<Hom>><\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> (Q, \sb<`F><\scr<W>> P)> \br;
+          \c<\cong;> \c<\int<X, \bar<X>> \op<Hom> \paren<Q (X, \bar<X>), \int<M> P (M \oslash; X, M \obackslash; \bar<X>)>> \br;
+          \c<\cong;> \c<\int<M, X, \bar<X>> \op<Hom> (Q (X, \bar<X>), P (M \oslash; X, M \obackslash; \bar<X>))> \br;
+          \c<\cong;> \c<\int<M, X, \bar<X>> \op<Hom> \paren<Q (X, \bar<X>), \int<Y, \bar<Y>> (\op<Hom> (Y, M \oslash; X) \buharprarr; (\op<Hom> (M \obackslash; \bar<X>, \bar<Y>) \buharprarr; P (Y, \bar<Y>)))>> \br;
+          \c<\cong;> \c<\int<M, X, \bar<X>, Y, \bar<Y>> \op<Hom> (Q (X, \bar<X>), \op<Hom> (Y, M \oslash; X) \buharprarr; (\op<Hom> (M \obackslash; \bar<X>, \bar<Y>) \buharprarr; P (Y, \bar<Y>)))> \br;
+          \c<\cong;> \c<\int<M, X, \bar<X>, Y, \bar<Y>> \op<Hom> (Q (X, \bar<X>) \times; \op<Hom> (Y, M \oslash; X) \times; \op<Hom> (M \obackslash; \bar<X>, \bar<Y>), P (Y, \bar<Y>))> \br;
+          \c<\cong;> \c<\int<Y, \bar<Y>> \op<Hom> \paren<\int<><M, X, \bar<X>> (Q (X, \bar<X>) \times; \op<Hom> (Y, M \oslash; X) \times; \op<Hom> (M \obackslash; \bar<X>, \bar<Y>)), P (Y, \bar<Y>)>> \br;
+        >
+      >
+      が成り立つ。
+      そこで、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<`C><\scr<W>>:> \c<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \c<\longto;> \c<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \br;
+          \c; \c<Q> \c<\longmapsto;> \c<\tort<\array|align="rcl"|<
+            \c<\sp<\scr<C>><\circ;> \times; \bar<\scr<C>>> \c<\longto;> \c<\bfrm<Set>> \br;
+            \c<(Y, \bar<Y>)> \c<\longmapsto;> \c<\int<><M \in; \scr<K>> \int<><X \in; \scr<C>> \int<><\bar<X> \in; \bar<\scr<C>>> (Q (X, \bar<X>) \times; \op<Hom> (Y, M \oslash; X) \times; \op<Hom> (M \obackslash; \bar<X>, \bar<Y>))>
+          >>>
+        >
+      >
+      とおくとこれは関手になり、上式の最右辺は、
+      &mb<
+        \int<Y, \bar<Y>> \op<Hom> (\sb<`C><\scr<W>> Q (Y, \bar<Y>), P (Y, \bar<Y>))
+      >
+      と書ける。
+      これは &m<\op<Hom> (\sb<`C><\scr<W>> Q, P)> と同型だから、以上によって、
+      &mb<
+        \sb<\op<Hom>><\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> (Q, \sb<`F><\scr<W>> P) \cong; \sb<\op<Hom>><\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> (\sb<`C><\scr<W>> Q, P)
+      >
+      が示された。
+      これより、&m<\sb<`C><\scr<W>>> は &m<\sb<`F><\scr<W>>> の左随伴である。
+    >
+  >
+  \p<
+    これで、&m<\sb<`F><\scr<W>>> の左随伴として、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<`C><\scr<W>>:> \c<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \c<\longto;> \c<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \br;
+        \c; \c<Q> \c<\longmapsto;> \c<\tort<\array|align="rcl"|<
+          \c<\sp<\scr<C>><\circ;> \times; \bar<\scr<C>>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c<(Y, \bar<Y>)> \c<\longmapsto;> \c<\int<><M \in; \scr<K>> \int<><X \in; \scr<C>> \int<><\bar<X> \in; \bar<\scr<C>>> (Q (X, \bar<X>) \times; \op<Hom> (Y, M \oslash; X) \times; \op<Hom> (M \obackslash; \bar<X>, \bar<Y>))>
+        >>>
+      >
+    >
+    が得られたわけだが、&m<\sb<`F><\scr<W>>> の定義を Yoneda の補題を用いて展開して、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<`F><\scr<W>>:> \c<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \c<\longto;> \c<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \br;
+        \c; \c<P> \c<\longmapsto;> \c<\tort<\array|align="rcl"|<
+          \c<\sp<\scr<C>><\circ;> \times; \bar<\scr<C>>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c<(X, \bar<X>)> \c<\longmapsto;> \c<\int<M \in; \scr<K>> \int<Y \in; \scr<C>> \int<\bar<Y> \in; \bar<\scr<C>>> (P (Y, \bar<Y>) \times; \op<Hom> (M \oslash; X, Y) \times; \op<Hom> (\bar<Y>, M \obackslash; \bar<X>))>
+        >>>
+      >
+    >
+    と書くと、綺麗に対応していることが見られる。
+  >
+  \p<
+    さて、ここで以下の随伴モナドに関する一般論を思い出そう。
+  >
+  \thm|type="thm",id="monad"|<
+    \p<
+      圏 &m<\scr<P>> 上のコモナド &m<(`F, `d, `e)> に対し、関手 &m<`F> が左随伴関手 &m<`C> をもつとする。
+      このとき、
+    >
+    \ul<
+      \li<
+        &m<`C> はモナドの構造 &m<(`C, `m, `h)> をもつ。
+      >
+      \li<
+        コモナド &m<(`F, `d, `e)> 上の余代数とモナド &m<(`C, `m, `h)> 上の代数は 1 対 1 に対応し、この対応は圏同値を与える。
+        すなわち、&m<(`F, `d, `e)> 上の余 Eilenberg–Moore 圏 &m<\sp<\scr<P>><`F>> と &m<(`C, `m, `h)> 上の Eilenberg–Moore 圏 &m<\sp<\scr<P>><`C>> は圏同値である。
+      >
+    >
+  >
+  \prf<
+    \p<
+      最初の主張は Eilenberg–Moore\ref|type="bib",ref="eaft"|; の命題 3.1 に記載がある。
+      次の主張も &m<`m> と &m<`h> の構成を用いて計算することで確かめられる。
+    >
+  >
+  \p<
+    この定理から、Tambara 加群がモナド代数としても書けることが分かり、さらに任意のプロ関手から自由 Tambara 加群や余自由 Tambara 加群が作れることが分かる。
+  >
+  \thm|type="thm",id="tambeq"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> に対し、圏同値
+      &mb<
+        \bfrm<Tamb> (\scr<W>) \cong; \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`F><\scr<W>>> \cong; \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`C><\scr<W>>>
+      >
+      が成立する。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="adj"|; と\ref|type="thm",ref="monad"|; からすぐに従う。
+    >
+  >
+  \thm|type="thm",id="tambadj"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      忘却関手 &m<U: \bfrm<Tamb> (\scr<W>) \to; \bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> は左随伴と右随伴をともにもつ。
+      すなわち、任意のプロ関手に対して、それ上の自由 Tambara 加群と余自由 Tambara 加群がともに存在する。
+    >
+  >
+  \prf<
+    \p<
+      コモナド理論の一般論から、コモナド &m<\sb<`F><\scr<W>>> は関手 &m<\sb<\tilde<`F>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`F><\scr<W>>>> を誘導し、これは忘却関手の右随伴になる。
+      一方で、\ref|type="thm",ref="tambeq"|; より &m<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`F><\scr<W>>>> は &m<\bfrm<Tamb> (\scr<W>)> と圏同値だから、この関手は &m<\sb<\tilde<`F>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Tamb> (\scr<W>)> と見なすこともでき、忘却関手の右随伴を与える。
+    >
+    \p<
+      同様にして、モナド &m<\sb<`C><\scr<W>>> は関手 &m<\sb<\tilde<`C>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`C><\scr<W>>>> を誘導し、これを &m<\sb<\tilde<`C>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Tamb> (\scr<W>)> と見なせば、忘却関手の左随伴になる。
+    >
+  >
+  \p<
+    以上の結果は、次のような可換図式としてまとめることができる。
+    ラベルのない矢印は忘却関手である。
+  >
+  \p<
+    &mb<
+      \diag|ver="5"|<
+        \v<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> \v<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`F><\scr<W>>>> \v; \br;
+        \v; \v<\g|rotate="90deg"|<\cong;>> \v; \br;
+        \v; \v<\bfrm<Tamb> (\scr<W>)> \v; \br;
+        \v; \v<\g|rotate="90deg"|<\cong;>> \v; \br;
+        \v; \v<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`C><\scr<W>>>> \v<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)>
+        \ar|s="1:r60",e="2:l60",bend="-40",name="a",inv|<\sb<\tilde<`F>><\scr<W>>> \ar|s="2:l40",e="1:r40",bend="-40",name="b",inv|<\ph<\sb<`F><\scr<W>>>>
+        \ar|s="a:c",e="b:c",line="0",mark|<\g|rotate="-90deg"|<\vdash;>>
+        \ar|s="14:r60",e="15:l60",bend="-40",name="c",inv|<\ph<\sb<`C><\scr<W>>>> \ar|s="15:l40",e="14:r40",bend="-40",name="d",inv|<\sb<\tilde<`C>><\scr<W>>>
+        \ar|s="c:c",e="d:c",line="0",mark|<\g|rotate="-90deg"|<\vdash;>>
+        \ar|s="1:t40",e="15:t60",bend="40"|<\sb<`F><\scr<W>>> \ar|s="15:b60",e="1:b40",bend="40"|<\sb<`C><\scr<W>>>
+      >
+    >
+  >
+  \p<
+    さて、自由 Tambara 加群の存在を使うと、オプティックの 2 つのエンコーディングが等価であることが示せる。
+  >
+  \thm|type="thm",id="equiv"|<
+    \p<
+      オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
+      &m<\scr<C>> の対象 &m<S, A> と &m<\bar<\scr<C>>> の対象 &m<\bar<S>, \bar<A>> に対し、
+      &mb<
+        \sb<\rm<POptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \cong; \sb<\rm<COptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>)
+      >
+      が成立する。
+    >
+  >
+  \prf<
+    \p<
+      &m<(A, \bar<A>)> による表現可能プロ関手を
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<H><A \bar<A>>:> \c<\sp<\scr<C>><\circ;> \times; \bar<\scr<C>>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<(X, \bar<X>)> \c<\longmapsto;> \c<\op<Hom> (X, A) \times; \op<Hom> (\bar<A>, \bar<X>)>
+        >
+      >
+      とおくと、\ref|type="thm",ref="tambadj"|; などを用いて、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\rm<POptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>)> \c<=> \c<\int<(P, `j) \in; \bfrm<Tamb> (\scr<W>)> \op<Hom> (P (A, \bar<A>), P (S, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\int<(P, `j) \in; \bfrm<Tamb> (\scr<W>)> \op<Hom> (\sb<\op<Hom>><\bfrm<Prof> (\bar<\scr<C>>, \scr<C>)> (\sp<H><A \bar<A>>, P), P (S, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\int<(P, `j) \in; \bfrm<Tamb> (\scr<W>)> \op<Hom> (\sb<\op<Hom>><\bfrm<Tamb> (\scr<W>)> (\sb<\tilde<`C>><\scr<W>> \sp<H><A \bar<A>>, (P, `j)), P (S, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\sb<`C><\scr<W>> \sp<H><A \bar<A>> (S, \bar<S>)> \br;
+          \c; \c<=> \c<\int<><K, X, \bar<X>> (\sp<H><A \bar<A>> (X, \bar<X>) \times; \op<Hom> (S, K \oslash; X) \times; \op<Hom> (K \obackslash; \bar<X>, \bar<S>))> \br;
+          \c; \c<=> \c<\int<><K, X, \bar<X>> (\op<Hom> (X, A) \times; \op<Hom> (\bar<A>, \bar<X>) \times; \op<Hom> (S, K \oslash; X) \times; \op<Hom> (K \obackslash; \bar<X>, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\int<><K> (\op<Hom> (S, K \oslash; A) \times; \op<Hom> (K \obackslash; \bar<A>, \bar<S>))> \br;
+          \c; \c<=> \c<\sb<\rm<COptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>)>
+        >
+      >
+      が成り立つことが分かり、定理が示された。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="eaft"|<S. Eilenberg, J. Moore (1965)「Adjoint functors and triples」『Illinois Journal of Mathematics』 9:381–398>
+    \li|id="rpot"|<M. Román (2020)「Profunctor optics and traversals」arXiv:2001.08045>
+  >
+
+>

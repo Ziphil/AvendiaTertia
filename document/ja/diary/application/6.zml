@@ -1,0 +1,132 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<AGC021-B: ギフト包装法>
+  \use-math;
+
+  \h1<日記 (2018 年 2 月 24 日)>
+  \p<
+    AGC021 に出てきました。
+    結果は、1 問正解 300 点で 1032 人中 469 位でした。
+    レートは 869 (緑) まで上がりました。
+    早く青くなりたい。
+  >
+  \p<
+    さて、今回は AGC021 の B 問題についてまとめておきます。
+    問題は\ae|href="https://beta.atcoder.jp/contests/agc021/tasks/agc021_b"|<こちら>です。
+  >
+  \p<
+    平面上の &m<N> 個の点が与えられるので、それぞれの点に対して、ランダムにある位置を決めたときにそこからその点が最短となるような確率を求めます。
+    したがって、ボロノイ図を描いて各面積を求めれば良いんですが、&m<N> 個の点が与えられる領域に対して &m<R> がやたら大きく設定されているので、ボロノイ領域が十分遠方まで広がらない点については確率 0 としてしまって問題なさそうです。
+    ボロノイ領域が十分遠方まで広がっている場合、その領域は遠方では 2 つの半直線で囲まれたような領域になっているはずなので、その領域にランダムな位置が属する確率は、その半直線が成す角に比例します。
+  >
+  \p<
+    ということで、問題となるのはボロノイ領域が十分遠方まで広がる点というのはどういう点かということですが、少し考えれば、与えられた &m<N> 点の凸包上の点であることが分かります。
+    また、そのような領域を作る 2 つの半直線は、凸包上で隣り合う点との垂直二等分線になります。
+    垂直二等分線の角度は逆正接関数ですぐ求まりますが、凸法を求める方は大変 (というか私はこの問題を読んだ時点で知らなかった) です。
+  >
+  \p<
+    凸包を求めるアルゴリズムはいくつかあるようですが、今回は「ギフト包装法」と呼ばれるアルゴリズムを使ってみます。
+    凸包を成す頂点が、その凸方を 1 周する順番に求まります。
+    処理する点の数を &m<N> とすると、最悪計算量が &m<O (\sp<N><2>)> です。
+  >
+  \p<
+    このアルゴリズムでは、以下のように凸包を求めます。
+    まず、絶対に凸包の頂点となるような点 &m<A> を 1 つ選びます。
+    これは与えられた点全体の中の一番上などを選べば良いので簡単です。
+    次に、点 &m<B> であって全ての点が直線 &m<AB> の右側になるようなものを見つけます。
+    この点 &m<B> が凸包の次の頂点となります。
+    あとは、点 &m<A> を今見つけた点 &m<B> に上書きして、上の操作を 1 周するまで繰り返すだけです。
+  >
+  \p<
+    上の点 &m<B> は以下のように見つけられます。
+    与えられた点のうちの最初の点を &m<C> とし、与えられた点の中で順に直線 &m<AC> より左側にあるものが存在するか調べます。
+    もし存在したら、その点を新たに &m<C> とし、再び直線 &m<AC> より左側にあるものが存在するか調べていきます。
+    こうすることで、だんだんと直線 &m<AC> が反時計回りに動いていき、全ての点がその右側にあるような &m<C> が見つかるわけです。
+  >
+  \p<
+    実際のプログラムは以下のような感じです。
+  >
+  \pre~*<
+    public void run() {
+      BetterScanner scanner = new BetterScanner(System.in);
+
+      int n = scanner.nextInt();
+      int[] xx = new int[n];
+      int[] yy = new int[n];
+
+      // 最も上 (y 座標が小さい) にある点のインデックスを求める
+      // y 座標が最小の点が複数ある場合はその中の最も左のものにしておく
+      int a = 0;
+      int minY = 10000000;
+      int minX = 10000000;
+      for (int i = 0 ; i `< n ; i ++) {
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        xx[i] = x;
+        yy[i] = y;
+        if (y `< minY || (y == minY `&`& x `< minX)) {
+          minY = y;
+          minX = x;
+          a = i;
+        }
+      }
+      List`<Integer`> outers = new ArrayList(n);
+      int b;
+      do {
+        outers.add(a);
+        b = 0;
+        for (int c = 1 ; c `< n ; c ++) {
+          if (b == a) {
+            b = c;
+          } else {
+            // 2 ベクトル AB, AC の外積を計算
+            // これが正なら直線 AB に対して点 C は左側
+            long v = (long)(xx[a] - xx[b]) * (yy[a] - yy[c]) - (long)(xx[a] - xx[c]) * (yy[a] - yy[b]);
+            long ab = (long)(xx[a] - xx[b]) * (xx[a] - xx[b]) + (long)(yy[a] - yy[b]) * (yy[a] - yy[b]);
+            long ac = (long)(xx[a] - xx[c]) * (xx[a] - xx[c]) + (long)(yy[a] - yy[c]) * (yy[a] - yy[c]);
+            // 直線 AB 上に点 C がある (外積が 0) 場合は点 C の方が遠いときに更新
+            if (v `> 0L || (v == 0L `&`& ac `> ab)) {
+              b = c;
+            }
+          }
+        }
+        a = b;
+      // 1 周するまで繰り返し
+      } while (a != outers.get(0)); 
+
+      int m = outers.size();
+      double[] probs = new double[n];
+      for (int k = 0 ; k `< m ; k ++) {
+        int i = outers.get(k);
+        int nextI = (k `< m - 1) ? outers.get(k + 1) : outers.get(0);
+        int previousI = (k `>= 1) ? outers.get(k - 1) : outers.get(m - 1);
+        // 凸包上で隣り合う点との垂直二等分線の角度を計算
+        double nextTan = Math.atan2(yy[nextI] - yy[i], xx[nextI] - xx[i]) + Math.PI / 2;
+        double previousTan = Math.atan2(yy[i] - yy[previousI], xx[i] - xx[previousI]) + Math.PI / 2;
+        if (nextTan `> Math.PI) {
+          nextTan -= 2 * Math.PI;
+        }
+        if (previousTan `> Math.PI) {
+          previousTan -= 2 * Math.PI;
+        }
+        double range = previousTan - nextTan;
+        if (range `< 0) {
+          range += 2 * Math.PI;
+        }
+        // 隣り合う点との垂直二等分線の角度の差を 2π でわったものが確率
+        probs[i] = range / (2 * Math.PI);
+      }
+      for (int i = 0 ; i `< n ; i ++) {
+        System.out.println(probs[i]);
+      }
+    }
+  >
+  \p<
+    ちなみに本番では、最も上にある点のインデックスを求める処理を間違えて書いていて、みすみす 600 点を逃しました。
+    つらいです。
+  >
+
+>

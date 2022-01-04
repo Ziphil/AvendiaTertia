@@ -1,0 +1,25 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Zatlin>
+
+  \h1<概要>
+  \p<
+    Zatlin は、架空言語の単語を生成するためのドメイン固有言語です。
+    この言語で単語生成規則を記述し処理系に渡すと、その生成規則に沿ってランダムに単語の綴りを生成します。
+  >
+  \p<
+    \a|href="2.html"|<ZpDIC> 上では Zatlin を動かすことができます。
+    また、単独で動く Java 製の処理系も公開してます。
+  >
+  \h1<ダウンロード>
+  \p<
+    Zatlin の仕様や処理系は GitHub で公開しています。
+  >
+  \form<
+    \ae|href="https://github.com/Ziphil/Zatlin"|<GitHub ページ>
+  >
+
+>

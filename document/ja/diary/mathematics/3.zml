@@ -1,0 +1,203 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<正規関手の余積表現>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2018 年 2 月 4 日)>
+  \p<
+    前回は解析的関手の圏と特定の前層の圏が同値になることを証明した。
+    今回は、解析的関手の特殊な場合である正規関手にスポットを当てていく。
+  >
+  \p<
+    まず、忘れていた定義をしておく。
+    弱正規対象の定義と全く同様なので、わざわざ言わなくても分かる気がするが･･･。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<\sb<\rm<id>><X>: X \to; X> が &m<X> の正規形であるとき、&m<X> を\em<正規対象\fl<normal object>> という。
+    >
+  >
+  \p<
+    正規形について、2 つ補題を用意する。
+    これらの補題は\a|href="1.html#norm"|<定理 1.9> を示すのに用いるので、本来ならばこの時点で証明されているはずであるが、そこでは証明を省略したのでここで証明する。
+  >
+  \thm|type="lem",id="wnn"|<
+    \p<
+      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<X> が弱正規対象であることと &m<X> が正規対象であることは同値である。
+    >
+  >
+  \prf<
+    \p<
+      正規対象ならば弱正規対象なのは明らかなので、弱正規対象であることを仮定して正規対象でもあることを示す。
+    >
+    \p<
+      任意に &m<\scr<C> `/ X> の対象 &m<f: U \to; X> をとる。
+      仮定から &m<\sb<\rm<id>><X>: X \to; X> は &m<\scr<C> `/ X> で推移的なので、ある &m<u: \sb<\rm<id>><X> \to; f> がとれる。
+    >
+    \p<
+      別の &m<\scr<C> `/ X> の射 &m<v: \sb<\rm<id>><X> \to; f> が存在したとする。
+      &m<f> は推移的なので、ある同型射 &m<p: \sb<\rm<id>><X> \to; \sb<\rm<id>><X>> が存在して &m<v = u \circ; p> となるが、そのような &m<p> は &m<\sb<\rm<id>><X>> しかない。
+      したがって、&m<v = u> である。
+      これにより、&m<\sb<\rm<id>><X>> は &m<\scr<C> `/ X> の始対象である。
+    >
+  >
+  \thm|type="lem",id="comp"|<
+    \p<
+      圏 &m<\scr<C>> が引き戻しをもつとする。
+      任意の射 &m<f: U \to; X> と &m<g: X \to; Y> に対し、&m<f> が正規形ならば &m<g \circ; f> も正規形である。
+    >
+  >
+  \prf<
+    \p<
+      &m<f> は正規形だとして、&m<g> が &m<\scr<C> `/ Y> の始対象であることを示せば良い。
+    >
+    \p<
+      任意に &m<\scr<C> `/ Y> の対象 &m<h: V \to; Y> をとる。
+      &m<\scr<C>> で引き戻し
+      &mb<
+        \diag<
+          \v<X \sb|bin|<\times;><Y> V> \v<V> \br;
+          \v<X> \v<V>
+          \ar|s="1",e="2",dash|<q> \ar|s="1",e="3",dash,inv|<p>
+          \ar|s="3",e="4",inv|<g> \ar|s="2",e="4"|<h>
+        >
+      >
+      を計算すると、&m<f> は &m<\scr<C> `/ X> の始対象だから、&m<\scr<C> `/ X> の射 &m<u: f \to; p> が一意に存在する。
+      これは、&m<\scr<C> `/ Y> の射 &m<q \circ; u: g \circ; f \to; h> を定める。 
+    >
+    \p<
+      他に &m<\scr<C> `/ Y> の射 &m<v: g \circ; f \to; h> があったとする。
+      上の四角形の図式は引き戻しなので、図式
+      &mb<
+        \diag<
+          \v<W> \v; \v; \br;
+          \v; \v<X \sb|bin|<\times;><Y> V> \v<V>  \br;
+          \v; \v<X> \v<V>
+          \ar|s="1",e="6",bend="30"|<v> \ar|s="1",e="8",bend="-30",inv|<f> \ar|s="1",e="5",dash|<w>
+          \ar|s="5",e="6"|<q> \ar|s="5",e="8",inv|<p> \ar|s="6",e="9"|<h> \ar|s="8",e="9",inv|<g>
+        >
+      >
+      を可換にする射 &m<w> が存在し、これは &m<\scr<C> `/ X> の射 &m<w: f \to; p> を定める。
+      しかし、&m<u> の一意性により &m<w = u> である。
+      したがって、&m<v = q \circ; w = q \circ; u> となり、&m<q \circ; u> も一意である。
+      以上により、&m<g \circ; f> は &m<\scr<C> `/ Y> の始対象である。
+    >
+  >
+  \p<
+    これらの補題を用いると、弱正規対象上の自己射が恒等射しかないことが分かる。
+  >
+  \thm|type="lem",id="unit"|<
+    \p<
+      正規関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> をとる。
+      &m<\bfrm<El> (F)> の任意の弱正規対象 &m<(X, x)> に対し、&m<\sb<\op<Aut>><\bfrm<El> (F)> ((X, x))> は単位群である。
+    >
+  >
+  \prf<
+    \p<
+      任意に射 &m<f: (X, x) \to; (X, x)> をとる。
+      \ref|type="thm",ref="wnn"|; によって &m<(X, x)> は正規対象でもあるから、&m<\sb<\rm<id>><(X, x)>> は正規形である。
+      さらに\a|href="1.html#norm"|<定理 1.9> により &m<F> は引き戻しを保つから、&m<\bfrm<El> (F)> は引き戻しをもつ。
+      したがって\ref|type="thm",ref="comp"|; を用いれば、&m<f = f \circ; \sb<\rm<id>><(X, x)>> も正規形であることが分かる。
+    >
+    \p<
+      さて、&m<\sp<\bfrm<Set>><A>> において余等化子
+      &mb<
+        \diag<
+          \v<X> \v<X> \v<Y>
+          \ar|s="1",e="2",shift="3"|<f> \ar|s="1",e="2",shift="-3",inv|<\rm<id>>
+          \ar|s="2",e="3",dash|<g>
+        >
+      >
+      をとり、&m<y \coloneqq; (Fg) x> とおく。
+      すると、&m<\bfrm<El> (F)> での図式
+      &mb<
+        \diag<
+          \v<(X, x)> \v<(X, x)> \v<(Y, y)>
+          \ar|s="1",e="2",shift="3"|<f> \ar|s="1",e="2",shift="-3",inv|<\rm<id>>
+          \ar|s="2",e="3"|<g>
+        >
+      >
+      が可換になる。
+      これにより &m<\bfrm<El> (F) `/ (X, x)> の 2 本の射 &m<f, \sb<\rm<id>><X>: g \circ; f \to; g> が定まるが、\ref|type="thm",ref="comp"|; によって &m<g \circ; f> は正規形なので、&m<f = \sb<\rm<id>><X>> となる。
+    >
+    \p<
+      以上により、&m<(X, x)> 上の自己射は恒等射に限るので、&m<\sb<\op<Aut>><\bfrm<El> (F)> ((X, x)) = 1> である。
+    >
+  >
+  \thm|type="thm",id="main"|<
+    \p<
+      正規関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> を考える。
+      このとき、ある関手 &m<\widetilde<F>: \op<Ob> (\bfrm<Nat> (\sp<\bfrm<Set>><A>)) \to; \bfrm<Set>> によって、各 &m<X \in; \sp<\bfrm<Set>><A>> に対し、
+      &mb<
+        FX \cong; \coprod<`g \in; \bfrm<Nat> (\sp<\bfrm<Set>><A>)><> (\sb<\op<Hom>><\sp<\bfrm<Set>><A>> (`g, X) \times; \widetilde<F> `g)
+      >
+      と表せる。
+    >
+  >
+  \prf<
+    \p<
+      正規関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> を考える。
+      これは解析的なので、\a|href="2.html#main"|<定理 2.5> の議論により、
+      &mb<
+        FX \cong; \coprod<`g><> \sb<\op<Aut>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)> (`g) \backslash; (\sb<\op<Hom>><\sp<\bfrm<Set>><A>> (`g, X) \times; \sp<F><\sharp;> `g)
+      >
+      と書ける。
+      この &m<`g> は &m<\bfrm<Nat> (\sp<\bfrm<Set>><A>)> の対象全体を回る。
+      ここで、
+      &mb<
+        \sp<F><\sharp;> `g = \coprod<c><> \sb<\op<Aut>><\bfrm<El> (F)> ((`g, c)) \backslash; \sb<\op<Aut>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)> (`g)
+      >
+      である。
+      この &m<c> は &m<(`g, c)> という形の &m<\bfrm<El> (F)> の弱正規対象の同型類の代表元全体を回る。
+      しかし、今 &m<F> は正規なので、\ref|type="thm",ref="unit"|; により、
+      &mb<
+        \sp<F><\sharp;> `g = \coprod<c><> \sb<\op<Aut>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)> (`g)
+      >
+      となる。
+      ここで、各 &m<`g> に対して、元の対応
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<Aut> (`g) \backslash; (\op<Hom> (`g, X) \times; \sp<F><\sharp;> `g)> \c<\longrarr;> \c<\op<Hom> (`g, X) \times; \op<Aut> (`g) \backslash; \sp<F><\sharp;> `g> \br;
+          \c<`[f, p @ c`]> \c<\longmapsto;> \c<(f \circ; p, `[p @ c`])> \br;
+          \c<`[f \circ; \sp<p><- 1>, p @ c`]> \c<\longmappedfrom;> \c<(f, `[p @ c`])>
+        >
+      >
+      を考えると、これは全単射になっている。
+      そこで、
+      &mb<
+        \widetilde<F> `g \coloneqq; \op<Aut> (`g) \backslash; \sp<F><\sharp;> `g
+      >
+      とおけば、定理の主張が従う。
+    >
+  >
+  \p<
+    ということで、正規関手については、群でわるという操作を &m<\widetilde<F> `g> の方に押し付けて、&m<F> の表示そのものは群でわらないシンプルな形にすることができるのである。
+    これは、何となく形式的冪級数に見えので、数列の生成関数の圏論版として組み合わせ論でも用いられているようである (というよりむしろ正規関手が組み合わせ論の立場から生まれたという方が正確である)。
+  >
+  \h1<追記 (2019 年 1 月 21 日)>
+  \p<
+    正規関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> に対して、\ref|type="thm",ref="main"|; の証明中で &m<\widetilde<F>> を構成したが、これはもう少し簡単に書き表せる。
+    実際、
+    &mb<
+      \array|align="rcl"|<
+        \c<\widetilde<F> `g> \c<=> \c<\op<Aut> (`g) \backslash; \sp<F><\sharp;> `g> \br;
+        \c; \c<\cong;> \c<\op<Aut> (`g) \backslash; \coprod<c><> \op<Aut> (`g)> \br;
+        \c; \c<\cong;> \c<\coprod<c><> 1>
+      >
+    >
+    であり、ここに出てくる余積はどちらも &m<(`g, c)> という形の &m<\bfrm<El> (F)> の正規対象の同型類の代表元全体を回る。
+    したがって結局、
+    &mb<
+      \widetilde<F> `g = `# `{ (`g, c) \text< の形の > \bfrm<El> (F) \text< の正規対象の同型類> `}
+    >
+    と書ける。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="htaa"|<R. Hasegawa (2006)「Two applications of analytic functors」『Theoretical Computer Science』272:113–175>
+  >
+
+>

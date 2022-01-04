@@ -1,0 +1,371 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<レンズの圏論的考察>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2021 年 7 月 7 日)>
+  \p<
+    Haskell には \ae|href="https://hackage.haskell.org/package/lens"|<lens> というパッケージがあり、オブジェクトの一部分を取り出したり書き換えたりする操作を抽象化したレンズと呼ばれる仕組みを提供している。
+    \a|href="20.html"|<2019 年 4 月 25 日>では、このパッケージで定義されているレンズの型と、素朴にゲッターとセッターを対にしたタプル型とが、実は等価になることを述べた。
+    今回は、この事実を圏論的視点から見る。
+  >
+  \p<
+    全体のオブジェクトの型を \m<s> で表し、そのオブジェクトの中の取り扱いたい部分の型を \m<a> で表すことにすると、ゲッターの型とセッターの型はそれぞれ \m<s -`> a> と \m<s -`> a -`> s> と書けるのであった。
+    ここではこれを少し一般化して、セッターを使うときに渡すセットする値の型が \m<a> と異なっていたり、セッターで値をセットした結果得られる全体のオブジェクトの型が \m<s> と異なっていたりしても良いことにする。
+    この場合、セッターに渡す値の型を \m<a'> と書き、セッターが返す型を \m<s'> と書くことにすると、セッターの型は \m<s -`> a' -`> s'> になる。
+    この設定のもと、ゲッターとセッターの対の型は \m<(s -`> a, s -`> a' -`> s')> とタプル型として実現される。
+    以降、この型の値を素朴レンズと呼ぶことにする。
+  >
+  \p<
+    まずは、素朴レンズを圏論的に定式化しよう。
+    これは単純に次のようにすれば良い。
+    なお、上記の \m<s>, \m<s'>, \m<a>, \m<a'> に対応する変数名としてそれぞれ &m<S>, &m<\bar<S>>, &m<A>, &m<\bar<A>> を用いる。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      対象 &m<S, \bar<S>, A, \bar<A>> に対し、2 つの射 &m<g: S \to; A> と &m<p: S \times; \bar<A> \to; \bar<S>> から成る組 &m<(g, p)> を\em<素朴レンズ\fl<naive lens>> と呼び、&m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)> で表す。
+    >
+  >
+  \p<
+    素朴レンズを合成することで、階層的により深い位置にある値を操作する新たな素朴レンズを得ることができた。
+    \a|href="20.html"|<2019 年 4 月 25 日>では、この演算を \m<@.> という名前で定義している。
+    圏論的には、この演算は次のように定式化できる。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      素朴レンズ &m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)>, &m<(g', p'): (A, \bar<A>) \ring<\to;> (\bar<B>, B)> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sp<g><\ppr;>> \c<\coloneqq;> \c<\tort<\diag|bl|<
+            \v<S> \v<A> \v<\bar<B>>
+            \ar|s="1",e="2"|<g> \ar|s="2",e="3"|<g'>
+          >>> \br;
+          \c<\sp<p><\ppr;>> \c<\coloneqq;> \c<\tort<\diag|bl|<
+            \v<S \times; B> \v<S \times; S \times; B> \v<S \times; A \times; B> \v<S \times; \bar<A>> \v<\bar<S>>
+            \ar|s="1",e="2"|<\sb<\rm<diag>><S> \times; \rm<id>> \ar|s="2",e="3"|<\rm<id> \times; g \times; \rm<id>>
+            \ar|s="3",e="4"|<\rm<id> \times; p'> \ar|s="4",e="5"|<p>
+          >>>
+        >
+      >
+      と定める。
+      なお、図式中の &m<\sb<\rm<diag>><S>: S \to; S \times; S> は対角射である。
+      これによって得られる素朴レンズ &m<(\sp<g><\ppr;>, \sp<p><\ppr;>): (S, \bar<S>) \ring<\to;> (\bar<B>, B)> を &m<(g, p)> と &m<(g', p')> の\em<合成\fl<composition>> という。
+    >
+  >
+  \p<
+    この合成によって、素朴レンズを射とする圏が定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      圏 &m<\bfrm<NLens> (\scr<C>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<NLens> (\scr<C>)> の対象は、&m<\scr<C>> の 2 つの対象の組 &m<(S, \bar<S>)> の全体とする。
+      >
+      \li<
+        &m<\bfrm<NLens> (\scr<C>)> の 2 つの対象 &m<(S, \bar<S>), (A, \bar<A>)> の間の射は、素朴レンズ &m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)> の全体とする。
+        すなわち、
+        &mb<
+          \sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><\scr<C>> (S, A) \times; \sb<\op<Hom>><\scr<C>> (S \times; \bar<A>, \bar<S>)
+        >
+        である。
+      >
+      \li<
+        &m<\bfrm<NLens> (\scr<C>)> の射の合成は、上記で定めた素朴レンズの合成とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    さて、Haskell の lens パッケージにおけるレンズの型は、上記のような素朴な \m<(s -`> a, s -`> a' -`> s')> ではなく、\m<forall f. Functor f =`> (a -`> f a') -`> (s -`> f s')> という一見不思議な形になっている。
+    \a|href="20.html"|<2019 年 4 月 25 日>では、一方の型の値からもう一方の型の値を作ることができ、さらにその構成が互いに逆になっていることを観察して、この 2 つの型が等価であることを述べた。
+    ここでは、圏論的にこの 2 つの型の等価性を示そう。
+    そのためには、後者の型を圏論的に定式化する必要がある。
+  >
+  \p<
+    型 \m<forall f. Functor f =`> (a -`> f a') -`> (s -`> f s')> の値とはすなわち、関手 \m<f> で添字付けられた \m<(a -`> f a') -`> (s -`> f s')> という型の関数の族である。
+    これを素朴に捉えれば、圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> で添字付けられた写像 &m<\sb<`f><F>: \op<Hom> (A, F \bar<A>) \to; \op<Hom> (S, F \bar<S>)> の族 &m<(\sb<`f><F>) \sb<><F>> が圏論的定式化であろうと思いつく。
+    しかし、&m<F> に対して &m<\sb<`f><F>> がバラバラに存在するというのは圏論的に不自然なので、&m<F> に関して &m<\sb<`f><F>> が自然であることを課すのは理に適っているだろう。
+    すなわち、&m<\op<Hom> (A, \hyphen; \bar<A>)> と &m<\op<Hom> (S, \hyphen; \bar<S>)> を関手 &m<\bfrm<End> (\scr<C>) \to; \bfrm<Set>> と見なして、自然変換 &m<`f: \op<Hom> (A, \hyphen; \bar<A>) \raarr; \op<Hom> (S, \hyphen; \bar<S>)> を考えるということである。
+  >
+  \p<
+    残念ながら、自然変換 &m<`f: \op<Hom> (A, \hyphen; \bar<A>) \raarr; \op<Hom> (S, \hyphen; \bar<S>)> と素朴レンズ &m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)> は 1 対 1 に対応しない。
+    この原因は、素朴レンズから上記の自然変換を作ろうとしたときに、自然変換の添字として使われている &m<F> の関手性だけでは構造が足りないためである。
+    そこで、自然変換の添字として自己関手に追加の構造を加えたものを考える必要性が出てくるが、その構造として次で定義する強度という概念が適切であることが知られている。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
+      対象 &m<M, \bar<X>> に対し、全ての変数に関して自然な射
+      &mb<
+        \sb<`s><M \bar<X>>: M \times; F \bar<X> \longto; F (M \times; \bar<X>)
+      >
+      が定まっていて、任意の対象 &m<M, N, \bar<X>> に対し、図式
+      &mb<
+        \array|align="c"|<
+          \c<\diag<
+            \v<(M \times; N) \times; F \bar<X>> \v; \v<F ((M \times; N) \times; \bar<X>)> \br;
+            \v<M \times; (N \times; F \bar<X>)> \v<M \times; F (N \times; \bar<X>)> \v<F (M \times; (N \times; \bar<X>))>
+            \ar|s="1",e="3"|<\sb<`s><M \times; N, \bar<X>>>
+            \ar|s="4",e="5",inv|<\rm<id> \times; \sb<`s><N\bar<X>>> \ar|s="5",e="6",inv|<\sb<`s><M, N \times; \bar<X>>>
+            \ar|s="1",e="4"|; \ar|s="3",e="6"|;
+          >> \br;
+          \c<\diag|hor="thn"|<
+            \v; \v<F \bar<X>> \v; \br;
+            \v<1 \times; F \bar<X>> \v; \v<F (1 \times; \bar<X>)>
+            \ar|s="4",e="6",inv|<\sb<`s><1 \bar<X>>>
+            \ar|s="2",e="4"|; \ar|s="2",e="6"|;
+          >>
+        >
+      >
+      が全て可換であるとする。
+      なお、ラベルのない射は標準的な同型射を表している。
+      このとき、&m<`s> を &m<F> に対する\em<強度\fl<strength>> といい、組 &m<(F, `s)> を\em<自己強関手\fl<strong endofunctor>> という。
+    >
+  >
+  \p<
+    強関手の間の射としては、次のような強度と適合する自然変換を考える。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> 上の自己強関手 &m<(F, `s), (G, `t): \scr<C> \to; \scr<C>> および自然変換 &m<`u: F \raarr; G> をとる。
+      任意の対象 &m<M, \bar<X>> に対し、
+      &mb<
+        \diag<
+          \v<M \times; F\bar<X>> \v<M \times; G\bar<X>> \br;
+          \v<F (M \times; \bar<X>)> \v<G (M \times; \bar<X>)>
+          \ar|s="1",e="2"|<\rm<id> \times; \sb<`u><\bar<X>>> \ar|s="3",e="4",inv|<\sb<`u><M \times; \bar<X>>>
+          \ar|s="1",e="3",inv|<\sb<`s><M \bar<X>>> \ar|s="2",e="4"|<\sb<`t><M \bar<X>>>
+        >
+      >
+      が可換であるとき、&m<`u> を\em<強自然変換\fl<strong natural transformation>> といい、&m<`u: (F, `s) \raarr; (G, `t)> で表す。
+    >
+  >
+  \p<
+    定義から強自然変換は合成に関して閉じていることがすぐに分かるので、強関手と強自然変換は圏を成す。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      圏 &m<\bfrm<StrEnd> (\scr<C>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<StrEnd> (\scr<C>)> の対象は、&m<\scr<C>> 上の自己強関手 &m<(F, `s)> の全体とする。
+      >
+      \li<
+        &m<\bfrm<StrEnd> (\scr<C>)> の 2 つの対象 &m<(F, `s), (G, `t)> の間の射は、強自然変換 &m<`u: (F, `s) \raarr; (G, `t)> の全体とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    さて、我々の目的は、素朴レンズ &m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)> と 1 対 1 に対応するような自然変換 &m<`f: \op<Hom> (A, \hyphen; \bar<A>) \raarr; \op<Hom> (S, \hyphen; \bar<S>)> を得ることであった。
+    &m<\op<Hom> (A, \hyphen; \bar<A>)> と &m<\op<Hom> (S, \hyphen; \bar<S>)> を &m<\bfrm<End> (\scr<C>)> からの関手だと見るとこれはうまくいかないが、&m<\bfrm<StrEnd> (\scr<C>)> からの関手だと見ると実はうまくいく。
+    このように見なした自然変換 &m<`f: \op<Hom> (A, \hyphen; \bar<A>) \raarr; \op<Hom> (S, \hyphen; \bar<S>)> を、このエンコーディング方法を考案した人の名前を借りて、van Laarhoven レンズと呼ぶことにしよう。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      対象 &m<A, \bar<A>> に対し、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\op<Hom> (A, \hyphen; \bar<A>):> \c<\bfrm<StrEnd> (\scr<C>)> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<(F, `s)> \c<\longmapsto;> \c<\op<Hom> (A, F \bar<A>)>
+        >
+      >
+      とおく。
+      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \op<Hom> (A, \hyphen; \bar<A>) \raarr; \op<Hom> (S, \hyphen; \bar<S>)> を \em<van Laarhoven レンズ\fl<— lens>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      圏 &m<\bfrm<LLens> (\scr<C>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<LLens> (\scr<C>)> の対象は、&m<\scr<C>> の 2 つの対象の組 &m<(S, \bar<S>)> の全体とする。
+      >
+      \li<
+        &m<\bfrm<LLens> (\scr<C>)> の 2 つの対象 &m<(S, \bar<S>), (A, \bar<A>)> の間の射は、van Laarhoven レンズ &m<`f: \op<Hom> (A, \hyphen; \bar<A>) \raarr; \op<Hom> (S, \hyphen; \bar<S>)> の全体とする。
+        すなわち、
+        &mb<
+          \sb<\op<Hom>><\bfrm<LLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (A, \hyphen; \bar<A>), \op<Hom> (S, \hyphen; \bar<S>))
+        >
+        である。
+      >
+      \li<
+        &m<\bfrm<LLens> (\scr<C>)> の射の合成は、通常の自然変換の合成を逆向きに行うものとする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    &m<\bfrm<LLens> (\scr<C>)> の射としての向きと実体である自然変換としての向きが逆になっていることには注意すること。
+  >
+  \p<
+    では、ここまでで定式化した 2 種類のレンズが等価であることを示そう。
+    すなわち、有限積をもつ圏 &m<\scr<C>> の任意の対象 &m<S, \bar<S>, A, \bar<A>> に対して、全単射
+    &mb<
+      \sb<\op<Hom>><\bfrm<LLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) \cong; \sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))
+    >
+    が存在することを示す。
+    直接この全単射を構成することもできるが、van Laarhoven レンズの定義に出てくる &m<\op<Hom> (A, \hyphen; \bar<A>): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> という形の関手には特別な性質があるので、それを介して証明することにする。
+  >
+  \thm|type="thm",id="rep"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> をとる。
+      対象 &m<A, \bar<A>> に対し、関手 &m<\op<Hom> (A, \hyphen; \bar<A>): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> は表現可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\op<Hom> (A, \hyphen; \bar<A>): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> の表現対象を具体的に構成する。
+      まず、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sp<E><A \bar<A>>:> \c<\scr<C>> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<\bar<X>> \c<\longmapsto;> \c<(\bar<A> \buharprarr; \bar<X>) \times; A>
+        >
+      >
+      とおく。
+      対象 &m<M, \bar<X>> に対し、積と冪の随伴の余単位を &m<\sb<\rm<ev>><\bar<A> \bar<X>>: (\bar<A> \buharprarr; \bar<X>) \times; \bar<A> \to; \bar<X>> で書くことにし、射
+      &mb<
+        \sb<\rm<id>><M> \times; \sb<\rm<ev>><\bar<A> \bar<X>>: M \times; (\bar<A> \buharprarr; \bar<X>) \times; \bar<A> \longto; M \times; \bar<X>
+      >
+      を考える。
+      これを &m<\bar<A>> に関して転置すれば
+      &mb<
+        (\sb<\rm<id>><M> \times; \sb<\rm<ev>><\bar<A> \bar<X>>) \sp<><\sharp;>: M \times; (\bar<A> \buharprarr; \bar<X>) \longto; \bar<A> \buharprarr; (M \times; \bar<X>)
+      >
+      が得られ、さらに右から &m<A> との積をとると、
+      &mb<
+        \sbsp<`r><M \bar<X>><A \bar<A>>: M \times; (\bar<A> \buharprarr; \bar<X>) \times; A \longto; (\bar<A> \buharprarr; (M \times; \bar<X>)) \times; A 
+      >
+      が得られる。
+      すると、これは &m<M> と &m<\bar<X>> の両方に関して自然であり、さらに強度の公理を満たす。
+      したがって、&m<(\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>)> は自己強関手である。
+    >
+    \p<
+      この &m<(\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>)> が実際に &m<\op<Hom> (A, \hyphen; \bar<A>): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> の表現対象であること、すなわち
+      &mb<
+        &mark<\wheart;>
+        \sb<\op<Hom>><\bfrm<StrEnd> (\scr<C>)> ((\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>), \hyphen;) \cong; \sb<\op<Hom>><\scr<C>> (A, \hyphen; \bar<A>)
+      >
+      が成り立つことを以下に示す。
+    >
+    \p<
+      自己強関手 &m<(F, `s)> を固定する。
+      任意の強自然変換 &m<`u: (\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>) \raarr; (F, `s)> に対し、&m<\sb<\rm<id>><\bar<A>>: \bar<A> \to; \bar<A>> の転置を &m<\sb<\rm<jd>><\bar<A>>: 1 \to; \bar<A> \buharprarr; \bar<A>> と書くことにして、
+      &mb<
+        `F `u \coloneqq; \tort<\diag|bl|<
+          \v<A> \v<1 \times; A> \v<(\bar<A> \buharprarr; \bar<A>) \times; A> \v<F \bar<A>>
+          \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sb<\rm<jd>><\bar<A>> \times; \rm<id>> \ar|s="3",e="4"|<\sb<`u><\bar<A>>>
+        >>
+      >
+      とおくと、これは写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<`F:> \c<\sb<\op<Hom>><\bfrm<StrEnd> (\scr<C>)> ((\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>), (F, `s))> \c<\longto;> \c<\sb<\op<Hom>><\scr<C>> (A, F \bar<A>)> \br;
+          \c; \c<`u> \c<\longmapsto;> \c<`F `u>
+        >
+      >
+      を定める。
+    >
+    \p<
+      逆に、射 &m<f: A \to; F \bar<A>> および対象 &m<\bar<X>> に対し、
+      &mb<
+        (`C f) \sb<><\bar<X>> \coloneqq; \tort<\diag|bl|<
+          \v<(\bar<A> \buharprarr; \bar<X>) \times; A> \v<(\bar<A> \buharprarr; \bar<X>) \times; F \bar<A>> \v<F ((\bar<A> \buharprarr; \bar<X>) \times; \bar<A>)> \v<F \bar<X>>
+          \ar|s="1",e="2"|<\rm<id> \times; f> \ar|s="2",e="3"|<\sb<`s><\bar<A> \buharprarr; \bar<X>, \bar<A>>> \ar|s="3",e="4"|<F \sb<\rm<ev>><\bar<A> \bar<X>>>
+        >>
+      >
+      とおくと、これは &m<\bar<X>> に関して自然なので、自然変換 &m<`C f: \sp<E><A \bar<A>> \raarr; F> が得られる。
+      さらにこれは強自然変換 &m<`C f: (\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>) \raarr; (F, `s)> にもなっていることが確かめられる。
+      これにより、写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<`C:> \c<\sb<\op<Hom>><\scr<C>> (A, F \bar<A>)> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<StrEnd> (\scr<C>)> ((\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>), (F, `s))> \br;
+          \c; \c<f> \c<\longmapsto;> \c<`C f>
+        >
+      >
+      が定まる。
+    >
+    \p<
+      &m<`F> と &m<`C> は互いに逆になっており、さらに自然でもあるので、これより式 &m<\wheart;> が得られた。
+    >
+  >
+  \thm|type="thm",id="homiso"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> をとる。
+      対象 &m<S, \bar<S>, A, \bar<A>> に対し、全単射
+      &mb<
+        \sb<\op<Hom>><\bfrm<LLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) \cong; \sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))
+      >
+      が存在する。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="rep"|; と Yoneda の補題により、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\bfrm<LLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))> \c<=> \c<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (A, \hyphen; \bar<A>), \op<Hom> (S, \hyphen; \bar<S>))> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> ((\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>), \hyphen;), \op<Hom> (S, \hyphen; \bar<S>))> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S, \sp<E><A \bar<A>> \bar<S>))> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S, (\bar<A> \buharprarr; \bar<S>) \times; A)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S, \bar<A> \buharprarr; \bar<S>) \times; \op<Hom> (S, A)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S \times; \bar<A>, \bar<S>) \times; \op<Hom> (S, A)> \br;
+          \c; \c<=> \c<\sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))> \br;
+        >
+      >
+      が成り立つので、示された。
+    >
+  >
+  \p<
+    この射の間の全単射は圏同型を与えることも知られている。
+  >
+  \thm|type="thm",id="catequiv"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> をとる。
+      圏同型
+      &mb<
+        \bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)
+      >
+      が成立する。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
+      単純に計算するだけなので、ここでは詳細は省略する。
+    >
+  >
+  \p<
+    以上により、ゲッターとセッターから成る素朴レンズと、強関手で添字付けられた自然変換としての van Laarhoven レンズが、互いに等価であることが示せた。
+    後者の自然変換としてのレンズは、以前述べたように Haskell で用いられているレンズのエンコーディング方法である。
+    レンズにはプロ関手を用いた別のエンコーディング方法もあり、これは Pure\bar<S>cript のレンズライブラリで用いられている。
+    数学的には、プロ関手を用いたエンコーディングの方が見通しが良く計算もしやすいという利点があり、こちらの方がより深く研究されているようである。
+    次回は、このプロ関手を用いたエンコーディングについて触れる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cpoc"|<B. Clarke et al (2020)「Profunctor optics, a categorical update」arXiv:2001.07488>
+    \li|id="rcox"|<M. Riley (2018)「Categories of optics」arXiv:1809.00738>
+  >
+
+>

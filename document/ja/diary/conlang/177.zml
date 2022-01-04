@@ -1,0 +1,48 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<限定節に被修飾語が 2 つある場合>
+  \ver<S 代>
+
+  \h1<日記 (\h<2094>)>
+  \p<
+    次の 2 つの文を考えます。
+  >
+  \xl<
+    \li<\sh<{salat a qos e qazek.}>\ja<あれは男性だ。>>
+    \li<\sh<{rafleses a tel ca ces ce sôdes a'l e tonaslon fe ces.}>\ja<彼とお喋りした後に彼と夕食を取った。>>
+  >
+  \p<
+    2 文目の {ces} が 1 文目の {qazek} を指しているとして、2 文目を限定節にして {qazek} を修飾することを考えます。
+    しかし、2 文目には {ces} が 2 ヶ所現れており、このような場合にどうすれば良いかは現行の文法では定められていません。
+    とりあえず、一般の限定節の作り方に形式上沿って、被修飾語を指す名詞を取り除いて被修飾語の後に置いてみます。
+  >
+  \xl<
+    \li<\sh|mark="u"|<{salat a qos e qazek rafleses ca a tel ce sôdes fe a'l e tonaslon.}>>
+  >
+  \p<
+    これを文法的に許容するかどうかが問題です。
+  >
+  \p<
+    もう 1 つ例を示しておきます。
+  >
+  \xl<
+    \li<\sh<{salat a qos e fér.}>\ja<あれは女の子だ。>>
+    \li<\sh<{vîtices a tel e ces o fax i ces.}>\ja<私は彼女と彼女の母親を見た。>>
+  >
+  \p<
+    この 2 文から形式的に限定表現を作ると以下のようになります。
+  >
+  \xl<
+    \li<\sh|mark="u"|<{salat a qos e fér vîtices e o fax i a tel.}>>
+  >
+  \p<
+    {e o fax i} が気持ち悪いですね･･･。
+  >
+  \p<
+    とりあえず今のところはこの表現は許容しないことにします。
+  >
+
+>

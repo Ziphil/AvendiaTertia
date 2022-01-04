@@ -1,0 +1,288 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<直交クラスの諸性質>
+  \use-math|prefix="10"|;
+
+  \h1<日記 (2020 年 9 月 22 日)>
+  \p<
+    今日は、直交クラスを導入してそのいくつかの性質を見る。
+    今日の内容には局所表示可能圏は出てこないが、数記事後に直交クラスと局所表示可能圏との関係を見る予定である。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> をとる。
+      射 &m<m: M \to; N> と対象 &m<A> について、任意の射 &m<f: M \to; A> に対してある射 &m<g: N \to; A> が一意に存在して、図式
+      &mb<
+        \diag|hor="thn"|<
+          \v<M> \v; \v<N> \br;
+          \v; \v<A>
+          \ar|s="1",e="5",inv|<f> \ar|s="1",e="3"|<m> \ar|s="3",e="5"|<g>
+        >
+      >
+      が可換になるとする。
+      このとき、&m<A> は &m<m> に\em<直交する\fl<orthogonal>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の射から成るクラス &m<\scr<M>> に対し、
+      &mb<
+        \sp<\scr<M>><\bot;> \coloneqq; `{ A \in; \scr<C> \mid; &raw<任意の &m<\scr<M>> に属する射 &m<m> に対して &m<A> は &m<m> に直交する> `}
+      >
+      とおき、これを &m<\scr<C>> の充満部分圏と見なす。
+    >
+  >
+
+  \thm|type="def"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> とその充満部分圏 &m<\scr<A> \subseteq; \scr<C>> について、&m<\scr<C>> の射から成るクラス &m<\scr<M>> によって &m<\scr<A> = \sp<\scr<M>><\bot;>> と書けるとする。
+      ここで、
+    >
+    \ul<
+      \li<
+        このとき、&m<\scr<A>> は &m<\scr<C>> の\em<直交クラス\fl<orthogonality class>> であるという。
+      >
+      \li<
+        特に &m<\scr<M>> を集合サイズにとれるときは、&m<\scr<A>> は &m<\scr<C>> の\em<小直交クラス\fl<small-orthogonality class>> であるという。
+      >
+      \li<
+        特に &m<\scr<M>> に属する全ての射の始域と終域が &m<`k>-表示可能にとれるときは、&m<\scr<A>> は &m<\scr<C>> の &m<`k>-\em<直交クラス\fl<orthogonality class>> であるという。
+      >
+    >
+    \p<
+      と定義する。
+    >
+  >
+  \p<
+    小直交クラスとは、それを生成する射のクラスが集合サイズであることを意味しており、小直交クラス自身は集合サイズでないことに注意すること。
+  >
+  \p<
+    ここで、次の定理の証明に用いるので、&m<\bfrm<Set>> における極限の具体的な表示を確認しておこう。
+  >
+  \thm|type="lem",id="setlim"|<
+    \p<
+      小図式 &m<G: \scr<I> \to; \bfrm<Set>> の極限は、
+      &mb<
+        \op<lim> G = \set<(\sb<x><i>) \sb<><i \in; \scr<I>> \in; \prod<i \in; \scr<I>> Gi><&raw<任意の &m<\scr<I>> の射 &m<u: i \to; i'> に対して &m<(Gu) \sb<x><i> = \sb<x><i'>>>>
+      >
+      として具体的に与えられる。
+    >
+  >
+  \prf<
+    \p<
+      極限の普遍性を愚直に確かめれば良い。
+    >
+  >
+  \p<
+    さて、前層がある種の極限を保存することを、前層圏の直交クラスの言葉で言い換えることができる。
+  >
+  \thm|type="thm",id="orthpres"|<
+    \p<
+      小圏 &m<\scr<S>> をとる。
+      終域が &m<\sp<\scr<S>><\circ;>> であるような関手から成るクラス &m<\scr<F>> であって、任意の &m<\scr<F>> の元は &m<\sp<\scr<S>><\circ;>> で極限をもつとする。
+      各 &m<\scr<F>> の元 &m<F: \scr<I> \to; \sp<\scr<S>><\circ;>> に対して、
+      &mb<
+        \sb<m><F>: \un<\op<colim>><i \in; \scr<I>> \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (F i, \hyphen;) \to; \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (\un<\op<lim>><i \in; \scr<I>> F i, \hyphen;)
+      >
+      を余極限と極限から誘導される標準的な &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の射とし、これを用いて &m<\scr<M> \coloneqq; `{\sb<m><F> \mid; F \in; \scr<F>`}> とおく。
+      このとき、任意の前層 &m<P: \sp<\scr<S>><\circ;> \to; \bfrm<Set>> に対し、
+    >
+    \ol<
+      \li<
+        &m<P> は &m<\sp<\scr<M>><\bot;>> に属する。
+      >
+      \li<
+        任意の &m<\scr<F>> の元 &m<F> に対して &m<P> は &m<F> の極限を保存する。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \p<
+    証明の前に、各 &m<\scr<F>> の元 &m<F> に対する &m<\sb<m><F>> の定義に出てくる射集合は、全て &m<\scr<S>> ではなく &m<\sp<\scr<S>><\circ;>> でとっていることに注意すること。
+    この証明中では &m<\sp<\scr<S>><\circ;>> の射を &m<\scr<S>> の射と見なすことはないので、&m<\sp<\scr<S>><\circ;>> を &m<\scr<S>> の反対圏と見なすのではなく、&m<\sp<\scr<S>><\circ;>> という 1 つの圏だと見なせば、混乱を防げるかもしれない。
+  >
+  \prf<
+    \p<
+      &m<\scr<F>> の元 &m<F> を 1 つ固定し、&m<(\sb<s><i>: S \to; F i) \sb<><i \in; \scr<I>>> を &m<F> の極限錐とする。
+      このとき、
+    >
+    \ol<
+      \li<
+        任意の &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の射 &m<f: \sb<\op<colim>><i> \op<Hom> (F i, \hyphen;) \to; P> に対して、射 &m<g: \op<Hom> (S, \hyphen;) \to; A> が一意に存在し、
+        &mb<
+          \diag|hor="thn"|<
+            \v<\sb<\op<colim>><i> \op<Hom> (F i, \hyphen;)> \v; \v<\op<Hom> (S, \hyphen;)> \br;
+            \v; \v<A>
+            \ar|s="1",e="5",inv|<f> \ar|s="1",e="3"|<\sb<m><F>> \ar|s="3",e="5",dash|<g>
+          >
+        >
+        は可換である。
+      >
+      \li<
+        任意の余錐 &m<(\sb<f><i>: \op<Hom> (F i, \hyphen;) \to; A) \sb<><i \in; \sb<\scr<I>><l>>> に対して、射 &m<g: \op<Hom> (S, \hyphen;) \to; A> が一意に存在し、任意の &m<\sb<\scr<I>><l>> の対象 &m<i> に対し、
+        &mb<
+          \diag|hor="thn"|<
+            \v<\op<Hom> (F i, \hyphen;)> \v; \v<\op<Hom> (S, \hyphen;)> \br;
+            \v; \v<A>
+            \ar|s="1",e="5",inv|<\sb<f><l>> \ar|s="1",e="3"|<m> \ar|s="3",e="5",dash|<g>
+          >
+        >
+        は一斉に可換である。
+      >
+      \li<
+        任意の族 &m<(\sb<x><i> \in; P F i) \sb<><i \in; \scr<I>>> であって各 &m<\scr<I>> の射 &m<u: i \to; i'> について &m<(P F u) \sb<x><i> = \sb<x><i'>> が成り立っているものに対して、元 &m<x \in; P S> が一意に存在し、任意の &m<\scr<I>> の対象 &m<i> に対し、&m<(P \sb<s><i>) x = \sb<x><i>> が成り立つ。
+      >
+      \li<
+        \ref|type="thm",ref="setlim"|; の表示において、
+        &mb<
+          \array|align="rrcl"|<
+            \c<Ш:> \c<P S> \c<\longto;> \c<\sb<\op<lim>><i> P F i> \br;
+            \c; \c<x> \c<\longmapsto;> \c<((P \sb<s><i>) x) \sb<><i \in; \scr<I>>>
+          >
+        >
+        は全単射である。
+      >
+      \li<
+        &m<P> は &m<F> の極限を保存する。
+      >
+    >
+    \p<
+      は順に同値である。
+      実際、主張 1 と主張 2 の同値性は余極限の普遍性から従い、主張 2 と主張 3 の同値性は Yoneda の補題から従い、主張 3 と主張 4 と主張 5 は単なる言い換えである。
+    >
+    \p<
+      さて、&m<P> が &m<\sp<\scr<M>><\bot;>> に属するとは、任意の &m<\scr<F>> の元 &m<F> に対して主張 1 が成り立つことであった。
+      今述べた内容により、このことは、任意の &m<\scr<F>> の元 &m<F> に対して主張 5 が成り立つことと同値である。
+      この同値性がまさに示したかった内容である。
+    >
+  >
+  \p<
+    次に、直交クラスが極限と有向余極限で閉じていることを示す。
+  >
+  \thm|type="thm",id="orthlim"|<
+    \p<
+      任意の圏の直交クラスは極限をとる操作で閉じている。
+    >
+  >
+  \prf<
+    \p<
+      圏 &m<\scr<C>> の直交クラス &m<\scr<A>> をとる。
+      定義から、&m<\scr<C>> の射から成るクラス &m<\scr<M>> が存在して、&m<\scr<A> = \sp<\scr<M>><\bot;>> と書ける。
+    >
+    \p<
+      &m<\scr<A>> の対象の小図式 &m<F: \scr<I> \to; \scr<C>> をとり、その極限 &m<(\sb<c><i>: C \to; Fi) \sb<><i \in; \scr<I>>> が存在したとする。
+      &m<C> が &m<\sp<\scr<M>><\bot;>> に属することを示せば良い。
+      そのために、任意に &m<\scr<M>> の元 &m<m: M \to; N> および &m<\scr<C>> の射 &m<f: M \to; C> をとる。
+      すると、各 &m<\scr<I>> の対象 &m<i> に対して、&m<Fi> が &m<\sp<\scr<M>><\bot;>> に属することから、ある射 &m<\sb<g><i>: N \to; Fi> が一意に存在して、
+      &mb<
+        \diag|hor="thn"|<
+          \v<M> \v; \v<N> \br;
+          \v; \v<Fi>
+          \ar|s="1",e="5",inv|<f \rcomp; \sb<c><i>> \ar|s="1",e="3"|<m> \ar|s="3",e="5"|<\sb<g><i>>
+        >
+      >
+      は可換である。
+      その一意性によって、&m<(\sb<g><i>: N \to; Fi) \sb<><i \in; \scr<I>>> は &m<F> の錐になる。
+      したがって、極限の普遍性により、ある射 &m<g: C \to; N> が存在して、任意の &m<\scr<I>> の対象 &m<i> に対して、
+      &mb<
+        \diag<
+          \v<N> \v; \br;
+          \v<C> \v<Fi>
+          \ar|s="3",e="4",inv|<\sb<c><i>> \ar|s="1",e="3",inv|<g> \ar|s="1",e="4"|<\sb<g><i>>
+        >
+      >
+      は一斉に可換である。
+      すると、任意の &m<\scr<I>> の対象 &m<i> に対して、
+      &mb<
+        f \rcomp; \sb<c><i> = m \rcomp; \sb<g><i> = m \rcomp; g \rcomp; \sb<c><i>
+      >
+      が成り立つが、&m<(\sb<c><i>) \sb<><i \in; \scr<I>>> は極限錐だから、これより &m<f = m \rcomp; g> を得る。
+      このような &m<g> が一意であることも容易に分かる。
+    >
+  >
+  \thm|type="thm",id="orthcol"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      任意の圏の &m<`k>-直交クラスは &m<`k>-有向余極限をとる操作で閉じている。
+    >
+  >
+  \prf<
+    \p<
+      圏 &m<\scr<C>> の &m<`k>-直交クラス &m<\scr<A>> をとる。
+      定義から、始域と終域がともに &m<`k>-到達可能である &m<\scr<C>> の射から成るクラス &m<\scr<M>> が存在して、&m<\scr<A> = \sp<\scr<M>><\bot;>> と書ける。
+    >
+    \p<
+      &m<\scr<A>> の対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> をとり、その余極限 &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> が存在したとする。
+      &m<C> が &m<\sp<\scr<M>><\bot;>> に属することを示せば良い。
+      そのために、任意に &m<\scr<M>> の元 &m<m: M \to; N> および &m<\scr<C>> の射 &m<f: M \to; C> をとる。
+      &m<M> は &m<`k>-表示可能だから、ある &m<\scr<I>> の対象 &m<i> と射 &m<h: M \to; Fi> が存在して、
+      &mb<
+        \diag|hor="thn"|<
+          \v<M> \v; \v<C> \br;
+          \v; \v<Fi>
+          \ar|s="1",e="5",inv|<h> \ar|s="1",e="3"|<f> \ar|s="5",e="3",inv|<\sb<c><i>>
+        >
+      >
+      は可換である。
+      さらに、&m<Fi> は &m<\sp<\scr<M>><\bot;>> の元なので、ある射 &m<p: N \to; Fi> が存在して、
+      &mb<
+        \diag|hor="thn"|<
+          \v<M> \v; \v<N> \br;
+          \v; \v<Fi>
+          \ar|s="1",e="5",inv|<h> \ar|s="1",e="3"|<m> \ar|s="3",e="5"|<p>
+        >
+      >
+      も可換である。
+      すると、&m<f = m \rcomp; (p \rcomp; \sb<c><i>)> となり、示したかった分解が得られた。
+    >
+    \p<
+      この分解の一意性を示すため、射 &m<g, g': N \to; C> によって &m<f = m \rcomp; g = m \rcomp; g'> と 2 通りに分解できたとする。
+      &m<N> は &m<`k>-表示可能だから、ある &m<\scr<I>> の対象 &m<i, i'> および射 &m<h: N \to; Fi>, &m<h': N \to; Fi'> が存在して、
+      &mb<
+        \diag|hor="thn"|<
+          \v<N> \v; \v<C> \br;
+          \v; \v<Fi>
+          \ar|s="1",e="5",inv|<h> \ar|s="1",e="3"|<g> \ar|s="5",e="3",inv|<\sb<c><i>>
+        > \qquad;
+        \diag|hor="thn"|<
+          \v<N> \v; \v<C> \br;
+          \v; \v<Fi'>
+          \ar|s="1",e="5",inv|<h'> \ar|s="1",e="3"|<g> \ar|s="5",e="3",inv|<\sb<c><i'>>
+        >
+      >
+      を可換にできる。
+      すると、&m<(m \rcomp; h) \rcomp; \sb<c><i> = (m \rcomp; h') \rcomp; \sb<c><i'>> が成り立つ。
+      &m<M> は &m<`k>-表示可能だから、このような分解の本質的一意性によって、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であって、
+      &mb<
+        m \rcomp; h \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = m \rcomp; h' \rcomp; F \ltort; i' \hookrarr; \bar<i> \rtort; 
+      >
+      が成り立つ。
+      &m<F \bar<i>> は &m<\sp<\scr<M>><\bot;>> の元なので、今度はこれを経由する分解の一意性によって、
+      &mb<
+        h \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = h' \rcomp; F \ltort; i' \hookrarr; \bar<i> \rtort; 
+      >
+      が得られる。
+      すると、
+      &mb<
+        \array|align="rcl"|<
+          \c<g> \c<=> \c<h \rcomp; \sb<c><i>> \br;
+          \c; \c<=> \c<h \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; \rcomp; \sb<c><\bar<i>>> \br;
+          \c; \c<=> \c<h' \rcomp; F \ltort; i' \hookrarr; \bar<i> \rtort; \rcomp; \sb<c><\bar<i>>> \br;
+          \c; \c<=> \c<g'>
+        >
+      >
+      が成り立つ。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>

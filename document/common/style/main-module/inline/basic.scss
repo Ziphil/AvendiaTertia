@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.sans {
+  font-family: $sans-font-family !important;
+  font-weight: $sans-font-weight !important;
+  font-size: $sans-font-size !important;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  line-height: $sans-font-size !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.japanese {
+  font-family: $japanese-serif-font-family !important;
+  font-weight: $serif-font-weight;
+  font-feature-settings: "palt" 0;
+  line-height: 1;
+}
+
+.monospace {
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
+  font-weight: $monospace-font-weight;
+  letter-spacing: $monospace-letter-spacing;
+  white-space: pre-wrap;
+}
+
+.code {
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
+  font-weight: $monospace-font-weight;
+  letter-spacing: $monospace-letter-spacing;
+  white-space: pre-wrap;
+  background-color: $block-background-color;
+}
+
+.hairia {
+  &::before {
+    font-size: 80%;
+    vertical-align: 0.3906em;
+    line-height: 0;
+    content: "H";
+  }
+}
+
+.foreign {
+  font-size: 80%;
+  &::before {
+    content: " (";
+  }
+  &::after {
+    content: ")";
+  }
+}
+
+.emphasis {
+  font-weight: inherit;
+  font-style: inherit;
+  background-image: linear-gradient($blue-color, $blue-color);
+  background-size: 100% 2rpx;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.small {
+}
+
+.lyrics-space {
+  margin-right: 0.5em;
+}
+
+.redaction {
+  padding: 0.1em 0em;
+  line-height: 100%;
+  white-space: break-spaces;
+  border: 1rpx $blue-color solid;
+  background-image: linear-gradient(-45deg, transparent 33%, $blue-color 33% 50%, transparent 50% 83%, $blue-color 83%);
+  background-size: 3rpx 3rpx;
+}
+
+.box {
+  @include box($blue-color, false);
+}
+
+.label {
+  margin-right: $blank-margin;
+  color: $blue-color;
+  &::after {
+    content: ":";
+  }
+}
+
+.sup {
+  font-size: 80%;
+  vertical-align: 0.3906em;
+  line-height: 0;
+}
+
+.sub {
+  font-size: 80%;
+  vertical-align: -0.2969em;
+  line-height: 0;
+}

@@ -1,0 +1,96 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<ARC097-D: Union-Find 木>
+
+  \h1<日記 (2018 年 5 月 14 日)>
+  \p<
+    少し前に ARC097 があって参加しました。
+    そこの D 問題は Union-Find 木を使うと簡単に解けるんですが、コンテスト当時の私はそのことに気づかずに他の方法でやったので、Union-Find 木の実装をここに記しておこうと思います。
+    問題は\ae|href="https://beta.atcoder.jp/contests/arc097/tasks/arc097_b"|<こちら>です。
+  >
+  \p<
+    Union-Find 木とは、簡単に言うと複数の要素をグループ化して保持するデータ構造です。
+    2 つの要素がそれぞれ属するグループを結合して 1 つの大きなグループを作ったり、2 つの要素が同じグループに属しているかを判定したりなどが、高速に行えます。
+    詳しい実装の中身の説明はここでは省略しますが、Java では以下のように実装できます。
+  >
+  \pre~*<
+    public static class UnionFind {
+      private int[] parents;
+      private int[] ranks;
+
+      public UnionFind(int max) {
+        parents = new int[max];
+        ranks = new int[max];
+        for (int i = 0 ; i `< max; i ++) {
+          parents[i] = i;
+        }
+      }
+
+      public int find(int i) {
+        int parent = parents[i];
+        if (i == parent) {
+          return i;
+        } else {
+          parents[i] = find(parent);
+          return parents[i];
+        }
+      }
+
+      public void unite(int i, int j) {
+        int iRoot = find(i);
+        int jRoot = find(j);
+        if (iRoot != jRoot) {
+          if (ranks[iRoot] `> ranks[jRoot]) {
+            parents[jRoot] = iRoot;
+          } else if (ranks[jRoot] `> ranks[iRoot]) {
+            parents[iRoot] = jRoot;
+          } else {
+            parents[jRoot] = iRoot;
+            ranks[iRoot] ++;
+          }
+        }
+      }
+
+      public boolean isConnected(int i, int j) {
+        return find(i) == find(j);
+      }
+    }
+  >
+  \p<
+    2 つの要素のグループを結合するには \m<unite> メソッドを用い、2 つの要素が同じグループに属するかを判定するには \m<isConnected> メソッドを用います。
+  >
+  \p<
+    これを使うと、今回の問題は以下のようなプログラムで解けます。
+  >
+  \pre~*<
+    public void run() {
+      BetterScanner scanner = new BetterScanner(System.in);
+
+      int n = scanner.nextInt();
+      int m = scanner.nextInt();
+      int[] pp = new int[n];
+      for (int i = 0 ; i `< n ; i ++) {
+        pp[i] = scanner.nextInt() - 1;
+      }
+
+      UnionFind u = new UnionFind(n);
+      for (int i = 0 ; i `< m ; i ++) {
+        int x = scanner.nextInt() - 1;
+        int y = scanner.nextInt() - 1;
+        u.unite(x, y);
+      }
+
+      int res = 0;
+      for (int i = 0 ; i `< n ; i ++) {
+        if (u.isConnected(i, pp[i])) {
+          res ++;
+        }
+      }
+      System.out.println(res);
+    }
+  >
+
+>

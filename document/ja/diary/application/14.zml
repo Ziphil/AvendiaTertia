@@ -1,0 +1,73 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Ruby での文字列のインデックスによる文字参照>
+
+  \h1<日記 (2019 年 2 月 5 日)>
+  \p<
+    ZenML を使っていて前から気になっていたんですが、ファイルサイズが大きくなると構文木への変換がかなり遅くなるんです。
+    例えば、シャレイア語の 5 代 5 期の文法書ページ (\a|href="../../conlang/grammar/6.html"|<これ>) を変換するのに、だいたい 1.5 秒くらいかかります。
+    Ruby なので仕方ないのかなとも思ってたんですが、さすがに気になってきたので、ちょっと高速化をしようと思いました。
+  >
+  \p<
+    ZenML の構文解析は、まずファイルの内容を全て読み込んで、その文字列を前から 1 文字ずつ読むことで行っていました。
+    このとき、何も考えずに \m~<String#[]> で特定のインデックスの文字を取得していたのですが、ふと思い立って、あらかじめ文字列を各文字の配列に変換しておき、\m~<Array#[]> で文字の取得を行うようにしたところ、劇的に速くなりました。 
+    文字列は文字の配列みたいなものだと思っていたので、これだけで速度が大きく変わったのには驚きました。
+  >
+  \p<
+    ということで、ベンチマークを取ってみましょう。
+    今回は試しに \ae|href="https://github.com/benchmark-driver/benchmark-driver"|<BenchmarkDriver> を使ってみます。
+    ベンチマーク対象をブロックではなく文字列で渡すことで、ブロック呼び出しによるオーバーヘッドをなくして、より厳密な計測ができるらしいです。
+  >
+  \p<
+    まず、ラテン小文字から成る 100 万文字の文字列 \m~<string> を適当に生成します。
+    \m~<String#[]> の計測では、単純に \m~<String#[]> を用いて \m~<string> の 0 番目の文字を取得します。
+    \m~<Array#[]> の計測では、1 回目の繰り返しでのみ各文字から成る配列 \m~<string_chars> を生成し、以降は \m~<string_chars> の 0 番目の要素を取得します。
+    したがって、\m~<Array#[]> の計測で使うプログラムには 1 回目かどうかの場合分け処理が入るわけですが、これが速度の違いを生んでしまうと困るので、\m~<String#[]> のプログラムにも何もしない場合分けを入れておきます。
+  >
+  \pre~*<
+    require 'benchmark_driver'
+
+    Benchmark.driver do |report|
+      report.prelude(<<~end_string)
+        chars = [*"a".."z"]
+        string = 1000000.times.map{chars.sample}.join
+        string_chars = nil
+        char = nil
+      end_string
+      # String#[] を使った読み出し
+      report.report("String#[]", <<~end_string)
+        unless char
+          string_chars = nil
+        end
+        char = string[0]
+      end_string
+      # あらかじめ各文字から成る Array を生成して Array#[] を使った読み出し
+      report.report("Array#[]", <<~end_string)
+        unless char
+          string_chars = string.chars
+        end
+        char = string_chars[0]
+      end_string
+    end
+  >
+  \samp~*<
+    Warming up --------------------------------------
+               String#[]    11.828M i/s -     12.091M times in 1.022295s (84.55ns/i)
+                Array#[]    36.173M i/s -     36.344M times in 1.004736s (27.65ns/i)
+    Calculating -------------------------------------
+               String#[]    13.281M i/s -     35.483M times in 2.671758s (75.30ns/i)
+                Array#[]    63.126M i/s -    108.518M times in 1.719064s (15.84ns/i)
+
+    Comparison:
+                Array#[]:  63126068.1 i/s 
+               String#[]:  13280662.0 i/s - 4.75x  slower
+  >
+  \p<
+    \m~<Array#[]> の方がだいたい 5 倍速いようです。
+    正確な理由はよく分かりませんが、\m~<String#[]> では部分文字列を \m<String> オブジェクトとして毎回作成しているので、その分が遅くなっているんだと思います。
+  >
+
+>

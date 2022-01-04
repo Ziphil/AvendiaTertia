@@ -1,0 +1,891 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Cohen トポスについて>
+  \use-math;
+
+  \h1<初めに>
+  \p<
+    この記事の目標は、選択公理は満たすが連続体仮説は満たさないトポスを構成することである。
+    ここで、トポス上の選択公理や連続体仮説とは、以下で定義される概念である。
+  >
+  \thm|type="def"|<
+    \p<
+      トポス &m<\scr<E>> において、任意の全射 &m<e: X \headrarr; I> に対してある射 &m<s: I \to; X> が存在して &m<e \circ; s = \sb<\rm<id>><I>> を満たすとする。
+      このとき、&m<\scr<E>> は\em<選択公理\fl<axiom of choice>> を満たすという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      トポス &m<\scr<E>> は自然数対象 &m<\bb<N>> をもつとする。
+      &m<\scr<E>> 内の単射の列 
+      &mb<
+        \diag<
+          \v<\bb<N>> \v<K> \v<P \bb<N>>
+          \ar|s="1",e="2",tip="tail"|<u> \ar|s="2",e="3",tip="tail"|<v> 
+        >
+      >
+      が存在したとすると、&m<u> と &m<v> の少なくとも一方は同型射になっているとする。
+      ここで、&m<P \bb<N>> は &m<\bb<N>> の冪対象である。
+      このとき、&m<\scr<E>> は\em<連続体仮説\fl<continuum hypothesis>> を満たすという。
+    >
+  >
+  \p<
+    なお、この記事はトポス (特に Grothendieck トポス) の基本的な性質について理解している人を対象としている。
+  >
+  \h1<Cohen トポス>
+  \p<
+    以下、自然数全体の集合 (すなわち &m<\bfrm<Set>> の自然数対象) を &m<\bb<N>> と表す。
+    また、&m<P \bb<N>> よりも真に大きい集合 (例えば &m<PP \bb<N>>) を 1 つとって固定し、それを &m<B> とおく。
+  >
+  \p<
+    以下のような写像の集合を考える。
+    &mb<
+      \bfrm<P> \coloneqq; `{p: \sb<F><p> \to; 2 \mid; &raw<&m<\sb<F><p> \subseteq; B \times; \bb<N>> は有限集合>`}
+    >
+    ここで、&m<2 \coloneqq; `{0, 1`}> は 2 元から成る集合である。
+    この &m<\bfrm<P>> に以下で定まる順序を入れる。
+    &mb<
+      p \leq; p' \coloniff; \sb<F><p> \supseteq; \sb<F><p'> \scand; p \rvert; \sb<><\sb<F><p'>> = p'
+    > 
+    すなわち、&m<p> が &m<p'> 以下であるとは、写像として &m<p> が &m<p'> の延長になっているということである。
+    順序の向きが定義域の包含と逆なので注意すること。
+  >
+  \p<
+    さて、これによって &m<\bfrm<P>> は順序集合になったから通常の方法で圏と見なすことにする。
+    &m<\bfrm<P>> 上の前層の圏 &m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> を考え、ここに適切な位相を入れて層を考える。
+    そのために、以下の定義をする。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<p \in; \bfrm<P>> 上の篩 &m<D> をとる。
+      &mb<
+        \sp<><\forall;> q \leq; p \ssbin; \sp<><\exists;> d \leq; q \ssbin; d \in; D
+      >
+      が成り立つとき、&m<D> は\em<稠密\fl<dense>> であるという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      &m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> 上の位相 &m<J> を、各 &m<p \in; \bfrm<P>> に対して、
+      &mb<
+        Jp \coloneqq; `{D \mid; &raw<&m<D> は &m<p> 上の稠密な篩>`}
+      >
+      で定めたとき、&m<J> を\em<稠密位相\fl<dense topology>> という。
+    >
+  >
+  \p<
+    稠密位相に関する層全体から成る &m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> の充満部分圏を &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> と書く。
+  >
+  \p<
+    以下、ここで定義した &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> が、選択公理を満たすが連続体仮説は満たさないトポスになっていることを示す。
+  >
+  \h1<選択公理>
+  \p<
+    以下、&m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> の部分対象分類子は &m<`V> で表し、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> の部分対象分類子は &m<\sb<`V><\rm<Sh>>> で表す。
+    また、Yoneda 埋め込みを &m<\bf<y>: \bfrm<P> \to; \sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> で記す。
+  >
+  \thm|type="lem",id="subyp"|<
+    \p<
+      任意の &m<p \in; \bfrm<P>> に対し、&m<\bf<y> p> は層である。
+      また、終対象への唯一の射 &m<!: \bf<y> p \to; 1> は &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> で単射である。
+    >
+  >
+  \thm|type="lem",id="gen"|<
+    \p<
+      &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> において、族 &m<(\bf<y> p) \sb<><p \in; \bfrm<P>>> は生成子である。
+    >
+  >
+  \prf<
+    \p<
+      いずれも簡単に示せるので、ここでは証明を省略する。
+    >
+  >
+  \thm|type="lem",id="morph"|<
+    \p<
+      &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> の対象 &m<F> をとる。
+      &m<F \ncong; 0> であれば、ある元 &m<p \in; \bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> と射 &m<f: \bf<y> p \to; F> が存在して、&m<\bf<y> p \ncong; 0> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<F \ncong; 0> だから、&m<\rm<id>: F \tailrarr; F> と &m<!: 0 \tailrarr; F> は相異なる &m<F> の部分対象である。
+      したがって、
+      &mb<
+        \op<char> (F) \neq; \op<char> (0): F \to; \sb<`V><\rm<Sh>>
+      >
+      である。
+      これにより、\ref|type="thm",ref="gen"|; を用いると、ある元 &m<p \in; \bfrm<P>> と射 &m<f: \bf<y> p \to; F> が存在し、
+      &mb<
+        \op<char> (F) \circ; f \neq; \op<char> (0) \circ; f: \bf<y> p \to; \sb<`V><\rm<Sh>>
+      >
+      が成り立つ。
+      ここで &m<\bf<y> p \cong; 0> とすると、上の式によって始対象からの異なる平行な射が存在していまい矛盾する。
+      したがって、&m<\bf<y> p \ncong; 0> である。
+    >
+  >
+  \p<
+    さて、任意のトポスにおいて、ある対象の部分対象全体の集合には Heyting 代数の構造が入ることを思い出してほしい。
+  >
+  \thm|type="lem",id="compsub"|<
+    \p<
+      &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> の任意の対象 &m<F> に対し、&m<\op<Sub> (F)> は完備 Boole 代数である。
+    >
+  >
+  \prf<
+    \p<
+      具体的に &m<\op<Sub> (F)> の任意の族の交わりと結びを構成することができる。
+      また、&m<\op<Sub> (F)> の任意の元に対してその補元が存在することも比較的容易に示せる。
+      証明の詳細は、MacLane\ref|type="bib",ref="sgl"|; の III.8 節などを参照してほしい。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> は選択公理を満たす。
+    >
+  >
+  \prf<
+    \p<
+      任意に全射 &m<e: X \headrarr; I> をとる。
+      この切断を構成すれば良い。
+    >
+    \p<
+      まず、
+      &mb<
+        \frak<M> \coloneqq; `{(M, s) \mid; &raw<&m<M> は &m<I> の部分対象で &m<s: M \to; X> は &m<M> 上の &m<e> の切断>`}
+      >
+      とおく。
+      始対象からの射 &m<!: 0 \to; X> を考えると、明らかに &m<(0, !) \in; \frak<M>> であるから、&m<\frak<M>> は空でない。
+      ここで、&m<\frak<M>> に以下で定める順序を入れる。
+      &mb<
+        (M, s) \leq; (M', s') \iff; M \subseteq; M' \scand; s' \rvert; \sb<><M> = s
+      >
+      このとき、&m<\frak<M>> が帰納的順序集合であることを以下に示す。
+    >
+    \p<
+      任意に全順序部分集合 &m<\frak<T> \subseteq; \frak<M>> をとる。
+      便宜上 &m<\frak<T> \eqqcolon; `{(\sb<T><j> \sb<s><j>)`} \sb<><j \in; J>> と添字付けておく。
+      &m<\sb<T><j>> たちは &m<I> の部分対象だから、単射 &m<\sb<m><j>: \sb<T><j> \tailrarr; I> が存在する。
+      さて、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> は余完備だから &m<\sb<T><j>> たちの余極限が存在し、射 
+      &mb<
+        m \coloneqq; \un<\colim;><j \in; J> \sb<m><j>: \un<\colim;><j \in; J> \sb<T><j> \to; I
+      >
+      が構成できる。
+      ここで、&m<\frak<T>> が全順序であることから、&m<J> 上の余極限はフィルターである。
+      したがって、この余極限は有限極限と交換するから、特に単射を保存する。
+      これにより、上の射は単射となるので、&m<\sb<\colim;><j \in; J> \sb<T><j>> は &m<I> の部分対象を定め、
+      &mb<
+        T \coloneqq; \un<\colim;><j \in; J> \sb<T><j> = \bigcup<j \in; J> \sb<T><j>
+      >
+      が成り立つ。
+    >
+    \p<
+      &m<\sb<T><j>> たちと &m<T> は &m<I> の部分対象だから &m<I> への射をもち、それによってスライス圏 &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ I> の対象であると見なせる。
+      同様に、&m<X> も &m<e: X \to; I> によって &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ I> の対象とする。
+      余極限は &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> 上でとっても &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ I> 上でとっても同じことを利用すると、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ I> 上で、任意の &m<\sb<T><j> \subseteq; \sb<T><j'>> なる &m<j, j'> について、
+      &mb<
+        \diag<
+          \v; \v<X> \v; \br;
+          \v; \v<T> \v; \br;
+          \v<\sb<T><j>> \v; \v<\sb<T><j'>>
+          \ar|s="5",e="2",inv,dash|<s>
+          \ar|s="7",e="9"|; \ar|s="7",e="5"|; \ar|s="7",e="2",bend="30"|<\sb<s><j>>
+          \ar|s="9",e="5"|; \ar|s="9",e="2",bend="-30",inv|<\sb<s><j'>>
+        >
+      >
+      を可換にする射 &m<s: T \to; X> が存在する。
+      この図式は &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ I> 内のものだから &m<e \circ; s = m> が成り立つので、この &m<s> は &m<T> 上の &m<e> の切断である。
+      したがって、&m<(T, s) \in; \frak<M>> であって、これは &m<\frak<T>> の上界を与える。
+    >
+    \p<
+      これによって &m<\frak<M>> は帰納的順序集合であることが示されたので、Zorn の補題により、極大元 &m<(M, s)> がとれる。
+      &m<M = I> を示せば良い。
+    >
+    \p<
+      &m<M \neq; I> を仮定して矛盾を導く。
+      \ref|type="thm",ref="compsub"|; によって &m<\op<Sub> (I)> は Boole 代数だから、&m<\neg; M \neq; 0> である。
+      したがって、\ref|type="thm",ref="morph"|; によって、ある表現可能関手 &m<V> と射 &m<f: V \to; \neg; M> がとれ、&m<V \ncong; 0> である。
+      引き戻し 
+      &mb<
+        \diag<
+          \v<X'> \v; \v<X> \br;
+          \v<V> \v<\neg; M> \v<I>
+          \ar|s="1",e="3",dash|<x> \ar|s="1",e="4",tip="head",dash,inv|<e'> \ar|s="3",e="6",tip="head"|<e>
+          \ar|s="4",e="5",inv|<f> \ar|s="5",e="6",tip="tail"|;
+        >
+      >
+      を考えると、トポスの引き戻しは全射を保存するから、&m<e'> は全射である。
+      &m<X' \cong; 0> とすると、&m<e'> は始対象からの射だから単射となり、したがって同型射となるが、それは &m<V \ncong; 0> に反する。
+      したがって、&m<X' \ncong; 0> が成り立つ。
+      再び\ref|type="thm",ref="morph"|; を用いれば、表現可能関手 &m<W> と射 &m<g: W \to; X'> がとれて、&m<W \ncong; 0> である。
+    >
+    \p<
+      ここで、全射と単射による分解 
+      &mb<
+        \diag<
+          \v<W> \v<V> \v<\neg; M> \br;
+          \v; \v<Z> \v;
+          \ar|s="1",e="2"|<e' \circ; g> \ar|s="1",e="5",tip="head",dash,inv|<h> \ar|s="2",e="3"|<f> \ar|s="5",e="3",tip="tail",dash|;
+        >
+      >
+      を考えると、まず &m<W \ncong; 0> より &m<Z \ncong; 0> である。
+      さらに\ref|type="thm",ref="subyp"|; によって &m<W> から 1 への射は単射だから、可換図式 
+      &mb<
+        \diag<
+          \v<W> \v<1> \br;
+          \v<Z> \v<\neg; M>
+          \ar|s="1",e="2",tip="tail"|; \ar|s="1",e="3",tip="head",inv|<h>
+          \ar|s="3",e="4",tip="tail"|; \ar|s="4",e="2"|;
+        >
+      >
+      を考えると、&m<h> も単射であることが分かる。
+      したがって、&m<h> は全射かつ単射なので同型射である。
+    >
+    \p<
+      さて、&m<Z> から &m<\neg; M> に単射があり、&m<\neg; M> は &m<I> の部分対象だから、&m<Z> も &m<I> の部分対象と見なせる。
+      このように見なすと、&m<\op<Sub> (I)> で、
+      &mb<
+        M \cap; Z \subseteq; M \cap; \neg; M = 0
+    >
+      が成り立つ。
+      したがって、&m<M \cup; Z> は余積 &m<M + Z> と同型である。
+      これにより、&m<M \cup; Z> からの射を構成するには、&m<M> からの射と &m<Z> からの射を構成すれば良い。
+      &m<s: M \to; X> と &m<x \circ; g \circ; \sp<h><-1>: Z \to; X> から誘導される射を &m<s': M \cup; Z \to; X> とおくと、これは &m<M \cup; Z> 上の &m<e> の切断になっている。
+      &m<Z \ncong; 0> より &m<M \subsetneq; M \cup; Z> だから、これは &m<(M, s)> が &m<\frak<M>> の極大元であることに矛盾する。
+    >
+  >
+  \h1<連続体仮説>
+  \h2<部分対象分類子の表示>
+  \p<
+    初めに &m<`V> と &m<\sb<`V><\rm<Sh>>> の具体的な表示を確認しておく。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<p \in; \sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> 上の篩 &m<S> をとる。
+      &m<S> が\em<閉\fl<closed>> であるとは、
+      &mb<
+        \sp<><\forall;> q \leq; p \ssbin; (S \darr|bin|; q \in; Jq \implies; q \in; S)
+      >
+      が成り立つことである。
+      ここで、
+      &mb<
+        S \darr|bin|; q \coloneqq; `{q' \in; S \mid; q' \leq; q`}
+      >
+      である。
+    >
+  >
+  \p<
+    このとき、以下が成り立つ。
+  >
+  \thm|type="prp",id="expsubc"|<
+    \p<
+      &m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> において、&m<`V> は具体的に、
+      &mb<
+        \array|align="rrcl"|<
+          \c<`V:> \c<\sp<\bfrm<P>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<p> \c<\longmapsto;> \c<`{S \mid; &raw<&m<S> は &m<p> 上の篩>`}>
+        >
+      >
+      と書ける。
+      また、&m<\sb<`V><\rm<Sh>>> については、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<`V><\rm<Sh>>:> \c<\sp<\bfrm<P>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<p> \c<\longmapsto;> \c<`{S \mid; &raw<&m<S> は &m<p> 上の閉篩>`}>
+        >
+      >
+      と書ける。
+    >
+  >
+  \prf<
+    \p<
+      この命題の証明はここでは省略する。
+      MacLane\ref|type="bib",ref="sgl"|; の I.4 節と III.7 節などを参照してほしい。
+    >
+  >
+  \h2<単射列の構成>
+  \p<
+    以下、&m<`D: \bfrm<Set> \to; \sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> を定値前層を作る関手とし、&m<\bf<a>: \sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>> \to; \bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> を層化関手とする。
+    また、記号の簡略化のため、集合 &m<S> に対して &m<\widetilde<S> \coloneqq; \bf<a> `D S> とおく。
+  >
+  \p<
+    &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> の自然数対象は &m<\widetilde<\bb<N>>> であることに注意する。
+    ここでの目標は、単射列 
+    &mb<
+      \diag<
+        \v<\widetilde<\bb<N>>> \v<\widetilde<\sp<2><\bb<N>>>> \v<\widetilde<B>> \v<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>>
+        \ar|s="1",e="2",tip="tail"|; \ar|s="2",e="3",tip="tail"|; \ar|s="3",e="4",tip="tail"|;
+      >
+    >
+    を構成することである。
+  >
+  \p<
+    この図式の最初 2 つの単射はすぐに作ることができる。
+    実際、&m<\sp<2><\bb<N>>> は &m<\bb<N>> よりも濃度が大きい集合だから、&m<\bfrm<Set>> では単射 &m<\bb<N> \tailrarr; \sp<2><\bb<N>>> が存在する。
+    &m<`D> も &m<\bf<a>> も有限極限は保存するので特に単射を保存するから、ここから誘導される &m<\widetilde<\bb<N>> \to; \widetilde<\sp<2><\bb<N>>>> も単射であることが分かる。
+    同様にして単射 &m<\widetilde<\sp<2><\bb<N>>> \tailrarr; \widetilde<B>> も存在する。
+    したがって、残りの単射 &m<\widetilde<B> \tailrarr; \sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>> を構成すれば良い。
+  >
+  \p<
+    まず、&m<`D B \times; `D \bb<N>> の部分前層 
+    &mb<
+      \array|align="rrcl"|<
+        \c<A:> \c<\sp<\bfrm<P>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+        \c; \c<p> \c<\longmapsto;> \c<`{(b, n) \in; B \times; \bb<N> \mid; p (b, n) = 0`}>
+      >
+    >
+    を考える。
+  >
+  \thm|type="lem"|<
+    \p<
+      上で定義した &m<A> について、図式 
+      &mb<
+        \diag<
+          \v<\sb<`V><\rm<Sh>>> \v<`V> \br;
+          \v<`D B \times; `D \bb<N>> \v;
+          \ar|s="1",e="2",tip="hook"|; \ar|s="3",e="1",dash|<f>
+          \ar|s="3",e="2",tip="tail",inv|<\op<char>(A)>
+        >
+      >
+      を可換にする射 &m<f> が存在する。
+      なお、&m<\op<char> (A)> は &m<A \in; \sb<\op<Sub>><\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> (`D B \times; `D \bb<N>)> の特性射である。
+    >
+  >
+  \prf<
+    \p<
+      任意に &m<p \in; \bfrm<P>> および &m<(b, n) \in; B \times; \bb<N>> をとる。
+      このとき、&m<\op<char> (A) \sb<><p> (b, n) \in; `V p> が &m<\sb<`V><\rm<Sh>> p> に属していることを示せば良いが、\ref|type="thm",ref="expsubc"|; によって、それはこれが閉篩であることを示すのと同値である。
+    >
+    \p<
+      閉篩の定義の対偶を示す。
+      ある &m<q \leq; p> であって &m<q \nin; \op<char> (A) \sb<><p> (b, n)> なるものが存在したとする。
+      &m<\op<char> (A) \sb<><p> (b, n) \darr|bin|; q> が稠密でないことを示せば良い。
+    >
+    \p<
+      ここで、
+      &mb<
+        \op<char> (A) \sb<><p> (b, n) = `{p' \leq; p \mid; (b, n) \in; Ap'`}
+      >
+      と具体的に表示できることを利用すると、&m<(b, n) \nin; Aq> が分かる。
+      すなわち、&m<q (b, n)> が定義されないか、もしくは &m<q (b, n) = 1> である。
+    >
+    \p<
+      &m<q (b, n)> が定義されない場合、
+      &mb<
+        \array|align="rrcl"|<
+          \c<q':> \c<\sb<F><q> \cup; `{(b, n)`}> \c<\longto;> \c<2> \br;
+          \c; \c<(c, m)> \c<\longmapsto;> \c<\case<
+            \c<q (c, m)> \c<((c, m) \in; \sb<F><q>)> \br;
+            \c<1> \c<((c, m) = (b, n))>
+          >>
+        >
+      >
+      で写像 &m<q'> を定めると、これは &m<q> の延長になっているから &m<q' \leq; q> が成り立つ。
+      ここで任意の &m<d \leq; q'> に対し、順序の定義から、
+      &mb<
+        d (b, b) = q' (b, n) = 1 \neq; 0
+      >
+      が成り立つので、&m<(b, n) \nin; Ad> である。
+      すなわち、&m<d \nin; \op<char> (A) \sb<><p> (b, n) \darr|bin|; q> が成り立つ。
+      これにより、&m<\op<char> (A) \sb<><p> (b, n) \darr|bin|; q> は稠密でないことが示された。
+      &m<q (b, n) = 1> の場合は、この議論で &m<q' = q> とすれば良い。
+    >
+  >
+  \p<
+    さて、同型 
+    &mb<
+      \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> (`D B \times; `D \bb<N>, \sb<`V><\rm<Sh>>) \cong; \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> (`D B, \sp<\sb<`V><\rm<Sh>>><`D \bb<N>>)
+    >
+    において &m<f: `D B \times; `D \bb<N> \to; \sb<`V><\rm<Sh>>> と対応する射を &m<g: `D B \to; \sp<\sb<`V><\rm<Sh>>><`D \bb<N>>> とおく。
+  >
+  \thm|type="lem",id="gmono"|<
+    \p<
+      上で定義した &m<g: `D B \to; \sp<\sb<`V><\rm<Sh>>><`D \bb<N>>> は &m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> で単射である。
+    >
+  >
+  \prf<
+    \p<
+      関手圏の射が単射かどうかは各点で調べられるので、任意の &m<p \in; \bfrm<P>> に対して &m<\sb<g><p>: B \to; \sp<\sb<`V><\rm<Sh>>><`D \bb<N>> p> が単射であることを示せば良い。
+      前層の冪の定義から、
+      &mb<
+        \sp<\sb<`V><\rm<Sh>>><`D \bb<N>> p = \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> (\bf<y> p \times; `D \bb<N>, \sb<`V><\rm<Sh>>)
+      >
+      であるから、各 &m<b \in; B> に対して、&m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> 内の射 
+      &mb<
+        \sb<g><p> b: \bf<y> p \times; `D \bb<N> \to; \sb<`V><\rm<Sh>>
+      >
+      が定まっていることになる。
+      これは自然変換だから、各 &m<q \in; \bfrm<P>> に対して、&m<\bfrm<Set>> の射 
+      &mb<
+        (\sb<g><p> b) \sb<><q>: \op<Hom> (p, q) \times; \bb<N> \to; \sb<`V><\rm<Sh>> q
+      >
+      がある。
+      &m<g> は冪の随伴で &m<f> から得られたもので、&m<f> は &m<\op<char> (A)> の終域を制限したものだということを踏まえると、この射は、
+      &mb<
+        \array|align="rrcl"|<
+          \c<(\sb<g><p> b) \sb<><q>:> \c<\op<Hom> (p, q) \times; \bb<N>> \c<\longto;> \c<\sb<`V><\rm<Sh>> q> \br;
+          \c; \c<(\star|ord|;, n)> \c<\longmapsto;> \c<`{r \leq; q \mid; (b, n) \in; Ar`}>
+        >
+      >
+      と具体的に表示できることが分かる。
+    >
+    \p<
+      さて、この具体的な表示を用いて &m<\sb<g><p>> が単射であることを示す。
+      任意に相異なる 2 元 &m<b, b' \in; B> をとる。
+      &m<p> の定義域は有限集合だから、十分大きな &m<\sb<n><0> \in; \bb<N>> で、&m<p (b, \sb<n><0>)> も &m<p (b', \sb<n><0>)> も定義されないようなものが存在する。
+      そこで、
+      &mb<
+        \array|align="rrcl"|<
+          \c<r:> \c<\sb<F><p> \cup; `{(b, \sb<n><0>), (b', \sb<n><0>)`}> \c<\longto;> \c<2> \br;
+          \c; \c<(c, m)> \c<\longmapsto;> \c<\case<
+            \c<p (c, m)> \c<((c, m) \in; \sb<F><p>)> \br;
+            \c<0> \c<((c, m) = (b, \sb<n><0>))> \br;
+            \c<1> \c<((c, m) = (b', \sb<n><0>))>
+          >>
+      >
+    >
+      と定義することで、&m<p> の延長が得られる。
+      この定義と上の &m<\sb<g><p>> の表示から、&m<r \in; (\sb<g><p> b) \sb<><p> (\star|ord|;, \sb<n><0>)> であるが &m<r \nin; (\sb<g><p> b') \sb<><p> (\star|ord|;, \sb<n><0>)> であることが分かる。
+      これより &m<\sb<g><p> b \neq; \sb<g><p> b'> が得られたので、&m<\sb<g><p>> は相異なる元を相異なる元に移すから単射である。
+    >
+  >
+  \thm|type="lem",id="iso"|<
+    \p<
+      &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> において同型 &m<\bf<a> \sp<\sb<`V><\rm<Sh>>><`D \bb<N>> \cong; \sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>> が成り立つ。
+      ここで、&m<\sp<\sb<`V><\rm<Sh>>><`D \bb<N>>> の冪は &m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> でとっており、&m<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>> の冪は &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> でとっている。
+    >
+  >
+  \prf<
+    \p<
+      任意に &m<X \in; \sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> をとると、&m<\bf<a>> が包含関手の左随伴であることから、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> (X, \sp<\sb<`V><\rm<Sh>>><`D \bb<N>>)> \c<\cong;> \c<\sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> (`D \bb<N> \times; X, \sb<`V><\rm<Sh>>)> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> (\bf<a> `D \bb<N> \times; \bf<a> X, \sb<`V><\rm<Sh>>)> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> (\bf<a> X, \sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>)> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> (X, \sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>)>
+        >
+      >
+      が成り立つ。
+      この同型は &m<X> に関して自然だから、Yoneda の補題によって &m<\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> での同型 &m<\sp<\sb<`V><\rm<Sh>>><`D \bb<N>> \cong; \sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>> が得られる。
+      この両辺を層化すれば、右辺はすでに層だから &m<\bf<a> \sp<\sb<`V><\rm<Sh>>><`D \bb<N>> \cong; \sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>> が得られる。
+    >
+  >
+  \thm|type="prp",id="monomono"|<
+    \p<
+      &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> において、単射列 
+      &mb<
+        \diag<
+          \v<\widetilde<\bb<N>>> \v<\widetilde<\sp<2><\bb<N>>>> \v<\widetilde<B>> \v<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>>
+          \ar|s="1",e="2",tip="tail"|; \ar|s="2",e="3",tip="tail"|; \ar|s="3",e="4",tip="tail"|;
+        >
+      >
+      が存在する。
+    >
+  >
+  \prf<
+    \p<
+      左側 2 つの単射の存在はすでに述べた通りである。
+      右側の単射は、次に述べるように &m<\bf<a> g> である。
+    >
+    \p<
+      \ref|type="thm",ref="gmono"|; によって &m<g> は単射であるが、層化関手は単射を保存するから &m<\bf<a> g: \bf<a> `D B \to; \bf<a> \sp<\sb<`V><\rm<Sh>>><`D \bb<N>>> も単射である。
+      \ref|type="thm",ref="iso"|; によってこれの終域は &m<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>> と同型だから、まさに &m<\bf<a> g> が命題の図式の右側の単射を与えている。
+    >
+  >
+  \h2<全射の存在性>
+  \p<
+    &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> が連続体仮説を満たさないことを示すには、前項で構成した &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> 内の 2 つの単射がどちらも同型射でないことを示す必要がある。
+    そのためには、逆向きの全射が存在しないことを示せば良い。
+    そこで、トポスの全射についてもう少し考察をする。
+    この項の議論は &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> でないトポスでも行えるので、一般のトポス &m<\scr<E>> で考えることにする。
+  >
+  \p<
+    この項では、トポス &m<\scr<E>> の部分対象分類子を &m<`V> で表し、それに付随する射は &m<\top;: 1 \to; `V> で表す。
+  >
+  \p<
+    トポス &m<\scr<E>> の対象 &m<X, Y> を固定する。
+    射 &m<f: E \to; \sp<Y><X>> に対し、全射と単射による分解 
+    &mb<
+      \diag|hor="vthn"|<
+        \v<E \times; X> \v; \v<E \times; Y> \br;
+        \v; \v<\sb<\op<Im>><E> (f)> \v;
+        \ar|s="1",e="3"|<(`p, \widehat<f>)> \ar|s="1",e="5",tip="head",dash|; \ar|s="5",e="3",tip="tail",dash|;
+      >
+    >
+    を考える。
+    なお、&m<`p: E \times; X \to; E> は積の射影で、&m<\widehat<f>: E \to; \sp<Y><X>> は冪の随伴で &m<f> と対応する射である。
+    ここで、同型 
+    &mb<
+      \op<Sub> (E \times; Y) \cong; \op<Hom> (E, `V)
+    >
+    において、&m<\sb<\op<Im>><E> (f) \in; \op<Sub> (E \times; Y)> と対応するものを &m<\sb<\op<im>><E> (f) \in; \op<Hom> (E, `V)> とおく。
+    以上の操作により、写像 
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sb<\op<im>><E>:> \c<\op<Hom> (E, \sp<Y><X>)> \c<\longto;> \c<\op<Hom> (E, \sp<`V><Y>)> \br;
+        \c; \c<f> \c<\longmapsto;> \c<\sb<\op<im>><E> (f)>
+      >
+    >
+    が得られるが、これは &m<E> に関して自然であることが容易に示される。
+    したがって、Yoneda の補題によって 1 つの射 &m<\op<im>: \sp<Y><X> \to; \sp<`V><Y>> が定まる。
+    ここで、終対象への唯一の射 &m<!: 1 \times; Y \to; 1> と &m<\top;: 1 \to; `V> の合成を &m<\sb<t><Y>: 1 \times; Y \to; `V> で書くことにし、これと冪の随伴で対応する射 &m<\widehat<\sb<t><Y>>: 1 \to; \sp<`V><Y>> を考える。
+    引き戻し 
+    &mb<
+      \diag<
+        \v<\op<Epi> (X, Y)> \v<1> \br;
+        \v<\sp<Y><X>> \v<\sp<`V><Y>>
+        \ar|s="1",e="2",dash|; \ar|s="1",e="3",tip="tail",dash|;
+        \ar|s="2",e="4"|<\widehat<\sb<t><Y>>> \ar|s="3",e="4",inv|<\op<im>>
+      >
+    >
+    によって &m<\sp<Y><X>> の部分対象 &m<\op<Epi> (X, Y)> を定める。
+  >
+  \p<
+    &m<\scr<E> = \bfrm<Set>> として上の構成を追うと、
+    &mb<
+      \op<Epi> (X, Y) = `{u: X \to; Y \mid; &raw<&m<u> は全射>`} \subseteq; \sp<Y><X>
+    >
+    であることが分かる。
+    したがって、&m<\op<Epi> (X, Y)> は &m<X> から &m<Y> への全射全体の内部的な対応物になっていそうなことが分かる。
+  >
+  \thm|type="prp",id="epiepi"|<
+    \p<
+      トポス &m<\scr<E>> 内の射 &m<f: E \to; \sp<Y><X>> をとる。
+      &m<(`p, \widehat<f>): E \times; X \to; E \times; Y> が全射であるための必要十分条件は、図式 
+      &mb<
+        \diag<
+          \v<E> \v<\sp<Y><X>> \br;
+          \v<\op<Epi> (X, Y)>
+          \ar|s="1",e="2"|<f> \ar|s="1",e="3",dash|;
+          \ar|s="3",e="2",tip="tail"|;
+        >
+      >
+      を可換にする破線の射が存在することである。
+    >
+  >
+  \prf<
+    \p<
+      &m<\op<Epi> (X, Y)> の定義を遡ればすぐに分かる。
+    >
+  >
+  \thm|type="prp",id="noepi"|<
+    \p<
+      トポス &m<\scr<E>> の対象 &m<X, Y> をとる。
+      &m<\scr<E>> において &m<0 \ncong; 1> であって &m<\op<Epi> (X, Y) \cong; 0> が成り立つならば、&m<X> から &m<Y> への全射は存在しない。
+    >
+  >
+  \prf<
+    \p<
+      &m<0 \ncong; 1> かつ &m<\op<Epi> (X, Y) \cong; 0> が成り立つとし、さらに全射 &m<g: X \headrarr; Y> が存在すると仮定する。
+      このとき &m<(`p, g): 1 \times; X \to; 1 \times; Y> も全射になるから、&m<\widehat<g>: 1 \to; \sp<Y><X>> を冪の随伴で &m<g> と対応する射とすると、\ref|type="thm",ref="epiepi"|; によって、図式 
+      &mb<
+        \diag<
+          \v<1> \v<\sp<Y><X>> \br;
+          \v<\op<Epi> (X, Y)>
+          \ar|s="1",e="2"|<\widehat<g>> \ar|s="1",e="3",dash,inv|<u>
+          \ar|s="3",e="2",tip="tail"|;
+        >
+      >
+      を可換にするような &m<u> が存在する。
+      今 &m<\op<Epi> (X, Y) \cong; 0> だから &m<u> の終域は 0 であるが、トポスにおいて 0 への射は全て同型射であるから、&m<u> は同型射である。
+      したがって、&m<0 \cong; 1> となり矛盾する。
+    >
+  >
+  \h2<同型射でないことの証明>
+  \p<
+    前項の結果を利用して、前に構成した単射が同型射でないことを示す。
+    初めに少しの補題を準備する。
+  >
+  \thm|type="def"|<
+    \p<
+      相異なる 2 元 &m<p, p' \in; \bfrm<P>> に対し、&m<q \leq; p> かつ &m<q \leq; p'> を満たす &m<q \in; \bfrm<P>> が存在しないとき、&m<p> と &m<p'> は\em<両立しない\fl<incompatible>> という。
+    >
+  >
+  \thm|type="lem",id="incomp"|<
+    \p<
+      &m<\bfrm<P>> の部分集合 &m<A> の任意の相異なる 2 元が両立しないとき、&m<A> は高々可算である。
+    >
+  >
+  \prf<
+    \p<
+      まず、&m<A> に属する任意の元 &m<p> について、&m<p> の定義域の元の個数がちょうど &m<n> 個である場合に補題を示す。
+      これは &m<n> に関する帰納法による。
+    >
+    \p<
+      &m<n = 0> の場合は明らかなので、以下 &m<n \geq; 1> とする。
+      自然数 &m<k> に対し、
+      &mb<
+        \sb<A><k> \coloneqq; `{p \in; \sb<A><n> \mid; \sp<><\exists;> b \in; B \ssbin; (b, k) \in; \sb<F><p>`}
+      >
+      とおく。
+      定義から、各 &m<p \in; \sb<A><k>> に対して &m<(b, k) \in; \sb<F><p>> なる &m<b \in; B> が存在するので、そのような &m<b> を 1 つ選んで &m<\sb<b><p>> とする。
+      さらに、&m<i \in; `{0, 1`}> に対し、
+      &mb<
+        \sb<A><ki> \coloneqq; `{p \in; \sb<A><k> \mid; p (\sb<b><p>, k) = i`}
+      >
+      とおく。
+      各 &m<p \in; \sb<A><ki>> に対し、&m<p> の定義域を &m<\sb<F><p> \setminus; `{(\sb<b><p>, k)`}> に制限したものを &m<\sp<p><\flat;>> と書くことにする。
+      この記号を利用して、
+      &mb<
+        \sb<R><ki> \coloneqq; `{\sp<p><\flat;> \mid; p \in; \sb<A><ki>`}
+      >
+      とおく。
+    >
+    \p<
+      任意に異なる 2 元 &m<\sp<p><\flat;>, \sp<p><\pr; \flat;> \in; \sb<R><ki>> をとり、&m<q \leq; \sp<p><\flat;>> かつ &m<q \leq; \sp<p><\pr; \flat;>> を満たす &m<q \in; \bfrm<P>> が存在したと仮定する。
+      このとき、
+      &mb<
+        \array|align="rrcl"|<
+          \c<r:> \c<\sb<F><q> \cup; `{(\sb<b><p>, k), (\sb<b><p'>, k)`}> \c<\longto;> \c<2> \br;
+          \c; \c<(c, m)> \c<\longmapsto;> \c<\case<
+            \c<r (c, m)> \c<(\text<下記以外>)> \br;
+            \c<i> \c<((c, m) = (\sb<b><p>, k), (\sb<b><p'>, k))>
+          >>
+        >
+      >
+      とおくと、&m<r> は &m<p, p'> 双方の延長になっているから、&m<r \leq; p> かつ &m<r \leq; p'> が成り立つ。
+      すなわち &m<p> と &m<p'> は両立することになるが、これは &m<A> の任意の相異なる 2 元が両立しないことに矛盾する。
+      したがって、&m<\sb<R><ki>> の任意の相異なる 2 元は両立しない。
+    >
+    \p<
+      &m<\sb<R><ki>> の任意の元に対し、その定義域の元の個数はちょうど &m<n - 1> だから、帰納法の仮定によってこれは高々可算である。
+      したがって &m<\sb<A><ki>> も高々可算で、
+      &mb<
+        A = \bigcup<k> \sb<A><k> = \bigcup<k> (\sb<A><k0> \cup; \sb<A><k1>)
+    >
+      も高々可算である。
+    >
+    \p<
+      一般の &m<A> に関しては、各自然数 &m<n> に対し、
+      &mb<
+        \sbsp<A><n><\pr;> \coloneqq; `{p \in; A \mid; \lvert; \sb<F><p> \rvert; = n`}
+    >
+      とおくと、上の議論によって &m<\sbsp<A><n><\pr;>> は高々可算である。
+      したがって、
+      &mb<
+        A = \bigcup<n> \sbsp<A><n><\pr;>
+    >
+      も高々加算となり、補題が示された。
+    >
+  >
+  \thm|type="lem",id="suslin"|<
+    \p<
+      &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> において、&m<\op<Sub> (1)> の部分集合 &m<\frak<U>> の任意の相異なる 2 元が交わりをもたないとする。
+      このとき、&m<\frak<U>> は高々可算である。
+    >
+  >
+  \prf<
+    \p<
+      仮定のような &m<\frak<U>> をとる。
+      &m<\frak<U>> の代わりに &m<\frak<U> \setminus; `{0`}> を考えることで、初めから &m<\frak<U>> には 0 は属さないとして良い。
+    >
+    \p<
+      各 &m<U \in; \frak<U>> に対し &m<U \ncong; 0> だから、\ref|type="thm",ref="morph"|; を用いると、ある元 &m<\sb<p><U> \in; \bfrm<P>> と射 &m<\sb<f><U>: \bf<y> \sb<p><U> \to; U> がとれる。
+      \ref|type="thm",ref="subyp"|; によって &m<\bf<y> \sb<p><U>> も 1 の部分対象だから、&m<\sb<f><U>> の存在は &m<\op<Sub> (1)> で &m<\bf<y> \sb<p><U> \subseteq; U> が成り立つことを意味する。
+    >
+    \p<
+      ここで、相異なる &m<U, U' \in; \frak<U>> からとると、
+      &mb<
+        \bf<y> \sb<p><U> \cap; \bf<y> \sb<p><U'> \subseteq; U \cap; U' = 0
+      >
+      が成り立つ。
+      これにより、任意の &m<q \in; \bfrm<P>> に対して、
+      &mb<
+        \op<Hom> (q, \sb<p><U>) \cap; \op<Hom> (q, \sb<p><U'>) = \empty;
+      >
+      が分かり、これはすなわち 
+      &mb<
+        A \coloneqq; `{\sb<p><U> \in; \bfrm<P> \mid; U \in; \frak<U>`}
+      >
+      の相異なる 2 元は両立しないことを意味している。
+      \ref|type="thm",ref="incomp"|; によって &m<A> は高々可算なので、&m<\frak<U>> も高々可算である。
+    >
+  >
+  \thm|type="prp",id="preserve"|<
+    \p<
+      無限集合 &m<S, T> に対し、&m<\bfrm<Set>> で &m<\op<Epi> (S, T) \cong; 0> が成り立つならば、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> で &m<\op<Epi> (\widetilde<S>, \widetilde<T>) \cong; 0> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      証明は背理法による。
+      ある無限集合 &m<S, T> が存在して、&m<\op<Epi> (S, T) \cong; 0> および &m<\op<Epi> (\widetilde<S>, \widetilde<T>) \ncong; 0> がともに成り立つと仮定する。
+    >
+    \p<
+      まず\ref|type="thm",ref="morph"|; によって、ある表現可能関手 &m<X> と射 &m<f: X \to; \op<Epi> (\widetilde<S>, \widetilde<T>)> が存在する。
+      さらに &m<X \ncong; 0> である。
+      &m<m: \op<Epi> (\widetilde<S>, \widetilde<T>) \tailrarr; \widetilde<T> \sp<><\widetilde<S>>> を部分対象を与える単射とする。
+      このとき、明らかに 
+      &mb<
+        \diag<
+          \v<X> \v<\widetilde<T> \sp<><\widetilde<S>>> \br;
+          \v<\op<Epi> (\widetilde<S>, \widetilde<T>)>
+          \ar|s="1",e="2"|<m \circ; f> \ar|s="1",e="3",inv|<f>
+          \ar|s="3",e="2",inv|<m>
+        >
+      >
+      は可換だから、\ref|type="thm",ref="epiepi"|; によって &m<g \coloneqq; (`p, \widehat<m \circ; f>): X \times; \widetilde<S> \to; X \times; \widetilde<T>> は全射である。
+    >
+    \p<
+      さて、各 &m<s \in; S> および &m<t \in; T> に対し、これを &m<s: 1 \to; S> と &m<t: 1 \to; T> という &m<\bfrm<Set>> の射と見なして、引き戻し 
+      &mb<
+        \diag<
+          \v<\sb<U><st>> \v<\sb<P><t>> \v<X \times; 1> \br;
+          \v<X \times; 1> \v<X \times; \widetilde<S>> \v<X \times; \widetilde<T>>
+          \ar|s="1",e="2",dash|; \ar|s="1",e="4",tip="tail",dash|; \ar|s="2",e="3",tip="head",dash|<\sb<h><t>> \ar|s="2",e="5",tip="tail",dash|<\sb<k><t>> \ar|s="3",e="6",tip="tail"|<\rm<id> \times; \widetilde<t>>
+          \ar|s="4",e="5",inv|<\rm<id> \times; \widehat<s>> \ar|s="5",e="6",tip="head",inv|<g>
+        >
+      >
+      を考える。
+      ここで、トポスでは引き戻しは全射を保存するので、&m<g> が全射であることから &m<\sb<h><t>> は全射である。
+      &m<\sb<P><t> \cong; 0> とすると、&m<\sb<h><t>> は始対象からの射だから単射となり &m<\sb<h><t>> は同型射になるので、&m<X \cong; 0> となり矛盾する。
+      したがって、&m<\sb<P><t> \ncong; 0> である。
+    >
+    \p<
+      上記のようにして定義した &m<\sb<U><st>> を用いて、集合 &m<W> を 
+      &mb<
+        W \coloneqq; `{(s, t) \in; S \times; T \mid; \sb<U><st> \ncong; 0`}
+      >
+      と定義する。
+    >
+    \p<
+      さて、&m<X \times; \text<->> は右随伴をもつことから余極限を保存するので、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> において同型 
+      &mb<
+        \coprod<s \in; S> (X \times; 1) \cong; X \times; \coprod<s \in; S> 1 \cong; X \times; \widetilde<S>
+      >
+      が成立する。
+      左辺の添字 &m<s \in; S> に対応する &m<X \times; 1> を、射 &m<\rm<id> \times; \widetilde<s>: X \times; 1 \to; X \times; \widetilde<S>> によってスライス圏 &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ (X \times; \widetilde<S>)> の対象だと見なすことにすれば、この同型は &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ (X \times; \widetilde<S>)> でも成立する。
+    >
+    \p<
+      各 &m<t \in; T> に対して、引き戻し関手 &m<\sp<\sb<p><t>><*>: \bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ (X \times; \widetilde<S>) \to; \bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) `/ \sb<P><t>> を考える。
+      &m<\sp<\sb<p><t>><*>> も右随伴をもつことから余極限を保存するので、&m<\sp<\sb<p><t>><*>> を上の同型の両辺に施すと、
+      &mb<
+        \coprod<s \in; S> \sb<U><st> \cong; \sb<P><t>
+      >
+      が得られる。
+      &m<\sb<P><t> \ncong; 0> であったから、上式よりある &m<s \in; S> が存在して &m<\sb<U><st> \ncong; 0> すなわち &m<(s, t) \in; W> である。
+      この議論は任意の &m<t> に対して成り立つから、直積の射影 &m<`p: W \to; T> は全射であることが従う。
+    >
+    \p<
+      次に、&m<s \in; S> をとって固定する。
+      任意の相異なる 2 元 &m<t, t' \in; T> に対し、再びこれを &m<t, t': 1 \to; T> という &m<\bfrm<Set>> の射と見なすと、&m<\bfrm<Set>> において図式 
+      &mb<
+        \diag<
+          \v<0> \v<1> \br;
+          \v<1> \v<T>
+          \ar|s="1",e="2"|; \ar|s="1",e="3"|; \ar|s="2",e="4",tip="tail"|<t'> \ar|s="3",e="4",tip="tail",inv|<t>
+        >
+      >
+      は引き戻しである。
+      &m<\widetilde<\hyphen;>: \bfrm<Set> \to; \bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> は有限極限および余極限を保存するから、引き戻しと始対象を保存し、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> において、
+      &mb<
+        \diag<
+          \v<0> \v<1> \br;
+          \v<1> \v<\widetilde<T>>
+          \ar|s="1",e="2"|; \ar|s="1",e="3"|; \ar|s="2",e="4",tip="tail"|<\widetilde<t'>> \ar|s="3",e="4",tip="tail",inv|<\widetilde<t>>
+        >
+      >
+      も引き戻しである。
+      &m<X \times; \text<->: \bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>) \to; \bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> も同様に引き戻しと始対象を保存するから、
+      &mb<
+        \diag<
+          \v<0> \v<X \times; 1> \br;
+          \v<X \times; 1> \v<X \times; \widetilde<T>>
+          \ar|s="1",e="2"|; \ar|s="1",e="3"|; \ar|s="2",e="4",tip="tail"|<\rm<id> \times; \widetilde<t'>> \ar|s="3",e="4",tip="tail",inv|<\rm<id> \times; \widetilde<t>>
+        >
+      >
+      もまた引き戻しである。
+      これは、&m<\op<Sub> (X \times; \widetilde<T>)> において、
+      &mb<
+        (\rm<id> \times; \widetilde<t>) \cap; (\rm<id> \times; \widetilde<t'>) = 0
+      >
+      が成り立つことを意味している。
+      この両辺を &m<g \circ; (\rm<id> \times; \widetilde<s>)> で引き戻す。
+      引き戻しは Heyting 代数の構造を保存するから、&m<\op<Sub> (X)> での等式 
+      &mb<
+        \sb<U><st> \cap; \sb<U><st'> = 0
+      >
+      が得られる。
+      ところで &m<X> は表現可能関手だったから、\ref|type="thm",ref="subyp"|;  により 1 への射は単射である。
+      したがって、&m<\sb<U><st>, \sb<U><st'>> は 1 の部分対象とも見なすことができ、&m<\op<Sub> (1)> においても上の等式は成り立つ。
+      このことから、
+      &mb<
+        \sb<\frak<U>><s> \coloneqq; `{\sb<U><st> \in; \op<Sub> (1) \mid; t \in; T`}
+      >
+      はどの相異なる 2 元をとっても交わりをもたない。
+      したがって、\ref|type="thm",ref="suslin"|; によって、&m<\sb<\frak<U>><s>> は高々可算である。
+      さらに、
+      &mb<
+        \sb<W><s> \coloneqq; `{t \in; T \mid; (s, t) \in; W`}
+      >
+      とおくと、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\sb<`f><s>:> \c<\sb<W><s>> \c<\longto;> \c<\sb<\frak<U>><s>> \br;
+          \c; \c<t> \c<\longmapsto;> \c<\sb<U><st>>
+        >
+      >
+      は単射になる。
+      &m<\sb<\frak<U>><s>> は高々可算だから、&m<\sb<W><s>> も高々可算である。
+    >
+    \p<
+      ここで、&m<S> は無限集合だったから、
+      &mb<
+        \lvert; W \rvert; = \vert<\coprod<s \in; S> \sb<W><s>> \leq; \lvert; S \rvert; \cdot; \sb<\aleph;><0> = \op<max> (\lvert; S \rvert;, \sb<\aleph;><0>) = \lvert; S \rvert;
+      >
+      が成り立つ。
+      逆の大小関係も明らかに成り立つから、&m<\lvert; W \rvert; = \lvert; S \rvert;> となり、したがって全単射 &m<u: S \to; W> が存在する。
+      &m<`p: W \to; T> は全射だったから、これらの合成 &m<`p \circ; u: S \to; T> も全射である。
+      &m<\op<Epi> (S, T)> は &m<S> から &m<T> への全射全体の集合だったから、これは &m<\op<Epi> (S, T) \cong; 0> に矛盾する。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      &m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> は連続体仮説を満たさない。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="monomono"|; によって、単射列 
+      &mb<
+        \diag<
+          \v<\widetilde<\bb<N>>> \v<\widetilde<\sp<2><\bb<N>>>> \v<\widetilde<B>> \v<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>>
+          \ar|s="1",e="2",tip="tail"|<u> \ar|s="2",e="3",tip="tail"|<v> \ar|s="3",e="4",tip="tail"|<w>
+        >
+      >
+      が存在する。
+    >
+    \p<
+      &m<\sp<2><\bb<N>>> は &m<\bb<N>> よりも真に濃度が大きいから、&m<\bfrm<Set>> で全射 &m<\bb<N> \headrarr; \sp<2><\bb<N>>> は存在しない。
+      &m<\bfrm<Set>> では &m<\op<Epi> (\bb<N>, \sp<2><\bb<N>>)> はそのような全射そのもの全体の集合だったから、これにより &m<\op<Epi> (\bb<N>, \sp<2><\bb<N>>) \cong; 0> が成り立つ。
+      同じようにして、&m<\op<Epi> (\sp<2><\bb<N>>, B) \cong; 0> も成り立つ。
+      したがって、\ref|type="thm",ref="preserve"|; により、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> で &m<\op<Epi> (\widetilde<\bb<N>>, \widetilde<\sp<2><\bb<N>>>) \cong; 0> および &m<\op<Epi> (\widetilde<\sp<2><\bb<N>>>, \widetilde<B>) \cong; 0> が成り立つ。
+    >
+    \p<
+      このことから、まず &m<\op<Epi> (\widetilde<\bb<N>>, \widetilde<\sp<2><\bb<N>>>) \cong; 0> と\ref|type="thm",ref="noepi"|; によって、&m<u> は同型射になり得ない。
+      さらに、&m<w \circ; v> が同型射だとすると、&m<w> は全射となる。
+      もともと &m<w> は単射だから &m<w> は同型射となり、したがって &m<v> も同型射である。
+      しかし、これは &m<\op<Epi> (\widetilde<\sp<2><\bb<N>>>, \widetilde<B>) \cong; 0> に反する。
+      したがって、&m<w \circ; v> は同型射ではない。
+    >
+    \p<
+      以上により、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> 内に単射列 
+      &mb<
+        \diag<
+          \v<\widetilde<\bb<N>>> \v<\widetilde<\sp<2><\bb<N>>>> \v<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>>
+          \ar|s="1",e="2",tip="tail"|<u> \ar|s="2",e="3",tip="tail"|<w \circ; v>
+        >
+      >
+      が存在し、&m<u> と &m<w \circ; v> はどちらも同型射ではない。
+      これは連続体仮説に反する。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="sgl"|<S. MacLane, I. Moerdijk (1992)『Sheaves in Geometry and Logic』Springer>
+  >
+
+>

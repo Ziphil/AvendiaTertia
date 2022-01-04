@@ -1,0 +1,190 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<豊穣関手と豊穣自然変換>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2018 年 8 月 1 日)>
+  \p<
+    前回は圏の一般化である豊穣圏を定義したので、関手や自然変換の豊穣バージョンを考えていきたい。
+    豊穣圏では射全体は集合ではなくあるモノイダル圏の対象にすぎないので、関手や自然変換が満たすべき射に関する等式を、射対象の間の可換図式として書き直す必要がある。
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> をとる。
+      &m<\scr<V>>-豊穣圏 &m<\scr<C>, \scr<D>> に対し、&m<F> が
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<D>> の対象 &m<FA> が定まっている。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A, B> に対し、&m<\scr<V>> の射 &m<\sb<F><AB>: `[A, B`] \sb<><\scr<C>> \to; `[FA, FB`] \sb<><\scr<D>>> が定まっている。
+      >
+    >
+    \p<
+      という情報から成り、任意の &m<\scr<C>> の対象 &m<A, B, C> に対して、
+      &mb<
+        \array|align="c"|<
+          \c<
+            \diag|hor="thk"|<
+              \v<`[A, B`] \otimes; `[B, C`]> \v<`[A, C`]> \br;
+              \v<`[FA, FB`] \otimes; `[FB, FC`]> \v<`[FA, FB`]>
+              \ar|s="1",e="3",inv|<\sb<F><AB> \otimes; \sb<F><BC>> \ar|s="1",e="2"|<\sb<c><ABC>>
+              \ar|s="2",e="4"|<\sb<F><AC>> \ar|s="3",e="4",inv|<\sb<c><FA, FB, FC>>
+            >
+          > \br;
+          \c<
+            \diag<
+              \v<1> \v<`[A, A`]> \br;
+              \v; \v<`[FA, FA`]>
+              \ar|s="1",e="2"|<\sb<j><A>> \ar|s="1",e="4",inv|<\sb<j><FA>>
+              \ar|s="2",e="4"|<\sb<F><AA>>
+            >
+          >
+        >
+      >
+      がともに可換であるとする。
+      このとき、&m<F> を &m<\scr<V>>-\em<豊穣関手\fl<enriched functor>> といい、&m<F: \scr<C> \to; \scr<D>> で表す。
+    >
+  >
+  \thm|type="def",id="nat"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> をとる。
+      &m<\scr<V>>-豊穣圏 &m<\scr<C>, \scr<D>> と &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to; \scr<D>> に対し、&m<`g> が
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<V>> の射 &m<\sb<`g><A>: 1 \to; `[FA, GA`] \sb<><\scr<D>>> が定まっている。
+      >
+    >
+    \p<
+      という情報から成り、任意の &m<\scr<C>> の対象 &m<A, B> に対して、
+      &mb<
+        \diag|ver="vthn",hor="thk"|<
+          \v; \v<`[A, B`] \otimes; 1> \v<`[FA, FB`] \otimes; `[FB, GB`]> \v; \br;
+          \v<`[A, B`]> \v; \v; \v<`[FA, GB`]> \br;
+          \v; \v<1 \otimes; `[A, B`]> \v<`[FA, GA`] \otimes; `[GA, GB`]> \v;
+          \ar|s="2",e="3"|<\sb<F><AB> \otimes; \sb<`g><B>> \ar|s="3",e="8"|<\sb<c><FA, FB, GB>>
+          \ar|s="5",e="2"|<\sp<\sb<`r><`[A, B`]>><- 1>> \ar|s="5",e="10",inv|<\sp<\sb<`l><`[A, B`]>><- 1>>
+          \ar|s="10",e="11",inv|<\sb<`g><A> \otimes; \sb<G><AB>> \ar|s="11",e="8",inv|<\sb<c><FA, GA, GB>>
+        >
+      >
+      が可換であるとする。
+      このとき、&m<`g> を &m<\scr<V>>-\em<豊穣自然変換\fl<enriched natural transformation>> といい、&m<`g: F \raarr; G> で表す。
+    >
+  >
+  \p<
+    豊穣圏では射全体がモノイダル圏の対象にすぎない以上、通常の圏に関する自然変換と同じように、豊穣自然変換 &m<`g: F \raarr; G> を各対象 &m<A> に対する射 &m<\sb<`g><A>: FA \to; GA> の族と定義するわけにはいかない。
+    しかし、関手の終域が &m<\scr<V>> であれば (もちろん &m<\scr<V>> 自身を &m<\scr<V>>-豊穣圏と見なすため &m<\scr<V>> が対称モノイダル閉圏である必要があるが)、&m<\scr<V>> では射全体が普通の集合なので、豊穣自然変換を射の族として定義できる。
+  >
+  \thm|type="prp",id="nateq"|<
+    \p<
+      対称モノイダル閉圏 &m<\scr<V>> をとる。
+      &m<\scr<V>>-豊穣圏 &m<\scr<C>> と &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to; \scr<V>> に対し、&m<\tilde<`g>> が
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<V>> の射 &m<\sb<\tilde<`g>><A>: FA \to; GA> が定まっている。
+      >
+    >
+    \p<
+      という情報から成り、任意の &m<\scr<C>> の対象 &m<A, B> に対して、
+      &mb<
+        \diag<
+          \v<`[A, B`]> \v<FA \rmulti|bin|; FB> \br;
+          \v<GA \rmulti|bin|; GB> \v<FA \rmulti|bin|; GB>
+          \ar|s="1",e="2"|<\sb<F><AB>> \ar|s="1",e="3",inv|<\sb<G><AB>>
+          \ar|s="2",e="4"|<\rm<id> \rmulti|bin|; \sb<\tilde<`g>><B>> \ar|s="3",e="4",inv|<\sb<\tilde<`g>><A> \rmulti|bin|; \rm<id>>
+        >
+      >
+      が可換であるとする。
+      このような &m<\tilde<`g>> は、上の定義の &m<\scr<V>>-豊穣自然変換 &m<`g: F \raarr; G> とちょうど対応する。
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<C>> の対象 &m<A> に対し、本来の定義における &m<\sb<`g><A>> とこの命題における &m<\sb<\tilde<`g>><A>> の対応は、全単射
+      &mb<
+        \sb<\op<Hom>><\scr<V>> (1, FA \rmulti|bin|; GA) \cong; \sb<\op<Hom>><\scr<V>> (1 \otimes; FA, GA) \cong; \sb<\op<Hom>><\scr<V>> (FA, GA)
+      >
+      で与えられる。
+      具体的には、合成
+      &mb<
+        \diag<
+          \v<FA> \v<FA \otimes; 1> \v<FA \otimes; (FA \rmulti|bin|; GA)> \v<GA>
+          \ar|s="1",e="2"|<\sp<\sb<`r><FA>><- 1>> \ar|s="2",e="3"|<\rm<id> \otimes; \sb<`g><A>> \ar|s="3",e="4"|<\sb<`e><FA, GA>>
+        >
+      >
+      が &m<\sb<\tilde<`g>><A>> である。
+      ここで、&m<\sb<`e><FA, GA>> はテンソル積の随伴の余単位である。
+      あとは、双方に対する自然性を表す可換図式が対応しているかどうかを確かめれば良い。
+    >
+    \p<
+      任意に &m<\scr<C>> の対象 &m<A, B> をとる。
+      テンソル積の随伴によって、命題中の図式の可換性は、
+      &mb<
+        &mark<\wspade;>
+        \diag|hor="thk"|<
+          \v<FA \otimes; `[A, B`]> \v<FA \otimes; (FA \rmulti|bin|; FB)> \v<FB> \br;
+          \v<GA \otimes; `[A, B`]> \v<GA \otimes; (GA \rmulti|bin|; GB)> \v<GB>
+          \ar|s="1",e="2"|<\rm<id> \otimes; \sb<F><AB>> \ar|s="1",e="4",inv|<\sb<\tilde<`g>><A> \otimes; \rm<id>> \ar|s="2",e="3"|<\sb<`e><FA, FB>> \ar|s="3",e="6"|<\sb<\tilde<`g>><B>>
+          \ar|s="4",e="5",inv|<\rm<id> \otimes; \sb<G><AB>> \ar|s="5",e="6",inv|<\sb<`e><GA, GB>>
+        >
+      >
+      の可換性と同値である。
+    >
+    \p<
+      この図式において、左上から初めに右に行って下に行くという射の合成について、
+      &mb<
+        \diag<
+          \v<FA \otimes; `[A, B`]> \v<FA \otimes; (FA \rmulti|bin|; FB)> \v<FB> \br;
+          \v<FA \otimes; `[A, B`] \otimes; 1> \v<FA \otimes; (FA \rmulti|bin|; FB) \otimes; 1> \v<FB \otimes; 1> \br;
+          \v; \v<FA \otimes; (FA \rmulti|bin|; FB) \otimes; (FB \rmulti|bin|; GB)> \v<FB \otimes; (FB \rmulti|bin|; GB)> \br;
+          \v; \v; \v<GB>
+          \ar|s="1",e="2"|<\rm<id> \otimes; F> \ar|s="1",e="4",inv|<\rm<id> \otimes; \sp<`r><- 1>>
+          \ar|s="2",e="3"|<`e> \ar|s="2",e="5"|<\rm<id> \otimes; \sp<`r><- 1>> \ar|s="3",e="6"|<\sp<`r><- 1>>
+          \ar|s="4",e="5"|<\rm<id> \otimes; F \otimes; \rm<id>> \ar|s="4",e="8",inv|<\rm<id> \otimes; F \otimes; `g>
+          \ar|s="5",e="6"|<`e \otimes; \rm<id>> \ar|s="5",e="8"|<\rm<id> \otimes; `g> \ar|s="6",e="9"|<\rm<id> \otimes; `g>
+          \ar|s="8",e="9",inv|<`e \otimes; \rm<id>> \ar|s="9",e="12"|<`e>
+        >
+      >
+      という可換図式がある。
+      また、左上から初めに下に行って右に行くという射の合成については、
+      &mb<
+        \diag<
+          \v<FA \otimes; `[A, B`]> \v; \v; \br;
+          \v<FA \otimes; 1 \otimes; `[A, B`]> \v; \v; \br;
+          \v<FA \otimes; (FA \rmulti|bin|; GA) \otimes; `[A, B`]> \v<FA \otimes; (FA \rmulti|bin|; GA) \otimes; (GA \rmulti|bin|; GB)> \v; \br;
+          \v<GA \otimes; `[A, B`]> \v<GA \otimes; (GA \rmulti|bin|; GB)> \v<GB>
+          \ar|s="1",e="4",shift="-3",inv|<\sp<`r><- 1> \otimes; \rm<id>> \ar|s="1",e="4",shift="3"|<\rm<id> \otimes; \sp<`l><- 1>>
+          \ar|s="4",e="7",inv|<\rm<id> \otimes; `g \otimes; \rm<id>> \ar|s="4",e="8"|<\rm<id> \otimes; `g \otimes; G>
+          \ar|s="7",e="10",inv|<`e \otimes; \rm<id>> \ar|s="7",e="8",inv|<\rm<id> \otimes; G> \ar|s="8",e="11"|<`e \otimes; \rm<id>>
+          \ar|s="10",e="11",inv|<\rm<id> \otimes; G> \ar|s="11",e="12",inv|<`e>
+        >
+      >
+      という可換図式がある。
+      したがって、図式 &m<\wspade;> の可換性は、
+      &mb<
+        \diag|ver="vthn",hor="thk"|<
+          \v; \v<FA \otimes; `[A, B`] \otimes; 1> \v<FA \otimes; (FA \rmulti|bin|; FB) \otimes; (FB \rmulti|bin|; GB)> \v; \br;
+          \v<FA \otimes; `[A, B`]> \v; \v; \v<GB \vph<\otimes;>> \br;
+          \v; \v<FA \otimes; 1 \otimes; `[A, B`]> \v<FA \otimes; (FA \rmulti|bin|; GA) \otimes; (GA \rmulti|bin|; GB)> \v;
+          \ar|s="2",e="3"|<\rm<id> \otimes; F \otimes; `g> \ar|s="3",e="8"|<`e \circ; (`e \otimes; \rm<id>)>
+          \ar|s="5",e="2"|<\rm<id> \otimes; \sp<`r><- 1>> \ar|s="5",e="10",inv|<\rm<id> \otimes; \sp<`l><- 1>>
+          \ar|s="10",e="11",inv|<\rm<id> \otimes; `g \otimes; G> \ar|s="11",e="8",inv|<`e \circ; (`e \otimes; \rm<id>)>
+        >
+      >
+      の可換性と同値である。
+      この図式の最も右になる 2 つの射は、テンソル積の随伴で &m<\scr<V>> の合成を表す射に移るから、この図式全体をテンソル積の随伴で移せば、\ref|type="thm",ref="nat"|; の図式が得られる。
+      以上で、命題が示された。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 2』Cambridge University Press>
+  >
+
+>

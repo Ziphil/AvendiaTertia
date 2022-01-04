@@ -1,0 +1,287 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<線型圏の定義>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2018 年 3 月 5 日)>
+  \p<
+    今回の目標は、線型論理のモデルを作るための圏を定義することである。
+    ここで定義するのは、Bierman\ref|type="bib",ref="bill"|; が提唱したものである。
+    コモノイドやコモナド上の余代数などを用いるので、定義を復習しながら順に見ていくことにする。
+    これらの概念をすでに扱い慣れているのなら、図式の部分は単なる定義の確認なので無視して構わない。
+  >
+  \p<
+    対称モノイダル圏 &m<\scr<C>> を考える。
+    これがモノイダル閉であれば、各対象 &m<A> に対し、関手 &m<\hyphen; \otimes; A: \scr<C> \to; \scr<C>> は右随伴をもつ。
+    以降、それを &m<A \rmulti|bin|; \hyphen;: \scr<C> \to; \scr<C>> と書くことにする。
+    すなわち、任意の対象 &m<A, B, C> に対し、自然な全単射
+    &mb<
+      \op<Hom> (C \otimes; A, B) \cong; \op<Hom> (C, A \rmulti|bin|; B)
+    >
+    が成立する。
+  >
+  \p<
+    対称モノイダル関手 &m<!: \scr<C> \to; \scr<C>> を考える。
+    すなわち、任意の対象 &m<A, B> に対し、両方の変数に関して自然な射 &m<\sb<\tilde<`f>><AB>: !A \otimes; !B \to; !(A \otimes; B)> および &m<`f: \top; \to; !\top;> が存在して、
+    &mb<
+      \array|align="c"|<
+        \cc<
+          \diag<
+            \v<\top; \otimes; !A> \v<!A> \br;
+            \v<! \top; \otimes; !A> \v<! (\top; \otimes; A)>
+            \ar|s="1",e="2"|; \ar|s="1",e="3",inv|<`f \otimes; \rm<id>>
+            \ar|s="2",e="4"|; \ar|s="3",e="4",inv|<\sb<\tilde<`f>><\top; A>>
+          > \qquad;
+          \diag<
+            \v<!A \otimes; \top;> \v<!A> \br;
+            \v<!A \otimes; ! \top;> \v<! (A \otimes; \top;)>
+            \ar|s="1",e="2"|; \ar|s="1",e="3",inv|<\rm<id> \otimes; `f>
+            \ar|s="2",e="4"|; \ar|s="3",e="4",inv|<\sb<\tilde<`f>><A \top;>>
+          >
+        >
+        \cc<
+          \diag<
+            \v<(!A \otimes; !B) \otimes; !C> \v<!(A \otimes; B) \otimes; !C> \v<!((A \otimes; B) \otimes; C)> \br;
+            \v<!A \otimes; (!B \otimes; !C)> \v<!A \otimes; !(B \otimes; C)> \v<!(A \otimes; (B \otimes; C))>
+            \ar|s="1",e="2"|<\sb<\tilde<`f>><AB> \otimes; \rm<id>> \ar|s="1",e="4"|; \ar|s="2",e="3"|<\sb<\tilde<`f>><A \otimes; B, C>>
+            \ar|s="3",e="6"|; \ar|s="4",e="5",inv|<\rm<id> \otimes; \sb<\tilde<`f>><BC>> \ar|s="5",e="6",inv|<\sb<\tilde<`f>><A, B \otimes; C>>
+          >
+        >
+        \cc<
+          \diag<
+            \v<!A \otimes; !B> \v<!(A \otimes; B)> \br;
+            \v<!B \otimes; !A> \v<!(B \otimes; A)>
+            \ar|s="1",e="2"|<\sb<\tilde<`f>><AB>> \ar|s="3",e="4",inv|<\sb<\tilde<`f>><BA>>
+            \ar|s="1",e="3"|; \ar|s="2",e="4"|;
+          >
+        >
+      >
+    >
+    が全て可換である。
+    なお、射のラベルのない矢印は、対称モノイダル圏の構造射が誘導するものを表しているとする。
+  >
+  \p<
+    さらに、モノイダル自然変換 &m<`d: ! \raarr; ! \circ; !, `e: ! \raarr; \rm<id>> を考える。
+    これはすなわち、&m<`d> に関しては、
+    &mb<
+      \diag<
+        \v<!A \otimes; !B> \v<!!A \otimes; !!B> \br;
+        \v; \v<! (!A \otimes; !B)> \br;
+        \v<! (A \otimes; B)> \v<! (A \otimes; B)>
+        \ar|s="1",e="2"|<\sb<`d><A> \otimes; \sb<`d><B>> \ar|s="1",e="5",inv|<\sb<\tilde<`f>><AB>>
+        \ar|s="2",e="4"|<\sb<\tilde<`f>><!A, !B>> \ar|s="4",e="6"|<! \sb<\tilde<`f>><AB>> \ar|s="5",e="6",inv|<\sb<`d><A \otimes; B>>
+      > \qquad;
+      \diag<
+        \v; \v<\top;> \br;
+        \v; \v<! \top;> \br;
+        \v<! \top;> \v<!! \top;>
+        \ar|s="2",e="5",inv|<`f> \ar|s="2",e="4"|<`f> \ar|s="4",e="6"|<! `f> \ar|s="5",e="6",inv|<\sb<`d><\top;>>
+      >
+    >
+    が両方とも可換であることを意味し、&m<`e> に関しては、
+    &mb<
+      \diag<
+        \v<!A \otimes; !B> \v<A \otimes; B> \br;
+        \v<!(A \otimes; B)> \v<A \otimes; B>
+        \ar|s="1",e="2"|<\sb<`e><A> \otimes; \sb<`e><B>> \ar|s="1",e="3",inv|<\sb<\tilde<`f>><AB>>
+        \ar|s="2",e="4",line="2",tip="none"|; \ar|s="3",e="4",inv|<\sb<`e><A \otimes; B>>
+      > \qquad;
+      \diag<
+        \v; \v<\top;> \br;
+        \v<! \top;> \v<\top;>
+        \ar|s="2",e="3",inv|<`f> \ar|s="3",e="4",inv|<\sb<`e><\top;>> \ar|s="2",e="4",line="2",tip="none"|;
+      >
+    >
+    が両方とも可換であることを意味する。
+  >
+  \p<
+    以降は、&m<(!, `d, `e)> はコモナドを成すとする。
+    すなわち、
+    &mb<
+      \diag<
+        \v<!A> \v<!!A> \br;
+        \v<!!A> \v<!!!A>
+        \ar|s="1",e="2"|<\sb<`d><A>> \ar|s="1",e="3",inv|<\sb<`d><A>>
+        \ar|s="2",e="4"|<! \sb<`d><A>> \ar|s="3",e="4",inv|<\sb<`d><!A>>
+      > \qquad;
+      \diag<
+        \v; \v<!A> \v; \br;
+        \v<!A> \v<!!A> \v<!A>
+        \ar|s="2",e="4",line="2",tip="none"|; \ar|s="2",e="6",line="2",tip="none"|;
+        \ar|s="2",e="5"|<\sb<`d><A>> \ar|s="5",e="4"|<\sb<`e><!A>> \ar|s="5",e="6",inv|<! \sb<`e><!A>>
+      >
+    >
+    がともに可換である。
+  >
+  \p<
+    次に、2 つの関手
+    &mb<
+      \array|align="rrcl"|<
+        \c<! \otimes; !:> \c<\scr<C>> \c<\longto;> \c<\scr<C>> \br;
+        \c; \c<A> \c<\longmapsto;> \c<!A \otimes; !A>
+      > \qquad;
+      \array|align="rrcl"|<
+        \c<\top;:> \c<\scr<C>> \c<\longto;> \c<\scr<C>> \br;
+        \c; \c<A> \c<\longmapsto;> \c<\top;>
+      >
+    >
+    を考えると、これらはどちらも対称モノイダル関手になっていることが確かめられる。
+    そこで、モノイダル自然変換 &m<d: ! \raarr; ! \otimes; !, e: ! \raarr; \top;> を考える。
+    すなわち、&m<d> に関しては、
+    &mb<
+      \diag<
+        \v<!A \otimes; !B> \v<(!A \otimes; !A) \otimes; (!B \otimes; !B)> \br;
+        \v; \v<(!A \otimes; !B) \otimes; (!A \otimes; !B)> \br;
+        \v<!(A \otimes; B)> \v<!(A \otimes; B) \otimes; !(A \otimes; B)>
+        \ar|s="1",e="2"|<\sb<d><A> \otimes; \sb<d><B>> \ar|s="1",e="5",inv|<\sb<\tilde<`f>><AB>>
+        \ar|s="2",e="4"|; \ar|s="4",e="6"|<\sb<\tilde<`f>><AB> \otimes; \sb<\tilde<`f>><AB>> \ar|s="5",e="6",inv|<\sb<d><A \otimes; B>>
+      > \qquad;
+      \diag<
+        \v; \v<\top;> \br;
+        \v; \v<\top; \otimes; \top;> \br;
+        \v<! \top;> \v<! \top; \otimes; ! \top;>
+        \ar|s="2",e="5",inv|<`f> \ar|s="2",e="4"|; \ar|s="4",e="6"|<`f \otimes; `f> \ar|s="5",e="6",inv|<\sb<d><\top;>>
+      >
+    >
+    が両方とも可換であり、&m<e> に関しては、
+    &mb<
+      \diag<
+        \v<!A \otimes; !B> \v<\top; \otimes; \top;> \br;
+        \v<! (A \otimes; B)> \v<\top;>
+        \ar|s="1",e="2"|<\sb<e><A> \otimes; \sb<e><B>> \ar|s="1",e="3",inv|<\sb<\tilde<`f>><AB>>
+        \ar|s="2",e="4"|; \ar|s="3",e="4",inv|<\sb<e><A \otimes; B>>
+      > \qquad;
+      \diag<
+        \v; \v<\top;> \br;
+        \v<! \top;> \v<\top;>
+        \ar|s="2",e="3",inv|<`f> \ar|s="2",e="4",line="2",tip="none"|; \ar|s="3",e="4",inv|<\sb<e><\top;>>
+      >
+    >
+    が両方とも可換である。
+  >
+  \p<
+    各対象 &m<A> に対し、&m<(!A, \sb<d><A>, \sb<e><A>)> は可換コモノイドの構造をもち得る。
+    これはすなわち、
+    &mb<
+      \array|align="c"|<
+        \cc<
+          \diag<
+            \v<!A \otimes; !A> \v<!A> \v<!A \otimes; !A> \br;
+            \v<(!A \otimes; !A) \otimes; !A> \v; \v<!A \otimes; (!A \otimes; !A)>
+            \ar|s="1",e="4",inv|<\sb<d><A> \otimes; \rm<id>> \ar|s="2",e="1",inv|<\sb<d><A>> \ar|s="2",e="3"|<\sb<d><A>>
+            \ar|s="3",e="6"|<\rm<id> \otimes; \sb<d><A>> \ar|s="4",e="6"|;
+          >
+        >
+        \cc<
+          \diag<
+            \v; \v<!A> \v; \br;
+            \v<\top; \otimes; !A> \v<!A \otimes; !A> \v<!A \otimes; \top;>
+            \ar|s="2",e="4"|; \ar|s="2",e="6"|;
+            \ar|s="2",e="5"|<\sb<d><A>> \ar|s="5",e="4"|<\sb<e><A> \otimes; \rm<id>> \ar|s="5",e="6",inv|<\rm<id> \otimes; \sb<e><A>>
+          > \qquad;
+          \diag<
+            \v<!A> \v<!A \otimes; !A> \br;
+            \v<!A> \v<!A \otimes; !A>
+            \ar|s="1",e="2"|<\sb<d><A>> \ar|s="1",e="3",line="2",tip="none"|; \ar|s="2",e="4"|;
+            \ar|s="3",e="4",inv|<\sb<d><A>>
+          >
+        >
+      >
+    >
+    が全て可換であるということである。
+    なお、最後の図式の右側の垂直な射は、テンソル積の左右を入れ替える同型射である。
+  >
+  \p<
+    さて、各対象 &m<A> に対し、&m<!A, !A \otimes; !A> はともに &m<!>-余代数の構造 &m<(!A, \sb<`d><A>), (!A \otimes; !A, \sb<\tilde<`f>><!A, !A> \circ; (\sb<`d><A> \otimes; \sb<`d><A>))> をもつ。
+    そこで、&m<\sb<d><A>: !A \to; !A \otimes; !A> は &m<!>-余代数の間の射であるとする。
+    すなわち、
+    &mb<
+      \diag<
+        \v<!A> \v<!A \otimes; !A> \br;
+        \v; \v<!!A \otimes; !!A> \br;
+        \v<!A> \v<!(!A \otimes; !A)>
+        \ar|s="1",e="2"|<\sb<d><A>> \ar|s="1",e="5",inv|<\sb<`d><A>>
+        \ar|s="2",e="4"|<\sb<`d><A> \otimes; \sb<`d><A>> \ar|s="4",e="6"|<\sb<\tilde<`f>><!A, !A>>
+        \ar|s="5",e="6",inv|<! \sb<d><A>>
+      >
+    >
+    が可換であると仮定する。
+    さらに、&m<\top;> も &m<!>-余代数の構造 &m<(\top;, `f)> をもつので、&m<\sb<e><A>: !A \to; \top;> も &m<!>-余代数の射とする。
+    これにより、
+    &mb<
+      \diag<
+        \v<!A> \v<\top;> \br;
+        \v<!!A> \v<! \top;>
+        \ar|s="1",e="2"|<\sb<e><A>> \ar|s="1",e="3",inv|<\sb<`d><A>>
+        \ar|s="2",e="4"|<`f> \ar|s="3",e="4",inv|<! \sb<e><A>>
+      >
+    >
+    が可換だと仮定することになる。
+  >
+  \p<
+    これまでの仮定から、各対象 &m<A> に対し、&m<!A> は &m<!>-余代数の構造とコモノイドの構造を両方もつ。
+    したがって、対象 &m<A, B> に対して、射 &m<f: !A \to; !B> が &m<!>-余代数の射であるかを考えることもコモノイドの射であるかを考えることもできる。
+    &m<f> が &m<!>-余代数の射であるとは、
+    &mb<
+      \diag<
+        \v<!A> \v<!B> \br;
+        \v<!!A> \v<!!B>
+        \ar|s="1",e="2"|<f> \ar|s="1",e="3",inv|<\sb<`d><A>>
+        \ar|s="2",e="4"|<\sb<`d><B>> \ar|s="3",e="4",inv|<!f>
+      >
+    >
+    が可換だということである。
+    また、&m<f> がコモノイドの射であるとは、
+    &mb<
+      \diag<
+        \v<!A> \v<!B> \br;
+        \v<!A \otimes; !A> \v<!B \otimes; !B>
+        \ar|s="1",e="2"|<f> \ar|s="1",e="3",inv|<\sb<d><A>>
+        \ar|s="2",e="4"|<\sb<d><B>> \ar|s="3",e="4",inv|<f \otimes; f>
+      > \qquad;
+      \diag<
+        \v<!A> \v<!B> \br;
+        \v<\top;> \v<\top;>
+        \ar|s="1",e="2"|<f> \ar|s="1",e="3",inv|<\sb<e><A>>
+        \ar|s="2",e="4"|<\sb<e><B>> \ar|s="3",e="4",line="2",tip="none"|;
+      >
+    >
+    がともに可換だということである。
+  >
+  \p<
+    以上のことを踏まえて、我々はこれから以下の圏を考える。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<C>> が以下の条件を全て満たすとする。
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> はモノイダル閉である。
+      >
+      \li<
+        対称モノイダル関手 &m<!: \scr<C> \to; \scr<C>> およびモノイダル自然変換 &m<`d: ! \raarr; ! \circ; !>, &m<`e: ! \raarr; \rm<id>> が存在し、&m<(!, `d, `e)> はコモナドを成す。
+      >
+      \li<
+        モノイダル自然変換 &m<d: ! \rarr; ! \otimes; !>, &m<e: ! \raarr; \top;> が存在し、任意の対象 &m<A> に対し、&m<(!A, \sb<d><A>, \sb<e><A>)> は可換コモノイドであり、&m<\sb<d><A>: !A \to; !A \otimes; !A>, &m<\sb<e><A>: !A \to; !\top;> は !-余代数の射である。
+      >
+      \li<
+        任意の対象 &m<A, B> および射 &m<f: !A \to; !B> に対し、&m<f > が !-余代数の射であれば、&m<f> はコモノイドの射でもある。
+      >
+    >
+    \p<
+      このとき、&m<\scr<C>> を\em<線型圏\fl<linear category>> という。
+    >
+  >
+  \p<
+    この圏上に論理式と項の解釈を適切に定めることで、線型論理のモデルを作ることができるのだが、それについては次回行うことにする。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="bill"|<G. M. Bierman (1993)「On intuitionistic linear logic」Ph. D. thesis, The University of Cambridge>
+  >
+
+>

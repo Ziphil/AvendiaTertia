@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$section-height: 42rpx;
+
+.section {
+  height: $section-height;
+  margin-left: 0rpx - $main-horizontal-padding;
+  margin-right: 0rpx - $main-horizontal-padding;
+  line-height: $line-height;
+  overflow: hidden;
+  @include smartphone {
+    margin-left: 0rpx - $main-smartphone-horizontal-padding;
+    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
+  }
+}
+
+.section-inner {
+  height: 100%;
+  padding: 0rpx $main-horizontal-padding;
+  font-size: 130%;
+  font-weight: normal;
+  color: var(--background-color);
+  line-height: $section-height;
+  position: relative;
+  z-index: 0;
+  @include smartphone {
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+  }
+  &::before {
+    top: 0rpx;
+    bottom: 0rpx;
+    left: 0rpx;
+    right: 0rpx;
+    background-color: $blue-color;
+    position: absolute;
+    z-index: -2;
+    content: "";
+  }
+  &::after {
+    top: 0rpx;
+    bottom: 0rpx;
+    right: -20rpx;
+    width: 20rpx - 3rpx + $main-horizontal-padding;
+    border-left: 6rpx $main-background-color solid;
+    background-color: $orange-color;
+    background-origin: padding-box;
+    transform: skew($skew-angle);
+    position: absolute;
+    z-index: -1;
+    content: "";
+    @include smartphone {
+      width: 20rpx - 3rpx + $main-smartphone-horizontal-padding;
+    }
+  }
+}
+
+.subsection {
+  margin-left: 0rpx - $main-horizontal-padding;
+  margin-right: 0rpx - $main-horizontal-padding;
+  line-height: $line-height;
+  overflow: hidden;
+  @include smartphone {
+    margin-left: 0rpx - $main-smartphone-horizontal-padding;
+    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
+  }
+}
+
+.subsection-inner {
+  padding: 0rpx $main-horizontal-padding;
+  font-size: 110%;
+  font-weight: normal;
+  color: $blue-color;
+  position: relative;
+  z-index: 0;
+  @include smartphone {
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+  }
+  &::before {
+    top: 0rpx;
+    bottom: 0rpx;
+    left: 0rpx;
+    right: $main-horizontal-padding;
+    border-bottom: 1rpx $blue-color solid;
+    position: absolute;
+    z-index: -2;
+    content: "";
+    @include smartphone {
+      right: $main-smartphone-horizontal-padding;
+    }
+  }
+  &::after {
+    width: $main-horizontal-padding;
+    top: 0rpx;
+    bottom: 0rpx;
+    right: 0rpx;
+    border-bottom: 1rpx $orange-color solid;
+    position: absolute;
+    z-index: -2;
+    content: "";
+    @include smartphone {
+      width: $main-smartphone-horizontal-padding;
+    }
+  }
+}
+
+.subsection-number {
+  margin-right: fix-em($blank-margin, 80%);
+  font-size: 80%;
+  &::before {
+    content: "§" attr(data-number) ".";
+  }
+}

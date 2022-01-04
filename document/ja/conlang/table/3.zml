@@ -1,0 +1,19 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<指示詞>
+  \ver<5 代 1 期>
+
+  \h1<指示詞>
+  \table<
+    \tr<\th<>\th<近接>\th<遠方>\th<指示>\th<疑問>\th<不在>\th<不定>\th<特定>\th<任意>\th<同種>\th<一般>>
+    \tr<\th<人>\td<{fas}>\td<{qos}>\td<{ces}>\td<{pas}>\td<{nus}>\td<{zas}>\td<{kes}>\td<{ros}>\td<>\td<{ves}>>
+    \tr<\th<物>\td<{fit}>\td<{qat}>\td<{cot}>\td<{pit}>\td<{nat}>\td<{zit}>\td<{kot}>\td<{rat}>\td<{met}>\td<>>
+    \tr<\th<事>\td<{fel}>\td<{qil}>\td<{cal}>\td<{pel}>\td<{nol}>\td<{zel}>\td<{kal}>\td<{ril}>\td<>\td<>>
+    \tr<\th<場所>\td<{feed}>\td<{qiid}>\td<{caad}>\td<{peed}>\td<{nood}>\td<{zeed}>\td<{kaad}>\td<{riid}>\td<>\td<>>
+    \tr<\th<修飾>\td<{fik}>\td<{qak}>\td<{cok}>\td<{pik}>\td<{nak}>\td<>\td<{kok}>\td<{rak}>\td<>\td<>>
+  >
+
+>

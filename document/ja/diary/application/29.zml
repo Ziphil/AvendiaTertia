@@ -1,0 +1,223 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<レンズの圏論的考察 (その 3)>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2021 年 10 月 10 日)>
+  \p<
+    \a|href="27.html"|<7 月 7 日>と \a|href="28.html"|<10 月 9 日>で、それぞれレンズの van Laarhoven エンコーディングとプロ関手エンコーディングについて触れた。
+    今回は、レンズのコエンドを用いた表現方法について触れる。
+    概念の定義にコエンドを用いるが、その後で集合としての具体的な表示も行うので、コエンドを知らなくても読めるようにはしたつもりである。
+    コエンドの基本については Loregian\ref|type="bib",ref="ccx"|; を参照すると良い。
+  >
+  \p<
+    さて、少々天下り的ではあるが、次のような集合を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      対象 &m<S, \bar<S>, A, \bar<A>> に対し、
+      &mb<
+        \sb<\op<Lens>><\scr<C>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<C>> (\op<Hom> (S, K \times; A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))
+      >
+      とおく。
+      この元 &m<`g> を\em<コエンドレンズ\fl<coend lens>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
+    >
+  >
+  \p<
+    このコエンドは具体的に以下のように表すことができる。
+  >
+  \thm|type="prp"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      対象 &m<S, \bar<S>, A, \bar<A>> に対し、
+      &mb<
+        \sb<\op<Lens>><\scr<C>> (S, \bar<S>`; A, \bar<A>) = \frac<\coprod<K \in; \scr<C>> (\op<Hom> (S, K \times; A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))><\approx;>
+      >
+      が成り立つ。
+      ただし、上記の &m<\approx;> とは、任意の射 &m<l: S \to; K \times; A>, &m<r': K' \times; \bar<A> \to; \bar<S>>, &m<k: K \to; K'> に対し、
+      &mb<
+        ((k \times; \sb<\rm<id>><A>) \circ; l, r') \approx; (l, r' \circ; (k \times; \sb<\rm<id>><\bar<A>>))
+      >
+      が成り立つような最小の同値関係とする。
+    >
+  >
+  \prf<
+    \p<
+      コエンドの普遍性を愚直に確かめれば良い。
+    >
+  >
+  \p<
+    上記の命題により、有限積をもつ圏の対象 &m<S, \bar<S>, A, \bar<A>> に対し、各コエンドレンズ &m<`g: (S, \bar<S>) \to; (A, \bar<A>)> は、ある対象 &m<K> を用いた 2 つの射 &m<l: S \to; K \times; A>, &m<r: K \times; \bar<A> \to; \bar<S>> によって代表される同値類として表せる。
+    そこで、このときに &m<`g> のことを &m<\langle; l, r \rangle; \sb<><K>> と書くことにする。
+    上記の命題中の同値関係の定義により、任意の射 &m<l: S \to; K \times; A>, &m<r': K' \times; \bar<A> \to; \bar<S>>, &m<k: K \to; K'> に対し、
+    &mb<
+      \langle; (k \times; \sb<\rm<id>><A>) \circ; l, r' \rangle; \sb<><K'> = \langle; l, r' \circ; (k \times; \sb<\rm<id>><\bar<A>>) \rangle; \sb<><K>
+    >
+    が成り立つ。
+  >
+  \p<
+    コエンドレンズに対しても合成が定義でき、これによって圏を成す。
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      コエンドレンズ &m<\langle; l, r \rangle; \sb<><K>: (S, \bar<S>) \to; (A, \bar<A>)>, &m<\langle; l', r' \rangle; \sb<><L>: (A, \bar<A>) \to; (\bar<B>, B)> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sp<l><\ppr;>> \c<\coloneqq;> \c<\tort<\diag|bl|<
+            \v<S> \v<K \times; A> \v<K \times; L \times; \bar<B>>
+            \ar|s="1",e="2"|<l> \ar|s="2",e="3"|<\rm<id> \times; l'>
+          >>> \br;
+          \c<\sp<r><\ppr;>> \c<\coloneqq;> \c<\tort<\diag|bl|<
+            \v<K \times; L \times; B> \v<K \times; \bar<A>> \v<\bar<S>>
+            \ar|s="1",e="2"|<\rm<id> \times; r'> \ar|s="2",e="3"|<r>
+          >>>
+        >
+      >
+      と定める。
+      これによって得られる素朴レンズ &m<\langle; \sp<l><\ppr;>, \sp<r><\ppr;> \rangle; \sb<><K \times; L>: (S, \bar<S>) \to; (\bar<B>, B)> を &m<\langle; l, r \rangle; \sb<><K>> と &m<\langle; l', r' \rangle; \sb<><L>> の\em<合成\fl<composition>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      圏 &m<\bfrm<CLens> (\scr<C>)> を、
+    >
+    \ul<
+      \li<
+        &m<\bfrm<CLens> (\scr<C>)> の対象は、&m<\scr<C>> の 2 つの対象の組 &m<(S, \bar<S>)> の全体とする。
+      >
+      \li<
+        &m<\bfrm<CLens> (\scr<C>)> の 2 つの対象 &m<(S, \bar<S>), (A, \bar<A>)> の間の射は、コエンドレンズ &m<`g: (S, \bar<S>) \to; (A, \bar<A>)> の全体とする。
+        すなわち、
+        &mb<
+          \sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) = \int<><K \in; \scr<C>> (\op<Hom> (S, K \times; A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))
+        >
+        である。
+      >
+      \li<
+        &m<\bfrm<CLens> (\scr<C>)> の射の合成は、上記で定めたコエンドレンズの合成とする。
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    最後に、コエンドレンズがこれまでに出てきたレンズと等価であることを示そう。
+  >
+  \thm|type="thm",id="homiso"|<
+    \p<
+      有限積をもつ圏 &m<\scr<C>> をとる。
+      対象 &m<S, \bar<S>, A, \bar<A>> に対し、全単射
+      &mb<
+        \sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) \cong; \sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))
+      >
+      が存在する。
+    >
+  >
+  \prf<
+    \p<
+      コエンドに関する Yoneda の補題を用いると、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))> \c<=> \c<\int<><K \in; \scr<C>> (\op<Hom> (S, K \times; A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\int<><K \in; \scr<C>> (\op<Hom> (S, K) \times; \op<Hom> (S, A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S, A) \times; \op<Hom> (S \times; \bar<A>, \bar<S>)> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))> \br;
+        >
+      >
+      が得られる。
+    >
+  >
+  \p<
+    この全単射による元の対応は、以下のように具体的に書くこともできる。
+    コエンドレンズ &m<\langle; l, r \rangle; \sb<><K>: (S, \bar<S>) \to; (A, \bar<A>)> をとる。
+    &m<\sb<\rm<fst>><K A>: K \times; A \to; K> と &m<\sb<\rm<snd>><K A>: K \times; A \to; A> をそれぞれ積の射影とすると、
+    &mb<
+      \array|align="rcl"|<
+        \c<g> \c<\coloneqq;> \c<\tort<\diag|bl|<
+          \v<S> \v<K \times; A> \v<A>
+          \ar|s="1",e="2"|<l> \ar|s="2",e="3"|<\sb<\rm<snd>><K A>>
+        >>> \br;
+        \c<p> \c<\coloneqq;> \c<\tort<\diag|bl|<
+          \v<S \times; \bar<A>> \v<K \times; A \times; \bar<A>> \v<K \times; \bar<A>> \v<\bar<S>>
+          \ar|s="1",e="2"|<l \times; \rm<id>> \ar|s="2",e="3"|<\sb<\rm<fst>><K A> \times; \rm<id>> \ar|s="3",e="4"|<r>
+        >>>
+      >
+    >
+    によって、素朴レンズ &m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)> が得られる。
+    逆に素朴レンズ &m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)> からは、
+    &mb<
+      \array|align="rcl"|<
+        \c<l> \c<\coloneqq;> \c<(\sb<\rm<id>><S>, g): S \to; S \times; A> \br;
+        \c<r> \c<\coloneqq;> \c<p: S \times; \bar<A> \to; \bar<S>>
+      >
+    >
+    とおくことで、コエンドレンズ &m<\langle; l, r \rangle; \sb<><S>: (S, \bar<S>) \to; (A, \bar<A>)> が得られる。
+    この対応が上の全単射を与えている。
+  >
+  \thm|type="thm",id="catequiv"|<
+    \p<
+      カルテシアン閉圏 &m<\scr<C>> をとる。
+      圏同型
+      &mb<
+        \bfrm<CLens> (\scr<C>) \cong; \bfrm<PLens> (\scr<C>) \cong; \bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)
+      >
+      が成立する。
+    >
+  >
+  \prf<
+    \p<
+      圏同型 &m<\bfrm<PLens> (\scr<C>) \cong; \bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> はすでに\a|href="28.html#homiso"|<定理 2.10> で示されているので、\ref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
+    >
+  >
+  \p<
+    以上で、レンズの主要な表現方法を紹介し終えた。
+    ここで軽くまとめておこう。
+  >
+  \p<
+    1 つ目の素朴レンズは、ゲッターとセッターの組だと素朴に見なしたときのレンズの表現方法で、数式で書けば
+    &mb<
+      \sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><\scr<C>> (S, A) \times; \sb<\op<Hom>><\scr<C>> (S \times; \bar<A>, \bar<S>)
+    >
+    の元であった。
+    2 つ目の van Laarhoven レンズは、強度付きの自己関手で添字付けられた写像群としてレンズを表現したもので、
+    &mb<
+      \sb<\op<Hom>><\bfrm<LLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (A, \hyphen; \bar<A>), \op<Hom> (S, \hyphen; \bar<S>))
+    >
+    の元として表したものであった。
+    これは Haskell のレンズライブラリで用いられているエンコーディング方法である。
+    3 つ目のプロ関手レンズは、強度付きの自己関手の代わりに Tambra 構造をもった自己プロ関手を考え、それで添字付けられた写像群としてレンズを表現したもので、
+    &mb<
+      \sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))
+    >
+    の元であった。
+    こちらは Pure\bar<S>cript のレンズライブラリで用いられている。
+    van Laarhoven レンズとプロ関手レンズに共通する特徴として、レンズの合成が本当の写像の合成として実現できるという点がある。
+    4 つ目のコエンドレンズとは、特定のコエンドの元としてレンズを表現するもので、
+    &mb<
+      \sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) = \int<><K \in; \scr<C>> (\op<Hom> (S, K \times; A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))
+    >
+    の元であった。
+    そして、これらの表現方法は全て等価なのであった。
+    すなわち、上記の 4 つの集合の間には全単射が存在し、さらにその全単射はそれぞれの表現方法について定義された合成を保存する。
+  >
+  \p<
+    レンズのこれら 4 つの表現方法のうち、プロ関手レンズとコエンドレンズはモノイダル圏の作用を用いた一般化が可能で、一般化したものはオプティックと呼ばれている。
+    レンズの一般化がオプティックなので、オプティックの具体例の 1 つがレンズということになるが、オプティックからは他にもデータの取得や操作に使えるたくさんの有用な具体例が出てくることが知られている。
+    逆に、一見別々のものに見えるそのような具体例が、全てオプティックという一般概念にまとめられるのは、理論としても美しく驚くべきことである。
+    次回は、オプティックの定義をし、その具体例をいくつか紹介しようと思う。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cpoc"|<B. Clarke et al (2020)「Profunctor optics, a categorical update」arXiv:2001.07488>
+    \li|id="ccx"|<F. Loregian (2021)『(Co)end Calculus』Cambridge University Press>
+    \li|id="rcox"|<K. Riley (2018)「Categories of optics」arXiv:1809.00738>
+  >
+
+>

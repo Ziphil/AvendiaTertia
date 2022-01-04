@@ -1,0 +1,80 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<文字フォント>
+  \ver<S 代>
+
+  \h1<ライセンスについて>
+  \p<
+    以下のフォントは、Shaleian ファミリーを除いて \ae|href="https://osdn.net/projects/opensource/wiki/SIL_Open_Font_License_1.1"|<SIL Open Font License 1.1> が適用されます。
+    これらのフォントの著作者は Ziphil Shaleiras です。
+  >
+  \h1<Vekos ファミリー>
+  \img|src="../../file/other/57.png"|;
+  \p<
+    標準的なサンセリフ体です。
+    3 種類のウェイトと 3 種類の字幅により 9 個のフォントと、縦線と横線のコントラストを強くした 2 個のフォントの、合計 11 個のフォントから成ります。
+  >
+  \ul|col="3"|<
+    \li<Vekos Regular>
+    \li<Vekos Bold>
+    \li<Vekos Thin>
+    \li<Vekos Condensed Regular>
+    \li<Vekos Condensed Bold>
+    \li<Vekos Condensed Thin>
+    \li<Vekos Expanded Regular>
+    \li<Vekos Expanded Bold>
+    \li<Vekos Expanded Thin>
+    \li<Vekos High Regular>
+    \li<Vekos High Bold>
+  >
+  \p<
+    アルファベットと数字および一部の記号が含まれます。
+    シャレイア文字には大文字と小文字の区別がありませんが、便宜上大文字にも小文字と同じグリフが割り当てられています。
+  >
+  \form<
+    \ae|href="https://drive.google.com/drive/folders/1rMHE0txxCf0_37C5bXHhY4m06BgQoQV8?usp=sharing"|<ダウンロード>　(ver 2.0.0)
+  >
+  \h1<Gilit ファミリー>
+  \img|src="../../file/other/58.png"|;
+  \p<
+    三角形が特徴的な書体です。
+    合計で以下の 8 個のフォントから成ります。
+  >
+  \ul|col="3"|<
+    \li<Gilit Regular>
+    \li<Gilit Bold>
+    \li<Gilit Triangle Regular>
+    \li<Gilit Triangle Bold>
+    \li<Gilit Expanded Regular>
+    \li<Gilit Expanded Bold>
+    \li<Gilit Sprawled Expanded Regular>
+    \li<Gilit Sprawled Expanded Bold>
+  >
+  \p<
+    名前に「Triangle」が付くものは三角形部分が正三角形で、名前に「Expanded」が付くものは三角形部分の縦横比が 2 : 3 で、無印のものは三角形部分の縦横比が 1 : 1 になっています。
+    また、名前に「Sprawled」が付くものはディセンダーとアセンダーが長めになっています。
+  >
+  \p<
+    現段階ではアルファベットと一部の記号のみが含まれます。
+    上に尖った三角形状の文字は小文字に、下に尖った三角形状の文字は大文字に割り当てられているので、字形を正しく表示するには小文字と大文字を交互 ([x], [j], [n], [m] の直後は除く) に入力する必要があります。
+  >
+  \form<
+    \ae|href="https://drive.google.com/drive/folders/1DpKt_rYgn9EMHUWOXudrzR3DxhScxVJV?usp=sharing"|<ダウンロード>　(ver 2.0.0)
+  >
+  \h1<Shaleian ファミリー>
+  \img|src="../../file/other/50.png"|;
+  \p<
+    アルファベットと数字および一部の記号が含まれます。
+  >
+  \p<
+    このフォントは、アド様 (\ae|href="https://dirdam.github.io/"|<GitHub Pages>) に作っていただきました。
+    フォントファイルの著作権はアド様に帰属します。
+  >
+  \form<
+    \ae|href="https://drive.google.com/drive/folders/1_6-LM8VGyzmvhcWApXXUev0nrDq4w6Ms?usp=sharing"|<ダウンロード>
+  >
+
+>

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@import "../util/common.scss";
+@import "../main-module/variable.scss";
+
+
+.navigation {
+  padding: 10rpx 0rpx;
+  background-color: $header-background-color;
+  @include smartphone {
+    width: 100%;
+  }
+}
+
+.navigation-inner {
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 0rpx auto;
+  line-height: $small-line-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include smartphone {
+    width: 100%;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.navigation-list {
+  list-style: none;
+  display: inline;
+}
+
+.navigation-item {
+  display: inline;
+  &:not(:nth-child(1))::before {
+    @include icon-font;
+    margin: 0em fix-em($blank-margin, 90%);
+    color: mix($blue-color, $header-background-color, 50%);
+    font-size: 90%;
+    line-height: 0;
+    content: "\F101";
+  }
+  &:nth-child(1) >.navigation-link >* {
+    display: none;
+  }
+  &:nth-child(1) >.navigation-link::before {
+    @include icon-font;
+    font-size: 90%;
+    color: $blue-color;
+    content: "\F015";
+  }
+}
+
+.navigation-link {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+
+.navigation-version {
+  margin-left: 30rpx;
+  white-space: nowrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  &[data-caution] {
+    color: hsl(307, 100%, 60%);
+  }
+}

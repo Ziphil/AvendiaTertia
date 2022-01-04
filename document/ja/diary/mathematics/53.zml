@@ -1,0 +1,225 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<局所的な書き換え規則への変換>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2020 年 7 月 6 日)>
+  \p<
+    \a|href="52.html"|<7 月 5 日>では、継続を扱えるように拡張された &m<\sb<\rm<`l>><\rm<c>>>-計算について軽く触れた。
+    ここで、&m<\sb<\rm<`l>><\rm<c>>>-計算の簡約規則を思い出そう。
+    簡約規則は (もともとのラムダ計算に定まっていたものを含めて) 3 種類あり、評価環境 &m<E> と項 &m<M> と値 &m<V> に対し、
+    &mb<
+      &mark<\wspade;>
+      \array|align="rcl"|<
+        \c<E `[(\rm<`l> x. \sfun; M) V`]> \c<\squigrarr;> \c<E `[M `[x \coloneqq; V`]`]> \br;
+        \c<E `[\tt|fun|<abort> M`]> \c<\squigrarr;> \c<M> \br;
+        \c<E `[\tt|fun|<cont> M`]> \c<\squigrarr;> \c<M (\rm<`l> x. \sfun; \tt|fun|<abort> E `[x`])>
+      >
+    >
+    と定まっていた。
+    このうち最初の規則は評価環境 &m<E> の内側だけの書き換えで済んでいるが、残りの 2 つの規則は項全体を書き換える必要がある。
+    このような局所的な書き換えだけでは実現できない簡約規則は、しばしば簡約の分析を難しくする。
+    そこで、できるだけ局所的な書き換え規則だけを用いて、上と同じ振る舞いが実現できれば便利である。
+    今日は、この問題について触れていこうと思う。
+  >
+  \p<
+    これから定める新しい規則と区別するため、これまでの簡約は単に &m<\squigrarr|ord|;> ではなく &m<\sb<\squigrarr|ord|;><\rm<G>>> と書くことにする。
+  >
+  \p<
+    まずは &m<\tt<abort>> について考察する。
+    &m<E `[\tt|fun|<abort> M`]> という項を考え、&m<E> は空でないとする。
+    このとき、&m<\tt|fun|<abort> M> は、ある項 &m<N> について &m<(\tt|fun|<abort> M) N> の形で現れるか、ある値 &m<V> について &m<V (\tt|fun|<abort> M)> の形で現れるかどちらかである。
+  >
+  \p<
+    初めに、前者の &m<(\tt|fun|<abort> M) N> の形で現れる場合を考えよう。
+    今の目的は、局所的に &m<(\tt|fun|<abort> M) N> という形の項を何か別の項に書き換えるという規則を作り、式 &m<\wspade;> と同じ振る舞いを実現することである。
+    式 &m<\wspade;> を見ても分かるように、&m<\tt|fun|<abort> M> はその外側にある評価環境を完全に破棄する役割がある。
+    したがって、&m<(\tt|fun|<abort> M) N> において &m<\tt|fun|<abort> M> の外側にある &m<N> は破棄されるべきである。
+    そこで、局所的に、
+    &mb<
+      (\tt|fun|<abort> M) N \sb<\rhd;><\rm<Lr>> \tt|fun|<abort> M
+    >
+    という書き換えを行えばうまくいきそうだと考えられる。
+  >
+  \p<
+    後者の &m<V (\tt|fun|<abort> M)> の形で現れる場合も、同様に考えて、&m<\tt|fun|<abort> M> の外側にある &m<V> を破棄して、
+    &mb<
+      V (\tt|fun|<abort> M) \sb<\rhd;><\rm<Lr>> \tt|fun|<abort> M
+    >
+    とすれば良さそうである。
+  >
+  \p<
+    これら 2 つの規則を次々と適用していけば、&m<E `[\tt|fun|<abort> M`]> という項は、&m<E> に相当する部分が全て破棄されて単に &m<\tt|fun|<abort> M> に書き換えられる。
+    そこで、
+    &mb<
+      \tt|fun|<abort> M \sb<\rhd;><\rm<Lo>> M
+    >
+    という書き換えを最後に行うことにすれば、式 &m<\wspade;> が再現できる。
+    ここで注意すべき点として、最初の 2 つの書き換え (&m<\sb<\rhd|ord|;><\rm<Lr>>> で書いた) はある大きな項の内部の書き換えだが、最後のこの書き換え (&m<\sb<\rhd|ord|;><\rm<Lo>>> で書いた) は項全体が &m<\tt|fun|<abort> M> という形になって初めて適用されなけれならない。
+    つまり、大きな項の真の部分項として現れる &m<\tt|fun|<abort> M> に対して &m<\sb<\rhd|ord|;><\rm<Lo>>> を適用して &m<M> に置き換えてはいけない。 
+  >
+  \p<
+    次に &m<\tt<cont>> について考察する。
+    前と同様に、ある項 &m<N> について &m<(\tt|fun|<cont> M) N> の形で現れる場合と、ある値 &m<V> について &m<V (\tt|fun|<cont> M)> の形で現れる場合を考える。
+  >
+  \p<
+    前者の &m<(\tt|fun|<cont> M) N> の形について考察する。
+    &m<\tt<abort>> の場合を踏まえると、うまい &m<X> をとってこれを &m<\tt|fun|<cont> X> という形に局所的に書き換えるという規則を定めれば、この書き換えが次々と伝播して目的が達成されることが期待できる。
+    そこで、この &m<X> として何が適切かを考えることにする。
+    我々の目標は &m<(\tt|fun|<cont> M) N> を &m<\tt|fun|<cont> X> に局所的に書き換えることで式 &m<\wspade;> をシミュレートすることであったから、任意の評価環境 &m<E'> のもとで、&m<E' `[(\tt|fun|<cont> M) N`]> と &m<E' `[\tt|fun|<cont> X`]> は &m<\sb<\squigrarr|ord|;><\rm<G>>> によって同じ項に簡約されるべきである。
+    定義から、
+    &mb<
+      \array|align="rcl"|<
+        \c<E' `[(\tt|fun|<cont> M) N`]> \c<\sb<\squigrarr;><\rm<G>>> \c<M (\rm<`l> x. \sfun; \tt|fun|<abort> E' `[x N`])> \br;
+        \c<E' `[\tt|fun|<cont> X`]> \c<\sb<\squigrarr;><\rm<G>>> \c<X (\rm<`l> x. \sfun; \tt|fun|<abort> E' `[x`])>
+      >
+    >
+    であるから、
+    &mb<
+      X (\rm<`l> x. \sfun; \tt|fun|<abort> E' `[x`]) = M (\rm<`l> x. \sfun; \tt|fun|<abort> E' `[x N`])
+    >
+    となるように &m<X> を定めれば良さそうである。
+  >
+  \p<
+    まず &m<X> は継続関数を引数として受け取る関数であるから、ラムダ抽象で始めるとするのが自然である。
+    したがって、&m<X \equiv; \rm<`l> k. \sfun; X'> として、&m<X'> をうまく定義することを考える。
+    &m<k> には &m<\rm<`l> x. \sfun; \tt|fun|<abort> E' `[x`]> が渡されるので、&m<k (x N)> という項を考えれば &m<\tt|fun|<abort> E' `[x N`]> という形の項が得られる。
+    目標は &m<M (\rm<`l> x. \sfun; \tt|fun|<abort> E' `[x N`])> という形であったが、これは &m<X' \equiv; M (\rm<`l> x. \sfun; k (x N))> とすれば実現できる。
+    以上の観察により、局所的に、
+    &mb<
+      (\tt|fun|<cont> M) N \sb<\rhd;><\rm<Lr>> \tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N)))
+    >
+    という書き換えをすれば良さそうであることが分かった。
+  >
+  \p<
+    後者の &m<V (\tt|fun|<cont> M)> の場合も、同様にして、
+    &mb<
+      V (\tt|fun|<cont> M) \sb<\rhd;><\rm<Lr>> \tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (V x)))
+    >
+    という規則が考えられる。
+  >
+  \p<
+    これら 2 つの規則を次々と適用していけば、&m<E `[\tt|fun|<cont> M`]> という項は、ある項 &m<X> について &m<\tt|fun|<cont> X> という形に書き換えられる。
+    そこで、
+    &mb<
+      \tt|fun|<cont> X \sb<\rhd;><\rm<Lo>> X (\rm<`l> x. \sfun; \tt|fun|<abort> x)
+    >
+    という書き換えを最後に行えば、式 &m<\wspade;> が再現できる。
+    この規則も前と同様に、部分式の書き換えの最後のみで行わなければならないことには注意すべきである。
+  >
+  \p<
+    これにより、式 &m<\wspade;> を再現しそうな局所的な書き換え規則が得られた。
+    この規則の厳密な定義を書き下す前に、まずは「局所的に書き換える」とはどのような意味なのかを明確にするため、以下の用語を用意する。
+  >
+  \thm|type="def"|<
+    \p<
+      計算体系 &m<\sb<\rm<`l>><\rm<c>>> の項の上の関係 &m<\rhd;> に対し、同じく項の上の関係 &m<\squigrarr;> を次を満たす最小の関係として定める。
+      すなわち、項 &m<M, N, P> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<M \rhd; N> \c<\implies;> \c<M \squigrarr; N> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<\rm<`l> x. \sfun; M \squigrarr; \rm<`l> x. \sfun; N> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<MP \squigrarr; NP> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<PM \squigrarr; PN> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<\tt|fun|<abort> M \squigrarr; \tt|fun|<abort> N> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<\tt|fun|<cont> M \squigrarr; \tt|fun|<cont> N>
+        >
+      >
+      が成り立つ。
+      このとき、&m<\squigrarr|ord|;> を &m<\rhd;> の\em<合同閉包\fl<congruent closure>> という。
+    >
+  >
+  \p<
+    以上のもと、次のような書き換え規則が定義できる。
+  >
+  \thm|type="def",id="locred"|<
+    \p<
+      計算体系 &m<\sb<\rm<`l>><\rm<c>>> の項の上の関係 &m<\sb<\rhd|ord|;><\rm<Lr>>> を、項 &m<M, N> と値 &m<V> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<(\rm<`l> x. \sfun; M) V> \c<\sb<\rhd;><\rm<Lr>>> \c<M `[x \coloneqq; V`]> \br;
+          \c<(\tt|fun|<abort> M) N> \c<\sb<\rhd;><\rm<Lr>>> \c<\tt|fun|<abort> M> \br;
+          \c<V (\tt|fun|<abort> M)> \c<\sb<\rhd;><\rm<Lr>>> \c<\tt|fun|<abort> M> \br;
+          \c<(\tt|fun|<cont> M) N> \c<\sb<\rhd;><\rm<Lr>>> \c<\tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N)))> \br;
+          \c<V (\tt|fun|<cont> M)> \c<\sb<\rhd;><\rm<Lr>>> \c<\tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (V x)))>
+        >
+      >
+      で定める。
+      さらに、関係 &m<\sb<\rhd|ord|;><\rm<Lo>>> を、項 &m<M> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<abort> M> \c<\sb<\rhd;><\rm<Lo>>> \c<M> \br;
+          \c<\tt|fun|<cont> M> \c<\sb<\rhd;><\rm<Lo>>> \c<M (\rm<`l> x. \sfun; \tt|fun|<abort> x)>
+        >
+      >
+      で定める。
+      最後に、関係 &m<\sb<\squigrarr|ord|;><\rm<L>>> を、&m<\sb<\rhd|ord|;><\rm<Lr>>> の合同閉包と &m<\sb<\rhd|ord|;><\rm<Lo>>> 自身の合併として定める。
+    >
+  >
+  \p<
+    この関係は、最初に意図していた以下の性質を満たす。
+  >
+  \thm|type="thm",id="locglb"|<
+    \p<
+      計算体系 &m<\sb<\rm<`l>><\rm<c>>> の任意の項 &m<P, Q> に対し、&m<P \sb<\squigrarr;><\rm<G>> Q> ならば &m<P \sbsp<\squigrarr;><\rm<L>><*> Q> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb<\squigrarr|ord|;><\rm<G>>> の定義により、ある評価環境 &m<E> について、&m<P> は &m<E `[(\rm<`l> x. \sfun; M) V`]> か &m<E `[\tt|fun|<abort> M`]> か &m<E `[\tt|fun|<cont> M`]> の形である。
+      この &m<E> のサイズに関する帰納法によって、定理の主張を示す。
+    >
+    \p<
+      &m<E \equiv; `[`]> の場合は明らかであるから、以下では &m<E \nequiv; `[`]> の場合を考える。
+      このとき、ある評価環境 &m<E'> が存在して、ある項 &m<N> について &m<E \equiv; E' `[`[`] N`]> であるか、ある値 &m<V> について &m<E \equiv; E' `[V `[`]`]> である。
+    >
+    \p<
+      &m<E \equiv; E' `[`[`] N`]> かつ &m<P \equiv; E `[\tt|fun|<cont> M`]> の場合を考える。
+      このとき、
+      &mb<
+        Q \equiv; M (\rm<`l> x. \sfun; \tt|fun|<abort> E `[x`])
+      >
+      である。
+      また、
+      &mb<
+        &mark<\wheart;>
+        \array|align="rcl"|<
+          \c<P> \c<\equiv;> \c<E' `[(\tt|fun|<cont> M) N`]> \br;
+          \c; \c<\sb<\squigrarr;><\rm<L>>> \c<E' `[\tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (+x N)))`]>
+        >
+      >
+      が成り立つ。
+      ところで、
+      &mb<
+        E' `[\tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N)))`] \sb<\squigrarr;><\rm<G>> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N))) (\rm<`l> y. \sfun; \tt|fun|<abort> E' `[y`])
+      >
+      であるから、帰納法の仮定によって、この簡約は &m<\sb<\squigrarr|ord|;><\rm<L>>> を複数ステップ行うことでも可能である。
+      したがって、簡約 &m<\wheart;> の続きは、
+      &mb<
+        \array|align="rcl"|<
+          \c<\cdots;> \c<\sbsp<\squigrarr;><\rm<L>><*>> \c<(\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N))) (\rm<`l> y. \sfun; \tt|fun|<abort> E' `[y`])> \br;
+          \c; \c<\sb<\squigrarr;><\rm<L>>> \c<M (\rm<`l> x. \sfun; (\rm<`l> y. \sfun; \tt|fun|<abort> E' `[y`]) (x N))> \br;
+          \c; \c<\sb<\squigrarr;><\rm<L>>> \c<M (\rm<`l> x. \sfun; \tt|fun|<abort> E' `[x N`])> \br;
+          \c; \c<\equiv;> \c<Q>
+        >
+      >
+      となり、&m<P \sbsp<\squigrarr;><\rm<L>><*> Q> が示された。
+    >
+    \p<
+      それ以外の場合も同様である。
+    >
+  >
+  \h1<追記 (2020 年 7 月 7 日)>
+  \p<
+    合同閉包の厳密な定義を追加した。
+    また、局所的な置き換えと全体の置き換えの違いを明確にするため、記号を変えてそれぞれ &m<\rhd;> と &m<\squigrarr;> で表すことにした。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="fsts"|<M. Felleisen et al (1987)「A syntactic theory of sequential control」『Theoretical Computer Science』52(3):205–237>
+  >
+
+>

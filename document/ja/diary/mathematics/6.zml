@@ -1,0 +1,243 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<線型論理の定義>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2018 年 2 月 14 日)>
+  \p<
+    線型論理とは、Girard\ref|type="bib",ref="gllx"|; によって提唱された論理体系で、弱化規則や縮約規則の使用が制限されているのが特徴である。
+    これによって、連言は &m<\times;> と &m<\otimes;> に分かれ、選言は &m<+> と &m<\oplus;> に分かれている。
+    また、指数的結合子と呼ばれる 2 種類の結合子 &m<!, ?> によって、弱化規則や縮約規則の使用を制御する。
+  >
+  \p<
+    完全な線型論理の体系は以下のように定義される。
+    定義には様々なバリエーションがあるが、ここでは Girard の原論文に従って、シークエント計算の形で定義する。
+    記号は少し変えてある。
+  >
+  \thm|type="def"|<
+    \p<
+      論理言語を以下によって定義する。
+      原子論理式は &m<a> で表すとし、論理式 &m<A> を、
+      &mb<
+        A \o|rel|<::=> 1 \mid; 0 \mid; \top; \mid; \bot; \mid; a \mid; \sp<a><*> \mid; A \times; A \mid; A + A \mid; A \otimes; A \mid; A \oplus; A \mid; !A \mid; ?A
+      >
+      によって定める。
+      また、各論理式 &m<A> に対して、別の論理式 &m<\sp<A><*>> を、
+      &mb<
+        \array|align="rclcrcl"|<
+          \c<\sp<1><*>> \c<\equiv;> \c<0> \c<\qquad;> \c<\sp<0><*>> \c<\equiv;> \c<1> \br;
+          \c<\sp<\top;><*>> \c<\equiv;> \c<\bot;> \c; \c<\sp<\bot;><*>> \c<\equiv;> \c<\top;> \br;
+          \c<\sp<a><*>> \c<\equiv;> \c<\sp<a><*>> \c; \c<(\sp<a><*>) \sp<><*>> \c<\equiv;> \c<a> \br;
+          \c<\sp<(A \times; B)><*>> \c<\equiv;> \c<\sp<A><*> + \sp<B><*>> \c; \c<\sp<(A + B)><*>> \c<\equiv;> \c<\sp<A><*> \times; \sp<B><*>> \br;
+          \c<\sp<(A \otimes; B)><*>> \c<\equiv;> \c<\sp<A><*> \oplus; \sp<B><*>> \c; \c<\sp<(A \oplus; B)><*>> \c<\equiv;> \c<\sp<A><*> \otimes; \sp<B><*>> \br;
+          \c<\sp<(!A)><*>> \c<\equiv;> \c<? \sp<A><*>> \c; \c<\sp<(?A)><*>> \c<\equiv;> \c<! \sp<A><*>>
+        >
+      >
+      によって再帰的に定める。
+      さらに、省略記法として、
+      &mb<
+        \array|align="rcl"|<
+          \c<A \rmulti|bin|; B> \c<\equiv;> \c<\sp<A><*> \oplus; B> \br;
+          \c<A \lrmulti|bin|; B> \c<\equiv;> \c<(A \rmulti|bin|; B) \times; (B \rmulti|bin|; A)>
+        >
+      >
+      を用いる。
+      シークエントの導出規則は以下によって定める。
+      &m<`G, `D> は任意個の論理式の列を表す。
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \tree<
+              \infr|n="0"|<\vdash; \srel; A, \sp<A><*>><\rm<Axiom>>
+            > \qquad;
+            \tree<
+              \axm<\vdash; \srel; A, `G> \axm<\vdash; \srel; \sp<A><*>, `D> \infr|n="2"|<\vdash; \srel; `G, `D><\rm<Cut>>
+            > \qquad;
+            \tree<
+              \axm<\vdash; \srel; `G, A, B, `D> \infr|n="1"|<\vdash; \srel; `G, B, A, `D><\rm<Exchange>>
+            >
+          >
+          \cc<
+            \tree<
+              \infr|n="0"|<\vdash; \srel; 1, `G><1>
+            > \qquad;
+            \tree<
+              \infr|n="0"|<\vdash; \srel; \top;><\top;>
+            > \qquad;
+            \tree<
+              \axm<\vdash; \srel; `G> \infr|n="1"|<\vdash; \srel; \bot;, `G><\bot;>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\vdash; \srel; A, `G> \axm<\vdash; \srel; B, `G> \infr|n="2"|<\vdash; \srel; A \times; B, `G><\times;>
+            > \qquad;
+            \tree<
+              \axm<\vdash; \srel; A, `G> \infr|n="1"|<\vdash; \srel; A + B, `G><\sb<+><\rm<L>>>
+            > \qquad;
+            \tree<
+              \axm<\vdash; \srel; B, `G> \infr|n="1"|<\vdash; \srel; A + B, `G><\sb<+><\rm<R>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\vdash; \srel; A, `G> \axm<\vdash; \srel; B, `D> \infr|n="2"|<\vdash; \srel; A \otimes; B, `G, `D><\otimes;>
+            > \qquad;
+            \tree<
+              \axm<\vdash; \srel; A, B, `G> \infr|n="1"|<\vdash; \srel; A \oplus; B, `G><\oplus;>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\vdash; \srel; A, ?`G> \infr|n="1"|<\vdash; \srel; !A, ?`G><!> 
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\vdash; \srel; A, `G> \infr|n="1"|<\vdash; \srel; ?A, `G><\sb<?><\rm<D>>>
+            > \qquad;
+            \tree<
+              \axm<\vdash; \srel; `G> \infr|n="1"|<\vdash; \srel; ?A, `G><\sb<?><\rm<W>>>
+            > \qquad;
+            \tree<
+              \axm<\vdash; \srel; ?A, ?A, `G> \infr|n="1"|<\vdash; \srel; ?A, `G><\sb<?><\rm<C>>>
+            >
+          >
+        >
+      >
+      以上によって定義される論理を\em<線型論理\fl<linear logic>> という。
+    >
+  >
+  \p<
+    それぞれの結合子がどのような意味合いをもつのかについては様々な解釈がある。
+    これについては、私自身もまだイメージが掴めておらず何も書けないので、Girard\ref|type="bib",ref="glli"|; などを参照してほしい。
+  >
+  \p<
+    見て分かる通り、ここで定義した線型論理のシークエントには前件が存在しない。
+    ただし、&m<`G \vdash; `D> を &m<\vdash; \srel; \sp<`G><*>, `D> の意味だとすることで、&m<\sp<A><*>> という形を使わずに、前件をもつシークエントの導出規則で上と等価なものを作ることもできる。
+    このバージョンの導出規則は、Bierman\ref|type="bib",ref="bill"|; や Troelstra\ref|type="bib",ref="lll"|; などに記載がある。
+  >
+  \p<
+    さて、線型論理のシークエント計算による定式化は上の通りできたが、導入則と除去則から成る自然演繹としての定式化できるかも気になるところである。
+    しかし、自然演繹は結論としてちょうど 1 つの論理式しか許さないので、後件に少なくとも 2 つの論理式を要求する &m<\oplus;> や &m<?> の導出規則を自然演繹の形で扱うことは難しい。
+    そこで、&m<\times|ord|;, \plus|ord|;, \otimes|ord|;, !> の 4 つに結合子を制限し、&m<\rmulti;> をプリミティブな結合子として追加したものが考えられている。
+    これも定義に様々なバリエーションがあるが、ここでは Bierman\ref|type="bib",ref="bill"|; によるものを記載する。
+  >
+  \thm|type="def"|<
+    \p<
+      論理言語を以下によって定義する。
+      原子論理式は &m<a> で表すとし、論理式 &m<A> を、
+      &mb<
+        A \o|rel|<::=> 1 \mid; 0 \mid; \top; \mid; a \mid; A \times; A \mid; A + A \mid; A \otimes; A \mid; A \rmulti|bin|; A \mid; !A
+      >
+      によって定める。
+      推論規則は以下によって定める。
+      &m<`G, `D> およびこれに添字が付いたものは任意個の論理式の多重集合を表す。
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \tree<
+              \infr|n="0"|<A \vdash; A><\rm<Axiom>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\sb<`G><1> \vdash; \sb<A><1>> \axm<\cdots;> \axm<\sb<`G><k> \vdash; \sb<A><k>>
+              \infr|n="3"|<\sb<`G><1>, \cdots;, \sb<`G><k> \vdash; 1><\sb<1><\rm<I>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\sb<`G><1> \vdash; \sb<A><1>> \axm<\cdots;> \axm<\sb<`G><k> \vdash; \sb<A><k>> \axm<`D \vdash; 0>
+              \infr|n="4"|<\sb<`G><1>, \cdots;, \sb<`G><k>, `D \vdash; B><\sb<0><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \infr|n="0"|<\vdash; \srel; \top;><\sb<\top;><\rm<I>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; \top;> \axm<`D \vdash; A> \infr|n="2"|<`G, `D \vdash; A><\sb<\top;><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; A> \axm<`G \vdash; B> \infr|n="2"|<`G \vdash; A \times; B><\sb<\times;><\rm<I>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; A \times; B> \infr|n="1"|<`G \vdash; A><\sb<\times;><\rm<EL>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; A \times; B> \infr|n="1"|<`G \vdash; B><\sb<\times;><\rm<ER>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; A> \infr|n="1"|<`G \vdash; A + B><\sb<+><\rm<IL>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; B> \infr|n="1"|<`G \vdash; A + B><\sb<+><\rm<IR>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; A + B> \axm<`D, A \vdash; C> \axm<`D, B \vdash; C> \infr|n="3"|<`G, `D \vdash; C><\sb<+><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; A> \axm<`D \vdash; B> \infr|n="2"|<`G, `D \vdash; A \otimes; B><\sb<\otimes;><\rm<I>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; A \otimes; B> \axm<`D, A, B \vdash; C> \infr|n="2"|<`G, `D \vdash; C><\sb<\otimes;><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G, A \vdash; B> \infr|n="1"|<`G \vdash; A \rmulti|bin|; B><\sb<\rmulti;><\rm<I>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; A \rmulti|bin|; B> \axm<`D \vdash; A> \infr|n="2"|<`G, `D \vdash; B><\sb<\rmulti;><\rm<E>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<\sb<`G><1> \vdash; ! \sb<A><1>> \axm<\cdots;> \axm<\sb<`G><k> \vdash; ! \sb<A><k>> \axm<! \sb<A><1>, \cdots;, ! \sb<A><k> \vdash; B>
+              \infr|n="4"|<\sb<`G><1>, \cdots;, \sb<`G><k> \vdash; !B><\sb<!><\rm<P>>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; !A> \axm<`D \vdash; B> \infr|n="2"|<`G, `D \vdash; B><\sb<!><\rm<W>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; !A> \axm<`D, !A, !A \vdash; B> \infr|n="2"|<`G, `D \vdash; B><\sb<!><\rm<C>>>
+            > \qquad;
+            \tree<
+              \axm<`G \vdash; !A> \infr|n="1"|<`G \vdash; A><\sb<!><\rm<D>>>
+            >
+          >
+        >
+      >
+      以上によって定義される論理を\em<直観主義線型論理\fl<intuitionistic linear logic>> という。
+    >
+  >
+  \p<
+    注意すべき点は、上の定義中の &m<`G> や &m<`D> が多重集合だという点である。
+    すなわち、要素の順番は区別しないが、要素の個数の違いは区別する。
+    通常の直観主義論理には弱化規則と縮約規則があるので、要素の個数が問題となることはなく、&m<`G> などはただの集合として良い。
+    しかし、線型論理はこの 2 つの規則の使用を制限することで生まれたものなので、前件の個数の違いに敏感になる必要がある。
+  >
+  \p<
+    今後のしばらくの目標は、上で定義した線型論理の圏論的モデルを構成することである。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="bill"|<G. M. Bierman (1993)「On intuitionistic linear logic」Ph. D. thesis, The University of Cambridge>
+    \li|id="gllx"|<J. Y. Girard (1987)「Linear logic」『Theoretical Computer Science』50:1–101>
+    \li|id="glli"|<J. Y. Girard (1995)「Linear logic: Its syntax and semantics」『In Advances in Linear Logic』1–42>
+    \li|id="lll"|<A. S. Troelstra (1992)『Lectures on Linear Logic』Center for the Study of Language and Information>
+  >
+
+>

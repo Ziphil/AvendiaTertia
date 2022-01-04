@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$form-input-vertical-padding: 1rpx;
+$form-input-horizontal-padding: 10rpx;
+
+.form {
+  text-align: center;
+}
+
+.form-table {
+  margin: 0rpx auto;
+  line-height: $line-height;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.form-table tr +tr td {
+  padding-top: 5rpx;
+}
+
+.form-input {
+  padding: $form-input-vertical-padding $form-input-horizontal-padding;
+  background-color: $block-background-color;
+  line-height: $line-height;
+  text-align: left;
+  box-sizing: content-box;
+}
+
+.form-button {
+  padding: $form-input-vertical-padding $form-input-horizontal-padding;
+  color: var(--background-color);
+  line-height: $line-height;
+  text-align: center;
+  box-shadow: 2rpx 2rpx 0rpx 0rpx $shadow-color;
+  background-position: 0% 0%;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, $orange-color 50%, $dark-orange-color 50%);
+  transition: background-position 0.2s;
+  display: inline-block;
+  &:hover {
+    background-position: 0% 100%;
+  }
+}

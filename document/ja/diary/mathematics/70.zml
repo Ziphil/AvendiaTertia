@@ -1,0 +1,398 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Chu 構成上の余自由コモノイド (その 2)>
+  \use-math|prefix="6"|;
+
+  \h1<日記 (2020 年 11 月 13 日)>
+  \p<
+    \a|href="69.html"|<10 月 11 日>で、Chu 構成上に線型圏の構造を定めるための 3 ステップから成る手法を紹介し、その 2 ステップ目についての詳細を述べた。
+    今日は、3 ステップ目の詳細を述べようと思う。
+  >
+  \p<
+    3 ステップ目とは、余自由前コモノイドの部分対象として余自由コモノイドを作るというものであった。
+    これを実現するためには、すでに 2 ステップ目までで余自由前コモノイドは作られているので、余自由コモノイドが成す圏が余自由前コモノイドが成す圏の中で余反射的になっていることを示せば良い。
+    余自由コモノイドは、余結合性と余単位性という特定の射に関する等式を満たすという条件を余自由前コモノイドに課したものであった。
+    そこで、この状況を一般化して、何らかの圏の中の等式で書かれる条件を満たすものについて考察することにする。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<X>, \scr<Y>> および関手 &m<F, G: \scr<X> \to; \scr<Y>> と自然変換 &m<`f, `c: F \raarr; G> をとる。
+      組 &m<(F, G, `f, `c)> を &m<\scr<X>> 上の\em<方程式\fl<equation>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<X>> 上の方程式 &m<(F, G, `f, `c)> をとる。
+      &m<\scr<X>> の対象 &m<C> が &m<\sb<`f><C> = \sb<`g><C>> を満たすとき、&m<C> を &m<(F, G, `f, `c)> の\em<解\fl<solution>> という。
+    >
+  >
+  \p<
+    以降、&m<\scr<X>> 上の方程式 &m<(F, G, `f, `c)> の解が成す &m<\scr<X>> の充満部分圏を &m<\bfrm<Sol> (F, G, `f, `c)> で表すことにする。
+  >
+  \p<
+    モノイダル圏 &m<\scr<X>> に対し、コモノイドが成す圏 &m<\bfrm<Comon> (\scr<X>)> は前コモノイドが成す圏 &m<\bfrm<PComon> (\scr<X>)> の充満部分圏であるが、これは &m<\bfrm<PComon> (\scr<X>)> 上の方程式の解から成る圏とも見なすことができる。
+    実際、
+    &mb<
+      \array|align="rrcl"|<
+        \c<F:> \c<\bfrm<PComon> (\scr<X>)> \c<\longto;> \c<\scr<X>> \br;
+        \c; \c<(A, d, e)> \c<\longmapsto;> \c<A>
+      > \qquad;
+      \array|align="rrcl"|<
+        \c<G:> \c<\bfrm<PComon> (\scr<X>)> \c<\longto;> \c<\scr<X>> \br;
+        \c; \c<(A, d, e)> \c<\longmapsto;> \c<(A \otimes; A \otimes; A) \times; (\top; \otimes; A) \times; (A \otimes; \top;)>
+      >
+    >
+    として、&m<\bfrm<PComon> (\scr<X>)> の各対象 &m<(A, d, e)> に対して、
+    &mb<
+      \array|align="rcl"|<
+        \c<\sbsp<`f><(A, d, e)><\rm<a>>> \c<\coloneqq;> \c<\tort<\diag<
+          \v<A> \v<A \otimes; A> \v<A \otimes; A \otimes; A>
+          \ar|s="1",e="2"|<d> \ar|s="2",e="3"|<d \otimes; \rm<id>>
+        >>> \br;
+        \c<\sbsp<`c><(A, d, e)><\rm<a>>> \c<\coloneqq;> \c<\tort<\diag<
+          \v<A> \v<A \otimes; A> \v<A \otimes; A \otimes; A>
+          \ar|s="1",e="2"|<d> \ar|s="2",e="3"|<\rm<id> \otimes; d>
+        >>> \br;
+        \c<\sbsp<`f><(A, d, e)><\rm<ul>>> \c<\coloneqq;> \c<\tort<\diag<
+          \v<A> \v<A \otimes; A> \v<\top; \otimes; A>
+          \ar|s="1",e="2"|<d> \ar|s="2",e="3"|<e \otimes; \rm<id>>
+        >>> \br;
+        \c<\sbsp<`c><(A, d, e)><\rm<ul>>> \c<\coloneqq;> \c<\tort<\diag<
+          \v<A> \v<\top; \otimes; A>
+          \ar|s="1",e="2"|<>
+        >>> \br;
+        \c<\sbsp<`f><(A, d, e)><\rm<ur>>> \c<\coloneqq;> \c<\tort<\diag<
+          \v<A> \v<A \otimes; A> \v<A \otimes; \top;>
+          \ar|s="1",e="2"|<d> \ar|s="2",e="3"|<\rm<id> \otimes; e>
+        >>> \br;
+        \c<\sbsp<`c><(A, d, e)><\rm<ur>>> \c<\coloneqq;> \c<\tort<\diag<
+          \v<A> \v<A \otimes; \top;>
+          \ar|s="1",e="2"|<>
+        >>> \br;
+      >
+    >
+    とおくと、これらは全て &m<(A, d, e)> に関して自然であるから、
+    &mb<
+      `f \coloneqq; (\sp<`f><\rm<a>>, \sp<`f><\rm<ul>>, \sp<`f><\rm<ur>>) \qquad;
+      `c \coloneqq; (\sp<`c><\rm<a>>, \sp<`c><\rm<ul>>, \sp<`c><\rm<ur>>)
+    >
+    と定めることで自然変換 &m<`f, `c: F \raarr; G> が得られる。
+    前コモノイド &m<(A, d, e)> に対し、&m<\sb<`f><(A, d, e)> = \sb<`c><(A, d, e)>> が成り立つことがまさに &m<(A, d, e)> がコモノイドであることの定義だから、&m<\bfrm<Comon> (\scr<X>) = \bfrm<Sol> (F, G, `f, `c)> である。
+  >
+  \p<
+    ということで、しばらく圏上の方程式という一般的なセッティングのもとで、その解が成す圏の性質を調べることにする。
+  >
+  \thm|type="prp",id="close"|<
+    \p<
+      圏 &m<\scr<X>> 上の方程式 &m<(F, G, `f, `c)> をとる。
+      &m<F> が余極限を保存するならば、部分圏 &m<\bfrm<Sol> (F, G, `f, `c) \subseteq; \scr<X>> は余極限に関して閉じている。
+    >
+  >
+  \prf<
+    \p<
+      解対象から成る図式 &m<(\sb<A><i>) \sb<><i>> をとり、その余極限余錐 &m<(\sb<p><i>: \sb<A><i> \to; A) \sb<><i>> が存在したとする。
+      すると、各 &m<i> に対して、&m<\sb<A><i>> が解対象であることから、
+      &mb<
+        \sb<`f><A> \circ; F \sb<p><i> = G \sb<p><i> \circ; \sb<`f><\sb<A><i>> = G \sb<p><i> \circ; \sb<`c><\sb<A><i>> = \sb<`c><A> \circ; F \sb<p><i>
+      >
+      が成り立つ。
+      一方、&m<F> は余極限を保存するから、&m<(F \sb<p><i>: F \sb<A><i> \to; FA) \sb<><i>> も余極限である。
+      したがって、余極限に関する分解の一意性によって &m<\sb<`f><A> = \sb<`c><A>> が得られ、&m<A> は解である。
+    >
+  >
+  \thm|type="prp",id="epi"|<
+    \p<
+      圏 &m<\scr<X>> 上の方程式 &m<(F, G, `f, `c)> をとる。
+      &m<F> が全射を保存するならば、解対象の商対象は再び解である。
+    >
+  >
+  \prf<
+    \p<
+      全射 &m<f: B \headrarr; A> をとり、&m<B> は解であるとする。
+      &m<F> は全射を保存するから、&m<Ff> も全射である。
+      ここで、
+      &mb<
+        \sb<`f><A> \circ; Ff = Gf \circ; \sb<`f><B> = Gf \circ; \sb<`c><B> = \sb<`f><A> \circ; Ff
+      >
+      が成り立つから、&m<Ff> が全射であることより &m<\sb<`f><A> = \sb<`c><A>> が成り立つ。
+      したがって、&m<A> も解である。
+    >
+  >
+  \thm|type="prp",id="corefl"|<
+    \p<
+      圏 &m<\scr<X>> 上の方程式 &m<(F, G, `f, `c)> をとる。
+      &m<\scr<X>> が余完備かつ冪化可能であって全射単射分解をもち、さらに &m<F> が余極限を保存するならば、部分圏 &m<\bfrm<Sol> (F, G, `f, `c) \subseteq; \scr<X>> は余反射的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<F> は余極限を保存するから、\ref|type="thm",ref="close"|; によって &m<\bfrm<Sol> (F, G, `f, `c)> は余極限に関して閉じている。
+      さらに、&m<\scr<X>> は余完備だから、これより &m<\bfrm<Sol> (F, G, `f, `c)> も余完備である。
+      したがって、&m<\scr<X>> は冪化可能であることを合わせて、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\bf<r>:> \c<\scr<X>> \c<\longto;> \c<\bfrm<Sol> (F, G, `f, `c)> \br;
+          \c; \c<A> \c<\longmapsto;> \c<\bigcup|in|; `{ A' \in; \sb<\op<Sub>><\scr<X>> (A) \mid; &raw<&mb<A'> は解> `}> 
+        >
+      >
+      が定義できる。
+      各 &m<\scr<X>> の対象 &m<A> に対し、定義から &m<\bf<r> A> は &m<A> の部分対象だから、射 &m<\sb<`j><A>: \bf<r> A \tailrarr; A> がある。
+    >
+    \p<
+      任意に解対象 &m<B> および射 &m<f: B \to; A> をとると、仮定によって &m<f> の全射と単射による分解
+      &mb<
+        \diag|hor="thn"|<
+          \v<B> \v; \v<A> \br;
+          \v; \v<X> \v;
+          \ar|s="1",e="3"|<f> \ar|s="1",e="5",tip="head",dash,inv|<e> \ar|s="5",e="3",tip="tail",dash,inv|<i>
+        >
+      >
+      がとれる。
+      &m<F> は余極限を保存するから特に全射を保存するので、\ref|type="thm",ref="epi"|; によって &m<X> は解である。
+      したがって &m<X \subseteq; \bf<r> A> であり、
+      &mb<
+        \diag<
+          \v<B> \v; \br;
+          \v<X> \v; \br;
+          \v<\bf<r> A> \v<A>
+          \ar|s="1",e="6"|<f> \ar|s="1",e="3",inv|<e> \ar|s="3",e="5",tip="tail"|; \ar|s="5",e="6",tip="tail",inv|<\sb<`j><A>>
+        >
+      >
+      は可換である。
+      さらに、&m<\sb<`j><A>> は単射だから、このような分解は常に一意である。
+      以上により、&m<\bf<r>> は包含関手の右随伴関手となるから、&m<\bfrm<Sol> (F, G, `f, `c)> は余反射的である。
+    >
+  >
+  \p<
+    さて、今回の我々の目標は、引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> に対し、&m<\bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;))> が &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の余反射的部分圏になっていることを示すことであった。
+    最初に述べたように、&m<\bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;))> は &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> 上の方程式の解の圏と見なせるから、上の命題がちょうど使えそうである。
+    そのためには、まず &m<\bfrm<Chu> (\scr<C>, \bbot;)> が冪化可能であることが必要だが、前回から行っているように、この条件もベースの圏 &m<\scr<C>> 自身と &m<\scr<C>> 上のスライス圏の条件に落とし込むことができる。
+  >
+  \thm|type="prp",id="monomono"|<
+    \p<
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> を考える。
+      &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
+      &mb<
+        (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((A, \bar<A>, a), (d, m), (e, u))
+      >
+      をとる。
+      このとき、&m<(f, \bar<f>)> が &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> で単射ならば、&m<f: (B, d', e') \to; (A, d, e)> は &m<\bfrm<PComon> (\scr<C>)> で単射である。
+    >
+  >
+  \prf<
+    \p<
+      &m<f> が単射でないと仮定する。
+      すると、&m<\bfrm<PComon> (\scr<C>)> の射 &m<g, g': (C, \sp<d><\ppr;>, \sp<e><\ppr;>) \to; (B, d', e')> が存在して、&m<g \neq; g'> かつ &m<f \circ; g = f \circ; g'> が成り立つ。
+      ここで、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\bar<g>> \c<\coloneqq;> \c<\tort<\diag<
+            \v<\bar<B>> \v<\sp<B><\bbot;>> \v<\sp<C><\bbot;>>
+            \ar|s="1",e="2"|<\sp<b><\sharp;>> \ar|s="2",e="3"|<\sp<g><\bbot;>>
+          >>> \br;
+          \c<\bar<g>'> \c<\coloneqq;> \c<\tort<\diag<
+            \v<\bar<B>> \v<\sp<B><\bbot;>> \v<\sp<C><\bbot;>>
+            \ar|s="1",e="2"|<\sp<b><\sharp;>> \ar|s="2",e="3"|<\sp<g><\pr; \bbot;>>
+          >>>
+        >
+      >
+      とおくと、これらは &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
+      &mb<
+        (g, \bar<g>), (g', \bar<g>'): ((C, \sp<C><\bbot;>, \sb<`e><C>), (\sp<d><\ppr;>, \sp<d><\ppr; \bbot;>), (\sp<e><\ppr;>, \sp<e><\ppr; \bbot;>)) \to; ((B, \bar<B>, b), (d', m'), (e', u'))
+      >
+      を定め、さらに &m<(f, \bar<f>) \circ; (g, \bar<g>) = (f, \bar<f>) \circ; (g', \bar<g>')> が成り立つ。
+      &m<(f, \bar<f>)> は単射だったから &m<(g, \bar<g>) = (g', \bar<g>')> が成り立つが、これは &m<g \neq; g'> に矛盾する。
+      以上により、&m<f> は単射である。
+    >
+  >
+  \thm|type="prp",id="monoepi"|<
+    \p<
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> を考える。
+      &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
+      &mb<
+        (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((A, \bar<A>, a), (d, m), (e, u))
+      >
+      をとり、ある &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> の射 &m<\bar<p>: ((\bar<X>, \sp<x><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>) \to; ((\bar<B>, \sp<b><\sharp;>), m', u')> が存在して、
+      &mb<
+        \diag|hor="thn"|<
+          \v<\bar<A>> \v; \v<\bar<B>> \br;
+          \v; \v<\bar<X>>
+          \ar|s="1",e="3"|<\bar<f>> \ar|s="5",e="3",inv|<\bar<p>> \ar|s="1",e="5",dash|;
+        > 
+      >
+      という分解ができるとする。
+      このとき、&m<(f, \bar<f>)> が &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> で単射ならば、&m<\bar<p>> は &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> で全射である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\bar<p>> が全射でないと仮定する。
+      すると、&m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> の射 &m<\bar<g>, \bar<g>': ((\bar<B>, \sp<b><\sharp;>), m', u') \to; ((\bar<C>, \sp<c><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>)> が存在して、&m<\bar<g> \neq; \bar<g>'> かつ &m<\bar<g> \circ; \bar<p> = \bar<g>' \circ; \bar<p>> が成り立つ。
+      ここで、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
+      &mb<
+        (\rm<id>, \bar<g>), (\rm<id>, \bar<g>'): ((B, \sp<C><\bbot;>, c), (d', \sp<m><\ppr;>), (e', \sp<u><\ppr;>)) \to; ((B, \bar<B>, b), (d', m'), (e', u'))
+      >
+      が考えられるが、&m<\bar<g> \circ; \bar<p> = \bar<g>' \circ; \bar<p>> より  &m<\bar<g> \circ; \bar<f> = \bar<g>' \circ; \bar<f>> が得られるから、&m<(f, \bar<f>) \circ; (\rm<id>, \bar<g>) = (f, \bar<f>) \circ; (\rm<id>, \bar<g>')> が成り立つ。
+      &m<(f, \bar<f>)> は単射だったから &m<(\rm<id>, \bar<g>) = (\rm<id>, \bar<g>')> が成り立つが、これは &m<\bar<g> \neq; \bar<g>'> に矛盾する。
+      以上により、&m<\bar<p>> は全射である。
+    >
+  >
+  \thm|type="prp",id="wellpow"|<
+    \p<
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、3 条件
+    >
+    \ul<
+      \li<
+        &m<\bfrm<PComon> (\scr<C>)> は冪化可能である。
+      >
+      \li<
+        &m<\scr<C>> の各前コモノイド &m<(B, d', e')> に対し、&m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> は余冪化可能である。
+      >
+      \li<
+        &m<\scr<C>> の各前コモノイド &m<(B, d', e')> に対し、忘却関手 &m<\sb<W><B>: \bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>) \to; \scr<C> `/ \sp<B><\bbot;>> の左随伴関手 &m<\sb<L><B>: \scr<C> `/ \sp<B><\bbot;> \to; \bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> が存在する。
+      >
+    >
+    \p<
+      が成り立っているとする。
+      このとき、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は冪化可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の対象 &m<((A, \bar<A>, a), (d, m), (e, u))> を 1 つとって固定する。
+      これの部分対象が集合サイズしか存在しないことを示せば良い。
+    >
+    \p<
+      部分対象
+      &mb<
+        (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \tailrarr; ((A, \bar<A>, a), (d, m), (e, u))
+      >
+      をとると、\ref|type="thm",ref="monomono"|; によって &m<f: (B, d', e') \tailrarr; (A, d, e)> は &m<\bfrm<PComon> (\scr<C>)> における部分対象である。
+    >
+    \p<
+      一方、
+      &mb<
+        \sp<a><\pr; \sharp;> \coloneqq; \tort<\diag<
+          \v<\bar<A>> \v<\sp<A><\bbot;>> \v<\sp<B><\bbot;>>
+          \ar|s="1",e="2"|<\sp<a><\sharp;>> \ar|s="2",e="3"|<\sp<f><\bbot;>>
+        >>
+      >
+      とおくと、&m<\scr<C> `/ \sp<B><\bbot;>> の射 &m<\bar<f>: (\bar<A>, \sp<a><\pr; \sharp;>) \to; (\bar<B>, \sp<b><\sharp;>)> が考えられる。
+      ここで、仮定から忘却関手 &m<\sb<W><B>: \bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>) \to; \scr<C> `/ \sp<B><\bbot;>> には左随伴関手 &m<\sb<L><B>> が存在する。
+      これを用いて &m<((\bar<X>, \sp<x><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>) \coloneqq; \sb<L><B> (\bar<A>, \sp<a><\pr; \sharp;>)> とおけば、随伴によって、
+      &mb<
+        \sb<\op<Hom>><\scr<C> `/ \sp<B><\bbot;>> ((\bar<A>, \sp<a><\pr; \sharp;>), (B, \sp<b><\sharp;>))
+        \cong; \sb<\op<Hom>><\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> (((\bar<X>, \sp<x><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>), ((B, \sp<b><\sharp;>), m', u'))
+      >
+      が成り立つ。
+      &m<\bar<f>> はこの右辺に属するから、それに対応する左辺の元として &m<\bar<p>: ((\bar<X>, \sp<x><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>) \to; ((B, \sp<b><\sharp;>), m', u')> がとれ、随伴の単位から定まる射を &m<`j: (\bar<A>, \sp<a><\pr; \sharp;>) \to; (\bar<X>, \sp<x><\sharp;>)> とおけば、
+      &mb<
+        \diag|hor="thn"|<
+          \v<\bar<A>> \v; \v<\bar<B>> \br;
+          \v; \v<\bar<X>>
+          \ar|s="1",e="3"|<\bar<f>> \ar|s="5",e="3",inv|<\bar<p>> \ar|s="1",e="5",inv|<`j>
+        > 
+      >
+      は可換である。
+      したがって、\ref|type="thm",ref="monoepi"|; によって &m<\bar<p>> は &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> における商対象である。
+    >
+    \p<
+      以上の議論により、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> における &m<((A, \bar<A>, a), (d, m), (e, u))> の部分対象 &m<(f, \bar<f>)> に対し、
+      &mb<
+        \coprod<\stack<\cc<f \in; \sb<\op<Sub>><\bfrm<PComon> (\scr<C>)> ((A, d, e))> \cc<(B, d', e') \coloneqq; \op<dom> (f)>>> \sfun;
+        \coprod<\sp<a><\pr; \sharp;> \in; \sb<\op<Hom>><\scr<C>> (A, \sp<B><\bbot;>)>
+        \sb<\op<Quot>><\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> (\sb<L><B> (A, \sp<a><\pr; \sharp;>))
+      >
+      の元 &m<(f, \sp<a><\pr; \sharp;>, \bar<p>)> が 1 つ定まり、この対応は単射である。
+      仮定から &m<\bfrm<PComon> (\scr<C>)> は冪化可能で &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> は余冪化可能であるから、上のクラスは集合である。
+      したがって、&m<((A, \bar<A>, a), (d, m), (e, u))> の部分対象は集合サイズしかない。
+    >
+  >
+  \thm|type="thm",id="main"|<
+    \p<
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、5 条件
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> は完備かつ余完備である。
+      >
+      \li<
+        &m<\bfrm<PComon> (\scr<C>)> は冪化可能である。
+      >
+      \li<
+        &m<\scr<C>> の各前コモノイド &m<(A, d, e)> に対し、&m<\bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>)> は余冪化可能である。
+      >
+      \li<
+        &m<\scr<C>> の各前コモノイド &m<(A, d, e)> に対し、忘却関手 &m<\sb<W><A>: \bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>) \to; \scr<C> `/ \sp<A><\bbot;>> の左随伴関手 &m<\sb<L><A>: \scr<C> `/ \sp<A><\bbot;> \to; \bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>)> が存在する。
+      >
+      \li<
+        &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は全射単射分解をもつ。
+      >
+    >
+    \p<
+      が成り立っているとする。
+      このとき、包含関手 &m<I: \bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の右随伴関手が存在する。
+    >
+  >
+  \prf<
+    \p<
+      仮定から &m<\scr<C>> は完備かつ余完備だから、&m<\bfrm<Chu> (\scr<C>, \bbot;)> は特に余完備であり、さらに忘却関手 &m<U: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<Chu> (\scr<C>, \bbot;)> が余極限を生成することから &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> も余完備である。
+      さらに、仮定と\ref|type="thm",ref="wellpow"|; によって &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は冪化可能である。
+      また、仮定から &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は全射単射分解をもつ。
+      最後に、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) = \bfrm<Sol> (F, G, `f, `c)> と表したときの &m<F> は忘却関手だったから、これは余極限を保存する。
+      以上によって\ref|type="thm",ref="corefl"|; が使えるので、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は余反射的であり、これは &m<I> に右随伴関手が存在するということである。
+    >
+  >
+  \p<
+    最後に、前回の結果と合わせれば、以下が得られる。
+  >
+  \thm|type="thm",id="all"|<
+    \p<
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、6 条件
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> は完備かつ余完備である。
+      >
+      \li<
+        &m<\bfrm<PComon> (\scr<C>)> は冪化可能である。
+      >
+      \li<
+        &m<\scr<C>> の各前コモノイド &m<(A, d, e)> に対し、&m<\bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>)> は余冪化可能である。
+      >
+      \li<
+        忘却関手 &m<V: \bfrm<PComon> (\scr<C>) \to; \scr<C>> の右随伴関手 &m<R: \scr<C> \to; \bfrm<PComon> (\scr<C>)> が存在する。
+      >
+      \li<
+        &m<\scr<C>> の各前コモノイド &m<(A, d, e)> に対し、忘却関手 &m<\sb<W><A>: \bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>) \to; \scr<C> `/ \sp<A><\bbot;>> の左随伴関手 &m<\sb<L><A>: \scr<C> `/ \sp<A><\bbot;> \to; \bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>)> が存在する。
+      >
+      \li<
+        &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は全射単射分解をもつ。
+      >
+    >
+    \p<
+      が成り立っているとする。
+      このとき、&m<\bfrm<Chu> (\scr<C>, \bbot;)> は Lafont 圏であり、したがって線型圏である。
+    >
+  >
+  \prf<
+    \p<
+      仮定と\ref|type="thm",ref="main"|; から、包含関手 &m<I: \bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は右随伴関手をもつ。
+      さらに、仮定と\a|href="69.html#adjcomp"|<定理 5.3> から、忘却関手 &m<U: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<Chu> (\scr<C>, \bbot;)> も右随伴関手をもつ。
+      したがって、これらの合成 &m<U \circ; I> も右随伴関手をもつが、これは &m<\bfrm<Chu> (\scr<C>, \bbot;)> が Lafont 圏であるということである。
+    >
+  >
+  \p<
+    ということで、無事 Chu 構成が線型圏になることが示せたわけだが、そのために必要な条件が 6 つもあるのが難点である。
+    しかし、このうちの最初の 5 つは、局所可能表示性を課すことでそこから従うことが示せる。
+    これについては次回触れる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="bacm"|<M. Barr (1990)「Accessible categories and models of linear logic」『Journal of Pure and Applied Algebra』69:219–232>
+  >
+
+>

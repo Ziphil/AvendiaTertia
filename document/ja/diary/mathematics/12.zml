@@ -1,0 +1,235 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<ファイブレーションと添字付き圏>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2018 年 7 月 23 日)>
+  \p<
+    これまでファイブレーションについての基本的な概念を定義してきた。
+    ここで、ファイブレーションと密接な関係がある、もしくはファイブレーションの別の捉え方とも考えられる、別の概念について触れておく。
+  >
+  \p<
+    ファイブレーション &m<p: \scr<E> \to; \scr<B>> があると、&m<\scr<B>> の各対象 &m<I> に対してその上のファイバー圏 &m<\sb<\scr<E>><I>> が定まるので、ファイブレーションとはファイバー圏を集めたものとも見なすことができる。
+    しかし、&m<\scr<B>> の対象 &m<I> に対して何か圏が紐付けられていて、そのような圏を全て集めたもの考えたければ、わざわざファイバーなどを考えなくても、単に &m<\scr<B>> の対象から圏への対応を作れば良いだけである。
+    このような考え方で圏の集まりを扱うのが、以下に定義する添字付き圏である。
+  >
+  \thm|type="def",id="index"|<
+    \p<
+      圏 &m<\scr<B>> に対して、
+    >
+    \ul<
+      \li<
+        &m<\scr<B>> の対象 &m<I> に対し、圏 &m<`C I> が定まっている。
+      >
+      \li<
+        &m<\scr<B>> の射 &m<u: I \to; J> に対し、関手 &m<`C u: `C J \to; `C I> が定まっている。
+      >
+      \li<
+        &m<\scr<B>> の対象 &m<I> に対し、自然同型 &m<\sb<`h><I>: \sb<\rm<id>><`C I> \raarr; `C \sb<\rm<id>><I>> が存在する。
+      >
+      \li<
+        &m<\scr<B>> の射 &m<u: I \to; J, v: J \to; K> に対し、自然同型 &m<\sb<`m><uv>: `C u \circ; `C v \raarr; `C (v \circ; u)>  が存在する。
+      >
+    >
+    \p<
+      となっているとする。
+      さらに、任意の &m<\scr<B>> の射 &m<u: I \to; J, v: J \to; K, w: K \to; L> に対し、
+      &mb<
+        \array|align="c"|<
+          \c<\diag<
+            \v; \v<`C u> \v; \br;
+            \v<`C \sb<\rm<id>><I> \circ; `C u> \v<`C u> \v<`C u \circ; `C \sb<\rm<id>><I>>
+            \ar|s="2",e="5",line="2",tip="none"|; \ar|s="2",e="4",inv|<\sb<`h><I> * `C u> \ar|s="2",e="6"|<`C u * \sb<`h><I>>
+            \ar|s="4",e="5",inv|<\sb<`m><\sb<\rm<id>><I>, u>> \ar|s="6",e="5"|<\sb<`m><u, \sb<\rm<id>><I>>>
+          >> \br;
+          \c<\diag<
+            \v<`C u \circ; `C v \circ; `C w> \v<`C u \circ; `C (w \circ; v)> \br;
+            \v<`C (v \circ; u) \circ; `C w> \v< `C (w \circ; v \circ; u)>
+            \ar|s="1",e="2"|<`C u * \sb<`m><vw>> \ar|s="1",e="3",inv|<\sb<`m><uv> * `C w>
+            \ar|s="2",e="4"|<\sb<`m><u, w \circ; v>> \ar|s="3",e="4",inv|<\sb<`m><v \circ; u, w>>
+          >>
+        >
+      >
+      が可換であるとする。
+      このとき &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> と書き、これを &m<\scr<B>> 上の\em<添字付き圏\fl<indexed category>> という。
+    >
+  >
+  \p<
+    2-射として恒等射のみを考えることで普通の圏 &m<\sp<\scr<B>><\circ;>> を 2-圏だと思えば、添字付き圏 &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> とは単なる 2-圏の間の擬関手のことである。
+  >
+  \p<
+    最初に述べたように、ファイブレーション &m<p: \scr<E> \to; \scr<B>> があると、そのファイバー圏をとることによって &m<\scr<B>> の対象に圏を対応させることができる。
+    これを添字付き圏に拡張するにはファイバー圏の間の関手を作る必要があるが、それを行うには、\a|href="11.html"|<7 月 17 日>でも触れたように持ち上げを 1 つ選んでおく必要があるので、&m<p> は少なくとも劈開ファイブレーションである必要がある。
+  >
+  \thm|type="prp"|<
+    \p<
+      劈開ファイブレーション &m<p: \scr<E> \to; \scr<B>> に対し、ファイバー圏を対応させる関係
+      &mb<
+        \array|align="rrcl"|<
+          \c<\widetilde<p>:> \c<\sp<\scr<B>><\circ;>> \c<\longto;> \c<\bfrm<Cat>> \br;
+          \c; \c<I> \c<\longmapsto;> \c<\sb<\scr<E>><I>> \br;
+          \c; \c<u> \c<\longmapsto;> \c<\sp<u><*>>
+        >
+      >
+      は添字付き圏を定める。
+    >
+  >
+  \prf<
+    \p<
+      上で定められた関係に対して、添字付き圏の公理が全て満たされていることを確かめれば良い。
+      持ち上げの普遍性を使うだけでできるので面倒なだけで何も難しくないが、全部省略してしまうのも味気ないので一部分だけ確かめておこう。
+    >
+    \p<
+      &m<\scr<B>> の射 &m<u: I \to; J, v: J \to; K> および &m<\sb<\scr<E>><K>> の対象 &m<Z> に対し、 &m<\scr<E>> の射 &m<(\sb<`m><uv>) \sb<><Z>: \sp<u><*> \sp<v><*> Z \to; \sp<(v \circ; u)><*> Z> を、図式
+      &mb<
+        \diag<
+          \v<\sp<u><*> \sp<v><*> Z> \v<\sp<v><*> Z> \v; \br;
+          \v<\sp<(v \circ; u)><*> Z> \v; \v<Z>
+          \ar|s="1",e="4",dash,inv|<(\sb<`m><uv>) \sb<><Z>> \ar|s="1",e="2"|<\sb<\overline<u>><\sp<v><*> Z>> \ar|s="2",e="6"|<\sb<\overline<v>><Z>>
+          \ar|s="4",e="6",inv|<\sb<\overline<v \circ; u>><Z>>
+        >
+      >
+      を可換にする破線の射として定める。
+      この &m<\sp<(v \circ; u)><*> Z> は &m<\sb<\overline<v \circ; u>><Z>> のカルテシアン性によって一意に定まる射である。
+      また、&m<\sb<\overline<u>><\sp<v><*> Z> \circ; \sb<\overline<v>><Z>> もカルテシアンであるから、&m<(\sb<`m><uv>) \sb<><Z>> の逆向きの射も誘導され、分解の一意性によって &m<(\sb<`m><uv>) \sb<><Z>> とその射は互いに逆写像である。
+    >
+    \p<
+      このように作られた同型射 &m<(\sb<`m><uv>) \sb<><Z>: \sp<u><*> \sp<v><*> Z \to; \sp<(v \circ; u)><*> Z> は &m<Z> に関して自然である。
+      これは以下のように確かめられる。
+      任意の射 &m<f: Z \to; Z'> に対し、図式
+      &mb<
+        \diag|ver="thn",hor="thn"|<
+          \v; \v<\sp<u><*> \sp<v><*> Z> \v; \v<\sp<v><*> Z> \v; \br;
+          \v<\sp<u><*> \sp<v><*> Z'> \v; \v<\sp<v><*> Z'> \v; \v; \br;
+          \v; \v<\sp<(v \circ; u)><*> Z> \v; \v; \v<Z> \br;
+          \v<\sp<(v \circ; u)><*> Z'> \v; \v; \v<Z'>
+          \ar|s="2",e="4"|<\sb<\overline<u>><\sp<v><*> Z>> \ar|s="2",e="12",pos="25"|<(\sb<`m><uv>) \sb<><Z>> \ar|s="2",e="6",inv|<\sp<u><*> \sp<v><*> f>
+          \ar|s="4",e="15"|<\sb<\overline<v>><Z>> \ar|s="4",e="8"|<\sp<v><*> f>
+          \ar|s="6",e="8",pos="30",inv|<\sb<\overline<u>><\sp<v><*> Z'>> \ar|s="6",e="16",inv|<(\sb<`m><uv>) \sb<><Z'>>
+          \ar|s="8",e="19",pos="30"|<\overline<v> \sb<><Z'>>
+          \ar|s="12",e="15",pos="20"|<\sb<\overline<v \circ; u>><Z>> \ar|s="12",e="16",pos="40"|<\sp<(v \circ; u)><*> f>
+          \ar|s="15",e="19"|<f> \ar|s="16",e="19",inv|<\overline<v \circ; u> \sb<><Z'>>
+        >
+      >
+      を考える。
+      上面と底面と右の斜めの面は &m<\sp<u><*>> などの定義によって可換で、背面と前面は &m<(\sb<`m><uv>) \sb<><Z>> などの定義から可換である。
+      問題は左の面だが、他の面の可換性から、左の面を構成している 2 つの射はともに &m<\overline<v \circ; u> \sb<><Z'>> のカルテシアン性によって誘導される &m<\sp<u><*> \sp<v><*> Z> からの射になっている。
+      したがって、分解の一意性から、左の面を構成する 2 つの射は等しい。
+      以上によって &m<(\sb<`m><uv>) \sb<><Z>> の &m<Z> に関する自然性が示され、自然同型 &m<\sb<`m><uv>: \sp<u><*> \circ; \sp<v><*> \raarr; \sp<(v \circ; u)><*>> が得られた。
+    >
+    \p<
+      &m<\scr<B>> の対象 &m<I> に対しての自然同型 &m<\sb<`h><I>: \sb<\rm<id>><\sb<\scr<E>><I>> \raarr; \sb<\rm<id>><I> \sp<><*>> も同様に構成できる。
+      添字付き圏の残りの条件に関しても、分解の一意性を用いて証明できる。
+    >
+  >
+  \p<
+    さて、すると、逆に添字付き圏から劈開ファイブレーションを作れるのかが気になってくるが、実はこちらも可能である。
+  >
+  \thm|type="def"|<
+    \p<
+      添字付き圏 &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> に対し、圏 &m<\int|in|; `C> を
+    >
+    \ul<
+      \li<
+        &m<\int|in|; `C> の対象は、&m<\scr<B>> の対象 &m<I> と &m<`C I> の対象 &m<X> の組 &m<(I, X)> とする。
+      >
+      \li<
+        &m<\int|in|; `C> の 2 つの対象 &m<(I, X), (J, Y)> の間の射は、&m<\scr<B>> の射 &m<u: I \to; J> と &m<`C I> の射 &m<f: X \to; (`C u) Y> の組 &m<(u, f)> とする。
+      >
+      \li<
+        &m<\int|in|; `C> の 2 つの射 &m<(u, f): (I, X) \to; (J, Y), (v, g): (J, Y) \to; (K, Z)> の合成は、
+        &mb<
+          \diag<
+            \v<X> \v<(`C u) Y> \v<(`C u \circ; `C v) Z> \v<(`C (v \circ; u)) Z>
+            \ar|s="1",e="2"|<f> \ar|s="2",e="3"|<(`C u) g> \ar|s="3",e="4"|<(\sb<`m><uv>) \sb<><Z>>
+          >
+        >
+        を &m<h> とするとき、&m<(v \circ; u, h)> であるとする。
+      >
+    >
+    \p<
+      によって定める。
+      この圏を &m<`C> による \em<Grothendieck 構成\fl<— construction>> という。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      添字付き圏 &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> に対し、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\widetilde<`C>:> \c<\int|in|; `C> \c<\longto;> \c<\scr<B>> \br;
+          \c; \c<(I, X)> \c<\longmapsto;> \c<I>
+        >
+      >
+      を考える。
+      終域を &m<(J, Y)> とする射 &m<u: I \to; J> の持ち上げとして &m<(u, \sb<\rm<id>><(`C u) Y>): (I, (`C u) Y) \to; (J, Y)> を選ぶことにより、&m<\widetilde<`C>> は劈開ファイブレーションになる。
+    >
+  >
+  \p<
+    劈開の選び方が、\a|href="11.html"|<7 月 17 日>で例に挙げた、ある圏 &m<\scr<C>> の族ファイブレーション &m<\op|ord|<ind>: \bfrm<Fam> (\scr<C>) \ring<\to;> \bfrm<Set>> と似ていることにも注目すべきだろう。
+  >
+  \prf<
+    \p<
+      任意の &m<\scr<B>> の射 &m<u: I \to; J> と &m<`C J> の対象 &m<Y> に対し、&m<(u, \sb<\rm<id>><(`C u) Y>): (I, (`C u) Y) \to; (J, Y)> がカルテシアンであることを示せば良い。
+      そのためには、任意の &m<\int|in|; `C> の射 &m<(v, g): (K, Z) \to; (J, Y)> と &m<\scr<B>> の射 &m<w: K \to; I> について、
+      &mb<
+        &mark<\wspade;>
+        \diag<
+          \v<K> \v; \br;
+          \v<I> \v<J>
+          \ar|s="1",e="3",inv|<w> \ar|s="1",e="4"|<v> \ar|s="3",e="4",inv|<u>
+        > \qquad;
+        \diag<
+          \v<(K, Z)> \v; \br;
+          \v<(I, (`C u) Y)> \v<(J, Y)>
+          \ar|s="1",e="3",dash|; \ar|s="1",e="4"|<(v, g)> \ar|s="3",e="4",inv|<(u, \rm<id>)>
+        >
+      >
+      の左側の図式を可換であるとき、右側の図式を可換にする破線の射であって、&m<p> によって &m<w> に移るものが一意に存在することを示せば良い。
+    >
+    \p<
+      まず、そのような破線の射が &m<p> によって &m<w> に移ることから、破線の射の第 1 成分は &m<w> でなければならない。
+      また、第 2 成分は右側の図式の可換性から、
+      &mb<
+        \diag<
+          \v<Z> \v<(`C w \circ; `C u) Y> \v<(`C w \circ; `C u) Y> \v<(`C v) Y>
+          \ar|s="1",e="2",dash|; \ar|s="2",e="3"|<(`C w) \rm<id>> \ar|s="3",e="4"|<(\sb<`m><wv>) \sb<><Y>>
+        >
+      >
+      が &m<g> に等しいような破線の射である必要があるが、&m<(`C w) \sb<\rm<id>><(`C u) Y> = \sb<\rm<id>><(`C w \circ; `C u) Y>> であり、さらに &m<(\sb<`m><wv>) \sb<><Y>> は同型射だから、そのような射は &m<(\sb<`m><wv>) \sb<><Y> \sp<><-1> \circ; g> しかない。
+      よって、&m<(w, (\sb<`m><wv>) \sb<><Y> \sp<><-1> \circ; g): (K, Z) \to; (I, (`C u) Y)> は、&m<p> で &m<w> に移り式 &m<\wspade;> の右側の図式を可換にする唯一の射である。
+    >
+  >
+  \p<
+    以上によって、劈開ファイブレーションと添字付き圏は相互に構成できることが分かった。
+    ところで、劈開ファイブレーションより性質の良い分裂ファイブレーションというものがあったが、添字付き圏の方でこれに対応するものがどういうものかということにも触れておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      添字付き圏 &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> について、上記の定義の記号で &m<\sb<`h><I>> および &m<\sb<`m><uv>> たちが全て恒等な自然変換であるとき、&m<`C> は\em<厳密\fl<strict>> であるという。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      劈開ファイブレーション &m<p: \scr<E> \to; \scr<B>> に対し、&m<p> が分裂ならば &m<\widetilde<p>> は厳密である。
+    >
+  >
+  \thm|type="prp"|<
+    \p<
+      添字付き圏 &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> に対し、&m<`C> が厳密ならば &m<\widetilde<`C>> は分裂である。
+    >
+  >
+  \p<
+    以上により、分裂ファイブレーションと厳密添字付き圏は相互に構成可能であって、少し計算すると分かるが、この構成は同型の違いを除いて互いに逆になっている。
+    したがって、分裂ファイブレーションが成す圏と厳密添字付き圏が成す圏は圏同値であることになるが、これは 2-圏同値にまで拡張できる。
+    この辺りの定式化はまた次の記事で行いたい。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="clt"|<B. Jacobs (1999)『Categorical Logic and Type Theory』North Holland>
+  >
+
+>

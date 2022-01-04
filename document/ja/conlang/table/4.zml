@@ -1,0 +1,44 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<数詞>
+  \ver<5 代 1 期～ 5 代 2 期>
+
+  \h1<基本数詞>
+  \table<
+    \tr<\th<単語>\th<数>>
+    \tr<\td<{nof}>\td<0>>
+    \tr<\td<{tis}>\td<1>>
+    \tr<\td<{qot}>\td<2>>
+    \tr<\td<{fex}>\td<3>>
+    \tr<\td<{mip}>\td<4>>
+    \tr<\td<{xal}>\td<5>>
+    \tr<\td<{kiq}>\td<6>>
+    \tr<\td<{ced}>\td<7>>
+    \tr<\td<{yus}>\td<8>>
+    \tr<\td<{von}>\td<9>>
+  >
+  \h1<小区切り用位取り数詞>
+  \table<
+    \tr<\th<単語>\th<数>>
+    \tr<\td<[zem]>\td<10>>
+    \tr<\td<[bil]>\td<100>>
+    \tr<\td<[vaas]>\td<1000>>
+  >
+  \h1<大区切り用位取り数詞>
+  \table<
+    \tr<\th<単語>\th<数>>
+    \tr<\td<[tilak]>\td<1 万 (10\sup<4>)>>
+    \tr<\td<[qolak]>\td<1 億 (10\sup<8>)>>
+    \tr<\td<[felak]>\td<1 兆 (10\sup<12>)>>
+    \tr<\td<[milak]>\td<1 京 (10\sup<16>)>>
+    \tr<\td<[xalak]>\td<1 垓 (10\sup<20>)>>
+    \tr<\td<[kilak]>\td<1 𥝱 (10\sup<24>)>>
+    \tr<\td<[celak]>\td<1 穣 (10\sup<28>)>>
+    \tr<\td<[yulak]>\td<1 溝 (10\sup<32>)>>
+    \tr<\td<[volak]>\td<1 澗 (10\sup<36>)>>
+  >
+
+>

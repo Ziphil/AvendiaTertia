@@ -1,0 +1,383 @@
+﻿@charset "utf-8";
+
+@import "util/reset.scss";
+@import "util/common.scss";
+@import "util/font.scss";
+
+
+body {
+  @include text-size-adjust;
+  margin: 0px;
+  padding: 0px;
+  font-family: $serif-font-family;
+  font-weight: $serif-font-weight;
+  font-size: 16px;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  color: rgb(0, 0, 0);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-image: url("../material/idolmaster/31.png");
+  background-repeat: repeat;
+}
+
+div.top {
+  margin: 40px auto 30px auto;
+  padding: 0px;
+  text-align: center;
+}
+
+div.link {
+  margin: 0px auto 90px auto;
+  padding: 0px;
+  text-align: center;
+}
+
+div.link img {
+  margin: 0px 5px;
+}
+
+div.translation {
+  width: 840px;
+  margin: 40px auto;
+  padding: 15px 20px 15px 0px;
+  border-radius: 10px;
+}
+
+div.translation div.name {
+  width: 85px;
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+  float: left;
+}
+
+div.translation div.name img {
+  margin: 0px 0px 0px -10px;
+}
+
+div.translation div.main {
+  width: 755px;
+  margin: 0px 0px 0px 0px;
+  float: right;
+}
+
+div.translation div.header {
+  width: 731px;
+  height: 34px;
+  margin: 0px 0px 15px 0px;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+div.translation div.header div.title {
+  width: 500px;
+  margin: 0px;
+  font-size: 22px;
+  line-height: 34px;
+  vertical-align: middle;
+  float: left;   
+}
+
+div.translation div.header div.composer {
+  width: 231px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 17px;
+  vertical-align: middle;
+  text-align: right;
+  float: right;   
+}
+
+div.translation div.main table {
+  width: 755px;
+  margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;
+}
+
+div.translation div.main table tr td {
+  width: 370px;
+  padding: 0px 0px 0px 0px;
+  font-size: 16px;
+  line-height: 26px;
+  border: 0px;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+div.translation div.main table tr td:first-child {
+  padding: 0px 0px 0px 0px;
+}
+
+div.translation div.clear {
+  clear: both;
+}
+
+div.translation#haruka {
+  color: rgb(85, 17, 17);
+  background-color: rgb(255, 239, 239);
+  border: rgb(85, 17, 17) 2px solid;
+}
+
+div.translation#haruka div.header {
+  color: rgb(85, 17, 17);
+  background-color: rgb(255, 205, 205);
+  border: rgb(85, 17, 17) 1px solid;
+}
+
+div.translation#haruka div.main table tr td {
+  border-top: rgb(228, 78, 78) 1px dotted;
+  border-bottom: rgb(228, 78, 78) 1px dotted;
+}
+
+div.translation#yayoi {
+  color: rgb(85, 41, 17);
+  background-color: rgb(255, 245, 239);
+  border: rgb(85, 41, 17) 2px solid;
+}
+
+div.translation#yayoi div.header {
+  color: rgb(85, 41, 17);
+  background-color: rgb(255, 224, 205);
+  border: rgb(85, 41, 17) 1px solid;
+}
+
+div.translation#yayoi div.main table tr td {
+  border-top: rgb(221, 131, 78) 1px dotted;
+  border-bottom: rgb(221, 131, 78) 1px dotted;
+}
+
+div.translation#ami,
+div.translation#mami {
+  color: rgb(84, 85, 17);
+  background-color: rgb(255, 255, 239);
+  border: rgb(84, 85, 17) 2px solid;
+}
+
+div.translation#ami div.header,
+div.translation#mami div.header {
+  color: rgb(84, 85, 17);
+  background-color: rgb(255, 255, 205);
+  border: rgb(84, 85, 17) 1px solid;
+}
+
+div.translation#ami div.main table tr td,
+div.translation#mami div.main table tr td {
+  border-top: rgb(226, 228, 78) 1px dotted;
+  border-bottom: rgb(226, 228, 78) 1px dotted;
+}
+
+div.translation#miki {
+  color: rgb(57, 85, 17);
+  background-color: rgb(248, 255, 239);
+  border: rgb(57, 85, 17) 2px solid;
+}
+
+div.translation#miki div.header {
+  color: rgb(57, 85, 17);
+  background-color: rgb(233, 255, 205);
+  border: rgb(57, 85, 17) 1px solid;
+}
+
+div.translation#miki div.main table tr td {
+  border-top: rgb(166, 228, 78) 1px dotted;
+  border-bottom: rgb(166, 228, 78) 1px dotted;
+}
+
+div.translation#ritsuko {
+  color: rgb(17, 85, 25);
+  background-color: rgb(239, 255, 241);
+  border: rgb(17, 85, 25) 2px solid;
+}
+
+div.translation#ritsuko div.header {
+  color: rgb(17, 85, 25);
+  background-color: rgb(205, 255, 211);
+  border: rgb(17, 85, 25) 1px solid;
+}
+
+div.translation#ritsuko div.main table tr td {
+  border-top: rgb(78, 228, 96) 1px dotted;
+  border-bottom: rgb(78, 228, 96) 1px dotted;
+}
+
+div.translation#hibiki {
+  color: rgb(17, 85, 73);
+  background-color: rgb(239, 255, 252);
+  border: rgb(17, 85, 73) 2px solid;
+}
+
+div.translation#hibiki div.header {
+  color: rgb(17, 85, 73);
+  background-color: rgb(205, 255, 246);
+  border: rgb(17, 85, 73) 1px solid;
+}
+
+div.translation#hibiki div.main table tr td {
+  border-top: rgb(78, 228, 202) 1px dotted;
+  border-bottom: rgb(78, 228, 202) 1px dotted;
+}
+
+div.translation#chihaya {
+  color: rgb(17, 17, 85);
+  background-color: rgb(239, 239, 255);
+  border: rgb(17, 17, 85) 2px solid;
+}
+
+div.translation#chihaya div.header {
+  color: rgb(17, 17, 85);
+  background-color: rgb(205, 205, 255);
+  border: rgb(17, 17, 85) 1px solid;
+}
+
+div.translation#chihaya div.main table tr td {
+  border-top: rgb(78, 78, 228) 1px dotted;
+  border-bottom: rgb(78, 78, 228) 1px dotted;
+}
+
+div.translation#azusa {
+  color: rgb(49, 27, 85);
+  background-color: rgb(247, 239, 255);
+  border: rgb(49, 27, 85) 2px solid;
+}
+
+div.translation#azusa div.header {
+  color: rgb(49, 27, 85);
+  background-color: rgb(230, 205, 255);
+  border: rgb(49, 27, 85) 1px solid;
+}
+
+div.translation#azusa div.main table tr td {
+  border-top: rgb(149, 78, 228) 1px dotted;
+  border-bottom: rgb(149, 78, 228) 1px dotted;
+}
+
+div.translation#iori {
+  color: rgb(85, 17, 81);
+  background-color: rgb(255, 239, 254);
+  border: rgb(85, 17, 81) 2px solid;
+}
+
+div.translation#iori div.header {
+  color: rgb(85, 17, 81);
+  background-color: rgb(255, 205, 252);
+  border: rgb(85, 17, 81) 1px solid;
+}
+
+div.translation#iori div.main table tr td {
+  border-top: rgb(228, 78, 219) 1px dotted;
+  border-bottom: rgb(228, 78, 219) 1px dotted;
+}
+
+div.translation#takane {
+  color: rgb(85, 17, 57);
+  background-color: rgb(255, 239, 248);
+  border: rgb(85, 17, 57) 2px solid;
+}
+
+div.translation#takane div.header {
+  color: rgb(85, 17, 57);
+  background-color: rgb(255, 205, 233);
+  border: rgb(85, 17, 57) 1px solid;
+}
+
+div.translation#takane div.main table tr td {
+  border-top: rgb(228, 78, 166) 1px dotted;
+  border-bottom: rgb(228, 78, 166) 1px dotted;
+}
+
+div.translation#yukiho {
+  color: rgb(56, 86, 98);
+  background-color: rgb(255, 255, 255);
+  border: rgb(56, 86, 98) 2px solid;
+}
+
+div.translation#yukiho div.header {
+  color: rgb(56, 86, 98);
+  background-color: rgb(229, 241, 247);
+  border: rgb(56, 86, 98) 1px solid;
+}
+
+div.translation#yukiho div.main table tr td {
+  border-top: rgb(154, 189, 204) 1px dotted;
+  border-bottom: rgb(154, 189, 204) 1px dotted;
+}
+
+div.translation#makoto {
+  color: rgb(51, 51, 51);
+  background-color: rgb(247, 247, 247);
+  border: rgb(51, 51, 51) 2px solid;
+}
+
+div.translation#makoto div.header {
+  color: rgb(51, 51, 51);
+  background-color: rgb(230, 230, 230);
+  border: rgb(51, 51, 51) 1px solid;
+}
+
+div.translation#makoto div.main table tr td {
+  border-top: rgb(153, 153, 153) 1px dotted;
+  border-bottom: rgb(153, 153, 153) 1px dotted;
+}
+
+div.translation#kotori {
+  color: rgb(91, 98, 56);
+  background-color: rgb(255, 255, 255);
+  border: rgb(91, 98, 56) 2px solid;
+}
+
+div.translation#kotori div.header {
+  color: rgb(91, 98, 56);
+  background-color: rgb(244, 247, 229);
+  border: rgb(91, 98, 56) 1px solid;
+}
+
+div.translation#kotori div.main table tr td {
+  border-top: rgb(195, 204, 154) 1px dotted;
+  border-bottom: rgb(195, 204, 154) 1px dotted;
+}
+
+div.translation#opening {
+  color: rgb(77, 77, 77);
+  background-color: rgb(255, 255, 255);
+  border: rgb(77, 77, 77) 2px solid;
+}
+
+div.translation#opening div.header {
+  color: rgb(77, 77, 77);
+  background-color: rgb(238, 238, 238);
+  border: rgb(77, 77, 77) 1px solid;
+}
+
+div.translation#opening div.main table tr td {
+  border-top: rgb(179, 179, 179) 1px dotted;
+  border-bottom: rgb(179, 179, 179) 1px dotted;
+}
+
+span.sans,
+a.sans {
+  font-family: "Arial", "IPA Pゴシック", "ＭＳ Ｐゴシック", sans-serif !important;
+  font-size: 96% !important;
+  line-height: 96% !important;
+}
+
+span.japanese {
+  font-family: "IPA明朝", "ＭＳ 明朝", serif;
+}
+
+span.lyrics-space {
+  margin-right: 0.5em;
+}
+
+sup {
+  font-size: 70%;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
+}
+
+sub {
+  font-size: 70%;
+  vertical-align: baseline;
+  position: relative;
+  top: 0.2em;
+}

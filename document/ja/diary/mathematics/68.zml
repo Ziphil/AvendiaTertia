@@ -1,0 +1,162 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<局所表示可能圏の表現定理>
+  \use-math|prefix="12"|;
+
+  \h1<日記 (2020 年 10 月 1 日)>
+  \p<
+    今日は、Adámek–Rosický\ref|type="bib",ref="lpa"|; において局所表示可能圏の表現定理として紹介されている定理を証明する。
+  >
+  \thm|type="def"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      小圏 &m<\scr<S>> に対し、
+      &mb<
+        \sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>) \coloneqq; `{P \in; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>> \mid; &raw<&m<\sp<\scr<S>><\circ;>> に存在する全ての &m<`k>-小極限を &m<P> は保存する>`}
+      >
+      とおき、これを &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の充満部分圏と見なす。
+    >
+  >
+  \thm|type="lem",id="pfil"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-局所表示可能圏 &m<\scr<C>> に対し、&m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とおく。
+      このとき、任意の &m<\sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> の対象 &m<P> に対し、&m<\bfrm<El> (P)> は &m<`k>-フィルターである。
+    >
+  >
+  \prf<
+    \p<
+      任意に &m<`k>-小な部分圏 &m<\scr<A> \subseteq; \bfrm<El> (P)> をとり、&m<\scr<A>> 上の錐が存在することを示せば良い。
+      &m<\bfrm<El> (P)> に関する忘却関手を &m<U: \bfrm<El> (P) \to; \scr<S>> とし、これの &m<\scr<A>> への制限を &m<F \coloneqq; U \rvert; \sb<><\scr<A>>: \scr<A> \to; \scr<S>> とおく。
+      &m<\scr<C>> は余完備で、\a|href="59.html#prescol"|<定理 3.4> より &m<\scr<S>> は &m<`k>-小余極限に関して閉じているから、&m<F> の余極限が &m<\scr<S>> に存在する。
+      その余極限余錐を &m<(\sb<s><(A, a)>: A \to; S) \sb<><(A, a) \in; \scr<A>>> とおく。
+      &m<P> は &m<`k>-極限を保存するから、&m<(P \sb<s><(A, a)>: PS \to; PA) \sb<><(A, a) \in; \sp<\scr<A>><\circ;>>> は &m<\sp<F><\circ;> \rcomp; P> の極限である。
+      これは &m<\bfrm<Set>> における極限だから、\a|href="66.html#setlim"|<補題 10.4> の &m<\bfrm<Set>> での極限の具体的な表示を思い出せば、ある元 &m<t \in; PS> が存在して、任意の &m<\scr<A>> の対象 &m<(A, a)> に対して &m<(P \sb<s><(A, a)>) t = a> が成り立つことになる。
+      これより、&m<(\sb<s><(A, a)>: (A, a) \to; (S, t)) \sb<><(A, a) \in; \scr<A>>> は &m<\scr<A>> 上の錐になる。
+    >
+  >
+  \thm|type="thm",id="equiv"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-局所表示可能圏 &m<\scr<C>> に対し、圏同値 &m<\scr<C> \cong; \sb<\bfrm<Cont>><`k> (\sp<\sb<\bfrm<Pres>><`k> (\scr<C>)><\circ;>)> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とおく。
+      制限 Yoneda 埋め込み &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考えると、これは\a|href="61.html#presden"|<定理 5.6> と\a|href="61.html#denff"|<補題 5.3> によって忠実充満である。
+      したがって、&m<\scr<C>> は &m<\bf<z>> の像と圏同値である。
+      すなわち、
+      &mb<
+        \tilde<\scr<C>> \coloneqq; `{P \in; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>> \mid; &raw<ある &m<\scr<C>> の対象 &m<C> が存在して &m<P \cong; \bf<z> C>>`}
+      >
+      とおき、これを &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の充満部分圏と見なすと、&m<\scr<C>> と &m<\tilde<\scr<C>>> は圏同値である。
+      したがって、&m<\tilde<\scr<C>> = \sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> が成り立つことが分かれば、定理の主張が示せたことになる。
+    >
+    \p<
+      まず、&m<\tilde<\scr<C>> \subseteq; \sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> を示す。
+      任意に &m<\tilde<\scr<C>>> の対象 &m<P> をとり、&m<\scr<C>> の対象 &m<C> によって &m<P \cong; \bf<z> C> と書けるとする。
+      \a|href="59.html#prescol"|<定理 3.4> によって、&m<\sp<\scr<S>><\circ;>> は &m<\sp<\scr<C>><\circ;>> の部分圏として &m<`k>-小極限をとる操作に関して閉じている。
+      すなわち、包含関手 &m<\bf<i>: \sp<\scr<S>><\circ;> \hookrarr; \sp<\scr<C>><\circ;>> は &m<`k>-小極限を保存する。
+      また、表現可能関手 &m<\op<Hom> (\hyphen;, C): \sp<\scr<C>><\circ;> \to; \bfrm<Set>> は全ての極限を保存する。
+      &m<\bf<z> C> はこの 2 つの関手の合成だから &m<`k>-小極限を保存し、したがって &m<\bf<z> C> と同型である &m<P> も &m<`k>-小極限を保存する。
+      以上により、&m<P> は &m<\sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> に属する。
+    >
+    \p<
+      逆に、&m<\tilde<\scr<C>> \supseteq; \sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> を示す。
+      任意に &m<\sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> の対象 &m<P> をとる。
+      よく知られているように、
+      &mb<
+        P = \op<colim> [] \tort<\diag|bl|<
+          \v<\bfrm<El> (P)> \v<\scr<S>> \v<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>>
+          \ar|s="1",e="2"|; \ar|s="2",e="3"|<\bf<y>>
+        >>
+      >
+      と表せる。
+      \ref|type="thm",ref="pfil"|; によって &m<\bfrm<El> (P)> は &m<`k>-フィルターであり、&m<\bf<y>: \scr<S> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の像は全て &m<\tilde<\scr<C>>> に属するので、&m<P> が &m<\tilde<\scr<C>>> の対象の &m<`k>-フィルター余極限で書けたことになる。
+      一方、\a|href="65.html#colpres"|<補題 9.3> によって &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は &m<`k>-有向余極限を保存するが、\a|href="58.html#fd"|<定理 2.8> によって &m<`k>-フィルター余極限は &m<`k>-有向余極限に取り替えられるから、&m<\bf<z>> は &m<`k>-フィルター余極限も保存する。
+      すなわち、&m<\tilde<\scr<C>>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の部分圏として &m<`k>-フィルター余極限をとる操作で閉じている。
+      以上により、&m<P> は &m<\tilde<\scr<C>>> に属する。
+    >
+  >
+  \p<
+    ここまでの結果をまとめると、次に述べる局所表示可能圏の表現定理が導かれる。
+    これは、局所表示可能圏と極限を保つ関手の圏と直交クラスとを結びつける定理である。
+  >
+  \thm|type="thm",id="rep"|<
+    \name<局所表示可能圏の表現定理\fl<representation theorem of locally presentable categories>>
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> に対し、4 条件
+    >
+    \ol<
+      \li<
+        &m<\scr<C>> は &m<`k>-局所表示可能である。
+      >
+      \li<
+        ある小圏 &m<\scr<S>> が存在して、&m<\scr<C>> は &m<\sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> と圏同値である。
+      >
+      \li<
+        ある小圏 &m<\scr<S>> が存在して、&m<\scr<C>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の &m<`k>-直交クラスと圏同値である。
+      >
+      \li<
+        ある小圏 &m<\scr<S>> が存在して、&m<\scr<C>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の反射的部分圏で &m<`k>-有向余極限で閉じているものと圏同値である。
+      >
+    >
+    \p<
+      は全て同値である。
+      さらに、これらが成り立つとき、条件 1 以外に出てくる &m<\scr<S>> が &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> であるとしても成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      \ref|type="thm",ref="equiv"|; によって &m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とすれば良い。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 3>
+      終域が &m<\sp<\scr<S>><\circ;>> であるような &m<`k>-小図式の全体を &m<\scr<F>> とおき、\a|href="66.html#orthpres"|<定理 10.5> の主張の通りに &m<\scr<M>> を定める。
+      すると、\a|href="66.html#orthpres"|<定理 10.5> によって &m<\sp<\scr<M>><\bot;> = \sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> が分かる。
+      したがって、あとは &m<\sp<\scr<M>><\bot;>> が &m<`k>-直交クラスであること、すなわち &m<\scr<M>> に属する射の始域と終域がともに &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> で &m<`k>-表示可能であることを示せば良い。
+    >
+    \p<
+      &m<\scr<M>> に属する射は、各 &m<\scr<F>> の元 &m<F: \scr<I> \to; \sp<\scr<S>><\circ;>> に対し、
+      &mb<
+        \sb<m><F>: \un<\op<colim>><i \in; \scr<I>> \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (F i, \hyphen;) \to; \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (\un<\op<lim>><i \in; \scr<I>> F i, \hyphen;)
+      >
+      という形であった。
+      ここで、\a|href="65.html#reppres"|<補題 9.1> と\a|href="59.html#presup"|<定理 3.3> によって表現可能関手が &m<`k>-表示可能になることを思い出そう。
+      このことから、まず &m<\sb<m><F>> の終域は &m<`k>-表示可能である。
+      また、&m<\sb<m><F>> の始域は &m<`k>-表示可能対象の &m<`k>-小余極限だから、\a|href="59.html#prescol"|<定理 3.4> によって &m<`k>-表示可能である。
+      以上で示された。
+    >
+    \p<
+      \label<条件 3 &m<\raarr;> 条件 4>
+      \a|href="67.html#orthrefl"|<定理 11.1> と\a|href="66.html#orthcol"|<定理 10.7> から従う。
+    >
+    \p<
+      \label<条件 4 &m<\raarr;> 条件 1>
+      \a|href="67.html#refllp"|<定理 11.3> から従う。
+    >
+  >
+  \p<
+    今日の結果は、関手の対応を考えることで、さらに次のようにまとめることもできる。
+    正則基数 &m<`k> を固定し、&m<`k>-局所表示可能圏および極限を保存する &m<`k>-到達可能関手が成す擬圏を &m<\sb<\bfrm<LocPres>><`k>> と書き、&m<`k>-小極限をもつ小圏および &m<`k>-小極限を保つ関手が成す擬圏を &m<\sb<\bfrm<Comp>><`k>> と書くとき、
+    &mb<
+      \array|align="rrcl"|<
+        \c<Ш:> \c<\sb<\bfrm<LocPres>><`k>> \c<\longto;> \c<\sp<\sb<\bfrm<Comp>><`k>><\circ;>> \br;
+        \c; \c<\scr<C>> \c<\longmapsto;> \c<\sp<\sb<\bfrm<Pres>><`k> (\scr<C>)><\circ;>> \br;
+        \c; \c<\sb<\bfrm<Cont>><`k> (\scr<S>)> \c<\longmappedfrom;> \c<\scr<S>>
+      >
+    >
+    という対応によって &m<\sb<\bfrm<LocPres>><`k>> と &m<\sb<\bfrm<Comp>><`k>> は双対同値である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>

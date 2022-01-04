@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.link {
+  color: $orange-color;
+  text-decoration: none;
+  background-image: single-color($orange-color);
+  background-size: 100% 1rpx;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  &:hover {
+    color: $dark-orange-color;
+    background-image: single-color($dark-orange-color);
+  }
+}
+
+.hidden-link {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}

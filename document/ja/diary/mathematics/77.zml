@@ -1,0 +1,141 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<前層圏との間の随伴>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2021 年 5 月 12 日)>
+  \p<
+    今回は、Kan 拡張によって前層圏との間に定まる随伴について触れる。
+    これは \a|href="76.html"|<5 月 7 日>の続きになっていて、しばしば \a|href="76.html"|<5 月 7 日>の命題を引用する。
+  >
+  \p<
+    後で使うので、左随伴関手は左 Kan 拡張を保つという事実を示しておく。
+  >
+  \thm|type="thm",id="adjpres"|<
+    \p<
+      左随伴関手は左 Kan 拡張を保つ。
+    >
+  >
+  \prf<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとり、&m<L \coloneqq; \sb<\op<Lan>><K> F> が存在するとする。
+      また、関手 &m<G: \scr<D> \to; \scr<E>, R: \scr<E> \to; \scr<D>> が随伴 &m<G \dashv; H> を成しているとする。
+      このとき、&m<G \circ; L = \sb<\op<Lan>><K> (G \circ; F)> であることを示せば良い。
+    >
+    \p<
+      \a|href="76.html#rep"|<命題 1.4> と随伴により、任意の関手 &m<L': \scr<S> \to; \scr<E>> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><`[\scr<S>, \scr<E>`]> (G \circ; L, L')> \c<\cong;> \c<\sb<\op<Hom>><`[\scr<S>, \scr<D>`]> (L, H \circ; L')> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><`[\scr<C>, \scr<D>`]> (F, H \circ; L' \circ; K)> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><`[\scr<C>, \scr<E>`]> (G \circ; F, L' \circ; K)>
+        >
+      >
+      が成り立ち、これは &m<L'> に関して自然である。
+      したがって、再び\a|href="76.html#rep"|<命題 1.4> によって、&m<G \circ; L = \sb<\op<Lan>><K> (G \circ; F)> が成り立つ。
+    >
+  >
+  \p<
+    Yoneda 埋め込みとの左 Kan 拡張を考えることにより、ある小圏とその前層圏との間に標準的な随伴が誘導される。
+    以下、小圏 &m<\scr<C>> に対し、Yoneda 埋め込みを &m<\bf<y>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> と書く。
+    また、前層圏 &m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> を考えているときは、暗黙のうちに &m<\scr<C>> は小圏であると仮定する。
+  >
+  \thm|type="prp",id="calclan"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>> をとる。
+      このとき、&m<\sb<\op<Lan>><F> \bf<y>: \scr<D> \to; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> が存在して各点であり、各 &m<\scr<D>> の対象 &m<D> に対し、
+      &mb<
+        (\sb<\op<Lan>><F> \bf<y>) D \cong; \op<Hom> (F \hyphen;, D) \in; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>
+      >
+      と表せる。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> は余完備だから、\a|href="76.html#exist"|<定理 1.11> により &m<\sb<\op<Lan>><F> \bf<y>> は存在して各点である。
+      さらに、\a|href="76.html#homrep"|<命題 1.12> により、&m<\scr<D>> の対象 &m<D> と &m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の対象 &m<P> に対し、
+      &mb<
+        \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> ((\sb<\op<Lan>><F> \bf<y>) D, P) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (F \hyphen;, D), \op<Hom> (\bf<y> \hyphen;, P))
+      >
+      が自然に成り立つ。
+      Yoneda の補題により &m<\op<Hom> (\bf<y> \hyphen;, P) \cong; P> であるから、これより、
+      &mb<
+        \sb<\op<Hom>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> ((\sb<\op<Lan>><F> \bf<y>) D, P) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (F \hyphen;, D), P)
+      >
+      が自然に成り立つ。
+      再び Yoneda の補題より、
+      &mb<
+        (\sb<\op<Lan>><F> \bf<y>) D \cong; \op<Hom> (F \hyphen;, D)
+      >
+      を得る。
+    >
+  >
+  \thm|type="prp",id="calclany"|<
+    \p<
+      小圏 &m<\scr<C>> に対し、&m<\sb<\op<Lan>><\bf<y>> \bf<y>: \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>> \to; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> が存在して各点であり、&m<\sb<\op<Lan>><\bf<y>> \bf<y> \cong; \sb<\rm<id>><\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>>> である。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="calclan"|; により &m<\sb<\op<Lan>><\bf<y>> \bf<y>> は存在して各点で、&m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の対象 &m<P> に対し、
+      &mb<
+        (\sb<\op<Lan>><\bf<y>> \bf<y>) P \cong; \op<Hom> (\bf<y> \hyphen;, P)
+      >
+      が成り立つ。
+      Yoneda の補題により &m<\op<Hom> (\bf<y> \hyphen;, P) \cong; P> だから、&m<(\sb<\op<Lan>><\bf<y>> \bf<y>) P \cong; P> となって命題の主張が従う。
+    >
+  >
+  \thm|type="thm",id="adj"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>> をとる。
+      もし &m<\sb<\op<Lan>><\bf<y>> F: \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>> \to; \scr<D>> が存在して各点であるならば、随伴 &m<\sb<\op<Lan>><\bf<y>> F \dashv; \sb<\op<Lan>><F> \bf<y>> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の対象 &m<P> と &m<\scr<D>> の対象 &m<D> に対し、\a|href="76.html#homrep"|<命題 1.12> と\ref|type="thm",ref="calclan"|; を使うと、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\scr<D>> ((\sb<\op<Lan>><\bf<y>> F) P, D)> \c<\cong;> \c<\sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (\bf<y> \hyphen;, P), \op<Hom> (F \hyphen;, D))> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (P, (\sb<\op<Lan>><F> \bf<y>) D)> 
+        >
+      >
+      が自然に成り立つことが分かる。
+      これはすなわち、&m<\sb<\op<Lan>><\bf<y>> F \dashv; \sb<\op<Lan>><F> \bf<y>> が成り立つということである。
+    >
+  >
+  \p<
+    逆に、前層圏との間の随伴はこの形しかないことも示せる。
+  >
+  \thm|type="thm",id="adjinv"|<
+    \p<
+      関手 &m<G: \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>> \to; \scr<D>, H: \scr<D> \to; \sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> をとり、&m<\scr<C>> は小であるとする。
+      随伴 &m<G \dashv; H> が成立するならば、ある関手 &m<F: \scr<C> \to; \scr<D>> が存在して、&m<G = \sb<\op<Lan>><\bf<y>> F> および &m<H = \sb<\op<Lan>><F> \bf<y>> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<F \coloneqq; G \circ; \bf<y>> とおくと定理の主張が成り立つことを示す。
+      &m<G> は左随伴関手だから、\ref|type="thm",ref="adjpres"|; によって &m<G> は左 Kan 拡張を保存する。
+      したがって、\ref|type="thm",ref="calclany"|; によって、
+      &mb<
+        G \cong; G \circ; \sb<\op<Lan>><\bf<y>> \bf<y> \cong; \sb<\op<Lan>><\bf<y>> (G \circ; \bf<y>) = \sb<\op<Lan>><\bf<y>> F
+      >
+      が成り立つ。
+      &m<\sb<\op<Lan>><\bf<y>> \bf<y>> が各点だったから、&m<G = \sb<\op<Lan>><\bf<y>> (G \circ; \bf<y>)> も各点である。
+      これより\ref|type="thm",ref="adj"|; が使えて、随伴 &m<G \dashv; \sb<\op<Lan>><F> \bf<y>> が成り立つ。
+      随伴の一意性により、&m<H \cong; \sb<\op<Lan>><F> \bf<y>> である。
+    >
+  >
+  \p<
+    この形の随伴は、代数幾何学の分野で出てくる単体的集合のナーブ関手と幾何学的実現関手が典型例であるため、ナーブ実現随伴と呼ばれることもある。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ctc"|<E. Riehl (2016)『Category Theory in Context』Dover Publications>
+  >
+
+>

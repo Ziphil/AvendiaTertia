@@ -1,0 +1,235 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<2-圏の定義>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2018 年 8 月 27 日)>
+  \p<
+    小圏とその間の関手はまた圏を成し、これを &m<\bfrm<Cat>> と書くのであった。
+    関手とは圏の間の射であるが、その関手の間にも自然変換という射が考えられる。
+    このように、射の間の射が考えられるような圏を 2-圏という。
+    このような構造をもっていると、ある 2 つの対象の間の射全体は、単なる集合ではなく圏だと考えられる。
+    すなわち、射と射の間の射が成す圏である。
+  >
+  \p<
+    射の集合が何らかの構造をもっているような圏を豊穣圏というのであった。
+    したがって、2-圏とは &m<\bfrm<Cat>>-豊穣圏であると考えることができる。
+    ここで、&m<\bfrm<Cat>> は有限直積をもつので、直積と終対象によって対称モノイダル圏だと見なしている。
+  >
+  \p<
+    では、改めて定義を述べよう。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<\bfrm<Cat>>-豊穣圏のことを 2-\em<圏\fl<category>> という。
+    >
+  >
+  \p<
+    2-圏は豊穣圏の特殊な場合であるから、豊穣圏の議論がそのまま使える。
+    したがって、2-圏についてこれ以上言うことがないと言えばそうなのだが、2-圏特有の概念もあるので、それについて触れていく。
+  >
+  \p<
+    まず、用語を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>> の対象 &m<A, B> に対し、&m<`[A, B`] \sb<><\scr<C>>> の対象を &m<\scr<C>> の 1-\em<射\fl<morphism>> といい、&m<f: A \to; B> と書く。
+      また、&m<`[A, B`] \sb<><\scr<C>>> の 2 つの対象 &m<f, g> の間の射を &m<\scr<C>> の 2-\em<射\fl<morphism>> といい、&m<`a: f \raarr; g> と書く。
+    >
+  >
+  \p<
+    上の定義における状況を、図式では
+    &mb<
+      \diag<
+        \v<A> \v<B>
+        \ar|s="1",e="2",bend="30"|<f> \ar|s="1",e="2",bend="-30",inv|<g>
+        \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="g"|;
+        \ar|s="f:c",e="g:c",line="2"|<`a>
+      >
+    >
+    のように書く。
+  >
+  \p<
+    さて、2-圏 &m<\scr<C>> は &m<\bfrm<Cat>>-豊穣圏であるから、任意の対象 &m<A, B, C> に対して、合成を表す &m<\bfrm<Cat>> の射 &m<\sb<c><ABC>: `[A, B`] \times; `[B, C`] \to; `[A, C`]> が定まっている。
+    これは関手だから、これによって様々な種類の合成が得られる。
+    まず、この関手の対象の対応により、&m<\scr<C>> の 1-射の合成が得られる。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>> において、1-射 &m<f: A \to; B, g: B \to; C> に対し、
+      &mb<
+        g \circ; f \coloneqq; \sb<c><ABC> (f, g): A \to; C
+      >
+      を &m<f> と &m<g> の\em<合成\fl<composition>> という。
+    >
+  >
+  \p<
+    2-射に関しては 2 種類の合成がある。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>> において、1-射 &m<f, g, h: A \to; B> および 2-射 &m<`a: f \raarr; g, `b: g \raarr; h> に対し、
+      &mb<
+        `b \dot|bin|<\circ;> `a \coloneqq; `b \diamond; `a: f \raarr; h
+      >
+      を &m<`a> と &m<`b> の\em<垂直合成\fl<vertical composition>> という。
+      ここで、&m<\diamond;> は &m<`[A, B`]> の合成である。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>> において、1-射 &m<f, g: A \to; B> と &m<h, k: B \to; C> および 2-射 &m<`a: f \raarr; g, `b: h \raarr; k> に対し、
+      &mb<
+        `b * `a \coloneqq; \sb<c><ABC> (`a, `b): h \circ; f \raarr; k \circ; g
+      >
+      を &m<`a> と &m<`b> の\em<水平合成\fl<horizontal composition>> という。
+    >
+  >
+  \p<
+    垂直合成と水平合成は、2-圏の図式で描けば、
+    &mb<
+      \array|align="rcl"|<
+        \c<
+          \tort<\diag|hor="thk"|<
+            \v<A> \v<B>
+            \ar|s="1:r0",e="2:l0",bend="50"|<f> \ar|s="1:r100",e="2:l100",bend="-50",inv|<h>
+            \ar|s="1:r0",e="2:l0",bend="50",line="0",name="f",inv|; \ar|s="1:r100",e="2:l100",bend="-50",line="0",name="h"|;
+            \ar|s="1",e="2",name="gu"|; \ar|s="1",e="2",line="0",name="gd",inv|;
+            \ar|s="f:c",e="gu:c",line="2"|<`a> \ar|s="gd:c",e="h:c",line="2"|<`b>
+          >>
+        >
+        \c<\sfun; \longmapsto; \sfun;>
+        \c<
+          \tort<\diag|hor="thk"|<
+            \v<A> \v<B>
+            \ar|s="1",e="2",bend="30"|<f> \ar|s="1",e="2",bend="-30",inv|<h>
+            \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="h"|;
+            \ar|s="f:c",e="h:c",line="2"|<`b \dot<\circ;> `a>
+          >>
+        > \br;
+        \c<
+          \tort<\diag|hor="thk"|<
+            \v<A> \v<B> \v<C>
+            \ar|s="1",e="2",bend="30"|<f> \ar|s="1",e="2",bend="-30",inv|<g>
+            \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="g"|;
+            \ar|s="f:c",e="g:c",line="2"|<`a>
+            \ar|s="2",e="3",bend="30"|<h> \ar|s="2",e="3",bend="-30",inv|<k>
+            \ar|s="2",e="3",bend="30",line="0",name="h",inv|; \ar|s="2",e="3",bend="-30",line="0",name="k"|;
+            \ar|s="h:c",e="k:c",line="2"|<`b>
+          >>
+        >
+        \c<\sfun; \longmapsto; \sfun;>
+        \c<
+          \tort<\diag|hor="thk"|<
+            \v<A> \v<C>
+            \ar|s="1",e="2",bend="30"|<h \circ; f> \ar|s="1",e="2",bend="-30",inv|<k \circ; g>
+            \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="h"|;
+            \ar|s="f:c",e="h:c",line="2"|<`b * `a>
+          >>
+        >
+      >
+    >
+    という操作である。
+  >
+  \p<
+    水平合成は片方が恒等射である形でよく出てくるので、個別の記号と名前が用意されている。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>> において、1-射 &m<f: A \to; B> と &m<h, k: B \to; C> および 2-射 &m<`b: h \raarr; k> に対し、
+      &mb<
+        `b \ast; f \coloneqq; \sb<c><ABC> (\sb<\rm<id>><f>, `b): h \circ; f \raarr; k \circ; f
+      >
+      を &m<f> と &m<`b> の\em<左髭結合\fl<left whiskering>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>> において、1-射 &m<f, g: A \to; B> と &m<h: B \to; C> および 2-射 &m<`a: f \raarr; g> に対し、
+      &mb<
+        h \ast; `a \coloneqq; \sb<c><ABC> (`a, \sb<\rm<id>><h>): h \circ; f \raarr; h \circ; g
+      >
+      をそれぞれ &m<`a> と &m<h> の\em<右髭結合\fl<right whiskering>>  という。
+    >
+  >
+  \p<
+    例えば、左髭結合は
+    &mb<
+      \tort<\diag|hor="med,thk"|<
+        \v<A> \v<B> \v<C>
+        \ar|s="1",e="2"|<f>
+        \ar|s="2",e="3",bend="30"|<h> \ar|s="2",e="3",bend="-30",inv|<k>
+        \ar|s="2",e="3",bend="30",line="0",name="h",inv|; \ar|s="2",e="3",bend="-30",line="0",name="k"|;
+        \ar|s="h:c",e="k:c",line="2"|<`b>
+      >>
+      \sfun; \longmapsto; \sfun;
+      \tort<\diag|hor="thk"|<
+        \v<A> \v<C>
+        \ar|s="1",e="2",bend="30"|<h \circ; f> \ar|s="1",e="2",bend="-30",inv|<k \circ; f>
+        \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="h"|;
+        \ar|s="f:c",e="h:c",line="2"|<`b \ast; f>
+      >>
+    >
+    という操作である。
+    図式中の &m<h, k, `b> が成す部分に左から頬髭のような感じで &m<f> をくっ付けているので、左髭結合と呼ぶのだと思う。
+    なお、この日本語訳は私が勝手に造語したもので、定着した用語ではない。
+  >
+  \p<
+    各種合成に用いる記号は全く統一されておらず、文献によってまちまちである。
+    少なくともこの日記シリーズでは、上の定義で用いた記号で統一する。
+    また、文献によっては記号を書かずに 1-射や 2-射をそのまま並列させるだけで合成を表すこともあるが、混乱を招くのでこの日記シリーズでは記号の省略はしない。
+  >
+  \p<
+    2-圏 &m<\scr<C>> には、任意の対象 &m<A> に対して、恒等射を与える関手 &m<\sb<j><A>: \bfrm<1> \to; `[A, A`]> も定まっている。
+    &m<\bfrm<1>> の唯一の対象を &m<\star|ord|;> で書くことにすれば、1-射 &m<\sb<j><A> \star|ord|;: A \to; A> が得られるが、これは &m<\sb<\rm<id>><A>> で表す。
+  >
+  \p<
+    豊穣圏における合成を表す射の公理から、1-射の合成は結合的である。
+    また、通常の圏の射の合成は定義から結合的なので、2-射の垂直合成も結合的である。
+    この他に、2-射の垂直合成と水平合成の間には、以下の重要な等式が成り立つ。
+  >
+  \thm|type="prp"|<
+    \p<
+      2-圏 &m<\scr<C>> において、1-射 &m<f, g, h: A \to; B> と &m<k, l, m: B \to; C> および 2-射 &m<`a: f \raarr; g, `b: g \raarr; h, `g: k \raarr; l, `d: l \raarr; m> に対し、
+      &mb<
+        (`d \dot|bin|<\circ;> `g) * (`b \dot|bin|<\circ;> `a) = (`d * `b) \dot|bin|<\circ;> (`g * `a)
+      >
+      が成り立つ。
+    >
+  >
+  \p<
+    命題の状況は、2-圏の図式では、
+    &mb<
+      \diag|hor="thk"|<
+        \v<A> \v<B> \v<C>
+        \ar|s="1:r0",e="2:l0",bend="50"|<f> \ar|s="1:r100",e="2:l100",bend="-50",inv|<h>
+        \ar|s="1:r0",e="2:l0",bend="50",line="0",name="f",inv|; \ar|s="1:r100",e="2:l100",bend="-50",line="0",name="h"|;
+        \ar|s="1",e="2",name="gu"|; \ar|s="1",e="2",line="0",name="gd",inv|;
+        \ar|s="f:c",e="gu:c",line="2"|<`a> \ar|s="gd:c",e="h:c",line="2"|<`b>
+        \ar|s="2:r0",e="3:l0",bend="50"|<k> \ar|s="2:r100",e="3:l100",bend="-50",inv|<m>
+        \ar|s="2:r0",e="3:l0",bend="50",line="0",name="k",inv|; \ar|s="2:r100",e="3:l100",bend="-50",line="0",name="m"|;
+        \ar|s="2",e="3",name="lu"|; \ar|s="2",e="3",line="0",name="ld",inv|;
+        \ar|s="k:c",e="lu:c",line="2"|<`g> \ar|s="ld:c",e="m:c",line="2"|<`d>
+      >
+    >
+    と表せる。
+    命題が述べているのは、先に垂直合成した後に水平合成しても、先に水平合成した後に垂直合成しても、同じ 2-射が得られるということである。
+  >
+  \prf<
+    \p<
+      証明は簡単で、&m<\sb<c><ABC>> の関手性によって、
+      &mb<
+        \sb<c><ABC> (`b \diamond; `a, `d \diamond; `g) = \sb<c><ABC> (`b, `d) \diamond; \sb<c><ABC> (`a, `g)
+      >
+      が成り立つが、これは命題の等式そのものである。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 1』Cambridge University Press>
+  >
+
+>

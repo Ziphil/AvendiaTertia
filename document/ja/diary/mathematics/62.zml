@@ -1,0 +1,443 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<到達可能圏の基数の取り替え>
+  \use-math|prefix="6"|;
+
+  \h1<日記 (2020 年 8 月 8 日)>
+  \p<
+    局所表示可能圏と到達可能圏は、どちらもパラメータとして正則基数が割り当てられていた。
+    今日は、この正則基数を別のより大きな正則基数に取り替えられるかという問題を考える。
+  >
+  \p<
+    局所表示可能圏については、その答えは非常にシンプルである。
+  >
+  \thm|type="thm",id="lock"|<
+    \p<
+      正則基数 &m<`k, `l> をとり、&m<`k `< `l> であるとする。
+      全ての &m<`k>-局所表示可能圏は &m<`l>-局所表示可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<`k>-局所表示可能圏 &m<\scr<C>> をとる。
+      \a|href="60.html#exgen"|<定理 4.10> により、&m<\scr<C>> の &m<`k>-表示可能対象から成る極限的生成子 &m<\scr<A>> が存在する。
+      しかし、\a|href="59.html#presup"|<定理 3.3> により、&m<\scr<C>> の &m<`k>-表示可能対象は &m<`l>-表示可能だから、&m<\scr<A>> は &m<\scr<C>> の &m<`l>-表示可能対象から成る極限的生成子でもある。
+      したがって、&m<\scr<C>> は &m<`l>-局所表示可能である。
+    >
+  >
+  \p<
+    しかし、一般の到達可能圏を考えるとなると、状況は少し複雑になる。
+    これについて議論するための準備として、まずは次のような集合を考える。
+  >
+  \thm|type="def"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      集合 &m<X> に対し、
+      &mb<
+        \sb<\frak<P>><`k> (X) \coloneqq; `{Y \subseteq; X \mid; \lvert; Y \rvert; `< `k`}
+      >
+      と定義する。
+      また、包含関係によってこれを順序集合と見なす。
+    >
+  >
+  \thm|type="lem",id="pkdir"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      任意の集合 &m<X> に対し、&m<\sb<\frak<P>><`k> (X)> は &m<`k>-有向順序集合である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb<\frak<P>><`k> (X)> の元の族 &m<`{\sb<Y><l>`} \sb<><l \in; L>> でその個数が &m<`k> 未満であるものをとる。
+      &m<\bar<Y> \coloneqq; \bigcup|in|<l \in; L> \sb<Y><l>> とおけば、これは濃度が &m<`k> 未満の集合を &m<`k> 未満個合併したものであるから、&m<`k> が正則基数であることより &m<\bar<Y>> 自身の濃度も &m<`k> 未満である。
+      したがって &m<\bar<Y> \in; \sb<\frak<P>><`k> (X)> であり、これが &m<`{\sb<Y><l>`} \sb<><l \in; L>> の上界を与える。
+    >
+  >
+  \p<
+    次に、有向順序集合から成る圏について考察する。
+  >
+  \thm|type="def"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\sb<\bfrm<DPos>><`k>> を、
+    >
+    \ul<
+      \li<
+        &m<\sb<\bfrm<DPos>><`k>> の対象は、&m<`k>-有向順序集合の全体とする。
+      >
+      \li<
+        &m<\sb<\bfrm<DPos>><`k>> の 2 つの対象 &m<C, D> の間の射は、順序を保つ包含写像 &m<f: C \to; D> の全体とする。
+      >
+    >
+    \p<
+      で定義する。
+    >
+  >
+  \thm|type="lem",id="dircol"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-有向図式 &m<F: \scr<I> \to; \sb<\bfrm<DPos>><`k>> の余極限は、
+      &mb<
+        \op<colim> F = \bigcup<i \in; \scr<I>> Fi
+      >
+      として具体的に与えられる。
+      ここで、&m<\op<colim> F> 上の順序関係は、&m<x \in; Fi> と &m<x' \in; Fi'> に対して、
+      &mb<
+        x \leq; x' \coloniff; &raw<ある &m<\scr<I>> の対象 &m<\bar<i>> であって &m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であるものについて &m<F \bar<i>> の元として &m<x \leq; x'>>
+      >
+      で定まるものである。
+    >
+  >
+  \prf<
+    \p<
+      余極限の普遍性などを愚直に確かめれば良い。
+    >
+  >
+  \thm|type="lem",id="dircard"|<
+    \p<
+      正則基数 &m<`k, `l> をとる。
+      圏 &m<\sb<\bfrm<DPos>><`k>> の対象 &m<C> について、&m<C> が &m<`l>-表示可能であるための必要十分条件は、&m<\lvert; C \rvert; `< `l> が成り立つことである。
+    >
+  >
+  \prf<
+    \p<
+      \label<必要性>
+      &m<\sb<\bfrm<DPos>><`k>> の &m<`l>-表示可能対象 &m<C> をとる。
+      &m<C> に新たな最大元を追加した集合 &m<\sp<C><*> \coloneqq; C \sqcup; `{\top;`}> を考えると、
+      &mb<
+        \sp<C><*> = \bigcup<Y \in; \sb<\frak<P>><`l> (C)> (Y \sqcup; `{\top;`})
+      >
+      と書ける。
+      ここで、任意の &m<\sb<\frak<P>><`l> (C)> の元 &m<Y> に対し、&m<Y \sqcup; `{\top;`}> は最大元をもつので &m<`k>-有向であるから &m<&m<\sb<\bfrm<DPos>><`k>>> の対象である。
+      さらに、\ref|type="thm",ref="pkdir"|; により &m<\sb<\frak<P>><`l> (C)> は &m<`l>-有向だから、上記の和集合は &m<\sb<\bfrm<DPos>><`k>> 内の &m<`l>-有向余極限と見なせる。
+      これより、包含写像 &m<f: C \to; \sp<C><*>> を考えると、今述べたように &m<\sp<C><*>> は &m<`l>-有向余極限で &m<C> は &m<`l>-表示可能なので、ある &m<\sb<\frak<P>><`l> (C)> の元 &m<Y> が存在して、
+      &mb<
+        \diag|hor="thn"|<
+          \v<C> \v; \v<\sp<C><*>> \br;
+          \v; \v<Y \sqcup; `{\top;`}>
+          \ar|s="1",e="3"|<f> \ar|s="1",e="5",dash|; \ar|s="5",e="3",tip="hook"|;
+        >
+      >
+      という分解ができる。
+      &m<\sb<\bfrm<DPos>><`k>> の射は全て包含写像だから、これより &m<\lvert; C \rvert; \leq; \lvert; Y \sqcup; `{\top;`} \rvert;> を得るが、&m<\lvert; Y \sqcup; `{\top;`} \rvert; `< `l> であったから &m<\lvert; C \rvert; `< `l> が成り立つ。
+     >
+    \p<
+      \label<十分性>
+      &m<\sb<\bfrm<DPos>><`k>> の対象 &m<C> であって &m<\lvert; C \rvert; `< `l> であるものをとる。
+      &m<`l>-有向図式 &m<F: \scr<I> \to; \sb<\bfrm<DPos>><`k>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> および射 &m<f: C \to; D> をとる。
+      &m<\sb<\bfrm<DPos>><`k>> の射が包含写像であることと、\ref|type="thm",ref="dircol"|; による余極限の具体的な表示を用いれば、これは、
+      &mb<
+        C \subseteq; \bigcup<i \in; \scr<I>> Fi = D
+      >
+      が成り立つということである。
+      したがって、任意の &m<C> の元 &m<c> に対し、ある &m<\scr<I>> の対象 &m<\sb<i><c>> が存在して &m<c \in; F \sb<i><c>> が成り立つ。
+      &m<\lvert; C \rvert; `< `l> であって &m<\scr<I>> は &m<`l>-有向だから、&m<`{\sb<i><c>`} \sb<><c \in; C>> の上界 &m<\bar<i>> がとれる。
+      すると、任意の &m<C> の元 &m<c> に対して一斉に &m<c \in; F \bar<i>> となるから、&m<C \subseteq; F \bar<i>> が成り立つ。
+      これは、
+      &mb<
+        \diag|hor="thn"|<
+          \v<C> \v; \v<D> \br;
+          \v; \v<F \bar<i>>
+          \ar|s="1",e="3"|<f> \ar|s="1",e="5",dash|; \ar|s="5",e="3",inv|<\sb<d><i>>
+        >
+      >
+      が可換であるということである。
+      さらに、このような分解は明らかに本質的に一意である。
+      したがって、&m<C> が &m<`l>-表示可能であることが示された。
+    >
+  >
+  \thm|type="lem",id="diracc"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\sb<\bfrm<DPos>><`k>> は &m<`k>-到達可能である。
+    >
+  >
+  \prf<
+    \p<
+      まず、\ref|type="thm",ref="dircol"|; によって &m<\sb<\bfrm<DPos>><`k>> は &m<`k>-有向余極限をもつ。
+      また、\ref|type="thm",ref="pkdir"|; により、&m<\sb<\bfrm<DPos>><`k>> の &m<`k>-表示可能対象は濃度が &m<`k> 未満の対象であるから、そのようなものは同型の違いを除けば集合サイズしかない。
+      したがって、\a|href="60.html#pressm"|<定理 4.5> により、あとは &m<\sb<\bfrm<DPos>><`k>> の任意の対象が &m<`k>-表示可能対象の &m<`k>-有向余極限として書けることを示せば良い。
+    >
+    \p<
+      任意に &m<\sb<\bfrm<DPos>><`k>> の対象 &m<C> をとる。
+      &m<\sb<\frak<P>><`k> (C)> の元 &m<Y> を考えると、&m<\lvert; Y \rvert; `< `k> であって &m<C> は &m<`k>-有向だから、&m<Y> の上界 &m<\sb<\top;><Y>> が &m<C> にとれる。
+      これを用いると、
+      &mb<
+        C = \bigcup<Y \in; \sb<\frak<P>><`k> (C)> (Y \cup; `{\sb<\top;><Y>`})
+      >
+      と書ける。
+      ここで、任意の &m<\sb<\frak<P>><`l> (C)> の元 &m<Y> に対し、&m<Y \cup; `{\sb<\top;><Y>`}> は最大元をもつので &m<`k>-有向であるから &m<&m<\sb<\bfrm<DPos>><`k>>> の対象である。
+      さらに、\ref|type="thm",ref="pkdir"|; により &m<\sb<\frak<P>><`k> (C)> は &m<`k>-有向だから、上記の和集合は &m<\sb<\bfrm<DPos>><`k>> 内の &m<`k>-有向余極限である。
+      これにより、&m<C> を &m<`k>-有向余極限として表せた。
+    >
+  >
+  \p<
+    最後に、有向順序集合への包含写像が関手として終であることの同値な言い換えについて述べておく。
+    ただし、今日はこの同値性を用いないので、有向順序集合への包含写像が終であるということを以下の 2 番目の条件で定義したと見なしても、今後の議論で問題になることはない。
+  >
+  \thm|type="lem",id="dirfin"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-有向順序集合 &m<T> とその部分集合 &m<S> に対し、2 条件
+    >
+    \ul<
+      \li<
+        包含写像 &m<S \hookrarr; T> を関手と見なすと終である。
+      >
+      \li<
+        任意の &m<T> の元 &m<t> に対し、ある &m<S> の元 &m<s> が存在し、&m<t \leq; s> が成り立つ。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="57.html#fineq"|<定理 1.6> を用いれば容易である。
+    >
+  >
+  \p<
+    以上の準備のもと、到達可能圏の正則基数をより大きいものに取り替えられるかどうかについて、次のような言い換えが可能であることが示せる。
+  >
+  \thm|type="thm",id="acck"|<
+    \p<
+      正則基数 &m<`k, `l> をとり、&m<`k `< `l> であるとする。
+      このとき、5 条件
+    >
+    \ol<
+      \li<
+        全ての &m<`k>-到達可能圏は &m<`l>-到達可能である。
+      >
+      \li<
+        圏 &m<\sb<\bfrm<DPos>><`k>> は &m<`l>-到達可能である。
+      >
+      \li<
+        任意の集合 &m<X> であって &m<\lvert; X \rvert; `< `l> であるものに対し、ある部分集合 &m<S \subseteq; \sb<\frak<P>><`k> (X)> であって &m<\lvert; S \rvert; `< `l> であるものが存在し、その包含写像 &m<S \hookrarr; \sb<\frak<P>><`k> (X)> を関手と見なすと終である。
+      >
+      \li<
+        任意の &m<`k>-有向順序集合 &m<I> およびその部分集合 &m<X \subseteq; I> であって &m<\lvert; X \rvert; `< `l> であるものに対し、ある部分集合 &m<\sp<X><*> \subseteq; I> であって &m<\lvert; \sp<X><*> \rvert; `< `l> であるものが存在し、&m<X \subseteq; \sp<X><*>> であってさらに &m<\sp<X><*>> は &m<`k>-有向である。
+      >
+      \li<
+        任意の &m<`k>-有向順序集合 &m<I> に対し、
+        &mb<
+          \scr<K> \coloneqq; `{X \subseteq; I \mid; &raw<&m<\lvert; X \rvert; `< `l> であって &m<X> は &m<`k>-有向> `}
+        >
+        とおき、包含関係によって順序集合と見なす。
+        このとき、&m<\scr<K>> は &m<`l>-有向である。
+      >
+    >
+    \p<
+      は全て同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      \ref|type="thm",ref="diracc"|; によって &m<\sb<\bfrm<DPos>><`k>> は &m<`k>-到達可能だから、明らかである。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 3>
+      集合 &m<X> であって &m<\lvert; X \rvert; `< `l> であるものをとる。
+      \ref|type="thm",ref="pkdir"|; によって &m<\sb<\frak<P>><`k> (X)> は &m<`k>-有向順序集合だから、これは &m<\sb<\bfrm<DPos>><`k>> の対象である。
+      仮定から &m<\sb<\bfrm<DPos>><`k>> は &m<`l>-到達可能だから、ある &m<`l>-表示可能対象の &m<`l>-有向図式 &m<F: \scr<I> \to; \sb<\bfrm<DPos>><`k>> が存在して、&m<\sb<\frak<P>><`k> (X) = \op<colim> F> と書ける。
+      この余極限余錐を &m<(\sb<c><i>: Fi \to; \sb<\frak<P>><`k> (X)) \sb<><i \in; \scr<I>>> とおく。
+      ここで、各 &m<\scr<I>> の対象 &m<i> に対し、&m<Fi> は &m<\sb<\bfrm<DPos>><`k>> の対象であるから &m<`k>-有向順序集合である。
+      また、&m<Fi> は &m<\sb<\bfrm<DPos>><`k>> で &m<`l>-表示可能だから、\ref|type="thm",ref="dircard"|; を使えば &m<\lvert; Fi \rvert; `< `l> であることも分かる。
+      さらに、&m<\sb<\bfrm<DPos>><`k>> の射は包含写像だったので、&m<Fi \subseteq; \sb<\frak<P>><`k> (X)> である。
+    >
+    \p<
+      任意の &m<X> の元 &m<x> に対し、単元集合 &m<`{x`}> は &m<\sb<\frak<P>><`k> (X)> の元だから、\ref|type="thm",ref="dircol"|; による余極限の具体的な表示を見れば、ある &m<\scr<I>> の対象 &m<\sb<i><x>> が存在して &m<`{x`} \in; F \sb<i><x>> であることが分かる。
+      &m<\lvert; X \rvert; `< `l> であって &m<\scr<I>> は &m<`l>-有向だから、&m<`{\sb<i><x>`} \sb<><x \in; X>> の上界 &m<\bar<i>> がとれる。
+      すると、任意の &m<X> の元 &m<x> に対して一斉に &m<`{x`} \in; F \bar<i>> となる。
+      すなわち、&m<F \bar<i>> は任意の単元集合を属する。
+    >
+    \p<
+      この &m<F \bar<i>> が存在を示したい集合になっていることを示す。
+      そのためには、あとは &m<F \bar<i> \subseteq; \sb<\frak<P>><`k> (X)> が終であることが示せば良い。
+      そこで、任意に &m<\sb<\frak<P>><`k> (X)> の元 &m<Y> をとる。
+      &m<Y> の各元の単元集合から成る族 &m<`{`{y`}`} \sb<><y \in; Y>> を考えると、すでに述べたようにこれらはそれぞれ &m<F \bar<i>> の元である。
+      さらに &m<\lvert; Y \rvert; `< `k> であって &m<F \bar<i>> は &m<`k>-有向順序集合だから、&m<`{`{y`}`} \sb<><y \in; Y>> の上界 &m<Z> が &m<F \bar<i>> の元としてとれる。
+      これはつまり &m<Y \subseteq; Z> が成り立つということだから、示したいことが示された。
+    >
+    \p<
+      \label<条件 3 &m<\raarr;> 条件 4>
+      任意に &m<`k>-有向順序集合 &m<I> およびその部分集合 &m<X \subseteq; I> をとり、&m<\lvert; X \rvert; `< `l> であるとする。
+      これから、超限帰納法によって &m<I> の部分集合の増加列 &m<(\sb<X><`a>) \sb<><`a `< `k>> を構成する。
+      さらに同時に、各 &m<`a> について &m<\lvert; \sb<X><`a> \rvert; `< `l> であることも示す。
+    >
+    \p<
+      基底ケースでは、&m<\sb<X><0> \coloneqq; X> とおく。
+      明らかに &m<\lvert; \sb<X><0> \rvert; `< `l> である。
+    >
+    \p<
+      後続順序数のケースを考える。
+      &m<\sb<X><`a>> が定まっているとする。
+      これに仮定を使うことで、終部分集合 &m<S \subseteq; \sb<\frak<P>><`k> (\sb<X><`a>)> であって &m<\lvert; S \rvert; `< `l> であるものがとれる。
+      &m<S> の元 &m<Z> をとると、&m<\lvert; Z \rvert; `< `k> であって &m<I> は &m<`k>-有向だから、&m<Z> の上界 &m<\sb<\top;><Z>> がとれる。
+      そこで、
+      &mb<
+        \sb<X><`a + 1> \coloneqq; \bigcup<Z \in; S> (Z \cup; `{\sb<\top;><Z>`})
+      >
+      とおく。
+      &m<\lvert; S \rvert; `< `l> であり、&m<S> の元 &m<Z> について &m<\lvert; Z \cup; `{\sb<\top;><Z>`} \rvert; `< `k `< `l> でもあるから、&m<`l> が正則基数であることより &m<\lvert; \sb<X><`a + 1> \rvert; `< `l> であることが分かる。
+      なお、&m<\sb<X><`a> \subseteq; \sb<X><`a + 1>> であることは以下のようにして分かる。
+      任意に &m<\sb<X><`a>> から元 &m<x> をとると、単元集合 &m<`{x`}> は &m<\sb<\frak<P>><`k> (\sb<X><`a>)> の元だから、&m<S> が終であることより、ある &m<S> の元 &m<\sb<Z><x>> が存在して &m<`{x`} \subseteq; \sb<Z><x>> すなわち &m<x \in; \sb<Z><x>> が成り立つ。
+      これより、&m<x> は &m<\sb<X><`a + 1>> の元である。
+    >
+    \p<
+      極限順序数のケースを考える。
+      このときは、
+      &mb<
+        \sb<X><`a> \coloneqq; \bigcup<`j `< `a> \sb<X><`j>
+      >
+      とおく。
+      すると、前の場合と同様に、&m<`l> が正則基数であることから &m<\lvert; \sb<X><`a> \rvert; `< `l> であることが分かる。
+    >
+    \p<
+      以上のように定義された &m<I> の部分集合の増加列 &m<(\sb<X><`a>) \sb<><`a `< `k>> を用いて、
+      &mb<
+        \sp<X><*> \coloneqq; \bigcup<`a `< `k> \sb<X><`a>
+      >
+      と定める。
+      これが存在を示したい集合になっていることを示す。
+      &m<`l> が正則基数であることから &m<\lvert; \sp<X><*> \rvert; `< `l> であることは分かり、さらに &m<(\sb<X><`a>) \sb<><`a `< `k>> が単調増加であることから &m<X = \sb<X><0> \subseteq; \sp<X><*>> である。
+      したがって、あとは &m<\sp<X><*>> が &m<`k>-有向であることを示せば良い。
+    >
+    \p<
+      任意に部分集合 &m<Y \subseteq; \sp<X><*>> をとり、&m<\lvert; Y \rvert; `< `k> であるとする。
+      &m<\sp<X><*>> の定義から、各 &m<Y> の元 &m<y> に対して、ある &m<\sb<`a><y>> が存在して &m<y \in; \sb<X><\sb<`a><y>>> が成り立つ。
+      ここで &m<\bar<`a> \coloneqq; \op<sup> [] `{\sb<`a><y>`} \sb<><y \in; Y>> とおけば、&m<`k> が正則基数であることから &m<\bar<`a> `< `k> であり、任意の &m<Y> の元 &m<y> に対して &m<y \in; \sb<X><\bar<`a>>> が成り立つ。
+      これはすなわち &m<Y \subseteq; \sb<X><\bar<`a>>> であるということであり、さらに &m<\lvert; Y \rvert; `< `k> でもあったから &m<Y \in; \sb<\frak<P>><`k> (\sb<X><`a>)> である。
+    >
+    \p<
+      ここで &m<\sb<X><\bar<`a> + 1>> の定義を思い出そう。
+      これは、終部分集合 &m<S \subseteq; \sb<\frak<P>><`k> (\sb<X><\bar<`a>>)> をとり、さらに各 &m<S> の元 &m<Z> の上界 &m<\sb<\top;><Z>> をとって、
+      &mb<
+        \sb<X><\bar<`a> + 1> \coloneqq; \bigcup<Z \in; S> (Z \cup; `{\sb<\top;><Z>`})
+      >
+      と定義されていた。
+      ところで &m<Y \in; \sb<\frak<P>><`k> (\sb<X><`a>)> であったから、&m<S> が終であることより、ある &m<S> の元 &m<Z> をとって &m<Y \subseteq; Z> が成り立つようにできる。
+      したがって、&m<\sb<\top;><Z>> が &m<Z> の上界であることから、&m<\sb<\top;><Z>> は &m<Y> の上界でもある。
+      &m<\sb<\top;><Z> \in; \sb<X><\bar<`a> + 1> \subseteq; \sp<X><*>> であるから、これで &m<Y> の上界が &m<\sp<X><*>> にとれたことになる。
+      以上により、&m<\sp<X><*>> は &m<`k>-有向である。
+    >
+    \p<
+      \label<条件 4 &m<\raarr;> 条件 5>
+      &m<\scr<K>> の元の族 &m<`{\sb<X><l>`} \sb<><l \in; L>> でその個数が &m<`l> 未満であるものをとる。
+      &m<\bar<X> \coloneqq; \bigcup|in|<l \in; L> \sb<X><l>> とおけば、これは濃度が &m<`l> 未満の集合を &m<`l> 未満個合併したものであるから、&m<`l> は正則基数であることより &m<X> 自身の濃度も &m<`l> 未満である。
+      これより &m<\bar<X>> に仮定が使えて、部分集合 &m<\sp<\bar<X>><*> \subseteq; I> が存在し、&m<\lvert; \sp<\bar<X>><*> \rvert; `< `l> および &m<\bar<X> \subseteq; \sp<\bar<X>><*>> であって &m<\sp<\bar<X>><*>> は &m<`k>-有向である。
+      すなわち、&m<\sp<\bar<X>><*>> は &m<\scr<K>> の元であって、&m<`{\sb<X><l>`} \sb<><l \in; L>> の上界を与えている。
+      以上により、&m<\scr<K>> は &m<`l>-有向である。
+    >
+    \p<
+      \label<条件 5 &m<\raarr;> 条件 1>
+      &m<`k>-到達可能圏 &m<\scr<C>> をとる。
+      まず、&m<\scr<C>> は &m<`k>-有向余極限をもつが、&m<`l>-有向余極限は &m<`k>-有向余極限だから、&m<\scr<C>> は &m<`l>-有向余極限ももつ。
+      ここで、
+      &mb<
+        \scr<A> \coloneqq; `{A \in; \scr<C> \mid; &raw<&m<A> は &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象の &m<`k>-有向 &m<`l>-小余極限として表せる>`}
+      >
+      とおく。
+      \a|href="60.html#sm"|<定理 4.7> によって &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> は小だから、&m<\scr<A>> も小である。
+      さらに、\a|href="59.html#presup"|<定理 3.3> によって &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象は &m<`l>-表示可能であり、&m<\scr<A>> の元はそのようなものの &m<`l>-小余極限なのだから、\a|href="59.html#prescol"|<定理 3.4> によって &m<\scr<A>> の元は全て &m<`l>-表示可能である。
+      したがって、あとは &m<\scr<C>> の任意の元が &m<\scr<A>> の元の &m<`l>-有向余極限として表せることを示せば良い。
+    >
+    \p<
+      任意に &m<\scr<C>> の対象 &m<C> をとる。
+      &m<\scr<C>> は &m<`k>-到達可能だから、ある &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> が存在して、&m<C = \op<colim> F> と書ける。
+      この余極限余錐を &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> とおく。
+      ここで、
+      &mb<
+        \scr<K> \coloneqq; `{X \subseteq; \scr<I> \mid; &raw<&m<\lvert; X \rvert; `< `l> であって &m<X> は &m<`k>-有向> `}
+      >
+      とおくと、仮定によってこれは &m<`l>-有向である。
+      &m<\scr<K>> の元 &m<X> に対し、
+      &mb<
+        GX \coloneqq; \op<colim> (\ltort; X \hookrarr; \scr<I> \rtort; \rcomp; F) 
+      >
+      とおくと、&m<X> は &m<`k>-有向かつ &m<`l>-小であり、&m<F> の像は全て &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象であったから、&m<GX> は &m<\scr<A>> の元である。
+      また、余極限の普遍性によって射 &m<\sb<d><X>: GX \to; C> がとれる。
+      ここで、&m<\scr<K>> の対象 &m<X, X'> が &m<X \subseteq; X'> を満たすとすると、再び余極限の普遍性によって射 &m<GX \to; GX'> がとれるから、これによって関手 &m<G: \scr<K> \to; \scr<C>> と見なせる。
+      さらに、&m<(\sb<d><X>: GX \to; C) \sb<><X \in; \scr<K>>> は余錐を成し、余極限にもなっていることが容易に示せる。
+      以上で、&m<C> が &m<\scr<A>> の元の &m<`l>-有向余極限として表せることが示せたが、これがまさに示したかったことである。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      正則基数 &m<`k, `l> をとり、&m<`k `< `l> であるとする。
+      上記定理の条件のいずれか (したがって全て) が成り立つとき、&m<`k> は &m<`l> より\em<激しく小さい\fl<sharply smaller>> といい、&m<`k \smt; `l> で表す。
+    >
+  >
+  \p<
+    この関係については、証明は省略するが次のことが知られている。
+  >
+  \thm|type="prp",id="smtsucc"|<
+    \p<
+      正則基数 &m<`k> に対し、&m<`k \smt; \sp<`k><+>> が成り立つ。
+    >
+  >
+  \thm|type="prp",id="smtarb"|<
+    \p<
+      正則基数 &m<`k, `l> に対し、&m<`k \leq; `l> ならば &m<`k \smt; \sp<(\sp<2><`l>)><+>> が成り立つ。
+    >
+  >
+  \thm|type="prp",id="smtanti"|<
+    \p<
+      &m<\sb<\aleph;><0> \smt; \sb<\aleph;><\rm<`v> + 1>> は成り立つが、&m<\sb<\aleph;><1> \smt;\not; \sb<\aleph;><\rm<`v> + 1>> である。
+    >
+  >
+  \p<
+    \ref|type="thm",ref="smtarb"|; により、任意の正則基数に対してそれよりも激しく大きい正則基数が存在することが分かる。
+    しかし、\ref|type="thm",ref="smtanti"|; により、単に大きいからといって激しく大きいとは限らないことも分かる。
+    ということで、到達可能圏の正則基数の取り替えについては、なかなかセンシティブな問題がある。
+  >
+  \p<
+    最後に、局所表示可能圏についても到達可能圏についても、パラメータとなる正則基数を任意に大きく取り替えられることを定理としてまとめて、今日の内容の締めとしよう。
+  >
+  \thm|type="thm",id="presup"|<
+    \p<
+      任意に基数 &m<`s> をとる。
+      局所表示可能圏の集合 &m<`{\sb<\scr<C>><l>`} \sb<><l \in; L>> に対し、ある正則基数 &m<`l> が存在して、&m<`s \leq; `l> であって、さらにどんな &m<l> についても &m<\sb<\scr<C>><l>> は &m<`l>-局所表示可能である。
+    >
+  >
+  \prf<
+    \p<
+      各 &m<L> の元 &m<l> に対し、&m<\sb<\scr<C>><l>> は &m<\sb<`k><l>>-局所表示可能であるとする。
+      このとき、&m<\sup; [] `{\sb<`k><l>`} \sb<><l \in; L>> と &m<`s> のどちらよりも大きい正則基数 &m<`l> をとれば良い。
+      実際、明らかに &m<`s \leq; `l> である。
+      さらに、任意の &m<L> の元 &m<l> に対し、&m<\sb<`k><l> \leq; `l> であることから、\ref|type="thm",ref="lock"|; によって &m<\scr<C>> は &m<`l>-局所表示可能である。
+    >
+  >
+  \thm|type="thm",id="accup"|<
+    \p<
+      任意に基数 &m<`s> をとる。
+      到達可能圏の集合 &m<`{\sb<\scr<C>><l>`} \sb<><l \in; L>> に対し、ある正則基数 &m<`l> が存在して、&m<`s \leq; `l> であって、さらにどんな &m<l> についても &m<\sb<\scr<C>><l>> は &m<`l>-到達可能である。
+    >
+  >
+  \prf<
+    \p<
+      各 &m<L> の元 &m<l> に対し、&m<\sb<\scr<C>><l>> は &m<\sb<`k><l>>-到達可能であるとする。
+      このとき、&m<\sup; [] `{\sb<`k><l>`} \sb<><l \in; L>> と &m<`s> のどちらよりも大きい正則基数 &m<`l'> をとり、&m<`l \coloneqq; \sp<(\sp<2><`l'>)><+>> とすれば良い。
+      実際、まず &m<`s \leq; `l' `< `l> である。
+      さらに、任意の &m<L> の元 &m<l> に対し、&m<\sb<`k><l> \leq; `l'> であることから、\ref|type="thm",ref="smtarb"|; によって &m<\sb<`k><l> \smt; `l> であり、\ref|type="thm",ref="acck"|; によって &m<\scr<C>> は &m<`l>-到達可能である。
+    >
+  >
+  \h1<追記 (2020 年 8 月 10 日)>
+  \p<
+    今後の参照用に、パラメータの正則基数を任意に大きく取り替えられることを定理として改めてまとめた。
+  >
+  \h1<追記 (2020 年 8 月 11 日)>
+  \p<
+    今後の議論で使うため、\ref|type="thm",ref="acck"|; に条件を追加した。
+    それに伴って、証明も少し変更した。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>

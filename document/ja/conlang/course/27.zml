@@ -1,0 +1,61 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<『入門 シャレイア語』>
+  \ver<S 代>
+
+  \h1<情報>
+  \p<
+    初学者向けのシャレイア語文法の入門書です。
+    このサイトで公開している文法書の内容を網羅しつつ、難易度順に整理して、予備知識がなくても読めるように易しく説明してあります。
+    この 1 冊だけでシャレイア語の文法を基礎から一通り学ぶことができます。
+  >
+  \p<
+    書籍は Amazon で販売しています。
+    以下のリンクから Amazon の商品ページへ移動することができます。
+  >
+  \form<
+    \ae|href="https://www.amazon.co.jp/dp/B07KGYPSS3/"|<商品ページ>
+  >
+  \h1<PDF ファイル>
+  \p<
+    第 2 版として発行予定の PDF ファイルを無料公開しています。
+    第 1 版 (現在販売されている書籍版) と比べ、誤植が修正され、いくつかの課が最新の文法に則って書き直されています。
+  >
+  \pdf|src="../../file/course/4.pdf"|;
+  \p<
+    以下のリンクから PDF ファイルを直接ダウンロードすることもできます。
+  >
+  \form<
+    \a|href="../../file/course/4.pdf"|<ダウンロード>
+  >
+  \h1<第 1 版正誤表>
+  \p<
+    第 1 版の正誤表です。
+    上でダウンロードできる PDF ファイルでは、これらの誤植は修正されています。
+  >
+  \table<
+    \tr<\th<位置>\th<誤>\th<正>>
+    \tr<\td<p10, [x] の発音説明の 2 行目>\td<下の位置>\td<舌の位置>>
+    \tr<\td<p65, 新出単語の右列下から 4 行目>\td<〈動〉{tílirsítpiv}>\td<〈名〉{tílirsítpiv}>>
+    \tr<\td<p77, 新出単語の右列上から 1 行目>\td<〈名〉{sal}>\td<〈名〉{cal}>>
+    \tr<\td<p131, 新出単語の左列下から 4 行目>\td<〈動〉{doz}>\td<(削除)>>
+    \tr<\td<p150, 右列上から 9 行目>\td<〈名〉{sal}>\td<〈名〉{cal}>>
+    \tr<\td<p151, 左列下から 5 行目>\td<〈動〉{tílirsítpiv}>\td<〈名〉{tílirsítpiv}>>
+    \tr<\td<p151, 右列下から 5 行目>\td<〈動〉{doz}>\td<(削除)>>
+  >
+  \h1<関連リンク>
+  \ul<
+    \li<\ae|href="https://www.amazon.co.jp/dp/B07KGYPSS3/"|<Amazon>>
+    \li<\ae|href="https://iss.ndl.go.jp/books/R100000002-I029393716-00"|<国立国会図書館サーチ>>
+    \li<\ae|href="https://ci.nii.ac.jp/ncid/BB29525109"|<CiNii Books>>
+  >
+  \h1<組版について>
+  \p<
+    この本の表紙を除く本文は、全て XSL-FO を用いて組版しました。
+    もととなった XML ファイルとそれを変換する XSLT コードは、\ae|href="https://github.com/Ziphil/ShaleianIntroduction"|<GitHub> で無料公開しています。
+  >
+
+>

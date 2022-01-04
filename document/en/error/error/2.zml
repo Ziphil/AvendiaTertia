@@ -1,0 +1,15 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Forbidden>
+  \base|href="/error/"|;
+
+  \error<
+    \code<403>
+    \message<dUqIfAt LiCoS\br;A lOc E miTaL aFiK>
+    \desc<Your access has been denied.>
+  >
+
+>

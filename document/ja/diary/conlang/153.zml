@@ -1,0 +1,36 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<指示対象の区別>
+  \ver<S 代>
+
+  \h1<日記 (\h<1566>)>
+  \p<
+    指示の代詞は前に出てきたものを指しますが、指し得るものが 2 つ以上ある場合は困ります。
+  >
+  \xl<
+    \li<\sh<{dusalot a tel e zis asokes itazi ʻxalih iti duqifot zelqotos a's e ces.}>\ja<私はシャリアにとって無視できないほど大切な人間ではない。>>
+  >
+  \p<
+    この文には {ces} が縮約形を含めて 2 箇所出てきていますが、1 つ目の {ces} が指すものと 2 つ目の {ces} が指すものは異なります。
+    1 つ目はシャリアを指し、2 つ目はこの文の中の {zis} を指します。
+    「シャリア (1 つ目の {ces}) がその人 (2 つ目の {ces}) を無視することができないほど大切な」というわけです。
+  >
+  \p<
+    ところで、{ces} は {zis acik} と同じ意味なので置き換えが可能です。
+    そこで、指すものの違う 2 つの {ces} の片方だけを {zis acik} に置き換えることで、指すものが違うということを明示できるのではないでしょうか。
+  >
+  \xl<
+    \li<\sh<{dusalot a tel e zis asokes itazi ʻxalih iti duqifot zelqotos a's e zis acik.}>>
+  >
+  \p<
+    この表現方法、わりと便利そうです。
+  >
+  \h1<追記 (\h<1874>)>
+  \p<
+    この表現方法をシャレイア語論として\a|href="../../conlang/theory/30.html"|<ここ>に書き直しました。
+  >
+
+>

@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+@import "../util/common.scss";
+@import "../main-module/variable.scss";
+
+
+.footer {
+  width: 100%;
+  margin: 30rpx 0rpx 20rpx 0rpx;
+  text-align: center;
+}
+
+.footer-icon-list {
+  font-size: 140%;
+  display: flex;
+  justify-content: center;
+  column-gap: 15rpx;
+}
+
+.footer-icon-item {
+  @include icon-font;
+  font-weight: normal;
+  color: $orange-color;
+  cursor: pointer;
+  &:hover {
+    color: $dark-orange-color;
+  }
+  &[data-brand="twitter"]::before {
+    content: "\F099";
+  }
+  &[data-brand="youtube"]::before {
+    content: "\F167";
+  }
+  &[data-brand="discord"]::before {
+    content: "\F392";
+  }
+  &[data-brand="github"]::before {
+    content: "\F09B";
+  }
+}
+
+.footer-copyright {
+  margin-top: 10rpx;
+  font-size: 80%;
+  display: block;
+}
+
+.footer-copyright-author {
+  &::before {
+    content: " · ";
+  }
+}
+
+.footer-counter {
+  margin-top: 5rpx;
+  font-size: 80%;
+  display: block;
+}

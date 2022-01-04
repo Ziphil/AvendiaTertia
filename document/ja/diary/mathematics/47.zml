@@ -1,0 +1,466 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<順序数の定義と基本的な性質>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2020 年 5 月 29 日)>
+  \p<
+    最近、順序数と基数の理論を真面目に勉強しようということでセミナーをしているので、そのまとめを少しずつ行っていこうと思う。
+    予備知識としては、半順序と全順序の定義と、その順序に関する極小性や最小性の定義など、非常に基本的なもののみ仮定する。
+    途中で順序集合に関するいくつかの一般的な性質を使うことにはなるが、それについては必要になったときに適宜補題として掲げて復習することにする。
+  >
+  \p<
+    記号に関する注意をしておく。
+    集合 &m<X, Y> に対し、&m<X \subset; Y> と書いたら &m<X> が &m<Y> の真部分集合であることを意味し、&m<X = Y> の場合を含まない。
+    これは通常の数の不等号の慣習に従ったものである。
+  >
+  \p<
+    まず、整礎関係と整列順序の定義を復習しておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      集合 &m<X> 上の関係 &m<\prec;> をとる。
+      &m<X> の空でない部分集合が &m<\prec;> に関して極小な元を属するとき、&m<\prec;> を\em<整礎関係\fl<well-founded relation>> という。
+      また、対 &m<(X, \prec|ord|;)> を\em<整礎集合\fl<well-founded set>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      集合 &m<X> 上の関係 &m<\preceq;> をとる。
+      &m<X> 上で &m<\preceq;> が全順序であり、&m<X> 上で &m<\prec;> が整礎関係であるとき、&m<\preceq;> を\em<整列順序\fl<well-order>> という。
+      また、対 &m<(X, \preceq|ord|;)> を\em<整列集合\fl<well-ordered set>> という。
+    >
+  >
+  \p<
+    以降、特に断らなければ、一般の順序集合の順序は &m<\preceq;> で表す。
+    また、&m<\preceq;> から等号が成り立つ場合を除いて得られる関係を &m<\prec;> で表す。
+  >
+  \p<
+    さて、本題に入る前に、Zelmero–Fraenkel 集合論の公理系に含まれている基礎公理を復習しておこう。
+    順序数論を展開するにあたって、この公理が重要な役割を果たす。
+  >
+  \thm|type="axm"|<
+    \name<基礎公理\fl<axiom of foundation>>
+    \p<
+      任意の集合 &m<X> に対し、&m<X> 上の関係 &m<\in;> は整礎順序である。
+      すなわち、任意の集合 &m<X> に対し、その空でない部分集合は &m<\in;> に関して極小な元を属する。
+    >
+  >
+  \p<
+    では、順序数を定義しよう。
+  >
+  \thm|type="def"|<
+    \p<
+      集合 &m<`a> が 2 条件
+    >
+    \ul<
+      \li<
+        任意の元 &m<`j \in; `a> に対し、&m<`j \subseteq; `a> が成り立つ。
+      >
+      \li<
+        任意の元 &m<`j, `h \in; `a> に対し、&m<`h = `j> もしくは &m<`h \in; `j> もしくは &m<`h \ni; `j> が成り立つ。
+      >
+    >
+    \p<
+      をともに満たすとき、&m<`a> を\em<順序数\fl<ordinal>> という。
+      また、1 つ目の条件を &m<`a> の\em<推移性\fl<transitivity>> と呼び、2 つ目の条件を &m<`a> の\em<三分性\fl<trichotomy>> と呼ぶことにする。
+    >
+  >
+  \p<
+    定義からすぐに、任意の順序数は属するか等しいかという順序について整列していることが分かる。
+  >
+  \thm|type="thm",id="wellord"|<
+    \p<
+      順序数 &m<`a> 上の関係 &m<\ineq;> を、
+      &mb<
+        `h \ineq; `j \coloniff; `h = `j \scor; `h \in; `j
+      >
+      で定めると、これは整列順序である。
+    >
+  >
+  \prf<
+    \p<
+      &m<`a> の三分性によって &m<\ineq;> は全順序である。
+      また、基礎公理によって &m<\in;> は整礎順序である。
+      したがって、&m<\ineq;> は整列順序になる。
+    >
+  >
+  \p<
+    以降、特に断りがなければ、任意の順序数はこの &m<\ineq;> によって順序付けられているとする。
+    今示した定理によってこれは整列順序であるから、整列集合に関する一般論が順序数に対して適用できる。
+  >
+  \thm|type="thm",id="elemord"|<
+    \p<
+      順序数 &m<`a> に対し、その元 &m<`b \in; `a> もまた順序数である。
+    >
+  >
+  \prf<
+    \p<
+      まず、&m<`b> の推移性を示す。
+      任意に元 &m<`j \in; `b> をとる。
+      &m<`j \subseteq; `b> を示せば良いので、そのためにさらに元 &m<`h \in; `j> をとる。
+      &m<`b \in; `a> であったから &m<`a> の推移性によって &m<`b \subseteq; `a> であり、さらに &m<`j \in; `b> より &m<`j \in; `a> を得る。
+      したがって、再び &m<`a> の推移性によって &m<`j \subseteq; `a> であり、さらに &m<`h \in; `j> より &m<`h \in; `a> を得る。
+      ここで、&m<`b, `h \in; `a> であるから、&m<`a> の三分性を用いれば、&m<`h = `b> か &m<`h \in; `b> か &m<`h \ni; `b> かのいずれかが成り立つ。
+    >
+    \p<
+      仮に &m<`h = `b> であったとする。
+      このとき、&m<`b = `h \in; `j \in; `b> が成り立つので、集合 &m<`{`b, `h, `j`}> は &m<\in;> に関する極小元をもち得ないが、これは基礎公理に矛盾する。
+      また、&m<`h \ni; `b> であったとしても、&m<`b \in; `h \in; `j \in; `b> が成り立ち、同様に矛盾する。
+      したがって、&m<`h \in; `b> しかあり得ない。
+    >
+    \p<
+      以上によって、任意の元 &m<`h \in; `j> に対して &m<`h \in; `b> が分かったので、&m<`j \subseteq; `b> が示された。
+      これが示したかったことである。
+    >
+    \p<
+      次に、&m<`b> の三分性を示す。
+      任意に元 &m<`j, `h \in; `b> をとる。
+      &m<`a> の推移性によって &m<`b \subseteq; `a> であるから、&m<`j, `h \in; `a> でもある。
+      したがって、&m<`a> の三分性を用いれば、&m<`h = `j> か &m<`h \in; `j> か &m<`h \ni; `j> かのいずれかが成り立つことが分かるが、これがまさに示したかったことであった。
+    >
+  >
+  \thm|type="thm",id="elemsub"|<
+    \p<
+      順序数 &m<`a, `b> に対し、
+      &mb<
+        `b \subseteq; `a \iff; `b = `a \scor; `b \in; `a
+      >
+      が成り立つ。
+      もしくは同じことだが、
+      &mb<
+        `b \subset; `a \iff; `b \in; `a
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      定理中の 2 つの主張は明らかに同値なので、2 つ目の主張のみを示す。
+      まず、左の条件から右の条件を導くため、&m<`b \subset; `a> を仮定する。
+      すると、&m<`a \setminus; `b \neq; \empty;> であり、\ref|type="thm",ref="wellord"|; によって &m<`a> は整列集合だから、&m<`j \in; \min; (`a \setminus; `b)> がとれる。
+      以降、&m<`j = `b> であることを示す。
+    >
+    \p<
+      任意に元 &m<`h \in; `j> をとる。
+      定義から &m<`j \in; `a> であるから、&m<`a> の推移性によって &m<`j \subseteq; `a> が成り立つので、&m<`h \in; `a> が分かる。
+      ここで、仮に &m<`h \nin; `b> でもあったとすると、&m<`h \in; `a \setminus; `b> であるが、&m<`h \in; `j> であるから &m<`j> の最小性に矛盾する。
+      したがって、&m<`h \in; `b> である。
+      以上により、&m<`j \subseteq; `b> が示された。
+    >
+    \p<
+      次に、任意に元 &m<`h \in; `b> をとる。
+      仮定から &m<`b \subset; `a> であるから、&m<`h \in; `a> も成り立つ。
+      これによって &m<`j, `h \in; `a> であるから、&m<`a> の三分性を用いれば、&m<`h = `j> か &m<`h \in; `j> か &m<`h \ni; `j> のいずれかが成り立つことが分かる。
+      示したいのは &m<`h \in; `j> が成り立つことであるから、&m<`h = `j> と &m<`h \ni; `j> がどちらも起こり得ないことを示せば良い。
+      そこで仮に &m<`h = `j> であったとすると、&m<`h \in; `b> であるから &m<`j \in; `b> が成り立つ。
+      また &m<`h \ni; `j> であったとすると、&m<`h \in; `b> であることと &m<`b> の推移性を用いると &m<`h \subseteq; `b> であるから、&m<`j \in; `b> が成り立つ。
+      いずれの場合でも &m<`j \in; `b> が示されたが、定義から &m<`j \in; `a \setminus; `b> であるから、これは矛盾である。
+      これにより、&m<`h \in; `j> が分かったので、&m<`j \supseteq; `b> が示された。
+    >
+    \p<
+      ここまでの議論から、&m<`j = `b> が成り立つことが分かった。
+      ところで &m<`j \in; `a> であったから、&m<`b \in; `a> が示された。
+    >
+    \p<
+      逆に、定理の主張の右の条件から左の条件を導くため、&m<`b \in; `a> を仮定する。
+      すると、&m<`a> の推移性によって &m<`b \subseteq; `a> が成り立つ。
+      ここで仮に &m<`b = `a> であったとすると、&m<`a \in; `a> となって基礎公理に反するので、&m<`b \neq; `a> である。
+      以上により、&m<`b \subset; `a> が示された。 
+    >
+  >
+  \p<
+    任意の順序数は &m<\ineq;> によって順序付けられていると見なしたことを思い出そう。
+    ここで、\ref|type="thm",ref="elemord"|; によって順序数の元は順序数であり、\ref|type="thm",ref="elemsub"|; によって順序数同士であれば &m<\ineq;> と &m<\subseteq;> は同値であった。
+    したがって、順序数は &m<\subseteq;> によって順序付けられていると見なしても、全く同じ順序集合が得られることになる。
+    以降では、このことを踏まえて、順序数に関しては同値である &m<\ineq;> と &m<\subseteq;> をともに &m<\leq;> で表すことにする。
+  >
+  \thm|type="thm",id="ordcap"|<
+    \p<
+      順序数から成る集合 &m<\scr<F>> に対し、&m<\bigcap|in|; \scr<F>> もまた順序数である。
+    >
+  >
+  \prf<
+    \p<
+      定義から明らかである。
+    >
+  >
+  \thm|type="thm",id="tri"|<
+    \p<
+      順序数 &m<`a, `b> に対し、&m<`b = `a> もしくは &m<`b `< `a> もしくは &m<`b `> `a> のいずれかが成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<`g \coloneqq; `a \cap; `b> とおくと、\ref|type="thm",ref="ordcap"|; によってこれは順序数である。
+      以降、&m<`g = `a> または &m<`g = `b> が成り立つことを背理法によって示す。
+      そこで、&m<`g \neq; `a> かつ &m<`g \neq; `b> であると仮定する。
+      まず、定義から &m<`g \subseteq; `a> であるから、&m<`g \subset; `a> が成り立つ。
+      すると、\ref|type="thm",ref="elemsub"|; によって &m<`g \in; `a> が得られる。 
+      同様にして、&m<`g \in; `b> も得られる。
+      したがって、&m<`g \in; `a \cap; `b = `g> が成り立つことになるが、これは基礎公理に矛盾する。
+    >
+    \p<
+      以上により &m<`g = `a> または &m<`g = `b> であるが、&m<`g = `a> であれば &m<`b \supseteq; `a> であり、&m<`g = `b> であれば &m<`b \subseteq; `a> である。
+      したがって、&m<`b \supseteq; `a> または &m<`b \subseteq; `a> であることが示され、これが示したかったことである。
+    >
+  >
+  \thm|type="thm",id="ordcup"|<
+    \p<
+      順序数から成る集合 &m<\scr<F>> に対し、&m<\bigcup|in|; \scr<F>> もまた順序数である。
+    >
+  >
+  \prf<
+    \p<
+      まず、&m<\bigcup|in|; \scr<F>> の推移性を示す。
+      任意に元 &m<`b \in; \bigcup|in|; \scr<F>> をとると、ある順序数 &m<`a \in; \scr<F>> が存在して &m<`b \in; `a> が成り立つ。
+      &m<`a> の推移性を用いれば &m<`b \subseteq; `a> であるから、&m<`b \subseteq; `a \subseteq; \bigcup|in|; \scr<F>> が得られる。
+    >
+    \p<
+      次に、&m<\bigcup|in|; \scr<F>> の三分性を示す。
+      任意に元 &m<`j, `h \in; \bigcup|in|; \scr<F>> をとると、ある順序数 &m<`a, `b \in; \scr<F>> が存在して &m<`j \in; `a> および &m<`h \in; `b> が成り立つ。
+      \ref|type="thm",ref="tri"|; によって、&m<`b = `a> もしくは &m<`b \subset; `a> もしくは &m<`b \supset; `a> のいずれかが成り立つから、各場合について議論する。
+    >
+    \p<
+      &m<`b = `a> であれば &m<`j, `h \in; `a> であるから、&m<`a> の三分性によって &m<`h = `j> か &m<`h \in; `j> か &m<`h \ni; `j> のいずれかが成り立つことが分かる。
+      &m<`b \subset; `a> のときも &m<`j, `h \in; `a> であるから、同様に &m<`a> の三分性を用いれば良い。
+      &m<`b \supset; `a> のときは &m<`j, `h \in; `b> であるから、今度は &m<`b> の三分性を用いれば良い。
+    >
+  >
+  \p<
+    さて、ここで切片の概念を思い出そう。
+  >
+  \thm|type="def"|<
+    \p<
+      半順序集合 &m<X> の部分集合 &m<S \subseteq; X> をとる。
+      任意の元 &m<x, y \in; X> に対し、&m<x \in; S> かつ &m<y \preceq; x> ならば &m<y \in; S> が成り立つとき、&m<S> を &m<X> の\em<切片\fl<segment>> という。
+      さらに、&m<S \neq; X> であるとき、&m<S> は\em<真\fl<proper>> であるという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      半順序集合 &m<X> とその元 &m<x \in; X> に対し、
+      &mb<
+        O (x) \coloneqq; `{y \in; X \mid; y \prec; x`} \subseteq; X
+      >
+      を &m<x> が生成する &m<X> の\em<切片\fl<segment>> という。
+    >
+  >
+  \thm|type="lem",id="segid"|<
+    \p<
+       順序数 &m<`a> とその元 &m<`j \in; `a> に対し、&m<`a> の部分集合として &m<O (`j) = `j> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意に元 &m<`h \in; `a> をとると、定義から &m<`h \in; O (`j)> は &m<`h \in; `j> と同値である。
+      したがって、&m<O (`j) = `j> が成り立つ。
+    >
+  >
+  \p<
+    次の定理の証明では超限帰納法を用いるので、主張を思い出しておこう。
+  >
+  \thm|type="thm",id="trans"|<
+    \name<超限帰納法の原理\fl<principle of transfinite induction>>
+    \p<
+      整列集合 &m<X> の部分集合 &m<Z \subseteq; X> について、任意の元 &m<x \in; X> に対して &m<O (x) \subseteq; Z> ならば &m<x \in; Z> が成り立っているとする。
+      このとき、&m<Z = X> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      Ciesielski\ref|type="bib",ref="stw"|; の定理 4.1.6 を参照。
+    >
+  >
+  \p<
+    以上の準備のもと、順序数については等号と同型が同じ意味になることが示される。
+    後で詳しく述べるが、この性質のおかげで、順序数を整列集合の同値類の代表元のように扱えるのである。
+  >
+  \thm|type="thm",id="isoeq"|<
+    \p<
+      順序数 &m<`a, `b> に対し、&m<`a \cong; `b> と &m<`a = `b> は同値である。
+    >
+  >
+  \prf<
+    \p<
+      &m<`a = `b> であれば &m<`a \cong; `b> であることは明らかなので、&m<`a \cong; `b> を仮定して &m<`a = `b> を示す。
+      &m<`a \cong; `b> であるから、順序同型写像 &m<f: `a \to; `b> が存在する。
+      これに対し、
+      &mb<
+        Z \coloneqq; `{`j \in; `a \mid; f (`j) = `j`} \subseteq; `a
+      >
+      とおく。
+      超限帰納法を用いて &m<Z = `a> を示す。
+    >
+    \p<
+      任意に &m<`j \in; `a> をとり、&m<O (`j) \subseteq; Z> であるとする。
+      この仮定と\ref|type="thm",ref="segid"|; により、
+      &mb<
+        \array|align="rcl"|<
+          \c<f (`j)> \c<=> \c<O (f (`j))> \br;
+          \c; \c<=> \c<f `[O (`j)`]> \br;
+          \c; \c<=> \c<`{f (`h) \in; `b \mid; `h \subset; `j`}> \br;
+          \c; \c<=> \c<`{`h \in; `a \mid; `h \subset; `j`}> \br;
+          \c; \c<=> \c<O (`j)> \br;
+          \c; \c<=> \c<`j> \br;
+        >
+      >
+      と計算できる。
+      したがって、&m<`j \in; Z> が成り立つ。
+    >
+    \p<
+      以上により &m<Z = `a> が示されたので、任意の元 &m<`j \in; `a> に対して &m<f (`j) = `j> が成り立つ。
+      これは &m<f> が恒等写像であるということなので、&m<`a = `b> である。
+    >
+  >
+  \thm|type="thm",id="succ"|<
+    \p<
+      順序数 &m<`a> に対し、&m<`a \cup; `{`a`}> もまた順序数である。
+    >
+  >
+  \prf<
+    \p<
+      まず、&m<`a \cup; `{`a`}> の推移性を示す。
+      任意に元 &m<`j \in; `a \cup; `{`a`}> をとると、特に &m<`j \in; `a> であるから、&m<`a> の推移性によって &m<`j \subseteq; `a> が分かる。
+      これより、&m<`j \subseteq; `a \subseteq; `a \cup; `{`a`}> を得る。
+    >
+    \p<
+      次に、&m<`a \cup; `{`a`}> の三分性を示す。
+      任意に元 &m<`j, `h \in; `a \cup; `{`a`}> をとると、&m<`j> については &m<`j \in; `a> か &m<`j = `a> かの 2 通りの場合があり、&m<`h> についても同様の 2 通りの場合がある。
+      したがって合計で 4 通りの場合があるので、それぞれの場合について議論する。
+    >
+    \p<
+      &m<`j \in; `a> かつ &m<`h \in; `a> の場合は、&m<`a> の三分性を使えば &m<`h = `j> か &m<`h \in; `j> か &m<`h \ni; `j> のいずれかが成り立つことが分かる。
+      &m<`j = `a> かつ &m<`h \in; `a> の場合は、明らかに &m<`h \in; `j> である。
+      &m<`j \in; `a> かつ &m<`h = `a> の場合は、&m<`h \ni; `j> である。
+      最後に &m<`j = `a> かつ &m<`h = `a> の場合は、&m<`h = `j> である。
+    >
+  >
+  \p<
+    次の定理の証明で利用するため、順序集合に関する一般的な補題を 2 つ用意しておく。
+  >
+  \thm|type="lem",id="isoim"|<
+    \p<
+      半順序集合 &m<X, Y> の間の写像 &m<f: X \to; Y> に対し、&m<X> が全順序集合で &m<f> が狭義単調増加ならば、&m<f: X \to; f (X)> は順序同型である。
+    >
+  >
+  \prf<
+    \p<
+      簡単に示せる。
+    >
+  >
+  \thm|type="lem",id="isouniq"|<
+    \p<
+      半順序集合 &m<X, Y> の間の写像 &m<f, g: X \to; Y> に対し、&m<X, Y> がともに整列順序集合で &m<f, g> がともに順序同型写像であれば、&m<f = g> が成り立つ。
+      すなわち、整列順序集合の間の順序同型写像は一意である。
+    >
+  >
+  \prf<
+    \p<
+      Ciesielski\ref|type="bib",ref="stw"|; の補題 4.1.9 を参照。
+    >
+  >
+  \p<
+    以上の準備のもと、任意の整列集合がある一意な順序数と順序同型になることが示せる。
+  >
+  \thm|type="thm",id="typ"|<
+    \p<
+      整列集合 &m<X> に対し、順序数 &m<`a> が一意に存在して &m<X \cong; `a> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      一意性は\ref|type="thm",ref="isoeq"|; からすぐに従うので、以下では存在を示す。
+      まず、元 &m<x \in; X> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\bar<O> (x)> \c<\coloneqq;> \c<O (x) \cup; `{x`}> \br;
+          \c; \c<=> \c<`{y \in; X \mid; y \preceq; x`}>
+        >
+      >
+      と書くことにする。
+      これを用いて、
+      &mb<
+        Z \coloneqq; `{x \in; X \mid; &raw<ある順序数 &m<`a> について &m<\bar<O> (x) \cong; `a>>`} \subseteq; X
+      >
+      とおく。
+      定義から、各 &m<x \in; Z> に対して、順序数 &m<`a> と順序同型写像 &m<f: \bar<O> (x) \to; `a> が存在する。
+      \ref|type="thm",ref="isoeq"|; によって &m<`a> は一意に定まり、さらに\ref|type="thm",ref="isouniq"|; によって &m<f> も一意に定まる。
+      したがって、以降はこれらをそれぞれ &m<\sb<`a><x>> と &m<\sb<f><x>> で表すことにする。
+    >
+    \p<
+      初めに、任意の &m<x, y \in; Z> に対し、
+      &mb<
+        y \preceq; x \implies; \sb<f><y> \subseteq; \sb<f><x>
+      >
+      が成り立つことを示す。
+      まず、
+      &mb<
+        \sb<f><x> `[\bar<O> (y)`] = \bar<O> (\sb<f><x> (y)) = O (\sb<f><x> (y)) \cup; `{\sb<f><x> (y)`}
+      >
+      が成り立つ。
+      &m<\sb<f><x> (y) \in; \sb<`a><y>> であって &m<\sb<`a><y>> は順序数だから、\ref|type="thm",ref="segid"|; によって &m<O (\sb<f><x> (y)) = \sb<f><x> (y)> が成り立つ。
+      また、\ref|type="thm",ref="elemord"|; によって &m<\sb<f><x> (y)> は順序数だから、さらに\ref|type="thm",ref="succ"|; によって &m<\sb<f><x> (y) \cup; `{\sb<f><x> (y)`}> も順序数である。
+      したがって、これと等しい &m<\sb<f><x> `[\bar<O> (y)`]> も順序数である。
+      ここで\ref|type="thm",ref="isoim"|; を使えば、制限 &m<\sb<f><x> \rvert; \sb<><\bar<O> (y)>: \bar<O> (y) \to; \sb<f><x> `[\bar<O> (y)`]> が順序同型写像であることが分かる。
+      ところで、&m<\sb<f><y>: \bar<O> (y) \to; \sb<`a><y>> は &m<\bar<O> (y)> から何らかの順序数への一意な順序同型写像であったから、&m<\sb<f><x> \rvert; \sb<><\bar<O> (y)> = \sb<f><y>> でなければならない。
+      すなわち、&m<\sb<f><y> \subseteq; \sb<f><x>> である。
+    >
+    \p<
+      この観察のもと、超限帰納法によって &m<Z = X> を示す。
+      任意に &m<x \in; X> をとり、&m<O (x) \subseteq; Z> を仮定する。
+      今の観察により、写像
+      &mb<
+        \bigcup<y \in; O (x)> \sb<f><y>: \bigcup<y \in; O (x)> \bar<O> (y) \to; \bigcup<y \in; O (x)> \sb<`a><y>
+      >
+      が定義できる。
+      この写像を &m<f> とおく。
+      各 &m<\sb<f><y>> が順序同型写像であることから、この &m<f> が狭義単調増加な全射であることがすぐに従う。
+      また、&m<f> の定義域 &m<\bigcup|in|<y> \bar<O> (y)> は &m<O (x)> に等しい。
+      さらに、\ref|type="thm",ref="ordcup"|; により、&m<f> の値域 &m<`a \coloneqq; \bigcup|in|<y> \sb<`a><y>> は順序数である。
+      したがって、\ref|type="thm",ref="isoim"|; によって &m<f> は順序同型写像である。
+    >
+    \p<
+      上記の議論で得られた順序同型写像 &m<f: O (x) \to; `a> の拡張として、
+      &mb<
+        \array|align="rrcl"|<
+          \c<\tilde<f>:> \c<\bar<O> (x)> \c<\longto;> \c<`a \cup; `{`a`}> \br;
+          \c; \c<y> \c<\longmapsto;> \c<\case<
+            \c<f (y)> \c<(y \in; O (x))> \br;
+            \c<`a> \c<(y = x)>
+          >>
+        >
+      >
+      を考える。
+      &m<\tilde<f>> は &m<f> に 1 点の行き先を追加した拡張であり、追加された 1 点とその像はそれぞれ定義域と値域の最大元であるから、&m<\tilde<f>> も順序同型写像である。
+      \ref|type="thm",ref="succ"|; によって &m<`a \cup; `{`a`}> は順序数であるから、これにより &m<x \in; Z> が示された。
+    >
+    \p<
+      以上により &m<Z = X> であるから、写像
+      &mb<
+        \bigcup<y \in; X> \sb<f><y>: \bigcup<y \in; X> \bar<O> (y) \to; \bigcup<y \in; X> \sb<`a><y>
+      >
+      が定義でき、前と同様の議論によってこれは順序同型写像になる。
+      &m<f> の定義域 &m<\bigcup|in|<y> \bar<O> (y)> は &m<X> に等しく、&m<f> の値域 &m<\bigcup|in|<y> \sb<`a><y>> は順序数であるから、定理が示された。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      整列集合 &m<X> に対し、&m<X \cong; `a> を満たすような順序数 &m<`a> を &m<X> の\em<順序型\fl<order type>> といい、&m<\op<ord> X> で表す。
+    >
+  >
+  \h1<追記 (2020 年 5 月 31 日)>
+  \p<
+    より自己完結性を高めるため、整礎関係と整列順序の定義を追加した。
+    また、一般の切片の定義を追加した。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="stw"|<K. Ciesielski (1997)『Set Theory for the Working Mathematician』Cambridge University Press>
+    \li|id="stx"|<T. Jech (2000)『Set Theory: The Third Millennium Edition』Springer>
+ >
+
+>

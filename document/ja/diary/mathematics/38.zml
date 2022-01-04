@@ -1,0 +1,167 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<線型論理に対応する圏の比較 (その 2)>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2020 年 4 月 6 日)>
+  \p<
+    \a|href="35.html"|<4 月 5 日>の続き。
+    前回は、Bierman による線型圏と Seely によるモデル (を修正したもの) の関係について述べたが、今回は Lafont\ref|type="bib",ref="llcm"|; によって提案されたモデルとの関係について述べる。
+  >
+  \p<
+    モデルの定義に入る前に、コモノイドについて復習しておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<C>> において、対象 &m<A> に 2 つの射 &m<\sbsp<d><A><\pr;>: A \to; A \otimes; A, \sbsp<e><A><\pr;>: A \to; \top;> が定まっていて、
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \diag<
+              \v<A \otimes; A> \v<A> \v<A \otimes; A> \br;
+              \v<(A \otimes; A) \otimes; A> \v; \v<A \otimes; (A \otimes; A)>
+              \ar|s="1",e="4",inv|<\sbsp<d><A><\pr;> \otimes; \rm<id>> \ar|s="2",e="1",inv|<\sbsp<d><A><\pr;>> \ar|s="2",e="3"|<\sbsp<d><A><\pr;>>
+              \ar|s="3",e="6"|<\rm<id> \otimes; \sbsp<d><A><\pr;>> \ar|s="4",e="6"|;
+            >
+          >
+          \cc<
+            \diag<
+              \v; \v<A> \v; \br;
+              \v<\top; \otimes; A> \v<A \otimes; A> \v<A \otimes; \top;>
+              \ar|s="2",e="4"|; \ar|s="2",e="6"|;
+              \ar|s="2",e="5"|<\sbsp<d><A><\pr;>> \ar|s="5",e="4"|<\sbsp<e><A><\pr;> \otimes; \rm<id>> \ar|s="5",e="6",inv|<\rm<id> \otimes; \sbsp<e><A><\pr;>>
+            > \qquad;
+            \diag<
+              \v<A> \v<A \otimes; A> \br;
+              \v<A> \v<A \otimes; A>
+              \ar|s="1",e="2"|<\sbsp<d><A><\pr;>> \ar|s="1",e="3",line="2",tip="none"|; \ar|s="2",e="4"|;
+              \ar|s="3",e="4",inv|<\sbsp<d><A><\pr;>>
+            >
+          >
+        >
+      >
+      が全て可換であるとき、組 &m<(A, \sbsp<d><A><\pr;>, \sbsp<e><A><\pr;>)> を\em<可換コモノイド\fl<commutative comonoid>> という。
+      なお、最後の図式の右側の垂直な射は、テンソル積の左右を入れ替える同型射である。
+      それ以外のラベルのない射は、対称モノイダル圏に定まる構造射が誘導する同型射である。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<C>> において、可換コモノイド &m<(A, \sbsp<d><A><\pr;>, \sbsp<e><A><\pr;>), (B, \sbsp<d><B><\pr;>, \sbsp<e><B><\pr;>)> をとる。
+      射 &m<f: A \to; B> が、
+      &mb<
+        \diag<
+          \v<A> \v<B> \br;
+          \v<A \otimes; A> \v<B \otimes; B>
+          \ar|s="1",e="2"|<f> \ar|s="1",e="3",inv|<\sbsp<d><A><\pr;>>
+          \ar|s="2",e="4"|<\sbsp<d><B><\pr;>> \ar|s="3",e="4",inv|<f \otimes; f>
+        > \qquad;
+        \diag<
+          \v<A> \v<B> \br;
+          \v<\top;> \v<\top;>
+          \ar|s="1",e="2"|<f> \ar|s="1",e="3",inv|<\sbsp<e><A><\pr;>>
+          \ar|s="2",e="4"|<\sbsp<e><B><\pr;>> \ar|s="3",e="4",line="2",tip="none"|;
+        >
+      >
+      をともに可換にするとき、&m<f> を\em<可換コモノイドの射\fl<commutative comonoid morphism>> という。
+    >
+  >
+  \p<
+    対称モノイダル圏 &m<\scr<C>> 上の可換コモノイドとその間の射は圏を成すので、これを &m<\bfrm<Comon> (\scr<C>)> で表す。
+    すると、忘却関手 &m<U: \bfrm<Comon> (\scr<C>) \to; \scr<C>> が構成できる。
+    Lafont が提案した線型論理のモデルは、この忘却関手に右随伴関手が存在することを課したものである。
+  >
+  \thm|type="def"|<
+    \p<
+      対称モノイダル圏 &m<\scr<C>> について、忘却関手 &m<U: \bfrm<Comon> (\scr<C>) \to; \scr<C>> に右随伴関手 &m<G: \scr<C> \to; \bfrm<Comon> (\scr<C>)> が存在するとする。
+      このとき、&m<\scr<C>> を \em<Lafont 圏\fl<— category>> という。
+    >
+  >
+  \p<
+    一般に、忘却関手の右随伴関手の像は余自由対象と呼ばれるので、Lafont 圏とは任意の対象が余自由可換コモノイドを生成する圏であると言い換えることができる。
+  >
+  \p<
+    さて、今後の議論のため、随伴 &m<U \dashv; G> の余単位 &m<`e> がもつ普遍性についてここに書き下しておく。 
+    対象 &m<A> と可換コモノイド &m<(B, \sbsp<d><B><\pr;>, \sbsp<e><B><\pr;>)> をとり、射 &m<f: A \to; B> を考える。
+    すると、
+    &mb<
+      \diag<
+        \v<B> \v; \br;
+        \v<GA> \v<A>
+        \ar|s="1",e="4"|<f> \ar|s="3",e="4",inv|<\sb<`e><A>> \ar|s="1",e="3",dash,inv|<g>
+      >
+    >
+    を可換にするような可換コモノイドの射 &m<g: B \to; GA> が一意に存在する。
+    これは、随伴による全単射
+    &mb<
+      \sb<\op<Hom>><\scr<C>> (U (B, \sbsp<d><B><\pr;>, \sbsp<e><B><\pr;>), A) \cong; \sb<\op<Hom>><\bfrm<Comon> (\scr<C>)> ((B, \sbsp<d><B><\pr;>, \sbsp<e><B><\pr;>), GA)
+    >
+    によって、右辺の集合の元である &m<f> と対応する左辺の集合の元である。
+  >
+  \p<
+    Lafont 圏の定義は非常にシンプルだが、これだけで線型圏に必要な構造が全て誘導される。
+  >
+  \thm|type="thm",id="lafont"|<
+    \p<
+      Lafont 圏は線型圏である。
+    >
+  >
+  \prf<
+    \p<
+      随伴 &m<U \dashv; G> の単位と余単位をそれぞれ &m<`h> と &m<`e> で表し、&m<`d \coloneqq; U * `h * G> とおく。
+      また、&m<! \coloneqq; U \circ; G> とおく。
+    >
+    \p<
+      各対象 &m<A> に対し、&m<GA> は定義から可換コモノイドであり、その台対象は &m<UGA> すなわち &m<!A> である。
+      したがって、そこに定まっている 2 つの構造射は &m<\sb<d><A>: !A \to; !A \otimes; !A, \sb<e><A>: !A \to; \top;> で表せる。
+    >
+    \p<
+      対象 &m<A, B> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sbsp<d><!A \otimes; !B><\pr;>> \c<\coloneqq;> \c<\tort<\diag<
+            \v<!A \otimes; !B> \v<(!A \otimes; !A) \otimes; (!B \otimes; !B)> \v<(!A \otimes; !B) \otimes; (!A \otimes; !B)>
+            \ar|s="1",e="2"|<\sb<d><A> \otimes; \sb<d><B>> \ar|s="2",e="3"|;
+          >>> \br;
+          \c<\sbsp<e><!A \otimes; !B><\pr;>> \c<\coloneqq;> \c<\tort<\diag<
+            \v<!A \otimes; !B> \v<\top; \otimes; \top;> \v<\top;>
+            \ar|s="1",e="2"|<\sb<e><A> \otimes; \sb<e><B>> \ar|s="2",e="3"|;
+          >>>
+        >
+      >
+      とおくと、&m<(!A \otimes; !B, \sbsp<d><!A \otimes; !B><\pr;>, \sbsp<e><!A \otimes; !B><\pr;>)> は可換コモノイドになる。
+      したがって、余単位の普遍性により、
+      &mb<
+        \diag<
+          \v<!A \otimes; !B> \v; \br;
+          \v<! (A \otimes; B)> \v<A \otimes; B>
+          \ar|s="1",e="4"|<\sb<`e><A> \otimes; \sb<`e><B>> \ar|s="3",e="4",inv|<\sb<`e><A \otimes; B>> \ar|s="1",e="3",dash,inv|<\sb<\tilde<`f>><AB>>
+        >
+      >
+      を可換にする射 &m<\sb<\tilde<`f>><AB>: !A \otimes; !B \to; ! (A \otimes; B)> が存在して、これは可換コモノイドの射になっている。
+      また、同様にして、
+      &mb<
+        \diag<
+          \v<\top;> \v; \br;
+          \v<! \top;> \v<\top;>
+          \ar|s="1",e="4",line="2",tip="none"|; \ar|s="3",e="4",inv|<\sb<`e><\top;>> \ar|s="1",e="3",dash,inv|<`f>
+        >
+      >
+      を可換にする射 &m<`f: \top; \to; ! \top;> も存在して、これは可換コモノイドの射である。
+      これら 2 種類の射は、&m<!> にモノイダル関手の構造を定める。
+    >
+    \p<
+      以上によって定まった &m<(!, \tilde<`f>, `f, `d, `e, d, e)> は線型圏の公理を満たす。
+      これは簡単な計算によって確かめられる。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="bill"|<G. M. Bierman (1993)「On intuitionistic linear logic」Ph. D. thesis, The University of Cambridge>
+    \li|id="llcm"|<Y. Lafont (1988)「Logiques, catégories et machines」Ph. D. thesis, Université de Paris VII>
+  >
+
+>

@@ -1,0 +1,180 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<λμ-計算と古典論理>
+  \use-math|prefix="4"|;
+
+  \h1<日記 (2020 年 7 月 9 日)>
+  \p<
+    \a|href="54.html"|<7 月 8 日>では、&m<\rm<`l`m>>-計算を導入してその直観的意味について解説した。
+    今日は、&m<\rm<`l`m>>-計算に型付け規則を定め、Curry–Howard 対応のもとで古典論理に対応することを見ていこうと思う。
+  >
+  \thm|type="def"|<
+    \p<
+      計算体系 &m<\rm<`l`m>> を考える。
+      可算集合 &m<\bb<A>> を固定し、この元を\em<基本型\fl<basic type>> と呼ぶ。
+      さらに、基本型をメタ変項 &m<`a> で表すことにし、その上で、
+      &mb<
+        A \ccoloneqq; `a \mid; \bot; \mid; A \buharprarr; A
+      >
+      とする。
+      このとき、これによって定まるものを\em<型\fl<type>> という。
+    >
+  >
+  \p<
+    &m<\rm<`l`m>>-計算には変項と名前があるので、型割り当てのときに使われる文脈もそれぞれに対応して 2 種類考える必要がある。
+  >
+  \thm|type="def"|<
+    \p<
+      計算体系 &m<\rm<`l`m>> において、変項と型の 0 個以上の組から成る列であって現れる変項が相異なるものを\em<変項文脈\fl<variable context>> という。
+      同様に、名前と型の 0 個以上の組から成る列であって現れる名前が相異なるものを\em<名前文脈\fl<name context>> という。
+      変項文脈は、変項と型をこの順でコロンで区切ったものを並べることで
+      &mb<
+        \sb<x><1>: \sb<A><1>, \cdots;, \sb<x><n>: \sb<A><n>
+      >
+      と表す。
+      名前文脈についても同様である。
+    >
+  >
+  \p<
+    変項文脈 &m<`G> に対して、そこに変項と型の組 &m<x: A> を追加して得られるものを &m<`G, x: A> と書くが、このとき暗黙的に &m<`G> に現れる変項と &m<x> は異なるものとする。
+    また、変項文脈 &m<`G, `G'> に対して、&m<`G> に現れる変項と型の組が全て &m<`G'> にも現れることを &m<`G \subseteq; `G'> で表す。
+    特に、&m<`G> を並び替えて &m<`G'> が得られるときは &m<`G \subseteq; `G'> が成り立つ。
+    名前文脈についても同様の記号を用いる。
+  >
+  \p<
+  >
+  \p<
+    &m<\rm<`l`m>>-計算の型割り当ては、変項文脈 &m<`G> と名前文脈 &m<`D> と項 &m<M> と型 &m<A> の 4 つ組になり、&m<`G \vdash; M: A \mid; `D> と表される。
+    通常のラムダ計算における型割り当てに対し、最後に名前文脈が追加されている点に注目してほしい。
+    この関係は以下のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      型システム &m<\rm<`l`m>> の型割り当て規則を、
+      &mb<
+        \array|align="cl"|<
+          \cc<
+            \tree<
+              \infr|n="0"|<`G, x: A \vdash; x: A \mid; `D><\text<Axiom>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A \mid; `D>
+              \infr|n="1"|<`G' \vdash; M: A \mid; `D'><\text<Weak>>
+            >
+          ><\scas; (`G \subseteq; `G', `D \subseteq; `D')>
+          \cc<
+            \tree<
+              \axm<`G, x: A \vdash; M: B \mid; `D>
+              \infr|n="1"|<`G \vdash; \rm<`l> x. \sfun; M: A \buharprarr; B \mid; `D><\buharprarr|ord|; \rm<I>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A \buharprarr; B \mid; `D> \axm<`G \vdash; N: A \mid; `D>
+              \infr|n="2"|<`G \vdash; MN: B \mid; `D><\buharprarr|ord|; \rm<E>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: \bot; \mid; a: A, `D>
+              \infr|n="1"|<`G \vdash; \rm<`m> a. \sfun; M: A \mid; `D><\bot; \rm<E>>
+            >
+          >
+          \cc<
+            \tree<
+              \axm<`G \vdash; M: A \mid; `D>
+              \infr|n="1"|<`G \vdash; `{a`} M: \bot; \mid; a: A, `D><\bot; \rm<I>>
+            >
+          >
+        >
+      >
+      で定める。
+    >
+  >
+  \p<
+    特殊な型である &m<\bot;> は、常に例外を投げるなどで値を返さない関数の返り値の型と見なすと分かりやすい。
+    TypeScript では never 型 (void 型ではない) に対応するものである。
+    実際、&m<`{a`} M> という名前付き項は、これが置かれた環境ではなく &m<a> に束縛された環境で &m<M> を評価するという意味があるので、&m<`{a`} M> のすぐ外側には何も値を返さない。
+    そのため、&m<`{a`} M> は &m<\bot;> 型になっているのである。 
+  >
+  \p<
+    以上のように、&m<\bot;> は値をもたない型を表しているので、論理学的には矛盾 (証明が存在しない論理式) に対応する。
+    論理学では、&m<A> の否定が成立とは &m<A> を仮定すると矛盾することとして定義するので、これを踏まえて &m<A \buharprarr; \bot;> のことを &m<\neg; A> で表すことにする。
+  >
+  \p<
+    ここで、型割り当ての具体例をいくつか見てみよう。
+    まず、\a|href="54.html"|<7 月 8 日>で例に挙げた
+    &mb<
+      \rm<cont> \equiv; \rm<`l> m. \sfun; \rm<`m> a. \sfun; m (\rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x)
+    >
+    を考える。
+    これは、
+    &mb<
+      \tree<
+        \infr|n="0"|<m: \neg; \neg; A \vdash; m: \neg; \neg; A \mid;>
+        \infr|n="1"|<m: \neg; \neg; A \vdash; m: \neg; \neg; A \mid; a: A>
+        \infr|n="0"|<x: A \vdash; x: A \mid;>
+        \infr|n="1"|<x: A \vdash; `{a`} x: \bot; \mid; a: A>
+        \infr|n="1"|<x: A \vdash; `{a`} x: \bot; \mid; b: \bot;, a: A>
+        \infr|n="1"|<x: A \vdash; \rm<`m> b. \sfun; `{a`} x: \bot; \mid; a: A>
+        \infr|n="1"|<\vdash; \srel; \rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x: \neg; A \mid; a: A>
+        \infr|n="1"|<m: \neg; \neg; A \vdash; \rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x: \neg; A \mid; a: A>
+        \infr|n="2"|<m: \neg; \neg; A \vdash; m (\rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x): \bot; \mid; a: A>
+        \infr|n="1"|<m: \neg; \neg; A \vdash; \rm<`m> a. \sfun; m (\rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x): A \mid;>
+        \infr|n="1"|<\vdash; \srel; \rm<`l> m. \sfun; \rm<`m> a. \sfun; m (\rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x): \neg; \neg; A \buharprarr; A \mid;>
+      >
+    >
+    と型付けできる。
+    この &m<\rm<cont>> の型である &m<\neg; \neg; A \buharprarr; A> はいわゆる二重否定除去則で、これは直観主義論理では証明できず古典論理では証明できる命題の 1 つである。
+  >
+  \p<
+    次に、
+    &mb<
+      \rm<call`/cc> \equiv; \rm<`l> m. \sfun; \rm<`m> a. \sfun; `{a`} (m (\rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x))
+    >
+    という項を考えると、これは名前の通り Scheme の call`/cc と同じ振る舞いをする項になる。
+    詳細な証明図は省略するが、この項は &m<((A \buharprarr; B) \buharprarr; A) \buharprarr; A> という型をもつことが示せる。
+    これは Peirce の法則と呼ばれる形で、これも直観主義論理では証明できず古典論理では証明できる命題である。
+  >
+  \p<
+    以上のように、継続を扱う演算子には古典論理でしか証明できない形の型が付けられる。
+    これはすなわち、古典論理と比べて直観主義論理に足りない演算とは、計算論的な視点から見れば継続の操作であったということである。
+    このように、古典論理の計算論的意味付けをしたという点が、Parigot などの成果である。
+  >
+  \p<
+    なお、Parigot\ref|type="bib",ref="plca"|; はより強く以下のことを示した。
+  >
+  \thm|type="thm"|<
+    \p<
+      型システム &m<\rm<`l`m>> の型 &m<A> に対し、&m<\rm<`l`m>> において型 &m<A> をもつ閉じた項が存在することは、古典論理において &m<A> がトートロジーであることと同値である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\rm<`l`m>> における型割り当て
+      &mb<
+        \sb<x><1>: \sb<B><1>, \cdots;, \sb<x><m>: \sb<B><m> \vdash; M: A \mid; \sb<a><1>: \sb<C><1>, \cdots;, \sb<a><n>: \sb<C><n>
+      >
+      が、古典論理における演繹
+      &mb<
+        \sb<B><1>, \cdots;, \sb<B><m>, \neg; \sb<C><1>, \cdots;, \neg; \sb<C><n> \vdash; A
+      >
+      に対応することを見れば良い。
+    >
+  >
+  \h1<追記 (2020 年 7 月 10 日)>
+  \p<
+    最後の定理に簡単な解説を追加した。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ochf"|<C.-H. L. Ong, C. A. Stewart (1997)「A Curry-Howard foundation for functional computation with control」『Proceedings of the 24th ACM SIGPLAN-SIGACT symposium on principles of programming languages』215–227>
+    \li|id="plca"|<M. Parigot (1992)「&m<\rm<`l`m>>-calculus: an algorithmic interpretation of classical natural deduction」『Lecture Notes in Artificial Intelligence』624:190–201>
+  >
+
+>

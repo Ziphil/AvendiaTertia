@@ -1,0 +1,45 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<グロスの凡例>
+  \ver<S 代>
+
+  \h1<動詞>
+  \table<
+    \tr<\th<漢字>\th<英字>\th<意味>>
+    \tr<\td<現>\td<PRS>\td<現在時制>>
+    \tr<\td<過>\td<PST>\td<過去時制>>
+    \tr<\td<未>\td<FUT>\td<未来時制>>
+    \tr<\td<通>\td<DCH>\td<通時時制>>
+    \tr<\td<開>\td<INCP>\td<開始相>>
+    \tr<\td<経>\td<PROG>\td<経過相>>
+    \tr<\td<完>\td<PERF>\td<完了相>>
+    \tr<\td<継>\td<CONT>\td<継続相>>
+    \tr<\td<終>\td<TERM>\td<終了相>>
+    \tr<\td<無>\td<INDF>\td<無相>>
+    \tr<\td<自>\td<INTR>\td<自動>>
+    \tr<\td<他>\td<TR>\td<他動>>
+  >
+  \h1<助詞>
+  \table<
+    \tr<\th<漢字>\th<英字>\th<意味>>
+    \tr<\td<主>\td<NOM>\td<主格 ({a} 格)>>
+    \tr<\td<対>\td<ACC>\td<対格 ({e} 格)>>
+    \tr<\td<与>\td<DAT>\td<与格 ({ca} 格)>>
+    \tr<\td<奪>\td<ABL>\td<奪格 ({zi} 格)>>
+    \tr<\td<被>\td<PAT>\td<被格 ({li} 格)>>
+  >
+  \h1<その他>
+  \table<
+    \tr<\th<漢字>\th<英字>\th<意味>>
+    \tr<\td<形>\td<ADJ>\td<形容詞>>
+    \tr<\td<副>\td<ADV>\td<副詞>>
+    \tr<\td<否>\td<NEG>\td<否定>>
+    \tr<\td<非動修>\td<NVM>\td<非動詞修飾>>
+    \tr<\td<疑>\td<INT>\td<疑問>>
+    \tr<\td<節>\td<COMP>\td<節化>>
+  >
+
+>

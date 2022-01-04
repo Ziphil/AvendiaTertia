@@ -1,0 +1,337 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<豊穣関手の豊穣圏>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2018 年 8 月 2 日)>
+  \p<
+    普通の圏論においては、小圏 &m<\scr<C>> と圏 &m<\scr<D>> の間の関手と自然変換は新しい圏を成す。
+    これと同じようなことが、実は豊穣圏に関しても成り立つ。
+    ただし、ある豊穣圏の対象が関手であるという言及はできても、豊穣圏の射全体は一般に集合ではないので、ある豊穣圏の射が自然変換であるという言及はそのままではできない。
+    したがって、何らかのものを射とする豊穣圏とはそもそもどういう意味なのか明確にする必要がある。
+  >
+  \thm|type="def"|<
+    \p<
+      モノイダル圏 &m<\scr<V>> の元 &m<X> に対し、&m<\sb<\op<Hom>><\scr<V>> (1, X)> を &m<X> の\em<台集合\fl<underlying set>> という。
+    >
+  >
+  \p<
+    この定義により、ある &m<\scr<V>>-豊穣圏 &m<\scr<C>> の射対象 &m<`[A, B`]> が何らかの数学的概念全体であるという言及に対し、その台集合 &m<\sb<\op<Hom>><\scr<V>> (1, `[A, B`])> がその数学的概念全体の集合であるという意味付けができる。
+  >
+  \p<
+    なお、台集合が同型だからといって、もともとの対象が同型というわけではない。
+    さらに、台集合を与える関手 &m<\op<Hom> (1, \text<->): \scr<V> \to; \bfrm<Set>> は、充満ではないし、一般に忠実にすらならない。
+    すなわち、台集合の情報だけでもとの対象が決定できるわけでは全くない。
+  >
+  \p<
+    さて、これによって豊穣関手と豊穣自然変換が新たな豊穣圏を成すという言明に意味をもたせることができた。
+    この圏を構成するため、まずは与えられた豊穣関手 &m<F, G> に対し、&m<F> から &m<G> への豊穣自然変換全体を台集合にもつ対象を構成する。
+  >
+  \thm|type="prp",id="nat"|<
+    \p<
+      完備対称モノイダル閉圏 &m<\scr<V>> をとり、&m<\scr<V>>-豊穣小圏 &m<\scr<C>> と &m<\scr<V>>-豊穣圏 &m<\scr<D>> およびその間の &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to; \scr<D>> を考える。
+      ある &m<\scr<V>> の対象 &m<\lbbracket; F, G \rbbracket; \sb<><\scr<C> \to; \scr<D>>> が存在して、集合の同型
+      &mb<
+        \sb<\op<Hom>><\scr<V>> (1, \lbbracket; F, G \rbbracket; \sb<><\scr<C> \to; \scr<D>>) \cong; `{ \scr<V> \text<-豊穣自然変換 > `g: F \raarr; G `}
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<C>> の対象 &m<B, C> に対し、合成
+      &mb<
+        \diag|hor="thk"|<
+          \v<`[B, C`] \otimes; \prod<A \in; \scr<C>><> `[FA, GA`]> \v<`[FB, FC`] \otimes; `[FC, GC`]> \v<`[FB, GC`]>
+          \ar|s="1",e="2"|<\sb<F><BC> \otimes; \sb<\rm<pr>><C>> \ar|s="2",e="3"|<\sb<c><FB, FC, GC>>
+        >
+      >
+      とテンソル積の随伴で対応する射を
+      &mb<
+        \sb<p><BC>: \prod<A \in; \scr<C>><> `[FA, GA`] \longto; `[B, C`] \rmulti|bin|; `[FB, GC`]
+      >
+      とおく。
+      この射たちは、
+      &mb<
+        p: \prod<A \in; \scr<C>><> `[FA, GA`] \longto; \prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, GC`])
+      >
+      を定める。
+      同様にして、&m<\scr<C>> の対象 &m<B, C> に対し、合成
+      &mb<
+        \diag|hor="thk"|<
+          \v<\prod<A \in; \scr<C>><> `[FA, GA`] \otimes; `[B, C`]> \v<`[FB, GB`] \otimes; `[GB, GC`]> \v<`[FB, GC`]>
+          \ar|s="1",e="2"|<\sb<\rm<pr>><B> \otimes; \sb<G><BC>> \ar|s="2",e="3"|<\sb<c><FB, GB, GC>>
+        >
+      >
+      とテンソル積の随伴で対応する射を
+      &mb<
+        \sb<q><BC>: \prod<A \in; \scr<C>><> `[FA, GA`] \longto; `[B, C`] \rmulti|bin|; `[FB, GC`]
+      >
+      とおき、これらが定める射を
+      &mb<
+        q: \prod<A \in; \scr<C>><> `[FA, GA`] \longto; \prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, GC`])
+      >
+      とする。
+      これによって平行な射が 2 本できたので、等化子
+      &mb<
+        \diag<
+          \v<N> \v<\prod<A \in; \scr<C>><> `[FA, GA`]> \v<\prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, GC`])>
+          \ar|s="1",e="2",tip="tail",dash|;
+          \ar|s="2",e="3",shift="3"|<p> \ar|s="2",e="3",shift="-3",inv|<q>
+        >
+      >
+      を計算する。
+      この &m<N> が存在を示したい対象になっている。
+    >
+    \p<
+      実際、&m<\op<Hom> (1, \text<->): \scr<V> \to; \bfrm<Set>> は表現可能関手なので極限を保存するため、
+      &mb<
+        \diag<
+          \v<\op<Hom> (1, N)> \v<\prod<A \in; \scr<C>><> \op<Hom> (1, `[FA, GA`])> \v<\prod<B, C \in; \scr<C>><> \op<Hom> (1, `[B, C`] \rmulti|bin|; `[FB, GC`])>
+          \ar|s="1",e="2",tip="tail"|;
+          \ar|s="2",e="3",shift="3"|<p \circ; \text<->> \ar|s="2",e="3",shift="-3",inv|<q \circ; \text<->>
+        >
+      >
+      は &m<\bfrm<Set>> で等化子の図式になっている。
+      したがって、同型の違いを除いて &m<\op<Hom> (1, N)> は、&m<\scr<C>> の対象 &m<A> に対する射 &m<\sb<`g><A>: 1 \to; `[FA, GA`]> たちの族 &m<(\sb<`g><A>) \sb<><A \in; \scr<C>>> であって、
+      &mb<
+        p \circ; (\sb<`g><A>) \sb<><A \in; \scr<C>> = q \circ; (\sb<`g><A>) \sb<><A \in; \scr<C>>
+      >
+      を満たすもの全体の集合である。
+      この等式は、任意の &m<\scr<C>> の対象 &m<B, C> に対して、
+      &mb<
+        \sb<p><BC> \circ; (\sb<`g><A>) \sb<><A \in; \scr<C>> = \sb<q><BC> \circ; (\sb<`g><A>) \sb<><A \in; \scr<C>>
+      >
+      が成り立つのと同値である。
+      さらにこの等式は、テンソル積の随伴で対応する射を考えることにより、
+      &mb<
+        \diag|ver="thn",hor="thk"|<
+          \v<`[B, C`] \otimes; 1> \v< `[B, C`] \otimes; \prod<A \in; \scr<C>><> `[FA, GA`]> \v<`[FB, FC`] \otimes; `[FC, GC`]> \br;
+          \v; \v; \v<`[FB, GC`]> \br;
+          \v<1 \otimes; `[B, C`]> \v<\prod<A \in; \scr<C>><\vph<A \in; \scr<C>>> `[FA, GA`]> \v<`[FB, GB`] \otimes; `[GB, GC`]>
+          \ar|s="1",e="2"|<\rm<id> \otimes; `g> \ar|s="1",e="7",inv|<\sb<`s><`[B, C`], 1>> \ar|s="2",e="3"|<\sb<F><BC> \otimes; \sb<\rm<pr>><C>>
+          \ar|s="3",e="6"|<\sb<c><FB, FC, GC>>
+          \ar|s="7",e="8",inv|<`g \otimes; \rm<id>> \ar|s="8",e="9",inv|<\sb<\rm<pr>><B> \otimes; \sb<G><BC>> \ar|s="9",e="6",inv|<\sb<c><FB, GB, GC>>
+        >
+      >
+      の可換性と同値である。
+      この図式を少し書き換えれば、
+      &mb<
+        &mark<\wheart;>
+        \diag|ver="vthn",hor="thk"|<
+          \v<`[B, C`] \otimes; 1> \v<`[FB, FC`] \otimes; `[FC, GC`]> \v; \br;
+          \v; \v; \v<`[FB, GC`]> \br;
+          \v<1 \otimes; `[B, C`]> \v<`[FB, GB`] \otimes; `[GB, GC`]> \v; \br;
+          \ar|s="1",e="2"|<\sb<F><BC> \otimes; \sb<`g><C>> \ar|s="1",e="7",inv|<\sb<`s><`[B, C`], 1>> \ar|s="2",e="6"|<\sb<c><FB, FC, GC>>
+          \ar|s="7",e="8",inv|<\sb<`g><B> \otimes; \sb<G><BC>> \ar|s="8",e="6",inv|<\sb<c><FB, GB, GC>>
+        >
+      >
+      となり、これは &m<`g> の自然性を表す図式そのものである。
+      以上により、
+      &mb<
+        \op<Hom> (1, N) \cong; `{ \scr<V> \text<-豊穣自然変換 > `g: F \raarr; G `}
+      >
+      が成り立つ。
+    >
+  >
+  \thm|type="thm",id="funcat"|<
+    \p<
+      完備対称モノイダル閉圏 &m<\scr<V>> をとる。
+      &m<\scr<V>>-豊穣小圏 &m<\scr<C>> と &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、&m<\scr<V>>-豊穣関手とその間の &m<\scr<V>>-豊穣自然変換は &m<\scr<V>>-豊穣圏を成す。
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to; \scr<D>> の間の射対象を、\ref|type="thm",ref="nat"|; の &m<\lbbracket; F, G \rbbracket;> とする。
+      あとは合成を表す射と恒等射を与える射を構成すれば良い。
+    >
+    \p<
+      まず、&m<\scr<V>>-豊穣関手 &m<F, G, H: \scr<C> \to; \scr<D>> に対して射 &m<\sb<c><FGH>: \lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket; \to; \lbbracket; F, H \rbbracket;> を構成する。
+      &m<\scr<C>> の対象 &m<A> に対し、
+      &mb<
+        \diag<
+          \v<\lbbracket; F, G \rbbracket;> \v<\prod<A \in; \scr<C>><> `[FA, GA`]> \v<`[FA, GA`]>
+          \ar|s="1",e="2",tip="tail"|; \ar|s="2",e="3"|<\sb<\rm<pr>><A>>
+        >
+      >
+      を &m<\sb<m><A>> とおく。
+      なお、この合成における最初の射は、等化子としての &m<\lbbracket; F, G \rbbracket;> の構造射である。
+      同様にして、
+      &mb<
+        \diag<
+          \v<\lbbracket; G, H \rbbracket;> \v<\prod<A \in; \scr<C>><> `[GA, HA`]> \v<`[GA, HA`]>
+          \ar|s="1",e="2",tip="tail"|; \ar|s="2",e="3"|<\sb<\rm<pr>><A>>
+        >
+      >
+      を &m<\sb<n><A>> とおく。
+      これらの射を用いて、
+      &mb<
+        \diag|hor="thk"|<
+          \v<\lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket;> \v<`[FA, GA`] \otimes; `[GA, HA`]> \v<`[FA, HA`]>
+          \ar|s="1",e="2"|<\sb<m><A> \otimes; \sb<n><A>> \ar|s="2",e="3"|<\sb<c><FA, GA, HA>>
+        >
+      >
+      を考え、これを &m<\sb<s><A>> とおく。
+      この &m<\sb<s><A>> たちは、
+      &mb<
+        s: \lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket; \longto; \prod<A \in; \scr<C>><> `[FA, HA`]
+      >
+      を定める。
+    >
+    \p<
+      さて、任意に &m<\scr<C>> の対象 &m<B, C> をとる。
+      まず &m<\lbbracket; F, G \rbbracket;> について、\ref|type="thm",ref="nat"|; で図式 &m<\wheart;> の可換性を導いたのと同様にして、
+      &mb<
+        &mark<\wspade;>
+        \diag<
+          \v<`[B, C`] \otimes; \lbbracket; F, G \rbbracket;> \v<`[FB, FC`] \otimes; `[FC, GC`]> \br;
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[B, C`]> \v; \br;
+          \v<`[FB, GB`] \otimes; `[GB, GC`]> \v<`[FB, GC`]>
+          \ar|s="1",e="2"|<\sb<F><BC> \otimes; \sb<m><C>> \ar|s="1",e="3",inv|<\sb<`s><`[B, C`], \lbbracket; F, G \rbbracket;>> \ar|s="2",e="6"|<\sb<c><FB, FC, GC>>
+          \ar|s="3",e="5",inv|<\sb<m><B> \otimes; \sb<G><BC>>
+          \ar|s="5",e="6",inv|<\sb<c><FB, GB, GC>>
+        >
+      >
+      が可換であることが分かる。
+      したがって、
+      &mb<
+        \diag<
+          \v<`[B, C`] \otimes; \lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket;>
+          \v<`[B, C`] \otimes; \lbbracket; F, G \rbbracket; \otimes; `[GC, HC`]>
+          \v<`[FB, FC`] \otimes; `[FC, GC`] \otimes; `[GC, HC`]> \br;
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[B, C`] \otimes; \lbbracket; G, H \rbbracket;>
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[B, C`] \otimes; `[GC, HC`]> 
+          \v; \br;
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[GB, GC`] \otimes; `[GC, HC`]>
+          \v<`[FB, GB`] \otimes; `[GB, GC`] \otimes; `[GC, HC`]>
+          \v<`[FB, GC`] \otimes; `[GC, HC`]> \br;
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[GB, HC`]>
+          \v<`[FB, GB`] \otimes; `[GB, HC`]>
+          \v<`[FB, HC`]>
+          \ar|s="1",e="2"|<\rm<id> \otimes; n> \ar|s="1",e="4",inv|<`s \otimes; \rm<id>>
+          \ar|s="2",e="3"|<F \otimes; m \otimes; \rm<id>> \ar|s="2",e="5"|<`s \otimes; \rm<id>>
+          \ar|s="3",e="9"|<c \otimes; \rm<id>>
+          \ar|s="4",e="7",inv|<\rm<id> \otimes; G \otimes; n>
+          \ar|s="5",e="8"|<m \otimes; G \otimes; \rm<id>>
+          \ar|s="7",e="8"|<m \otimes; \rm<id>> \ar|s="7",e="10",inv|<\rm<id> \otimes; c>
+          \ar|s="8",e="9"|<c \otimes; \rm<id>> \ar|s="8",e="11"|<\rm<id> \otimes; c>
+          \ar|s="9",e="12"|<c>
+          \ar|s="10",e="11",inv|<m \otimes; \rm<id>> \ar|s="11",e="12",inv|<c>
+        >
+      >
+      は可換である。
+      実際、右上の矩形部分は上の図式から可換であり、右下の矩形部分は合成の結合性から可換で、それ以外の部分はテンソル積の関手性から可換である。
+      したがって、
+      &mb<
+        \diag<
+          \v<`[B, C`] \otimes; \lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket;>
+          \v<`[B, C`] \otimes; \lbbracket; F, G \rbbracket; \otimes; `[GC, HC`]>
+          \v<`[FB, FC`] \otimes; `[FC, GC`] \otimes; `[GC, HC`]> \br;
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[B, C`] \otimes; \lbbracket; G, H \rbbracket;>
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[GB, GC`] \otimes; `[GC, HC`]>
+          \v; \br;
+          \v<\lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket; \otimes; `[B, C`]>
+          \v;
+          \v<`[FB, GC`] \otimes; `[GC, HC`]>\br;
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[GB, HC`] \otimes; `[HB, HC`]>
+          \v<\lbbracket; F, G \rbbracket; \otimes; `[GB, HC`]>
+          \v; \br;
+          \v<`[FB, GB`] \otimes; `[GB, HC`] \otimes; `[HB, HC`]>
+          \v<`[FB, GB`] \otimes; `[GB, HC`]>
+          \v<`[FB, HC`]>
+          \ar|s="1",e="2"|<\rm<id> \otimes; n> \ar|s="1",e="4",inv|<`s \otimes; \rm<id>>
+          \ar|s="2",e="3"|<F \otimes; m \otimes; \rm<id>>
+          \ar|s="3",e="9"|<c \otimes; \rm<id>>
+          \ar|s="4",e="7",inv|<\rm<id> \otimes; `s> \ar|s="4",e="5"|<\rm<id> \otimes; G \otimes; n>
+          \ar|s="5",e="11"|<\rm<id> \otimes; c>
+          \ar|s="7",e="10",inv|<\rm<id> \otimes; n \otimes; H>
+          \ar|s="9",e="15"|<c>
+          \ar|s="10",e="13",inv|<m \otimes; \rm<id>> \ar|s="10",e="11"|<\rm<id> \otimes; c>
+          \ar|s="11",e="14"|<m \otimes; \rm<id>>
+          \ar|s="13",e="14",inv|<\rm<id> \otimes; c>
+          \ar|s="14",e="15",inv|<c>
+        >
+      >
+      も可換になる。
+      実際、左中央の矩形部分は図式 &m<\wspade;> が可換であるのと同様にして可換であり、左下の矩形部分はテンソル積の関手性から可換で、右側の残りの部分は上の図式の外周そのものである。
+      そして、この図式の外周は、
+      &mb<
+        \diag<
+          \v<`[B, C`] \otimes; (\lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket;)>
+          \v<`[FB, FC`] \otimes; `[FC, HC`]> \br;
+          \v<(\lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket;) \otimes; `[B, C`]> \v; \br;
+          \v<`[FB, HB`] \otimes; `[HB, HC`]> \v<`[FB, HC`]>
+          \ar|s="1",e="2"|<\sb<F><BC> \otimes; \sb<s><C>> \ar|s="1",e="3",inv|<\sb<`s><`[B, C`], \lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket;>>
+          \ar|s="2",e="6"|<\sb<c><FB, FC, HC>>
+          \ar|s="3",e="5",inv|<\sb<s><B> \otimes; \sb<H><BC>> \ar|s="5",e="6",inv|<\sb<c><FB, HB, HC>>
+        >
+      >
+      と書き換えられるから、この図式も可換である。
+      すなわち、&m<\lbbracket; F, H \rbbracket;> を等化子として定義するときに用いた 2 つの平行な射を &m<p, q> とすれば、&m<p \circ; s = p \circ; q> が成り立つ。
+      よって、等化子の普遍性により、図式
+      &mb<
+        \diag<
+          \v<\lbbracket; F, H \rbbracket;> \v<\prod<A \in; \scr<C>><> `[FA, HA`]> \v<\prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, HC`])> \br;
+          \v<\lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket;> \v; \v;
+          \ar|s="1",e="2",tip="tail"|; \ar|s="2",e="3",shift="3"|<p> \ar|s="2",e="3",shift="-3",inv|<q>
+          \ar|s="4",e="2",inv|<s> \ar|s="4",e="1",dash|;
+        >
+      >
+      の左側の三角形部分を可換にする破線の射が唯一存在する。
+      これを &m<\sb<c><FGH>> と定めれば良い。
+    >
+    \p<
+      次に、&m<\scr<V>>-豊穣関手 &m<F: \scr<C> \to; \scr<D>> に対して射 &m<\sb<j><F>: 1 \to; \lbbracket; F, F \rbbracket;> を構成する。
+      任意の &m<\scr<C>> の対象 &m<B, C> に対し、図式
+      &mb<
+        \diag<
+          \v<`[B, C`] \otimes; 1> \v<`[FB, FC`] \otimes; `[FC, FC`]> \br;
+          \v<1 \otimes; `[B, C`]> \v; \br;
+          \v<`[FB, FB`] \otimes; `[FB, FC`]> \v<`[FB, FC`]>
+          \ar|s="1",e="2"|<\sb<F><BC> \otimes; \sb<j><FC>> \ar|s="1",e="3",inv|<\sb<`s><`[B, C`], 1>>
+          \ar|s="2",e="6"|<\sb<c><FB, FC, FC>>
+          \ar|s="3",e="5",inv|<\sb<j><FB> \otimes; \sb<F><BC>> \ar|s="5",e="6",inv|<\sb<c><FB, FB, FC>>
+        >
+      >
+      を考えると、これは明らかに可換である。
+      したがって、&m<\scr<C>> の各対象 &m<A> に対して、&m<\scr<D>> の恒等射を定める射 &m<\sb<j><FA>: 1 \to; `[FA, FA`]> たちが定める射を
+      &mb<
+        t: 1 \longto; \prod<A \in; \scr<C>><> `[FA, FA`]
+      >
+      とおけば、上の議論と同様にして、図式
+      &mb<
+        \diag<
+          \v<\lbbracket; F, F \rbbracket;> \v<\prod<A \in; \scr<C>><> `[FA, FA`]> \v<\prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, FC`])> \br;
+          \v<1> \v; \v;
+          \ar|s="1",e="2",tip="tail"|; \ar|s="2",e="3",shift="3"|<p> \ar|s="2",e="3",shift="-3",inv|<q>
+          \ar|s="4",e="2",inv|<t> \ar|s="4",e="1",dash|;
+        >
+      >
+      の左側の三角形部分を可換にする破線の射が唯一存在する。
+      これを &m<\sb<j><F>> と定めれば良い。
+    >
+    \p<
+      以上のデータにより、&m<\scr<V>>-豊穣関手とその間の &m<\scr<V>>-豊穣自然変換は &m<\scr<V>>-豊穣圏を成す。
+      本来は合成の結合性なども示さなければならないが、それを確認する気力が今はないので、ここでは省略することにする。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      完備対称モノイダル閉圏 &m<\scr<V>> をとる。
+      &m<\scr<V>>-豊穣小圏 &m<\scr<C>> と &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、\ref|type="thm",ref="funcat"|; で構成された &m<\scr<V>>-豊穣圏を &m<\scr<C>, \scr<D>> の\em<豊穣関手圏\fl<enriched functor category>> といい、&m<\bfrm<Fun> (\scr<C>, \scr<D>)> で表す。
+    >
+  >
+  \p<
+    上で定義された圏は &m<\sp<\scr<D>><\scr<C>>> で表すこともある。
+    後々 2-圏を考えることになるのだが、2-圏の間の関手は何種類かあるので、それにしたがって関手圏も何種類か存在することになる。
+    &m<\sp<\scr<D>><\scr<C>>> と書いてしまうとどの関手圏を表しているのか曖昧になってしまうため、この日記シリーズでは、添字などを付けて区別しやすい &m<\bfrm<Fun> (\scr<C>, \scr<D>)> の方を使うことにする。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 2』Cambridge University Press>
+  >
+
+>

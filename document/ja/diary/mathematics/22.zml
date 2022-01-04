@@ -1,0 +1,235 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<錐状極限>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2018 年 9 月 3 日)>
+  \p<
+    前回は、2-圏における極限を、豊穣圏における重み付き極限として定義した。
+    したがって、2-極限を考えるためには、極限を考える図式を与える関手の他に、重みを与えるもう 1 つの関手が必要であった。
+    しかし、普通の圏での極限には重みという概念はない。
+    なぜ重みが必要になったのかを考えると、\a|href="17.html"|<8 月 6 日>で述べたように、一般の豊穣圏において定値関手がうまく定義できないからであった。
+  >
+  \p<
+    &m<\bfrm<Cat>>-豊穣圏である 2-圏においてであれば、定値な 2-関手を定義することができる。
+    したがって、通常の圏での極限と同様の形式のものを、2-圏では定義することができる。
+    通常の圏での極限は、重みとして 1 点集合への定値関手を選ぶことで得られることを思い出すと、2-圏においては、1 つの対象から成る圏への定値な 2-関手を考えれば良いだろう。
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \scr<J> \to; \scr<C>> があるとする。
+      &m<\bfrm<1>> の唯一の対象への定値関手 &m<\sb<`D><\bfrm<1>>: \scr<J> \to; \bfrm<Cat>> を重みとして用いた &m<F> の 2-極限を\em<錐状極限\fl<conical limit>> といい、単に &m<\lim; F> で表す。
+    >
+  >
+  \p<
+    一般の 2-極限は普遍性をもつ柱として特徴付けられた。
+    錐状極限は、&m<\sb<`D><\bfrm<1>>> を重みとして用いた特殊な場合であるから、ある &m<\scr<C>> の対象 &m<A> を含む &m<`s: \sb<`D><\bfrm<1>> \raarr; `[A, F \hyphen;`]> という形の柱であって普遍性をもつものとして特徴付けられる。
+    今後のため、これをもう少し初等的に言い換えておこう。
+  >
+  \p<
+    まず、柱 &m<`s: \sb<`D><\bfrm<1>> \raarr; `[A, F \hyphen;`]> は、&m<\scr<J>> の各対象 &m<I> に対して定められた関手 &m<\sb<`s><I>: \bfrm<1> \to; `[A, FI`]> から成る。
+    この関手は &m<\bfrm<1>> の唯一の対象 &m<\star|ord|;> の像によって一意に定まるから、&m<\scr<C>> の 1-射 &m<\sb<\bar<`s>><I>: A \to; FI> と同一視できる。
+  >
+  \p<
+    &m<`s> は 2-自然変換なので自然性を満たすが、それは &m<\bfrm<Cat>> における図式
+    &mb<
+      \diag<
+        \v<`[I, J`]> \v<`[\bfrm<1>, \bfrm<1>`]> \br;
+        \v<`[`[A, FI`], `[A, FJ`]`]> \v<`[\bfrm<1>, `[A, FJ`]`]>
+        \ar|s="1",e="2"|<\sb<`D><\bfrm<1>>> \ar|s="1",e="3",inv|<`[A,  F \hyphen;`]>
+        \ar|s="2",e="4"|<c (\hyphen;, \sb<`s><J>)> \ar|s="3",e="4",inv|<c (\sb<`s><I>, \hyphen;)>
+      >
+    >
+    が可換であるということであった。
+    これはまず、任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> (すなわち &m<`[I, J`]> の対象) に対して、通常の関手の等式
+    &mb<
+      \sb<`s><J> \circ; \sb<`D><\bfrm<1>> = `[A, Fu`] \circ; \sb<`s><I>
+    >
+    が成り立つことを要求している。
+    この等式の両辺は &m<\bfrm<1>> からの関手なので &m<\star|ord|;> の像のみを考えれば良く、したがってこれは、&m<\scr<C>> の 1-射の等式
+    &mb<
+      \sb<\bar<`s>><J> = Fu \circ; \sb<\bar<`s>><I>
+    >
+    と同値である。
+    次に、上の図式は、任意の &m<\scr<J>> の 2-射 &m<`v: u \raarr; v: I \to; J> (すなわち &m<`[I, J`]> の射) に対して、通常の自然変換の等式
+    &mb<
+      \sb<`s><J> \ast; \sb<`D><\bfrm<1>> `v = `[A, F `v`] \ast; \sb<`s><I>
+    >
+    が成り立つことも要求している。
+    これも &m<\star;> における成分を考えて、&m<\scr<C>> の 2-射の等式
+    &mb<
+      \sb<\rm<id>><\sb<\bar<`s>><J>> = F `v \ast; \sb<\bar<`s>><I>
+    >
+    が成り立つことと同値であることが分かる。
+  >
+  \p<
+    以上により、重みが &m<\sb<`D><\bfrm<1>>> であるときの柱は、以下のようなものと同一視できることがわかった。
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>> をとり、さらに &m<\scr<C>> の対象 &m<A> をとる。
+      &m<\scr<J>> の対象 &m<I> に対して &m<\scr<C>> の 1-射 &m<\sb<\bar<`s>><I>: A \to; FI> が定められており、以下の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> に対し、
+        &mb<
+          \diag|hor="thn"|<
+            \v; \v<A> \v; \br;
+            \v<FI> \v; \v<FJ>
+            \ar|s="2",e="4",inv|<\sb<\bar<`s>><I>> \ar|s="2",e="6"|<\sb<\bar<`s>><J>>
+            \ar|s="4",e="6",inv|<Fu>
+          >
+        >
+        は可換である。
+      >
+      \li<
+        任意の &m<\scr<J>> の 2-射 &m<`v: u \raarr; v: I \to; J> に対し、
+        &mb<
+          \diag<
+            \v<A> \v<FI> \v<FJ>
+            \ar|s="1",e="2"|<\sb<\bar<`s>><I>>
+            \ar|s="2:r10",e="3:l10",bend="40"|<Fu> \ar|s="2:r90",e="3:l90",bend="-40",inv|<Fv>
+            \ar|s="2:r10",e="3:l10",bend="40",line="0",name="h",inv|; \ar|s="2:r90",e="3:l90",bend="-40",line="0",name="k"|;
+            \ar|s="h:c",e="k:c",line="2"|<F `v>
+          > \qquad;
+          \diag<
+            \v<A> \v<FJ>
+            \ar|s="1:r10",e="2:l10",bend="40"|<\sb<\bar<`s>><J>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<\bar<`s>><J>>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
+            \ar|s="h:c",e="k:c",line="2"|<\rm<id>>
+          >
+        >
+        は等しい。
+      >
+    >
+    \p<
+      このとき、族 &m<(\sb<\bar<`s>><I>) \sb<><I \in; \scr<J>>> を &m<F> の\em<錐\fl<cone>> といい、&m<\bar<`s>: A \daarr; F> で表す。
+    >
+  >
+  \p<
+    最初の条件は、普通の圏での極限を考えるときにお馴染みの錐と全く同じである。
+    2-圏には 2-射が存在するので、2-圏における錐を考えるときは、上の定義中の 2 つ目の条件が追加で課されることになる。
+  >
+  \p<
+    柱の 2 次元的普遍性には柱の間の自然調整が出てくるので、重みとして &m<\sb<`D><\bfrm<1>>> を考えている場合の柱の間の自然調整についても初等的な言い換えをしておこう。
+    2 つの柱 &m<`s, `t: \sb<`D><\bfrm<1>> \raarr; `[A, F \hyphen;`]> と自然調整 &m<`J: `s \raaarr; `t> をとる。
+    これは、&m<\scr<J>> の対象 &m<I> に対して定められた自然変換 &m<\sb<`J><I>: \sb<`s><I> \raarr; \sb<`t><I>> から成る。
+    &m<\star;> における成分を考えれば、これは &m<\scr<C>> の 2-射 &m<\sb<\bar<`J>><I>: \sb<\bar<`s>><I> \raarr; \sb<\bar<`t>><I>> と同一視できる。
+  >
+  \p<
+    &m<`J> の自然性とは、任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> に対し、通常の自然変換 (すなわち &m<\bfrm<Cat>> の 2-射) の等式
+    &mb<
+      \sb<`J><J> \ast; \sb<`D><\bfrm<1>> u = `[A, Fu`] \ast; \sb<`J><I>
+    >
+    が等しいということであった。
+    &m<\star;> における成分を考えると、これは &m<\scr<C>> の 2-射の等式
+    &mb<
+      \sb<\bar<`J>><J> = Fu \ast; \sb<\bar<`J>><I>
+    >
+    と同値である。
+  >
+  \p<
+    以上により、重みが &m<\sb<`D><\bfrm<1>>> であるときの柱の間の自然調整は、以下のものと同一視できる。
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>> をとり、さらに錐 &m<\bar<`s>, \bar<`t>: A \daarr; F> をとる。
+      &m<\scr<J>> の対象 &m<I> に対して &m<\scr<C>> の 2-射 &m<\sb<\bar<`J>><I>: \sb<\bar<`s>><I> \raarr; \sb<\bar<`t>><I>> が定められており、以下の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> に対し、
+        &mb<
+          \diag<
+            \v<A> \v<FI> \v<FJ>
+            \ar|s="2",e="3"|<Fu>
+            \ar|s="1:r10",e="2:l10",bend="40"|<\sb<\bar<`s>><I>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<\bar<`t>><I>>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
+            \ar|s="h:c",e="k:c",line="2"|<\sb<\bar<`J>><I>>
+          > \qquad;
+          \diag<
+            \v<A> \v<FJ>
+            \ar|s="1:r10",e="2:l10",bend="40"|<\sb<\bar<`s>><J>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<\bar<`t>><J>>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
+            \ar|s="h:c",e="k:c",line="2"|<\sb<\bar<`J>><J>>
+          >
+        >
+        は等しい。
+      >
+    >
+    \p<
+      このとき、族 &m<(\sb<\bar<`J>><I>) \sb<><I \in; \scr<J>>> を\em<錐の射\fl<morphism of cones>> といい、&m<\bar<`J>: \bar<`s> \raaarr; \bar<`t>> で表す。
+    >
+  >
+  \p<
+    これらの議論により、錐の普遍性は以下のように述べることができる。
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>> に対し、錐 &m<\bar<`h>: L \daarr; F> が以下の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        任意の錐 &m<\bar<`s>: A \daarr; F> に対し、ある &m<\scr<C>> の 1-射 &m<f: A \to; L> が一意に存在し、任意の &m<\scr<J>> の対象 &m<I> に対して、
+        &mb<
+          \diag<
+            \v<A> \v; \br;
+            \v<L> \v<FI>
+            \ar|s="1",e="4"|<\sb<\bar<`s>><I>> \ar|s="1",e="3",inv|<f> \ar|s="3",e="4",inv|<\sb<\bar<`h>><I>>
+          >
+        >
+        は可換である。
+      >
+    >
+    \p<
+      このとき、&m<\bar<`h>> は \em<1 次元的普遍性\fl<one-dimensional universality>> を満たすという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>> に対し、錐 &m<\bar<`h>: A \daarr; F> が 1 次元的普遍性を満たし、さらに以下の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        任意の錐 &m<\bar<`s>, \bar<`t>: A \daarr; F> と任意の錐の射 &m<\bar<`J>: \bar<`s> \raaarr; \bar<`t>> に対し、ある &m<\scr<C>> の 2-射 &m<`a: f \raarr; g> が一意に存在し、任意の &m<\scr<J>> の対象 &m<I> に対して、
+        &mb<
+          \diag<
+            \v<A> \v<L> \v<FI>
+            \ar|s="2",e="3"|<\sb<\bar<`h>><I>>
+            \ar|s="1:r10",e="2:l10",bend="40"|<f> \ar|s="1:r90",e="2:l90",bend="-40",inv|<g>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
+            \ar|s="h:c",e="k:c",line="2"|<`a>
+          > \qquad;
+          \diag<
+            \v<A> \v<FI>
+            \ar|s="1:r10",e="2:l10",bend="40"|<\sb<\bar<`s>><I>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<\bar<`t>><I>>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
+            \ar|s="h:c",e="k:c",line="2"|<\sb<\bar<`J>><I>>
+          >
+        >
+        は等しい。
+        ここで、&m<\scr<C>> の 1-射 &m<f, g> は &m<\bar<`h>> の 1 次元的普遍性によりそれぞれ &m<\bar<`s>, \bar<`t>> から得られるものとする。
+      >
+    >
+    \p<
+      このとき、&m<\bar<`h>> は \em<2 次元的普遍性\fl<two-dimensional universality>> を満たすという。
+    >
+  >
+  \p<
+    ここまで見てきたように、これらは単に柱の 2 種類の普遍性を言い換えただけであるから、\a|href="21.html#limuniv"|<命題 4.5> によって 2 種類の普遍性を満たす錐は錐状極限を定める。
+  >
+  \p<
+    なお、一般の豊穣圏において錐状極限のようなものを考えることができないというわけではない。
+    これについては、Kelly\ref|type="bib",ref="kbce"|; の 3.8 節を参照すると良い。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="kbce"|<G. M. Kelly (1985)『Basic Concepts of Enriched Category Theory』Cambridge University Press>
+    \li|id="keot"|<G. M. Kelly (1989)「Elementary observations on 2-categorical limits」『Bulletin of the Australian Mathematical Society』39:301–317>
+  >
+
+>

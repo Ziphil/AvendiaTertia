@@ -1,0 +1,494 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Kan 拡張概略>
+  \use-math|prefix="1"|;
+
+  \h1<日記 (2021 年 5 月 7 日)>
+  \p<
+    巷で全ての概念であると噂の Kan 拡張の概略をまとめておく。
+    あくまで概略に留め、細かい計算は省略した。
+  >
+  \p<
+    Kan 拡張には左 Kan 拡張と右 Kan 拡張の 2 種類があり、片方の定義に現れる自然変換の向きを全て逆にするともう片方が得られるという意味で、互いに双対概念である。
+    自然変換の向きの反転に関する双対であって、関手の向きの反転に関する双対ではないことには注意すること。
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      関手 &m<L: \scr<S> \to; \scr<D>> と自然変換 &m<`h: F \raarr; L \circ; K> の対 &m<(L, `h)> について、同様の任意の関手 &m<L': \scr<S> \to; \scr<D>> と任意の自然変換 &m<`h: F \raarr; L' \circ; K> の対 &m<(L', `h')> に対し、自然変換 &m<`f: L \raarr; L'> が一意に存在して、&m<`h' = (`f * K) \circ; `h> が成り立つとする。
+      すなわち、次の図式を埋める 2 つの自然変換が等しいとする。
+      &mb<
+        \diag<
+          \v<\scr<C>> \v<\scr<D>> \br;
+          \v<\scr<S>>
+          \ar|s="1",e="2"|<F> \ar|s="1",e="3",inv|<K>
+          \ar|s="3",e="2",bend="-45",inv|<L'>
+          \ar|s="1",e="2",line="0",pos="40",name="c",inv|; \ar|s="3",e="2",bend="-45",line="0",pos="21",name="b"|; \ar|s="c",e="b",line="2"|<`h'>
+        > \qquad;
+        \diag<
+          \v<\scr<C>> \v<\scr<D>> \br;
+          \v<\scr<S>>
+          \ar|s="1",e="2"|<F> \ar|s="1",e="3",inv|<K>
+          \ar|s="3",e="2",pos="25",inv|<L> \ar|s="3",e="2",bend="-45",inv|<L'>
+          \ar|s="3",e="2",line="0",name="a"|; \ar|s="3",e="2",bend="-45",line="0",name="b",inv|; \ar|s="a",e="b",line="2"|<`f>
+          \ar|s="1",e="2",line="0",pos="18",name="c",inv|; \ar|s="3",e="2",line="0",pos="25",name="d"|; \ar|s="c",e="d",line="2"|<`h>
+        >
+      >
+      このとき、&m<L> を &m<K> に沿った &m<F> の\em<左 Kan 拡張\fl<left — extension>> といい、&m<`h> をその\em<単位\fl<unit>> という。
+      また、&m<(L, `h)> は &m<\sb<\op<Lan>><K> F> で表される。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      関手 &m<R: \scr<S> \to; \scr<D>> と自然変換 &m<`e: R \circ; K \raarr; F> の対 &m<(R, `e)> について、同様の任意の関手 &m<R': \scr<S> \to; \scr<D>> と任意の自然変換 &m<`e: R' \circ; K \raarr; F> の対 &m<(R', `e')> に対し、自然変換 &m<`f: R' \raarr; R> が一意に存在して、&m<`e' = `e \circ; (`f * K)> が成り立つとする。
+      すなわち、次の図式を埋める 2 つの自然変換が等しいとする。
+      &mb<
+        \diag<
+          \v<\scr<C>> \v<\scr<D>> \br;
+          \v<\scr<S>>
+          \ar|s="1",e="2"|<F> \ar|s="1",e="3",inv|<K>
+          \ar|s="3",e="2",bend="-45",inv|<R'>
+          \ar|s="1",e="2",line="0",pos="40",name="c",inv|; \ar|s="3",e="2",bend="-45",line="0",pos="21",name="b"|; \ar|s="b",e="c",line="2",inv|<`e'>
+        > \qquad;
+        \diag<
+          \v<\scr<C>> \v<\scr<D>> \br;
+          \v<\scr<S>>
+          \ar|s="1",e="2"|<F> \ar|s="1",e="3",inv|<K>
+          \ar|s="3",e="2",pos="25",inv|<R> \ar|s="3",e="2",bend="-45",inv|<R'>
+          \ar|s="3",e="2",line="0",name="a"|; \ar|s="3",e="2",bend="-45",line="0",name="b",inv|; \ar|s="b",e="a",line="2",inv|<`f>
+          \ar|s="1",e="2",line="0",pos="18",name="c",inv|; \ar|s="3",e="2",line="0",pos="25",name="d"|; \ar|s="d",e="c",line="2",inv|<`e>
+        >
+      >
+      このとき、&m<R> を &m<K> に沿った &m<F> の\em<右 Kan 拡張\fl<right — extension>> といい、&m<`e> をその\em<余単位\fl<counit>> という。
+      また、&m<(R, `e)> は &m<\sb<\op<Ran>><K> F> で表される。
+    >
+  >
+  \p<
+    定義に厳格に沿えば、Kan 拡張とは関手と自然変換の組のことである。
+    しかし、極限について述べるときに錐を省略して対象だけを指して極限と言うように、Kan 拡張についても関手だけを指して Kan 拡張と言うことがある。
+  >
+  \p<
+    さて、関手 &m<F: \scr<C> \to; \scr<D>> は、始域と終域に現れる圏を反転圏にして、関手 &m<\sp<F><\circ;>: \sp<\scr<C>><\circ;> \to; \sp<\scr<D>><\circ;>> とも見なすことができる。
+    同様に、関手 &m<F, G: \scr<C> \to; \scr<D>> の間の自然変換 &m<`h: F \raarr; G> についても、現れる圏を反転圏にして、&m<\sp<`h><\circ;>: \sp<G><\circ;> \raarr; \sp<F><\circ;>> と見なせる。
+    現れる圏や関手や自然変換をこの意味で反転すると、全ての左 Kan 拡張は右 Kan 拡張と見なすことができる。
+  >
+  \thm|type="prp"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      このとき、&m<\sb<\op<Lan>><K> F> と &m<\sb<\op<Ran>><\sp<K><\circ;>> \sp<F><\circ;>> のどちらか一方が存在すればもう一方も存在し、
+      &mb<
+        (\sb<\op<Lan>><K> F) \sp<><\circ;> = \sb<\op<Ran>><\sp<K><\circ;>> \sp<F><\circ;>: \sp<\scr<S>><\circ;> \to; \sp<\scr<D>><\circ;>
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      定義から明らかである。
+    >
+  >
+  \p<
+    このことから、左 Kan 拡張に関するある主張が証明されたなら、出てくる全てのものを反転することで、右 Kan 拡張に関する同様の主張が証明されたことになる。
+    したがって、以降は左 Kan 拡張にのみ注目する。
+  >
+  \thm|type="prp",id="rep"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      関手 &m<L: \scr<S> \to; \scr<D>> について、2 条件
+    >
+    \ol<
+      \li<
+        &m<L = \sb<\op<Lan>><K> F> が成り立つ。
+      >
+      \li<
+        任意の関手 &m<L': \scr<S> \to; \scr<D>> について、全単射
+        &mb<
+          \sb<\op<Hom>><`[\scr<S>, \scr<D>`]> (L, L') \cong; \sb<\op<Hom>><`[\scr<C>, \scr<D>`]> (F, L' \circ; K)
+        >
+        が成り立ち、これは &m<L'> について自然である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      &m<L = \sb<\op<Lan>><K> F> の単位を &m<`h: F \raarr; L \circ; K> とおく。
+      関手 &m<L': \scr<S> \to; \scr<D>> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><`[\scr<S>, \scr<D>`]> (L, L')> \c<\longto;> \c<\sb<\op<Hom>><`[\scr<C>, \scr<D>`]> (F, L' \circ; K)> \br;
+          \c<`f> \c<\longmapsto;> \c<(`f * K) \circ; `h>
+        >
+      >
+      を考えると、これは &m<L'> に関して自然であり、さらに &m<`h> の普遍性によってこれは全単射である。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      仮定から
+      &mb<
+        \sb<\op<Hom>><`[\scr<S>, \scr<D>`]> (L, L) \cong; \sb<\op<Hom>><`[\scr<C>, \scr<D>`]> (F, L \circ; K)
+      >
+      であるから、左辺の元 &m<\sb<\rm<id>><L>> に対応する右辺の元 &m<`h: F \raarr; L \circ; K> がある。
+      すると、この同型の自然性から、この同型を与える写像は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><`[\scr<S>, \scr<D>`]> (L, L')> \c<\longto;> \c<\sb<\op<Hom>><`[\scr<C>, \scr<D>`]> (F, L' \circ; K)> \br;
+          \c<`f> \c<\longmapsto;> \c<(`f * K) \circ; `h>
+        >
+      >
+      で与えられることが分かる。
+      これが全単射であるということは、まさに &m<`h> が左 Kan 拡張の普遍性をもつということである。
+    >
+  >
+  \p<
+    左 Kan 拡張は余極限やコエンドとして具体的に得ることができる。
+  >
+  \thm|type="lem",id="lem"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      &m<\scr<S>> の対象 &m<S> と &m<\scr<D>> の対象 &m<D> について、以下の集まりを定義する。
+    >
+    \ul<
+      \li<
+        コンマ圏 &m<K \bdarr; S> を考え、忘却関手と &m<F> の合成を
+        &mb<
+          \sp<`F><S> \coloneqq; \tort<\diag|bl|<
+            \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
+            \ar|s="1",e="2"|<> \ar|s="2",e="3"|<F>
+          >>
+        >
+        とおき、これの &m<D> を頂点とする余錐全体の集まりを &m<\op<Cocone> (\sp<`F><S>, D)> で表す。
+        すなわち、この元は、
+        &mb<
+          \sp<`l><S> \coloneqq; (\sbsp<`l><C, f><S>: FC \to; D) \sb<><(C, f) \in; K \bdarr; S>
+        >
+        という射の自然な族である。
+      >
+      \li<
+        &m<\scr<D>> がテンソル付きであるとし、テンソル対象を &m<\odot;> で表す。
+        このとき、関手
+        &mb<
+          \array|align="rrcl"|<
+            \c<\sp<`C><S>:> \c<\sp<\scr<C>><\circ;> \times; \scr<C>> \c<\longto;> \c<\scr<D>> \br;
+            \c; \c<(C, C')> \c<\longmapsto;> \c<\op<Hom> (KC, S) \odot; FC'>
+          >
+        >
+        を考え、これの &m<D> を頂点とする余楔全体の集まりを &m<\op<Cowedge> (\sp<`C><S>, D)> で表す。
+        すなわち、この元は、
+        &mb<
+          \sp<`m><S> \coloneqq; (\sbsp<`m><C><S>: \op<Hom> (KC, S) \odot; FC \to; D) \sb<><C \in; \scr<C>>
+        >
+        という射の自然な族である。
+      >
+    >
+    \p<
+      このとき、全単射
+      &mb<
+        \op<Cocone> (\sp<`F><S>, D) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
+      >
+      が存在する。
+      さらに、&m<\scr<D>> がテンソル付きならば、全単射
+      &mb<
+        \op<Cowedge> (\sp<`C><S>, D) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
+      >
+      も存在する。
+      また、これらの全単射はどちらも &m<D> に関して自然である。
+    >
+  >
+  \prf<
+    \p<
+      最初の全単射は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<Cocone> (\sp<`F><S>, D)> \c<\longto;> \c<\sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))> \br;
+          \c<\sp<`l><S>> \c<\longmapsto;> \c<(f \longmapsto; \sbsp<`l><C, f><S>) \sb<><C \in; \scr<C>>> \br;
+          \c<(\sbsp<`n><C><S> f) \sb<><(C, f) \in; K \bdarr; S>> \c<\longmappedfrom;> \c<\sp<`n><S>>
+        >
+      >
+      で与えられる。
+      また、次の全単射は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<Cowedge> (\sp<`C><S>, D)> \c<\longto;> \c<\sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))> \br;
+          \c<\sp<`m><S>> \c<\longmapsto;> \c<(\sbsp<`m><C><S> \sp<><\sharp;> ) \sb<><C \in; \scr<C>>> \br;
+          \c<\sb<(\sbsp<`n><C><S> \sp<><\flat;>)><C \in; \scr<C>>> \c<\longmappedfrom;> \c<\sp<`n><S>>
+        >
+      >
+      で与えられる。
+      なお、&m<\sp<\hyphen;><\sharp;>> と &m<\sp<\hyphen;><\flat;>> はテンソル対象の元の対応である。
+    >
+  >
+  \thm|type="thm",id="colimrep"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      今、任意の &m<\scr<S>> の対象 &m<S> に対し、
+      &mb<
+        LS \coloneqq; \op<colim> \tort<\diag|bl|<
+          \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
+          \ar|s="1",e="2"|<> \ar|s="2",e="3"|<F>
+        >>
+      >
+      が存在するとし、これを定める余錐を
+      &mb<
+        (\sbsp<`l><C, f><S>: FC \to; LS) \sb<><(C, f) \in; K \bdarr; S>
+      >
+      とおく。
+      さらに、各 &m<\scr<C>> の対象 &m<C> に対し、
+      &mb<
+        \sb<`h><C> \coloneqq; \sbsp<`l><C, \sb<\rm<id>><KC>><KC>: FC \to; LKC
+      >
+      とおく。
+      すると、以上のデータは、関手 &m<L: \scr<S> \to; \scr<D>> と自然変換 &m<`h: F \raarr; L \circ; K> を定め、&m<(L, `h) = \sb<\op<Lan>><K> F> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意に関手 &m<L': \scr<S> \to; \scr<D>> と自然変換 &m<`h: F \raarr; L' \circ; K> をとる。
+      また、任意に &m<\scr<S>> の対象 &m<S> をとる。
+      ここで、&m<(L'f \circ; \sbsp<`h><C><\pr;>: FC \to; L'S) \sb<><(C, f) \in; K \bdarr; S>> は &m<LS> を定める図式の余錐であるから、余極限の普遍性により、&m<\scr<D>> の射 &m<\sb<`f><S>: LS \to; L'S> が一意に存在して、任意の &m<K \bdarr; S> の対象 &m<(C, f)> に対し、
+      &mb<
+        \diag<
+          \v<FC> \v<LS> \br;
+          \v; \v<L'S>
+          \ar|s="1",e="2"|<\sbsp<`l><C, f><S>> \ar|s="1",e="4",inv|<L'f \circ; \sbsp<`h><C><\pr;>> \ar|s="2",e="4"|<\sb<`f><S>>
+        >
+      >
+      は可換である。
+      さらに、これは自然変換 &m<`f: L \raarr; L'> を定めることがすぐに分かる。
+      また、上の図式の可換性から、任意の &m<\scr<C>> の対象 &m<C> に対し、
+      &mb<
+        \diag<
+          \v<FC> \v<LKC> \br;
+          \v; \v<L'KC>
+          \ar|s="1",e="2"|<\sbsp<`l><C, \sb<\rm<id>><KC>><KC>> \ar|s="1",e="4",inv|<\sbsp<`h><C><\pr;>> \ar|s="2",e="4"|<\sb<`f><KC>>
+        >
+      >
+      は可換で、定義から &m<\sb<`h><C> = \sbsp<`l><C, \sb<\rm<id>><KC>><KC>> であるから、&m<`h' = (`f * K) \circ; `h> が成り立つ。
+      このような &m<`f> の一意性は、余極限の分解の一意性から従う。
+    >
+  >
+  \thm|type="thm",id="coendrep"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      今、任意の &m<\scr<S>> の対象 &m<S> に対し、
+      &mb<
+        LS \coloneqq; \int<><C \in; \scr<C>> (\op<Hom> (KC, S) \odot; FC)
+      >
+      が存在するとし、これを定める余楔を
+      &mb<
+        (\sbsp<`m><C><S>: \op<Hom> (KC, S) \odot; FC \to; LS) \sb<><C \in; \scr<C>>
+      >
+      とおく。
+      さらに、各 &m<\scr<C>> の対象 &m<C> に対し、
+      &mb<
+        \sb<`h><C> \coloneqq; \sbsp<`m><C><KC> \sp<><\sharp;> \sb<\rm<id>><KC>: FC \to; LKC
+      >
+      とおく。
+      すると、以上のデータは、関手 &m<L: \scr<S> \to; \scr<D>> と自然変換 &m<`h: F \raarr; L \circ; K> を定め、&m<(L, `h) = \sb<\op<Lan>><K> F> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="lem"|; によって、\ref|type="thm",ref="colimrep"|; の余極限を定める図式の余錐とこの定理のコエンドを定める図式の余楔は 1 対 1 に対応するから、\ref|type="thm",ref="colimrep"|; の余極限とこの定理のコエンドは一致する。
+      したがって、この定理の主張は\ref|type="thm",ref="colimrep"|; から従う。
+    >
+  >
+  \p<
+    このようにして余極限やコエンドとして計算できる左 Kan 拡張は、任意の表現可能関手で保たれるという性質をもつ。
+    逆に、任意の表現可能関手で保たれる左 Kan 拡張は、上のような余極限やコエンドとして書けることも知られている。
+    このような性質をもつ左 Kan 拡張は、始域の圏の対象それぞれに対してその値が計算できることから、各点であると呼ばれる。
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとり、&m<(L, `h) = \sb<\op<Lan>><K> F> が存在するとする。
+      関手 &m<G: \scr<D> \to; \scr<E>> が &m<(G \circ; L, G * `h) = \sb<\op<Lan>><K> (G \circ; F)> を満たすとき、&m<G> は &m<\sb<\op<Lan>><K> F> を\em<保存する\fl<preserve>> という。
+      &mb<
+        \diag<
+          \v<\scr<C>> \v<\scr<D>> \v<\scr<E>> \br;
+          \v<\scr<S>>
+          \ar|s="1",e="2"|<F> \ar|s="1",e="4",inv|<K> \ar|s="2",e="3"|<G>
+          \ar|s="4",e="2",inv|<L>
+          \ar|s="1",e="2",line="0",pos="18",name="c",inv|; \ar|s="4",e="2",line="0",pos="25",name="d"|; \ar|s="c",e="d",line="2"|<`h>
+        >
+      >
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとり、&m<(L, `h) = \sb<\op<Lan>><K> F> が存在するとする。
+      任意の &m<\scr<D>> の対象 &m<D> に対し、関手 &m<\op<Hom> (\hyphen;, D): \scr<D> \to; \sp<\bfrm<Set>><\circ;>> が &m<\sb<\op<Lan>><K> F> を保存するとき、&m<\sb<\op<Lan>><K> F> は\em<各点\fl<pointwise>> であるという。
+      &mb<
+        \diag<
+          \v<\scr<C>> \v<\scr<D>> \v<\sp<\bfrm<Set>><\circ;>> \br;
+          \v<\scr<S>>
+          \ar|s="1",e="2"|<F> \ar|s="1",e="4",inv|<K> \ar|s="2",e="3"|<\op<Hom> (\hyphen;, D)>
+          \ar|s="4",e="2",inv|<L>
+          \ar|s="1",e="2",line="0",pos="18",name="c",inv|; \ar|s="4",e="2",line="0",pos="25",name="d"|; \ar|s="c",e="d",line="2"|<`h>
+        >
+      >
+    >
+  >
+  \thm|type="thm",id="main"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      関手 &m<L: \scr<S> \to; \scr<D>> に対し、3 条件
+    >
+    \ol<
+      \li<
+        &m<L = \sb<\op<Lan>><K> F> であり、さらにこれは各点である。
+      >
+      \li<
+        各 &m<\scr<S>> の対象 &m<S> に対し、
+        &mb<
+          LS = \op<colim> \tort<\diag|bl|<
+            \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
+            \ar|s="1",e="2"|<> \ar|s="2",e="3"|<F>
+          >>
+        >
+        が成り立つ。
+        特に、上式の右辺の余極限が存在する。
+      >
+      \li<
+        各 &m<\scr<S>> の対象 &m<S> に対し、
+        &mb<
+          LS = \int<><C \in; \scr<C>> (\op<Hom> (KC, S) \odot; FC)
+        >
+        が成り立つ。
+        特に、上式の右辺のコエンドが存在する。
+      >
+    >
+    \p<
+      について、条件 1 と条件 2 は同値である。
+      さらに、&m<\scr<D>> がテンソル付きならば、条件 3 を含めてこれらは全て同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      &m<\scr<S>> の対象 &m<S> と &m<\scr<D>> の対象 &m<D> に対し、まず Yoneda の補題により、
+      &mb<
+        &mark<1>
+        \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \sb<\op<Hom>><`[\sp<\scr<S>><\circ;>, \bfrm<Set>`]> (\op<Hom> (\hyphen;, S), \op<Hom> (L \hyphen;, D))
+      >
+      が成り立つ。
+      さらに、&m<L = \sb<\op<Lan>><K> F> が各点であることから、
+      &mb<
+        \op<Hom> (L \hyphen;, D) = \sb<\op<Lan>><K> \op<Hom> (F \hyphen;, D): \scr<S> \to; \sp<\bfrm<Set>><\circ;>
+      >
+      が成り立つので、\ref|type="thm",ref="rep"|; によって、
+      &mb<
+        \sb<\op<Hom>><`[\scr<S>, \sp<\bfrm<Set>><\circ;>`]> (\op<Hom> (L \hyphen;, D), \op<Hom> (\hyphen;, S)) \cong; \sb<\op<Hom>><`[\scr<C>, \sp<\bfrm<Set>><\circ;>`]> (\op<Hom> (F \hyphen;, D), \op<Hom> (K \hyphen;, S))
+      >
+      である。
+      これはすなわち、
+      &mb<
+        &mark<2>
+        \sb<\op<Hom>><`[\sp<\scr<S>><\circ;>, \bfrm<Set>`]> (\op<Hom> (\hyphen;, S), \op<Hom> (L \hyphen;, D)) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
+      >
+      が成り立つということである。
+      最後に、\ref|type="thm",ref="lem"|; によって、
+      &mb<
+        &mark<3>
+        \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D)) \cong; \op<Cocone> (\sp<`F><S>, D)
+      >
+      が成り立つ。
+    >
+    \p<
+      さて、式 1, 2, 3 をまとめると、
+      &mb<
+        &mark<4>
+        \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \op<Cocone> (\sp<`F><S>, D)
+      >
+      が得られる。 
+      さらに、式 1, 2, 3 は全て &m<D> に関して自然なので、上の式 4 も &m<D> に関して自然である。
+      この式 4 の同型は &m<LS = \op<colim> \sp<`F><S>> が成り立つということであるから、条件 2 が示された。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      \ref|type="thm",ref="colimrep"|; によって &m<L = \sb<\op<Lan>><K> F> である。
+      さらに、表現可能関手は余極限を保存するから、これは各点である。
+    >
+    \p<
+      \label<条件 2 &m<\lraarr;> 条件 3>
+      \ref|type="thm",ref="lem"|; によって条件 2 の余極限と条件 3 のコエンドは一致するから、条件 2 と条件 3 は明らかに同値である。
+    >
+  >
+  \p<
+    この定理からすぐに従う事実をいくつか並べておく。
+  >
+  \thm|type="thm",id="exist"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      &m<\scr<D>> が余完備ならば、&m<\sb<\op<Lan>><K> F> が存在して各点である。 
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<D>> の余完備性から、各 &m<\scr<S>> の対象 &m<S> に対し、
+      &mb<
+        LS \coloneqq; \op<colim> \tort<\diag|bl|<
+          \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
+          \ar|s="1",e="2"|<> \ar|s="2",e="3"|<F>
+        >>
+      >
+      が存在する。
+      \ref|type="thm",ref="colimrep"|; によって、これは関手 &m<L: \scr<S> \to; \scr<D>> を定めて &m<L = \sb<\op<Lan>><K> F> を満たす。
+      また、\ref|type="thm",ref="main"|; によって、これは各点である。
+    >
+  >
+  \thm|type="prp",id="homrep"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      関手 &m<L: \scr<S> \to; \scr<D>> について、2 条件
+    >
+    \ol<
+      \li<
+        &m<L = \sb<\op<Lan>><K> F> であり、さらにこれは各点である。
+      >
+      \li<
+        任意の &m<\scr<S>> の対象 &m<S> と &m<\scr<D>> の対象 &m<D> について、全単射
+        &mb<
+          \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
+        >
+        が成り立ち、これは &m<S> と &m<D> の両方について自然である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="thm",ref="main"|; により、&m<L = \sb<\op<Lan>><K> F> であってこれが各点であることは、任意の &m<\scr<S>> の対象 &m<S> に対して、
+      &mb<
+        LS = \op<colim> \tort<\diag|bl|<
+          \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
+          \ar|s="1",e="2"|<> \ar|s="2",e="3"|<F>
+        >>
+      >
+      が成り立つことと同値である。
+      この余極限をとっている関手を &m<\sp<`F><S>> とおけば、このことは、任意の &m<\scr<S>> の対象 &m<S> と &m<\scr<D>> の対象 &m<D> に対して、
+      &mb<
+        \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \op<Cocone> (\sp<`F><S>, D)
+      >
+      が自然に成り立つことと同値である。
+      さらに、\ref|type="thm",ref="lem"|; により、これは、
+      &mb<
+        \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
+      >
+      が自然に成り立つことと同値である。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ctc"|<E. Riehl (2016)『Category Theory in Context』Dover Publications>
+  >
+
+>

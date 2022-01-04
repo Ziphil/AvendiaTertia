@@ -1,0 +1,114 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<ABC073-D: 順列の全探索>
+  \use-math;
+
+  \h1<日記 (2018 年 5 月 23 日)>
+  \p<
+    最近、友人と AtCoder の過去問を使って疑似コンテストをするようになったんですが、そこで解いた問題でちょっとメモしておくべきだなと感じたものがあったので、メモしておきます。
+    問題は ABC073 の D 問題で、\ae|href="https://beta.atcoder.jp/contests/abc073/tasks/abc073_d"|<こちら>です。
+  >
+  \p<
+    町を訪れる順番を 1 つ固定したとします。
+    このとき、その順番で街を訪れたときの移動距離の最小値は、典型的な最短経路問題です。
+    これは、例えばワーシャル・フロイド法を用いれば &m<O (\sp<N><3>)> で求めることができます。
+    したがって、あらゆる町の訪れ方を考えて、その訪れ方をしたときの最短経路をそれぞれ計算し、それらの全体の最小値を求めれば、この問題の答えになります。
+    町の訪れ方は全部で &m<R!> 通りありますが、今回は幸い &m<R \leq; 8> なので、多くても &m<8! = 40320> 通りしかありません。
+    したがって、町の訪れ方に関しては全探索できます。
+  >
+  \p<
+    さて、ここで問題になるのが、町の訪れ方の全探索の方法です。
+    これには、0 から &m<R - 1> までの数列の順列を順番に全て取得する何らかの方法が必要です。
+    C++ であれば \m<next_permutation> という関数が標準で備わっているのでそれを使えば良いですが、Java にはありません。
+    Java にもあれば後々でも便利そうなので、作っておきましょう。
+  >
+  \pre~*<
+    private static boolean nextPermutation(int[] array) {
+      for (int i = array.length - 1 ; i `> 0 ; i --) {
+        if (array[i - 1] `< array[i]) {
+          int j = find(array, array[i - 1], i, array.length - 1);
+          int temp = array[j];
+          array[j] = array[i - 1];
+          array[i - 1] = temp;
+          Arrays.sort(array, i, array.length);
+          return true;
+        }
+      }
+      return false;
+    }
+
+    private static int find(int[] array, int dest, int f, int l) {
+      if (f == l) {
+        return f;
+      }
+      int m = (f + l + 1) / 2;
+      return (array[m] `<= dest) ? find(array, dest, f, m - 1) : find(array, dest, m, l);
+    }
+  >
+  \p<
+    この \m<nextPermutation> メソッドに配列を渡すと、その配列が小さい順での次の順列に書き換えられ、\m<true> が返されます。
+    渡された配列が最大の (すなわち大きい順にソートされている) 順列だった場合は、何もせずに \m<false> を返します。
+  >
+  \p<
+    これを使って、今回の問題は以下のように解けます。
+  >
+  \pre~*<
+    public void run() {
+      BetterScanner scanner = new BetterScanner(System.in);
+
+      int n = scanner.nextInt();
+      int m = scanner.nextInt();
+      int rNum = scanner.nextInt();
+      int[] rr = new int[rNum];
+      for (int i = 0 ; i `< rNum ; i ++) {
+        rr[i] = scanner.nextInt() - 1;
+      }
+      int[][] costs = new int[n][n];
+      for (int i = 0 ; i `< m ; i ++) {
+        int a = scanner.nextInt() - 1;
+        int b = scanner.nextInt() - 1;
+        int c = scanner.nextInt();
+        costs[a][b] = c;
+        costs[b][a] = c;
+      }
+
+      // ワーシャル・フロイド法で最短経路をあらかじめ求めておく
+      int[][] dd = new int[n][n];
+      for (int i = 0 ; i `< n ; i ++) {
+        for (int j = 0 ; j `< n ; j ++) {
+          dd[i][j] = (costs[i][j] `> 0) ? costs[i][j] : Integer.MAX_VALUE;
+        }
+      }
+      for (int k = 0 ; k `< n ; k ++) {
+        for (int i = 0 ; i `< n ; i ++) {
+          for (int j = 0 ; j `< n ; j ++) {
+            if (dd[i][k] `< Integer.MAX_VALUE `&`& dd[k][j] `< Integer.MAX_VALUE `&`& dd[i][j] `> dd[i][k] + dd[k][j]) {
+              dd[i][j] = dd[i][k] + dd[k][j];
+            }
+          }
+        }
+      }
+
+      // 順列の全探索
+      int min = Integer.MAX_VALUE;
+      int[] array = new int[rNum];
+      for (int i = 0 ; i `< rNum ; i ++) {
+        array[i] = i;
+      }
+      do {
+        int d = 0;
+        for (int i = 0 ; i `< rNum - 1 ; i ++) {
+          d += dd[rr[array[i`]][rr[array[i + 1`]];
+        }
+        if (d `< min) {
+          min = d;
+        }
+      } while (nextPermutation(array));
+      System.out.println(min);
+    }
+  >
+
+>

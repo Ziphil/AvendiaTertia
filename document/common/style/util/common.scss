@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+
+
+@function tint($color, $percent) {
+  @return mix(white, $color, $percent);
+}
+
+@function shade($color, $percent) {
+  @return mix(black, $color, $percent);
+}
+
+@function single-color($color) {
+  @return linear-gradient($color, $color);
+}
+
+@function fix-em($value, $font-percent) {
+  @return div($value, div($font-percent, 100%));
+}
+
+@function line-intrusion($line-height) {
+  @return div($line-height - 1, 2) * 1em;
+}
+
+
+$european-serif-font-family: "Times New Roman", "Times";
+$japanese-propotional-serif-font-family: "IPA P明朝", "IPAex明朝", "BIZ UDPMincho", "YuMincho", "Yu Mincho", "ＭＳ Ｐ明朝", "ＭＳ 明朝";
+$japanese-serif-font-family: "IPA明朝", "BIZ UDMincho", "YuMincho", "Yu Mincho", "ＭＳ 明朝";
+$european-sans-font-family: "Arial";
+$japanese-propotional-sans-font-family: "IPA Pゴシック", "IPAexゴシック", "BIZ UDPGothic", "YuGothic", "Yu Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック";
+$japanese-sans-font-family: "IPAゴシック", "BIZ UDGothic" "YuGothic", "Yu Gothic", "ＭＳ ゴシック";
+$european-monospace-font-family: "Consolas";
+$japanese-monospace-font-family: "IPAゴシック", "BIZ UDGothic", "YuGothic", "Yu Gothic", "ＭＳ ゴシック";
+
+$serif-font-family: $european-serif-font-family, $japanese-propotional-serif-font-family, serif;
+$sans-font-family: $european-sans-font-family, $japanese-propotional-sans-font-family, sans-serif;
+$monospace-font-family: $european-monospace-font-family, $japanese-monospace-font-family, monospace;
+
+$serif-font-weight: 400;
+$sans-font-weight: 400;
+$monospace-font-weight: 400;
+
+$sans-font-size: 96%;
+$monospace-font-size: 95%;
+
+$monospace-letter-spacing: -0.08em;
+
+
+@mixin scrollbar($size, $margin, $background-color, $thumb-background-color) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    background-color: $background-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 0px transparent solid;
+    background-color: $thumb-background-color;
+    background-clip: content-box;
+    &:horizontal {
+      border-top: $margin transparent solid;
+    }
+    &:vertical {
+      border-left: $margin transparent solid;
+    }
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: $background-color;
+  }
+}
+
+@mixin no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
+
+@mixin line-height($line-height, $directions: top bottom) {
+  line-height: $line-height;
+  @if index($directions, top) {
+    &::before {
+      width: 0em;
+      height: 0em;
+      margin-top: 0em - line-intrusion($line-height);
+      display: block;
+      content: "";
+    }
+  }
+  @if index($directions, bottom) {
+    &::after {
+      width: 0em;
+      height: 0em;
+      margin-bottom: 0em - line-intrusion($line-height);
+      display: block;
+      content: "";
+    }
+  }
+}
+
+@mixin before-after($before-content, $after-content) {
+  &::before {
+    content: $before-content;
+  }
+  &::after {
+    content: $after-content;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  } 
+}
+
+@mixin icon-font {
+  font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
+  font-weight: 900;
+}
+
+@mixin text-size-adjust {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@mixin tnum-variant {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+@mixin lnum-variant {
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}

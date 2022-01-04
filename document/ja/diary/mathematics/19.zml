@@ -1,0 +1,190 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<2-関手と 2-自然変換>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2018 年 8 月 28 日)>
+  \p<
+    2-圏は &m<\bfrm<Cat>>-豊穣圏であったから、2-圏の間の関手や自然変換としては &m<\bfrm<Cat>>-豊穣関手や &m<\bfrm<Cat>>-豊穣自然変換を考えれば良いのだが、実用上これでは少し公理が強すぎる場合がある。
+    そこで、以下に定義するように、公理を弱めたものを考えることも多い。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> に対し、&m<F> が
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<D>> の対象 &m<FA> が定まっている。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A, B> に対し、関手 &m<\sb<F><AB>: `[A, B`] \sb<><\scr<C>> \to; `[FA, FB`] \sb<><\scr<D>>> が定まっている。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A, B, C> に対し、自然変換
+        &mb<
+          \diag|hor="thk"|<
+            \v<`[A, B`] \times; `[B, C`]> \v<`[A, C`]> \br;
+            \v<`[FA, FB`] \times; `[FB, FC`]> \v<`[FA, FC`]>
+            \ar|s="1",e="2"|<\sb<c><ABC>> \ar|s="1",e="3",inv|<\sb<F><AB> \times; \sb<F><BC>>
+            \ar|s="2",e="4"|<\sb<F><AC>> \ar|s="3",e="4",inv|<\sb<c><FA, FB, FC>>
+            \ar|s="3",e="2",line="2"|<\sb<`m><ABC>>
+          >
+        >
+        が定まっている。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、自然変換
+        &mb<
+          \diag<
+            \v<\bfrm<1>> \v<`[A, A`]> \br;
+            \v; \v<`[FA, FA`]>
+            \ar|s="1",e="2"|<\sb<j><A>> \ar|s="1",e="4",inv|<\sb<j><FA>> \ar|s="2",e="4"|<\sb<F><AA>>
+            \ar|s="1",e="4",line="0",pos="70",name="a"|;
+            \ar|s="a:c",e="2",line="2",inv|<\sb<`j><A>>
+          >
+        >
+        が定まっている。
+      >
+    >
+    \p<
+      という情報から成り、任意の &m<\scr<C>> の 1-射 &m<f: A \to; B, g: B \to; C, h: C \to; D> に対し、2 通りの 2-射の合成
+      &mb<
+        \diag|hor="thn,thk,thn"|<
+          \v; \v<FB> \v<FC> \v; \br;
+          \v<FA> \v; \v; \v<FD>
+          \ar|s="5",e="2"|<Ff> \ar|s="2",e="3"|<Fg> \ar|s="3",e="8"|<Fh>
+          \ar|s="5",e="8",inv|<F (h \circ; g \circ; f)> \ar|s="5",e="3",inv|<F (g \circ; f)>
+          \ar|s="5",e="8",line="0",pos="70",name="b"|; \ar|s="5",e="3",line="0",pos="50",name="a"|;
+          \ar|s="2",e="a:c",line="2",inv|<\sb<`m><ABC>> \ar|s="3",e="b:c",line="2"|<\sb<`m><ACD>>
+        > \qquad;
+        \diag|hor="thn,thk,thn"|<
+          \v; \v<FB> \v<FC> \v; \br;
+          \v<FA> \v; \v; \v<FD>
+          \ar|s="5",e="2"|<Ff> \ar|s="2",e="3"|<Fg> \ar|s="3",e="8"|<Fh>
+          \ar|s="5",e="8",inv|<F (h \circ; g \circ; f)> \ar|s="2",e="8",inv|<F (g \circ; f)>
+          \ar|s="5",e="8",line="0",pos="30",name="b"|; \ar|s="2",e="8",line="0",pos="50",name="a"|;
+          \ar|s="3",e="a:c",line="2"|<\sb<`m><BCD>> \ar|s="2",e="b:c",line="2",inv|<\sb<`m><ABD>>
+        >
+      >
+      は等しく、さらに 2-射の合成
+      &mb<
+        \diag<
+          \v; \v<FB> \v; \br;
+          \v<FA> \v; \v<FB>
+          \ar|s="4",e="2"|<Ff> \ar|s="4",e="6",inv|<Ff> \ar|s="2",e="6",bend="40"|<\rm<id>>
+          \ar|s="4",e="6",line="0",name="a"|; \ar|s="2",e="6",line="0",bend="40",name="b",inv|; \ar|s="2",e="6",name="c"|;
+          \ar|s="2",e="a:c",line="2"|<\sb<`m><ABB>> \ar|s="b:c",e="c:c",line="2"|<\sb<`j><A>>
+        > \qquad;
+        \diag<
+          \v; \v<FB> \v; \br;
+          \v<FA> \v; \v<FB>
+          \ar|s="4",e="2"|<Ff> \ar|s="4",e="6",inv|<Ff> \ar|s="2",e="6",bend="40"|<\rm<id>>
+          \ar|s="4",e="6",line="0",name="a"|; \ar|s="2",e="6",line="0",bend="40",pos="30",name="b",inv|;
+          \ar|s="b:c",e="a:c",line="2"|<\rm<id>>
+        >
+      >
+      も等しいとする。
+      このとき、&m<F> を 2-\em<弛緩関手\fl<lax functor>> といい、&m<F: \scr<C> \to; \scr<D>>  で表す。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> をとる。
+      上記定義において、任意の &m<\scr<C>> の対象 &m<A, B, C> に対して &m<\sb<`m><ABC>, \sb<`j><A>> が同型射であるとき、&m<F> を 2-\em<擬関手\fl<pseudofunctor>> という。
+      任意の &m<\scr<C>> の対象 &m<A, B, C> に対して &m<\sb<`m><ABC>, \sb<`j><A>> が恒等射であるときは、単に &m<F> を 2-\em<関手\fl<functor>> という。
+    >
+  >
+  \p<
+    2-関手が &m<\bfrm<Cat>>-豊穣関手と同じものであり、2-擬関手と 2-弛緩関手はそこから合成との可換性を弱めたものである。
+  >
+  \p<
+    自然変換に関しても、同様の弱い概念がある。
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> と2-弛緩関手 &m<F, G: \scr<C> \to; \scr<D>> に対し、&m<`s> が
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<D>> の 1-射 &m<\sb<`s><A>: FA \to; GA> が定まっている。
+      >
+      \li<
+        &m<\scr<C>> の対象 &m<A, B> に対し、自然変換
+        &mb<
+          \diag|hor="vthk"|<
+            \v<`[A, B`]> \v<`[FA, FB`]> \br;
+            \v<`[GA, GB`]> \v<`[FA, GB`]>
+            \ar|s="1",e="2"|<\sb<F><AB>> \ar|s="1",e="3",inv|<\sb<G><AB>>
+            \ar|s="2",e="4"|<\sb<c><FA, FB, GB> (\hyphen;, \sb<`s><B>)> \ar|s="3",e="4",inv|<\sb<c><FA, GA, GB> (\sb<`s><A>, \hyphen;)>
+            \ar|s="3",e="2",line="2"|<\sb<`n><AB>>
+          >
+        >
+        が定まっている。
+      >
+    >
+    \p<
+      という情報から成り、任意の &m<\scr<C>> の 1-射 &m<f: A \to; B, g: B \to; C> に対し、2 通りの 2-射の合成
+      &mb<
+        \diag<
+          \v<FA> \v<GA> \br;
+          \v<FB> \v<GB> \br;
+          \v<FC> \v<GC>
+          \ar|s="1",e="2"|<\sb<`s><A>> \ar|s="1",e="3",inv|<Ff> \ar|s="2",e="4"|<Gf>
+          \ar|s="3",e="4"|; \ar|s="3",e="5",inv|<Fg> \ar|s="4",e="6"|<Gg>
+          \ar|s="5",e="6",inv|<\sb<`s><C>>
+          \ar|s="1",e="5",bend="-60",inv|<F (g \circ; f)>
+          \ar|s="1",e="5",bend="-60",line="0",name="a"|;
+          \ar|s="2",e="3",line="2",inv|<\sb<`n><AB>> \ar|s="4",e="5",line="2",inv|<\sb<`n><BC>>
+          \ar|s="3",e="a:c",line="2",inv|<\sb<`m><ABC>>
+        > \qquad;
+        \diag<
+          \v<FA> \v<GA> \br;
+          \v; \v<GB> \br;
+          \v<FC> \v<GC>
+          \ar|s="1",e="2"|<\sb<`s><A>> \ar|s="2",e="4"|<Gf> \ar|s="4",e="6"|<Gg>
+          \ar|s="5",e="6",inv|<\sb<`s><C>>
+          \ar|s="1",e="5",bend="-60",inv|<F (g \circ; f)> \ar|s="2",e="6",bend="-60",name="c",inv|;
+          \ar|s="1",e="5",bend="-60",line="0",name="a"|; \ar|s="2",e="6",bend="-60",line="0",name="b"|;
+          \ar|s="4",e="b:c",line="2",inv|<\sb<`m><ABC>> \ar|s="c:c",e="a:c",line="2",inv|<\sb<`n><AC>>
+        >
+      >
+      が等しいとする。
+      このとき、&m<`s> を 2-\em<弛緩自然変換\fl<lax natural transformation>> といい、&m<`s: F \raarr; G> で表す。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      2-圏 &m<\scr<C>, \scr<D>> と 2-弛緩関手 &m<F, G: \scr<C> \to; \scr<D>> をとる。
+      上記定義において、任意の &m<\scr<C>> の対象 &m<A, B> に対して &m<\sb<`n><AB>> が同型射であるとき、&m<`s> を 2-\em<擬自然変換\fl<pseudonatural transformation>> という。
+      任意の &m<\scr<C>> の対象 &m<A, B> に対して &m<\sb<`n><AB>> が恒等射であるときは、単に &m<`s> を 2-\em<自然変換\fl<natural transformation>> という。
+    >
+  >
+  \p<
+    関手のときと同様、2-自然変換が &m<\bfrm<Cat>>-豊穣自然変換と同じものである。
+    &m<\bfrm<Cat>>-豊穣自然変換は、本来なら &m<\scr<C>> の対象 &m<A> に対する関手 &m<\sb<`s><A>: \bfrm<1> \to; `[FA, GA`]> の族として定義されるが、&m<\bfrm<1>> は対象と射を 1 つだけもつ圏だから、これは &m<\scr<D>> の 1-射 &m<\sb<`s><A>: FA \to; GA> の族を与えるのと同じことである。
+  >
+  \p<
+    さて、2-圏においては、関手も自然変換も、合成との可換性や自然性がどの程度緩く成立するのかに応じて 3 種類ある。
+    このそれぞれをどのような形容詞を付けて区別するかは文献によるのだが、幸いなことに完全にバラバラというわけではないようで、だいたい以下の表に示す A, B, C のいずれかに分けられる。
+    合成との可換性が同型な 2-射の違いを除いて成立するような関手が多く現れる分野では B の名付け方が採用されているなど、どのタイプの名付け方を使うかはどのタイプの概念が最もよく使われるかに依存している。
+    この日記シリーズでは、一貫して A の名付け方を採用する。
+  >
+  \table<
+    \tr<\th;\th<A>\th<B>\th<C>>
+    \tr<\th<射>\td<弛緩>\td<弛緩>\td<∅>>
+    \tr<\th<同型射>\td<擬, 弱>\td<∅>\td<強>>
+    \tr<\th<恒等射>\td<∅>\td<厳密>\td<厳密>>
+  >
+  \p<
+    ちなみに、2-圏における射の合成の結合性を緩めた弱 2-圏という概念もあるが、今のところ私が扱う機会がないので、この日記シリーズでは扱わないことにする。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="hca"|<F. Borceux (1994)『Handbook of Categorical Algebra: Volume 1』Cambridge University Press>
+    \li|id="hctt"|<K. Honigs『Coherence Theorems in Two-Dimensional Category Theory』`<http:`/`/www.math.utah.edu`/~honigs`/coherence_essay.pdf`>>
+  >
+
+>

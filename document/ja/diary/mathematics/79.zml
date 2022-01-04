@@ -1,0 +1,275 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Chu 構成とダイアレクティカ圏の統一 (その 2)>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2021 年 6 月 16 日)>
+  \p<
+    今日は複圏上の加群を定義し、そこから新たな多圏が得られることを見る。
+  >
+  \p<
+    まずは加群を定義する。
+    これは関手と似ているが異なる概念であることに注意すること。
+  >
+  \thm|type="def"|<
+    \p<
+      対称複圏 &m<\scr<C>> および圏 &m<\scr<S>> に対し、以下のデータが定まっているとする。
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象列 &m<\langle; `G \rangle;> に対し、&m<\scr<S>> の対象 &m<`V \langle; `G \rangle;> が定まっている。
+      >
+      \li<
+        &m<\scr<C>> の複射 &m<f: \langle; `G \rangle; \to; A> と &m<\scr<C>> の対象列 &m<\langle; `F \rangle;, \langle; `F' \rangle;> に対し、&m<\scr<S>> の射 &m<\sbsp<`V><\langle; `F \rangle;><\langle; `F' \rangle;> f: `V \langle; `F, A, `F' \rangle; \to; `V \langle; `F, `G, `F' \rangle;> が定まっている。
+      >
+      \li<
+        &m<\scr<C>> の対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;> に対し、&m<\scr<S>> の射 &m<`V `s: `V \langle; `G \rangle; \to; `V \langle; `G' \rangle;> が定まっている。
+      >
+    >
+    \p<
+      これらのデータは、次の条件を満たすとする。
+    >
+    \ul<
+      \li<
+        &m<\scr<C>> の対象 &m<A> と &m<\scr<C>> の対象列 &m<\langle; `F \rangle;, \langle; `F' \rangle;> に対し、&m<\scr<S>> において、
+        &mb<
+          \sbsp<`V><\langle; `F \rangle;><\langle; `F' \rangle;> \sb<\rm<id>><A> = \sb<\rm<id>><`V \langle; `F, A, `F' \rangle;>
+        >
+        が成り立つ。
+      >
+      \li<
+        &m<\scr<C>> の対象列 &m<\langle; `G \rangle;> に対し、&m<\scr<S>> において、
+        &mb<
+          `V \sb<\rm<id>><\langle; `G \rangle;> = \sb<\rm<id>><`V \langle; `G \rangle;>
+        >
+        が成り立つ。
+      >
+      \li<
+        &m<\scr<C>> の対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;>, &m<`s': \langle; \sp<`G><\ppr;> \rangle; \to; \langle; `G' \rangle;> に対し、&m<\scr<S>> において、
+        &mb<
+          `V (`s' \rcomp; `s) = `V `s \rcomp; `V `s'
+        >
+        が成り立つ。
+      >
+      \li<
+        &m<\scr<C>> の複射 &m<f: \langle; `G \rangle; \to; A>, &m<g: \langle; `D \rangle; \to; B> と &m<\scr<C>> の対象列 &m<\langle; `F \rangle;, \langle; `F' \rangle;> に対し、&m<\scr<S>> において、
+        &mb<
+          \sbsp<`V><\langle; `F \rangle;><\langle; `F', B, \sp<`F><\ppr;> \rangle;> f \rcomp; \sbsp<`V><\langle; `F, `G, `F' \rangle;><\langle; \sp<`F><\ppr;> \rangle;> g
+          = \sbsp<`V><\langle; `F, A, `F' \rangle;><\langle; \sp<`F><\ppr;> \rangle;> g \rcomp; \sbsp<`V><\langle; `F \rangle;><\langle; `F', `D, \sp<`F><\ppr;> \rangle;> f
+        >
+        が成り立つ。
+      >
+      \li<
+        &m<\scr<C>> の複射 &m<f: \langle; `G \rangle; \to; A>, &m<g: \langle; `C, A, `C' \rangle; \to; B> と &m<\scr<C>> の対象列 &m<\langle; `F \rangle;, \langle; `F' \rangle;> に対し、&m<\scr<S>> において、
+        &mb<
+          \sbsp<`V><\langle; `F \rangle;><\langle; `F' \rangle;> (f \sb<\rcomp;><A> g) = \sbsp<`V><\langle; `F \rangle;><\langle; `F' \rangle;> g \rcomp; \sbsp<`V><\langle; `F, `C \rangle;><\langle; `C', `F' \rangle;> f
+        >
+        が成り立つ。
+      >
+      \li<
+        &m<\scr<C>> の複射 &m<f: \langle; `G \rangle; \to; A> と &m<\scr<C>> の対象列 &m<\langle; `F \rangle;, \langle; `F' \rangle;> および &m<\scr<C>> の対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;> に対し、&m<\scr<S>> において、
+        &mb<
+          \sbsp<`V><\langle; `F \rangle;><\langle; `F' \rangle;> (`s \cdot; f) = \sbsp<`V><\langle; `F \rangle;><\langle; `F' \rangle;> f \rcomp; `V \tilde<`s>
+        >
+        が成り立つ。
+        ここで、&m<\tilde<`s>: \langle; `F, `G', `F' \rangle; \to; \langle; `F, `G, `F' \rangle;> は &m<`s> から得られる置換である。
+      >
+      \li<
+        &m<\scr<C>> の複射 &m<f: \langle; `G \rangle; \to; A> と &m<\scr<C>> の対象列 &m<\langle; `F \rangle;, \langle; `F' \rangle;> および &m<\scr<C>> の対象列の置換 &m<`s: \langle; `C, A, `C' \rangle; \to; \langle; `F, A, `F' \rangle;> に対し、&m<\scr<S>> において、
+        &mb<
+          `V `s \rcomp; \sbsp<`V><\langle; `C \rangle;><\langle; `C' \rangle;> f = \sbsp<`V><\langle; `F \rangle;><\langle; `F' \rangle;> f \rcomp; `V \tilde<`s>
+        >
+        が成り立つ。
+        ここで、&m<\tilde<`s>: \langle; `C, `G, `C' \rangle; \to; \langle; `F, `G, `F' \rangle;> は &m<`s> から得られる置換である。
+
+      >
+    >
+    \p<
+      このとき、&m<`V> を &m<\scr<C>> 上の &m<\scr<S>>-値\em<反変加群\fl<contravariant module>> といい、&m<`V: \sp<\scr<C>><\circ;> \vertrarr; \scr<S>> で表す。
+    >
+  >
+  \p<
+    Shulman\ref|type="bib",ref="stcd"|; は上で定義された反変加群のことを前層と呼んでいるが、前層という用語は反変関手のことを言うことが多く混乱を招きそうだったので、ここでは加群という用語を用いることにした。
+    なお、Hyland\ref|type="bib",ref="stcd"|; が同様の構造を加群と呼んでいる。
+  >
+  \p<
+    反変加群 &m<`V: \sp<\scr<C>><\circ;> \vertrarr; \scr<S>> を固定するとき、記号の煩雑化を避けるため、&m<\scr<C>> の複射 &m<f: \langle; `G \rangle; \to; A> の作用 &m<\sbsp<`V><\langle; `F \rangle;><\langle; `F' \rangle;> f: `V \langle; `D, A, `D' \rangle; \to; `V \langle; `D, `G, `D' \rangle;> のことを &m<\sp<f><*>> で表すことがある。
+    また、&m<\scr<C>> の対象列の置換 &m<`s: \langle; `G \rangle; \to; \langle; `G' \rangle;> の作用 &m<`V `s: `V \langle; `G \rangle; \to; `V \langle; `G' \rangle;> も &m<\sp<`s><*>> と表すことがあるが、これは単に省略してしまうことも多い。
+  >
+  \p<
+    さて、対称多圏とその間の対称多関手が成す圏を &m<\bfrm<Poly>> と書くことにすると、我々に興味があるのは &m<\bfrm<Poly>>-値反変加群である。
+    すなわち、対称複圏 &m<\scr<C>> の対象列ごとに対称多圏が 1 つ定められており、その上に &m<\scr<C>> の複射による反変作用があるようなものである。
+    このような組に名前を付けておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      対称複圏 &m<\scr<C>> とそれ上の &m<\bfrm<Poly>>-値反変加群 &m<`V: \sp<\scr<C>><\circ;> \vertrarr; \bfrm<Poly>> の組 &m<(\scr<C>, `V)> を\em<線型超教義\fl<linear hyperdoctrine>> という。
+    >
+  >
+  \p<
+    線型超教義からは、次で定義される双対組から成る新たな多圏を構成することができる。
+    以下、列 &m<\langle; \sb<A><1>, \cdots;, \sb<A><m> \rangle;> から &m<i> 番目の要素 &m<\sb<A><i>> を取り除いてできる列を &m<\langle; \sb<A><1>, \ov<\cdots;><^ i>, \sb<A><m> \rangle;> のように表す。
+  >
+  \thm|type="def"|<
+    \p<
+      線型超教義 &m<(\scr<C>, `V)> を固定する。
+      &m<\scr<C>> の対象 &m<A, \bar<A>> および &m<`V \langle; A, \bar<A> \rangle;> の対象 &m<a> から成る組 &m<(A, \bar<A>, a)> を\em<双対組\fl<duality triple>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      線型超教義 &m<(\scr<C>, `V)> 上の双対組から成る 2 つの列 &m<\langle; (\sb<A><1>, \sb<\bar<A>><1>, \sb<a><1>), \cdots;, (\sb<A><m>, \sb<\bar<A>><m>, \sb<a><m>) \rangle;>, &m<\langle; (\sb<B><1>, \sb<\bar<B>><1>, \sb<b><1>), \cdots;, (\sb<B><n>, \sb<\bar<B>><n>, \sb<b><n>) \rangle;> を固定する。
+      各 &m<1 \leq; j \leq; n> および &m<1 \leq; i \leq; m> に対して、&m<\scr<C>> の複射
+      &mb<
+        \array|align="rl"|<
+          \c<\sb<f><j>:> \c<\langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<\bar<B>><1>, \ov<\cdots;><^ j>, \sb<\bar<B>><n> \rangle; \to; \sb<B><j>> \br;
+          \c<\sb<g><i>:> \c<\langle; \sb<A><1>, \ov<\cdots;><^ i>, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle; \to; \sb<\bar<A>><i>>
+        >
+      >
+      をとる。
+      さらに、&m<`V \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle;> の多射
+      &mb<
+        u: \langle; \sbsp<g><1><*> \sbsp<a><1>, \cdots;, \sbsp<g><n><*> \sbsp<a><n> \rangle; \to; \langle; \sbsp<f><1><*> \sbsp<b><1>, \cdots;, \sbsp<f><m><*> \sbsp<b><m> \rangle; 
+      >
+      をとる。
+      これらが成す組 &m<(\sb<f><1>, \cdots;, \sb<f><m> \mid; \sb<g><1>, \cdots;, \sb<g><n> \mid; u)> を\em<双対組の多射\fl<polymorphism of duality triples>> という。
+    >
+  >
+  \p<
+    この定義について軽く補足しておこう。
+    各 &m<1 \leq; i \leq; m> に対して、&m<\scr<C>> の複射
+    &mb<
+      \sb<g><i>: \langle; \sb<A><1>, \ov<\cdots;><^ i>, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle; \to; \sb<\bar<A>><i>
+    >
+    がある。
+    したがって反変加群の定義から、対称多関手
+    &mb<
+      \sbsp<g><i><*>: `V \langle; \sb<A><i>, \sb<\bar<A>><i> \rangle; \to; `V \langle; \sb<A><i>, \sb<A><1>, \ov<\cdots;><^ i>, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle;
+    >
+    が定まっている。
+    この左辺に出てくる列 &m<\langle; \sb<A><i>, \sb<A><1>, \ov<\cdots;><^ i>, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle;> は &m<\langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle;> の順番を入れ替えたものであるから、その入れ替えを与える置換を &m<\sb<`s><i>> と書くことにすれば、対称多関手
+    &mb<
+      \sbsp<`s><i><*>: `V \langle; \sb<A><i>, \sb<A><1>, \ov<\cdots;><^ i>, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle; \to; `V \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle;
+    >
+    もある。
+    &m<\sb<a><i>> は &m<`V \langle; \sb<A><i>, \sb<\bar<A>><i> \rangle;> の対象だったので、上記の 2 つの関手をこれに適用することで、&m<\sbsp<`s><i><*> \sbsp<g><i><*> \sb<a><i>> が &m<`V \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle;> の対象として得られる。
+    上の定義中では、置換の作用を省略してこれを &m<\sbsp<g><i><*> \sb<a><i>> と書いている。
+    各 &m<1 \leq; j \leq; n> についての &m<\sbsp<f><j><*> \sb<b><j>> も同様である。
+  >
+  \thm|type="lem"|<
+    \p<
+      線型超教義 &m<(\scr<C>, `V)> を固定する。
+      双対組の多射
+      &mb<
+        \array|align="rl"|<
+          \c<(\sb<f><1>, \cdots;, \sb<f><m> \mid; \sb<g><1>, \cdots;, \sb<g><n> \mid; u):> \c<\langle; (\sb<A><1>, \sb<\bar<A>><1>, \sb<a><1>), \cdots;, (\sb<A><m>, \sb<\bar<A>><m>, \sb<a><m>) \rangle; \to; \langle; (\sb<B><1>, \sb<\bar<B>><1>, \sb<b><1>), \cdots;, (\sb<B><n>, \sb<\bar<B>><n>, \sb<b><n>) \rangle;> \br;
+          \c<(\sb<r><1>, \cdots;, \sb<r><p> \mid; \sb<s><1>, \cdots;, \sb<s><q> \mid; v):> \c<\langle; (\sb<C><1>, \sb<\bar<C>><1>, \sb<c><1>), \cdots;, (\sb<C><p>, \sb<\bar<C>><p>, \sb<c><p>) \rangle; \to; \langle; (\sb<D><1>, \sb<\bar<D>><1>, \sb<d><1>), \cdots;, (\sb<D><q>, \sb<\bar<D>><q>, \sb<d><q>) \rangle;> \br;
+        >
+      >
+      において、ある &m<1 \leq; \tilde<j> \leq; n, 1 \leq; \tilde<k> \leq; p> について &m<(\sb<B><\tilde<j>>, \sb<\bar<B>><\tilde<j>>, \sb<b><\tilde<j>>) = (\sb<C><\tilde<k>>, \sb<\bar<C>><\tilde<k>>, \sb<c><\tilde<k>>)> であるとする。
+      このとき、その合成となる双対組の多射
+      &mb<
+        \langle; (\sb<A><1>, \sb<\bar<A>><1>, \sb<a><1>), \cdots;, (\sb<A><m>, \sb<\bar<A>><m>, \sb<a><m>), (\sb<C><1>, \sb<\bar<C>><1>, \sb<c><1>), \ov<\cdots;><^ \tilde<k>>, (\sb<C><p>, \sb<\bar<C>><p>, \sb<c><p>) \rangle; \to; \langle; (\sb<B><1>, \sb<\bar<B>><1>, \sb<b><1>), \ov<\cdots;><^ \tilde<j>>, (\sb<B><n>, \sb<\bar<B>><n>, \sb<b><n>), (\sb<D><1>, \sb<\bar<D>><1>, \sb<d><1>), \cdots;, (\sb<D><q>, \sb<\bar<D>><q>, \sb<d><q>) \rangle;
+      >
+      が定まり、この演算は多圏の合成の公理を全て満たす。
+    >
+  >
+  \prf<
+    \p<
+      まず、各 &m<1 \leq; j \leq; n, j \neq; \tilde<j>> に対して、&m<\scr<C>> の複射
+      &mb<
+        \array|align="rl"|<
+          \c<\sb<s><\tilde<k>>:> \c<\langle; \sb<C><1>, \ov<\cdots;><^ \tilde<k>>, \sb<C><p>, \sb<\bar<D>><1>, \cdots;, \sb<\bar<D>><q> \rangle; \to; \sb<\bar<C>><\tilde<k>>> \br;
+          \c<\sb<f><j>:> \c<\langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<\bar<B>><1>, \ov<\cdots;><^ j>, \sb<\bar<B>><n> \rangle; \to; \sb<B><j>>
+        >
+      >
+      がある。
+      仮定から &m<\sb<\bar<C>><\tilde<k>> = \sb<\bar<B>><\tilde<j>>> であり、この &m<\sb<\bar<B>><\tilde<j>>> は &m<\langle; \sb<\bar<B>><1>, \ov<\cdots;><^ j>, \sb<\bar<B>><n> \rangle;> に属しているので、上記の 2 つの射は &m<\sb<\bar<C>><\tilde<k>>> を介して合成することができる。
+      対象列の置換の作用を省略すれば、この合成は、
+      &mb<
+        &mark<1>
+        \sb<s><\tilde<k>> \sb<\rcomp;><\sb<\bar<C>><\tilde<k>>> \sb<f><j>: \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<C><1>, \ov<\cdots;><^ \tilde<k>>, \sb<C><p>, \sb<\bar<B>><1>, \ov<\cdots;><^ j, \tilde<j>>, \sb<\bar<B>><n>, \sb<\bar<D>><1>, \cdots;, \sb<\bar<D>><q> \rangle; \to; \sb<B><j>
+      >
+      を定める。
+    >
+    \p<
+      上記と同様にして、各 &m<1 \leq; l \leq; q> に対して、
+      &mb<
+        &mark<2>
+        \sb<f><\tilde<j>> \sb<\rcomp;><\sb<B><\tilde<j>>> \sb<r><l>: \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<C><1>, \ov<\cdots;><^ \tilde<k>>, \sb<C><p>, \sb<\bar<B>><1>, \ov<\cdots;><^ \tilde<j>>, \sb<\bar<B>><n>, \sb<\bar<D>><1>, \ov<\cdots;><^ l>, \sb<\bar<D>><q> \rangle; \to; \sb<D><l>
+      >
+      が定まる。
+      さらに、各 &m<1 \leq; i \leq; m> に対して、
+      &mb<
+        &mark<3>
+        \sb<s><\tilde<k>> \sb<\rcomp;><\sb<\bar<C>><\tilde<k>>> \sb<g><i>: \langle; \sb<A><1>, \ov<\cdots;><^ i>, \sb<A><m>, \sb<C><1>, \ov<\cdots;><^ \tilde<k>>, \sb<C><p>, \sb<\bar<B>><1>, \ov<\cdots;><^ \tilde<j>>, \sb<\bar<B>><n>, \sb<\bar<D>><1>, \cdots;, \sb<\bar<D>><q> \rangle; \to; \sb<\bar<A>><i>
+      >
+      が定まり、各 &m<1 \leq; k \leq; p, k \neq; \tilde<k>> に対して、
+      &mb<
+        &mark<4>
+        \sb<f><\tilde<j>> \sb<\rcomp;><\sb<B><\tilde<j>>> \sb<s><k>: \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<C><1>, \ov<\cdots;><^ k, \tilde<k>>, \sb<C><p>, \sb<\bar<B>><1>, \ov<\cdots;><^ \tilde<j>>, \sb<\bar<B>><n>, \sb<\bar<D>><1>, \cdots;, \sb<\bar<D>><q> \rangle; \to; \sb<\bar<C>><k>
+      >
+      も定まる。
+    >
+    \p<
+      さて、&m<\scr<C>> の複射
+      &mb<
+        \sb<s><\tilde<k>>: \langle; \sb<C><1>, \ov<\cdots;><^ \tilde<k>>, \sb<C><p>, \sb<\bar<D>><1>, \cdots;, \sb<\bar<D>><q> \rangle; \to; \sb<\bar<C>><\tilde<k>>
+      >
+      がある。
+      仮定から &m<\sb<\bar<C>><\tilde<k>> = \sb<\bar<B>><\tilde<j>>> であるから、対象列の置換の作用を省略すれば、対称多関手
+      &mb<
+        \sbsp<s><\tilde<k>><*>: `V \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle; \to; `V \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<C><1>, \ov<\cdots;><^ \tilde<k>>, \sb<C><p>, \sb<\bar<B>><1>, \ov<\cdots;><^ \tilde<j>>, \sb<\bar<B>><n>, \sb<\bar<D>><1>, \cdots;, \sb<\bar<D>><q> \rangle;
+      >
+      が得られる。
+      これは対称多関手だから、&m<`V \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<\bar<B>><1>, \cdots;, \sb<\bar<B>><n> \rangle;> の多射
+      &mb<
+        u: \langle; \sbsp<g><1><*> \sbsp<a><1>, \cdots;, \sbsp<g><m><*> \sbsp<a><m> \rangle; \to; \langle; \sbsp<f><1><*> \sbsp<b><1>, \cdots;, \sbsp<f><n><*> \sbsp<b><n> \rangle; 
+      >
+      に適用することができ、結果として &m<`V \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<C><1>, \ov<\cdots;><^ \tilde<k>>, \sb<C><p>, \sb<\bar<B>><1>, \ov<\cdots;><^ \tilde<j>>, \sb<\bar<B>><n>, \sb<\bar<D>><1>, \cdots;, \sb<\bar<D>><q> \rangle;> の多射
+      &mb<
+        \sbsp<s><\tilde<k>><*> u: \langle; \sbsp<s><\tilde<k>><*> \sbsp<g><1><*> \sbsp<a><1>, \cdots;, \sbsp<s><\tilde<k>><*> \sbsp<g><m><*> \sbsp<a><m> \rangle; \to; \langle; \sbsp<s><\tilde<k>><*> \sbsp<f><1><*> \sbsp<b><1>, \cdots;, \sbsp<s><\tilde<k>><*> \sbsp<f><n><*> \sbsp<b><n> \rangle; 
+      >
+      が得られる。
+      同様にして、&m<`V \langle; \sb<A><1>, \cdots;, \sb<A><m>, \sb<C><1>, \ov<\cdots;><^ \tilde<k>>, \sb<C><p>, \sb<\bar<B>><1>, \ov<\cdots;><^ \tilde<j>>, \sb<\bar<B>><n>, \sb<\bar<D>><1>, \cdots;, \sb<\bar<D>><q> \rangle;> の多射
+      &mb<
+        \sbsp<f><\tilde<j>><*> v: \langle; \sbsp<f><\tilde<j>><*> \sbsp<s><1><*> \sbsp<c><1>, \cdots;, \sbsp<f><\tilde<j>><*> \sbsp<s><p><*> \sbsp<c><p> \rangle; \to; \langle; \sbsp<f><\tilde<j>><*> \sbsp<r><1><*> \sbsp<d><1>, \cdots;, \sbsp<f><\tilde<j>><*> \sbsp<r><q><*> \sbsp<d><q> \rangle; 
+      >
+      が得られる。
+      ここで、仮定から &m<\sb<b><\tilde<j>> = \sb<c><\tilde<k>>> であり、さらに反変加群の定義から &m<\sbsp<s><\tilde<k>><*> \sbsp<f><\tilde<j>><*> \sbsp<b><\tilde<j>> = \sbsp<f><\tilde<j>><*> \sbsp<s><\tilde<k>><*> \sbsp<c><\tilde<k>>> が成り立つ。
+      したがって、上記の 2 つの射はここで合成することができ、
+      &mb<
+        &mark<5>
+        \sbsp<s><\tilde<k>><*> u \rcomp; \sbsp<f><\tilde<j>><*> v:
+        \langle; \sbsp<s><\tilde<k>><*> \sbsp<g><1><*> \sbsp<a><1>, \cdots;, \sbsp<s><\tilde<k>><*> \sbsp<g><m><*> \sbsp<a><m>, \sbsp<f><\tilde<j>><*> \sbsp<s><1><*> \sbsp<c><1>, \ov<\cdots;><^ \tilde<k>>, \sbsp<f><\tilde<j>><*> \sbsp<s><p><*> \sbsp<c><p> \rangle; \to;
+        \langle; \sbsp<s><\tilde<k>><*> \sbsp<f><1><*> \sbsp<b><1>, \ov<\cdots;><\tilde<j>>, \sbsp<s><\tilde<k>><*> \sbsp<f><n><*> \sbsp<b><n>, \sbsp<f><\tilde<j>><*> \sbsp<r><1><*> \sbsp<d><1>, \cdots;, \sbsp<f><\tilde<j>><*> \sbsp<r><q><*> \sbsp<d><q> \rangle;
+      >
+      が得られる。
+    >
+    \p<
+      式 1, 2, 3, 4, 5 で得られた複射や多射は、双対組の多射
+      &mb<
+        \langle; (\sb<A><1>, \sb<\bar<A>><1>, \sb<a><1>), \cdots;, (\sb<A><m>, \sb<\bar<A>><m>, \sb<a><m>), (\sb<C><1>, \sb<\bar<C>><1>, \sb<c><1>), \ov<\cdots;><^ \tilde<k>>, (\sb<C><p>, \sb<\bar<C>><p>, \sb<c><p>) \rangle; \to; \langle; (\sb<B><1>, \sb<\bar<B>><1>, \sb<b><1>), \ov<\cdots;><^ \tilde<j>>, (\sb<B><n>, \sb<\bar<B>><n>, \sb<b><n>), (\sb<D><1>, \sb<\bar<D>><1>, \sb<d><1>), \cdots;, (\sb<D><q>, \sb<\bar<D>><q>, \sb<d><q>) \rangle;
+      >
+      を定める。
+      これが多圏の合成の公理を全て満たすことの証明は省略する。
+    >
+  >
+  \p<
+    これにより、線型超教義 &m<(\scr<C>, `V)> 上の双対組とその間の多射は対象多圏を成す。
+    以下ではこれを &m<\bfrm<Adj> (\scr<C>, `V)> で表す。
+    この構成こそが Chu 構成とダイアレクティカ圏の両方を一般化したものになっており、Shulman の研究の主な成果である。
+  >
+  \p<
+    次回は、反変加群 &m<`V: \sp<\scr<C>><\circ;> \vertrarr; \bfrm<Poly>> がもつ構造が &m<\bfrm<Adj> (\scr<C>, `V)> に持ち上がることを示し、その系としてダイアレクティカ圏を復元する。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="spxx"|<J. M. E. Hyland (2002)「Proof theory in the abstract」『Annals of Pure and Applied Logic』114:43–78>
+    \li|id="stcd"|<M. Shulman (2020)「The 2-Chu-dialectica construction and the polycategory of multivariable adjunctions」『Theory and Applications of Categories』35(4):89–136>
+  >
+
+>
