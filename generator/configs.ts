@@ -82,7 +82,7 @@ export class AvendiaConfigs {
   }
 
   public replaceOutputDirPath(outputPath: string, outputLanguage: AvendiaOutputLanguage): string {
-    return pathUtil.join(this.getRemoteDirPath(outputLanguage), pathUtil.relative(this.getOutputDirPath(outputLanguage), outputPath)).replaceAll(pathUtil.sep, "/");
+    return pathUtil.join(this.getRemoteDirPath(outputLanguage), pathUtil.relative(this.getOutputDirPath(outputLanguage), outputPath)).replace(/\/|\\/g, "/");
   }
 
 }

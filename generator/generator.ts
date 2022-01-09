@@ -6,9 +6,6 @@ import {
 import {
   ZenmlParser
 } from "@zenml/zenml";
-import {
-  Client as FtpClient
-} from "basic-ftp";
 import chalk from "chalk";
 import chokidar from "chokidar";
 import commandLineArgs from "command-line-args";
@@ -26,6 +23,9 @@ import pluginManagers from "../plugin";
 import templateManagers from "../template";
 import WEBPACK_CONFIGS from "../webpack-document";
 import {
+  CustomFtpClient
+} from "./client";
+import {
   AVENDIA_CONFIGS,
   AvendiaLanguage,
   AvendiaOutputLanguage
@@ -42,7 +42,7 @@ export class AvendiaGenerator {
 
   private parser!: ZenmlParser;
   private transformer!: AvendiaTransformer;
-  private client!: FtpClient;
+  private client!: CustomFtpClient;
   private options!: any;
   private count: number;
 
@@ -242,14 +242,10 @@ export class AvendiaGenerator {
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let remotePathSpecs = this.getRemotePathSpecs(documentPath, documentLanguage);
-    let promise = remotePathSpecs.reduce((promise, [outputPath, remotePath]) => {
-      let nextPromise = promise.then(async () => {
-        await this.createClient();
-        await this.client.uploadFrom(outputPath, remotePath);
-      });
-      return nextPromise;
-    }, Promise.resolve());
-    await promise;
+    let promises = remotePathSpecs.map(async ([outputPath, remotePath]) => {
+      await this.client.uploadFrom(outputPath, remotePath);
+    });
+    await Promise.all(promises);
   }
 
   private printNormal(documentPath: string, documentLanguage: AvendiaLanguage, intervals: {convert: number, upload: number}, succeed: boolean): void {
@@ -325,15 +321,13 @@ export class AvendiaGenerator {
     return transformer;
   }
 
-  private async createClient(): Promise<FtpClient> {
-    let client = this.client ?? new FtpClient();
-    if (client.closed) {
-      await client.access({
-        host: AVENDIA_CONFIGS.getServerHost(),
-        user: AVENDIA_CONFIGS.getServerUser(),
-        password: AVENDIA_CONFIGS.getServerPassword()
-      });
-    }
+  private async createClient(): Promise<CustomFtpClient> {
+    let client = new CustomFtpClient();
+    await client.access({
+      host: AVENDIA_CONFIGS.getServerHost(),
+      user: AVENDIA_CONFIGS.getServerUser(),
+      password: AVENDIA_CONFIGS.getServerPassword()
+    });
     return client;
   }
 
