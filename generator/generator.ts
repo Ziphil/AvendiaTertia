@@ -6,15 +6,15 @@ import {
 import {
   ZenmlParser
 } from "@zenml/zenml";
+import {
+  Client as FtpClient
+} from "basic-ftp";
 import chalk from "chalk";
 import chokidar from "chokidar";
 import commandLineArgs from "command-line-args";
 import cssTreeUtil from "css-tree";
 import dayjs from "dayjs";
 import fs from "fs/promises";
-import {
-  Client as FtpClient
-} from "basic-ftp";
 import glob from "glob-promise";
 import pathUtil from "path";
 import sass from "sass";
@@ -245,7 +245,7 @@ export class AvendiaGenerator {
     let promise = remotePathSpecs.reduce((promise, [outputPath, remotePath]) => {
       let nextPromise = promise.then(async () => {
         await this.createClient();
-        await this.client.uploadFrom(outputPath, remotePath)
+        await this.client.uploadFrom(outputPath, remotePath);
       });
       return nextPromise;
     }, Promise.resolve());
@@ -295,7 +295,7 @@ export class AvendiaGenerator {
   }
 
   private async logError(documentPath: string, documentLanguage: AvendiaLanguage, error: unknown): Promise<void> {
-    let output = ""
+    let output = "";
     let logPath = AVENDIA_CONFIGS.getErrorLogPath();
     output += `[${documentPath}]` + "\n";
     if (error instanceof Error) {
@@ -331,7 +331,7 @@ export class AvendiaGenerator {
       await client.access({
         host: AVENDIA_CONFIGS.getServerHost(),
         user: AVENDIA_CONFIGS.getServerUser(),
-        password: AVENDIA_CONFIGS.getServerPassword(),
+        password: AVENDIA_CONFIGS.getServerPassword()
       });
     }
     return client;
