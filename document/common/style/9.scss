@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap");
+@import url("https://jpafonts.osdn.jp/webfonts/jpafonts.css");
+@import "util/reset.scss";
+@import "util/common.scss";
+@import "util/font.scss";
+@import "main-module/variable.scss";
+
+
+html {
+  font-size: 16rpx;
+}
+
+body {
+  @include no-scrollbar;
+  @include text-size-adjust;
+  margin: 0rpx;
+  padding: 0rpx;
+  font-family: $serif-font-family;
+  font-weight: normal;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  line-height: 1;
+  text-decoration-skip-ink: none;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+$max-logo-size: 220rpx;
+
+.logo-container {
+  width: min(15vw, #{$max-logo-size});
+  top: 3vw;
+  left: 3vw;
+  position: fixed;
+}
+
+.logo {
+  width: 100%;
+  line-height: 0;
+}
+
+.section-block {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section-left {
+  flex: 0 0 min(15vw + 6vw, #{$max-logo-size} + 6vw);
+}
+
+.section {
+  flex: 1 1 0rpx;
+  box-sizing: border-box;
+}
+
+.header-block {
+  height: 50vw;
+  max-height: 100vh;
+  background-image: url("/material/anniversary/1.jpg");
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: left 0vw bottom max(0vw, 100vh - 50vw);
+  background-attachment: fixed;
+}
+
+.header {
+  padding: 0vw 4vw 3vw 0vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header-paragraph {
+  font-family: "Vekos";
+  font-size: max(2vw, 100%);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  color: white;
+  text-align: right;
+  text-shadow: 0.3vw 0.3vw 1vw black;
+  & +& {
+    margin-top: 0.8em;
+  }
+}
+
+.header-line {
+  transform: skew(-5deg, 0deg);
+}
+
+.timeline-left {
+  background-image: linear-gradient(to right bottom, hsl(35, 100%, 97%), hsl(198, 100%, 97%));
+  background-repeat: no-repeat;
+  background-position: left 0vw bottom 0vw;
+  background-attachment: fixed;
+}
+
+.timeline {
+  padding: 3vw 4vw 3vw 3vw;
+  background-image: linear-gradient(to right bottom, hsl(35, 100%, 94%), hsl(198, 100%, 94%));
+  background-repeat: no-repeat;
+  background-position: left 0vw bottom 0vw;
+  background-attachment: fixed;
+}
+
+.timeline-item {
+  --timeline-color: #{$blue-color};
+  &:nth-child(2n) {
+    --timeline-color: #{$orange-color};
+  }
+}
+
+.timeline-head {
+  display: flex;
+  align-items: center;
+}
+
+$timeline-date-size: 100rpx;
+
+.timeline-date {
+  width: $timeline-date-size;
+  height: $timeline-date-size;
+  border-radius: 50%;
+  font-family: $special-font-family;
+  background-color: var(--timeline-color);
+  color: white;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-hairian {
+  margin-top: 5rpx;
+  font-size: 180%;
+  &::before {
+    font-size: 60%;
+    vertical-align: 0.5em;
+    line-height: 0;
+    content: "H";
+  }
+}
+
+.timeline-gregorian {
+  font-size: 90%;
+}
+
+.timeline-generation {
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  color: var(--timeline-color);
+}
+
+.timeline-number {
+  margin: 0em 0.2em;
+  font-family: $special-font-family;
+  font-size: 300%;
+  &:first-child {
+    margin-left: 0em;
+  }
+}
+
+.timeline-number sub {
+  font-size: 80%;
+  vertical-align: -0.2em;
+  line-height: 0;
+}
+
+.timeline-scale {
+  font-size: 150%;
+}
+
+.timeline-text {
+  margin-left: div($timeline-date-size - 6rpx, 2);
+  padding: 10rpx 0rpx 30rpx div($timeline-date-size - 6rpx, 2);
+  font-size: 110%;
+  line-height: 1.7;
+  text-align: justify;
+  border-left: 6rpx var(--timeline-color) solid;
+}
+
+.timeline-text sub {
+  font-size: 80%;
+  vertical-align: -0.3em;
+  line-height: 0;
+}
+
+.sans {
+  font-family: $sans-font-family !important;
+  font-weight: $sans-font-weight !important;
+  font-size: $sans-font-size !important;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  line-height: $sans-font-size !important;
+}
