@@ -7,7 +7,7 @@ import {
 
 let manager = new AvendiaTemplateManager();
 
-manager.registerElementRule("x", ["page", "page.section-table"], (transformer, document, element) => {
+manager.registerElementRule("x", true, (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("sans");
@@ -16,7 +16,7 @@ manager.registerElementRule("x", ["page", "page.section-table"], (transformer, d
   return self;
 });
 
-manager.registerElementRule("xn", ["page", "page.section-table"], (transformer, document, element) => {
+manager.registerElementRule("xn", true, (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("sans");
@@ -25,7 +25,7 @@ manager.registerElementRule("xn", ["page", "page.section-table"], (transformer, 
   return self;
 });
 
-manager.registerElementRule("i", ["page", "page.section-table"], (transformer, document, element) => {
+manager.registerElementRule("i", true, (transformer, document, element) => {
   let self = document.createDocumentFragment();
   self.appendElement("var", (self) => {
     self.addClassName("italic");
