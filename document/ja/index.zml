@@ -6,8 +6,8 @@
   \head<
     \meta|charset="UTF-8"|;
     \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
-    \script|src="program/script/12.js"|;
-    \link|rel="stylesheet",type="text/css",href="style/8.css"|;
+    \script|src="/program/script/12.js"|;
+    \link|rel="stylesheet",type="text/css",href="/style/8.css"|;
     \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
     \title<Avendia>
   >
@@ -16,7 +16,7 @@
     \div|class="header-block centralize"|<
       \div|class="header"|<
         \div|class="header-background"|<
-          \img|class="header-logo",src="material/logo/2.svg"|;
+          \img|class="header-logo",src="/material/logo/2.svg"|;
         >
         \div|class="header-content"|<
           \div|class="header-title",data-content="Avendia"|<Avendia>
@@ -88,6 +88,14 @@
               シャレイア語を作る上での疑問点や考察を綴ったものです。
               製作過程を垣間見ることができます。
             >
+          >
+        >
+      >
+      \div|class="anniversary"|<
+        \a|class="anniversary-link",href="other/other/16.html"|<
+          \img|class="anniversary-logo",src="/material/anniversary/2.svg"|;
+          \div|class="anniversary-text"|<
+            \span|class="anniversary-line"|<シャレイア語 10 周年記念ページ>
           >
         >
       >
