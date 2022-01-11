@@ -78,7 +78,7 @@
                 \div|class="timeline-gregorian"|<2012`/02`/25>
               >
               \div|class="timeline-generation"|<
-                \span|class="timeline-number"|<W\sub<1>>\span|class="timeline-scale"|<代>\span|class="timeline-number"|<1>\span|class="timeline-scale"|<期>
+                \span|class="timeline-number"|<W\sub|class="sub"|<1>>\span|class="timeline-scale"|<代>\span|class="timeline-number"|<1>\span|class="timeline-scale"|<期>
               >
             >
             \div|class="timeline-text"|<
@@ -94,7 +94,7 @@
                 \div|class="timeline-gregorian"|<2012`/02`/27>
               >
               \div|class="timeline-generation"|<
-                \span|class="timeline-number"|<W\sub<1>>\span|class="timeline-scale"|<代>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<期>
+                \span|class="timeline-number"|<W\sub|class="sub"|<1>>\span|class="timeline-scale"|<代>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<期>
               >
             >
             \div|class="timeline-text"|<
@@ -237,7 +237,7 @@
                 \div|class="timeline-gregorian"|<2012`/08`/15>
               >
               \div|class="timeline-generation"|<
-                \span|class="timeline-number"|<W\sub<2>>\span|class="timeline-scale"|<代>\span|class="timeline-number"|<1>\span|class="timeline-scale"|<期>
+                \span|class="timeline-number"|<W\sub|class="sub"|<2>>\span|class="timeline-scale"|<代>\span|class="timeline-number"|<1>\span|class="timeline-scale"|<期>
               >
             >
             \div|class="timeline-text"|<
@@ -378,7 +378,7 @@
                 \div|class="timeline-gregorian"|<2015`/04`/19>
               >
               \div|class="timeline-generation"|<
-                \span|class="timeline-number"|<W\sub<3>>\span|class="timeline-scale"|<代>\span|class="timeline-number"|<1>\span|class="timeline-scale"|<期>
+                \span|class="timeline-number"|<W\sub|class="sub"|<3>>\span|class="timeline-scale"|<代>\span|class="timeline-number"|<1>\span|class="timeline-scale"|<期>
               >
             >
             \div|class="timeline-text"|<

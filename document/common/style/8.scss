@@ -7,6 +7,7 @@
 @import "util/common.scss";
 @import "util/font.scss";
 @import "main-module/variable.scss";
+@import "main-module/inline/common.scss";
 
 
 $home-width: 85vw;
@@ -502,29 +503,6 @@ $card-item-title-height: 42rpx;
     line-height: 0;
     content: "\F101";
   }
-}
-
-.sans {
-  font-family: $sans-font-family !important;
-  font-weight: $sans-font-weight !important;
-  font-size: $sans-font-size !important;
-  font-feature-settings: "palt" 1, "pkna" 1;
-  line-height: $sans-font-size !important;
-}
-
-.japanese {
-  font-family: $japanese-serif-font-family !important;
-  font-weight: $serif-font-weight;
-  font-feature-settings: "palt" 0;
-  line-height: 1;
-}
-
-.monospace {
-  font-family: $monospace-font-family;
-  font-size: $monospace-font-size;
-  font-weight: $monospace-font-weight;
-  letter-spacing: $monospace-letter-spacing;
-  white-space: pre-wrap;
 }
 
 .link,

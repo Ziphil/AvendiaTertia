@@ -7,6 +7,7 @@
 @import "util/common.scss";
 @import "util/font.scss";
 @import "main-module/variable.scss";
+@import "main-module/inline/common.scss";
 
 
 @mixin gradient-background($colors...) {
@@ -237,10 +238,9 @@ $timeline-date-size: 100rpx;
   }
 }
 
-.timeline-number sub {
+.timeline-number .sub {
   font-size: 80%;
   vertical-align: -0.2em;
-  line-height: 0;
 }
 
 .timeline-scale {
@@ -263,18 +263,4 @@ $timeline-date-size: 100rpx;
     position: absolute;
     content: ""
   }
-}
-
-.timeline-text sub {
-  font-size: 80%;
-  vertical-align: -0.3em;
-  line-height: 0;
-}
-
-.sans {
-  font-family: $sans-font-family !important;
-  font-weight: $sans-font-weight !important;
-  font-size: $sans-font-size !important;
-  font-feature-settings: "palt" 1, "pkna" 1;
-  line-height: $sans-font-size !important;
 }

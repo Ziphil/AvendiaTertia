@@ -5,49 +5,9 @@
 @import "../../main-module/variable.scss";
 
 
-.sans {
-  font-family: $sans-font-family !important;
-  font-weight: $sans-font-weight !important;
-  font-size: $sans-font-size !important;
-  font-feature-settings: "palt" 1, "pkna" 1;
-  line-height: $sans-font-size !important;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.japanese {
-  font-family: $japanese-serif-font-family !important;
-  font-weight: $serif-font-weight;
-  font-feature-settings: "palt" 0;
-  line-height: 1;
-}
-
-.monospace {
-  font-family: $monospace-font-family;
-  font-size: $monospace-font-size;
-  font-weight: $monospace-font-weight;
-  letter-spacing: $monospace-letter-spacing;
-  white-space: pre-wrap;
-}
-
 .code {
-  font-family: $monospace-font-family;
-  font-size: $monospace-font-size;
-  font-weight: $monospace-font-weight;
-  letter-spacing: $monospace-letter-spacing;
-  white-space: pre-wrap;
+  @extend .monospace;
   background-color: $block-background-color;
-}
-
-.hairia {
-  &::before {
-    font-size: 80%;
-    vertical-align: 0.3906em;
-    line-height: 0;
-    content: "H";
-  }
 }
 
 .foreign {
@@ -95,16 +55,4 @@
   &::after {
     content: ":";
   }
-}
-
-.sup {
-  font-size: 80%;
-  vertical-align: 0.3906em;
-  line-height: 0;
-}
-
-.sub {
-  font-size: 80%;
-  vertical-align: -0.2969em;
-  line-height: 0;
 }
