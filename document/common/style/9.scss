@@ -16,16 +16,6 @@
   background-attachment: fixed;
 }
 
-@mixin main-gradient-background {
-  @include gradient-background(hsl(35, 70%, 45%), hsl(82, 45%, 45%), hsl(198, 70%, 45%));
-}
-
-@mixin background-clip-text {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 @mixin medium-screen {
   @media screen and (max-width: 1000px) {
     @content;
@@ -39,17 +29,22 @@
 }
 
 
+$highlights-colors: hsl(35, 70%, 45%) 10%, hsl(307, 35%, 45%) 50%, hsl(198, 70%, 45%) 90%;
+$background-colors: hsl(35, 30%, 94%) 10%, hsl(307, 15%, 94%) 50%, hsl(198, 30%, 94%) 90%;
+$light-background-colors: hsl(35, 30%, 97%) 10%, hsl(307, 15%, 97%) 50%, hsl(198, 30%, 97%) 90%;
 
 html {
+  height: 100%;
   font-size: 16px;
   @include small-screen {
-    font-size: 14px;
+    font-size: div(16px, 1.1);
   }
 }
 
 body {
   @include no-scrollbar;
   @include text-size-adjust;
+  height: 100%;
   margin: 0rpx;
   padding: 0rpx;
   color: $text-color;
@@ -58,6 +53,11 @@ body {
   font-feature-settings: "palt" 1, "pkna" 1;
   line-height: 1;
   text-decoration-skip-ink: none;
+  background-image: url("/material/anniversary/1.jpg");
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: left 0vw bottom max(0vw, 100%);
+  background-attachment: fixed;
   overflow-x: auto;
   overflow-y: scroll;
 }
@@ -101,11 +101,6 @@ $max-logo-size: 220rpx;
 .header-block {
   height: 50vw;
   max-height: 100vh;
-  background-image: url("/material/anniversary/1.jpg");
-  background-size: 100vw auto;
-  background-repeat: no-repeat;
-  background-position: left 0vw bottom max(0vw, 100vh - 50vw);
-  background-attachment: fixed;
 }
 
 .header {
@@ -134,17 +129,17 @@ $max-logo-size: 220rpx;
 }
 
 .timeline-left {
-  @include gradient-background(hsl(35, 30%, 97%), hsl(198, 30%, 97%));
+  @include gradient-background($light-background-colors);
 }
 
 .timeline {
   padding-top: 50rpx;
   padding-bottom: 50rpx;
-  @include gradient-background(hsl(35, 30%, 94%), hsl(198, 30%, 94%));
+  @include gradient-background($background-colors);
 }
 
 .timeline-title {
-  @include main-gradient-background;
+  @include gradient-background($highlights-colors);
   @include background-clip-text;
   margin-bottom: 30rpx;
   padding-bottom: 10rpx;
@@ -155,7 +150,7 @@ $max-logo-size: 220rpx;
   position: relative;
   &::before,
   &::after {
-    @include main-gradient-background;
+    @include gradient-background($highlights-colors);
     height: 2rpx;
     bottom: 0rpx;
     left: 0rpx;
@@ -190,7 +185,7 @@ $max-logo-size: 220rpx;
 $timeline-date-size: 100rpx;
 
 .timeline-date {
-  @include main-gradient-background;
+  @include gradient-background($highlights-colors);
   width: $timeline-date-size;
   height: $timeline-date-size;
   border-radius: 50%;
@@ -206,7 +201,7 @@ $timeline-date-size: 100rpx;
 
 .timeline-hairian,
 .timeline-gregorian {
-  @include gradient-background(hsl(35, 30%, 94%), hsl(198, 30%, 94%));
+  @include gradient-background($background-colors);
   @include background-clip-text;
 }
 
@@ -226,7 +221,7 @@ $timeline-date-size: 100rpx;
 }
 
 .timeline-generation {
-  @include main-gradient-background;
+  @include gradient-background($highlights-colors);
   @include background-clip-text;
   margin-top: 10rpx;
   margin-left: 30rpx;
@@ -260,7 +255,7 @@ $timeline-date-size: 100rpx;
   text-align: justify;
   position: relative;
   &::before {
-    @include main-gradient-background;
+    @include gradient-background($highlights-colors);
     width: 6rpx;
     top: 0rpx;
     bottom: 0rpx;

@@ -136,6 +136,12 @@ $monospace-letter-spacing: -0.08em;
   -webkit-text-size-adjust: 100%;
 }
 
+@mixin background-clip-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @mixin tnum-variant {
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1;
