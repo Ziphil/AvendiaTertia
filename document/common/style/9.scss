@@ -30,9 +30,9 @@
 }
 
 
-$highlights-colors: hsl(35, 70%, 45%) 10%, hsl(307, 35%, 45%) 50%, hsl(198, 70%, 45%) 90%;
-$background-colors: hsl(35, 30%, 94%) 10%, hsl(307, 15%, 94%) 50%, hsl(198, 30%, 94%) 90%;
-$light-background-colors: hsl(35, 30%, 97%) 10%, hsl(307, 15%, 97%) 50%, hsl(198, 30%, 97%) 90%;
+$highlights-colors: hsl(35, 70%, 45%) 10%, hsl(307, 30%, 45%) 50%, hsl(198, 70%, 45%) 90%;
+$background-colors: hsl(35, 20%, 92%) 10%, hsl(307, 10%, 92%) 50%, hsl(198, 20%, 92%) 90%;
+$light-background-colors: hsl(35, 20%, 96%) 10%, hsl(307, 10%, 96%) 50%, hsl(198, 20%, 96%) 90%;
 
 html {
   height: 100%;
@@ -249,7 +249,7 @@ $timeline-date-size: 100rpx;
 
 .timeline-text {
   margin-left: div($timeline-date-size - 6rpx, 2);
-  padding: 10rpx 0rpx 10rpx min(#{div($timeline-date-size - 6rpx, 2)}, 4vw);
+  padding: 10rpx 0rpx 10rpx min(#{div($timeline-date-size + 6rpx, 2)}, 4vw);
   font-size: 110%;
   line-height: 1.7;
   text-align: justify;
