@@ -30,9 +30,9 @@
 }
 
 
-$highlights-colors: hsl(35, 70%, 45%) 10%, hsl(307, 30%, 45%) 50%, hsl(198, 70%, 45%) 90%;
-$background-colors: hsl(35, 20%, 92%) 10%, hsl(307, 10%, 92%) 50%, hsl(198, 20%, 92%) 90%;
-$light-background-colors: hsl(35, 20%, 96%) 10%, hsl(307, 10%, 96%) 50%, hsl(198, 20%, 96%) 90%;
+$highlights-colors: hsl(35, 70%, 45%) 10%, hsl(307, 40%, 45%) 50%, hsl(198, 70%, 45%) 90%;
+$background-colors: hsl(35, 30%, 92%) 10%, hsl(307, 13%, 92%) 50%, hsl(198, 30%, 92%) 90%;
+$light-background-colors: hsl(35, 30%, 96%) 10%, hsl(307, 13%, 96%) 50%, hsl(198, 30%, 96%) 90%;
 
 html {
   height: 100%;
@@ -94,7 +94,7 @@ $max-logo-size: 220rpx;
 }
 
 .section {
-  padding: 3vw 4vw 3vw 3vw;
+  padding: 3vw 4vw 3vw 4vw;
   flex: 1 1 0rpx;
   box-sizing: border-box;
 }
@@ -200,13 +200,13 @@ $timeline-date-size: 100rpx;
   align-items: center;
 }
 
-.timeline-hairian,
+.timeline-hairia,
 .timeline-gregorian {
   @include gradient-background($background-colors);
   @include background-clip-text;
 }
 
-.timeline-hairian {
+.timeline-hairia {
   margin-top: 5rpx;
   font-size: 180%;
   &::before {
@@ -248,8 +248,8 @@ $timeline-date-size: 100rpx;
 }
 
 .timeline-text {
-  margin-left: div($timeline-date-size - 6rpx, 2);
-  padding: 10rpx 0rpx 10rpx min(#{div($timeline-date-size + 6rpx, 2)}, 4vw);
+  margin-left: div($timeline-date-size, 2) - 3rpx;
+  padding: 10rpx 0rpx 10rpx min(#{div($timeline-date-size, 2) + 3rpx}, 4vw + 3rpx);
   font-size: 110%;
   line-height: 1.7;
   text-align: justify;
