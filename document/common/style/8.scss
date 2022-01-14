@@ -357,8 +357,7 @@ $card-item-title-height: 42rpx;
   opacity: 0.5;
   &::before,
   &::after {
-    height: 1rpx;
-    border-bottom: 1rpx $blue-color solid;
+    border-bottom: 1rpx mix($blue-color, $header-background-color, 50%) solid;
     flex-grow: 1;
     content: "";
   }
