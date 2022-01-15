@@ -29,12 +29,12 @@
     "@types/css-tree": "^1.0.7",
     "@types/dot": "^1.1.5",
     "@types/glob": "^7.2.0",
-    "@types/jquery": "^3.5.11",
+    "@types/jquery": "^3.5.13",
     "@types/sass": "^1.43.1",
     "@types/webpack": "^5.28.0",
     "@types/webpack-node-externals": "^2.5.3",
-    "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
     "eslint": "^8.6.0",
     "eslint-config-ziphil": "^1.2.0",
     "eslint-plugin-import": "^2.25.4",
@@ -51,9 +51,9 @@
   },
   "dependencies": {
     "@typescript/lib-dom": "npm:@zenml/xmldom-type",
-    "@zenml/xmldom": "^0.1.0",
-    "@zenml/zenml": "^0.2.0",
-    "@zenml/zotica": "^0.0.2",
+    "@zenml/xmldom": "^1.0.0",
+    "@zenml/zenml": "^1.0.0",
+    "@zenml/zotica": "^1.0.0",
     "basic-ftp": "^4.6.6",
     "chalk": "^4.1.2",
     "chokidar": "^3.5.2",
@@ -64,8 +64,8 @@
     "glob": "^7.2.0",
     "glob-promise": "^4.2.2",
     "jquery": "^3.6.0",
-    "sass": "^1.47.0",
+    "sass": "^1.48.0",
     "source-map-support": "^0.5.21",
-    "webpack": "^5.65.0"
+    "webpack": "^5.66.0"
   }
 }

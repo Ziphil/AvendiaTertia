@@ -30,8 +30,7 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
     this.template = dotjs.template(TEMPLATE_HTML, {...dotjs.templateSettings, strip: false});
   }
 
-  public transformFinalize(...[input, configs]: Parameters<typeof this.transform>): string {
-    let document = this.transform(input, configs);
+  protected stringify(document: AvendiaDocument): string {
     if (this.variables.mode === "page") {
       let view = {
         environments: this.environments,

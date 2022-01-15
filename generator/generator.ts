@@ -173,7 +173,7 @@ export class AvendiaGenerator {
     let initialVariables = {path: documentPath, language: outputLanguage};
     let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
     let inputDocument = this.parser.tryParse(inputString);
-    let outputString = this.transformer.transformFinalize(inputDocument, {initialVariables});
+    let outputString = this.transformer.transformStringify(inputDocument, {initialVariables});
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
   }
