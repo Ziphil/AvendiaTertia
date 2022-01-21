@@ -6,6 +6,12 @@
   \head<
     \meta|charset="UTF-8"|;
     \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \meta|name="twitter:card",content="summary"|;
+    \meta|name="twitter:site",content="@Ziphil"|;
+    \meta|property="og:url",content="http://ziphil.com/other/other/2.html"|;
+    \meta|property="og:title",content="10 周年記念ページ"|;
+    \meta|property="og:description",content="10 周年記念ページ"|;
+    \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
     \link|rel="stylesheet",type="text/css",href="/style/9.css"|;
     \title<10 周年記念ページ — Avendia>
   >
