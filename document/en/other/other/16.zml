@@ -1,0 +1,549 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\html|lang="en"|<
+  \head<
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \link|rel="stylesheet",type="text/css",href="/style/9.css"|;
+    \title<10th Anniversary Page — Avendia>
+  >
+  \body<
+
+    \div|class="logo-container"|<
+      \a|href="#"|<
+        \img|class="logo",src="/material/anniversary/2.svg"|;
+      >
+    >
+
+    \div|class="header-block section-block"|<
+      \div|class="header-left section-left"|;
+      \div|class="header section"|<
+        \div|class="header-paragraph-container"|<
+          \div|class="header-paragraph"|<
+            \div|class="header-line"|<a kesil o levec axaléh>
+            \div|class="header-line"|<salat e velex i zalvikhîx>
+          >
+          \div|class="header-paragraph"|<
+            \div|class="header-line"|<solxesat a tel e'n>
+            \div|class="header-line"|<xatêlic zi xahal ayaxos>
+            \div|class="header-line"|<e qilxaléh>
+          >
+        >
+      >
+    >
+
+    \div|class="timeline-block section-block"|<
+      \div|class="timeline-left section-left"|;
+      \div|class="timeline section"|<
+        \div|class="timeline-title"|<10 Years of Shaleian – A Timeline>
+        \div|class="timeline-list"|<
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<1>
+                \div|class="timeline-gregorian"|<2012`/01`/23>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<1>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              It all started here.
+              I started working on Shaleian as a language to use in the world of the RPG I was making at that time.
+              Although modern Shaleian has the peculiar feature of placing the verb at the start of the sentence, the first Shaleian had an SVO word order.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<12>
+                \div|class="timeline-gregorian"|<2012`/02`/03>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<1>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<2>
+              >
+            >
+            \div|class="timeline-text"|<
+              The first revision of the grammar.
+              I had decided on things without thinking through them thoroughly. As a result, when it was pointed out to me that it was linguistically unnatural to not include `/m`/ as a phoneme, I not only added it as a phoneme but also changed the spelling of some words I had already coined.
+              At that point, I gained an interest in linguistics and came to strive for linguistic naturalism.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<34>
+                \div|class="timeline-gregorian"|<2012`/02`/25>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<W\sub|class="sub"|<1>>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              I started wandering when it came to how intransitive and transitive verbs were expressed.
+              To make the distinction between the intransitive and transitive clear, I tried various plans to revise the grammar, such as putting an affix on transitive verbs, or creating dative and ablative cases to be used by transitive verbs, or in the end, making the language ergative.
+              This period is called ‘W’ for the ‘wandering’ that I did.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<36>
+                \div|class="timeline-gregorian"|<2012`/02`/27>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<W\sub|class="sub"|<1>>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<2>
+              >
+            >
+            \div|class="timeline-text"|<
+              In the end, I decided that intransitive and transitive verbs would share the same word and a dedicated adverb would be used to distinguish between the two.
+              In addition, the ‘verb-initial’ rule at the heart of modern Shaleian grammar was set in stone here.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<45>
+                \div|class="timeline-gregorian"|<2012`/03`/07>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              Because the wandering period completely changed the feeling of the language, I decided to delete all 486 words in the vocabulary and start anew.
+              This was the first vocabulary reset.
+              Furthermore, thanks to the wandering, the grammar began to take shape in a way I was satisfied with to some extent.
+              I think that this was the time I started putting the grammar on my website.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<64>
+                \div|class="timeline-gregorian"|<2012`/03`/26>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<2>
+              >
+            >
+            \div|class="timeline-text"|<
+              At this time, the default tense and aspect for each verb were fixed, and there was a rule that tense and aspect adverbs could be omitted for them.
+              However, almost all verbs had a default tense of present and a default aspect of indefinite. When I noticed that I didn’t need to decide on the default for each verb, this rule was abolished.
+              There were many cases when I thought that an idea was good at the time it was adopted but noticed that it didn’t work out in practice.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<66>
+                \div|class="timeline-gregorian"|<2012`/03`/28>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<3>
+              >
+            >
+            \div|class="timeline-text"|<
+              I felt that the existing native script lost some of its \i<a priori>-ness through influence from the Latin and Arka alphabets. For that reason, I decided to overhaul the shapes of its letters.
+              I laid out about 90 simple shapes that were made from arcs and straight lines only. From these, I adopted a method of selecting 34 of them to use in practice.
+              To avoid being too subjective, I consulted with acquaintances who did the same thing.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<84>
+                \div|class="timeline-gregorian"|<2012`/04`/15>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<4>
+              >
+            >
+            \div|class="timeline-text"|<
+              The structure of comparisons was changed slightly.
+              In addition, detailed rules that had not been stated explicitly were included, and I compiled the grammar into a single document.
+              Beforehand, the grammar was scattered across my site and wiki; hence, this is the earliest period for which a complete grammar of Shaleian exists.
+              比較の構文が少し変わりました。
+              また、これまで明文化されていなかった細かい規則を含めて、文法を 1 つの文法書としてまとめ上げました。
+              これより前の時代では、文法をサイトや Wiki に断片的にまとめているだけだったので、シャレイア語のまとまった文法書はこの時代のものが最古です。
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<114>
+                \div|class="timeline-gregorian"|<2012`/05`/15>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<5>
+              >
+            >
+            \div|class="timeline-text"|<
+              At this time, I started translating song lyrics in earnest, and I began to not only create Shaleian but also use it in the wild.
+              Even today, I remember how fun it was to be able to write something that could be sung in my language, and this is the period that I personally have the most emotional attachment to.
+              During the translation process, I noticed that the language had no equivalent to the English relative pronoun \i<whose> and tweaked the grammar of relative clauses as a result.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<156>
+                \div|class="timeline-gregorian"|<2012`/06`/26>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<6>
+              >
+            >
+            \div|class="timeline-text"|<
+              I noticed a problem with how comparisons were expressed and slightly changed the grammar around them again.
+              Because comparative structures have remained a subject of investigation to this day, I feel that I’ve truly been tormented by them for a long time.
+              Moreover, my main interest switched from making RPGs to making languages around this time, and the conlang that I had originally planned to use in my RPG started taking a life on its own.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<180>
+                \div|class="timeline-gregorian"|<2012`/07`/20>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<2>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<7>
+              >
+            >
+            \div|class="timeline-text"|<
+              This version introduced the contradictory-sounding ‘affirmative negative adverb’, a peculiar function word that was used for juxtaposing negation with affirmation and for emphasising the affirmative.
+              This feature does not survive today, but I am personally fond of it.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<191>
+                \div|class="timeline-gregorian"|<2012`/07`/31>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<3>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              A definition field was added to the dictionary to make sure that each word had a clear definition.
+              It was at this time that I started consciously thinking about how the scope of a word’s meaning was defined.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<206>
+                \div|class="timeline-gregorian"|<2012`/08`/15>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<W\sub|class="sub"|<2>>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              Until now, verb tenses and aspects were expressed with independent adverbs, but this period saw them being expressed with verbal conjugation.
+              Noun cases were also no longer expressed with independent particles but rather through declension.
+              However, when I tried to write texts according to the new grammar, they seemed more verbose than I imagined, and I reverted the changes within one day.
+              Ultimately, this period was placed as a wandering period.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<207>
+                \div|class="timeline-gregorian"|<2012`/08`/16>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<3>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<2>
+              >
+            >
+            \div|class="timeline-text"|<
+              In the same way as in the preceding wandering period, I removed the rarely-used prospective aspect.
+              I still wonder whether I should have also removed the similarly rare terminative aspect.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<217>
+                \div|class="timeline-gregorian"|<2012`/08`/26>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<3>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<3>
+              >
+            >
+            \div|class="timeline-text"|<
+              Abbreviated forms of particles + pronouns were added.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<251>
+                \div|class="timeline-gregorian"|<2012`/09`/29>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<3>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<4>
+              >
+            >
+            \div|class="timeline-text"|<
+              As investigating how one’s conlang was classified by cognitive linguistics went into fashion in the Conlang Neighbourhood, I did so for Shaleian.
+              As a result, I found that it was unnaturalistic for it to be a BE-language while preferring objective expression and thus revised its diction to become a HAVE-language.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<301>
+                \div|class="timeline-gregorian"|<2012`/11`/18>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<3>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<5>
+              >
+            >
+            \div|class="timeline-text"|<
+              I officially decided on verb conjugations at last.
+              The language had been completely isolating up to this point, but the difficulty of use due to the resulting abundance of function words was the primary factor for the change.
+              Since it had been policy from the beginning of creation to be isolating in order to make it easy to look up words in the dictionary, this was a pivotal decision.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<425>
+                \div|class="timeline-gregorian"|<2013`/03`/22>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<3>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<6>
+              >
+            >
+            \div|class="timeline-text"|<
+              The grammar was fine-tuned.
+              At that time, I was about to enter my third year of high school, and I decided to take a break from creating Shaleian to prepare for the university entrance exam.
+              For that reason, one year would pass before I made significant progress.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<712>
+                \div|class="timeline-gregorian"|<2014`/01`/03>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<4>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              Once my preparations for the entrance exam finished, I began to have spare time to work on Shaleian.
+              After taking a break from the language, I tried to establish diction, grammar, and the world it was situated in, but I ended up having an intense feeling of inadequacy.
+              As a result, I decided to reexamine everything from the phonology and orthography and firmly determine the etymology of each word.
+              In order to change my mindset around the creation of the language itself, I deleted all 1108 of the words that existed by then and started once more from the beginning.
+              This was the second vocabulary reset.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<841>
+                \div|class="timeline-gregorian"|<2014`/05`/12>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<5>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              # TODO: look at this later
+              Up to this time, I constantly strived for Shaleian, as a language spoken in another world, to be a language that was not unnatural to speak in real life. This goal was especially striking in version 4.1, but I started to feel that seeking linguistic consistency was too constraining.
+              For that reason, I decisively abandoned its setting in a fictional world and aimed to make it a language that I could consider to be the way it should be.
+              At this point, I began to keep detailed records of my inquiries in my diary on Shaleian.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<1035>
+                \div|class="timeline-gregorian"|<2014`/11`/22>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<5>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<2>
+              >
+            >
+            \div|class="timeline-text"|<
+              Coordinating and subordinating conjunctions were clearly distinguished, and the words used as coordinating conjunctions were separated as connectives.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<1183>
+                \div|class="timeline-gregorian"|<2015`/04`/19>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<W\sub|class="sub"|<3>>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              I changed my principles of creation and began to work on the language as I liked it without caring whether the changes were naturalistic or not. As a result, I started wondering if I could make the grammar and vocabulary more systematic.
+              Therefore, I revised all of the grammatical rules that I felt were difficult and performed a large-scale revision on the language.
+              Nevertheless, once I tried writing texts in the new grammar, it didn’t look like Shaleian at all, and I rejected the changes after one week.
+              This is now considered the third wandering period.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<1189>
+                \div|class="timeline-gregorian"|<2015`/04`/25>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<5>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<3>
+              >
+            >
+            \div|class="timeline-text"|<
+              Long vowels and diphthongs were now written with diacritical marks, perhaps because I disliked that short vowels and long vowels took different numbers of characters to write, even though they both made up one syllable.
+              In addition, a punctuation mark for proper nouns was added in this period.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<1287>
+                \div|class="timeline-gregorian"|<2015`/08`/01>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<5>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<4>
+              >
+            >
+            \div|class="timeline-text"|<
+              The grammar around particles and conjunctions was sorted out by, for instance, introducing non-verb-modifying forms of particles.
+              As far as particles and conjunctions were concerned, I had tried many options through trial and error before settling on the form that was ultimately adopted.
+              I believe that this revision went the cleanest out of the numerous revisions of Shaleian.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<1385>
+                \div|class="timeline-gregorian"|<2015`/11`/07>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<S>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<1>
+              >
+            >
+            \div|class="timeline-text"|<
+              Noticing that I was often pronouncing long vowels, diphthongs, and short vowels identically in my head, I officially adopted this tendency.
+              Instead, accented vowels would be pronounced slightly longer.
+              In addition, I began to concern myself with the compatibility of the grammar and thereafter decided not to make any major or destructive changes to the grammar.
+              The era from this point on is thus called ‘S’ for ‘stable’.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<1471>
+                \div|class="timeline-gregorian"|<2016`/02`/01>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<S>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<2>
+              >
+            >
+            \div|class="timeline-text"|<
+              Because it was disharmonious for [i] to lack diacritical marks while [a] and [e] did, this revision added [í] and [ì] to the Shaleian alphabet.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<2138>
+                \div|class="timeline-gregorian"|<2017`/11`/29>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<S>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<3>
+              >
+            >
+            \div|class="timeline-text"|<
+              This revision introduced the new Shaleian alphabet.
+              Unlike the previous script, which used Latin-like letterforms, this script used round letterforms with many curves.
+              With this change, the ‘Shaleianness’ of Shaleian when written in its own script increased.
+              In fact, I originally did not intend to revise the writing system, but I somehow liked the letterforms that I made while playing around and ended up adopting them.
+              Moreover, I started streaming my vocabulary creation at this time.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<2402>
+                \div|class="timeline-gregorian"|<2018`/08`/20>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<S>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<4>
+              >
+            >
+            \div|class="timeline-text"|<
+              This revision sorted out the grammar around expressing numerals.
+              I remember that this took a lot of trial and error in the same way as when I made changes concerning the particle affix of Version 5.4.
+              Based on these revisions, I also authored and published \cite<Introduction to Shaleian>.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<2686>
+                \div|class="timeline-gregorian"|<2019`/05`/31>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<S>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<5>
+              >
+            >
+            \div|class="timeline-text"|<
+              This revision clarified the rules on derived meanings when the same word was used in different parts of speech, especially as an adverb but also otherwise.
+              Classifying the derivation rules into a number of patterns was difficult, and I investigated all of the existing adverbs while streaming to YouTube.
+              You could say that the Version S.5 revisions concerning adverbs was one of the big three reforms of Shaleian, along with the particle affix revisions of 5.4 and the numeral revisions of S.4.
+              By the way, this was the time when Shaleian was chosen as a subject for the Japanese Linguistics Olympiad.
+              I was surprised by that.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<3315>
+                \div|class="timeline-gregorian"|<2021`/02`/18>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<S>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<6>
+              >
+            >
+            \div|class="timeline-text"|<
+              This revision was a collection of changes in multiple places that I had been worrying about.
+              A major change among these would be the strict distinction between \i|lang="ja-Latn"|<mono> and \i|lang="ja-Latn"|<koto>.
+              The revisions around this felt more like discovering rules from existing examples than creating rules as I pleased, and I started to feel that it was no different from linguistics on a natural language, even though it was supposed to be a constructed language.
+            >
+          >
+          \div|class="timeline-item"|<
+            \div|class="timeline-head"|<
+              \div|class="timeline-date"|<
+                \div|class="timeline-hairia"|<3653>
+                \div|class="timeline-gregorian"|<2022`/01`/22>
+              >
+              \div|class="timeline-generation"|<
+                \span|class="timeline-scale"|<Version>\span|class="timeline-number"|<S>\span|class="timeline-scale"|<.>\span|class="timeline-number"|<7>
+              >
+            >
+            \div|class="timeline-text"|<
+              Ten years have passed since I started working on Shaleian.
+              On this turning point, I have made a revision to settle many problems that I have progressed through by investigation.
+              In any case, I never thought that working on Shaleian would be a hobby that would continue for ten whole years.
+              I must have been doing this for a long time.
+              Streaming myself coining words, writing books, and translating texts: I plan to work on Shaleian in such various ways from now on as well, and I hope we all do well.
+            >
+          >
+        >
+      >
+    >
+
+    \p<Translation by ʻfelirovas-movanas, with special thanks to Luke>
+
+  >
+>
