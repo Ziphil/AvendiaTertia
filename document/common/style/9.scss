@@ -247,6 +247,11 @@ $timeline-date-size: 100rpx;
   font-size: 180%;
 }
 
+.timeline-period {
+  margin: 0em -0.2em;
+  font-size: 180%;
+}
+
 .timeline-text {
   margin-left: div($timeline-date-size, 2) - 3rpx;
   padding: 10rpx 0rpx 10rpx min(#{div($timeline-date-size, 2) + 3rpx}, 4vw + 3rpx);
