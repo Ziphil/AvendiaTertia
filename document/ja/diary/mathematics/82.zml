@@ -8,7 +8,7 @@
 
   \h1<日記 (2021 年 10 月 10 日)>
   \p<
-    \a|href="27.html"|<7 月 7 日>と \a|href="28.html"|<10 月 9 日>で、それぞれレンズの van Laarhoven エンコーディングとプロ関手エンコーディングについて触れた。
+    \a|href="80.html"|<7 月 7 日>と \a|href="81.html"|<10 月 9 日>で、それぞれレンズの van Laarhoven エンコーディングとプロ関手エンコーディングについて触れた。
     今回は、レンズのコエンドを用いた表現方法について触れる。
     概念の定義にコエンドを用いるが、その後で集合としての具体的な表示も行うので、コエンドを知らなくても読めるようにはしたつもりである。
     コエンドの基本については Loregian\ref|type="bib",ref="ccx"|; を参照すると良い。
@@ -173,7 +173,7 @@
   >
   \prf<
     \p<
-      圏同型 &m<\bfrm<PLens> (\scr<C>) \cong; \bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> はすでに\a|href="28.html#homiso"|<定理 2.10> で示されているので、\ref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
+      圏同型 &m<\bfrm<PLens> (\scr<C>) \cong; \bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> はすでに\a|href="81.html#homiso"|<定理 2.10> で示されているので、\ref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
     >
   >
   \p<
