@@ -2,9 +2,6 @@
 
 import fs from "fs";
 import {
-  AVENDIA_CONFIGS
-} from "../../generator/configs";
-import {
   AvendiaTemplateManager
 } from "../../generator/transformer";
 
@@ -15,7 +12,7 @@ manager.registerElementRule("history", ["page", "html"], (transformer, document,
   let self = document.createDocumentFragment();
   let language = transformer.variables.language;
   let size = parseInt(element.getAttribute("size"));
-  let logPath = AVENDIA_CONFIGS.getLogPath(language);
+  let logPath = transformer.environments.configs.getLogPath(language);
   let entries = fs.readFileSync(logPath, {encoding: "utf-8"}).trim().split("\n").reverse().slice(0, size);
   self.appendElement("ul", (self) => {
     self.addClassName("history-list");

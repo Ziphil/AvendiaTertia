@@ -1,18 +1,18 @@
 //
 
 import {
-  AvendiaOutputLanguage,
-  AVENDIA_CONFIGS
+  AvendiaOutputLanguage
 } from "../generator/configs";
 import {
+  AvendiaLightTransformer,
   AvendiaTemplateManager
 } from "../generator/transformer";
 
 
 let manager = new AvendiaTemplateManager();
 
-function getMainClassName(path: string, language: AvendiaOutputLanguage): string {
-  let splitRelativePath = AVENDIA_CONFIGS.getSplitRelativeDocumentPath(path, language);
+function getMainClassName(path: string, language: AvendiaOutputLanguage, transformer: AvendiaLightTransformer): string {
+  let splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
   let depth = splitRelativePath.length - 1;
   if (depth >= 1 && depth <= 2 && path.match(/index\.zml$/)) {
     return "content-table-main";
@@ -26,7 +26,7 @@ function getMainClassName(path: string, language: AvendiaOutputLanguage): string
 manager.registerElementRule("page", "", (transformer, document, element) => {
   let path = transformer.variables.path;
   let language = transformer.variables.language;
-  let mainClassName = getMainClassName(path, language);
+  let mainClassName = getMainClassName(path, language, transformer);
   let navigationNode = document.createDocumentFragment();
   let headerNode = document.createDocumentFragment();
   let mainNode = document.createDocumentFragment();

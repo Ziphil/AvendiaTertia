@@ -1,9 +1,6 @@
 //
 
 import {
-  AVENDIA_CONFIGS
-} from "../generator/configs";
-import {
   AvendiaTemplateManager
 } from "../generator/transformer";
 import TRANSLATIONS from "~/template/translations.json";
@@ -15,7 +12,7 @@ manager.registerElementRule("page", "history", (transformer, document, element) 
   let self = document.createDocumentFragment();
   let path = transformer.variables.path;
   let language = transformer.variables.language;
-  let splitRelativePath = AVENDIA_CONFIGS.getSplitRelativeDocumentPath(path, language);
+  let splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
   let depth = splitRelativePath.length - 1;
   let virtualDepth = (path.match(/index\.zml$/)) ? depth - 1 : depth;
   let title = "";

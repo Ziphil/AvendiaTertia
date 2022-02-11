@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=0.7">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Ziphil">
-    <meta property="og:url" content="{{= it.configs.getRemoteUrl(it.variables.path, it.variables.language) }}">
+    <meta property="og:url" content="{{= it.environments.configs.getRemoteUrl(it.variables.path, it.variables.language) }}">
     <meta property="og:title" content="{{= it.variables.title }}">
     <meta property="og:description" content="{{= it.variables.title }}">
-    <meta property="og:image" content="{{= it.configs.getRemoteDomain(it.variables.language) }}/material/logo/1.png">
+    <meta property="og:image" content="{{= it.environments.configs.getRemoteDomain(it.variables.language) }}/material/logo/1.png">
 {{= it.variables.headerNode?.toString() }}
     <link rel="stylesheet" type="text/css" href="/style/1.css">
     <link rel="stylesheet" media="all" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css">

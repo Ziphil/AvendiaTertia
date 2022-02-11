@@ -1,7 +1,6 @@
 //
 
 import pathUtil from "path";
-import AVENDIA_CONFIGS_JSON from "../config/config.json";
 
 
 export class AvendiaConfigs {
@@ -90,6 +89,4 @@ export class AvendiaConfigs {
 
 export type AvendiaLanguage = "ja" | "en" | "common";
 export type AvendiaOutputLanguage = Exclude<AvendiaLanguage, "common">;
-export type AvendiaConfigsJson = typeof AVENDIA_CONFIGS_JSON;
-
-export const AVENDIA_CONFIGS = new AvendiaConfigs(AVENDIA_CONFIGS_JSON);
+export type AvendiaConfigsJson = typeof import("../config/default.json");

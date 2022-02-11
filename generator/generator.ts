@@ -27,7 +27,7 @@ import {
   CustomFtpClient
 } from "./client";
 import {
-  AVENDIA_CONFIGS,
+  AvendiaConfigs,
   AvendiaLanguage,
   AvendiaOutputLanguage
 } from "./configs";
@@ -44,10 +44,12 @@ export class AvendiaGenerator {
   private parser!: ZenmlParser;
   private transformer!: AvendiaTransformer;
   private client!: CustomFtpClient;
+  private configs!: AvendiaConfigs;
   private options!: any;
   private count: number;
 
-  public constructor() {
+  public constructor(configs: AvendiaConfigs) {
+    this.configs = configs;
     this.count = 0;
   }
 
@@ -82,7 +84,7 @@ export class AvendiaGenerator {
   }
 
   private async executeWatch(): Promise<void> {
-    let promises = AVENDIA_CONFIGS.getDocumentDirPathSpecs().map(([documentDirPath, documentLanguage]) => {
+    let promises = this.configs.getDocumentDirPathSpecs().map(([documentDirPath, documentLanguage]) => {
       let promise = new Promise((resolve, reject) => {
         let watcher = chokidar.watch(documentDirPath, {persistent: true, ignoreInitial: true});
         watcher.on("add", (documentPath) => {
@@ -161,7 +163,7 @@ export class AvendiaGenerator {
   private async transformHistory(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let extension = pathUtil.extname(documentPath).slice(1);
     if (documentLanguage !== "common") {
-      let outputPath = AVENDIA_CONFIGS.getLogPath(documentLanguage);
+      let outputPath = this.configs.getLogPath(documentLanguage);
       if (extension === "zml") {
         await this.transformHistoryZml(documentPath, outputPath, documentLanguage, documentLanguage);
       } else {
@@ -259,7 +261,7 @@ export class AvendiaGenerator {
     output += " + ";
     output += chalk.magenta(Math.min(intervals.upload, 9999).toString().padStart(4));
     output += "  |  ";
-    let codeArray = AVENDIA_CONFIGS.getSplitRelativeDocumentPath(documentPath, documentLanguage).map((segment) => {
+    let codeArray = this.configs.getSplitRelativeDocumentPath(documentPath, documentLanguage).map((segment) => {
       let x = segment.replace(/\.\w+$/, "");
       if (x === "index") {
         return "  @";
@@ -293,7 +295,7 @@ export class AvendiaGenerator {
 
   private async logError(documentPath: string, documentLanguage: AvendiaLanguage, error: unknown): Promise<void> {
     let output = "";
-    let logPath = AVENDIA_CONFIGS.getErrorLogPath();
+    let logPath = this.configs.getErrorLogPath();
     output += `[${documentPath}]` + "\n";
     if (error instanceof Error) {
       output += error.message.trim() + "\n";
@@ -306,8 +308,8 @@ export class AvendiaGenerator {
   }
 
   private createParser(): ZenmlParser {
-    let implementation = new DOMImplementation();
-    let parser = new ZenmlParser(implementation, {specialElementNames: {brace: "x", bracket: "xn", slash: "i"}});
+    let options = {specialElementNames: {brace: "x", bracket: "xn", slash: "i"}};
+    let parser = new ZenmlParser(new DOMImplementation(), options);
     for (let manager of pluginManagers) {
       parser.registerPluginManager(manager);
     }
@@ -315,7 +317,8 @@ export class AvendiaGenerator {
   }
 
   private createTransformer(): AvendiaTransformer {
-    let transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false, html: true}));
+    let options = {initialEnvironments: {configs: this.configs}};
+    let transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false, html: true}), options);
     for (let manager of templateManagers) {
       transformer.regsiterTemplateManager(manager);
     }
@@ -325,9 +328,9 @@ export class AvendiaGenerator {
   private async createClient(): Promise<CustomFtpClient> {
     let client = new CustomFtpClient();
     await client.access({
-      host: AVENDIA_CONFIGS.getServerHost(),
-      user: AVENDIA_CONFIGS.getServerUser(),
-      password: AVENDIA_CONFIGS.getServerPassword()
+      host: this.configs.getServerHost(),
+      user: this.configs.getServerUser(),
+      password: this.configs.getServerPassword()
     });
     return client;
   }
@@ -336,13 +339,13 @@ export class AvendiaGenerator {
     let documentPathSpecs = [] as PathSpecs<AvendiaLanguage>;
     if (documentPaths.length >= 1) {
       for (let documentPath of documentPaths) {
-        let documentLanguage = AVENDIA_CONFIGS.findDocumentLanguage(documentPath);
+        let documentLanguage = this.configs.findDocumentLanguage(documentPath);
         if (documentLanguage !== null && this.checkValidDocumentPath(documentPath)) {
           documentPathSpecs.push([documentPath, documentLanguage]);
         }
       }
     } else {
-      let promises = AVENDIA_CONFIGS.getDocumentDirPathSpecs().map(async ([documentDirPath, documentLanguage]) => {
+      let promises = this.configs.getDocumentDirPathSpecs().map(async ([documentDirPath, documentLanguage]) => {
         let documentPaths = await glob(documentDirPath + "/**/*");
         for (let documentPath of documentPaths) {
           if (this.checkValidDocumentPath(documentPath)) {
@@ -357,8 +360,9 @@ export class AvendiaGenerator {
 
   private getOutputPathSpecs(documentPath: string, documentLanguage: AvendiaLanguage): PathSpecs<AvendiaOutputLanguage> {
     let outputPathSpecs = [];
+    let outerThis = this;
     let getOutputPathSpec = function (outputLanguage: AvendiaOutputLanguage): PathSpec<AvendiaOutputLanguage> {
-      let outputPath = AVENDIA_CONFIGS.replaceDocumentDirPath(documentPath, documentLanguage, outputLanguage);
+      let outputPath = outerThis.configs.replaceDocumentDirPath(documentPath, documentLanguage, outputLanguage);
       outputPath = outputPath.replace(/\.zml$/, ".html");
       outputPath = outputPath.replace(/\.scss$/, ".css");
       outputPath = outputPath.replace(/\.tsx?$/, ".js");
@@ -376,7 +380,7 @@ export class AvendiaGenerator {
   private getRemotePathSpecs(documentPath: string, documentLanguage: AvendiaLanguage): Array<[string, string]> {
     let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
     let remotePathSpecs = outputPathSpecs.map(([outputPath, outputLanguage]) => {
-      let remotePath = AVENDIA_CONFIGS.replaceOutputDirPath(outputPath, outputLanguage);
+      let remotePath = this.configs.replaceOutputDirPath(outputPath, outputLanguage);
       return [outputPath, remotePath] as any;
     });
     return remotePathSpecs;

@@ -2,6 +2,7 @@
 
 import {
   BaseTransformer,
+  BaseTransformerOptions,
   LightTransformer,
   NodeLikeOf,
   TemplateManager
@@ -13,7 +14,7 @@ import dotjs from "dot";
 import TEMPLATE_HTML from "../template/template.html";
 import TRANSLATIONS from "../template/translations.json";
 import {
-  AVENDIA_CONFIGS,
+  AvendiaConfigs,
   AvendiaOutputLanguage
 } from "./configs";
 import type {
@@ -25,8 +26,8 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
 
   private template: (...args: Array<any>) => string;
 
-  public constructor(implementation: () => AvendiaDocument) {
-    super(implementation);
+  public constructor(implementation: () => AvendiaDocument, options?: BaseTransformerOptions<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>) {
+    super(implementation, options);
     this.template = dotjs.template(TEMPLATE_HTML, {...dotjs.templateSettings, strip: false});
   }
 
@@ -35,7 +36,6 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
       let view = {
         environments: this.environments,
         variables: this.variables,
-        configs: AVENDIA_CONFIGS,
         translations: TRANSLATIONS,
         document
       };
@@ -50,6 +50,7 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
 
   protected resetEnvironments(initialEnvironments?: Partial<AvendiaTransformerEnvironments>): void {
     this.environments = {
+      configs: initialEnvironments?.configs!,
       mathStyleString: ZoticaResourceUtils.getStyleString("/material/font/math.otf"),
       mathScriptString: ZoticaResourceUtils.getScriptString(),
       ...initialEnvironments
@@ -78,6 +79,7 @@ export class AvendiaTemplateManager extends TemplateManager<AvendiaDocument, Ave
 export type AvendiaLightTransformer = LightTransformer<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables>;
 
 export type AvendiaTransformerEnvironments = {
+  configs: AvendiaConfigs,
   mathStyleString: string,
   mathScriptString: string
 };
