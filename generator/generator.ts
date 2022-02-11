@@ -4,7 +4,8 @@ import {
   DOMImplementation
 } from "@zenml/xmldom";
 import {
-  ZenmlParser
+  ZenmlParser,
+  measureAsync
 } from "@zenml/zenml";
 import chalk from "chalk";
 import chokidar from "chokidar";
@@ -116,11 +117,11 @@ export class AvendiaGenerator {
   private async saveNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let intervals = {convert: 0, upload: 0};
     try {
-      intervals.convert = await AvendiaGenerator.measure(async () => {
+      intervals.convert = await measureAsync(async () => {
         await this.transformNormal(documentPath, documentLanguage);
       });
       if (this.options.upload) {
-        intervals.upload = await AvendiaGenerator.measure(async () => {
+        intervals.upload = await measureAsync(async () => {
           await this.uploadNormal(documentPath, documentLanguage);
         });
       }
@@ -134,7 +135,7 @@ export class AvendiaGenerator {
   private async saveHistory(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let intervals = {convert: 0, upload: 0};
     try {
-      intervals.convert = await AvendiaGenerator.measure(async () => {
+      intervals.convert = await measureAsync(async () => {
         await this.transformHistory(documentPath, documentLanguage);
       });
     } catch (error) {
@@ -383,14 +384,6 @@ export class AvendiaGenerator {
 
   private checkValidDocumentPath(documentPath: string): boolean {
     return pathUtil.basename(documentPath).match(/^(index|\d+)\.(\w+)$/) !== null;
-  }
-
-  private static async measure(callback: () => Promise<void>): Promise<number> {
-    let before = process.hrtime();
-    await callback();
-    let [elapsedSeconds, elapsedNanoseconds] = process.hrtime(before);
-    let interval = Math.floor(elapsedSeconds * 1000 + elapsedNanoseconds / 1000000);
-    return interval;
   }
 
 }
