@@ -180,11 +180,11 @@
   >
   \h2|num="11"|<Long vowels and diphthongs>
   \p<
-    The letters [â], [ê], [î], [ô] and [û] originally represent long vowels and are pronounced slightly longer than those without diacritics.
-    Recently, however, they have been shortened and normally pronounced just like letters without diacritics.
+    The letters [â], [ê], [î], [ô] and [û] originally represented long vowels and were pronounced slightly longer than those without diacritics.
+    Nowadays, however, they are usually pronounced like the corresponding letters without diacritics without lengthening them.
   >
   \p<
-    The other letters, [á], [é], [í], [à], [è], [ì], [ò] and [ù], are originally pronounced as in the table below.
+    The other letters, [á], [é], [í], [à], [è], [ì], [ò] and [ù], were originally pronounced as in the table below.
     Each of these diphthongs forms one syllable.
   >
   \table<
@@ -199,8 +199,8 @@
     \tr<\td<[ù]>\td<`/uɐ`/>>
   >
   \p<
-    As is the case with the long vowels, these diphthongs have been also pronounced in the same way as the corresponding short vowels in many cases.
-    Even in such a case, however, the three connectives with diacritics ({ò}, {á}, {é} and {à}) and their alternative forms ({lá}, {lé} and {dà}) are pronounced according to the table above in order to distinguish them from other words.
+    As is the case with the long vowels, these diphthongs are also pronounced in the same way as the corresponding short vowels in many cases.
+    Even so, however, the three connectives with diacritics ({ò}, {á}, {é} and {à}) and their alternative forms ({lá}, {lé} and {dà}) are pronounced according to the table above in order to distinguish them from other words.
   >
   \h2|num="12"|<Phonological changes of consecutive vowels>
   \p<
@@ -937,8 +937,8 @@
     Objects of assistance of a transitive verb are indicated by a {li}-phrase.
   >
   \xl<
-    \li<\sh<{déxes a del.}>\ja<I slept.>>
-    \li<\sh<{déxez a del li yaf.}>\ja<I helped my sister sleep.>>
+    \li<\sh<{déxes a tel.}>\ja<I slept.>>
+    \li<\sh<{déxez a tel li yaf.}>\ja<I helped my sister sleep.>>
   >
   \h1<Special verb structures>
   \h2|num="35"|<Auxiliary uses of verbs>
@@ -1494,7 +1494,7 @@
   \p<
     Prepositional phrases, unlike verbs, are not always required in Shaleian.
     Consequently, they can be omitted freely according to grammar.
-    However, the {a}-phrase, which shows the subject`; the {e}-phrase, which shows the object`; and the {li}-phrase, which shows the subject when a verb is used as a transitive verb are not omitted very aggressively.
+    However, the {a}-phrase, which shows the subject`; the {e}-phrase, which shows the object`; and the {li}-phrase, which shows the object when a verb is used as a transitive verb, are not omitted very aggressively.
   >
   \p<
     A prepositional phrase that is not explicitly specified is interpreted to govern a pronoun of indefinite meaning, as explained in \a|href="#65"|<Section 65>.
@@ -1631,7 +1631,7 @@
     \li<\sh<{s'e neyef ayerif.}>\ja<What a beautiful flower.>> 
   >
   \p<
-    The {s'e} used in this construction is an abbreviation of {salat e} and canb e used only in admirative expressions.
+    The {s'e} used in this construction is an abbreviation of {salat e} and can be used only in admirative expressions.
   >
   \h2|num="61"|<Irony>
   \p<
