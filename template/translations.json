@@ -6,8 +6,9 @@
     "top": {"ja": "トップ", "en": "Top"},
     "conlang": {
       "index": {"ja": "シャレイア語", "en": "Shaleian"},
-      "grammar": {"ja": "文法書", "en": "Grammar"},
-      "course": {"ja": "入門書", "en": "Introduction"},
+      "grammar": {"ja": "文法概略", "en": "Abridged grammar"},
+      "reference": {"ja": "文法大全", "en": "Complete grammar"},
+      "course": {"ja": "入門資料", "en": "Introduction"},
       "database": {"ja": "データベース", "en": "Database"},
       "culture": {"ja": "文化", "en": "Culture"},
       "work": {"ja": "創作", "en": "Works"},
@@ -17,7 +18,7 @@
       "table": {"ja": "一覧表", "en": "Tables"}
     },
     "application": {
-      "index": {"ja": "自作ソフト", "en": "Softwares"},
+      "index": {"ja": "ソフトウェア", "en": "Softwares"},
       "download": {"ja": "ダウンロード", "en": "Download"},
       "web": {"ja": "Web アプリ", "en": "Web application"}
     },
