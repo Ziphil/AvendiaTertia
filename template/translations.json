@@ -7,7 +7,7 @@
     "conlang": {
       "index": {"ja": "シャレイア語", "en": "Shaleian"},
       "grammar": {"ja": "文法概略", "en": "Abridged grammar"},
-      "reference": {"ja": "文法大全", "en": "Complete grammar"},
+      "reference": {"ja": "文法詳細", "en": "Complete grammar"},
       "course": {"ja": "入門資料", "en": "Introduction"},
       "database": {"ja": "データベース", "en": "Database"},
       "culture": {"ja": "文化", "en": "Culture"},
