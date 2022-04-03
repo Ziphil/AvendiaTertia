@@ -20,14 +20,14 @@ manager.registerTextRule(true, (transformer, document, text) => {
   content = content.replace(/\uFEFF/gu, "");
   content = content.replace(/(、|。|」|』|〉)/g, (match) => match + " ");
   content = content.replace(/(「|『|〈)/g, (match) => " " + match);
-  content = content.replace(/(、|。)\s+(」|』)/g, (match, before, after) => before + after);
+  content = content.replace(/(、|。)\s+(」|』|〉)/g, (match, before, after) => before + after);
   content = content.replace(/(」|』|〉)\s+(、|。|,|\.)/g, (match, before, after) => before + after);
-  content = content.replace(/(\(|「|『)\s+(「|『)/g, (match, before, after) => before + after);
+  content = content.replace(/(\(|「|『|〈)\s+(「|『|〈)/g, (match, before, after) => before + after);
   if (!text.previousSibling?.isElement() || !INLINE_TAG_NAMES.includes(text.previousSibling.tagName)) {
-    content = content.replace(/^\s+(「|『)/g, (match, paren) => paren);
+    content = content.replace(/^\s+(「|『|〈)/g, (match, paren) => paren);
   }
   if (!text.nextSibling?.isElement() || !INLINE_TAG_NAMES.includes(text.nextSibling.tagName)) {
-    content = content.replace(/(」|』)\s+$/g, (match, paren) => paren);
+    content = content.replace(/(」|』|〉)\s+$/g, (match, paren) => paren);
   }
   if (text.parentNode !== null && text.parentNode.isElement()) {
     let parent = text.parentNode;
