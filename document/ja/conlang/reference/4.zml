@@ -6,29 +6,29 @@
   \name<音素>
   \ver<S 代>
 
-  \h1|id="phoneme"|<音素>
-  \h2|id="consonant"|<子音>
+  \h1|tag="ssh",id="phoneme"|<音素>
+  \h2|tag="ssa",id="consonant"|<子音>
   \p<
     シャレイア語で用いられる子音の音素は以下の通りである。
     図中の長方形で囲まれた部分が 1 つの音素を表している。
     各長方形の中には、右側にその音素の代表的な実現音声を国際音声記号で記し、左側にはその音素を表す文字を記してある。
   >
   \img|src="../../file/figure/62.png"|;
-  \h2|id="vowel"|<母音>
+  \h2|tag="sse",id="vowel"|<母音>
   \p<
     シャレイア語で用いられる母音の音素は以下の通りである。
     図中の長方形で囲まれた部分が 1 つの音素を表している。
     各長方形の中には、右側にその音素の代表的な実現音声を国際音声記号で記し、左側にはその音素を表す文字を記してある。
   >
   \img|src="../../file/figure/60.png"|;
-  \h1|id="correspondence-alphabet"|<文字と発音の対応>
-  \h2|id="correspondence-alphabet-basic"|<基本法則>
+  \h1|tag="ssi",id="correspondence-alphabet"|<文字と発音の対応>
+  \h2|tag="sso",id="correspondence-alphabet-basic"|<基本法則>
   \p<
-    シャレイア文字は音素文字であるため、原則として 1 つの文字が 1 つの音素を表しており、その対応は\a|href="#consonant"|<〈子音〉>と\a|href="#vowel"|<〈母音〉>にある図に示した通りである。
+    シャレイア文字は音素文字であるため、原則として 1 つの文字が 1 つの音素を表しており、その対応は \a|href="#ssa"|<@SSA> と \a|href="#sse"|<@SSE> にある図に示した通りである。
     しかし、1 つの文字が 2 つ以上の音素を表したり、特定の条件下のみで現れるため対応する文字が存在しない音素があったりなど、少数の例外がある。
     続く小節でこの例外について述べる。
   >
-  \h2|id="correspondence-alphabet-diacritic"|<ダイアクリティカルマーク付きの母音字>
+  \h2|tag="ssu",id="correspondence-alphabet-diacritic"|<ダイアクリティカルマーク付きの母音字>
   \p<
     母音字にはダイアクリティカルマークが付くことがあるが、ダイアクリティカルマークの有無で発音は変化しない。
     したがって、例えば [a], [á], [à], [â] は全て `/a`/ と発音される。
@@ -52,7 +52,7 @@
   \p<
     `/ɪ`/, `/ʊ`/, `/ɐ`/ はこの例外的な発音における二重母音の 2 つ目の母音としてのみ表れ、単独では現れることはない。
   >
-  \h2|id="correspondence-alphabet-inside-hiatus"|<単語内での連続母音>
+  \h2|tag="szs",id="correspondence-alphabet-inside-hiatus"|<単語内での連続母音>
   \p<
     以下に示す 8 種類の連続した母音字が 1 つの単語内に出てきた場合、1 文字目の母音と 2 文字目の母音の間に `/j`/ または `/w`/ が挿入されて読まれることがある。
     これらの母音字連続がシャレイア語固有の単語に出てくるのは {a} と {e} の非動詞修飾形である {ia} と {ie} のみで、それ以外は外国語から借用された単語にのみ見られる。
@@ -73,13 +73,13 @@
       \tr<\td<[uo]>\td<`/uwɔ`/>>
     >
   >
-  \h2|id="correspondence-alphabet-interword-hiatus"|<単語間での連続母音>
+  \h2|tag="szz",id="correspondence-alphabet-interword-hiatus"|<単語間での連続母音>
   \p<
     1 つの単語内ではなく 2 つの単語間で母音が連続した場合、すなわち母音で終わる単語の次に母音で始まる単語が置かれた場合、母音の衝突を避けるために母音の間に `/ɾ`/ が挿入される。
     ただし、単語間で母音が連続した場合の 2 つ目の単語が固有名詞の場合は、`/ɾ`/ が挿入されることはない。
     ## TODO: ここはもう少し詳しく
   >
-  \h2|id="correspondence-alphabet-cal"|<[c] と [q]>
+  \h2|tag="szt",id="correspondence-alphabet-cal"|<[c] と [q]>
   \p<
     [c] と [q] の発音は、話者が用いる発音変種として軽発音と重発音のどちらを選択しているかに応じて決まる。
     具体的には、以下の表の通りである。
@@ -90,24 +90,24 @@
     \tr<\td<[q]>\td<`/ð`/>\td<`/d͡z`/>>
   >
   \p<
-    軽発音と重発音に関する詳細は\a|href="#pronunciation-variation-light"|<〈軽発音と重発音〉>に譲る。
+    軽発音と重発音に関する詳細は \a|href="#szv"|<@SZV> に譲る。
   >
-  \h2|id="correspondence-alphabet-les"|<[l]>
+  \h2|tag="szd",id="correspondence-alphabet-les"|<[l]>
   \p<
     [l] の発音は条件異音であり、後ろに母音が伴っているときは `/l`/ となり、それ以外のときは `/ɾ`/ となる。
   >
-  \h2|id="correspondence-alphabet-hes"|<音節末の [h]>
+  \h2|tag="szk",id="correspondence-alphabet-hes"|<音節末の [h]>
   \p<
     音節末の [h] は例外的に発音されない。
     ただし、[h] が語末にあり、直後に母音から始まる単語があった場合は、その [h] は規則通り `/h`/ で発音される。
   >
-  \h2|id="correspondence-alphabet-kin"|<{kin} と {'n}>
+  \h2|tag="szg",id="correspondence-alphabet-kin"|<{kin} と {'n}>
   \p<
     {kin} とその縮約形 {'n} に含まれる [n] は、例外的に `/ɴ`/ で発音される。
     したがって、{kin} の発音は `/kiɴ`/ となる。
   >
-  \h1|id="pronunciation-variation"|<発音の変種>
-  \h2|id="pronunciation-variation-light"|<軽発音と重発音>
+  \h1|tag="szf",id="pronunciation-variation"|<発音の変種>
+  \h2|tag="szv",id="pronunciation-variation-light"|<軽発音と重発音>
   \p<
     シャレイア語には「軽発音」と「重発音」と呼ばれる発音の変種があり、[c] と [q] の発音が異なる。
     それぞれの発音変種における音素は以下の通りである。
@@ -133,7 +133,7 @@
     しかしこれはあくまで転写するときだけの決まりであり、転写した結果の単語をシャレイア語としてどう発音するかは、各話者が軽発音と重発音のどちらを使っているかに応じて決められる。
     例えば、Lithuania `/lɪθjueɪniə`/ の転写である [licuénias] を、重発音話者は `/lit͡suenijas`/ と発音し、もともと `/θ`/ だったからと言って `/θ`/ で発音することはない。
   >
-  \h2|id="pronunciation-variation-present"|<現行発音と旧発音>
+  \h2|tag="szp",id="pronunciation-variation-present"|<現行発音と旧発音>
   \p<
     シャレイア語には「旧発音」 と呼ばれる発音の変種がある。
     これは、製作史上過去のシャレイア語 (5 代 4 期シャレイア語) で採用されていた発音であり、現在のシャレイア語には採用されておらず誤った発音である。
