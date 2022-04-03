@@ -110,6 +110,17 @@ $section-height: 42rpx;
   }
 }
 
+.section-tag,
+.subsection-tag {
+  margin-right: fix-em($blank-margin, 80%);
+  font-size: 80%;
+  &::before {
+    text-transform: uppercase;
+    content: "@" attr(data-tag) ".";
+  }
+}
+
+.section-number,
 .subsection-number {
   margin-right: fix-em($blank-margin, 80%);
   font-size: 80%;

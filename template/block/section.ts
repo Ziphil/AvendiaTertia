@@ -23,6 +23,13 @@ manager.registerElementRule(["h1", "h2"], "page", (transformer, document, elemen
       self.addClassName(`${className}-inner`);
       self.appendChild(transformer.apply());
     });
+    if (element.hasAttribute("tag")) {
+      self.setAttribute("id", element.getAttribute("tag"));
+      innerSelf.insertHead(document.createElement("span", (self) => {
+        self.addClassName(`${className}-tag`);
+        self.setAttribute("data-tag", element.getAttribute("tag").toUpperCase());
+      }));
+    }
     if (element.hasAttribute("num")) {
       self.setAttribute("id", element.getAttribute("num"));
       innerSelf.insertHead(document.createElement("span", (self) => {
