@@ -94,7 +94,7 @@
     \tr<\td<[,]>\td<{tadek}>\td<indicates a pause in a sentence>>
     \tr<\td<[!]>\td<{vadek}>\td<indicates the end of a sentence with emphasis>>
     \tr<\td<[?]>\td<{padek}>\td<indicates the end of a interrogative sentence>>
-    \tr<\td<[']>\td<{nôk}>\td<indicates an abbreviation>>
+    \tr<\td<[']>\td<{nôk}>\td<indicates a contraction>>
     \tr<\td<[ʻ]>\td<{dikak}>\td<marks the following word as a proper noun>>
     \tr<\td<[-]>\td<{fêk}>\td<makes a compound word>>
     \tr<\td<[:]>\td<{kaltak}>\td<partitions data>>
@@ -108,7 +108,7 @@
   \p<
     Tadeks indicate a pause in a sentence, but their use is restricted to certain positions and therefore are not completely free.
     They are, for example, put after a nonrestrictive use of a relative clause, mentioned in \a|href="#43"|<Section 43>, or an adverbial use of a conjunction, mentioned in \a|href="#43"|<Section 44>.
-    Nôks are used in place of the omitted letters when an abbreviation occurs.
+    Nôks are used in place of the omitted letters when a contraction occurs.
     Contractions will be explained in more detail in \a|href="#55"|<Section 55>.
     Dikaks are put immediately before a word and indicate that it is a proper noun such as a person's name.
     The uses of fêks and kaltaks will be dealt with in \a|href="#57"|<Section 57> and \a|href="#56"|<Section 56>, respectively.
@@ -174,7 +174,7 @@
   \p<
     Basically, all letters are pronounced according to the correspondence of letters and phonemes displayed in the preceding tables, except when some phonological changes (described in \a|href="#12"|<Section 12>) occur.
     There are, however, a small number of exceptions.
-    For example, {kin} is pronounced `/kiɴ`/`; the phoneme `/ɴ`/ appears only in {kin} and its abbreviation {'n}.
+    For example, {kin} is pronounced `/kiɴ`/`; the phoneme `/ɴ`/ appears only in {kin} and its contraction {'n}.
     The letter [h] also has a phonological exception.
     When it is placed at the end of a syllable, it may be pronounced `/h`/, but in most cases, it is not pronounced at all.
   >
@@ -977,7 +977,7 @@
     \li<\sh<{ditat lanis a loc e zîdsax.}>\ja<Go to school.>>
   >
   \p<
-    Since this is rather verbose, {ditat} is often abbreviated to {di'}.
+    Since this is rather verbose, {ditat} is often contracted to {di'}.
     In spoken language, {ditat} itself is sometimes omitted. 
     We will see this phenomenon in \a|href="#68"|<Section 68>.
   >
@@ -1448,7 +1448,7 @@
   >
   \p<
     Cardinal numerals are expressed by prefixing {il'} to the numeral conjugated as an adjective.
-    Although this is a contraction of {avôl ile lêk}, the unabbreviated form is not used except with a special meaning such as emphasis.
+    Although this is a contraction of {avôl ile lêk}, the uncontracted form is not used except with a special meaning such as emphasis.
     The same form is used, whether the numeral is used as an adjective or as an adverb, and it follows the noun.
   >
   \xl<
@@ -1456,7 +1456,7 @@
   >
   \p<
     Ordinal numerals are expressed by prefixing {ic'} to the numeral.
-    Although this is a contraction of {acál ile cav}, the unabbreviated form is rarely used as is the case with cardinal numerals.
+    Although this is a contraction of {acál ile cav}, the uncontracted form is rarely used as is the case with cardinal numerals.
     They are used in the same way as cardinal numerals, following the noun.
   >
   \xl<
@@ -1489,7 +1489,7 @@
   \p<
     Although nouns are placed in succession in all sorts of expressions, these expressions of dates and times are recognised as a special case.
   >
-  \h1<Omission and abbreviation>
+  \h1<Omission and contraction>
   \h2|num="52"|<Omission of prepositional phrases>
   \p<
     Prepositional phrases, unlike verbs, are not always required in Shaleian.
@@ -1544,20 +1544,20 @@
   \p<
     In the above example, {lat} stands for {kavat e monaf}.
   >
-  \h2|num="55"|<Abbreviated forms>
+  \h2|num="55"|<Contractions>
   \p<
     The first-person pronoun {tel}, the second-person pronoun {loc}, as well as {ces} and {cit}, which refer to a person or object mentioned earlier, occur frequently in sentences.
-    In order to reduce verbosity, they are often abbreviated as {'l}, {'c}, {'s} and {'t}, respectively, starting from their second occurrence in the same clause.
-    In this case, there is no space between the preposition being attached to and the abbreviated form.
-    In addition, these abbreviations can be used only from the second occurrence onward within a sentence`; they cannot be used at their first occurrence.
+    In order to reduce verbosity, they are often contracted as {'l}, {'c}, {'s} and {'t}, respectively, starting from their second occurrence in the same clause.
+    In this case, there is no space between the preposition being attached to and the contracted form.
+    In addition, these contractions can be used only from the second occurrence onward within a sentence`; they cannot be used at their first occurrence.
     Moreover, they are rarely used except immediately after the six prepositions {a}, {e}, {li}, {ca}, {zi} and {i}.
   >
   \xl<
     \li<\sh<{sâfat a tel e kin catos a'l vo fecil ica sod.}>\ja<I like walking in the surroundings of my house.>>
   >
   \p<
-    Furthermore, {kin}-clauses are used often`; thus, {kin} is often abbreviated to {'n}.
-    This abbreviation can be used even for the first occurrence of {kin} in a sentence.
+    Furthermore, {kin}-clauses are used often`; thus, {kin} is often contracted to {'n}.
+    This contraction can be used even for the first occurrence of {kin} in a sentence.
   >
   \xl<
     \li<\sh<{cipases a tel ca ces e'n fegis a's e dev.}>\ja<I asked him to buy a pen.>>
@@ -1631,7 +1631,7 @@
     \li<\sh<{s'e neyef ayerif.}>\ja<What a beautiful flower.>> 
   >
   \p<
-    The {s'e} used in this construction is an abbreviation of {salat e} and can be used only in admirative expressions.
+    The {s'e} used in this construction is a contraction of {salat e} and can be used only in admirative expressions.
   >
   \h2|num="61"|<Irony>
   \p<
@@ -1807,16 +1807,16 @@
     If the {sê} in the above sentence were an adverb, then it would not need tadeks because it immediately follows the verb.
   >
   \h1<Colloquial expressions>
-  \h2|num="67"|<Increased use of abbreviations>
+  \h2|num="67"|<Increased use of contractions>
   \p<
-    Abbreviations are used frequently in colloquial language.
-    Although the abbreviations for items such as {tel} and {ces} can, as explained in \a|href="#55"|<Section 55>, be used from their second occurrence onward within a clause, they are sometimes used from even the first occurrence colloquially.
-    Furthermore, in compositions that put importance on rhythm, such as song lyrics and poetry, these abbreviations are sometimes sued on the first occurrence in order to preserve the rhythm.
+    Contractions are used frequently in colloquial language.
+    Although the contractions for items such as {tel} and {ces} can, as explained in \a|href="#55"|<Section 55>, be used from their second occurrence onward within a clause, they are sometimes used from even the first occurrence colloquially.
+    Furthermore, in compositions that put importance on rhythm, such as song lyrics and poetry, these contractions are sometimes sued on the first occurrence in order to preserve the rhythm.
   >
   \h2|num="68"|<Imperatives>
   \p<
     As explained in \a|href="#35"|<Section 35>, the verb {dit} is used to indicate commands, but this verb is sometimes omitted in colloquial language, such that the imperative sentence starts abruptly with the verb.
-    Furthermore, if the target of command is the second-person pronoun {loc}, it is often abbreviated to {'c}.
+    Furthermore, if the target of command is the second-person pronoun {loc}, it is often contracted to {'c}.
   >
   \xl<
     \li<\sh<{pariqaf a'c!}>\ja<Go away!>>
