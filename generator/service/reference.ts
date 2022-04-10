@@ -40,18 +40,8 @@ async function createSectionSpecs(href: string, outputLanguage: AvendiaOutputLan
   let initialVariables = {path: documentPath, language: outputLanguage};
   let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
   let inputDocument = args.parser.tryParse(inputString);
-  let childSpecs = (() => {
-    let outputDocument = args.transformer.transform(inputDocument, {initialScope: "reference", initialVariables}) as any;
-    let outputText = outputDocument.fragment.nodes[0] as AvendiaText;
-    outputText.options.raw = true;
-    let sectionSpecs = JSON.parse(outputText.toString().trim());
-    return sectionSpecs;
-  })();
-  let content = (() => {
-    let outputDocument = args.transformer.transform(inputDocument, {initialScope: "name", initialVariables});
-    let content = outputDocument.toString().trim();
-    return content;
-  })();
+  let childSpecs = JSON.parse(args.transformer.transform(inputDocument, {initialScope: "reference", initialVariables}).toString().trim());
+  let content = args.transformer.transform(inputDocument, {initialScope: "name", initialVariables}).toString().trim();
   let documentSpec = {href, content, childSpecs, tag: ""};
   return documentSpec;
 }

@@ -11,6 +11,7 @@ import {
 let manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("page", "reference", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
   let path = transformer.variables.path;
   let language = transformer.variables.language;
   let splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
@@ -34,7 +35,8 @@ manager.registerElementRule("page", "reference", (transformer, document, element
   if (currentSectionSpec !== null) {
     sectionSpecs.push(currentSectionSpec);
   }
-  return document.createTextNode(JSON.stringify(sectionSpecs));
+  self.appendTextNode(JSON.stringify(sectionSpecs), (self) => self.options.raw = true);
+  return self;
 });
 
 manager.registerElementRule(true, "reference", (transformer, document) => {
