@@ -34,6 +34,7 @@ import {
 import {
   AvendiaDocument
 } from "./dom";
+import executeReferenceService from "./service/reference";
 import {
   AvendiaTransformer
 } from "./transformer";
@@ -58,7 +59,8 @@ export class AvendiaGenerator {
       {name: "documentPaths", multiple: true, defaultOption: true},
       {name: "upload", alias: "u", type: Boolean},
       {name: "history", alias: "h", type: Boolean},
-      {name: "watch", alias: "w", type: Boolean}
+      {name: "watch", alias: "w", type: Boolean},
+      {name: "service", alias: "s"}
     ]);
     this.parser = this.createParser();
     this.transformer = this.createTransformer();
@@ -68,6 +70,8 @@ export class AvendiaGenerator {
       await this.executeHistory();
     } else if (options.watch) {
       await this.executeWatch();
+    } else if (options.service) {
+      await this.executeService();
     } else {
       await this.executeNormal();
     }
@@ -114,6 +118,14 @@ export class AvendiaGenerator {
     });
     await Promise.all(promises);
     this.printLast();
+  }
+
+  private async executeService(): Promise<void> {
+    let name = this.options.service;
+    let args = {parser: this.parser, transformer: this.transformer, configs: this.configs};
+    if (name === "reference") {
+      await executeReferenceService("ja", args);
+    }
   }
 
   private async saveNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {

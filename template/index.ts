@@ -13,6 +13,7 @@ import blockNormalTableManager from "./block/normal-table";
 import blockParagraphManager from "./block/paragraph";
 import blockProgramManager from "./block/program";
 import blockQuizListManager from "./block/quiz-list";
+import blockReferenceTableManager from "./block/reference-table";
 import blockSectionManager from "./block/section";
 import blockSectionTableManager from "./block/section-table";
 import blockSentenceListManager from "./block/sentence-list";
@@ -27,7 +28,9 @@ import inlineBasicManager from "./inline/basic";
 import inlineGreekManager from "./inline/greek";
 import inlineLinkManager from "./inline/link";
 import inlineMathManager from "./inline/math";
+import nameManager from "./name";
 import navigationManager from "./navigation";
+import referenceManager from "./reference";
 import rootManager from "./root";
 
 
@@ -51,6 +54,7 @@ let managers = [
   blockProgramManager,
   blockFormManager,
   blockSectionTableManager,
+  blockReferenceTableManager,
   blockMediaManager,
   blockHistoryManager,
   blockMathManager,
@@ -59,6 +63,8 @@ let managers = [
   inlineGreekManager,
   inlineMathManager,
   historyManager,
+  referenceManager,
+  nameManager,
   htmlManager,
   fallbackManager
 ];

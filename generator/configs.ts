@@ -62,6 +62,10 @@ export class AvendiaConfigs {
     return pathUtil.join(this.json.logDirPath, "history", `${language}.txt`);
   }
 
+  public getReferenceIndexPath(language: AvendiaOutputLanguage): string {
+    return pathUtil.join(this.json.logDirPath, "reference", `${language}.json`);
+  }
+
   public getErrorLogPath(): string {
     return pathUtil.join(this.json.logDirPath, "error.txt");
   }
