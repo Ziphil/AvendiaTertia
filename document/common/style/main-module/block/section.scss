@@ -116,9 +116,6 @@ $section-height: 42rpx;
   font-size: 80%;
   text-transform: uppercase;
   opacity: 0.7;
-  &::before {
-    content: "@" attr(data-tag) ".";
-  }
 }
 
 .section-number,
@@ -126,7 +123,4 @@ $section-height: 42rpx;
   margin-right: fix-em($blank-margin, 80%);
   font-size: 80%;
   opacity: 0.7;
-  &::before {
-    content: "§" attr(data-number) ".";
-  }
 }

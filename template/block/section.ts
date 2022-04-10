@@ -27,14 +27,14 @@ manager.registerElementRule(["h1", "h2"], "page", (transformer, document, elemen
       self.setAttribute("id", element.getAttribute("tag"));
       innerSelf.insertHead(document.createElement("span", (self) => {
         self.addClassName(`${className}-tag`);
-        self.setAttribute("data-tag", element.getAttribute("tag").toUpperCase());
+        self.appendTextNode("@" + element.getAttribute("tag").toUpperCase() + ".");
       }));
     }
     if (element.hasAttribute("num")) {
       self.setAttribute("id", element.getAttribute("num"));
       innerSelf.insertHead(document.createElement("span", (self) => {
         self.addClassName(`${className}-number`);
-        self.setAttribute("data-number", element.getAttribute("num"));
+        self.appendTextNode("§" + element.getAttribute("num") + ".");
       }));
     }
   });

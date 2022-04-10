@@ -48,7 +48,7 @@ manager.registerElementRule("section-table", "page", (transformer, document, ele
           if (sectionElement.hasAttribute("num")) {
             self.appendElement("span", (self) => {
               self.addClassName("section-table-number");
-              self.setAttribute("data-number", sectionElement.getAttribute("num"));
+              self.appendTextNode("§" + sectionElement.getAttribute("num") + ".");
             });
             self.appendElement("a", (self) => {
               self.addClassName("link");

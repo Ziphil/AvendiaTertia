@@ -35,7 +35,7 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
           self.addClassName("normal-item");
           self.appendElement("span", (self) => {
             self.addClassName("section-table-tag");
-            self.setAttribute("data-tag", sectionSpec.tag.toUpperCase());
+            self.appendTextNode("@" + sectionSpec.tag.toUpperCase() + ".");
           });
           self.appendElement("a", (self) => {
             self.addClassName("link");
@@ -50,7 +50,7 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
                   self.addClassName("normal-item");
                   self.appendElement("span", (self) => {
                     self.addClassName("section-table-tag");
-                    self.setAttribute("data-tag", subsectionSpec.tag.toUpperCase());
+                    self.appendTextNode("@" + subsectionSpec.tag.toUpperCase() + ".");
                   });
                   self.appendElement("a", (self) => {
                     self.addClassName("link");
