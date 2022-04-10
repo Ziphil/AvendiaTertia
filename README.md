@@ -39,11 +39,7 @@
     "ja": "",
     "en": "en.ziphil.com"
   },
-  "logPath": {  // ログファイルの出力先の相対パス
-    "ja": "log/ja.txt",
-    "en": "log/en.txt",
-    "error": "log/error.txt"
-  },
+  "logDirPath": "./log",  // ログファイルの出力先となるディレクトリの相対パス
   "programPath": {  // CGI のプログラムのパス
     "ruby": "/usr/bin/ruby"
   }
