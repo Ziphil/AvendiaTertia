@@ -58,12 +58,12 @@ export class AvendiaConfigs {
     return this.json.remoteDirPath[language];
   }
 
-  public getLogPath(language: AvendiaOutputLanguage): string {
-    return this.json.logPath[language];
+  public getHistoryIndexPath(language: AvendiaOutputLanguage): string {
+    return pathUtil.join(this.json.logDirPath, "history", `${language}.txt`);
   }
 
   public getErrorLogPath(): string {
-    return this.json.logPath.error;
+    return pathUtil.join(this.json.logDirPath, "error.txt");
   }
 
   public findDocumentLanguage(path: string): AvendiaLanguage | null {

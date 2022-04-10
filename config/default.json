@@ -25,11 +25,7 @@
     "ja": "",
     "en": "_en"
   },
-  "logPath": {
-    "ja": "./log/ja.txt",
-    "en": "./log/en.txt",
-    "error": "./log/error.txt"
-  },
+  "logDirPath": "./log",
   "programPath": {
     "ruby": "/usr/local/bin/ruby2.6"
   }

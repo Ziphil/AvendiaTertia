@@ -163,7 +163,7 @@ export class AvendiaGenerator {
   private async transformHistory(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let extension = pathUtil.extname(documentPath).slice(1);
     if (documentLanguage !== "common") {
-      let outputPath = this.configs.getLogPath(documentLanguage);
+      let outputPath = this.configs.getHistoryIndexPath(documentLanguage);
       if (extension === "zml") {
         await this.transformHistoryZml(documentPath, outputPath, documentLanguage, documentLanguage);
       } else {

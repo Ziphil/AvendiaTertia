@@ -12,8 +12,8 @@ manager.registerElementRule("history", ["page", "html"], (transformer, document,
   let self = document.createDocumentFragment();
   let language = transformer.variables.language;
   let size = parseInt(element.getAttribute("size"));
-  let logPath = transformer.environments.configs.getLogPath(language);
-  let entries = fs.readFileSync(logPath, {encoding: "utf-8"}).trim().split("\n").reverse().slice(0, size);
+  let indexPath = transformer.environments.configs.getHistoryIndexPath(language);
+  let entries = fs.readFileSync(indexPath, {encoding: "utf-8"}).trim().split("\n").reverse().slice(0, size);
   self.appendElement("ul", (self) => {
     self.addClassName("history-list");
     self.setBlockType("text", "text");
