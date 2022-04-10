@@ -22,6 +22,7 @@
     このとき、改行がスペースの役割を果たすため、行末や行頭に空白を作る必要はない。
   >
   \h1|tag="ssv",id="punctuation"|<約物>
+  \h2|tag="ssp",id="punctuation-general"|<概要>
   \p<
     シャレイア語では、以下の約物を用いる。
     表の中央が文字形を表し、左上は転写を表す。
@@ -54,8 +55,7 @@
     手書きにおいては、デック, タデック, ヴァデック, パデック, カルタックに含まれるベースライン上の丸を、左下に払ってコンマのように書くこともある。
     カルタックにはベースライン上の丸の上にもう 1 つ丸があるが、これを左下に払って書くことはせず、日本語の読点のように左上から右下へかけての短い斜線として書くのが普通である。
   >
-  \h1|tag="ssp",id="punctuation-usage"|<各約物の用法>
-  \h2|tag="ssb",id="punctuation-usage-dek"|<デック類>
+  \h2|tag="ssb",id="punctuation-dek"|<デック類>
   \p<
     文の最後には、デック, パデック, ヴァデックのいずれかを置く。
     通常はデックを置くが、その文が疑問のニュアンスを含む場合はパデックを代わりに置く。
@@ -77,7 +77,7 @@
     \li<\sh<{salot a cal e adasos ebam! di'dupâmis a's.}>\ja<それはとても重要です! 忘れないでください。>>
     \li<\sh<{pa xânac a ces}[⁉]>\ja<彼は生きているの!?>>
   >
-  \h2|tag="ssc",id="punctuation-usage-tadek"|<タデック>
+  \h2|tag="ssc",id="punctuation-tadek"|<タデック>
   \p<
     タデックは、文の区切りを示す。
     ただし、日本語の読点のように自由に置いて良いわけでなく、置ける場所には一定の規則がある。
@@ -92,7 +92,7 @@
   \xl<
     \li<\sh<{pa lesec, sê, e pil a loc, te cákes a ces?}>\ja<ねえ、彼が来たとき何してたの?>>
   >
-  \h2|tag="ssq",id="punctuation-usage-deklot"|<タデックロット>
+  \h2|tag="ssq",id="punctuation-deklot"|<タデックロット>
   \p<
     タデックロットは、囲まれた部分が挿入句であることを明示するために、タデックの代わりに用いられる。
     タデックロットで囲まれた場合、通常の挿入構文に加え、完全な節がそのまま挿入される形も許される。
@@ -107,7 +107,7 @@
     \li<\sh<{sôdes a ces e sakil — adoqsaret ebam.}>\ja<彼はリンゴを食べた――とてもまずかった。>>
     \li<\sh<{nîpes a ces fi tirad adak — fadakas okòv a tel e cal — zi sokul acik.}>\ja<彼は全く音を立てずに――私はそのことに気づいていたのだが――その部屋を立ち去った。>>
   >
-  \h2|tag="ssx",id="punctuation-usage-nok"|<ノーク>
+  \h2|tag="ssx",id="punctuation-nok"|<ノーク>
   \p<
     ノークは、縮約形において省略された文字列があった箇所を示すために使われる。
     文法的に定められている縮約形でのみ使われるので、単語の綴りの一部分を省略して書いたからといってその場所にノークを使うことはできない。
@@ -122,7 +122,7 @@
   \xl<
     \li<\sh<{lices a'l te tazît e'n raflesac a's ca refet afam al'ayos.}>\ja<私は昨日彼が 3 人の女友達と話しているのを見た。>>
   >
-  \h2|tag="ssj",id="punctuation-usage-dikak"|<ディカック>
+  \h2|tag="ssj",id="punctuation-dikak"|<ディカック>
   \p<
     ディカックは、それに続く語が固有名詞であることを示す。
     しかし、全ての固有名詞にディカックがつけられるわけではなく、辞書に載っていない名詞や広くは知られていない名詞であればあるほどディカックが付けられやすくなる。
@@ -155,7 +155,7 @@
   \xl<
     \li<\sh<{qorases a tel fe}[ ʻxastil ]{ca feranes.}>\ja<私はシャスティルと一緒にフランスへ旅行した。>>
   >
-  \h2|tag="ssl",id="punctuation-usage-fek"|<フェーク>
+  \h2|tag="ssl",id="punctuation-fek"|<フェーク>
   \p<
     フェークは、複数の単語を組み合わせて 1 つの単語を作るとき、単語と単語の間に入れられる。
     英語では「Kyoto University」のように、1 つのものを表すときに名詞を並べるなどして 2 単語以上になっても良いが、シャレイア語では 1 つの意味の言葉は必ず 1 つの単語で表されなければならないため、複数の単語を 1 つにまとめるためにフォークが用いられる。
@@ -165,7 +165,7 @@
     フェークの前後にはスペースを入れない。
     また、フェークの後では改行することができるが、このときフェークは前半の行の最後に置かれる。
   >
-  \h2|tag="sdz",id="punctuation-usage-losek"|<ロセック>
+  \h2|tag="sdz",id="punctuation-losek"|<ロセック>
   \p<
     ロセックは、それが付いている単語が準飾辞であることを示すとともに、その準飾辞の接続方向を表す。
     ロセックが最初に付いている準飾辞は他の単語に接尾して使うものであり、ロセックが最後に付いている準飾辞は他の単語に接頭して使うものである。
@@ -178,7 +178,7 @@
   \p<
     準飾辞については \a|href="7.html#sds"|<@SDS> を参照。
   >
-  \h2|tag="ssr",id="punctuation-usage-kaltak"|<カルタック>
+  \h2|tag="ssr",id="punctuation-kaltak"|<カルタック>
   \p<
     カルタックは、データを区切るのに用いられ、日本語や英語でのスラッシュと用法が似ている。
     主に日時の略記に用いられる。
@@ -192,7 +192,7 @@
   \xl<
     \li<\sh<{nîpes a tel te 30:07.}>\ja<7 時 30 分に家を出た。>>
   >
-  \h2|tag="ssn",id="punctuation-usage-fohak"|<フォーハック>
+  \h2|tag="ssn",id="punctuation-fohak"|<フォーハック>
   \p<
     フォーハックは、余韻や沈黙を表す。
     単語と単語の間ならばどこにでも置くことができるが、節の始まりか終わりに置かれることが多い。
@@ -210,7 +210,7 @@
   \xl<
     \li<\sh<{……. dà…, bari salot a cal… e ayát, …duzefedak a'l e cal….}>\ja<･･････。でも･･･、たとえそれが･･･本当だとしても、･･･私は受け入れられない。>>
   >
-  \h2|tag="ssm",id="punctuation-usage-rakut"|<ラクット>
+  \h2|tag="ssm",id="punctuation-rakut"|<ラクット>
   \p<
     ラクットは、開きラクットと閉じラクットの 2 つの記号から成り、必ず対となって用いられる。
     開きラクットと閉じラクットで文を囲むことで、囲まれた部分が会話内容や思考内容であることを示せる。
@@ -237,7 +237,7 @@
     \li<\sh<{bava kéces ca tel e «di'dukûvis odûg a'c ca cêd!», kûves a tel ca cêd.}>\ja<「そこには絶対入るな!」と言われていたのに、私は入ってしまった。>>
     \li<\sh<{sitifes a ces e «te lôk acál».}>\ja<彼は「また今度ね」と囁いた。>>
   >
-  \h2|tag="ssy",id="punctuation-usage-vakut"|<ヴァクット>
+  \h2|tag="ssy",id="punctuation-vakut"|<ヴァクット>
   \p<
     ヴァクットは、開きヴァクットと閉じヴァクットの 2 つの記号から成り、必ず対となって用いられる。
     開きヴァクットと閉じヴァクットで表現を囲むことで、囲まれた部分を強調したりその部分が引用であることを示したりできる。
