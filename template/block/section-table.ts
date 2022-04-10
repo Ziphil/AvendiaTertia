@@ -20,53 +20,51 @@ manager.registerElementRule("section-table", "page", (transformer, document, ele
     let hasSubsection = false;
     let sectionElements = element.searchXpath("/page/*[name() = 'h1' or name() = 'h2']") as Array<Element>;
     for (let sectionElement of sectionElements) {
-      if (typeof sectionElement === "object" && sectionElement.isElement()) {
-        if (sectionElement.tagName === "h1") {
-          if (hasSection) {
-            if (hasSubsection) {
-              sectionSelf.appendChild(subsectionSelf);
-            }
-            self.appendChild(sectionSelf);
+      if (sectionElement.tagName === "h1") {
+        if (hasSection) {
+          if (hasSubsection) {
+            sectionSelf.appendChild(subsectionSelf);
           }
-          hasSection = true;
-          sectionSelf = document.createElement("li", (self) => {
-            self.addClassName("normal-item");
-            if (sectionElement.hasAttribute("id")) {
-              self.appendElement("a", (self) => {
-                self.addClassName("link");
-                self.setAttribute("href", "#" + sectionElement.getAttribute("id"));
-                self.appendChild(transformer.apply(sectionElement, "page.section-table"));
-              });
-            } else {
-              self.appendChild(transformer.apply(sectionElement, "page.section-table"));
-            }
-          });
-          subsectionSelf = document.createElement("ul", (self) => self.addClassName("normal-list"));
-        } else if (sectionElement.tagName === "h2") {
-          hasSubsection = true;
-          subsectionSelf.appendElement("li", (self) => {
-            self.addClassName("normal-item");
-            if (sectionElement.hasAttribute("num")) {
-              self.appendElement("span", (self) => {
-                self.addClassName("section-table-number");
-                self.setAttribute("data-number", sectionElement.getAttribute("num"));
-              });
-              self.appendElement("a", (self) => {
-                self.addClassName("link");
-                self.setAttribute("href", "#" + sectionElement.getAttribute("num"));
-                self.appendChild(transformer.apply(sectionElement, "page.section-table"));
-              });
-            } else if (sectionElement.hasAttribute("id")) {
-              self.appendElement("a", (self) => {
-                self.addClassName("link");
-                self.setAttribute("href", "#" + sectionElement.getAttribute("id"));
-                self.appendChild(transformer.apply(sectionElement, "page.section-table"));
-              });
-            } else {
-              self.appendChild(transformer.apply(sectionElement, "page.section-table"));
-            }
-          });
+          self.appendChild(sectionSelf);
         }
+        hasSection = true;
+        sectionSelf = document.createElement("li", (self) => {
+          self.addClassName("normal-item");
+          if (sectionElement.hasAttribute("id")) {
+            self.appendElement("a", (self) => {
+              self.addClassName("link");
+              self.setAttribute("href", "#" + sectionElement.getAttribute("id"));
+              self.appendChild(transformer.apply(sectionElement, "page.section-table"));
+            });
+          } else {
+            self.appendChild(transformer.apply(sectionElement, "page.section-table"));
+          }
+        });
+        subsectionSelf = document.createElement("ul", (self) => self.addClassName("normal-list"));
+      } else if (sectionElement.tagName === "h2") {
+        hasSubsection = true;
+        subsectionSelf.appendElement("li", (self) => {
+          self.addClassName("normal-item");
+          if (sectionElement.hasAttribute("num")) {
+            self.appendElement("span", (self) => {
+              self.addClassName("section-table-number");
+              self.setAttribute("data-number", sectionElement.getAttribute("num"));
+            });
+            self.appendElement("a", (self) => {
+              self.addClassName("link");
+              self.setAttribute("href", "#" + sectionElement.getAttribute("num"));
+              self.appendChild(transformer.apply(sectionElement, "page.section-table"));
+            });
+          } else if (sectionElement.hasAttribute("id")) {
+            self.appendElement("a", (self) => {
+              self.addClassName("link");
+              self.setAttribute("href", "#" + sectionElement.getAttribute("id"));
+              self.appendChild(transformer.apply(sectionElement, "page.section-table"));
+            });
+          } else {
+            self.appendChild(transformer.apply(sectionElement, "page.section-table"));
+          }
+        });
       }
     }
     if (hasSubsection) {
