@@ -3,8 +3,9 @@
 
 
 \page<
+  \use-script|src="17.js"|;
 
-  ## ski まで使用
+  ## sfz まで使用
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<概要>
@@ -31,6 +32,10 @@
   \pb<
     \ab|href="11.html"|<否定表現>
     \ab|href="12.html"|<疑問表現>
+  >
+  \hb<動詞>
+  \pb<
+    \ab|href="13.html"|<時制と相>
   >
 
 >
