@@ -15,12 +15,13 @@ manager.registerElementRule("page", "reference", (transformer, document, element
   let path = transformer.variables.path;
   let language = transformer.variables.language;
   let splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
-  let href = splitRelativePath[splitRelativePath.length - 1].replace(/\.zml/, ".html");
+  let baseHref = splitRelativePath[splitRelativePath.length - 1].replace(/\.zml/, ".html");
   let sectionElements = element.searchXpath("/page/*[name() = 'h1' or name() = 'h2']") as Array<Element>;
   let sectionSpecs = [] as Array<SectionSpec>;
   let currentSectionSpec = null as SectionSpec | null;
   for (let sectionElement of sectionElements) {
     let tag = sectionElement.getAttribute("tag");
+    let href = baseHref + "#" + tag;
     let content = transformer.apply(sectionElement, "page").toString();
     if (sectionElement.tagName === "h1") {
       if (currentSectionSpec !== null) {

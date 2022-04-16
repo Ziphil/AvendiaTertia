@@ -19,8 +19,8 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
   let self = document.createDocumentFragment();
   let language = transformer.variables.language;
   let indexPath = transformer.environments.configs.getReferenceIndexPath(language);
-  let documentSpecs = JSON.parse(fs.readFileSync(indexPath, {encoding: "utf-8"})) as Array<SectionSpec>;
-  let appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, documentSpec: SectionSpec, inner?: boolean) {
+  let documentSpecs = JSON.parse(fs.readFileSync(indexPath, {encoding: "utf-8"})).specs as Array<SectionSpec>;
+  let appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, sectionSpecs: Array<SectionSpec>, inner?: boolean) {
     self.appendElement("ul", (self) => {
       self.addClassName("normal-list");
       self.setBlockType("text", "text");
@@ -28,21 +28,20 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
         self.setAttribute("data-type", "unordered");
         self.setAttribute("data-column", "2");
       }
-      for (let sectionSpec of documentSpec.childSpecs) {
+      for (let sectionSpec of sectionSpecs) {
         self.appendElement("li", (self) => {
           self.addClassName("normal-item");
-          self.setAttribute("id", sectionSpec.tag);
           self.appendElement("span", (self) => {
             self.addClassName("section-table-tag");
             self.appendTextNode("@" + sectionSpec.tag.toUpperCase() + ".");
           });
           self.appendElement("a", (self) => {
             self.addClassName("link");
-            self.setAttribute("href", sectionSpec.href + "#" + sectionSpec.tag);
+            self.setAttribute("href", sectionSpec.href);
             self.appendTextNode(sectionSpec.content, (self) => self.options.raw = true);
           });
           if (sectionSpec.childSpecs.length > 0) {
-            appendIndexList(self, sectionSpec, true);
+            appendIndexList(self, sectionSpec.childSpecs, true);
           }
         });
       }
@@ -57,7 +56,7 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
         self.appendTextNode(documentSpec.content, (self) => self.options.raw = true);
       });
     });
-    appendIndexList(self, documentSpec);
+    appendIndexList(self, documentSpec.childSpecs);
   }
   return self;
 });

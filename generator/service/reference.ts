@@ -30,7 +30,9 @@ export default async function execute(outputLanguage: AvendiaOutputLanguage, arg
     return documentSpec;
   });
   let documentSpecs = await Promise.all(promises);
-  let outputString = JSON.stringify(documentSpecs, undefined, 2);
+  let hrefEntries = createHrefEntries(documentSpecs);
+  let outputObject = {specs: documentSpecs, hrefs: Object.fromEntries(hrefEntries)};
+  let outputString = JSON.stringify(outputObject, undefined, 2);
   await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
   await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
 }
@@ -44,6 +46,17 @@ async function createSectionSpecs(href: string, outputLanguage: AvendiaOutputLan
   let content = args.transformer.transform(inputDocument, {initialScope: "name", initialVariables}).toString().trim();
   let documentSpec = {href, content, childSpecs, tag: ""};
   return documentSpec;
+}
+
+function createHrefEntries(sectionSpecs: Array<SectionSpec>): Array<[tag: string, href: string]> {
+  const entries = [] as Array<[string, string]>;
+  for (let sectionSpec of sectionSpecs) {
+    if (sectionSpec.tag !== "") {
+      entries.push([sectionSpec.tag, sectionSpec.href]);
+    }
+    entries.push(...createHrefEntries(sectionSpec.childSpecs));
+  }
+  return entries;
 }
 
 export type SectionSpec = {
