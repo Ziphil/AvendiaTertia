@@ -55,7 +55,7 @@ manager.registerElementRule("input", ["page", "page.form"], (transformer, docume
       self.setAttribute("size", element.getAttribute("size"));
     }
     if (element.hasAttribute("width")) {
-      self.setAttribute("style", `width: ${element.getAttribute("width")}em;`)
+      self.setAttribute("style", `width: ${element.getAttribute("width")}em;`);
     }
     self.appendChild(transformer.apply(element, "page"));
   });
