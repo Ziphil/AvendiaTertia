@@ -27,4 +27,4 @@ export class Executor extends BaseExecutor {
 }
 
 
-Executor.regsiter();
+Executor.regsiter("direct");
