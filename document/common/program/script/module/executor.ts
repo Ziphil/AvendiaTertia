@@ -6,11 +6,19 @@ export abstract class BaseExecutor {
 
   protected abstract prepare(): void;
 
-  public static regsiter<E extends BaseExecutor>(this: new() => E): void {
+  public static regsiter<E extends BaseExecutor>(this: new() => E, type: ExecutorType = "load"): void {
     let executor = new this();
-    window.addEventListener("load", () => {
+    if (type === "load") {
+      window.addEventListener("load", () => {
+        executor.prepare();
+      });
+    } else if (type === "contentLoad") {
+      window.addEventListener("DOMContentLoaded", () => {
+        executor.prepare();
+      });
+    } else {
       executor.prepare();
-    });
+    }
   }
 
   public static addLoadListener(listener: (event: Event) => unknown): void {
@@ -18,3 +26,6 @@ export abstract class BaseExecutor {
   }
 
 }
+
+
+type ExecutorType = "load" | "contentLoad" | "direct";
