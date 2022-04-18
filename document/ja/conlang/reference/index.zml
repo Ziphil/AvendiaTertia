@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## sfz まで使用
+  ## sft まで使用
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<初めに>
@@ -36,6 +36,7 @@
   \hb<動詞>
   \pb<
     \ab|href="13.html"|<時制と相>
+    \ab|href="14.html"|<自他>
   >
 
 >
