@@ -37,7 +37,7 @@ export default async function execute(outputLanguage: AvendiaOutputLanguage, arg
   await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
 }
 
-async function createSectionSpecs(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendaServiceArgs): Promise<SectionSpec> {
+async function createSectionSpecs(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendaServiceArgs): Promise<ReferenceSectionSpec> {
   let documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/" + href.replace(/\.html$/, ".zml");
   let initialVariables = {path: documentPath, language: outputLanguage};
   let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
@@ -48,7 +48,7 @@ async function createSectionSpecs(href: string, outputLanguage: AvendiaOutputLan
   return documentSpec;
 }
 
-function createHrefEntries(sectionSpecs: Array<SectionSpec>): Array<[tag: string, href: string]> {
+function createHrefEntries(sectionSpecs: Array<ReferenceSectionSpec>): Array<[tag: string, href: string]> {
   const entries = [] as Array<[string, string]>;
   for (let sectionSpec of sectionSpecs) {
     if (sectionSpec.tag !== "") {
@@ -59,11 +59,15 @@ function createHrefEntries(sectionSpecs: Array<SectionSpec>): Array<[tag: string
   return entries;
 }
 
-export type SectionSpec = {
+export type ReferenceSectionSpec = {
   href: string,
   tag: string,
   content: string,
-  childSpecs: Array<SectionSpec>
+  childSpecs: Array<ReferenceSectionSpec>
+};
+export type ReferenceIndex = {
+  specs: Array<ReferenceSectionSpec>,
+  hrefs: Record<string, string | undefined>
 };
 type AvendaServiceArgs = {
   parser: ZenmlParser,

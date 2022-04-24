@@ -1,26 +1,26 @@
 //
 
-import fs from "fs";
 import type {
   AvendiaDocumentFragment,
   AvendiaElement
 } from "../../generator/dom";
 import type {
-  SectionSpec
+  ReferenceSectionSpec
 } from "../../generator/service/reference";
 import {
   AvendiaTemplateManager
 } from "../../generator/transformer";
+import {
+  getReferenceIndex
+} from "../../template/util";
 
 
 let manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("reference-table", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
-  let language = transformer.variables.language;
-  let indexPath = transformer.environments.configs.getReferenceIndexPath(language);
-  let documentSpecs = JSON.parse(fs.readFileSync(indexPath, {encoding: "utf-8"})).specs as Array<SectionSpec>;
-  let appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, sectionSpecs: Array<SectionSpec>, inner?: boolean) {
+  let documentSpecs = getReferenceIndex(transformer).specs;
+  let appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, sectionSpecs: Array<ReferenceSectionSpec>, inner?: boolean) {
     self.appendElement("ul", (self) => {
       self.addClassName("normal-list");
       self.setBlockType("text", "text");

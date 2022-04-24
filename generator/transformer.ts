@@ -20,6 +20,9 @@ import {
 import type {
   AvendiaDocument
 } from "./dom";
+import type {
+  ReferenceIndex
+} from "./service/reference";
 
 
 export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables> {
@@ -53,6 +56,7 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
       configs: initialEnvironments?.configs!,
       mathStyleString: ZoticaResourceUtils.getStyleString("/material/font/math.otf"),
       mathScriptString: ZoticaResourceUtils.getScriptString(),
+      referenceIndexes: new Map(),
       ...initialEnvironments
     };
   }
@@ -81,7 +85,8 @@ export type AvendiaLightTransformer = LightTransformer<AvendiaDocument, AvendiaT
 export type AvendiaTransformerEnvironments = {
   configs: AvendiaConfigs,
   mathStyleString: string,
-  mathScriptString: string
+  mathScriptString: string,
+  referenceIndexes: Map<AvendiaOutputLanguage, ReferenceIndex>
 };
 export type AvendiaTransformerVariables = {
   path: string,

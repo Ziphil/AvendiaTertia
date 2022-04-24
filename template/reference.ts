@@ -1,7 +1,7 @@
 //
 
 import type {
-  SectionSpec
+  ReferenceSectionSpec
 } from "../generator/service/reference";
 import {
   AvendiaTemplateManager
@@ -17,8 +17,8 @@ manager.registerElementRule("page", "reference", (transformer, document, element
   let splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
   let baseHref = splitRelativePath[splitRelativePath.length - 1].replace(/\.zml/, ".html");
   let sectionElements = element.searchXpath("/page/*[name() = 'h1' or name() = 'h2']") as Array<Element>;
-  let sectionSpecs = [] as Array<SectionSpec>;
-  let currentSectionSpec = null as SectionSpec | null;
+  let sectionSpecs = [] as Array<ReferenceSectionSpec>;
+  let currentSectionSpec = null as ReferenceSectionSpec | null;
   for (let sectionElement of sectionElements) {
     let tag = sectionElement.getAttribute("tag");
     let href = baseHref + "#" + tag;

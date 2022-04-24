@@ -4,7 +4,7 @@ import {
   AvendiaTemplateManager
 } from "../../generator/transformer";
 import {
-  ReferenceType,
+  NumberRefType,
   getNumber,
   setNumber
 } from "../util";
@@ -53,19 +53,19 @@ manager.registerElementRule("math-block", "page", (transformer, document, elemen
 
 manager.registerElementRule("ref", "page", (transformer, document, element, scope, args) => {
   let self = document.createDocumentFragment();
-  let referenceId = element.getAttribute("ref");
+  let refId = element.getAttribute("ref");
   let rawType = element.getAttribute("type");
-  let type = (rawType === "thm") ? "theorem" : (rawType === "eq") ? "equation" : "bibliography" as ReferenceType;
+  let type = (rawType === "thm") ? "theorem" : (rawType === "eq") ? "equation" : "bibliography" as NumberRefType;
   let noLink = element.hasAttribute("nolink") || rawType !== "thm";
   let tagName = (noLink) ? "span" : "a";
   self.appendElement(tagName, (self) => {
-    self.addClassName("reference");
+    self.addClassName("ref");
     if (!noLink) {
       self.addClassName("link");
-      self.setAttribute("href", `#${referenceId}`);
+      self.setAttribute("href", `#${refId}`);
     }
     self.setAttribute("data-type", type);
-    self.appendTextNode(getNumber(transformer, element, type, true, referenceId));
+    self.appendTextNode(getNumber(transformer, element, type, true, refId));
   });
   return self;
 });

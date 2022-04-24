@@ -1,18 +1,22 @@
 //
 
+import fs from "fs";
+import type {
+  ReferenceIndex
+} from "../generator/service/reference";
 import type {
   AvendiaLightTransformer
 } from "../generator/transformer";
 import TRANSLATIONS from "~/template/translations.json";
 
 
-export function setNumber(transformer: AvendiaLightTransformer, element: Element, type: ReferenceType, id: string): void {
+export function setNumber(transformer: AvendiaLightTransformer, element: Element, type: NumberRefType, id: string): void {
   transformer.variables.number[type] ++;
   transformer.variables.numbers[type].set(id, transformer.variables.number[type]);
   transformer.variables.namePrefixes[type].set(id, createNamePrefix(transformer, element, type));
 }
 
-export function getNumber(transformer: AvendiaLightTransformer, element: Element, type: ReferenceType, clever: boolean, id: string): string {
+export function getNumber(transformer: AvendiaLightTransformer, element: Element, type: NumberRefType, clever: boolean, id: string): string {
   let getNumberSpec = function (): [string, string | null, string | null] {
     if (transformer.variables.numbers[type].has(id)) {
       let number = transformer.variables.numbers[type].get(id)!.toString();
@@ -54,7 +58,7 @@ export function getNumber(transformer: AvendiaLightTransformer, element: Element
   return string;
 }
 
-function createNamePrefix(transformer: AvendiaLightTransformer, element: Element, type: ReferenceType): string | null {
+function createNamePrefix(transformer: AvendiaLightTransformer, element: Element, type: NumberRefType): string | null {
   if (type === "theorem") {
     let theoremType = element.getAttribute("type");
     let prefix = TRANSLATIONS.math[theoremType]?.[transformer.variables.language] ?? null;
@@ -67,4 +71,17 @@ function createNamePrefix(transformer: AvendiaLightTransformer, element: Element
   }
 }
 
-export type ReferenceType = "theorem" | "equation" | "bibliography";
+export function getReferenceIndex(transformer: AvendiaLightTransformer): ReferenceIndex {
+  let language = transformer.variables.language;
+  let index = transformer.environments.referenceIndexes.get(language);
+  if (index === undefined) {
+    let indexPath = transformer.environments.configs.getReferenceIndexPath(language);
+    let index = JSON.parse(fs.readFileSync(indexPath, {encoding: "utf-8"}));
+    transformer.environments.referenceIndexes.set(language, index);
+    return index;
+  } else {
+    return index;
+  }
+}
+
+export type NumberRefType = "theorem" | "equation" | "bibliography";

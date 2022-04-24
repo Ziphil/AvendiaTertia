@@ -28,6 +28,7 @@ import inlineBasicManager from "./inline/basic";
 import inlineGreekManager from "./inline/greek";
 import inlineLinkManager from "./inline/link";
 import inlineMathManager from "./inline/math";
+import inlineReferenceManager from "./inline/reference";
 import nameManager from "./name";
 import navigationManager from "./navigation";
 import referenceManager from "./reference";
@@ -62,6 +63,7 @@ let managers = [
   inlineLinkManager,
   inlineGreekManager,
   inlineMathManager,
+  inlineReferenceManager,
   historyManager,
   referenceManager,
   nameManager,
