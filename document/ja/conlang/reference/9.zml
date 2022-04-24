@@ -89,9 +89,18 @@
     この文では、文頭の動詞 {feges} を、主語を表す {a tel}, 目的語を表す {e dezet}, 場所を表す {vo vosis afik} の 3 つの助詞句が後ろから修飾している。
     修飾語句の順番に制約がないことから、この文の後半は {vo vosis afik a tel e dezet} の順にしても良い。
   >
-  \h2|tag=""|<動詞以外と助詞句>
+  \h2|tag="svk"|<動詞以外と助詞句>
   \p<
-
+    動詞以外を修飾する助詞句は、その被修飾語の後に置かれる。
+    このような助詞句に使われる助詞は必ず非動詞修飾形である。
+  >
+  \xl<
+    \li<\sh<{sâfat a tel e ricam ivo riy.}>\ja<私は海で泳ぐのが好きだ。>>
+    \li<\sh<{câses a tel e ces vo vosras afêc ica kolot.}>\ja<私は彼に駅の近くのカフェであった。>>
+    \li<\sh<{cates a ces omêl ifeli delmet.}>\ja<彼はカメのようにゆっくり歩いた。>>
+  >
+  \p<
+    これらの例文では、{ivo riy}, {ica kolot}, {ifeli delmet} という助詞句がそれぞれ {ricam}, {afêc}, {omêl} に係っている。
   >
   \h2|tag="sdy",id="modifier-adjective"|<形容詞>
   \p<
@@ -209,6 +218,15 @@
     {lôk atov câsos te a ces} で「彼らが会うたび」という意味なのだが、この意味を作るには、まず「彼らが会うとき」という語句を作って、それを「それぞれ」で修飾する必要があるため、{lôk câsos te a ces atov} という語順になるはずである。
     しかし、上の場合と同様に、{câsos te a ces} と {atov} の位置が交換され、上の文の語順になっているのである。
     ここでは、{câsos te a ces} が /S/ で、{atov} が /Z/ であった。
+  >
+  \h1|tag="svg"|<{vel} による間接的な修飾>
+  \p<
+    特殊助接辞の助詞用法による助詞句は動詞を修飾することができない。
+    したがって、例えば「人形のように眠る」のような一見動詞を修飾しているように見える表現をしたいときは、助詞句をまず {vel} の副詞用法に修飾させ、それ全体を動詞に修飾するという形をとる。
+    すなわち、動詞 ＋ {ovel} ＋ 助詞句という形になる。
+  >
+  \xl<
+    \li<\sh<{déxet a ces ovel ifeli qisec.}>\ja<彼は人形のように眠っていた。>>
   >
 
 >
