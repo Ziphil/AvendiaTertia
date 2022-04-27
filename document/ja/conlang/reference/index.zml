@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## svn まで使用
+  ## sva まで使用
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<初めに>
@@ -44,6 +44,7 @@
     \ab|href="17.html"|<連結辞>
     \ab|href="18.html"|<接続詞としての助接辞>
     \ab|href="19.html"|<接続詞の特殊構文>
+    \ab|href="20.html"|<{kin} 節> 
     \ab|href="16.html"|<限定表現>
   >
 
