@@ -65,8 +65,8 @@ $content-item-height: 90rpx;
   &::before {
     top: 0rpx;
     bottom: 0rpx;
-    left: calc(-100% + #{div($content-item-height * $skew-tan, 2)});
-    width: 100%;
+    left: calc(-100% + #{$content-item-height * $skew-tan} + 6rpx + #{div($content-item-height * $skew-tan, 2)});
+    width: calc(100% - #{$content-item-height * $skew-tan} - 6rpx);
     background-color: $blue-color;
     position: absolute;
     transform: skew($skew-angle);
@@ -75,7 +75,7 @@ $content-item-height: 90rpx;
     content: "";
   }
   &:not([data-disabled]):hover::before {
-    left: calc(0% - #{div($content-item-height * $skew-tan, 2)} - 6rpx);
+    left: calc(#{div($content-item-height * $skew-tan, 2)});
   }
   &::after {
     top: 0rpx;
