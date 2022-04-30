@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## spt まで使用
+  ## spb まで使用
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<初めに>
@@ -50,6 +50,7 @@
   \hb<比較>
   \pb<
     \ab|href="21.html"|<比較表現>
+    \ab|href="22.html"|<同等表現>
   >
 
 >
