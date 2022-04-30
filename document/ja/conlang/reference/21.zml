@@ -3,7 +3,7 @@
 
 
 \page<
-  \name<比較表現と同等表現>
+  \name<比較表現>
   \ver<S 代>
 
   \h1|tag="sve"|<接続詞節による比較表現>
@@ -144,6 +144,46 @@
   >
   \xl<
     \li<\sh<{di'sôdis a'c e sakil afik otîv evêl ini kilat a'c e'n las.}>\ja<できるだけ速くこのリンゴを食べなさい。>>
+  >
+  \h1|tag="spd"|<差異の程度の表現>
+  \h2|tag="spk"|<構成>
+  \p<
+    比較において、2 者の間の差がどのくらいなのかを表現する場合は、助節辞の {le} の非動詞修飾形を用いる。
+    {le} の用法については、\rref|ref=""|; も参照のこと。
+  >
+  \p<
+    例えば、以下の比較表現を考える。
+  >
+  \xl<
+    \li<\sh<{salat a sakil afik e avaf emic ini sakil aquk.}>\ja<このリンゴはあのリンゴより大きい。>>
+  >
+  \p<
+    この文は「このリンゴの大きさ」と「あのリンゴの大きさ」を比較して前者の方が大きいことを述べているが、その大きさの差が例えば 7 cm だったとする。
+    これを表現するには、「7 cm」を意味する {mulôt 7} の前に {ile} をつけて助詞句にし、それを {emic} に修飾させれば良い。
+    このとき、{emic} を {ile mulôt 7} と {ini} 句の 2 つの語句が修飾していることになる。
+  >
+  \xl<
+    \li<\sh<{salat a sakil afik e avaf emic ile mulôt 7 ini sakil aquk.}>\ja<このリンゴはあのリンゴより 7 cm 大きい。>>
+  >
+  \p<
+    差異を倍数で表現したいときも同様である。
+  >
+  \xl<
+    \li<\sh<{salat a sakil afik e avaf emic ile vâl 3 ini sakil aquk.}>\ja<このリンゴはあのリンゴより 3 倍大きい。>>
+  >
+  \h2|tag="spg"|<差異の基準>
+  \p<
+    ζ*'ヮ')ζ まだ決まってないかも。
+  >
+  ## TODO:「このリンゴはあのリンゴより幅が 7 cm 大きい」のような表現
+  \h1|tag="spf"|<劣等比較表現>
+  \p<
+    比較表現において {mic} の代わりに {dès} を用いることで、主節にある比較物の方が逆に程度が劣っていることを表すことができる。
+    {dès} による劣等比較で可能な表現は、{mic} が {dès} に変わること以外 {mic} による通常の比較表現と全く同じである。
+  >
+  \xl<
+    \li<\sh<{salat a sakil e asaret edès ini lesit.}>\ja<ミカンほどリンゴはおいしくない。>>
+    \li<\sh<{salat a ces e alinsiref edès ini les te zîk.}>\ja<彼女はかつてほどおとなしくない。>>
   >
 
 >
