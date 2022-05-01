@@ -1,0 +1,96 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<挿入>
+  \ver<S 代>
+
+  \h1|tag="sbp"|<挿入>
+  \h2|tag="sbb"|<概要>
+  \p<
+    挿入とは、完全な文の途中もしくは最後に語句を追加することで、文中の内容を補足説明することができる表現方法である。
+    このとき、挿入される語句は、それが挿入部であることを明示するために、前後にタデックもしくはタデックロットが置かれる。
+    ただし、挿入部が文末にある場合は、挿入部の後ろとなる文末にはタデックやタデックロットを置かない。
+  >
+  \p<
+    タデックを置くかタデックロットを置くかによって、挿入できる語句の種類やニュアンスが変わるので、続くサブセクションでその違いを述べる。
+  >
+  \h2|tag="sbc"|<タデックによる挿入>
+  \p<
+    タデックによる挿入構文においては、挿入部の前後に置かれているタデックを取り除いて通常の文だと見なしたときに、正しい文になっている必要がある。
+    逆に、通常の文から始めて、その中で補足説明であるというニュアンスを加えたい部分の前後にタデックを置くことで、挿入構文を作ることができる。
+    さらに、このときの挿入部は、ある 1 つの語句に係っている修飾語句 (名詞を修飾している場合は節でも可) でなければならない。
+    したがって、他の語句を修飾する機能をもたない名詞句や動詞句は、単独で挿入語句になることはできない。
+  >
+  \p<
+    例として、次の文から挿入構文を作る。
+  >
+  \xl<
+    \li<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で自慢げに見せた。>>
+  >
+  \p<
+    まず、動詞修飾副詞や助詞句は動詞を修飾するものなので、これは挿入構文にすることができる。
+  >
+  \xl<
+    \li<\sh<{cafoses, ocàszocèt, a ces fi socavhâr e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
+    \li<\sh<{cafoses ocàszocèt a ces, fi socavhâr, e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を自慢気に見せたが、笑みを浮かべていた。>>
+  >
+  \p<
+    単独の形容詞や限定節は名詞を修飾するものなので、これも挿入構文にできる。
+  >
+  \xl<
+    \li<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq, axodol, séqes e ca's a refet.}>\ja<彼は友達からもらった時計を笑顔で見せたが、それは高価なものだった。>>
+    \li<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol, séqes e ca's a refet.}>\ja<彼は高価な時計を自慢気に見せたが、それは友達からもらったものだった。>>
+  >
+  \p<
+    通常の文では、動詞修飾副詞は動詞の直後か節の末尾にしか置くことはできないが、挿入構文で挿入語句になっている場合に限り、同じ動詞を修飾する助詞句の間にも置くことができる。
+    例えば、以下は全て正しい挿入構文である。
+  >
+  \xl<
+    \li<\sh<{cafoses a ces, ocàszocèt, fi socavhâr e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
+    \li<\sh<{cafoses a ces fi socavhâr, ocàszocèt, e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
+  >
+  \p<
+    挿入語句となった修飾語句は、被修飾語が指すものを限定する機能を失い、代わりに被修飾語に追加の補足説明を与える機能をもつ。
+    そのため、挿入された修飾語句を「非限定用法」と呼ぶことがある。
+    このような通常の修飾と挿入構文での機能の違いが、しばしば文全体の意味を大きく変えることがある。
+  >
+  \xl<
+    \li<\sh<{kavat a tel e refet al'ayos keqilac a vo ʻtôkôs.}>\ja<私には東京に住んでいる 3 人の友人がいる。>>
+    \li<\sh<{kavat a tel e refet al'ayos, keqilac a vo ʻtôkôs.}>\ja<私には 3 人の友人がいて、東京に住んでいる。>>
+  >
+  \p<
+    最初の文では、{keqilac} 以下の限定節が通常通り {refet} に係っており、この「友人」という単語が指す範囲を「東京に住んでいる」ものに制限している。
+    したがって、この文は「東京に住んでいる 3 人の友人がいる」ということを述べているにすぎないため、東京に住んでいない別の友人がいる可能性がある。
+    一方で次の文では、{keqilac} の前にタデックが置かれていて、{keqilac} 以下が挿入構文になっている。
+    そのため、この文は「3 人の友人がいる」ということを述べていて、それの補足として「その友人は東京に住んでいる」という情報が与えられているため、友人はこの 3 人のみとなる。
+  >
+  \h2|tag="sbq"|<タデックロットによる挿入>
+  \p<
+    タデックによる挿入構文は、全てタデックをタデックロットに置き換えることができる。
+    したがって、例えば以下は全て正しい文となる。
+  >
+  \xl<
+    \li<\sh<{cafoses — ocàszocèt — a ces fi socavhâr e sokiq axodol séqes e ca's a refet.}>>
+    \li<\sh<{cafoses ocàszocèt a ces — fi socavhâr — e sokiq axodol séqes e ca's a refet.}>>
+    \li<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq — axodol — séqes e ca's a refet.}>>
+    \li<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol — séqes e ca's a refet.}>>
+    \li<\sh<{cafoses a ces — ocàszocèt — fi socavhâr e sokiq axodol séqes e ca's a refet.}>>
+    \li<\sh<{cafoses a ces fi socavhâr — ocàszocèt — e sokiq axodol séqes e ca's a refet.}>>
+  >
+  \p<
+    これに加え、タデックロットによる挿入構文では、動詞を修飾する接続詞節もしくは完全文を挿入することができる。
+    その場合、挿入部は動詞の後に並べられている副詞もしくは助詞句の間に置かれる。
+    なお、これはタデックによる挿入構文では不可能である。
+  >
+  \xl<
+    \li<\sh<{cafoses ocàszocèt a ces — bava kéces a tel ca ces e'n dudozat lis — e sokiq axodol.}>\ja<彼は――私はその必要はないと言ったのだが――自慢気に高価な時計を見せた。>>
+    \li<\sh<{cafoses ocàszocèt — dîtikat e tel a cal — a ces e sokiq axodol.}>\ja<自慢気に――私はそれに苛ついてたのだが――彼は高価な時計を見せた。>>
+  >
+  \p<
+    タデックロットを用いた挿入構文で挿入されている箇所は、読み飛ばしても概ね問題ないというニュアンスが出る。
+    そのため、タデックロットによる挿入構文は、タデックによる挿入構文と比べて挿入部が補足説明であるというニュアンスがより強い。
+  >
+
+>
