@@ -7,13 +7,14 @@ import {
 
 let manager = new AvendiaTemplateManager();
 
-manager.registerElementRule(["h1", "h2"], "page", (transformer, document, element) => {
+manager.registerElementRule(["h1", "h2", "h3"], "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
-  let className = (element.tagName === "h1") ? "section" : "subsection";
+  let className = (element.tagName === "h1") ? "section" : (element.tagName === "h2") ? "subsection" : "subsubsection";
+  let blockType = (element.tagName !== "h3") ? "bordered" : "text";
   self.appendElement(element.tagName, (self) => {
     let innerSelf = document.placeholder();
     self.addClassName(className);
-    self.setBlockType("bordered", "bordered");
+    self.setBlockType(blockType, blockType);
     if (element.hasAttribute("id")) {
       self.setAttribute("id", element.getAttribute("id"));
     }
