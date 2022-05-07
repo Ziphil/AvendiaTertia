@@ -116,8 +116,16 @@ $subsection-height: 36rpx;
   }
 }
 
+.subsubsection {
+  font-size: 105%;
+  font-weight: normal;
+  color: $blue-color;
+  line-height: $line-height;
+}
+
 .section-tag,
-.subsection-tag {
+.subsection-tag,
+.subsubsection-tag {
   margin-right: fix-em($blank-margin, 80%);
   font-size: 80%;
   text-transform: uppercase;
@@ -125,7 +133,8 @@ $subsection-height: 36rpx;
 }
 
 .section-number,
-.subsection-number {
+.subsection-number,
+.subsubsection-number {
   margin-right: fix-em($blank-margin, 80%);
   font-size: 80%;
   opacity: 0.7;
