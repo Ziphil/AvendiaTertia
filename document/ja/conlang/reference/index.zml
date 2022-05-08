@@ -5,7 +5,8 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## sql まで使用
+  ## sqo まで使用
+  ## 「基本語順」まで校正済み
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<初めに>
@@ -21,6 +22,7 @@
   \hb<単語>
   \pb<
     \ab|href="6.html"|<品詞>
+    \ab|href="34.html"|<語彙的品詞と文法的品詞の関係>
     \ab|href="7.html"|<その他の特殊な形態素>
     \ab|href="8.html"|<活用>
   >
