@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## sqv まで使用
+  ## sqq まで使用
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<初めに>
@@ -63,6 +63,7 @@
     \ab|href="26.html"|<挿入と強調>
     \ab|href="32.html"|<省略>
     \ab|href="29.html"|<縮約>
+    \ab|href="33.html"|<繰り返しの回避>
     \ab|href="27.html"|<遊離助詞句>
   >
   \hb<重要語>
