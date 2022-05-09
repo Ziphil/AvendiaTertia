@@ -5,8 +5,8 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## sqo まで使用
-  ## 「基本語順」まで校正済み
+  ## squ まで使用
+  ## 「疑問表現」まで校正済み
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<初めに>
