@@ -38,6 +38,17 @@
             >
           >
         >
+        \a|class="card-item",id="theory",href="conlang/reference/"|<
+          \div|class="card-title"|<
+            \div|class="card-title-japanese"|<文法詳細>
+          >
+          \div|class="card-explanation"|<
+            \div|class="card-explanation-text"|<
+              シャレイア語文法の詳細な解説です。
+              文法の確認に利用できます。
+            >
+          >
+        >
         \a|class="card-item",id="database",href="conlang/database/"|<
           \div|class="card-title"|<
             \div|class="card-title-japanese"|<データベース>
@@ -66,16 +77,6 @@
           \div|class="card-explanation"|<
             \div|class="card-explanation-text"|<
               シャレイア語で書かれたオリジナルの文章などを読むことができます。
-            >
-          >
-        >
-        \a|class="card-item",id="theory",href="conlang/theory/"|<
-          \div|class="card-title"|<
-            \div|class="card-title-japanese"|<シャレイア語論>
-          >
-          \div|class="card-explanation"|<
-            \div|class="card-explanation-text"|<
-              シャレイア語における文法や語法に関する詳細な解説を集めたものです。
             >
           >
         >

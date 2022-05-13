@@ -1,0 +1,462 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<リンゴを食べたい 58 文>
+  \ver<S 代>
+
+  \h1<概要>
+  \p<
+    これは、ざすろん氏によって作成された『リンゴを食べたい 58 文』をシャレイア語に翻訳したものである。
+    58 文の一覧は\ae|href="http://ja.conlinguistics.wikia.com/wiki/%E3%82%8A%E3%82%93%E3%81%94%E6%96%87"|<ここ>で見ることができる。
+  >
+  \p<
+    リンゴ文の各文に対し、もともとの日本語の文とそのシャレイア語訳に加え、グロスと簡単な解説を付した。
+    グロスで使われる略号は、\a|href="../document/14.html"|<こちら>を参照すること。
+  >
+  \h1<翻訳>
+  \h2|id="1"|<1>
+  \xl<
+    \li<
+      \sh<{vomac sôdos a tel e sakil.}>\ja<私はリンゴを食べる。>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{vom}>\ex<繰り返す>>
+        &lig|conj="-os"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    「食べる」を単純に現在時制無相とすることはできない。
+    これは、現在という幅のない一瞬のうちに「食べる」という行為全体を行うことはあり得ないためである。
+    したがって、ここでは「リンゴを食べる」というのが現在も続いている習慣であると考え、反復表現で翻訳した。
+    直訳すると、「私はリンゴを食べることを何度か繰り返すことの途中である」となる。
+    なお、時制と相に関する詳しい説明は\a|href="15.html"|<ここ>を参照すること。
+  >
+  \h2|id="2"|<2>
+  \xl<
+    \li<
+      \sh<{sôdes a tel e sakil.}>\ja<私はリンゴを食べた。>
+      \gloss<
+        &lig|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    「食べる」という意味の単語 {sôd} を過去時制にしている。
+    過去は幅のある時間なので、上の文で述べたことは問題にはならない。
+  >
+  \h2|id="3"|<3>
+  \xl<
+    \li<
+      \sh<{sôdac a ces e sakil.}>\ja<彼はリンゴを食べている。>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    日本語の「リンゴを食べている」は、食べるという行為が完了する (リンゴが口の中に入れられて全て飲み込んでしまう瞬間) 前の状態を表すと解釈するのが自然なので、経過相を用いた。
+  >
+  \h2|id="4"|<4>
+  \xl<
+    \li<
+      \sh<{sôdat a ces e sakil.}>\ja<彼女はリンゴを食べ終わっている。>
+      \gloss<
+        &lig|conj="-at"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    日本語の「リンゴを食べ終わっている」は、食べるという行為が完了した後の状態を指すので、継続相を用いている。
+    なお、終了相は行為の後の状態が途切れる瞬間を表すので、「食べ終わっている」という表現に引きずられて終了相にするのは誤りである。
+  >
+  \p<
+    シャレイア語では、指示代名詞を性別で区別しないので、「彼」も「彼女」もともに {ces} で訳すことになる。
+  >
+  \h2|id="5"|<5>
+  \xl<
+    \li<
+      \sh<{sôdet a ces e sakil.}>\ja<彼女はリンゴを食べ終わっていた。>
+      \gloss<
+        &lig|conj="-et"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    上の文を過去時制にするだけで良い。
+  >
+  \h2|id="6"|<6>
+  \xl<
+    \li<
+      \sh<{sôdes a yéf i tel e sakil.}>\ja<私の妻はリンゴを食べたことがある。>
+      \gloss<
+        &lig|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{yéf}>\ex<妻>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+    \li<
+      \sh<{zikolat a yéf i tel e'n sôdes a's e sakil.}>\ja<私の妻はリンゴを食べたことがある。>
+      \gloss<
+        &lig|conj="-at"|<\sh<{zikol}>\ex<経験する>>
+        &lig|auto="a"|;
+        &lig<\sh<{yéf}>\ex<妻>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig|auto="'n"|;
+        &lig|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    「～したことがある」という経験は、単に「～した」と考えて、最初の例文のように過去時制無相を用いて表現することが多い。
+    そのような経験があることを特に強調したい場合は、「～したという経験をしている」だと考えて、2 つ目の例文のように「経験する」という意味の {zikol} を用いる。
+  >
+  \p<
+    「私の妻」のような名詞修飾には、非動詞修飾を表す活用接尾辞 [i] をゼロ助接詞 (語幹が空の助接詞) に付けた {i} を用いる。
+    シャレイア語は後置修飾する言語なので、「私の妻」を訳すときは、「私」を意味する {tel} が「妻」を意味する {yéf} の後ろに置かれる。
+  >
+  \h2|id="7"|<7>
+  \xl<
+    \li<
+      \sh<{vomac sôdos a yéf i tel e sakil te taq atov.}>\ja<私の妻はリンゴを毎日食べる。>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{vom}>\ex<繰り返す>>
+        &lig|conj="-os"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{yéf}>\ex<妻>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{taq}>\ex<日>>
+        &lig|conj="a-"|<\sh<{tov}>\ex<それぞれの>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    「リンゴを食べる」という行為の繰り返しを意味するので、反復表現を用いている。
+    反復を表す {vom} は省略できない。
+    構文的には 1 番目の文と同じである。
+  >
+  \h2|id="8"|<8>
+  \xl<
+    \li<
+      \sh<{sôdes a tel o yéf i tel e sakil te tazît.}>\ja<私と私の妻は昨日リンゴを食べた。>
+      \gloss<
+        &lig|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig<\sh<{o}>\ex<と>>
+        &lig<\sh<{yéf}>\ex<妻>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{tazît}>\ex<昨日>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    語句を並列して接続するには、連結詞の {o} を用いる。
+  >
+  \h2|id="9"|<9>
+  \xl<
+    \li<
+      \sh<{sôdes a tel o yéf i tel e sakil te zîk ile lattaq aric.}>\ja<私と私の妻は 6 日前にリンゴを食べた。>
+      \gloss<
+        &lig|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig<\sh<{o}>\ex<と>>
+        &lig<\sh<{yéf}>\ex<妻>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{zîk}>\ex<前>>
+        &lig|conj="i-"|<\sh<{le}>\ex<～の数量分の>>
+        &lig<\sh<{lattaq}>\ex<1 日>>
+        &lig|conj="a-"|<\sh<{ric}>\ex<6>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    「6 日前」は「6 日分だけ以前」と考えて、「以前」を表す {zîk} に、被修飾語の程度を数量で説明する役割をもつ {ile} 句を修飾させて訳出する。
+    ここでは、6 日分だけ以前のことについて表現したいので、{ile lattaq aric} としている。
+    数詞は常に形容詞として用いる。
+    なお、具体的な日を表すには {taq} を用いる (7 番目の文で用いている) が、単位としての 1 日を表すには {lattaq} という別の単語を用いるので、注意すること。
+  >
+  \h2|id="10"|<10>
+  \xl<
+    \li<
+      \sh<{sôdis a ces e sakil te tacál.}>\ja<彼らは明日リンゴを食べる。>
+      \gloss<
+        &lig|conj="-is"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼ら>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{tacál}>\ex<明日>>
+        &lig|punc="."|;
+      >
+    >
+    \li<
+      \sh<{sôdis a ces avéf e sakil te tacál.}>\ja<彼らは明日リンゴを食べる。>
+      \gloss<
+        &lig|conj="-is"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|conj="a-"|<\sh<{véf}>\ex<たち>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{tacál}>\ex<明日>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    未来に起こるだろうことを表現しているので、動詞は未来時制にする。
+  >
+  \p<
+    シャレイア語では単数と複数を構文的に区別しないので、{ces} は単数の「彼」も複数の「彼ら」も表し得る。
+    特に複数であることを明示したい場合は、被修飾語が複数であることを意味する {véf} を用いれば良い。
+    なお、以降「彼ら」や「彼女ら」が含まれる文を訳出する際は、{ces} を単独で用いた文のみを挙げ、{ces avéf} という形を用いた文を追加で挙げることはしない。
+  >
+  \h2|id="11"|<11>
+  \xl<
+    \li<
+      \sh<{sôdis a ces e sakil te carip ile lattaq aric.}>\ja<彼らは 6 日後にリンゴを食べる。>
+      \gloss<
+        &lig|conj="-is"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼ら>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{carip}>\ex<後>>
+        &lig|conj="i-"|<\sh<{le}>\ex<～の数量分の>>
+        &lig<\sh<{lattaq}>\ex<1 日>>
+        &lig|conj="a-"|<\sh<{ric}>\ex<6>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    構文的には 9 番目の文と同じである。
+    ここでは 6 日分だけ以後のことについて言及したいので、「以前」の意味の {zîk} の代わりに「以後」の意味の {carip} を用いている。
+  >
+  \h2|id="15"|<15>
+  \xl<
+    \li<
+      \sh<{qetat a sakil al'ayos.}>\ja<リンゴが 3 つある。>
+      \gloss<
+        &lig|conj="-at"|<\sh<{qet}>\ex<ある>>
+        &lig|auto="a"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{al'}>\ex<個の>>
+        &lig|conj="a-"|<\sh<{yos}>\ex<3>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    単純に何らかのものがどこかに存在していることを表したければ、「ある」や「存在する」という意味の {qet} を継続相にして用いる。
+    「存在する」に相当する単語には {qet} の他にも {kocaq} があるが、{kocaq} の方は、存在するのか存在していないのかに注目して存在することを表す単語である。
+  >
+  \p<
+    個数を表現するには、名詞の後に {al'} ＋ 数詞の形を続ければ良い。
+    日本語のような助数詞はシャレイア語にはなく、どんなものでも {al'} を使う。
+  >
+  \h2|id="16"|<16>
+  \xl<
+    \li<
+      \sh<{qetat a sakil avéf vo hif izi dèt.}>\ja<リンゴたちがテーブルの上にある。>
+      \gloss<
+        &lig|conj="-at"|<\sh<{qet}>\ex<ある>>
+        &lig|auto="a"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|conj="a-"|<\sh<{véf}>\ex<たち>>
+        &lig<\sh<{vo}>\ex<～の場所で>>
+        &lig<\sh<{hif}>\ex<上>>
+        &lig|auto="zi",conj="i-"|;
+        &lig<\sh<{dèt}>\ex<テーブル>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    前の文と同様、存在を表す {qet} を用いている。
+  >
+  \p<
+    「上」を意味する {hif} は、何の上なのかを表現するのに {zi} の非動詞修飾形をとることになっている。
+    そのため、「テーブルの上」は {hif izi dèt} となる。
+    6 番目の文で使っているようなゼロ助接詞の非動詞修飾形を用いて、{hif i dèt} とすることはできない。
+  >
+  \h2|id="17"|<17>
+  \xl<
+    \li<
+      \sh<{sôdat a zis e sakil aquk.}>\ja<誰かがあのリンゴを食べてしまった。>
+      \gloss<
+        &lig|conj="-at"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{zis}>\ex<誰か>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|conj="a-"|<\sh<{quk}>\ex<あの>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    継続相は、その動作が完了した後の状態が続いていることを表す。
+    したがって、「食べる」を継続相にすると、食べて終わってしまってその食べたものがない状態が続いていることを表すようになる。
+  >
+  \p<
+    不特定の「誰か」には {zis} を使う。
+    {zis} を省略して {sôdat e sakil aquk} としても意味的には変わらないが、このようにすると、リンゴを食べた人ではなくリンゴそのものに焦点が当てられることになる。
+  >
+  \h2|id="20"|<20>
+  \xl<
+    \li<
+      \sh<{qetat a sakil adak.}>\ja<リンゴが 1 つもない。>
+      \gloss<
+        &lig|conj="-at"|<\sh<{qet}>\ex<ある>>
+        &lig|auto="a"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|conj="a-"|<\sh<{dak}>\ex<何も～ない>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    被修飾語が存在しないことを表す {dak} を用いている。
+    構文は 15 番目の文と同じである。
+  >
+  \h2|id="21"|<21>
+  \xl<
+    \li<
+      \sh<{vomac dusôdos a tel e sakil.}>\ja<私はリンゴを食べない。>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{vom}>\ex<繰り返す>>
+        &lig|conj="du-os"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    1 番目の文の場合と同じく、主節の動詞を現在時制無相にすることはできないため、「習慣的にリンゴを食べない」と解釈して反復表現にしている。
+  >
+  \p<
+    単語の意味を否定したい場合は、否定を表す活用接頭辞の [du] を付ければ良い。
+  >
+  \h2|id="22"|<22>
+  \xl<
+    \li<
+      \sh<{duqifat sôdas a tel e sakil.}>\ja<私はリンゴを食べられない。>
+      \gloss<
+        &lig|conj="du-at"|<\sh<{qif}>\ex<可能にする>>
+        &lig|conj="-as"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    状況的に何らかの行為が可能であることを表すには {qif} を用いる。
+    一方で、能力があるために何らかの行為が可能であることを表すには {kil} を用いる。
+    このように、シャレイア語では状況による可能と能力による可能を区別して表現する。
+  >
+  \h2|id="23"|<23>
+  \xl<
+    \li<
+      \sh<{delivez a tel li sakil ca delef.}>\ja<私はリンゴを床に落とした。>
+      \gloss<
+        &lig|conj="-ez"|<\sh<{deliv}>\ex<落ちる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="li"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|auto="ca"|;
+        &lig<\sh<{delef}>\ex<床>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    「落とす」は「落ちる」の意味の {deliv} を他動詞にして表現する。
+    このときの他動詞の相手を表現するには、専用の助詞である {li} を用いる。
+    シャレイア語では自動詞と他動詞を単語レベルで区別せずに、活用によってどちらであるかを明示する。
+  >
+  \h2|id="24"|<24>
+  \xl<
+    \li<
+      \sh<{delives a sakil ca delef.}>\ja<リンゴが床に落ちた。>
+      \gloss<
+        &lig|conj="-es"|<\sh<{deliv}>\ex<落ちる>>
+        &lig|auto="a"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|auto="ca"|;
+        &lig<\sh<{delef}>\ex<床>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    上の文の {deliv} を自動詞として用いた文である。
+    シャレイア語は能格言語ではなく対格言語なので、自動詞の主語と他動詞の主語がともに {a} で標示され、他動詞の相手は別の助詞である {li} で標示される。
+  >
+
+>

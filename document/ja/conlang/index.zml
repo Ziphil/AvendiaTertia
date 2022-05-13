@@ -5,14 +5,13 @@
 \page<
 
   \pb<
-    \ab|href="grammar/"|<文法概略>
-    \ab|href="reference/"|<文法詳細>
     \ab|href="course/"|<入門資料>
+    \ab|href="reference/"|<文法詳細>
+    \ab|href="grammar/"|<文法概略>
     \ab|href="database/"|<データベース>
     \ab|href="culture/"|<文化>
-    \ab|href="work/"|<創作>
     \ab|href="translation/"|<翻訳>
-    \ab|href="theory/"|<シャレイア語論>
+    \ab|href="work/"|<創作>
     \ab|href="document/"|<資料>
     \ab|href="table/"|<一覧表>
   >

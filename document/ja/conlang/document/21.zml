@@ -1,0 +1,388 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<シャレイア語 1 日 1 例文>
+  \ver<S 代>
+
+  \h1<概要>
+  \p<
+    これは、「シャレイア語 1 日 1 例文」と称して Twitter で呟いたシャレイア語の例文をまとめたページである。
+    例文一覧は \ae|href="https://twitter.com/search?f=tweets&q=%23%E3%82%B7%E3%83%A3%E3%83%AC%E3%82%A4%E3%82%A2%E8%AA%9E1%E6%97%A51%E4%BE%8B%E6%96%87"|<Twitter 検索>でも見ることができる。
+  >
+  \p<
+    各例文に対し、シャレイア語の文とその日本語訳に加え、グロスと簡単な解説を付した。
+    また、例文中および解説中にあるシャレイア語の単語をクリックすると、オンライン辞典の該当項目に移動するようになっている。
+    グロスで使われる略号は、\a|href="../document/14.html"|<こちら>を参照すること。
+  >
+  \p<
+    各例文の見出しには、その例文を Twitter で呟いた日付と、隣に括弧書きでその例文が辞書のどの項目に載っているかを記載した。
+  >
+  \h1<目次>
+  \section-table;
+  \h1<例文>
+  \h2|id="qikov"|<\h<2567> ({qikov})>
+  \xl<
+    \li<
+      \sh<{pa medelat e qikov aquk? xílac olov a cadìq i cit se abig.}>\ja<あのパソコン壊れてるの? ずっと画面が青く光ってるけど。>
+      \gloss<
+        &lig|auto="pa"|;
+        &lig|conj="-at"|<\sh<{medel}>\ex<壊す>>
+        &lig|auto="e"|;
+        &lig<\sh<{qikov}>\ex<パソコン>>
+        &lig|conj="a-"|<\sh<{quk}>\ex<あの>>
+        &lig|punc="?"|;
+        &lig|conj="-ac"|<\sh<{xíl}>\ex<光る>>
+        &lig|conj="o-"|<\sh<{lov}>\ex<ずっと>>
+        &lig|auto="a"|;
+        &lig<\sh<{cadìq}>\ex<画面>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{cit}>\ex<それ>>
+        &lig<\sh<{se}>\ex<～の状態で>>
+        &lig|conj="a-"|<\sh<{big}>\ex<青い>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    「青く光る」の「青く」の部分は、動作中や動作後の状態を表す助詞である {se} を用いて表現する。
+    {se} の後ろには形容詞が置かれることが多い。
+    日本語のように「青い」を副詞として使うと、青さを感じさせるような (ある種で共感覚的な) 様子で光ることを表してしまい、青い光を発することは意味しなくなってしまう。
+  >
+  \h2|id="tilirsitpiv"|<\h<2568> ({tílirsítpiv})>
+  \xl<
+    \li<
+      \sh<{kofides a tel vo naflat e tílirsítpiv. pa kodis e zel anissarac?}>\ja<公園で四つ葉のクローバーを見つけたんだ。何か良いことあるかな?>
+      \gloss<
+        &lig|conj="-es"|<\sh<{kofid}>\ex<見つける>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig<\sh<{vo}>\ex<～の場所で>>
+        &lig<\sh<{naflat}>\ex<公園>>
+        &lig|auto="e"|;
+        &lig<\sh<{tílirsítpiv}>\ex<四つ葉のクローバー>>
+        &lig|punc="."|;
+        &lig|auto="pa"|;
+        &lig|conj="-is"|<\sh<{kod}>\ex<起こす>>
+        &lig|auto="e"|;
+        &lig<\sh<{zel}>\ex<こと>>
+        &lig|conj="a-"|<\sh<{nissarac}>\ex<幸運な>>
+        &lig|punc="?"|;
+      >
+    >
+  >
+  \p<
+    {nissarac} は、「幸運で嬉しくさせる」という意味の感情動詞である {sarac} に、「～という感情を誘う」という意味の準飾詞 (接辞) の {nis+} が付けられてできた単語である。
+    {nis+} はあらゆる感情動詞に付けられるため、辞書に {nis+} の付いた形がわざわざ載せられていない場合があるので、注意すること。
+  >
+  \h2|id="kevcaq"|<\h<2570> ({kevcaq})>
+  \xl<
+    \li<
+      \sh<{kòdet ca kevcaq acik e “e agipik! befolat e kûv!”.}>\ja<その看板には「危険! 立入禁止!」と書かれていた。>
+      \gloss<
+        &lig|conj="-et"|<\sh<{kòd}>\ex<書く>>
+        &lig|auto="ca"|;
+        &lig<\sh<{kevcaq}>\ex<看板>>
+        &lig|conj="a-"|<\sh<{cik}>\ex<その>>
+        &lig|auto="e"|;
+        &lig|punc="“"|;
+        &lig|auto="e"|;
+        &lig|conj="a-"|<\sh<{gipik}>\ex<危険な>>
+        &lig|punc="!"|;
+        &lig|conj="-at"|<\sh<{befol}>\ex<禁止する>>
+        &lig|auto="e"|;
+        &lig<\sh<{kûv}>\ex<入ること>>
+        &lig|punc="!”."|;
+      >
+    >
+  >
+  \p<
+    「/S/ に /Z/ と書かれている」は、日本語と同じように「書く」を意味する {kòd} を用いて表現する。
+    英語のように「the sign says」のような表現はしない。
+  >
+  \p<
+    引用内の最初にある {e agipik} は遊離助詞句である。
+    「ここは危険である」という意味の {salat a fêd e agipik} という文が裏に想定されており、この文の {e agipik} のみが抽出された形である。
+    形容詞や名詞を単独で言いたいときに、しばしばこのような動詞のない助詞句のみの文が現れることがある。
+  >
+  \h2|id="nitdel"|<\h<2571> ({nitdel})>
+  \xl<
+    \li<
+      \sh<{nitdeles a tel e tédser, voltigat e a tific ivo fecil, ca met ayesaf.}>\ja<近所の子供に割られてしまった窓を新しいものに交換した。>
+      \gloss<
+        &lig|conj="-es"|<\sh<{nitdel}>\ex<交換する>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{tédser}>\ex<窓>>
+        &lig|punc=","|;
+        &lig|conj="-at"|<\sh<{voltig}>\ex<割る>>
+        &lig|auto="e"|;
+        &lig|auto="a"|;
+        &lig<\sh<{tific}>\ex<子供>>
+        &lig|conj="i-"|<\sh<{vo}>\ex<～の場所で>>
+        &lig<\sh<{fecil}>\ex<周り>>
+        &lig|punc=","|;
+        &lig|auto="ca"|;
+        &lig<\sh<{met}>\ex<それ>>
+        &lig|conj="a-"|<\sh<{yesaf}>\ex<新しい>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    日本語の「窓」に相当する単語は {serik} と {tédser} があり、{serik} は壁に開けられた穴の方を指し、{tédser} はその穴に取り付けられた窓枠や窓ガラスを指す。
+    割られるのは窓ガラスの方なので、文中では {tédser} の方が使われている。
+  >
+  \p<
+    {voltigat} から {fecil} までの節は、直前の {tédser} を修飾する限定節である。
+    両側をタデック (コンマ) で囲まれているので、被修飾語の {tédser} の指す範囲を限定するのではなく、{tédser} の補足説明をしているというニュアンスになっている。
+  >
+  \p<
+    {met} は、前に出てきた単語の代わりをし、同じ単語が繰り返されるのを防ぐ役割がある。
+    英語の代名詞の one とほぼ同じである。
+    この文では、{tédser} の代わりをしている。
+  >
+  \h2|id="kosiz"|<\h<2572> ({kosiz})>
+  \xl<
+    \li<
+      \sh<{okosiz evêk, kétes a ces ca hif izi dèt e qinat axodol ile yen atisoqek.}>\ja<丁寧すぎるほどに、彼は机の上に 1 億円する絵画を置いた。>
+      \gloss<
+        &lig|conj="o-"|<\sh<{kosiz}>\ex<丁寧に>>
+        &lig|conj="e-"|<\sh<{vêk}>\ex<あまりに>>
+        &lig|punc=","|;
+        &lig|conj="-es"|<\sh<{két}>\ex<置く>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="ca"|;
+        &lig<\sh<{hif}>\ex<上>>
+        &lig|conj="i-",auto="zi"|;
+        &lig<\sh<{dèt}>\ex<机>>
+        &lig|auto="e"|;
+        &lig<\sh<{qinat}>\ex<絵画>>
+        &lig|conj="a-"|<\sh<{xodol}>\ex<高価な>>
+        &lig|conj="i-"|<\sh<{le}>\ex<～の数量で>>
+        &lig<\sh<{yen}>\ex<円>>
+        &lig|conj="a-"|<\sh<{tisoqek}>\ex<1 億>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    文全体は、{okosiz evêk} という副詞句が文頭に倒置された形をしている。
+  >
+  \p<
+    「1 億円する絵画」は「1 億円分だけ高価な絵画」と考え、形容詞や副詞の程度を具体的な数で説明する役割をもつ {le} を用いて表現する。
+  >
+  \h2|id="kezis"|<\h<2575> ({kezis})>
+  \xl<
+    \li<
+      \sh<{vade xakalet te nîpes a tel zi kossax, kezisez a'l li litéz ca cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
+      \gloss<
+        &lig<\sh<{vade}>\ex<～なので>>
+        &lig|conj="-et"|<\sh<{xakal}>\ex<晴れる>>
+        &lig<\sh<{te}>\ex<～するとき>>
+        &lig|conj="-es"|<\sh<{nîp}>\ex<去る>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="zi"|;
+        &lig<\sh<{kossax}>\ex<学校>>
+        &lig|punc=","|;
+        &lig|conj="-ez"|<\sh<{kezis}>\ex<残る>>
+        &lig|auto="a"|;
+        &lig<\sh<{'l}>\ex<私>>
+        &lig|auto="li"|;
+        &lig<\sh<{litéz}>\ex<傘>>
+        &lig|auto="ca"|;
+        &lig<\sh<{cêd}>\ex<そこ>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    天候を表す動詞は、主語や目的語などは取らずに単独で用いる。
+    この文では、「晴れる」を意味する {xakal} が使われている。
+  >
+  \p<
+    「置き忘れる」の意味の「忘れる」を表現するには、{kezis} を用いることが多い。
+    日本語の「忘れる」に最も近い単語は {pâm} だが、これは「覚えていたことを思い出せなくなる」の意味なので、ここでは不適切である。
+  >
+  \h2|id="ficav"|<\h<2575> ({ficav})>
+  \xl<
+    \li<
+      \sh<{dulesos e'n ficavas okôk a vas ca zis vade dibemas a ces ca ces.}>\ja<謝ったからといって必ず許してもらえるわけではない。>
+      \gloss<
+        &lig|conj="du-os"|<\sh<{les}>\ex<する>>
+        &lig|auto="e"|;
+        &lig|auto="'n"|;
+        &lig|conj="-as"|<\sh<{ficav}>\ex<許す>>
+        &lig|conj="o-"|<\sh<{kôk}>\ex<必ず>>
+        &lig|auto="a"|;
+        &lig<\sh<{vas}>\ex<人>>
+        &lig|auto="ca"|;
+        &lig<\sh<{zis}>\ex<ある人>>
+        &lig<\sh<{vade}>\ex<～なので>>
+        &lig|conj="-as"|<\sh<{dibem}>\ex<謝る>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="ca"|;
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    {dules/os/ e kin} の後に節を続けることで、その節全体を否定する文を作ることができる。
+    この例では、「謝ったので許される」という内容全体が否定されて、「謝ったからといって許されるわけではない」という意味になっている。
+    単純に {ficav} を否定形にするだけでは、「謝ったので許されなかった」という別の意味になってしまうため、この形を使っている。
+  >
+  \p<
+    {vas} は一般論を表現したいときに使う代詞である。
+    英語で「総称の you」と呼ばれている you と同じような働きをもつ。
+  >
+  \h2|id="levkit"|<\h<2576> ({levkit})>
+  \xl<
+    \li<
+      \sh<{di'dukezisoz a'c li cikik ca fêd. di'dulesos e'n pelnetas a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
+      \gloss<
+        &lig<\sh<{di'}>>
+        &lig|conj="du-oz"|<\sh<{kezis}>\ex<残る>>
+        &lig|auto="a"|;
+        &lig<\sh<{'c}>\ex<あなた>>
+        &lig|auto="li"|;
+        &lig<\sh<{cikik}>\ex<持ち物>>
+        &lig|auto="ca"|;
+        &lig<\sh<{fêd}>\ex<ここ>>
+        &lig|punc="."|;
+        &lig<\sh<{di'}>>
+        &lig|conj="du-os"|<\sh<{les}>\ex<する>>
+        &lig|auto="e"|;
+        &lig|auto="'n"|;
+        &lig|conj="-as"|<\sh<{pelnet}>\ex<うろつく>>
+        &lig|auto="a"|;
+        &lig<\sh<{'c}>\ex<あなた>>
+        &lig<\sh<{te}>\ex<～のときに>>
+        &lig<\sh<{lôk}>\ex<時間>>
+        &lig|conj="a-"|<\sh<{vôl}>\ex<多い>>
+        &lig|conj="i-"|<\sh<{levo}>\ex<～の数量以上で>>
+        &lig<\sh<{meris}>\ex<分>>
+        &lig|conj="a-"|<\sh<{qecet}>\ex<20>>
+        &lig|punc="."|;
+        &lig|conj="du-os"|<\sh<{mafet}>\ex<触る>>
+        &lig|auto="a"|;
+        &lig<\sh<{'c}>\ex<あなた>>
+        &lig|auto="e"|;
+        &lig<\sh<{levkit}>\ex<ガラス>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    命令文を作るには、普通の文の前に {ditat} を置く。
+    文法的には、{ditat} は特殊な動詞 {dit} の現在時制継続相自動詞の形で、それを助動詞的に用いていることになるが、{ditat} で命令文のマーカーになっていると考えて良い。
+    {ditat} に続く文は通常の文でなければならないので、例えば命令対象である {loc} は省略できないことに注意。
+  >
+  \p<
+    命令内容が実際に行われるのは命令した時点より後なので、{ditat} に続く動詞は基本的に未来時制にすることが多い。
+    しかし、この文は案内板に書かれていることを想定しているため、常に禁止するという意味を込めて、{ditat} の後の動詞は全て通時時制になっている。
+  >
+  \p<
+    この文に含まれる 3 つの命令文全てにおいて、{ditat} は {di'} という縮約形として用いられている。
+    また、{di'} に続く命令内容を否定形にすることで、「～するな」という禁止を表している。
+  >
+  \p<
+    「20 分以上」にあるような「以上」を表現するには、数量を表す {le} にこの意味を加えた {levo} を用いる。
+    語法は {le} と全く同じである。
+  >
+  \p<
+    なお、元ネタは『Portal2』というゲームの案内板。
+  >
+  \h2|id="savak"|<\h<2578> ({sávak})>
+  \xl<
+    \li<
+      \sh<{salet a sávak i ces e aqonef ebam iti dudéxat a dus teku cal.}>\ja<彼の授業はとてもつまらなく、その間に寝ていない者はいなかった。>
+      \gloss<
+        &lig|conj="-et"|<\sh<{sal}>\ex<である>>
+        &lig|auto="a"|;
+        &lig<\sh<{sávak}>\ex<授業>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="e"|;
+        &lig|conj="a-"|<\sh<{qonef}>\ex<つまらない>>
+        &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
+        &lig|conj="i-"|<\sh<{ti}>\ex<～するほど>>
+        &lig|conj="du-at"|<\sh<{déx}>\ex<寝る>>
+        &lig|auto="a"|;
+        &lig<\sh<{dus}>\ex<誰も～ない>>
+        &lig<\sh<{teku}>\ex<～の間中>>
+        &lig<\sh<{cal}>\ex<そのこと>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    {aqonef ebam} という形容詞句を {iti} 節で修飾することで、つまらなさの度合いが寝ていない者がいないほどだったことを表現している。
+    {ti} は非動詞修飾形で用いられ、形容詞や副詞を修飾し、その程度がどのくらいなのかを説明する役割をもつ。 
+  >
+  \p<
+    {iti} 節の中身は、{dudéxat} と {dus} という否定語が 2 つ使われた二重否定の形になっており、肯定の意味を強調している。
+  >
+  \p<
+    文末の {cal} は {sávak} を受けている。
+    {sávak} は「授業」というモノを表す名詞なので、通常ならモノを表す {cit} で受けるが、今回は授業そのものではなく授業の内容を指すために、コトを表す {cal} で受けている。
+  >
+  \h2|id="xer"|<\h<2579> ({xer})>
+  \xl<
+    \li<
+      \sh<{loke xer, revet a tel e'n rekotat loke a'l ovel ifeli qel, pa kilat a'l vade pil te sot e'n etut pafikos a'l?}>\ja<あれだけ理解していると思っていた愛を、今は思い出すことしかできないのはどうしてだろう?>
+    >
+  >
+  \h2|id="becam"|<\h<2581> ({becam})>
+  \xl<
+    \li<
+      \sh<{vomoc becamos olof a ces vo zîd edif qetat vo a dat.}>\ja<彼女は何もないところでさえもよく転ぶ。>
+      \gloss<
+        &lig|conj="-oc"|<\sh<{vom}>\ex<繰り返す>>
+        &lig|conj="-os"|<\sh<{becam}>\ex<転ぶ>>
+        &lig|conj="o-"|<\sh<{lof}>\ex<よく>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig<\sh<{vo}>\ex<～の場所で>>
+        &lig<\sh<{zîd}>\ex<場所>>
+        &lig|conj="e-"|<\sh<{dif}>\ex<さえ>>
+        &lig|conj="-at"|<\sh<{qet}>\ex<ある>>
+        &lig<\sh<{vo}>\ex<～の場所で>>
+        &lig|auto="a"|;
+        &lig<\sh<{dat}>\ex<何も～ない>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    「よく転ぶ」というのは習慣を表すので、繰り返しを表す {vom} を用いている。
+    さらに、現在続いている瞬間というよりは、過去も未来も「よく転ぶ」ということを繰り返しそうというニュアンスを込めて、{vom} は通時時制になっている。
+  >
+  \h2|id="liqon"|<\h<2586> ({liqon})>
+  \xl<
+    \li<
+      \sh<{â, derexaf. savat liqonis a tel e litéz ca fay.}>\ja<あっ、雨が降ってきた。娘に傘を届けに行かないと。>
+      \gloss<
+        &lig<\sh<{â}>\ex<あっ>>
+        &lig|punc=","|;
+        &lig|conj="-af"|<\sh<{derex}>\ex<雨が降る>>
+        &lig|punc="."|;
+        &lig|conj="-at"|<\sh<{sav}>\ex<した方が良くする>>
+        &lig|conj="-is"|<\sh<{liqon}>\ex<持って行く>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig<\sh<{litéz}>\ex<傘>>
+        &lig|auto="ca"|;
+        &lig<\sh<{fay}>\ex<娘>>
+        &lig|punc="."|;
+      >
+    >
+  >
+
+>
