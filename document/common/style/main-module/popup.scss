@@ -16,6 +16,11 @@ $popup-arrow-size: 8rpx;
   background-color: $main-background-color;
   border: 1rpx $blue-color solid;
   position: relative;
+  z-index: 100;
+  &[aria-hidden="true"] {
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .popup-arrow {
@@ -33,6 +38,9 @@ $popup-arrow-size: 8rpx;
     visibility: visible;
     transform: rotate(45deg);
     content: "";
+    [aria-hidden="true"] & {
+      visibility: hidden;
+    }
   }
   &::after {
     background: $main-background-color;

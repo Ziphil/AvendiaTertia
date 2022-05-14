@@ -24,6 +24,7 @@ export class Executor extends BaseExecutor {
 
   private dictionary?: Dictionary;
   private popper!: PopperInstance;
+  private popupElement!: HTMLDivElement;
   private contentElement!: HTMLDivElement;
 
   protected prepare(): void {
@@ -55,6 +56,7 @@ export class Executor extends BaseExecutor {
     let contentElement = document.createElement("div");
     let arrowElement = document.createElement("div");
     popupElement.classList.add("popup");
+    popupElement.setAttribute("aria-hidden", "true");
     contentElement.classList.add("popup-content");
     arrowElement.classList.add("popup-arrow");
     arrowElement.setAttribute("data-popper-arrow", "data-popper-arrow");
@@ -63,6 +65,7 @@ export class Executor extends BaseExecutor {
     this.popper = createPopper(document.documentElement, popupElement, {placement: "top", modifiers: [
       {name: "offset", options: {offset: [0, 5]}}
     ]});
+    this.popupElement = popupElement;
     this.contentElement = contentElement;
   }
 
@@ -79,6 +82,7 @@ export class Executor extends BaseExecutor {
           let parsedWord = parser.parse(word);
           let html = Executor.createWordHtml(parsedWord);
           if (html !== null) {
+            this.popupElement.setAttribute("aria-hidden", "false");
             this.contentElement.innerHTML = html;
             this.popper.state.elements.reference = element;
             this.popper.update();
@@ -86,6 +90,7 @@ export class Executor extends BaseExecutor {
         }
       });
       element.addEventListener("mouseleave", (event) => {
+        this.popupElement.setAttribute("aria-hidden", "true");
         this.popper.state.elements.reference = document.documentElement;
         this.popper.update();
       });
