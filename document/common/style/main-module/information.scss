@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../util/common.scss";
+@import "../main-module/variable.scss";
+
+
+.information {
+  --background-color: #{$main-background-color};
+  width: 100%;
+  max-width: 600rpx;
+  margin: 40rpx auto 0rpx auto;
+  padding: $main-vertical-padding 30rpx;
+  box-sizing: content-box;
+  background-color: $main-background-color;
+  overflow: hidden;
+  display: none;
+  @include smartphone {
+    width: 100%;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.information-explanation {
+  line-height: $line-height;
+  text-align: justify;  
+}
+
+.information-button-container {
+  margin-top: $block-vertical-margin + $additional-block-vertical-margin;
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+}

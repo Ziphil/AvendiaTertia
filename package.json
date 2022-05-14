@@ -21,6 +21,7 @@
       "sourceType": "module"
     },
     "rules": {
+      "@typescript-eslint/quotes": "off",
       "arrow-body-style": "off"
     }
   },
@@ -50,6 +51,7 @@
     "webpack-shell-plugin-next": "^2.2.2"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.5",
     "@typescript/lib-dom": "npm:@zenml/xmldom-type",
     "@zenml/xmldom": "^1.0.0",
     "@zenml/zenml": "^1.2.0",

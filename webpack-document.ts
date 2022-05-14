@@ -1,7 +1,8 @@
 //
 
 import {
-  Configuration
+  Configuration,
+  ProvidePlugin
 } from "webpack";
 
 
@@ -36,7 +37,10 @@ let config = {
       "buffer": require.resolve("buffer"),
       "asset": require.resolve("assert"),
     }
-  }
+  },
+  plugins: [
+    new ProvidePlugin({process: "process/browser"})
+  ]
 } as Configuration;
 
 export default config;
