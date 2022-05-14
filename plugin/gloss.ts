@@ -54,7 +54,7 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
             let index = prefixQuery.indexOf(code);
             if (index >= 0) {
               if (child.tagName === "sh") {
-                let prefixElement = builder.createElement("x", (self) => {
+                let prefixElement = builder.createElement("xn", (self) => {
                   builder.appendTextNode(self, prefix);
                 });
                 let prefixText = builder.createTextNode("-");
@@ -69,7 +69,7 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
             let index = suffixQuery.indexOf(code);
             if (index >= 0) {
               if (child.tagName === "sh") {
-                let suffixElement = builder.createElement("x", (self) => {
+                let suffixElement = builder.createElement("xn", (self) => {
                   builder.appendTextNode(self, prefix);
                 });
                 let suffixText = builder.createTextNode("-");
