@@ -52,7 +52,7 @@
   "dependencies": {
     "@typescript/lib-dom": "npm:@zenml/xmldom-type",
     "@zenml/xmldom": "^1.0.0",
-    "@zenml/zenml": "^1.1.0",
+    "@zenml/zenml": "^1.2.0",
     "@zenml/zotica": "^1.0.0",
     "basic-ftp": "^4.6.6",
     "chalk": "^4.1.2",
