@@ -64,7 +64,9 @@ export class AvendiaGenerator {
     ]);
     this.parser = this.createParser();
     this.transformer = this.createTransformer();
-    this.client = await this.createClient();
+    if (options.upload) {
+      this.client = await this.createClient();
+    }
     this.options = options;
     if (options.history) {
       await this.executeHistory();
@@ -75,7 +77,7 @@ export class AvendiaGenerator {
     } else {
       await this.executeNormal();
     }
-    this.client.close();
+    if (this.client) this.client.close();
   }
 
   private async executeNormal(): Promise<void> {
