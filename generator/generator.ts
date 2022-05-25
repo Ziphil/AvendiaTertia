@@ -44,8 +44,8 @@ export class AvendiaGenerator {
 
   private parser!: ZenmlParser;
   private transformer!: AvendiaTransformer;
-  private client!: CustomFtpClient;
-  private configs!: AvendiaConfigs;
+  private client?: CustomFtpClient;
+  private configs: AvendiaConfigs;
   private options!: any;
   private count: number;
 
@@ -62,12 +62,12 @@ export class AvendiaGenerator {
       {name: "watch", alias: "w", type: Boolean},
       {name: "service", alias: "s"}
     ]);
+    this.options = options;
     this.parser = this.createParser();
     this.transformer = this.createTransformer();
     if (options.upload) {
       this.client = await this.createClient();
     }
-    this.options = options;
     if (options.history) {
       await this.executeHistory();
     } else if (options.watch) {
@@ -77,7 +77,9 @@ export class AvendiaGenerator {
     } else {
       await this.executeNormal();
     }
-    if (this.client) this.client.close();
+    if (this.client) {
+      this.client.close();
+    }
   }
 
   private async executeNormal(): Promise<void> {
@@ -260,7 +262,7 @@ export class AvendiaGenerator {
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     let remotePathSpecs = this.getRemotePathSpecs(documentPath, documentLanguage);
     let promises = remotePathSpecs.map(async ([outputPath, remotePath]) => {
-      await this.client.uploadFrom(outputPath, remotePath);
+      await this.client!.uploadFrom(outputPath, remotePath);
     });
     await Promise.all(promises);
   }

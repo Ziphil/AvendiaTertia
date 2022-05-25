@@ -54,8 +54,8 @@
           "Once you download the dictionary data for the first time, you do not need to download it again."
         ]
       },
-      "enable": { "ja": "有効にする", "en": "Enable" },
-      "download": { "ja": "辞書をダウンロード", "en": "Download dictionary" }
+      "enable": {"ja": "有効にする", "en": "Enable"},
+      "download": {"ja": "辞書をダウンロード", "en": "Download data"}
     }
   },
   "math": {
