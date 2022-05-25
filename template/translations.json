@@ -40,6 +40,22 @@
     "error": {
       "index": {"ja": "エラー", "en": "Error"},
       "error": {"ja": "エラー", "en": "Error"}
+    },
+    "information": {
+      "notice": {
+        "ja": [
+          "このページでは、オンライン辞典ポップアップが利用できます。",
+          "辞書データをダウンロードした後で有効にすると、単語をホバーしたときにその意味がポップアップで表示されます。",
+          "辞書データは一度ダウンロードしていれば再度ダウンロードする必要はありません。"
+        ],
+        "en": [
+          "This page uses popups to the online dictionary.",
+          "By downloading the dictionary data and enabling the popups, you can hover over a word to see its definition.",
+          "Once you download the dictionary data for the first time, you do not need to download it again."
+        ]
+      },
+      "enable": { "ja": "有効にする", "en": "Enable" },
+      "download": { "ja": "辞書をダウンロード", "en": "Download dictionary" }
     }
   },
   "math": {
