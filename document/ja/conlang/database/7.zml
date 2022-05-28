@@ -14,8 +14,9 @@
   \h1<Vekos ファミリー>
   \img|src="../../file/font/1.png"|;
   \p<
-    標準的なサンセリフ体です。
-    3 種類のウェイトと 3 種類の字幅により 9 個のフォントと、縦線と横線のコントラストを強くした 2 個のフォントの、合計 11 個のフォントから成ります。
+    スタンダードなリッシュ体のフォントです。
+    本文フォントとして汎用的に利用できます。
+    合計で以下の 11 個のフォントファイルから成ります。
   >
   \ul|col="3"|<
     \li<Vekos Regular>
@@ -31,6 +32,9 @@
     \li<Vekos High Bold>
   >
   \p<
+    3 種類のウェイト (Regular, Bold, Thin) と 3 種類の字幅 (無印, Condensed, Expanded) の組み合わせでできる 9 個のフォントに加えて、縦線と横線のコントラストを強くした 2 個の特殊なバリアントが用意されています。
+  >
+  \p<
     アルファベットと数字および一部の記号が含まれます。
     シャレイア文字には大文字と小文字の区別がありませんが、便宜上大文字にも小文字と同じグリフが割り当てられています。
   >
@@ -40,8 +44,9 @@
   \h1<Gilit ファミリー>
   \img|src="../../file/font/2.png"|;
   \p<
-    三角形が特徴的な書体です。
-    合計で以下の 8 個のフォントから成ります。
+    三角形が特徴的なシフ体のフォントです。
+    ロゴなどの装飾向けにデザインされており、可読性はあまり高くありません。
+    合計で以下の 8 個のフォントファイルから成ります。
   >
   \ul|col="3"|<
     \li<Gilit Regular>
@@ -54,8 +59,8 @@
     \li<Gilit Sprawled Expanded Bold>
   >
   \p<
-    名前に「Triangle」が付くものは三角形部分が正三角形で、名前に「Expanded」が付くものは三角形部分の縦横比が 2 : 3 で、無印のものは三角形部分の縦横比が 1 : 1 になっています。
-    また、名前に「Sprawled」が付くものはディセンダーとアセンダーが長めになっています。
+    名前に Triangle を含むものは三角形部分が正三角形で、名前に Expanded を含むものは三角形部分の縦横比が 2 : 3 で、無印のものは三角形部分の縦横比が 1 : 1 になっています。
+    また、名前に Sprawled を含むものはディセンダーとアセンダーが長めになっています。
   >
   \p<
     現段階ではアルファベットと一部の記号のみが含まれます。
@@ -63,6 +68,48 @@
   >
   \form<
     \ae|href="https://drive.google.com/drive/folders/1DpKt_rYgn9EMHUWOXudrzR3DxhScxVJV?usp=sharing"|<ダウンロード>　(ver 2.0.0)
+  >
+  \h1<Kaleg ファミリー>
+  \img|src="../../file/font/4.png"|;
+  \p<
+    四角形が特徴的なカデグ体 (石書体) のフォントです。
+    合計で以下の 24 個のフォントファイルから成ります。
+  >
+  \ul|col="3"|<
+    \li<Kaleg Miter Regular>
+    \li<Kaleg Miter Bold>
+    \li<Kaleg Bevel Regular>
+    \li<Kaleg Bevel Bold>
+    \li<Kaleg Round Regular>
+    \li<Kaleg Round Bold>
+    \li<Kaleg Miter Beaked Regular>
+    \li<Kaleg Miter Beaked Bold>
+    \li<Kaleg Bevel Beaked Regular>
+    \li<Kaleg Bevel Beaked Bold>
+    \li<Kaleg Round Beaked Regular>
+    \li<Kaleg Round Beaked Bold>
+    \li<Kaleg Miter Expanded Regular>
+    \li<Kaleg Miter Expanded Bold>
+    \li<Kaleg Bevel Expanded Regular>
+    \li<Kaleg Bevel Expanded Bold>
+    \li<Kaleg Round Expanded Regular>
+    \li<Kaleg Round Expanded Bold>
+    \li<Kaleg Miter Beaked Expanded Regular>
+    \li<Kaleg Miter Beaked Expanded Bold>
+    \li<Kaleg Bevel Beaked Expanded Regular>
+    \li<Kaleg Bevel Beaked Expanded Bold>
+    \li<Kaleg Round Beaked Expanded Regular>
+    \li<Kaleg Round Beaked Expanded Bold>
+  >
+  \p<
+    2 種類のウェイト (Regular, Bold) と 2 種類の字幅 (無印, Expanded) と 3 種類の角の形状 (Miter, Bevel, Round) の組み合わせそれぞれに対し、線の先を曲げるか曲げないかが異なるバリアントが用意されています。
+  >
+  \p<
+    アルファベットと数字および一部の記号が含まれます。
+    シャレイア文字には大文字と小文字の区別がありませんが、便宜上大文字にも小文字と同じグリフが割り当てられています。
+  >
+  \form<
+    \ae|href="https://drive.google.com/drive/folders/1-Fq5iKrfu1Vi_I4-3QwtOHgBwjJBRrnW?usp=sharing"|<ダウンロード>　(ver 1.0.0)
   >
   \h1<Shaleian ファミリー>
   \img|src="../../file/font/3.png"|;
