@@ -50,6 +50,7 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
   for (let documentSpec of documentSpecs) {
     self.appendElement("h2", (self) => {
       self.addClassName("subsection");
+      self.setAttribute("data-section", "");
       self.setBlockType("bordered", "bordered");
       self.appendElement("div", (self) => {
         self.addClassName("subsection-inner");

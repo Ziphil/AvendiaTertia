@@ -14,6 +14,7 @@ manager.registerElementRule(["h1", "h2", "h3"], "page", (transformer, document, 
   self.appendElement(element.tagName, (self) => {
     let innerSelf = document.placeholder();
     self.addClassName(className);
+    self.setAttribute("data-section", "");
     self.setBlockType(blockType, blockType);
     if (element.hasAttribute("id")) {
       self.setAttribute("id", element.getAttribute("id"));
