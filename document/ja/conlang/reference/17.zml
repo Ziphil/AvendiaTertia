@@ -4,7 +4,7 @@
 
 \page<
   \name<連結辞>
-  \ver<S 代>
+  \ver<7 代>
 
   \h1|tag="sfh"|<連結辞>
   \p<
@@ -34,7 +34,7 @@
   \xl<
     \li<\sh<{cikekat a tel e dev o miv.}>\ja<私はペンと紙を持っている。>>
     \li<\sh<{pa qolkevat e talemcik abig é anám?}>\ja<青か緑のハンカチは売っていますか?>>
-    \li<\sh<{debat ò dojat e tel.}>\ja<私は疲れているしつらい。>>
+    \li<\sh<{debat ò dojat a tel.}>\ja<私は疲れているしつらい。>>
   >
   \p<
     連結辞は 3 つ以上の語句や節を繋ぐこともでき、そのとき連結辞は繋がれている語句や節の間の全てに置かれる。
@@ -138,8 +138,8 @@
     すなわち、節 [/S/], [/T/] に対し、{kin} 節の中で [/S/] と [/T/] を繋げた {kin}[ /S/ ]{o}[ /T/] という形は、2 つの名詞節 {kin} [/S/], {kin} [/T/] を {o} で繋げた {kin}[ /S/ ]{o kin}[ /T/] と同じ意味になる。
   >
   \xl<
-    \li<\sh<{qifat a vas vo fêd e kin yepelos a's o ritasos a's.}>\ja<ここでは歌ったり踊ったりすることができる。>>
-    \li<\sh<{qifat a vas vo fêd e kin yepelos a's o kin ritasos a's.}>\ja<ここでは歌うことと踊ることをすることができる。>>
+    \li<\sh<{qifat vo fêd e kin yepelos a vas o ritasos a ces.}>\ja<ここでは歌ったり踊ったりすることができる。>>
+    \li<\sh<{qifat vo fêd e kin yepelos a vas o kin ritasos a ces.}>\ja<ここでは歌うことと踊ることをすることができる。>>
   >
   \p<
     この 2 つの例文は同じ意味になり、最初の文は次の文の糖衣構文と見なすことができる。
@@ -150,7 +150,7 @@
     こちらの形は {kin} 節の中以外でも現れる。
   >
   \xl<
-    \li<\sh<{qifat a vas vo fêd e kin yepelos a's ò ritasos a's.}>\ja<ここでは歌って踊ることができる。>>
+    \li<\sh<{qifat vo fêd e kin yepelos a vas ò ritasos a ces.}>\ja<ここでは歌って踊ることができる。>>
   >
   \p<
     この例では、「歌う」と「踊る」という 2 つの節が {ò} で繋がれているので、その両方が成立する「歌っていてかつ踊っている」という 1 種類の行為が可能であることを表している。

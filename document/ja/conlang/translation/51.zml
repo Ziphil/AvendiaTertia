@@ -20,16 +20,16 @@
   \h2|id="aa"|<1-1>
   \xl<
     \li<
-      \sh<{e ʻalis, pôzac ovel ebam zi'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.}>
+      \sh<{a ʻalis, pôzac ovel ebam e'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.}>
       \ja<アリスは、お姉さんの近くで堤防の上に座ることにうんざりしていた上に、しなければならないことが何もなかった。>
       \gloss<
-        &lig|auto="e"|;
+        &lig|auto="a"|;
         &lig<\sh<{ʻalis}>\ex<アリス>>
         &lig|punc=","|;
-        &lig|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
+        &lig|conj="-ac"|<\sh<{pôz}>\ex<うんざりする>>
         &lig|conj="o-"|<\sh<{vel}>\ex<>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
-        &lig|auto="zi"|;
+        &lig|auto="e"|;
         &lig|auto="'n"|;
         &lig|conj="-at"|<\sh<{déq}>\ex<座る>>
         &lig|auto="a"|;
@@ -57,7 +57,7 @@
     >
   >
   \p<
-    {e ʻalis} の部分は、本来なら {ovel ebam} の直後に置かれるはずだが、{ʻalis} はこの物語の主人公なので、一番最初に主題として強調するために文頭に倒置されている。
+    {a ʻalis} の部分は、本来なら {ovel ebam} の直後に置かれるはずだが、{ʻalis} はこの物語の主人公なので、一番最初に主題として強調するために文頭に倒置されている。
     三人称視点の物語では、主人公を明示するためにこのように 1 文目の文頭に置かれることが多い。
   >
   \p<
@@ -155,7 +155,7 @@
   \h2|id="ba"|<2-1>
   \xl<
     \li<
-      \sh<{ce, soxas a ces qi soxot — duqifat lîgifas a's e cal, vade meberat o folnasat ovel ebam e's a zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.}>
+      \sh<{ce, soxas a ces qi soxot — duqifat lîgifas a's e cal, vade meberad o folnasad ovel ebam a's li zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.}>
       \ja<そして、彼女は頭の中で考えた――暑さが彼女をとても眠くさせぼーっとさせていたので、それに集中することはできなかった――立ち上がってヒナギクの輪を作るためにヒナギクを拾うことに価値があるのかどうかを。>
       \gloss<
         &lig<\sh<{ce}>\ex<そして>>
@@ -174,14 +174,14 @@
         &lig<\sh<{cal}>\ex<そのこと>>
         &lig|punc=","|;
         &lig<\sh<{vade}>\ex<～なので>>
-        &lig|conj="-at"|<\sh<{meber}>\ex<眠くする>>
+        &lig|conj="-ad"|<\sh<{meber}>\ex<眠くなる>>
         &lig<\sh<{o}>\ex<そして>>
-        &lig|conj="-at"|<\sh<{folnas}>\ex<ぼーっとさせる>>
+        &lig|conj="-ad"|<\sh<{folnas}>\ex<ぼーっとする>>
         &lig|conj="o-"|<\sh<{vel}>\ex<>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
-        &lig|auto="e"|;
-        &lig<\sh<{'s}>\ex<彼女>>
         &lig|auto="a"|;
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="li"|;
         &lig<\sh<{zalnat}>\ex<熱気>>
         &lig<\sh<{—}>>
         &lig|auto="e"|;

@@ -4,7 +4,7 @@
 
 \page<
   \name<縮約>
-  \ver<S 代>
+  \ver<7 代>
 
   \h1|tag="scl"|<縮約形>
   \p<
@@ -44,7 +44,7 @@
   >
   \xl<
     \li<\sh<{pafikak a tel e'n câses a'l te tazît e qâz i ces.}>\ja<昨日彼の父親に会ったことを思い出した。>>
-    \li<\sh<{revat a tel e'n bâges e ces a tel.}>\ja<彼を怒らせてしまったのは私だと思う。>>
+    \li<\sh<{revat a tel e'n bâgez a ces li tel.}>\ja<彼を怒らせてしまったのは私だと思う。>>
   >
   \p<
     最初の例文では、{kin} 節内では「彼の父親」というのが新情報で大事な部分であり、「私」はそれほど重要ではないため、{tel} が縮約されている。
@@ -93,7 +93,7 @@
     典型的な例としては、{kin} 節の「～すること」という出来事を表す意味合いが強く残る場合である。
   >
   \xl<
-    \li<\sh<{bâges e ces a kin bozetes e ces a refet i's.}>\ja<彼の友達に殴られて、彼は怒った。>>
+    \li<\sh<{bâgez a ces li kin bozetes e ces a refet i's.}>\ja<彼の友達に殴られて、彼は怒った。>>
   >
   \p<
     この例文に用いられている {bâg} は動詞として「怒らせる」の意味であり、{a} 句に {kin} 節をとって「～することが怒らせる」の意味になっている。

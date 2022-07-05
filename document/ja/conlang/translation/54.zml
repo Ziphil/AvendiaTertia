@@ -4,7 +4,7 @@
 
 \page<
   \name<『あさやけもゆうやけもないんだ』>
-  \ver<S 代>
+  \ver<7 代>
   \use-script|src="16.js"|;
 
   \h1<対訳>
@@ -14,7 +14,7 @@
     \li<\ja<ねんじゅう\lys;きょくやの\lys;このまちに>\sh<{te vis i vác, hikutot a jodogxav vo fêd,}>>
     \li<\ja<ひとりで\lys;きたんだ>\sh<{zêfat ca'k a'l te sot ekoz.}>>
     \li<\ja<すたれた\lys;じんじゃの\lys;とりい\lys;くぐる>\sh<{tiscelas a'l e dálik i kedxovas afovqot.}>>
-    \li<\ja<ひかりが\lys;ないのに\lys;めが\lys;くらむ>\sh<{digliqas e'l a zat voku jodog asôkal.}>>
+    \li<\ja<ひかりが\lys;ないのに\lys;めが\lys;くらむ>\sh<{digliqaz a'l li zat voku jodog asôkal.}>>
     \li<\ja<ふゆのうみへ\lys;おぼれそうで>\sh<{recakat a'l e kin bevderac opáv a'l,}>>
     \li<\ja<それが\lys;ここちよくて>\sh<{vo varis abisig fi rekic.}>>
     \li<\ja<さむいよる\lys;ながく\lys;つづく\lys;まちの>\sh<{vomac gizèlos e'l a beneg vo taqiv afik,}>>
@@ -29,8 +29,8 @@
     \li<\ja<うっそうと\lys;しています>\sh<{e teqiv agipik afik.}>>
     \li<\ja<こきょうは\lys;ひさしく\lys;なりますが>\sh<{ovip te saq, duqifat zifimis a'l okôk,}>>
     \li<\ja<もう\lys;もどれないのです>\sh<{ca lìdvalox nîpes zi a'l.}>>
-    \li<\ja<きずあとが\lys;うずく\lys;こごえてくる>\sh<{fôcas galnivas e gébit lo bikàgas e sôt.}>>
-    \li<\ja<ひかりが\lys;ないのに\lys;めが\lys;くらむ>\sh<{digliqas e'l a zat voku jodog asôkal.}>>
+    \li<\ja<きずあとが\lys;うずく\lys;こごえてくる>\sh<{fôcas galnivas a gébit lo bikàgas a sôt.}>>
+    \li<\ja<ひかりが\lys;ないのに\lys;めが\lys;くらむ>\sh<{digliqaz a'l li zat voku jodog asôkal.}>>
     \li<\ja<しものうみへ\lys;おぼれそうで>\sh<{recakat a'l e kin bevderac opáv a'l,}>>
     \li<\ja<それが\lys;ここちよくて>\sh<{vo varis atilbis fi rekic.}>>
     \li<\ja<さむいよる\lys;ながく\lys;つづく\lys;まちの>\sh<{vomac gizèlos e'l a beneg vo taqiv afik,}>>

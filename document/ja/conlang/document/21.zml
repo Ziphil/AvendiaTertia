@@ -4,7 +4,7 @@
 
 \page<
   \name<シャレイア語 1 日 1 例文>
-  \ver<S 代>
+  \ver<7 代>
 
   \h1<概要>
   \p<
@@ -73,7 +73,7 @@
     >
   >
   \p<
-    {nissarac} は、「幸運で嬉しくさせる」という意味の感情動詞である {sarac} に、「～という感情を誘う」という意味の準飾詞 (接辞) の {nis+} が付けられてできた単語である。
+    {nissarac} は、「幸運で嬉しくなる」という意味の感情動詞である {sarac} に、「～という感情を誘う」という意味の準飾詞 (接辞) の {nis+} が付けられてできた単語である。
     {nis+} はあらゆる感情動詞に付けられるため、辞書に {nis+} の付いた形がわざわざ載せられていない場合があるので、注意すること。
   >
   \h2|id="kevcaq"|<\h<2570> ({kevcaq})>
@@ -175,10 +175,10 @@
   \p<
     「1 億円する絵画」は「1 億円分だけ高価な絵画」と考え、形容詞や副詞の程度を具体的な数で説明する役割をもつ {le} を用いて表現する。
   >
-  \h2|id="kezis"|<\h<2575> ({kezis})>
+  \h2|id="paziq"|<\h<2575> ({pâziq})>
   \xl<
     \li<
-      \sh<{vade xakalet te nîpes a tel zi kossax, kezisez a'l li litéz ca cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
+      \sh<{vade xakalet te nîpes a tel zi kossax, pâziqes a'l e litéz zi cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
       \gloss<
         &lig<\sh<{vade}>\ex<～なので>>
         &lig|conj="-et"|<\sh<{xakal}>\ex<晴れる>>
@@ -189,12 +189,12 @@
         &lig|auto="zi"|;
         &lig<\sh<{kossax}>\ex<学校>>
         &lig|punc=","|;
-        &lig|conj="-ez"|<\sh<{kezis}>\ex<残る>>
+        &lig|conj="-es"|<\sh<{pâziq}>\ex<置き忘れる>>
         &lig|auto="a"|;
         &lig<\sh<{'l}>\ex<私>>
-        &lig|auto="li"|;
+        &lig|auto="e"|;
         &lig<\sh<{litéz}>\ex<傘>>
-        &lig|auto="ca"|;
+        &lig|auto="zi"|;
         &lig<\sh<{cêd}>\ex<そこ>>
         &lig|punc="."|;
       >
@@ -205,7 +205,7 @@
     この文では、「晴れる」を意味する {xakal} が使われている。
   >
   \p<
-    「置き忘れる」の意味の「忘れる」を表現するには、{kezis} を用いることが多い。
+    「置き忘れる」の意味の「忘れる」を表現するには、{pâziq} というまさにその意味の動詞があるので、これを用いる。
     日本語の「忘れる」に最も近い単語は {pâm} だが、これは「覚えていたことを思い出せなくなる」の意味なので、ここでは不適切である。
   >
   \h2|id="ficav"|<\h<2575> ({ficav})>
@@ -244,13 +244,13 @@
   \h2|id="levkit"|<\h<2576> ({levkit})>
   \xl<
     \li<
-      \sh<{di'dukezisoz a'c li cikik ca fêd. di'dulesos e'n pelnetas a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
+      \sh<{di'dukezisoz li'c a cikik ca fêd. di'dulesos e'n pelnetas a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
       \gloss<
         &lig<\sh<{di'}>>
         &lig|conj="du-oz"|<\sh<{kezis}>\ex<残る>>
-        &lig|auto="a"|;
-        &lig<\sh<{'c}>\ex<あなた>>
         &lig|auto="li"|;
+        &lig<\sh<{'c}>\ex<あなた>>
+        &lig|auto="a"|;
         &lig<\sh<{cikik}>\ex<持ち物>>
         &lig|auto="ca"|;
         &lig<\sh<{fêd}>\ex<ここ>>
@@ -280,7 +280,7 @@
   >
   \p<
     命令文を作るには、普通の文の前に {ditat} を置く。
-    文法的には、{ditat} は特殊な動詞 {dit} の現在時制継続相自動詞の形で、それを助動詞的に用いていることになるが、{ditat} で命令文のマーカーになっていると考えて良い。
+    文法的には、{ditat} は特殊な動詞 {dit} の現在時制継続相通常態の形で、それを助動詞的に用いていることになるが、{ditat} で命令文のマーカーになっていると考えて良い。
     {ditat} に続く文は通常の文でなければならないので、例えば命令対象である {loc} は省略できないことに注意。
   >
   \p<

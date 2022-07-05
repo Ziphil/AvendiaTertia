@@ -4,7 +4,7 @@
 
 \page<
   \name<{kin} 節>
-  \ver<S 代>
+  \ver<7 代>
 
   \h1|tag="svm"|<{kin} 節>
   \h2|tag="svy"|<構成>
@@ -30,7 +30,7 @@
     {kin} 節の内容全体を何らかの語で修飾したい場合は、その修飾語を {kin} の直後に置く。
   >
   \xl<
-    \li<\sh<{haros e tel a kin etut yepelos a'l.}>\ja<私の気分を良くするのは歌うことだけだ。>>
+    \li<\sh<{haroz a tel li kin etut yepelos a'l.}>\ja<私の気分を良くするのは歌うことだけだ。>>
   >
   \p<
     上の文では、{etut} を {kin} 節全体に修飾させて「歌うことだけ」という意味にするために、{etut} が {kin} の直後に置かれている。
