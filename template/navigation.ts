@@ -69,7 +69,8 @@ manager.registerElementRule("ver", "navigation", (transformer, document, element
   self.appendElement("div", (self) => {
     self.addClassName("navigation-version");
     let content = element.textContent;
-    if (content === "*" || content?.match(/(5\s*代\s*5\s*期|S\s*代|Version\s*5\.5|Version\s*S)/)) {
+    if (content === "*" || content?.match(/(7\s*代|Version\s*7)/)) {
+      transformer.variables.version = content;
       transformer.variables.latest = true;
     } else {
       self.setAttribute("data-caution", "");
