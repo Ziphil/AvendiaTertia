@@ -11,6 +11,7 @@ let manager = new ZenmlPluginManager();
 
 manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
   let self = builder.createDocumentFragment();
+  let version = attributes.get("ver") || "seven";
   let children = childrenArgs[0] ?? [];
   builder.appendElement(self, "li", (self) => {
     for (let child of children) {
@@ -18,7 +19,7 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
     }
     if (attributes.has("auto")) {
       let nameQuery = attributes.get("auto")!;
-      for (let [code, [name, kind]] of Object.entries(CONJUGATIONS.fixed)) {
+      for (let [code, [name, kind]] of Object.entries(CONJUGATIONS[version].fixed)) {
         if (nameQuery === code) {
           builder.appendElement(self, "sh", (self) => {
             builder.appendElement(self, "x", (self) => {
@@ -50,7 +51,7 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
           let [prefixQuery, suffixQuery] = conjugationQuery.split("-", 2);
           let prefixResults = [] as Array<Array<Node>>;
           let suffixResults = [] as Array<Array<Node>>;
-          for (let [code, [prefix, kind]] of Object.entries(CONJUGATIONS.prefix)) {
+          for (let [code, [prefix, kind]] of Object.entries(CONJUGATIONS[version].prefix)) {
             let index = prefixQuery.indexOf(code);
             if (index >= 0) {
               if (child.tagName === "sh") {
@@ -65,7 +66,7 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
               }
             }
           }
-          for (let [code, [prefix, kind]] of Object.entries(CONJUGATIONS.suffix)) {
+          for (let [code, [prefix, kind]] of Object.entries(CONJUGATIONS[version].suffix)) {
             let index = suffixQuery.indexOf(code);
             if (index >= 0) {
               if (child.tagName === "sh") {
