@@ -4,7 +4,7 @@
 
 \page<
   \name<グロスの凡例>
-  \ver<S 代>
+  \ver<7 代>
 
   \h1<動詞>
   \table<
@@ -13,14 +13,14 @@
     \tr<\td<過>\td<PST>\td<過去時制>>
     \tr<\td<未>\td<FUT>\td<未来時制>>
     \tr<\td<通>\td<DCH>\td<通時時制>>
-    \tr<\td<開>\td<INCP>\td<開始相>>
-    \tr<\td<経>\td<PROG>\td<経過相>>
-    \tr<\td<完>\td<PERF>\td<完了相>>
-    \tr<\td<継>\td<CONT>\td<継続相>>
-    \tr<\td<終>\td<TERM>\td<終了相>>
-    \tr<\td<無>\td<INDF>\td<無相>>
-    \tr<\td<自>\td<INTR>\td<自動>>
-    \tr<\td<他>\td<TR>\td<他動>>
+    \tr<\td<開>\td<INC, INCP>\td<開始相>>
+    \tr<\td<経>\td<PRG, PROG>\td<経過相>>
+    \tr<\td<完>\td<PRF, PERF>\td<完了相>>
+    \tr<\td<継>\td<CNT, CONT>\td<継続相>>
+    \tr<\td<終>\td<TRM, TERM>\td<終了相>>
+    \tr<\td<無>\td<IDF, INDF>\td<無相>>
+    \tr<\td<通>\td<NOR>\td<通常態>>
+    \tr<\td<補>\td<AJT>\td<補助態>>
   >
   \h1<助詞>
   \table<
@@ -29,7 +29,7 @@
     \tr<\td<対>\td<ACC>\td<対格 ({e} 格)>>
     \tr<\td<与>\td<DAT>\td<与格 ({ca} 格)>>
     \tr<\td<奪>\td<ABL>\td<奪格 ({zi} 格)>>
-    \tr<\td<被>\td<PAT>\td<被格 ({li} 格)>>
+    \tr<\td<能>\td<ERG>\td<能格 ({li} 格)>>
   >
   \h1<その他>
   \table<
@@ -39,7 +39,7 @@
     \tr<\td<否>\td<NEG>\td<否定>>
     \tr<\td<非動修>\td<NVM>\td<非動詞修飾>>
     \tr<\td<疑>\td<INT>\td<疑問>>
-    \tr<\td<節>\td<COMP>\td<節化>>
+    \tr<\td<節>\td<CMP, COMP>\td<節化>>
   >
 
 >

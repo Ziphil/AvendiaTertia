@@ -4,7 +4,7 @@
 
 \page<
   \name<用語集>
-  \ver<S 代>
+  \ver<7 代>
   \use-math;
 
   \h1<目次>
@@ -325,19 +325,19 @@
     {zi} で表される格。
     動作の起点を表すことが多いが、例外も多い。
   >
-  \h2|id="patcs"|<被格\fl<patientive case>>
+  \h2|id="ergcs"|<能格\fl<ergative case>>
   \p<
     {li} で表される格。
-    動詞が補助態として使われているときにのみ用いられ、その動作を行うのを手助けする相手を表す。
+    動詞が補助態として使われているときにのみ用いられ、その動作を行うのを手助けしたものを表す。
   >
   \h1<態>
   \h2|id="norvc"|<通常態\fl<normal voice>>
   \p<
     動詞が本来もっている意味になる態。
   >
-  \h2|id="adjvc"|<補助態\fl<adjutive voice>>
+  \h2|id="ajtvc"|<補助態\fl<adjutative voice>>
   \p<
-    「通常態の意味の行為を他者が行うのを手助けする」という意味になる態。
+    「通常態の意味の行為を行うのを他者に手助けされる」という意味になる態。
   >
   \h2|id="intr"|<自動詞\fl<intransitive verb>>
   \p<
