@@ -165,7 +165,7 @@
         &lig|conj="-ez"|<\sh<{deliv}>\ex<落ちる>>
         &lig|auto="a"|;
         &lig<\sh<{tel}>\ex<私>>
-        &lig|auto="li"|;
+        &lig|ver="six",auto="li"|;
         &lig<\sh<{likok}>\ex<コップ>>
         &lig|auto="zi"|;
         &lig<\sh<{zeqil}>\ex<机>>
@@ -179,7 +179,7 @@
         &lig|conj="-ez"|<\sh<{nis}>\ex<なる>>
         &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼>>
-        &lig|auto="li"|;
+        &lig|ver="six",auto="li"|;
         &lig<\sh<{taqit}>\ex<壁>>
         &lig|conj="i-"|<\sh<∅>\ex<～の>>
         &lig<\sh<{sod}>\ex<家>>
