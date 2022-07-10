@@ -69,7 +69,7 @@ manager.registerElementRule("ver", "navigation", (transformer, document, element
   self.appendElement("div", (self) => {
     self.addClassName("navigation-version");
     let content = element.textContent;
-    if (content === "*" || content?.match(/(7\s*代|Version\s*7)/)) {
+    if (content === "*" || content?.match(/(7\s*代|Version\s*([0-9.]+–)?7)/)) {
       transformer.variables.version = content;
       transformer.variables.latest = true;
     } else {
