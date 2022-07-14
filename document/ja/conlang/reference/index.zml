@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## sxm まで使用
+  ## sjz まで使用
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<初めに>
@@ -59,6 +59,7 @@
   \hb<その他の表現>
   \pb<
     \ab|href="36.html"|<助接辞の特殊構文>
+    \ab|href="37.html"|<モノとコト>
     \ab|href="26.html"|<修辞的な表現>
     \ab|href="32.html"|<省略>
     \ab|href="29.html"|<縮約>
