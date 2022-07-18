@@ -12,10 +12,10 @@
     シャレイア語の時制は以下の 4 つである。
   >
   \ul<
-    \li<現在時制>
-    \li<過去時制>
-    \li<未来時制>
-    \li<通時時制>
+    \li<\rterm|key="げんざいじせい",id="present-tense"|<現在時制\fl<present tense>>>
+    \li<\rterm|key="かこじせい",id="past-tense"|<過去時制\fl<past tense>>>
+    \li<\rterm|key="みらいじせい",id="future-tense"|<未来時制\fl<future tense>>>
+    \li<\rterm|key="つうじじせい",id="diachronic-tense"|<通時時制\fl<diachronic tense>>>
   >
   \p<
     時制は動詞の活用によって示される。
@@ -23,7 +23,7 @@
   >
   \p<
     4 つある時制のうち通時時制を除く 3 つの時制は、次に示す図のようにモデル化することができる。
-    この図の直線を、便宜的に「時制直線」と呼ぶ。
+    この図の直線を、便宜的に「\rterm|key="じせいちょくせん",id="tense-line"|<時制直線\fl<tense line>>」と呼ぶ。
     直線の矢印の方向に時間が進んでいて、中央にある現在時制を基準として、それより時間的に前となる部分全体が過去時制となり、それより時間的に後になる部分全体が未来時制となる。
   >
   \img|src="../../file/figure/20.png"|;
@@ -99,12 +99,12 @@
     シャレイア語の相は以下の 6 つである。
   >
   \ul<
-    \li<開始相>
-    \li<経過相>
-    \li<完了相>
-    \li<継続相>
-    \li<終了相>
-    \li<無相>
+    \li<\rterm|key="かいしそう",id="inceptive-aspect"|<開始相\fl<inceptive aspect>>>
+    \li<\rterm|key="けいかそう",id="progressive-aspect"|<経過相\fl<progressive aspect>>>
+    \li<\rterm|key="かんりょうそう",id="perfect-aspect"|<完了相\fl<perfect aspect>>>
+    \li<\rterm|key="けいぞくそう",id="continuous-aspect"|<継続相\fl<continuous aspect>>>
+    \li<\rterm|key="しゅうりょうそう",id="terminative-aspect"|<終了相\fl<terminative aspect>>>
+    \li<\rterm|key="むそう",id="indefinite-aspect"|<無相\fl<indefinite aspect>>>
   >
   \p<
     相は動詞の活用によって示される。
@@ -112,13 +112,13 @@
   >
   \p<
     6 つある相のうち無相を除く 5 つの時制は、次に示す図のようにモデル化することができる。
-    この図の直線を、便宜的に「相直線」と呼ぶ。
+    この図の直線を、便宜的に「\rterm|key="そうちょくせん",id="aspect-line"|<相直線\fl<aspect line>>」と呼ぶ。
     直線の右方向に行為の段階が進んでいて、開始相と完了相と終了相の 3 つの点を基準として、その間に経過相と継続相が入る。
   >
   \img|src="../../file/figure/21.png"|;
   \p<
-    図が示す通り、開始相と完了相と終了相の 3 つの相は行為の局面の中のある 1 点を表すため、これらを総称して「瞬間相」と言うこともある。
-    また、経過相と継続相はそれらの間の長さのある一定期間を表すため、これらを総称して「期間相」と呼ぶこともある。
+    図が示す通り、開始相と完了相と終了相の 3 つの相は行為の局面の中のある 1 点を表すため、これらを総称して「\rterm|key="しゅんかんそう",id="puncutal-aspect"|<瞬間相\fl<puncutal aspect>>」と言うこともある。
+    また、経過相と継続相はそれらの間の長さのある一定期間を表すため、これらを総称して「\rterm|key="きかんそう",id="durative-aspect"|<期間相\fl<durative aspect>>」と呼ぶこともある。
   >
   \p<
    「座る」という動作を例にとると、各相が表す動作の局面は次のようになる。

@@ -8,7 +8,7 @@
 
   \h1|tag="szi",id="category"|<語彙的品詞と文法的品詞>
   \p<
-    シャレイア語には、「語彙的品詞」と「文法的品詞」という 2 種類の品詞がある。
+    シャレイア語には、「\rterm|key="ごいてきひんし",id="lexical-category"|<語彙的品詞\fl<lexical category>>」と「\rterm|key="ぶんぽうてきひんし",id="grammatical-category"|<文法的品詞\fl<grammatical category>>」という 2 種類の品詞がある。
     語彙的品詞は各単語にちょうど 1 つずつ割り当てられている品詞で、1 つの単語が複数の語彙的品詞をもつことはない。
     一方、文法的品詞は文中で使われている単語の使われ方に割り当てられている品詞である。
   >
@@ -16,7 +16,7 @@
     語彙的品詞は単語の分類なので、例えば「{tel} の語彙的品詞は～である」のように言及することができる。
     しかし、文法的品詞は単語単体の分類ではなく単語の使われ方の分類なので、文なしで「{tel} の文法的品詞は～である」と言及することはできず、「この文中に現れている {tel} の文法的品詞は～である」のように文の中で単語が使われていて初めて言及することができる。
     ただし、あたかも文法的品詞が単語の分類であるかのように「名詞 {tel} は」のように言うことがある。
-    このような言い回しは、文脈上その単語が使われている文が提示されている状況でのみ使われ、「その文で名詞として使われている {tel} は」の意味である。
+    このような言い回しは、その単語が何らかの文中で使われることが想定される場合でのみ使われ、「文中で名詞として使われている {tel} は」の意味である。
   >
   \h1|tag="sqr",id="lexical-category"|<語彙的品詞>
   \h2|tag="szu"|<概要>
@@ -25,16 +25,17 @@
     括弧内は別名である。
   >
   \ul|col="2"|<
-     \li<動詞型不定辞 (動辞)>
-     \li<名詞型不定辞 (名辞)>
-     \li<副詞型不定辞 (副辞)>
-     \li<助接辞>
-     \li<連結辞>
-     \li<間投辞>
-     \li<機能辞>
+     \li<\rterm|key="どうしがたふていじ",id="verbal-infinitive"|<動詞型不定辞\fl<verbal infinitive>>>
+     \li<\rterm|key="めいしがたふていじ",id="nominal-infinitive"|<名詞型不定辞\fl<nominal infinitive>>>
+     \li<\rterm|key="ふくしがたふていじ",id="adverbial-infinitive"|<副詞型不定辞\fl<adverbial infinitive>>>
+     \li<\rterm|key="じょせつじ",id="particle"|<助接辞\fl<particle>>>
+     \li<\rterm|key="れんけつじ",id="connective"|<連結辞\fl<connective>>>
+     \li<\rterm|key="かんとうじ",id="interjection"|<間投辞\fl<interjection>>>
+     \li<\rterm|key="きのうじ",id="functional"|<機能辞\fl<functional>>>
   >
+  ## TODO: 別名についてはどこかにまとめる
   \p<
-    動詞型不定辞と名詞型不定辞と副詞型不定辞を総称して「不定辞」と呼ぶ。
+    動詞型不定辞と名詞型不定辞と副詞型不定辞を総称して「\rterm|key="ふていじ",id="infinitive"|<不定辞\fl<infinitive>>」と呼ぶ。
   >
   \h2|tag="sqn"|<動詞型不定辞>
   \p<
@@ -53,12 +54,12 @@
     助接辞は機能語の一種であり、名詞の格を表したり、複文における 2 つの節の意味的な関係性を表したりする。
   >
   \p<
-    助接辞は、語幹部分だけで用いることができるかどうかに応じて、「一般助接辞」と「特殊助接辞」の 2 種類に分けられる。
+    助接辞は、語幹部分だけで用いることができるかどうかに応じて、「\rterm|key="いっぱんじょせつじ",id="normal particle"|<一般助接辞\fl<normal particle>>」と「\rterm|key="とくしゅじょせつじ",id="special particle"|<特殊助接辞\fl<special particle>>」の 2 種類に分けられる。
     一般助接辞は語幹部分だけで用いることができるが、特殊助接辞は原則として語幹部分だけでは用いられず常に活用接頭辞を伴って用いられる。
     助接辞の活用については \rref|ref="sdf"|; を参照。
   >
   \p<
-    {a}, {e}, {ca}, {zi}, {li} の 5 つの一般助接辞は、特に「基本助接辞」と呼ばれる。
+    {a}, {e}, {ca}, {zi}, {li} の 5 つの一般助接辞は、特に「\rterm|key="きほんじょせつじ",id="basic particle"|<基本助接辞\fl<basic particle>>」と呼ばれる。
     基本助接辞は単独では意味が定まらず、その助接辞が作る助詞句が修飾する語によって意味が決められる。
     例えば {zi} は、「囲む」の意味の {kucit} とともに用いられれば囲むのに使うものを表すが、「遠ざかる」の意味の {qon} とともに用いられると遠ざかる基準点を表す。
   >
@@ -84,20 +85,20 @@
     文法的品詞は以下の 10 種類がある。
   >
   \ul|col="2"|<
-    \li<動詞>
-    \li<名詞>
-    \li<形容詞>
-    \li<動詞修飾副詞>
-    \li<修飾詞修飾副詞>
-    \li<特殊副詞>
-    \li<助詞>
-    \li<接続詞>
-    \li<間投詞>
-    \li<機能詞>
+    \li<\rterm|key="どうし",id="verb"|<動詞\fl<verb>>>
+    \li<\rterm|key="めいし",id="noun"|<名詞\fl<noun>>>
+    \li<\rterm|key="けいようし",id="adjective"|<形容詞\fl<adjective>>>
+    \li<\rterm|key="どうししゅうしょくふくし",id="verb-modifying-adverb"|<動詞修飾副詞\fl<verb-modifying adverb>>>
+    \li<\rterm|key="しゅうしょくししゅうしょくふくし",id="modificative-modifying-adverb"|<修飾詞修飾副詞\fl<modificative-modifying adverb>>>
+    \li<\rterm|key="とくしゅふくし",id="special-adverb"|<特殊副詞\fl<special adverb>>>
+    \li<\rterm|key="じょし",id="preposition"|<助詞\fl<preposition>>>
+    \li<\rterm|key="せつぞくし",id="conjunction"|<接続詞\fl<conjunction>>>
+    \li<\rterm|key="かんとうし",id="interjection"|<間投詞\fl<interjection>>>
+    \li<\rterm|key="きのうし",id="functional"|<機能詞\fl<functional>>>
   >
   \p<
-    形容詞と動詞修飾副詞を総称して「修飾詞」と呼ぶ。
-    また、動詞修飾副詞と修飾詞修飾副詞と特殊副詞を総称して「副詞」と呼ぶ。
+    形容詞と動詞修飾副詞を総称して「\rterm|key="しゅうしょくし",id="modificative"|<修飾詞\fl<modificative>>」と呼ぶ。
+    また、動詞修飾副詞と修飾詞修飾副詞と特殊副詞を総称して「\rterm|key="ふくし",id="adverb"|<副詞\fl<adverb>>」と呼ぶ。
   >
   \p<
     機能詞は副詞の一種として分類されることがある。

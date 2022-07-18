@@ -54,10 +54,10 @@
     各動詞型不定辞は、この 4 つのパターンのうちどれか 1 つに分類され、2 つ以上のパターンがあり得るような動詞型不定辞は存在しない。
   >
   \ul<
-    \li<継続主格型 ･･･ 継続相 {a} 格>
-    \li<継続対格型 ･･･ 継続相 {e} 格>
-    \li<経過主格型 ･･･ 経過相 {a} 格>
-    \li<経過対格型 ･･･ 経過相 {e} 格>
+    \li<\rterm|key="けいぞくしゅかくがた",id="continuous-nominative"|<継続主格型\fl<continuous-nominative>> ･･･ 継続相 {a} 格>
+    \li<\rterm|key="けいぞくたいかくがた",id="continuous-accusative"|<継続対格型\fl<continuous-accusative>> ･･･ 継続相 {e} 格>
+    \li<\rterm|key="けいかしゅかくがた",id="progressive-nominative"|<経過主格型\fl<progressive-nominative>> ･･･ 経過相 {a} 格>
+    \li<\rterm|key="けいかたいかくがた",id="progressive-accusative"|<経過対格型\fl<progressive-accusative>> ･･･ 経過相 {e} 格>
   >
   \p<
     1 番目のパターンにはすでに例として挙げた {safey} などがあり、{zis safeyat a} と {zis asafey} はともに「優しい人」の意味になる。
@@ -73,12 +73,12 @@
     I 型がないのは歴史的な理由による。
   >
   \ul<
-    \li<II 型 ･･･ 形容詞としてコト名詞を修飾>
-    \li<II＋ 型 ･･･ II 型において形容詞がモノ名詞も修飾可能>
-    \li<III 型 ･･･ 副詞として動作の様子を説明>
-    \li<III＋ 型 ･･･ III 型において形容詞がコト名詞も修飾可能>
-    \li<IV 型 ･･･ 副詞として被修飾語に係る名詞の様子を説明>
-    \li<V 型 ･･･ 副詞として被修飾語に係る名詞の様子を説明>
+    \li<\rterm|key="にがた",id="of-type-two"|<II 型\fl<of type II>> ･･･ 形容詞としてコト名詞を修飾>
+    \li<\rterm|key="にぷらすがた",id="of-type-two-plus"|<II＋ 型\fl<of type II+>> ･･･ II 型において形容詞がモノ名詞も修飾可能>
+    \li<\rterm|key="さんがた",id="of-type-three"|<III 型\fl<of type III>> ･･･ 副詞として動作の様子を説明>
+    \li<\rterm|key="さんぷらすがた",id="of-type-three-plus"|<III＋ 型\fl<of type III+>> ･･･ III 型において形容詞がコト名詞も修飾可能>
+    \li<\rterm|key="よんがた",id="of-type-four"|<IV 型\fl<of type IV>> ･･･ 副詞として被修飾語に係る名詞の様子を説明>
+    \li<\rterm|key="ごがた",id="of-type-five"|<V 型\fl<of type V>> ･･･ 副詞として被修飾語に係る名詞の様子を説明>
   >
   \p<
     続くサブセクションで、これらそれぞれの意味の関係を具体的に説明する。

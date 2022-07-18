@@ -10,7 +10,7 @@ import {
 
 let manager = new AvendiaTemplateManager();
 
-manager.registerElementRule("rref", "page", (transformer, document, element, scope, args) => {
+manager.registerElementRule("rref", "page", (transformer, document, element) => {
   let self = document.createDocumentFragment();
   let referenceHrefs = getReferenceIndex(transformer).hrefs;
   let refTag = element.getAttribute("ref");
@@ -20,6 +20,16 @@ manager.registerElementRule("rref", "page", (transformer, document, element, sco
     self.addClassName("link");
     self.setAttribute("href", refHref);
     self.appendTextNode("@" + refTag.toUpperCase());
+  });
+  return self;
+});
+
+manager.registerElementRule("rterm", "page", (transformer, document, element) => {
+  let self = document.createDocumentFragment();
+  let id = element.getAttribute("id");
+  self.appendElement("span", (self) => {
+    self.setAttribute("id", id);
+    self.appendChild(transformer.apply());
   });
   return self;
 });

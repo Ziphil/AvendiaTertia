@@ -51,7 +51,7 @@
     >
   >
   \p<
-    ここで現れる二重母音は「旧発音」と呼ばれる発音変種であり、これらの単語でのみ使われる。
+    なお、ここで現れる二重母音は旧発音であり、これらの単語でのみ使われる。
     旧発音については \rref|ref="szp"|; を参照。
   >
   \p<
@@ -120,7 +120,7 @@
   \h1|tag="szf",id="pronunciation-variation"|<発音の変種>
   \h2|tag="szv",id="pronunciation-variation-light"|<軽発音と重発音>
   \p<
-    シャレイア語には「軽発音」と「重発音」と呼ばれる発音の変種があり、[c] と [q] の発音が異なる。
+    シャレイア語には「\rterm|key="けいはつおん",id="light-pronunciation"|<軽発音\fl<light pronunciation>>」と「\rterm|key="じゅうはつおん",id="heavy-pronunciation"|<重発音\fl<heavy pronunciation>>」と呼ばれる発音の変種があり、[c] と [q] の発音が異なる。
     それぞれの発音変種における音素は以下の通りである。
   >
   \table<
@@ -147,9 +147,9 @@
   >
   \h2|tag="szp",id="pronunciation-variation-present"|<現行発音と旧発音>
   \p<
-    シャレイア語には「旧発音」 と呼ばれる発音の変種がある。
-    これは、製作史上過去のシャレイア語 (5 代 4 期シャレイア語) で採用されていた発音であり、現在のシャレイア語には採用されていない。
-    旧発音に対して、現在正式な発音として採用されている発音を「現行発音」と呼ぶことがある。
+    シャレイア語には「\rterm|key="きゅうはつおん",id="old-pronunciation"|<旧発音\fl<old pronunciation>>」 と呼ばれる発音の変種がある。
+    これは、製作史における過去のシャレイア語 (5 代 4 期シャレイア語) で採用されていた発音であり、現在のシャレイア語には採用されていない。
+    旧発音に対して、現在正式な発音として採用されている発音を「\rterm|key="げんこうはつおん",id="present-pronunciation"|<現行発音\fl<present pronunciation>>」と呼ぶことがある。
   >
   \p<
     以下に現行発音と旧発音で発音が異なる文字の対応表を示す。

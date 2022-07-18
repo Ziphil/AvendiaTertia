@@ -35,22 +35,22 @@
   >
   \table<
     \tr<\th<転写>\th<名称>\th<和名称>\th<用途の概略>>
-    \tr<\td<[.]>\td<{dek}>\td<デック>\td<文の終わりを示す>>
-    \tr<\td<[!]>\td<{vadek}>\td<ヴァデック>\td<強調の意味を込めて文の終わりを示す>>
-    \tr<\td<[?]>\td<{padek}>\td<パデック>\td<疑問の意味を込めて文の終わりを示す>>
-    \tr<\td<[,]>\td<{tadek}>\td<タデック>\td<文の区切りを示す>>
-    \tr<\td<[—]>\td<{tadeklot}>\td<タデックロット>\td<挿入を示す>>
-    \tr<\td<[']>\td<{nôk}>\td<ノーク>\td<省略を表す>>
-    \tr<\td<[ʻ]>\td<{dikak}>\td<ディカック>\td<固有名詞であることを表す>>
-    \tr<\td<[-]>\td<{fêk}>\td<フェーク>\td<合成語を作る>>
-    \tr<\td<[+]>\td<{losek}>\td<ロセック>\td<準飾辞の接続方向を示す>>
-    \tr<\td<[:]>\td<{kaltak}>\td<カルタック>\td<データの区切りを示す>>
-    \tr<\td<[…]>\td<{fôhak}>\td<フォーハック>\td<静寂や余韻を表す>>
-    \tr<\td<[« »]>\td<{rakut}>\td<ラクット>\td<会話文であることを明示する>>
-    \tr<\td<[“ ”]>\td<{vakut}>\td<ヴァクット>\td<引用や強調であることを明示する>>
+    \tr<\td<[.]>\td<{dek}>\td<\rterm|key="でっく",id="dek"|<デック>>\td<文の終わりを示す>>
+    \tr<\td<[!]>\td<{vadek}>\td<\rterm|key="ゔぁでっく",id="vadek"|<ヴァデック>>\td<強調の意味を込めて文の終わりを示す>>
+    \tr<\td<[?]>\td<{padek}>\td<\rterm|key="ぱでっく",id="padek"|<パデック>>\td<疑問の意味を込めて文の終わりを示す>>
+    \tr<\td<[,]>\td<{tadek}>\td<\rterm|key="たでっく",id="tadek"|<タデック>>\td<文の区切りを示す>>
+    \tr<\td<[—]>\td<{tadeklot}>\td<\rterm|key="たでっくろっと",id="tadeklot"|<タデックロット>>\td<挿入を示す>>
+    \tr<\td<[']>\td<{nôk}>\td<\rterm|key="のーく",id="nok"|<ノーク>>\td<省略を表す>>
+    \tr<\td<[ʻ]>\td<{dikak}>\td<\rterm|key="でぃかっく",id="dikak"|<ディカック>>\td<固有名詞であることを表す>>
+    \tr<\td<[-]>\td<{fêk}>\td<\rterm|key="ふぇーく",id="fek"|<フェーク>>\td<合成語を作る>>
+    \tr<\td<[+]>\td<{losek}>\td<\rterm|key="ろせっく",id="loseek"|<ロセック>>\td<準飾辞の接続方向を示す>>
+    \tr<\td<[:]>\td<{kaltak}>\td<\rterm|key="かるたっく",id="kaltak"|<カルタック>>\td<データの区切りを示す>>
+    \tr<\td<[…]>\td<{fôhak}>\td<\rterm|key="ふぉおはっく",id="fohak"|<フォーハック>>\td<静寂や余韻を表す>>
+    \tr<\td<[« »]>\td<{rakut}>\td<\rterm|key="らくっと",id="rakut"|<ラクット>>\td<会話文であることを明示する>>
+    \tr<\td<[“ ”]>\td<{vakut}>\td<\rterm|key="ゔぁくっと",id="vakut"|<ヴァクット>>\td<引用や強調であることを明示する>>
   >
   \p<
-    デック, タデック, ヴァデックはまとめて「デック類」と呼ぶことがある。
+    デック, タデック, ヴァデックはまとめて「\rterm|key="でっくるい",id="deklike"|<デック類\fl<deklike>>」と呼ぶことがある。
   >
   \p<
     手書きにおいては、デック, タデック, ヴァデック, パデック, カルタックに含まれるベースライン上の丸を、左下に払ってコンマのように書くこともある。
