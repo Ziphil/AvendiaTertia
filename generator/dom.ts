@@ -4,10 +4,7 @@ import {
   BaseDocument,
   BaseDocumentFragment,
   BaseElement,
-  BaseElementOptions,
   BaseText,
-  BaseTextOptions,
-  NodeCallback,
   NodeLikeOf
 } from "@zenml/zenml";
 
@@ -15,8 +12,8 @@ import {
 export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
 
   public addClassName(className: string): void {
-    let currentClassName = this.attributes.get("class");
-    let nextClassName = (currentClassName) ? currentClassName + " " + className : className;
+    const currentClassName = this.attributes.get("class");
+    const nextClassName = (currentClassName) ? currentClassName + " " + className : className;
     this.attributes.set("class", nextClassName);
   }
 
@@ -36,7 +33,7 @@ export class AvendiaElement extends BaseElement<AvendiaDocument, AvendiaDocument
 export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocumentFragment, AvendiaElement, AvendiaText> {
 
   public createBreadcrumb(callback?: (self: AvendiaElement) => void): NodeLikeOf<AvendiaDocument> {
-    let self = this.createDocumentFragment();
+    const self = this.createDocumentFragment();
     self.appendElement("ul", (self) => {
       self.setAttribute("itemscope", "itemscope");
       self.setAttribute("itemtype", "https://schema.org/BreadcrumbList");
@@ -46,7 +43,7 @@ export class AvendiaDocument extends BaseDocument<AvendiaDocument, AvendiaDocume
   }
 
   public createBreadcrumbItem(level: number, callback?: (itemSelf: AvendiaElement, linkSelf: AvendiaElement, nameSelf: AvendiaElement) => void): NodeLikeOf<AvendiaDocument> {
-    let self = this.createDocumentFragment();
+    const self = this.createDocumentFragment();
     self.appendElement("li", (itemSelf) => {
       itemSelf.setAttribute("itemscope", "itemscope");
       itemSelf.setAttribute("itemprop", "itemListElement");
@@ -90,7 +87,7 @@ export class AvendiaDocumentFragment extends BaseDocumentFragment<AvendiaDocumen
 
   public insertHead<N extends AvendiaElement | AvendiaText>(child: N): N {
     let firstSpace = "";
-    for (let node of this.nodes) {
+    for (const node of this.nodes) {
       if (node instanceof BaseText) {
         let match;
         if ((match = node.content.match(/^\s*$/)) !== null) {

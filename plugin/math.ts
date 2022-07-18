@@ -9,12 +9,12 @@ import {
 } from "@zenml/zotica";
 
 
-let manager = new ZenmlPluginManager();
+const manager = new ZenmlPluginManager();
 
 manager.registerPlugin("m", new ZoticaZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
-  let self = builder.createDocumentFragment();
+  const self = builder.createDocumentFragment();
   builder.appendElement(self, "math-inline", (self) => {
-    for (let child of childrenArgs[0] ?? []) {
+    for (const child of childrenArgs[0] ?? []) {
       builder.appendChild(self, child);
     }
   });
@@ -22,12 +22,12 @@ manager.registerPlugin("m", new ZoticaZenmlPlugin((builder, tagName, marks, attr
 }));
 
 manager.registerPlugin("mb", new ZoticaZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
-  let self = builder.createDocumentFragment();
+  const self = builder.createDocumentFragment();
   builder.appendElement(self, "math-block", (self) => {
     if (attributes.has("id")) {
       self.setAttribute("id", attributes.get("id")!);
     }
-    for (let child of childrenArgs[0] ?? []) {
+    for (const child of childrenArgs[0] ?? []) {
       builder.appendChild(self, child);
     }
   });
@@ -35,9 +35,9 @@ manager.registerPlugin("mb", new ZoticaZenmlPlugin((builder, tagName, marks, att
 }));
 
 manager.registerPlugin("mark", new ZoticaZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
-  let self = builder.createDocumentFragment();
+  const self = builder.createDocumentFragment();
   builder.appendElement(self, "math-mark", (self) => {
-    for (let child of childrenArgs[0] ?? []) {
+    for (const child of childrenArgs[0] ?? []) {
       builder.appendChild(self, child);
     }
   });
@@ -45,7 +45,7 @@ manager.registerPlugin("mark", new ZoticaZenmlPlugin((builder, tagName, marks, a
 }));
 
 manager.registerPlugin("raw", new SimpleZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
-  let nodes = childrenArgs[0] ?? [];
+  const nodes = childrenArgs[0] ?? [];
   return nodes;
 }));
 

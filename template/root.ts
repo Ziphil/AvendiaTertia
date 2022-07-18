@@ -9,11 +9,11 @@ import {
 } from "../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 function getMainClassName(path: string, language: AvendiaOutputLanguage, transformer: AvendiaLightTransformer): string {
-  let splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
-  let depth = splitRelativePath.length - 1;
+  const splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
+  const depth = splitRelativePath.length - 1;
   if (depth >= 1 && depth <= 2 && path.match(/index\.zml$/)) {
     return "content-table-main";
   } else if (depth === 2 && path.match(/error/)) {
@@ -24,12 +24,12 @@ function getMainClassName(path: string, language: AvendiaOutputLanguage, transfo
 }
 
 manager.registerElementRule("page", "", (transformer, document, element) => {
-  let path = transformer.variables.path;
-  let language = transformer.variables.language;
-  let mainClassName = getMainClassName(path, language, transformer);
-  let navigationNode = document.createDocumentFragment();
-  let headerNode = document.createDocumentFragment();
-  let mainNode = document.createDocumentFragment();
+  const path = transformer.variables.path;
+  const language = transformer.variables.language;
+  const mainClassName = getMainClassName(path, language, transformer);
+  const navigationNode = document.createDocumentFragment();
+  const headerNode = document.createDocumentFragment();
+  const mainNode = document.createDocumentFragment();
   transformer.variables.foreignLanguage = (language === "ja") ? "en" : "ja";
   transformer.variables.mode = "page";
   navigationNode.appendChild(transformer.call("navigation", element));
@@ -46,8 +46,8 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
 });
 
 manager.registerElementRule("html", "", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let language = transformer.variables.language;
+  const self = document.createDocumentFragment();
+  const language = transformer.variables.language;
   transformer.variables.mode = "html";
   self.appendElement("html", (self) => {
     self.setAttribute("lang", language);
@@ -57,7 +57,7 @@ manager.registerElementRule("html", "", (transformer, document, element) => {
 });
 
 manager.registerElementFactory("analytics", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("script", (self) => {
     self.setAttribute("async", "async");
     self.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-TGGC8V3L3P");

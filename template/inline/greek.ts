@@ -7,11 +7,11 @@ import {
 
 const GREEK_DIACRITICS = new Map([["a", "´"], ["g", "`"], ["s", "᾿"], ["sa", "῎"], ["sg", "῍"], ["r", "῾"], ["ra", "῞"], ["rg", "῝"], ["i", "ι"]]);
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("gd", ["page", "page.section-table"], (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let diacriticType = element.getAttribute("d");
+  const self = document.createDocumentFragment();
+  const diacriticType = element.getAttribute("d");
   self.appendElement("span", (self) => {
     self.addClassName("greek");
     self.appendElement("span", (self) => {

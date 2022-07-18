@@ -5,10 +5,10 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("form", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("form");
     self.setBlockType("bordered", "bordered");
@@ -18,7 +18,7 @@ manager.registerElementRule("form", "page", (transformer, document, element) => 
 });
 
 manager.registerElementRule("form-table", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("table", (self) => {
     self.addClassName("form-table");
     self.setBlockType("bordered", "bordered");
@@ -28,7 +28,7 @@ manager.registerElementRule("form-table", "page", (transformer, document, elemen
 });
 
 manager.registerElementRule("tr", "page.form-table", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("tr", (self) => {
     self.appendChild(transformer.apply(element, "page.form-table.tr"));
   });
@@ -36,7 +36,7 @@ manager.registerElementRule("tr", "page.form-table", (transformer, document, ele
 });
 
 manager.registerElementRule("td", "page.form-table.tr", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("td", (self) => {
     self.appendChild(transformer.apply(element, "page"));
   });
@@ -44,7 +44,7 @@ manager.registerElementRule("td", "page.form-table.tr", (transformer, document, 
 });
 
 manager.registerElementRule("input", ["page", "page.form"], (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("input", (self) => {
     self.addClassName("form-input");
     self.setAttribute("type", "text");
@@ -63,7 +63,7 @@ manager.registerElementRule("input", ["page", "page.form"], (transformer, docume
 });
 
 manager.registerElementRule("button", ["page", "page.form"], (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("button", (self) => {
     if (element.hasAttribute("id")) {
       self.setAttribute("id", element.getAttribute("id"));
@@ -75,7 +75,7 @@ manager.registerElementRule("button", ["page", "page.form"], (transformer, docum
 });
 
 manager.registerElementRule(["a", "ae"], "page.form", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("a", (self) => {
     self.addClassName("form-button");
     if (element.hasAttribute("href")) {

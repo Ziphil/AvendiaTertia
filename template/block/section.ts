@@ -5,12 +5,12 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule(["h1", "h2", "h3"], "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let className = (element.tagName === "h1") ? "section" : (element.tagName === "h2") ? "subsection" : "subsubsection";
-  let blockType = (element.tagName !== "h3") ? "bordered" : "text";
+  const self = document.createDocumentFragment();
+  const className = (element.tagName === "h1") ? "section" : (element.tagName === "h2") ? "subsection" : "subsubsection";
+  const blockType = (element.tagName !== "h3") ? "bordered" : "text";
   self.appendElement(element.tagName, (self) => {
     let innerSelf = document.placeholder();
     self.addClassName(className);

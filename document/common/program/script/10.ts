@@ -30,8 +30,8 @@ export class Stone {
   }
 
   public opposite(): MayNull<Stone> {
-    let tilePosition = this.tilePosition;
-    let edgePosition = this.edgePosition;
+    const tilePosition = this.tilePosition;
+    const edgePosition = this.edgePosition;
     let nextTilePosition = null as MayNull<TilePosition>;
     let nextEdgePosition = null as MayNull<EdgePosition>;
     if (edgePosition === 0 || edgePosition === 1) {
@@ -56,7 +56,7 @@ export class Stone {
       }
     }
     if (nextTilePosition !== null && nextEdgePosition !== null) {
-      let nextStone = new Stone(this.number, nextTilePosition, nextEdgePosition);
+      const nextStone = new Stone(this.number, nextTilePosition, nextEdgePosition);
       return nextStone;
     } else {
       return null;
@@ -83,16 +83,16 @@ export class Tile {
   // このタイルに沿って与えられた石を動かしたときの、移動後の位置情報をもった石を返します。
   // 石のタイル位置を変化しません。
   public movedStone(stone: Stone): Stone {
-    let edgePosition = stone.edgePosition;
-    let nextEdgePosition = this.connections[edgePosition];
-    let nextStone = new Stone(stone.number, stone.tilePosition, nextEdgePosition);
+    const edgePosition = stone.edgePosition;
+    const nextEdgePosition = this.connections[edgePosition];
+    const nextStone = new Stone(stone.number, stone.tilePosition, nextEdgePosition);
     return nextStone;
   }
 
   public rotate(rotation: Rotation = 1): Tile {
     if (rotation > 0) {
-      let connections = this.connections;
-      let nextConnections = new Array<EdgePosition>(8);
+      const connections = this.connections;
+      const nextConnections = new Array<EdgePosition>(8);
       for (let i = 0 ; i < 8 ; i ++) {
         nextConnections[i] = (connections[(i + 6) % 8] + 2) % 8;
       }
@@ -117,8 +117,8 @@ export class Board {
   }
 
   public place(tile: Tile, tilePosition: TilePosition): Board {
-    let nextTiles = this.tiles.concat();
-    let nextBoard = new Board();
+    const nextTiles = this.tiles.concat();
+    const nextBoard = new Board();
     nextTiles[tilePosition] = tile;
     nextBoard.tiles = nextTiles;
     return nextBoard;
@@ -129,7 +129,7 @@ export class Board {
   }
 
   public isFacingStone(tilePosition: TilePosition, stones: Array<Stone>): boolean {
-    for (let stone of stones) {
+    for (const stone of stones) {
       if (stone.tilePosition === tilePosition) {
         return true;
       }
@@ -140,7 +140,7 @@ export class Board {
   // この盤面に従って与えられた石を動かしたときの、移動後の位置情報をもった石を返します。
   // 石が盤外に出てしまう場合は null を返します。
   public movedStone(stone: Stone): MayNull<Stone> {
-    let tiles = this.tiles;
+    const tiles = this.tiles;
     let nextStone = stone as MayNull<Stone>;
     let tile = undefined as MayUndefined<Tile>;
     while (nextStone && (tile = tiles[nextStone.tilePosition])) {
@@ -244,7 +244,7 @@ export class History {
   }
 
   public place(board: Board, stones: Array<Stone>, tile: MayNull<Tile> = null, tilePosition: MayNull<TilePosition> = null): void {
-    let entry = new HistoryEntry(board, stones, tile, tilePosition);
+    const entry = new HistoryEntry(board, stones, tile, tilePosition);
     this.undoEntries.push(this.currentEntry);
     this.redoEntries = [];
     this.currentEntry = entry;
@@ -252,7 +252,7 @@ export class History {
 
   public undo(): MayNull<HistoryEntry> {
     if (this.canUndo()) {
-      let entry = this.undoEntries.pop()!;
+      const entry = this.undoEntries.pop()!;
       this.redoEntries.push(this.currentEntry);
       this.currentEntry = entry;
       return entry;
@@ -263,7 +263,7 @@ export class History {
 
   public redo(): MayNull<HistoryEntry> {
     if (this.canRedo()) {
-      let entry = this.redoEntries.pop()!;
+      const entry = this.redoEntries.pop()!;
       this.undoEntries.push(this.currentEntry);
       this.currentEntry = entry;
       return entry;
@@ -304,10 +304,10 @@ export class RecordEntry {
   }
 
   public toString(short: boolean): string {
-    let row = ROW_SYMBOLS[Math.floor(this.tilePosition / 6)];
-    let column = COLUMN_SYMBOLS[this.tilePosition % 6];
-    let tileNumber = this.tile.number;
-    let rotation = ROTATION_SYMBOLS[this.tile.rotation % this.tile.symmetry];
+    const row = ROW_SYMBOLS[Math.floor(this.tilePosition / 6)];
+    const column = COLUMN_SYMBOLS[this.tilePosition % 6];
+    const tileNumber = this.tile.number;
+    const rotation = ROTATION_SYMBOLS[this.tile.rotation % this.tile.symmetry];
     let string = row + column + tileNumber + rotation;
     if (this.withdrawn) {
       string += "*";
@@ -315,8 +315,8 @@ export class RecordEntry {
     if (!short) {
       string = this.round + ": " + string;
       if (this.elapsedTime !== null) {
-        let minute = ("0" + Math.floor(this.elapsedTime / 60)).slice(-2);
-        let second = ("0" + (this.elapsedTime % 60)).slice(-2);
+        const minute = ("0" + Math.floor(this.elapsedTime / 60)).slice(-2);
+        const second = ("0" + (this.elapsedTime % 60)).slice(-2);
         string = string + " [" + minute + ":" + second + "]";
       }
     }
@@ -335,13 +335,13 @@ export class Record {
   }
 
   public place(tile: Tile, tilePosition: TilePosition, round: number, elapsedTime: MayNull<number>): void {
-    let entry = new RecordEntry(tile, tilePosition, round, elapsedTime);
+    const entry = new RecordEntry(tile, tilePosition, round, elapsedTime);
     this.entries.push(entry);
   }
 
   public undo(): void {
     for (let i = this.entries.length - 1 ; i >= 0 ; i --) {
-      let entry = this.entries[i];
+      const entry = this.entries[i];
       if (!entry.withdrawn) {
         entry.withdraw();
         break;
@@ -350,13 +350,13 @@ export class Record {
   }
 
   public toString(short: boolean): string {
-    let strings = [] as Array<string>;
-    for (let entry of this.entries) {
-      let entryString = entry.toString(short);
+    const strings = [] as Array<string>;
+    for (const entry of this.entries) {
+      const entryString = entry.toString(short);
       strings.push(entryString);
     }
-    let separator = (short) ? " " : "\n";
-    let string = strings.join(separator);
+    const separator = (short) ? " " : "\n";
+    const string = strings.join(separator);
     return string;
   }
 
@@ -392,29 +392,29 @@ export class Tsuro {
   }
 
   public start(): void {
-    let unusedTiles = TILES.concat();
+    const unusedTiles = TILES.concat();
     Tsuro.shuffle(unusedTiles);
     this.hands.push(...unusedTiles);
   }
 
   public load(string: string): void {
     let unusedTiles = TILES.concat();
-    let regexp = new RegExp(RECORD_REGEXP, "g");
+    const regexp = new RegExp(RECORD_REGEXP, "g");
     let match = null as MayNull<RegExpExecArray>;
     while ((match = regexp.exec(string)) !== null) {
       if (match[2] !== undefined) {
-        let row = ROW_SYMBOLS.indexOf(match[2]);
-        let column = COLUMN_SYMBOLS.indexOf(match[3]);
-        let tileNumber = parseInt(match[4]);
-        let rotation = ROTATION_SYMBOLS.indexOf(match[5]);
-        let withdrawn = !!match[6];
-        let elapsedTime = (match[7] !== undefined) ? parseInt(match[7]) * 60 + parseInt(match[8]) : null;
+        const row = ROW_SYMBOLS.indexOf(match[2]);
+        const column = COLUMN_SYMBOLS.indexOf(match[3]);
+        const tileNumber = parseInt(match[4]);
+        const rotation = ROTATION_SYMBOLS.indexOf(match[5]);
+        const withdrawn = !!match[6];
+        const elapsedTime = (match[7] !== undefined) ? parseInt(match[7]) * 60 + parseInt(match[8]) : null;
         if (!withdrawn) {
           if (row >= 0 && column >= 0 && tileNumber < TILES.length && rotation >= 0) {
-            let tile = TILES[tileNumber];
-            let tilePosition = row * 6 + column;
+            const tile = TILES[tileNumber];
+            const tilePosition = row * 6 + column;
             this.hands[this.round] = tile;
-            let result = this.place(rotation, tilePosition, elapsedTime);
+            const result = this.place(rotation, tilePosition, elapsedTime);
             if (result) {
               unusedTiles = unusedTiles.filter((unusedTile) => {
                 return unusedTile.number !== tileNumber;
@@ -427,8 +427,8 @@ export class Tsuro {
           }
         }
       } else {
-        let tileNumber = parseInt(match[10]);
-        let tile = TILES[tileNumber];
+        const tileNumber = parseInt(match[10]);
+        const tile = TILES[tileNumber];
         this.hands[this.round] = tile;
         unusedTiles = unusedTiles.filter((unusedTile) => {
           return unusedTile.number !== tileNumber;
@@ -440,9 +440,9 @@ export class Tsuro {
   }
 
   public place(rotation: Rotation, tilePosition: TilePosition, elapsedTime: MayNull<number> = null): boolean {
-    let result = this.check(rotation, tilePosition);
+    const result = this.check(rotation, tilePosition);
     if (result !== null) {
-      let tile = this.nextHand!.rotate(rotation);
+      const tile = this.nextHand!.rotate(rotation);
       this.board = result.board;
       this.stones = result.stones;
       this.round ++;
@@ -458,7 +458,7 @@ export class Tsuro {
   }
 
   public undo(): boolean {
-    let entry = this.history.undo();
+    const entry = this.history.undo();
     if (entry) {
       this.board = entry.board;
       this.stones = entry.stones;
@@ -471,7 +471,7 @@ export class Tsuro {
   }
 
   public redo(): boolean {
-    let entry = this.history.redo();
+    const entry = this.history.redo();
     if (entry) {
       this.board = entry.board;
       this.stones = entry.stones;
@@ -496,14 +496,14 @@ export class Tsuro {
   // その場所に石が面していなかったり石が盤外に出てしまうなどの理由で置けない場合は、null を返します。
   // また、全てのタイルを置き切っていて次のタイルがない場合も、null を返します。
   private check(rotation: Rotation, tilePosition: TilePosition): MayNull<{board: Board, stones: Array<Stone>}> {
-    let board = this.board;
+    const board = this.board;
     if (this.nextHand && board.isEmpty(tilePosition) && board.isFacingStone(tilePosition, this.stones)) {
-      let placedTile = this.nextHand.rotate(rotation);
-      let nextBoard = this.board.place(placedTile, tilePosition);
-      let nextStones = new Array(this.stones.length);
+      const placedTile = this.nextHand.rotate(rotation);
+      const nextBoard = this.board.place(placedTile, tilePosition);
+      const nextStones = new Array(this.stones.length);
       for (let i = 0 ; i < this.stones.length ; i ++) {
-        let stone = this.stones[i];
-        let nextStone = nextBoard.movedStone(stone);
+        const stone = this.stones[i];
+        const nextStone = nextBoard.movedStone(stone);
         if (nextStone !== null) {
           nextStones[i] = nextStone;
         } else {
@@ -517,9 +517,9 @@ export class Tsuro {
   }
 
   public placeableTilePositions(rotation: Rotation): Array<TilePosition> {
-    let tilePositions = [] as Array<TilePosition>;
+    const tilePositions = [] as Array<TilePosition>;
     for (let tilePosition = 0 ; tilePosition < 36 ; tilePosition ++) {
-      let result = this.check(rotation, tilePosition);
+      const result = this.check(rotation, tilePosition);
       if (result !== null) {
         tilePositions.push(tilePosition);
       }
@@ -538,8 +538,8 @@ export class Tsuro {
 
   private static shuffle<T>(array: Array<T>): void {
     for (let i = array.length - 1 ; i > 0 ; i --) {
-      let j = Math.floor(Math.random() * (i + 1));
-      let temporary = array[i];
+      const j = Math.floor(Math.random() * (i + 1));
+      const temporary = array[i];
       array[i] = array[j];
       array[j] = temporary;
     }
@@ -558,9 +558,9 @@ export class Tsuro {
   }
 
   public get elapsedTime(): MayNull<number> {
-    let beginDate = this.beginDate;
+    const beginDate = this.beginDate;
     if (beginDate) {
-      let endDate = this.finishDate || new Date();
+      const endDate = this.finishDate || new Date();
       let elapsedTime = Math.floor((endDate.getTime() - beginDate.getTime()) / 1000);
       if (elapsedTime > 3600) {
         elapsedTime = 3600;
@@ -589,7 +589,7 @@ export class Executor extends BaseExecutor {
 
   private start(force: boolean): void {
     if (!force) {
-      let result = confirm("新しいゲームを開始します。");
+      const result = confirm("新しいゲームを開始します。");
       if (!result) {
         return;
       }
@@ -602,12 +602,12 @@ export class Executor extends BaseExecutor {
 
   private load(force: boolean): void {
     if (!force) {
-      let result = confirm("棋譜を読み込みます。");
+      const result = confirm("棋譜を読み込みます。");
       if (!result) {
         return;
       }
     }
-    let string = query("#history").val() as string;
+    const string = query("#history").val() as string;
     try {
       this.tsuro = new Tsuro(string);
     } catch {
@@ -620,8 +620,8 @@ export class Executor extends BaseExecutor {
 
   private init(): void {
     let string = null;
-    let pairs = location.search.substring(1).split("&");
-    for (let pair of pairs) {
+    const pairs = location.search.substring(1).split("&");
+    for (const pair of pairs) {
       let match;
       if ((match = pair.match(/q=(.+)/)) !== null) {
         string = decodeURIComponent(match[1]);
@@ -648,11 +648,11 @@ export class Executor extends BaseExecutor {
   }
 
   private prepareTiles(): void {
-    let maskDiv = query("#mask");
+    const maskDiv = query("#mask");
     for (let i = 0 ; i < 36 ; i ++) {
-      let j = i;
-      let tileDiv = query("<div>");
-      let rowNumber = Math.floor(i / 6);
+      const j = i;
+      const tileDiv = query("<div>");
+      const rowNumber = Math.floor(i / 6);
       if ((rowNumber % 2 === 0 && i % 2 === 0) || (rowNumber % 2 === 1 && i % 2 === 1)) {
         tileDiv.attr("class", "tile alternative");
       } else {
@@ -680,10 +680,10 @@ export class Executor extends BaseExecutor {
   }
 
   private prepareRemainingHands(): void {
-    let remainingHandDiv = query("#remaining");
+    const remainingHandDiv = query("#remaining");
     for (let i = 0 ; i < 35 ; i ++) {
-      let tileDiv = query("<div>");
-      let rowNumber = Math.floor(i / 6);
+      const tileDiv = query("<div>");
+      const rowNumber = Math.floor(i / 6);
       if ((rowNumber % 2 === 0 && i % 2 === 0) || (rowNumber % 2 === 1 && i % 2 === 1)) {
         tileDiv.attr("class", "tile alternative");
       } else {
@@ -695,9 +695,9 @@ export class Executor extends BaseExecutor {
   }
 
   private prepareStones(): void {
-    let maskDiv = query("#mask");
+    const maskDiv = query("#mask");
     for (let i = 0 ; i < 8 ; i ++) {
-      let stoneDiv = query("<div>");
+      const stoneDiv = query("<div>");
       stoneDiv.attr("class", "stone");
       stoneDiv.attr("id", "stone-" + i);
       stoneDiv.css("background-image", "url(\"../../material/tsuro/" + (i + 37) + ".png\")");
@@ -706,7 +706,7 @@ export class Executor extends BaseExecutor {
   }
 
   private prepareNextHand(): void {
-    let tileDiv = query("#next-tile");
+    const tileDiv = query("#next-tile");
     tileDiv.on("mousedown", (event) => {
       this.rotate();
     });
@@ -717,9 +717,9 @@ export class Executor extends BaseExecutor {
 
   private prepareTimer(): void {
     setInterval(() => {
-      let elapsedTime = this.tsuro.elapsedTime;
-      let minute = (elapsedTime !== null) ? ("0" + Math.floor(elapsedTime / 60)).slice(-2) : "  ";
-      let second = (elapsedTime !== null) ? ("0" + (elapsedTime % 60)).slice(-2) : "  ";
+      const elapsedTime = this.tsuro.elapsedTime;
+      const minute = (elapsedTime !== null) ? ("0" + Math.floor(elapsedTime / 60)).slice(-2) : "  ";
+      const second = (elapsedTime !== null) ? ("0" + (elapsedTime % 60)).slice(-2) : "  ";
       if (query("#minute").text() !== minute) {
         query("#minute").text(minute);
       }
@@ -763,7 +763,7 @@ export class Executor extends BaseExecutor {
   }
 
   private place(tilePosition: TilePosition): void {
-    let result = this.tsuro.place(this.rotation, tilePosition);
+    const result = this.tsuro.place(this.rotation, tilePosition);
     if (result) {
       this.rotation = 0;
     }
@@ -781,7 +781,7 @@ export class Executor extends BaseExecutor {
   }
 
   private undo(): void {
-    let result = this.tsuro.undo();
+    const result = this.tsuro.undo();
     if (result) {
       this.rotation = 0;
     }
@@ -789,7 +789,7 @@ export class Executor extends BaseExecutor {
   }
 
   private redo(): void {
-    let result = this.tsuro.redo();
+    const result = this.tsuro.redo();
     if (result) {
       this.rotation = 0;
     }
@@ -811,13 +811,13 @@ export class Executor extends BaseExecutor {
   }
 
   private renderTiles(): void {
-    let tiles = this.tsuro.board.tiles;
+    const tiles = this.tsuro.board.tiles;
     for (let i = 0 ; i < tiles.length ; i ++) {
-      let tile = tiles[i];
-      let tileDiv = query("#board #tile-" + i);
+      const tile = tiles[i];
+      const tileDiv = query("#board #tile-" + i);
       tileDiv.empty();
       if (tile) {
-        let tileTextureDiv = query("<div>");
+        const tileTextureDiv = query("<div>");
         tileTextureDiv.attr("class", "background");
         tileTextureDiv.css("background-image", "url(\"../../material/tsuro/" + (tile.number + 1) + ".png\")");
         tileTextureDiv.css("transform", "rotate(" + (tile.rotation * 90) + "deg)");
@@ -827,15 +827,15 @@ export class Executor extends BaseExecutor {
   }
 
   private renderRemainingHands(): void {
-    let remainingHands = this.tsuro.remainingHands;
+    const remainingHands = this.tsuro.remainingHands;
     for (let i = 0 ; i < 35 ; i ++) {
-      let tileDiv = query("#remaining #tile-" + i);
+      const tileDiv = query("#remaining #tile-" + i);
       tileDiv.empty();
     }
     if (query("#show-remaining").is(":checked")) {
-      for (let tile of remainingHands) {
-        let tileDiv = query("#remaining #tile-" + tile.number);
-        let tileTextureDiv = query("<div>");
+      for (const tile of remainingHands) {
+        const tileDiv = query("#remaining #tile-" + tile.number);
+        const tileTextureDiv = query("<div>");
         tileTextureDiv.attr("class", "background");
         tileTextureDiv.css("background-image", "url(\"../../material/tsuro/" + (tile.number + 1) + ".png\")");
         tileTextureDiv.css("transform", "rotate(" + (tile.rotation * 90) + "deg)");
@@ -845,22 +845,22 @@ export class Executor extends BaseExecutor {
   }
 
   private renderStones(): void {
-    let stones = this.tsuro.stones;
-    for (let stone of stones) {
-      let top = Math.floor(stone.tilePosition / 6) * 100 + TOP_SHIFT[stone.edgePosition];
-      let left = (stone.tilePosition % 6) * 100 + LEFT_SHIFT[stone.edgePosition];
-      let stoneDiv = query("#stone-" + stone.number);
+    const stones = this.tsuro.stones;
+    for (const stone of stones) {
+      const top = Math.floor(stone.tilePosition / 6) * 100 + TOP_SHIFT[stone.edgePosition];
+      const left = (stone.tilePosition % 6) * 100 + LEFT_SHIFT[stone.edgePosition];
+      const stoneDiv = query("#stone-" + stone.number);
       stoneDiv.css("top", (top + 50) + "px");
       stoneDiv.css("left", (left + 50) + "px");
     }
   }
 
   private renderHoveredTile(): void {
-    let tile = this.tsuro.nextHand;
+    const tile = this.tsuro.nextHand;
     if (tile) {
-      let tilePosition = this.hoveredTilePosition;
-      let tileDiv = query("#board #tile-" + tilePosition);
-      let tileTextureDiv = query("<div>");
+      const tilePosition = this.hoveredTilePosition;
+      const tileDiv = query("#board #tile-" + tilePosition);
+      const tileTextureDiv = query("<div>");
       tileTextureDiv.attr("class", "background hover");
       tileTextureDiv.css("background-image", "url(\"../../material/tsuro/" + (tile.number + 1) + ".png\")");
       tileTextureDiv.css("transform", "rotate(" + (this.rotation * 90) + "deg)");
@@ -870,10 +870,10 @@ export class Executor extends BaseExecutor {
 
   private renderPlaceableTilePositions(): void {
     if (query("#show-suggest").is(":checked")) {
-      let tilePositions = this.tsuro.placeableTilePositions(this.rotation);
-      for (let tilePosition of tilePositions) {
-        let tileDiv = query("#board #tile-" + tilePosition);
-        let highlightDiv = query("<div>");
+      const tilePositions = this.tsuro.placeableTilePositions(this.rotation);
+      for (const tilePosition of tilePositions) {
+        const tileDiv = query("#board #tile-" + tilePosition);
+        const highlightDiv = query("<div>");
         highlightDiv.attr("class", "highlight");
         tileDiv.append(highlightDiv);
       }
@@ -887,10 +887,10 @@ export class Executor extends BaseExecutor {
 
   private renderInformation(): void {
     if (query("#show-information").is(":checked")) {
-      for (let entry of this.tsuro.record.entries) {
+      for (const entry of this.tsuro.record.entries) {
         if (!entry.withdrawn) {
-          let tileDiv = query("#board #tile-" + entry.tilePosition);
-          let tileInformationDiv = query("<div>");
+          const tileDiv = query("#board #tile-" + entry.tilePosition);
+          const tileInformationDiv = query("<div>");
           tileInformationDiv.attr("class", "information");
           tileInformationDiv.html(entry.round + ":<br>" + entry.toString(true));
           tileDiv.append(tileInformationDiv);
@@ -900,11 +900,11 @@ export class Executor extends BaseExecutor {
   }
 
   private renderNextHand(): void {
-    let tile = this.tsuro.nextHand;
-    let tileDiv = query("#next-tile");
+    const tile = this.tsuro.nextHand;
+    const tileDiv = query("#next-tile");
     tileDiv.empty();
     if (tile) {
-      let tileTextureDiv = query("<div>");
+      const tileTextureDiv = query("<div>");
       tileTextureDiv.attr("class", "background");
       tileTextureDiv.css("background-image", "url(\"../../material/tsuro/" + (tile.number + 1) + ".png\")");
       tileTextureDiv.css("transform", "rotate(" + (this.rotation * 90) + "deg)");
@@ -914,13 +914,13 @@ export class Executor extends BaseExecutor {
 
   private renderNextHandInformation(): void {
     if (query("#show-information").is(":checked")) {
-      let tile = this.tsuro.nextHand;
-      let tileDiv = query("#next-tile");
+      const tile = this.tsuro.nextHand;
+      const tileDiv = query("#next-tile");
       if (tile) {
-        let tileInformationDiv = query("<div>");
-        let tileNumber = tile.number;
-        let rotation = ROTATION_SYMBOLS[this.rotation % tile.symmetry];
-        let string = tileNumber + rotation;
+        const tileInformationDiv = query("<div>");
+        const tileNumber = tile.number;
+        const rotation = ROTATION_SYMBOLS[this.rotation % tile.symmetry];
+        const string = tileNumber + rotation;
         tileInformationDiv.attr("class", "information");
         tileInformationDiv.html(string);
         tileDiv.append(tileInformationDiv);
@@ -929,8 +929,8 @@ export class Executor extends BaseExecutor {
   }
 
   private renderRemainingHandSize(): void {
-    let remainingHandSize = this.tsuro.remainingHandSize;
-    let remainingHandSizeDiv = query("#remaining-size");
+    const remainingHandSize = this.tsuro.remainingHandSize;
+    const remainingHandSizeDiv = query("#remaining-size");
     remainingHandSizeDiv.text(remainingHandSize);
   }
 
@@ -952,12 +952,12 @@ export class Executor extends BaseExecutor {
   }
 
   private tweet(): void {
-    let string = this.tsuro.record.toString(false);
-    let elapsedTime = this.tsuro.elapsedTime!;
-    let minute = ("0" + Math.floor(elapsedTime / 60)).slice(-2);
-    let second = ("0" + (elapsedTime % 60)).slice(-2);
+    const string = this.tsuro.record.toString(false);
+    const elapsedTime = this.tsuro.elapsedTime!;
+    const minute = ("0" + Math.floor(elapsedTime / 60)).slice(-2);
+    const second = ("0" + (elapsedTime % 60)).slice(-2);
     let url = location.protocol + "//" + location.host + location.pathname;
-    let option = "width=" + TWITTER_WIDTH + ",height=" + TWITTER_HEIGHT + ",menubar=no,toolbar=no,scrollbars=no";
+    const option = "width=" + TWITTER_WIDTH + ",height=" + TWITTER_HEIGHT + ",menubar=no,toolbar=no,scrollbars=no";
     let href = "https://twitter.com/intent/tweet";
     url += "?q=" + encodeURIComponent(string);
     href += "?text=" + TWITTER_MESSAGE.replace(/%t/g, minute + ":" + second);

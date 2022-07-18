@@ -5,10 +5,10 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("el", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("dl", (self) => {
     self.addClassName("description-list");
     self.setBlockType("text", "text");
@@ -18,13 +18,13 @@ manager.registerElementRule("el", "page", (transformer, document, element) => {
 });
 
 manager.registerElementRule("li", "page.el", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendChild(transformer.apply(element, "page.el.li"));
   return self;
 });
 
 manager.registerElementRule("et", "page.el.li", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("dt", (self) => {
     self.addClassName("description-left");
     self.appendChild(transformer.apply(element, "page"));
@@ -33,7 +33,7 @@ manager.registerElementRule("et", "page.el.li", (transformer, document, element)
 });
 
 manager.registerElementRule("ed", "page.el.li", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("dd", (self) => {
     self.addClassName("description-right");
     self.appendChild(transformer.apply(element, "page"));

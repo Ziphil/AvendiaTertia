@@ -5,17 +5,17 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("table", "page", (transformer, document, element, scope, args) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("table", (self) => {
     self.addClassName("normal-table");
     self.appendChild(transformer.apply(element, "page.table"));
   });
   if (!args?.contained) {
-    let innerSelf = self;
-    let containerSelf = document.createDocumentFragment();
+    const innerSelf = self;
+    const containerSelf = document.createDocumentFragment();
     containerSelf.appendElement("figure", (self) => {
       self.addClassName("figure-container");
       self.setBlockType("bordered", "bordered");
@@ -28,7 +28,7 @@ manager.registerElementRule("table", "page", (transformer, document, element, sc
 });
 
 manager.registerElementRule("caption", "page.table", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("caption", (self) => {
     self.addClassName("normal-table-caption");
     self.appendChild(transformer.apply(element, "page"));
@@ -37,7 +37,7 @@ manager.registerElementRule("caption", "page.table", (transformer, document, ele
 });
 
 manager.registerElementRule("tr", "page.table", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("tr", (self) => {
     self.appendChild(transformer.apply(element, "page.table.tr"));
   });
@@ -45,7 +45,7 @@ manager.registerElementRule("tr", "page.table", (transformer, document, element)
 });
 
 manager.registerElementRule(["th", "td"], "page.table.tr", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     if (element.hasAttribute("row")) {
       self.setAttribute("rowspan", element.getAttribute("row"));

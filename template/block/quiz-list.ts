@@ -5,10 +5,10 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("ql", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("dl", (self) => {
     self.addClassName("quiz-list");
     self.setBlockType("bordered", "bordered");
@@ -18,27 +18,27 @@ manager.registerElementRule("ql", "page", (transformer, document, element) => {
 });
 
 manager.registerElementRule("li", "page.ql", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let answerElement = element.searchXpath("choice/li[@ans]")[0] as Element;
-  let answerNumber = (answerElement.searchXpath("preceding-sibling::li").length + 1).toString();
+  const self = document.createDocumentFragment();
+  const answerElement = element.searchXpath("choice/li[@ans]")[0] as Element;
+  const answerNumber = (answerElement.searchXpath("preceding-sibling::li").length + 1).toString();
   self.appendChild(transformer.apply(element, "page.ql.li"));
   self.appendChild(document.createElement("dd", (self) => {
     self.addClassName("quiz-nested-item quiz-answer-item");
     self.setAttribute("data-unmarked", "");
     self.appendElement("span", (self) => {
-      self.addClassName("quiz-masked")
+      self.addClassName("quiz-masked");
       self.appendElement("span", (self) => {
         self.addClassName("box");
         self.appendTextNode(answerNumber);
       });
-      self.appendChild(transformer.apply(answerElement, "page"));        
+      self.appendChild(transformer.apply(answerElement, "page"));
     });
   }));
   return self;
 });
 
 manager.registerElementRule("sh", "page.ql.li", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("dt", (self) => {
     self.addClassName("quiz-item");
     self.appendChild(transformer.apply(element, "page"));
@@ -47,7 +47,7 @@ manager.registerElementRule("sh", "page.ql.li", (transformer, document, element)
 });
 
 manager.registerElementRule("ja", "page.ql.li", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("dd", (self) => {
     self.addClassName("quiz-nested-item");
     self.appendChild(transformer.apply(element, "page"));
@@ -56,7 +56,7 @@ manager.registerElementRule("ja", "page.ql.li", (transformer, document, element)
 });
 
 manager.registerElementRule("blank", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("quiz-blank");
   });
@@ -64,7 +64,7 @@ manager.registerElementRule("blank", "page", (transformer, document, element) =>
 });
 
 manager.registerElementRule("choice", "page.ql.li", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("dd", (self) => {
     self.addClassName("quiz-nested-item");
     self.setAttribute("data-unmarked", "");
@@ -77,7 +77,7 @@ manager.registerElementRule("choice", "page.ql.li", (transformer, document, elem
 });
 
 manager.registerElementRule("li", "page.ql.li.choice", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("li", (self) => {
     self.addClassName("quiz-choice-item");
     self.appendChild(transformer.apply(element, "page"));

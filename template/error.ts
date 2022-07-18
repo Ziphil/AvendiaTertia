@@ -5,10 +5,10 @@ import {
 } from "../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("error", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("error");
     self.appendElement("div", (self) => {
@@ -31,7 +31,7 @@ manager.registerElementRule("error", "page", (transformer, document, element) =>
 });
 
 manager.registerElementRule("br", "page.error", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("br");
   return self;
 });

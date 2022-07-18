@@ -9,7 +9,7 @@ const INLINE_TAG_NAMES = ["x", "xn", "a"];
 const PARENT_TRIM_TAG_NAMES = ["li"];
 const PREVIOUS_SIBLING_TRIM_TAG_NAMES = ["label"];
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule(true, true, (transformer, document) => {
   return document.createDocumentFragment();
@@ -30,18 +30,18 @@ manager.registerTextRule(true, (transformer, document, text) => {
     content = content.replace(/(」|』|〉)\s+$/g, (match, paren) => paren);
   }
   if (text.parentNode !== null && text.parentNode.isElement()) {
-    let parent = text.parentNode;
+    const parent = text.parentNode;
     if (PARENT_TRIM_TAG_NAMES.includes(parent.tagName) && parent.firstChild === text) {
       content = content.trimStart();
     }
   }
   if (text.previousSibling !== null && text.previousSibling.isElement()) {
-    let previousSibling = text.previousSibling;
+    const previousSibling = text.previousSibling;
     if (PREVIOUS_SIBLING_TRIM_TAG_NAMES.includes(previousSibling.tagName)) {
       content = content.replace(/^\s+/g, "");
     }
   }
-  let self = document.createTextNode(content);
+  const self = document.createTextNode(content);
   return self;
 });
 

@@ -105,20 +105,20 @@ export class History {
   }
 
   public update(text: string, mode: HistoryMode): void {
-    let splitText = text.split(/\r\n|\r|\n/);
+    const splitText = text.split(/\r\n|\r|\n/);
     this.entries = [];
     this.mode = mode;
     for (let i = 0 ; i < splitText.length ; i ++) {
-      let line = splitText[i];
-      let match = line.match(/^\s*(\d+)\/(\d+)\/(\d+)\s*,\s*(\d+(?:\.\d+)?)\s*$/m);
+      const line = splitText[i];
+      const match = line.match(/^\s*(\d+)\/(\d+)\/(\d+)\s*,\s*(\d+(?:\.\d+)?)\s*$/m);
       if (match !== null) {
-        let year = parseInt(match[1]);
-        let month = parseInt(match[2]);
-        let day = parseInt(match[3]);
-        let score = parseFloat(match[4]);
-        let date = new Date(year, month - 1, day);
-        let trimedScore = Math.min(Math.max(score, OVERALL_MIN_RATING), OVERALL_MAX_RATING);
-        let entry = new HistoryEntry(date, trimedScore, i);
+        const year = parseInt(match[1]);
+        const month = parseInt(match[2]);
+        const day = parseInt(match[3]);
+        const score = parseFloat(match[4]);
+        const date = new Date(year, month - 1, day);
+        const trimedScore = Math.min(Math.max(score, OVERALL_MIN_RATING), OVERALL_MAX_RATING);
+        const entry = new HistoryEntry(date, trimedScore, i);
         this.entries.push(entry);
       }
     }
@@ -138,7 +138,7 @@ export class History {
   }
 
   private calculateRating(): void {
-    let entries = this.entries;
+    const entries = this.entries;
     for (let i = 0 ; i < entries.length ; i ++) {
       let num = 0;
       let denom = 0;
@@ -146,7 +146,7 @@ export class History {
         num += History.scaling(entries[j].score) * (RATING_WEIGHT ** (i - j));
         denom += RATING_WEIGHT ** (i - j);
       }
-      let rawRating = History.inverseScaling(num / denom);
+      const rawRating = History.inverseScaling(num / denom);
       let rating = rawRating - History.correction(i, rawRating);
       rating = Math.min(Math.max(rating, OVERALL_MIN_RATING), OVERALL_MAX_RATING);
       entries[i].rating = rating;
@@ -156,7 +156,7 @@ export class History {
   private calculateMinMaxRating(): void {
     let minRating = OVERALL_MAX_RATING;
     let maxRating = OVERALL_MIN_RATING;
-    for (let entry of this.entries) {
+    for (const entry of this.entries) {
       if (entry.rating > maxRating) {
         maxRating = entry.rating;
       }
@@ -171,7 +171,7 @@ export class History {
   private calculateMinMaxDate(): void {
     let minDate = OVERALL_MAX_DATE;
     let maxDate = OVERALL_MIN_DATE;
-    for (let entry of this.entries) {
+    for (const entry of this.entries) {
       if (entry.date > maxDate) {
         maxDate = entry.date;
       }
@@ -184,26 +184,26 @@ export class History {
   }
 
   private calculateCoordinates(): void {
-    let entries = this.entries;
+    const entries = this.entries;
     for (let i = 0 ; i < entries.length ; i ++) {
-      let rating = entries[i].rating;
+      const rating = entries[i].rating;
       entries[i].x = this.x(i);
       entries[i].y = this.y(rating);
     }
   }
 
   public x(index: number): number {
-    let entries = this.entries;
+    const entries = this.entries;
     if (this.mode === 0) {
-      let length = entries.length;
+      const length = entries.length;
       if (length > 1) {
         return (CHART_WIDTH - CHART_MARGIN * 2) / (length - 1) * index + CHART_MARGIN + CHART_OFFSET_LEFT;
       } else {
         return CHART_WIDTH / 2 + CHART_OFFSET_LEFT;
       }
     } else {
-      let length = Math.floor((this.maxDate.getTime() - this.minDate.getTime()) / (1000 * 60 * 60 * 24));
-      let elapsedDay = Math.floor((entries[index].date.getTime() - this.minDate.getTime()) / (1000 * 60 * 60 * 24));
+      const length = Math.floor((this.maxDate.getTime() - this.minDate.getTime()) / (1000 * 60 * 60 * 24));
+      const elapsedDay = Math.floor((entries[index].date.getTime() - this.minDate.getTime()) / (1000 * 60 * 60 * 24));
       if (length > 0) {
         return (CHART_WIDTH - CHART_MARGIN * 2) / length * elapsedDay + CHART_MARGIN + CHART_OFFSET_LEFT;
       } else {
@@ -239,9 +239,9 @@ export class History {
       num += CORRECTION_WEIGHT ** (i * 2);
       denom += CORRECTION_WEIGHT ** i;
     }
-    let current = Math.sqrt(num) / denom;
-    let max = (1 - CORRECTION_WEIGHT) / Math.sqrt(1 - CORRECTION_WEIGHT ** 2);
-    let correction = (current - max) / (1 - max) * Math.min(value * MAX_CORRECTION_RATE, MAX_CORRECTION);
+    const current = Math.sqrt(num) / denom;
+    const max = (1 - CORRECTION_WEIGHT) / Math.sqrt(1 - CORRECTION_WEIGHT ** 2);
+    const correction = (current - max) / (1 - max) * Math.min(value * MAX_CORRECTION_RATE, MAX_CORRECTION);
     return correction;
   }
 
@@ -271,8 +271,8 @@ export class ChartRenderer {
     this.particles = [];
     this.timerSet = false;
     this.context.canvas.addEventListener("mousemove", (event) => {
-      let target = event.target as HTMLElement;
-      let rect = target.getBoundingClientRect();
+      const target = event.target as HTMLElement;
+      const rect = target.getBoundingClientRect();
       this.mouse.x = event.clientX - rect.left;
       this.mouse.y = event.clientY - rect.top;
     });
@@ -307,12 +307,12 @@ export class ChartRenderer {
   }
 
   private clearCanvas(): void {
-    let context = this.context;
+    const context = this.context;
     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
   }
 
   private makeClipPath(): void {
-    let context = this.context;
+    const context = this.context;
     context.beginPath();
     context.arc(CHART_OFFSET_LEFT + CHART_BORDER_RADIUS, CHART_OFFSET_TOP + CHART_BORDER_RADIUS, CHART_BORDER_RADIUS, -Math.PI, -Math.PI / 2, false);
     context.arc(CHART_OFFSET_LEFT + CHART_WIDTH - CHART_BORDER_RADIUS, CHART_OFFSET_TOP + CHART_BORDER_RADIUS, CHART_BORDER_RADIUS, -Math.PI / 2, 0, false);
@@ -322,12 +322,12 @@ export class ChartRenderer {
   }
 
   private renderBackground(): void {
-    let context = this.context;
-    let history = this.history;
+    const context = this.context;
+    const history = this.history;
     for (let i = COLOR_SIZE - 1 ; i >= 0 ; i --) {
-      let y = (i < COLOR_SIZE - 1) ? history.y(COLOR_SPAN * (i + 1)) : CHART_OFFSET_TOP;
-      let height = (i < COLOR_SIZE - 1) ? history.y(COLOR_SPAN * i) - history.y(COLOR_SPAN * (i + 1)) + 20 : CHART_HEIGHT;
-      let gapWidth = CHART_GAP_WIDTH;
+      const y = (i < COLOR_SIZE - 1) ? history.y(COLOR_SPAN * (i + 1)) : CHART_OFFSET_TOP;
+      const height = (i < COLOR_SIZE - 1) ? history.y(COLOR_SPAN * i) - history.y(COLOR_SPAN * (i + 1)) + 20 : CHART_HEIGHT;
+      const gapWidth = CHART_GAP_WIDTH;
       context.fillStyle = ChartRenderer.getStyleValue(".background-" + i, "color")!;
       context.beginPath();
       context.rect(CHART_OFFSET_LEFT, Math.floor(y), CHART_WIDTH, height);
@@ -337,12 +337,12 @@ export class ChartRenderer {
   }
 
   private calculateNearestIndex(): void {
-    let entries = this.history.entries;
-    let currentDate = new Date();
+    const entries = this.history.entries;
+    const currentDate = new Date();
     let minDistance = null;
     let nearestIndex = null;
     for (let i = 0 ; i < entries.length ; i ++) {
-      let distance = (entries[i].x - this.mouse.x) ** 2 + (entries[i].y - this.mouse.y) ** 2;
+      const distance = (entries[i].x - this.mouse.x) ** 2 + (entries[i].y - this.mouse.y) ** 2;
       if (distance < POPUP_DISTANCE && (minDistance === null || distance < minDistance)) {
         minDistance = distance;
         nearestIndex = i;
@@ -358,8 +358,8 @@ export class ChartRenderer {
   }
 
   private renderLine(): void {
-    let context = this.context;
-    let entries = this.history.entries;
+    const context = this.context;
+    const entries = this.history.entries;
     for (let i = 1 ; i < entries.length ; i ++) {
       context.strokeStyle = ChartRenderer.getStyleValue(".chart-line", "color")!;
       context.lineWidth = CHART_LINE_WIDTH;
@@ -371,15 +371,15 @@ export class ChartRenderer {
   }
 
   private renderParticles(): void {
-    let context = this.context;
-    let entries = this.history.entries;
-    let currentDate = new Date();
-    for (let particle of this.particles) {
-      let entry = entries[particle.index];
-      let elapsedTime = currentDate.getTime() - particle.createdTime;
+    const context = this.context;
+    const entries = this.history.entries;
+    const currentDate = new Date();
+    for (const particle of this.particles) {
+      const entry = entries[particle.index];
+      const elapsedTime = currentDate.getTime() - particle.createdTime;
       if (elapsedTime < PARTICLE_LIFE) {
-        let radius = elapsedTime / PARTICLE_LIFE * (PARTICLE_MAX_RADIUS - LARGE_MARKER_SIZE) + LARGE_MARKER_SIZE;
-        let alpha = 1 - elapsedTime / PARTICLE_LIFE;
+        const radius = elapsedTime / PARTICLE_LIFE * (PARTICLE_MAX_RADIUS - LARGE_MARKER_SIZE) + LARGE_MARKER_SIZE;
+        const alpha = 1 - elapsedTime / PARTICLE_LIFE;
         context.strokeStyle = ChartRenderer.getStyleValue(".marker-" + History.colorIndex(entry.rating), "color")!;
         context.lineWidth = PARTICLE_LINE_WIDTH;
         context.globalAlpha = alpha;
@@ -395,13 +395,13 @@ export class ChartRenderer {
   }
 
   private renderMarker(): void {
-    let context = this.context;
-    let entries = this.history.entries;
+    const context = this.context;
+    const entries = this.history.entries;
     for (let j = 0 ; j < entries.length ; j ++) {
-      let i = (j < this.nearestIndex) ? j : (j < entries.length - 1) ? j + 1 : this.nearestIndex;
-      let rating = entries[i].rating;
-      let radius = (i === this.nearestIndex) ? LARGE_MARKER_SIZE : MARKER_SIZE;
-      let borderWidth = MARKER_BORDER_WIDTH;
+      const i = (j < this.nearestIndex) ? j : (j < entries.length - 1) ? j + 1 : this.nearestIndex;
+      const rating = entries[i].rating;
+      const radius = (i === this.nearestIndex) ? LARGE_MARKER_SIZE : MARKER_SIZE;
+      const borderWidth = MARKER_BORDER_WIDTH;
       context.fillStyle = ChartRenderer.getStyleValue(".chart-line", "color")!;
       context.beginPath();
       context.arc(entries[i].x, entries[i].y, radius + 1, 0, Math.PI * 2, false);
@@ -414,10 +414,10 @@ export class ChartRenderer {
   }
 
   private renderAxis(): void {
-    let context = this.context;
-    let history = this.history;
+    const context = this.context;
+    const history = this.history;
     for (let i = 0 ; i < COLOR_SIZE - 1 ; i ++) {
-      let y = history.y(COLOR_SPAN * (i + 1));
+      const y = history.y(COLOR_SPAN * (i + 1));
       if (y < CHART_OFFSET_TOP + CHART_HEIGHT && y > CHART_OFFSET_TOP) {
         context.font = ChartRenderer.getStyleValue(".chart-axis", "font")!;
         context.textAlign = "right";
@@ -429,10 +429,10 @@ export class ChartRenderer {
   }
 
   private renderRating(): void {
-    let context = this.context;
-    let entries = this.history.entries;
-    let index = this.nearestIndex;
-    let rating = entries[index].rating;
+    const context = this.context;
+    const entries = this.history.entries;
+    const index = this.nearestIndex;
+    const rating = entries[index].rating;
     context.font = ChartRenderer.getStyleValue(".chart-rating", "font")!;
     context.textAlign = "right";
     context.textBaseline = "alphabetic";
@@ -451,9 +451,9 @@ export class ChartRenderer {
   }
 
   public static getStyleValue(query: string, property: string): string | null {
-    let element = document.querySelector<HTMLElement>(query);
+    const element = document.querySelector<HTMLElement>(query);
     if (element !== null) {
-      let value = window.getComputedStyle(element).getPropertyValue(property);
+      const value = window.getComputedStyle(element).getPropertyValue(property);
       return value;
     } else {
       return null;
@@ -476,19 +476,19 @@ export class ElementFactory {
   }
 
   public create(): HTMLElement {
-    let entries = this.history.entries;
-    let table = document.createElement("table");
+    const entries = this.history.entries;
+    const table = document.createElement("table");
     for (let i = 0 ; i < entries.length ; i ++) {
-      let tr = document.createElement("tr");
-      let dateString = ElementFactory.createDateString(entries[i].date);
-      let scoreString = entries[i].score.toFixed(1);
-      let previousRating = (i > 0) ? entries[i - 1].rating : 0;
-      let rating = entries[i].rating;
-      let differenceSign = (rating - previousRating >= 0) ? "+ " : "− ";
-      let difference = Math.abs(rating - previousRating);
-      let previousRatingString = (i > 0) ? previousRating.toFixed(DIGIT_SIZE) : "";
-      let ratingString = rating.toFixed(DIGIT_SIZE);
-      let differenceString = differenceSign + difference.toFixed(DIGIT_SIZE);
+      const tr = document.createElement("tr");
+      const dateString = ElementFactory.createDateString(entries[i].date);
+      const scoreString = entries[i].score.toFixed(1);
+      const previousRating = (i > 0) ? entries[i - 1].rating : 0;
+      const rating = entries[i].rating;
+      const differenceSign = (rating - previousRating >= 0) ? "+ " : "− ";
+      const difference = Math.abs(rating - previousRating);
+      const previousRatingString = (i > 0) ? previousRating.toFixed(DIGIT_SIZE) : "";
+      const ratingString = rating.toFixed(DIGIT_SIZE);
+      const differenceString = differenceSign + difference.toFixed(DIGIT_SIZE);
       tr.appendChild(ElementFactory.createTd((i + 1).toString(), "number"));
       tr.appendChild(ElementFactory.createTd(dateString, "date"));
       tr.appendChild(ElementFactory.createTd(scoreString, "score"));
@@ -502,8 +502,8 @@ export class ElementFactory {
   }
 
   private static createTd(text: string, clazz: string, rating?: number): HTMLElement {
-    let td = document.createElement("td");
-    let properClass = (rating === undefined) ? clazz : clazz + " marker-" + History.colorIndex(rating);
+    const td = document.createElement("td");
+    const properClass = (rating === undefined) ? clazz : clazz + " marker-" + History.colorIndex(rating);
     td.setAttribute("class", properClass);
     td.textContent = text;
     return td;
@@ -537,8 +537,8 @@ export class Executor extends BaseExecutor {
 
   private getItem(keys: Array<string>): string | undefined {
     let value;
-    for (let key of keys) {
-      let candidate = localStorage.getItem(key);
+    for (const key of keys) {
+      const candidate = localStorage.getItem(key);
       if (candidate !== null && candidate !== undefined) {
         value = candidate;
         break;
@@ -554,10 +554,10 @@ export class Executor extends BaseExecutor {
   private getParameters(): Parameter {
     let input = this.getItem(["randomizer_input", "input"]);
     let number = null;
-    let modeString = this.getItem(["randomizer_mode", "mode"]);
+    const modeString = this.getItem(["randomizer_mode", "mode"]);
     let mode = (modeString !== undefined) ? parseInt(modeString) : null;
-    let pairs = location.search.substring(1).split("&");
-    for (let pair of pairs) {
+    const pairs = location.search.substring(1).split("&");
+    for (const pair of pairs) {
       let match = null as RegExpMatchArray | null;
       if ((match = pair.match(/input=(.+)/)) !== null) {
         input = decodeURIComponent(match[1]);
@@ -587,24 +587,24 @@ export class Executor extends BaseExecutor {
   }
 
   private prepareForms(): void {
-    let parameters = this.getParameters();
-    let outerThis = this;
-    let go = function (): void {
+    const parameters = this.getParameters();
+    const outerThis = this;
+    const go = function (): void {
       if (parameters.input !== undefined) {
         document.querySelector<HTMLInputElement>("#input")!.value = parameters.input;
       }
       if (parameters.mode !== null) {
-        let modeElements = document.querySelectorAll<HTMLInputElement>("input[name=\"mode\"]");
-        for (let element of modeElements) {
+        const modeElements = document.querySelectorAll<HTMLInputElement>("input[name=\"mode\"]");
+        for (const element of modeElements) {
           if (element.value === parameters.mode.toString()) {
             element.checked = true;
           }
         }
       }
       for (let i = 0 ; i < COLOR_SIZE ; i ++) {
-        let canvas = document.querySelector("#canvas")!;
-        let markerDiv = document.createElement("div");
-        let backgroundDiv = document.createElement("div");
+        const canvas = document.querySelector("#canvas")!;
+        const markerDiv = document.createElement("div");
+        const backgroundDiv = document.createElement("div");
         markerDiv.setAttribute("class", "marker-" + i);
         backgroundDiv.setAttribute("class", "background-" + i);
         canvas.append(markerDiv, backgroundDiv);
@@ -615,8 +615,8 @@ export class Executor extends BaseExecutor {
     };
     if (parameters.number !== null) {
       document.querySelector<HTMLInputElement>("#input")!.value = "Loading";
-      let request = new XMLHttpRequest();
-      let url = INTERFACE_URL + "?mode=get&number=" + parameters.number;
+      const request = new XMLHttpRequest();
+      const url = INTERFACE_URL + "?mode=get&number=" + parameters.number;
       request.open("GET", url, true);
       request.send(null);
       request.addEventListener("readystatechange", (event) => {
@@ -640,15 +640,15 @@ export class Executor extends BaseExecutor {
   }
 
   private reset(): void {
-    for (let element of document.querySelectorAll(".content .main .history")) {
+    for (const element of document.querySelectorAll(".content .main .history")) {
       element.remove();
     }
   }
 
   private start(): void {
-    let chartDiv = document.querySelector(".content .main .chart")!;
-    let historyDiv = document.createElement("div")!;
-    let table = this.factory.create();
+    const chartDiv = document.querySelector(".content .main .chart")!;
+    const historyDiv = document.createElement("div")!;
+    const table = this.factory.create();
     historyDiv.setAttribute("class", "history");
     historyDiv.appendChild(table);
     chartDiv.after(historyDiv);
@@ -656,9 +656,9 @@ export class Executor extends BaseExecutor {
   }
 
   private execute(first: boolean): void {
-    let input = document.querySelector<HTMLInputElement>("#input")!.value;
-    let modeString = document.querySelector<HTMLInputElement>("input[name=\"mode\"]:checked")!.value;
-    let mode = parseInt(modeString) as HistoryMode;
+    const input = document.querySelector<HTMLInputElement>("#input")!.value;
+    const modeString = document.querySelector<HTMLInputElement>("input[name=\"mode\"]:checked")!.value;
+    const mode = parseInt(modeString) as HistoryMode;
     this.history.update(input, mode);
     this.renderer.update(this.history);
     this.factory.update(this.history);
@@ -671,30 +671,30 @@ export class Executor extends BaseExecutor {
   }
 
   private tweet(): void {
-    let entries = this.history.entries;
+    const entries = this.history.entries;
     if (entries !== undefined && entries.length > 0) {
-      let input = document.querySelector<HTMLInputElement>("#input")!.value;
-      let rating = entries[entries.length - 1].rating;
-      let ratingString = rating.toFixed(DIGIT_SIZE);
-      let colorName = COLOR_NAMES[History.colorIndex(rating)];
-      let numberRequest = new XMLHttpRequest();
-      let numberUrl = INTERFACE_URL + "?mode=get_number";
+      const input = document.querySelector<HTMLInputElement>("#input")!.value;
+      const rating = entries[entries.length - 1].rating;
+      const ratingString = rating.toFixed(DIGIT_SIZE);
+      const colorName = COLOR_NAMES[History.colorIndex(rating)];
+      const numberRequest = new XMLHttpRequest();
+      const numberUrl = INTERFACE_URL + "?mode=get_number";
       numberRequest.open("GET", numberUrl, true);
       numberRequest.send(null);
       numberRequest.addEventListener("readystatechange", (event) => {
         if (numberRequest.readyState === 4 && numberRequest.status === 200) {
-          let number = numberRequest.responseText;
+          const number = numberRequest.responseText;
           let url = location.protocol + "//" + location.host + location.pathname;
-          let option = "width=" + TWITTER_WIDTH + ",height=" + TWITTER_HEIGHT + ",menubar=no,toolbar=no,scrollbars=no";
+          const option = "width=" + TWITTER_WIDTH + ",height=" + TWITTER_HEIGHT + ",menubar=no,toolbar=no,scrollbars=no";
           let href = "https://twitter.com/intent/tweet";
           url += "?number=" + encodeURIComponent(number);
           url += "&mode=" + this.history.mode;
           href += "?text=" + TWITTER_MESSAGE.replace(/%r/g, ratingString).replace(/%c/g, colorName);
           href += "&url=" + encodeURIComponent(url);
           href += "&hashtags=" + TWITTER_HASHTAG;
-          let twitterRequest = new XMLHttpRequest();
-          let twitterUrl = INTERFACE_URL;
-          let data = "mode=save&number=" + number + "&content=" + encodeURIComponent(input);
+          const twitterRequest = new XMLHttpRequest();
+          const twitterUrl = INTERFACE_URL;
+          const data = "mode=save&number=" + number + "&content=" + encodeURIComponent(input);
           twitterRequest.open("POST", twitterUrl);
           twitterRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
           twitterRequest.send(data);

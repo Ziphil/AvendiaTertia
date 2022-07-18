@@ -17,27 +17,27 @@ export function setNumber(transformer: AvendiaLightTransformer, element: Element
 }
 
 export function getNumber(transformer: AvendiaLightTransformer, element: Element, type: NumberRefType, clever: boolean, id: string): string {
-  let getNumberSpec = function (): [string, string | null, string | null] {
+  const getNumberSpec = function (): [string, string | null, string | null] {
     if (transformer.variables.numbers[type].has(id)) {
-      let number = transformer.variables.numbers[type].get(id)!.toString();
-      let namePrefix = transformer.variables.namePrefixes[type].get(id) ?? null;
-      let numberPrefix = transformer.variables.numberPrefix ?? null;
+      const number = transformer.variables.numbers[type].get(id)!.toString();
+      const namePrefix = transformer.variables.namePrefixes[type].get(id) ?? null;
+      const numberPrefix = transformer.variables.numberPrefix ?? null;
       return [number, namePrefix, numberPrefix];
     } else {
-      let targetElement = element.ownerDocument!.searchXpath(`//*[@id='${id}']`)[0];
+      const targetElement = element.ownerDocument!.searchXpath(`//*[@id='${id}']`)[0];
       if (typeof targetElement === "object" && targetElement.isElement()) {
         if (type === "theorem") {
-          let number = (targetElement.searchXpath("preceding::thm").length + 1).toString();
-          let namePrefix = createNamePrefix(transformer, targetElement, type);
-          let numberPrefix = transformer.variables.numberPrefix ?? null;
+          const number = (targetElement.searchXpath("preceding::thm").length + 1).toString();
+          const namePrefix = createNamePrefix(transformer, targetElement, type);
+          const numberPrefix = transformer.variables.numberPrefix ?? null;
           return [number, namePrefix, numberPrefix];
         } else if (type === "equation") {
-          let number = (targetElement.searchXpath("preceding::math-block[@id]").length + 1).toString();
-          let namePrefix = createNamePrefix(transformer, targetElement, type);
-          let numberPrefix = transformer.variables.numberPrefix ?? null;
+          const number = (targetElement.searchXpath("preceding::math-block[@id]").length + 1).toString();
+          const namePrefix = createNamePrefix(transformer, targetElement, type);
+          const numberPrefix = transformer.variables.numberPrefix ?? null;
           return [number, namePrefix, numberPrefix];
         } else if (type === "bibliography") {
-          let number = (targetElement.searchXpath("preceding-sibling::li").length + 1).toString();
+          const number = (targetElement.searchXpath("preceding-sibling::li").length + 1).toString();
           return [number, null, null];
         } else {
           return ["?", null, null];
@@ -47,7 +47,7 @@ export function getNumber(transformer: AvendiaLightTransformer, element: Element
       }
     }
   };
-  let [number, namePrefix, numberPrefix] = getNumberSpec();
+  const [number, namePrefix, numberPrefix] = getNumberSpec();
   let string = number;
   if (type === "theorem" && numberPrefix !== null) {
     string = numberPrefix + "." + string;
@@ -60,11 +60,11 @@ export function getNumber(transformer: AvendiaLightTransformer, element: Element
 
 function createNamePrefix(transformer: AvendiaLightTransformer, element: Element, type: NumberRefType): string | null {
   if (type === "theorem") {
-    let theoremType = element.getAttribute("type");
-    let prefix = TRANSLATIONS.math[theoremType]?.[transformer.variables.language] ?? null;
+    const theoremType = element.getAttribute("type");
+    const prefix = TRANSLATIONS.math[theoremType]?.[transformer.variables.language] ?? null;
     return prefix;
   } else if (type === "equation") {
-    let prefix = TRANSLATIONS.math.equation[transformer.variables.language] ?? null;
+    const prefix = TRANSLATIONS.math.equation[transformer.variables.language] ?? null;
     return prefix;
   } else {
     return null;
@@ -72,11 +72,11 @@ function createNamePrefix(transformer: AvendiaLightTransformer, element: Element
 }
 
 export function getReferenceIndex(transformer: AvendiaLightTransformer): ReferenceIndex {
-  let language = transformer.variables.language;
-  let index = transformer.environments.referenceIndexes.get(language);
+  const language = transformer.variables.language;
+  const index = transformer.environments.referenceIndexes.get(language);
   if (index === undefined) {
-    let indexPath = transformer.environments.configs.getReferenceIndexPath(language);
-    let index = JSON.parse(fs.readFileSync(indexPath, {encoding: "utf-8"}));
+    const indexPath = transformer.environments.configs.getReferenceIndexPath(language);
+    const index = JSON.parse(fs.readFileSync(indexPath, {encoding: "utf-8"}));
     transformer.environments.referenceIndexes.set(language, index);
     return index;
   } else {

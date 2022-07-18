@@ -5,10 +5,10 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("pdf", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("object", (self) => {
     self.addClassName("pdf");
     self.setBlockType("bordered", "bordered");
@@ -19,7 +19,7 @@ manager.registerElementRule("pdf", "page", (transformer, document, element) => {
 });
 
 manager.registerElementRule("slide", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("slide");
     self.setBlockType("bordered", "bordered");
@@ -35,7 +35,7 @@ manager.registerElementRule("slide", "page", (transformer, document, element) =>
 });
 
 manager.registerElementRule("youtube", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("youtube");
     self.setBlockType("bordered", "bordered");

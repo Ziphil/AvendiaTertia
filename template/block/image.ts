@@ -5,10 +5,10 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("img", "page", (transformer, document, element, scope, args) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("img", (self) => {
     self.addClassName("image");
     if (element.hasAttribute("src")) {
@@ -21,8 +21,8 @@ manager.registerElementRule("img", "page", (transformer, document, element, scop
     }
   });
   if (!args?.contained) {
-    let innerSelf = self;
-    let containerSelf = document.createDocumentFragment();
+    const innerSelf = self;
+    const containerSelf = document.createDocumentFragment();
     containerSelf.appendElement("figure", (self) => {
       self.addClassName("figure-container");
       self.setBlockType("bordered", "bordered");

@@ -10,18 +10,18 @@ import {
 } from "../util";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("math-inline", "page", (transformer, document, element, scope, args) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendChild(transformer.apply(element, "math-html"));
   return self;
 });
 
 manager.registerElementRule("math-block", "page", (transformer, document, element, scope, args) => {
-  let self = document.createDocumentFragment();
-  let markElement = element.searchXpath("math-root/math-mark")[0];
-  let id = element.getAttribute("id");
+  const self = document.createDocumentFragment();
+  const markElement = element.searchXpath("math-root/math-mark")[0];
+  const id = element.getAttribute("id");
   if (element.hasAttribute("id")) {
     setNumber(transformer, element, "equation", id);
   }
@@ -41,7 +41,7 @@ manager.registerElementRule("math-block", "page", (transformer, document, elemen
         self.appendTextNode(getNumber(transformer, element, "equation", false, id));
       });
     } else if (typeof markElement === "object" && markElement.isElement()) {
-      let castMarkElement = markElement;
+      const castMarkElement = markElement;
       self.appendElement("span", (self) => {
         self.addClassName("math-mark");
         self.appendChild(transformer.apply(castMarkElement, "math-html"));
@@ -52,12 +52,12 @@ manager.registerElementRule("math-block", "page", (transformer, document, elemen
 });
 
 manager.registerElementRule("ref", "page", (transformer, document, element, scope, args) => {
-  let self = document.createDocumentFragment();
-  let refId = element.getAttribute("ref");
-  let rawType = element.getAttribute("type");
-  let type = (rawType === "thm") ? "theorem" : (rawType === "eq") ? "equation" : "bibliography" as NumberRefType;
-  let noLink = element.hasAttribute("nolink") || rawType !== "thm";
-  let tagName = (noLink) ? "span" : "a";
+  const self = document.createDocumentFragment();
+  const refId = element.getAttribute("ref");
+  const rawType = element.getAttribute("type");
+  const type = (rawType === "thm") ? "theorem" : (rawType === "eq") ? "equation" : "bibliography" as NumberRefType;
+  const noLink = element.hasAttribute("nolink") || rawType !== "thm";
+  const tagName = (noLink) ? "span" : "a";
   self.appendElement(tagName, (self) => {
     self.addClassName("ref");
     if (!noLink) {
@@ -71,11 +71,11 @@ manager.registerElementRule("ref", "page", (transformer, document, element, scop
 });
 
 manager.registerElementRule(true, "math-html", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   if (element.tagName !== "math-mark") {
     self.appendElement(element.tagName, (self) => {
       for (let i = 0 ; i < element.attributes.length ; i ++) {
-        let {name, value} = element.attributes.item(i)!;
+        const {name, value} = element.attributes.item(i)!;
         self.setAttribute(name, value);
       }
       self.appendChild(transformer.apply());

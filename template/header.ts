@@ -5,12 +5,12 @@ import {
 } from "../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("use-script", "header", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("script", (self) => {
-    let content = element.textContent;
+    const content = element.textContent;
     if (content === null || content === "") {
       self.setAttribute("src", "/program/script/" + element.getAttribute("src"));
     } else {
@@ -22,9 +22,9 @@ manager.registerElementRule("use-script", "header", (transformer, document, elem
 });
 
 manager.registerElementRule("use-math", "header", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let mathStyleString = transformer.environments.mathStyleString;
-  let mathScriptString = transformer.environments.mathScriptString;
+  const self = document.createDocumentFragment();
+  const mathStyleString = transformer.environments.mathStyleString;
+  const mathScriptString = transformer.environments.mathScriptString;
   if (element.hasAttribute("prefix")) {
     transformer.variables.numberPrefix = element.getAttribute("prefix");
   }
@@ -38,7 +38,7 @@ manager.registerElementRule("use-math", "header", (transformer, document, elemen
 });
 
 manager.registerElementRule("base", "header", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("base", (self) => {
     self.setAttribute("href", element.getAttribute("href"));
   });

@@ -47,11 +47,11 @@ export class Executor extends BaseExecutor {
       });
     });
     document.querySelector("#left")!.addEventListener("input", (event) => {
-      let target = event.target as HTMLInputElement;
+      const target = event.target as HTMLInputElement;
       this.validateInput(target, "left");
     });
     document.querySelector("#right")!.addEventListener("input", (event) => {
-      let target = event.target as HTMLInputElement;
+      const target = event.target as HTMLInputElement;
       this.validateInput(target, "right");
     });
     document.querySelector("#left")!.addEventListener("paste", (event) => {
@@ -72,7 +72,7 @@ export class Executor extends BaseExecutor {
   }
 
   private changeOperator(): void {
-    let operatorButton = document.querySelector<HTMLInputElement>("#operator")!;
+    const operatorButton = document.querySelector<HTMLInputElement>("#operator")!;
     if (operatorButton.value === "+") {
       operatorButton.value = "×";
     } else {
@@ -85,8 +85,8 @@ export class Executor extends BaseExecutor {
   }
 
   private toggleTable(): void {
-    let tableContainer = document.querySelector<HTMLElement>("#table-container")!;
-    let showButton = document.querySelector<HTMLElement>("#show")!;
+    const tableContainer = document.querySelector<HTMLElement>("#table-container")!;
+    const showButton = document.querySelector<HTMLElement>("#show")!;
     if (tableContainer.style.display === "none") {
       tableContainer.style.display = "block";
       showButton.textContent = "Hide Table";
@@ -97,9 +97,9 @@ export class Executor extends BaseExecutor {
   }
 
   private validateInput(source: HTMLInputElement, position: "left" | "right"): void {
-    let input = source.value.toUpperCase().slice(-1);
-    let maxAlphabet = (RADIX - 1).toString(RADIX).toUpperCase();
-    let correctRegexp = new RegExp("^[1-9A-" + maxAlphabet + "]{0,1}$");
+    const input = source.value.toUpperCase().slice(-1);
+    const maxAlphabet = (RADIX - 1).toString(RADIX).toUpperCase();
+    const correctRegexp = new RegExp("^[1-9A-" + maxAlphabet + "]{0,1}$");
     if (input.match(correctRegexp)) {
       source.value = input;
       this.previousInput[position] = input;
@@ -123,26 +123,26 @@ export class Executor extends BaseExecutor {
   }
 
   private updateAnswer(): void {
-    let leftElement = document.querySelector<HTMLInputElement>("#left")!;
-    let rightElement = document.querySelector<HTMLInputElement>("#right")!;
-    let answerElement = document.querySelector<HTMLInputElement>("#answer")!;
-    let operatorButton = document.querySelector<HTMLInputElement>("#operator")!;
-    let left = parseInt(leftElement.value, RADIX) || 1;
-    let right = parseInt(rightElement.value, RADIX) || 1;
-    let answer = (operatorButton.value === "+") ? left + right : left * right;
+    const leftElement = document.querySelector<HTMLInputElement>("#left")!;
+    const rightElement = document.querySelector<HTMLInputElement>("#right")!;
+    const answerElement = document.querySelector<HTMLInputElement>("#answer")!;
+    const operatorButton = document.querySelector<HTMLInputElement>("#operator")!;
+    const left = parseInt(leftElement.value, RADIX) || 1;
+    const right = parseInt(rightElement.value, RADIX) || 1;
+    const answer = (operatorButton.value === "+") ? left + right : left * right;
     answerElement.textContent = answer.toString(RADIX).toUpperCase();
   }
 
   private incrementProblem(): void {
-    let leftElement = document.querySelector<HTMLInputElement>("#left")!;
-    let rightElement = document.querySelector<HTMLInputElement>("#right")!;
-    let answerElement = document.querySelector<HTMLInputElement>("#answer")!;
-    let left = parseInt(leftElement.value, RADIX) || 1;
-    let right = parseInt(rightElement.value, RADIX) || 1;
+    const leftElement = document.querySelector<HTMLInputElement>("#left")!;
+    const rightElement = document.querySelector<HTMLInputElement>("#right")!;
+    const answerElement = document.querySelector<HTMLInputElement>("#answer")!;
+    const left = parseInt(leftElement.value, RADIX) || 1;
+    const right = parseInt(rightElement.value, RADIX) || 1;
     let nextLeft = left;
     let nextRight = right;
-    let leftMode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"left-mode\"]:checked")!.value);
-    let rightMode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"right-mode\"]:checked")!.value);
+    const leftMode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"left-mode\"]:checked")!.value);
+    const rightMode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"right-mode\"]:checked")!.value);
     if (leftMode === 0) {
       nextLeft = left + 1;
       if (nextLeft > RADIX - 1) {
@@ -181,19 +181,19 @@ export class Executor extends BaseExecutor {
   }
 
   private createTable(): void {
-    let leftElement = document.querySelector<HTMLInputElement>("#left")!;
-    let rightElement = document.querySelector<HTMLInputElement>("#right")!;
-    let operatorButton = document.querySelector<HTMLInputElement>("#operator")!;
-    let left = parseInt(leftElement.value, RADIX) || 1;
-    let right = parseInt(rightElement.value, RADIX) || 1;
-    let leftMode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"left-mode\"]:checked")!.value);
-    let rightMode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"right-mode\"]:checked")!.value);
-    let table = document.querySelector("#table")!;
+    const leftElement = document.querySelector<HTMLInputElement>("#left")!;
+    const rightElement = document.querySelector<HTMLInputElement>("#right")!;
+    const operatorButton = document.querySelector<HTMLInputElement>("#operator")!;
+    const left = parseInt(leftElement.value, RADIX) || 1;
+    const right = parseInt(rightElement.value, RADIX) || 1;
+    const leftMode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"left-mode\"]:checked")!.value);
+    const rightMode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"right-mode\"]:checked")!.value);
+    const table = document.querySelector("#table")!;
     table.textContent = null;
     for (let i = 0 ; i <= RADIX - 1 ; i ++) {
-      let tr = document.createElement("tr");
+      const tr = document.createElement("tr");
       for (let j = 0 ; j <= RADIX - 1 ; j ++) {
-        let td = (i >= 1 && j >= 1) ? document.createElement("td") : document.createElement("th");
+        const td = (i >= 1 && j >= 1) ? document.createElement("td") : document.createElement("th");
         if (i === 0 && j === 0) {
           td.textContent = operatorButton.value;
         } else if (i === 0) {
@@ -201,7 +201,7 @@ export class Executor extends BaseExecutor {
         } else if (j === 0) {
           td.textContent = i.toString(RADIX).toUpperCase();
         } else {
-          let answer = (operatorButton.value === "+") ? i + j : i * j;
+          const answer = (operatorButton.value === "+") ? i + j : i * j;
           td.textContent = answer.toString(RADIX).toUpperCase();
         }
         if (i === 0 && j !== 0) {

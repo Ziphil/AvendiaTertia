@@ -5,10 +5,10 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule(["ul", "ol"], "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     self.addClassName("normal-list");
     self.setBlockType("text", "text");
@@ -24,7 +24,7 @@ manager.registerElementRule(["ul", "ol"], "page", (transformer, document, elemen
 });
 
 manager.registerElementRule("li", "page.ul", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     self.addClassName("normal-item");
     self.appendChild(transformer.apply(element, "page"));

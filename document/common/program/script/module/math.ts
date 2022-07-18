@@ -7,7 +7,7 @@ export class FloorMath {
     if (a >= 0) {
       return Math.floor(a / b);
     } else {
-      return - Math.floor((b - a - 1) / b);
+      return -Math.floor((b - a - 1) / b);
     }
   }
 

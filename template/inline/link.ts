@@ -5,11 +5,11 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule(["a", "ae", "an"], "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let className = (element.tagName === "an") ? "hidden-link" : "link";
+  const self = document.createDocumentFragment();
+  const className = (element.tagName === "an") ? "hidden-link" : "link";
   self.appendElement("a", (self) => {
     self.addClassName(className);
     if (element.hasAttribute("href")) {

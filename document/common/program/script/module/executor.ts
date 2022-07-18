@@ -7,7 +7,7 @@ export abstract class BaseExecutor {
   protected abstract prepare(): void;
 
   public static regsiter<E extends BaseExecutor>(this: new() => E, type: ExecutorType = "load"): void {
-    let executor = new this();
+    const executor = new this();
     if (type === "load") {
       window.addEventListener("load", () => {
         executor.prepare();

@@ -4,7 +4,7 @@ import glossManager from "./gloss";
 import mathManager from "./math";
 
 
-let managers = [
+const managers = [
   glossManager,
   mathManager
 ];

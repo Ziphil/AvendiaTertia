@@ -5,10 +5,10 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("gloss", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("gloss");
     self.setBlockType("text", "text");
@@ -18,7 +18,7 @@ manager.registerElementRule("gloss", "page", (transformer, document, element) =>
 });
 
 manager.registerElementRule("gloss", "page.xl.li", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("dd", (self) => {
     self.addClassName("sentence-nested-item gloss");
     self.appendChild(transformer.apply(element, "page.gloss"));
@@ -27,7 +27,7 @@ manager.registerElementRule("gloss", "page.xl.li", (transformer, document, eleme
 });
 
 manager.registerElementRule("li", "page.gloss", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("gloss-word");
     self.appendChild(transformer.apply(element, "page.gloss.li"));
@@ -36,8 +36,8 @@ manager.registerElementRule("li", "page.gloss", (transformer, document, element)
 });
 
 manager.registerElementRule(["sh", "bs", "ex"], "page.gloss.li", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let className = (element.tagName === "sh") ? "gloss-name" : (element.tagName === "bs") ? "gloss-base" : "gloss-explanation";
+  const self = document.createDocumentFragment();
+  const className = (element.tagName === "sh") ? "gloss-name" : (element.tagName === "bs") ? "gloss-base" : "gloss-explanation";
   self.appendElement("span", (self) => {
     self.addClassName(className);
     self.appendChild(transformer.apply(element, "page"));
@@ -46,7 +46,7 @@ manager.registerElementRule(["sh", "bs", "ex"], "page.gloss.li", (transformer, d
 });
 
 manager.registerElementRule("mph", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("gloss-morpheme");
     self.appendChild(transformer.apply(element, "page"));
@@ -57,8 +57,8 @@ manager.registerElementRule("mph", "page", (transformer, document, element) => {
 manager.registerTextRule("page.gloss", (transformer, document, text) => {
   let content = "";
   if (text.previousSibling !== null && text.nextSibling !== null) {
-    let previousSibling = text.previousSibling;
-    let nextSibling = text.nextSibling;
+    const previousSibling = text.previousSibling;
+    const nextSibling = text.nextSibling;
     if (previousSibling.isElement() && previousSibling.getAttribute("punc").match(/(\(|\[|«|“)$/)) {
       content = "";
     } else if (nextSibling.isElement() && nextSibling.getAttribute("punc").match(/^(\)|\.|,|:|;|·|!|\?)/)) {
@@ -69,7 +69,7 @@ manager.registerTextRule("page.gloss", (transformer, document, text) => {
   } else {
     content = "";
   }
-  let self = document.createTextNode(content);
+  const self = document.createTextNode(content);
   return self;
 });
 

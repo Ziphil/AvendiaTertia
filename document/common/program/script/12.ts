@@ -9,14 +9,14 @@ import {
 export class Executor extends BaseExecutor {
 
   protected prepare(): void {
-    let request = new XMLHttpRequest();
-    let url = window.location.protocol + "//dic.ziphil.com/api/dictionary/difference?durations=7&durations=30&durations=365";
+    const request = new XMLHttpRequest();
+    const url = window.location.protocol + "//dic.ziphil.com/api/dictionary/difference?durations=7&durations=30&durations=365";
     request.open("GET", url, true);
     request.send(null);
     request.addEventListener("readystatechange", (event) => {
       if (request.readyState === 4 && request.status === 200) {
-        let data = JSON.parse(request.responseText);
-        for (let {duration, difference} of data.differences) {
+        const data = JSON.parse(request.responseText);
+        for (const {duration, difference} of data.differences) {
           if (duration === 7) {
             document.querySelector("#week-count")!.textContent = Math.max(difference, 0).toString();
           } else if (duration === 30) {

@@ -35,7 +35,7 @@ import referenceManager from "./reference";
 import rootManager from "./root";
 
 
-let managers = [
+const managers = [
   rootManager,
   headerManager,
   navigationManager,

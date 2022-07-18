@@ -28,9 +28,9 @@ export class AvendiaConfigs {
   }
 
   public getRemoteUrl(path: string, language: AvendiaOutputLanguage): string {
-    let documentDirPath = this.getDocumentDirPath(language);
-    let remoteDomain = this.getRemoteDomain(language);
-    let remoteUrl = remoteDomain + "/" + pathUtil.relative(documentDirPath, path).replace(/\\/g, "/").replace(/\.zml$/, ".html");
+    const documentDirPath = this.getDocumentDirPath(language);
+    const remoteDomain = this.getRemoteDomain(language);
+    const remoteUrl = remoteDomain + "/" + pathUtil.relative(documentDirPath, path).replace(/\\/g, "/").replace(/\.zml$/, ".html");
     return remoteUrl;
   }
 
@@ -71,8 +71,8 @@ export class AvendiaConfigs {
   }
 
   public findDocumentLanguage(path: string): AvendiaLanguage | null {
-    for (let [language, dirPath] of Object.entries(this.json.documentDirPath)) {
-      let relative = pathUtil.relative(dirPath, path);
+    for (const [language, dirPath] of Object.entries(this.json.documentDirPath)) {
+      const relative = pathUtil.relative(dirPath, path);
       if (!relative.startsWith("..")) {
         return language as any;
       }

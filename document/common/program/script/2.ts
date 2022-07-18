@@ -9,12 +9,12 @@ import {
 export class Executor extends BaseExecutor {
 
   protected prepare(): void {
-    let element = document.querySelector<HTMLInputElement>("[name=\"search\"]")!;
-    let checkbox = document.querySelector<HTMLInputElement>("#checkbox-conversion-0")!;
+    const element = document.querySelector<HTMLInputElement>("[name=\"search\"]")!;
+    const checkbox = document.querySelector<HTMLInputElement>("#checkbox-conversion-0")!;
     element.addEventListener("keyup", (event) => {
       if (checkbox.checked) {
-        let text = element.value;
-        let nextText = this.convert(text);
+        const text = element.value;
+        const nextText = this.convert(text);
         if (text !== nextText) {
           element.value = nextText;
         }

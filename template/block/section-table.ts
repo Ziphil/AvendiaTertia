@@ -5,10 +5,10 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("section-table", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("ul", (self) => {
     self.addClassName("normal-list");
     self.setBlockType("text", "text");
@@ -18,8 +18,8 @@ manager.registerElementRule("section-table", "page", (transformer, document, ele
     let subsectionSelf = document.createElement("ul", (self) => self.addClassName("normal-list"));
     let hasSection = false;
     let hasSubsection = false;
-    let sectionElements = element.searchXpath("/page/*[name() = 'h1' or name() = 'h2']") as Array<Element>;
-    for (let sectionElement of sectionElements) {
+    const sectionElements = element.searchXpath("/page/*[name() = 'h1' or name() = 'h2']") as Array<Element>;
+    for (const sectionElement of sectionElements) {
       if (sectionElement.tagName === "h1") {
         if (hasSection) {
           if (hasSubsection) {

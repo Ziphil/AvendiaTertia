@@ -9,16 +9,16 @@ import {
 export class Executor extends BaseExecutor {
 
   protected prepare(): void {
-    let trElements = Array.from(document.querySelectorAll("table.translation tr")) as Array<HTMLElement>;
-    let hiddenTrElements = trElements.slice(-3);
-    let lastTrElement = trElements.slice(-4)[0];
-    for (let hiddenTrElement of hiddenTrElements) {
+    const trElements = Array.from(document.querySelectorAll("table.translation tr"));
+    const hiddenTrElements = trElements.slice(-3) as Array<HTMLTableRowElement>;
+    const lastTrElement = trElements.slice(-4)[0];
+    for (const hiddenTrElement of hiddenTrElements) {
       hiddenTrElement.style.display = "none";
     }
-    let maskElements = [] as Array<HTMLElement>;
-    for (let rawLastTdElement of lastTrElement.children) {
-      let lastTdElement = rawLastTdElement as HTMLElement;
-      let maskElement = document.createElement("tr");
+    const maskElements = [] as Array<HTMLElement>;
+    for (const rawLastTdElement of lastTrElement.children) {
+      const lastTdElement = rawLastTdElement as HTMLElement;
+      const maskElement = document.createElement("tr");
       maskElement.style.top = "-20px";
       maskElement.style.bottom = "0px";
       maskElement.style.left = "-1px";
@@ -27,10 +27,10 @@ export class Executor extends BaseExecutor {
       maskElement.style.position = "absolute";
       maskElement.style.cursor = "pointer";
       maskElement.addEventListener("click", () => {
-        for (let lastTrElement of hiddenTrElements) {
+        for (const lastTrElement of hiddenTrElements) {
           lastTrElement.style.display = "table-row";
         }
-        for (let maskElement of maskElements) {
+        for (const maskElement of maskElements) {
           maskElement.remove();
         }
       });

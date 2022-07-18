@@ -5,10 +5,10 @@ import {
 } from "../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("pb", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("content-table");
     self.appendChild(transformer.apply());
@@ -17,7 +17,7 @@ manager.registerElementRule("pb", "page", (transformer, document, element) => {
 });
 
 manager.registerElementRule("hb", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("h1", (self) => {
     self.addClassName("content-head");
     self.appendChild(transformer.apply());
@@ -26,7 +26,7 @@ manager.registerElementRule("hb", "page", (transformer, document, element) => {
 });
 
 manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement("a", (self) => {
     self.addClassName("content-item");
     if (element.tagName === "ab") {
@@ -42,7 +42,7 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
       self.setAttribute("data-disabled", "");
     }
     if (element.hasAttribute("date")) {
-      let date = element.getAttribute("date");
+      const date = element.getAttribute("date");
       self.appendElement("div", (self) => {
         self.addClassName("content-date");
         if (date.match(/^\d+$/)) {

@@ -10,47 +10,44 @@ import {
   AvendiaOutputLanguage
 } from "../configs";
 import {
-  AvendiaText
-} from "../dom";
-import {
   AvendiaTransformer
 } from "../transformer";
 
 
 export default async function execute(outputLanguage: AvendiaOutputLanguage, args: AvendaServiceArgs): Promise<void> {
-  let documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/index.zml";
-  let outputPath = args.configs.getReferenceIndexPath("ja");
-  let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
-  let inputDocument = args.parser.tryParse(inputString);
-  let indexElements = inputDocument.searchXpath("//ab") as Array<Element>;
-  let filteredIndexElements = indexElements.filter((indexElement) => !indexElement.getAttribute("ignore"));
-  let promises = filteredIndexElements.map(async (indexElement) => {
-    let href = indexElement.getAttribute("href");
-    let documentSpec = await createSectionSpecs(href, outputLanguage, args);
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/index.zml";
+  const outputPath = args.configs.getReferenceIndexPath("ja");
+  const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
+  const inputDocument = args.parser.tryParse(inputString);
+  const indexElements = inputDocument.searchXpath("//ab") as Array<Element>;
+  const filteredIndexElements = indexElements.filter((indexElement) => !indexElement.getAttribute("ignore"));
+  const promises = filteredIndexElements.map(async (indexElement) => {
+    const href = indexElement.getAttribute("href");
+    const documentSpec = await createSectionSpecs(href, outputLanguage, args);
     return documentSpec;
   });
-  let documentSpecs = await Promise.all(promises);
-  let hrefEntries = createHrefEntries(documentSpecs);
-  let outputObject = {specs: documentSpecs, hrefs: Object.fromEntries(hrefEntries)};
-  let outputString = JSON.stringify(outputObject, undefined, 2);
+  const documentSpecs = await Promise.all(promises);
+  const hrefEntries = createHrefEntries(documentSpecs);
+  const outputObject = {specs: documentSpecs, hrefs: Object.fromEntries(hrefEntries)};
+  const outputString = JSON.stringify(outputObject, undefined, 2);
   await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
   await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
 }
 
 async function createSectionSpecs(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendaServiceArgs): Promise<ReferenceSectionSpec> {
-  let documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/" + href.replace(/\.html$/, ".zml");
-  let initialVariables = {path: documentPath, language: outputLanguage};
-  let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
-  let inputDocument = args.parser.tryParse(inputString);
-  let childSpecs = JSON.parse(args.transformer.transform(inputDocument, {initialScope: "reference", initialVariables}).toString().trim());
-  let content = args.transformer.transform(inputDocument, {initialScope: "name", initialVariables}).toString().trim();
-  let documentSpec = {href, content, childSpecs, tag: ""};
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/" + href.replace(/\.html$/, ".zml");
+  const initialVariables = {path: documentPath, language: outputLanguage};
+  const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
+  const inputDocument = args.parser.tryParse(inputString);
+  const childSpecs = JSON.parse(args.transformer.transform(inputDocument, {initialScope: "reference", initialVariables}).toString().trim());
+  const content = args.transformer.transform(inputDocument, {initialScope: "name", initialVariables}).toString().trim();
+  const documentSpec = {href, content, childSpecs, tag: ""};
   return documentSpec;
 }
 
 function createHrefEntries(sectionSpecs: Array<ReferenceSectionSpec>): Array<[tag: string, href: string]> {
   const entries = [] as Array<[string, string]>;
-  for (let sectionSpec of sectionSpecs) {
+  for (const sectionSpec of sectionSpecs) {
     if (sectionSpec.tag !== "") {
       entries.push([sectionSpec.tag, sectionSpec.href]);
     }

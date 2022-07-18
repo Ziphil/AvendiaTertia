@@ -10,6 +10,6 @@ import {
 } from "./generator";
 
 
-let configs = new AvendiaConfigs(AVENDIA_CONFIGS_JSON);
-let generator = new AvendiaGenerator(configs);
+const configs = new AvendiaConfigs(AVENDIA_CONFIGS_JSON);
+const generator = new AvendiaGenerator(configs);
 generator.execute();

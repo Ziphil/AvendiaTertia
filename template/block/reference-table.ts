@@ -15,12 +15,12 @@ import {
 } from "../../template/util";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("reference-table", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let documentSpecs = getReferenceIndex(transformer).specs;
-  let appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, sectionSpecs: Array<ReferenceSectionSpec>, inner?: boolean) {
+  const self = document.createDocumentFragment();
+  const documentSpecs = getReferenceIndex(transformer).specs;
+  const appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, sectionSpecs: Array<ReferenceSectionSpec>, inner?: boolean) {
     self.appendElement("ul", (self) => {
       self.addClassName("normal-list");
       self.setBlockType("text", "text");
@@ -28,7 +28,7 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
         self.setAttribute("data-type", "unordered");
         self.setAttribute("data-column", "2");
       }
-      for (let sectionSpec of sectionSpecs) {
+      for (const sectionSpec of sectionSpecs) {
         self.appendElement("li", (self) => {
           self.addClassName("normal-item");
           self.appendElement("span", (self) => {
@@ -47,7 +47,7 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
       }
     });
   };
-  for (let documentSpec of documentSpecs) {
+  for (const documentSpec of documentSpecs) {
     self.appendElement("h2", (self) => {
       self.addClassName("subsection");
       self.setAttribute("data-section", "");

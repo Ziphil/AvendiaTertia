@@ -5,11 +5,11 @@ import {
 } from "../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("page", "name", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let nameElement = element.searchXpath("/page/name")[0] as Element;
+  const self = document.createDocumentFragment();
+  const nameElement = element.searchXpath("/page/name")[0] as Element;
   self.appendChild(transformer.apply(nameElement, "page"));
   return self;
 });

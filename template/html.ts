@@ -5,13 +5,13 @@ import {
 } from "../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("head", "html", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     for (let i = 0 ; i < element.attributes.length ; i ++) {
-      let {name, value} = element.attributes.item(i)!;
+      const {name, value} = element.attributes.item(i)!;
       self.setAttribute(name, value);
     }
     self.appendChild(transformer.apply());
@@ -21,10 +21,10 @@ manager.registerElementRule("head", "html", (transformer, document, element) => 
 });
 
 manager.registerElementRule(true, "html", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
+  const self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     for (let i = 0 ; i < element.attributes.length ; i ++) {
-      let {name, value} = element.attributes.item(i)!;
+      const {name, value} = element.attributes.item(i)!;
       self.setAttribute(name, value);
     }
     self.appendChild(transformer.apply());

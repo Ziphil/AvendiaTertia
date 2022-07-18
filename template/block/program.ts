@@ -5,13 +5,13 @@ import {
 } from "../../generator/transformer";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule(["pre", "samp"], "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let lineTagName = (element.tagName === "pre") ? "code" : "samp";
-  let lines = element.textContent?.split("\n") ?? [];
-  let showNumber = element.tagName === "pre" && !element.hasAttribute("simple");
+  const self = document.createDocumentFragment();
+  const lineTagName = (element.tagName === "pre") ? "code" : "samp";
+  const lines = element.textContent?.split("\n") ?? [];
+  const showNumber = element.tagName === "pre" && !element.hasAttribute("simple");
   self.appendElement("div", (self) => {
     self.addClassName("program-container");
     self.setBlockType("bordered", "bordered");
@@ -24,7 +24,7 @@ manager.registerElementRule(["pre", "samp"], "page", (transformer, document, ele
           self.setAttribute("data-show-number", "");
         }
         for (let number = 0 ; number < lines.length ; number ++) {
-          let line = lines[number];
+          const line = lines[number];
           if (showNumber) {
             self.appendElement("div", (self) => {
               self.addClassName("program-number");

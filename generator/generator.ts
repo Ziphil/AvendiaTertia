@@ -55,7 +55,7 @@ export class AvendiaGenerator {
   }
 
   public async execute(): Promise<void> {
-    let options = commandLineArgs([
+    const options = commandLineArgs([
       {name: "documentPaths", multiple: true, defaultOption: true},
       {name: "upload", alias: "u", type: Boolean},
       {name: "history", alias: "h", type: Boolean},
@@ -83,8 +83,8 @@ export class AvendiaGenerator {
   }
 
   private async executeNormal(): Promise<void> {
-    let documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
-    let promises = documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
+    const documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
+    const promises = documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
       await this.saveNormal(documentPath, documentLanguage);
     });
     await Promise.all(promises);
@@ -92,9 +92,9 @@ export class AvendiaGenerator {
   }
 
   private async executeWatch(): Promise<void> {
-    let promises = this.configs.getDocumentDirPathSpecs().map(([documentDirPath, documentLanguage]) => {
-      let promise = new Promise((resolve, reject) => {
-        let watcher = chokidar.watch(documentDirPath, {persistent: true, ignoreInitial: true});
+    const promises = this.configs.getDocumentDirPathSpecs().map(([documentDirPath, documentLanguage]) => {
+      const promise = new Promise((resolve, reject) => {
+        const watcher = chokidar.watch(documentDirPath, {persistent: true, ignoreInitial: true});
         watcher.on("add", (documentPath) => {
           if (this.checkValidDocumentPath(documentPath)) {
             this.saveNormal(documentPath, documentLanguage);
@@ -116,8 +116,8 @@ export class AvendiaGenerator {
   }
 
   private async executeHistory(): Promise<void> {
-    let documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
-    let promises = documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
+    const documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
+    const promises = documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
       await this.saveHistory(documentPath, documentLanguage);
     });
     await Promise.all(promises);
@@ -125,15 +125,15 @@ export class AvendiaGenerator {
   }
 
   private async executeService(): Promise<void> {
-    let name = this.options.service;
-    let args = {parser: this.parser, transformer: this.transformer, configs: this.configs};
+    const name = this.options.service;
+    const args = {parser: this.parser, transformer: this.transformer, configs: this.configs};
     if (name === "reference") {
       await executeReferenceService("ja", args);
     }
   }
 
   private async saveNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
-    let intervals = {convert: 0, upload: 0};
+    const intervals = {convert: 0, upload: 0};
     try {
       intervals.convert = await measureAsync(async () => {
         await this.transformNormal(documentPath, documentLanguage);
@@ -151,7 +151,7 @@ export class AvendiaGenerator {
   }
 
   private async saveHistory(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
-    let intervals = {convert: 0, upload: 0};
+    const intervals = {convert: 0, upload: 0};
     try {
       intervals.convert = await measureAsync(async () => {
         await this.transformHistory(documentPath, documentLanguage);
@@ -162,9 +162,9 @@ export class AvendiaGenerator {
   }
 
   private async transformNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
-    let extension = pathUtil.extname(documentPath).slice(1);
-    let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
-    let promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
+    const extension = pathUtil.extname(documentPath).slice(1);
+    const outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
+    const promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       if (extension === "zml") {
         await this.transformNormalZml(documentPath, outputPath, documentLanguage, outputLanguage);
       } else if (extension === "scss") {
@@ -177,9 +177,9 @@ export class AvendiaGenerator {
   }
 
   private async transformHistory(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
-    let extension = pathUtil.extname(documentPath).slice(1);
+    const extension = pathUtil.extname(documentPath).slice(1);
     if (documentLanguage !== "common") {
-      let outputPath = this.configs.getHistoryIndexPath(documentLanguage);
+      const outputPath = this.configs.getHistoryIndexPath(documentLanguage);
       if (extension === "zml") {
         await this.transformHistoryZml(documentPath, outputPath, documentLanguage, documentLanguage);
       } else {
@@ -189,37 +189,37 @@ export class AvendiaGenerator {
   }
 
   private async transformNormalZml(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
-    let initialVariables = {path: documentPath, language: outputLanguage};
-    let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
-    let inputDocument = this.parser.tryParse(inputString);
-    let outputString = this.transformer.transformStringify(inputDocument, {initialVariables});
+    const initialVariables = {path: documentPath, language: outputLanguage};
+    const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
+    const inputDocument = this.parser.tryParse(inputString);
+    const outputString = this.transformer.transformStringify(inputDocument, {initialVariables});
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
   }
 
   private async transformHistoryZml(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
-    let initialScope = "history";
-    let initialVariables = {path: documentPath, language: outputLanguage};
-    let inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
-    let inputDocument = this.parser.tryParse(inputString);
-    let date = dayjs().subtract(6, "hour");
-    let dateString = (outputLanguage === "ja") ? date.format("YYYY/MM/DD") : date.format("DD/MMM/YYYY");
-    let outputString = this.transformer.transform(inputDocument, {initialScope, initialVariables}).toString().trim() + "\n";
-    let finalOutputString = dateString + "; " + outputString;
+    const initialScope = "history";
+    const initialVariables = {path: documentPath, language: outputLanguage};
+    const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
+    const inputDocument = this.parser.tryParse(inputString);
+    const date = dayjs().subtract(6, "hour");
+    const dateString = (outputLanguage === "ja") ? date.format("YYYY/MM/DD") : date.format("DD/MMM/YYYY");
+    const outputString = this.transformer.transform(inputDocument, {initialScope, initialVariables}).toString().trim() + "\n";
+    const finalOutputString = dateString + "; " + outputString;
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await fs.appendFile(outputPath, finalOutputString, {encoding: "utf-8"});
   }
 
   private async transformNormalScss(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
-    let logMessage = function (message: string, options: {span?: SassSourceSpan}): void {
+    const logMessage = function (message: string, options: {span?: SassSourceSpan}): void {
       Function.prototype();
     };
-    let options = {
+    const options = {
       file: documentPath,
       logger: {debug: logMessage, warn: logMessage}
     };
-    let cssString = sass.renderSync(options).css.toString("utf-8");
-    let cssTree = cssTreeUtil.parse(cssString);
+    const cssString = sass.renderSync(options).css.toString("utf-8");
+    const cssTree = cssTreeUtil.parse(cssString);
     cssTreeUtil.walk(cssTree, (node) => {
       if (node.type === "Dimension") {
         if (node.unit === "rpx") {
@@ -228,13 +228,13 @@ export class AvendiaGenerator {
         }
       }
     });
-    let outputString = cssTreeUtil.generate(cssTree);
+    const outputString = cssTreeUtil.generate(cssTree);
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
   }
 
   private async transformNormalTs(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
-    let configs = {
+    const configs = {
       ...WEBPACK_CONFIGS,
       entry: {[pathUtil.basename(outputPath, ".js")]: "./" + documentPath},
       output: {path: pathUtil.dirname(outputPath), filename: "[name].js"},
@@ -243,12 +243,12 @@ export class AvendiaGenerator {
         cacheDirectory: pathUtil.join(pathUtil.dirname(outputPath), ".webpack_cache")
       }
     } as const;
-    let promise = new Promise<void>((resolve, reject) => {
+    const promise = new Promise<void>((resolve, reject) => {
       webpack(configs, (error, stats) => {
         if (error) {
           reject(error);
         } else if (stats?.hasErrors()) {
-          let error = new Error(stats.toString());
+          const error = new Error(stats.toString());
           reject(error);
         } else {
           resolve();
@@ -260,8 +260,8 @@ export class AvendiaGenerator {
   }
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
-    let remotePathSpecs = this.getRemotePathSpecs(documentPath, documentLanguage);
-    let promises = remotePathSpecs.map(async ([outputPath, remotePath]) => {
+    const remotePathSpecs = this.getRemotePathSpecs(documentPath, documentLanguage);
+    const promises = remotePathSpecs.map(async ([outputPath, remotePath]) => {
       await this.client!.uploadFrom(outputPath, remotePath);
     });
     await Promise.all(promises);
@@ -269,7 +269,7 @@ export class AvendiaGenerator {
 
   private printNormal(documentPath: string, documentLanguage: AvendiaLanguage, intervals: {convert: number, upload: number}, succeed: boolean): void {
     let output = "";
-    let count = ++ this.count;
+    const count = ++ this.count;
     output += " ";
     output += Math.min(count, 9999).toString().padStart(4);
     output += " : ";
@@ -277,8 +277,8 @@ export class AvendiaGenerator {
     output += " + ";
     output += chalk.magenta(Math.min(intervals.upload, 9999).toString().padStart(4));
     output += "  |  ";
-    let codeArray = this.configs.getSplitRelativeDocumentPath(documentPath, documentLanguage).map((segment) => {
-      let x = segment.replace(/\.\w+$/, "");
+    const codeArray = this.configs.getSplitRelativeDocumentPath(documentPath, documentLanguage).map((segment) => {
+      const x = segment.replace(/\.\w+$/, "");
       if (x === "index") {
         return "  @";
       } else if (x.match(/^\d+$/)) {
@@ -289,7 +289,7 @@ export class AvendiaGenerator {
         return "  ?";
       }
     });
-    let codeString = (documentLanguage.substring(0, 2) + " " + codeArray.join(" ")).padEnd(14);
+    const codeString = (documentLanguage.substring(0, 2) + " " + codeArray.join(" ")).padEnd(14);
     if (succeed) {
       output += chalk.yellow(codeString);
     } else {
@@ -300,7 +300,7 @@ export class AvendiaGenerator {
 
   private printLast(): void {
     let output = "";
-    let count = this.count;
+    const count = this.count;
     if (count > 0) {
       output += "-".repeat(39);
       output += "\n";
@@ -311,7 +311,7 @@ export class AvendiaGenerator {
 
   private async logError(documentPath: string, documentLanguage: AvendiaLanguage, error: unknown): Promise<void> {
     let output = "";
-    let logPath = this.configs.getErrorLogPath();
+    const logPath = this.configs.getErrorLogPath();
     output += `[${documentPath}]` + "\n";
     if (error instanceof Error) {
       output += error.message.trim() + "\n";
@@ -324,25 +324,25 @@ export class AvendiaGenerator {
   }
 
   private createParser(): ZenmlParser {
-    let options = {specialElementNames: {brace: "x", bracket: "xn", slash: "i"}};
-    let parser = new ZenmlParser(new DOMImplementation(), options);
-    for (let manager of pluginManagers) {
+    const options = {specialElementNames: {brace: "x", bracket: "xn", slash: "i"}};
+    const parser = new ZenmlParser(new DOMImplementation(), options);
+    for (const manager of pluginManagers) {
       parser.registerPluginManager(manager);
     }
     return parser;
   }
 
   private createTransformer(): AvendiaTransformer {
-    let options = {initialEnvironments: {configs: this.configs}};
-    let transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false, html: true}), options);
-    for (let manager of templateManagers) {
+    const options = {initialEnvironments: {configs: this.configs}};
+    const transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false, html: true}), options);
+    for (const manager of templateManagers) {
       transformer.regsiterTemplateManager(manager);
     }
     return transformer;
   }
 
   private async createClient(): Promise<CustomFtpClient> {
-    let client = new CustomFtpClient();
+    const client = new CustomFtpClient();
     await client.access({
       host: this.configs.getServerHost(),
       user: this.configs.getServerUser(),
@@ -352,18 +352,18 @@ export class AvendiaGenerator {
   }
 
   private async getDocumentPathSpecs(documentPaths: Array<string>): Promise<PathSpecs<AvendiaLanguage>> {
-    let documentPathSpecs = [] as PathSpecs<AvendiaLanguage>;
+    const documentPathSpecs = [] as PathSpecs<AvendiaLanguage>;
     if (documentPaths.length >= 1) {
-      for (let documentPath of documentPaths) {
-        let documentLanguage = this.configs.findDocumentLanguage(documentPath);
+      for (const documentPath of documentPaths) {
+        const documentLanguage = this.configs.findDocumentLanguage(documentPath);
         if (documentLanguage !== null && this.checkValidDocumentPath(documentPath)) {
           documentPathSpecs.push([documentPath, documentLanguage]);
         }
       }
     } else {
-      let promises = this.configs.getDocumentDirPathSpecs().map(async ([documentDirPath, documentLanguage]) => {
-        let documentPaths = await glob(documentDirPath + "/**/*");
-        for (let documentPath of documentPaths) {
+      const promises = this.configs.getDocumentDirPathSpecs().map(async ([documentDirPath, documentLanguage]) => {
+        const documentPaths = await glob(documentDirPath + "/**/*");
+        for (const documentPath of documentPaths) {
           if (this.checkValidDocumentPath(documentPath)) {
             documentPathSpecs.push([documentPath, documentLanguage]);
           }
@@ -375,9 +375,9 @@ export class AvendiaGenerator {
   }
 
   private getOutputPathSpecs(documentPath: string, documentLanguage: AvendiaLanguage): PathSpecs<AvendiaOutputLanguage> {
-    let outputPathSpecs = [];
-    let outerThis = this;
-    let getOutputPathSpec = function (outputLanguage: AvendiaOutputLanguage): PathSpec<AvendiaOutputLanguage> {
+    const outputPathSpecs = [];
+    const outerThis = this;
+    const getOutputPathSpec = function (outputLanguage: AvendiaOutputLanguage): PathSpec<AvendiaOutputLanguage> {
       let outputPath = outerThis.configs.replaceDocumentDirPath(documentPath, documentLanguage, outputLanguage);
       outputPath = outputPath.replace(/\.zml$/, ".html");
       outputPath = outputPath.replace(/\.scss$/, ".css");
@@ -394,9 +394,9 @@ export class AvendiaGenerator {
   }
 
   private getRemotePathSpecs(documentPath: string, documentLanguage: AvendiaLanguage): Array<[string, string]> {
-    let outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
-    let remotePathSpecs = outputPathSpecs.map(([outputPath, outputLanguage]) => {
-      let remotePath = this.configs.replaceOutputDirPath(outputPath, outputLanguage);
+    const outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
+    const remotePathSpecs = outputPathSpecs.map(([outputPath, outputLanguage]) => {
+      const remotePath = this.configs.replaceOutputDirPath(outputPath, outputLanguage);
       return [outputPath, remotePath] as any;
     });
     return remotePathSpecs;

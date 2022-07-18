@@ -8,7 +8,9 @@
   "scripts": {
     "develop": "webpack --config webpack-main.ts --watch",
     "build": "webpack --config webpack-main.ts",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "lint": "eslint generator/**/*.ts plugin/**/*.ts template/**/*.ts document/**/*.ts",
+    "lint:fix": "eslint --fix generator/**/*.ts plugin/**/*.ts template/**/*.ts document/**/*.ts"
   },
   "eslintConfig": {
     "extends": "ziphil",
@@ -22,7 +24,12 @@
     },
     "rules": {
       "@typescript-eslint/quotes": "off",
-      "arrow-body-style": "off"
+      "prefer-const": [
+        "warn",
+        {
+          "destructuring": "all"
+        }
+      ]
     }
   },
   "devDependencies": {
@@ -35,12 +42,16 @@
     "@types/sass": "^1.43.1",
     "@types/webpack": "^5.28.0",
     "@types/webpack-node-externals": "^2.5.3",
-    "@typescript-eslint/eslint-plugin": "^5.9.1",
-    "@typescript-eslint/parser": "^5.9.1",
-    "eslint": "^8.6.0",
-    "eslint-config-ziphil": "^1.2.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsdoc": "^36.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "eslint-config-ziphil": "^1.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.2",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "raw-loader": "^4.0.2",
     "source-map-loader": "^3.0.1",
     "ts-loader": "^9.2.6",

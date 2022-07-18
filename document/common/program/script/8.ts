@@ -36,11 +36,11 @@ export class WordManager {
   }
 
   public append(text: string): void {
-    let splitText = text.split(/\r\n|\r|\n/);
-    for (let line of splitText) {
-      let match = line.match(/^\s*(.+?)\s*,\s*(.+)\s*$/m);
+    const splitText = text.split(/\r\n|\r|\n/);
+    for (const line of splitText) {
+      const match = line.match(/^\s*(.+?)\s*,\s*(.+)\s*$/m);
       if (match !== null) {
-        let entry = new WordEntry(match[1], match[2]);
+        const entry = new WordEntry(match[1], match[2]);
         this.entries.push(entry);
       }
     }
@@ -48,10 +48,10 @@ export class WordManager {
   }
 
   public shuffle(): void {
-    let entries = this.entries;
+    const entries = this.entries;
     for (let i = entries.length - 1 ; i > 0 ; i --) {
-      let j = Math.floor(Math.random() * (i + 1));
-      let temporary = entries[i];
+      const j = Math.floor(Math.random() * (i + 1));
+      const temporary = entries[i];
       entries[i] = entries[j];
       entries[j] = temporary;
     }
@@ -59,7 +59,7 @@ export class WordManager {
 
   public count(mark: WordMark): number {
     let count = 0;
-    for (let entry of this.entries) {
+    for (const entry of this.entries) {
       if (entry.mark === mark) {
         count ++;
       }
@@ -69,7 +69,7 @@ export class WordManager {
 
   public countMarked(): number {
     let count = 0;
-    for (let entry of this.entries) {
+    for (const entry of this.entries) {
       if (entry.mark !== null) {
         count ++;
       }
@@ -110,10 +110,10 @@ export class Executor extends BaseExecutor {
   private prepareDocument(): void {
     document.addEventListener("keydown", (event) => {
       if (event.keyCode === 39) {
-        let amount = (event.shiftKey) ? 2 : 1;
+        const amount = (event.shiftKey) ? 2 : 1;
         this.next(amount);
       } else if (event.keyCode === 37) {
-        let amount = (event.shiftKey) ? 2 : 1;
+        const amount = (event.shiftKey) ? 2 : 1;
         this.previous(amount);
       }
       if (event.keyCode === 68) {
@@ -129,9 +129,9 @@ export class Executor extends BaseExecutor {
   private prepareElements(): void {
     document.querySelectorAll("input[name=\"mode\"]").forEach((element) => {
       element.addEventListener("change", (event) => {
-        let target = event.target as HTMLInputElement;
-        let mode = parseInt(target.value);
-        let arrowDiv = document.querySelector<HTMLElement>("#arrow")!;
+        const target = event.target as HTMLInputElement;
+        const mode = parseInt(target.value);
+        const arrowDiv = document.querySelector<HTMLElement>("#arrow")!;
         if (mode === 0) {
           arrowDiv.style.margin = "0px auto -5px auto";
           arrowDiv.style.borderTop = "30px hsl(240, 60%, 60%) solid";
@@ -155,13 +155,13 @@ export class Executor extends BaseExecutor {
   private prepareButtons(): void {
     document.querySelectorAll("[id^=\"previous-\"]").forEach((element) => {
       element.addEventListener("click", () => {
-        let amount = parseInt(element.id.replace(/^previous-/, ""));
+        const amount = parseInt(element.id.replace(/^previous-/, ""));
         this.previous(amount);
       });
     });
     document.querySelectorAll("[id^=\"next-\"]").forEach((element) => {
       element.addEventListener("click", () => {
-        let amount = parseInt(element.id.replace(/^next-/, ""));
+        const amount = parseInt(element.id.replace(/^next-/, ""));
         this.next(amount);
       });
     });
@@ -170,7 +170,7 @@ export class Executor extends BaseExecutor {
         if (element.id === "mark-null") {
           this.mark(null);
         } else {
-          let mark = parseInt(element.id.replace(/^mark-/, "")) as WordMark;
+          const mark = parseInt(element.id.replace(/^mark-/, "")) as WordMark;
           this.mark(mark);
         }
       });
@@ -187,12 +187,12 @@ export class Executor extends BaseExecutor {
   }
 
   private upload(): void {
-    let manager = new WordManager();
-    let files = document.querySelector<HTMLInputElement>("#file")!.files || new FileList();
-    for (let file of files) {
-      let reader = new FileReader();
+    const manager = new WordManager();
+    const files = document.querySelector<HTMLInputElement>("#file")!.files || new FileList();
+    for (const file of files) {
+      const reader = new FileReader();
       reader.addEventListener("load", (event) => {
-        let result = reader.result;
+        const result = reader.result;
         if (typeof result === "string") {
           manager.append(result);
           this.updateMain(true);
@@ -208,15 +208,15 @@ export class Executor extends BaseExecutor {
   }
 
   private createList(): void {
-    let manager = this.manager;
-    let table = document.querySelector("#list")!;
+    const manager = this.manager;
+    const table = document.querySelector("#list")!;
     table.textContent = null;
     for (let i = 0 ; i < manager.length ; i ++) {
-      let entry = manager.get(i)!;
-      let tr = document.createElement("tr");
-      let numberTd = document.createElement("td");
-      let markTd = document.createElement("td");
-      let textTd = document.createElement("td");
+      const entry = manager.get(i)!;
+      const tr = document.createElement("tr");
+      const numberTd = document.createElement("td");
+      const markTd = document.createElement("td");
+      const textTd = document.createElement("td");
       tr.setAttribute("id", "entry-" + i);
       numberTd.setAttribute("class", "number");
       numberTd.textContent = (i + 1).toString();
@@ -236,14 +236,14 @@ export class Executor extends BaseExecutor {
   }
 
   private updateMain(increment: boolean): void {
-    let manager = this.manager;
-    let index = this.index;
-    let status = (this.count + 1) % 2;
-    let mode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"mode\"]:checked")!.value);
-    let entry = manager.get(index);
-    let englishDiv = document.querySelector("#english")!;
-    let japaneseDiv = document.querySelector("#japanese")!;
-    let pronunciationDiv = document.querySelector("#pronunciation")!;
+    const manager = this.manager;
+    const index = this.index;
+    const status = (this.count + 1) % 2;
+    const mode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"mode\"]:checked")!.value);
+    const entry = manager.get(index);
+    const englishDiv = document.querySelector("#english")!;
+    const japaneseDiv = document.querySelector("#japanese")!;
+    const pronunciationDiv = document.querySelector("#pronunciation")!;
     if (entry) {
       if (status === 0) {
         if (mode === 0) {
@@ -264,20 +264,20 @@ export class Executor extends BaseExecutor {
       englishDiv.textContent = "";
       japaneseDiv.textContent = "";
     }
-    let numeratorDiv = document.querySelector("#numerator")!;
-    let denominatorDiv = document.querySelector("#denominator")!;
+    const numeratorDiv = document.querySelector("#numerator")!;
+    const denominatorDiv = document.querySelector("#denominator")!;
     numeratorDiv.textContent = (index + 1).toString();
     denominatorDiv.textContent = manager.length.toString();
   }
 
   private updateMark(): void {
-    let manager = this.manager;
-    let index = this.index;
-    let entry = manager.get(index);
-    let correctDiv = document.querySelector<HTMLElement>("#correct-mark")!;
-    let wrongDiv = document.querySelector<HTMLElement>("#wrong-mark")!;
+    const manager = this.manager;
+    const index = this.index;
+    const entry = manager.get(index);
+    const correctDiv = document.querySelector<HTMLElement>("#correct-mark")!;
+    const wrongDiv = document.querySelector<HTMLElement>("#wrong-mark")!;
     if (entry) {
-      let mark = entry.mark;
+      const mark = entry.mark;
       if (mark === 0) {
         correctDiv.style.display = "inline";
         wrongDiv.style.display = "none";
@@ -295,12 +295,12 @@ export class Executor extends BaseExecutor {
   }
 
   private updateList(index: number): void {
-    let manager = this.manager;
-    let entry = manager.get(index);
+    const manager = this.manager;
+    const entry = manager.get(index);
     if (entry) {
-      let mark = entry.mark;
-      let markTd = document.querySelector("#entry-" + index + " .mark")!;
-      let textTd = document.querySelector("#entry-" + index + " .text")!;
+      const mark = entry.mark;
+      const markTd = document.querySelector("#entry-" + index + " .mark")!;
+      const textTd = document.querySelector("#entry-" + index + " .text")!;
       if (mark === 0) {
         markTd.textContent = "\uF009";
         markTd.setAttribute("class", "mark correct");
@@ -318,11 +318,11 @@ export class Executor extends BaseExecutor {
   }
 
   private updateStatistics(): void {
-    let manager = this.manager;
-    let marks = [0, 1] as Array<WordMark>;
-    for (let mark of marks) {
-      let numeratorDiv = document.querySelector("#statistics-" + mark + " .numerator")!;
-      let denominatorDiv = document.querySelector("#statistics-" + mark + " .denominator")!;
+    const manager = this.manager;
+    const marks = [0, 1] as Array<WordMark>;
+    for (const mark of marks) {
+      const numeratorDiv = document.querySelector("#statistics-" + mark + " .numerator")!;
+      const denominatorDiv = document.querySelector("#statistics-" + mark + " .denominator")!;
       numeratorDiv.textContent = manager.count(mark).toString();
       denominatorDiv.textContent = manager.countMarked().toString();
     }
@@ -365,7 +365,7 @@ export class Executor extends BaseExecutor {
   }
 
   private shuffle(): void {
-    let result = confirm("リストの順番をシャッフルしますか?");
+    const result = confirm("リストの順番をシャッフルしますか?");
     if (result) {
       this.count = 0;
       this.manager.shuffle();
@@ -376,10 +376,10 @@ export class Executor extends BaseExecutor {
   }
 
   private reflesh(): void {
-    let result = confirm("マーカーを全て削除しますか?");
+    const result = confirm("マーカーを全て削除しますか?");
     if (result) {
       this.count = 0;
-      for (let entry of this.manager.entries) {
+      for (const entry of this.manager.entries) {
         entry.mark = null;
       }
       this.updateMain(false);
@@ -389,9 +389,9 @@ export class Executor extends BaseExecutor {
   }
 
   private mark(mark: WordMark): void {
-    let manager = this.manager;
-    let index = this.index;
-    let entry = manager.get(index);
+    const manager = this.manager;
+    const index = this.index;
+    const entry = manager.get(index);
     if (entry) {
       entry.mark = mark;
       this.updateMark();
@@ -422,18 +422,18 @@ export class Executor extends BaseExecutor {
   }
 
   private fetchPronunciations(word: string, element: HTMLElement): void {
-    let previousRequest = this.request;
+    const previousRequest = this.request;
     if (previousRequest) {
       previousRequest.abort();
     }
-    let url = DICTIONARY_URL + word;
-    let request = new XMLHttpRequest();
+    const url = DICTIONARY_URL + word;
+    const request = new XMLHttpRequest();
     request.open("GET", url, true);
     request.send(null);
     request.addEventListener("readystatechange", (event) => {
       if (request.readyState === 4 && request.status === 200) {
-        let html = request.responseText;
-        let regexp = new RegExp(PRONUNCIATION_REGEXP, "g");
+        const html = request.responseText;
+        const regexp = new RegExp(PRONUNCIATION_REGEXP, "g");
         let pronunciations = [] as Array<string>;
         let match = null as RegExpExecArray | null;
         while ((match = regexp.exec(html)) !== null) {

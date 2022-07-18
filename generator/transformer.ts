@@ -36,17 +36,17 @@ export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, Avendia
 
   protected stringify(document: AvendiaDocument): string {
     if (this.variables.mode === "page") {
-      let view = {
+      const view = {
         environments: this.environments,
         variables: this.variables,
         translations: TRANSLATIONS,
         document
       };
-      let output = this.template(view);
+      const output = this.template(view);
       return output;
     } else {
       document.options.includeDeclaration = true;
-      let output = document.toString();
+      const output = document.toString();
       return output;
     }
   }

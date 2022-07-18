@@ -8,13 +8,13 @@ import {
 } from "../util";
 
 
-let manager = new AvendiaTemplateManager();
+const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("rref", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let referenceHrefs = getReferenceIndex(transformer).hrefs;
-  let refTag = element.getAttribute("ref");
-  let refHref = referenceHrefs[refTag] ?? "";
+  const self = document.createDocumentFragment();
+  const referenceHrefs = getReferenceIndex(transformer).hrefs;
+  const refTag = element.getAttribute("ref");
+  const refHref = referenceHrefs[refTag] ?? "";
   self.appendElement("a", (self) => {
     self.addClassName("ref");
     self.addClassName("link");
@@ -25,8 +25,8 @@ manager.registerElementRule("rref", "page", (transformer, document, element) => 
 });
 
 manager.registerElementRule("rterm", "page", (transformer, document, element) => {
-  let self = document.createDocumentFragment();
-  let id = element.getAttribute("id");
+  const self = document.createDocumentFragment();
+  const id = element.getAttribute("id");
   self.appendElement("span", (self) => {
     self.setAttribute("id", id);
     self.appendChild(transformer.apply());

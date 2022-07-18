@@ -33,7 +33,7 @@ export class CustomFtpClient {
   }
 
   public uploadFrom(sourcePath: string, remotePath: string): Promise<void> {
-    let promise = new Promise<void>((resolve, reject) => {
+    const promise = new Promise<void>((resolve, reject) => {
       this.promise = this.promise.then(async () => {
         try {
           await this.reaccess();
