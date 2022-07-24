@@ -9,9 +9,25 @@
   \h1|tag="sbi"|<代辞>
   \h2|tag="sbo"|<総論>
   \p<
-    以下の表に示す単語を、シャレイア語では総称して「代辞」と呼ぶ。
-    表で示されているように、代辞には 10 種類の意味と 5 種類の表す対象があり、全部で 41 個ある。
-    なお、「代辞」という言葉は以下の単語の総称であり、語彙的品詞ではない。
+    以下の表に示す単語を、シャレイア語では総称して「\rterm|key="だいじ",id="proform"|<代辞\fl<proform>>」と呼ぶ。
+    代辞はその意味に応じて以下の 10 種類に分けられる。
+  >
+  \ul|col="2"|<
+    \li<\rterm|key="きんせつ",id="proximal"|<近接\fl<proximal>>>
+    \li<\rterm|key="えんぽう",id="distal"|<遠方\fl<distal>>>
+    \li<\rterm|key="しじ",id="demonstrative"|<指示\fl<demonstrative>>>
+    \li<\rterm|key="ぎもん",id="interrogative"|<疑問\fl<interrogative>>>
+    \li<\rterm|key="ふざい",id="negative"|<不在\fl<negative>>>
+    \li<\rterm|key="ふてい",id="indefinite"|<不定\fl<indefinite>>>
+    \li<\rterm|key="とくてい",id="assertive"|<特定\fl<assertive>>>
+    \li<\rterm|key="にんい",id="elective"|<任意\fl<elective>>>
+    \li<\rterm|key="どうしゅ",id="substitutive"|<同種\fl<substitutive>>>
+    \li<\rterm|key="いっぱん",id="generic"|<一般\fl<generic>>>
+  >
+  \p<
+    以下に代辞を一覧する。
+    10 種類の意味それぞれに対して、人, 物, 事, 場所, 修飾を表す 5 つの代辞がある。
+    ただし、一部の組み合わせに当たる代辞が存在しないため、代辞は全部で 41 語である。
   >
   \table<
     \tr<\th<>\th<近接>\th<遠方>\th<指示>\th<疑問>\th<不在>\th<不定>\th<特定>\th<任意>\th<同種>\th<一般>>

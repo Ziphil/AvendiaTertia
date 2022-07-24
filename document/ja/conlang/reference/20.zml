@@ -9,8 +9,9 @@
   \h1|tag="svm"|<{kin} 節>
   \h2|tag="svy"|<構成>
   \p<
-    機能辞である {kin} の後に節を続けることで、全体で「～ということ」という意味の名詞節を作ることができる。
-    この名詞化された節は「{kin} 節」と呼ばれ、{kin} 節が付随する助詞句はしばしば「{kin} 節句」と呼ばれる。
+    {kin} の後に節を続けることで、全体で「～ということ」という意味の名詞節を作ることができる。
+    この名詞化された節は「\rterm|key="きんせつ",id="kin-clause"|<{kin} 節\fl<{kin}-clause>>」と呼ばれ、{kin} 節が付随する助詞句はしばしば「\rterm|key="きんせつく",id="kin-clausal-phrase"|<{kin} 節句\fl<{kin}-clausal phrase>>」と呼ばれる。
+    {kin} はこの用途のための特殊な単語である。
   >
   \xl<
     \li<\sh<{salot e asas a kin feraces a ces ca fax.}>\ja<彼が母親を手伝ったのは良いことだ。>>
