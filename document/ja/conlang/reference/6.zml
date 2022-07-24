@@ -107,39 +107,63 @@
   >
   \h2|tag="std",id="grammatical-category-verb"|<動詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    動詞は節の根幹部分となるもので、あらゆる修飾関係は修飾語の方向へ辿ると最終的に動詞に辿り着く。
+    したがって、動詞が他の語句を修飾することはない。
   >
   \h2|tag="stk",id="grammatical-category-noun"|<名詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    名詞はそれ自身のみでは修飾関係を作ることができず、助詞を伴って初めて他の単語を修飾できる形になる。
+    そのため、文中で名詞が単独で現れることはなく、常に助詞とともに現れる。
   >
   \h2|tag="stg",id="grammatical-category-adjective"|<形容詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    形容詞は名詞を修飾する。
+    また、助詞によって格を示されることで動詞の補語としても使うことができる。
   >
   \h2|tag="stf",id="grammatical-category-verb-adverb"|<動詞修飾副詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    動詞修飾副詞は動詞を修飾する。
+    加えて、一部の動詞修飾副詞はしばしば間投詞も修飾する。
   >
   \h2|tag="stv",id="grammatical-category-modificative-adverb"|<修飾詞修飾副詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    修飾詞修飾副詞は形容詞と副詞を修飾できる。
   >
   \h2|tag="stp",id="grammatical-category-special-adverb"|<特殊副詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    特殊副詞は動詞と名詞と形容詞と動詞修飾副詞と修飾詞修飾副詞を修飾できる。
   >
   \h2|tag="stb",id="grammatical-category-preposition"|<助詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    助詞は名詞の格を表すとともに、助詞句を形成して他の単語を修飾する語句を作る。
+    助詞が表す格は、助詞の綴りをそのまま用いて「{vo} 格」のように呼ぶ。
+    基本助接辞が助詞として使われているときの格には、次の表に示すような専用の名前を用いることがある。
+  >
+  \table<
+    \tr<\th<助詞>\th<格>>
+    \tr<\td<{a}>\td<\rterm|key="しゅかく",id="nominative-case"|<主格\fl<nominative case>>>>
+    \tr<\td<{e}>\td<\rterm|key="たいかく",id="accusative-case"|<対格\fl<accusative case>>>>
+    \tr<\td<{ca}>\td<\rterm|key="よかく",id="dative-case"|<与格\fl<dative case>>>>
+    \tr<\td<{zi}>\td<\rterm|key="だっかく",id="ablative-case"|<奪格\fl<ablative case>>>>
+    \tr<\td<{li}>\td<\rterm|key="のうかく",id="ergative-case"|<能格\fl<ergative case>>>>
+  >
+  \p<
+    一部の条件下では、助詞が形容詞とともに使われてその形容詞の格を表すことがある。
   >
   \h2|tag="stc",id="grammatical-category-conjunction"|<接続詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    接続詞は 2 つ以上の語句を繋ぐ役割をもつ。
+    このときに繋がれる語句は品詞が一致している必要があり、繋がれた全体も同じ品詞の句として扱われる。
+    例えば、名詞と形容詞を接続詞で繋げることはできない。
+    また、形容詞と形容詞を接続詞で繋げることはでき、繋げてできた全体は形容詞句として扱われる。
+  >
+  \p<
+    接続詞は 2 つ以上の節を繋ぐこともできる。
   >
   \h2|tag="stq",id="grammatical-category-interjection"|<間投詞>
   \p<
-    ζ*'ヮ')ζ 執筆中です!
+    間投詞は文構造に影響を与えず、完全文の間に挿入されて使われる。
+    また、単独で文を成すことができる。
   >
   \h2|tag="stx",id="grammatical-category-functional"|<機能詞>
   \p<
