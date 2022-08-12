@@ -147,6 +147,30 @@
             >
           >
         >
+        \div|class="introduction-separator"|<
+          \div|class="separator"|<
+            \div|class="separator-mark"|;
+          >
+        >
+        \h1|class="introduction-header"|<
+          \span|class="introduction-header-text"|<造語放送>
+        >
+        \div|class="introduction-content"|<
+          \div|class="introduction-explanation"|<
+            \p|class="introduction-paragraph"|<
+              シャレイア語は、製作者である私自身の世界の捉え方を反映させた言語です。
+              したがって、その単語の語義は、私が世界をどう区切っていてどう区切りたいかに従って決められます。
+              そのため、単語を作るときはかなりの時間を費やして、その単語が指す範囲はどこからどこまでなのかをじっくりと考察しています。
+            >
+            \p|class="introduction-paragraph"|<
+              そのような造語作業中に私が何を考えているのかを皆さんにお伝えするため、私が造語する様子を定期的に YouTube で生配信しています。
+              ぜひご覧ください。
+            >
+          >
+          \div|class="introduction-youtube"|<
+            \iframe|class="introduction-youtube-iframe",src="https://www.youtube.com/embed/live_stream?channel=UCF2sTP1NGBVFr79aJiKprsg"|;
+          >
+        >
       >
     >
 

@@ -222,7 +222,7 @@ $card-item-title-height: 42rpx;
     position: absolute;
     content: "";
     .card-item:hover & {
-      border-bottom: 1px rgba(white, 0.5) solid;
+      border-bottom: 1px rgba(white, 0.3) solid;
     }
   }
 }
@@ -260,6 +260,7 @@ $card-item-title-height: 42rpx;
 .introduction-content {
   display: flex;
   gap: 0rpx 80rpx;
+  align-items: center;
   @include small-screen {
     flex-direction: column;
     gap: 30rpx 0rpx;
@@ -271,6 +272,10 @@ $card-item-title-height: 42rpx;
 }
 
 .introduction-sample-container {
+  flex: 1 1 0rpx;
+}
+
+.introduction-youtube {
   flex: 1 1 0rpx;
 }
 
@@ -298,6 +303,16 @@ $card-item-title-height: 42rpx;
   & +& {
     margin-top: 10rpx;
   }
+}
+
+.introduction-youtube-iframe {
+  width: 100%;
+  border: none;
+  aspect-ratio: 16 / 9;
+}
+
+.introduction-separator {
+  margin: 50rpx 0rpx;
 }
 
 .count-table-block {
@@ -353,10 +368,10 @@ $card-item-title-height: 42rpx;
   max-width: $home-max-width;
   display: flex;
   align-items: center;
-  opacity: 0.5;
+  opacity: 0.3;
   &::before,
   &::after {
-    border-bottom: 1rpx mix($blue-color, $header-background-color, 50%) solid;
+    border-bottom: 1rpx $blue-color solid;
     flex-grow: 1;
     content: "";
   }
@@ -496,8 +511,9 @@ $card-item-title-height: 42rpx;
   &:not(:nth-child(2))::before {
     @include icon-font;
     margin: 0em fix-em($blank-margin, 90%);
-    color: mix($blue-color, $header-background-color, 50%);
+    color: $blue-color;
     font-size: 90%;
+    opacity: 0.5;
     line-height: 0;
     content: "\F101";
   }
