@@ -109,7 +109,7 @@
           \div|class="introduction-explanation"|<
             \p|class="introduction-paragraph"|<
               “Conlang” is an abbreviation of “constructed language”.
-              Constructed languages are those which are intentionally created by human beings, as opposed to naturally created languages such as Japanese or English.
+              Constructed languages are those which are intentionally created by human beings, as opposed to naturally created languages such as English or Japanese.
               There are various types of constructed languages, one of which is called “international auxiliary languages” for communicating with people who do not have a common mother tongue.
               Another type of them is “artificial languages”, which are created to enjoy the creation itself or to make novels or other works more realistic.
               Shaleian language, introduced on this website, is classified as an artificial language.
@@ -144,6 +144,41 @@
                 >
               >
             >
+          >
+        >
+        \div|class="introduction-separator"|<
+          \div|class="separator"|<
+            \div|class="separator-mark"|;
+          >
+        >
+        \h1|class="introduction-header"|<
+          \span|class="introduction-header-text"|<Broadcasting>
+        >
+        \div|class="introduction-content"|<
+          \div|class="introduction-explanation"|<
+            \p|class="introduction-paragraph"|<
+              Shaleian language is a language that reflects the way I perceive the world.
+              The meaning of each word is therefore determined according to how I delimit the world and how I wish to delimit it.
+              For this reason, when I create a word, I spend a great amount of time to deliberately consider what the word exactly refers to.
+            >
+            \p|class="introduction-paragraph"|<
+              In order to share with you what I think during such a word-creating process, I regularly stream live on YouTube.
+              Please come and see me when I am on the air.
+              The video \span|class="large-screen"|<on the right>\span|class="small-screen"|<below> is the latest streaming archive.
+            >
+            \div|class="introduction-table"|<
+              \div|class="introduction-item"|<
+                \div|class="introduction-item-heading"|<YouTube channel>
+                \div|class="introduction-item-content"|<\a|class="link",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg",target="_blank"|<Ziphil Shaleiras>>
+              >
+              \div|class="introduction-item"|<
+                \div|class="introduction-item-heading"|<Date and time>
+                \div|class="introduction-item-content"|<Every Saturday 22:00 (JST)>
+              >
+            >
+          >
+          \div|class="introduction-youtube"|<
+            \iframe|class="introduction-youtube-iframe",src="https://www.youtube.com/embed/live_stream?channel=UCF2sTP1NGBVFr79aJiKprsg"|;
           >
         >
       >
