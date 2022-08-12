@@ -307,6 +307,24 @@ $card-item-title-height: 42rpx;
   }
 }
 
+.introduction-table {
+  margin-top: 20px;
+  display: flex;
+}
+
+.introduction-item {
+  flex: 0rpx 1 1;
+}
+
+.introduction-item-heading {
+  opacity: 0.7;
+}
+
+.introduction-item-content {
+  font-size: 150%;
+  line-height: $line-height;
+}
+
 .introduction-youtube-iframe {
   width: 100%;
   border: none;
