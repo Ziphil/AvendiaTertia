@@ -259,7 +259,7 @@ $card-item-title-height: 42rpx;
 
 .introduction-content {
   display: flex;
-  gap: 0rpx 80rpx;
+  gap: 0rpx 60rpx;
   align-items: center;
   @include small-screen {
     flex-direction: column;
@@ -276,13 +276,13 @@ $card-item-title-height: 42rpx;
 }
 
 .introduction-youtube {
+  width: 100%;
   flex: 1 1 0rpx;
 }
 
 .introduction-sample {
   height: 100%;
-  margin-left: -40rpx;
-  padding: 20rpx 40rpx;
+  padding: 30rpx 30rpx;
   font-family: "Vekos Web";
   font-size: 110%;
   color: $black-blue-color;
@@ -292,6 +292,8 @@ $card-item-title-height: 42rpx;
   box-sizing: border-box;
   @include small-screen {
     margin-left: 0rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;
   }
@@ -361,6 +363,10 @@ $card-item-title-height: 42rpx;
 
 .separator-block {
   margin-top: 50rpx;
+  @include small-screen {
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+  }
 }
 
 .separator {
@@ -377,14 +383,12 @@ $card-item-title-height: 42rpx;
   }
   @include small-screen {
     width: 100%;
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
     box-sizing: border-box;
   }
 }
 
 .separator-mark {
-  margin: 0rpx 20rpx;
+  margin: 0rpx 27rpx;
   width: 6rpx;
   height: 6rpx;
   background-color: $blue-color;
@@ -400,7 +404,7 @@ $card-item-title-height: 42rpx;
   width: $home-width;
   max-width: $home-max-width;
   display: flex;
-  gap: 0rpx 80rpx;
+  gap: 0rpx 60rpx;
   @include small-screen {
     flex-direction: column;
     gap: 50rpx 0rpx;
