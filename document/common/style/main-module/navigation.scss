@@ -38,8 +38,9 @@
   &:not(:nth-child(1))::before {
     @include icon-font;
     margin: 0em fix-em($blank-margin, 90%);
-    color: mix($blue-color, $header-background-color, 50%);
+    color: $blue-color;
     font-size: 90%;
+    opacity: 0.5;
     line-height: 0;
     content: "\F101";
   }
