@@ -178,7 +178,7 @@
             >
           >
           \div|class="introduction-youtube"|<
-            \iframe|class="introduction-youtube-iframe",src="https://www.youtube.com/embed/live_stream?channel=UCF2sTP1NGBVFr79aJiKprsg"|;
+            \iframe|class="introduction-youtube-iframe",src="https://www.youtube.com/embed/?list=PLcxDffCpcTPLPokhX-GHMrU2mjaENx-bh"|;
           >
         >
       >
