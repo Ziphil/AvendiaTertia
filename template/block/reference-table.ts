@@ -20,7 +20,7 @@ const manager = new AvendiaTemplateManager();
 manager.registerElementRule("reference-table", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const documentSpecs = getReferenceIndex(transformer).specs;
-  const appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, sectionSpecs: Array<ReferenceSectionSpec>, inner?: boolean) {
+  const appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, sectionSpecs: Array<ReferenceSectionSpec>, inner?: boolean): void {
     self.appendElement("ul", (self) => {
       self.addClassName("normal-list");
       self.setBlockType("text", "text");
