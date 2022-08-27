@@ -58,6 +58,10 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
     if (element.hasAttribute("href")) {
       self.setAttribute("href", element.getAttribute("href"));
     }
+    if (element.hasAttribute("blank")) {
+      self.setAttribute("target", "_blank");
+      self.setAttribute("rel", "noopener noreferrer");
+    }
     self.appendElement("div", (self) => {
       self.addClassName("content-title");
       self.appendChild(transformer.apply());

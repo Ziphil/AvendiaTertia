@@ -15,7 +15,7 @@ manager.registerElementRule(["a", "ae", "an"], "page", (transformer, document, e
     if (element.hasAttribute("href")) {
       self.setAttribute("href", element.getAttribute("href"));
     }
-    if (element.tagName === "ae") {
+    if (element.tagName === "ae" || element.hasAttribute("blank")) {
       self.setAttribute("target", "_blank");
       self.setAttribute("rel", "noopener noreferrer");
     }
