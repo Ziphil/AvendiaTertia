@@ -12,7 +12,7 @@
   >
   \p<
     このサイトは、ZenML で書かれた原稿を HTML に変換することで作成しています。
-    詳細は\ae|href="https://github.com/Ziphil/AvendiaNew"|<こちら>をご覧ください。
+    詳細は\ae|href="https://github.com/Ziphil/AvendiaTertia"|<こちら>をご覧ください。
   >
   \p<
     以下は ZenML ドキュメント (ver 1.1 文法) の例です。
@@ -43,14 +43,14 @@
     `>
   >
   \p<
-    ZenML を XML の構文木に変換する Ruby スクリプトを公開しています。
+    ZenML を XML の構文木に変換する TypeScript 製と Ruby 製の処理系も公開してます。
   >
   \h1<ダウンロード>
   \p<
     ZenML の仕様や処理系は GitHub で公開しています。
   >
   \form<
-    \ae|href="https://github.com/Ziphil/Zenithal"|<GitHub ページ>
+    \ae|href="https://github.com/Ziphil/Zenml"|<GitHub ページ>
   >
 
 >

@@ -11,15 +11,15 @@
     この言語で単語生成規則を記述し処理系に渡すと、その生成規則に沿ってランダムに単語の綴りを生成します。
   >
   \p<
-    \a|href="2.html"|<ZpDIC> 上では Zatlin を動かすことができます。
-    また、単独で動く Java 製の処理系も公開してます。
+    \ae|href="https://zpdic.ziphil.com"|<ZpDIC Online> には Zatlin 処理系が埋め込まれており、単語生成規則を登録しておくと単語作成時に綴りを自動生成することができるようになります。
+    また、単独で動く TypeScript 製と Java 製の処理系も公開してます。
   >
   \h1<ダウンロード>
   \p<
     Zatlin の仕様や処理系は GitHub で公開しています。
   >
   \form<
-    \ae|href="https://github.com/Ziphil/Zatlin"|<GitHub ページ>
+    \ae|href="https://github.com/Ziphil/ZatlinTypeScript"|<GitHub ページ>
   >
 
 >
