@@ -8,32 +8,44 @@
   \use-math;
 
   \h1<単位>
+  \h2<国際単位系>
   \p<
-    シャレイア語では現実世界の国際単位系を用いる。
-    質量は 1 kg を基準と考えるが、シャレイア語では接頭辞をつけない形で表現される。
+    シャレイア語では現実世界の国際単位系 (とその併用単位) を用いる。
+    質量は 1 kg を基準と考えるが、シャレイア語ではこれを接頭辞をつけない形で表現される。
+  >
+  \p<
+    国際単位系では別名をもっている組立単位が、シャレイア語では別名をもたない場合がある。
+    そのような単位には単語の欄に「組立」と記した。
   >
   \table<
     \tr<\th<単語>\th<略称>\th<定義>\th<物理量>>
     \tr<\td<{lôt}>\td<[L]>\td<1 m>\td<長さ>>
     \tr<\td<{dok}>\td<[D]>\td<1 kg>\td<質量>>
-    \tr<\td<{kùl}>\td<[K]>\td<1 L (&m<= \srel; \sp<\rm<m>><3>>)>\td<容積>>
-    \tr<\td<*>\td<*>\td<1 N (&m<= \srel; \rm<m> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2>>)>\td<力>>
-    \tr<\td<*>\td<*>\td<1 Pa (&m<= \srel; \sp<\rm<m>><-1> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2>>)>\td<圧力>>
-    \tr<\td<*>\td<*>\td<1 C (&m<= \srel; \rm<s> \cdot; \rm<A>>)>\td<電荷>>
-    \tr<\td<*>\td<*>\td<1 A>\td<電流>>
-    \tr<\td<*>\td<*>\td<1 V (&m<= \srel; \sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3> \cdot; \sp<\rm<A>><-1>>)>\td<電位差>>
-    \tr<\td<*>\td<*>\td<1 Ω (&m<= \srel; \sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3> \cdot; \sp<\rm<A>><-2>>)>\td<電気抵抗>>
-    \tr<\td<*>\td<*>\td<1 W (&m<= \srel; \sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3>>)>\td<仕事率>>
-    \tr<\td<*>\td<*>\td<1 J (&m<= \srel; \sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2>>)>\td<エネルギー, 仕事>>
+    \tr<\td<{lîtes}>\td<[LT]>\td<1 L (&m<= \srel; \sp<\rm<m>><3>>)>\td<容積>>
+    \tr<\td<{nûton}>\td<[N]>\td<1 N (&m<= \srel; \rm<m> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2>>)>\td<力>>
+    \tr<\td<{paskal}>\td<[P]>\td<1 Pa (&m<= \srel; \sp<\rm<m>><-1> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2>>)>\td<圧力>>
+    \tr<\td<組立>\td<*>\td<1 W (&m<= \srel; \sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3>>)>\td<仕事率>>
+    \tr<\td<{jûl}>\td<[J]>\td<1 J (&m<= \srel; \sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-2>>)>\td<エネルギー, 仕事>>
+    \tr<\td<{kûlom}>\td<[KL]>\td<1 C (&m<= \srel; \rm<s> \cdot; \rm<A>>)>\td<電荷>>
+    \tr<\td<{ampés}>\td<[A]>\td<1 A>\td<電流>>
+    \tr<\td<{volet}>\td<[V]>\td<1 V (&m<= \srel; \sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3> \cdot; \sp<\rm<A>><-1>>)>\td<電位差>>
+    \tr<\td<組立>\td<*>\td<1 Ω (&m<= \srel; \sp<\rm<m>><2> \cdot; \rm<kg> \cdot; \sp<\rm<s>><-3> \cdot; \sp<\rm<A>><-2>>)>\td<電気抵抗>>
     \tr<\td<{tît}>\td<[T]>\td<1 s>\td<時間>>
-    \tr<\td<*>\td<*>\td<1 Hz (&m<= \srel; \sp<\rm<s>><-1>>)>\td<周波数>>
+    \tr<\td<{hês}>\td<[HS]>\td<1 Hz (&m<= \srel; \sp<\rm<s>><-1>>)>\td<周波数>>
     \tr<\td<{zác}>\td<[Z]>\td<1 °C>\td<温度>>
-    \tr<\td<{kelvin}>\td<*>\td<1 K>\td<温度>>
-    \tr<\td<*>\td<*>\td<1 cd>\td<光度>>
+    \tr<\td<{kelvin}>\td<[K]>\td<1 K>\td<温度>>
+    \tr<\td<{kandelas}>\td<[KD]>\td<1 cd>\td<光度>>
+    \tr<\td<{lûmen}>\td<[LM]>\td<1 lm (&m<= \srel; \rm<cd> \cdot; \rm<sr>>)>\td<光束>>
+    \tr<\td<組立>\td<*>\td<1 lx (&m<= \srel; \sp<\rm<m>><-2> \cdot; \rm<cd> \cdot; \rm<sr>>)>\td<照度>>
     \tr<\td<{tok}>\td<*>\td<1°>\td<平面角>>
     \tr<\td<{rédian}>\td<*>\td<1 rad>\td<平面角>>
     \tr<\td<*>\td<*>\td<1 sr>\td<立体角>>
     \tr<\td<*>\td<*>\td<1 mol>\td<物質量>>
+  >
+  \h2<それ以外の単位系>
+  \p<
+    国際単位系以外の単位は全て借用語である。
+    これらはほとんど使われないか特定の場面に限って使われるかのどちらかである。
   >
   \h1<接頭辞>
   \p<
