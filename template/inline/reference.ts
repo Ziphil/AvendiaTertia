@@ -19,7 +19,7 @@ manager.registerElementRule("rref", "page", (transformer, document, element) => 
     self.addClassName("ref");
     self.addClassName("link");
     self.setAttribute("href", refHref);
-    self.appendTextNode("@" + refTag.toUpperCase());
+    self.appendTextNode("#" + refTag.toUpperCase());
   });
   return self;
 });

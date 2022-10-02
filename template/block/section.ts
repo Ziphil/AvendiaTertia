@@ -28,7 +28,7 @@ manager.registerElementRule(["h1", "h2", "h3"], "page", (transformer, document, 
       self.setAttribute("id", element.getAttribute("tag"));
       innerSelf.insertHead(document.createElement("span", (self) => {
         self.addClassName(`${className}-tag`);
-        self.appendTextNode("@" + element.getAttribute("tag").toUpperCase() + ".");
+        self.appendTextNode("#" + element.getAttribute("tag").toUpperCase() + ".");
       }));
     }
     if (element.hasAttribute("num")) {

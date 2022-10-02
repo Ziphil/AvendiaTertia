@@ -33,7 +33,7 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
           self.addClassName("normal-item");
           self.appendElement("span", (self) => {
             self.addClassName("section-table-tag");
-            self.appendTextNode("@" + sectionSpec.tag.toUpperCase() + ".");
+            self.appendTextNode("#" + sectionSpec.tag.toUpperCase() + ".");
           });
           self.appendElement("a", (self) => {
             self.addClassName("link");
