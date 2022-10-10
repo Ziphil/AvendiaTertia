@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../util/common.scss";
+@import "../main-module/variable.scss";
+
+
+.ad {
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 0rpx auto 0rpx auto;
+  box-sizing: content-box;
+}
+
+.ad-inner {
+  width: 100%;
+}
