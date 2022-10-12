@@ -8,7 +8,8 @@
 .ad {
   width: $main-width;
   max-width: $main-max-width;
-  margin: 0rpx auto 0rpx auto;
+  margin: 40rpx auto 0rpx auto;
+  padding: 0rpx $main-horizontal-padding;
   box-sizing: content-box;
 }
 
