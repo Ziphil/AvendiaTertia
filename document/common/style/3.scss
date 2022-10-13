@@ -92,6 +92,7 @@ $footer-height: 50px;
 body {
   @include text-size-adjust;
   @include lnum-variant;
+  min-height: 100vh;
   margin: 0px;
   padding: 0px;
   font-family: $serif-font-family;
@@ -99,6 +100,8 @@ body {
   font-feature-settings: "palt" 1, "pkna" 1;
   background: $page-background;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 div.navigation {
@@ -165,7 +168,7 @@ div.box div.line {
 }
 
 div.head {
-  margin: ($navigation-height + 1px) 0px $content-vertical-margin 0px;
+  margin: ($navigation-height + 1px) 0px 0px 0px;
   padding: 80px 0px;
   background: $head-background;
   display: flex;
@@ -250,13 +253,14 @@ div.content {
   width: $content-width;
   max-width: $content-max-width;
   min-width: $content-min-width;
-  margin: $content-vertical-margin auto;
+  margin: $content-vertical-margin auto 0px auto;
   padding: 0px 0px;
   text-align: center;
+  flex-grow: 1;
 }
 
 h1 {
-  margin: $section-vertical-margin 0px;
+  margin: 0px 0px $section-vertical-margin 0px;
   padding: 0px;
   font-family: "Alegreya";
   font-size: $section-font-size;
@@ -416,9 +420,10 @@ div.license table tr td:last-child {
   color: $note-version-color;
 }
 
-div.license table tr td a {
+div.license table tr td a,
+div.license p a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 div.history {
