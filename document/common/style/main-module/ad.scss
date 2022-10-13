@@ -11,6 +11,12 @@
   margin: 40rpx auto 0rpx auto;
   padding: 0rpx $main-horizontal-padding;
   box-sizing: content-box;
+  @include smartphone {
+    width: 100%;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
 }
 
 .ad-inner {
