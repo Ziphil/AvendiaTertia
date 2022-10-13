@@ -232,6 +232,19 @@ $card-item-title-height: 42rpx;
   text-align: justify;
 }
 
+.ad-block {
+  margin-top: 60rpx;
+}
+
+.ad {
+  width: $home-width;
+  max-width: $home-max-width;
+}
+
+.ad-inner {
+  width: 100%;
+}
+
 .introduction-block {
   margin-top: 60rpx;
   padding: 50rpx 0rpx;

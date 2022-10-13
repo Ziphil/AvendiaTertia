@@ -93,11 +93,14 @@
           >
         >
       >
-      \div|class="anniversary"|<
-        \a|class="anniversary-link",href="other/other/16.html"|<
-          \img|class="anniversary-logo",src="/material/anniversary/3.svg"|;
-          \div|class="anniversary-text"|<
-            \span|class="anniversary-line"|<シャレイア語 10 周年記念ページ>
+    >
+
+    \div|class="ad-block centralize"|<
+      \div|class="ad"|<
+        \div|class="ad-inner",align="center"|<
+          \ins|class="adsbygoogle",style="display:block;width:100%;height:90px;",data-ad-client="ca-pub-9429549748934508",data-ad-slot="8515086829"|;
+          \script~<
+            (adsbygoogle = window.adsbygoogle || []).push({});
           >
         >
       >
