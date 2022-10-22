@@ -178,7 +178,7 @@
   \h2|id="paziq"|<\h<2575> ({pâziq})>
   \xl<
     \li<
-      \sh<{vade xakalet te nîpes a tel zi kossax, pâziqes a'l e litéz zi cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
+      \sh<{vade xakalet te nîpes a tel zi kosax, pâziqes a'l e litéz zi cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
       \gloss<
         &lig<\sh<{vade}>\ex<～なので>>
         &lig|conj="-et"|<\sh<{xakal}>\ex<晴れる>>
@@ -187,7 +187,7 @@
         &lig|auto="a"|;
         &lig<\sh<{tel}>\ex<私>>
         &lig|auto="zi"|;
-        &lig<\sh<{kossax}>\ex<学校>>
+        &lig<\sh<{kosax}>\ex<学校>>
         &lig|punc=","|;
         &lig|conj="-es"|<\sh<{pâziq}>\ex<置き忘れる>>
         &lig|auto="a"|;
