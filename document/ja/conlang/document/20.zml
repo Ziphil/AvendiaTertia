@@ -36,7 +36,7 @@
     これは、現在という幅のない一瞬のうちに「食べる」という行為全体を行うことはあり得ないためである。
     したがって、ここでは「リンゴを食べる」というのが現在も続いている習慣であると考え、反復表現で翻訳した。
     直訳すると、「私はリンゴを食べることを何度か繰り返すことの途中である」となる。
-    なお、時制と相に関する詳しい説明は\a|href="15.html"|<ここ>を参照すること。
+    なお、時制と相に関する詳しい説明は\a|href="../reference#sgx"|<ここ>を参照すること。
   >
   \h2|id="2"|<2>
   \xl<
@@ -291,6 +291,74 @@
     構文的には 9 番目の文と同じである。
     ここでは 6 日分だけ以後のことについて言及したいので、「以前」の意味の {zîk} の代わりに「以後」の意味の {carip} を用いている。
   >
+  \h2|id="12"|<12>
+  \xl<
+    \li<
+      \sh<{vomac sôdos a ces e sakil teku taq al'ayos.}>\ja<彼女らは 3 日間リンゴを食べている。>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{vom}>\ex<繰り返す>>
+        &lig|conj="-os"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼女ら>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{teku}>\ex<～の間>>
+        &lig<\sh<{taq}>\ex<日>>
+        &lig<\sh<{al'}>\ex<～個の>>
+        &lig|conj="a-"|<\sh<{yos}>\ex<3>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    同じリンゴを 3 日かけて食べ続けているというよりは、リンゴを食べるという別々の行為を 3 日間繰り返しているという意味なので、反復表現を用いている。
+  >
+  \p<
+    「3 日間」の表現には、「3 つの日」と考えて基数表現を用いる。
+  >
+  \h2|id="13"|<13>
+  \xl<
+    \li<
+      \sh<{sôdac a ces e sakil teku lôt avôl ile meris axaf.}>\ja<彼女らはリンゴを 5 分間食べ続けている。>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼女ら>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig<\sh<{teku}>\ex<～の間>>
+        &lig<\sh<{lôt}>\ex<時間>>
+        &lig|conj="a-"|<\sh<{vôl}>\ex<～の間>>
+        &lig|conj="i-"|<\sh<{le}>\ex<～の数量分の>>
+        &lig<\sh<{meris}>\ex<1 分>>
+        &lig|conj="a-"|<\sh<{xaf}>\ex<5>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    これは 5 分かけて 1 つのリンゴを食べ続けているという意味なので、反復表現にはせず単に経過相を用いている。
+  >
+  \p<
+    「5 分」を表現するには「5 分の数量の時間」と言う必要がある。
+    すなわち、「時間」を表す {lôt} に、被修飾語の程度を数量で説明する役割をもつ {ile} 句を修飾させ、{ile} 句の中に「5 分」を表す {meris axaf} を入れる。
+    この {meris} は単位名詞なので、「5 つの分」と考えて {meris al'axaf} とはできない。
+  >
+  \h2|id="14"|<14>
+  \xl<
+    \li<
+      \sh<{sôdac ovák a ces e sakil.}>\ja<彼は常にりんごを食べている。>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{sôd}>\ex<食べる>>
+        &lig|conj="o-"|<\sh<{vak}>\ex<常に>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼女ら>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|punc="."|;
+      >
+    >
+  >
   \h2|id="15"|<15>
   \xl<
     \li<
@@ -361,6 +429,43 @@
     不特定の「誰か」には {zis} を使う。
     {zis} を省略して {sôdat e sakil aquk} としても意味的には変わらないが、このようにすると、リンゴを食べた人ではなくリンゴそのものに焦点が当てられることになる。
   >
+  \h2|id="18"|<18>
+  \xl<
+    \li<
+      \sh<{fêzat sôdis a zis e sakil afik.}>\ja<誰かがこのリンゴを食べそうだ。>
+      \gloss<
+        &lig|conj="-at"|<\sh<{fêz}>\ex<しそうに思わせる>>
+        &lig|conj="-is"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{zis}>\ex<誰か>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|conj="a-"|<\sh<{fik}>\ex<この>>
+        &lig|punc="."|;
+      >
+    >
+    \li<
+      \sh<{revat a tel e'n sôdis a zis e sakil afik.}>\ja<誰かがこのリンゴを食べそうだ。>
+      \gloss<
+        &lig|conj="-at"|<\sh<{rev}>\ex<思う>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|;
+        &lig|auto="'n"|;
+        &lig|conj="-is"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{zis}>\ex<誰か>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+        &lig|conj="a-"|<\sh<{fik}>\ex<この>>
+        &lig|punc="."|;
+      >
+    >
+  >
+  \p<
+    その場の状況からして誰かがリンゴを食べることが客観的に予期される場合は、{fêz} を使うことができる。
+    自分がそう思っているだけである場合は、「私は～と思う」と言う。
+  >
   \h2|id="20"|<20>
   \xl<
     \li<
@@ -376,7 +481,7 @@
   >
   \p<
     被修飾語が存在しないことを表す {dak} を用いている。
-    構文は 15 番目の文と同じである。
+    構文は \a|href="#15"|<15 番目の文>と同じである。
   >
   \h2|id="21"|<21>
   \xl<
