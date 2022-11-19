@@ -6,6 +6,12 @@
   \head<
     \meta|charset="UTF-8"|;
     \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \meta|name="twitter:card",content="summary"|;
+    \meta|name="twitter:site",content="@Ziphil"|;
+    \meta|property="og:url",content="https://ziphil.com"|;
+    \meta|property="og:title",content="Avendia"|;
+    \meta|property="og:description",content="人工言語「シャレイア語」の公式サイトです。"|;
+    \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
     \script|src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508",crossorigin="anonymous",async|;
     \script|src="/program/script/12.js"|;
     \link|rel="stylesheet",type="text/css",href="/style/8.css"|;
