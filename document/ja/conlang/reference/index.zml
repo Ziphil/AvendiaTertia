@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## srv まで使用
+  ## srq まで使用
   ## 索引インデックス: 見出し順に #14 まで終了
   \hb<初めに>
   \pb<
@@ -22,7 +22,7 @@
   \hb<単語>
   \pb<
     \ab|href="6.html"|<品詞>
-    \ab|href="34.html"|<語彙的品詞と文法的品詞の関係>
+    \ab|href="34.html"|<語彙的品詞と文法的品詞>
     \ab|href="7.html"|<その他の特殊な形態素>
     \ab|href="8.html"|<活用>
   >
