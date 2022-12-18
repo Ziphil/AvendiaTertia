@@ -3,10 +3,10 @@
 
 
 \page<
-  \name<セクション一覧>
+  \name<目次>
   \ver<7 代>
 
-  \h1<セクション一覧>
+  \h1<目次>
   \reference-table;
 
 >
