@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+@import "util/reset.scss";
+@import "util/common.scss";
+@import "util/font.scss";
+@import "main-module/variable.scss";
+
+
+$song-item-height: 90rpx;
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  @include text-size-adjust;
+  height: 100%;
+  margin: 0rpx;
+  padding: 0rpx;
+  color: $text-color;
+  font-family: $serif-font-family;
+  font-weight: normal;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  line-height: 1;
+  text-decoration-skip-ink: none;
+  background-image: linear-gradient(to right bottom, hsl(198, 75%, 98%), hsl(205, 75%, 98%));
+}
+
+.main {
+  --background-color: #{$main-background-color};
+  width: $main-width;
+  max-width: $main-max-width;
+  margin-block: 40rpx;
+  margin-inline: auto;
+  box-sizing: content-box;
+  @include smartphone {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.song-list {
+  width: 100%;
+  row-gap: 30rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.song-item {
+  --background-color: #{hsl(198, 75%, 95%)};
+  --highlight-background-color: #{hsl(198, 75%, 88%)};
+  --highlight-color: #{$blue-color};
+  height: $song-item-height;
+  box-shadow: 2rpx 2rpx 0rpx 0rpx $shadow-color;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  &[data-state] {
+    --background-color: #{hsl(35, 75%, 95%)};
+    --highlight-background-color: #{hsl(35, 75%, 88%)};
+    --highlight-color: #{$orange-color};  
+  }
+}
+
+.song-number {
+  width: 100rpx;
+  height: 100%;
+  margin-inline-start: tan(abs($skew-angle)) * $song-item-height * -0.5;
+  padding-inline-start: tan(abs($skew-angle)) * $song-item-height * 0.5;
+  font-size: 50rpx;
+  font-family: $special-font-family;
+  font-weight: 300;
+  color: var(--highlight-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+  z-index: 0;
+  &::before {
+    inset-block-end: -0.1em;
+    content: attr(data-number);
+    position: relative;
+    z-index: 2;
+  }
+  &::after {
+    inset: 0rpx;
+    background-color:var(--highlight-background-color);
+    transform: skew(-15deg, 0deg); 
+    position: absolute;
+    z-index: 1;
+    content: "";
+  }
+}
+
+.song-button {
+  width: 100rpx;
+  height: 100%;
+  inset-inline-end: tan(abs($skew-angle)) * $song-item-height * -0.5;
+  padding-inline-end: tan(abs($skew-angle)) * $song-item-height * 0.25;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 0;
+  &::before {
+    @include icon-font;
+    color: var(--background-color);
+    z-index: 2;
+    content: "\F04B";
+  }
+  .song-item[data-state="playing"] &::before {
+    content: "\F04C";
+  }
+  &::after {
+    inset: 0rpx;
+    background-color: var(--highlight-color);
+    transform: skew(-15deg, 0deg); 
+    position: absolute;
+    z-index: 1;
+    content: "";
+  }
+}
+
+.song-information {
+  row-gap: 5rpx;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.song-title {
+  margin-inline-start: 20rpx;
+  font-size: 40rpx;
+  font-family: "Kaleg Round Expanded";
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  flex-grow: 1;
+  transform: skew(-3deg, 0deg);
+  &[data-none] {
+    opacity: 0.5;
+    &::before {
+      content: "reláf ide kofcaf";
+    }
+  }
+}
+
+.song-data-list {
+  margin-inline-start: 20rpx;
+  column-gap: 20rpx;
+  font-size: 14rpx;
+  display: flex;
+  opacity: 0.7;
+}
+
+.song-data-item {
+  &::before {
+    @include icon-font;
+    margin-inline-end: fix-em($blank-margin, 90%);
+    font-size: 90%;
+    color: var(--highlight-color);
+  }
+  &[data-type="date"]::before {
+    content: "\F073";
+  }
+  &[data-type="length"]::before {
+    content: "\E4BA";
+  }
+}

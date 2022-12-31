@@ -1,0 +1,50 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \meta|name="twitter:card",content="summary"|;
+    \meta|name="twitter:site",content="@Ziphil"|;
+    \meta|property="og:url",content="http://ziphil.com/other/other/17.html"|;
+    \meta|property="og:title",content="音楽室"|;
+    \meta|property="og:description",content="音楽室"|;
+    \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
+    \link|rel="stylesheet",type="text/css",href="/style/10.css"|;
+    \link|rel="stylesheet",media="all",href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"|;
+    \script|src="/program/script/19.js"|;
+    \title<音楽室 — Avendia>
+  >
+  \body<
+
+    \main|class="main"|<
+      \div|class="song-list"|<
+        \button|class="song-item",data-number="1"|<
+          \div|class="song-number",data-number="1"|;
+          \div|class="song-information"|<
+            \div|class="song-title"|<xalíh acís>
+            \div|class="song-data-list"|<
+              \div|class="song-data-item",data-type="date"|<2022`/12`/30>
+              \div|class="song-data-item",data-type="length"|<2:40>
+            >
+          >
+          \div|class="song-button"|;
+        >
+        \button|class="song-item",data-number="2"|<
+          \div|class="song-number",data-number="2"|;
+          \div|class="song-information"|<
+            \div|class="song-title",data-none|;
+            \div|class="song-data-list"|<
+              \div|class="song-data-item",data-type="date"|<2022`/12`/31>
+              \div|class="song-data-item",data-type="length"|<2:40>
+            >
+          >
+          \div|class="song-button"|;
+        >
+      >
+    >
+
+  >
+>
