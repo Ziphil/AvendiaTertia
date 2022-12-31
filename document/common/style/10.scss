@@ -8,7 +8,7 @@
 @import "main-module/variable.scss";
 
 
-$song-item-height: 90rpx;
+$song-item-height: 80rpx;
 
 html {
   height: 100%;
@@ -77,11 +77,11 @@ body {
 }
 
 .song-number {
-  width: 100rpx;
+  width: 90rpx;
   height: 100%;
   margin-inline-start: tan(abs($skew-angle)) * $song-item-height * -0.5;
   padding-inline-start: tan(abs($skew-angle)) * $song-item-height * 0.5;
-  font-size: 50rpx;
+  font-size: 300%;
   font-family: $special-font-family;
   font-weight: 300;
   color: var(--highlight-color);
@@ -105,15 +105,18 @@ body {
     z-index: 1;
     content: "";
   }
+  @include smartphone {
+    display: none;
+  }
 }
 
 .song-button {
-  width: 100rpx;
+  width: 90rpx;
   height: 100%;
   inset-inline-end: tan(abs($skew-angle)) * $song-item-height * -0.5 - 100rpx;
   padding-inline-end: tan(abs($skew-angle)) * $song-item-height * 0.25;
   transition: inset-inline-end 0.2s;
-  font-size: 40rpx;
+  font-size: 200%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,15 +146,19 @@ body {
 }
 
 .song-information {
-  margin-inline-start: 110rpx;
+  margin-inline-start: 100rpx;
+  margin-inline-end: 20rpx;
   row-gap: 8rpx;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  @include smartphone {
+    margin-inline-start: 20rpx;
+  }
 }
 
 .song-title {
-  font-size: 40rpx;
+  font-size: 200%;
   font-family: "Kaleg Round Expanded";
   font-weight: bold;
   letter-spacing: 0.05em;
@@ -167,7 +174,7 @@ body {
 
 .song-data-list {
   column-gap: 20rpx;
-  font-size: 14rpx;
+  font-size: 80%;
   display: flex;
   opacity: 0.7;
 }
