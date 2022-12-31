@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @use "sass:math" as *;
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap");
 @import "util/reset.scss";
 @import "util/common.scss";
 @import "util/font.scss";
@@ -17,7 +17,6 @@ html {
 
 body {
   @include text-size-adjust;
-  height: 100%;
   margin: 0rpx;
   padding: 0rpx;
   color: $text-color;
@@ -27,6 +26,15 @@ body {
   line-height: 1;
   text-decoration-skip-ink: none;
   background-image: linear-gradient(to right bottom, hsl(198, 60%, 98%), hsl(205, 60%, 98%));
+}
+
+.header {
+  margin-block-start: 40rpx;
+  font-family: $special-font-family;
+  font-size: 300%;
+  font-weight: 600;
+  color: $blue-color;
+  text-align: center;
 }
 
 .main {

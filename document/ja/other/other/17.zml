@@ -19,6 +19,10 @@
   >
   \body<
 
+    \header|class="header"|<
+      Avendia Auditorium
+    >
+
     \main|class="main"|<
       \div|class="song-list"|<
         \button|class="song-item",data-number="1"|<
