@@ -26,11 +26,10 @@ body {
   font-feature-settings: "palt" 1, "pkna" 1;
   line-height: 1;
   text-decoration-skip-ink: none;
-  background-image: linear-gradient(to right bottom, hsl(198, 75%, 98%), hsl(205, 75%, 98%));
+  background-image: linear-gradient(to right bottom, hsl(198, 60%, 98%), hsl(205, 60%, 98%));
 }
 
 .main {
-  --background-color: #{$main-background-color};
   width: $main-width;
   max-width: $main-max-width;
   margin-block: 40rpx;
@@ -52,8 +51,8 @@ body {
 }
 
 .song-item {
-  --background-color: #{hsl(198, 75%, 95%)};
-  --highlight-background-color: #{hsl(198, 75%, 88%)};
+  --background-color: #{hsl(198, 60%, 94%)};
+  --highlight-background-color: #{hsl(198, 60%, 86%)};
   --highlight-color: #{$blue-color};
   height: $song-item-height;
   box-shadow: 2rpx 2rpx 0rpx 0rpx $shadow-color;
@@ -63,8 +62,8 @@ body {
   overflow: hidden;
   position: relative;
   &[data-state] {
-    --background-color: #{hsl(35, 75%, 95%)};
-    --highlight-background-color: #{hsl(35, 75%, 88%)};
+    --background-color: #{hsl(35, 60%, 94%)};
+    --highlight-background-color: #{hsl(35, 60%, 86%)};
     --highlight-color: #{$orange-color};  
   }
 }
@@ -82,8 +81,7 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  position: relative;
-  flex-shrink: 0;
+  position: absolute;
   z-index: 0;
   &::before {
     inset-block-end: -0.1em;
@@ -104,8 +102,9 @@ body {
 .song-button {
   width: 100rpx;
   height: 100%;
-  inset-inline-end: tan(abs($skew-angle)) * $song-item-height * -0.5;
+  inset-inline-end: tan(abs($skew-angle)) * $song-item-height * -0.5 - 100rpx;
   padding-inline-end: tan(abs($skew-angle)) * $song-item-height * 0.25;
+  transition: inset-inline-end 0.2s;
   font-size: 40rpx;
   display: flex;
   align-items: center;
@@ -113,6 +112,9 @@ body {
   box-sizing: border-box;
   position: absolute;
   z-index: 0;
+  .song-item:hover & {
+    inset-inline-end: tan(abs($skew-angle)) * $song-item-height * -0.5;
+  }
   &::before {
     @include icon-font;
     color: var(--background-color);
@@ -133,14 +135,14 @@ body {
 }
 
 .song-information {
-  row-gap: 5rpx;
+  margin-inline-start: 110rpx;
+  row-gap: 8rpx;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .song-title {
-  margin-inline-start: 20rpx;
   font-size: 40rpx;
   font-family: "Kaleg Round Expanded";
   font-weight: bold;
@@ -156,7 +158,6 @@ body {
 }
 
 .song-data-list {
-  margin-inline-start: 20rpx;
   column-gap: 20rpx;
   font-size: 14rpx;
   display: flex;
