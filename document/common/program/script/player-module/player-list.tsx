@@ -8,28 +8,34 @@ import PlayerPane from "./player-pane";
 
 
 const PlayerList = function ({
+  songSpecs
 }: {
+  songSpecs: Array<SongSpec>
 }): ReactElement {
 
   const node = (
     <div className="player-list">
-      <PlayerPane
-        number="1"
-        title="xalíh acís"
-        date="2022/12/30"
-        length="2:40"
-      />
-      <PlayerPane
-        number="2"
-        title={null}
-        date="2022/12/31"
-        length="2:40"
-      />
+      {songSpecs.map((songSpec) => (
+        <PlayerPane
+          key={songSpec.number}
+          number={songSpec.number}
+          title={songSpec.title}
+          date={songSpec.date}
+          length={songSpec.length}
+        />
+      ))}
     </div>
   );
   return node;
 
 };
 
+
+export type SongSpec = {
+  number: number,
+  title: string | null,
+  date: string,
+  length: number
+};
 
 export default PlayerList;

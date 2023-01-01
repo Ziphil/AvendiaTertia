@@ -22,10 +22,10 @@ const PlayerPane = function ({
   date,
   length
 }: {
-  number: string,
+  number: number,
   title: string | null,
   date: string,
-  length: string
+  length: number
 }): ReactElement {
 
   const [state, setState] = useState<"playing" | "pausing" | null>(null);
@@ -71,12 +71,12 @@ const PlayerPane = function ({
   const node = (
     <div className="player-item" {...data({state})}>
       <div className="player-item-top">
-        <div className="player-number" {...data({number})}/>
+        <div className="player-number" {...data({number: number.toString()})}/>
         <div className="player-information">
           <div className="player-title" {...data({none: title === null})}>{title}</div>
           <div className="player-detail-list">
             <div className="player-detail-item" {...data({type: "date"})}>{date}</div>
-            <div className="player-detail-item" {...data({type: "length"})}>{length}</div>
+            <div className="player-detail-item" {...data({type: "length"})}>{formatTime(length)}</div>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ const PlayerPane = function ({
 };
 
 
-function createHowl(number: string): Howl {
+function createHowl(number: number): Howl {
   const howl = new Howl({
     src: [`/file/song/${number}.mp3`],
     preload: false
