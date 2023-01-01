@@ -8,7 +8,8 @@
 @import "main-module/variable.scss";
 
 
-$song-item-height: 80rpx;
+$player-item-top-height: 80rpx;
+$player-item-bottom-height: 40rpx;
 
 html {
   height: 100%;
@@ -50,7 +51,7 @@ body {
   }
 }
 
-.song-list {
+.player-list {
   width: 100%;
   row-gap: 30rpx;
   display: flex;
@@ -58,29 +59,34 @@ body {
   box-sizing: border-box;
 }
 
-.song-item {
+.player-item {
   --background-color: #{hsl(198, 60%, 94%)};
   --highlight-background-color: #{hsl(198, 60%, 86%)};
-  --highlight-color: #{$blue-color};
-  height: $song-item-height;
-  box-shadow: 2rpx 2rpx 0rpx 0rpx $shadow-color;
+  --highlight-color: #{hsl(198, 75%, 50%)};
+  --dark-highlight-color: #{hsl(205, 75%, 50%)};
   background-color: var(--background-color);
-  display: flex;
-  align-items: center;
+  border: var(--highlight-color) 1rpx solid;
   overflow: hidden;
   position: relative;
   &[data-state] {
     --background-color: #{hsl(35, 60%, 94%)};
     --highlight-background-color: #{hsl(35, 60%, 86%)};
-    --highlight-color: #{$orange-color};  
-  }
+    --highlight-color: #{hsl(35, 75%, 50%)};
+    --dark-highlight-color: #{hsl(28, 75%, 50%)};
+    }
 }
 
-.song-number {
-  width: 90rpx;
+.player-item-top {
+  height: $player-item-top-height;
+  display: flex;
+  align-items: center; 
+}
+
+.player-number {
+  width: 80rpx;
   height: 100%;
-  margin-inline-start: tan(abs($skew-angle)) * $song-item-height * -0.5;
-  padding-inline-start: tan(abs($skew-angle)) * $song-item-height * 0.5;
+  margin-inline-start: tan(abs($skew-angle)) * $player-item-top-height * -0.5;
+  padding-inline-start: tan(abs($skew-angle)) * $player-item-top-height * 0.5;
   font-size: 250%;
   font-family: $special-font-family;
   font-weight: 300;
@@ -89,7 +95,7 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   z-index: 0;
   &::before {
     inset-block-end: -0.1em;
@@ -99,8 +105,8 @@ body {
   }
   &::after {
     inset: 0rpx;
-    background-color:var(--highlight-background-color);
-    transform: skew(-15deg, 0deg); 
+    background-color: var(--highlight-background-color);
+    transform: skew($skew-angle, 0deg); 
     position: absolute;
     z-index: 1;
     content: "";
@@ -110,44 +116,8 @@ body {
   }
 }
 
-.song-button {
-  width: 90rpx;
-  height: 100%;
-  inset-inline-end: tan(abs($skew-angle)) * $song-item-height * -0.5 - 100rpx;
-  padding-inline-end: tan(abs($skew-angle)) * $song-item-height * 0.25;
-  transition: inset-inline-end 0.2s;
-  font-size: 200%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 0;
-  .song-item:hover & {
-    inset-inline-end: tan(abs($skew-angle)) * $song-item-height * -0.5;
-  }
-  &::before {
-    @include icon-font;
-    color: var(--background-color);
-    z-index: 2;
-    content: "\F04B";
-  }
-  .song-item[data-state="playing"] &::before {
-    content: "\F04C";
-  }
-  &::after {
-    inset: 0rpx;
-    background-color: var(--highlight-color);
-    transform: skew(-15deg, 0deg); 
-    position: absolute;
-    z-index: 1;
-    content: "";
-  }
-}
-
-.song-information {
-  margin-inline-start: 100rpx;
-  margin-inline-end: 20rpx;
+.player-information {
+  margin-inline: 20rpx;
   row-gap: 8rpx;
   display: flex;
   flex-direction: column;
@@ -157,7 +127,7 @@ body {
   }
 }
 
-.song-title {
+.player-title {
   font-size: 200%;
   font-family: "Kaleg Round Expanded";
   font-weight: bold;
@@ -172,14 +142,14 @@ body {
   }
 }
 
-.song-data-list {
+.player-detail-list {
   column-gap: 20rpx;
   font-size: 80%;
   display: flex;
   opacity: 0.7;
 }
 
-.song-data-item {
+.player-detail-item {
   &::before {
     @include icon-font;
     margin-inline-end: fix-em($blank-margin, 90%);
@@ -192,4 +162,66 @@ body {
   &[data-type="length"]::before {
     content: "\E4BA";
   }
+}
+
+.player-item-bottom {
+  height: $player-item-bottom-height;
+  padding-inline: 20rpx;
+  background-color: var(--highlight-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+}
+
+.player-progress-container {
+  inset-block: 0rpx;
+  inset-inline: tan(abs($skew-angle)) * $player-item-bottom-height * -0.5;
+  position: absolute;
+  z-index: 1;
+}
+
+.player-progress {
+  width: 50%;
+  height: 100%;
+  background-color: var(--dark-highlight-color);
+  transform: skew($skew-angle, 0deg); 
+}
+
+.player-item-bottom-left {
+  column-gap: 15rpx;
+  display: flex;
+  z-index: 2;
+}
+
+.player-button {
+  width: 1em;
+  font-size: 120%;
+  color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: var(--highlight-background-color);
+  }
+  &::before {
+    @include icon-font;
+  }
+  &[data-type="play"]::before {
+    font-size: 140%;
+    content: "\F04B";
+}
+  .player-item[data-state="playing"] &[data-type="play"]::before {
+    content: "\F04C";
+  }
+  &[data-type="reset"]::before {
+    content: "\F04D";
+  }
+}
+
+.player-item-bottom-right {
+  color: var(--background-color);
+  opacity: 0.7;
+  z-index: 2;
 }

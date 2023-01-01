@@ -23,32 +23,7 @@
       Avendia Auditorium
     >
 
-    \main|class="main"|<
-      \div|class="song-list"|<
-        \button|class="song-item",data-number="1"|<
-          \div|class="song-number",data-number="1"|;
-          \div|class="song-information"|<
-            \div|class="song-title"|<xalíh acís>
-            \div|class="song-data-list"|<
-              \div|class="song-data-item",data-type="date"|<2022`/12`/30>
-              \div|class="song-data-item",data-type="length"|<2:40>
-            >
-          >
-          \div|class="song-button"|;
-        >
-        \button|class="song-item",data-number="2"|<
-          \div|class="song-number",data-number="2"|;
-          \div|class="song-information"|<
-            \div|class="song-title",data-none|;
-            \div|class="song-data-list"|<
-              \div|class="song-data-item",data-type="date"|<2022`/12`/31>
-              \div|class="song-data-item",data-type="length"|<2:40>
-            >
-          >
-          \div|class="song-button"|;
-        >
-      >
-    >
+    \main|class="main",id="main"|;
 
   >
 >

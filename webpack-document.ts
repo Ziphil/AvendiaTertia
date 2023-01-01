@@ -2,13 +2,13 @@
 
 import {
   Configuration,
+  DefinePlugin,
   ProvidePlugin
 } from "webpack";
 
 
 let config = {
-  mode: "none",
-  target: "web",
+  mode: "production",
   module: {
     rules: [
       {
@@ -25,7 +25,7 @@ let config = {
     ]
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
     fallback: {
       "http": require.resolve("stream-http"),
       "https": require.resolve("https-browserify"),
@@ -39,7 +39,10 @@ let config = {
     }
   },
   plugins: [
-    new ProvidePlugin({process: "process/browser"})
+    new DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    }),
+    new ProvidePlugin({process: "process/browser"}),
   ]
 } as Configuration;
 
