@@ -132,6 +132,7 @@ body {
   font-family: "Kaleg Round Expanded";
   font-weight: bold;
   letter-spacing: 0.05em;
+  word-spacing: -0.2rem;
   flex-grow: 1;
   transform: skew(-3deg, 0deg);
   &[data-none] {
