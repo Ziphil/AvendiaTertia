@@ -20,12 +20,14 @@ const PlayerPane = function ({
   number,
   title,
   date,
-  length
+  length,
+  description
 }: {
   number: number,
   title: string | null,
   date: string,
-  length: number
+  length: number,
+  description: string
 }): ReactElement {
 
   const [state, setState] = useState<"playing" | "pausing" | null>(null);
@@ -78,6 +80,9 @@ const PlayerPane = function ({
             <div className="player-detail-item" {...data({type: "date"})}>{date}</div>
             <div className="player-detail-item" {...data({type: "length"})}>{formatTime(length)}</div>
           </div>
+          <p className="player-description">
+            {description}
+          </p>
         </div>
       </div>
       <div className="player-item-bottom">

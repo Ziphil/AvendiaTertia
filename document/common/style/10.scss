@@ -148,6 +148,9 @@ body {
   font-size: 80%;
   display: flex;
   opacity: 0.7;
+  .player-item-top:hover & {
+    display: none;
+  }
 }
 
 .player-detail-item {
@@ -162,6 +165,24 @@ body {
   }
   &[data-type="length"]::before {
     content: "\E4BA";
+  }
+}
+
+.player-description {
+  font-size: 80%;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  display: none;
+  .player-item-top:hover & {
+    display: block;
+  }
+  &::before {
+    @include icon-font;
+    margin-inline-end: fix-em($blank-margin, 90%);
+    font-size: 90%;
+    color: var(--highlight-color);
+    content: "\F05A";
   }
 }
 

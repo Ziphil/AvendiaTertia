@@ -22,6 +22,7 @@ const PlayerList = function ({
           title={songSpec.title}
           date={songSpec.date}
           length={songSpec.length}
+          description={songSpec.description}
         />
       ))}
     </div>
@@ -35,7 +36,8 @@ export type SongSpec = {
   number: number,
   title: string | null,
   date: string,
-  length: number
+  length: number,
+  description: string
 };
 
 export default PlayerList;

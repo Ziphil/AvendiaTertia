@@ -21,13 +21,15 @@ const SONG_SPECS = [
     number: 1,
     title: "xalíh acís",
     date: "2022/12/30",
-    length: 101
+    length: 101,
+    description: "最初の曲。"
   },
   {
     number: 2,
     title: "ritasac a fobôs avéf",
     date: "2023/01/01",
-    length: 28
+    length: 28,
+    description: "ディミニッシュセブンス使いたかっただけ。途中でなんかよく分かんなくなった。"
   }
 ] as Array<SongSpec>;
 
