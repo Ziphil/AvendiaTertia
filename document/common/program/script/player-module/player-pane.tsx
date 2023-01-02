@@ -83,7 +83,7 @@ const PlayerPane = function ({
           <button className="player-button" onClick={handleStop} {...data({type: "reset"})}/>
         </div>
         <div className="player-item-bottom-right">
-          {formatTime(currentTime)} / {formatTime(totalTime)}
+          {state !== null && <>{formatTime(currentTime)} / {formatTime(totalTime)}</>}
         </div>
         <div className="player-progress-container">
           <div className="player-progress" style={{width: `${currentProgress}%`}}/>
