@@ -8,7 +8,7 @@
 @import "main-module/variable.scss";
 
 
-$player-item-top-height: 80rpx;
+$player-item-top-height: 100rpx;
 $player-item-bottom-height: 40rpx;
 
 html {
@@ -86,7 +86,7 @@ body {
   width: 80rpx;
   height: 100%;
   margin-inline-start: tan(abs($skew-angle)) * $player-item-top-height * -0.5;
-  padding-inline-start: tan(abs($skew-angle)) * $player-item-top-height * 0.5;
+  padding-inline-start: tan(abs($skew-angle)) * $player-item-top-height * 0.3;
   font-size: 250%;
   font-family: $special-font-family;
   font-weight: 300;
@@ -118,7 +118,6 @@ body {
 
 .player-information {
   margin-inline: 20rpx;
-  row-gap: 8rpx;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -128,7 +127,7 @@ body {
 }
 
 .player-title {
-  font-size: 200%;
+  font-size: 175%;
   font-family: "Kaleg Round Expanded";
   font-weight: bold;
   letter-spacing: 0.05em;
@@ -144,13 +143,11 @@ body {
 }
 
 .player-detail-list {
+  margin-block-start: 8rpx;
   column-gap: 20rpx;
   font-size: 80%;
   display: flex;
   opacity: 0.7;
-  .player-item-top:hover & {
-    display: none;
-  }
 }
 
 .player-detail-item {
@@ -169,14 +166,11 @@ body {
 }
 
 .player-description {
+  margin-block-start: 6rpx;
   font-size: 80%;
   opacity: 0.7;
   white-space: nowrap;
   overflow: hidden;
-  display: none;
-  .player-item-top:hover & {
-    display: block;
-  }
   &::before {
     @include icon-font;
     margin-inline-end: fix-em($blank-margin, 90%);

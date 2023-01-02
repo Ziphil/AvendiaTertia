@@ -26,10 +26,10 @@ const SONG_SPECS = [
   },
   {
     number: 2,
-    title: "ritasac a fobôs avéf",
+    title: "fobôs avéf ritasac a'k",
     date: "2023/01/01",
     length: 28,
-    description: "ディミニッシュセブンス使いたかっただけ。途中でなんかよく分かんなくなった。"
+    description: "ディミニッシュセブンス使いたくて始めたけど、途中でなんかよく分かんなくなった･･･。"
   }
 ] as Array<SongSpec>;
 
