@@ -13,20 +13,20 @@ import {
 import PlayerList from "./player-module/player-list";
 import {
   SongSpec
-} from "./player-module/player-list";
+} from "./player-module/player-pane";
 
 
 const SONG_SPECS = [
   {
     number: 1,
-    title: "xalíh acís",
+    title: {shaleian: "xalíh acís", normal: "Le premier sentiment"},
     date: "2022/12/30",
     length: 101,
     description: "最初の曲。"
   },
   {
     number: 2,
-    title: "fobôs avéf ritasac a'k",
+    title: {shaleian: "saltefac a kut", normal: "Ils t'accueillent"},
     date: "2023/01/01",
     length: 28,
     description: "ディミニッシュセブンス使いたくて始めたけど、途中でなんかよく分かんなくなった･･･。"

@@ -17,24 +17,16 @@ import {
 
 
 const PlayerPane = function ({
-  number,
-  title,
-  date,
-  length,
-  description
+  songSpec
 }: {
-  number: number,
-  title: string | null,
-  date: string,
-  length: number,
-  description: string
+  songSpec: SongSpec
 }): ReactElement {
 
   const [state, setState] = useState<"playing" | "pausing" | null>(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [currentProgress, setCurrentProgress] = useState(0);
   const [totalTime, setTotalTime] = useState(0);
-  const howlRef = useRef(createHowl(number));
+  const howlRef = useRef(createHowl(songSpec.number));
 
   const handlePlayOrPause = useCallback(function (): void {
     const howl = howlRef.current;
@@ -73,16 +65,16 @@ const PlayerPane = function ({
   const node = (
     <div className="player-item" {...data({state})}>
       <div className="player-item-top">
-        <div className="player-number" {...data({number: number.toString()})}/>
+        <div className="player-number" {...data({number: songSpec.number.toString()})}/>
         <div className="player-information">
-          <div className="player-title" {...data({none: title === null})}>{title}</div>
-          <div className="player-detail-list">
-            <div className="player-detail-item" {...data({type: "date"})}>{date}</div>
-            <div className="player-detail-item" {...data({type: "length"})}>{formatTime(length)}</div>
+          <div className="player-title" {...data({none: songSpec.title === null})}>
+            {songSpec.title !== null && <div className="player-title-shaleian">{songSpec.title.shaleian}</div>}
+            {songSpec.title !== null && <div className="player-title-normal">{songSpec.title.normal}</div>}
           </div>
-          <p className="player-description">
-            {description}
-          </p>
+          <div className="player-detail-list">
+            <div className="player-detail-item" {...data({type: "date"})}>{songSpec.date}</div>
+            <div className="player-detail-item" {...data({type: "length"})}>{formatTime(songSpec.length)}</div>
+          </div>
         </div>
       </div>
       <div className="player-item-bottom">
@@ -118,5 +110,12 @@ function formatTime(time: number): string {
   return `${minute}:${second}`;
 }
 
+export type SongSpec = {
+  number: number,
+  title: {shaleian: string, normal: string} | null,
+  date: string,
+  length: number,
+  description: string
+};
 
 export default PlayerPane;

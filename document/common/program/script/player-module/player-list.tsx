@@ -5,6 +5,9 @@ import {
   ReactElement
 } from "react";
 import PlayerPane from "./player-pane";
+import {
+  SongSpec
+} from "./player-pane";
 
 
 const PlayerList = function ({
@@ -16,14 +19,7 @@ const PlayerList = function ({
   const node = (
     <div className="player-list">
       {songSpecs.map((songSpec) => (
-        <PlayerPane
-          key={songSpec.number}
-          number={songSpec.number}
-          title={songSpec.title}
-          date={songSpec.date}
-          length={songSpec.length}
-          description={songSpec.description}
-        />
+        <PlayerPane key={songSpec.number} songSpec={songSpec}/>
       ))}
     </div>
   );
@@ -31,13 +27,5 @@ const PlayerList = function ({
 
 };
 
-
-export type SongSpec = {
-  number: number,
-  title: string | null,
-  date: string,
-  length: number,
-  description: string
-};
 
 export default PlayerList;
