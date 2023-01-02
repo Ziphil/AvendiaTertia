@@ -136,7 +136,7 @@ body {
 
 .player-title-shaleian {
   font-size: 180%;
-  font-family: "Kaleg Round Expanded";
+  font-family: "Kaleg Round Expanded Web";
   font-weight: 600;
   letter-spacing: 0.05em;
   word-spacing: -0.2rem;
@@ -166,6 +166,7 @@ body {
 
 .player-detail-list {
   row-gap: 5rpx;
+  font-size: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
