@@ -8,6 +8,7 @@ import {
   ReactElement,
   useCallback,
   useEffect,
+  useId,
   useRef,
   useState
 } from "react";
@@ -29,6 +30,7 @@ const PlayerPane = function ({
   const [currentProgress, setCurrentProgress] = useState(0);
   const [totalTime, setTotalTime] = useState(0);
   const howlRef = useRef(createHowl(spec));
+  const id = useId();
 
   const handlePlayOrPause = useCallback(function (): void {
     const howl = howlRef.current;
@@ -51,7 +53,9 @@ const PlayerPane = function ({
   useEffect(() => {
     const howl = howlRef.current;
     howl.on("load", () => {
+      const totalTime = howl.duration();
       setLoading(false);
+      setTotalTime(totalTime);
     });
     howl.on("end", () => {
       howl.stop();
@@ -69,7 +73,7 @@ const PlayerPane = function ({
 
   const node = (
     <div className="player-item" {...data({state})}>
-      <div className="player-item-top">
+      <label className="player-item-top" htmlFor={id}>
         <div className="player-number" {...data({number: spec.number.toString()})}/>
         <div className="player-information">
           <div className="player-title" {...data({none: spec.title === null})}>
@@ -81,10 +85,10 @@ const PlayerPane = function ({
             <div className="player-detail-item" {...data({type: "length"})}>{formatTime(spec.length)}</div>
           </div>
         </div>
-      </div>
+      </label>
       <div className="player-item-bottom">
         <div className="player-item-bottom-left">
-          <button className="player-button" onClick={handlePlayOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
+          <button className="player-button" id={id} onClick={handlePlayOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
           <button className="player-button" onClick={handleStop} {...data({type: "stop"})} {...aria({label: "Stop"})}/>
           <div className="player-separator"/>
           <a className="player-button" href={spec.url} {...data({type: "download"})} {...aria({label: "Download"})}/>
