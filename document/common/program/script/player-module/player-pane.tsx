@@ -17,16 +17,17 @@ import {
 
 
 const PlayerPane = function ({
-  songSpec
+  spec
 }: {
-  songSpec: SongSpec
+  spec: SongSpec
 }): ReactElement {
 
   const [state, setState] = useState<"playing" | "pausing" | null>(null);
+  const [loading, setLoading] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
   const [currentProgress, setCurrentProgress] = useState(0);
   const [totalTime, setTotalTime] = useState(0);
-  const howlRef = useRef(createHowl(songSpec.number));
+  const howlRef = useRef(createHowl(spec));
 
   const handlePlayOrPause = useCallback(function (): void {
     const howl = howlRef.current;
@@ -48,6 +49,9 @@ const PlayerPane = function ({
 
   useEffect(() => {
     const howl = howlRef.current;
+    howl.on("load", () => {
+      setLoading(false);
+    });
     howl.on("end", () => {
       howl.stop();
       setState(null);
@@ -65,15 +69,15 @@ const PlayerPane = function ({
   const node = (
     <div className="player-item" {...data({state})}>
       <div className="player-item-top">
-        <div className="player-number" {...data({number: songSpec.number.toString()})}/>
+        <div className="player-number" {...data({number: spec.number.toString()})}/>
         <div className="player-information">
-          <div className="player-title" {...data({none: songSpec.title === null})}>
-            {songSpec.title !== null && <div className="player-title-shaleian">{songSpec.title.shaleian}</div>}
-            {songSpec.title !== null && <div className="player-title-normal">{songSpec.title.normal}</div>}
+          <div className="player-title" {...data({none: spec.title === null})}>
+            {spec.title !== null && <div className="player-title-shaleian">{spec.title.shaleian}</div>}
+            {spec.title !== null && <div className="player-title-normal">{spec.title.normal}</div>}
           </div>
           <div className="player-detail-list">
-            <div className="player-detail-item" {...data({type: "date"})}>{songSpec.date}</div>
-            <div className="player-detail-item" {...data({type: "length"})}>{formatTime(songSpec.length)}</div>
+            <div className="player-detail-item" {...data({type: "date"})}>{spec.date}</div>
+            <div className="player-detail-item" {...data({type: "length"})}>{formatTime(spec.length)}</div>
           </div>
         </div>
       </div>
@@ -83,7 +87,7 @@ const PlayerPane = function ({
           <button className="player-button" onClick={handleStop} {...data({type: "reset"})}/>
         </div>
         <div className="player-item-bottom-right">
-          {state !== null && <>{formatTime(currentTime)} / {formatTime(totalTime)}</>}
+          {(state !== null) && ((loading) ? "Loading" : `${formatTime(currentTime)} / ${formatTime(totalTime)}`)}
         </div>
         <div className="player-progress-container">
           <div className="player-progress" style={{width: `${currentProgress}%`}}/>
@@ -96,9 +100,10 @@ const PlayerPane = function ({
 };
 
 
-function createHowl(number: number): Howl {
+function createHowl(spec: SongSpec): Howl {
   const howl = new Howl({
-    src: [`/file/song/${number}.mp3`],
+    src: [spec.url],
+    html5: true,
     preload: false
   });
   return howl;
@@ -115,6 +120,7 @@ export type SongSpec = {
   title: {shaleian: string, normal: string} | null,
   date: string,
   length: number,
+  url: string,
   description: string
 };
 

@@ -11,15 +11,15 @@ import {
 
 
 const PlayerList = function ({
-  songSpecs
+  specs
 }: {
-  songSpecs: Array<SongSpec>
+  specs: Array<SongSpec>
 }): ReactElement {
 
   const node = (
     <div className="player-list">
-      {songSpecs.map((songSpec) => (
-        <PlayerPane key={songSpec.number} songSpec={songSpec}/>
+      {specs.map((spec) => (
+        <PlayerPane key={spec.number} spec={spec}/>
       ))}
     </div>
   );
