@@ -28,7 +28,7 @@ const SONG_SPECS = [
     number: 2,
     title: {shaleian: "saltefac a kut", normal: "Ils t'accueillent"},
     date: "2023/01/01",
-    length: 28,
+    length: 35,
     description: "ディミニッシュセブンス使いたくて始めたけど、途中でなんかよく分かんなくなった･･･。"
   }
 ] as Array<SongSpec>;
