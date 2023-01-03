@@ -220,7 +220,7 @@ body {
 }
 
 .player-progress {
-  width: 50%;
+  width: 0%;
   height: 100%;
   background-color: var(--dark-highlight-color);
   transform: skew($skew-angle, 0deg); 
@@ -233,8 +233,7 @@ body {
 }
 
 .player-button {
-  width: 1em;
-  font-size: 120%;
+  width: 1.1em;
   color: var(--background-color);
   display: flex;
   align-items: center;
@@ -246,15 +245,24 @@ body {
     @include icon-font;
   }
   &[data-type="play"]::before {
-    font-size: 140%;
+    font-size: 150%;
     content: "\F04B";
 }
   .player-item[data-state="playing"] &[data-type="play"]::before {
     content: "\F04C";
   }
-  &[data-type="reset"]::before {
+  &[data-type="stop"]::before {
     content: "\F04D";
   }
+  &[data-type="download"]::before {
+    content: "\F019";
+  }
+}
+
+.player-separator {
+  width: 1rpx;
+  border-inline-start: var(--background-color) 1px solid;
+  opacity: 0.3;
 }
 
 .player-item-bottom-right {

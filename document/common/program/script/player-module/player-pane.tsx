@@ -12,6 +12,7 @@ import {
   useState
 } from "react";
 import {
+  aria,
   data
 } from "../util/data";
 
@@ -83,8 +84,10 @@ const PlayerPane = function ({
       </div>
       <div className="player-item-bottom">
         <div className="player-item-bottom-left">
-          <button className="player-button" onClick={handlePlayOrPause} {...data({type: "play"})}/>
-          <button className="player-button" onClick={handleStop} {...data({type: "reset"})}/>
+          <button className="player-button" onClick={handlePlayOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
+          <button className="player-button" onClick={handleStop} {...data({type: "stop"})} {...aria({label: "Stop"})}/>
+          <div className="player-separator"/>
+          <a className="player-button" href={spec.url} {...data({type: "download"})} {...aria({label: "Download"})}/>
         </div>
         <div className="player-item-bottom-right">
           {(state !== null) && ((loading) ? "Loading" : `${formatTime(currentTime)} / ${formatTime(totalTime)}`)}
