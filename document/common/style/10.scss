@@ -32,7 +32,7 @@ body {
 .header {
   margin-block-start: 40rpx;
   font-family: $special-font-family;
-  font-size: 300%;
+  font-size: 250%;
   font-weight: 600;
   color: $blue-color;
   text-align: center;
@@ -65,7 +65,6 @@ body {
   --highlight-color: #{hsl(198, 75%, 50%)};
   --dark-highlight-color: #{hsl(205, 75%, 50%)};
   background-color: var(--background-color);
-  border: var(--highlight-color) 1rpx solid;
   overflow: hidden;
   position: relative;
   &[data-state] {
@@ -128,7 +127,7 @@ body {
 }
 
 .player-title {
-  row-gap: 8rpx;
+  row-gap: 6rpx;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -150,11 +149,7 @@ body {
 }
 
 .player-title-normal {
-  font-size: 120%;
-  font-family: $special-font-family;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  word-spacing: -0.1rem;
+  font-size: 110%;
   transform: skew(-3deg, 0deg);
   .player-title[data-none] & {
     opacity: 0.5;
