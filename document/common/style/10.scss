@@ -29,6 +29,13 @@ body {
   background-image: linear-gradient(to right bottom, hsl(198, 60%, 98%), hsl(205, 60%, 98%));
 }
 
+zp-song,
+zp-title-shaleian,
+zp-title-normal,
+zp-description {
+  display: none;
+}
+
 .header {
   margin-block-start: 40rpx;
   font-family: $special-font-family;

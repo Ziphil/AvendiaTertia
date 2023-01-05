@@ -25,5 +25,30 @@
 
     \main|class="main",id="main"|;
 
+    \zp-song|
+      number="1",
+      date="2022/12/30",
+      length="101",
+      url="https://drive.google.com/uc?export=download&id=1Bczin3WJtmW2y37MMwoDWbH3iiirMi78"
+    |<
+      \zp-title-shaleian<xalíh acís>
+      \zp-title-normal<Le premier sentiment>
+      \zp-description<
+        最初の曲。
+      >
+    >
+    \zp-song|
+      number="2",
+      date="2023/01/01",
+      length="35",
+      url="https://drive.google.com/uc?export=download&id=1YzVkpjFIK3xiorbE2d34U2QRU2nlnLPr"
+    |<
+      \zp-title-shaleian<saltefac e'c a kut>
+      \zp-title-normal<Ils t'accueillent>
+      \zp-description<
+        ディミニッシュセブンス使いたくて始めたけど、途中でなんかよく分かんなくなった･･･。
+      >
+    >
+
   >
 >
