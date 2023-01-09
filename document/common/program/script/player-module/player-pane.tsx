@@ -91,7 +91,8 @@ const PlayerPane = function ({
           <button className="player-button" id={id} onClick={handlePlayOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
           <button className="player-button" onClick={handleStop} {...data({type: "stop"})} {...aria({label: "Stop"})}/>
           <div className="player-separator"/>
-          <a className="player-button" href={spec.url} {...data({type: "download"})} {...aria({label: "Download"})}/>
+          <a className="player-button" href={getSourceUrl(spec)} {...data({type: "download"})} {...aria({label: "Download"})}/>
+          <a className="player-button" target="_blank" rel="noreferrer" href={getExternalUrl(spec)} {...data({type: "external"})} {...aria({label: "Open in new tab"})}/>
         </div>
         <div className="player-item-bottom-right">
           {(state !== null) && ((loading) ? "Loading" : `${formatTime(currentTime)} / ${formatTime(totalTime)}`)}
@@ -109,11 +110,21 @@ const PlayerPane = function ({
 
 function createHowl(spec: SongSpec): Howl {
   const howl = new Howl({
-    src: [spec.url],
+    src: [getSourceUrl(spec)],
     html5: true,
     preload: false
   });
   return howl;
+}
+
+function getSourceUrl(spec: SongSpec): string {
+  const url = `https://drive.google.com/uc?export=download&id=${spec.googleId}`;
+  return url;
+}
+
+function getExternalUrl(spec: SongSpec): string {
+  const url = `https://drive.google.com/file/d/${spec.googleId}/view`;
+  return url;
 }
 
 function formatTime(time: number): string {
@@ -127,7 +138,7 @@ export type SongSpec = {
   title: {shaleian: string, normal: string} | null,
   date: string,
   length: number,
-  url: string,
+  googleId: string,
   description: string
 };
 

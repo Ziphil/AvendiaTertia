@@ -264,6 +264,9 @@ zp-description {
   &[data-type="download"]::before {
     content: "\F019";
   }
+  &[data-type="external"]::before {
+    content: "\F08E";
+  }
 }
 
 .player-separator {

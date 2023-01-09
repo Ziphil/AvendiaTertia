@@ -39,7 +39,7 @@ export class Executor extends BaseExecutor {
         title: (titleShaleian && titleNormal) ? {shaleian: titleShaleian, normal: titleNormal} : null,
         date: element.getAttribute("date") ?? "",
         length: parseInt(element.getAttribute("length") ?? "0"),
-        url: element.getAttribute("url") ?? "",
+        googleId: element.getAttribute("google-id") ?? "",
         description: description ?? ""
       };
       return spec;
