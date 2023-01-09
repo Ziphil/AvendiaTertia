@@ -149,7 +149,6 @@ zp-description {
   word-spacing: -0.2rem;
   transform: skew(-3deg, 0deg);
   .player-title[data-none] & {
-    opacity: 0.5;
     &::before {
       content: "reláf ide kofcaf";
     }
@@ -160,7 +159,6 @@ zp-description {
   font-size: 110%;
   transform: skew(-3deg, 0deg);
   .player-title[data-none] & {
-    opacity: 0.5;
     &::before {
       content: "Sans titre";
     }
