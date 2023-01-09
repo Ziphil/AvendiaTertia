@@ -2,7 +2,8 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
 import {
-  ReactElement
+  ReactElement,
+  useRef
 } from "react";
 import PlayerPane from "./player-pane";
 import {
@@ -16,10 +17,12 @@ const PlayerList = function ({
   specs: Array<SongSpec>
 }): ReactElement {
 
+  const stopsRef = useRef<Map<number, () => void>>(new Map());
+
   const node = (
     <div className="player-list">
       {specs.map((spec) => (
-        <PlayerPane key={spec.number} spec={spec}/>
+        <PlayerPane key={spec.number} spec={spec} stopsRef={stopsRef}/>
       ))}
     </div>
   );

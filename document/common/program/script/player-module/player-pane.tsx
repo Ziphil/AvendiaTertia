@@ -6,6 +6,7 @@ import {
 } from "howler";
 import {
   ReactElement,
+  RefObject,
   useCallback,
   useEffect,
   useId,
@@ -19,9 +20,11 @@ import {
 
 
 const PlayerPane = function ({
-  spec
+  spec,
+  stopsRef
 }: {
-  spec: SongSpec
+  spec: SongSpec,
+  stopsRef: RefObject<Map<number, () => void>>
 }): ReactElement {
 
   const [state, setState] = useState<"playing" | "pausing" | null>(null);
@@ -32,8 +35,9 @@ const PlayerPane = function ({
   const howlRef = useRef(createHowl(spec));
   const id = useId();
 
-  const handlePlayOrPause = useCallback(function (): void {
+  const playOrPause = useCallback(function (): void {
     const howl = howlRef.current;
+    const stops = stopsRef.current;
     if (howl.playing()) {
       howl.pause();
       setState("pausing");
@@ -42,12 +46,26 @@ const PlayerPane = function ({
       howl.play();
       setState("playing");
     }
+    if (stops !== null) {
+      for (const [number, stop] of stops) {
+        if (number !== spec.number) {
+          stop();
+        }
+      }
+    }
   }, []);
 
-  const handleStop = useCallback(function (): void {
+  const stop = useCallback(function (): void {
     const howl = howlRef.current;
     howl.stop();
     setState(null);
+  }, []);
+
+  useEffect(() => {
+    const stops = stopsRef.current;
+    if (stops !== null) {
+      stops.set(spec.number, stop);
+    }
   }, []);
 
   useEffect(() => {
@@ -88,8 +106,8 @@ const PlayerPane = function ({
       </label>
       <div className="player-item-bottom">
         <div className="player-item-bottom-left">
-          <button className="player-button" id={id} onClick={handlePlayOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
-          <button className="player-button" onClick={handleStop} {...data({type: "stop"})} {...aria({label: "Stop"})}/>
+          <button className="player-button" id={id} onClick={playOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
+          <button className="player-button" onClick={stop} {...data({type: "stop"})} {...aria({label: "Stop"})}/>
           <div className="player-separator"/>
           <a className="player-button" href={getSourceUrl(spec)} {...data({type: "download"})} {...aria({label: "Download"})}/>
           <a className="player-button" target="_blank" rel="noreferrer" href={getExternalUrl(spec)} {...data({type: "external"})} {...aria({label: "Open in new tab"})}/>
