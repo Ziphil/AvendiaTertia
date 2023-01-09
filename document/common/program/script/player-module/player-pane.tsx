@@ -95,8 +95,8 @@ const PlayerPane = function ({
         <div className="player-number" {...data({number: spec.number.toString()})}/>
         <div className="player-information">
           <div className="player-title" {...data({none: spec.title === null})}>
-            {spec.title !== null && <div className="player-title-shaleian">{spec.title.shaleian}</div>}
-            {spec.title !== null && <div className="player-title-normal">{spec.title.normal}</div>}
+            <div className="player-title-shaleian">{spec.title?.shaleian ?? ""}</div>
+            <div className="player-title-normal">{spec.title?.normal ?? ""}</div>
           </div>
           <div className="player-detail-list">
             <div className="player-detail-item" {...data({type: "date"})}>{spec.date}</div>
