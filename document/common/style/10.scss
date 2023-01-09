@@ -86,6 +86,7 @@ zp-description {
   height: $player-item-top-height;
   display: flex;
   align-items: center; 
+  cursor: pointer;
 }
 
 .player-number {
@@ -254,7 +255,7 @@ zp-description {
   &[data-type="play"]::before {
     font-size: 150%;
     content: "\F04B";
-}
+  }
   .player-item[data-state="playing"] &[data-type="play"]::before {
     content: "\F04C";
   }
