@@ -26,15 +26,14 @@
     \main|class="main",id="main"|;
 
     \zp-song|
-      number="1",
-      date="2022/12/30",
-      length="101",
-      google-id="1mUlMuLrG-4EirzSHcS8U9DkVyz1wuIFB"
+      number="4",
+      date="2023/01/09",
+      length="65",
+      google-id="1wezt4R0W4Jetvaw0rQRVDSj6_cyEvpVm"
     |<
-      \zp-title-shaleian<xalír acís>
-      \zp-title-normal<Le premier sentiment>
       \zp-description<
-        最初の曲。
+        8bit 音源使ってみたかった。
+        ベースのフレーズが一生うまくいかなくて泣きそう。
       >
     >
     \zp-song|
@@ -50,14 +49,15 @@
       >
     >
     \zp-song|
-      number="4",
-      date="2023/01/09",
-      length="65",
-      google-id="1wezt4R0W4Jetvaw0rQRVDSj6_cyEvpVm"
+      number="1",
+      date="2022/12/30",
+      length="101",
+      google-id="1mUlMuLrG-4EirzSHcS8U9DkVyz1wuIFB"
     |<
+      \zp-title-shaleian<xalír acís>
+      \zp-title-normal<Le premier sentiment>
       \zp-description<
-        8bit 音源使ってみたかった。
-        ベースのフレーズが一生うまくいかなくて泣きそう。
+        最初の曲。
       >
     >
 
