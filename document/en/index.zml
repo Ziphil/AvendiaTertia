@@ -33,7 +33,7 @@
           >
           \div|class="card-explanation"|<
             \div|class="card-explanation-text"|<
-              You can read an introduction of Shaleian grammar.
+              You can read an introduction to Shaleian grammar.
               It has also been published as a book.
             >
           >
@@ -74,7 +74,7 @@
           >
           \div|class="card-explanation"|<
             \div|class="card-explanation-text"|<
-              A collection of detailed explanations of grammar and word usage in the Shaleian language.
+              A collection of detailed explanations of the grammar and word usage of the Shaleian language.
             >
           >
         >
@@ -84,17 +84,9 @@
           >
           \div|class="card-explanation"|<
             \div|class="card-explanation-text"|<
-              A journal describing the discussions in creating Shaleian language.
+              A journal describing the discussions about the creation of the Shaleian language.
               You can get a glimpse of the creation process.
             >
-          >
-        >
-      >
-      \div|class="anniversary"|<
-        \a|class="anniversary-link",href="other/other/16.html"|<
-          \img|class="anniversary-logo",src="/material/anniversary/3.svg"|;
-          \div|class="anniversary-text"|<
-            \span|class="anniversary-line"|<Shaleian 10th anniversary page>
           >
         >
       >
@@ -159,13 +151,13 @@
           \div|class="introduction-explanation"|<
             \p|class="introduction-paragraph"|<
               The Shaleian language is a language that reflects the way I perceive the world.
-              The meaning of each word is therefore determined according to how I delimit the world and how I wish to delimit it.
-              For this reason, when I create a word, I spend a great amount of time to deliberately consider what the word exactly refers to.
+              The meaning of each word is therefore depends on how I demarcate the world and how I want to demarcate it.
+              It is for this reason that, when I create a word, I spend a lot of time considering what the word exactly refers to.
             >
             \p|class="introduction-paragraph"|<
-              In order to share with you what I think during such a word-creating process, I regularly stream live on YouTube.
-              Please come and see me when I am on the air.
-              The video \span|class="large-screen"|<on the right>\span|class="small-screen"|<below> is the latest streaming archive.
+              In order to share with you my thoughts during such a word creation process, I regularly stream live on YouTube.
+              Please feel free to come and watch me when I am on the air.
+              The video \span|class="large-screen"|<on the right>\span|class="small-screen"|<below> is the most recent streaming archive.
             >
             \div|class="introduction-table"|<
               \div|class="introduction-item"|<
@@ -222,17 +214,16 @@
             >
             \a|class="contact-icon",data-brand="youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank"|;
             \div|class="contact-explanation"|<
-              The creation process of the Shaleian language may be broadcast on YouTube Live.
+              The process of creating the Shaleian language may be streamed live on YouTube.
               The schedule will be announced on Twitter and Discord.
             >
             \a|class="contact-icon",data-brand="discord",href="https://discord.gg/qdRyE2ZExf",target="_blank"|;
             \div|class="contact-explanation"|<
-              There is a Discord server for the Shaleian language.
-              Here I accept questions and regularly give quizzes.
+              There is a Discord server for the Shaleian language, where I chat with members and answer their questions.
             >
             \a|class="contact-icon",data-brand="github",href="https://github.com/Ziphil",target="_blank"|;
             \div|class="contact-explanation"|<
-              Most of the data on the Shaleian language are managed on GitHub.
+              Most of the data about the Shaleian language is managed on GitHub.
             >
           >
         >
