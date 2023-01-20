@@ -25,7 +25,7 @@
     Beginners are recommended to read the \a|href="../course/27.html"|<introduction> first.
   >
   \p<
-    Since this document is meant to explain the grammar of Shaleian language, it does not deal with detailed usages such as collocations except for ones closely related to the structure of sentences.
+    Since this document is meant to explain the grammar of the Shaleian language, it does not deal with detailed usages such as collocations except for ones closely related to the structure of sentences.
     All explanations are based on the written language.
     Expressions peculiar to the spoken language will be taken up separately in \a|href="#67"|<Section 67> and \a|href="#68"|<Section 68>.
   >
@@ -51,7 +51,7 @@
     See \a|href="#10"|<Section 10> for the details of this correspondence.
   >
   \p<
-    Since the Shaleian alphabet is unique to Shaleian language, it is, of course, not covered by Unicode.
+    Since the Shaleian alphabet is unique to the Shaleian language, it is, of course, not covered by Unicode.
     Therefore, it is difficult to input or display the script on computers. 
     For this reason, the Latin alphabet, with each letter corresponding to a Shaleian letter, is often used instead. 
     This notation is called the “Latin transliteration” (or the “romanisation”).
@@ -82,7 +82,7 @@
   >
   \h2|num="7"|<Punctuation marks>
   \p<
-    Shaleian language mainly uses the punctuation marks listed below: 
+    Shaleian mainly uses the punctuation marks listed below: 
   >
   \img|src="../../file/character/23.png"|;
   \p<
