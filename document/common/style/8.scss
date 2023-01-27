@@ -556,25 +556,13 @@ $card-item-title-height: 42rpx;
 
 .anniversary {
   margin-top: 30rpx;
-}
-
-.anniversary-link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &:hover {
-    filter: brightness(0.7);
-  }
-}
-
-.anniversary-logo {
-  width: 120rpx;
 }
 
 .anniversary-text {
-  margin-top: 10rpx;
-  font-size: 100%;
-  color: hsl(35, 70%, 45%);
+  margin-top: 8rpx;
 }
 
 .link,
