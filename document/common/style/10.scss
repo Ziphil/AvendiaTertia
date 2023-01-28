@@ -87,6 +87,9 @@ zp-description {
   display: flex;
   align-items: center; 
   cursor: pointer;
+  @include smartphone {
+    height: $player-item-top-height * 0.9;
+  }
 }
 
 .player-number {
@@ -124,7 +127,9 @@ zp-description {
 }
 
 .player-information {
+  min-width: 0rpx;
   margin-inline: 20rpx;
+  column-gap: 20rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,6 +140,7 @@ zp-description {
 }
 
 .player-title {
+  min-width: 0rpx;
   row-gap: 6rpx;
   display: flex;
   flex-direction: column;
@@ -148,20 +154,30 @@ zp-description {
   letter-spacing: 0.05em;
   word-spacing: -0.2rem;
   transform: skew(-3deg, 0deg);
+  white-space: nowrap;
+  overflow: hidden;
   .player-title[data-none] & {
     &::before {
       content: "reláf ide kofcaf";
     }
+  }
+  @include smartphone {
+    font-size: 180% * 0.9;
   }
 }
 
 .player-title-normal {
   font-size: 110%;
   transform: skew(-3deg, 0deg);
+  white-space: nowrap;
+  overflow: hidden;
   .player-title[data-none] & {
     &::before {
       content: "Sans titre";
     }
+  }
+  @include smartphone {
+    font-size: 110% * 0.9;
   }
 }
 
@@ -170,6 +186,8 @@ zp-description {
   font-size: 80%;
   display: flex;
   flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
   align-items: flex-end;
   opacity: 0.7;
 }
