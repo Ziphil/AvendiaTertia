@@ -555,10 +555,22 @@ $card-item-title-height: 42rpx;
 }
 
 .anniversary {
+  width: $home-width;
+  max-width: $home-max-width;
   margin-top: 30rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include small-screen {
+    width: 100%;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.anniversary-image {
+  max-width: 100%;
 }
 
 .anniversary-text {
