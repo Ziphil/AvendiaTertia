@@ -1,7 +1,7 @@
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import * as query from "jquery";
+import query from "jquery";
 import {
   BaseExecutor
 } from "./module/executor";
@@ -138,7 +138,7 @@ export class Board {
   }
 
   // この盤面に従って与えられた石を動かしたときの、移動後の位置情報をもった石を返します。
-  // 石が盤外に出てしまう場合は null を返します。
+  // 石が盤外に出てしまう場合は `null` を返します。
   public movedStone(stone: Stone): MayNull<Stone> {
     const tiles = this.tiles;
     let nextStone = stone as MayNull<Stone>;
@@ -493,8 +493,8 @@ export class Tsuro {
 
   // 次に置くべきタイルを特定の場所に特定の回転で置けるかどうかを調べます。
   // 置けるのであれば、置いた後の盤面と石の状態を返します。
-  // その場所に石が面していなかったり石が盤外に出てしまうなどの理由で置けない場合は、null を返します。
-  // また、全てのタイルを置き切っていて次のタイルがない場合も、null を返します。
+  // その場所に石が面していなかったり石が盤外に出てしまうなどの理由で置けない場合は、`null` を返します。
+  // また、全てのタイルを置き切っていて次のタイルがない場合も、`null` を返します。
   private check(rotation: Rotation, tilePosition: TilePosition): MayNull<{board: Board, stones: Array<Stone>}> {
     const board = this.board;
     if (this.nextHand && board.isEmpty(tilePosition) && board.isFacingStone(tilePosition, this.stones)) {

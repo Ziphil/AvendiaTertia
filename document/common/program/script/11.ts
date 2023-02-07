@@ -1,7 +1,7 @@
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import * as query from "jquery";
+import query from "jquery";
 import {
   BaseExecutor
 } from "./module/executor";
