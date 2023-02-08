@@ -94,9 +94,13 @@ const PlayerPane = function ({
       <label className="player-item-top" htmlFor={id}>
         <div className="player-number" {...data({number: spec.number.toString()})}/>
         <div className="player-information">
-          <div className="player-title" {...data({none: spec.title === null})}>
-            <div className="player-title-shaleian">{spec.title?.shaleian ?? ""}</div>
-            <div className="player-title-normal">{spec.title?.normal ?? ""}</div>
+          <div className="player-title">
+            <div className="player-title-shaleian">
+              {spec.title?.shaleian ?? <>{"reláf ac'"}<span className="player-title-number">{spec.number}</span></>}
+            </div>
+            <div className="player-title-normal">
+              {spec.title?.normal ?? <>{"Musique n°"}<span className="player-title-number">{spec.number}</span></>}
+            </div>
           </div>
           <div className="player-detail-list">
             <div className="player-detail-item" {...data({type: "date"})}>{spec.date}</div>

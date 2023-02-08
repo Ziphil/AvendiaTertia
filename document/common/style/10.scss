@@ -141,7 +141,8 @@ zp-description {
 
 .player-title {
   min-width: 0rpx;
-  row-gap: 6rpx;
+  row-gap: 3rpx;
+  line-height: 1.2;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -156,11 +157,6 @@ zp-description {
   transform: skew(-3deg, 0deg);
   white-space: nowrap;
   overflow: hidden;
-  .player-title[data-none] & {
-    &::before {
-      content: "reláf ide kofcaf";
-    }
-  }
   @include smartphone {
     font-size: 180% * 0.9;
   }
@@ -171,19 +167,19 @@ zp-description {
   transform: skew(-3deg, 0deg);
   white-space: nowrap;
   overflow: hidden;
-  .player-title[data-none] & {
-    &::before {
-      content: "Sans titre";
-    }
-  }
   @include smartphone {
     font-size: 110% * 0.9;
   }
 }
 
+.player-title-number {
+  margin-inline-start: 0.1em;
+}
+
 .player-detail-list {
-  row-gap: 5rpx;
+  row-gap: 3rpx;
   font-size: 80%;
+  line-height: 1.2;
   display: flex;
   flex-direction: column;
   flex-grow: 0;
