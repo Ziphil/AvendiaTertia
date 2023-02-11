@@ -80,8 +80,8 @@ export class Tile {
     this.connections = connections;
   }
 
-  // このタイルに沿って与えられた石を動かしたときの、移動後の位置情報をもった石を返します。
-  // 石のタイル位置を変化しません。
+  /** このタイルに沿って与えられた石を動かしたときの、移動後の位置情報をもった石を返します。
+   * 石のタイル位置を変化しません。*/
   public movedStone(stone: Stone): Stone {
     const edgePosition = stone.edgePosition;
     const nextEdgePosition = this.connections[edgePosition];
@@ -137,8 +137,8 @@ export class Board {
     return false;
   }
 
-  // この盤面に従って与えられた石を動かしたときの、移動後の位置情報をもった石を返します。
-  // 石が盤外に出てしまう場合は `null` を返します。
+  /** この盤面に従って与えられた石を動かしたときの、移動後の位置情報をもった石を返します。
+   * 石が盤外に出てしまう場合は `null` を返します。*/
   public movedStone(stone: Stone): MayNull<Stone> {
     const tiles = this.tiles;
     let nextStone = stone as MayNull<Stone>;
@@ -491,10 +491,10 @@ export class Tsuro {
     return this.history.canRedo();
   }
 
-  // 次に置くべきタイルを特定の場所に特定の回転で置けるかどうかを調べます。
-  // 置けるのであれば、置いた後の盤面と石の状態を返します。
-  // その場所に石が面していなかったり石が盤外に出てしまうなどの理由で置けない場合は、`null` を返します。
-  // また、全てのタイルを置き切っていて次のタイルがない場合も、`null` を返します。
+  /** 次に置くべきタイルを特定の場所に特定の回転で置けるかどうかを調べます。
+   * 置けるのであれば、置いた後の盤面と石の状態を返します。
+   * その場所に石が面していなかったり石が盤外に出てしまうなどの理由で置けない場合は、`null` を返します。
+   * また、全てのタイルを置き切っていて次のタイルがない場合も、`null` を返します。*/
   private check(rotation: Rotation, tilePosition: TilePosition): MayNull<{board: Board, stones: Array<Stone>}> {
     const board = this.board;
     if (this.nextHand && board.isEmpty(tilePosition) && board.isFacingStone(tilePosition, this.stones)) {
