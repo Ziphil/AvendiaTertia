@@ -333,7 +333,8 @@ export class AvendiaGenerator {
   }
 
   private createTransformer(): AvendiaTransformer {
-    const options = {initialEnvironments: {configs: this.configs}};
+    const initialEnvironments = {configs: this.configs};
+    const options = {initialEnvironments};
     const transformer = new AvendiaTransformer(() => new AvendiaDocument({includeDeclaration: false, html: true}), options);
     for (const manager of templateManagers) {
       transformer.regsiterTemplateManager(manager);
