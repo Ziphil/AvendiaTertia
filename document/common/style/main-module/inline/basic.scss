@@ -10,6 +10,29 @@
   background-color: $block-background-color;
 }
 
+.music-accidental {
+  font-family: "Noto Music";
+  font-size: 120%;
+  line-height: 0;
+  &[data-type="sharp"] {
+    bottom: 0.12em;
+    position: relative;
+  }
+  &[data-type="flat"] {
+    bottom: -0.02em;
+    position: relative;
+  }
+  &[data-type="natural"] {
+    bottom: 0.1em;
+    position: relative;
+  }
+}
+
+.music-chord {
+  font-family: $monospace-font-family;
+  font-size: 90%;
+}
+
 .foreign {
   font-size: 80%;
   &::before {
