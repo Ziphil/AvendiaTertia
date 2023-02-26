@@ -10,7 +10,7 @@ const MUSIC_SYMBOL_SPECS = new Map([
   ["f", ["music-accidental", "flat", "♭"]],
   ["n", ["music-accidental", "natural", "♮"]],
   ["maj", ["music-chord", "major", "Δ"]],
-  ["min", ["music-chord", "minor", "−"]],
+  ["min", ["music-chord", "minor", "-"]],
   ["aug", ["music-chord", "augmented", "+"]],
   ["dim", ["music-chord", "diminished", "o"]],
   ["hdim", ["music-chord", "half-diminished", "ø"]]
