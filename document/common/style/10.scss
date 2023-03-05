@@ -218,6 +218,9 @@ zp-description {
   background-color: white;
   border-inline-start: 2rpx solid var(--highlight-background-color);
   border-inline-end: 2rpx solid var(--background-color);
+  @include smartphone {
+    border-inline-start: 2rpx solid var(--background-color);
+  }
 }
 
 .player-description {
