@@ -32,7 +32,9 @@ const PlayerPane = function ({
   const [currentTime, setCurrentTime] = useState(0);
   const [currentProgress, setCurrentProgress] = useState(0);
   const [totalTime, setTotalTime] = useState(0);
+  const [descriptionHeight, setDescriptionHeight] = useState(0);
   const howlRef = useRef(createHowl(spec));
+  const descriptionElementRef = useRef<HTMLDivElement>(null);
   const id = useId();
 
   const playOrPause = useCallback(function (): void {
@@ -59,6 +61,17 @@ const PlayerPane = function ({
     const howl = howlRef.current;
     howl.stop();
     setState(null);
+  }, []);
+
+  const handleClick = useCallback(function (): void {
+    setDescriptionHeight((descriptionHeight) => {
+      if (descriptionHeight <= 0) {
+        const nextDescriptionHeight = descriptionElementRef.current?.clientHeight ?? 0;
+        return nextDescriptionHeight;
+      } else {
+        return 0;
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -91,7 +104,7 @@ const PlayerPane = function ({
 
   const node = (
     <div className="player-item" {...data({state})}>
-      <label className="player-item-top" htmlFor={id}>
+      <button className="player-item-top" onClick={handleClick}>
         <div className="player-number" {...data({number: spec.number.toString()})}/>
         <div className="player-information">
           <div className="player-title">
@@ -107,7 +120,12 @@ const PlayerPane = function ({
             <div className="player-detail-item" {...data({type: "length"})}>{formatTime(spec.length)}</div>
           </div>
         </div>
-      </label>
+      </button>
+      <div className="player-item-middle" style={{height: descriptionHeight}}>
+        <div className="player-item-middle-inner" ref={descriptionElementRef}>
+          <p className="player-description" dangerouslySetInnerHTML={createHtmlObject(spec.description)}/>
+        </div>
+      </div>
       <div className="player-item-bottom">
         <div className="player-item-bottom-left">
           <button className="player-button" id={id} onClick={playOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
@@ -137,6 +155,12 @@ function createHowl(spec: SongSpec): Howl {
     preload: false
   });
   return howl;
+}
+
+function createHtmlObject(html: string): any {
+  const object = {} as any;
+  object["__html"] = html;
+  return object;
 }
 
 function getSourceUrl(spec: SongSpec): string {

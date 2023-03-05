@@ -33,7 +33,7 @@ export class Executor extends BaseExecutor {
     const specs = [...elements].map((element) => {
       const titleShaleian = element.querySelector<HTMLElement>("zp-title-shaleian")?.innerText;
       const titleNormal = element.querySelector<HTMLElement>("zp-title-normal")?.innerText;
-      const description = element.querySelector<HTMLElement>("zp-description")?.innerText;
+      const description = element.querySelector<HTMLElement>("zp-description")?.innerHTML;
       const spec = {
         number: parseInt(element.getAttribute("number") ?? "0"),
         title: (titleShaleian && titleNormal) ? {shaleian: titleShaleian, normal: titleNormal} : null,

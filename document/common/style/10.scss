@@ -83,6 +83,7 @@ zp-description {
 }
 
 .player-item-top {
+  width: 100%;
   height: $player-item-top-height;
   display: flex;
   align-items: center; 
@@ -206,19 +207,21 @@ zp-description {
   }
 }
 
+.player-item-middle {
+  transition: height 0.2s ease;
+}
+
+.player-item-middle-inner {
+  padding-block: 10rpx;
+  padding-inline: 18rpx;
+  background-color: white;
+  border-inline-start: 2rpx solid var(--highlight-background-color);
+  border-inline-end: 2rpx solid var(--background-color);
+}
+
 .player-description {
-  margin-block-start: 6rpx;
-  font-size: 80%;
-  opacity: 0.7;
-  white-space: nowrap;
-  overflow: hidden;
-  &::before {
-    @include icon-font;
-    margin-inline-end: fix-em($blank-margin, 90%);
-    font-size: 90%;
-    color: var(--highlight-color);
-    content: "\F05A";
-  }
+  line-height: 1.4;
+  text-align: justify;
 }
 
 .player-item-bottom {
