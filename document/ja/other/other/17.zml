@@ -26,6 +26,20 @@
     \main|class="main",id="main"|;
 
     \zp-song|
+      number="5",
+      date="2023/03/05",
+      length="128",
+      google-id="1kFViEU7xD2fmrqDE6uauHE920JaXTZEy"
+    |<
+      \zp-title-shaleian<kedpasif arevez>
+      \zp-title-normal<Le patholabyrinthe>
+      \zp-description<
+        四和音を使う練習。
+        ディミニッシュセブンスの使い所とか、わりとコード進行の勉強になった。
+        あと初めてイコライザーで音の調整をした (まだよく分かってないけど)。
+      >
+    >
+    \zp-song|
       number="4",
       date="2023/01/25",
       length="115",
