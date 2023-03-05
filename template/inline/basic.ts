@@ -109,7 +109,7 @@ manager.registerElementRule("i", true, (transformer, document, element) => {
   return self;
 });
 
-manager.registerElementRule("k", ["page", "page.section-table"], (transformer, document, element) => {
+manager.registerElementRule("k", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("japanese");
@@ -229,7 +229,7 @@ manager.registerElementRule("label", "page", (transformer, document, element) =>
   return self;
 });
 
-manager.registerElementRule(["sup", "sub"], ["page", "page.section-table"], (transformer, document, element) => {
+manager.registerElementRule(["sup", "sub"], true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName(element.tagName);

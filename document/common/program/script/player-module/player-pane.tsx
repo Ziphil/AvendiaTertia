@@ -122,8 +122,7 @@ const PlayerPane = function ({
         </div>
       </button>
       <div className="player-item-middle" style={{height: descriptionHeight}}>
-        <div className="player-item-middle-inner" ref={descriptionElementRef}>
-          <p className="player-description" dangerouslySetInnerHTML={createHtmlObject(spec.description)}/>
+        <div className="player-item-middle-inner" ref={descriptionElementRef} dangerouslySetInnerHTML={createHtmlObject(spec.description)}>
         </div>
       </div>
       <div className="player-item-bottom">
