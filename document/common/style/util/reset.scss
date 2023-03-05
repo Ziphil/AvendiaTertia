@@ -7,7 +7,7 @@
 }
 
 a,
-input[type="button"],
-button {
+input[type="button"]:not(:disabled),
+button:not(:disabled) {
   cursor: pointer;
 }

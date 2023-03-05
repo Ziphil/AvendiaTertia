@@ -89,11 +89,10 @@ zp-description {
   height: $player-item-top-height;
   display: flex;
   align-items: center; 
-  cursor: pointer;
   @include smartphone {
     height: $player-item-top-height * 0.9;
   }
-}
+} 
 
 .player-number {
   width: 80rpx;

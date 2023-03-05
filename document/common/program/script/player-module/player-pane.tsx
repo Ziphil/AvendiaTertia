@@ -104,7 +104,7 @@ const PlayerPane = function ({
 
   const node = (
     <div className="player-item" {...data({state})}>
-      <button className="player-item-top" onClick={handleClick}>
+      <button className="player-item-top" disabled={spec.description === undefined} onClick={handleClick}>
         <div className="player-number" {...data({number: spec.number.toString()})}/>
         <div className="player-information">
           <div className="player-title">
@@ -121,10 +121,12 @@ const PlayerPane = function ({
           </div>
         </div>
       </button>
-      <div className="player-item-middle" style={{height: descriptionHeight}}>
-        <div className="player-item-middle-inner" ref={descriptionElementRef} dangerouslySetInnerHTML={createHtmlObject(spec.description)}>
+      {(spec.description !== undefined) && (
+        <div className="player-item-middle" style={{height: descriptionHeight}}>
+          <div className="player-item-middle-inner" ref={descriptionElementRef} dangerouslySetInnerHTML={createHtmlObject(spec.description)}>
+          </div>
         </div>
-      </div>
+      )}
       <div className="player-item-bottom">
         <div className="player-item-bottom-left">
           <button className="player-button" id={id} onClick={playOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
@@ -184,7 +186,7 @@ export type SongSpec = {
   date: string,
   length: number,
   googleId: string,
-  description: string
+  description?: string
 };
 
 export default PlayerPane;

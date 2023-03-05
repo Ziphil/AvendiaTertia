@@ -40,7 +40,7 @@ export class Executor extends BaseExecutor {
         date: element.getAttribute("date") ?? "",
         length: parseInt(element.getAttribute("length") ?? "0"),
         googleId: element.getAttribute("google-id") ?? "",
-        description: description ?? ""
+        description
       };
       return spec;
     });
