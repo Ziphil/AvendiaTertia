@@ -213,16 +213,22 @@ zp-description {
 }
 
 .player-item-middle-inner {
-  padding-block: 10rpx;
+  padding-block: 12rpx;
   padding-inline: 18rpx;
   background-color: white;
   border-inline-start: 2rpx solid var(--highlight-background-color);
   border-inline-end: 2rpx solid var(--background-color);
 }
 
-.player-item-middle-inner >p {
-  line-height: 1.4;
+.player-description {
+}
+
+.player-description >p {
+  line-height: 1.5;
   text-align: justify;
+  &:not(:first-child) {
+    margin-block-start: 5rpx;
+  }
 }
 
 .player-item-bottom {
