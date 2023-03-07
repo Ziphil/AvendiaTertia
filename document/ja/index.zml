@@ -33,6 +33,18 @@
     >
 
     \div|class="card-table-block centralize"|<
+      \div|class="link-table"|<
+        \a|class="link-item",id="course",href="conlang/document/16.html"|<
+          \div|class="link-title"|<
+            \div|class="link-title-japanese"|<シャレイア語とは>
+          >
+        >
+        \a|class="link-item",id="course",href="conlang/document/24.html"|<
+          \div|class="link-title"|<
+            \div|class="link-title-japanese"|<ブランドアイデンティティ>
+          >
+        >
+      >
       \div|class="card-table"|<
         \a|class="card-item",id="course",href="conlang/course/"|<
           \div|class="card-title"|<
