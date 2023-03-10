@@ -135,7 +135,8 @@ const PlayerPane = function ({
           <button className="player-button" onClick={stop} {...data({type: "stop"})} {...aria({label: "Stop"})}/>
           <div className="player-separator"/>
           <a className="player-button" href={getSourceUrl(spec)} {...data({type: "download"})} {...aria({label: "Download"})}/>
-          <a className="player-button" target="_blank" rel="noreferrer" href={getExternalUrl(spec)} {...data({type: "external"})} {...aria({label: "Open in new tab"})}/>
+          <a className="player-button" target="_blank" rel="noreferrer" href={getSongExternalUrl(spec)} {...data({type: "external"})} {...aria({label: "Open in new tab"})}/>
+          {(spec.scoreGoogleId !== undefined) && <a className="player-button" target="_blank" rel="noreferrer" href={getScoreExternalUrl(spec)} {...data({type: "score"})} {...aria({label: "See score"})}/>}
         </div>
         <div className="player-item-bottom-right">
           {(state !== null) && ((loading) ? "Loading" : `${formatTime(currentTime)} / ${formatTime(totalTime)}`)}
@@ -167,12 +168,17 @@ function createHtmlObject(html: string): any {
 }
 
 function getSourceUrl(spec: SongSpec): string {
-  const url = `https://drive.google.com/uc?export=download&id=${spec.googleId}`;
+  const url = `https://drive.google.com/uc?export=download&id=${spec.songGoogleId}`;
   return url;
 }
 
-function getExternalUrl(spec: SongSpec): string {
-  const url = `https://drive.google.com/file/d/${spec.googleId}/view`;
+function getSongExternalUrl(spec: SongSpec): string {
+  const url = `https://drive.google.com/file/d/${spec.songGoogleId}/view`;
+  return url;
+}
+
+function getScoreExternalUrl(spec: SongSpec): string {
+  const url = `https://drive.google.com/file/d/${spec.scoreGoogleId}/view?usp=share_link`;
   return url;
 }
 
@@ -184,10 +190,11 @@ function formatTime(time: number): string {
 
 export type SongSpec = {
   number: number,
-  title: {shaleian: string, normal: string} | null,
+  title?: {shaleian: string, normal: string},
   date: string,
   length: number,
-  googleId: string,
+  songGoogleId: string,
+  scoreGoogleId?: string,
   description?: string
 };
 

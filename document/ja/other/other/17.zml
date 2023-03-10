@@ -26,21 +26,35 @@
     \main|class="main",id="main"|;
 
     \zp-song|
+      number="6",
+      date="2023/03/10",
+      length="89",
+      song-google-id="11AGVUWOY_rO28_1xZvqf4k8hO41WT9Wk",
+      score-google-id="1iS3gYAIlr-WQU8yPAmNE3r-PNfVgghex"
+    |<
+      \zp-description<
+        \p<
+          5 曲目を作ってる途中で、シンプルにピアノ曲も作りたいなーと思って作り始めました。
+          左手にオクターブ＋ 1 音みたいな和音が多すぎて弾くのつらいと思います。
+        >
+      >
+    >
+    \zp-song|
       number="5",
       date="2023/03/05",
       length="128",
-      google-id="1kFViEU7xD2fmrqDE6uauHE920JaXTZEy"
+      song-google-id="1kFViEU7xD2fmrqDE6uauHE920JaXTZEy"
     |<
       \zp-title-shaleian<kedpasif arevez>
       \zp-title-normal<Le patholabyrinthe>
       \zp-description<
         \p<
-          これまでずっと三和音しか使ってなかったから、四和音を使う練習したいなと思って始めた曲。
-          ディミニッシュセブンスの使い所とか、わりとコード進行の勉強にもなった気がする。
+          これまでずっと三和音しか使ってなかったから、四和音を使う練習したいなと思って始めた曲です。
+          ディミニッシュセブンスの使い所とか、わりとコード進行の勉強にもなった気がします。
           サビ前の C\ms|t="min"|; → E\ms|t="f"|; → F\ms|t="dim"|;\sub<7> → G\ms|t="min"|;\sub<7> → B\ms|t="dim"|;\sub<7> の流れとか。
         >
         \p<
-          あと初めてイコライザーで音の調整をした (まだよく分かってないけど)。
+          あと初めてイコライザーで音の調整をしました (まだよく分かってないけど)。
         >
       >
     >
@@ -48,7 +62,7 @@
       number="4",
       date="2023/01/25",
       length="116",
-      google-id="1gDjPevhmOBlvfZpFq7Pnc1BcHRV6rSqm"
+      song-google-id="1gDjPevhmOBlvfZpFq7Pnc1BcHRV6rSqm"
     |<
       \zp-title-shaleian<fekul aquk>
       \zp-title-normal<Ces souvenirs passés>
@@ -57,11 +71,11 @@
       number="3",
       date="2023/01/09",
       length="66",
-      google-id="1XpMOMvYh2g1-f5aFMtB0C0M8WGIknf7J"
+      song-google-id="1XpMOMvYh2g1-f5aFMtB0C0M8WGIknf7J"
     |<
       \zp-description<
         \p<
-          8bit 音源使ってみたかった。
+          8bit 音源使ってみたかっただけです。
           ベースのフレーズが一生うまくいかなくて泣きそう。
         >
       >
@@ -70,7 +84,7 @@
       number="2",
       date="2023/01/01",
       length="37",
-      google-id="1w9akxAA9YqsYtBFr3Huo7KLHolEXeck0"
+      song-google-id="1w9akxAA9YqsYtBFr3Huo7KLHolEXeck0"
     |<
       \zp-title-shaleian<saltefac e'c a kut>
       \zp-title-normal<Ils t'accueillent>
@@ -84,13 +98,13 @@
       number="1",
       date="2022/12/30",
       length="104",
-      google-id="1uBIRdYG_ktLgH0sorc7tqZ58uTIVduMC"
+      song-google-id="1uBIRdYG_ktLgH0sorc7tqZ58uTIVduMC"
     |<
       \zp-title-shaleian<xalír acís>
       \zp-title-normal<Le premier sentiment>
       \zp-description<
         \p<
-          最初の曲。
+          音楽理論とかを勉強し始めて最初に作った曲です。
         >
       >
     >

@@ -293,6 +293,9 @@ zp-description {
   &[data-type="external"]::before {
     content: "\F08E";
   }
+  &[data-type="score"]::before {
+    content: "\F001";
+  }
 }
 
 .player-separator {

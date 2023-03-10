@@ -36,10 +36,11 @@ export class Executor extends BaseExecutor {
       const description = element.querySelector<HTMLElement>("zp-description")?.innerHTML;
       const spec = {
         number: parseInt(element.getAttribute("number") ?? "0"),
-        title: (titleShaleian && titleNormal) ? {shaleian: titleShaleian, normal: titleNormal} : null,
+        title: (titleShaleian && titleNormal) ? {shaleian: titleShaleian, normal: titleNormal} : undefined,
         date: element.getAttribute("date") ?? "",
         length: parseInt(element.getAttribute("length") ?? "0"),
-        googleId: element.getAttribute("google-id") ?? "",
+        songGoogleId: element.getAttribute("song-google-id") ?? "",
+        scoreGoogleId: element.getAttribute("score-google-id") ?? undefined,
         description
       };
       return spec;
