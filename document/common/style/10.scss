@@ -50,7 +50,8 @@ zp-description {
 .main {
   width: $main-width;
   max-width: $main-max-width;
-  margin-block: 40rpx;
+  padding-block-start: 40rpx;
+  padding-block-end: 40rpx;
   margin-inline: auto;
   box-sizing: content-box;
   @include smartphone {
@@ -95,10 +96,10 @@ zp-description {
 } 
 
 .player-number {
-  width: 80rpx;
+  width: 85rpx;
   height: 100%;
   margin-inline-start: tan(abs($skew-angle)) * $player-item-top-height * -0.5;
-  padding-inline-start: tan(abs($skew-angle)) * $player-item-top-height * 0.3;
+  padding-inline-start: tan(abs($skew-angle)) * $player-item-top-height * 0.35;
   font-size: 250%;
   font-family: $special-font-family;
   font-weight: 300;
