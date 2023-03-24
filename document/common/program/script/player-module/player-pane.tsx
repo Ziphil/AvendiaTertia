@@ -131,12 +131,12 @@ const PlayerPane = function ({
       )}
       <div className="player-item-bottom">
         <div className="player-item-bottom-left">
-          <button className="player-button" id={id} onClick={playOrPause} {...data({type: "play"})} {...aria({label: "Play or pause"})}/>
-          <button className="player-button" onClick={stop} {...data({type: "stop"})} {...aria({label: "Stop"})}/>
+          <button className="player-button" id={id} onClick={playOrPause} {...data({type: "play"})} title="再生/中断" {...aria({label: "再生/中断"})}/>
+          <button className="player-button" onClick={stop} {...data({type: "stop"})} title="停止" {...aria({label: "停止"})}/>
           <div className="player-separator"/>
-          <a className="player-button" href={getSourceUrl(spec)} {...data({type: "download"})} {...aria({label: "Download"})}/>
-          <a className="player-button" target="_blank" rel="noreferrer" href={getSongExternalUrl(spec)} {...data({type: "external"})} {...aria({label: "Open in new tab"})}/>
-          {(spec.scoreGoogleId !== undefined) && <a className="player-button" target="_blank" rel="noreferrer" href={getScoreExternalUrl(spec)} {...data({type: "score"})} {...aria({label: "See score"})}/>}
+          <a className="player-button" href={getSourceUrl(spec)} {...data({type: "download"})} title="ダウンロード" {...aria({label: "ダウンロード"})}/>
+          <a className="player-button" target="_blank" rel="noreferrer" href={getSongExternalUrl(spec)} {...data({type: "external"})} title="新しいタブ" {...aria({label: "新しいタブ"})}/>
+          {(spec.scoreGoogleId !== undefined) && <a className="player-button" target="_blank" rel="noreferrer" href={getScoreExternalUrl(spec)} {...data({type: "score"})} title="楽譜" {...aria({label: "楽譜"})}/>}
         </div>
         <div className="player-item-bottom-right">
           {(state !== null) && ((loading) ? "Loading" : `${formatTime(currentTime)} / ${formatTime(totalTime)}`)}
