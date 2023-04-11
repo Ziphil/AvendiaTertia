@@ -9,8 +9,10 @@ const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("el", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
+  const type = element.getAttribute("type") || "desc";
   self.appendElement("dl", (self) => {
     self.addClassName("description-list");
+    self.setAttribute("data-type", type);
     self.setBlockType("text", "text");
     self.appendChild(transformer.apply(element, "page.el"));
   });
