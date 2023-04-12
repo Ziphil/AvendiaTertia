@@ -20,12 +20,12 @@
     ギリシャ語の文法や意味などは、以下の文献を参照しています。
     これらの文献の内容を参照した場合は、文末にブラケットで囲んで以下の略記号とセクション番号などを附します。
   >
-  \ul<
-    \li<M ･･･ 水谷智洋『古典ギリシア語初歩』>
-    \li<L ･･･ Alessandra Lukinovich, 水崎博明『古典ギリシア語文法』(\ae|href="https://fukuoka-u.repo.nii.ac.jp/?action=repository_action_common_download&item_id=2556&item_no=1&attribute_id=22&file_no=1"|<PDF>)>
-    \li<S ･･･ Herbert Weir Smyth『A Greek Grammar for Colleges』(\ae|href="http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007"|<オンライン版>)>
-    \li<H ･･･ James Helm『Plato Apology: Text, Grammatical Commentary』>
-    \li<X ･･･『A Greek-English Lexicon』(\ae|href="https://philolog.us/"|<オンライン版>)>
+  \el|type="par"|<
+    \li<\et<M>\ed<水谷智洋『古典ギリシア語初歩』>>
+    \li<\et<L>\ed<Alessandra Lukinovich, 水崎博明『古典ギリシア語文法』(\ae|href="https://fukuoka-u.repo.nii.ac.jp/?action=repository_action_common_download&item_id=2556&item_no=1&attribute_id=22&file_no=1"|<PDF>)>>
+    \li<\et<S>\ed<Herbert Weir Smyth『A Greek Grammar for Colleges』(\ae|href="http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0007"|<オンライン版>)>>
+    \li<\et<H>\ed<James Helm『Plato Apology: Text, Grammatical Commentary』>>
+    \li<\et<X>\ed<A Greek-English Lexicon』(\ae|href="https://philolog.us/"|<オンライン版>)>>
   >
   \p<
     ということで、始めます。

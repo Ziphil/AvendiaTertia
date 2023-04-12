@@ -12,19 +12,19 @@
   \p<
     各単語をクリックすると、オンライン辞典のその単語の項目にジャンプします。
   >
-  \ul|col="3"|<
-    \li<{sakil} ･･･ リンゴ>
-    \li<{saret} ･･･ おいしい>
-    \li<{séq} ･･･ あげる>
-    \li<{tolék} ･･･ 料理>
-    \li<{tific} ･･･ 子供>
-    \li<{dus} ･･･ 誰も～いない>
-    \li<{dat} ･･･ 何も～しない>
-    \li<{dûd} ･･･ どこも～しない>
-    \li<{dûg} ･･･ 決して～しない>
-    \li<{dum} ･･･ 全く～しない>
-    \li<{keqil} ･･･ 住む>
-    \li<{rez} ･･･ 笑う>
+  \el|type="par",col="3"|<
+    \li<\et<{sakil}>\ed<リンゴ>>
+    \li<\et<{saret}>\ed<おいしい>>
+    \li<\et<{séq}>\ed<あげる>>
+    \li<\et<{tolék}>\ed<料理>>
+    \li<\et<{tific}>\ed<子供>>
+    \li<\et<{dus}>\ed<誰も～いない>>
+    \li<\et<{dat}>\ed<何も～しない>>
+    \li<\et<{dûd}>\ed<どこも～しない>>
+    \li<\et<{dûg}>\ed<決して～しない>>
+    \li<\et<{dum}>\ed<全く～しない>>
+    \li<\et<{keqil}>\ed<住む>>
+    \li<\et<{rez}>\ed<笑う>>
   >
 
 >

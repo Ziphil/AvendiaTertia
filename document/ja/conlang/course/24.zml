@@ -12,22 +12,22 @@
   \p<
     各単語をクリックすると、オンライン辞典のその単語の項目にジャンプします。
   >
-  \ul|col="3"|<
-    \li<{kin} ･･･ ～すること>
-    \li<{solak} ･･･ 洋服>
-    \li<{raf} ･･･ 望む>
-    \li<{lak} ･･･ 話す>
-    \li<{qilxaléh} ･･･ シャレイア語>
-    \li<{deq} ･･･ させる>
-    \li<{nifet} ･･･ 持って来る>
-    \li<{cèr} ･･･ お茶>
-    \li<{mozas} ･･･ 温かい>
-    \li<{sas} ･･･ 良い>
-    \li<{sitay} ･･･ 挨拶する>
-    \li<{har} ･･･ 気分良くする>
-    \li<{yepel} ･･･ 歌う>
-    \li<{panoz} ･･･ ふりをする>
-    \li<{cal} ･･･ そのこと>
+  \el|type="par",col="3"|<
+    \li<\et<{kin}>\ed<～すること>>
+    \li<\et<{solak}>\ed<洋服>>
+    \li<\et<{raf}>\ed<望む>>
+    \li<\et<{lak}>\ed<話す>>
+    \li<\et<{qilxaléh}>\ed<シャレイア語>>
+    \li<\et<{deq}>\ed<させる>>
+    \li<\et<{nifet}>\ed<持って来る>>
+    \li<\et<{cèr}>\ed<お茶>>
+    \li<\et<{mozas}>\ed<温かい>>
+    \li<\et<{sas}>\ed<良い>>
+    \li<\et<{sitay}>\ed<挨拶する>>
+    \li<\et<{har}>\ed<気分良くする>>
+    \li<\et<{yepel}>\ed<歌う>>
+    \li<\et<{panoz}>\ed<ふりをする>>
+    \li<\et<{cal}>\ed<そのこと>>
   >
 
 >

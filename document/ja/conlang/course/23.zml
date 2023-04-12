@@ -12,41 +12,41 @@
   \p<
     各単語をクリックすると、オンライン辞典のその単語の項目にジャンプします。
   >
-  \ul|col="3"|<
-    \li<{dales} ･･･ 犬>
-    \li<{o} ･･･ と>
-    \li<{dalaz} ･･･ 元気な>
-    \li<{safey} ･･･ 優しい>
-    \li<{hinof} ･･･ 姉>
-    \li<{nîl} ･･･ 兄>
-    \li<{qet} ･･･ いる>
-    \li<{hay} ･･･ 少女>
-    \li<{é} ･･･ または>
-    \li<{à} ･･･ しかし>
-    \li<{qinat} ･･･ 絵>
-    \li<{kàfet} ･･･ 写真>
-    \li<{qik} ･･･ 作る>
-    \li<{yerif} ･･･ 美しい>
-    \li<{kûv} ･･･ 入る>
-    \li<{cêd} ･･･ そこ>
-    \li<{lo} ･･･ そして>
-    \li<{lé} ･･･ または>
-    \li<{dà} ･･･ しかし>
-    \li<{lîd} ･･･ 読む>
-    \li<{kofid} ･･･ 見つける>
-    \li<{zîdsax} ･･･ 学校>
-    \li<{ri} ･･･ もし～>
-    \li<{cife} ･･･ ～しながら>
-    \li<{kût} ･･･ 持つ>
-    \li<{loqis} ･･･ 車>
-    \li<{lesit} ･･･ ミカン>
-    \li<{gulod} ･･･ 苦い>
-    \li<{les} ･･･ する>
-    \li<{déx} ･･･ 寝る>
-    \li<{qasot} ･･･ 息子>
-    \li<{fay} ･･･ 娘>
-    \li<{faket} ･･･ 起きる>
-    \li<{fev} ･･･ すぐ>
+  \el|type="par",col="3"|<
+    \li<\et<{dales}>\ed<犬>>
+    \li<\et<{o}>\ed<と>>
+    \li<\et<{dalaz}>\ed<元気な>>
+    \li<\et<{safey}>\ed<優しい>>
+    \li<\et<{hinof}>\ed<姉>>
+    \li<\et<{nîl}>\ed<兄>>
+    \li<\et<{qet}>\ed<いる>>
+    \li<\et<{hay}>\ed<少女>>
+    \li<\et<{é}>\ed<または>>
+    \li<\et<{à}>\ed<しかし>>
+    \li<\et<{qinat}>\ed<絵>>
+    \li<\et<{kàfet}>\ed<写真>>
+    \li<\et<{qik}>\ed<作る>>
+    \li<\et<{yerif}>\ed<美しい>>
+    \li<\et<{kûv}>\ed<入る>>
+    \li<\et<{cêd}>\ed<そこ>>
+    \li<\et<{lo}>\ed<そして>>
+    \li<\et<{lé}>\ed<または>>
+    \li<\et<{dà}>\ed<しかし>>
+    \li<\et<{lîd}>\ed<読む>>
+    \li<\et<{kofid}>\ed<見つける>>
+    \li<\et<{zîdsax}>\ed<学校>>
+    \li<\et<{ri}>\ed<もし～>>
+    \li<\et<{cife}>\ed<～しながら>>
+    \li<\et<{kût}>\ed<持つ>>
+    \li<\et<{loqis}>\ed<車>>
+    \li<\et<{lesit}>\ed<ミカン>>
+    \li<\et<{gulod}>\ed<苦い>>
+    \li<\et<{les}>\ed<する>>
+    \li<\et<{déx}>\ed<寝る>>
+    \li<\et<{qasot}>\ed<息子>>
+    \li<\et<{fay}>\ed<娘>>
+    \li<\et<{faket}>\ed<起きる>>
+    \li<\et<{fev}>\ed<すぐ>>
   >
 
 >

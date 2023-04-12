@@ -12,31 +12,31 @@
   \p<
     各単語をクリックすると、オンライン辞典のその単語の項目にジャンプします。
   >
-  \ul|col="3"|<
-    \li<{ter} ･･･ 飲む>
-    \li<{rix} ･･･ 水>
-    \li<{lan} ･･･ 行く>
-    \li<{tazîk} ･･･ 昨日>
-    \li<{cák} ･･･ 来る>
-    \li<{tacar} ･･･ 明日>
-    \li<{fêd} ･･･ ここ>
-    \li<{vahix} ･･･ 死ぬ>
-    \li<{kôt} ･･･ 必ず>
-    \li<{laxol} ･･･ 人間>
-    \li<{déq} ･･･ 座る>
-    \li<{loc} ･･･ あなた>
-    \li<{dezet} ･･･ 椅子>
-    \li<{káz} ･･･ 見つめる>
-    \li<{nát} ･･･ 花>
-    \li<{zaf} ･･･ 赤い>
-    \li<{kôm} ･･･ 着る>
-    \li<{hâl} ･･･ スカート>
-    \li<{li} ･･･ ～に>
-    \li<{yaf} ･･･ 妹>
-    \li<{sal} ･･･ である>
-    \li<{zissác} ･･･ 教師>
-    \li<{cit} ･･･ それ>
-    \li<{kav} ･･･ いる>
+  \el|type="par",col="3"|<
+    \li<\et<{ter}>\ed<飲む>>
+    \li<\et<{rix}>\ed<水>>
+    \li<\et<{lan}>\ed<行く>>
+    \li<\et<{tazîk}>\ed<昨日>>
+    \li<\et<{cák}>\ed<来る>>
+    \li<\et<{tacar}>\ed<明日>>
+    \li<\et<{fêd}>\ed<ここ>>
+    \li<\et<{vahix}>\ed<死ぬ>>
+    \li<\et<{kôt}>\ed<必ず>>
+    \li<\et<{laxol}>\ed<人間>>
+    \li<\et<{déq}>\ed<座る>>
+    \li<\et<{loc}>\ed<あなた>>
+    \li<\et<{dezet}>\ed<椅子>>
+    \li<\et<{káz}>\ed<見つめる>>
+    \li<\et<{nát}>\ed<花>>
+    \li<\et<{zaf}>\ed<赤い>>
+    \li<\et<{kôm}>\ed<着る>>
+    \li<\et<{hâl}>\ed<スカート>>
+    \li<\et<{li}>\ed<～に>>
+    \li<\et<{yaf}>\ed<妹>>
+    \li<\et<{sal}>\ed<である>>
+    \li<\et<{zissác}>\ed<教師>>
+    \li<\et<{cit}>\ed<それ>>
+    \li<\et<{kav}>\ed<いる>>
   >
 
 >
