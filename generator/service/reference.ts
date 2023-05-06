@@ -21,12 +21,11 @@ export default async function execute(outputLanguage: AvendiaOutputLanguage, arg
   const inputDocument = args.parser.tryParse(inputString);
   const indexElements = inputDocument.searchXpath("//ab") as Array<Element>;
   const filteredIndexElements = indexElements.filter((indexElement) => !indexElement.getAttribute("ignore"));
-  const promises = filteredIndexElements.map(async (indexElement) => {
+  const documentSpecs = await Promise.all(filteredIndexElements.map(async (indexElement) => {
     const href = indexElement.getAttribute("href");
-    const documentSpec = await createSectionSpecs(href, outputLanguage, args);
+    const documentSpec = await createSectionSpec(href, outputLanguage, args);
     return documentSpec;
-  });
-  const documentSpecs = await Promise.all(promises);
+  }));
   const hrefEntries = createHrefEntries(documentSpecs);
   const outputObject = {specs: documentSpecs, hrefs: Object.fromEntries(hrefEntries)};
   const outputString = JSON.stringify(outputObject, undefined, 2);
@@ -34,7 +33,7 @@ export default async function execute(outputLanguage: AvendiaOutputLanguage, arg
   await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
 }
 
-async function createSectionSpecs(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendaServiceArgs): Promise<ReferenceSectionSpec> {
+async function createSectionSpec(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendaServiceArgs): Promise<ReferenceSectionSpec> {
   const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/" + href.replace(/\.html$/, ".zml");
   const initialVariables = {path: documentPath, language: outputLanguage};
   const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});

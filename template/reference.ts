@@ -22,7 +22,7 @@ manager.registerElementRule("page", "reference", (transformer, document, element
   let currentSubsectionSpec = null as ReferenceSectionSpec | null;
   for (const sectionElement of sectionElements) {
     const tag = sectionElement.getAttribute("tag");
-    const href = baseHref + "#" + tag;
+    const href = (tag) ? baseHref + "#" + tag : "";
     const content = transformer.apply(sectionElement, "page").toString();
     if (sectionElement.tagName === "h1") {
       const sectionSpec = {href, tag, content, childSpecs: []};

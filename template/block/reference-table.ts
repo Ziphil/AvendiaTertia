@@ -31,15 +31,21 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
       for (const sectionSpec of sectionSpecs) {
         self.appendElement("li", (self) => {
           self.addClassName("normal-item");
-          self.appendElement("span", (self) => {
-            self.addClassName("section-table-tag");
-            self.appendTextNode("#" + sectionSpec.tag.toUpperCase() + ".");
-          });
-          self.appendElement("a", (self) => {
-            self.addClassName("link");
-            self.setAttribute("href", sectionSpec.href);
+          if (sectionSpec.tag) {
+            self.appendElement("span", (self) => {
+              self.addClassName("section-table-tag");
+              self.appendTextNode("#" + sectionSpec.tag.toUpperCase() + ".");
+            });
+          }
+          if (sectionSpec.href) {
+            self.appendElement("a", (self) => {
+              self.addClassName("link");
+              self.setAttribute("href", sectionSpec.href);
+              self.appendTextNode(sectionSpec.content, (self) => self.options.raw = true);
+            });
+          } else {
             self.appendTextNode(sectionSpec.content, (self) => self.options.raw = true);
-          });
+          }
           if (sectionSpec.childSpecs.length > 0) {
             appendIndexList(self, sectionSpec.childSpecs, true);
           }
