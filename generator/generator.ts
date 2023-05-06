@@ -20,6 +20,9 @@ import {
   SourceSpan as SassSourceSpan
 } from "sass";
 import webpack from "webpack";
+import {
+  Configuration as WebpackConfiguration
+} from "webpack";
 import pluginManagers from "../plugin";
 import templateManagers from "../template";
 import WEBPACK_CONFIGS from "../webpack-document";
@@ -84,15 +87,14 @@ export class AvendiaGenerator {
 
   private async executeNormal(): Promise<void> {
     const documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
-    const promises = documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
+    await Promise.all(documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
       await this.saveNormal(documentPath, documentLanguage);
-    });
-    await Promise.all(promises);
+    }));
     this.printLast();
   }
 
   private async executeWatch(): Promise<void> {
-    const promises = this.configs.getDocumentDirPathSpecs().map(([documentDirPath, documentLanguage]) => {
+    await Promise.all(this.configs.getDocumentDirPathSpecs().map(([documentDirPath, documentLanguage]) => {
       const promise = new Promise((resolve, reject) => {
         const watcher = chokidar.watch(documentDirPath, {persistent: true, ignoreInitial: true});
         watcher.on("add", (documentPath) => {
@@ -110,17 +112,15 @@ export class AvendiaGenerator {
         });
       });
       return promise;
-    });
-    await Promise.all(promises);
+    }));
     this.printLast();
   }
 
   private async executeHistory(): Promise<void> {
     const documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
-    const promises = documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
+    await Promise.all(documentPathSpecs.map(async ([documentPath, documentLanguage]) => {
       await this.saveHistory(documentPath, documentLanguage);
-    });
-    await Promise.all(promises);
+    }));
     this.printLast();
   }
 
@@ -164,7 +164,7 @@ export class AvendiaGenerator {
   private async transformNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
     const extension = pathUtil.extname(documentPath).slice(1);
     const outputPathSpecs = this.getOutputPathSpecs(documentPath, documentLanguage);
-    const promises = outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
+    await Promise.all(outputPathSpecs.map(async ([outputPath, outputLanguage]) => {
       if (extension === "zml") {
         await this.transformNormalZml(documentPath, outputPath, documentLanguage, outputLanguage);
       } else if (extension === "scss") {
@@ -172,8 +172,7 @@ export class AvendiaGenerator {
       } else if (extension === "ts") {
         await this.transformNormalTs(documentPath, outputPath, documentLanguage, outputLanguage);
       }
-    });
-    await Promise.all(promises);
+    }));
   }
 
   private async transformHistory(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
@@ -243,20 +242,8 @@ export class AvendiaGenerator {
         cacheDirectory: pathUtil.join(pathUtil.dirname(outputPath), ".webpack_cache")
       }
     } as const;
-    const promise = new Promise<void>((resolve, reject) => {
-      webpack(configs, (error, stats) => {
-        if (error) {
-          reject(error);
-        } else if (stats?.hasErrors()) {
-          const error = new Error(stats.toString());
-          reject(error);
-        } else {
-          resolve();
-        }
-      });
-    });
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
-    await promise;
+    await createWebpackPromise(configs);
   }
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
@@ -362,15 +349,14 @@ export class AvendiaGenerator {
         }
       }
     } else {
-      const promises = this.configs.getDocumentDirPathSpecs().map(async ([documentDirPath, documentLanguage]) => {
+      await Promise.all(this.configs.getDocumentDirPathSpecs().map(async ([documentDirPath, documentLanguage]) => {
         const documentPaths = await glob(documentDirPath + "/**/*");
         for (const documentPath of documentPaths) {
           if (this.checkValidDocumentPath(documentPath)) {
             documentPathSpecs.push([documentPath, documentLanguage]);
           }
         }
-      });
-      await Promise.all(promises);
+      }));
     }
     return documentPathSpecs;
   }
@@ -409,6 +395,22 @@ export class AvendiaGenerator {
 
 }
 
+
+function createWebpackPromise(configs: WebpackConfiguration): Promise<void> {
+  const promise = new Promise<void>((resolve, reject) => {
+    webpack(configs, (error, stats) => {
+      if (error) {
+        reject(error);
+      } else if (stats?.hasErrors()) {
+        const error = new Error(stats.toString());
+        reject(error);
+      } else {
+        resolve();
+      }
+    });
+  });
+  return promise;
+}
 
 type PathSpec<L> = [string, L];
 type PathSpecs<L> = Array<PathSpec<L>>;
