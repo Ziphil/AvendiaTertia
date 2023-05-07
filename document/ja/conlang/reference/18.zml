@@ -37,7 +37,6 @@
   \p<
     助接辞の動詞修飾形が接続詞として使われている場合は、2 つの節を繋げてそれらの節の関係性を示す役割をもつ。
     このとき、接続詞は 2 つ目の節の先頭に置かれる。
-    接続詞が置かれた方の節を「\rterm|key="せつぞくしせつ",id="coordinate-clause"|<接続詞節\fl<coordinate clause>>」と呼び、そうでない方の節を「\rterm|key="しゅせつ",id="main clause"|<主節\fl<main clause>>」と呼ぶ。
     接続詞の直前にはタデックが置かれるが、繋がれている節がともに短い場合などでは、このタデックが省略されることがある。
   >
   \xl<
@@ -68,7 +67,6 @@
   \h2|tag="svj"|<総論>
   \p<
     助接辞の非動詞修飾形が接続詞として使われる場合は、助接辞の後ろに節を伴って、全体で名詞や形容詞や副詞を修飾する。
-    接続詞が置かれた方の節を「\rterm|key="せつぞくしせつ",id="coordinate-clause"|<接続詞節\fl<coordinate clause>>」と呼び、その接続詞節が修飾する語句を含む節を「\rterm|key="しゅせつ",id="main clause"|<主節\fl<main clause>>」と呼ぶ。
   >
   \xl<
     \li<\sh<{salot a dev e zat iso kôdos a vas e lakad.}>\ja<ペンは文字を書くためのものだ。>>
