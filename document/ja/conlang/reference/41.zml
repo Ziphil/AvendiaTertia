@@ -6,16 +6,29 @@
   \name<補遺>
   \ver<7 代>
 
-  \h1|tag="snp"|<別名>
+  \h1|tag="smg"|<別名>
+  \h2|tag="snp"|<語彙的品詞>
   \p<
     語彙的品詞の 3 種類の不定辞は、以下の表に示すような短い別名がある。
   >
   \table<
-    \tr<\th<現行名称>\th<別名称>>
-    \tr<\td<動詞型不定辞>\td<動辞\fl<verbal infinitive>>>
-    \tr<\td<名詞型不定辞>\td<名辞\fl<nominal infinitive>>>
-    \tr<\td<連述詞型不定辞>\td<連述辞\fl<adpredicative infinitive>>>
-    \tr<\td<特殊詞型不定辞>\td<特殊辞\fl<special infinitive>>>
+    \tr<\th<別名称>\th<現行名称>>
+    \tr<\td<動辞\fl<verbal>>\td<動詞型不定辞>>
+    \tr<\td<名辞\fl<nominal>>\td<名詞型不定辞>>
+    \tr<\td<連述辞\fl<adpredicative>>\td<連述詞型不定辞>>
+    \tr<\td<特殊辞\fl<special>>\td<特殊詞型不定辞>>
+  >
+  \h2|tag="smf"|<副詞と形容詞や動詞との意味関係>
+  \p<
+    副詞と他の品詞との意味関係の分類には、以下の表に示すローマ数字による別名がある。
+    I 型がないのは歴史的な理由による。
+  >
+  \table<
+    \tr<\th<別名称>\th<現行名称>>
+    \tr<\td<II 型\fl<of type II>>\td<被修飾語型>>
+    \tr<\td<III 型\fl<of type III>>\td<文脈補完型>>
+    \tr<\td<IV 型\fl<of type IV>>\td<{kin} 節型>>
+    \tr<\td<V 型\fl<of type V>>\td<{fa} 節型>>
   >
   \h1|tag="snb"|<古い用語>
   \h2|tag="snc"|<語彙的品詞一般>
@@ -27,13 +40,13 @@
   \h2|tag="snq"|<語彙的品詞>
   \p<
     古い文献では、語彙的品詞について以下の表に挙げるような名称を用いていることがある (飾辞は語彙的品詞ではないが便宜上ここに入れた)。
-    これらの名称は、現行の名称に置き換えられ現在ではあまり使われない。
+    これらの名称は、現行の名称に置き換えられ推奨されない。
   >
   \table<
-    \tr<\th<現行名称>\th<旧名称>>
-    \tr<\td<特殊不定辞>\td<副詞型不定辞\fl<adverbial infinitive>>>
-    \tr<\td<例外助接辞>\td<特殊助接辞\fl<special particle>>>
-    \tr<\td<飾辞>\td<準飾辞\fl<quasidecorative>>>
+    \tr<\th<旧名称>\th<現行名称>>
+    \tr<\td<副詞型不定辞\fl<adverbial infinitive>>\td<連述詞型不定辞, 特殊詞型不定辞>>
+    \tr<\td<特殊助接辞\fl<special particle>>\td<例外助接辞>>
+    \tr<\td<準飾辞\fl<quasidecorative>>\td<飾辞>>
   >
   \h2|tag="snx"|<文法的品詞>
   \p<
@@ -41,10 +54,10 @@
     しかし、この 3 つの文法的品詞を総称するのは、現在の文法ではほとんど意味がないため推奨されない。
   >
   \table<
-    \tr<\th<現行名称>\th<旧名称>>
-    \tr<\td<副詞>\td<動詞修飾副詞\fl<verb-modifying adverb>>>
-    \tr<\td<連述詞>\td<修飾詞修飾副詞\fl<modificative-modifying adverb>>>
-    \tr<\td<特殊詞>\td<特殊副詞\fl<special adverb>>>
+    \tr<\th<旧名称>\th<現行名称>>
+    \tr<\td<動詞修飾副詞\fl<verb-modifying adverb>>\td<副詞>>
+    \tr<\td<修飾詞修飾副詞\fl<modificative-modifying adverb>>\td<連述詞>>
+    \tr<\td<特殊副詞\fl<special adverb>>\td<特殊詞>>
   >
   \h2|tag="snj"|<態>
   \p<
@@ -52,9 +65,9 @@
     しかし、態を自他として扱うのは、一般的な言語学での用語法と大きくずれるため現在は推奨されない。
   >
   \table<
-    \tr<\th<現行名称>\th<旧名称>>
-    \tr<\td<通常態>\td<自動\fl<intransitive>>>
-    \tr<\td<補助態>\td<他動\fl<transitive>>>
+    \tr<\th<旧名称>\th<現行名称>>
+    \tr<\td<自動\fl<intransitive>>\td<通常態>>
+    \tr<\td<他動\fl<transitive>>\td<補助態>>
   >
  
 >

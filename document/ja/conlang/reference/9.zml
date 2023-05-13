@@ -10,12 +10,15 @@
   \p<
     文は原則として 1 つの節から成る。
     したがって、全ての文には文全体の修飾関係の根となる動詞が存在する。
-    しかし、以下のような場合には文は動詞をもたない。
+    文となっている節のことを「\rterm|key="しゅせつ",id="main-clause"|<主節\fl<main clause>>」と呼び、主節の中に含まれている節を「\rterm|key="じゅうぞくせつ",id="subordinate-clause"|<従属節\fl<subordinate clause>>」と呼ぶ。
+  >
+  \p<
+    例外として、以下のような節ではない文が存在する。
   >
   \ul<
-    \li<遊離助詞句が使われている場合 (\rref|ref="sbn"|; 参照)>
-    \li<間投詞のみが文を構成している場合 (\rref|ref="sxt"|; 参照)>
-    \li<フォーハックのみが文を構成している場合 (\rref|ref="ssn"|; 参照)>
+    \li<遊離助詞句が構成する文 (\rref|ref="sbn"|; 参照)>
+    \li<間投詞句のみの文 (\rref|ref="sxt"|; 参照)>
+    \li<フォーハックのみの文 (\rref|ref="ssn"|; 参照)>
   >
   \h1|tag="sdq",id="verb-first"|<動詞先頭>
   \p<
