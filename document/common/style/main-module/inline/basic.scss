@@ -52,15 +52,3 @@
   background-image: linear-gradient(-45deg, transparent 33%, $blue-color 33% 50%, transparent 50% 83%, $blue-color 83%);
   background-size: 3rpx 3rpx;
 }
-
-.box {
-  @include box($blue-color, false);
-}
-
-.label {
-  margin-right: $blank-margin;
-  color: $blue-color;
-  &::after {
-    content: ":";
-  }
-}

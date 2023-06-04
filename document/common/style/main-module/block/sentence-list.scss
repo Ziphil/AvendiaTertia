@@ -5,8 +5,6 @@
 @import "../../main-module/variable.scss";
 
 
-$sentence-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
-
 .sentence-list {
   --background-color: #{$block-background-color};
   margin-left: 0rpx - $main-horizontal-padding;
@@ -28,7 +26,7 @@ $sentence-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width
   list-style: none;
 }
 
-.sentence-item {
+.sentence-list[data-type="unordered"] >.sentence-item {
   margin-left: $bullet-width + $blank-margin;
   &::before {
     @include icon-font;
@@ -43,13 +41,38 @@ $sentence-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width
   }
 }
 
-.sentence-nested-item {
-  margin-left: $sentence-nested-list-marker-width + $blank-margin;
+.sentence-list[data-type="unordered"] >.sentence-nested-item {
+  margin-left: $bullet-width + $blank-margin + $arrow-width + $blank-margin;
   &::before {
     @include icon-font;
-    width: fix-em($sentence-nested-list-marker-width, 90%);
+    width: fix-em($bullet-width + $blank-margin + $arrow-width + $blank-margin, 90%);
     margin-right: fix-em($blank-margin, 90%);
-    margin-left: fix-em(0em - $sentence-nested-list-marker-width - $blank-margin, 90%);
+    margin-left: fix-em(0em - ($bullet-width + $blank-margin + $arrow-width + $blank-margin) - $blank-margin, 90%);
+    font-size: 90%;
+    color: $blue-color;
+    text-align: right;
+    display: inline-block;
+    content: "\F061";
+  }
+}
+
+.sentence-list[data-type="ordered"] >.sentence-item {
+  margin-left: 1em + $blank-margin;
+  &::before {
+    @include box($blue-color, false);
+    margin-left: fix-em(0em - (1em + $bordered-blank-margin), 80%);
+    margin-right: fix-em($bordered-blank-margin, 80%);
+    content: attr(data-tag);
+  }
+}
+
+.sentence-list[data-type="ordered"] >.sentence-nested-item {
+  margin-left: 1em + $blank-margin + $arrow-width + $blank-margin;
+  &::before {
+    @include icon-font;
+    width: fix-em(1em + $blank-margin + $arrow-width + $blank-margin, 90%);
+    margin-right: fix-em($blank-margin, 90%);
+    margin-left: fix-em(0em - (1em + $blank-margin + $arrow-width + $blank-margin) - $blank-margin, 90%);
     font-size: 90%;
     color: $blue-color;
     text-align: right;

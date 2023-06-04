@@ -29,6 +29,7 @@ import inlineBasicManager from "./inline/basic";
 import inlineGreekManager from "./inline/greek";
 import inlineLinkManager from "./inline/link";
 import inlineMathManager from "./inline/math";
+import inlineMiscManager from "./inline/misc";
 import inlineReferenceManager from "./inline/reference";
 import nameManager from "./name";
 import navigationManager from "./navigation";
@@ -64,6 +65,7 @@ const managers = [
   inlineBasicManager,
   inlineLinkManager,
   inlineGreekManager,
+  inlineMiscManager,
   inlineMathManager,
   inlineReferenceManager,
   historyManager,

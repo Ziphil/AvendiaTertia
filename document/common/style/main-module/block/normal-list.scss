@@ -30,7 +30,7 @@ $normal-list-column-gap: 30px;
     @include icon-font;
     width: fix-em($bullet-width, 90%);
     margin-right: fix-em($blank-margin, 90%);
-    margin-left: fix-em(0em - $bullet-width - $blank-margin, 90%);
+    margin-left: fix-em(0em - ($bullet-width + $blank-margin), 90%);
     font-size: 90%;
     color: $blue-color;
     text-align: right;
@@ -48,7 +48,7 @@ $normal-list-column-gap: 30px;
   counter-increment: normal-list;
   &::before {
     @include box($blue-color, false);
-    margin-left: fix-em(0em - 1em - $bordered-blank-margin, 80%);
+    margin-left: fix-em(0em - (1em + $bordered-blank-margin), 80%);
     margin-right: fix-em($bordered-blank-margin, 80%);
     content: counter(normal-list);
   }
