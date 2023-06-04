@@ -8,6 +8,7 @@ import blockHistoryManager from "./block/history";
 import blockImageManager from "./block/image";
 import blockMathManager from "./block/math";
 import blockMediaManager from "./block/media";
+import blockMiscManager from "./block/misc";
 import blockNormalListManager from "./block/normal-list";
 import blockNormalTableManager from "./block/normal-table";
 import blockParagraphManager from "./block/paragraph";
@@ -58,6 +59,7 @@ const managers = [
   blockReferenceTableManager,
   blockMediaManager,
   blockHistoryManager,
+  blockMiscManager,
   blockMathManager,
   inlineBasicManager,
   inlineLinkManager,

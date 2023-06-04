@@ -23,12 +23,12 @@ manager.registerElementRule(["pre", "samp"], "page", (transformer, document, ele
         if (showNumber) {
           self.setAttribute("data-show-number", "");
         }
-        for (let number = 0 ; number < lines.length ; number ++) {
-          const line = lines[number];
+        for (let index = 0 ; index < lines.length ; index ++) {
+          const line = lines[index];
           if (showNumber) {
             self.appendElement("div", (self) => {
               self.addClassName("program-number");
-              self.setAttribute("data-number", (number + 1).toString());
+              self.setAttribute("data-number", (index + 1).toString());
             });
           }
           self.appendElement(lineTagName, (self) => {

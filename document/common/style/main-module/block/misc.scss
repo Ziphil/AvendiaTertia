@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$todo-vertical-padding: 8rpx;
+$todo-horizontal-padding: 12rpx;
+
+.todo {
+  padding-block: $todo-vertical-padding;
+  padding-inline: $todo-horizontal-padding;
+  column-gap: $blank-margin;
+  border: 1rpx $blue-color dashed;
+  display: flex;
+  align-items: center;
+  &::before {
+    @include icon-font;
+    width: fix-em($bullet-width, 90%);
+    margin-right: fix-em($blank-margin, 90%);
+    font-size: 90%;
+    color: $blue-color;
+    content: "\F06A";
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.todo-inner {
+  line-height: $line-height;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
