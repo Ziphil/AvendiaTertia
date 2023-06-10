@@ -24,11 +24,11 @@
   \p<
     節を構成する動詞はその節の最初に置かれる。
   >
-  \xl<
-    \li<\sh<{cates a tel.}>\ja<私は歩いた。>>
+  \xol<
+    \li|tag="1"|<\sh<{cates a tel.}>\ja<私は歩いた。>>
   >
   \p<
-    この例文では、動詞 {cates} が節の最初すなわち文頭にあり、その後ろに動詞を修飾する語句である {a tel} が置かれている。
+    \box|tag="1"|; では、動詞 {cates} が節の最初すなわち文頭にあり、その後ろに動詞を修飾する語句である {a tel} が置かれている。
   >
   \p<
     強調によって動詞の後に置かれるはずの語句が文頭に移動することがあり、その場合は動詞が節の先頭に置かれないことがある。
@@ -64,17 +64,17 @@
     接続詞を除いた複数の種類の修飾語句が同時に動詞に係るときは、特殊詞, 連述詞, 副詞, 助詞句, 副詞の順で置かれる。
     同じ種類の修飾語句であれば、その順番に制約は見られない。
   >
-  \xl<
-    \li<\sh<{feges a tel e dezet vo vosis afik.}>\ja<私はこの店で椅子を買った。>>
-    \li<\sh<{vilises ovop a tel omêl.}>\ja<私は再びゆっくり走った。>>
-    \li<\sh<{debat evoc ebam a tel te cal.}>\ja<私はそのときとても疲れてもいた。>>
+  \xol<
+    \li|tag="1"|<\sh<{feges a tel e dezet vo vosis afik.}>\ja<私はこの店で椅子を買った。>>
+    \li|tag="2"|<\sh<{vilises ovop a tel omêl.}>\ja<私は再びゆっくり走った。>>
+    \li|tag="3"|<\sh<{debat evoc ebam a tel te cal.}>\ja<私はそのときとても疲れてもいた。>>
   >
   \p<
-    1 つ目の例文は、{a tel}, {e dezet}, {vo vosis afik} という 3 つが修飾語句である。
+    \box|tag="1"|; では、{a tel}, {e dezet}, {vo vosis afik} という 3 つが修飾語句である。
     このように動詞の後に助詞句が並べられるのが最も基本的な文の構造である。
-    2 つ目の例文は、{ovop}, {a tel}, {omêl} という 3 つが修飾語句である。
+    \box|tag="2"|; では、{ovop}, {a tel}, {omêl} という 3 つが修飾語句である。
     副詞は動詞の直後と節の最後にどちらにも置くことができ、この例では 2 つの副詞が 2 ヶ所に分けて置かれている。
-    3 つ目の例文は、{evoc}, {ebam}, {a tel}, {te cal} という 4 つが修飾語句である。
+    \box|tag="3"|; では、{evoc}, {ebam}, {a tel}, {te cal} という 4 つが修飾語句である。
     {evoc} は特殊詞で {ebam} は連述詞なので、この 2 つを入れ替えると不自然な文になることに注意せよ。
   >
   \p<
@@ -97,9 +97,9 @@
   \p<
     名詞修飾の語句は種類が多いためその順番に傾向を見出すのは難しいが、意図していない修飾構造で解釈される余地を極力減らそうとするという傾向はここでも見られる。
   >
-  \xl<
-    \li<\sh<{lices a tel e nayef azaf.}>\ja<私は赤い花を見た。>>
-    \li<\sh<{kûtat a tel e dev axodol ajôm.}>\ja<私は高価で黒いペンを持っている。>>
+  \xol<
+    \li|tag="1"|<\sh<{lices a tel e nayef azaf.}>\ja<私は赤い花を見た。>>
+    \li|tag="2"|<\sh<{kûtat a tel e dev axodol ajôm.}>\ja<私は高価で黒いペンを持っている。>>
   >
   \todo<
     ここに上の例文の説明を入れる予定です。
@@ -118,21 +118,21 @@
     動詞に最も近い助詞句ほど話題を表し、節の最後に近い助詞句ほどそれに対する焦点を表すことが多い。
     すなわち、その節で何について述べるのかを表す助詞句ほど前に置かれやすく、それに対してどういった情報を伝えたいかを表す助詞句ほど後ろに置かれやすい。
   >
-  \xl<
-    \li<\sh<{câses a tel e ces vo kosax.}>\ja<私は彼女に学校で会った。>>
-    \li<\sh<{câses a tel vo kosax e ces.}>\ja<私は学校で彼女に会った。>>
+  \xol<
+    \li|tag="1"|<\sh<{câses a tel e ces vo kosax.}>\ja<私は彼女に学校で会った。>>
+    \li|tag="2"|<\sh<{câses a tel vo kosax e ces.}>\ja<私は学校で彼女に会った。>>
   >
   \p<
-    1 つ目の例文では、最初に {a tel} が置かれ最後に {vo kosax} が置かれている。
+    \box|tag="1"|; では、最初に {a tel} が置かれ最後に {vo kosax} が置かれている。
     「私」が話題で「学校」が焦点である場合、すなわち「彼女に会ったのは学校なのだ」という情報を新たに相手に伝えたい場合に、この語順が選ばれやすい。
-    一方で 2 つ目の例文では、最後に {e ces} が置かれている。
+    一方で \box|tag="2"|; では、最後に {e ces} が置かれている。
     「彼女」が焦点となる場合、すなわち「学校で会ったのは彼女なのだ」という情報を新たに相手に伝えたい場合には、この語順になりやすい。
   >
   \p<
     この傾向は、2 文以上が連続している場合により顕著に現れやすい。
   >
-  \xl<
-    \li<\sh<{qoletes a tel e zeqil. séqes e cit ca tel a refet.}>\ja<私は机を売った。それは私が友達からもらったものだ。>>
+  \xol<
+    \li|tag="3"|<\sh<{qoletes a tel e zeqil. séqes e cit ca tel a refet.}>\ja<私は机を売った。それは私が友達からもらったものだ。>>
   >
   \p<
     1 文目で「私が机を売った」という情報が読者に与えられるので、読者が 2 文目を読む段階では「私が机を売った」ということは既知である。
@@ -145,11 +145,11 @@
     特に、{fik} のような被修飾語を 1 つに限定してしまう形容詞は一番最後に置かれる。
     これは、1 つに限定してしまう形容詞が修飾した瞬間に何を指しているのかが確定し、それ以上他の形容詞で限定する必要はないからだと考えられる。
   >
-  \xl<
-    \li<\sh<{pa feges a pas e delêmtéq azaf afik?}>\ja<この赤い手袋は誰が買ったのですか?>>
+  \xol<
+    \li|tag="1"|<\sh<{pa feges a pas e delêmtéq azaf afik?}>\ja<この赤い手袋は誰が買ったのですか?>>
   >
   \p<
-    この文には {delêmtéq azaf afik} という表現が含まれているが、形容詞の順番を変えて {delêmtéq afik azaf} とするのは不自然である。
+    \box|tag="1"|; には {delêmtéq azaf afik} という表現が含まれているが、形容詞の順番を変えて {delêmtéq afik azaf} とするのは不自然である。
     これは以下のように説明できる。
     もし {delêmtéq afik azaf} という語順であったとすると、まず {afik} という形容詞が {delêmtéq} を修飾することになる。
     {afik} は話者から近いある 1 つのものを指し示す役割があるため、{delêmtéq afik} という名詞句ができた時点でこれが表すものが 1 つに限定される。
@@ -162,21 +162,21 @@
     しかし、/S/ が 2 単語以上で /Z/ が 1 単語であるとき、/S/ と /Z/ の順序が入れ替わる。
     このような交換現象が起こる主な原因は、規則通りの語順にしてしまうと、/Z/ が /S/ に含まれる語句を修飾しているように見えてしまうためだと考えられる。
   >
-  \xl<
-    \li<\sh<{zêhises a ces e sálak acasat ehiv ica gulilsoz.}>\ja<彼は最も頭痛に効果的な薬を作り上げた。>>
+  \xol<
+    \li|tag="1"|<\sh<{zêhises a ces e sálak acasat ehiv ica gulilsoz.}>\ja<彼は最も頭痛に効果的な薬を作り上げた。>>
   >
   \p<
-    この文に含まれる {acasat ehiv ica gulilsoz} という語句は「最も頭痛に効果的な」という意味であるが、ここで修飾語句の順序交換が行われている。
+    \box|tag="1"|; に含まれる {acasat ehiv ica gulilsoz} という語句は「最も頭痛に効果的な」という意味であるが、ここで修飾語句の順序交換が行われている。
     「最も頭痛に効果的な」という意味の語句は、まず {acasat} に {ica gulilsoz} を修飾させて「頭痛に効果的な」を意味する {acasat ica gulilsoz} という表現を作り、それに {ehiv} を修飾させることで作られるので、{acasat ica gulilsoz ehiv} という形になるはずである。
     しかし、上の文では {ica gulilsoz} と {ehiv} の位置が交換され、{acasat ehiv ica gulilsoz} という語順になっている。
     これは、本来の {acasat ica gulilsoz ehiv} という語順では、{ehiv} が {gulilsoz} を修飾しているように見えてしまうためだと考えられる。
     この例では、{ica gulilsoz} が /S/ であり、{ehiv} が /Z/ であった。
   >
-  \xl<
-    \li<\sh<{te lôk atov câsos te a ces, baldetos a ces.}>\ja<彼らは会うたびに喧嘩する。>>
+  \xol<
+    \li|tag="2"|<\sh<{te lôk atov câsos te a ces, baldetos a ces.}>\ja<彼らは会うたびに喧嘩する。>>
   >
   \p<
-    この文の {lôk atov câsos te a ces} は「彼らが会うたび」という意味だが、これも修飾語句の順序交換の例になっている。
+    \box|tag="2"|; にある {lôk atov câsos te a ces} は「彼らが会うたび」という意味だが、これも修飾語句の順序交換の例になっている。
     「彼らが会うたび」という意味の語句は、まず「彼らが会うとき」を意味する {lôk câsos te a ces} という語句を作り、それに {atov} を修飾させることで作られるので、{lôk câsos te a ces atov} という形になるのが本来である。
     しかし、上の場合と同様に、これでは {atov} が {ces} を修飾しているように見えるため、語順が交換されている。
     ここでは、{câsos te a ces} が /S/ で、{atov} が /Z/ であった。

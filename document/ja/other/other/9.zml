@@ -198,6 +198,33 @@
     >
     \li<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>>
   >
+  \p<
+    ナンバリングもできます。
+  >
+  \xol<
+    \li|tag="s"|<\sh<{kiles a tel te tazît e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
+    \li|tag="z"|<\sh|mark="u"|<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>\ja<この絵画はとても重要で高価なものなので、大切に扱いなさい。>>
+    \li|tag="t"|<\sh<{kiles a tel te tazît e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
+    \li|tag="d"|<\sh|mark="q"|<{kiles a tel te tazît e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
+    \li|tag="k"|<
+      \sh<{kiles a tel te tazît e kin duricamos a tel.}>
+      \ja<私は昨日泳ぐことができるようになった。>
+      \gloss<
+        &lig|conj="-es"|<\sh<{kil}>\ex<可能になる>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{tazît}>\ex<昨日>>
+        &lig|auto="e"|;
+        &lig|auto="kin"|;
+        &lig|conj="du-os"|<\sh<{ricam}>\ex<泳ぐ>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|punc="."|;
+      >
+    >
+    \li|tag="g"|<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>>
+  >
   \h2<単独グロス>
   \p<
     グロスは単独で置くこともできます。
