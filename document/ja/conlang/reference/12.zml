@@ -15,9 +15,9 @@
     複数の節が連結詞で繋がれている文が疑問文になる場合は、例外的に繋がれている全ての節の動詞の前に {pa} が置かれる。
     複数の節が接続詞で繋がれている文が疑問文になる場合は、前述の通り主節の動詞の前にのみ {pa} が置かれる。
   >
-  \xl<
-    \li<\sh<{pa salot a loc e pas, lo pa lesac a loc e pil vo fêd?}>\ja<あなたは誰ですか、そしてここで何をしているのですか?>>
-    \li<\sh<{pa qetet a loc vo pâd, te liceles a tel e loc te tazît?}>\ja<私が昨日あなたを訪ねたとき、あなたはどこにいましたか?>>
+  \xol<
+    \li|tag="1"|<\sh<{pa salot a loc e pas, lo pa lesac a loc e pil vo fêd?}>\ja<あなたは誰ですか、そしてここで何をしているのですか?>>
+    \li|tag="2"|<\sh<{pa qetet a loc vo pâd, te liceles a tel e loc te tazît?}>\ja<私が昨日あなたを訪ねたとき、あなたはどこにいましたか?>>
   >
   \p<
     上記に加え、疑問文では文末のデックがパデックに変えられる。
@@ -30,8 +30,8 @@
     諾否疑問文は、真偽を問いたい内容を表現した文に対し、共通法則の通りに {pa} を置いてデックをパデックに換えることで作られる。
     その他の語順の変化はない。
   >
-  \xl<
-    \li<\sh<{pa kilat lakos a loc qi qixaléh?}>\ja<あなたはシャレイア語を話せますか?>>
+  \xol<
+    \li|tag="1"|<\sh<{pa kilat lakos a loc qi qixaléh?}>\ja<あなたはシャレイア語を話せますか?>>
   >
   \h2|tag="skq"|<返答方法>
   \p<
@@ -39,27 +39,27 @@
     {ya} は聞かれた内容が正しいときに使われ、{du} は聞かれた内容が誤りのときに使われる。
     どちらも間投辞であるため、単独で文を成す。
   >
-  \xl<
-    \li<\sh<{pa séqes ca loc a ces e gisol?} `/ {du.}>\ja<あなたは彼からお金をもらいましたか? `/ いいえ。>>
+  \xol<
+    \li|tag="1"|<\sh<{pa séqes ca loc a ces e gisol?} `/ {du.}>\ja<あなたは彼からお金をもらいましたか? `/ いいえ。>>
   >
   \p<
     {ya} と {du} の使い分けは、疑問内容が否定表現になっているときに特に注意が必要である。
     疑問文から {pa} を取り除いた文が正しければ {ya} が使われ、正しくなければ {du} が使われる。
   >
-  \xl<
-    \li<\sh<{pa dusâfakes a loc e dat?} `/ {ya.}>\ja<あなたは犬が嫌いですか? `/ はい。>>
+  \xol<
+    \li|tag="2"|<\sh<{pa dusâfakes a loc e dat?} `/ {ya.}>\ja<あなたは犬が嫌いですか? `/ はい。>>
   >
   \p<
-    この例では、疑問文から {pa} を除いた文が「あなたは犬が好きではない」という意味であるため、{ya} と答えた人は犬が嫌いであるということになる。
+    \box|tag="2"|; では、疑問文から {pa} を除いた文が「あなたは犬が好きではない」という意味であるため、{ya} と答えた人は犬が嫌いであるということになる。
   >
   \h1|tag="skx"|<疑問詞疑問文>
   \h2|tag="skj"|<構成>
   \p<
     疑問詞を用いた疑問文は、尋ねたい部分を適切な疑問詞に変えた文に対し、共通法則の通りに {pa} を置いてデックをパデックに換えることで作られる。
   >
-  \xl<
-    \li<\sh<{pa salot a loc e pas?}>\ja<あなたは誰ですか?>>
-    \li<\sh<{pa yisat a loc e fakel apéf?}>\ja<あなたはどんな女性が好きですか?>>
+  \xol<
+    \li|tag="1"|<\sh<{pa salot a loc e pas?}>\ja<あなたは誰ですか?>>
+    \li|tag="2"|<\sh<{pa yisat a loc e fakel apéf?}>\ja<あなたはどんな女性が好きですか?>>
   >
   \p<
     以下に主要な疑問詞を挙げる。
@@ -81,11 +81,11 @@
   \p<
     助詞と疑問詞を組み合わせて副詞的な疑問表現が作られることがある。
   >
-  \xl<
-    \li<\sh<{pa qoletes a loc e sod vade pil?}>\ja<あなたはどうして家を売ったのですか?>>
+  \xol<
+    \li|tag="3"|<\sh<{pa qoletes a loc e sod vade pil?}>\ja<あなたはどうして家を売ったのですか?>>
   >
   \p<
-     この文では、理由を表す助詞 {vade} と疑問詞 {pil} が組み合わさり、{vade pil} で「どんなことの理由で」すなわち「なぜ」という意味の疑問表現になっている。
+    \box|tag="3"|; では、理由を表す助詞 {vade} と疑問詞 {pil} が組み合わさり、{vade pil} で「どんなことの理由で」すなわち「なぜ」という意味の疑問表現になっている。
   >
   \p<
     このような方法で作られる疑問表現には、以下のようなものがある。
@@ -105,30 +105,30 @@
   \p<
     疑問詞が名詞か形容詞である場合は、その疑問詞を含む動詞修飾の助詞句を取り出し、疑問詞を回答となる表現に変えたものが、返答として用いられることが多い。
   >
-  \xl<
-    \li<\sh<{pa lanes a loc ca amerikas te pet?} `/ {te tazît.}>\ja<あなたはいつアメリカに行ったのですか? `/ 昨日だ。>>
-    \li<\sh<{pa sâfat a loc e zas apéf?} `/ {e zas asafey.}>\ja<あなたはどんな人が好きですか? `/ 愛想の良い人だ。>>
-    \li<\sh<{pa salat a qut e sokiq i pas?} `/ {e sokiq i tel.}>\ja<あれは誰の腕時計ですか? `/ 私の腕時計だ。>>
+  \xol<
+    \li|tag="1"|<\sh<{pa lanes a loc ca amerikas te pet?} `/ {te tazît.}>\ja<あなたはいつアメリカに行ったのですか? `/ 昨日だ。>>
+    \li|tag="2"|<\sh<{pa sâfat a loc e zas apéf?} `/ {e zas asafey.}>\ja<あなたはどんな人が好きですか? `/ 愛想の良い人だ。>>
+    \li|tag="3"|<\sh<{pa salat a qut e sokiq i pas?} `/ {e sokiq i tel.}>\ja<あれは誰の腕時計ですか? `/ 私の腕時計だ。>>
   >
   \p<
-    順に {te pet}, {e zas apéf}, {e sokiq i pas} が疑問詞を含む動詞修飾助詞句であるため、それぞれに含まれる疑問詞を回答に置き換えた助詞句が返答として用いられている。
+    \box|tag="1"|; の {te pet}, \box|tag="2"|; の {e zas apéf}, \box|tag="3"|; の {e sokiq i pas} が疑問詞を含む動詞修飾助詞句であるため、それぞれに含まれる疑問詞を回答に置き換えた助詞句が返答として用いられている。
     ここで、抜き出される助詞句は必ず動詞修飾のものであることに注意せよ。
-    例えば、3 つ目の例文において、{i pas} だけを抜き出して回答に置き換えた {i tel} が返答となることはない。
+    例えば、\box|tag="3"|; において、{i pas} だけを抜き出して回答に置き換えた {i tel} が返答となることはない。
   >
   \p<
-    上の 2 つ目の例文のように疑問詞が形容詞である場合や、3 つ目の例文のように疑問詞を含む助詞句が動詞以外を修飾している場合は、回答となる遊離助詞句に回答以外の名詞が含まれることになる。
+    \box|tag="2"|; のように疑問詞が形容詞である場合や、\box|tag="3"|; のように疑問詞を含む助詞句が動詞以外を修飾している場合は、回答となる遊離助詞句に回答以外の名詞が含まれることになる。
     この回答以外の名詞は疑問文にも含まれているものなので、繰り返しを避けるために {met} に置き換わることが多い。
     {met} については \rref|ref="sqc"|; を参照せよ。
   >
-  \xl<
-    \li<\sh<{pa sâfat a loc e zas apéf?} `/ {e met asafey.}>\ja<あなたはどんな人が好きですか? `/ 愛想の良い人だ。>>
-    \li<\sh<{pa salat a qut e sokiq i pas?} `/ {e met i tel.}>\ja<あれは誰の腕時計ですか? `/ 私のだ。>>
+  \xol<
+    \li|tag="4"|<\sh<{pa sâfat a loc e zas apéf?} `/ {e met asafey.}>\ja<あなたはどんな人が好きですか? `/ 愛想の良い人だ。>>
+    \li|tag="5"|<\sh<{pa salat a qut e sokiq i pas?} `/ {e met i tel.}>\ja<あれは誰の腕時計ですか? `/ 私のだ。>>
   >
   \p<
     疑問詞が {pil} の場合は回答が節になることが多いが、この場合は {pil} が {kin} 節に置き換えられる。
   >
-  \xl<
-    \li<\sh<{pa leses a loc te tazît e pil?} `/ {e kin câses a tel e ʻyutih.}>\ja<あなたは昨日何をしましたか? `/ 私はユティアに会った。>>
+  \xol<
+    \li|tag="6"|<\sh<{pa leses a loc te tazît e pil?} `/ {e kin câses a tel e ʻyutih.}>\ja<あなたは昨日何をしましたか? `/ 私はユティアに会った。>>
   >
   \h3|tag="slj"|<遊離 {e} 句を使う方法>
   \p<
@@ -137,13 +137,13 @@
     これは、\rref|ref="skl"|; で述べた方法で返答しようとすると、その疑問詞を含む動詞修飾の助詞句全体を抜き出す必要があるため、回答が冗長になってしまうからだと考えられる。
     遊離 {e} 句については \rref|ref="sbh"|; を参照せよ。
   >
-  \xl<
-    \li<\sh<{pa sâfat a loc e qinat i pas?} `/ {e ʻxastil.}>\ja<あなたは誰の絵が好きですか? `/ シャスティルだ。>>
-    \li<\sh<{pa kétes a loc e sòlaq ca hif izi dèt apek?} `/ {e met ivo sokfetiq.}>\ja<どの机の上に携帯を置いたのですか? `/ リビングにある机だ。>>
+  \xol<
+    \li|tag="1"|<\sh<{pa sâfat a loc e qinat i pas?} `/ {e ʻxastil.}>\ja<あなたは誰の絵が好きですか? `/ シャスティルだ。>>
+    \li|tag="2"|<\sh<{pa kétes a loc e sòlaq ca hif izi dèt apek?} `/ {e met ivo sokfetiq.}>\ja<どの机の上に携帯を置いたのですか? `/ リビングにある机だ。>>
   >
   \p<
-    この最初の例文では、疑問詞を含む助詞句として {i pas} が抜き出され、その {pas} が {ʻxastil} に置き換えられて返答となっている。
-    次の例文では、{izi dèt apek} が抜き出され、{apek} が {ivo sokfetiq} に置き換えられて (さらに繰り返しを避けるために {dèt} が {met} に変えられて) 返答となっている。
+    \box|tag="1"|; では、疑問詞を含む助詞句として {i pas} が抜き出され、その {pas} が {ʻxastil} に置き換えられて返答となっている。
+    \box|tag="2"|; では、{izi dèt apek} が抜き出され、{apek} が {ivo sokfetiq} に置き換えられて (さらに繰り返しを避けるために {dèt} が {met} に変えられて) 返答となっている。
   >
   \p<
     なお、疑問詞が形容詞のとき、回答となる形容詞に直接 {e} を付けた形の遊離 {e} 句で返答されることはない。
@@ -157,8 +157,8 @@
     {ive} 句は選択肢を表し、{ive} 句の中には選択肢となる名詞句が置かれる。
     なお、「どれ」や「どちら」のような選択肢の中から選ばせる意味をもつ特別な疑問詞はないので、代わりに {pas} や {pet} などの通常の疑問詞が用いられる。
   >
-  \xl<
-    \li<\sh<{pa sâfat a loc e pet ive zef o bak o nev?}>\ja<赤色と青色と黄色ではどれが好きですか?>>
+  \xol<
+    \li|tag="1"|<\sh<{pa sâfat a loc e pet ive zef o bak o nev?}>\ja<赤色と青色と黄色ではどれが好きですか?>>
   >
   \h3|tag="skh"|<{á} による構成>
   ## TODO: このサブセクションは全体的に大きく説明を削ったが増やすべきか
@@ -166,16 +166,16 @@
     選択疑問文は、選択肢を {á} で繋げて文中に置くことでも作られる。
     このとき、{á} で繋がれた名詞全体が疑問表現として働く。
   >
-  \xl<
-    \li<\sh<{pa sâfat a loc e zef á bak á nev?}>\ja<赤色と青色と黄色ではどれが好きですか?>>
+  \xol<
+    \li|tag="1"|<\sh<{pa sâfat a loc e zef á bak á nev?}>\ja<赤色と青色と黄色ではどれが好きですか?>>
   >
   \p<
     {á} は節を繋げることもある。
     この場合、{á} の代わりに別形の {lá} が使われることが多い。
     {á} や {lá} は連結辞であるため、これによって繋がれた節の両方の動詞の前に {pa} が置かれることに注意せよ。
   >
-  \xl<
-    \li<\sh<{pa harat a loc, lá pa dodat a loc?}>\ja<あなたは楽しんでいますか、それとも悲しんでいますか?>>
+  \xol<
+    \li|tag="2"|<\sh<{pa harat a loc, lá pa dodat a loc?}>\ja<あなたは楽しんでいますか、それとも悲しんでいますか?>>
   >
   \p<
     主節の動詞の後に {á dul/os/} が続けられると、肯定か否定かを選ばせる選択疑問文になるため、結果として諾否疑問文と同じ意味になる。
@@ -183,8 +183,8 @@
     また、諾否疑問表現を間接疑問にしたい場合にもこの形が用いられる。
     詳しくは \rref|ref="ski"|; を参照せよ。
   >
-  \xl<
-    \li<\sh<{pa bozetes á dules a loc e qaled i tel?}>\ja<あなたは私の弟を殴ったのか殴っていないのか?>>
+  \xol<
+    \li|tag="3"|<\sh<{pa bozetes á dules a loc e qaled i tel?}>\ja<あなたは私の弟を殴ったのか殴っていないのか?>>
   >
   \h2|tag="ska"|<返答方法>
   \p<
@@ -200,14 +200,14 @@
   \p<
     例えば、以下のような疑問文があるとする。
   >
-  \xl<
-    \li<\sh<{pa qetat a sod i loc vo pâd?}>\ja<あなたの家はどこにありますか?>>
+  \xol<
+    \li|tag="1"|<\sh<{pa qetat a sod i loc vo pâd?}>\ja<あなたの家はどこにありますか?>>
   >
   \p<
     この疑問文からは、例えば以下のような間接疑問表現が作られる。
   >
-  \xl<
-    \li<\sh<{sokat a tel e kin qetat a sod i loc vo pâd.}>\ja<私はあなたの家がどこにあるか知っている。>>
+  \xol<
+    \li|tag="2"|<\sh<{sokat a tel e kin qetat a sod i loc vo pâd.}>\ja<私はあなたの家がどこにあるか知っている。>>
   >
   \p<
     最初の文から {pa} を取り除いて得られる形が {kin} 節になっていることに着目せよ。
@@ -219,8 +219,8 @@
     {á dul/os/} を付け足した形の選択疑問文については \rref|ref="skh"|; を参照せよ。
     なお、このような形になるのは、諾否疑問表現には動詞に付けられた {pa} 以外に疑問表現がないため、{pa} を取り除くと疑問文なのか平叙文なのかが区別できなくなるためだと考えられる。
   >
-  \xl<
-    \li<\sh<{dusokat a tel e kin kavat á dulat a loc e nîl.}>\ja<私はあなたに兄がいるかいないか知らない。>>
+  \xol<
+    \li|tag="1"|<\sh<{dusokat a tel e kin kavat á dulat a loc e nîl.}>\ja<私はあなたに兄がいるかいないか知らない。>>
   >
 
 >

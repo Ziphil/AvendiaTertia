@@ -12,11 +12,11 @@
     名詞は必ず前に助詞を伴って助詞句となる。
     このとき、助詞によって名詞の格が表される。
   >
-  \xl<
-    \li<\sh<{câses a tel e yaf.}>\ja<私は妹に会った。>>
+  \xol<
+    \li|tag="1"|<\sh<{câses a tel e yaf.}>\ja<私は妹に会った。>>
   >
   \p<
-    上の例文には、{a tel} と {e yaf} という 2 つの助詞句が用いられている。
+    \box|tag="1"|; には、{a tel} と {e yaf} という 2 つの助詞句が用いられている。
     助詞句 {a tel} に含まれる助詞 {a} は {tel} が主語として文中で用いられていることを明示していて、{e yaf} に含まれる {e} は {yaf} が目的語であることを示している。
   >
   \p<
@@ -24,18 +24,18 @@
     助詞句が修飾する語句の種類については \rref|ref="sjg"|; で詳しく述べる。
     また、助詞句そのものの位置については \rref|ref="sdm"|; と \rref|ref="svk"|; で述べる。
   >
-  \xl<
-    \li<\sh<{terac a ces e tirmal.}>\ja<彼女はジュースを飲んでいる。>>
-    \li<\sh<{hafe e ferac.}>\ja<手伝ってくれてありがとう。>>
-    \li<\sh<{qetat a nîl i tel vo kosxoq.}>\ja<私の兄は図書館にいる。>>
-    \li<\sh<{pa kavat a loc e sokiq aqôc izi fit?}>\ja<これの他に時計を持っていますか?>>
-    \li<\sh<{salat a cit e agulod emic ini kèc.}>\ja<それはコーヒーより苦かった。>>
+  \xol<
+    \li|tag="2"|<\sh<{terac a ces e tirmal.}>\ja<彼女はジュースを飲んでいる。>>
+    \li|tag="3"|<\sh<{hafe e ferac.}>\ja<手伝ってくれてありがとう。>>
+    \li|tag="4"|<\sh<{qetat a nîl i tel vo kosxoq.}>\ja<私の兄は図書館にいる。>>
+    \li|tag="5"|<\sh<{pa kavat a loc e sokiq aqôc izi fit?}>\ja<これの他に時計を持っていますか?>>
+    \li|tag="6"|<\sh<{salat a cit e agulod emic ini kèc.}>\ja<それはコーヒーより苦かった。>>
   >
   \p<
-    最初の文にある {a ces} や {e tirmal} は動詞修飾形が成す助詞句で、ともに動詞 {terac} を修飾している。
-    2 つ目の文にある {e ferac} は、間投詞 {hafe} を修飾している。
-    3 つ目の文にある {i tel} は非動詞修飾形が成す助詞句で、名詞 {nîl} を修飾している。
-    4 つ目と 5 つ目の文にある {izi fit} と {ini kèc} も非動詞修飾形が成す助詞句であり、それぞれ形容詞 {aqôc} と副詞 {emic} に係っている。
+    \box|tag="2"|; にある {a ces} や {e tirmal} は動詞修飾形が成す助詞句で、ともに動詞 {terac} を修飾している。
+    \box|tag="3"|; にある {e ferac} は、間投詞 {hafe} を修飾している。
+    \box|tag="4"|; にある {i tel} は非動詞修飾形が成す助詞句で、名詞 {nîl} を修飾している。
+    \box|tag="5"|; と \box|tag="6"|; にある {izi fit} と {ini kèc} も非動詞修飾形が成す助詞句であり、それぞれ形容詞 {aqôc} と副詞 {emic} に係っている。
   >
   \h2|tag="sxb"|<形容詞を伴う助詞句>
   \h3|tag="sxc"|<総論>
@@ -47,8 +47,8 @@
   \p<
     全ての形容詞は限定的用法でも叙述的用法でも使え、どちらかの用法のみをもつ形容詞は存在しない。
   >
-  \xl<
-    \li<\sh<{salat a sakil afik e avôl ile lát ayos.}>\ja<このリンゴは 3 個だ。>>
+  \xol<
+    \li|tag="1"|<\sh<{salat a sakil afik e avôl ile lát ayos.}>\ja<このリンゴは 3 個だ。>>
   >
   \p<
     続くサブサブサクションで、助詞が形容詞を伴う個別の場合について述べる。
@@ -58,11 +58,11 @@
     動詞の中には、名詞の代わりに形容詞を伴った基本助詞句が係ることを許すものがある。
     その場合は助詞が形容詞に付随して用いられる。
   >
-  \xl<
-    \li<\sh<{salat a nayef aquk e abik.}>\ja<あの花は青い。>>
+  \xol<
+    \li|tag="1"|<\sh<{salat a nayef aquk e abik.}>\ja<あの花は青い。>>
   >
   \p<
-    ここでは、形容詞 {abik} が助詞 {e} を伴って使われている。
+    \box|tag="1"|; では、形容詞 {abik} が助詞 {e} を伴って使われている。
     これは、{e} 句が修飾する動詞が {sal} であり、{sal} が特別に形容詞を伴った {e} 句が係るのを許しているためである。
   >
   \h3|tag="sxq"|<特殊な助接辞>
@@ -70,8 +70,8 @@
     {se} などの一部の助接辞は、助詞として用いられると常に形容詞を伴う。
     このような助詞は、修飾する動詞によらず形容詞を伴う。
   >
-  \xl<
-    \li<\sh<{xílac a xák se alevac.}>\ja<電灯がオレンジ色に光っている。>>
+  \xol<
+    \li|tag="1"|<\sh<{xílac a xák se alevac.}>\ja<電灯がオレンジ色に光っている。>>
   >
   ## TODO: 一覧が欲しいかも
   \h1|tag="sjg"|<助詞句の種類と修飾>
@@ -171,12 +171,12 @@
     同じ助詞から成る複数の助詞句が 1 つの単語に係っている状況は、しばしば「\rterm|key="にじゅうじょしく",id="double-prepositional-phrase"|<二重助詞句\fl<double prepositional phrase>>」と呼ばれる。
     二重助詞句は、その助詞句の補語となっている名詞を {ò} で繋げて 1 つの助詞句にしたものと同じ意味になる。
   >
-  \xl<
-    \li<\sh<{qetet te tazît vo fêd a qelad i tel, a dutel.}>\ja<昨日ここにいたのは私の弟で、私ではない。>>
-    \li<\sh<{qetet te tazît vo fêd a qelad i tel ò dutel.}>\ja<昨日ここにいたのは私の弟で、私ではない。>>
+  \xol<
+    \li|tag="1"|<\sh<{qetet te tazît vo fêd a qelad i tel, a dutel.}>\ja<昨日ここにいたのは私の弟で、私ではない。>>
+    \li|tag="12"|<\sh<{qetet te tazît vo fêd a qelad i tel ò dutel.}>\ja<昨日ここにいたのは私の弟で、私ではない。>>
   >
   \p<
-    上の 2 つの文のうち、最初の文が二重助詞句を含む文で、次の文がその 2 つの助詞句に置かれている名詞を {ò} で繋げて 1 つの助詞句にしたものである。
+    このうち、\box|tag="1"|; が二重助詞句を含む文で、\box|tag="2"|; がその 2 つの助詞句に置かれている名詞を {ò} で繋げて 1 つの助詞句にしたものである。
     この 2 つの文が表す内容は同じである。
   >
   \p<
@@ -187,11 +187,11 @@
   \p<
     本来ならば 1 つの助詞句で済むが、その助詞句の意味の一部分だけが話題として節の始めの方に移動させられたために、二重助詞句が現れることがある。
   >
-  \xl<
-    \li<\sh<{te saq, dunòqes catsatas a tel te zéc vo fecil ica sod.}>\ja<今日は、朝家の周りを散歩するのを忘れなかった。>>
+  \xol<
+    \li|tag="1"|<\sh<{te saq, dunòqes catsatas a tel te zéc vo fecil ica sod.}>\ja<今日は、朝家の周りを散歩するのを忘れなかった。>>
   >
   \p<
-    この例文には、{dunòqes} に {te saq} と {te zéc} という 2 つの {te} 句が係っている。
+    \box|tag="1"|; には、{dunòqes} に {te saq} と {te zéc} という 2 つの {te} 句が係っている。
     これは、本来なら {te zéc i saq} という 1 つの {te} 句で表現するところを、{saq} だけを話題として文頭に置きたかったために、2 つの {te} 句に分離させて表現したからだと考えられる。
   >
   \h2|tag="sra"|<挿入表現による補足説明>
@@ -199,20 +199,20 @@
     すでに存在している助詞句と同じ助詞を用いた別の助詞句が、もともとの助詞句の内容に対する補足説明として、挿入表現にして追加されることがある。
     補足説明となる 2 つ目の助詞句は、それを受ける助詞句の直後に挿入されることが多いが、文末に挿入されることもある。
   >
-  \xl<
-    \li<\sh<{fékes a tel e'n benagat a hinof i loc, a nêtih asen, e benôm.}>\ja<あなたの姉、ネーティアさんが風邪を引いたと聞いた。>>
-    \li<\sh<{ditat cipasis a'c ca ces e qidok ie qixov, ca qasot i tel.}>\ja<彼にパソコンを修理するよう頼んでください、私の息子に。>>
+  \xol<
+    \li|tag="1"|<\sh<{fékes a tel e'n benagat a hinof i loc, a nêtih asen, e benôm.}>\ja<あなたの姉、ネーティアさんが風邪を引いたと聞いた。>>
+    \li|tag="2"|<\sh<{ditat cipasis a'c ca ces e qidok ie qixov, ca qasot i tel.}>\ja<彼にパソコンを修理するよう頼んでください、私の息子に。>>
   >
   \p<
-    最初の文では、{a hinof i loc} という {a} 句への補足として、{a nêtih asen} という更なる {a} 句が直後に挿入されている。
-    次の文では、{ca loc} という {ca} 句への補足として、{ca qasot i tel} という {ca} 句が文末に挿入されている。
+    \box|tag="1"|; では、{a hinof i loc} という {a} 句への補足として、{a nêtih asen} という更なる {a} 句が直後に挿入されている。
+    \box|tag="2"|; では、{ca loc} という {ca} 句への補足として、{ca qasot i tel} という {ca} 句が文末に挿入されている。
   >
   \h2|tag="sre"|<詩歌における強調>
   \p<
     詩歌においては、強調のために全く同じ助詞句が 2 回以上繰り返されることがある。
   >
-  \xl<
-    \li<\sh<{fi xerat acís afik, zêhisac a zál e kovèt, e kovèt, e kovèt.}>\ja<この初めての音とともに、私たちは絆を、絆を、絆を作り上げている。>>
+  \xol<
+    \li|tag="1"|<\sh<{fi xerat acís afik, zêhisac a zál e kovèt, e kovèt, e kovèt.}>\ja<この初めての音とともに、私たちは絆を、絆を、絆を作り上げている。>>
   >
 
 >
