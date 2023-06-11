@@ -30,45 +30,45 @@
     連結詞は、語句や節の間に置かれてその語句や節を対等な関係で結ぶ。
     連結詞は、文法的な役割が同じであればあらゆる語句や節を繋げるが、文法的な役割が異なる語句を繋げることはない。
   >
-  \xl<
-    \li<\sh<{cikekat a tel e dev o miv.}>\ja<私はペンと紙を持っている。>>
-    \li<\sh<{pa qolkevat e talemcik abik é anám?}>\ja<青か緑のハンカチは売っていますか?>>
-    \li<\sh<{debat ò dojat a tel.}>\ja<私は疲れているしつらい。>>
+  \xol<
+    \li|tag="1"|<\sh<{cikekat a tel e dev o miv.}>\ja<私はペンと紙を持っている。>>
+    \li|tag="2"|<\sh<{pa qolkevat e talemcik abik é anám?}>\ja<青か緑のハンカチは売っていますか?>>
+    \li|tag="3"|<\sh<{debat ò dojat a tel.}>\ja<私は疲れているしつらい。>>
   >
   \p<
     連結詞は 3 つ以上の語句や節を繋ぐこともでき、そのとき連結詞は繋がれている語句や節の間の全てに置かれる。
     例えば、連結詞が 3 つの語句を繋げている場合は、その連結詞は 1 つ目と 2 つ目の間および 2 つ目と 3 つ目の間の両方に置かれる。
     タデックなどの他の記号で代用されることはない。
   >
-  \xl<
-    \li<\sh<{fesalat a tel e milef o hâl o desek acac.}>\ja<私は新しいシャツとスカートと靴が欲しい。>>
+  \xol<
+    \li|tag="4"|<\sh<{fesalat a tel e milef o hâl o desek acac.}>\ja<私は新しいシャツとスカートと靴が欲しい。>>
   >
   \p<
     連結詞が節を繋いでいる場合は、連結詞の直前にタデックが置かれる。
     繋がれている節がともに短い場合などでは、このタデックは省略されることがある。
   >
-  \xl<
-    \li<\sh<{kavat a tel e xoq avôl, dà dulîdes a tel e met arak.}>\ja<私はたくさんの本を持っているが、どれも読んだことがない。>>
+  \xol<
+    \li|tag="5"|<\sh<{kavat a tel e xoq avôl, dà dulîdes a tel e met arak.}>\ja<私はたくさんの本を持っているが、どれも読んだことがない。>>
   >
   \h2|tag="syz"|<修飾語句が {ò} で繋がれる場合>
   \p<
     形容詞句や副詞句のように他の単語を修飾する語句は、{ò} で繋がれることが少ない。
     これは、{ò} で繋げなくとも単に並べるだけで同じ意味の表現にできるからだと考えられる。
   >
-  \xl<
-    \li<\sh<{sôdac a ces e malek amay ò asaret.}>\ja<彼は甘くておいしい飴を食べている。>>
-    \li<\sh<{sôdac a ces e malek amay asaret.}>\ja<彼は甘くておいしい飴を食べている。>>
+  \xol<
+    \li|tag="1"|<\sh<{sôdac a ces e malek amay ò asaret.}>\ja<彼は甘くておいしい飴を食べている。>>
+    \li|tag="2"|<\sh<{sôdac a ces e malek amay asaret.}>\ja<彼は甘くておいしい飴を食べている。>>
   >
   \p<
-    この 1 つ目の文では、{amay} と {asaret} が {ò} で繋がれて「甘くておいしい」という形容詞句を構成しており、それが {malek} を修飾して「甘くておいしい飴」という表現が成立している。
-    しかし、2 つ目の文のように、{amay} と {asaret} を順番に {malek} に修飾させることでも、「甘くておいしい飴」を表現することができる。
-    2 つ目の文の方が簡潔であるため、こちらの方が好まれる。
+    \box|tag="1"|; では、{amay} と {asaret} が {ò} で繋がれて「甘くておいしい」という形容詞句を構成しており、それが {malek} を修飾して「甘くておいしい飴」という表現が成立している。
+    しかし、\box|tag="2"|; のように、{amay} と {asaret} を順番に {malek} に修飾させることでも、「甘くておいしい飴」を表現することができる。
+    \box|tag="2"|; の方が簡潔であるため、こちらの方が好まれる。
   >
   \p<
      なお、形容詞句が叙述的に使われている場合は、単に並べることが文法的に許されていないため、{ò} で繋げる必要がある。
   >
-  \xl<
-    \li<\sh<{salat a malek afik e amay ò asaret.}>\ja<この飴は甘くておいしい。>>
+  \xol<
+    \li|tag="3"|<\sh<{salat a malek afik e amay ò asaret.}>\ja<この飴は甘くておいしい。>>
   >
   \h1|tag="sfu"|<{o} と {ò} の使い分け>
   \h2|tag="svs"|<総論>
@@ -86,29 +86,29 @@
   \p<
     名詞句が {o} で連結された場合、繋がれている名詞句それぞれが表すものの集まりを表す。
   >
-  \xl<
-    \li<\sh<{kocaqat vo nasfek a milcat o monaf.}>\ja<庭にはペットと猫がいる。>>
+  \xol<
+    \li|tag="1"|<\sh<{kocaqat vo nasfek a milcat o monaf.}>\ja<庭にはペットと猫がいる。>>
   >
   \p<
-    この例では、{milcat} と {monaf} が {o} で繋がれているので、何匹かのペット (名詞に単複の区別がないので複数の場合があることに注意) と何匹かの猫から成る集まりが庭にいることを表している。
+    \box|tag="1"|; では、{milcat} と {monaf} が {o} で繋がれているので、何匹かのペット (名詞に単複の区別がないので複数の場合があることに注意) と何匹かの猫から成る集まりが庭にいることを表している。
     別の言い方をすれば、庭には少なくとも 2 匹の動物がいて、その一方はペットであり、もう一方は猫であるということになる。
     さらに、ペットである方の動物は猫であるとは限らないし、猫である方の動物はペットであるとも限らない。
   >
   \p<
     名詞句が {ò} で連結された場合は、繋がれている名詞句それぞれであるための条件を全て満たしているものを表す。
   >
-  \xl<
-    \li<\sh<{kocaqat vo nasfek a milcat ò monaf.}>\ja<庭にはペットの猫がいる。>>
+  \xol<
+    \li|tag="2"|<\sh<{kocaqat vo nasfek a milcat ò monaf.}>\ja<庭にはペットの猫がいる。>>
   >
   \p<
-    この例では、{milcat} と {monaf} が {ò} で繋がれているので、ペットであってかつ猫であるようなものが庭にいることを表している。
+    \box|tag="2"|; では、{milcat} と {monaf} が {ò} で繋がれているので、ペットであってかつ猫であるようなものが庭にいることを表している。
     したがって、庭にいる動物は 1 匹の可能性がある。
   >
   \p<
     名詞句が {ò} で繋がれている形は、肯定形と否定形の名詞が {ò} で繋がれた「～であって～ではない」を意味する表現でよく見られる。
   >
-  \xl<
-    \li<\sh<{sâfat a tel e sakil ò dulesit.}>\ja<私が好きなのはリンゴであってミカンではない。>>
+  \xol<
+    \li|tag="3"|<\sh<{sâfat a tel e sakil ò dulesit.}>\ja<私が好きなのはリンゴであってミカンではない。>>
   >
   \h2|tag="svt"|<形容詞句を繋ぐ場合>
   \p<
@@ -116,24 +116,28 @@
     すなわち、名詞 [/S/] と形容詞句 [/T/], [/D/] に対し、形容詞句 [/T/ ]{o}[ /D/] を名詞 [/S/] に修飾させた [/S/ /T/ ]{o}[ /D/] という形は、2 つの名詞句 [/S/ /T/], [/S/ /D/] が {o} で繋がれた [/S/ /T/ ]{o}[ /S/ /D/] と同じ意味になる。
     なお、形容詞が {o} で繋がれた形は、名詞を修飾する形でしか使われず、{sal} に係る {e} 句や {se} 句の補語などでは使うことはできない。
   >
-  \xl<
-    \li<\sh<{kûtat a ces e cekul axac o atik.}>\ja<彼は白い鞄と小さい鞄を持っている。>>
-    \li<\sh<{kûtat a ces e cekul axac o cekul atik.}>\ja<彼は白い鞄と小さい鞄を持っている。>>
+  \xol<
+    \li|tag="1"|<\sh<{kûtat a ces e cekul axac o atik.}>\ja<彼は白い鞄と小さい鞄を持っている。>>
+    \li|tag="2"|<\sh<{kûtat a ces e cekul axac o cekul atik.}>\ja<彼は白い鞄と小さい鞄を持っている。>>
   >
   \p<
-    この 2 つの文は同じ意味になり、1 つ目の文は 2 つ目の文を短く言い換えた形と見なすことができる。
+    \box|tag="1"|; と \box|tag="2"|; は同じ意味になり、\box|tag="1"|; は \box|tag="2"|; を短く言い換えた形と見なすことができる。
     どちらの文も、白い鞄と小さい鞄の両方の集まりを持っていることを表しているので、少なくとも 2 つの鞄を持っていることになる。
     さらに、白い方の鞄は小さいとは限らず、小さい方の鞄は白いとは限らない。
   >
   \p<
-    形容詞や副詞が {ò} で連結されている場合は、繋がれている形容詞句が表す性質を全て満たしているという意味になる。
+    形容詞句や副詞句が {ò} で連結されている場合は、繋がれている形容詞句が表す性質を全て満たしているという意味になる。
   >
-  \xl<
-    \li<\sh<{kûtat a ces e cekul axac ò atik.}>\ja<彼は白くて小さい鞄を持っている。>> 
+  \xol<
+    \li|tag="3"|<\sh<{kûtat a ces e cekul axac ò atik.}>\ja<彼は白くて小さい鞄を持っている。>> 
   >
   \p<
-    この例文にある {axac ò atik} という形容詞句は、{axac} と {atik} のそれぞれの意味である「白い」と「小さい」をともに満たすことを表す。
+    \box|tag="3"|; にある {axac ò atik} という形容詞句は、{axac} と {atik} のそれぞれの意味である「白い」と「小さい」をともに満たすことを表す。
     したがって、文全体としては、白くてかつ小さい鞄という 1 種類のものを持っていることを言及しているに過ぎず、鞄を 1 つしか持っていない可能性がある。
+  >
+  \p<
+    なお、\box|tag="3"|; にあるような {ò} で繋がれた形容詞が名詞を修飾する形は、形容詞を名詞の後に単に並べる形で代用されることが多いため、稀である。
+    これについては \rref|ref="syz"|; も参照せよ。
   >
   \h2|tag="sys"|<副詞句を繋ぐ場合>
   \p<
@@ -142,26 +146,33 @@
   \p<
     副詞が {ò} で連結されている場合は、繋がれた 2 つの副詞句が表す性質をともに満たしているという意味になる。
   >
+  \xol<
+    \li|tag="1"|<\sh<{qiniles a tel e rikel acik omêl ò okosiz.}>\ja<私はその瓶をゆっくりと丁寧に運んだ。>> 
+  >
+  \p<
+    なお、\box|tag="1"|; にあるような {ò} で繋がれた副詞の形は、副詞を単に並べる形で代用されることが多いため、稀である。
+    これについては \rref|ref="syz"|; も参照せよ。
+  >
   \h2|tag="svd"|<節を繋ぐ場合>
   \p<
     節が {o} で繋がれるのは {kin} 節の中だけである。
     {kin} 節の中で節が {o} で繋がれると、繋がれた片方の節を単独で {kin} 節にしたものともう一方の節を単独で {kin} 節にしたものの両方から成る集まりを表す。
     すなわち、節 [/S/], [/T/] に対し、{kin} 節の中で [/S/] と [/T/] を繋げた {kin}[ /S/ ]{o}[ /T/] という形は、2 つの {kin} 節である {kin} [/S/], {kin} [/T/] を {o} で繋げた {kin}[ /S/ ]{o kin}[ /T/] と同じ意味になる。
   >
-  \xl<
-    \li<\sh<{qifat vo fêd e kin yepelos a vas o ritasos a ces.}>\ja<ここでは歌ったり踊ったりすることができる。>>
-    \li<\sh<{qifat vo fêd e kin yepelos a vas o kin ritasos a ces.}>\ja<ここでは歌うことと踊ることをすることができる。>>
+  \xol<
+    \li|tag="1"|<\sh<{qifat vo fêd e kin yepelos a vas o ritasos a ces.}>\ja<ここでは歌ったり踊ったりすることができる。>>
+    \li|tag="2"|<\sh<{qifat vo fêd e kin yepelos a vas o kin ritasos a ces.}>\ja<ここでは歌うことと踊ることをすることができる。>>
   >
   \p<
-    この 2 つの文は同じ意味になり、1 つ目の文は 2 つ目の文を短く言い換えた形と見なすことができる。
+    \box|tag="1"|; と \box|tag="2"|; は同じ意味になり、\box|tag="1"|; は \box|tag="2"|; を短く言い換えた形と見なすことができる。
     どちらの文も、歌うことと踊ることという 2 種類の行為が可能であることを表している。
   >
   \p<
     節が {ò} で連結されている場合、繋がれた 2 つの節の内容がともに成立することを表す。
     こちらの形は {kin} 節の中以外でも現れる。
   >
-  \xl<
-    \li<\sh<{qifat vo fêd e kin yepelos a vas ò ritasos a ces.}>\ja<ここでは歌って踊ることができる。>>
+  \xol<
+    \li|tag="3"|<\sh<{qifat vo fêd e kin yepelos a vas ò ritasos a ces.}>\ja<ここでは歌って踊ることができる。>>
   >
   \p<
     この例では、「歌う」と「踊る」という 2 つの節が {ò} で繋がれているので、その両方が成立する「歌っていてかつ踊っている」という 1 種類の行為が可能であることを表している。
@@ -173,16 +184,16 @@
     標準形と別形の大きな違いは、別形は節を繋いでいる場合にのみ現れるという点である。
     連結詞が語句と語句を繋ぐ場合は、必ず標準形の方が用いられ、別形が用いられることはない。
   >
-  \xl<
-    \li<\sh<{sâfat a tel e sakil o lesit.}>\ja<私はリンゴとミカンが好きだ。>>
-    \li<\sh<{salet e ayefex à axodol ebam a sokiq fesalat e a tel.}>\ja<私が欲しかった時計は魅力的だがとても高価だった。>>
+  \xol<
+    \li|tag="1"|<\sh<{sâfat a tel e sakil o lesit.}>\ja<私はリンゴとミカンが好きだ。>>
+    \li|tag="2"|<\sh<{salet e ayefex à axodol ebam a sokiq fesalat e a tel.}>\ja<私が欲しかった時計は魅力的だがとても高価だった。>>
   >
   \p<
     一方で、連結詞が節と節を繋ぐ場合は、標準形も別形も用いられる。
   >
-  \xl<
-    \li<\sh<{zavages a tel e kofet i ces, à duqifet qeritas a ces e cit.}>\ja<私は彼の名前を叫んだが、彼にはそれが聞こえなかった。>>
-    \li<\sh<{zavages a tel e kofet i ces, dà duqifet qeritas a ces e cit.}>\ja<私は彼の名前を叫んだが、彼にはそれが聞こえなかった。>>
+  \xol<
+    \li|tag="3"|<\sh<{zavages a tel e kofet i ces, à duqifet qeritas a ces e cit.}>\ja<私は彼の名前を叫んだが、彼にはそれが聞こえなかった。>>
+    \li|tag="4"|<\sh<{zavages a tel e kofet i ces, dà duqifet qeritas a ces e cit.}>\ja<私は彼の名前を叫んだが、彼にはそれが聞こえなかった。>>
   >
   \p<
     ただし、節を繋いでいる場合では、標準形より別形の方が頻繁に使われ、特に主節では別形の方が圧倒的に好まれる。
@@ -200,18 +211,18 @@
     例として、以下の 2 つの文を考える。
     2 つの文で異なる点は、使われている連結詞が標準形の {ò} か別形の {lo} かだけである。
   >
-  \xl<
-    \li<\sh<{salat onalef e adupadit a kin kocaqat a socav ayerif aquk, lo kocaqat vo cêd a bunlohis etut.}>\ja<あの美しい顔が存在することなど当然あるはずがなく、ただ蚊だけがそこにいた。>>
-    \li<\sh<{salat onalef e adupadit a kin kocaqat a socav ayerif aquk, ò kocaqat vo cêd a bunlohis etut.}>\ja<あの美しい顔が存在することもただ蚊だけがそこにいるということも、当然あるはずがない。>>
+  \xol<
+    \li|tag="1"|<\sh<{salat onalef e adupadit a kin kocaqat a socav ayerif aquk, lo kocaqat vo cêd a bunlohis etut.}>\ja<あの美しい顔が存在することなど当然あるはずがなく、ただ蚊だけがそこにいた。>>
+    \li|tag="2"|<\sh<{salat onalef e adupadit a kin kocaqat a socav ayerif aquk, ò kocaqat vo cêd a bunlohis etut.}>\ja<あの美しい顔が存在することもただ蚊だけがそこにいるということも、当然あるはずがない。>>
   >
   \p<
-    ここで、それぞれの文において連結詞が何と何を繋げているかを考察する。
-    まず、上の文では別形である {lo} が用いられているので、比較的長いものが接続されていると解釈される。
+    ここで、\box|tag="1"|; と \box|tag="2"|; のそれぞれにおいて連結詞が何と何を繋げているかを考察する。
+    まず、\box|tag="1"|; では別形である {lo} が用いられているので、比較的長いものが接続されていると解釈される。
     したがって、{lo} が接続するのは、{lo} より前にある節全体 ({salat} ～ {aquk}) と {lo} より後にある節全体 ({kocaqat} ～ {etut}) であると解釈されやすい。
     このとき、主節の {a} 句にある {kin} 節は {aquk} までとなるので、例文で「あり得ない」と述べているのは「あの美しい顔が存在すること」であるということになる。
   >
   \p<
-    一方、下の文では標準形である {ò} が用いられているので、比較的短いものが繋げられていると解釈される。
+    一方、\box|tag="2"|; では標準形である {ò} が用いられているので、比較的短いものが繋げられていると解釈される。
     したがって、{ò} が接続するのは、{kocaqat} から {aquk} までの節と {kocaqat} から {etut} までの節であると解釈されやすい。
     つまり、主節の {kin} 節は最初の {kocaqat} から文末までとなるので、「あり得ない」と述べているのは「あの美しい顔が存在して蚊だけが存在すること」であることになる。
   >
