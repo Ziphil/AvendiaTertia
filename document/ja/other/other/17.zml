@@ -27,6 +27,22 @@
 
     \zp-song|
       number="8",
+      date="2023/06/18",
+      length="98",
+      song-google-id="1jdkkr2yfVuiJ9E14TR1SUioxq4RjpYGz",
+      score-google-id="1kx9dk6t7kovMaL7Vw-k3g71-b3DMMfX5"
+    |<
+      \zp-title-shaleian<hîxxif axalír — iqi líker>
+      \zp-title-normal<Étoiles du sentiment (Version piano)>
+      \zp-description<
+        \p<
+          8 曲目のピアノバージョンです。
+          F マイナーキーに移調されています。
+        >
+      >
+    >
+    \zp-song|
+      number="8",
       date="2023/05/05",
       length="99",
       song-google-id="1Mw1kFngmy5fsDsKv2FShrCBZ5fl3Qujt"
@@ -61,7 +77,7 @@
       number="6",
       date="2023/03/10",
       length="89",
-      song-google-id="1WqOEjkJr1xkpXXoWPB60z_ZjLoA3O_QR",
+      song-google-id="1JcmwqkKVepDqIEKZixFg6ocdzk4mEza5",
       score-google-id="1wq7vnv5SXcoA-PJUNerbOKek_mJ8zMH9"
     |<
       \zp-description<
