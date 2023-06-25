@@ -9,37 +9,40 @@
   \h1|tag="svm"|<{kin} 節>
   \h2|tag="svy"|<構成>
   \p<
-    {kin} の後に節を続けることで、全体で「～ということ」という意味の名詞節を作ることができる。
-    この名詞化された節は「\rterm|key="きんせつ",id="kin-clause"|<{kin} 節\fl<{kin}-clause>>」と呼ばれ、{kin} 節が付随する助詞句はしばしば「\rterm|key="きんせつく",id="kin-clausal-phrase"|<{kin} 節句\fl<{kin}-clausal phrase>>」と呼ばれる。
+    {kin} の後ろに節が続けられると、全体で「～ということ」という意味になる。
+    このときにできる〈{kin} ＋ 節〉の形を「\rterm|key="きんせつ",id="kin-clause"|<{kin} 節\fl<{kin}-clause>>」と呼び、{kin} 節を補語とする助詞句をしばしば「\rterm|key="きんせつく",id="kin-clausal-phrase"|<{kin} 節句\fl<{kin}-clausal phrase>>」と呼ぶ。
     {kin} はこの用途のための特殊な単語である。
   >
-  \xl<
-    \li<\sh<{salot e asas a kin feraces a ces ca fax.}>\ja<彼が母親を手伝ったのは良いことだ。>>
+  \p<
+    {kin} 節は名詞のように扱われ、文中では常に助詞を伴って現れる。
+  >
+  \xol<
+    \li|tag="1"|<\sh<{salot e asas a kin feraces a ces ca fax.}>\ja<彼が母親を手伝ったのは良いことだ。>>
   >
   \p<
-    上の例文では、{feraces} 以下の節が名詞化され、通常の名詞と同様に助詞の {a} を伴って文の主語となっている。
+    \box|tag="1"|; では、{feraces} 以下の節が {kin} の後に置かれて {kin} 節を構成しており、その {kin} 節は名詞と同様に {a} 句となって文の主語になっている。
   >
   \p<
-    {kin} 節の中身が長い場合は、{kin} の直後にタデックを置くことがある。
+    {kin} 節の中身が長い場合、{kin} の直後にタデックが置かれることがある。
     特に {kin} 節の中身が複文になっている場合は、{kin} の直後にタデックが置かれることが多い。
   >
-  \xl<
-    \li<\sh<{revat a tel e kin, te câses a'l e ces, savet nicasos a'l ca's e litéz.}>\ja<彼に会ったときに傘を渡すべきだったと思った。>>
+  \xol<
+    \li|tag="2"|<\sh<{revat a tel e kin, te câses a'l e ces, savet nicasos a'l ca's e litéz.}>\ja<彼に会ったときに傘を渡すべきだったと思った。>>
   >
   \h2|tag="svh"|<{kin} 節を修飾する語句>
   \p<
-    {kin} 節の内容全体を何らかの語で修飾したい場合は、その修飾語を {kin} の直後に置く。
+    特殊詞は {kin} 節全体を修飾することがある。
+    このとき、その特殊詞は {kin} 節の直後に置かれる。
   >
-  \xl<
-    \li<\sh<{haroz a tel li kin etut yepelos a'l.}>\ja<私の気分を良くするのは歌うことだけだ。>>
+  \xol<
+    \li|tag="1"|<\sh<{haroz a tel li kin etut yepelos a'l.}>\ja<私の気分を良くするのは歌うことだけだ。>>
   >
   \p<
-    上の文では、{etut} を {kin} 節全体に修飾させて「歌うことだけ」という意味にするために、{etut} が {kin} の直後に置かれている。
-    なお、{etut} を {yapelos} の直後に置くと、{etut} が {kin} 節全体ではなく {yapelos} を修飾してしまうので、意味が「歌うだけで気分が良くなる」に変わってしまう。
+    \box|tag="1"|; では、{etut} が {kin} の直後に置かれて {kin} 節全体を修飾し、「歌うことだけ」という意味になっている。
   >
   \h2|tag="sva"|<{kin} 節内の時制の基準>
   \p<
-    {kin} 節内の時制は、主節の時制と相が表している時間に対する相対的な時を表す。
+    {kin} 節内での時制の意味は被修飾節の時間に対して相対的に決まる。
     詳細は \rref|ref="sgi"|; を参照せよ。
   >
 
