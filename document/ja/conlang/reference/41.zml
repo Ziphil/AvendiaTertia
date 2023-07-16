@@ -13,10 +13,10 @@
   >
   \table<
     \tr<\th<別名称>\th<現行名称>>
-    \tr<\td<動辞\fl<verbal>>\td<動詞型不定辞>>
-    \tr<\td<名辞\fl<nominal>>\td<名詞型不定辞>>
-    \tr<\td<連述辞\fl<adpredicative>>\td<連述詞型不定辞>>
-    \tr<\td<特殊辞\fl<special>>\td<特殊詞型不定辞>>
+    \tr<\td<\rterm|key="どうじ",id="verbal"|<動辞\fl<verbal>>>\td<動詞型不定辞>>
+    \tr<\td<\rterm|key="めいじ",id="nominal"|<名辞\fl<nominal>>>\td<名詞型不定辞>>
+    \tr<\td<\rterm|key="れんじゅつじ",id="adpredicative"|<連述辞\fl<adpredicative>>>\td<連述詞型不定辞>>
+    \tr<\td<\rterm|key="とくしゅじ",id="special"|<特殊辞\fl<special>>>\td<特殊詞型不定辞>>
   >
   \h2|tag="smf"|<副詞と形容詞や動詞との意味関係>
   \p<
@@ -25,10 +25,10 @@
   >
   \table<
     \tr<\th<別名称>\th<現行名称>>
-    \tr<\td<II 型\fl<of type II>>\td<被修飾語型>>
-    \tr<\td<III 型\fl<of type III>>\td<文脈補完型>>
-    \tr<\td<IV 型\fl<of type IV>>\td<{kin} 節型>>
-    \tr<\td<V 型\fl<of type V>>\td<{fa} 節型>>
+    \tr<\td<\rterm|key="にがた",id="of-type-ii"|<II 型\fl<of type II>>>\td<被修飾語型>>
+    \tr<\td<\rterm|key="さんがた",id="of-type-iii"|<III 型\fl<of type III>>>\td<文脈補完型>>
+    \tr<\td<\rterm|key="よんがた",id="of-type-iv"|<IV 型\fl<of type IV>>>\td<{kin} 節型>>
+    \tr<\td<\rterm|key="ごがた",id="of-type-v"|<V 型\fl<of type V>>>\td<{fa} 節型>>
   >
   \h1|tag="snb"|<古い用語>
   \h2|tag="snc"|<語彙的品詞一般>
