@@ -17,9 +17,9 @@ import {
 
 const manager = new AvendiaTemplateManager();
 
-manager.registerElementRule("reference-table", "page", (transformer, document, element) => {
+manager.registerElementRule("reference-section-table", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const documentSpecs = getReferenceIndex(transformer).section.specs;
+  const sectionSpecs = getReferenceIndex(transformer).section.specs;
   const appendIndexList = function (self: AvendiaDocumentFragment | AvendiaElement, sectionSpecs: Array<ReferenceSectionSpec>, inner?: boolean): void {
     self.appendElement("ul", (self) => {
       self.addClassName("normal-list");
@@ -53,7 +53,7 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
       }
     });
   };
-  for (const documentSpec of documentSpecs) {
+  for (const documentSpec of sectionSpecs) {
     self.appendElement("h2", (self) => {
       self.addClassName("subsection");
       self.setAttribute("data-section", "");
@@ -65,6 +65,32 @@ manager.registerElementRule("reference-table", "page", (transformer, document, e
     });
     appendIndexList(self, documentSpec.childSpecs);
   }
+  return self;
+});
+
+manager.registerElementRule("reference-term-table", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const termSpecs = getReferenceIndex(transformer).term.specs;
+  self.appendElement("ul", (self) => {
+    self.addClassName("normal-list");
+    self.setBlockType("text", "text");
+    self.setAttribute("data-type", "unordered");
+    self.setAttribute("data-column", "2");
+    for (const termSpec of termSpecs) {
+      self.appendElement("li", (self) => {
+        self.addClassName("normal-item");
+        if (termSpec.href) {
+          self.appendElement("a", (self) => {
+            self.addClassName("link");
+            self.setAttribute("href", termSpec.href);
+            self.appendTextNode(termSpec.content, (self) => self.options.raw = true);
+          });
+        } else {
+          self.appendTextNode(termSpec.content, (self) => self.options.raw = true);
+        }
+      });
+    }
+  });
   return self;
 });
 

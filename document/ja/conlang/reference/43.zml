@@ -3,10 +3,10 @@
 
 
 \page<
-  \name<目次>
+  \name<索引>
   \ver<7 代>
 
-  \h1<目次>
-  \reference-section-table;
+  \h1<索引>
+  \reference-term-table;
 
 >
