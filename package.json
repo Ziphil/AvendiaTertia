@@ -24,6 +24,7 @@
     },
     "rules": {
       "@typescript-eslint/quotes": "off",
+      "no-useless-concat": "off",
       "prefer-const": [
         "warn",
         {

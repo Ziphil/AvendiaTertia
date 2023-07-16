@@ -1,39 +1,33 @@
 //
 
-import {
-  ZenmlParser
-} from "@zenml/zenml";
 import fs from "fs/promises";
 import pathUtil from "path";
 import {
-  AvendiaConfigs,
   AvendiaOutputLanguage
 } from "../configs";
-import {
-  AvendiaTransformer
-} from "../transformer";
+import type {
+  AvendiaServiceArgs
+} from "./index";
 
 
-export default async function execute(outputLanguage: AvendiaOutputLanguage, args: AvendaServiceArgs): Promise<void> {
-  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/index.zml";
+export default async function execute(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<void> {
   const outputPath = args.configs.getReferenceIndexPath("ja");
-  const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
-  const inputDocument = args.parser.tryParse(inputString);
-  const indexElements = inputDocument.searchXpath("//ab") as Array<Element>;
-  const filteredIndexElements = indexElements.filter((indexElement) => !indexElement.getAttribute("ignore"));
-  const documentSpecs = await Promise.all(filteredIndexElements.map(async (indexElement) => {
-    const href = indexElement.getAttribute("href");
-    const documentSpec = await createSectionSpec(href, outputLanguage, args);
-    return documentSpec;
-  }));
-  const hrefEntries = createHrefEntries(documentSpecs);
-  const outputObject = {specs: documentSpecs, hrefs: Object.fromEntries(hrefEntries)};
+  const outputObject = {
+    section: await createSectionIndex(outputLanguage, args),
+    term: await createTermIndex(outputLanguage, args)
+  };
   const outputString = JSON.stringify(outputObject, undefined, 2);
   await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
   await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
 }
 
-async function createSectionSpec(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendaServiceArgs): Promise<ReferenceSectionSpec> {
+async function createSectionIndex(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceIndex["section"]> {
+  const specs = await iteratePages(outputLanguage, args, (href) => createSectionSpec(href, outputLanguage, args));
+  const hrefs = Object.fromEntries(createSectionHrefEntries(specs));
+  return {specs, hrefs};
+}
+
+async function createSectionSpec(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceSectionSpec> {
   const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/" + href.replace(/\.html$/, ".zml");
   const initialVariables = {path: documentPath, language: outputLanguage};
   const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
@@ -44,15 +38,35 @@ async function createSectionSpec(href: string, outputLanguage: AvendiaOutputLang
   return documentSpec;
 }
 
-function createHrefEntries(sectionSpecs: Array<ReferenceSectionSpec>): Array<[tag: string, href: string]> {
+function createSectionHrefEntries(specs: Array<ReferenceSectionSpec>): Array<[tag: string, href: string]> {
   const entries = [] as Array<[string, string]>;
-  for (const sectionSpec of sectionSpecs) {
-    if (sectionSpec.tag !== "") {
-      entries.push([sectionSpec.tag, sectionSpec.href]);
+  for (const spec of specs) {
+    if (spec.tag !== "") {
+      entries.push([spec.tag, spec.href]);
     }
-    entries.push(...createHrefEntries(sectionSpec.childSpecs));
+    entries.push(...createSectionHrefEntries(spec.childSpecs));
   }
   return entries;
+}
+
+async function createTermIndex(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceIndex["term"]> {
+  const specs = [] as Array<{}>;
+  const hrefs = {};
+  return {specs, hrefs};
+}
+
+async function iteratePages<T>(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs, operate: (href: string) => T | Promise<T>): Promise<Array<T>> {
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/index.zml";
+  const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
+  const inputDocument = args.parser.tryParse(inputString);
+  const indexElements = inputDocument.searchXpath("//ab") as Array<Element>;
+  const filteredIndexElements = indexElements.filter((indexElement) => !indexElement.getAttribute("ignore"));
+  const results = await Promise.all(filteredIndexElements.map(async (indexElement) => {
+    const href = indexElement.getAttribute("href");
+    const result = await operate(href);
+    return result;
+  }));
+  return results;
 }
 
 export type ReferenceSectionSpec = {
@@ -61,12 +75,15 @@ export type ReferenceSectionSpec = {
   content: string,
   childSpecs: Array<ReferenceSectionSpec>
 };
-export type ReferenceIndex = {
-  specs: Array<ReferenceSectionSpec>,
-  hrefs: Record<string, string | undefined>
+export type ReferenceTermSpec = {
 };
-type AvendaServiceArgs = {
-  parser: ZenmlParser,
-  transformer: AvendiaTransformer,
-  configs: AvendiaConfigs
+export type ReferenceIndex = {
+  section: {
+    specs: Array<ReferenceSectionSpec>,
+    hrefs: Record<string, string | undefined>
+  },
+  term: {
+    specs: Array<ReferenceTermSpec>,
+    hrefs: Record<string, string | undefined>
+  }
 };

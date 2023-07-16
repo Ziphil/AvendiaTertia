@@ -12,7 +12,7 @@ const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("rref", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const referenceHrefs = getReferenceIndex(transformer).hrefs;
+  const referenceHrefs = getReferenceIndex(transformer).section.hrefs;
   const refTag = element.getAttribute("ref");
   const refHref = referenceHrefs[refTag] ?? "";
   self.appendElement("a", (self) => {

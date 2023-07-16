@@ -37,7 +37,7 @@ import referenceManager from "./reference";
 import rootManager from "./root";
 
 
-const managers = [
+export default [
   rootManager,
   headerManager,
   navigationManager,
@@ -74,5 +74,3 @@ const managers = [
   htmlManager,
   fallbackManager
 ];
-
-export default managers;

@@ -37,7 +37,7 @@ import {
 import {
   AvendiaDocument
 } from "./dom";
-import executeReferenceService from "./service/reference";
+import services from "./service";
 import {
   AvendiaTransformer
 } from "./transformer";
@@ -127,8 +127,9 @@ export class AvendiaGenerator {
   private async executeService(): Promise<void> {
     const name = this.options.service;
     const args = {parser: this.parser, transformer: this.transformer, configs: this.configs};
-    if (name === "reference") {
-      await executeReferenceService("ja", args);
+    const service = services[name];
+    if (service !== undefined) {
+      await service("ja", args);
     }
   }
 
