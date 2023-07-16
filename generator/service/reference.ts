@@ -10,6 +10,11 @@ import type {
 } from "./index";
 
 
+const SECTION_TERM_INITIALS = {
+  ja: [["あ", "あ行"], ["か", "か行"], ["さ", "さ行"], ["た", "た行"], ["な", "な行"], ["は", "は行"], ["ま", "ま行"], ["や", "や行"], ["ら", "ら行"], ["わ", "わ行"]],
+  en: [["a", "A–D"], ["e", "E–H"], ["i", "I–L"], ["m", "M–P"], ["q", "Q–T"], ["u", "U–Z"]]
+};
+
 export default async function execute(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<void> {
   const outputPath = args.configs.getReferenceIndexPath("ja");
   const outputObject = {
@@ -51,8 +56,8 @@ function createSectionHrefEntries(specs: Array<ReferenceSectionSpec>): Array<[ta
 
 async function createTermIndex(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceIndex["term"]> {
   const specs = await iteratePages(outputLanguage, args, (href) => createTermSpecsFromPage(href, outputLanguage, args)).then((specs) => specs.flat());
-  specs.sort((firstSpec, secondSpec) => firstSpec.key.localeCompare(secondSpec.key, outputLanguage));
-  return {specs};
+  const initialedSpecs = createInitialedTermSpecs(specs, outputLanguage);
+  return {specs: initialedSpecs};
 }
 
 async function createTermSpecsFromPage(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<Array<ReferenceTermSpec>> {
@@ -62,6 +67,29 @@ async function createTermSpecsFromPage(href: string, outputLanguage: AvendiaOutp
   const inputDocument = args.parser.tryParse(inputString);
   const specs = JSON.parse(args.transformer.transform(inputDocument, {initialScope: "reference-term", initialVariables}).toString().trim());
   return specs;
+}
+
+function createInitialedTermSpecs(specs: Array<ReferenceTermSpec>, outputLanguage: AvendiaOutputLanguage): Array<ReferenceInitialedTermSpec> {
+  const initialedSpecs = [];
+  let currentInitialedSpec = null as ReferenceInitialedTermSpec | null;
+  let currentInitialIndex = 0;
+  specs.sort((firstSpec, secondSpec) => firstSpec.key.localeCompare(secondSpec.key, outputLanguage));
+  for (const spec of specs) {
+    while (true) {
+      const [currentInitialKey, currentInitialText] = SECTION_TERM_INITIALS[outputLanguage][currentInitialIndex];
+      if (currentInitialKey !== undefined && spec.key.localeCompare(currentInitialKey, outputLanguage) >= 0) {
+        if (currentInitialedSpec !== null) {
+          initialedSpecs.push(currentInitialedSpec);
+        }
+        currentInitialedSpec = {key: currentInitialKey, text: currentInitialText, specs: []};
+        currentInitialIndex ++;
+      } else {
+        break;
+      }
+    }
+    currentInitialedSpec?.specs.push(spec);
+  }
+  return initialedSpecs;
 }
 
 async function iteratePages<T>(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs, operate: (href: string) => T | Promise<T>): Promise<Array<T>> {
@@ -84,18 +112,25 @@ export type ReferenceSectionSpec = {
   content: string,
   childSpecs: Array<ReferenceSectionSpec>
 };
+
 export type ReferenceTermSpec = {
   href: string,
   key: string,
   id: string,
   content: string
 };
+export type ReferenceInitialedTermSpec = {
+  key: string,
+  text: string,
+  specs: Array<ReferenceTermSpec>
+};
+
 export type ReferenceIndex = {
   section: {
     specs: Array<ReferenceSectionSpec>,
     hrefs: Record<string, string | undefined>
   },
   term: {
-    specs: Array<ReferenceTermSpec>
+    specs: Array<ReferenceInitialedTermSpec>
   }
 };

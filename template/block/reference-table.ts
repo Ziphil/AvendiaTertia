@@ -70,27 +70,38 @@ manager.registerElementRule("reference-section-table", "page", (transformer, doc
 
 manager.registerElementRule("reference-term-table", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const termSpecs = getReferenceIndex(transformer).term.specs;
-  self.appendElement("ul", (self) => {
-    self.addClassName("normal-list");
-    self.setBlockType("text", "text");
-    self.setAttribute("data-type", "unordered");
-    self.setAttribute("data-column", "2");
-    for (const termSpec of termSpecs) {
-      self.appendElement("li", (self) => {
-        self.addClassName("normal-item");
-        if (termSpec.href) {
-          self.appendElement("a", (self) => {
-            self.addClassName("link");
-            self.setAttribute("href", termSpec.href);
-            self.appendTextNode(termSpec.content, (self) => self.options.raw = true);
-          });
-        } else {
-          self.appendTextNode(termSpec.content, (self) => self.options.raw = true);
-        }
+  const initialedTermSpecs = getReferenceIndex(transformer).term.specs;
+  for (const initialedTermSpec of initialedTermSpecs) {
+    self.appendElement("h2", (self) => {
+      self.addClassName("subsection");
+      self.setAttribute("data-section", "");
+      self.setBlockType("bordered", "bordered");
+      self.appendElement("div", (self) => {
+        self.addClassName("subsection-inner");
+        self.appendTextNode(initialedTermSpec.text);
       });
-    }
-  });
+    });
+    self.appendElement("ul", (self) => {
+      self.addClassName("normal-list");
+      self.setBlockType("text", "text");
+      self.setAttribute("data-type", "unordered");
+      self.setAttribute("data-column", "2");
+      for (const termSpec of initialedTermSpec.specs) {
+        self.appendElement("li", (self) => {
+          self.addClassName("normal-item");
+          if (termSpec.href) {
+            self.appendElement("a", (self) => {
+              self.addClassName("link");
+              self.setAttribute("href", termSpec.href);
+              self.appendTextNode(termSpec.content, (self) => self.options.raw = true);
+            });
+          } else {
+            self.appendTextNode(termSpec.content, (self) => self.options.raw = true);
+          }
+        });
+      }
+    });
+  }
   return self;
 });
 
