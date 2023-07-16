@@ -1,7 +1,8 @@
 //
 
 import type {
-  ReferenceSectionSpec
+  ReferenceSectionSpec,
+  ReferenceTermSpec
 } from "../generator/service/reference";
 import {
   AvendiaTemplateManager
@@ -10,7 +11,7 @@ import {
 
 const manager = new AvendiaTemplateManager();
 
-manager.registerElementRule("page", "reference", (transformer, document, element) => {
+manager.registerElementRule("page", "reference-section", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const path = transformer.variables.path;
   const language = transformer.variables.language;
@@ -42,11 +43,38 @@ manager.registerElementRule("page", "reference", (transformer, document, element
   return self;
 });
 
-manager.registerElementRule(true, "reference", (transformer, document) => {
+manager.registerElementRule(true, "reference-section", (transformer, document) => {
   return document.createDocumentFragment();
 });
 
-manager.registerTextRule("reference", (transformer, document) => {
+manager.registerTextRule("reference-section", (transformer, document) => {
+  return document.createDocumentFragment();
+});
+
+manager.registerElementRule("page", "reference-term", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const path = transformer.variables.path;
+  const language = transformer.variables.language;
+  const splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
+  const baseHref = splitRelativePath[splitRelativePath.length - 1].replace(/\.zml/, ".html");
+  const termElements = element.searchXpath("//rterm") as Array<Element>;
+  const termSpecs = [] as Array<ReferenceTermSpec>;
+  for (const termElement of termElements) {
+    const key = termElement.getAttribute("key");
+    const id = termElement.getAttribute("id");
+    const href = (id) ? baseHref + "#" + id : "";
+    const content = transformer.apply(termElement, "page").toString();
+    termSpecs.push({href, key, id, content});
+  }
+  self.appendTextNode(JSON.stringify(termSpecs), (self) => self.options.raw = true);
+  return self;
+});
+
+manager.registerElementRule(true, "reference-term", (transformer, document) => {
+  return document.createDocumentFragment();
+});
+
+manager.registerTextRule("reference-term", (transformer, document) => {
   return document.createDocumentFragment();
 });
 
