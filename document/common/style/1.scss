@@ -2,7 +2,6 @@
 
 @use "sass:math" as *;
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Music&display=swap");
 @import "util/reset.scss";
 @import "util/common.scss";
 @import "util/font.scss";
@@ -59,7 +58,7 @@ body {
   color: $text-color;
   font-family: $serif-font-family;
   font-weight: $serif-font-weight;
-  font-feature-settings: "palt" 1, "pkna" 1;
+  font-feature-settings: "lnum" 1, "palt" 1, "pkna" 1;
   line-height: 1;
   text-decoration-skip-ink: none;
   background-color: $page-background-color;

@@ -24,14 +24,14 @@
 }
 
 
-$european-serif-font-family: "Times New Roman", "Times";
-$japanese-propotional-serif-font-family: "IPA P明朝", "IPAex明朝", "BIZ UDPMincho", "YuMincho", "Yu Mincho", "ＭＳ Ｐ明朝", "ＭＳ 明朝";
-$japanese-serif-font-family: "IPA明朝", "BIZ UDMincho", "YuMincho", "Yu Mincho", "ＭＳ 明朝";
-$european-sans-font-family: "Arial";
-$japanese-propotional-sans-font-family: "IPA Pゴシック", "IPAexゴシック", "BIZ UDPGothic", "YuGothic", "Yu Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック";
-$japanese-sans-font-family: "IPAゴシック", "BIZ UDGothic" "YuGothic", "Yu Gothic", "ＭＳ ゴシック";
+$european-serif-font-family: "Brill Web", "Brill", "Times New Roman", "Times";
+$japanese-propotional-serif-font-family: "Yu Mincho", "YuMincho";
+$japanese-serif-font-family: "Yu Mincho", "YuMincho";
+$european-sans-font-family: "Fira Sans Web", "Fira Sans", "Arial";
+$japanese-propotional-sans-font-family: "Yu Gothic Medium", "Yu Gothic";
+$japanese-sans-font-family: "Yu Gothic Medium", "Yu Gothic";
 $european-monospace-font-family: "Consolas";
-$japanese-monospace-font-family: "IPAゴシック", "BIZ UDGothic", "YuGothic", "Yu Gothic", "ＭＳ ゴシック";
+$japanese-monospace-font-family: "Yu Gothic Medium", "Yu Gothic";
 
 $serif-font-family: $european-serif-font-family, $japanese-propotional-serif-font-family, serif;
 $sans-font-family: $european-sans-font-family, $japanese-propotional-sans-font-family, sans-serif;
@@ -41,7 +41,7 @@ $serif-font-weight: 400;
 $sans-font-weight: 400;
 $monospace-font-weight: 400;
 
-$sans-font-size: 96%;
+$sans-font-size: 100%;
 $monospace-font-size: 95%;
 
 $monospace-letter-spacing: -0.08em;

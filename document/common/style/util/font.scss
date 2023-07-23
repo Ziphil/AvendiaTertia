@@ -37,6 +37,53 @@
 }
 
 @font-face {
+  font-family: "Brill Web";
+  src: local("brill-roman");
+  font-weight: normal;
+  font-style: normal;
+  size-adjust: 108%;
+  ascent-override: 90%;
+  descent-override: 20%;
+  font-feature-settings: "lnum" 1;
+}
+
+@font-face {
+  font-family: "Brill Web";
+  src: local("brill-bold");
+  font-weight: bold;
+  font-style: normal;
+  size-adjust: 108%;
+  font-feature-settings: "lnum" 1;
+}
+
+@font-face {
+  font-family: "Brill Web";
+  src: local("brill-italic");
+  font-weight: normal;
+  font-style: italic;
+  size-adjust: 108%;
+  font-feature-settings: "lnum" 1;
+}
+
+@font-face {
+  font-family: "Brill Web";
+  src: local("brill-bolditalic");
+  font-weight: bold;
+  font-style: italic;
+  size-adjust: 108%;
+  font-feature-settings: "lnum" 1;
+}
+
+@font-face {
+  font-family: "Fira Sans Web";
+  src: local("firasans-regular");
+  font-weight: normal;
+  font-style: normal;
+  size-adjust: 93%;
+  font-feature-settings: "lnum" 1;
+}
+
+@font-face {
   font-family: "Gilit Web";
   src: url("../material/font/8.ttf") format("truetype");
   font-weight: normal;

@@ -12,7 +12,7 @@ body {
   font-family: $serif-font-family;
   font-weight: $serif-font-weight;
   font-size: 16px;
-  font-feature-settings: "palt" 1, "pkna" 1;
+  font-feature-settings: "lnum" 1, "palt" 1, "pkna" 1;
   color: rgb(0, 0, 0);
   overflow-x: hidden;
   overflow-y: scroll;
