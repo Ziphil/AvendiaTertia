@@ -10,6 +10,14 @@
   background-color: $block-background-color;
 }
 
+.cuneiform {
+  font-family: "Assurbanipal Web";
+  font-size: 200%;
+  line-height: 1;
+  position: relative;
+  bottom: -0.15em;
+}
+
 .music-accidental {
   font-family: "Chord Font";
 }

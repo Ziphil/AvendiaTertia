@@ -17,6 +17,11 @@
   font-style: italic;
 }
 
+.smallcaps {
+  font-variant: small-caps;
+  font-feature-settings: "smcp" 1;
+}
+
 .japanese {
   font-family: $japanese-serif-font-family !important;
   font-weight: $serif-font-weight;

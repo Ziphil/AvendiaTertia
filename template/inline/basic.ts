@@ -109,6 +109,15 @@ manager.registerElementRule("i", true, (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("sc", true, (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("smallcaps");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("k", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
@@ -123,6 +132,15 @@ manager.registerElementRule(["c", "m"], ["page", "page.section-table"], (transfo
   const className = (element.tagName === "c") ? "code" : "monospace";
   self.appendElement("code", (self) => {
     self.addClassName(className);
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
+manager.registerElementRule("cunei", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("cuneiform");
     self.appendChild(transformer.apply());
   });
   return self;
