@@ -137,10 +137,19 @@ manager.registerElementRule(["c", "m"], ["page", "page.section-table"], (transfo
   return self;
 });
 
-manager.registerElementRule("cunei", "page", (transformer, document, element) => {
+manager.registerElementRule("cn", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("cuneiform");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
+manager.registerElementRule("cns", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("cuneiform-sentence");
     self.appendChild(transformer.apply());
   });
   return self;
