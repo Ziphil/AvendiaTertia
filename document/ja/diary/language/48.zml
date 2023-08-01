@@ -8,6 +8,7 @@
   \h1<日記 (2023 年 7 月 30 日)>
   \p<
     今日は、動詞の活用パターンを概覧した後に、継続相の活用を見ていきます。
+    [n] の同化についても少し触れます。
   >
   \p<
     アッカド語の動詞の活用は、まず大きく「定形\fl<finite>」と「非定形\fl<nonfinite>」に分かれます。
@@ -42,7 +43,7 @@
   \p<
     ではまず、G 語幹の継続相の活用を見てみましょう。
     \sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3> という形をベースにして、そこに接頭辞と接尾辞を付けることで活用形が作られます。
-    また、語根の第 2 子音と第 3 子音の間に入る母音は「幹母音\fl<thematic vowel>」と呼ばれ、単語ごとに異なります。
+    また、第 2 根素と第 3 根素の間に入る母音は「幹母音\fl<thematic vowel>」と呼ばれ、単語ごとに異なります。
     {parāsum} の幹母音は [a] なので三人称単数形は {iparras} となりますが、{šarāqum} の幹母音は [i] なので三人称単数形は {išarriq} です。
     語幹を書く際は、単語によって変わり得ることが分かるように、幹母音はイタリックにしておきます。
   >
@@ -54,7 +55,7 @@
     \tr<\th<二.女.単>\td<{taparrasī}>\td<[ta]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ī]>>
     \tr<\th<一.単>\td<{aparras}>\td<[a]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
     \tr<\th<三.男.複>\td<{iparrasū}>\td<[i]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ū]>>
-    \tr<\th<二.女.複>\td<{iparrasā}>\td<[i]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ā]>>
+    \tr<\th<三.女.複>\td<{iparrasā}>\td<[i]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ā]>>
     \tr<\th<二.複>\td<{taparrasā}>\td<[ta]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ā]>>
     \tr<\th<一.複>\td<{niparras}>\td<[ni]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
   >
@@ -74,7 +75,7 @@
     \tr<\th<二.女.単>\td<{tuparrasī}>\td<[tu]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[ī]>>
     \tr<\th<一.単>\td<{uparras}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>>>
     \tr<\th<三.男.複>\td<{uparrasū}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[ū]>>
-    \tr<\th<二.女.複>\td<{uparrasā}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[ā]>>
+    \tr<\th<三.女.複>\td<{uparrasā}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[ā]>>
     \tr<\th<二.複>\td<{tuparrasā}>\td<[tu]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[ā]>>
     \tr<\th<一.複>\td<{nuparras}>\td<[nu]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>>>
   >
@@ -94,7 +95,7 @@
     \tr<\th<二.女.単>\td<{tušaprasī}>\td<[tuša]\sub<1>\sub<2>[a]\sub<3>[ī]>>
     \tr<\th<一.単>\td<{ušapras}>\td<[uša]\sub<1>\sub<2>[a]\sub<3>>>
     \tr<\th<三.男.複>\td<{ušaprasū}>\td<[uša]\sub<1>\sub<2>[a]\sub<3>[ū]>>
-    \tr<\th<二.女.複>\td<{ušaprasā}>\td<[uša]\sub<1>\sub<2>[a]\sub<3>[ā]>>
+    \tr<\th<三.女.複>\td<{ušaprasā}>\td<[uša]\sub<1>\sub<2>[a]\sub<3>[ā]>>
     \tr<\th<二.複>\td<{tušaprasā}>\td<[tuša]\sub<1>\sub<2>[a]\sub<3>[ā]>>
     \tr<\th<一.複>\td<{nušapras}>\td<[nuša]\sub<1>\sub<2>[a]\sub<3>>>
   >
@@ -116,7 +117,7 @@
     \tr<\th<二.女.単>\td<{tapparrasī}>\td<[tan]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ī]>>
     \tr<\th<一.単>\td<{apparras}>\td<[an]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
     \tr<\th<三.男.複>\td<{ipparrasū}>\td<[in]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ū]>>
-    \tr<\th<二.女.複>\td<{ipparrasā}>\td<[in]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ā]>>
+    \tr<\th<三.女.複>\td<{ipparrasā}>\td<[in]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ā]>>
     \tr<\th<二.複>\td<{tapparrasā}>\td<[tan]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[ā]>>
     \tr<\th<一.複>\td<{nipparras}>\td<[nin]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
   >
