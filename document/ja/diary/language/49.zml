@@ -1,0 +1,190 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<アッカド語学習ログ 7>
+
+  \h1<日記 (2023 年 8 月 1 日)>
+  \p<
+    今日は、完了相と完結相の活用です。
+    母音消失についても少し触れます。
+  >
+  \p<
+    活用に入る前に、まず母音消失について触れます。
+    アッカド語では、 短母音から成る開音節が語末以外で 2 連続することが基本的に許されていません。
+    そのため、語形変化によって短母音の開音節が連続した場合、2 つ目の開音節の母音が消失します。
+    例えば、[taptarasī] という語形には [tara] という短母音開音節が連続している箇所がありますが、これは許されないので、2 つ目の [a] が消失して {taptarsī} になります。
+  >
+  \p<
+    これを踏まえて、G 語幹の完了相の活用を見てみましょう。
+    完了相の活用は、第 1 根素の直後に [-ta-] が入るのが特徴です。
+    G 語幹の完了相の活用では、\sub<1>[ta]\sub<2>[/a/]\sub<3> という形がベースとなり、継続相のときと同じ接頭辞と接尾辞が付けられます。
+    ただし、語末に母音が付けられる形では、今述べた母音消失の規則により、第 2 根素と第 3 根素の間の母音が消失します。
+    幹母音は単語によって異なりますが、単語によらず継続相のときと同じになります。
+  >
+  \table<
+    \caption<{parāsum} (G 語幹)>
+    \tr<\th;\th|col="2"|<完>>
+    \tr<\th<三.単>\td<{iptaras}>\td<[i]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
+    \tr<\th<二.男.単>\td<{taptaras}>\td<[ta]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
+    \tr<\th<二.女.単>\td<{taptarsī}>\td<[ta]\sub<1>[ta]\sub<2>\sub<3>[ī]>>
+    \tr<\th<一.単>\td<{aptaras}>\td<[a]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
+    \tr<\th<三.男.複>\td<{iptarsū}>\td<[i]\sub<1>[ta]\sub<2>\sub<3>[ū]>>
+    \tr<\th<三.女.複>\td<{iptarsā}>\td<[i]\sub<1>[ta]\sub<2>\sub<3>[ā]>>
+    \tr<\th<二.複>\td<{taptarsā}>\td<[ta]\sub<1>[ta]\sub<2>\sub<3>[ā]>>
+    \tr<\th<一.複>\td<{niptaras}>\td<[ni]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
+  >
+  \p<
+    さらに注意すべき点として、第 1 根素が [d], [ṭ], [s], [ṣ] のいずれかだった場合、直後の [t] がその子音に同化します。
+    例えば、{saḫāpum} の完了相三人称単数形は、[istaḫap] ではなく {issaḫap} です。
+    また、第 1 根素が [g] だった場合は、直後の [t] は [d] になるのが普通です。
+    例えば、{gamārum} の完了相三人称単数形は、[igtamar] ではなく {igdamar} です。
+  >
+  \p<
+    残りの 3 つの語幹の完了相の活用は一気に見てしまいましょう。
+    D 語幹と Š 語幹での幹母音は常に [i] で、N 語幹での幹母音は単語ごとに変わります。
+    また、Š 語幹と N 語幹では [-ta-] が入るのが第 1 根素の前であることと、N 語幹では [n] が直後の [t] と同化することは、注意すべきかもしれません。
+  >
+  \side<
+    \table<
+      \caption<{purrusum} (D 語幹)>
+      \tr<\th;\th|col="2"|<完>>
+      \tr<\th<三.単>\td<{uptarris}>\td<[u]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tuptarris}>\td<[tu]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tuptarrisī}>\td<[tu]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[ī]>>
+      \tr<\th<一.単>\td<{uptarris}>\td<[u]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.男.複>\td<{uptarrisū}>\td<[u]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[ū]>>
+      \tr<\th<三.女.複>\td<{uptarrisā}>\td<[u]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[ā]>>
+      \tr<\th<二.複>\td<{tuptarrisā}>\td<[tu]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[ā]>>
+      \tr<\th<一.複>\td<{nuptarris}>\td<[nu]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
+    >
+    \table<
+      \caption<{šuprusum} (Š 語幹)>
+      \tr<\th;\th|col="2"|<完>>
+      \tr<\th<三.単>\td<{uštapris}>\td<[ušta]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tuštapris}>\td<[tušta]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tuštaprisī}>\td<[tušta]\sub<1>\sub<2>[i]\sub<3>[ī]>>
+      \tr<\th<一.単>\td<{uštapris}>\td<[ušta]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.男.複>\td<{uštaprisū}>\td<[ušta]\sub<1>\sub<2>[i]\sub<3>[ū]>>
+      \tr<\th<三.女.複>\td<{uštaprisā}>\td<[ušta]\sub<1>\sub<2>[i]\sub<3>[ā]>>
+      \tr<\th<二.複>\td<{tuštaprisā}>\td<[tušta]\sub<1>\sub<2>[i]\sub<3>[ā]>>
+      \tr<\th<一.複>\td<{nuštapris}>\td<[nušta]\sub<1>\sub<2>[i]\sub<3>>>
+    >
+    \table<
+      \caption<{naprusum} (N 語幹)>
+      \tr<\th;\th|col="2"|<完>>
+      \tr<\th<三.単>\td<{ittapras}>\td<[itta]\sub<1>\sub<2>[/a/]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tattapras}>\td<[tatta]\sub<1>\sub<2>[/a/]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tattaprasī}>\td<[tatta]\sub<1>\sub<2>[/a/]\sub<3>[ī]>>
+      \tr<\th<一.単>\td<{attapras}>\td<[atta]\sub<1>\sub<2>[/a/]\sub<3>>>
+      \tr<\th<三.男.複>\td<{ittaprasū}>\td<[itta]\sub<1>\sub<2>[/a/]\sub<3>[ū]>>
+      \tr<\th<三.女.複>\td<{uttaprasā}>\td<[itta]\sub<1>\sub<2>[/a/]\sub<3>[ā]>>
+      \tr<\th<二.複>\td<{tattaprasā}>\td<[tatta]\sub<1>\sub<2>[/a/]\sub<3>[ā]>>
+      \tr<\th<一.複>\td<{nittapras}>\td<[nitta]\sub<1>\sub<2>[/a/]\sub<3>>>
+    >
+  >
+  \p<
+    次に、G 語幹の完結相の活用です。
+    今度は \sub<1>\sub<2>[/u/]\sub<3> という形がベースとなり、継続相のときと同じ接頭辞と接尾辞が付けられます。
+    幹母音は単語によって異なり、継続相や完了相のときと異なる場合があります。
+  >
+  \table<
+    \caption<{parāsum} (G 語幹)>
+    \tr<\th;\th|col="2"|<結>>
+    \tr<\th<三.単>\td<{iprus}>\td<[i]\sub<1>\sub<2>[/u/]\sub<3>>>
+    \tr<\th<二.男.単>\td<{taprus}>\td<[ta]\sub<1>\sub<2>[/u/]\sub<3>>>
+    \tr<\th<二.女.単>\td<{taprusī}>\td<[ta]\sub<1>\sub<2>[/u/]\sub<3>[ī]>>
+    \tr<\th<一.単>\td<{aprus}>\td<[a]\sub<1>\sub<2>[/u/]\sub<3>>>
+    \tr<\th<三.男.複>\td<{iprusū}>\td<[i]\sub<1>\sub<2>[/u/]\sub<3>[ū]>>
+    \tr<\th<三.女.複>\td<{iprusā}>\td<[i]\sub<1>\sub<2>[/u/]\sub<3>[ā]>>
+    \tr<\th<二.複>\td<{taprusā}>\td<[ta]\sub<1>\sub<2>[/u/]\sub<3>[ā]>>
+    \tr<\th<一.複>\td<{niprus}>\td<[ni]\sub<1>\sub<2>[/u/]\sub<3>>>
+  >
+  \p<
+    残りの 3 つの語幹の完結相の活用も一気に見てしまいます。
+    D 語幹と Š 語幹での幹母音は常に [i] で、N 語幹での幹母音は単語ごとに変わります。
+    また、N 語幹では母音消失が起こることも注意が必要ですね。
+  >
+  \side<
+    \table<
+      \caption<{purrusum} (D 語幹)>
+      \tr<\th;\th|col="2"|<結>>
+      \tr<\th<三.単>\td<{uparris}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tuparris}>\td<[tu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tuparrisī}>\td<[tu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[ī]>>
+      \tr<\th<一.単>\td<{uparris}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.男.複>\td<{uparrisū}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[ū]>>
+      \tr<\th<三.女.複>\td<{uparrisā}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[ā]>>
+      \tr<\th<二.複>\td<{tuparrisā}>\td<[tu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[ā]>>
+      \tr<\th<一.複>\td<{nuparris}>\td<[nu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
+    >
+    \table<
+      \caption<{šuprusum} (Š 語幹)>
+      \tr<\th;\th|col="2"|<結>>
+      \tr<\th<三.単>\td<{ušapris}>\td<[uša]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tušapris}>\td<[tuša]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tušaprisī}>\td<[tuša]\sub<1>\sub<2>[i]\sub<3>[ī]>>
+      \tr<\th<一.単>\td<{ušapris}>\td<[uša]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.男.複>\td<{ušaprisū}>\td<[uša]\sub<1>\sub<2>[i]\sub<3>[ū]>>
+      \tr<\th<三.女.複>\td<{ušaprisā}>\td<[uša]\sub<1>\sub<2>[i]\sub<3>[ā]>>
+      \tr<\th<二.複>\td<{tušaprisā}>\td<[tuša]\sub<1>\sub<2>[i]\sub<3>[ā]>>
+      \tr<\th<一.複>\td<{nušapris}>\td<[nuša]\sub<1>\sub<2>[i]\sub<3>>>
+    >
+    \table<
+      \caption<{naprusum} (N 語幹)>
+      \tr<\th;\th|col="2"|<結>>
+      \tr<\th<三.単>\td<{ipparis}>\td<[in]\sub<1>[a]\sub<2>[/i/]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tapparis}>\td<[tan]\sub<1>[a]\sub<2>[/i/]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tapparsī}>\td<[tan]\sub<1>[a]\sub<2>\sub<3>[ī]>>
+      \tr<\th<一.単>\td<{apparis}>\td<[an]\sub<1>[a]\sub<2>[/i/]\sub<3>>>
+      \tr<\th<三.男.複>\td<{ipparsū}>\td<[in]\sub<1>[a]\sub<2>\sub<3>[ū]>>
+      \tr<\th<三.女.複>\td<{ipparsā}>\td<[in]\sub<1>[a]\sub<2>\sub<3>[ā]>>
+      \tr<\th<二.複>\td<{tapparsā}>\td<[tan]\sub<1>[a]\sub<2>\sub<3>[ā]>>
+      \tr<\th<一.複>\td<{nipparis}>\td<[nin]\sub<1>[a]\sub<2>[/i/]\sub<3>>>
+    >
+  >
+  \p<
+    形が分かったところで、意味についてです。
+    完了相は、過去のとある地点で発生した行為が現在にまで影響を及ぼしていることを表します。
+    そこから派生して、最近完了したばかり出来事を表したり、場合によっては今もまだ行っていることを表したりもします。
+    このことから、特にこの行為に注目しているのだというニュアンスを表すために使われることもあるらしいです。
+  >
+  \p<
+    完結相は、過去に起こったことを 1 つのまとまった出来事として捉えます。
+    古典ギリシャ語のアオリスト時制に近いんじゃないかなと思っています。
+  >
+  \p<
+    『ハンムラビ法典』は、今後の裁判のために作られた法律というよりは、ハンムラビ本人による判例を集めたものという側面が強いため、全体的に過去の出来事として書かれています。
+    そのため、それぞれの法は「もし誰かが～したら～ (という判決に) する」という形式で書かれるのですが、この前件に当たる「誰かが～したら」の部分には完了相や完結相が使われることが多いようです。
+  >
+  \p<
+    さて、前回と今回で、継続相, 完了相, 完結相という 3 つの活用を一気にやってしまいましたが、ここでちょっとまとめておきましょう。
+    どの活用でもベースとなる形につく接頭辞と接尾辞は共通なので、実質的に重要なのは三人称単数形です。
+    ということで、各語幹の各相での三人称単数形をまとめて表にしておきます。
+  >
+  \table<
+    \tr<\th;\th<継続相>\th<完了相>\th<完結相>>
+    \tr<\th<G 語幹>\td<{iparras}>\td<{iptaras}>\td<{iprus}>>
+    \tr<\th<D 語幹>\td<{uparras}>\td<{uptarris}>\td<{uparris}>>
+    \tr<\th<Š 語幹>\td<{ušapras}>\td<{uštapris}>\td<{ušapris}>>
+    \tr<\th<N 語幹>\td<{ipparras}>\td<{ittapras}>\td<{ipparis}>>
+  >
+  \p<
+    まず、接頭辞が [i-]`/[ta-]`/[a-]`/[ni-] なら G 語幹か N 語幹で、[u-]`/[tu-]`/[u-]`/[nu-] なら D 語幹か Š 語幹です。
+    G 語幹なのか N 語幹なのかは [n] が入っているかどうか (実際には [n] は第 1 根素に同化するので第 1 根素が重子音になっているかどうか) で区別でき、D 語幹か Š 語幹かは [š] が入っているかどうかで区別できます。
+  >
+  \p<
+    完了相かどうかは [ta] の有無で簡単に分かります。
+    継続相か完結相かはちょっと分かりづらいです。
+    D 語幹か Š 語幹であれば、第 2 根素と第 3 根素の間の母音が [a] か [i] かで区別できます (というかそれしか区別する術がない)。
+    G 語幹か N 語幹であれば、第 2 根素が重子音になっているかどうかで区別できます。
+  >
+  \p<
+    ただ、これを判別法として覚えるのはたぶん良くない (というか危険) だと思います。
+    というのも、動詞語幹はこれまでに挙げた 4 種類だけではなくさらに派生したものがいくつかあるためです。
+    例えば、Gt 語幹の継続相形は {iptarras} ですが、活用を正確に覚えていないと G 語幹の完了相形だと思ってしまうかもしれません。
+    あくまで覚えるときの手がかりにするくらいですかね。
+  >
+
+>
