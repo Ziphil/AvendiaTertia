@@ -24,8 +24,8 @@
 }
 
 .information-explanation {
+  @include justify;
   line-height: $line-height;
-  text-align: justify;  
 }
 
 .information-button-container {

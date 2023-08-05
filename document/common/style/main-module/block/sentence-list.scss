@@ -6,12 +6,12 @@
 
 
 .sentence-list {
+  @include justify;
   --background-color: #{$block-background-color};
   margin-left: 0rpx - $main-horizontal-padding;
   margin-right: 0rpx - $main-horizontal-padding;
   padding: $block-vertical-padding $main-horizontal-padding;
   line-height: $line-height;
-  text-align: justify;
   background-color: $block-background-color;
   @include smartphone {
     margin-left: 0rpx - $main-smartphone-horizontal-padding;
@@ -22,7 +22,7 @@
 }
 
 .sentence-nested-list {
-  text-align: justify;
+  @include justify;
   list-style: none;
 }
 

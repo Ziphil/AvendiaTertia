@@ -8,9 +8,9 @@
 $normal-list-column-gap: 30px;
 
 .normal-list {
+  @include justify;
   line-height: $line-height;
   column-gap: $normal-list-column-gap;
-  text-align: justify;
   list-style: none;
   &[data-column="2"] {
     column-count: 2;

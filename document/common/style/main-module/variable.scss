@@ -44,6 +44,24 @@ $small-line-height: 1.2;
 $program-line-height: 1.5;
 
 
+@mixin small-screen {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @media screen and (max-width: 880px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 881px) {
+    @content;
+  }
+}
+
 @mixin box($color, $bordered: false) {
   width: fix-em(1em, 80%);
   min-width: fix-em(1em, 80%);
@@ -63,20 +81,9 @@ $program-line-height: 1.5;
   }
 }
 
-@mixin small-screen {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
-
-@mixin smartphone {
-  @media screen and (max-width: 880px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media screen and (min-width: 881px) {
-    @content;
+@mixin justify {
+  text-align: justify;
+  @include smartphone {
+    text-align: unset;
   }
 }

@@ -65,8 +65,8 @@ $popup-arrow-size: 8rpx;
 }
 
 .popup-section-item {
+  @include justify;
   margin-bottom: 5rpx;
-  text-align: justify;
   &:last-child {
     margin-bottom: 0rpx;
   }

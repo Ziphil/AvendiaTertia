@@ -6,10 +6,10 @@
 
 
 .description-list {
+  @include justify;
   width: max-content;
   max-width: 100%;
   line-height: $line-height;
-  text-align: justify;
   display: grid;
   grid-template-columns: repeat(2, auto);
 }

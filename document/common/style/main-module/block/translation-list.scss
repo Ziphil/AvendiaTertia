@@ -8,8 +8,8 @@
 $translation-list-column-gap: 15px;
 
 .translation-list {
+  @include justify;
   line-height: $line-height;
-  text-align: justify;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: ($translation-list-column-gap * 2);

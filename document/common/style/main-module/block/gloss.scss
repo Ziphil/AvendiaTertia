@@ -6,13 +6,13 @@
 
 
 .gloss {
+  @include justify;
   line-height: $line-height;
-  text-align: justify;
   word-spacing: 0.5em;
 }
 
 .sentence-gloss {
-  text-align: justify;
+  @include justify;
   word-spacing: 0.5em;
 }
 

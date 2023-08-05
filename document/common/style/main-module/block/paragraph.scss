@@ -6,8 +6,8 @@
 
 
 .paragraph {
+  @include justify;
   line-height: $line-height;
-  text-align: justify;  
 }
 
 .paragraph-number {
