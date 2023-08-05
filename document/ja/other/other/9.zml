@@ -10,166 +10,217 @@
   \section-table;
   \h1|id="first"|<第 1 見出し>
   \p<
-    第 1 見出しの直後に段落があるパターンです。
+    第 1 見出しの直後に段落があるパターン。
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   >
-  \h1<{qilxaléh} を含む見出し>
+  \h1|id="sec"|<第 1 見出し>
+  \h2|id="subsec"|<直後に第 2 見出し>
   \p<
-    この下に段落が連続します。
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \h2<第 2 見出し>
+  \h3|id="subsubsec"|<直後に第 3 見出し>
+  \p<
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \h3<第 3 見出し>
+  \p<
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \h2<第 2 見出し>
+  \p<
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
+    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+  >
+  \h1<{qilxaléh} や A\sub<2> などのマークアップを含む見出し>
+  \h2<{qilxaléh} や A\sub<2> などのマークアップを含む見出し>
+  \h3<{qilxaléh} や A\sub<2> などのマークアップを含む見出し>
+  \p<
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  >
+  \h3<\h<1234>, \m<map>, C\ms|t="s"|;\ms|t="min"|;\sub<7>\sup<(\ms|t="s"|;9)>>
+  \p<
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  >
+  \h2<\h<1234>, \m<map>, C\ms|t="s"|;\ms|t="min"|;\sub<7>\sup<(\ms|t="s"|;9)>>
+  \p<
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  >
+  \h1<番号付きサブセクション>
+  \h2|num="1"|<番号付き>
+  \p<
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  >
+  \h2|num="57"|<任意の番号付き>
+  \p<
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  >
+  \h2|tag="sxj"|<タグ付き>
+  \p<
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  >
+  \h1|id="inline"|<インライン要素>
+  \h2<シャレイア語>
+  \p<
+    特殊タグは入れ子にできるので、{valek iqi /S/ o /Z/} や [sal/os/] などが書けます。 
+    ハイリア数は \h<3617> と表示されます。
+  >
+  \h2<リンク>
+  \p<
+    これは\a|href="#"|<リンク>です。
+    これは\ae|href="https://google.com"|<外部リンク>です。
+    このように\an|href="#"|<隠されたリンク>もあります。
+    リンクテキストの途中で改行が入った場合に\a|href="/"|<意図通りに表示されるかをテストします>。
   >
   \p<
-    段落の連続です。
-    ついでにインライン要素のテストもします。
-    シャレイア語として {valek iqi /S/ o /Z/} や [sal/os/] などが書けます。 
-    ハイリア数は \h<3617> のように H が上付きになります。
+    リンク内にマークアップを含めると、\a|href="#"|<\h<2859>> や \a|href="#"|<\m<map>> や \a|href="#"|<C\ms|t="s"|;\ms|t="min"|;\sub<7>\sup<(\ms|t="s"|;9)>> のようになります。
+  >
+  \h2<コード>
+  \p<
+    等幅フォントで表示させます。
+    コードに関連する文字列は \m<variable> のように書き、実際のコードをそのまま引用する際は \c<const var = 2`;> のように書きます。
   >
   \p<
-    これは\a|href="/"|<リンク ygp リンク>や \a|href="/"|<\h<2859>> です。
-    \ae|href="https://google.com"|<外部リンク>もあります。
-    このように\an|href="/"|<隠されたリンク>も書けます。
-    リンクテキストの途中で\a|href="/"|<改行が入った場合に意図通りに表示されるかをテストします>。
+    コードの引用が非常に長いなどで行を跨ぐ場合は、\c<const veryLongVariableName = VeryLongClassName.veryLongMethodName(veryLongArgumentVariableName, veryLongArgumentVariableName)`;> のようになります。
   >
+  \h2<外国語表記>
   \p<
-    テキストの強調や外国語表記のテストです。
-    \em<モノイダル整合構造\fl<monoidal coherent structure>> とは、次のような 3 つの自然変換の組である。
+    外国語表記\fl<foreign word> は小さめに表示されます。
+    強調表示と一緒に\em<モノイダル整合構造\fl<monoidal coherent structure>> のように使うことが多いです。
   >
+  \h2<音楽記号>
   \p<
-    シャレイア語の資料にはときどき個人名が含まれているので、\red|len="180"|;のように削除してください。
-    かえって怪しさが増してる感じがしますが気にしてはいけません。
+    専用フォントで音楽記号を入力できます。
+    E\ms|t="f"|;, B\ms|t="n"|;, C\ms|t="s"|;\ms|t="min"|;\sub<7>\sup<(\ms|t="s"|;9)>, A\ms|t="f"|;\sub<sus4>, D\sub<\ms|t="maj"|;7>, E\ms|t="aug"|;\sup<(\ms|t="s"|;9,\ms|t="s"|;11,\ms|t="f"|;13)>, G\ms|t="s"|;\ms|t="hdim"|;\sub<7>。
+  >
+  \h2<その他>
+  \p<
+    伏せ字ができます。
+    \red|len="12"|;のように長さを指定できます。
+    行を跨ぐと\red|len="180"|;のようになります。
   >
   \p<
     マクロを使って \ch|c="1A2"|; などの特殊文字が入力できます。
   >
+  \h1<フォントテスト>
+  \h2<本文フォント>
   \p<
-    音楽記号を入力します。
-    E\ms|t="f"|;, B\ms|t="n"|;, C\ms|t="s"|;\ms|t="min"|;\sub<7>\sup<(\ms|t="s"|;9)>, A\ms|t="f"|;\sub<sus4>, D\sub<\ms|t="maj"|;7>, E\ms|t="aug"|;\sup<(\ms|t="s"|;9,\ms|t="s"|;11,\ms|t="f"|;13)>, G\ms|t="s"|;\ms|t="hdim"|;\sub<7>。
+    Lorem ipsum à côté de aḫāzum hāʔulāʔi ʕarabīya ḥ ġ ṣ ḍ ṭullābun ṯ ḏālika.
+    Я не хочу́ е́хать в университе́т.
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος.
+    εὐθεί\gd|d="i"|<ᾱ> \gd|d="ra"|<ῡ>δω.
   >
-  \h1|id="sec"|<見出し>
-  \h2|id="subsec"|<直後に subsection>
+  \h2<サンセリフフォント>
   \p<
-    subsection 後の段落です。
-    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
-    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
+    [Lorem ipsum à côté de aḫāzum hāʔulāʔi ʕarabīya ḥ ġ ṣ ḍ ṭullābun ṯ ḏālika.]
+    [Я не хочу́ е́хать в университе́т.]
+    [μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος.]
+    [εὐθεί\gd|d="i"|<ᾱ> \gd|d="ra"|<ῡ>δω.]
   >
-  \h2<2 つ目の subsection>
-  \h3|id="subsubsec"|<subsubsection>
-  \p<
-    subsubsection にも対応しました。
-    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
-    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
-  >
-  \h3<subsubsection>
-  \p<
-    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
-    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
-  >
-  \h2<3 つ目の subsection>
-  \p<
-    subsection 後の段落です。
-    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
-    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
-  >
-  \h1<番号付きサブセクション>
-  \h2|num="1"|<番号付き>
+  \h1|id="numbered-paragraph"|<番号付き段落>
   \p|num="1"|<
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
   >
-  \p|num="2"|<
+  \p|num="8"|<
     μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
     ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
   >
-  \p|num="43"|<
+  \p|num="57"|<
     μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
     ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
   >
-  \h2|num="24"|<番号付き>
-  \p<
-    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε' ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή.
-    ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.
-  >
-  \h1<リスト>
-  \h2|id="ul"|<番号なし>
+  \h1|id="list"|<リスト>
+  \h2<番号なし>
   \p<
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
   >
   \ul<
-    \li<番号なしリスト 1>
-    \li<番号なしリスト 2>
+    \li<リスト項目 1>
+    \li<リスト項目 2>
     \li<sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo>
+    \li<リスト項目 4>
   >
   \p<
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
   >
   \ul|col="3"|<
-    \li<番号なしリスト 1>
-    \li<番号なしリスト 2>
-    \li<番号なしリスト 3>
-    \li<番号なしリスト 4>
-    \li<番号なしリスト 5>
-    \li<番号なしリスト 6>
-    \li<番号なしリスト 7>
-    \li<番号なしリスト 8>
-    \li<番号なしリスト 9>
-    \li<番号なしリスト 10>
+    \li<リスト項目 1>
+    \li<リスト項目 2>
+    \li<長い項目長い項目長い項目長い項目長い項目長い項目長い項目長い項目長い項目長い項目>
+    \li<リスト項目 4>
+    \li<リスト項目 5>
+    \li<長い項目長い項目長い項目長い項目長い項目>
+    \li<リスト項目 7>
+    \li<リスト項目 8>
   >
   \h2|id="ol"|<番号あり>
+  \p<
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+  >
   \ol<
-    \li<番号なしリスト 1>
-    \li<番号なしリスト 2>
+    \li<リスト項目 1>
+    \li<リスト項目 2>
     \li<sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo>
+    \li<リスト項目 4>
   >
   \p<
-    This is an awesome paragraph.
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
   >
   \ol|col="3"|<
-    \li<番号なしリスト 1>
-    \li<番号なしリスト 2>
-    \li<番号なしリスト 3 はときどきある非常に長い箇条書きの項目ですが良い感じに表示されると嬉しいです>
-    \li<番号なしリスト 4>
-    \li<番号なしリスト 5>
-    \li<番号なしリスト 6>
-    \li<番号なしリスト 7>
-    \li<番号なしリスト 8>
-    \li<番号なしリスト 9>
-    \li<番号なしリスト 10>
+    \li<リスト項目 1>
+    \li<リスト項目 2>
+    \li<長い項目長い項目長い項目長い項目長い項目長い項目長い項目長い項目長い項目長い項目>
+    \li<リスト項目 4>
+    \li<リスト項目 5>
+    \li<長い項目長い項目長い項目長い項目長い項目>
+    \li<リスト項目 7>
+    \li<リスト項目 8>
   >
-  \h1|id="el"|<定義リスト>
-  \p<
-    項目名とその説明のリストです。
-  >
+  \h1|id="element-list"|<定義リスト>
+  \h2<項目と内容>
   \el<
     \li<\et<タイトル>\ed<『ONLY MY NOTE』>>
     \li<\et<収録メディア>\ed<ゲーム『アイドルマスター ワンフォーオール』>>
     \li<\et<抜粋箇所>\ed<ショートバージョン部分>>
-    \li<\et<作詞者>\ed<marhy>>
-    \li<\et<作曲者>\ed<内田哲也>>
-    \li<\et<翻訳日>\ed<\h<1216>>>
+    \li<\et<左側 4>\ed<右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合>>
+    \li<\et<左側 5>\ed<右側 5>>
+  >
+  \h2<対応付け>
+  \el|type="par"|<
+    \li<\et<左側 1>\ed<右側 1>>
+    \li<\et<左側 2>\ed<右側 2>>
+    \li<\et<左側 3>\ed<右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合右側が長い場合>>
+    \li<\et<左側 4>\ed<右側 4>>
   >
   \h1|id="trans"|<対訳>
   \p<
-    歌詞の翻訳などでは、原文と訳文を並べて表示したくなります。
+    左側に原文を表示し、右側に翻訳文を表示します。
   >
   \trans<
     \li<\ja<歌詞 1>\sh<{salat a fit e lêdik il'atis,}>>
-    \li<\ja<歌詞 2>\sh<{lo salat a fit e lêdik il'aqec.}>>
-    \li<\ja<歌詞 3>\sh<{lo salat a fit e lêdik il'ayos.}>>
+    \li<\ja<歌詞 2>\sh<{lo salat a fit e lêdik il'aqec,}>>
+    \li<\ja<歌詞 3\lys;歌詞の間のスペース\lys;歌詞 3>\sh<{lo salat a fit e lêdik il'ayos.}>>
     \li<
-      \ja<これは信じられないほどとてつもなく長い歌詞です\lys;これは信じられないほどとてつもなく長い歌詞です>
-      \sh<{salot a fit e zat salot a e zat salot a e zat salot a e fit, lo salot a fit e zat salot a e zat salot a e zat salot a e fit}>
+      \ja<長い歌詞長い歌詞長い歌詞長い歌詞長い歌詞\lys;長い歌詞長い歌詞長い歌詞長い歌詞長い歌詞長い歌詞長い歌詞>
+      \sh<{salot a fit e zat salot a e zat salot a e zat salot a e fit, lo salot a fit e zat salot a e zat salot a e zat salot a e fit.}>
     >
   >
-  \h1|id="xl"|<例文の箇条書き>
-  \h2<リスト>
+  \h1|id="example"|<例文の箇条書き>
+  \h2<番号なし>
   \p<
     言語サイトなので、文章の途中に例文が挟まるときがあります。
     グロスも書けます。
@@ -198,9 +249,7 @@
     >
     \li<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>>
   >
-  \p<
-    ナンバリングもできます。
-  >
+  \h2<番号あり>
   \xol<
     \li|tag="s"|<\sh<{kiles a tel te tazît e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
     \li|tag="z"|<\sh|mark="u"|<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>\ja<この絵画はとても重要で高価なものなので、大切に扱いなさい。>>
@@ -225,10 +274,9 @@
     >
     \li|tag="g"|<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>>
   >
-  \h2<単独グロス>
+  \h1|id="gloss"|<単独グロス>
   \p<
     グロスは単独で置くこともできます。
-    たぶんやらないけど。
   >
   \gloss<
     \li<\sh<{καὶ}>\bs<{καί}>\ex<そして>>
@@ -260,7 +308,8 @@
   >
   \h1|id="quiz"|<クイズ>
   \p<
-    Discord で出題しているシャレイア語のクイズをここでも表示したいですよね。
+    例文穴埋めクイズを表示できます。
+    正答はマウスホバーで表示されます。
   >
   \ql<
     \li<
@@ -269,12 +318,20 @@
       \choice<\li<{tazît}>\li<{ca tazît}>\li|ans|<{te tazît}>\li<{e tazît}>>
     >
   >
-  \h1|id="img"|<画像>
+  \h1|id="image"|<画像>
+  \h2<単独>
   \p<
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
   >
   \img|src="../../file/figure/29.png"|;
+  \p<
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+  >
+  \img|src="../../file/figure/41.png"|;
+  \img|src="../../file/figure/60.png"|;
+  \h2<横並び>
   \p<
     画像は横に並べることができます。
     メインエリアからはみ出す場合は、スクロールができるようになります。
@@ -285,59 +342,70 @@
     \img|src="../../file/figure/60.png"|;
   >
   \h1|id="table"|<表>
+  \h2<通常>
   \p<
-    表が書けます。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
   >
   \table<
     \tr<\th;\th<列 1>\th<列 2>>
     \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
-    \tr<\th<見出しセル>\td<普通のセルのものすごく長めの列>\td<普通のセル>>
-    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセルのものすごく長めの列>>
-  >
-  \p<
-    ZenML の \m<k> 要素を使うと行間が広くなるらしいので、検証してください。
-    現在は、\m<k> 要素の変換先に該当する \m<.japanese> セレクタに行間設定をすることで修正してあります。
+    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
+    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
   >
   \table<
-    \tr<\th<列 1>\th<列 2>\th<列 3>>
-    \tr<\td<\k<△>おかしい>\td<普通のセル>\td<普通のセル>>
-    \tr<\td<\k<△>おかしい>\td<普通のセルの長めの列>\td<普通のセル>>
-    \tr<\td<\k<△>おかしい>\td<普通のセル>\td<普通のセルの長めの列>>
+    \tr<\th;\th<列 1>\th<列 2>>
+    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
+    \tr<\th<見出しセル>\td<長いセル長いセル長いセル長いセル長いセル長いセル長いセル長いセル>\td<普通のセル>>
+    \tr<\th<見出しセル>\td<普通のセル>\td<長いセル長いセル長いセル長いセル長いセル長いセル長いセル>>
+  >
+  \h2<キャプション>
+  \p<
+    キャプションが付けられます。
   >
   \p<
-    セルの結合をしても正しく表示されるか確認してください。
-    また、キャプションが付いた場合の余白の大きさも適切か確認してください。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
   >
   \table<
     \caption<キャプション>
+    \tr<\th;\th<列 1>\th<列 2>>
+    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
+    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
+    \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
+  >
+  \h2<結合>
+  \p<
+    セルの結合ができます。
+  >
+  \p<
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+  >
+  \table<
     \tr<\th;\th<見出し列 1>\th<見出し列 2>\th<見出し列 3>\th<見出し列 4>>
     \tr<\th;\th|col="2"|<結合セル>\th<見出し列 3>\th<見出し列 4>>
     \tr<\th|row="2"|<見出し行 1>\td<セル>\td|col="2",row="2"|<セル>\td<セル>>
     \tr<\td<セル>\td<セル>>
     \tr<\th<見出し行 3>\td<セル>\td<セル>\td<セル>\td<セル>>
   >
-  \p<
-    表を横に並べることもできます。
-  >
+  \h2<横並び>
   \side<
     \table<
       \tr<\th<見出し>\th<見出し>\th<見出し>>
-      \tr<\td<中身>\td<結構長めの中身>\td<中身>>
-      \tr<\td<結構長めのさらに長いとても長い中身>\td<中身>\td<結構長めの中身>>
+      \tr<\td<普通のセル>\td<長いセル長いセル長いセル長いセル長いセル>\td<普通のセル>>
+      \tr<\td<普通のセル>\td<普通のセル>\td<普通のセル>>
     >
     \table<
       \tr<\th<見出し>\th<見出し>\th<見出し>>
-      \tr<\td<中身>\td<結構長めのさらに長いとても長い中身>\td<中身>>
-      \tr<\td<結構長めの中身>\td<中身>\td<結構長めの中身>>
+      \tr<\td<普通のセル>\td<結構長めのさらに長いとても長い中身>\td<普通のセル>>
+      \tr<\td<長いセル長いセル長いセル長いセル長いセル>\td<普通のセル>\td<普通のセル>>
     >
   >
-  \h1|id="pre"|<ソースコード>
-  \p<
-    等幅フォントで表示させます。
-    コード中の変数は \m<variable> のように書き、実際のコードをそのまま引用する際は \c<1 + "sas"> のようにします。
-  >
+  \h1|id="code"|<ソースコード>
+  \h2<コードのみ>
   \pre~*<
-    variable = 1 + "sas"
+    variable = 57
     puts(variable)
     def indent
       indented_block.each do |i|
@@ -352,26 +420,74 @@
     ****.rb:11:in ``+': String can't be coerced into Integer (TypeError)
       from ****:11:in ``<main`>'
   >
-  \h1<メディア>
-  \h2|id="pdf"|<PDF>
+  \h2<直後に実行結果>
+  \pre~*<
+    # this is impossible
+    test = 42 + "answer"
+  >
+  \samp~*<
+    ****.rb:1:in ``+': String can't be coerced into Integer (TypeError)
+      from ****:1:in ``<main`>'
+  >
+  \h1|id="media"|<メディア>
+  \h2<PDF>
   \pdf|src="../../file/course/4.pdf"|;
-  \h2|id="slide"|<Speaker Deck スライド>
+  \h2<Speaker Deck スライド>
   \slide|code="4eee7c7033b24cb0ab6ca7d35a1ca0a8"|;
-  \h2|id="youtube"|<YouTube 動画>
+  \h2<YouTube 動画>
   \youtube|code="gHh-x4N8Y-8"|;
   \h1|id="form"|<フォーム>
+  \h2<ボタン>
   \p<
     フォームでありがちなボタンを表示できます。
-    \m<a> 要素を使うものと \m<button> 要素を使うもので 2 種類ありますが、見た目が同じになっているか確認してください。
+    \m<a> 要素を使うものと \m<button> 要素を使うもので 2 種類ありますが、見た目は同じです。
   >
   \form<
-    \ae|href="http://google.com"|<ボタン>　\button<ボタン>　(ver 2.0.0)
+    \ae|href="http://google.com"|<ボタン>　\button<ボタン>
   >
+  \h2<テキストフィールド>
   \p<
     テキストフィールドも表示できます。
   >
   \form<
     \input|size="20"|;
+  >
+  \h1|id="math"|<数式>
+  \p<
+    いきなり多変数関数を扱うのは難しいので、まずは 2 変数関数を考えることにする。
+    &m<\sp<C><2>> 級、すなわち 2 階連続的微分可能である 2 変数関数 &m<f (x, y)> について考える。
+    この最大点および最小点を求めるには、まずその候補となる極大点と極小点を求める必要がある。
+    そして、点 &m<(\sb<x><0>, \sb<y><0>)> が極大点もしくは極小点であるための必要条件は、
+    &mb|id="stat"|<
+      \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) = \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>) = 0
+    >
+    で与えられる。
+    この\ref|type="eq",ref="stat"|; を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の停留点である。
+  >
+  \p<
+    以下の\ref|type="eq",ref="taylor"|; を見よ。
+  >
+  \p<
+    関数の近似的な振る舞いを調べるのには、Taylor 展開が有効である。
+    そこで、関数 &m<f (x, y)> を点 &m<(\sb<x><0>, \sb<y><0>)> のまわりで Taylor 展開してみると、
+    &mb|id="taylor"|<
+      f (\sb<x><0> + h, \sb<y><0> + k) = f (\sb<x><0>, \sb<y><0>)
+      + h \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) + k \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>)
+      + \frac<1><2> \paren<\sp<h><2> \frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)>
+      + \frac<1><6> \paren<\sp<h><3> \frac<\sp<\partial;><3> f><\partial; \sp<x><3>> (\sb<x><0>, \sb<y><0>) + 3 \sp<h><2> k \frac<\sp<\partial;><3> f><\partial; \sp<x><2> \partial; y> (\sb<x><0>, \sb<y><0>) + 3 h \sp<k><2> \frac<\sp<\partial;><3> f><\partial; x \partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>) + \sp<k><3> \frac<\sp<\partial;><3> f><\partial; \sp<y><3>> (\sb<x><0>, \sb<y><0>)>
+      + o (\sp<`r><3>)
+    >
+    となる。
+    ここで &m<`r \coloneqq; \sqrt<\sp<h><2> + \sp<k><2>>> とした。
+  >
+  \p<
+    さて、この Jacobi 行列を用いることで、多変数から多変数への写像に関しても微分可能性を綺麗に定義できるわけである。
+    すなわち、写像 &m<\bf<f> (\bf<x>)> を考えるとき、微小量 &m<\bf<h>> に対して &m<\sb<\bf<x>><0>> にのみ関係する行列 &m<\scr<J> \bf<f> (\sb<\bf<x>><0>)> が存在し、
+    &mb<
+      &mark<\wheart;>
+      \bf<f> (\sb<\bf<x>><0> + \bf<h>) = \scr<J> \bf<f> (\sb<\bf<x>><0>) \bf<h> + o \lvert; \bf<h> \rvert;
+    >
+    が成り立つとき、写像 &m<\bf<f> (\bf<x>)> は点 &m<\sb<\bf<x>><0>> で微分可能というのである。
   >
   \h1|id="thm"|<定理環境>
   \thm|type="def",id="def"|<
@@ -417,14 +533,13 @@
     また、\ref|type="thm",ref="test"|; のように後から出てくる定理も参照できるか調べる。
   >
   \thm|type="prp",id="stbapp"|<
-    \name<すごい定理\fl<awesome theorem>>
+    \name<ここに定理名\fl<theorem name here>>
     \p<
       整合空間 &m<A, B> の間の写像 &m<f: A \to; B> をとる。
       このとき、2 条件
     >
     \ol<
       \li<
-        あいうえお。
         &m<f> は安定である。
       >
       \li<
@@ -455,14 +570,6 @@
       仮定からすでに &m<f> は単調だから、あとは &m<f> の連続性と安定性を示せば良い。
     >
     \p<
-      まず、&m<f> の連続性を示す。
-      任意に有向部分集合 &m<S \subseteq; A> をとると、&m<f> の単調性によって &m<\bigcup|in|<a \in; S> f (a) \subseteq; f (\bigcup|in|<a \in; S> a)> は成り立つから、この逆の包含関係を示せば良い。
-      そこで、&m<\bar<a> \coloneqq; \bigcup|in|<a \in; S> a> とおき、&m<y \in; f (\bar<a>)> をとる。
-      仮定から最小元 &m<\ring<a> \in; \op<elfin> (\bar<a>, y)> がとれるが、&m<\ring<a>> は有限集合で &m<\ring<a> \subseteq; \bigcup|in|<a \in; S> a> であるから、\ref|type="thm",ref="finex"|; によって、ある &m<a \in; S> が存在して &m<\ring<a> \subseteq; a> が成り立つ。
-      &m<f> の単調性から &m<f (\ring<a>) \subseteq; f (a)> なので &m<y \in; f (a)> が得られ、これより &m<y \in; \bigcup|in|<a \in; S> f (a)> が分かる。
-      以上により、&m<f (\bigcup|in|<a \in; S> a) \subseteq; \bigcup|in|<a \in; S> f (a)> である。
-    >
-    \p<
       次に、&m<f> の安定性を示す。
       任意に元 &m<a, a' \in; A> をとり、&m<a \cup; a' \in; A> であるとする。
       &m<f> の単調性によって &m<f (a \cap; a') \subseteq; f (a) \cap; f (a')> は成り立つから、この逆の包含関係を示せば良い。
@@ -484,42 +591,7 @@
       あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
     >
   >
-  \p<
-    いきなり多変数関数を扱うのは難しいので、まずは 2 変数関数を考えることにする。
-    &m<\sp<C><2>> 級、すなわち 2 階連続的微分可能である 2 変数関数 &m<f (x, y)> について考える。
-    この最大点および最小点を求めるには、まずその候補となる極大点と極小点を求める必要がある。
-    そして、点 &m<(\sb<x><0>, \sb<y><0>)> が極大点もしくは極小点であるための必要条件は、
-    &mb|id="stat"|<
-      \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) = \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>) = 0
-    >
-    で与えられる。
-    この\ref|type="eq",ref="stat"|; を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の停留点である。
-  >
-  \p<
-    以下の\ref|type="eq",ref="taylor"|; を見よ。
-  >
-  \p<
-    関数の近似的な振る舞いを調べるのには、Taylor 展開が有効である。
-    そこで、関数 &m<f (x, y)> を点 &m<(\sb<x><0>, \sb<y><0>)> のまわりで Taylor 展開してみると、
-    &mb|id="taylor"|<
-      f (\sb<x><0> + h, \sb<y><0> + k) = f (\sb<x><0>, \sb<y><0>)
-      + h \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) + k \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>)
-      + \frac<1><2> \paren<\sp<h><2> \frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)>
-      + \frac<1><6> \paren<\sp<h><3> \frac<\sp<\partial;><3> f><\partial; \sp<x><3>> (\sb<x><0>, \sb<y><0>) + 3 \sp<h><2> k \frac<\sp<\partial;><3> f><\partial; \sp<x><2> \partial; y> (\sb<x><0>, \sb<y><0>) + 3 h \sp<k><2> \frac<\sp<\partial;><3> f><\partial; x \partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>) + \sp<k><3> \frac<\sp<\partial;><3> f><\partial; \sp<y><3>> (\sb<x><0>, \sb<y><0>)>
-      + o (\sp<`r><3>)
-    >
-    となる。
-    ここで &m<`r \coloneqq; \sqrt<\sp<h><2> + \sp<k><2>>> とした。
-  >
-  \p<
-    さて、この Jacobi 行列を用いることで、多変数から多変数への写像に関しても微分可能性を綺麗に定義できるわけである。
-    すなわち、写像 &m<\bf<f> (\bf<x>)> を考えるとき、微小量 &m<\bf<h>> に対して &m<\sb<\bf<x>><0>> にのみ関係する行列 &m<\scr<J> \bf<f> (\sb<\bf<x>><0>)> が存在し、
-    &mb<
-      &mark<\wheart;>
-      \bf<f> (\sb<\bf<x>><0> + \bf<h>) = \scr<J> \bf<f> (\sb<\bf<x>><0>) \bf<h> + o \lvert; \bf<h> \rvert;
-    >
-    が成り立つとき、写像 &m<\bf<f> (\bf<x>)> は点 &m<\sb<\bf<x>><0>> で微分可能というのである。
-  >
+  \h1|id="bibliography-reference"|<参考文献の参照>
   \p<
     スター自律圏を構成する一般的な方法はいくつか知られており、その中で代表的なものとして、Chu\ref|type="bib",ref="csac"|; による Chu 構成と de Paiva\ref|type="bib",ref="pdcx"|; によるダイアレクティカ圏がある。
     Chu 構成は、名前の通り Chu\ref|type="bib",ref="csac"|; によって導入された構成方法で、まさにスター自律圏を構成する方法として考えられた。
