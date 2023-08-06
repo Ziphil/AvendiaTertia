@@ -17,42 +17,25 @@
   >
   \p<
     私は同時にアラビア語の勉強もしているのですが、アラビア語とアッカド語はともにセム語派に属する言語ということもあり結構似ています。
-    この学習ログでも、アラビア語との比較を随所ですると思います。
-    今日は格変化の回なので、アッカド語の変化表の横にアラビア語の変化表を置いて比較することにします。
+    この学習ログでも、アラビア語との比較をときどきすると思います。
   >
   \p<
     まず、男性名詞 {šarrum}「王」の格変化は以下の通りです。
-    隣にアラビア語の mudarrisun の格変化も置いておきます。
+    アラビア語の格変化と比べるとすごい似てることが分かります。
   >
-  \side<
-    \table<
-      \caption<{šarrum}>
-      \tr<\th<単.主>\td<[šarrum]>\td<[-um]>>
-      \tr<\th<単.属>\td<[šarrim]>\td<[-im]>>
-      \tr<\th<単.対>\td<[šarram]>\td<[-am]>>
-      \tr<\th<双.主>\td<[šarrān]>\td<[-ān]>>
-      \tr<\th<双.属`/対>\td<[šarrīn]>\td<[-īn]>>
-      \tr<\th<複.主>\td<[šarrū]>\td<[-ū]>>
-      \tr<\th<複.属`/対>\td<[šarrī]>\td<[-ī]>>
-    >
-    \table<
-      \caption<mudarrisun>
-      \tr<\th<単.主>\td<mudarrisun>\td<-un>>
-      \tr<\th<単.属>\td<mudarrisin>\td<-in>>
-      \tr<\th<単.対>\td<mudarrisan>\td<-an>>
-      \tr<\th<双.主>\td<mudarrisāni>\td<-āni>>
-      \tr<\th<双.属`/対>\td<mudarrisayni>\td<-ayni>>
-      \tr<\th<複.主>\td<mudarrisūna>\td<-ūna>>
-      \tr<\th<複.属`/対>\td<mudarrisīna>\td<-īna>>
-    >
+  \table<
+    \caption<{šarrum}>
+    \tr<\th<単.主>\td<[šarrum]>\td<[-um]>>
+    \tr<\th<単.属>\td<[šarrim]>\td<[-im]>>
+    \tr<\th<単.対>\td<[šarram]>\td<[-am]>>
+    \tr<\th<双.主>\td<[šarrān]>\td<[-ān]>>
+    \tr<\th<双.属`/対>\td<[šarrīn]>\td<[-īn]>>
+    \tr<\th<複.主>\td<[šarrū]>\td<[-ū]>>
+    \tr<\th<複.属`/対>\td<[šarrī]>\td<[-ī]>>
   >
   \p<
-    こうやって見比べるとすごい似てますよね。
-    単数形では、アラビア語の -n がアッカド語では [-m] になっています。
-    アラビア語の -n は「タンウィーン」や「nunation」などと呼ばれますが、アッカド語では [-m] なので「mimation」と呼ぶらしいです。
-    また複数形では、アラビア語に見られる -na が、アッカド語で消えています。
-    アラビア語の -na もムダーフ形では消えるので、実質同じとも言えそうです。
-    ということで、アラビア語の格変化を知っていれば、アッカド語の格変化はほとんど覚えることがありません!
+    単数形が全て [m] で終わっていますが、これは「mimation」と呼ばれる現象です。
+    時代が下るにつれてこの [m] は脱落したらしく、辞書によっては [m] がない語形で載っていることもあるようです。
   >
   \p<
     次に女性名詞ですが、女性名詞には概ね [-t-] や [-at-] という接辞が付けられます。
@@ -61,33 +44,20 @@
   >
   \p<
     以下に女性名詞 {šarratum}「女王」の格変化を挙げます。
-    隣にはアラビア語の mudarrisatun の格変化を置いておきます。
   >
-  \side<
-    \table<
-      \caption<{šarratum}>
-      \tr<\th<単.主>\td<[šarratum]>\td<[-at-um]>>
-      \tr<\th<単.属>\td<[šarratim]>\td<[-at-im]>>
-      \tr<\th<単.対>\td<[šarratam]>\td<[-at-am]>>
-      \tr<\th<双.主>\td<[šarratān]>\td<[-at-ān]>>
-      \tr<\th<双.属`/対>\td<[šarratīn]>\td<[-at-īn]>>
-      \tr<\th<複.主>\td<[šarrātum]>\td<[-āt-um]>>
-      \tr<\th<複.属`/対>\td<[šarrātim]>\td<[-āt-im]>>
-    >
-    \table<
-      \caption<mudarrisatun>
-      \tr<\th<単.主>\td<mudarrisatun>\td<-at-un>>
-      \tr<\th<単.属>\td<mudarrisatin>\td<-at-in>>
-      \tr<\th<単.対>\td<mudarrisatan>\td<-at-an>>
-      \tr<\th<双.主>\td<mudarrisatāni>\td<-at-āni>>
-      \tr<\th<双.属`/対>\td<mudarrisatayni>\td<-at-ayni>>
-      \tr<\th<複.主>\td<mudarrisātun>\td<-āt-un>>
-      \tr<\th<複.属`/対>\td<mudarrisātin>\td<-āt-in>>
-    >
+  \table<
+    \caption<{šarratum}>
+    \tr<\th<単.主>\td<[šarratum]>\td<[-at-um]>>
+    \tr<\th<単.属>\td<[šarratim]>\td<[-at-im]>>
+    \tr<\th<単.対>\td<[šarratam]>\td<[-at-am]>>
+    \tr<\th<双.主>\td<[šarratān]>\td<[-at-ān]>>
+    \tr<\th<双.属`/対>\td<[šarratīn]>\td<[-at-īn]>>
+    \tr<\th<複.主>\td<[šarrātum]>\td<[-āt-um]>>
+    \tr<\th<複.属`/対>\td<[šarrātim]>\td<[-āt-im]>>
   >
   \p<
     男性名詞とは複数形での変化だけが異なり、語尾を変える代わりに、女性標識の [-t-] や [-at-] を [-āt-] にします。
-    これもアラビア語と同じですね。
+    この辺もアラビア語と同じですね。
   >
   \p<
     女性名詞の中には、[-t-] や [-at-] が付かないものもあります。
@@ -99,36 +69,20 @@
     上の 2 つのタイプの変化が混ざっているのが分かると思います。
     隣にはアラビア語の maḥallun の格変化を置いておきます。
   >
-  \side<
-    \table<
-      \caption<{nārum}>
-      \tr<\th<単.主>\td<[nārum]>\td<[-um]>>
-      \tr<\th<単.属>\td<[nārim]>\td<[-im]>>
-      \tr<\th<単.対>\td<[nāram]>\td<[-am]>>
-      \tr<\th<双.主>\td<[nārān]>\td<[-ān]>>
-      \tr<\th<双.属`/対>\td<[nārīn]>\td<[-īn]>>
-      \tr<\th<複.主>\td<[nārātum]>\td<[-āt-um]>>
-      \tr<\th<複.属`/対>\td<[nārātim]>\td<[-āt-im]>>
-    >
-    \table<
-      \caption<maḥallun>
-      \tr<\th<単.主>\td<maḥallun>\td<-un>>
-      \tr<\th<単.属>\td<maḥallin>\td<-in>>
-      \tr<\th<単.対>\td<maḥallan>\td<-an>>
-      \tr<\th<双.主>\td<maḥallāni>\td<-āni>>
-      \tr<\th<双.属`/対>\td<maḥallayni>\td<-ayni>>
-      \tr<\th<複.主>\td<maḥallātun>\td<-āt-un>>
-      \tr<\th<複.属`/対>\td<maḥallātin>\td<-āt-in>>
-    >
-  >
-  \p<
-    ここでアラビア語を知っている場合の注意点です。
-    アラビア語では、このタイプの名詞は、-at- が付いていない単数と双数は男性として扱い、-āt- が付く複数では女性として扱います。
-    しかしアッカド語では、数によらず常に女性として扱うので、[-t-] や [-at-] が付いていない単数と双数でも女性です。
+  \table<
+    \caption<{nārum}>
+    \tr<\th<単.主>\td<[nārum]>\td<[-um]>>
+    \tr<\th<単.属>\td<[nārim]>\td<[-im]>>
+    \tr<\th<単.対>\td<[nāram]>\td<[-am]>>
+    \tr<\th<双.主>\td<[nārān]>\td<[-ān]>>
+    \tr<\th<双.属`/対>\td<[nārīn]>\td<[-īn]>>
+    \tr<\th<複.主>\td<[nārātum]>\td<[-āt-um]>>
+    \tr<\th<複.属`/対>\td<[nārātim]>\td<[-āt-im]>>
   >
   \p<
     ところで、アラビア語には、「壊れた複数形\fl<broken plural>」という語幹の母音を変化させることで作られる複数形がありました。
     アッカド語には、なんとそれがありません!
+    つまり、上の表から外れるような不規則な複数形は基本的にないということです。
     文中に複数形が出てきたときに辞書が引けなくて困る日々を送る必要はないわけですね。
     最高です (まあちょっとつまらないけど)。
   >
@@ -159,6 +113,11 @@
   \p<
     そうなると、この後には動詞っぽい単語が続きそうですが、それについては次回から触れます。
     アッカド語は動詞が重要らしいので、次回からが文法の本番という感じになるんですかね。
+  >
+  \h1<追記 (2023 年 8 月 6 日)>
+  \p<
+    アラビア語への言及が多すぎる気がしたので、アラビア語に関する記述を削りました。
+    主役はアッカド語だからね。
   >
 
 >
