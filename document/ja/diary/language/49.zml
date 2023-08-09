@@ -103,7 +103,7 @@
   >
   \p<
     残りの 3 つの語幹の完結相の活用も一気に見てしまいます。
-    D 語幹と Š 語幹での幹母音は常に [i] で、N 語幹での幹母音は単語ごとに変わります。
+    これらの語幹での幹母音は常に [i] です。
     また、N 語幹では母音消失が起こることも注意が必要ですね。
   >
   \side<
@@ -134,14 +134,14 @@
     \table<
       \caption<{naprusum} (N 語幹)>
       \tr<\th;\th|col="2"|<結>>
-      \tr<\th<三.単>\td<{ipparis}>\td<[in]\sub<1>[a]\sub<2>[/i/]\sub<3>>>
-      \tr<\th<二.男.単>\td<{tapparis}>\td<[tan]\sub<1>[a]\sub<2>[/i/]\sub<3>>>
+      \tr<\th<三.単>\td<{ipparis}>\td<[in]\sub<1>[a]\sub<2>i\sub<3>>>
+      \tr<\th<二.男.単>\td<{tapparis}>\td<[tan]\sub<1>[a]\sub<2>i\sub<3>>>
       \tr<\th<二.女.単>\td<{tapparsī}>\td<[tan]\sub<1>[a]\sub<2>\sub<3>[ī]>>
-      \tr<\th<一.単>\td<{apparis}>\td<[an]\sub<1>[a]\sub<2>[/i/]\sub<3>>>
+      \tr<\th<一.単>\td<{apparis}>\td<[an]\sub<1>[a]\sub<2>i\sub<3>>>
       \tr<\th<三.男.複>\td<{ipparsū}>\td<[in]\sub<1>[a]\sub<2>\sub<3>[ū]>>
       \tr<\th<三.女.複>\td<{ipparsā}>\td<[in]\sub<1>[a]\sub<2>\sub<3>[ā]>>
       \tr<\th<二.複>\td<{tapparsā}>\td<[tan]\sub<1>[a]\sub<2>\sub<3>[ā]>>
-      \tr<\th<一.複>\td<{nipparis}>\td<[nin]\sub<1>[a]\sub<2>[/i/]\sub<3>>>
+      \tr<\th<一.複>\td<{nipparis}>\td<[nin]\sub<1>[a]\sub<2>i\sub<3>>>
     >
   >
   \p<
@@ -165,10 +165,10 @@
   >
   \table<
     \tr<\th;\th<継続相>\th<完了相>\th<完結相>>
-    \tr<\th<G 語幹>\td<{iparras}>\td<{iptaras}>\td<{iprus}>>
+    \tr<\th<G 語幹>\td<{iparr/a/s}>\td<{iptar/a/s}>\td<{ipr/u/s}>>
     \tr<\th<D 語幹>\td<{uparras}>\td<{uptarris}>\td<{uparris}>>
     \tr<\th<Š 語幹>\td<{ušapras}>\td<{uštapris}>\td<{ušapris}>>
-    \tr<\th<N 語幹>\td<{ipparras}>\td<{ittapras}>\td<{ipparis}>>
+    \tr<\th<N 語幹>\td<{ipparr/a/s}>\td<{ittapr/a/s}>\td<{ipparis}>>
   >
   \p<
     まず、接頭辞が [i-]`/[ta-]`/[a-]`/[ni-] なら G 語幹か N 語幹で、[u-]`/[tu-]`/[u-]`/[nu-] なら D 語幹か Š 語幹です。
