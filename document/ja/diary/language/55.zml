@@ -36,13 +36,13 @@
     \li<\et<3w 弱動詞>\ed<[u] クラス>>
   >
   \p<
-    ということで、G 語幹完了相の活用は以下のようになります。
+    ということで、G 語幹継続相の活用は以下のようになります。
     語末の母音に注意しましょう。
   >
   \side<
     \table<
       \caption<{malûm} (G-3a 語幹)>
-      \tr<\th;\th|col="2"|<完>>
+      \tr<\th;\th|col="2"|<継>>
       \tr<\th<三.単>\td<{imalla}>>
       \tr<\th<二.男.単>\td<{tamalla}>>
       \tr<\th<二.女.単>\td<{tamallî}>>
@@ -54,7 +54,7 @@
     >
     \table<
       \caption<{banûm} (G-3y 語幹)>
-      \tr<\th;\th|col="2"|<完>>
+      \tr<\th;\th|col="2"|<継>>
       \tr<\th<三.単>\td<{ibanni}>>
       \tr<\th<二.男.単>\td<{tabanni}>>
       \tr<\th<二.女.単>\td<{tabannî}>>
@@ -66,7 +66,7 @@
     >
     \table<
       \caption<{ḫadûm} (G-3w 語幹)>
-      \tr<\th;\th|col="2"|<完>>
+      \tr<\th;\th|col="2"|<継>>
       \tr<\th<三.単>\td<{iḫaddu}>>
       \tr<\th<二.男.単>\td<{taḫaddu}>>
       \tr<\th<二.女.単>\td<{taḫaddî}>>
