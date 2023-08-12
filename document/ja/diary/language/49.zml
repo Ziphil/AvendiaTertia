@@ -26,14 +26,14 @@
   \table<
     \caption<{parāsum} (G 語幹)>
     \tr<\th;\th|col="2"|<完>>
-    \tr<\th<三.単>\td<{iptaras}>\td<[i]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
-    \tr<\th<二.男.単>\td<{taptaras}>\td<[ta]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
-    \tr<\th<二.女.単>\td<{taptarsī}>\td<[ta]\sub<1>[ta]\sub<2>\sub<3>[ī]>>
-    \tr<\th<一.単>\td<{aptaras}>\td<[a]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
-    \tr<\th<三.男.複>\td<{iptarsū}>\td<[i]\sub<1>[ta]\sub<2>\sub<3>[ū]>>
-    \tr<\th<三.女.複>\td<{iptarsā}>\td<[i]\sub<1>[ta]\sub<2>\sub<3>[ā]>>
-    \tr<\th<二.複>\td<{taptarsā}>\td<[ta]\sub<1>[ta]\sub<2>\sub<3>[ā]>>
-    \tr<\th<一.複>\td<{niptaras}>\td<[ni]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
+    \tr<\th<三.単>\td<{iptaras}>\td<[i-]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
+    \tr<\th<二.男.単>\td<{taptaras}>\td<[ta-]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
+    \tr<\th<二.女.単>\td<{taptarsī}>\td<[ta-]\sub<1>[ta]\sub<2>\sub<3>[-ī]>>
+    \tr<\th<一.単>\td<{aptaras}>\td<[a-]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
+    \tr<\th<三.男.複>\td<{iptarsū}>\td<[i-]\sub<1>[ta]\sub<2>\sub<3>[-ū]>>
+    \tr<\th<三.女.複>\td<{iptarsā}>\td<[i-]\sub<1>[ta]\sub<2>\sub<3>[-ā]>>
+    \tr<\th<二.複>\td<{taptarsā}>\td<[ta-]\sub<1>[ta]\sub<2>\sub<3>[-ā]>>
+    \tr<\th<一.複>\td<{niptaras}>\td<[ni-]\sub<1>[ta]\sub<2>[/a/]\sub<3>>>
   >
   \p<
     さらに注意すべき点として、第 1 根素が [d], [ṭ], [s], [ṣ] のいずれかだった場合、直後の [t] がその子音に同化します。
@@ -50,38 +50,38 @@
     \table<
       \caption<{purrusum} (D 語幹)>
       \tr<\th;\th|col="2"|<完>>
-      \tr<\th<三.単>\td<{uptarris}>\td<[u]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
-      \tr<\th<二.男.単>\td<{tuptarris}>\td<[tu]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
-      \tr<\th<二.女.単>\td<{tuptarrisī}>\td<[tu]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[ī]>>
-      \tr<\th<一.単>\td<{uptarris}>\td<[u]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
-      \tr<\th<三.男.複>\td<{uptarrisū}>\td<[u]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[ū]>>
-      \tr<\th<三.女.複>\td<{uptarrisā}>\td<[u]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[ā]>>
-      \tr<\th<二.複>\td<{tuptarrisā}>\td<[tu]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[ā]>>
-      \tr<\th<一.複>\td<{nuptarris}>\td<[nu]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.単>\td<{uptarris}>\td<[u-]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tuptarris}>\td<[tu-]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tuptarrisī}>\td<[tu-]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[-ī]>>
+      \tr<\th<一.単>\td<{uptarris}>\td<[u-]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.男.複>\td<{uptarrisū}>\td<[u-]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[-ū]>>
+      \tr<\th<三.女.複>\td<{uptarrisā}>\td<[u-]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[-ā]>>
+      \tr<\th<二.複>\td<{tuptarrisā}>\td<[tu-]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>[-ā]>>
+      \tr<\th<一.複>\td<{nuptarris}>\td<[nu-]\sub<1>[ta]\sub<2>\sub<2>[i]\sub<3>>>
     >
     \table<
       \caption<{šuprusum} (Š 語幹)>
       \tr<\th;\th|col="2"|<完>>
-      \tr<\th<三.単>\td<{uštapris}>\td<[ušta]\sub<1>\sub<2>[i]\sub<3>>>
-      \tr<\th<二.男.単>\td<{tuštapris}>\td<[tušta]\sub<1>\sub<2>[i]\sub<3>>>
-      \tr<\th<二.女.単>\td<{tuštaprisī}>\td<[tušta]\sub<1>\sub<2>[i]\sub<3>[ī]>>
-      \tr<\th<一.単>\td<{uštapris}>\td<[ušta]\sub<1>\sub<2>[i]\sub<3>>>
-      \tr<\th<三.男.複>\td<{uštaprisū}>\td<[ušta]\sub<1>\sub<2>[i]\sub<3>[ū]>>
-      \tr<\th<三.女.複>\td<{uštaprisā}>\td<[ušta]\sub<1>\sub<2>[i]\sub<3>[ā]>>
-      \tr<\th<二.複>\td<{tuštaprisā}>\td<[tušta]\sub<1>\sub<2>[i]\sub<3>[ā]>>
-      \tr<\th<一.複>\td<{nuštapris}>\td<[nušta]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.単>\td<{uštapris}>\td<[u-šta]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tuštapris}>\td<[tu-šta]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tuštaprisī}>\td<[tu-šta]\sub<1>\sub<2>[i]\sub<3>[-ī]>>
+      \tr<\th<一.単>\td<{uštapris}>\td<[u-šta]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.男.複>\td<{uštaprisū}>\td<[u-šta]\sub<1>\sub<2>[i]\sub<3>[-ū]>>
+      \tr<\th<三.女.複>\td<{uštaprisā}>\td<[u-šta]\sub<1>\sub<2>[i]\sub<3>[-ā]>>
+      \tr<\th<二.複>\td<{tuštaprisā}>\td<[tu-šta]\sub<1>\sub<2>[i]\sub<3>[-ā]>>
+      \tr<\th<一.複>\td<{nuštapris}>\td<[nu-šta]\sub<1>\sub<2>[i]\sub<3>>>
     >
     \table<
       \caption<{naprusum} (N 語幹)>
       \tr<\th;\th|col="2"|<完>>
-      \tr<\th<三.単>\td<{ittapras}>\td<[itta]\sub<1>\sub<2>[/a/]\sub<3>>>
-      \tr<\th<二.男.単>\td<{tattapras}>\td<[tatta]\sub<1>\sub<2>[/a/]\sub<3>>>
-      \tr<\th<二.女.単>\td<{tattaprasī}>\td<[tatta]\sub<1>\sub<2>[/a/]\sub<3>[ī]>>
-      \tr<\th<一.単>\td<{attapras}>\td<[atta]\sub<1>\sub<2>[/a/]\sub<3>>>
-      \tr<\th<三.男.複>\td<{ittaprasū}>\td<[itta]\sub<1>\sub<2>[/a/]\sub<3>[ū]>>
-      \tr<\th<三.女.複>\td<{uttaprasā}>\td<[itta]\sub<1>\sub<2>[/a/]\sub<3>[ā]>>
-      \tr<\th<二.複>\td<{tattaprasā}>\td<[tatta]\sub<1>\sub<2>[/a/]\sub<3>[ā]>>
-      \tr<\th<一.複>\td<{nittapras}>\td<[nitta]\sub<1>\sub<2>[/a/]\sub<3>>>
+      \tr<\th<三.単>\td<{ittapras}>\td<[i-tta]\sub<1>\sub<2>[/a/]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tattapras}>\td<[ta-tta]\sub<1>\sub<2>[/a/]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tattaprasī}>\td<[ta-tta]\sub<1>\sub<2>[/a/]\sub<3>[-ī]>>
+      \tr<\th<一.単>\td<{attapras}>\td<[a-tta]\sub<1>\sub<2>[/a/]\sub<3>>>
+      \tr<\th<三.男.複>\td<{ittaprasū}>\td<[i-tta]\sub<1>\sub<2>[/a/]\sub<3>[-ū]>>
+      \tr<\th<三.女.複>\td<{uttaprasā}>\td<[i-tta]\sub<1>\sub<2>[/a/]\sub<3>[-ā]>>
+      \tr<\th<二.複>\td<{tattaprasā}>\td<[ta-tta]\sub<1>\sub<2>[/a/]\sub<3>[-ā]>>
+      \tr<\th<一.複>\td<{nittapras}>\td<[ni-tta]\sub<1>\sub<2>[/a/]\sub<3>>>
     >
   >
   \p<
@@ -92,14 +92,14 @@
   \table<
     \caption<{parāsum} (G 語幹)>
     \tr<\th;\th|col="2"|<結>>
-    \tr<\th<三.単>\td<{iprus}>\td<[i]\sub<1>\sub<2>[/u/]\sub<3>>>
-    \tr<\th<二.男.単>\td<{taprus}>\td<[ta]\sub<1>\sub<2>[/u/]\sub<3>>>
-    \tr<\th<二.女.単>\td<{taprusī}>\td<[ta]\sub<1>\sub<2>[/u/]\sub<3>[ī]>>
-    \tr<\th<一.単>\td<{aprus}>\td<[a]\sub<1>\sub<2>[/u/]\sub<3>>>
-    \tr<\th<三.男.複>\td<{iprusū}>\td<[i]\sub<1>\sub<2>[/u/]\sub<3>[ū]>>
-    \tr<\th<三.女.複>\td<{iprusā}>\td<[i]\sub<1>\sub<2>[/u/]\sub<3>[ā]>>
-    \tr<\th<二.複>\td<{taprusā}>\td<[ta]\sub<1>\sub<2>[/u/]\sub<3>[ā]>>
-    \tr<\th<一.複>\td<{niprus}>\td<[ni]\sub<1>\sub<2>[/u/]\sub<3>>>
+    \tr<\th<三.単>\td<{iprus}>\td<[i-]\sub<1>\sub<2>[/u/]\sub<3>>>
+    \tr<\th<二.男.単>\td<{taprus}>\td<[ta-]\sub<1>\sub<2>[/u/]\sub<3>>>
+    \tr<\th<二.女.単>\td<{taprusī}>\td<[ta-]\sub<1>\sub<2>[/u/]\sub<3>[-ī]>>
+    \tr<\th<一.単>\td<{aprus}>\td<[a-]\sub<1>\sub<2>[/u/]\sub<3>>>
+    \tr<\th<三.男.複>\td<{iprusū}>\td<[i-]\sub<1>\sub<2>[/u/]\sub<3>[-ū]>>
+    \tr<\th<三.女.複>\td<{iprusā}>\td<[i-]\sub<1>\sub<2>[/u/]\sub<3>[-ā]>>
+    \tr<\th<二.複>\td<{taprusā}>\td<[ta-]\sub<1>\sub<2>[/u/]\sub<3>[-ā]>>
+    \tr<\th<一.複>\td<{niprus}>\td<[ni-]\sub<1>\sub<2>[/u/]\sub<3>>>
   >
   \p<
     残りの 3 つの語幹の完結相の活用も一気に見てしまいます。
@@ -110,38 +110,38 @@
     \table<
       \caption<{purrusum} (D 語幹)>
       \tr<\th;\th|col="2"|<結>>
-      \tr<\th<三.単>\td<{uparris}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
-      \tr<\th<二.男.単>\td<{tuparris}>\td<[tu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
-      \tr<\th<二.女.単>\td<{tuparrisī}>\td<[tu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[ī]>>
-      \tr<\th<一.単>\td<{uparris}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
-      \tr<\th<三.男.複>\td<{uparrisū}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[ū]>>
-      \tr<\th<三.女.複>\td<{uparrisā}>\td<[u]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[ā]>>
-      \tr<\th<二.複>\td<{tuparrisā}>\td<[tu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[ā]>>
-      \tr<\th<一.複>\td<{nuparris}>\td<[nu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.単>\td<{uparris}>\td<[u-]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tuparris}>\td<[tu-]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tuparrisī}>\td<[tu-]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-ī]>>
+      \tr<\th<一.単>\td<{uparris}>\td<[u-]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.男.複>\td<{uparrisū}>\td<[u-]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-ū]>>
+      \tr<\th<三.女.複>\td<{uparrisā}>\td<[u-]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-ā]>>
+      \tr<\th<二.複>\td<{tuparrisā}>\td<[tu-]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-ā]>>
+      \tr<\th<一.複>\td<{nuparris}>\td<[nu-]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>>>
     >
     \table<
       \caption<{šuprusum} (Š 語幹)>
       \tr<\th;\th|col="2"|<結>>
-      \tr<\th<三.単>\td<{ušapris}>\td<[uša]\sub<1>\sub<2>[i]\sub<3>>>
-      \tr<\th<二.男.単>\td<{tušapris}>\td<[tuša]\sub<1>\sub<2>[i]\sub<3>>>
-      \tr<\th<二.女.単>\td<{tušaprisī}>\td<[tuša]\sub<1>\sub<2>[i]\sub<3>[ī]>>
-      \tr<\th<一.単>\td<{ušapris}>\td<[uša]\sub<1>\sub<2>[i]\sub<3>>>
-      \tr<\th<三.男.複>\td<{ušaprisū}>\td<[uša]\sub<1>\sub<2>[i]\sub<3>[ū]>>
-      \tr<\th<三.女.複>\td<{ušaprisā}>\td<[uša]\sub<1>\sub<2>[i]\sub<3>[ā]>>
-      \tr<\th<二.複>\td<{tušaprisā}>\td<[tuša]\sub<1>\sub<2>[i]\sub<3>[ā]>>
-      \tr<\th<一.複>\td<{nušapris}>\td<[nuša]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.単>\td<{ušapris}>\td<[u-ša]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.男.単>\td<{tušapris}>\td<[tu-ša]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<二.女.単>\td<{tušaprisī}>\td<[tu-ša]\sub<1>\sub<2>[i]\sub<3>[-ī]>>
+      \tr<\th<一.単>\td<{ušapris}>\td<[u-ša]\sub<1>\sub<2>[i]\sub<3>>>
+      \tr<\th<三.男.複>\td<{ušaprisū}>\td<[u-ša]\sub<1>\sub<2>[i]\sub<3>[-ū]>>
+      \tr<\th<三.女.複>\td<{ušaprisā}>\td<[u-ša]\sub<1>\sub<2>[i]\sub<3>[-ā]>>
+      \tr<\th<二.複>\td<{tušaprisā}>\td<[tu-ša]\sub<1>\sub<2>[i]\sub<3>[-ā]>>
+      \tr<\th<一.複>\td<{nušapris}>\td<[nu-ša]\sub<1>\sub<2>[i]\sub<3>>>
     >
     \table<
       \caption<{naprusum} (N 語幹)>
       \tr<\th;\th|col="2"|<結>>
-      \tr<\th<三.単>\td<{ipparis}>\td<[in]\sub<1>[a]\sub<2>i\sub<3>>>
-      \tr<\th<二.男.単>\td<{tapparis}>\td<[tan]\sub<1>[a]\sub<2>i\sub<3>>>
-      \tr<\th<二.女.単>\td<{tapparsī}>\td<[tan]\sub<1>[a]\sub<2>\sub<3>[ī]>>
-      \tr<\th<一.単>\td<{apparis}>\td<[an]\sub<1>[a]\sub<2>i\sub<3>>>
-      \tr<\th<三.男.複>\td<{ipparsū}>\td<[in]\sub<1>[a]\sub<2>\sub<3>[ū]>>
-      \tr<\th<三.女.複>\td<{ipparsā}>\td<[in]\sub<1>[a]\sub<2>\sub<3>[ā]>>
-      \tr<\th<二.複>\td<{tapparsā}>\td<[tan]\sub<1>[a]\sub<2>\sub<3>[ā]>>
-      \tr<\th<一.複>\td<{nipparis}>\td<[nin]\sub<1>[a]\sub<2>i\sub<3>>>
+      \tr<\th<三.単>\td<{ipparis}>\td<[i-n]\sub<1>[a]\sub<2>i\sub<3>>>
+      \tr<\th<二.男.単>\td<{tapparis}>\td<[ta-n]\sub<1>[a]\sub<2>i\sub<3>>>
+      \tr<\th<二.女.単>\td<{tapparsī}>\td<[ta-n]\sub<1>[a]\sub<2>\sub<3>[-ī]>>
+      \tr<\th<一.単>\td<{apparis}>\td<[a-n]\sub<1>[a]\sub<2>i\sub<3>>>
+      \tr<\th<三.男.複>\td<{ipparsū}>\td<[i-n]\sub<1>[a]\sub<2>\sub<3>[-ū]>>
+      \tr<\th<三.女.複>\td<{ipparsā}>\td<[i-n]\sub<1>[a]\sub<2>\sub<3>[-ā]>>
+      \tr<\th<二.複>\td<{tapparsā}>\td<[ta-n]\sub<1>[a]\sub<2>\sub<3>[-ā]>>
+      \tr<\th<一.複>\td<{nipparis}>\td<[ni-n]\sub<1>[a]\sub<2>i\sub<3>>>
     >
   >
   \p<
@@ -162,7 +162,6 @@
     さて、前回と今回で、継続相, 完了相, 完結相という 3 つの活用を一気にやってしまいましたが、ここでちょっとまとめておきましょう。
     どの活用でもベースとなる形につく接頭辞と接尾辞は共通なので、実質的に重要なのは三人称単数形です。
     ということで、各語幹の各相での三人称男性単数形をまとめて表にしておきます。
-    動詞によって変わり得る幹母音は、分かりやすいようにイタリックにしておきました。
   >
   \table<
     \caption<√[p]-[r]-[s]>
