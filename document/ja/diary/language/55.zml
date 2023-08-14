@@ -36,12 +36,12 @@
     \li<\et<3w 弱動詞>\ed<[u] クラス>>
   >
   \p<
-    ということで、G 語幹継続相の活用は以下のようになります。
+    ということで、G 型継続相の活用は以下のようになります。
     語末の母音に注意しましょう。
   >
   \side<
     \table<
-      \caption<{malûm} (G-3a 語幹)>
+      \caption<{malûm} (G-3a 型)>
       \tr<\th;\th|col="2"|<継>>
       \tr<\th<三.単>\td<{imalla}>>
       \tr<\th<二.男.単>\td<{tamalla}>>
@@ -53,7 +53,7 @@
       \tr<\th<一.複>\td<{nimalla}>>
     >
     \table<
-      \caption<{banûm} (G-3y 語幹)>
+      \caption<{banûm} (G-3y 型)>
       \tr<\th;\th|col="2"|<継>>
       \tr<\th<三.単>\td<{ibanni}>>
       \tr<\th<二.男.単>\td<{tabanni}>>
@@ -65,7 +65,7 @@
       \tr<\th<一.複>\td<{nibanni}>>
     >
     \table<
-      \caption<{ḫadûm} (G-3w 語幹)>
+      \caption<{ḫadûm} (G-3w 型)>
       \tr<\th;\th|col="2"|<継>>
       \tr<\th<三.単>\td<{iḫaddu}>>
       \tr<\th<二.男.単>\td<{taḫaddu}>>
@@ -78,17 +78,17 @@
     >
   >
   \p<
-    他の語幹や活用の種類も全く同じような変化をするので、活用表は省略します。
+    他の型や活用の種類でも全く同じような変化をするので、活用表は省略します。
     代わりに、まとめとして 3a 弱動詞の三人称男性単数形の一覧表を置いておきましょう。
     3y 弱動詞や 3w 弱動詞は、語末の母音が異なるだけです。
   >
   \table<
-    \caption<√[m]-[l]-[ʔ]\sub<1> (3a 弱動詞)>
+    \caption<√[m]-[l]-[ʔ]\sub<1> (3a 弱語幹)>
     \tr<\th;\th<継続相>\th<完了相>\th<完結相>>
-    \tr<\th<G 語幹>\td<{imalla}>\td<{imtala}>\td<{imla}>>
-    \tr<\th<D 語幹>\td<{umalla}>\td<{umtalli}>\td<{umalli}>>
-    \tr<\th<Š 語幹>\td<{ušamla}>\td<{uštamli}>\td<{ušamli}>>
-    \tr<\th<N 語幹>\td<{immalla}>\td<{ittamla}>\td<{immali}>>
+    \tr<\th<G 型>\td<{imalla}>\td<{imtala}>\td<{imla}>>
+    \tr<\th<D 型>\td<{umalla}>\td<{umtalli}>\td<{umalli}>>
+    \tr<\th<Š 型>\td<{ušamla}>\td<{uštamli}>\td<{ušamli}>>
+    \tr<\th<N 型>\td<{immalla}>\td<{ittamla}>\td<{immali}>>
   >
   \p<
     これで準備が整ったので、『ハンムラビ法典』§1 の続きを読んでいきましょう。
@@ -137,7 +137,7 @@
   \p<
     最後の {iddīma} はちょっと厄介です。
     まず、{ma} の部分は「そして」を意味する小辞でした。
-    では {iddī} は何かというと、これは √[n]-[d]-[y] の G 語幹動詞 {nadûm} の完結相三人称単数形です。
+    では {iddī} は何かというと、これは √[n]-[d]-[y] の G 型動詞 {nadûm} の完結相三人称単数形です。
     これは、第 1 根素が [n] なので 1n 弱動詞であり、さらに第 3 根素が [y] なので 3y 弱動詞でもある、いわゆる「重弱動詞\fl<doubly weak verb>」です。
     そのため、1n 弱動詞の特徴である [n] と同化と 3y 弱動詞の特徴である [y] の脱落が両方起きていて、規則的な形である [indiy] が最終的に {iddi} という形になっています。
     最後の [i] が長音になっているのは、{ma} が付いた影響です。

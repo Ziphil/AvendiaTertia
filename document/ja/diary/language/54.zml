@@ -21,10 +21,10 @@
   \table<
     \caption<√[p]-[r]-[s]>
     \tr<\th;\th<継続相>\th<完了相>\th<完結相>>
-    \tr<\th<G 語幹>\td<{iparras}>\td<{iptaras}>\td<{iprus}>>
-    \tr<\th<D 語幹>\td<{uparras}>\td<{uptarris}>\td<{uparris}>>
-    \tr<\th<Š 語幹>\td<{ušapras}>\td<{uštapris}>\td<{ušapris}>>
-    \tr<\th<N 語幹>\td<{ipparras}>\td<{ittapras}>\td<{ipparis}>>
+    \tr<\th<G 型>\td<{iparras}>\td<{iptaras}>\td<{iprus}>>
+    \tr<\th<D 型>\td<{uparras}>\td<{uptarris}>\td<{uparris}>>
+    \tr<\th<Š 型>\td<{ušapras}>\td<{uštapris}>\td<{ušapris}>>
+    \tr<\th<N 型>\td<{ipparras}>\td<{ittapras}>\td<{ipparis}>>
   >
   \p<
     一方で、√[ḫ]-[l]-[q] の活用パラダイムは以下のようになります。
@@ -33,16 +33,16 @@
   \table<
     \caption<√[ḫ]-[l]-[q]>
     \tr<\th;\th<継続相>\th<完了相>\th<完結相>>
-    \tr<\th<G 語幹>\td<{iḫalliq}>\td<{iḫtaliq}>\td<{iḫliq}>>
-    \tr<\th<D 語幹>\td<{uḫallaq}>\td<{uḫtalliq}>\td<{uḫalliq}>>
-    \tr<\th<Š 語幹>\td<{ušaḫlaq}>\td<{uštaḫliq}>\td<{ušaḫliq}>>
-    \tr<\th<N 語幹>\td<{iḫḫalliq}>\td<{ittaḫliq}>\td<{iḫḫaliq}>>
+    \tr<\th<G 型>\td<{iḫalliq}>\td<{iḫtaliq}>\td<{iḫliq}>>
+    \tr<\th<D 型>\td<{uḫallaq}>\td<{uḫtalliq}>\td<{uḫalliq}>>
+    \tr<\th<Š 型>\td<{ušaḫlaq}>\td<{uštaḫliq}>\td<{ušaḫliq}>>
+    \tr<\th<N 型>\td<{iḫḫalliq}>\td<{ittaḫliq}>\td<{iḫḫaliq}>>
   >
   \p<
-    動詞の幹母音のとり方による分類を「母音クラス\fl<vowel class>」といい、G 語幹継続相と G 語幹完了相の幹母音をとって「[a]`/[u] クラス」や「[i]`/[i] クラス」のように呼びます。
+    動詞の幹母音のとり方による分類を「母音クラス\fl<vowel class>」といい、G 型継続相と G 型完了相の幹母音をとって「[a]`/[u] クラス」や「[i]`/[i] クラス」のように呼びます。
     2 つの幹母音が同じ場合は、母音を片方だけ明示して、単に「[i] クラス」などと呼ぶこともあります。
-    例えば √[p]-[r]-[s] は、G 語幹継続相の幹母音が [a] で、G 語幹完結相の幹母音が [u] なので、[a]`/[u] クラスに属する語根ということになります。
-    また、√[ḫ]-[l]-[q] は、G 語幹継続相の幹母音も G 語幹完結相の幹母音も [i] なので、[i] クラスに属することになります。
+    例えば √[p]-[r]-[s] は、G 型継続相の幹母音が [a] で、G 型完結相の幹母音が [u] なので、[a]`/[u] クラスに属する語根ということになります。
+    また、√[ḫ]-[l]-[q] は、G 型継続相の幹母音も G 型完結相の幹母音も [i] なので、[i] クラスに属することになります。
   >
   \p<
     母音クラスは以下の 4 つしかありません。
@@ -60,35 +60,35 @@
   >
   \table<
     \tr<\th;\th<継続相>\th<完了相>\th<完結相>>
-    \tr<\th<G 語幹>\td</V/\sub<1>>\td</V/\sub<1>>\td</V/\sub<2>>>
-    \tr<\th<D 語幹>\td<[a]>\td<[i]>\td<[i]>>
-    \tr<\th<Š 語幹>\td<[a]>\td<[i]>\td<[i]>>
-    \tr<\th<N 語幹>\td</V/\sub<1>>\td</V/\sub<1>>\td<[i]>>
+    \tr<\th<G 型>\td</V/\sub<1>>\td</V/\sub<1>>\td</V/\sub<2>>>
+    \tr<\th<D 型>\td<[a]>\td<[i]>\td<[i]>>
+    \tr<\th<Š 型>\td<[a]>\td<[i]>\td<[i]>>
+    \tr<\th<N 型>\td</V/\sub<1>>\td</V/\sub<1>>\td<[i]>>
   >
   \p<
-    D 語幹と Š 語幹における幹母音は、母音クラスによらず常に [a], [i], [i] で固定です。
-    N 語幹完結相の幹母音も、母音クラスによらず [i] で固定です。
-    他の部分は母音クラスによって変わるわけですが、G 語幹完結相にのみ /V/\sub<2> が使われ、他は全部 /V/\sub<1> です。
+    D 型と Š 型における幹母音は、母音クラスによらず常に [a], [i], [i] で固定です。
+    N 型完結相の幹母音も、母音クラスによらず [i] で固定です。
+    他の部分は母音クラスによって変わるわけですが、G 型完結相にのみ /V/\sub<2> が使われ、他は全部 /V/\sub<1> です。
     母音クラスという大層な概念を持ち出してはいますが、そのわりにはシンプルですね。
   >
   \p<
-    さて、今日はさらに、1n 弱動詞の活用についても見てしまいましょう。
+    さて、ついでに 1n 弱動詞の活用についても見てしまいましょう。
     第 1 根素が [n] になっている動詞です。
     1n 弱動詞の語根の代表としては √[n]-[q]-[r] を使います。
   >
   \p<
     \a|href="48.html"|<学習ログ 6> で触れたように、[n] は直後に子音があるとその子音に同化するのでした。
     1n 弱動詞の活用は、この規則を単純に適用するだけで作れます。
-    ただし、N 語幹完了相だけは例外的に [n] が同化しません。
+    ただし、N 型完了相だけは例外的に [n] が同化しません。
     したがって、三人称男性単数形は次の表のようになります。
   >
   \table<
     \caption<√[n]-[q]-[r] (1n 弱動詞)>
     \tr<\th;\th<継続相>\th<完了相>\th<完結相>>
-    \tr<\th<G 語幹>\td<{inaqqar}>\td<{ittaqar}>\td<{iqqur}>>
-    \tr<\th<D 語幹>\td<{unaqqar}>\td<{uttaqqir}>\td<{unaqqir}>>
-    \tr<\th<Š 語幹>\td<{ušaqqar}>\td<{uštaqqir}>\td<{ušaqqir}>>
-    \tr<\th<N 語幹>\td<{innaqqar}>\td<{ittanqar}>\td<{innaqir}>>
+    \tr<\th<G 型>\td<{inaqqar}>\td<{ittaqar}>\td<{iqqur}>>
+    \tr<\th<D 型>\td<{unaqqar}>\td<{uttaqqir}>\td<{unaqqir}>>
+    \tr<\th<Š 型>\td<{ušaqqar}>\td<{uštaqqir}>\td<{ušaqqir}>>
+    \tr<\th<N 型>\td<{innaqqar}>\td<{ittanqar}>\td<{innaqir}>>
   >
 
 >
