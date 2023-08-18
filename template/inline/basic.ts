@@ -146,6 +146,15 @@ manager.registerElementRule("cn", "page", (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("cnbr", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("cuneiform-break");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("cns", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
