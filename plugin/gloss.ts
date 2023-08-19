@@ -58,11 +58,16 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
                 const prefixElement = builder.createElement("xn", (self) => {
                   builder.appendTextNode(self, prefix);
                 });
-                const prefixText = builder.createTextNode("-");
-                prefixResults[index] = [prefixElement, prefixText];
+                const prefixPunctuationElement = builder.createElement("glp", (self) => {
+                  builder.appendTextNode(self, "-");
+                });
+                prefixResults[index] = [prefixElement, prefixPunctuationElement];
               } else if (child.tagName === "ex") {
-                const prefixText = builder.createTextNode(kind["ja"] + "-");
-                prefixResults[index] = [prefixText];
+                const prefixText = builder.createTextNode(kind["ja"]);
+                const prefixPunctuationElement = builder.createElement("glp", (self) => {
+                  builder.appendTextNode(self, "-");
+                });
+                prefixResults[index] = [prefixText, prefixPunctuationElement];
               }
             }
           }
@@ -73,11 +78,16 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
                 const suffixElement = builder.createElement("xn", (self) => {
                   builder.appendTextNode(self, prefix);
                 });
-                const suffixText = builder.createTextNode("-");
-                suffixResults[index] = [suffixText, suffixElement];
+                const suffixPunctuationElement = builder.createElement("glp", (self) => {
+                  builder.appendTextNode(self, "-");
+                });
+                suffixResults[index] = [suffixPunctuationElement, suffixElement];
               } else if (child.tagName === "ex") {
-                const suffixText = builder.createTextNode("-" + kind["ja"]);
-                suffixResults[index] = [suffixText];
+                const suffixPunctuationElement = builder.createElement("glp", (self) => {
+                  builder.appendTextNode(self, "-");
+                });
+                const suffixText = builder.createTextNode(kind["ja"]);
+                suffixResults[index] = [suffixPunctuationElement, suffixText];
               }
             }
           }

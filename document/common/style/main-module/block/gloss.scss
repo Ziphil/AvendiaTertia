@@ -30,3 +30,10 @@
 .gloss-morpheme {
   font-size: 80%;
 }
+
+.gloss-punctuation {
+  opacity: 0.5;
+  &[data-space] {
+    margin: 0em 0.2em;
+  }
+}
