@@ -5,6 +5,9 @@
 @import "../../main-module/variable.scss";
 
 
+$description-arrow-width: 0.5em;
+$description-dash-width: 1.1em;
+
 .description-list {
   @include justify;
   width: max-content;
@@ -16,6 +19,7 @@
 
 .description-left {
   margin-left: $bullet-width + $blank-margin;
+  margin-right: $blank-margin;
   &::before {
     @include icon-font;
     width: fix-em($bullet-width, 90%);
@@ -30,16 +34,28 @@
 }
 
 .description-right {
+  .description-list[data-type="desc"] & {
+    margin-left: $description-arrow-width + $blank-margin;
+  }
+  .description-list[data-type="par"] & {
+    margin-left: $description-dash-width + $blank-margin;
+  }
   &::before {
     color: mix($blue-color, $header-background-color, 50%);
     .description-list[data-type="desc"] & {
       @include icon-font;
-      margin: 0em fix-em($blank-margin, 90%);
+      width: fix-em($description-arrow-width, 90%);
+      margin-right: fix-em($blank-margin, 90%);
+      margin-left: fix-em(0em - $description-arrow-width - $blank-margin, 90%);  
       font-size: 90%;
-      content: "\F105";  
+      display: inline-block;
+      content: "\F105";
     }
     .description-list[data-type="par"] & {
-      margin: 0em $blank-margin;
+      width: $description-dash-width;
+      margin-right: $blank-margin;
+      margin-left: 0em - $description-dash-width - $blank-margin;
+      display: inline-block;
       content: "—";
     }
   }
