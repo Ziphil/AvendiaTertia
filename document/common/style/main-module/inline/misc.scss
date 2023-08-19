@@ -12,7 +12,4 @@
 .label {
   margin-right: $blank-margin;
   color: $blue-color;
-  &::after {
-    content: ":";
-  }
 }

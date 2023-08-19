@@ -32,6 +32,7 @@
   @include box($blue-color, true);
   left: 0rpx;
   position: absolute;
+  user-select: none;
 }
 
 math-i:not(.fun):not(.rm)[data-cont="f"] {
@@ -54,7 +55,4 @@ math-o[data-cont=":"] {
   font-size: 80%;
   color: $blue-color;
   vertical-align: 0.3906em;
-  &::before {
-    content: "†";
-  }
 }

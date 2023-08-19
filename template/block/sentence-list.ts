@@ -34,11 +34,11 @@ manager.registerElementRule("sh", "page.xl.li", (transformer, document, element)
       self.setAttribute("data-tag", parentElement.getAttribute("tag")!.toUpperCase());
     }
     if (element.hasAttribute("mark")) {
-      const rawMark = element.getAttribute("mark");
-      const mark = (rawMark === "u") ? "ungrammatical" : "question";
+      const mark = element.getAttribute("mark");
+      const markString = (mark === "u") ? "⁎" : "?";
       self.insertHead(document.createElement("span", (self) => {
         self.addClassName("sentence-mark");
-        self.setAttribute("data-mark", mark);
+        self.appendTextNode(markString);
       }));
     }
   });

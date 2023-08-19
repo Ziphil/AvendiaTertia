@@ -32,9 +32,12 @@ manager.registerElementRule("thm", "page", (transformer, document, element) => {
       if (nameElement !== undefined) {
         self.appendElement("span", (self) => {
           self.addClassName("theorem-name");
+          self.appendTextNode(" [");
           self.appendChild(transformer.apply(nameElement));
+          self.appendTextNode("]");
         });
       }
+      self.appendTextNode(".");
     });
     self.appendChild(transformer.apply());
   });
@@ -49,6 +52,7 @@ manager.registerElementRule("prf", "page", (transformer, document, element) => {
     self.appendElement("span", (self) => {
       self.addClassName("proof-label");
       self.appendTextNode(TRANSLATIONS.math.proof[transformer.variables.language]);
+      self.appendTextNode(".");
     });
     self.appendChild(transformer.apply());
   });

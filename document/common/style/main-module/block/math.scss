@@ -26,18 +26,9 @@ $proof-horizontal-padding: 12rpx;
   color: $blue-color;
   line-height: $line-height;
   float: left;
-  &::after {
-    content: "."
-  }
 }
 
 .theorem-name {
-  &::before {
-    content: " [";
-  }
-  &::after {
-    content: "]";
-  }
 }
 
 .proof {
@@ -50,7 +41,4 @@ $proof-horizontal-padding: 12rpx;
   color: $blue-color;
   line-height: $line-height;
   float: left;
-  &::after {
-    content: "."
-  }
 }

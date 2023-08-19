@@ -84,10 +84,4 @@
 .sentence-mark {
   margin-right: 0.1em;
   color: $blue-color;
-  &[data-mark="ungrammatical"]::before {
-    content: "*";
-  }
-  &[data-mark="question"]::before {
-    content: "?";
-  }
 }

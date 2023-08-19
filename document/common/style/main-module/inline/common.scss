@@ -38,12 +38,12 @@
 }
 
 .hairia {
-  &::before {
-    font-size: 80%;
-    vertical-align: 0.3906em;
-    line-height: 0;
-    content: "H";
-  }
+}
+
+.hairia-mark {
+  font-size: 80%;
+  vertical-align: 0.3906em;
+  line-height: 0;
 }
 
 .sup {

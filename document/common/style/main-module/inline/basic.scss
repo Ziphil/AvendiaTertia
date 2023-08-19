@@ -41,12 +41,6 @@
 
 .foreign {
   font-size: 80%;
-  &::before {
-    content: " (";
-  }
-  &::after {
-    content: ")";
-  }
 }
 
 .emphasis {

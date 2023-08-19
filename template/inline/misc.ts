@@ -27,6 +27,7 @@ manager.registerElementRule("label", "page", (transformer, document, element) =>
   self.appendElement("span", (self) => {
     self.addClassName("label");
     self.appendChild(transformer.apply());
+    self.appendTextNode(":");
   });
   return self;
 });

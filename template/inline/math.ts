@@ -65,6 +65,9 @@ manager.registerElementRule("ref", "page", (transformer, document, element, scop
       self.setAttribute("href", `#${refId}`);
     }
     self.setAttribute("data-type", type);
+    if (type === "bibliography") {
+      self.appendTextNode("†");
+    }
     self.appendTextNode(getNumber(transformer, element, type, true, refId));
   });
   return self;

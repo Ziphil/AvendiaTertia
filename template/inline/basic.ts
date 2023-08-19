@@ -168,6 +168,10 @@ manager.registerElementRule("h", ["page", "page.section-table"], (transformer, d
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("hairia");
+    self.appendElement("span", (self) => {
+      self.addClassName("hairia-mark");
+      self.appendTextNode("H");
+    });
     self.appendChild(transformer.apply());
   });
   return self;
@@ -203,7 +207,9 @@ manager.registerElementRule("fl", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("foreign");
+    self.appendTextNode(" (");
     self.appendChild(transformer.apply());
+    self.appendTextNode(")");
   });
   return self;
 });
