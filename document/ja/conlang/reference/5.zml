@@ -78,12 +78,12 @@
     さらに例外として、助接辞や連結辞が副詞的用法で使われている場合は、その語幹の最後の母音がアクセントをもち、有アクセント語となる。
     助接辞や連結辞の副詞的用法については \rref|ref="svr"|; を参照せよ。
   >
-  \xl<
-    \li<\sh<{vade, kavat a tel e kisol atipil.}>\ja<というのも、私には十分なお金がなかったからだ。>>
-    \li<\sh<{dà, ducákes a ces ca koskalad teca edif cipases a tel ca ces qi liqet.}>\ja<しかし、私が彼に電話で頼んだ後でさえも、彼は職場には来なかった。>>
+  \xol<
+    \li|tag="1"|<\sh<{vade, kavat a tel e kisol atipil.}>\ja<というのも、私には十分なお金がなかったからだ。>>
+    \li|tag="2"|<\sh<{dà, ducákes a ces ca koskalad teca edif cipases a tel ca ces qi liqet.}>\ja<しかし、私が彼に電話で頼んだ後でさえも、彼は職場には来なかった。>>
   >
   \p<
-    これらの例文において、文頭にある {vade} と {dà} は副詞的に使われているため最後の母音にアクセントが置かれ、ともに有アクセントとなる。
+    \box|tag="1"|; や \box|tag="2"|; において、文頭にある {vade} と {dà} は副詞的に使われているため最後の母音にアクセントが置かれ、ともに有アクセントとなる。
     それ以外の助接辞 (文中にある {a}, {e}, {ca}, {qi}, {teca} の 5 つ) はアクセントをもたない後接語で、続く単語と繋げて読まれる。
   >
   \h2|tag="szh",id="clitic-contraction"|<縮約形>
@@ -107,13 +107,13 @@
     前接語として振る舞う語句は 2 個以上連続して現れることがある。
     その場合、アクセントのない箇所が長く続くのを避けるために、この連続の最後の語句に含まれる最後の母音がアクセントをもつことがある。
   >
-  \xl<
-    \li<\sh<{kômes a ces e yelicnelas feges e a's te tazît.}>\ja<彼は昨日買ったネックレスを身につけた。>>
-    \li<\sh<{pâmat a'l e'n, te câses a'l e ces vo kosxoq, cipases e pil ca'l a's.}>\ja<昨日図書館で彼に会ったときに何を頼まれたのか忘れてしまった。>>
+  \xol<
+    \li|tag="1"|<\sh<{kômes a ces e yelicnelas feges e a's te tazît.}>\ja<彼は昨日買ったネックレスを身につけた。>>
+    \li|tag="2"|<\sh<{pâmat a'l e'n, te câses a'l e ces vo kosxoq, cipases e pil ca'l a's.}>\ja<昨日図書館で彼に会ったときに何を頼まれたのか忘れてしまった。>>
   >
   \p<
-    最初の例文では、{e a's} の部分で前接語が連続しているので、{a's} の [a] がアクセントをもつことがある。
-    次の例文では、{a'l e'n} と {ca'l a's} が前接語の連続であり、ともに最後の母音がアクセントをもって発音されることがある。
+    \box|tag="1"|; では、{e a's} の部分で前接語が連続しているので、{a's} の [a] がアクセントをもつことがある。
+    \box|tag="2"|; では、{a'l e'n} と {ca'l a's} が前接語の連続であり、ともに最後の母音がアクセントをもって発音されることがある。
   >
   \h1|tag="sze"|<副アクセント>
   \p<
