@@ -48,6 +48,10 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
         if (date.match(/^\d+$/)) {
           self.appendElement("span", (self) => {
             self.addClassName("hairia");
+            self.appendElement("span", (self) => {
+              self.addClassName("hairia-mark");
+              self.appendTextNode("H");
+            });
             self.appendTextNode(date);
           });
         } else {
