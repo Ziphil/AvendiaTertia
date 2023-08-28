@@ -161,7 +161,7 @@
   \side<
     \table<
       \caption<{parāsum} (G 型)>
-      \tr<\th;\th|col="2"|<分>>
+      \tr<\th;\th|col="2"|<動形>>
       \tr<\th<男.単.主>\td<{parsum}>\td<\sub<1>[a]\sub<2>\sub<3>[-um]>>
       \tr<\th<男.複.主>\td<{parsūtum}>\td<\sub<1>[a]\sub<2>\sub<3>[-ūtum]>>
       \tr<\th<女.単.主>\td<{paristum}>\td<\sub<1>[a]\sub<2>[/i/]\sub<3>[-t-um]>>
@@ -169,7 +169,7 @@
     >
     \table<
       \caption<{purrusum} (D 型)>
-      \tr<\th;\th|col="2"|<分>>
+      \tr<\th;\th|col="2"|<動形>>
       \tr<\th<男.単.主>\td<{purrusum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-um]>>
       \tr<\th<男.複.主>\td<{purrusūtum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-ūtum]>>
       \tr<\th<女.単.主>\td<{purrustum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-t-um]>>
@@ -179,7 +179,7 @@
   \side<
     \table<
       \caption<{šuprusum} (Š 型)>
-      \tr<\th;\th|col="2"|<分>>
+      \tr<\th;\th|col="2"|<動形>>
       \tr<\th<男.単.主>\td<{šuprusum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-um]>>
       \tr<\th<男.複.主>\td<{šuprusūtum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-ūtum]>>
       \tr<\th<女.単.主>\td<{šuprustum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-t-um]>>
@@ -187,7 +187,7 @@
     >
     \table<
       \caption<{naprusum} (N 型)>
-      \tr<\th;\th|col="2"|<分>>
+      \tr<\th;\th|col="2"|<動形>>
       \tr<\th<男.単.主>\td<{naprusum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-um]>>
       \tr<\th<男.単.主>\td<{naprusūtum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-ūtum]>>
       \tr<\th<女.単.主>\td<{naprustum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-t-um]>>
