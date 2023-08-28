@@ -1,0 +1,108 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<アッカド語学習ログ 22 — 1e 弱動詞, 3e 弱動詞>
+
+  \h1<日記 (2023 年 8 月 28 日)>
+  \p<
+    今日は、1e 弱動詞と 3e 弱動詞の活用を見ていきます。
+  >
+  \p<
+    初めに、\a|href="51.html"|<学習ログ 9> でやった 1a 弱動詞の活用を復習しましょう。
+    [ʔ] が脱落する影響で、強動詞の活用形から以下のような変化が起こるのでした。
+  >
+  \el|type="par"|<
+    \li<\et<[ʔ] が母音に挟まれる>\ed<[ʔ] と後続の母音がともに脱落>>
+    \li<\et<[ʔ] の直後に子音>\ed<[ʔ] が脱落して代償延長 (Š 型継続相では次の子音が重子音に)>>
+    \li<\et<[ʔ] が語頭>\ed<[ʔ] が単に脱落>>
+    \li<\et<N 型>\ed<一律で [ʔ] が [n] に変化>>
+  >
+  \p<
+    そのため、活用パラダイムは以下のようになります。
+    \a|href="51.html"|<学習ログ 9> では非定形活用はやりませんでしたが、強動詞の活用形から機械的に上の規則を適用するだけで作れます。
+  >
+  \table<
+    \caption<√[ʔ]\sub<1>-[ḫ]-[z] (1a 弱語根)>
+    \tr<\th;\th<継続相>\th<完了相>\th<完結相>\th<不定詞>\th<分詞>\th<動形容詞>>
+    \tr<\th<G 型>\td<{iḫḫaz}>\td<{ītaḫaz}>\td<{īḫuz}>\td<{aḫāzum}>\td<{āḫizum}>\td<{aḫzum}>>
+    \tr<\th<D 型>\td<{uḫḫaz}>\td<{ūtaḫḫiz}>\td<{uḫḫiz}>\td<{uḫḫuzum}>\td<{muḫḫizum}>\td<{uḫḫuzum}>>
+    \tr<\th<Š 型>\td<{ušaḫḫaz}>\td<{uštāḫiz}>\td<{ušāḫiz}>\td<{šūḫuzum}>\td<{mušāḫizum}>\td<{šūḫuzum}>>
+    \tr<\th<N 型>\td<{innaḫḫaz}>\td<{ittanḫaz}>\td<{innaḫiz}>\td<{nanḫuzum}>\td<{munnaḫzum}>\td<{nanḫuzum}>>
+  >
+  \p<
+    これを踏まえて、1e 弱動詞の活用を見ていきます。
+  >
+  \p<
+    1e 弱動詞とは、第 1 根素が [ʔ]\sub<3>, [ʔ]\sub<4>, [ʔ]\sub<5> のいずれかである動詞のことです。
+    \a|href="50.html"|<学習ログ 8> で触れたように、これらの [ʔ] は、消失するときに近くにある [a] や [ā] をそれぞれ [e] や [ē] に変化させました。
+    これ以外は、[ʔ]\sub<1>, [ʔ]\sub<2> と全く同じ変化を引き起こします。
+  >
+  \p<
+    そのため、1e 弱動詞の活用形は、1a 弱動詞の活用形の [a] や [ā] をそれぞれ [e] や [ē] に変えるだけで作ることができます。
+    ただし、D 型継続相のみ例外で、第 2 根素と第 3 根素の間の [a] が保たれます。
+    また、下の表では分かりませんが、活用接頭辞の [i-]`/[ta-]`/[a-]`/[ni-] も [i-]`/[te-]`/[e-]`/[ni-] に変わります。
+  >
+  \table<
+    \caption<√[ʔ]\sub<3>-[p]-[š] (1e 弱語根)>
+    \tr<\th;\th<継続相>\th<完了相>\th<完結相>\th<不定詞>\th<分詞>\th<動形容詞>>
+    \tr<\th<G 型>\td<{ippeš}>\td<{ītepeš}>\td<{īpuš}>\td<{epēšum}>\td<{ēpišum}>\td<{epšum}>>
+    \tr<\th<D 型>\td<{uppaš}>\td<{ūteppiš}>\td<{uppiš}>\td<{uppušum}>\td<{muppišum}>\td<{uppušum}>>
+    \tr<\th<Š 型>\td<{ušeppeš}>\td<{uštēpiš}>\td<{ušēpiš}>\td<{šūpušum}>\td<{mušēpišum}>\td<{šūpušum}>>
+    \tr<\th<N 型>\td<{inneppeš}>\td<{ittenpeš}>\td<{innepiš}>\td<{nenpušum}>\td<{munnepšum}>\td<{nenpušum}>>
+  >
+  \p<
+    注意点として、三人称女性複数形と二人称複数形にある語尾の [-ā] は母音調和の影響を受けません。
+    これは活用の種類によらず成り立ちます。
+    例えば、{epēšum} の継続相二人称複数形は {teppešā} であって [teppešē] にはなりません。
+  >
+  \p<
+    第 1 根素が [y] の動詞も、1e 弱動詞と全く同じように活用します。
+    そのため、第 1 根素が [y] の動詞は 1e 弱動詞に分類し、「1y 弱動詞」という弱動詞の分類は設けないのが普通です。
+    なお、第 1 根素が [w] の動詞は、1a 弱動詞や 1e 弱動詞とは違う振る舞いをするので、「1w 弱動詞」という分類を設けてそこに入れます。
+    1w 弱動詞はそのうち出てきます。
+  >
+  \p<
+    さて、次は\a|href="55.html"|<学習ログ 13> でやった 3a 弱動詞の活用を復習しましょう。
+    作り方は以下のようになっていました。
+    [ʔ] が母音に挟まれているときの規則が 1a 弱動詞のときと違うのが注意点です。
+  >
+  \el|type="par"|<
+    \li<\et<[ʔ] が母音に挟まれる>\ed<[ʔ] が脱落して母音融合>>
+    \li<\et<[ʔ] が語末>\ed<[ʔ] が単に脱落>>
+  >
+  \p<
+    活用パラダイムは以下の通りです。
+    ここでも非定形活用形を追加しておきました。
+  >
+  \table<
+    \caption<√[m]-[l]-[ʔ]\sub<1> (3a 弱語根)>
+    \tr<\th;\th<継続相>\th<完了相>\th<完結相>\th<不定詞>\th<分詞>\th<動形容詞>>
+    \tr<\th<G 型>\td<{imalla}>\td<{imtala}>\td<{imla}>\td<{malûm}>\td<{mālûm}>\td<{malûm}>>
+    \tr<\th<D 型>\td<{umalla}>\td<{umtalli}>\td<{umalli}>\td<{mullûm}>\td<{mumallûm}>\td<{mullûm}>>
+    \tr<\th<Š 型>\td<{ušamla}>\td<{uštamli}>\td<{ušamli}>\td<{šumlûm}>\td<{mušamlûm}>\td<{šumlûm}>>
+    \tr<\th<N 型>\td<{immalla}>\td<{ittamla}>\td<{immali}>\td<{namlûm}>\td<{mummalûm}>\td<{namlûm}>>
+  >
+  \p<
+    3e 弱動詞の活用形は、3a 弱動詞の活用形の [a] や [ā] をそれぞれ [e] や [ē] に変えるだけで作れます。
+    ただし、G 型継続相, G 型動形容詞, D 型の全て, N 型の全てで、最初に現れる [a] が保たれて母音調和しない形も存在しています。
+    また、D 型継続相だけ、最初に現れる [a] が保たれるのであれば末尾の [a] も保たれます。
+    [a] が保たれる形では、活用接頭辞の [i-]`/[ta-]`/[a-]`/[ni-] に含まれる [a] も保たれます。
+  >
+  \table<
+    \caption<√[l]-[q]-[ʔ]\sub<3> (3e 弱語根)>
+    \tr<\th;\th<継続相>\th<完了相>\th<完結相>\th<不定詞>\th<分詞>\th<動形容詞>>
+    \tr<\th<G 型>\td<{ileqqe}`/{ilaqqe}>\td<{ilteqe}>\td<{ilqe}>\td<{leqûm}>\td<{lēqûm}>\td<{leqûm}`/{laqûm}>>
+    \tr<\th<D 型>\td<{uleqqe}`/{ulaqqa}>\td<{ulteqqi}`/{ultaqqi}>\td<{uleqqi}`/{ulaqqi}>\td<{luqqûm}>\td<{muleqqûm}`/{mulaqqûm}>\td<{luqqûm}>>
+    \tr<\th<Š 型>\td<{ušelqe}>\td<{uštelqi}>\td<{ušelqi}>\td<{šulqûm}>\td<{mušelqûm}>\td<{šulqûm}>>
+    \tr<\th<N 型>\td<{illeqqe}`/{illaqqe}>\td<{ittelqe}`/{ittalqe}>\td<{illeqi}`/{illaqi}>\td<{nelqûm}`/{nalqûm}>\td<{mulleqûm}`/{mullaqûm}>\td<{nelqûm}`/{nalqûm}>>
+  >
+  \p<
+    注意点として、3e 弱動詞で語幹末の母音が [e] になるところは、3a 弱動詞のときと活用接尾辞を付けたときの母音融合のパターンが異なります。
+    語幹の [a] を [e] にした後で活用接尾辞を付けるのであって、活用接尾辞を付けた後に [a] を [e] に変えるわけではありません。
+    例えば、{malûm} (3a 弱動詞) の継続相三人称女性複数形は [imalla-] に [-ā] を付けるので {imallâ} ですが、{leqûm} (3e 弱動詞) の継続相三人称女性複数形は [ileqqe-] に [-ā] を付けるので {ileqqeā} になります。
+    [a] を [e] に変えれば良いと思って、{ileqqê} にしてはいけません。
+  >
+
+>
