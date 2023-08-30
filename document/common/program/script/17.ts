@@ -18,7 +18,8 @@ export class Executor extends BaseExecutor {
 
   private jump(): void {
     const tag = window.location.hash.replace(/^#/, "");
-    const href = REFERENCE_INDEX_JSON.hrefs[tag];
+    const hrefs = REFERENCE_INDEX_JSON.section.hrefs as Record<string, string>;
+    const href = hrefs[tag];
     if (href) {
       window.location.replace(href);
     }
