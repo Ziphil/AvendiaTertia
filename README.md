@@ -3,7 +3,7 @@
 </div>
 
 ![](https://img.shields.io/github/commit-activity/y/Ziphil/AvendiaTertia?label=commits)
-![](https://img.shields.io/github/search/Ziphil/AvendiaTertia/extension:zml?label=pages)
+![](https://img.shields.io/github/search/Ziphil/AvendiaTertia/path%3A*.zmll?label=pages)
 
 
 ## 概要
