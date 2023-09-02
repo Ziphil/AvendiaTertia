@@ -83,7 +83,7 @@
       持ち上げの普遍性を使うだけでできるので面倒なだけで何も難しくないが、全部省略してしまうのも味気ないので一部分だけ確かめておこう。
     >
     \p<
-      &m<\scr<B>> の射 &m<u: I \to; J, v: J \to; K> および &m<\sb<\scr<E>><K>> の対象 &m<Z> に対し、 &m<\scr<E>> の射 &m<(\sb<`m><uv>) \sb<><Z>: \sp<u><*> \sp<v><*> Z \to; \sp<(v \circ; u)><*> Z> を、図式
+      &m<\scr<B>> の射 &m<u: I \to; J, v: J \to; K> および &m<\sb<\scr<E>><K>> の対象 &m<Z> に対し、&m<\scr<E>> の射 &m<(\sb<`m><uv>) \sb<><Z>: \sp<u><*> \sp<v><*> Z \to; \sp<(v \circ; u)><*> Z> を、図式
       &mb<
         \diag<
           \v<\sp<u><*> \sp<v><*> Z> \v<\sp<v><*> Z> \v; \br;

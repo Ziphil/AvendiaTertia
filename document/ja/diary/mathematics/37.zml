@@ -179,7 +179,7 @@
     >
     \p<
       逆に、自然変換 &m<`j: `F \raarr; ZP> が与えられたとする。
-      &m<\scr<C>> の対象 &m<C> に対して、Yoneda の補題により &m<(ZP) (YC) = \op<Hom> (YC, P) \cong; PC> であるから、 この自然変換の &m<YC>-成分は、
+      &m<\scr<C>> の対象 &m<C> に対して、Yoneda の補題により &m<(ZP) (YC) = \op<Hom> (YC, P) \cong; PC> であるから、この自然変換の &m<YC>-成分は、
       &mb<
         \sb<`a><C> \coloneqq; \sb<`j><YC>: `F YC \to; PC
       >
@@ -218,7 +218,7 @@
   >
   \p<
     ということで、&m<\bfrm<Set>> 上の共変 Yoneda 埋め込み関手 &m<Y: \bfrm<Set> \to; \sp<\bfrm<Set>><\sp<\bfrm<Set>><\circ;>>> に関する随伴列 &m< U \dashv; V \dashv; W \dashv; X \dashv; Y> が構成できた。
-    ･･･のだが、構成が抽象的でよく分からないので、具体的な形も書いておこう。
+    \k<…>のだが、構成が抽象的でよく分からないので、具体的な形も書いておこう。
     導出過程は省略するが、上の証明の構成から、それほど難しいわけではない計算で全て導出できる。
   >
   \p<

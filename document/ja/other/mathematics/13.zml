@@ -727,7 +727,7 @@
         >
       >
       と定める。
-      すると、&m<\scr<C>> の対象 &m<A, B, Z> に対し、 Day 畳み込みの定義と\ref|type="thm",ref="rep"|; によって、
+      すると、&m<\scr<C>> の対象 &m<A, B, Z> に対し、Day 畳み込みの定義と\ref|type="thm",ref="rep"|; によって、
       &mb<
         \array|align="rcl"|<
           \c<P' (Z, A, B)> \c<=> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; \bf<y> B)> \br;

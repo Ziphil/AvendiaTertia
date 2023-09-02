@@ -153,7 +153,7 @@
   \thm|type="def"|<
     \p<
       計算体系 &m<\sb<\rm<`l>><\rm<c>>> の言語を、&m<\sb<\rm<`l>><>> の言語を拡張する形で定める。
-      すなわち、項をメタ変数 &m<M> で表して、 
+      すなわち、項をメタ変数 &m<M> で表して、
       &mb<
         \array|align="rcl"|<
           \c<M> \c<\ccoloneqq;> \c<\cdots; \mid; \tt|fun|<abort> M \mid; \tt|fun|<cont> M> \br;

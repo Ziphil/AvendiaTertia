@@ -872,7 +872,7 @@
   \h2|id="enumret"|<ブロックなしの \m<Enumerable> のメソッド>
   \p<
     ブロックなしの \m<Enumerable`#map> は \m<Enumerator> インスタンスを返す。
-    繰り返しのできるオブジェクト (何でも良い) を \m<Enumerator> インスタンスに変換するという認識で良いのだろうか･･･。
+    繰り返しのできるオブジェクト (何でも良い) を \m<Enumerator> インスタンスに変換するという認識で良いのだろうか\k<…>。
   >
   \pre~*<
     DATA.map.with_index do |element, i|

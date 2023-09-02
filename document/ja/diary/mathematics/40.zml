@@ -164,7 +164,7 @@
   >
   \p<
     形式理論における型 &m<`# A> がモナド型を表していて、&m<\tt|fun|<return> M> と &m<N `{ a \mapsto; M `}> はそれぞれモナドの return と bind に対応するものである。
-    &m<N `{ a \mapsto; M `}> の代わりに &m<M \g|bin|<\gt|ord|; \s|t="-thk"|; \gt|ord|; \s|t="-vthk"|; \eq|ord|;> \rm<`l> a. \sfun; N> と書けば、 Haskell に慣れている人にとって意図が分かりやすいであろう。
+    &m<N `{ a \mapsto; M `}> の代わりに &m<M \g|bin|<\gt|ord|; \s|t="-thk"|; \gt|ord|; \s|t="-vthk"|; \eq|ord|;> \rm<`l> a. \sfun; N> と書けば、Haskell に慣れている人にとって意図が分かりやすいであろう。
     また、等号の定義の最後の 3 つの式は、モナド則を表現している。
   >
   \p<

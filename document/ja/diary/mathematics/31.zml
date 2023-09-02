@@ -101,7 +101,7 @@
     と書く。
     また、余代数 &m<(C, `d, `e) > の元 &m<c> に対しては、&m<C \otimes; C> の元 &m<`d (c)> が定まる。
     テンソル積の定義によって、この元は &m<C> の元 2 つのテンソル積の有限和で書くことができる。
-    その表示を、 
+    その表示を、
     &mb<
       \sum<c> (\sb<c><(1)> \otimes; \sb<c><(2)>) \coloneqq; `d (c)
     >
@@ -369,7 +369,7 @@
   >
   \prf<
     \p<
-      作用 &m<\sp<C><*> \curverarr; \sp<C><**>> を、 
+      作用 &m<\sp<C><*> \curverarr; \sp<C><**>> を、
       &mb<
         \array|align="rrcl"|<
           \c<\cdot;:> \c<\sp<C><*> \times; \sp<C><**>> \c<\longto;> \c<\sp<C><**>> \br;

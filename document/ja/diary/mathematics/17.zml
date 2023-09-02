@@ -122,7 +122,7 @@
     >
   >
   \p<
-    すなわち、関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Set>> に対し、&m<F \circ; U: \bfrm<El> (W) \to; \scr<C>> の極限は、&m<\scr<C>> の対象 &m<L> であって、任意の &m<\scr<C>> の対象 &m<A> に対し、 
+    すなわち、関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Set>> に対し、&m<F \circ; U: \bfrm<El> (W) \to; \scr<C>> の極限は、&m<\scr<C>> の対象 &m<L> であって、任意の &m<\scr<C>> の対象 &m<A> に対し、
     &mb<
       \sb<\op<Hom>><\scr<C>> (A, L) \cong; \sb<\op<Nat>><\scr<J> \to; \bfrm<Set>> (W, \op<Hom> (A, F \hyphen;))
     >
