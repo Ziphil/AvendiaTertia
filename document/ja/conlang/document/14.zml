@@ -17,9 +17,8 @@
     \tr<\td<経>\td<PRG, PROG>\td<経過相>>
     \tr<\td<完>\td<PRF, PERF>\td<完了相>>
     \tr<\td<継>\td<CNT, CONT>\td<継続相>>
-    \tr<\td<終>\td<TRM, TERM>\td<終了相>>
     \tr<\td<無>\td<IDF, INDF>\td<無相>>
-    \tr<\td<通>\td<NOR>\td<通常態>>
+    \tr<\td<常>\td<NOR>\td<通常態>>
     \tr<\td<補>\td<AJT>\td<補助態>>
   >
   \h1<助詞>
@@ -36,8 +35,10 @@
     \tr<\th<漢字>\th<英字>\th<意味>>
     \tr<\td<形>\td<ADJ>\td<形容詞>>
     \tr<\td<副>\td<ADV>\td<副詞>>
+    \tr<\td<述>\td<ADP>\td<連述詞>>
+    \tr<\td<特>\td<SPL>\td<特殊詞>>
     \tr<\td<否>\td<NEG>\td<否定>>
-    \tr<\td<非動修>\td<NVM>\td<非動詞修飾>>
+    \tr<\td<非動>\td<NVM>\td<非動詞修飾>>
     \tr<\td<疑>\td<INT>\td<疑問>>
     \tr<\td<節>\td<CMP, COMP>\td<節化>>
   >
