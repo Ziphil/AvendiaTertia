@@ -7,9 +7,9 @@
   \ver<7 代>
 
   \h1|tag="sdc"|<助詞句の構成>
-  \h2|tag="sdl"|<名詞を伴う助詞句>
+  \h2|tag="sdl"|<名詞や {kin} 節を伴う助詞句>
   \p<
-    名詞は必ず前に助詞を伴って助詞句となる。
+    名詞や {kin} 節は必ず前に助詞を伴って助詞句となる。
     このとき、助詞によって名詞の格が表される。
   >
   \xol<
@@ -176,7 +176,7 @@
   >
   \xol<
     \li|tag="1"|<\sh<{qetet te tazît vo fêd a qelad i tel, a dutel.}>\ja<昨日ここにいたのは私の弟で、私ではない。>>
-    \li|tag="12"|<\sh<{qetet te tazît vo fêd a qelad i tel ò dutel.}>\ja<昨日ここにいたのは私の弟で、私ではない。>>
+    \li|tag="2"|<\sh<{qetet te tazît vo fêd a qelad i tel ò dutel.}>\ja<昨日ここにいたのは私の弟で、私ではない。>>
   >
   \p<
     このうち、\box|tag="1"|; が二重助詞句を含む文で、\box|tag="2"|; がその 2 つの助詞句に置かれている名詞を {ò} で繋げて 1 つの助詞句にしたものである。
