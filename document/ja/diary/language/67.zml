@@ -1,0 +1,202 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<アッカド語学習ログ 24 — 1w 弱動詞>
+
+  \h1<日記 (2023 年 8 月 29 日)>
+  \p<
+    今日は、1w 弱動詞の活用を見ていきます。
+    弱同士の活用も大詰めです。
+  >
+  \p<
+    1w 弱動詞は、それが性質や状態を表すのか行為を表すのかで活用のパターンが変わります。
+    そこで、性質や状態を表す方を「状態動詞\fl<stative verb>」と呼び、行為を表す方を「動作動詞\fl<active verb>」と呼んで、両者を区別することにします。
+    なお、1w 弱状態動詞は常に [i] クラスで、1w 弱動作動詞は常に [a]`/[i] クラスなので、意味だけでなく形態でも両者を区別することができます。
+    1w 弱状態動詞の語根の代表例には √[w]-[r]-[q]「黄色くなる」を使い、1w 弱動作動詞の語根の代表例には √[w]-[l]-[d]「産む」を使います。
+  >
+  \p<
+    初めに G 型の活用についてです。
+    1w 弱状態動詞の G 型の活用は、定形活用では 1e 弱動詞と同じになり、非定形活用では強動詞と同じになります。
+    ただし、G 型完了相でのみ、[a] が [e] に変化しない 1a 弱動詞と同じ活用をすることがあります。
+  >
+  \side<
+    \table<
+      \caption<{warāqum} (G-1w 型)>
+      \tr<\th;\th|col="2"|<継>>
+      \tr<\th<三.単>\td<{irriq}>>
+      \tr<\th<二.男.単>\td<{terriq}>>
+      \tr<\th<二.女.単>\td<{terriqī}>>
+      \tr<\th<一.単>\td<{erriq}>>
+      \tr<\th<三.男.複>\td<{irriqū}>>
+      \tr<\th<三.女.複>\td<{irriqā}>>
+      \tr<\th<二.複>\td<{terriqā}>>
+      \tr<\th<一.複>\td<{nirriq}>>
+    >
+    \table<
+      \caption<{warāqum} (G-1w 型)>
+      \tr<\th;\th|col="2"|<完>>
+      \tr<\th<三.単>\td<{īteriq}`/{ītariq}>>
+      \tr<\th<二.男.単>\td<{tēteriq}`/{tātariq}>>
+      \tr<\th<二.女.単>\td<{tēterqī}`/{tātarqī}>>
+      \tr<\th<一.単>\td<{ēteriq}`/{ātariq}>>
+      \tr<\th<三.男.複>\td<{īterqū}`/{ītarqū}>>
+      \tr<\th<三.女.複>\td<{īterqā}`/{ītarqā}>>
+      \tr<\th<二.複>\td<{tēterqā}`/{tātarqā}>>
+      \tr<\th<一.複>\td<{nīteriq}`/{nītariq}>>
+    >
+    \table<
+      \caption<{warāqum} (G-1w 型)>
+      \tr<\th;\th|col="2"|<結>>
+      \tr<\th<三.単>\td<{īriq}>>
+      \tr<\th<二.男.単>\td<{tēriq}>>
+      \tr<\th<二.女.単>\td<{tēriqī}>>
+      \tr<\th<一.単>\td<{āriq}>>
+      \tr<\th<三.男.複>\td<{īriqū}>>
+      \tr<\th<三.女.複>\td<{īriqā}>>
+      \tr<\th<二.複>\td<{tēriqā}>>
+      \tr<\th<一.複>\td<{nīriq}>>
+    >
+  >
+  \table<
+    \caption<{warāqum} (G-1w 型)>
+    \tr<\th;\th<不>\th<分>\th<動形>>
+    \tr<\th<男.単.主>\td<{warāqum}>\td<{wāriqum}>\td<{warqum}>>
+  >
+  \p<
+    一方で、1w 弱動作動詞の G 型の活用は、ちょっと特殊な形になります。
+    G 型継続相の形は、基本的に 1a 弱動詞と同様になりますが、[w] の影響で活用接頭辞の [i-]`/[ta-]`/[a-]`/[ni-] が [u-]`/[tu-]`/[u-]`/[nu-] に変わります。
+  >
+  \table<
+    \caption<{walādum} (G-1w 型)>
+    \tr<\th;\th|col="2"|<継>>
+    \tr<\th<三.単>\td<{ullad}>>
+    \tr<\th<二.男.単>\td<{tullad}>>
+    \tr<\th<二.女.単>\td<{tulladī}>>
+    \tr<\th<一.単>\td<{ullad}>>
+    \tr<\th<三.男.複>\td<{ulladū}>>
+    \tr<\th<三.女.複>\td<{ulladā}>>
+    \tr<\th<二.複>\td<{tulladā}>>
+    \tr<\th<一.複>\td<{nullad}>>
+  >
+  \p<
+    G 型完了相の形は、完了相を表す [-ta-] の [t] が二重になり、1n 弱動詞のような見た目になります。
+    継続層のときと違い、活用接頭辞は [i-]`/[ta-]`/[a-]`/[ni-] のままです。
+  >
+  \table<
+    \caption<{walādum} (G-1w 型)>
+    \tr<\th;\th|col="2"|<継>>
+    \tr<\th<三.単>\td<{ittalad}>>
+    \tr<\th<二.男.単>\td<{tattalad}>>
+    \tr<\th<二.女.単>\td<{tattaldī}>>
+    \tr<\th<一.単>\td<{attalad}>>
+    \tr<\th<三.男.複>\td<{ittaldū}>>
+    \tr<\th<三.女.複>\td<{ittaldā}>>
+    \tr<\th<二.複>\td<{tattaldā}>>
+    \tr<\th<一.複>\td<{nittalad}>>
+  >
+  \p<
+    G 型完結相の形は、1a 弱動詞と同様でありつつも、活用接頭辞が [u-]`/[tu-]`/[u-]`/[nu-] になる点と、活用接頭辞の母音は短母音のままである点が異なります。
+  >
+  \table<
+    \caption<{walādum} (G-1w 型)>
+    \tr<\th;\th|col="2"|<継>>
+    \tr<\th<三.単>\td<{ulid}>>
+    \tr<\th<二.男.単>\td<{tulid}>>
+    \tr<\th<二.女.単>\td<{tuldī}>>
+    \tr<\th<一.単>\td<{ulid}>>
+    \tr<\th<三.男.複>\td<{uldū}>>
+    \tr<\th<三.女.複>\td<{uldā}>>
+    \tr<\th<二.複>\td<{tuldā}>>
+    \tr<\th<一.複>\td<{nulid}>>
+  >
+  \p<
+    G 型の非定形活用は、強動詞と同じです。
+  >
+  \table<
+    \caption<{walādum} (G-1w 型)>
+    \tr<\th;\th<不>\th<分>\th<動形>>
+    \tr<\th<男.単.主>\td<{walādum}>\td<{wālidum}>\td<{waldum}>>
+  >
+  \p<
+    続いて D 型の活用を見ていきましょう。
+    D 型の活用は簡単で、ほとんど強動詞と同じ形になり、完了相でだけ [-uw-] が [-ū-] に変わります。
+    なお、ここからは状態動詞と動作動詞の区別がなくなります。
+  >
+  \side<
+    \table<
+      \caption<{wurruqum} (D-1w 型)>
+      \tr<\th;\th|col="2"|<継>>
+      \tr<\th<三.単>\td<{uwarraq}>>
+      \tr<\th<二.男.単>\td<{tuwarraq}>>
+      \tr<\th<二.女.単>\td<{tuwarraqī}>>
+      \tr<\th<一.単>\td<{uwarraq}>>
+      \tr<\th<三.男.複>\td<{uwarrraqū}>>
+      \tr<\th<三.女.複>\td<{tuwarraqā}>>
+      \tr<\th<二.複>\td<{tuwarraqā}>>
+      \tr<\th<一.複>\td<{nuwarraq}>>
+    >
+    \table<
+      \caption<{wurruqum} (D-1w 型)>
+      \tr<\th;\th|col="2"|<完>>
+      \tr<\th<三.単>\td<{ūtarriq}>>
+      \tr<\th<二.男.単>\td<{tūtarriq}>>
+      \tr<\th<二.女.単>\td<{tūtarriqī}>>
+      \tr<\th<一.単>\td<{ūtarriq}>>
+      \tr<\th<三.男.複>\td<{ūtarriqū}>>
+      \tr<\th<三.女.複>\td<{ūtarriqā}>>
+      \tr<\th<二.複>\td<{tūtarriqā}>>
+      \tr<\th<一.複>\td<{nūtarriq}>>
+    >
+    \table<
+      \caption<{wurruqum} (D-1w 型)>
+      \tr<\th;\th|col="2"|<結>>
+      \tr<\th<三.単>\td<{uwarriq}>>
+      \tr<\th<二.男.単>\td<{tuwarriq}>>
+      \tr<\th<二.女.単>\td<{tuwarriqī}>>
+      \tr<\th<一.単>\td<{uwarriq}>>
+      \tr<\th<三.男.複>\td<{uwarriqū}>>
+      \tr<\th<三.女.複>\td<{uwarriqā}>>
+      \tr<\th<二.複>\td<{tuwarriqā}>>
+      \tr<\th<一.複>\td<{nuwarriq}>>
+    >
+  >
+  \table<
+    \caption<{wurruqum} (D-1w 型)>
+    \tr<\th;\th<不>\th<分>\th<動形>>
+    \tr<\th<男.単.主>\td<{wurruqum}>\td<{muwarriqum}>\td<{wurruqum}>>
+  >
+  \p<
+    続いて Š 型の活用ですが、これは 1a 弱動詞か 1e 弱動詞と同じになります。
+    どちらになるかは単語によります。
+    活用表は省略します。
+  >
+  \p<
+    最後に N 型の活用ですが、これは強動詞と同じです。
+    ただし、そもそも 1w 弱動詞の N 型はあまり確認されておらず、あったとしても継続相と完結相の形しかないようです。
+    規則通りなので、ここでも活用表は省略します。
+  >
+  \p<
+    ということで、以上が 1w 弱動詞の活用でした。
+    ややこしいのは G 型だけで、他はすでにやった活用とほぼ同じになります。
+    基本形の表も置いておきます。
+  >
+  \table<
+    \caption<√[w]-[r]-[q] (1w 弱語根)>
+    \tr<\th;\th<継続相>\th<完了相>\th<完結相>\th<不定詞>\th<分詞>\th<動形容詞>>
+    \tr<\th<G 型>\td<{irriq}>\td<{īteriq}`/{ītariq}>\td<{īriq}>\td<{warāqum}>\td<{wāriqum}>\td<{warqum}>>
+    \tr<\th<D 型>\td<{uwarraq}>\td<{ūtarriq}>\td<{uwarriq}>\td<{wurruqum}>\td<{muwarriqum}>\td<{wurruqum}>>
+    \tr<\th<Š 型>\td<{ušarraq}>\td<{uštāriq}>\td<{ušāriq}>\td<{šūruqum}>\td<{mušāriqum}>\td<{šūruqum}>>
+    \tr<\th<N 型>\td<{iwwarraq}>\td<>\td<{iwwariq}>\td<>\td<>\td<>>
+  >
+  \table<
+    \caption<√[w]-[l]-[d] (1w 弱語根)>
+    \tr<\th;\th<継続相>\th<完了相>\th<完結相>\th<不定詞>\th<分詞>\th<動形容詞>>
+    \tr<\th<G 型>\td<{ullad}>\td<{ittalad}>\td<{ulid}>\td<{warāqum}>\td<{wāriqum}>\td<{warqum}>>
+    \tr<\th<D 型>\td<{uwallad}>\td<{ūtallid}>\td<{uwallid}>\td<{wulludum}>\td<{muwallidum}>\td<{wulludum}>>
+    \tr<\th<Š 型>\td<{ušallad}>\td<{uštālid}>\td<{ušālid}>\td<{šūludum}>\td<{mušālidum}>\td<{šūludum}>>
+    \tr<\th<N 型>\td<{iwwallad}>\td<>\td<{iwwalid}>\td<>\td<>\td<>>
+  >
+
+>
