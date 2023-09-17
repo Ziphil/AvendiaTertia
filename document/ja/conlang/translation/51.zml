@@ -20,14 +20,12 @@
   \h2|id="aa"|<1-1>
   \xl<
     \li<
-      \sh<{a ʻalis, pôzac ovel ebam e'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.}>
+      \sh<{a ʻalis, pôzac ebam e'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.}>
       \ja<アリスは、お姉さんの近くで堤防の上に座ることにうんざりしていた上に、しなければならないことが何もなかった。>
       \gloss<
         &lig|auto="a"|;
         &lig<\sh<{ʻalis}>\ex<アリス>>
-        &lig|punc=","|;
         &lig|conj="-ac"|<\sh<{pôz}>\ex<うんざりする>>
-        &lig|conj="o-"|<\sh<{vel}>\ex<>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
         &lig|auto="e"|;
         &lig|auto="'n"|;
@@ -40,7 +38,6 @@
         &lig<\sh<{fîc}>\ex<近く>>
         &lig|auto="ca",conj="i-"|;
         &lig<\sh<{hinof}>\ex<姉>>
-        &lig|punc=","|;
         &lig<\sh<{lo}>\ex<そして>>
         &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
         &lig|auto="a"|;
@@ -52,7 +49,6 @@
         &lig|auto="e"|;
         &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|punc="."|;
       >
     >
   >
@@ -65,11 +61,8 @@
     シャレイア語で物語を描写するときは、過去に起こった話として記述するというより、物語の進行と並行して記述していくというイメージがあるので、現在時制を使うのである。
   >
   \p<
-    {bam} は副詞として使うと形容詞か副詞しか修飾できないので、今回のように動詞を修飾させたい場合は、{vel} を介して {ovel ebam} という形で修飾する。
-    この {vel} に特に意味はなく、形容詞と副詞のみを修飾する副詞を動詞に修飾させたいときに間に入れる、いわば機能語のようなものである。
-  >
-  \p<
-    {dozat lesas} の部分は {doz} が助動詞的用法になっていて、もともとは {dozat e kin lesas} という形で、{e kin} の部分が省略されている。
+    {dozat lesas} の部分は {doz} が助動詞的用法になっている。
+    もともとは {dozat e kin lesas} という形で、{e kin} の部分が省略されている。
   >
   \h2|id="ab"|<1-2>
   \xl<
@@ -93,7 +86,6 @@
         &lig|auto="e"|;
         &lig|auto="a"|;
         &lig<\sh<{hinof}>\ex<姉>>
-        &lig|punc=","|;
         &lig<\sh<{dà}>\ex<しかし>>
         &lig|conj="du-at"|<\sh<{kav}>\ex<もつ>>
         &lig|auto="a"|;
@@ -102,13 +94,12 @@
         &lig<\sh<{qinat}>\ex<絵>>
         &lig<\sh<{o}>\ex<と>>
         &lig<\sh<{lek}>\ex<会話>>
-        &lig|punc="."|;
       >
     >
   >
   \p<
-    {tal} は「～回」を表す単語だが、単位名詞ではないので後ろに直接数詞を置くことはできない。
-    したがって、{tal atis} などとするのは間違いで、{tal al'atis} とする必要がある。
+    {tal} は「～回」を表す単語だが、これは単位名詞ではないので後ろに数詞を直接置くことはできない。
+    したがって、{tal atis} などとするのは不自然で、{tal al'atis} とする必要がある。
   >
   \h2|id="ac"|<1-3>
   \xl<
@@ -117,11 +108,9 @@
       \ja<そして、彼女は思った。>
       \gloss<
         &lig<\sh<{lo}>\ex<そして>>
-        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{rev}>\ex<思う>>
         &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|punc="."|;
       >
     >
   >
@@ -143,47 +132,41 @@
         &lig<\sh<{qinat}>\ex<絵>>
         &lig<\sh<{o}>\ex<と>>
         &lig<\sh<{lek}>\ex<会話>>
-        &lig|punc="?"|;
       >
     >
   >
   \p<
     「絵も会話もない」において「絵」と「会話」を繋ぐ接続詞には {o} を使う。
-    英語では or が使われているので、それに引きづられて {é} を使わないように注意。
+    英語ではこのような場面では or が使われているので、それに引きづられて {é} を使わないように注意。
   >
   \h1<第 2 段落>
   \h2|id="ba"|<2-1>
   \xl<
     \li<
-      \sh<{ce, soxas a ces qi soxot — duqifat lîgifas a's e cal, vade meberad o folnasad ovel ebam a's li zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.}>
+      \sh<{ce, soxas a ces qi soxot — duqifat lîgifas a's e cal, vade meberad o folnasad ebam a's li zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.}>
       \ja<そして、彼女は頭の中で考えた――暑さが彼女をとても眠くさせぼーっとさせていたので、それに集中することはできなかった――立ち上がってヒナギクの輪を作るためにヒナギクを拾うことに価値があるのかどうかを。>
       \gloss<
         &lig<\sh<{ce}>\ex<そして>>
-        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{sox}>\ex<考える>>
         &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
         &lig<\sh<{qi}>\ex<～で>>
         &lig<\sh<{soxot}>\ex<理性>>
-        &lig<\sh<{—}>>
         &lig|conj="du-at"|<\sh<{qif}>\ex<できるようにする>>
         &lig|conj="-as"|<\sh<{lîgif}>\ex<集中する>>
         &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
         &lig|auto="e"|;
         &lig<\sh<{cal}>\ex<そのこと>>
-        &lig|punc=","|;
         &lig<\sh<{vade}>\ex<～なので>>
         &lig|conj="-ad"|<\sh<{meber}>\ex<眠くなる>>
         &lig<\sh<{o}>\ex<そして>>
         &lig|conj="-ad"|<\sh<{folnas}>\ex<ぼーっとする>>
-        &lig|conj="o-"|<\sh<{vel}>\ex<>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
         &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
         &lig|auto="li"|;
         &lig<\sh<{zalnat}>\ex<熱気>>
-        &lig<\sh<{—}>>
         &lig|auto="e"|;
         &lig|auto="'n"|;
         &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
@@ -210,7 +193,6 @@
         &lig<\sh<{lîs}>\ex<輪>>
         &lig|auto="zi"|;
         &lig<\sh<{met}>\ex<それ>>
-        &lig|punc="."|;
       >
     >
   >
@@ -237,7 +219,6 @@
       \gloss<
         &lig<\sh<{te}>\ex<～するとき>>
         &lig<\sh<{cal}>\ex<そのこと>>
-        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{cák}>\ex<来る>>
         &lig|conj="o-"|<\sh<{bâl}>\ex<突然>>
         &lig<\sh<{cife}>\ex<～しながら>>
@@ -254,7 +235,6 @@
         &lig|auto="e"|;
         &lig<\sh<{lisaz}>\ex<目>>
         &lig|conj="a-"|<\sh<{hafas}>\ex<ピンクの>>
-        &lig|punc="."|;
       >
     >
   >
@@ -279,7 +259,6 @@
         &lig|auto="e"|;
         &lig|conj="a-"|<\sh<{niszaz}>\ex<驚くべき>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
-        &lig|punc="."|;
       >
     >
   >
@@ -299,7 +278,6 @@
         &lig|auto="e"|;
         &lig|conj="a-"|<\sh<{tùk}>\ex<異常な>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
-        &lig<\sh<{—}>>
         &lig|conj="-is"|<\sh<{fedak}>\ex<気づく>>
         &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
@@ -318,7 +296,6 @@
         &lig<\sh<{cal}>\ex<そのこと>>
         &lig<\sh<{te}>\ex<～のときに>>
         &lig<\sh<{càd}>\ex<後>>
-        &lig|punc=","|;
         &lig<\sh<{dà}>\ex<しかし>>
         &lig|conj="-at"|<\sh<{sal}>\ex<である>>
         &lig<\sh<{te}>\ex<～するとき>>
@@ -331,14 +308,12 @@
         &lig|conj="e-"|<\sh<{koz}>\ex<まさに>>
         &lig|conj="i-"|<\sh<{tazi}>\ex<～にとって>>
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig<\sh<{—}>>
         &lig|auto="a"|;
         &lig|auto="kin"|;
         &lig|conj="-as"|<\sh<{tufos}>\ex<呟く>>
         &lig|auto="a"|;
         &lig<\sh<{hapet}>\ex<ウサギ>>
         &lig|conj="a-"|<\sh<{cik}>\ex<その>>
-        &lig|punc="."|;
       >
     >
   >
@@ -358,12 +333,10 @@
       \ja<ああ、どうするのが良いのだろう?>
       \gloss<
         &lig<\sh<{â}>\ex<ああ>>
-        &lig|punc=","|;
         &lig|auto="pa"|;
         &lig|conj="-at"|<\sh<{sav}>\ex<する方が良くする>>
         &lig|auto="e"|;
         &lig<\sh<{pil}>\ex<どんなこと>>
-        &lig|punc="?"|;
       >
     >
   >
@@ -397,7 +370,6 @@
         &lig<\sh<{sevlat}>\ex<チョッキ>>
         &lig|auto="e"|;
         &lig<\sh<{sokiq}>\ex<懐中時計>>
-        &lig|punc=","|;
         &lig<\sh<{ce}>\ex<そして>>
         &lig|conj="-as"|<\sh<{lic}>\ex<見る>>
         &lig|auto="a"|;
@@ -405,7 +377,6 @@
         &lig|auto="e"|;
         &lig<\sh<{sokiq}>\ex<懐中時計>>
         &lig|conj="a-"|<\sh<{cik}>\ex<その>>
-        &lig|punc=","|;
         &lig<\sh<{ce}>\ex<そして>>
         &lig|conj="-as"|<\sh<{fôc}>\ex<始める>>
         &lig|conj="-as"|<\sh<{vilis}>\ex<走る>>
@@ -413,7 +384,6 @@
         &lig|conj="o-"|<\sh<{fev}>\ex<すぐに>>
         &lig|auto="a"|;
         &lig<\sh<{'t}>\ex<それ>>
-        &lig|punc="."|;
       >
     >
   >
@@ -447,11 +417,9 @@
         &lig|auto="a"|;
         &lig|auto="e"|;
         &lig<\sh<{sokiq}>\ex<懐中時計>>
-        &lig|punc=","|;
         &lig|conj="-af"|<\sh<{cat}>\ex<歩く>>
         &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|punc="."|;
       >
     >
   >
@@ -469,7 +437,7 @@
   \h2|id="cg"|<3-7>
   \xl<
     \li<
-      \sh<{fa delizac a ces zi caxel, dilsizas a ces e nalvaf so zizetis a's ca cit.}>
+      \sh<{fa delizac a ces zi caxel, dilsizas a's e nalvaf so zizetis a's ca cit.}>
       \ja<彼女は好奇心に従って、それを追うために野原を横切った。>
       \gloss<
         &lig<\sh<{fa}>\ex<～しながら>>
@@ -478,10 +446,9 @@
         &lig<\sh<{ces}>\ex<彼女>>
         &lig|auto="zi"|;
         &lig<\sh<{caxel}>\ex<好奇心>>
-        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{dilsiz}>\ex<横切る>>
         &lig|auto="a"|;
-        &lig<\sh<{ces}>\ex<彼女>>
+        &lig<\sh<{'s}>\ex<彼女>>
         &lig|auto="e"|;
         &lig<\sh<{nalvaf}>\ex<野原>>
         &lig<\sh<{so}>\ex<～するために>>
@@ -490,7 +457,6 @@
         &lig<\sh<{'s}>\ex<彼女>>
         &lig|auto="ca"|;
         &lig<\sh<{cit}>\ex<それ>>
-        &lig|punc="."|;
       >
     >
   >
@@ -501,7 +467,6 @@
       \ja<幸運にも、彼女は生け垣の下の大きなウサギの巣穴にそれが入るのを見ることができた。>
       \gloss<
         &lig|conj="o-"|<\sh<{nistecaf}>\ex<幸運にも>>
-        &lig|punc=","|;
         &lig|conj="-at"|<\sh<{qif}>\ex<できるようにする>>
         &lig|conj="-as"|<\sh<{lic}>\ex<見る>>
         &lig|auto="a"|;
@@ -520,7 +485,6 @@
         &lig<\sh<{fîcdem}>\ex<下>>
         &lig|conj="i-",auto="zi"|;
         &lig<\sh<{nátalkìd}>\ex<生け垣>>
-        &lig|punc="."|;
       >
     >
   >
@@ -529,19 +493,17 @@
   \xl<
     \li<
       \sh<{te tesil acál, fodlisas a ʻalis ca filot acik, fa vomac soxos odum a ces e kin fovalis qi pil a's zi cêd.}>
-      \ja<>
+      \ja<次の瞬間、彼女はどうやってそこから出るのか全く考えずに、アリスは穴に飛び込んだ。>
       \gloss<
         &lig<\sh<{te}>\ex<～のときに>>
         &lig<\sh<{tesil}>\ex<瞬間>>
         &lig|conj="a-"|<\sh<{cál}>\ex<次の>>
-        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{fodlis}>\ex<飛び込む>>
         &lig|auto="a"|;
         &lig<\sh<{ʻalis}>\ex<アリス>>
         &lig|auto="ca"|;
         &lig<\sh<{filot}>\ex<穴>>
         &lig|conj="a-"|<\sh<{cik}>\ex<その>>
-        &lig|punc=","|;
         &lig<\sh<{fa}>\ex<～しながら>>
         &lig|conj="-es"|<\sh<{vom}>\ex<繰り返す>>
         &lig|conj="-os"|<\sh<{sox}>\ex<考える>>
@@ -557,7 +519,6 @@
         &lig<\sh<{'s}>\ex<彼女>>
         &lig|auto="zi"|;
         &lig<\sh<{cêd}>\ex<そこ>>
-        &lig|punc="."|;
       >
     >
   >
