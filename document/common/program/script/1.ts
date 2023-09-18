@@ -245,4 +245,4 @@ export class Executor extends BaseExecutor {
 }
 
 
-Executor.regsiter();
+Executor.register();

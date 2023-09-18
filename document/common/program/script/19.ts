@@ -51,4 +51,4 @@ export class Executor extends BaseExecutor {
 }
 
 
-Executor.regsiter("load");
+Executor.register("load");

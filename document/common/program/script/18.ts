@@ -101,7 +101,7 @@ export class Executor extends BaseExecutor {
   private searchWord(name: string): Word | null {
     const dictionary = this.dictionary;
     if (dictionary !== undefined) {
-      const parameter = new NormalParameter(name, "name", "exact", "ja", {diacritic: false, case: false});
+      const parameter = new NormalParameter(name, "name", "exact", "ja", {diacritic: false, case: false, space: false, wave: false});
       const result = dictionary.search(parameter);
       const word = result.words[0];
       if (word) {
@@ -109,7 +109,7 @@ export class Executor extends BaseExecutor {
       } else {
         if (result.suggestions.length > 0 && result.suggestions[0].kind !== "revision") {
           const suggestion = result.suggestions[0];
-          const suggestedParameter = new NormalParameter(suggestion.names[0], "name", "exact", "ja", {diacritic: false, case: false});
+          const suggestedParameter = new NormalParameter(suggestion.names[0], "name", "exact", "ja", {diacritic: false, case: false, space: false, wave: false});
           const suggestedResult = dictionary.search(suggestedParameter);
           const suggestedWord = suggestedResult.words[0];
           if (suggestedWord) {
@@ -188,4 +188,4 @@ export class Executor extends BaseExecutor {
 }
 
 
-Executor.regsiter();
+Executor.register();

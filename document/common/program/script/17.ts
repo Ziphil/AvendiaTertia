@@ -28,4 +28,4 @@ export class Executor extends BaseExecutor {
 }
 
 
-Executor.regsiter("direct");
+Executor.register("direct");
