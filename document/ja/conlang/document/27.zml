@@ -1,0 +1,56 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Web ページ外の資料>
+  \ver<7 代>
+
+  \h1<概要>
+  \h2<紙資料>
+  \p<
+    紙媒体に手書きで記された資料。
+  >
+  \table<
+    \tr<\th<符号>\th<形式>\th<ページ数>\th<期間>>
+    \tr<\td<PA.I>\td<手帳ノート>\td<96 ページ>\td<\h<930> ～ \h<956>>>
+    \tr<\td<PA.II>\td<手帳ノート>\td<96 ページ>\td<\h<959> ～ \h<1050>>>
+    \tr<\td<PA.III>\td<手帳ノート>\td<54 ページ>\td<\h<1050> ～ \h<1112>>>
+    \tr<\td<PB>\td<リングノート>\td<86 ページ (78 枚)>\td<\h<1122> ～ \h<1280>>>
+    \tr<\td<PC>\td<ルーズリーフ>\td<66 ページ (66 枚)>\td<\h<1281> ～ \h<1408>>>
+    \tr<\td<PD.I>\td<ルーズリーフ>\td<36 ページ (18 枚)>\td<\h<1414> ～ \h<2343>>>
+    \tr<\td<PD.II>\td<ルーズリーフ>\td<34 ページ (17 枚)>\td<\h<1351> ～ \h<2308>>>
+    \tr<\td<PD.III>\td<ルーズリーフ>\td<2 ページ (2 枚)>\td<\h<1545> ～ \h<1568>>>
+  >
+  \h2<ファイル>
+  \todo<
+    調査中です。
+  >
+  \h2<電子ノートの手書き資料>
+  \p<
+    iOS の電子ノートアプリ『Goodnotes』上で管理されている手書き資料。
+  >
+  \table<
+    \tr<\th<符号>\th<タイトル>\th<ページ数>\th<期間>>
+    \tr<\td<GG>\td<Général>\td<使用中>\td<使用中>>
+    \tr<\td<GT.Flq>\td<T `/ Fluquor>\td<6 ページ>\td<\h<2974> ～ \h<2976>>>
+    \tr<\td<GT.Mys>\td<T `/ Myosotis>\td<6 ページ>\td<\h<3807> ～ \h<3805>>>
+    \tr<\td<GT.Cil>\td<T `/ Le ciel n'est pas embrasé>\td<13 ページ>\td<\h<3409> ～ \h<3473>>>
+    \tr<\td<GT.Drn>\td<T `/ La dernière musique>\td<21 ページ>\td<\h<3843> ～ \h<3871>>>
+  >
+  \h1<詳細>
+  \h2|id="pai"|<PA.I>
+  \h2|id="paii"|<PA.II>
+  \h2|id="paiii"|<PA.III>
+  \h2|id="pb"|<PB>
+  \h2|id="pc"|<PC>
+  \h2|id="pdi"|<PD.I>
+  \h2|id="pdii"|<PD.II>
+  \h2|id="pdiii"|<PD.III>
+  \h2|id="g"|<GG>
+  \h2|id="tflq"|<GT.Flq>
+  \h2|id="tmys"|<GT.Mys>
+  \h2|id="tcil"|<G.Cil>
+  \h2|id="tdrn"|<G.Drn>
+
+>
