@@ -9,26 +9,26 @@
   \h1<一覧>
   \table<
     \tr<\th<>\th<項目>\th<値>>
-    \tr<\td<1A>\td<\ae|href="https://wals.info/chapter/1"|<Consonant inventories>>\td<Average (22～23)>>
-    \tr<\td<2A>\td<\ae|href="https://wals.info/chapter/2"|<Vowel quality inventories>>\td<Average (5)>>
-    \tr<\td<3A>\td<\ae|href="https://wals.info/chapter/3"|<Consonant-vowel ratio>>\td<Average (4.4～4.6)>>
-    \tr<\td<4A>\td<\ae|href="https://wals.info/chapter/4"|<Voicing in plosives and fricatives>>\td<In both plosives and fricatives>>
-    \tr<\td<5A>\td<\ae|href="https://wals.info/chapter/5"|<Voicing and gaps in plosive systems>>\td<None missing>>
-    \tr<\td<6A>\td<\ae|href="https://wals.info/chapter/6"|<Uvular consonants>>\td<Uvular continuants only>>
-    \tr<\td<7A>\td<\ae|href="https://wals.info/chapter/7"|<Glottalized consonants>>\td<None>>
-    \tr<\td<8A>\td<\ae|href="https://wals.info/chapter/8"|<Lateral consonants>>\td<With `/l`/, no obstruent laterals>>
-    \tr<\td<9A>\td<\ae|href="https://wals.info/chapter/9"|<>>\td<>>
-    \tr<\td<10A>\td<\ae|href="https://wals.info/chapter/10"|<>>\td<>>
-    \tr<\td<11A>\td<\ae|href="https://wals.info/chapter/11"|<>>\td<>>
-    \tr<\td<12A>\td<\ae|href="https://wals.info/chapter/12"|<>>\td<>>
-    \tr<\td<13A>\td<\ae|href="https://wals.info/chapter/13"|<>>\td<>>
-    \tr<\td<14A>\td<\ae|href="https://wals.info/chapter/14"|<>>\td<>>
-    \tr<\td<15A>\td<\ae|href="https://wals.info/chapter/15"|<>>\td<>>
-    \tr<\td<16A>\td<\ae|href="https://wals.info/chapter/16"|<>>\td<>>
-    \tr<\td<17A>\td<\ae|href="https://wals.info/chapter/17"|<>>\td<>>
-    \tr<\td<18A>\td<\ae|href="https://wals.info/chapter/18"|<>>\td<>>
-    \tr<\td<19A>\td<\ae|href="https://wals.info/chapter/19"|<>>\td<>>
-    \tr<\td<20A>\td<\ae|href="https://wals.info/chapter/20"|<>>\td<>>
+    \tr<\td<1A>\td<\ae|href="#1"|<Consonant inventories>>\td<Average (22～23)>>
+    \tr<\td<2A>\td<\ae|href="#2"|<Vowel quality inventories>>\td<Average (5)>>
+    \tr<\td<3A>\td<\ae|href="#3"|<Consonant-vowel ratio>>\td<Average (4.4～4.6)>>
+    \tr<\td<4A>\td<\ae|href="#4"|<Voicing in plosives and fricatives>>\td<In both plosives and fricatives>>
+    \tr<\td<5A>\td<\ae|href="#5"|<Voicing and gaps in plosive systems>>\td<None missing in `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/>>
+    \tr<\td<6A>\td<\ae|href="#6"|<Uvular consonants>>\td<Uvular continuants only>>
+    \tr<\td<7A>\td<\ae|href="#7"|<Glottalized consonants>>\td<No glottalized consonants>>
+    \tr<\td<8A>\td<\ae|href="#8"|<Lateral consonants>>\td<With `/l`/, no obstruent laterals>>
+    \tr<\td<9A>\td<\ae|href="#9"|<The velar nasal>>\td<No velar nasal>>
+    \tr<\td<10A>\td<\ae|href="#10"|<Vowel nasalization>>\td<Contrastive nasal vowels absent>>
+    \tr<\td<11A>\td<\ae|href="#11"|<Front rounded vowels>>\td<None>>
+    \tr<\td<12A>\td<\ae|href="#12"|<Syllable structure>>\td<Moderately complex syllable structure>>
+    \tr<\td<13A>\td<\ae|href="#13"|<Tone>>\td<No tones>>
+    \tr<\td<14A>\td<\ae|href="#14"|<>>\td<>>
+    \tr<\td<15A>\td<\ae|href="#15"|<>>\td<>>
+    \tr<\td<16A>\td<\ae|href="#16"|<>>\td<>>
+    \tr<\td<17A>\td<\ae|href="#17"|<>>\td<>>
+    \tr<\td<18A>\td<\ae|href="#18"|<>>\td<>>
+    \tr<\td<19A>\td<\ae|href="#19"|<>>\td<>>
+    \tr<\td<20A>\td<\ae|href="#20"|<>>\td<>>
   >
   \h1<概要>
   \h2|id="1"|<Consonant inventories>
@@ -43,7 +43,7 @@
   >
   \h2|id="3"|<Consonant-vowel ratio>
   \p<
-    子音音素と母音音質の割合は 4.4～4.6。
+    子音音素と母音音質の比率は 4.4～4.6。
     `/w`/ を音素に入れないのであれば 4.4 で、入れるのであれば 4.6 となる。
   >
   \p<
@@ -69,6 +69,28 @@
   \h2|id="8"|<Lateral consonants>
   \p<
     側面音として `/l`/ をもつが、側面阻害音はもたない。
+  >
+  \h2|id="9"|<The velar nasal>
+  \p<
+    軟口蓋音はもたない。
+    さらに、音素に `/n`/ をもつが、これは `/k`/ や `/ɡ`/ などの軟口蓋音の前でも `[ŋ`] に同化しない。
+  >
+  \h2|id="10"|<Vowel nasalization>
+  \p<
+    鼻母音と口母音の区別はもたない。
+  >
+  \h2|id="11"|<Front rounded vowels>
+  \p<
+    前舌円唇母音はもたない。
+  >
+  \h2|id="12"|<Syllable structure>
+  \p<
+    可能な音節は V, CV, VC, CVC のみで、音節内で子音が 2 個以上連続することはない。
+    また、母音から始まる V, VC は稀である。
+  >
+  \h2|id="13"|<Tone>
+  \p<
+    声調の区別はもたない。
   >
 
 >
