@@ -9,39 +9,39 @@
   \h1<一覧>
   \table<
     \tr<\th<>\th<項目>\th<値>>
-    \tr<\td<1A>\td<\ae|href="#1"|<Consonant inventories>>\td<Average (22～23)>>
-    \tr<\td<2A>\td<\ae|href="#2"|<Vowel quality inventories>>\td<Average (5)>>
-    \tr<\td<3A>\td<\ae|href="#3"|<Consonant-vowel ratio>>\td<Average (4.4～4.6)>>
-    \tr<\td<4A>\td<\ae|href="#4"|<Voicing in plosives and fricatives>>\td<In both plosives and fricatives>>
-    \tr<\td<5A>\td<\ae|href="#5"|<Voicing and gaps in plosive systems>>\td<None missing in `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/>>
-    \tr<\td<6A>\td<\ae|href="#6"|<Uvular consonants>>\td<Uvular continuants only>>
-    \tr<\td<7A>\td<\ae|href="#7"|<Glottalized consonants>>\td<No glottalized consonants>>
-    \tr<\td<8A>\td<\ae|href="#8"|<Lateral consonants>>\td<With `/l`/, no obstruent laterals>>
-    \tr<\td<9A>\td<\ae|href="#9"|<The velar nasal>>\td<No velar nasal>>
-    \tr<\td<10A>\td<\ae|href="#10"|<Vowel nasalization>>\td<Contrastive nasal vowels absent>>
-    \tr<\td<11A>\td<\ae|href="#11"|<Front rounded vowels>>\td<None>>
-    \tr<\td<12A>\td<\ae|href="#12"|<Syllable structure>>\td<Moderately complex syllable structure>>
-    \tr<\td<13A>\td<\ae|href="#13"|<Tone>>\td<No tones>>
-    \tr<\td<14A>\td<\ae|href="#14"|<>>\td<>>
-    \tr<\td<15A>\td<\ae|href="#15"|<>>\td<>>
-    \tr<\td<16A>\td<\ae|href="#16"|<>>\td<>>
-    \tr<\td<17A>\td<\ae|href="#17"|<>>\td<>>
-    \tr<\td<18A>\td<\ae|href="#18"|<>>\td<>>
-    \tr<\td<19A>\td<\ae|href="#19"|<>>\td<>>
-    \tr<\td<20A>\td<\ae|href="#20"|<>>\td<>>
+    \tr<\td<1A>\td<\a|href="#1"|<Consonant inventories>>\td<Average>>
+    \tr<\td<2A>\td<\a|href="#2"|<Vowel quality inventories>>\td<Average>>
+    \tr<\td<3A>\td<\a|href="#3"|<Consonant-vowel ratio>>\td<Average>>
+    \tr<\td<4A>\td<\a|href="#4"|<Voicing in plosives and fricatives>>\td<In both plosives and fricatives>>
+    \tr<\td<5A>\td<\a|href="#5"|<Voicing and gaps in plosive systems>>\td<None missing in `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/>>
+    \tr<\td<6A>\td<\a|href="#6"|<Uvular consonants>>\td<Uvular continuants only>>
+    \tr<\td<7A>\td<\a|href="#7"|<Glottalized consonants>>\td<No glottalized consonants>>
+    \tr<\td<8A>\td<\a|href="#8"|<Lateral consonants>>\td<With `/l`/, no obstruent laterals>>
+    \tr<\td<9A>\td<\a|href="#9"|<The velar nasal>>\td<No velar nasal>>
+    \tr<\td<10A>\td<\a|href="#10"|<Vowel nasalization>>\td<Contrastive nasal vowels absent>>
+    \tr<\td<11A>\td<\a|href="#11"|<Front rounded vowels>>\td<None>>
+    \tr<\td<12A>\td<\a|href="#12"|<Syllable structure>>\td<Moderately complex syllable structure>>
+    \tr<\td<13A>\td<\a|href="#13"|<Tone>>\td<No tones>>
+    \tr<\td<14A>\td<\a|href="#14"|<Fixed stress locations>>\td<Ultimate>>
+    \tr<\td<15A>\td<\a|href="#15"|<Weight-sensitive stress>>\td<Fixed stress>>
+    \tr<\td<16A>\td<\a|href="#16"|<Weight factors in weight-sensitive stress systems>>\td<No weight>>
+    \tr<\td<17A>\td<\a|href="#17"|<Rhythm types>>\td<>>
+    \tr<\td<18A>\td<\a|href="#18"|<Absence of common consonants>>\td<All present>>
+    \tr<\td<19A>\td<\a|href="#19"|<Presence of uncommon consonants>>\td<“Th” sounds>>
+    \tr<\td<20A>\td<\a|href="#20"|<>>\td<>>
   >
   \h1<概要>
-  \h2|id="1"|<Consonant inventories>
+  \h2|id="1"|<1A: Consonant inventories>
   \p<
     子音音素は 22 個～ 23 個。
     子音文字は 20 個だが、[l] と [n] は 2 つの音素を表すため、子音音素は 22 個となる。
     また、外来語などにおいて [u] と他の母音が連続したときに間に挿入されることがある `/w`/ を音素として数えれば、23 個となる。
   >
-  \h2|id="2"|<Vowel quality inventories>
+  \h2|id="2"|<2A: Vowel quality inventories>
   \p<
     母音音質の種類は 5 種類。
   >
-  \h2|id="3"|<Consonant-vowel ratio>
+  \h2|id="3"|<3A: Consonant-vowel ratio>
   \p<
     子音音素と母音音質の比率は 4.4～4.6。
     `/w`/ を音素に入れないのであれば 4.4 で、入れるのであれば 4.6 となる。
@@ -50,47 +50,73 @@
     なお、Average と Moderately high の境界が 4.5 に設定されているため、`/w`/ を音素として認めるか否かで分類が変わってしまう。
     ここでは、`/w`/ が現れる頻度が非常に低いため、`/w`/ を音素に入れない場合の値である 4.4 を採用し、Average に分類した。
   >
-  \h2|id="4"|<Voicing in plosives and fricatives>
+  \h2|id="4"|<4A: Voicing in plosives and fricatives>
   \p<
     破裂音と摩擦音の両方について有声無声の区別がある。
   >
-  \h2|id="5"|<Voicing and gaps in plosive systems>
+  \h2|id="5"|<5A: Voicing and gaps in plosive systems>
   \p<
     `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/ を全て音素として区別する。
   >
-  \h2|id="6"|<Uvular consonants>
+  \h2|id="6"|<6A: Uvular consonants>
   \p<
     口蓋垂音として `/ɴ`/ をもつ。
   >
-  \h2|id="7"|<Glottalized consonants>
+  \h2|id="7"|<7A: Glottalized consonants>
   \p<
     声門化子音はもたない。
   >
-  \h2|id="8"|<Lateral consonants>
+  \h2|id="8"|<8A: Lateral consonants>
   \p<
     側面音として `/l`/ をもつが、側面阻害音はもたない。
   >
-  \h2|id="9"|<The velar nasal>
+  \h2|id="9"|<9A: The velar nasal>
   \p<
     軟口蓋音はもたない。
     さらに、音素に `/n`/ をもつが、これは `/k`/ や `/ɡ`/ などの軟口蓋音の前でも `[ŋ`] に同化しない。
   >
-  \h2|id="10"|<Vowel nasalization>
+  \h2|id="10"|<10A: Vowel nasalization>
   \p<
     鼻母音と口母音の区別はもたない。
   >
-  \h2|id="11"|<Front rounded vowels>
+  \h2|id="11"|<11A: Front rounded vowels>
   \p<
     前舌円唇母音はもたない。
   >
-  \h2|id="12"|<Syllable structure>
+  \h2|id="12"|<12A: Syllable structure>
   \p<
     可能な音節は V, CV, VC, CVC のみで、音節内で子音が 2 個以上連続することはない。
     また、母音から始まる V, VC は稀である。
   >
-  \h2|id="13"|<Tone>
+  \h2|id="13"|<13A: Tone>
   \p<
     声調の区別はもたない。
+  >
+  \h2|id="14"|<14A: Fixed stress locations>
+  \p<
+    アクセント位置は固定で、常に語幹の最後の音節に置かれる。
+    ここで、活用形の最後の音節ではなく、語幹の最後の音節であることには注意。
+    単語が動詞として使われる場合は、語幹の後に 1 音節の活用接尾辞が付くので、結果的に最後から 2 番目の音節に置かれることになる。
+  >
+  \h2|id="15"|<15A: Weight-sensitive stress>
+  \p<
+    アクセント位置は常に語幹の最後の音節であり、音節の重さによって変わることはない。
+  >
+  \h2|id="16"|<16A: Weight factors in weight-sensitive stress systems>
+  \p<
+    \a|href="#15"|<15A: Weight-sensitive stress> の通り、音節の重さによるアクセント位置の変化はない。
+  >
+  \h2|id="18"|<18A: Absence of common consonants>
+  \p<
+    両唇音と摩擦音と鼻音を全てもち、具体的には以下の音素をもつ。
+    両唇音としては `/p`/, `/b`/, `/m`/ を区別する。
+    摩擦音は多く `/f`/, `/v`/, `/θ`/, `/ð`/, `/s`/, `/z`/, `/ʃ`/, `/ʒ`/ を区別する。
+    鼻音は `/n`/, `/m`/, `/ɴ`/ を区別する。
+  >
+  \h2|id="19"|<19A: Presence of uncommon consonants>
+  \p<
+    吸着音や両唇軟口蓋音や咽頭音はもたないが、歯摩擦音として `/θ`/ と `/ð`/ をもつ。
+    ただし、重発音と呼ばれる発音変種では、これらはそれぞれ `/t͡s`/ と `/d͡z`/ で発音されるため歯摩擦音をもたない。
   >
 
 >
