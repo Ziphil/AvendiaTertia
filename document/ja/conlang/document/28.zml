@@ -9,114 +9,203 @@
   \h1<一覧>
   \table<
     \tr<\th<>\th<項目>\th<値>>
-    \tr<\td<1A>\td<\a|href="#1"|<Consonant inventories>>\td<Average>>
-    \tr<\td<2A>\td<\a|href="#2"|<Vowel quality inventories>>\td<Average>>
-    \tr<\td<3A>\td<\a|href="#3"|<Consonant-vowel ratio>>\td<Average>>
-    \tr<\td<4A>\td<\a|href="#4"|<Voicing in plosives and fricatives>>\td<In both plosives and fricatives>>
-    \tr<\td<5A>\td<\a|href="#5"|<Voicing and gaps in plosive systems>>\td<None missing in `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/>>
-    \tr<\td<6A>\td<\a|href="#6"|<Uvular consonants>>\td<Uvular continuants only>>
-    \tr<\td<7A>\td<\a|href="#7"|<Glottalized consonants>>\td<No glottalized consonants>>
-    \tr<\td<8A>\td<\a|href="#8"|<Lateral consonants>>\td<With `/l`/, no obstruent laterals>>
-    \tr<\td<9A>\td<\a|href="#9"|<The velar nasal>>\td<No velar nasal>>
-    \tr<\td<10A>\td<\a|href="#10"|<Vowel nasalization>>\td<Contrastive nasal vowels absent>>
-    \tr<\td<11A>\td<\a|href="#11"|<Front rounded vowels>>\td<None>>
-    \tr<\td<12A>\td<\a|href="#12"|<Syllable structure>>\td<Moderately complex syllable structure>>
-    \tr<\td<13A>\td<\a|href="#13"|<Tone>>\td<No tones>>
-    \tr<\td<14A>\td<\a|href="#14"|<Fixed stress locations>>\td<Ultimate>>
-    \tr<\td<15A>\td<\a|href="#15"|<Weight-sensitive stress>>\td<Fixed stress>>
-    \tr<\td<16A>\td<\a|href="#16"|<Weight factors in weight-sensitive stress systems>>\td<No weight>>
-    \tr<\td<17A>\td<\a|href="#17"|<Rhythm types>>\td<>>
-    \tr<\td<18A>\td<\a|href="#18"|<Absence of common consonants>>\td<All present>>
-    \tr<\td<19A>\td<\a|href="#19"|<Presence of uncommon consonants>>\td<“Th” sounds>>
-    \tr<\td<20A>\td<\a|href="#20"|<>>\td<>>
+    \tr<\td<1A>\td<\a|href="#1-1"|<Consonant inventories>>\td<Average>>
+    \tr<\td<2A>\td<\a|href="#2-1"|<Vowel quality inventories>>\td<Average>>
+    \tr<\td<3A>\td<\a|href="#3-1"|<Consonant-vowel ratio>>\td<Average>>
+    \tr<\td<4A>\td<\a|href="#4-1"|<Voicing in plosives and fricatives>>\td<In both plosives and fricatives>>
+    \tr<\td<5A>\td<\a|href="#5-1"|<Voicing and gaps in plosive systems>>\td<None missing in `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/>>
+    \tr<\td<6A>\td<\a|href="#6-1"|<Uvular consonants>>\td<Uvular continuants only>>
+    \tr<\td<7A>\td<\a|href="#7-1"|<Glottalized consonants>>\td<No glottalized consonants>>
+    \tr<\td<8A>\td<\a|href="#8-1"|<Lateral consonants>>\td<With `/l`/, no obstruent laterals>>
+    \tr<\td<9A>\td<\a|href="#9-1"|<The velar nasal>>\td<No velar nasal>>
+    \tr<\td<10A>\td<\a|href="#10-1"|<Vowel nasalization>>\td<Contrastive nasal vowels absent>>
+    \tr<\td<11A>\td<\a|href="#11-1"|<Front rounded vowels>>\td<None>>
+    \tr<\td<12A>\td<\a|href="#12-1"|<Syllable structure>>\td<Moderately complex syllable structure>>
+    \tr<\td<13A>\td<\a|href="#13-1"|<Tone>>\td<No tones>>
+    \tr<\td<14A>\td<\a|href="#14-1"|<Fixed stress locations>>\td<Ultimate>>
+    \tr<\td<15A>\td<\a|href="#15-1"|<Weight-sensitive stress>>\td<Fixed stress>>
+    \tr<\td<16A>\td<\a|href="#16-1"|<Weight factors in weight-sensitive stress systems>>\td<No weight>>
+    \tr<\td<17A>\td<\a|href="#17-1"|<Rhythm types>>\td<>>
+    \tr<\td<18A>\td<\a|href="#18-1"|<Absence of common consonants>>\td<All present>>
+    \tr<\td<19A>\td<\a|href="#19-1"|<Presence of uncommon consonants>>\td<“Th” sounds>>
+    \tr<\td<20A>\td<\a|href="#20-1"|<Fusion of selected inflectional formatives>>\td<Exclusively concatenative>>
+    \tr<\td<21A>\td<\a|href="#21-1"|<Exponence of selected inflectional formatives>>\td<Monoexponential case>>
+    \tr<\td<21B>\td<\a|href="#21-2"|<Exponence of tense-aspect-mood inflection>>\td<Monoexponential TAM>>
+    \tr<\td<22A>\td<\a|href="#22-1"|<>>\td<>>
+    \tr<\td<23A>\td<\a|href="#23-1"|<>>\td<>>
+    \tr<\td<24A>\td<\a|href="#24-1"|<>>\td<>>
+    \tr<\td<25A>\td<\a|href="#25-1"|<>>\td<>>
+    \tr<\td<26A>\td<\a|href="#26-1"|<>>\td<>>
+    \tr<\td<27A>\td<\a|href="#27-1"|<>>\td<>>
+    \tr<\td<28A>\td<\a|href="#28-1"|<>>\td<>>
+    \tr<\td<29A>\td<\a|href="#29-1"|<>>\td<>>
+    \tr<\td<30A>\td<\a|href="#30-1"|<>>\td<>>
   >
   \h1<概要>
-  \h2|id="1"|<1A: Consonant inventories>
+  \h2|id="1-1"|<1A: Consonant inventories>
   \p<
-    子音音素は 22 個～ 23 個。
+    子音音素は 22 個～ 23 個である。
     子音文字は 20 個だが、[l] と [n] は 2 つの音素を表すため、子音音素は 22 個となる。
     また、外来語などにおいて [u] と他の母音が連続したときに間に挿入されることがある `/w`/ を音素として数えれば、23 個となる。
   >
-  \h2|id="2"|<2A: Vowel quality inventories>
+  \h2|id="2-1"|<2A: Vowel quality inventories>
   \p<
-    母音音質の種類は 5 種類。
+    母音音質の種類は 5 種類である。
   >
-  \h2|id="3"|<3A: Consonant-vowel ratio>
+  \h2|id="3-1"|<3A: Consonant-vowel ratio>
   \p<
-    子音音素と母音音質の比率は 4.4～4.6。
+    子音音素と母音音質の比率は 4.4～4.6 である。
     `/w`/ を音素に入れないのであれば 4.4 で、入れるのであれば 4.6 となる。
   >
   \p<
     なお、Average と Moderately high の境界が 4.5 に設定されているため、`/w`/ を音素として認めるか否かで分類が変わってしまう。
     ここでは、`/w`/ が現れる頻度が非常に低いため、`/w`/ を音素に入れない場合の値である 4.4 を採用し、Average に分類した。
   >
-  \h2|id="4"|<4A: Voicing in plosives and fricatives>
+  \h2|id="4-1"|<4A: Voicing in plosives and fricatives>
   \p<
     破裂音と摩擦音の両方について有声無声の区別がある。
   >
-  \h2|id="5"|<5A: Voicing and gaps in plosive systems>
+  \h2|id="5-1"|<5A: Voicing and gaps in plosive systems>
   \p<
     `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/ を全て音素として区別する。
   >
-  \h2|id="6"|<6A: Uvular consonants>
+  \h2|id="6-1"|<6A: Uvular consonants>
   \p<
     口蓋垂音として `/ɴ`/ をもつ。
   >
-  \h2|id="7"|<7A: Glottalized consonants>
+  \h2|id="7-1"|<7A: Glottalized consonants>
   \p<
     声門化子音はもたない。
   >
-  \h2|id="8"|<8A: Lateral consonants>
+  \h2|id="8-1"|<8A: Lateral consonants>
   \p<
     側面音として `/l`/ をもつが、側面阻害音はもたない。
   >
-  \h2|id="9"|<9A: The velar nasal>
+  \h2|id="9-1"|<9A: The velar nasal>
   \p<
     軟口蓋音はもたない。
     さらに、音素に `/n`/ をもつが、これは `/k`/ や `/ɡ`/ などの軟口蓋音の前でも `[ŋ`] に同化しない。
   >
-  \h2|id="10"|<10A: Vowel nasalization>
+  \h2|id="10-1"|<10A: Vowel nasalization>
   \p<
     鼻母音と口母音の区別はもたない。
   >
-  \h2|id="11"|<11A: Front rounded vowels>
+  \h2|id="11-1"|<11A: Front rounded vowels>
   \p<
     前舌円唇母音はもたない。
   >
-  \h2|id="12"|<12A: Syllable structure>
+  \h2|id="12-1"|<12A: Syllable structure>
   \p<
     可能な音節は V, CV, VC, CVC のみで、音節内で子音が 2 個以上連続することはない。
     また、母音から始まる V, VC は稀である。
   >
-  \h2|id="13"|<13A: Tone>
+  \h2|id="13-1"|<13A: Tone>
   \p<
     声調の区別はもたない。
   >
-  \h2|id="14"|<14A: Fixed stress locations>
+  \h2|id="14-1"|<14A: Fixed stress locations>
   \p<
     アクセント位置は固定で、常に語幹の最後の音節に置かれる。
-    ここで、活用形の最後の音節ではなく、語幹の最後の音節であることには注意。
+    ここで、活用形の最後の音節ではなく、語幹の最後の音節であることには注意されたい。
     単語が動詞として使われる場合は、語幹の後に 1 音節の活用接尾辞が付くので、結果的に最後から 2 番目の音節に置かれることになる。
   >
-  \h2|id="15"|<15A: Weight-sensitive stress>
+  \h2|id="15-1"|<15A: Weight-sensitive stress>
   \p<
     アクセント位置は常に語幹の最後の音節であり、音節の重さによって変わることはない。
   >
-  \h2|id="16"|<16A: Weight factors in weight-sensitive stress systems>
+  \h2|id="16-1"|<16A: Weight factors in weight-sensitive stress systems>
   \p<
-    \a|href="#15"|<15A: Weight-sensitive stress> の通り、音節の重さによるアクセント位置の変化はない。
+    \a|href="#15-1"|<15A: Weight-sensitive stress> の通り、音節の重さによるアクセント位置の変化はない。
   >
-  \h2|id="18"|<18A: Absence of common consonants>
+  \h2|id="18-1"|<18A: Absence of common consonants>
   \p<
     両唇音と摩擦音と鼻音を全てもち、具体的には以下の音素をもつ。
     両唇音としては `/p`/, `/b`/, `/m`/ を区別する。
     摩擦音は多く `/f`/, `/v`/, `/θ`/, `/ð`/, `/s`/, `/z`/, `/ʃ`/, `/ʒ`/ を区別する。
     鼻音は `/n`/, `/m`/, `/ɴ`/ を区別する。
   >
-  \h2|id="19"|<19A: Presence of uncommon consonants>
+  \h2|id="19-1"|<19A: Presence of uncommon consonants>
   \p<
     吸着音や両唇軟口蓋音や咽頭音はもたないが、歯摩擦音として `/θ`/ と `/ð`/ をもつ。
     ただし、重発音と呼ばれる発音変種では、これらはそれぞれ `/t͡s`/ と `/d͡z`/ で発音されるため歯摩擦音をもたない。
+  >
+  \h2|id="20-1"|<20A: Fusion of selected inflectional formatives>
+  \p<
+    時制や格などの文法範疇は、全て膠着的な接辞によって表される。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{vilises a tel.}>
+      \gloss<
+        &lig|conj="-es"|<\sh<{vilis}>\ex<走る>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+      >
+      \ja<私は走った。>
+    >
+  >
+  \p<
+    \box|tag="1"|; では、動詞 {vilis} に対して、過去時制を表す接尾辞 [e] と無相通常態を表す接尾辞 [s] が付けられている。
+    また、名詞 {tel} は、対格を表す助詞 [a] とともに表れている。
+    これらの接尾辞や助詞は音韻論的な接語であり、常にホストとなる単語を必要とする。
+  >
+  \h2|id="21-1"|<21A: Exponence of selected inflectional formatives>
+  \p<
+    格を表す形態素は格のみを表し、その他の文法範疇を同時に表すことはない。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{sôdac a ces e sakil.}>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{sôd}>\ex<食べる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="e"|;
+        &lig<\sh<{sakil}>\ex<リンゴ>>
+      >
+      \ja<彼はリンゴを食べている。>
+    >
+  >
+  \p<
+    \box|tag="1"|; では、名詞の前に置かれている助詞 {a} と {e} はそれぞれ主格と対格のみを標示しており、数や定性などの情報はもっていない。
+  >
+  \h2|id="21-2"|<21B: Exponence of tense-aspect-mood inflection>
+  \p<
+    時制を表す形態素は時制のみを表す。
+    相を表す形態素は相の他にも態を同時に表すが、形態素を弁別素性レベルで分解すれば、相を表す形態素と態を表す形態素を分離することができる。
+    これについては、次の例で説明する。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{dodes a tel.}>
+      \gloss<
+        &lig|conj="-es"|<\sh<{dod}>\ex<悲しむ>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+      >
+      \ja<私は悲しんだ。>
+    >
+    \li|tag="2"|<
+      \sh<{dodez a tel li ces.}>
+      \gloss<
+        &lig|conj="-ez"|<\sh<{dod}>\ex<悲しむ>>
+        &lig|auto="a"|;
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="li"|;
+        &lig<\sh<{ces}>\ex<彼>>
+      >
+      \ja<彼は私を悲しませた。>
+    >
+  >
+  \p<
+    \box|tag="1"|; と \box|tag="2"|; の両方において、{dod} に付随している [e] は過去時制のみを標示している。
+    また、その後に付随している [s] は無相と通常態を同時に表しており、[z] は無相と補助態を同時に表している。
+    この分析では、相を表す形態素は同時に態も表していることになる。
+  >
+  \p<
+    しかし、全ての相に対し、通常態を表す形態素は無声子音であり、補助態を表す形態素はそれを有声化したものになっている。
+    そこで、相のみを表す形態素として無声子音を立て、通常態と補助態を表す形態素としてそれぞれ `[−voice`] と `[+voice`] を立てれば、相と態はそれぞれ個別の形態素によって標示されると分析できる。
+    この見方では、\box|tag="2"|; の {dodez} という形は、動詞 {dod} に対して、過去時制の `/e`/ と無相の `/s`/ と補助態の `[+voice`] という 3 つの形態素が付けられたものと見なされる。
   >
 
 >
