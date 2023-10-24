@@ -7,6 +7,10 @@
   \ver<7 代 2 期>
 
   \h1<一覧>
+  \p<
+    以下に各項目とその値を一覧する。
+    続くセクションに、各項目のより詳細な解説を記す。
+  >
   \table<
     \tr<\th<>\th<項目>\th<値>>
     \tr<\td<1A>\td<\a|href="#1-1"|<Consonant inventories>>\td<Average>>
@@ -31,8 +35,8 @@
     \tr<\td<20A>\td<\a|href="#20-1"|<Fusion of selected inflectional formatives>>\td<Exclusively concatenative>>
     \tr<\td<21A>\td<\a|href="#21-1"|<Exponence of selected inflectional formatives>>\td<Monoexponential case>>
     \tr<\td<21B>\td<\a|href="#21-2"|<Exponence of tense-aspect-mood inflection>>\td<Monoexponential TAM>>
-    \tr<\td<22A>\td<\a|href="#22-1"|<>>\td<>>
-    \tr<\td<23A>\td<\a|href="#23-1"|<>>\td<>>
+    \tr<\td<22A>\td<\a|href="#22-1"|<Inflectional synthesis of the verb>>\td<4–5 categories per word>>
+    \tr<\td<23A>\td<\a|href="#23-1"|<Locus of marking in the clause>>\td<P is dependent-marked>>
     \tr<\td<24A>\td<\a|href="#24-1"|<>>\td<>>
     \tr<\td<25A>\td<\a|href="#25-1"|<>>\td<>>
     \tr<\td<26A>\td<\a|href="#26-1"|<>>\td<>>
@@ -41,7 +45,7 @@
     \tr<\td<29A>\td<\a|href="#29-1"|<>>\td<>>
     \tr<\td<30A>\td<\a|href="#30-1"|<>>\td<>>
   >
-  \h1<概要>
+  \h1<解説>
   \h2|id="1-1"|<1A: Consonant inventories>
   \p<
     子音音素は 22 個～ 23 個である。
@@ -147,7 +151,7 @@
   \p<
     \box|tag="1"|; では、動詞 {vilis} に対して、過去時制を表す接尾辞 [e] と無相通常態を表す接尾辞 [s] が付けられている。
     また、名詞 {tel} は、対格を表す助詞 [a] とともに表れている。
-    これらの接尾辞や助詞は音韻論的な接語であり、常にホストとなる単語を必要とする。
+    これらの接尾辞や助詞は音韻的接語であり、常にホストとなる単語を必要とする。
   >
   \h2|id="21-1"|<21A: Exponence of selected inflectional formatives>
   \p<
@@ -206,6 +210,57 @@
     しかし、全ての相に対し、通常態を表す形態素は無声子音であり、補助態を表す形態素はそれを有声化したものになっている。
     そこで、相のみを表す形態素として無声子音を立て、通常態と補助態を表す形態素としてそれぞれ `[−voice`] と `[+voice`] を立てれば、相と態はそれぞれ個別の形態素によって標示されると分析できる。
     この見方では、\box|tag="2"|; の {dodez} という形は、動詞 {dod} に対して、過去時制の `/e`/ と無相の `/s`/ と補助態の `[+voice`] という 3 つの形態素が付けられたものと見なされる。
+  >
+  \h2|id="22-1"|<22A: Inflectional synthesis of the verb>
+  \p<
+    動詞に付属する活用的形態素の最大数は 5 つである。
+    具体的には、時制, 相, 態, 極性, 疑問性の 5 つである。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{pa ducákes vade pil a loc ca fèd?}>
+      \gloss<
+        &lig|auto="pa"|;
+        &lig|conj="du-es"|<\sh<{cák}>\ex<来る>>
+        &lig<\sh<{vade}>\ex<～の理由で>>
+        &lig<\sh<{pil}>\ex<どんなこと>>
+        &lig|auto="a"|;
+        &lig<\sh<{loc}>\ex<あなた>>
+        &lig|auto="ca"|;
+        &lig<\sh<{fêd}>\ex<ここ>>
+      >
+      \ja<なぜあなたはここに来なかったのですか?>
+    >
+  >
+  \p<
+    \box|tag="1"|; では、動詞 {cák} に対して、疑問を表す {pa}, 否定を表す [du], 過去時制を表す [e], 無相通常態を表す [s] という 4 つの文法的接語が付随している。
+    最後の形態素は相と態を同時に表すので、これらの文法的接語によって合計 5 つの文法範疇が示されていることになる。
+  >
+  \p<
+    なお、疑問を表す {pa} は、綴り字上は単独の単語として分かち書きされるが、動詞なしで現れることがなく他の接語との順番が固定であることから、ここでは文法的接語として扱った。
+  >
+  \h2|id="23-1"|<23A: Locus of marking in the clause>
+  \p<
+    動詞とその項の関係は、項の方に標示され動詞の方には標示されない。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{lanes a ces zi sod ca kosax.}>
+      \gloss<
+        &lig|conj="-es"|<\sh<{lan}>\ex<行く>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|auto="zi"|;
+        &lig<\sh<{sod}>\ex<家>>
+        &lig|auto="ca"|;
+        &lig<\sh<{kosax}>\ex<学校>>
+      >
+      \ja<彼女は家から学校へ行った。>
+    >
+  >
+  \p<
+    \box|tag="1"|; では、動詞 {lan} の項 {ces}, {sod}, {kosax} にそれぞれ助詞 {a}, {zi}, {ca} が付随しており、その格を標示している。
+    動詞には、動詞の項の情報を示すような形態素は付けられない。
   >
 
 >
