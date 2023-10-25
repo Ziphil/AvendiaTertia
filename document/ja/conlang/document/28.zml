@@ -37,8 +37,8 @@
     \tr<\td<21B>\td<\a|href="#21-2"|<Exponence of tense-aspect-mood inflection>>\td<Monoexponential TAM>>
     \tr<\td<22A>\td<\a|href="#22-1"|<Inflectional synthesis of the verb>>\td<4–5 categories per word>>
     \tr<\td<23A>\td<\a|href="#23-1"|<Locus of marking in the clause>>\td<P is dependent-marked>>
-    \tr<\td<24A>\td<\a|href="#24-1"|<>>\td<>>
-    \tr<\td<25A>\td<\a|href="#25-1"|<>>\td<>>
+    \tr<\td<24A>\td<\a|href="#24-1"|<Locus of marking in possessive noun phrases>>\td<Possessor is dependent-marked>>
+    \tr<\td<25A>\td<\a|href="#25-1"|<Locus of marking: whole-language typology>>\td<Consistently dependent-marking>>
     \tr<\td<26A>\td<\a|href="#26-1"|<>>\td<>>
     \tr<\td<27A>\td<\a|href="#27-1"|<>>\td<>>
     \tr<\td<28A>\td<\a|href="#28-1"|<>>\td<>>
@@ -119,7 +119,7 @@
   >
   \h2|id="16-1"|<16A: Weight factors in weight-sensitive stress systems>
   \p<
-    \a|href="#15-1"|<15A: Weight-sensitive stress> の通り、音節の重さによるアクセント位置の変化はない。
+    \a|href="#15-1"|<15A> で見た通り、音節の重さによるアクセント位置の変化はない。
   >
   \h2|id="18-1"|<18A: Absence of common consonants>
   \p<
@@ -241,7 +241,7 @@
   >
   \h2|id="23-1"|<23A: Locus of marking in the clause>
   \p<
-    動詞とその項の関係は、項の方に標示され動詞の方には標示されない。
+    動詞とその項の関係は、項の方に標示され、動詞の方には標示されない。
   >
   \xol<
     \li|tag="1"|<
@@ -261,6 +261,36 @@
   \p<
     \box|tag="1"|; では、動詞 {lan} の項 {ces}, {sod}, {kosax} にそれぞれ助詞 {a}, {zi}, {ca} が付随しており、その格を標示している。
     動詞には、動詞の項の情報を示すような形態素は付けられない。
+  >
+  \h2|id="24-1"|<24A: Locus of marking in possessive noun phrases>
+  \p<
+    名詞とその所有者の関係は、所有者の方に標示され、所有される名詞の方には標示されない。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{salat a fit e loqis i tel.}>
+      \gloss<
+        &lig|conj="-at"|<\sh<{sal}>\ex<である>>
+        &lig|auto="a"|;
+        &lig<\sh<{fit}>\ex<これ>>
+        &lig|auto="e"|;
+        &lig<\sh<{loqis}>\ex<車>>
+        &lig|auto="i"|;
+        &lig<\sh<{tel}>\ex<私>>
+      >
+      \ja<これは私の車だ。>
+    >
+  >
+  \p<
+    \box|tag="1"|; における {loqis i tel}「私の車」の部分が所有関係の表現である。
+    ここで、所有を表す {i} は後接語であり、後続する {tel} と一体となって「私の」の意味の表現を作る。
+    所有される名詞である {loqis} には標識が付けられない。
+  >
+  \h2|id="25-1"|<25A: Locus of marking: whole-language typology>
+  \p<
+    \a|href="#23-1"|<23A> と \a|href="#24-1"|<24A> で見たように、動詞の項や所有関係はどちらも依存部に標示される。
+    また、形容詞による関係についても、形容詞に活用接頭辞が付けられて名詞は変化しないため、ここでも依存部標示が行われている。
+    このことから、依存分標示が圧倒的に優勢である。
   >
 
 >
