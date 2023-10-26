@@ -13,37 +13,47 @@
   >
   \table<
     \tr<\th<>\th<項目>\th<値>>
-    \tr<\td<1A>\td<\a|href="#1-1"|<Consonant inventories>>\td<Average>>
-    \tr<\td<2A>\td<\a|href="#2-1"|<Vowel quality inventories>>\td<Average>>
-    \tr<\td<3A>\td<\a|href="#3-1"|<Consonant-vowel ratio>>\td<Average>>
-    \tr<\td<4A>\td<\a|href="#4-1"|<Voicing in plosives and fricatives>>\td<In both plosives and fricatives>>
-    \tr<\td<5A>\td<\a|href="#5-1"|<Voicing and gaps in plosive systems>>\td<None missing in `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/>>
-    \tr<\td<6A>\td<\a|href="#6-1"|<Uvular consonants>>\td<Uvular continuants only>>
-    \tr<\td<7A>\td<\a|href="#7-1"|<Glottalized consonants>>\td<No glottalized consonants>>
-    \tr<\td<8A>\td<\a|href="#8-1"|<Lateral consonants>>\td<With `/l`/, no obstruent laterals>>
-    \tr<\td<9A>\td<\a|href="#9-1"|<The velar nasal>>\td<No velar nasal>>
-    \tr<\td<10A>\td<\a|href="#10-1"|<Vowel nasalization>>\td<Contrastive nasal vowels absent>>
-    \tr<\td<11A>\td<\a|href="#11-1"|<Front rounded vowels>>\td<None>>
-    \tr<\td<12A>\td<\a|href="#12-1"|<Syllable structure>>\td<Moderately complex syllable structure>>
-    \tr<\td<13A>\td<\a|href="#13-1"|<Tone>>\td<No tones>>
-    \tr<\td<14A>\td<\a|href="#14-1"|<Fixed stress locations>>\td<Ultimate>>
-    \tr<\td<15A>\td<\a|href="#15-1"|<Weight-sensitive stress>>\td<Fixed stress>>
-    \tr<\td<16A>\td<\a|href="#16-1"|<Weight factors in weight-sensitive stress systems>>\td<No weight>>
+    \tr<\td<1A>\td<\a|href="#1-1"|<Consonant inventories>>\td<average>>
+    \tr<\td<2A>\td<\a|href="#2-1"|<Vowel quality inventories>>\td<average>>
+    \tr<\td<3A>\td<\a|href="#3-1"|<Consonant-vowel ratio>>\td<average>>
+    \tr<\td<4A>\td<\a|href="#4-1"|<Voicing in plosives and fricatives>>\td<in both plosives and fricatives>>
+    \tr<\td<5A>\td<\a|href="#5-1"|<Voicing and gaps in plosive systems>>\td<none missing in `/p`/, `/t`/, `/k`/, `/b`/, `/d`/, `/ɡ`/>>
+    \tr<\td<6A>\td<\a|href="#6-1"|<Uvular consonants>>\td<uvular continuants only>>
+    \tr<\td<7A>\td<\a|href="#7-1"|<Glottalized consonants>>\td<no glottalized consonants>>
+    \tr<\td<8A>\td<\a|href="#8-1"|<Lateral consonants>>\td<with `/l`/, no obstruent laterals>>
+    \tr<\td<9A>\td<\a|href="#9-1"|<The velar nasal>>\td<no velar nasal>>
+    \tr<\td<10A>\td<\a|href="#10-1"|<Vowel nasalization>>\td<contrastive nasal vowels absent>>
+    \tr<\td<11A>\td<\a|href="#11-1"|<Front rounded vowels>>\td<none>>
+    \tr<\td<12A>\td<\a|href="#12-1"|<Syllable structure>>\td<moderately complex syllable structure>>
+    \tr<\td<13A>\td<\a|href="#13-1"|<Tone>>\td<no tones>>
+    \tr<\td<14A>\td<\a|href="#14-1"|<Fixed stress locations>>\td<ultimate>>
+    \tr<\td<15A>\td<\a|href="#15-1"|<Weight-sensitive stress>>\td<fixed stress>>
+    \tr<\td<16A>\td<\a|href="#16-1"|<Weight factors in weight-sensitive stress systems>>\td<no weight>>
     \tr<\td<17A>\td<\a|href="#17-1"|<Rhythm types>>\td<>>
-    \tr<\td<18A>\td<\a|href="#18-1"|<Absence of common consonants>>\td<All present>>
-    \tr<\td<19A>\td<\a|href="#19-1"|<Presence of uncommon consonants>>\td<“Th” sounds>>
-    \tr<\td<20A>\td<\a|href="#20-1"|<Fusion of selected inflectional formatives>>\td<Exclusively concatenative>>
-    \tr<\td<21A>\td<\a|href="#21-1"|<Exponence of selected inflectional formatives>>\td<Monoexponential case>>
-    \tr<\td<21B>\td<\a|href="#21-2"|<Exponence of tense-aspect-mood inflection>>\td<Monoexponential TAM>>
+    \tr<\td<18A>\td<\a|href="#18-1"|<Absence of common consonants>>\td<all present>>
+    \tr<\td<19A>\td<\a|href="#19-1"|<Presence of uncommon consonants>>\td<“th” sounds>>
+    \tr<\td<20A>\td<\a|href="#20-1"|<Fusion of selected inflectional formatives>>\td<exclusively concatenative>>
+    \tr<\td<21A>\td<\a|href="#21-1"|<Exponence of selected inflectional formatives>>\td<monoexponential case>>
+    \tr<\td<21B>\td<\a|href="#21-2"|<Exponence of tense-aspect-mood inflection>>\td<monoexponential TAM>>
     \tr<\td<22A>\td<\a|href="#22-1"|<Inflectional synthesis of the verb>>\td<4–5 categories per word>>
     \tr<\td<23A>\td<\a|href="#23-1"|<Locus of marking in the clause>>\td<P is dependent-marked>>
-    \tr<\td<24A>\td<\a|href="#24-1"|<Locus of marking in possessive noun phrases>>\td<Possessor is dependent-marked>>
-    \tr<\td<25A>\td<\a|href="#25-1"|<Locus of marking: whole-language typology>>\td<Consistently dependent-marking>>
-    \tr<\td<26A>\td<\a|href="#26-1"|<>>\td<>>
-    \tr<\td<27A>\td<\a|href="#27-1"|<>>\td<>>
-    \tr<\td<28A>\td<\a|href="#28-1"|<>>\td<>>
-    \tr<\td<29A>\td<\a|href="#29-1"|<>>\td<>>
-    \tr<\td<30A>\td<\a|href="#30-1"|<>>\td<>>
+    \tr<\td<24A>\td<\a|href="#24-1"|<Locus of marking in possessive noun phrases>>\td<possessor is dependent-marked>>
+    \tr<\td<25A>\td<\a|href="#25-1"|<Locus of marking: whole-language typology>>\td<consistently dependent-marking>>
+    \tr<\td<26A>\td<\a|href="#26-1"|<Prefixing vs suffixing in inflectional morphology>>\td<>>
+    \tr<\td<27A>\td<\a|href="#27-1"|<Reduplication>>\td<no productive reduplication>>
+    \tr<\td<28A>\td<\a|href="#28-1"|<Case syncretism>>\td<no case marking>>
+    \tr<\td<29A>\td<\a|href="#29-1"|<Syncretism in verbal person`/number marking>>\td<no subject person`/number marking>>
+    \tr<\td<30A>\td<\a|href="#30-1"|<Number of genders>>\td<none>>
+    \tr<\td<31A>\td<\a|href="#31-1"|<Sex-based and non-sex-based gender systems>>\td<no gender system>>
+    \tr<\td<32A>\td<\a|href="#32-1"|<Systems of gender assignment>>\td<no gender system>>
+    \tr<\td<33A>\td<\a|href="#33-1"|<Coding of nominal plurality>>\td<plural word>>
+    \tr<\td<34A>\td<\a|href="#34-1"|<>>\td<>>
+    \tr<\td<35A>\td<\a|href="#35-1"|<>>\td<>>
+    \tr<\td<36A>\td<\a|href="#36-1"|<>>\td<>>
+    \tr<\td<37A>\td<\a|href="#37-1"|<>>\td<>>
+    \tr<\td<38A>\td<\a|href="#38-1"|<>>\td<>>
+    \tr<\td<39A>\td<\a|href="#39-1"|<>>\td<>>
+    \tr<\td<40A>\td<\a|href="#40-1"|<>>\td<>>
   >
   \h1<解説>
   \h2|id="1-1"|<1A: Consonant inventories>
@@ -62,8 +72,8 @@
     `/w`/ を音素に入れないのであれば 4.4 で、入れるのであれば 4.6 となる。
   >
   \p<
-    なお、Average と Moderately high の境界が 4.5 に設定されているため、`/w`/ を音素として認めるか否かで分類が変わってしまう。
-    ここでは、`/w`/ が現れる頻度が非常に低いため、`/w`/ を音素に入れない場合の値である 4.4 を採用し、Average に分類した。
+    なお、average と moderately high の境界が 4.5 に設定されているため、`/w`/ を音素として認めるか否かで分類が変わってしまう。
+    ここでは、`/w`/ が現れる頻度が非常に低いため、`/w`/ を音素に入れない場合の値である 4.4 を採用し、average に分類した。
   >
   \h2|id="4-1"|<4A: Voicing in plosives and fricatives>
   \p<
@@ -115,11 +125,13 @@
   >
   \h2|id="15-1"|<15A: Weight-sensitive stress>
   \p<
-    アクセント位置は常に語幹の最後の音節であり、音節の重さによって変わることはない。
+    \a|href="#14-1"|<14A> で見た通り、アクセント位置は常に語幹の最後の音節で、音節の重さによって変わることはない。
+    そのため、この項目の調査の対象ではない。
   >
   \h2|id="16-1"|<16A: Weight factors in weight-sensitive stress systems>
   \p<
-    \a|href="#15-1"|<15A> で見た通り、音節の重さによるアクセント位置の変化はない。
+    \a|href="#14-1"|<14A> で見た通り、音節の重さによるアクセント位置の変化はない。
+    そのため、この項目の調査の対象ではない。
   >
   \h2|id="18-1"|<18A: Absence of common consonants>
   \p<
@@ -291,6 +303,40 @@
     \a|href="#23-1"|<23A> と \a|href="#24-1"|<24A> で見たように、動詞の項や所有関係はどちらも依存部に標示される。
     また、形容詞による関係についても、形容詞に活用接頭辞が付けられて名詞は変化しないため、ここでも依存部標示が行われている。
     このことから、依存分標示が圧倒的に優勢である。
+  >
+  \h2|id="27-1"|<27A: Reduplication>
+  \p<
+    畳音は見られない。
+  >
+  \h2|id="28-1"|<28A: Case syncretism>
+  \p<
+    格は曲用ではなく独立した形態素によって示される。
+    そのため、この項目の調査の対象ではない。
+  >
+  \h2|id="29-1"|<29A: Syncretism in verbal person`/number marking>
+  \p<
+    人称や数の標識は存在しない。
+    そのため、この項目の調査の対象ではない。
+  >
+  \h2|id="30-1"|<30A: Number of genders>
+  \p<
+    名詞性や名詞クラスは存在しない。
+  >
+  \h2|id="31-1"|<31A: Number of genders>
+  \p<
+    \a|href="#30-1"|; で見た通り、名詞性や名詞クラスは存在しない。
+    そのため、この項目の調査の対象ではない。
+  >
+  \h2|id="32-1"|<32A: Systems of gender assignment>
+  \p<
+    \a|href="#30-1"|; で見た通り、名詞性や名詞クラスは存在しない。
+    そのため、この項目の調査の対象ではない。
+  >
+  \h2|id="33-1"|<33A: Coding of nominal plurality>
+  \p<
+    複数は、それを表す単語によって示される。
+    \a|href="#30-1"|; で見た通り、名詞性や名詞クラスは存在しない。
+    そのため、この項目の調査の対象ではない。
   >
 
 >
