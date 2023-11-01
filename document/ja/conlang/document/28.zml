@@ -56,8 +56,8 @@
     \tr<\td<31A>\td<\a|href="#31-1"|<Sex-based and non-sex-based gender systems>>\td<no gender system>>
     \tr<\td<32A>\td<\a|href="#32-1"|<Systems of gender assignment>>\td<no gender system>>
     \tr<\td<33A>\td<\a|href="#33-1"|<Coding of nominal plurality>>\td<plural word>>
-    \tr<\td<34A>\td<\a|href="#34-1"|<>>\td<>>
-    \tr<\td<35A>\td<\a|href="#35-1"|<>>\td<>>
+    \tr<\td<34A>\td<\a|href="#34-1"|<Occurrence of nominal plurality>>\td<plural in all nouns, always optional>>
+    \tr<\td<35A>\td<\a|href="#35-1"|<Plurality in independent personal pronouns>>\td<person stem with a nominal plural affix>>
     \tr<\td<36A>\td<\a|href="#36-1"|<>>\td<>>
     \tr<\td<37A>\td<\a|href="#37-1"|<>>\td<>>
     \tr<\td<38A>\td<\a|href="#38-1"|<>>\td<>>
@@ -343,9 +343,74 @@
   >
   \h2|id="33-1"|<33A: Coding of nominal plurality>
   \p<
-    複数は、それを表す単語によって示される。
-    \a|href="#30-1"|<30A> で見た通り、名詞性や名詞クラスは存在しない。
-    そのため、この項目の調査の対象ではない。
+    複数は独立した単語 {véf} によって示される。
+  >
+  \h2|id="34-1"|<34A: Occurrence of nominal plurality>
+  \p<
+    複数は独立した単語 {véf} によって示されるが、これの使用は完全に任意である。
+    むしろ、{véf} が置かれると「複数であることを強調している」というニュアンスが付加される。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{vilisac a tific avéf.}>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{vilis}>\ex<走る>>
+        &lig|auto="a"|;
+        &lig<\sh<{tific}>\ex<子供>>
+        &lig|conj="a-"|<\sh<{véf}>\ex<～たち>>
+      >
+      \ja<子供たちが走っている。>
+    >
+    \li|tag="2"|<
+      \sh<{vilisac a tific.}>
+      \gloss<
+        &lig|conj="-ac"|<\sh<{vilis}>\ex<走る>>
+        &lig|auto="a"|;
+        &lig<\sh<{tific}>\ex<子供>>
+      >
+      \ja<子供が走っている。>
+    >
+  >
+  \p<
+    \box|tag="1"|; では、{tific}「子供」に {avéf} が修飾することで、子供が複数人いることを明示している。
+    \box|tag="2"|; は \box|tag="1"|; から {avéf} を取り除いて得られる文だが、この文は子供が 1 人だけいる状況も複数人いる状況も表し得る。
+  >
+  \h2|id="35-1"|<35A: Plurality in independent personal pronouns>
+  \p<
+    人称代名詞は他の名詞と全く同じ扱いを受けるため、人称代名詞の複数は他の名詞の場合と同じく {véf} によって示され、その使用は任意である。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{zecases a ces avéf zi dales.}>
+      \gloss<
+        &lig|conj="-es"|<\sh<{zecas}>\ex<逃げる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|conj="a-"|<\sh<{véf}>\ex<～たち>>
+        &lig|auto="zi"|;
+        &lig<\sh<{dales}>\ex<犬>>
+      >
+      \ja<彼らは犬から逃げた。>
+    >
+    \li|tag="1"|<
+      \sh<{zecases a ces zi dales.}>
+      \gloss<
+        &lig|conj="-es"|<\sh<{zecas}>\ex<逃げる>>
+        &lig|auto="a"|;
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="zi"|;
+        &lig<\sh<{dales}>\ex<犬>>
+      >
+      \ja<彼`/彼らは犬から逃げた。>
+    >
+  >
+  \p<
+    \box|tag="1"|; では、{ces}「彼」に {avéf} が修飾し、{ces} が指す対象が複数人いることを明示している。
+    \box|tag="2"|; は \box|tag="1"|; から {avéf} を取り除いて得られる文だが、{ces} が指す対象が 1 人の場合も複数人の場合もあり得る。
+  >
+  \p<
+    なお、一人称複数を表す場合のみ、一人称単数を表す代名詞 {tel} とは異なる形態素である {zál} が用いられる。
+    これは、一人称複数の「私達」が、一人称単数の「私」の集合体ではなく「私」とその他誰かとの集合体であるため、「私」とは別概念だと捉えられているからだと考えられる。
   >
 
 >
