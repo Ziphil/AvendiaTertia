@@ -58,10 +58,10 @@
     \tr<\td<33A>\td<\a|href="#33-1"|<Coding of nominal plurality>>\td<plural word>>
     \tr<\td<34A>\td<\a|href="#34-1"|<Occurrence of nominal plurality>>\td<plural in all nouns, always optional>>
     \tr<\td<35A>\td<\a|href="#35-1"|<Plurality in independent personal pronouns>>\td<person stem with a nominal plural affix>>
-    \tr<\td<36A>\td<\a|href="#36-1"|<>>\td<>>
-    \tr<\td<37A>\td<\a|href="#37-1"|<>>\td<>>
-    \tr<\td<38A>\td<\a|href="#38-1"|<>>\td<>>
-    \tr<\td<39A>\td<\a|href="#39-1"|<>>\td<>>
+    \tr<\td<36A>\td<\a|href="#36-1"|<The associative plural>>\td<associative plural absent>>
+    \tr<\td<37A>\td<\a|href="#37-1"|<Definite articles>>\td<neither definite nor indefinite>>
+    \tr<\td<38A>\td<\a|href="#38-1"|<Indefinite articles>>\td<neither indefinite nor definite>>
+    \tr<\td<39A>\td<\a|href="#39-1"|<Inclusive`/exclusive distinction in independent pronouns>>\td<no inclusive`/exclusive opposition>>
     \tr<\td<40A>\td<\a|href="#40-1"|<>>\td<>>
   >
   \h1<解説>
@@ -392,7 +392,7 @@
       >
       \ja<彼らは犬から逃げた。>
     >
-    \li|tag="1"|<
+    \li|tag="2"|<
       \sh<{zecases a ces zi dales.}>
       \gloss<
         &lig|conj="-es"|<\sh<{zecas}>\ex<逃げる>>
@@ -411,6 +411,58 @@
   \p<
     なお、一人称複数を表す場合のみ、一人称単数を表す代名詞 {tel} とは異なる形態素である {zál} が用いられる。
     これは、一人称複数の「私達」が、一人称単数の「私」の集合体ではなく「私」とその他誰かとの集合体であるため、「私」とは別概念だと捉えられているからだと考えられる。
+  >
+  \h2|id="36-1"|<36A: The associative plural>
+  \p<
+    連合複数は累加複数 (通常の複数) と明確に区別されるが、連合複数を表す決まった構成は存在しない。
+  >
+  \p<
+    {véf} を用いた複数の表現は、常に累加複数を表し連合複数を意味することはない。
+    連合複数を表す決まった表現は存在しないが、1 つの方法として名詞の後に {o focis} を続ける構成がしばしば見られる。
+  >
+  \xol<
+    \li|tag="1"|<
+      \sh<{qetat a monaf avéf vo nasfek.}>
+      \gloss<
+        &lig|conj="-at"|<\sh<{qet}>\ex<いる>>
+        &lig|auto="a"|;
+        &lig<\sh<{monaf}>\ex<猫>>
+        &lig|conj="a-"|<\sh<{véf}>\ex<～たち>>
+        &lig<\sh<{vo}>\ex<～に>>
+        &lig<\sh<{nasfek}>\ex<庭>>
+      >
+      \ja<猫たちが庭にいる。>
+    >
+    \li|tag="2"|<
+      \sh<{qetat a monaf o focis vo nasfek.}>
+      \gloss<
+        &lig|conj="-at"|<\sh<{qet}>\ex<いる>>
+        &lig|auto="a"|;
+        &lig<\sh<{monaf}>\ex<猫>>
+        &lig<\sh<{o}>\ex<と>>
+        &lig<\sh<{focis}>\ex<その他>>
+        &lig<\sh<{vo}>\ex<～に>>
+        &lig<\sh<{nasfek}>\ex<庭>>
+      >
+      \ja<猫たちが庭にいる。>
+    >
+  >
+  \p<
+    \box|tag="1"|; の {monaf avéf} は累加複数であり、猫が複数いることを表している。
+    一方で \box|tag="2"|; の {monaf o focis} は連合複数で、猫とその他の動物がいることを表している。
+  >
+  \h2|id="37-1"|<37A: Definite articles>
+  \p<
+    定冠詞も不定冠詞ももたない。
+  >
+  \h2|id="38-1"|<38A: Indefinite articles>
+  \p<
+    \a|href="#37-1"|<37A> で見た通り、不定冠詞は存在しない。
+    そのため、この項目の調査の対象ではない。
+  >
+  \h2|id="39-1"|<39A: Inclusive`/exclusive distinction in independent pronouns>
+  \p<
+    一人称単数と一人称複数の代名詞は区別されるが、一人称複数の代名詞において包括と除外は区別されない。
   >
 
 >
