@@ -54,14 +54,23 @@ manager.registerElementRule("mph", "page", (transformer, document, element) => {
   return self;
 });
 
-manager.registerElementRule("glp", "page", (transformer, document, element) => {
+manager.registerElementRule("gls", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const space = element.hasAttribute("sp");
   self.appendElement("span", (self) => {
-    self.addClassName("gloss-punctuation");
+    self.addClassName("gloss-separator");
     if (space) {
       self.setAttribute("data-space", "");
     }
+    self.appendChild(transformer.apply(element, "page"));
+  });
+  return self;
+});
+
+manager.registerElementRule("glp", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("gloss-punctuation");
     self.appendChild(transformer.apply(element, "page"));
   });
   return self;
