@@ -223,6 +223,19 @@ manager.registerElementRule("em", "page", (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("abbr", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("abbr", (self) => {
+    self.addClassName("abbreviation");
+    if (element.hasAttribute("full")) {
+      const full = element.getAttribute("full");
+      self.setAttribute("title", full);
+    }
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("small", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {

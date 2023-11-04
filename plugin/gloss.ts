@@ -1,6 +1,7 @@
 //
 
 import {
+  Builder,
   SimpleZenmlPlugin,
   ZenmlPluginManager
 } from "@zenml/zenml";
@@ -8,6 +9,22 @@ import CONJUGATIONS from "~/plugin/conjugations.json";
 
 
 const manager = new ZenmlPluginManager();
+
+function createMorphemeElement(builder: Builder, kinds: Array<[string, string]>): DocumentFragment {
+  const element = builder.createDocumentFragment((self) => {
+    for (let i = 0 ; i < kinds.length ; i ++) {
+      const [abbreviation, full] = kinds[i];
+      if (i > 0) {
+        builder.appendTextNode(self, ".");
+      }
+      builder.appendElement(self, "abbr", (self) => {
+        self.setAttribute("full", full);
+        builder.appendTextNode(self, abbreviation);
+      });
+    }
+  });
+  return element;
+}
 
 manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, attributes, childrenArgs) => {
   const self = builder.createDocumentFragment();
@@ -19,7 +36,7 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
     }
     if (attributes.has("auto")) {
       const nameQuery = attributes.get("auto")!;
-      for (const [code, [name, kind]] of Object.entries(CONJUGATIONS[version].fixed)) {
+      for (const [code, [name, kinds]] of Object.entries(CONJUGATIONS[version].fixed)) {
         if (nameQuery === code) {
           builder.appendElement(self, "sh", (self) => {
             builder.appendElement(self, "x", (self) => {
@@ -28,7 +45,7 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
           });
           builder.appendElement(self, "ex", (self) => {
             builder.appendElement(self, "mph", (self) => {
-              builder.appendTextNode(self, kind["ja"]);
+              self.appendChild(createMorphemeElement(builder, kinds["ja"]));
             });
           });
         }
@@ -51,7 +68,7 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
           const [prefixQuery, suffixQuery] = conjugationQuery.split("-", 2);
           const prefixResults = [] as Array<Array<Node>>;
           const suffixResults = [] as Array<Array<Node>>;
-          for (const [code, [prefix, kind]] of Object.entries(CONJUGATIONS[version].prefix)) {
+          for (const [code, [prefix, kinds]] of Object.entries(CONJUGATIONS[version].prefix)) {
             const index = prefixQuery.indexOf(code);
             if (index >= 0) {
               if (child.tagName === "sh") {
@@ -63,15 +80,15 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
                 });
                 prefixResults[index] = [prefixElement, prefixPunctuationElement];
               } else if (child.tagName === "ex") {
-                const prefixText = builder.createTextNode(kind["ja"]);
+                const prefixMorphemeElement = createMorphemeElement(builder, kinds["ja"]);
                 const prefixPunctuationElement = builder.createElement("glp", (self) => {
                   builder.appendTextNode(self, "-");
                 });
-                prefixResults[index] = [prefixText, prefixPunctuationElement];
+                prefixResults[index] = [prefixMorphemeElement, prefixPunctuationElement];
               }
             }
           }
-          for (const [code, [prefix, kind]] of Object.entries(CONJUGATIONS[version].suffix)) {
+          for (const [code, [prefix, kinds]] of Object.entries(CONJUGATIONS[version].suffix)) {
             const index = suffixQuery.indexOf(code);
             if (index >= 0) {
               if (child.tagName === "sh") {
@@ -86,8 +103,8 @@ manager.registerPlugin("lig", new SimpleZenmlPlugin((builder, tagName, marks, at
                 const suffixPunctuationElement = builder.createElement("glp", (self) => {
                   builder.appendTextNode(self, "-");
                 });
-                const suffixText = builder.createTextNode(kind["ja"]);
-                suffixResults[index] = [suffixPunctuationElement, suffixText];
+                const suffixMorphemeText = createMorphemeElement(builder, kinds["ja"]);
+                suffixResults[index] = [suffixPunctuationElement, suffixMorphemeText];
               }
             }
           }
