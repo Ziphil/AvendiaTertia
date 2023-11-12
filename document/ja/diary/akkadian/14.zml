@@ -1,0 +1,231 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<学習ログ 14 — 形容詞の曲用, 不定詞, 分詞, 動形容詞>
+
+  \h1<日記 (2023 年 8 月 12 日)>
+  \p<
+    今日は、非定形活用を全部やります。
+    形容詞の語形変化についても途中で触れます。
+  >
+  \p<
+    まずは不定詞です。
+    不定詞はいわゆる「原形」や「辞書形」のようなもので、動詞の最も基本的な形とされていて、動詞を指し示す際にもこの形が用いられます。
+    この学習ログでも、これまで動詞を指す際に不定詞の形を使ってきました。
+    そのため、ここで不定詞の活用をやるのは今さらな感じもしますが、改めてちゃんと触れていきます。
+  >
+  \p<
+    不定詞は非定形活用の一種で、主語の人称, 性, 数に従って形を変えるのではなく、それ自身の性, 数, 格に従って形が変わります。
+    ただし、不定詞は常に男性名詞として扱われ数の区別もないため、格による活用しかありません。
+    各語幹での形は以下のようになります。
+    幹母音は単語によらず固定で、語尾は名詞の変化と全く同じです。
+  >
+  \side<
+    \table<
+      \caption<{parāsum} (G 型)>
+      \tr<\th;\th|col="2"|<不>>
+      \tr<\th<主>\td<{parāsum}>\td<\sub<1>[a]\sub<2>[ā]\sub<3>[-um]>>
+      \tr<\th<属>\td<{parāsim}>\td<\sub<1>[a]\sub<2>[ā]\sub<3>[-im]>>
+      \tr<\th<対>\td<{parāsam}>\td<\sub<1>[a]\sub<2>[ā]\sub<3>[-am]>>
+    >
+    \table<
+      \caption<{purrusum} (D 型)>
+      \tr<\th;\th|col="2"|<不>>
+      \tr<\th<主>\td<{purrusum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-um]>>
+      \tr<\th<属>\td<{purrusim}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-im]>>
+      \tr<\th<対>\td<{purrusam}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-am]>>
+    >
+  >
+  \side<
+    \table<
+      \caption<{šuprusum} (Š 型)>
+      \tr<\th;\th|col="2"|<不>>
+      \tr<\th<主>\td<{šuprusum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-um]>>
+      \tr<\th<属>\td<{šuprusim}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-im]>>
+      \tr<\th<対>\td<{šuprusam}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-am]>>
+    >
+    \table<
+      \caption<{naprusum} (N 型)>
+      \tr<\th;\th|col="2"|<不>>
+      \tr<\th<主>\td<{naprusum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-um]>>
+      \tr<\th<属>\td<{naprusim}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-im]>>
+      \tr<\th<対>\td<{naprusam}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-am]>>
+    >
+  >
+  \p<
+    不定詞は、名詞と同じ活用をすることからも分かるように、動詞の意味を名詞化した「～ということ」のような意味をもちます。
+    文法的には名詞と同じように扱われ、例えば主語として使われるなら主格形になり、前置詞の補語として使われるなら属格形になります。
+  >
+  \p<
+    続いて分詞について触れていきたいのですが、その前に形容詞の変化についてやってしまいます。
+    形容詞は性, 数, 格に従って形を変え、その変化は名詞の変化と基本的に同じですが、双数形はなく、男性複数形の語尾が異なります。
+  >
+  \table<
+    \caption<{ṭābum}>
+    \tr<\th;\th|col="2"|<男>\th|col="2"|<女>>
+    \tr<\th<単.主>\td<{ṭābum}>\td<[-um]>\td<{ṭābtum}>\td<[-t-um]>>
+    \tr<\th<単.属>\td<{ṭābim}>\td<[-im]>\td<{ṭābtim}>\td<[-t-im]>>
+    \tr<\th<単.対>\td<{ṭābam}>\td<[-am]>\td<{ṭābtam}>\td<[-t-am]>>
+    \tr<\th<複.主>\td<{ṭābūtum}>\td<[-ūtum]>\td<{ṭābātum}>\td<[-āt-um]>>
+    \tr<\th<複.属`/対>\td<{ṭābūtim}>\td<[-ūtim]>\td<{ṭābātim}>\td<[-āt-im]>>
+  >
+  \p<
+    語幹の最後が 2 個以上の子音で終わる場合は、女性単数形に追加される [-t-] が [-at-] になります。
+  >
+  \table<
+    \caption<{dannum}>
+    \tr<\th;\th|col="2"|<男>\th|col="2"|<女>>
+    \tr<\th<単.主>\td<{dannum}>\td<[-um]>\td<{dannatum}>\td<[-at-um]>>
+    \tr<\th<単.属>\td<{dannim}>\td<[-im]>\td<{dannatim}>\td<[-at-im]>>
+    \tr<\th<単.対>\td<{dannam}>\td<[-am]>\td<{dannatam}>\td<[-at-am]>>
+    \tr<\th<複.主>\td<{dannūtum}>\td<[-ūtum]>\td<{dannātum}>\td<[-āt-um]>>
+    \tr<\th<複.属`/対>\td<{dannūtim}>\td<[-ūtim]>\td<{dannātim}>\td<[-āt-im]>>
+  >
+  \p<
+    形容詞は、それが修飾する名詞の後に置かれ、さらにその名詞と性, 数, 格が一致します。
+    形容詞には双数形がないので、名詞の双数形を修飾する場合は形容詞は複数形になります。
+    また、形容詞は単独で名詞のように使われることもあり、そのときは「～な人」や「～なもの」を表します。
+    このとき、男性複数形の語尾が形容詞特有の [-ūtum]`/[-ūtim] ではなく名詞と同じ [-ū]`/[-ī] になることもあります。
+  >
+  \p<
+    これを踏まえて、動詞の分詞の活用を見てみましょう。
+    分詞の活用は形容詞の変化と同じなので、以下の表はちょっと省略して主格形だけ示すことにします。
+    G 型は独自の形ですが、G 型以外では完了相の語幹に [mu-] を付けたものになっています。
+  >
+  \p<
+    N 型の活用はちょっと注意すべきで、表を見ると女性単数形だけ第 2 根素と第 3 根素の間に [i] が入っていますが、これは実は逆で、それ以外の形で [i] が消失しています。
+    つまり、実際の語幹は [mun]\sub<1>[a]\sub<2>[i]\sub<3> という [i] が入った形であり、女性単数形以外では [i] が消失しているわけです。
+    これは\a|href="7.html"|<学習ログ 7> でやった母音消失の規則によるもので、完了相の活用でも同じことが起きましたね。
+  >
+  \side<
+    \table<
+      \caption<{parāsum} (G 型)>
+      \tr<\th;\th|col="2"|<分>>
+      \tr<\th<男.単.主>\td<{pārisum}>\td<\sub<1>[ā]\sub<2>[i]\sub<3>[-um]>>
+      \tr<\th<男.複.主>\td<{pārisūtum}>\td<\sub<1>[ā]\sub<2>[i]\sub<3>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{pāristum}>\td<\sub<1>[ā]\sub<2>[i]\sub<3>[-t-um]>>
+      \tr<\th<女.複.主>\td<{pārisātum}>\td<\sub<1>[ā]\sub<2>[i]\sub<3>[-āt-um]>>
+    >
+    \table<
+      \caption<{purrusum} (D 型)>
+      \tr<\th;\th|col="2"|<分>>
+      \tr<\th<男.単.主>\td<{muparrisum}>\td<[mu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-um]>>
+      \tr<\th<男.複.主>\td<{muparrisūtum}>\td<[mu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{muparristum}>\td<[mu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-t-um]>>
+      \tr<\th<女.複.主>\td<{muparrisātum}>\td<[mu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-āt-um]>>
+    >
+  >
+  \side<
+    \table<
+      \caption<{šuprusum} (Š 型)>
+      \tr<\th;\th|col="2"|<分>>
+      \tr<\th<男.単.主>\td<{mušaprisum}>\td<[muša]\sub<1>\sub<2>[i]\sub<3>[-um]>>
+      \tr<\th<男.複.主>\td<{mušaprisūtum}>\td<[muša]\sub<1>\sub<2>[i]\sub<3>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{mušapristum}>\td<[muša]\sub<1>\sub<2>[i]\sub<3>[-t-um]>>
+      \tr<\th<女.複.主>\td<{mušaprisātum}>\td<[muša]\sub<1>\sub<2>[i]\sub<3>[-āt-um]>>
+    >
+    \table<
+      \caption<{naprusum} (N 型)>
+      \tr<\th;\th|col="2"|<分>>
+      \tr<\th<男.単.主>\td<{mupparsum}>\td<[mun]\sub<1>[a]\sub<2>\sub<3>[-um]>>
+      \tr<\th<男.単.主>\td<{mupparsūtum}>\td<[mun]\sub<1>[a]\sub<2>\sub<3>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{mupparistum}>\td<[mun]\sub<1>[a]\sub<2>[i]\sub<3>[-t-um]>>
+      \tr<\th<女.単.主>\td<{mupparsātum}>\td<[mun]\sub<1>[a]\sub<2>\sub<3>[-āt-um]>>
+    >
+  >
+  \p<
+    分詞は、動詞を形容詞化したようなもので、名詞を修飾して「～している」のような意味になります。
+    名詞が省略されて「～している人」や「～しているもの」を表すこともあります。
+    例えば、{šarrum pārisum} は「(何かを) 決定する王」のような意味になり、{pārisum} 単体では「決定する人」や「意思決定者」のような意味になります。
+  >
+  \p<
+    なお、{damāqum}「良い」のように、行為というよりは状態を表すような動詞は、分詞をもたないことがあります。
+  >
+  \p<
+    形容詞化された動詞には、分詞の他に動形容詞というものもあります。
+    動形容詞の活用も形容詞の変化と同じです。
+  >
+  \p<
+    G 型の動形容詞の活用では、母音消失の規則により、女性単数形で以外では第 2 根素と第 3 根素の間に [i] が脱落します。
+    この現象は、N 型の分詞のときと同じですね。
+    女性単数形で現れるこの母音は、多くの動詞で [i] ですが、状態を表すような動詞では [a] や [u] になることがあります。
+    この母音は動詞の母音クラスとは関係ないので、個別に追加で覚える必要があります。
+  >
+  \p<
+     G 型以外の動形容詞の活用は、不定詞と同じになります。
+     したがって、不定詞か動形容詞かは文脈で判断する必要がありますが、不定詞は男性単数形しかないので、それ以外の形だったら動形容詞で確定です。
+     なお、G 型以外では語幹母音は固定です。
+  >
+  \side<
+    \table<
+      \caption<{parāsum} (G 型)>
+      \tr<\th;\th|col="2"|<動形>>
+      \tr<\th<男.単.主>\td<{parsum}>\td<\sub<1>[a]\sub<2>\sub<3>[-um]>>
+      \tr<\th<男.複.主>\td<{parsūtum}>\td<\sub<1>[a]\sub<2>\sub<3>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{paristum}>\td<\sub<1>[a]\sub<2>[/i/]\sub<3>[-t-um]>>
+      \tr<\th<女.複.主>\td<{parsātum}>\td<\sub<1>[a]\sub<2>\sub<3>[-āt-um]>>
+    >
+    \table<
+      \caption<{purrusum} (D 型)>
+      \tr<\th;\th|col="2"|<動形>>
+      \tr<\th<男.単.主>\td<{purrusum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-um]>>
+      \tr<\th<男.複.主>\td<{purrusūtum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{purrustum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-t-um]>>
+      \tr<\th<女.複.主>\td<{purrusātum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-āt-um]>>
+    >
+  >
+  \side<
+    \table<
+      \caption<{šuprusum} (Š 型)>
+      \tr<\th;\th|col="2"|<動形>>
+      \tr<\th<男.単.主>\td<{šuprusum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-um]>>
+      \tr<\th<男.複.主>\td<{šuprusūtum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{šuprustum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-t-um]>>
+      \tr<\th<女.複.主>\td<{šuprusātum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-āt-um]>>
+    >
+    \table<
+      \caption<{naprusum} (N 型)>
+      \tr<\th;\th|col="2"|<動形>>
+      \tr<\th<男.単.主>\td<{naprusum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-um]>>
+      \tr<\th<男.単.主>\td<{naprusūtum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{naprustum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-t-um]>>
+      \tr<\th<女.単.主>\td<{naprusātum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-āt-um]>>
+    >
+  >
+  \p<
+    分詞と動形容詞は、動詞から作られる形容詞という点で非常に似ていますが、意味は異なります。
+    もととなっている動詞が他動詞の場合、分詞は能動の意味になりますが、動形容詞は受動の意味になります。
+    例えば、{parāsum}「決定する」から作られる分詞 {pārisum} は「決定している (人)」の意味ですが、動形容詞 {parsum} は「決定された (事柄)」の意味になります。
+    もととなっている動詞が自動詞の場合は、分詞が未完了の意味になり、動形容詞が完了の意味になります。
+    例えば、{wašābum}「座る」から作られる分詞 {wāšibum} は「座っている途中の」の意味ですが、動形容詞 {wašbum} は「座っている」の意味になります。
+    この辺は、英語やフランス語の現在分詞と過去分詞の関係に似ていますね。
+  >
+  \p<
+    以上のように、動詞からは動形容詞という形容詞が作られます。
+    逆に、だいたいの形容詞は \sub<1>[a]\sub<2>\sub<3>[um] の形をしており、何らかの動詞の動形容詞になっています。
+    したがって、動詞と形容詞の区別が薄いと考えることができます。
+  >
+  \p<
+    さて、ここで\a|href="6.html"|<学習ログ 6> で述べた活用の種類を見返すと、非定形活用は不定詞, 分詞, 動形容詞の 3 種類だったので、これで非定形活用は全部一気にやってしまったことになります。
+    ということは、動詞の活用で残っているのは定形活用の命令法と否定希求法だけですが、これらは『ハンムラビ法典』ではほとんど出てこないっぽいので、これを扱うのは結構後になりそうです。
+    まとめとして、基本形の表を置いておきます。
+  >
+  \table<
+    \caption<√[p]-[r]-[s]>
+    \tr<\th;\th<継続相>\th<完了相>\th<完結相>\th<不定詞>\th<分詞>\th<動形容詞>>
+    \tr<\th<G 型>\td<{iparras}>\td<{iptaras}>\td<{iprus}>\td<{parāsum}>\td<{pārisum}>\td<{parsum}>>
+    \tr<\th<D 型>\td<{uparras}>\td<{uptarris}>\td<{uparris}>\td<{purrusum}>\td<{muparrisum}>\td<{purrusum}>>
+    \tr<\th<Š 型>\td<{ušapras}>\td<{uštapris}>\td<{ušapris}>\td<{šuprusum}>\td<{mušaprisum}>\td<{šuprusum}>>
+    \tr<\th<N 型>\td<{ipparras}>\td<{ittapras}>\td<{ipparis}>\td<{naprusum}>\td<{mupparsum}>\td<{naprusum}>>
+  >
+  \p<
+    だんだん表が大きくなってきましたね\k<…>。
+  >
+  \h1<追記 (2023 年 8 月 23 日)>
+  \p<
+    形容詞が名詞として使われる場合について、本文に追記しました。
+  >
+
+>

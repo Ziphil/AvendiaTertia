@@ -25,6 +25,9 @@
     "diary": {
       "index": {"ja": "日記", "en": "Diary"},
       "conlang": {"ja": "シャレイア語", "en": "Shaleian"},
+      "greek": {"ja": "古典ギリシャ語", "en": "Ancient Greek"},
+      "akkadian": {"ja": "アッカド語", "en": "Akkadian"},
+      "slavonic": {"ja": "古代教会スラヴ語", "en": "Old Church Slavonic"},
       "language": {"ja": "自然言語", "en": "Languages"},
       "mathematics": {"ja": "数学", "en": "Mathematics"},
       "application": {"ja": "プログラミング", "en": "Programming"},
@@ -32,8 +35,10 @@
     },
     "other": {
       "index": {"ja": "その他", "en": "Others"},
-      "mathematics": {"ja": "数学", "en": "Mathematics"},
+      "french": {"ja": "フランス語", "en": "French"},
+      "greek": {"ja": "古典ギリシャ語", "en": "Ancient Greek"},
       "language": {"ja": "自然言語", "en": "Languages"},
+      "mathematics": {"ja": "数学", "en": "Mathematics"},
       "tsolitaire": {"ja": "Tsolitaire", "en": "Tsolitaire"},
       "other": {"ja": "その他", "en": "Others"}
     },

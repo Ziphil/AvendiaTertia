@@ -1,0 +1,107 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<使役構文>
+
+  \h1<{faire}\k<＋>[/inf/]>
+  \h2<不定法が自動詞の場合>
+  \p<
+    {faire}\k<＋>[/inf/] を 1 つの動詞の塊とみなし、不定法の主語はこの塊の直接目的補語となる。
+  >
+  \xl<
+    \li<\sh<{J'ai fait venir ma sœur.}>>
+    \li<\sh<{C'est ma sœur que j'ai fait vanir.}>>
+    \li<\sh<{Je l'ai fait venir.}>>
+    \li<\sh<{Faites-la venir.}>>
+  >
+  \h2<不定法が他動詞の場合>
+  \p<
+    不定法の直接目的補語が {faire}\k<＋>[/inf/] の直接目的補語となり、不定法の主語は {à} もしくは {par} を用いて表される。
+    この不定法の主語が補語人称代名詞となる場合、間接目的の形を用いる。
+  >
+  \xl<
+    \li<\sh<{J'ai fait apporter le vase à mon frère.}>>
+    \li<\sh<{C'est mon frère à qui je l'ai fait apporter.}>>
+    \li<\sh<{Je le lui ai fait apporter.}>>
+    \li<\sh<{Faites-le-lui apporter.}>>
+  >
+  \p<
+    なお、不定法の主語と直接目的補語がともに一人称か二人称の場合、人称代名詞を両方とも {faire} の前に置くことは文法上不可能であるため、不定法の主語を直接目的の形で {faire} の前に置き、不定法の直接目的補語は {faire} の後の不定詞の前に置く。
+  >
+  \xl<
+    \li<\sh<{Le hasard m'a fait vous rencontrer.}>>
+  >
+  \h2<不定法が間接目的補語を伴う場合>
+  \p<
+    基本的には不定法が自動詞の場合と同じである。
+    まず、不定法が直接目的補語を伴わないならば、不定法の主語は {faire}\k<＋>[/inf/] の直接目的補語となる。
+  >
+  \xl<
+    \li<\sh<{Les photos ont fait songer mon grand-père à sa jeunesse.}>>
+    \li<\sh<{C'est mon grand-père que les photos ont fait songer à sa jeunesse.}>>
+    \li<\sh<{Les photos l'ont fait songer à sa jeunesse.}>>
+    \li<\sh<{Faites-le songer à sa jeunesse.}>>
+  >
+  \p<
+    不定法の間接目的補語を人称代名詞にしたい場合、その代名詞は不定詞の直前に置く。
+  >
+  \xl<
+    \li<\sh<{La chanson a fait rappeler ma sœur à sa mère.}>>
+    \li<\sh<{La chanson l'a fait lui rappeler.}>>
+  >
+  \p<
+    不定法が直接目的補語も間接目的補語も伴う場合、不定法の主語は {par} で表現する。
+  >
+  \xl<
+    \li<\sh<{J'ai fait parle de vous au maître par un de mes amis.}>>
+  >
+  \h1<{laisser}\k<＋>[/inf/]>
+  \h2<不定法が自動詞の場合>
+  \p<
+    {faire} と同じ。
+  >
+  \xl<
+    \li<\sh<{J'ai laissé partir ma fille.}>>
+    \li<\sh<{Je l'ai laissée partir.}>>
+  >
+  \h2<不定法が他動詞の場合>
+  \p<
+    不定法の主語と直接目的補語が一般名詞か人称代名詞かで、4 通りが考えられる。
+  >
+  \p<
+    不定法の主語および直接目的補語がともに一般名詞の場合は、以下のような 2 つの表現が可能である。
+    ただし、1 番目の表現はどこでも使われるが、2 番目の表現はしばしば不自然となることがある。
+  >
+  \xl<
+    \li<\sh<{J'ai laissé le professeur expliquer les théorèmes.}>>
+    \li<\sh<{J'ai laissé expliquer les théorèmes au professeur.}>>
+  >
+  \p<
+    不定法の主語が代名詞で直接目的補語が一般名詞の場合は、不定詞の主語を直接目的の形で {laisser} の前に置く。
+  >
+  \xl<
+    \li<\sh<{Je l'ai laissé expliquer les théorèmes.}>>
+  >
+  \p<
+    不定法の主語が一般名詞で直接目的補語が代名詞の場合は、2 通りの表現が可能である。
+    1 つ目は、不定法の直接目的補語を不定法の直前に置く表現である。
+    2 つ目は、不定法の直接目的補語を {laisser} の直前に置く表現であるが、このときの不定法の主語は、不定法の直接目的補語だと解釈されることを避けるために {par} で表現する。
+  > 
+  \xl<
+    \li<\sh<{J'ai laissé le professeur les expliquer.}>>
+    \li<\sh<{Je les ai laissé par le professeur.}>>
+  >
+  \p<
+    不定法の主語および直接目的補語がともに代名詞の場合も、2 通りの表現が可能。
+    1 つ目は、不定法の主語を間接目的の形で、不定法の直接目的補語を直接目的の形で、{laisser} の直前に置く方法である。
+    2 つ目は、不定法の主語を直接目的の形で {laisser} の前に置き、不定法の直接目的補語は不定法の前に置く方法である。
+  >
+  \xl<
+    \li<\sh<{Je les lui ai laissé expliquer.}>>
+    \li<\sh<{Je l'ai laissé les expliquer.}>>
+  >
+  \h1<過去分詞の一致>
+
+>

@@ -4,10 +4,18 @@
 
 \page<
   
+  \hb<人工言語>
   \pb<
     \ab|href="conlang/"|<シャレイア語>
+  >
+  \hb<自然言語>
+  \pb<
+    \ab|href="greek/"|<古典ギリシャ語>
+    \ab|href="akkadian/"|<アッカド語>
+  >
+  \hb<その他>
+  \pb<
     \ab|href="mathematics/"|<数学>
-    \ab|href="language/"|<自然言語>
     \ab|href="application/"|<プログラミング>
     \ab|href="game/"|<ゲーム制作>
   >
