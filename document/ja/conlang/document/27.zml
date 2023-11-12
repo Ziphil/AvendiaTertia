@@ -60,12 +60,12 @@
     以下に、ここに残されている楽曲翻訳メモを一覧する。
   >
   \el|type="par"|<
-    \li<\et<『メルト』>\ed<PB.23 ～ PB.25>>
-    \li<\et<『ONLY MY NOTE』>\ed<PB.41 ～ PB.46, PB.48 ～ PB.50>>
-    \li<\et<『99 Nights』>\ed<PB.51 ～ PB.59>>
-    \li<\et<『ALIVE』>\ed<PB.63 ～ PB.64, PB.66 ～ PB.72>>
-    \li<\et<『隣に\k<…>』>\ed<PB.76 ～ PB.83>>
-    \li<\et<『迷走 MIND』>\ed<PB.84 ～ PB.87 (PC.23 に続く)>>
+    \li<\et<PB.23 ～ PB.25>\ed<『メルト』>>
+    \li<\et<PB.41 ～ PB.46, PB.48 ～ PB.50>\ed<『ONLY MY NOTE』>>
+    \li<\et<PB.51 ～ PB.59>\ed<『99 Nights』>>
+    \li<\et<PB.63 ～ PB.64, PB.66 ～ PB.72>\ed<『ALIVE』>>
+    \li<\et<PB.76 ～ PB.83>\ed<『隣に\k<…>』>>
+    \li<\et<PB.84 ～ PB.87>\ed<『迷走 MIND』>>
   >
   \h2|id="pc"|<PC>
   \p<
@@ -76,9 +76,9 @@
     以下に、ここに残されている楽曲翻訳メモを一覧する。
   >
   \el|type="par"|<
-    \li<\et<『迷走 MIND』>\ed<PC.23 ～ PC.27 (PB.87 から続く)>>
-    \li<\et<『shiny smile』>\ed<PC.37 ～ PC.43>>
-    \li<\et<『relations』>\ed<PC.44 ～ PC.48>>
+    \li<\et<PC.23 ～ PC.27>\ed<『迷走 MIND』>>
+    \li<\et<PC.37 ～ PC.43>\ed<『shiny smile』>>
+    \li<\et<PC.44 ～ PC.48>\ed<『relations』>>
   >
   \h2|id="pd"|<PD>
   \p<
@@ -95,16 +95,16 @@
     以下に、PD.I に記されている楽曲翻訳メモを一覧する。
   >
   \el|type="par"|<
-    \li<\et<『ALRIGHT*』>\ed<PD.I.3 ～ PD.I.6>>
-    \li<\et<『風花』>\ed<PD.I.7 ～ PD.I.9>>
-    \li<\et<『約束』>\ed<PD.I.10 ～ PD.I.11>>
-    \li<\et<『ハートウォーミング』>\ed<PD.I.12 ～ PD.I.14>>
-    \li<\et<『ステキハピネス』>\ed<PD.I.15 ～ PD.I.17>>
-    \li<\et<『地球ミラーボール』>\ed<PD.I.18 ～ PD.I.21>>
-    \li<\et<『ジェミー』>\ed<PD.I.22 ～ PD.I.24>>
-    \li<\et<『魔法をかけて!』>\ed<PD.I.25 ～ PD.I.27>>
-    \li<\et<『微笑んだから、 気づいたんだ。』>\ed<PD.I.28 ～ PD.I.31>>
-    \li<\et<『Spring Screaming』>\ed<PD.I.33 ～ PD.I.36>>
+    \li<\et<PD.I.3 ～ PD.I.6>\ed<『ALRIGHT*』>>
+    \li<\et<PD.I.7 ～ PD.I.9>\ed<『風花』>>
+    \li<\et<PD.I.10 ～ PD.I.11>\ed<『約束』>>
+    \li<\et<PD.I.12 ～ PD.I.14>\ed<『ハートウォーミング』>>
+    \li<\et<PD.I.15 ～ PD.I.17>\ed<『ステキハピネス』>>
+    \li<\et<PD.I.18 ～ PD.I.21>\ed<『地球ミラーボール』>>
+    \li<\et<PD.I.22 ～ PD.I.24>\ed<『ジェミー』>>
+    \li<\et<PD.I.25 ～ PD.I.27>\ed<『魔法をかけて!』>>
+    \li<\et<PD.I.28 ～ PD.I.31>\ed<『微笑んだから、 気づいたんだ。』>>
+    \li<\et<PD.I.33 ～ PD.I.36>\ed<『Spring Screaming』>>
   >
   \h2|id="gg"|<GG>
   \h2|id="gt"|<GT>
