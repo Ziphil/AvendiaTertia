@@ -121,7 +121,16 @@
   font-family: "Inter Web";
   src: url("../material/font/19.woff2") format("woff2");
   font-weight: normal;
-  font-style:  normal;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 91%;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: local("NotoSans-Regular");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
   size-adjust: 91%;
 }
