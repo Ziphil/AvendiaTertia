@@ -37,6 +37,8 @@
       "index": {"ja": "その他", "en": "Others"},
       "french": {"ja": "フランス語", "en": "French"},
       "greek": {"ja": "古典ギリシャ語", "en": "Ancient Greek"},
+      "akkadian": {"ja": "アッカド語", "en": "Akkadian"},
+      "slavonic": {"ja": "古代教会スラブ語", "en": "Old Church Slavonic"},
       "language": {"ja": "自然言語", "en": "Languages"},
       "mathematics": {"ja": "数学", "en": "Mathematics"},
       "tsolitaire": {"ja": "Tsolitaire", "en": "Tsolitaire"},
