@@ -68,6 +68,40 @@
   \p<
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   >
+  \h1<フォントテスト>
+  \h2<ラテン文字>
+  \p<
+    Lorem ipsum à côté ça weiß. `/
+    [Lorem ipsum à côté ça weiß.]
+  >
+  \p<
+    `[Akkadian`] aḫāzum šalûm baʔlātum, ʔ ḫ ṭ ṣ š. `/
+    [aḫāzum šalûm baʔlātum, ʔ ḫ ṭ ṣ š.]
+  >
+  \p<
+    `[Arabic`] hāʔulāʔi ʕarabīya, ʔ ḥ ḫ ṯ ḏ š ṣ ḍ ṭ ẓ ʕ. `/
+    [hāʔulāʔi ʕarabīya, ʔ ḥ ḫ ṯ ḏ š ṣ ḍ ṭ ẓ ʕ.]
+  >
+  \p<
+    `[Sanskrit`] ṛ ṝ ḷ ḹ ṃ ḥ ḍ ṅ ñ ṇ ś ṣ ḻ kʰ. `/
+    [ṛ ṝ ḷ ḹ ṃ ḥ ḍ ṅ ñ ṇ ś ṣ ḻ kʰ.]
+  >
+  \h2<キリル文字>
+  \p<
+    Я не хочу́ е́хать в университе́т. `/
+    [Я не хочу́ е́хать в университе́т.]
+  >
+  \p<
+    `[Church`] є ѕ ꙉ ꙋ ꙑ ѣ ꙗ ѥ ѧ ѫ ѩ ѭ ѯ ѱ ѳ ѵ ҁ, ꙁ ꙃ і ї ѹ. `/
+    [є ѕ ꙉ ꙋ ꙑ ѣ ꙗ ѥ ѧ ѫ ѩ ѭ ѯ ѱ ѳ ѵ ҁ, ꙁ ꙃ і ї ѹ.]
+  >
+  \h2<ギリシャ文字>
+  \p<
+    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος.
+    εὐθεί\gd|d="i"|<ᾱ> \gd|d="ra"|<ῡ>δω. `/
+    [μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος.]
+    [εὐθεί\gd|d="i"|<ᾱ> \gd|d="ra"|<ῡ>δω.]
+  >
   \h1|id="inline"|<インライン要素>
   \h2<シャレイア語>
   \p<
@@ -110,21 +144,6 @@
   >
   \p<
     マクロを使って \ch|c="1A2"|; などの特殊文字が入力できます。
-  >
-  \h1<フォントテスト>
-  \h2<本文フォント>
-  \p<
-    Lorem ipsum à côté de aḫāzum hāʔulāʔi ʕarabīya ḥ ġ ṣ ḍ ṭullābun ṯ ḏālika.
-    Я не хочу́ е́хать в университе́т.
-    μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος.
-    εὐθεί\gd|d="i"|<ᾱ> \gd|d="ra"|<ῡ>δω.
-  >
-  \h2<サンセリフフォント>
-  \p<
-    [Lorem ipsum à côté de aḫāzum hāʔulāʔi ʕarabīya ḥ ġ ṣ ḍ ṭullābun ṯ ḏālika.]
-    [Я не хочу́ е́хать в университе́т.]
-    [μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος.]
-    [εὐθεί\gd|d="i"|<ᾱ> \gd|d="ra"|<ῡ>δω.]
   >
   \h1|id="numbered-paragraph"|<番号付き段落>
   \p|num="1"|<
