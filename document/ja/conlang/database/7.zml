@@ -8,10 +8,15 @@
 
   \h1<ライセンスについて>
   \p<
-    以下のフォントは、Shaleian ファミリーを除いて \ae|href="https://osdn.net/projects/opensource/wiki/SIL_Open_Font_License_1.1"|<SIL Open Font License 1.1> が適用されます。
-    これらのフォントの著作者は Ziphil Shaleiras です。
+    公式フォントには、全て \ae|href="https://osdn.net/projects/opensource/wiki/SIL_Open_Font_License_1.1"|<SIL Open Font License 1.1> が適用されます。
+    このライセンスのもとで自由に使っていただいて構いません。
+    フォントの著作者は Ziphil Shaleiras です。
   >
-  \h1<Vekos ファミリー>
+  \p<
+    サードパーティ製のフォントのライセンスについては、配布先の記述を参照するか、著作者にお問い合わせください。
+  >
+  \h1<公式フォント>
+  \h2<Vekos ファミリー>
   \img|src="../../file/font/1.png"|;
   \p<
     スタンダードなリッシュ体のフォントです。
@@ -41,7 +46,7 @@
   \form<
     \ae|href="https://drive.google.com/drive/folders/1rMHE0txxCf0_37C5bXHhY4m06BgQoQV8?usp=sharing"|<ダウンロード>　(ver 2.0.0)
   >
-  \h1<Gilit ファミリー>
+  \h2<Gilit ファミリー>
   \img|src="../../file/font/2.png"|;
   \p<
     三角形が特徴的なシフ体のフォントです。
@@ -69,7 +74,7 @@
   \form<
     \ae|href="https://drive.google.com/drive/folders/1DpKt_rYgn9EMHUWOXudrzR3DxhScxVJV?usp=sharing"|<ダウンロード>　(ver 2.0.0)
   >
-  \h1<Kaleg ファミリー>
+  \h2<Kaleg ファミリー>
   \img|src="../../file/font/4.png"|;
   \p<
     四角形が特徴的なカデグ体のフォントです。
@@ -111,14 +116,20 @@
   \form<
     \ae|href="https://drive.google.com/drive/folders/1-Fq5iKrfu1Vi_I4-3QwtOHgBwjJBRrnW?usp=sharing"|<ダウンロード>　(ver 1.0.0)
   >
-  \h1<Shaleian ファミリー>
+  \h1<サードパーティ製フォント>
+  \h2<Càgit ファミリー>
+  \p<
+    \ae|href="https://kaeru2193.net/"|<かえる様>によるセリフ体風のフォントです。
+    2 種類のウェイトが用意されています。
+  >
+  \form<
+    \ae|href="https://kaeru2193.net/download/font/cagit"|<配布ページ>
+  >
+  \h2<Shaleian ファミリー>
   \img|src="../../file/font/3.png"|;
   \p<
-    アルファベットと数字および一部の記号が含まれます。
-  >
-  \p<
-    このフォントは、アド様 (\ae|href="https://dirdam.github.io/"|<GitHub Pages>) に作っていただきました。
-    フォントファイルの著作権はアド様に帰属します。
+    \ae|href="https://dirdam.github.io/"|<アド様>による丸ゴシック体風のフォントです。
+    こちらのサイトで代理して配布していますが、フォントファイルの著作権はアド様に帰属します。
   >
   \form<
     \ae|href="https://drive.google.com/drive/folders/1_6-LM8VGyzmvhcWApXXUev0nrDq4w6Ms?usp=sharing"|<ダウンロード>
