@@ -19,6 +19,12 @@ manager.registerElementRule("img", "page", (transformer, document, element, scop
     } else {
       self.setAttribute("alt", "");
     }
+    if (element.hasAttribute("width")) {
+      self.setAttribute("width", element.getAttribute("width"));
+    }
+    if (element.hasAttribute("height")) {
+      self.setAttribute("height", element.getAttribute("height"));
+    }
   });
   if (!args?.contained) {
     const innerSelf = self;
