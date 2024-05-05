@@ -164,6 +164,24 @@ manager.registerElementRule("cns", "page", (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("cns", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("cuneiform-sentence");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
+manager.registerElementRule("rd", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("radical");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("h", ["page", "page.section-table"], (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {

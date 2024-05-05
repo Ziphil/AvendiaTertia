@@ -62,7 +62,7 @@ $program-line-height: 1.5;
   }
 }
 
-@mixin box($color, $bordered: false) {
+@mixin box($color, $bordered: false, $dotted: false) {
   width: fix-em(1em, 80%);
   min-width: fix-em(1em, 80%);
   height: fix-em(1em, 80%);
@@ -72,9 +72,14 @@ $program-line-height: 1.5;
   align-items: center;
   justify-content: center;
   vertical-align: fix-em(0.12em, 80%);
+  box-sizing: border-box;
   @if $bordered {
     color: $color;
-    box-shadow: 0rpx 0rpx 0rpx 1rpx $color;
+    @if $dotted {
+      border: 1px $color dotted;
+    } @else {
+      border: 1px $color solid;
+    }
   } @else {
     color: var(--background-color);
     background-color: $color;

@@ -6,6 +6,7 @@
 
 
 .box {
+  margin-inline: 0.15em;
   @include box($blue-color, false);
 }
 
