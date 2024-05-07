@@ -20,14 +20,14 @@
   >
   \table<
     \tr<\th<語型>\th<単語>>
-    \tr<\td<\sub<1>[a]\sub<2>[ā]\sub<3>[um]>\td<{kaṣārum}「縛ること」>>
-    \tr<\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[um]>\td<{kuṣṣurum}「縛られた」>>
-    \tr<\td<[ma]\sub<1>\sub<2>[a]\sub<3>[um]>\td<{makṣarum}「束 (縛られたもの)」>>
+    \tr<\td<\rd<I>[a]\rd<II>[ā]\rd<III>[um]>\td<{kaṣārum}「縛ること」>>
+    \tr<\td<\rd<I>[u]\rd<II>[u]\rd<III>[um]>\td<{kuṣṣurum}「縛られた」>>
+    \tr<\td<[ma]\rd<I>\rd<II>[a]\rd<III>[um]>\td<{makṣarum}「束 (縛られたもの)」>>
   >
   \p<
-    ここで、語型において語根を構成する子音が入る場所を下付き数字で表しました。
+    ここで、語型において語根を構成する子音が入る場所をローマ数字で表しました。
     しかし、語型を記述する際には、語根の代表として √[p-r-s] を適用した形で表すという表記法が広く用いられています。
-    この表記法では、例えば \sub<1>[a]\sub<2>[ā]\sub<3>[um] や \sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[um] ではなく [parāsum] や [purrusum] と書きます。
+    この表記法では、例えば \rd<I>[a]\rd<II>[ā]\rd<III>[um] や \rd<I>[u]\rd<II>[u]\rd<III>[um] ではなく [parāsum] や [purrusum] と書きます。
     要するに、「√[p-r-s] の場合の形だけ書くけど他の語根でも同様だよ」という表記をするわけですね。
     この学習ログで語型を記す際には、一般的な慣習に倣って √[p-r-s] に適用した形で書きますが、語根を除いた語型だけに特に注目したい場合は下付き数字による記法も使うことにします。
   >
@@ -69,10 +69,10 @@
   >
   \table<
     \tr<\th<型>\th<意味>\th|col="2"|<形>>
-    \tr<\td<G 型>\td<分ける (基本)>\td<{parāsum}>\td<\sub<1>[a]\sub<1>[ā]\sub<1>[um]>>
-    \tr<\td<D 型>\td<切り落とす (作為, 強調)>\td<{purrusum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[um]>>
-    \tr<\td<Š 型>\td<分断させる (使役)>\td<{šuprusum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[um]>>
-    \tr<\td<N 型>\td<分かれる (再帰, 受動)>\td<{naprusum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[um]>>
+    \tr<\td<G 型>\td<分ける (基本)>\td<{parāsum}>\td<\rd<I>[a]\rd<I>[ā]\rd<I>[um]>>
+    \tr<\td<D 型>\td<切り落とす (作為, 強調)>\td<{purrusum}>\td<\rd<I>[u]\rd<II>[u]\rd<III>[um]>>
+    \tr<\td<Š 型>\td<分断させる (使役)>\td<{šuprusum}>\td<[šu]\rd<I>\rd<II>[u]\rd<III>[um]>>
+    \tr<\td<N 型>\td<分かれる (再帰, 受動)>\td<{naprusum}>\td<[na]\rd<I>\rd<II>[u]\rd<III>[um]>>
   >
   \p<
     なお、「D 型は強調」や「Š 型は使役」などと言いましたが、これはあくまで目安で、実際には各型の意味を予測することはあまりできません。

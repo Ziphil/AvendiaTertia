@@ -26,32 +26,32 @@
     \table<
       \caption<{parāsum} (G 型)>
       \tr<\th;\th|col="2"|<不>>
-      \tr<\th<主>\td<{parāsum}>\td<\sub<1>[a]\sub<2>[ā]\sub<3>[-um]>>
-      \tr<\th<属>\td<{parāsim}>\td<\sub<1>[a]\sub<2>[ā]\sub<3>[-im]>>
-      \tr<\th<対>\td<{parāsam}>\td<\sub<1>[a]\sub<2>[ā]\sub<3>[-am]>>
+      \tr<\th<主>\td<{parāsum}>\td<\rd<I>[a]\rd<II>[ā]\rd<III>[-um]>>
+      \tr<\th<属>\td<{parāsim}>\td<\rd<I>[a]\rd<II>[ā]\rd<III>[-im]>>
+      \tr<\th<対>\td<{parāsam}>\td<\rd<I>[a]\rd<II>[ā]\rd<III>[-am]>>
     >
     \table<
       \caption<{purrusum} (D 型)>
       \tr<\th;\th|col="2"|<不>>
-      \tr<\th<主>\td<{purrusum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-um]>>
-      \tr<\th<属>\td<{purrusim}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-im]>>
-      \tr<\th<対>\td<{purrusam}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-am]>>
+      \tr<\th<主>\td<{purrusum}>\td<\rd<I>[u]\rd<II>\rd<II>[u]\rd<III>[-um]>>
+      \tr<\th<属>\td<{purrusim}>\td<\rd<I>[u]\rd<II>\rd<II>[u]\rd<III>[-im]>>
+      \tr<\th<対>\td<{purrusam}>\td<\rd<I>[u]\rd<II>\rd<II>[u]\rd<III>[-am]>>
     >
   >
   \side<
     \table<
       \caption<{šuprusum} (Š 型)>
       \tr<\th;\th|col="2"|<不>>
-      \tr<\th<主>\td<{šuprusum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-um]>>
-      \tr<\th<属>\td<{šuprusim}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-im]>>
-      \tr<\th<対>\td<{šuprusam}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-am]>>
+      \tr<\th<主>\td<{šuprusum}>\td<[šu]\rd<I>\rd<II>[u]\rd<III>[-um]>>
+      \tr<\th<属>\td<{šuprusim}>\td<[šu]\rd<I>\rd<II>[u]\rd<III>[-im]>>
+      \tr<\th<対>\td<{šuprusam}>\td<[šu]\rd<I>\rd<II>[u]\rd<III>[-am]>>
     >
     \table<
       \caption<{naprusum} (N 型)>
       \tr<\th;\th|col="2"|<不>>
-      \tr<\th<主>\td<{naprusum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-um]>>
-      \tr<\th<属>\td<{naprusim}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-im]>>
-      \tr<\th<対>\td<{naprusam}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-am]>>
+      \tr<\th<主>\td<{naprusum}>\td<[na]\rd<I>\rd<II>[u]\rd<III>[-um]>>
+      \tr<\th<属>\td<{naprusim}>\td<[na]\rd<I>\rd<II>[u]\rd<III>[-im]>>
+      \tr<\th<対>\td<{naprusam}>\td<[na]\rd<I>\rd<II>[u]\rd<III>[-am]>>
     >
   >
   \p<
@@ -96,43 +96,43 @@
   >
   \p<
     N 型の活用はちょっと注意すべきで、表を見ると女性単数形だけ第 2 根素と第 3 根素の間に [i] が入っていますが、これは実は逆で、それ以外の形で [i] が消失しています。
-    つまり、実際の語幹は [mun]\sub<1>[a]\sub<2>[i]\sub<3> という [i] が入った形であり、女性単数形以外では [i] が消失しているわけです。
+    つまり、実際の語幹は [mun]\rd<I>[a]\rd<II>[i]\rd<III> という [i] が入った形であり、女性単数形以外では [i] が消失しているわけです。
     これは\a|href="7.html"|<学習ログ 7> でやった母音消失の規則によるもので、完了相の活用でも同じことが起きましたね。
   >
   \side<
     \table<
       \caption<{parāsum} (G 型)>
       \tr<\th;\th|col="2"|<分>>
-      \tr<\th<男.単.主>\td<{pārisum}>\td<\sub<1>[ā]\sub<2>[i]\sub<3>[-um]>>
-      \tr<\th<男.複.主>\td<{pārisūtum}>\td<\sub<1>[ā]\sub<2>[i]\sub<3>[-ūtum]>>
-      \tr<\th<女.単.主>\td<{pāristum}>\td<\sub<1>[ā]\sub<2>[i]\sub<3>[-t-um]>>
-      \tr<\th<女.複.主>\td<{pārisātum}>\td<\sub<1>[ā]\sub<2>[i]\sub<3>[-āt-um]>>
+      \tr<\th<男.単.主>\td<{pārisum}>\td<\rd<I>[ā]\rd<II>[i]\rd<III>[-um]>>
+      \tr<\th<男.複.主>\td<{pārisūtum}>\td<\rd<I>[ā]\rd<II>[i]\rd<III>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{pāristum}>\td<\rd<I>[ā]\rd<II>[i]\rd<III>[-t-um]>>
+      \tr<\th<女.複.主>\td<{pārisātum}>\td<\rd<I>[ā]\rd<II>[i]\rd<III>[-āt-um]>>
     >
     \table<
       \caption<{purrusum} (D 型)>
       \tr<\th;\th|col="2"|<分>>
-      \tr<\th<男.単.主>\td<{muparrisum}>\td<[mu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-um]>>
-      \tr<\th<男.複.主>\td<{muparrisūtum}>\td<[mu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-ūtum]>>
-      \tr<\th<女.単.主>\td<{muparristum}>\td<[mu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-t-um]>>
-      \tr<\th<女.複.主>\td<{muparrisātum}>\td<[mu]\sub<1>[a]\sub<2>\sub<2>[i]\sub<3>[-āt-um]>>
+      \tr<\th<男.単.主>\td<{muparrisum}>\td<[mu]\rd<I>[a]\rd<II>\rd<II>[i]\rd<III>[-um]>>
+      \tr<\th<男.複.主>\td<{muparrisūtum}>\td<[mu]\rd<I>[a]\rd<II>\rd<II>[i]\rd<III>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{muparristum}>\td<[mu]\rd<I>[a]\rd<II>\rd<II>[i]\rd<III>[-t-um]>>
+      \tr<\th<女.複.主>\td<{muparrisātum}>\td<[mu]\rd<I>[a]\rd<II>\rd<II>[i]\rd<III>[-āt-um]>>
     >
   >
   \side<
     \table<
       \caption<{šuprusum} (Š 型)>
       \tr<\th;\th|col="2"|<分>>
-      \tr<\th<男.単.主>\td<{mušaprisum}>\td<[muša]\sub<1>\sub<2>[i]\sub<3>[-um]>>
-      \tr<\th<男.複.主>\td<{mušaprisūtum}>\td<[muša]\sub<1>\sub<2>[i]\sub<3>[-ūtum]>>
-      \tr<\th<女.単.主>\td<{mušapristum}>\td<[muša]\sub<1>\sub<2>[i]\sub<3>[-t-um]>>
-      \tr<\th<女.複.主>\td<{mušaprisātum}>\td<[muša]\sub<1>\sub<2>[i]\sub<3>[-āt-um]>>
+      \tr<\th<男.単.主>\td<{mušaprisum}>\td<[muša]\rd<I>\rd<II>[i]\rd<III>[-um]>>
+      \tr<\th<男.複.主>\td<{mušaprisūtum}>\td<[muša]\rd<I>\rd<II>[i]\rd<III>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{mušapristum}>\td<[muša]\rd<I>\rd<II>[i]\rd<III>[-t-um]>>
+      \tr<\th<女.複.主>\td<{mušaprisātum}>\td<[muša]\rd<I>\rd<II>[i]\rd<III>[-āt-um]>>
     >
     \table<
       \caption<{naprusum} (N 型)>
       \tr<\th;\th|col="2"|<分>>
-      \tr<\th<男.単.主>\td<{mupparsum}>\td<[mun]\sub<1>[a]\sub<2>\sub<3>[-um]>>
-      \tr<\th<男.単.主>\td<{mupparsūtum}>\td<[mun]\sub<1>[a]\sub<2>\sub<3>[-ūtum]>>
-      \tr<\th<女.単.主>\td<{mupparistum}>\td<[mun]\sub<1>[a]\sub<2>[i]\sub<3>[-t-um]>>
-      \tr<\th<女.単.主>\td<{mupparsātum}>\td<[mun]\sub<1>[a]\sub<2>\sub<3>[-āt-um]>>
+      \tr<\th<男.単.主>\td<{mupparsum}>\td<[mun]\rd<I>[a]\rd<II>\rd<III>[-um]>>
+      \tr<\th<男.単.主>\td<{mupparsūtum}>\td<[mun]\rd<I>[a]\rd<II>\rd<III>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{mupparistum}>\td<[mun]\rd<I>[a]\rd<II>[i]\rd<III>[-t-um]>>
+      \tr<\th<女.単.主>\td<{mupparsātum}>\td<[mun]\rd<I>[a]\rd<II>\rd<III>[-āt-um]>>
     >
   >
   \p<
@@ -162,36 +162,36 @@
     \table<
       \caption<{parāsum} (G 型)>
       \tr<\th;\th|col="2"|<動形>>
-      \tr<\th<男.単.主>\td<{parsum}>\td<\sub<1>[a]\sub<2>\sub<3>[-um]>>
-      \tr<\th<男.複.主>\td<{parsūtum}>\td<\sub<1>[a]\sub<2>\sub<3>[-ūtum]>>
-      \tr<\th<女.単.主>\td<{paristum}>\td<\sub<1>[a]\sub<2>[/i/]\sub<3>[-t-um]>>
-      \tr<\th<女.複.主>\td<{parsātum}>\td<\sub<1>[a]\sub<2>\sub<3>[-āt-um]>>
+      \tr<\th<男.単.主>\td<{parsum}>\td<\rd<I>[a]\rd<II>\rd<III>[-um]>>
+      \tr<\th<男.複.主>\td<{parsūtum}>\td<\rd<I>[a]\rd<II>\rd<III>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{paristum}>\td<\rd<I>[a]\rd<II>[/i/]\rd<III>[-t-um]>>
+      \tr<\th<女.複.主>\td<{parsātum}>\td<\rd<I>[a]\rd<II>\rd<III>[-āt-um]>>
     >
     \table<
       \caption<{purrusum} (D 型)>
       \tr<\th;\th|col="2"|<動形>>
-      \tr<\th<男.単.主>\td<{purrusum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-um]>>
-      \tr<\th<男.複.主>\td<{purrusūtum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-ūtum]>>
-      \tr<\th<女.単.主>\td<{purrustum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-t-um]>>
-      \tr<\th<女.複.主>\td<{purrusātum}>\td<\sub<1>[u]\sub<2>\sub<2>[u]\sub<3>[-āt-um]>>
+      \tr<\th<男.単.主>\td<{purrusum}>\td<\rd<I>[u]\rd<II>\rd<II>[u]\rd<III>[-um]>>
+      \tr<\th<男.複.主>\td<{purrusūtum}>\td<\rd<I>[u]\rd<II>\rd<II>[u]\rd<III>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{purrustum}>\td<\rd<I>[u]\rd<II>\rd<II>[u]\rd<III>[-t-um]>>
+      \tr<\th<女.複.主>\td<{purrusātum}>\td<\rd<I>[u]\rd<II>\rd<II>[u]\rd<III>[-āt-um]>>
     >
   >
   \side<
     \table<
       \caption<{šuprusum} (Š 型)>
       \tr<\th;\th|col="2"|<動形>>
-      \tr<\th<男.単.主>\td<{šuprusum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-um]>>
-      \tr<\th<男.複.主>\td<{šuprusūtum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-ūtum]>>
-      \tr<\th<女.単.主>\td<{šuprustum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-t-um]>>
-      \tr<\th<女.複.主>\td<{šuprusātum}>\td<[šu]\sub<1>\sub<2>[u]\sub<3>[-āt-um]>>
+      \tr<\th<男.単.主>\td<{šuprusum}>\td<[šu]\rd<I>\rd<II>[u]\rd<III>[-um]>>
+      \tr<\th<男.複.主>\td<{šuprusūtum}>\td<[šu]\rd<I>\rd<II>[u]\rd<III>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{šuprustum}>\td<[šu]\rd<I>\rd<II>[u]\rd<III>[-t-um]>>
+      \tr<\th<女.複.主>\td<{šuprusātum}>\td<[šu]\rd<I>\rd<II>[u]\rd<III>[-āt-um]>>
     >
     \table<
       \caption<{naprusum} (N 型)>
       \tr<\th;\th|col="2"|<動形>>
-      \tr<\th<男.単.主>\td<{naprusum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-um]>>
-      \tr<\th<男.単.主>\td<{naprusūtum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-ūtum]>>
-      \tr<\th<女.単.主>\td<{naprustum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-t-um]>>
-      \tr<\th<女.単.主>\td<{naprusātum}>\td<[na]\sub<1>\sub<2>[u]\sub<3>[-āt-um]>>
+      \tr<\th<男.単.主>\td<{naprusum}>\td<[na]\rd<I>\rd<II>[u]\rd<III>[-um]>>
+      \tr<\th<男.単.主>\td<{naprusūtum}>\td<[na]\rd<I>\rd<II>[u]\rd<III>[-ūtum]>>
+      \tr<\th<女.単.主>\td<{naprustum}>\td<[na]\rd<I>\rd<II>[u]\rd<III>[-t-um]>>
+      \tr<\th<女.単.主>\td<{naprusātum}>\td<[na]\rd<I>\rd<II>[u]\rd<III>[-āt-um]>>
     >
   >
   \p<
@@ -204,7 +204,7 @@
   >
   \p<
     以上のように、動詞からは動形容詞という形容詞が作られます。
-    逆に、だいたいの形容詞は \sub<1>[a]\sub<2>\sub<3>[um] の形をしており、何らかの動詞の動形容詞になっています。
+    逆に、だいたいの形容詞は \rd<I>[a]\rd<II>\rd<III>[um] の形をしており、何らかの動詞の動形容詞になっています。
     したがって、動詞と形容詞の区別が薄いと考えることができます。
   >
   \p<

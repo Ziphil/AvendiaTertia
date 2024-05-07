@@ -42,7 +42,7 @@
   >
   \p<
     動詞の活用は、動詞型と活用の種類によって定まる「語幹\fl<stem>」と呼ばれる部分に、接頭辞や接尾辞を付けることで行われます。
-    G 型の継続相の活用では、\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3> という語幹が用いられます。
+    G 型の継続相の活用では、\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III> という語幹が用いられます。
     ここで、語幹の第 2 根素と第 3 根素の間に入る母音は「幹母音\fl<thematic vowel>」と呼ばれ、単語ごとに異なります。
     {parāsum} の幹母音は [a] なので三人称単数形は {iparras} となりますが、{šarāqum} の幹母音は [i] なので三人称単数形は {išarriq} です。
     語型を書く際は、単語によって変わり得ることが分かるように、幹母音はイタリックにしておきます。
@@ -50,14 +50,14 @@
   \table<
     \caption<{parāsum} (G 型)>
     \tr<\th;\th|col="2"|<継>>
-    \tr<\th<三.単>\td<{iparras}>\td<[i-]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
-    \tr<\th<二.男.単>\td<{taparras}>\td<[ta-]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
-    \tr<\th<二.女.単>\td<{taparrasī}>\td<[ta-]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[-ī]>>
-    \tr<\th<一.単>\td<{aparras}>\td<[a-]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
-    \tr<\th<三.男.複>\td<{iparrasū}>\td<[i-]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[-ū]>>
-    \tr<\th<三.女.複>\td<{iparrasā}>\td<[i-]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[-ā]>>
-    \tr<\th<二.複>\td<{taparrasā}>\td<[ta-]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[-ā]>>
-    \tr<\th<一.複>\td<{niparras}>\td<[ni-]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
+    \tr<\th<三.単>\td<{iparras}>\td<[i-]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>>>
+    \tr<\th<二.男.単>\td<{taparras}>\td<[ta-]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>>>
+    \tr<\th<二.女.単>\td<{taparrasī}>\td<[ta-]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>[-ī]>>
+    \tr<\th<一.単>\td<{aparras}>\td<[a-]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>>>
+    \tr<\th<三.男.複>\td<{iparrasū}>\td<[i-]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>[-ū]>>
+    \tr<\th<三.女.複>\td<{iparrasā}>\td<[i-]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>[-ā]>>
+    \tr<\th<二.複>\td<{taparrasā}>\td<[ta-]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>[-ā]>>
+    \tr<\th<一.複>\td<{niparras}>\td<[ni-]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>>>
   >
   \p<
     アッカド語で付けられる接頭辞の [i-]`/[ta-]`/[a-]`/[ni-] は、アラビア語の未完了相の活用などで付けられる ya-`/ta-`/ʔa-`/na- と似てますね。
@@ -70,34 +70,34 @@
   \table<
     \caption<{purrusum} (D 型)>
     \tr<\th;\th|col="2"|<継>>
-    \tr<\th<三.単>\td<{uparras}>\td<[u-]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>>>
-    \tr<\th<二.男.単>\td<{tuparras}>\td<[tu-]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>>>
-    \tr<\th<二.女.単>\td<{tuparrasī}>\td<[tu-]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[-ī]>>
-    \tr<\th<一.単>\td<{uparras}>\td<[u-]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>>>
-    \tr<\th<三.男.複>\td<{uparrasū}>\td<[u-]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[-ū]>>
-    \tr<\th<三.女.複>\td<{uparrasā}>\td<[u-]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[-ā]>>
-    \tr<\th<二.複>\td<{tuparrasā}>\td<[tu-]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>[-ā]>>
-    \tr<\th<一.複>\td<{nuparras}>\td<[nu-]\sub<1>[a]\sub<2>\sub<2>[a]\sub<3>>>
+    \tr<\th<三.単>\td<{uparras}>\td<[u-]\rd<I>[a]\rd<II>\rd<II>[a]\rd<III>>>
+    \tr<\th<二.男.単>\td<{tuparras}>\td<[tu-]\rd<I>[a]\rd<II>\rd<II>[a]\rd<III>>>
+    \tr<\th<二.女.単>\td<{tuparrasī}>\td<[tu-]\rd<I>[a]\rd<II>\rd<II>[a]\rd<III>[-ī]>>
+    \tr<\th<一.単>\td<{uparras}>\td<[u-]\rd<I>[a]\rd<II>\rd<II>[a]\rd<III>>>
+    \tr<\th<三.男.複>\td<{uparrasū}>\td<[u-]\rd<I>[a]\rd<II>\rd<II>[a]\rd<III>[-ū]>>
+    \tr<\th<三.女.複>\td<{uparrasā}>\td<[u-]\rd<I>[a]\rd<II>\rd<II>[a]\rd<III>[-ā]>>
+    \tr<\th<二.複>\td<{tuparrasā}>\td<[tu-]\rd<I>[a]\rd<II>\rd<II>[a]\rd<III>[-ā]>>
+    \tr<\th<一.複>\td<{nuparras}>\td<[nu-]\rd<I>[a]\rd<II>\rd<II>[a]\rd<III>>>
   >
   \p<
     アッカド語の D 型はアラビア語の II 型に対応するわけですが、アラビア語の II 型の活用で付けられる接頭辞も母音が u になりますね。
   >
   \p<
     Š 型の継続相の活用は以下のようになります。
-    これはここまでの活用とはちょっと違い、語幹は [ša]\sub<1>\sub<2>[a]\sub<3> という形になります。
+    これはここまでの活用とはちょっと違い、語幹は [ša]\rd<I>\rd<II>[a]\rd<III> という形になります。
     幹母音は単語によらず常に [a] です。
   >
   \table<
     \caption<{šuprusum} (Š 型)>
     \tr<\th;\th|col="2"|<継>>
-    \tr<\th<三.単>\td<{ušapras}>\td<[u-ša]\sub<1>\sub<2>[a]\sub<3>>>
-    \tr<\th<二.男.単>\td<{tušapras}>\td<[tu-ša]\sub<1>\sub<2>[a]\sub<3>>>
-    \tr<\th<二.女.単>\td<{tušaprasī}>\td<[tu-ša]\sub<1>\sub<2>[a]\sub<3>[-ī]>>
-    \tr<\th<一.単>\td<{ušapras}>\td<[u-ša]\sub<1>\sub<2>[a]\sub<3>>>
-    \tr<\th<三.男.複>\td<{ušaprasū}>\td<[u-ša]\sub<1>\sub<2>[a]\sub<3>[-ū]>>
-    \tr<\th<三.女.複>\td<{ušaprasā}>\td<[u-ša]\sub<1>\sub<2>[a]\sub<3>[-ā]>>
-    \tr<\th<二.複>\td<{tušaprasā}>\td<[tu-ša]\sub<1>\sub<2>[a]\sub<3>[-ā]>>
-    \tr<\th<一.複>\td<{nušapras}>\td<[nu-ša]\sub<1>\sub<2>[a]\sub<3>>>
+    \tr<\th<三.単>\td<{ušapras}>\td<[u-ša]\rd<I>\rd<II>[a]\rd<III>>>
+    \tr<\th<二.男.単>\td<{tušapras}>\td<[tu-ša]\rd<I>\rd<II>[a]\rd<III>>>
+    \tr<\th<二.女.単>\td<{tušaprasī}>\td<[tu-ša]\rd<I>\rd<II>[a]\rd<III>[-ī]>>
+    \tr<\th<一.単>\td<{ušapras}>\td<[u-ša]\rd<I>\rd<II>[a]\rd<III>>>
+    \tr<\th<三.男.複>\td<{ušaprasū}>\td<[u-ša]\rd<I>\rd<II>[a]\rd<III>[-ū]>>
+    \tr<\th<三.女.複>\td<{ušaprasā}>\td<[u-ša]\rd<I>\rd<II>[a]\rd<III>[-ā]>>
+    \tr<\th<二.複>\td<{tušaprasā}>\td<[tu-ša]\rd<I>\rd<II>[a]\rd<III>[-ā]>>
+    \tr<\th<一.複>\td<{nušapras}>\td<[nu-ša]\rd<I>\rd<II>[a]\rd<III>>>
   >
   \p<
     続いて N 型の活用を見たいのですが、その前に少し注意すべきことがあります。
@@ -112,14 +112,14 @@
   \table<
     \caption<{naprusum} (N 型)>
     \tr<\th;\th|col="2"|<継>>
-    \tr<\th<三.単>\td<{ipparras}>\td<[i-n]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
-    \tr<\th<二.男.単>\td<{tapparras}>\td<[ta-n]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
-    \tr<\th<二.女.単>\td<{tapparrasī}>\td<[ta-n]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[-ī]>>
-    \tr<\th<一.単>\td<{apparras}>\td<[a-n]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
-    \tr<\th<三.男.複>\td<{ipparrasū}>\td<[i-n]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[-ū]>>
-    \tr<\th<三.女.複>\td<{ipparrasā}>\td<[i-n]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[-ā]>>
-    \tr<\th<二.複>\td<{tapparrasā}>\td<[ta-n]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>[-ā]>>
-    \tr<\th<一.複>\td<{nipparras}>\td<[ni-n]\sub<1>[a]\sub<2>\sub<2>[/a/]\sub<3>>>
+    \tr<\th<三.単>\td<{ipparras}>\td<[i-n]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>>>
+    \tr<\th<二.男.単>\td<{tapparras}>\td<[ta-n]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>>>
+    \tr<\th<二.女.単>\td<{tapparrasī}>\td<[ta-n]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>[-ī]>>
+    \tr<\th<一.単>\td<{apparras}>\td<[a-n]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>>>
+    \tr<\th<三.男.複>\td<{ipparrasū}>\td<[i-n]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>[-ū]>>
+    \tr<\th<三.女.複>\td<{ipparrasā}>\td<[i-n]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>[-ā]>>
+    \tr<\th<二.複>\td<{tapparrasā}>\td<[ta-n]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>[-ā]>>
+    \tr<\th<一.複>\td<{nipparras}>\td<[ni-n]\rd<I>[a]\rd<II>\rd<II>[/a/]\rd<III>>>
   >
   \p<
     継続相の形が分かったところで、次は意味です。
