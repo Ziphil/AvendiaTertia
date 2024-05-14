@@ -22,6 +22,18 @@
   font-feature-settings: "smcp" 1;
 }
 
+.sup {
+  font-size: 80%;
+  vertical-align: 0.3906em;
+  line-height: 0;
+}
+
+.sub {
+  font-size: 80%;
+  vertical-align: -0.2969em;
+  line-height: 0;
+}
+
 .japanese {
   font-family: $japanese-serif-font-family !important;
   font-weight: $serif-font-weight;
@@ -37,23 +49,7 @@
   white-space: pre-wrap;
 }
 
-.hairia {
-}
-
-.hairia-mark {
-  font-size: 80%;
-  vertical-align: 0.3906em;
-  line-height: 0;
-}
-
-.sup {
-  font-size: 80%;
-  vertical-align: 0.3906em;
-  line-height: 0;
-}
-
-.sub {
-  font-size: 80%;
-  vertical-align: -0.2969em;
-  line-height: 0;
+.code {
+  @extend .monospace;
+  background-color: $block-background-color;
 }

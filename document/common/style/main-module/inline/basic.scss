@@ -5,43 +5,13 @@
 @import "../../main-module/variable.scss";
 
 
-.code {
-  @extend .monospace;
-  background-color: $block-background-color;
+.hairia {
 }
 
-.cuneiform {
-  font-family: "Assurbanipal Web";
-  font-size: 150%;
-  line-height: 1;
-  position: relative;
-  bottom: -0.15em;
-}
-
-.cuneiform-break {
-  margin-left: -0.3em;
-  margin-right: -0.3em;
-  opacity: 0.5;
-  &::after {
-    content: "·";
-  }
-}
-
-.cuneiform-sentence {
-  word-spacing: 0.5em;
-}
-
-.radical {
-  margin-inline: 0.15em;
-  @include box($gray-color, true, true);
-}
-
-.music-accidental {
-  font-family: "Chord Font";
-}
-
-.music-chord {
-  font-family: "Chord Font";
+.hairia-mark {
+  font-size: 80%;
+  vertical-align: 0.3906em;
+  line-height: 0;
 }
 
 .foreign {

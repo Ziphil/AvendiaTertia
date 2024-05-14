@@ -26,6 +26,8 @@ import headerManager from "./header";
 import historyManager from "./history";
 import htmlManager from "./html";
 import inlineBasicManager from "./inline/basic";
+import inlineCommonManager from "./inline/common";
+import inlineCuneiformManager from "./inline/cuneiform";
 import inlineGreekManager from "./inline/greek";
 import inlineLinkManager from "./inline/link";
 import inlineMathManager from "./inline/math";
@@ -62,9 +64,11 @@ export default [
   blockHistoryManager,
   blockMiscManager,
   blockMathManager,
+  inlineCommonManager,
   inlineBasicManager,
   inlineLinkManager,
   inlineGreekManager,
+  inlineCuneiformManager,
   inlineMiscManager,
   inlineMathManager,
   inlineReferenceManager,
