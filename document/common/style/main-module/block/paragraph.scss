@@ -8,6 +8,9 @@
 .paragraph {
   @include justify;
   line-height: $line-height;
+  &[data-rtl] {
+    direction: rtl;
+  }
 }
 
 .paragraph-number {
