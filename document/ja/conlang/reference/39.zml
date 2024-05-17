@@ -29,11 +29,12 @@
     発言や思考の内容をラクットで囲んで引用したものが、前後の文から独立して置かれることがある。
     これは、ラクットで囲まれた部分が、その直前の文にある発言や思考を表す動詞の {e} 句の補語にあった状態から、文とは独立した表現として移動したものだと解釈できる。
     この移動の際に、ラクット部分に付随していた {e} は省略される。
+    さらに、その文の末尾にフェークレーディックが置かれることも多い。
     このような表現はしばしば「\rterm|key="ゆうりちょくせつわほう",id="floating-direct-speech"|<遊離直接話法\fl<floating direct speech>>」と呼ばれる。
   >
   \xol<
     \li|tag="1"|<\sh<{kéces a ces ca tel e «tòdes a tel e yaf i loc vo kosxoq.».}>\ja<彼は私に「あなたの妹に図書館で会った。」と言った。>>
-    \li|tag="2"|<\sh<{kéces a ces ca tel. «tòdes a tel e yaf i loc vo kosxoq.»}>\ja<彼は私に行った。「あなたの妹に図書館で会った。」>>
+    \li|tag="2"|<\sh<{kéces a ces ca tel.⹀ «tòdes a tel e yaf i loc vo kosxoq.»}>\ja<彼は私に行った。「あなたの妹に図書館で会った。」>>
   >
   \p<
     \box|tag="1"|; と \box|tag="2"|; は同じ意味であり、\box|tag="2"|; では遊離直接話法が用いられている。
@@ -42,7 +43,7 @@
     物語のような叙述的な文章においては、発言や思考を表す動詞がなくても、発言や思考の内容をラクットで囲んだものが文の間に挿入され、そこでその発言や思考が行われたことを表すことがある。
   >
   \xol<
-    \li|tag="3"|<\sh<{fôves a ces e téd. «pa qetat a pet voku sokul afik?»}>\ja<彼女は扉を開けた。「この部屋の中には何があるんだろう?」>>
+    \li|tag="3"|<\sh<{fôves a ces e téd.⹀ «pa qetat a pet voku sokul afik?»}>\ja<彼女は扉を開けた。「この部屋の中には何があるんだろう?」>>
   >
  
 >
