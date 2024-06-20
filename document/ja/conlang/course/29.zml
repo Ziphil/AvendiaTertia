@@ -12,20 +12,5 @@
   >
   \p<
     現在執筆中です。
-    以下の PDF ファイルも随時更新されます。
   >
-  \h1<PDF ファイル>
-  \pdf|src="../../file/course/3.pdf"|;
-  \p<
-    以下のリンクから PDF ファイルを直接ダウンロードすることもできます。
-  >
-  \form<
-    \a|href="../../file/course/3.pdf"|<ダウンロード>
-  >
-  \h1<組版について>
-  \p<
-    この本の本文は、全て XSL-FO を用いて組版しました。
-    本の原稿は \ae|href="https://github.com/Ziphil/ShaleianWordbook"|<GitHub> で公開しています。
-  >
-
 >

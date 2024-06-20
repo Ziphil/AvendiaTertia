@@ -24,12 +24,12 @@
     The PDF file of the upcoming second edition is available for free. 
     Compared to the first edition (which is currently available in book form), typographical errors have been corrected and some sections have been rewritten according to the latest grammar.
   >
-  \pdf|src="../../file/course/4.pdf"|;
+  \pdf|src="../../file/course/1.pdf"|;
   \p<
     You can also download the PDF file directly from the link below.
   >
   \form<
-    \a|href="../../file/course/4.pdf"|<Download>
+    \a|href="../../file/course/1.pdf"|<Download>
   >
 
 >
