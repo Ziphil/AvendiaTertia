@@ -48,12 +48,47 @@
   >
   \h1|tag="shi"|<節の代わりとなる表現>
   \h2|tag="sho"|<名詞>
-  \todo<
-    このセクションは 7 代 3 期に移行するまでに執筆されます。
+  \p<
+    {kin} 節および接続詞節において、節の内容全体がその節に含まれる主要な名詞句のみから十分推測できると判断される場合、その名詞句単体で節全体の代わりをすることができる。
+    このとき、名詞が {kin} 節を代替する場合、{kin} も消える。
+  >
+  \xol<
+    \li|tag="1"|<\sh<{di'qologac a'c e'n sôdis a'c e ratbig.}>\ja<アイスを食べるのは我慢しなさい。>>
+    \li|tag="2"|<\sh<{di'qologac a'c e ratbig.}>\ja<アイスを食べるのは我慢しなさい。>>
+  >
+  \p<
+    \box|tag="1"|; において、{kin} 節の内容である「アイスを食べること」という内容は、単に「アイス」という名詞だけ述べても十分伝わると考えられる。
+    そのため、この {kin} 節全体を {ratbig} に置き換えた \box|tag="2"|; も可能である。
+  >
+  \xol<
+    \li|tag="3"|<\sh<{qídites e letoq i tel a dales te salet a'l e coskosaxlêsal.}>\ja<私が小学生だったときに私の腕を犬に噛まれた。>>
+    \li|tag="4"|<\sh<{qídites e letoq i tel a dales te coskosaxlêsal.}>\ja<小学生のときに私の腕を犬に噛まれた。>>
+  >
+  \p<
+    \box|tag="3"|; では、{te} 節の内容である「私が小学生だったとき」という内容は、「小学生」だけでも十分伝わるはずである。
+    そのため、この {te} 以下の節全体を {coskosaxlêsal} で代表した \box|tag="4"|; が可能である。
   >
   \h2|tag="shu"|<形容詞>
-  \todo<
-    このセクションは 7 代 3 期に移行するまでに執筆されます。
+  \p<
+    コトをとる助詞や接続詞用法をもつ助詞の後には、節の代わりに形容詞句単体が置かれることがある。
+    このとき、その形容詞は〈{sal/o/t} or {nis/os/} ＋ 何らかの主語 ＋ 形容詞〉という形の節の代わりをしていると解釈される。
+  >
+  \p<
+    この表現は、{se} の直後でよく見られる。
+  >
+  \xol<
+    \li|tag="1"|<\sh<{xílac a xák se salat a cit e alevac.}>\ja<電灯がオレンジ色の状態で光っている。>>
+    \li|tag="2"|<\sh<{xílac a xák se alevac.}>\ja<電灯がオレンジ色に光っている。>>
+  >
+  \p<
+    \box|tag="1"|; と \box|tag="2"|; は同じ意味で、\box|tag="2"|; における {alevac} は {salat a cit e alevac} という節の代わりとして用いられていると解釈できる。
+  >
+  \xol<
+    \li|tag="3"|<\sh<{temedes a tel e taqit se nises a cit e azaf.}>\ja<私は壁をそれが赤色になるように塗った。>>
+    \li|tag="4"|<\sh<{temedes a tel e taqit se azaf.}>\ja<私は壁を赤色に塗った。>>
+  >
+  \p<
+    \box|tag="3"|; と \box|tag="4"|; は同じ意味で、ここでは \box|tag="4"|; における {azaf} は {nises a cit e alevac} の代わりとして用いられている。
   >
   \h1|tag="shz"|<助詞や連結詞の省略>
   \h2|tag="shd"|<{o}>
