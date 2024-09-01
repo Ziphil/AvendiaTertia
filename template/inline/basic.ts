@@ -93,9 +93,23 @@ manager.registerElementRule("ch", true, (transformer, document, element) => {
     if (query === "nbsp") {
       self.appendTextNode(String.fromCodePoint(0xA0));
     }
+  } else if (element.hasAttribute("dz")) {
+    const query = element.getAttribute("dz");
+    self.appendElement("span", (self) => {
+      self.addClassName("dozenal");
+      self.setAttribute("data-query", query);
+      self.appendElement("span", (self) => {
+        self.addClassName("dozenal-main");
+        self.appendTextNode((query === "x") ? "↊" : "↋");
+      });
+      self.appendElement("span", (self) => {
+        self.addClassName("dozenal-pseudo");
+        self.setAttribute("aria-hidden", "true");
+        self.appendTextNode((query === "x") ? "2" : "3");
+      });
+    });
   }
   return self;
 });
-
 
 export default manager;
