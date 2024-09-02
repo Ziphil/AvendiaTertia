@@ -52,20 +52,20 @@
     例えば、以下のような文です。
   >
   \xl<
-    \li<\sh|mark="u"|<{debet a ces ovel emic ini pafisac a tel e'n lat.}>>
+    \li<\sh|mark="u"|<{debet a ces ovel emic ini pafisac a tel e’n lat.}>>
   >
   \p<
     この文では、({ovel} を介して) 動詞を修飾している {emic} にさらに {ini} 節が係っているので、{emic} を動詞の直後に移動させると以下のようになってしまい、文構造が複雑になってしまいます。
     新情報とは思えない {a ces} が文末で浮いてるのがさらに気持ち悪いです。
   >
   \xl<
-    \li<\sh<{debet emic ini pafisac a tel e'n lat, a ces.}>>
+    \li<\sh<{debet emic ini pafisac a tel e’n lat, a ces.}>>
   >
   \p<
     幸い、例外助接辞が接続詞として使われているときの言い換え規則が使えるので、以下のような自然な形に直すことができます。
   >
   \xl<
-    \li<\sh<{debet emic a ces ni pafisec a tel e'n lat.}>>
+    \li<\sh<{debet emic a ces ni pafisec a tel e’n lat.}>>
   >
   \p<
     ただ、この {emic ini}[ ～] の形が動詞に係るときは上のような言い換えを常にしないといけない (しないとかなり不自然) 一方、形容詞に係るときは言い換えをしてもしなくても良いというのは、動詞と形容詞の等価性を崩していてちょっと嫌です。
@@ -93,23 +93,23 @@
     これを採用すると、以下のような感じになります。
   >
   \xl<
-    \li<\sh|mark="u"|<{debet a ces omic ini pafisac a tel e'n lat.}>>
+    \li<\sh|mark="u"|<{debet a ces omic ini pafisac a tel e’n lat.}>>
     \li<\sh|mark="u"|<{debet a ces omic ini tel.}>>
   >
   \p<
     他の案としては、こんなのも思いつきました。
     例えば「彼は私より疲れていた」は、「彼は疲れていた」と「かつ私よりそう (＝彼は疲れる) だった」の 2 つの節に分けることができます。
     後半は {ò les emic ini tel} と表現できます。
-    そこで、この {ò l/es/} の部分の縮約形として {ol'} のようなものを導入して、最終的に以下のようにしてはどうでしょうか。
+    そこで、この {ò l/es/} の部分の縮約形として {ol’} のようなものを導入して、最終的に以下のようにしてはどうでしょうか。
   >
   \xl<
-    \li<\sh|mark="u"|<{debet a ces ol'emic ini pafisac a tel e'n lat.}>>
-    \li<\sh|mark="u"|<{debet a ces ol'emic ini tel.}>>
+    \li<\sh|mark="u"|<{debet a ces ol’emic ini pafisac a tel e’n lat.}>>
+    \li<\sh|mark="u"|<{debet a ces ol’emic ini tel.}>>
   >
   \p<
-    最終形だけを見ると、{ol'} が連述詞や特殊詞を動詞に係らせるためのマーカーのように見えます。
-    {ol'e} の部分を連述詞や特殊詞が動詞修飾するための活用接頭辞になっていると見ることもできるかもしれません。
-    ただ、{vel} 廃止前と比べると、実は {ovel} が {ol'} になっただけなので、一周回ってもとに戻ってきた感じがしますね。
+    最終形だけを見ると、{ol’} が連述詞や特殊詞を動詞に係らせるためのマーカーのように見えます。
+    {ol’e} の部分を連述詞や特殊詞が動詞修飾するための活用接頭辞になっていると見ることもできるかもしれません。
+    ただ、{vel} 廃止前と比べると、実は {ovel} が {ol’} になっただけなので、一周回ってもとに戻ってきた感じがしますね。
     結局 {vel} は必要だったんだ\k<…>。
   >
   \p<

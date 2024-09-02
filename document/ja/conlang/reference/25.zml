@@ -54,11 +54,11 @@
     この形は「\rterm|key="きすうひょうげん",id="cardinal-expression"|<基数表現\fl<cardinal expression>>」と呼ばれる。
   >
   \p<
-    基数表現は頻出するため、{avôl ile lêk} の部分を縮約形の {al'} にした形で用いられることがほとんどである。
+    基数表現は頻出するため、{avôl ile lêk} の部分を縮約形の {al’} にした形で用いられることがほとんどである。
   >
   \xol<
-    \li|tag="1"|<\sh<{qetat a sakil al'apiv vo hif izi dèt.}>\ja<机の上に 4 個のリンゴがある。>>
-    \li|tag="2"|<\sh<{kavat a tel e yaf al'ayos.}>\ja<私には妹が 3 人いる。>>
+    \li|tag="1"|<\sh<{qetat a sakil al’apiv vo hif izi dèt.}>\ja<机の上に 4 個のリンゴがある。>>
+    \li|tag="2"|<\sh<{kavat a tel e yaf al’ayos.}>\ja<私には妹が 3 人いる。>>
   >
   \p<
     基数表現が名詞を修飾するのではなく助詞の補語として現れる場合は、縮約する前の形が用いられる。
@@ -82,10 +82,10 @@
     この形は「\rterm|key="じょすうひょうげん",id="ordinal-expression"|<序数表現\fl<ordinal expression>>」と呼ばれる。
   >
   \p<
-    序数表現は頻出するため、{acál ile cav} の部分を縮約形の {ac'} にした形で用いられることがほとんどである。
+    序数表現は頻出するため、{acál ile cav} の部分を縮約形の {ac’} にした形で用いられることがほとんどである。
   >
   \xol<
-    \li|tag="1"|<\sh<{salet e aqonef a lacat ac'aqec qikes e a ces.}>\ja<彼の書いた 2 番目の小説はつまらなかった。>>
+    \li|tag="1"|<\sh<{salet e aqonef a lacat ac’aqec qikes e a ces.}>\ja<彼の書いた 2 番目の小説はつまらなかった。>>
   >
   \p<
     序数表現が名詞を修飾するのではなく助詞の補語として現れる場合は、縮約しない形のみが用いられる。
@@ -239,7 +239,7 @@
     〈{la tal} ＋ 基数表現〉という形で回数が表される。 
   >
   \xol<
-    \li|tag="1"|<\sh<{vomes lanas a tel ca ʻamerikas la tal al'avon.}>\ja<私は 9 回アメリカに行ったことがある。>>
+    \li|tag="1"|<\sh<{vomes lanas a tel ca ʻamerikas la tal al’avon.}>\ja<私は 9 回アメリカに行ったことがある。>>
   >
   \p<
     この表現における基数表現という部分は、数辞を含まない他の形容詞句になることもある。
@@ -247,13 +247,13 @@
   >
   \xol<
     \li|tag="2"|<\sh<{vomes bozetas a ces e tel la tal avôl}>\ja<彼は私を何度も殴った。>>
-    \li|tag="3"|<\sh<{te xakalis la tal acál, di'lanis a zál ca zîdrahit.}>\ja<今度晴れたら遊園地に行きましょう。>>
+    \li|tag="3"|<\sh<{te xakalis la tal acál, di’lanis a zál ca zîdrahit.}>\ja<今度晴れたら遊園地に行きましょう。>>
   >
   \p<
     〈{la tal} ＋ 序数表現〉という形では「～回目に」という意味になる。 
   >
   \xol<
-    \li|tag="4"|<\sh<{te vîtices a tel e ces la tal ac'ayos, rédet a ces.}>\ja<私が彼を 3 回目に見たとき、彼は泣いていた。>>
+    \li|tag="4"|<\sh<{te vîtices a tel e ces la tal ac’ayos, rédet a ces.}>\ja<私が彼を 3 回目に見たとき、彼は泣いていた。>>
   >
   \p<
     なお、この形での「～回目に」が意味するのは、それが修飾する動詞の行為と同じ行為を何回か行ううちのその回数番目の行為である。
@@ -280,7 +280,7 @@
     なお、{la} 句に数辞を含まない表現も見られる。
   >
   \xol<
-    \li|tag="2"|<\sh<{pa savat canisis a'l la ziked avôl epác?}>\ja<あとどのくらい進めば良いのですか?>>
+    \li|tag="2"|<\sh<{pa savat canisis a’l la ziked avôl epác?}>\ja<あとどのくらい進めば良いのですか?>>
   >
 
 >

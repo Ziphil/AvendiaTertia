@@ -29,8 +29,8 @@
     なお、連結辞が副詞的用法で使われるときは必ず別形をとる。
   >
   \xol<
-    \li|tag="3"|<\sh<{cipases a tel ca ces e'n nifetis a's e celet, dà dules a ces.}>\ja<私は彼女にノートを持ってくるよう頼んだが、彼女はそうしなかった。>>
-    \li|tag="4"|<\sh<{cipases a tel ca ces e'n nifetis a's e celet. dà, dules a ces.}>\ja<私は彼女にノートを持ってくるよう頼んだ。しかし、彼女はそうしなかった。>>
+    \li|tag="3"|<\sh<{cipases a tel ca ces e’n nifetis a’s e celet, dà dules a ces.}>\ja<私は彼女にノートを持ってくるよう頼んだが、彼女はそうしなかった。>>
+    \li|tag="4"|<\sh<{cipases a tel ca ces e’n nifetis a’s e celet. dà, dules a ces.}>\ja<私は彼女にノートを持ってくるよう頼んだ。しかし、彼女はそうしなかった。>>
   >
   \p<
     \box|tag="3"|; の {dà} を副詞的用法にしたものが \box|tag="4"|; である。
@@ -48,8 +48,8 @@
     接続詞節が被修飾節の後ろに置かれているときは、接続詞節の直前にタデックが置かれるが、接続詞節と被修飾節がともに短い場合はタデックが省略されることがある。
   >
   \xol<
-    \li|tag="1"|<\sh<{salot a xoq aquk e anisxok emic ini revat a loc e'n lot.}>\ja<あの本はあなたが思っているよりもおもしろい。>>
-    \li|tag="2"|<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n lot.}>\ja<あの本はあなたが思っているよりもおもしろい。>>
+    \li|tag="1"|<\sh<{salot a xoq aquk e anisxok emic ini revat a loc e’n lot.}>\ja<あの本はあなたが思っているよりもおもしろい。>>
+    \li|tag="2"|<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e’n lot.}>\ja<あの本はあなたが思っているよりもおもしろい。>>
   >
   \p<
     \box|tag="1"|; を言い換えたものが \box|tag="2"|; である。

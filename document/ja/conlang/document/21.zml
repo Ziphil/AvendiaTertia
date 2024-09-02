@@ -178,7 +178,7 @@
   \h2|id="paziq"|<\h<2575> ({pâziq})>
   \xl<
     \li<
-      \sh<{vade xakalet te nîpes a tel zi kosax, pâziqes a'l e litéz zi cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
+      \sh<{vade xakalet te nîpes a tel zi kosax, pâziqes a’l e litéz zi cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
       \gloss<
         &lig<\sh<{vade}>\ex<～なので>>
         &lig|conj="-et"|<\sh<{xakal}>\ex<晴れる>>
@@ -191,7 +191,7 @@
         &lig|punc=","|;
         &lig|conj="-es"|<\sh<{pâziq}>\ex<置き忘れる>>
         &lig|auto="a"|;
-        &lig<\sh<{'l}>\ex<私>>
+        &lig<\sh<{’l}>\ex<私>>
         &lig|auto="e"|;
         &lig<\sh<{litéz}>\ex<傘>>
         &lig|auto="zi"|;
@@ -211,11 +211,11 @@
   \h2|id="ficav"|<\h<2575> ({ficav})>
   \xl<
     \li<
-      \sh<{dulesos e'n ficavas okôk a vas ca zis vade dibemas a ces ca ces.}>\ja<謝ったからといって必ず許してもらえるわけではない。>
+      \sh<{dulesos e’n ficavas okôk a vas ca zis vade dibemas a ces ca ces.}>\ja<謝ったからといって必ず許してもらえるわけではない。>
       \gloss<
         &lig|conj="du-os"|<\sh<{les}>\ex<する>>
         &lig|auto="e"|;
-        &lig|auto="'n"|;
+        &lig|auto="’n"|;
         &lig|conj="-as"|<\sh<{ficav}>\ex<許す>>
         &lig|conj="o-"|<\sh<{kôk}>\ex<必ず>>
         &lig|auto="a"|;
@@ -244,24 +244,24 @@
   \h2|id="levkit"|<\h<2576> ({levkit})>
   \xl<
     \li<
-      \sh<{di'dukezisoz li'c a cikik ca fêd. di'dulesos e'n pelnetas a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
+      \sh<{di’dukezisoz li’c a cikik ca fêd. di’dulesos e’n pelnetas a’c te lôk avôl ilevo meris aqecet. di’dumafetos a’c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
       \gloss<
-        &lig<\sh<{di'}>>
+        &lig<\sh<{di’}>>
         &lig|conj="du-oz"|<\sh<{kezis}>\ex<残る>>
         &lig|auto="li"|;
-        &lig<\sh<{'c}>\ex<あなた>>
+        &lig<\sh<{’c}>\ex<あなた>>
         &lig|auto="a"|;
         &lig<\sh<{cikik}>\ex<持ち物>>
         &lig|auto="ca"|;
         &lig<\sh<{fêd}>\ex<ここ>>
         &lig|punc="."|;
-        &lig<\sh<{di'}>>
+        &lig<\sh<{di’}>>
         &lig|conj="du-os"|<\sh<{les}>\ex<する>>
         &lig|auto="e"|;
-        &lig|auto="'n"|;
+        &lig|auto="’n"|;
         &lig|conj="-as"|<\sh<{pelnet}>\ex<うろつく>>
         &lig|auto="a"|;
-        &lig<\sh<{'c}>\ex<あなた>>
+        &lig<\sh<{’c}>\ex<あなた>>
         &lig<\sh<{te}>\ex<～のときに>>
         &lig<\sh<{lôk}>\ex<時間>>
         &lig|conj="a-"|<\sh<{vôl}>\ex<多い>>
@@ -271,7 +271,7 @@
         &lig|punc="."|;
         &lig|conj="du-os"|<\sh<{mafet}>\ex<触る>>
         &lig|auto="a"|;
-        &lig<\sh<{'c}>\ex<あなた>>
+        &lig<\sh<{’c}>\ex<あなた>>
         &lig|auto="e"|;
         &lig<\sh<{levkit}>\ex<ガラス>>
         &lig|punc="."|;
@@ -288,8 +288,8 @@
     しかし、この文は案内板に書かれていることを想定しているため、常に禁止するという意味を込めて、{ditat} の後の動詞は全て通時時制になっている。
   >
   \p<
-    この文に含まれる 3 つの命令文全てにおいて、{ditat} は {di'} という縮約形として用いられている。
-    また、{di'} に続く命令内容を否定形にすることで、「～するな」という禁止を表している。
+    この文に含まれる 3 つの命令文全てにおいて、{ditat} は {di’} という縮約形として用いられている。
+    また、{di’} に続く命令内容を否定形にすることで、「～するな」という禁止を表している。
   >
   \p<
     「20 分以上」にあるような「以上」を表現するには、数量を表す {le} にこの意味を加えた {levo} を用いる。
@@ -335,7 +335,7 @@
   \h2|id="xer"|<\h<2579> ({xer})>
   \xl<
     \li<
-      \sh<{loke xer, revet a tel e'n rekotat loke a'l ovel ifeli qel, pa kilat a'l vade pil te sot e'n etut pafikos a'l?}>\ja<あれだけ理解していると思っていた愛を、今は思い出すことしかできないのはどうしてだろう?>
+      \sh<{loke xer, revet a tel e’n rekotat loke a’l ovel ifeli qel, pa kilat a’l vade pil te sot e’n etut pafikos a’l?}>\ja<あれだけ理解していると思っていた愛を、今は思い出すことしかできないのはどうしてだろう?>
     >
   >
   \h2|id="becam"|<\h<2581> ({becam})>

@@ -78,7 +78,7 @@
   >
   \img|src="../../file/character/22.png"|;
   \p<
-    Numerals are written sometimes in digits such as {dev il'}[6] or {ben ic'}[12], and sometimes in their pronunciation such as {dev il'aric} or {ben ic'atisetqec}.
+    Numerals are written sometimes in digits such as {dev il’}[6] or {ben ic’}[12], and sometimes in their pronunciation such as {dev il’aric} or {ben ic’atisetqec}.
   >
   \h2|num="7"|<Punctuation marks>
   \p<
@@ -94,7 +94,7 @@
     \tr<\td<[,]>\td<{tadek}>\td<indicates a pause in a sentence>>
     \tr<\td<[!]>\td<{vadek}>\td<indicates the end of a sentence with emphasis>>
     \tr<\td<[?]>\td<{padek}>\td<indicates the end of a interrogative sentence>>
-    \tr<\td<[']>\td<{nôk}>\td<indicates a contraction>>
+    \tr<\td<[’]>\td<{nôk}>\td<indicates a contraction>>
     \tr<\td<[ʻ]>\td<{dikak}>\td<marks the following word as a proper noun>>
     \tr<\td<[-]>\td<{fêk}>\td<makes a compound word>>
     \tr<\td<[:]>\td<{kaltak}>\td<partitions data>>
@@ -110,7 +110,7 @@
     They are, for example, put after a nonrestrictive use of a relative clause, mentioned in \a|href="#43"|<Section 43>, or an adverbial use of a conjunction, mentioned in \a|href="#43"|<Section 44>.
     Nôks are used in place of the omitted letters when a contraction occurs.
     Contractions will be explained in more detail in \a|href="#55"|<Section 55>.
-    Dikaks are put immediately before a word and indicate that it is a proper noun such as a person's name.
+    Dikaks are put immediately before a word and indicate that it is a proper noun such as a person’s name.
     The uses of fêks and kaltaks will be dealt with in \a|href="#57"|<Section 57> and \a|href="#56"|<Section 56>, respectively.
   >
   \p<
@@ -146,7 +146,7 @@
     \tr<\td<[ì] (U+00EC)>\td<[iu]>>
     \tr<\td<[ò] (U+00F2)>\td<[oa]>>
     \tr<\td<[ù] (U+00F9)>\td<[ua]>>
-    \tr<\td<[ʻ] (U+02BB)>\td<[']>>
+    \tr<\td<[ʻ] (U+02BB)>\td<[’]>>
   >
   \p<
     The alternative notation should be avoided as much as possible. It is highly recommended to use the formal transliteration unless technical issues prevent its use.
@@ -174,7 +174,7 @@
   \p<
     Basically, all letters are pronounced according to the correspondence of letters and phonemes displayed in the preceding tables, except when some phonological changes (described in \a|href="#12"|<Section 12>) occur.
     There are, however, a small number of exceptions.
-    For example, {kin} is pronounced `/kiɴ`/`; the phoneme `/ɴ`/ appears only in {kin} and its contraction {'n}.
+    For example, {kin} is pronounced `/kiɴ`/`; the phoneme `/ɴ`/ appears only in {kin} and its contraction {’n}.
     The letter [h] also has a phonological exception.
     When it is placed at the end of a syllable, it may be pronounced `/h`/, but in most cases, it is not pronounced at all.
   >
@@ -644,7 +644,7 @@
     Therefore, they are used in a different manner from English “yes” and “no”.
   >
   \xl<
-    \li<\sh<{pa dusâfakes a loc e dat?} `/ {ya.}>\ja<Don't you like dogs? `/ No.>>
+    \li<\sh<{pa dusâfakes a loc e dat?} `/ {ya.}>\ja<Don’t you like dogs? `/ No.>>
   >
   \p<
     In this example, the sentence obtained by removing {pa} has the meaning “you do not like dogs”, so a person who answered {ya} does not like them.
@@ -748,7 +748,7 @@
     These are constructed by connecting affirmative and negative questions with the conjunction {á}. 
   >
   \xl<
-    \li<\sh<{pa debat e loc, á pa dudebat e loc?}>\ja<Are you tired, or aren't you tired?>>
+    \li<\sh<{pa debat e loc, á pa dudebat e loc?}>\ja<Are you tired, or aren’t you tired?>>
   >
   \p<
     To avoid redundancy, the common phrase is omitted by the second clause to form the following sentence:
@@ -801,7 +801,7 @@
     The two interrogative adverbs {pa} must be removed.
   >
   \xl<
-    \li<\sh<{dusokat a tel e kin kavat a loc e nîl á dulat.}>\ja<I don't know whether or not you have brothers.>>
+    \li<\sh<{dusokat a tel e kin kavat a loc e nîl á dulat.}>\ja<I don’t know whether or not you have brothers.>>
   >
   \h1<Usages of verbs>
   \h2|num="32"|<Tenses>
@@ -903,7 +903,7 @@
     This use is similar to using the indeterminate tense when one does not want to specify the time as explained in \a|href="#32"|<Section 32>.
   >
   \xl<
-    \li<\sh<{haros e tel a kin lanos a'l ca zîdsax.}>\ja<I feel pleasure in going to school.>>
+    \li<\sh<{haros e tel a kin lanos a’l ca zîdsax.}>\ja<I feel pleasure in going to school.>>
   >
   \p<
     The following is a summary of the use of the aspects taking the verb “sitting down” as an example.
@@ -977,7 +977,7 @@
     \li<\sh<{ditat lanis a loc e zîdsax.}>\ja<Go to school.>>
   >
   \p<
-    Since this is rather verbose, {ditat} is often contracted to {di'}.
+    Since this is rather verbose, {ditat} is often contracted to {di’}.
     In spoken language, {ditat} itself is sometimes omitted. 
     We will see this phenomenon in \a|href="#68"|<Section 68>.
   >
@@ -1093,13 +1093,13 @@
     The particle {ile}, the nonverb-modifying form of {le}, is used to show the degree by which something differs from the object of comparison.
   >
   \xl<
-    \li<\sh<{salat a tel e alot emic ile mulôt il'}[25 ]{ini ces.}>\ja<I am 25 cm taller than him.>>
+    \li<\sh<{salat a tel e alot emic ile mulôt il’}[25 ]{ini ces.}>\ja<I am 25 cm taller than him.>>
   >
   \p<
     Comparative constructions are also used to express a factor by which one thing exceeds another, with an {ile}-phrase being used for the factor.
   >
   \xl<
-    \li<\sh<{kilat vilisos a tel ovit emic ile vâl il'aqot ini ces.}>\ja<I can run twice as fast as him.>>
+    \li<\sh<{kilat vilisos a tel ovit emic ile vâl il’aqot ini ces.}>\ja<I can run twice as fast as him.>>
   >
   \p<
     {ni}- or {ini}-phrases can be omitted.
@@ -1122,19 +1122,19 @@
     Below is another sentence related to the object of comparison.
   >
   \xl<
-    \li<\sh<{revat a loc e'n salot a xoq aquk e anisxok.}>\ja<You think that book is interesting.>>
+    \li<\sh<{revat a loc e’n salot a xoq aquk e anisxok.}>\ja<You think that book is interesting.>>
   >
   \p<
     When these two sentences are linked together in a comparative construction, we get the following.
   >
   \xl<
-    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n salot a xoq aquk e anisxok.}>\ja<That book is more interesting than you think that book is interesting.>>
+    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e’n salot a xoq aquk e anisxok.}>\ja<That book is more interesting than you think that book is interesting.>>
   >
   \p<
     Eliding the shared parts gives us the final result.
   >
   \xl<
-    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n lot.}>\ja<This book is more interesting than you think.>>
+    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e’n lot.}>\ja<This book is more interesting than you think.>>
   >
   \p<
     To express a comparative construction meaning “less”, one uses {domic} instead of {mic}.
@@ -1276,13 +1276,13 @@
     This is called a “nonrestrictive relative clause”.
   >
   \xl<
-    \li<\sh<{salat e aqobit a beqas aquk, salat a e qazrêy i refet i tel.}>\ja<That man, who is my friend's boyfriend, is unfriendly.>>
+    \li<\sh<{salat e aqobit a beqas aquk, salat a e qazrêy i refet i tel.}>\ja<That man, who is my friend’s boyfriend, is unfriendly.>>
   >
   \p<
     If additional prepositional phrases are added after a nonrestrictive relative clause, then a tadek is required a the end of the relative clause.
   >
   \xl<
-    \li<\sh<{salat a beqas aquk, salat a e qazrêy i refet i tel, e aqobit.}>\ja<That man, who is my friend's boyfriend, is unfriendly.>>
+    \li<\sh<{salat a beqas aquk, salat a e qazrêy i refet i tel, e aqobit.}>\ja<That man, who is my friend’s boyfriend, is unfriendly.>>
   >
   \p<
     This use of a nonrestrictive relative clause appears when the modified noun is limited to one referent with words such as {fik} or {cik} or by being a proper noun.
@@ -1304,14 +1304,14 @@
     Not only can nouns be connected, as above, but also other kinds of phrases such as adjectives and verbs.
   >
   \xl<
-    \li<\sh<{debat o dojat e tel.}>\ja<I'm tired and worn down.>>
+    \li<\sh<{debat o dojat e tel.}>\ja<I’m tired and worn down.>>
   >
   \p<
     When a connective connects two sentences, it is placed before the sentence, and a tadek is inserted between the two clauses.
-    If the connective phrase is short, this tadek may be omitted at one's discretion.
+    If the connective phrase is short, this tadek may be omitted at one’s discretion.
   >
   \xl<
-    \li<\sh<{kavat a tel e xoq avôl, dà dulîdes a tel e met arak.}>\ja<I have a lot of books, but I haven't read any of them.>>
+    \li<\sh<{kavat a tel e xoq avôl, dà dulîdes a tel e met arak.}>\ja<I have a lot of books, but I haven’t read any of them.>>
   >
   \h2|num="45"|<Particles>
   \p<
@@ -1349,7 +1349,7 @@
     In cases where one is used as such, a tadek is always placed immediately after the connective or particle used as a conjunction.
   >
   \xl<
-    \li<\sh<{kavat a tel e xoq avôl. vade, sêfat a tel e met.}>\ja<I have a lot of books. That's because I like them.>>
+    \li<\sh<{kavat a tel e xoq avôl. vade, sêfat a tel e met.}>\ja<I have a lot of books. That’s because I like them.>>
   >
   \p<
     In the example above, the conjunction {vade} does not connect clauses because the sentence is cut off mid-way.
@@ -1373,7 +1373,7 @@
     If the entire content of a {kin}-clause is modified by some word, that modifier is placed immediately after the {kin}.
   >
   \xl<
-    \li<\sh<{haros e tel a kin etut yepelos a'l.}>\ja<The only thing that makes me happy is singing.>>
+    \li<\sh<{haros e tel a kin etut yepelos a’l.}>\ja<The only thing that makes me happy is singing.>>
   >
   \p<
     If {etut} were placed immediately after {etut} in the above sentence, it would not modify the entire {kin}-clause but rather only {yepelos}, and the sentence would mean “I feel good just by singing”.
@@ -1447,20 +1447,20 @@
     Furthermore, this conjugated form still shows only the numeral itself.
   >
   \p<
-    Cardinal numerals are expressed by prefixing {il'} to the numeral conjugated as an adjective.
+    Cardinal numerals are expressed by prefixing {il’} to the numeral conjugated as an adjective.
     Although this is a contraction of {avôl ile lêk}, the uncontracted form is not used except with a special meaning such as emphasis.
     The same form is used, whether the numeral is used as an adjective or as an adverb, and it follows the noun.
   >
   \xl<
-    \li<\sh<{kavat a tel e refet il'atisil.}>\ja<I have 100 friends.>>
+    \li<\sh<{kavat a tel e refet il’atisil.}>\ja<I have 100 friends.>>
   >
   \p<
-    Ordinal numerals are expressed by prefixing {ic'} to the numeral.
+    Ordinal numerals are expressed by prefixing {ic’} to the numeral.
     Although this is a contraction of {acál ile cav}, the uncontracted form is rarely used as is the case with cardinal numerals.
     They are used in the same way as cardinal numerals, following the noun.
   >
   \xl<
-    \li<\sh<{ditat kòdas a loc e kofet i fax o qâz ca miv ic'afex.}>\ja<Write your mother's and father's names on the third sheet of paper.>>
+    \li<\sh<{ditat kòdas a loc e kofet i fax o qâz ca miv ic’afex.}>\ja<Write your mother’s and father’s names on the third sheet of paper.>>
   >
   \h2|num="50"|<Nominal forms of numerals>
   \p<
@@ -1477,9 +1477,9 @@
   >
   \h2|num="51"|<Dates and times>
   \p<
-    To express dates, one uses ordinal numerals and connects the unit + {ac'} + numeral into a group.
+    To express dates, one uses ordinal numerals and connects the unit + {ac’} + numeral into a group.
     The units are lined up from the smallest first.
-    For instance, “April 17” would be expressed as {taq ac'}[17 ]{ben ac'}[4].
+    For instance, “April 17” would be expressed as {taq ac’}[17 ]{ben ac’}[4].
   >
   \p<
     To express times, {tat ile} is followed by the unit and the numeral.
@@ -1547,20 +1547,20 @@
   \h2|num="55"|<Contractions>
   \p<
     The first-person pronoun {tel}, the second-person pronoun {loc}, as well as {ces} and {cit}, which refer to a person or object mentioned earlier, occur frequently in sentences.
-    In order to reduce verbosity, they are often contracted as {'l}, {'c}, {'s} and {'t}, respectively, starting from their second occurrence in the same clause.
+    In order to reduce verbosity, they are often contracted as {’l}, {’c}, {’s} and {’t}, respectively, starting from their second occurrence in the same clause.
     In this case, there is no space between the preposition being attached to and the contracted form.
     In addition, these contractions can be used only from the second occurrence onward within a sentence`; they cannot be used at their first occurrence.
     Moreover, they are rarely used except immediately after the six prepositions {a}, {e}, {li}, {ca}, {zi} and {i}.
   >
   \xl<
-    \li<\sh<{sâfat a tel e kin catos a'l vo fecil ica sod.}>\ja<I like walking in the surroundings of my house.>>
+    \li<\sh<{sâfat a tel e kin catos a’l vo fecil ica sod.}>\ja<I like walking in the surroundings of my house.>>
   >
   \p<
-    Furthermore, {kin}-clauses are used often`; thus, {kin} is often contracted to {'n}.
+    Furthermore, {kin}-clauses are used often`; thus, {kin} is often contracted to {’n}.
     This contraction can be used even for the first occurrence of {kin} in a sentence.
   >
   \xl<
-    \li<\sh<{cipases a tel ca ces e'n fegis a's e dev.}>\ja<I asked him to buy a pen.>>
+    \li<\sh<{cipases a tel ca ces e’n fegis a’s e dev.}>\ja<I asked him to buy a pen.>>
   >
   \h2|num="56"|<Abbereviations for dates and times>
   \p<
@@ -1573,7 +1573,7 @@
     \li<\sh<{zêfes a tel vo fêd te}[ 12:05.]>\ja<I arrived at 12:05.>>
   >
   \p<
-    The expression [12:05] in the above example is short for “five minutes after twelve o'clock”, or in other words, {tat ile tef}[ 12 ]{meris}[ 5], but it could also stand for “May 12”, or {taq ac'}[12 ]{ben ac'}[5].
+    The expression [12:05] in the above example is short for “five minutes after twelve o’clock”, or in other words, {tat ile tef}[ 12 ]{meris}[ 5], but it could also stand for “May 12”, or {taq ac’}[12 ]{ben ac’}[5].
     They cannot be distinguished from the abbreviation alone, only from the context.
   >
   \p<
@@ -1610,7 +1610,7 @@
     An adverb modifying a verb can also be emphasized in the same way.
   >
   \xl<
-    \li<\sh<{okôk, ditat lesis a'c e cal.}>\ja<Make sure to do that.>>
+    \li<\sh<{okôk, ditat lesis a’c e cal.}>\ja<Make sure to do that.>>
   >
   \p<
     A verb-modifying prepositional phrase or adverb can also be emphasized by placing it at the end of a sentence and placing a tadek before it.
@@ -1624,14 +1624,14 @@
   >
   \h2|num="60"|<Admiration>
   \p<
-    An expression of admiration is formed by using {s'e} followed by an adjective or noun.
+    An expression of admiration is formed by using {s’e} followed by an adjective or noun.
   >
   \xl<
-    \li<\sh<{s'e ayerif.}>\ja<How beautiful.>>
-    \li<\sh<{s'e neyef ayerif.}>\ja<What a beautiful flower.>> 
+    \li<\sh<{s’e ayerif.}>\ja<How beautiful.>>
+    \li<\sh<{s’e neyef ayerif.}>\ja<What a beautiful flower.>> 
   >
   \p<
-    The {s'e} used in this construction is a contraction of {salat e} and can be used only in admirative expressions.
+    The {s’e} used in this construction is a contraction of {salat e} and can be used only in admirative expressions.
   >
   \h2|num="61"|<Irony>
   \p<
@@ -1765,7 +1765,7 @@
     They are often used to express compromise.
   >
   \xl<
-    \li<\sh<{bari kodis e rel, xarit a tel e loc.}>\ja<Even if anything happens, I'll still love you.>>
+    \li<\sh<{bari kodis e rel, xarit a tel e loc.}>\ja<Even if anything happens, I’ll still love you.>>
   >
   \p<
     There is only one substitutive proform, {met}, which takes a noun mentioned earlier in context.
@@ -1773,7 +1773,7 @@
     It is roughly equivalent to “one” or “ones” in English.
   >
   \xl<
-    \li<\sh<{kûtat a nîl i tel e sokul iku ces, dà dulat a tel e met.}>\ja<My older brother has his own room, but I don't.>>
+    \li<\sh<{kûtat a nîl i tel e sokul iku ces, dà dulat a tel e met.}>\ja<My older brother has his own room, but I don’t.>>
   >
   \p<
     There is only one generic pronoun, {ves}, which refers to a person.
@@ -1816,10 +1816,10 @@
   \h2|num="68"|<Imperatives>
   \p<
     As explained in \a|href="#35"|<Section 35>, the verb {dit} is used to indicate commands, but this verb is sometimes omitted in colloquial language, such that the imperative sentence starts abruptly with the verb.
-    Furthermore, if the target of command is the second-person pronoun {loc}, it is often contracted to {'c}.
+    Furthermore, if the target of command is the second-person pronoun {loc}, it is often contracted to {’c}.
   >
   \xl<
-    \li<\sh<{pariqaf a'c!}>\ja<Go away!>>
+    \li<\sh<{pariqaf a’c!}>\ja<Go away!>>
   >
   \h1<Detailed explanations for categories>
   \h2|num="69"|<Verbal infinitives>

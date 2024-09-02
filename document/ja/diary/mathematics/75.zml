@@ -433,7 +433,7 @@
     この定理は Beck のモナド性定理として知られる。
   >
   \thm|type="thm"|<
-    \name<Beck のモナド性定理\fl<—'s monadicity theorem>>
+    \name<Beck のモナド性定理\fl<—’s monadicity theorem>>
     \p<
       随伴対 &m<(F \dashv; G`; `h, `e): \scr<D> \to; \scr<C>> に対し、これが標準的に定めるコモナドを &m<(!, `d, `e)> とし、さらに上記の通りに関手 &m<K: \scr<D> \to; \sp<\scr<C>><!>> をとる。
       このとき、3 条件

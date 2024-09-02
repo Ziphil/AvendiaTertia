@@ -45,8 +45,8 @@
     限定節の動詞の省略の場合というのは、以下のようなものです。
   >
   \xl<
-    \li<\sh<{duqetet a lisid qîlis e a tel so sôdis a'l e macak afik.}>\ja<このケーキを食べるために使うフォークがなかった。>>
-    \li<\sh<{duqetet a lisid iso sôdis a'l e macak afik.}>\ja<このケーキを食べるためのフォークがなかった。>>
+    \li<\sh<{duqetet a lisid qîlis e a tel so sôdis a’l e macak afik.}>\ja<このケーキを食べるために使うフォークがなかった。>>
+    \li<\sh<{duqetet a lisid iso sôdis a’l e macak afik.}>\ja<このケーキを食べるためのフォークがなかった。>>
   >
   \p<
     まず、非動詞修飾形を使う前の文を見てみましょう。
@@ -68,7 +68,7 @@
     では次に、特殊助接詞が接続詞として使われる場合を考えましょう。
   >
   \xl<
-    \li<\sh<{sâfet a tel e korac ovel iti vomac teros a'l e met te taq atov.}>\ja<私は毎日飲んでいたくらいお酒が好きだった。>>
+    \li<\sh<{sâfet a tel e korac ovel iti vomac teros a’l e met te taq atov.}>\ja<私は毎日飲んでいたくらいお酒が好きだった。>>
   >
   \p<
     {iti} 節は主節内にある {ovel} を修飾していて、主節内に埋め込まれている感があるので、基準時刻は主節の動作が成立した時間にするのが自然でしょう。
@@ -79,7 +79,7 @@
     時制について何も考えずに言い換えると、以下の形になります。
   >
   \xl<
-    \li<\sh|mark="u"|<{sâfet a tel e korac, ti vomac teros a'l e met te taq atov.}>>
+    \li<\sh|mark="u"|<{sâfet a tel e korac, ti vomac teros a’l e met te taq atov.}>>
   >
   \p<
     しかし、このような表現の場合、{ti} 節が主節に埋め込まれているというより、{ti} 節が独立して主節を修飾していると見なすのが普通です。
@@ -87,7 +87,7 @@
     したがって、以下が正しい表現とすべきではないでしょうか。
   >
   \xl<
-    \li<\sh<{sâfet a tel e korac, ti vomec teros a'l e met te taq atov.}>\ja<私は毎日飲んでいたくらいお酒が好きだった。>>
+    \li<\sh<{sâfet a tel e korac, ti vomec teros a’l e met te taq atov.}>\ja<私は毎日飲んでいたくらいお酒が好きだった。>>
   >
   \p<
     これが自然だと感じるので、現段階ではこちらを正しい表現とすることにしておきます。

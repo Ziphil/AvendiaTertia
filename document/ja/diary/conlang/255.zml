@@ -15,13 +15,13 @@
     例を挙げてみます。
   >
   \xl<
-    \li<\sh<{kéces a tel ca ces e «dozat zifimis ofev a'l ca solex.».}>\ja<私は彼に「すぐに家に帰らなければならない。」と言った。>>
+    \li<\sh<{kéces a tel ca ces e «dozat zifimis ofev a’l ca solex.».}>\ja<私は彼に「すぐに家に帰らなければならない。」と言った。>>
   >
   \p<
     この文は、以下のように発話部を独立させることができます。
   >
   \xl<
-    \li<\sh<{kéces a tel ca ces. «dozat zifimis ofev a'l ca solex.»}>\ja<私は彼に言った。「すぐに家に帰らなければならない。」>>
+    \li<\sh<{kéces a tel ca ces. «dozat zifimis ofev a’l ca solex.»}>\ja<私は彼に言った。「すぐに家に帰らなければならない。」>>
   >
   \p<
     ここで、注意点が 2 つあります。
@@ -40,15 +40,15 @@
     上の文の場合、以下のようになります。
   >
   \xl<
-    \li<\sh<{kéces a tel ca ces e kin dozat zifimis ofev a'l ca solex.}>\ja<私は彼にすぐに家に帰らなければならないと言った。>>
+    \li<\sh<{kéces a tel ca ces e kin dozat zifimis ofev a’l ca solex.}>\ja<私は彼にすぐに家に帰らなければならないと言った。>>
   >
   \p<
     この {kin} 節を独立することはできるのでしょうか?
     つまり、以下のどちらか (もしくは両方) は可能なのでしょうか?
   >
   \xl<
-    \li<\sh|mark="u"|<{kéces a tel ca ces. kin dozat zifimis ofev a'l ca solex.}>>
-    \li<\sh|mark="u"|<{kéces a tel ca ces. dozat zifimis ofev a'l ca solex.}>>
+    \li<\sh|mark="u"|<{kéces a tel ca ces. kin dozat zifimis ofev a’l ca solex.}>>
+    \li<\sh|mark="u"|<{kéces a tel ca ces. dozat zifimis ofev a’l ca solex.}>>
   >
   \p<
     最初の例は、{kin} 節が文として独立しているわけですが、{kin} 節は名詞句なので、これは名詞が単独で文を成していることになります。

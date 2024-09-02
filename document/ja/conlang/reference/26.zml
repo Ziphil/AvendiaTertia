@@ -28,30 +28,30 @@
     例として、次の文を考える。
   >
   \xol<
-    \li|tag="1"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で自慢げに見せた。>>
+    \li|tag="1"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol séqes e ca’s a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で自慢げに見せた。>>
   >
   \p<
     ここからは、次のような挿入表現が考えられる。
     まず、副詞句や助詞句は動詞を修飾するものなので、これは挿入表現の挿入部になり得る。
   >
   \xol<
-    \li|tag="2"|<\sh<{cafoses, ocàszocèt, a ces fi socavhâr e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
-    \li|tag="3"|<\sh<{cafoses ocàszocèt a ces, fi socavhâr, e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を自慢気に見せたが、笑みを浮かべていた。>>
+    \li|tag="2"|<\sh<{cafoses, ocàszocèt, a ces fi socavhâr e sokiq axodol séqes e ca’s a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
+    \li|tag="3"|<\sh<{cafoses ocàszocèt a ces, fi socavhâr, e sokiq axodol séqes e ca’s a refet.}>\ja<彼は友達からもらった高価な時計を自慢気に見せたが、笑みを浮かべていた。>>
   >
   \p<
     形容詞句や限定節は名詞を修飾するものなので、これも挿入表現の挿入部になり得る。
   >
   \xol<
-    \li|tag="4"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq, axodol, séqes e ca's a refet.}>\ja<彼は友達からもらった時計を笑顔で見せたが、それは高価なものだった。>>
-    \li|tag="5"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol, séqes e ca's a refet.}>\ja<彼は高価な時計を自慢気に見せたが、それは友達からもらったものだった。>>
+    \li|tag="4"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq, axodol, séqes e ca’s a refet.}>\ja<彼は友達からもらった時計を笑顔で見せたが、それは高価なものだった。>>
+    \li|tag="5"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol, séqes e ca’s a refet.}>\ja<彼は高価な時計を自慢気に見せたが、それは友達からもらったものだった。>>
   >
   \p<
     通常の文では、副詞は動詞の直後か節の末尾にしか置かれないが、挿入表現における挿入部になっている場合に限り、同じ動詞を修飾する助詞句の間にも置かれる。
     例えば、以下は全てあり得る挿入表現である。
   >
   \xol<
-    \li|tag="6"|<\sh<{cafoses a ces, ocàszocèt, fi socavhâr e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
-    \li|tag="7"|<\sh<{cafoses a ces fi socavhâr, ocàszocèt, e sokiq axodol séqes e ca's a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
+    \li|tag="6"|<\sh<{cafoses a ces, ocàszocèt, fi socavhâr e sokiq axodol séqes e ca’s a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
+    \li|tag="7"|<\sh<{cafoses a ces fi socavhâr, ocàszocèt, e sokiq axodol séqes e ca’s a refet.}>\ja<彼は友達からもらった高価な時計を笑顔で見せたが、自慢げだった。>>
   >
   \h3|tag="sbq"|<タデックロットによる挿入>
   \p<
@@ -59,12 +59,12 @@
     例えば、以下のような挿入表現があり得る。
   >
   \xol<
-    \li|tag="1"|<\sh<{cafoses — ocàszocèt — a ces fi socavhâr e sokiq axodol séqes e ca's a refet.}>>
-    \li|tag="2"|<\sh<{cafoses ocàszocèt a ces — fi socavhâr — e sokiq axodol séqes e ca's a refet.}>>
-    \li|tag="3"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq — axodol — séqes e ca's a refet.}>>
-    \li|tag="4"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol — séqes e ca's a refet.}>>
-    \li|tag="5"|<\sh<{cafoses a ces — ocàszocèt — fi socavhâr e sokiq axodol séqes e ca's a refet.}>>
-    \li|tag="6"|<\sh<{cafoses a ces fi socavhâr — ocàszocèt — e sokiq axodol séqes e ca's a refet.}>>
+    \li|tag="1"|<\sh<{cafoses — ocàszocèt — a ces fi socavhâr e sokiq axodol séqes e ca’s a refet.}>>
+    \li|tag="2"|<\sh<{cafoses ocàszocèt a ces — fi socavhâr — e sokiq axodol séqes e ca’s a refet.}>>
+    \li|tag="3"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq — axodol — séqes e ca’s a refet.}>>
+    \li|tag="4"|<\sh<{cafoses ocàszocèt a ces fi socavhâr e sokiq axodol — séqes e ca’s a refet.}>>
+    \li|tag="5"|<\sh<{cafoses a ces — ocàszocèt — fi socavhâr e sokiq axodol séqes e ca’s a refet.}>>
+    \li|tag="6"|<\sh<{cafoses a ces fi socavhâr — ocàszocèt — e sokiq axodol séqes e ca’s a refet.}>>
   >
   \p<
     これに加え、タデックロットによる挿入表現では、動詞を修飾する接続詞節もしくは完全文が挿入されることがある。
@@ -72,7 +72,7 @@
     なお、この形はタデックによる挿入表現では見られない。
   >
   \xol<
-    \li|tag="7"|<\sh<{cafoses ocàszocèt a ces — bava kéces a tel ca ces e'n dudozat lis — e sokiq axodol.}>\ja<彼は――私はその必要はないと言ったのだが――自慢気に高価な時計を見せた。>>
+    \li|tag="7"|<\sh<{cafoses ocàszocèt a ces — bava kéces a tel ca ces e’n dudozat lis — e sokiq axodol.}>\ja<彼は――私はその必要はないと言ったのだが――自慢気に高価な時計を見せた。>>
     \li|tag="8"|<\sh<{cafoses ocàszocèt — dîtikad a tel li cal — a ces e sokiq axodol.}>\ja<自慢気に――私はそれに苛ついていた――彼は高価な時計を見せた。>>
   >
   \p<
@@ -86,8 +86,8 @@
     このような通常の修飾と挿入表現での機能の違いが、しばしば文全体の意味を大きく変えることがある。
   >
   \xol<
-    \li|tag="1"|<\sh<{kavat a tel e refet al'ayos keqilac a vo ʻtôkôs.}>\ja<私には東京に住んでいる 3 人の友人がいる。>>
-    \li|tag="2"|<\sh<{kavat a tel e refet al'ayos, keqilac a vo ʻtôkôs.}>\ja<私には 3 人の友人がいて、東京に住んでいる。>>
+    \li|tag="1"|<\sh<{kavat a tel e refet al’ayos keqilac a vo ʻtôkôs.}>\ja<私には東京に住んでいる 3 人の友人がいる。>>
+    \li|tag="2"|<\sh<{kavat a tel e refet al’ayos, keqilac a vo ʻtôkôs.}>\ja<私には 3 人の友人がいて、東京に住んでいる。>>
   >
   \p<
     \box|tag="1"|; では、{keqilac} 以下の限定節が通常通り {refet} に係っており、この「友人」という単語が指す範囲を「東京に住んでいる」ものに制限している。
@@ -108,7 +108,7 @@
     このとき、その主体が {les} の主語になる。
   >
   \xol<
-    \li|tag="2"|<\sh<{leses a ces e'n qolvabas a's e takul acik.}>\ja<彼がその箱を持ち去ったのだ。>>
+    \li|tag="2"|<\sh<{leses a ces e’n qolvabas a’s e takul acik.}>\ja<彼がその箱を持ち去ったのだ。>>
   >
   \h2|tag="sha"|<転移による強調>
   \h3|tag="sbj"|<文頭転移>
@@ -118,14 +118,14 @@
   >
   \xol<
     \li|tag="1"|<\sh<{e ʻmelfih, cafeles a tel.}>\ja<私が呼んだのはメルフィアだ。>>
-    \li|tag="2"|<\sh<{okôk, ditat lesis a'c e cal.}>\ja<それを必ずやりなさい。>>
+    \li|tag="2"|<\sh<{okôk, ditat lesis a’c e cal.}>\ja<それを必ずやりなさい。>>
   >
   \p<
     従属節内の語句がこの形で強調されることもあるが、あまり例は多くない。
     なお、強調される語句がもともと従属節内にある場合でも、転移する先は文の初めであり節の初めではないことに注意せよ。
   >
   \xol<
-    \li|tag="3"|<\sh<{a yaf i loc, lices a tel e'n folsatac vo caf izi sod i tel.}>\ja<私が家の前で散歩しているのを見たのは、あなたの妹だ。>>
+    \li|tag="3"|<\sh<{a yaf i loc, lices a tel e’n folsatac vo caf izi sod i tel.}>\ja<私が家の前で散歩しているのを見たのは、あなたの妹だ。>>
   >
   \h3|tag="sbl"|<文末転移>
   \p<

@@ -3,12 +3,12 @@
 
 
 \page<
-  \name<『Alice's Adventures in Wonderland』解説>
+  \name<『Alice’s Adventures in Wonderland』解説>
   \ver<7 代 2 期>
 
   \h1<概要>
   \p<
-    『Alice's Adventures in Wonderland』のシャレイア語訳の文法的な解説です。
+    『Alice’s Adventures in Wonderland』のシャレイア語訳の文法的な解説です。
     それぞれの文に対し、直訳に近い日本語訳とグロスを付け、さらに簡単な解説もしてあります。
   >
   \p<
@@ -20,7 +20,7 @@
   \h2|id="aa"|<1-1>
   \xl<
     \li<
-      \sh<{a ʻalis, pôzac ebam e'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.}>
+      \sh<{a ʻalis, pôzac ebam e’n déqat a’s ca zehrisis vo fîc ica hinof, lo kavat a’s e dat dozat lesas e a’s.}>
       \ja<アリスは、お姉さんの近くで堤防の上に座ることにうんざりしていた上に、しなければならないことが何もなかった。>
       \gloss<
         &lig|auto="a"|;
@@ -28,10 +28,10 @@
         &lig|conj="-ac"|<\sh<{pôz}>\ex<うんざりする>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
         &lig|auto="e"|;
-        &lig|auto="'n"|;
+        &lig|auto="’n"|;
         &lig|conj="-at"|<\sh<{déq}>\ex<座る>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="ca"|;
         &lig<\sh<{zehrisis}>\ex<堤防>>
         &lig<\sh<{vo}>\ex<～の場所で>>
@@ -41,14 +41,14 @@
         &lig<\sh<{lo}>\ex<そして>>
         &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="e"|;
         &lig<\sh<{dat}>\ex<何もない>>
         &lig|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
         &lig|conj="-as"|<\sh<{les}>\ex<する>>
         &lig|auto="e"|;
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
       >
     >
   >
@@ -67,7 +67,7 @@
   \h2|id="ab"|<1-2>
   \xl<
     \li<
-      \sh<{zesqikas a ces la tal al'atis é al'aqec e xoq lîdac e a hinof, dà dukavat a cit e qinat o lek.}>
+      \sh<{zesqikas a ces la tal al’atis é al’aqec e xoq lîdac e a hinof, dà dukavat a cit e qinat o lek.}>
       \ja<彼女は 1 度か 2 度お姉さんの読んでいる本を覗いたが、それには絵も会話もなかった。>
       \gloss<
         &lig|conj="-as"|<\sh<{zesqik}>\ex<覗く>>
@@ -75,10 +75,10 @@
         &lig<\sh<{ces}>\ex<彼女>>
         &lig<\sh<{la}>\ex<～の量で>>
         &lig<\sh<{tal}>\ex<回>>
-        &lig<\sh<{al'}>\ex<個の>>
+        &lig<\sh<{al’}>\ex<個の>>
         &lig|conj="a-"|<\sh<{tis}>\ex<1>>
         &lig<\sh<{é}>\ex<または>>
-        &lig<\sh<{al'}>\ex<個の>>
+        &lig<\sh<{al’}>\ex<個の>>
         &lig|conj="a-"|<\sh<{qec}>\ex<2>>
         &lig|auto="e"|;
         &lig<\sh<{xoq}>\ex<本>>
@@ -99,7 +99,7 @@
   >
   \p<
     {tal} は「～回」を表す単語だが、これは単位名詞ではないので後ろに数詞を直接置くことはできない。
-    したがって、{tal atis} などとするのは不自然で、{tal al'atis} とする必要がある。
+    したがって、{tal atis} などとするのは不自然で、{tal al’atis} とする必要がある。
   >
   \h2|id="ac"|<1-3>
   \xl<
@@ -143,7 +143,7 @@
   \h2|id="ba"|<2-1>
   \xl<
     \li<
-      \sh<{ce, soxas a ces qi soxot — duqifat lîgifas a's e cal, vade meberad o folnasad ebam a's li zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.}>
+      \sh<{ce, soxas a ces qi soxot — duqifat lîgifas a’s e cal, vade meberad o folnasad ebam a’s li zalnat — e’n kavat á dulat e sokos a kin hitis a’s ce dehisis a’s e lissod so qikis a’s e lîs zi met.}>
       \ja<そして、彼女は頭の中で考えた――暑さが彼女をとても眠くさせぼーっとさせていたので、それに集中することはできなかった――立ち上がってヒナギクの輪を作るためにヒナギクを拾うことに価値があるのかどうかを。>
       \gloss<
         &lig<\sh<{ce}>\ex<そして>>
@@ -155,7 +155,7 @@
         &lig|conj="du-at"|<\sh<{qif}>\ex<できるようにする>>
         &lig|conj="-as"|<\sh<{lîgif}>\ex<集中する>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="e"|;
         &lig<\sh<{cal}>\ex<そのこと>>
         &lig<\sh<{vade}>\ex<～なので>>
@@ -164,11 +164,11 @@
         &lig|conj="-ad"|<\sh<{folnas}>\ex<ぼーっとする>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="li"|;
         &lig<\sh<{zalnat}>\ex<熱気>>
         &lig|auto="e"|;
-        &lig|auto="'n"|;
+        &lig|auto="’n"|;
         &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
         &lig|auto="á"|;
         &lig|conj="du-at"|<\sh<{l}>\ex<する>>
@@ -178,17 +178,17 @@
         &lig|auto="kin"|;
         &lig|conj="-is"|<\sh<{hit}>\ex<立つ>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig<\sh<{ce}>\ex<そして>>
         &lig|conj="-is"|<\sh<{dehis}>\ex<拾う>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="e"|;
         &lig<\sh<{lissod}>\ex<ヒナギク>>
         &lig<\sh<{so}>\ex<～するために>>
         &lig|conj="-is"|<\sh<{qik}>\ex<作る>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="e"|;
         &lig<\sh<{lîs}>\ex<輪>>
         &lig|auto="zi"|;
@@ -197,7 +197,7 @@
     >
   >
   \p<
-    全体の文構造としては、主節の動詞が {soxas} であり、そこに {a ces}, {qi soxot}, {e'n} 以下という 3 つの助詞句が係っていて、2 つ目の {qi soxot} と 3 つ目の {e'n} 以下の間に、タデックロットで囲まれた長い節が挿入されている。
+    全体の文構造としては、主節の動詞が {soxas} であり、そこに {a ces}, {qi soxot}, {e’n} 以下という 3 つの助詞句が係っていて、2 つ目の {qi soxot} と 3 つ目の {e’n} 以下の間に、タデックロットで囲まれた長い節が挿入されている。
     タデックロットは、日本語や英語のダッシュに相当する記号で、このような長めの挿入句の前後に用いられる記号である。
   >
   \p<
@@ -265,7 +265,7 @@
   \h2|id="cb"|<3-2>
   \xl<
     \li<
-      \sh<{revas ocavas a ʻalis e'n dusalat e atùk ebam — fedakis a's e'n salet a cal e aduvekos te soxis a's loke cal te càd, dà salat te cal a zel aves e analef ekoz itazi ces — a kin tufosas a hapet acik.}>
+      \sh<{revas ocavas a ʻalis e’n dusalat e atùk ebam — fedakis a’s e’n salet a cal e aduvekos te soxis a’s loke cal te càd, dà salat te cal a zel aves e analef ekoz itazi ces — a kin tufosas a hapet acik.}>
       \ja<さらに、アリスはとても異常なことだとも思わなかった――後でそれについて考えたときにはそれが普通でないと気づいたが、そのときは全てのことが彼女にとってまさに自然だった――そのウサギが呟いたことを。>
       \gloss<
         &lig|conj="-as"|<\sh<{rev}>\ex<思う>>
@@ -273,16 +273,16 @@
         &lig|auto="a"|;
         &lig<\sh<{ʻalis}>\ex<アリス>>
         &lig|auto="e"|;
-        &lig|auto="'n"|;
+        &lig|auto="’n"|;
         &lig|conj="du-at"|<\sh<{sal}>\ex<である>>
         &lig|auto="e"|;
         &lig|conj="a-"|<\sh<{tùk}>\ex<異常な>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
         &lig|conj="-is"|<\sh<{fedak}>\ex<気づく>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="e"|;
-        &lig|auto="'n"|;
+        &lig|auto="’n"|;
         &lig|conj="-et"|<\sh<{sal}>\ex<である>>
         &lig|auto="a"|;
         &lig<\sh<{cal}>\ex<そのこと>>
@@ -291,7 +291,7 @@
         &lig<\sh<{te}>\ex<～するとき>>
         &lig|conj="-is"|<\sh<{sox}>\ex<考える>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig<\sh<{loke}>\ex<～について>>
         &lig<\sh<{cal}>\ex<そのこと>>
         &lig<\sh<{te}>\ex<～のときに>>
@@ -356,7 +356,7 @@
   \h2|id="ce"|<3-5>
   \xl<
     \li<
-      \sh<{fotaqas onás a hapet acik zi cikot i sevlat e sokiq, ce licas a cit e sokiq acik, ce fôcas vilisas ovop ofev a't.}>
+      \sh<{fotaqas onás a hapet acik zi cikot i sevlat e sokiq, ce licas a cit e sokiq acik, ce fôcas vilisas ovop ofev a’t.}>
       \ja<そのウサギはチョッキのポケットから懐中時計を実際に取り出し、その時計を見て、またすぐに走り始めた。>
       \gloss<
         &lig|conj="-as"|<\sh<{fotaq}>\ex<取り出す>>
@@ -383,14 +383,14 @@
         &lig|conj="o-"|<\sh<{vop}>\ex<再び>>
         &lig|conj="o-"|<\sh<{fev}>\ex<すぐに>>
         &lig|auto="a"|;
-        &lig<\sh<{'t}>\ex<それ>>
+        &lig<\sh<{’t}>\ex<それ>>
       >
     >
   >
   \h2|id="cf"|<3-6>
   \xl<
     \li<
-      \sh<{vade kebatas e ʻalis ca kin vomes licos a's cate sot e hapet adak kômat a e sevlat o vîticas a e sokiq, cataf a ces.}>
+      \sh<{vade kebatas e ʻalis ca kin vomes licos a’s cate sot e hapet adak kômat a e sevlat o vîticas a e sokiq, cataf a ces.}>
       \ja<アリスは、チョッキを着て時計を一瞥するウサギをそのときまで見たことがなかったことに気づいたので、歩き始めた。>
       \gloss<
         &lig<\sh<{vade}>\ex<～なので>>
@@ -402,7 +402,7 @@
         &lig|conj="-es"|<\sh<{vom}>\ex<繰り返す>>
         &lig|conj="-os"|<\sh<{lic}>\ex<見る>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig<\sh<{cate}>\ex<～まで>>
         &lig<\sh<{sot}>\ex<今>>
         &lig|auto="e"|;
@@ -437,7 +437,7 @@
   \h2|id="cg"|<3-7>
   \xl<
     \li<
-      \sh<{fa delizac a ces zi caxel, dilsizas a's e nalvaf so zizetis a's ca cit.}>
+      \sh<{fa delizac a ces zi caxel, dilsizas a’s e nalvaf so zizetis a’s ca cit.}>
       \ja<彼女は好奇心に従って、それを追うために野原を横切った。>
       \gloss<
         &lig<\sh<{fa}>\ex<～しながら>>
@@ -448,13 +448,13 @@
         &lig<\sh<{caxel}>\ex<好奇心>>
         &lig|conj="-as"|<\sh<{dilsiz}>\ex<横切る>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="e"|;
         &lig<\sh<{nalvaf}>\ex<野原>>
         &lig<\sh<{so}>\ex<～するために>>
         &lig|conj="-is"|<\sh<{zizet}>\ex<追う>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="ca"|;
         &lig<\sh<{cit}>\ex<それ>>
       >
@@ -463,7 +463,7 @@
   \h2|id="ch"|<3-8>
   \xl<
     \li<
-      \sh<{onistecaf, qifat licas a ces e'n kûvas a cit ca filotsodvaf avâc i hapet ivo fîcdem izi nátalkìd.}>
+      \sh<{onistecaf, qifat licas a ces e’n kûvas a cit ca filotsodvaf avâc i hapet ivo fîcdem izi nátalkìd.}>
       \ja<幸運にも、彼女は生け垣の下の大きなウサギの巣穴にそれが入るのを見ることができた。>
       \gloss<
         &lig|conj="o-"|<\sh<{nistecaf}>\ex<幸運にも>>
@@ -472,7 +472,7 @@
         &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
         &lig|auto="e"|;
-        &lig|auto="'n"|;
+        &lig|auto="’n"|;
         &lig|conj="-as"|<\sh<{kûv}>\ex<入る>>
         &lig|auto="a"|;
         &lig<\sh<{cit}>\ex<それ>>
@@ -492,7 +492,7 @@
   \h2|id="da"|<4-1>
   \xl<
     \li<
-      \sh<{te tesil acál, fodlisas a ʻalis ca filot acik, fa vomac soxos odum a ces e kin fovalis qi pil a's zi cêd.}>
+      \sh<{te tesil acál, fodlisas a ʻalis ca filot acik, fa vomac soxos odum a ces e kin fovalis qi pil a’s zi cêd.}>
       \ja<次の瞬間、彼女はどうやってそこから出るのか全く考えずに、アリスは穴に飛び込んだ。>
       \gloss<
         &lig<\sh<{te}>\ex<～のときに>>
@@ -516,7 +516,7 @@
         &lig<\sh<{qi}>\ex<～することで>>
         &lig<\sh<{pil}>\ex<どんなこと>>
         &lig|auto="a"|;
-        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{’s}>\ex<彼女>>
         &lig|auto="zi"|;
         &lig<\sh<{cêd}>\ex<そこ>>
       >

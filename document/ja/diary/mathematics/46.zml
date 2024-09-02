@@ -191,7 +191,7 @@
   >
   \h1<参考文献>
   \ol<
-    \li|id="bfpo"|<S. Bloom, Z. Ésik (1993)「Fixed-point operations on ccc's. part I」『Theoretical Computer Science』155(1):1–38>
+    \li|id="bfpo"|<S. Bloom, Z. Ésik (1993)「Fixed-point operations on ccc’s. part I」『Theoretical Computer Science』155(1):1–38>
     \li|id="hmsg"|<M. Hasegawa (1997)「Models of sharing graphs: a categorical semantics of let and letrec」Ph. D. thesis, The University of Edinburgh>
     \li|id="jtmc"|<A. Joyal, R. Street, D. Verity (1996)「Traced monoidal categories」『Mathematical Proceedings of the Cambridge Philosophical Society』119(3):447–468>
     \li|id="tpl"|<B. C. Pierce (2002)『Types and Programming Languages』The MIT Press>

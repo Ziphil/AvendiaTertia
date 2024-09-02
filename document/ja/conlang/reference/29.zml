@@ -21,16 +21,16 @@
   >
   \table<
     \tr<\th<語句>\th<縮約形>>
-    \tr<\td<{tel}>\td<{'l}>>
-    \tr<\td<{loc}>\td<{'c}>>
-    \tr<\td<{ces}>\td<{'s}>>
-    \tr<\td<{cit}>\td<{'t}>>
-    \tr<\td<{cok}>\td<{'k}>>
-    \tr<\td<{kin}>\td<{'n}>>
-    \tr<\td<{ditat}>\td<{di'}>>
-    \tr<\td<{avôl ile lêk}>\td<{al'}>>
-    \tr<\td<{acál ile cav}>\td<{ac'}>>
-    \tr<\td<{salat a cit} など>\td<{s'}>>
+    \tr<\td<{tel}>\td<{’l}>>
+    \tr<\td<{loc}>\td<{’c}>>
+    \tr<\td<{ces}>\td<{’s}>>
+    \tr<\td<{cit}>\td<{’t}>>
+    \tr<\td<{cok}>\td<{’k}>>
+    \tr<\td<{kin}>\td<{’n}>>
+    \tr<\td<{ditat}>\td<{di’}>>
+    \tr<\td<{avôl ile lêk}>\td<{al’}>>
+    \tr<\td<{acál ile cav}>\td<{ac’}>>
+    \tr<\td<{salat a cit} など>\td<{s’}>>
   >
   \p<
     縮約するかしないかによって意味や構文は変化しないため、縮約形とその前の形は自由に交換され得る。
@@ -38,15 +38,15 @@
     続くセクションで、縮約形の用法や縮約形が使われやすい場面などについて、縮約形別に詳しく述べる。
   >
   \h1|tag="scr"|<縮約の傾向>
-  \h2|tag="scn"|<{'l}, {'c}, {'s}, {'t}>
+  \h2|tag="scn"|<{’l}, {’c}, {’s}, {’t}>
   \h3|tag="scm"|<基本法則>
   \p<
     {tel}, {loc}, {ces}, {cit} の 4 つの単語は、話題として節の始めに近い位置にあるほど縮約されやすく、新情報として節の終わりに近い位置にあるほど縮約されにくい。
     ただし、文語では文中で 1 回目に出てきたものは縮約されない。
   >
   \xol<
-    \li|tag="1"|<\sh<{pafikak a tel e'n câses a'l te tazît e qâz i ces.}>\ja<昨日彼の父親に会ったことを思い出した。>>
-    \li|tag="2"|<\sh<{revat a tel e'n bâgez a ces li tel.}>\ja<彼を怒らせてしまったのは私だと思う。>>
+    \li|tag="1"|<\sh<{pafikak a tel e’n câses a’l te tazît e qâz i ces.}>\ja<昨日彼の父親に会ったことを思い出した。>>
+    \li|tag="2"|<\sh<{revat a tel e’n bâgez a ces li tel.}>\ja<彼を怒らせてしまったのは私だと思う。>>
   >
   \p<
     \box|tag="1"|; の {kin} 節内では、「彼の父親」というのが相手に伝えたい新情報であり、「私」はそれほど重要ではないため、{tel} が縮約されている。
@@ -66,25 +66,25 @@
     これは口語か文語かに関わらない。
   >
   \xol<
-    \li|tag="1"|<\sh<{ditat nifetis a'c e rix.}>\ja<水を持ってきてください。>>
+    \li|tag="1"|<\sh<{ditat nifetis a’c e rix.}>\ja<水を持ってきてください。>>
   >
   \p<
     命令の対象が目の前にいる「あなた」であることを特に強調したい場合は、{loc} を縮約しないこともある。
     この場合、縮約されなかった {loc} は強めに発音される。
   >
   \xol<
-    \li|tag="2"|<\sh<{di'cakofis a loc e pec.}>\ja<あなたが質問に答えてください。>>
+    \li|tag="2"|<\sh<{di’cakofis a loc e pec.}>\ja<あなたが質問に答えてください。>>
   >
-  \h2|tag="sca"|<{'k}>
+  \h2|tag="sca"|<{’k}>
   \todo<
     このサブセクションは執筆中です。
   >
-  \h2|tag="sce"|<{'n}>
+  \h2|tag="sce"|<{’n}>
   \p<
     {kin} は、動詞との結びつきが強いときに縮約されやすい。 
   >
   \xol<
-    \li|tag="1"|<\sh<{panozac a ces e'n dusokat a's e yét.}>\ja<彼は真実を知らないふりをしている。>>
+    \li|tag="1"|<\sh<{panozac a ces e’n dusokat a’s e yét.}>\ja<彼は真実を知らないふりをしている。>>
   >
   \p<
     \box|tag="1"|; で用いられている {panoz} は、動詞として「ふりをする」の意味であり、{e} 句に {kin} 節をとることで「～するふりをする」を表現する。
@@ -106,26 +106,26 @@
     また、{kin} 節以下を強調したい場合にも縮約されないことがある。
   >
   \xol<
-    \li|tag="3"|<\sh<{sâfat a tel e kin xakosos a'l e qilox.}>\ja<私は言語を作ることが好きだ。>>
+    \li|tag="3"|<\sh<{sâfat a tel e kin xakosos a’l e qilox.}>\ja<私は言語を作ることが好きだ。>>
   >
   \p<
     \box|tag="3"|; で用いられている {sâf} は、{e} 句に置かれる {kin} は縮約されることが多い上に、助動詞的に用いられて {kin} がそもそも現れないのが普通である。
     しかし、この例文では {kin} があえて縮約されずに用いられているため、結果として {kin} 節の内容が少し強調され、「他でもなく言語を作ることが好きなのだ」という意味合いになる。 
   >
-  \h2|tag="sci"|<{di'}>
+  \h2|tag="sci"|<{di’}>
   \p<
-    {ditat} が縮約されない状態では丁寧な命令になり、{di'} に縮約された状態では命令の丁寧度が下がる。
+    {ditat} が縮約されない状態では丁寧な命令になり、{di’} に縮約された状態では命令の丁寧度が下がる。
     詳しくは \rref|ref="sfv"|; を参照せよ。
   >
-  \h2|tag="slh"|<{al'}, {ac'}>
+  \h2|tag="slh"|<{al’}, {ac’}>
   \p<
-    {avôl ile lêk}, {acál ile cav} はほとんど必ず {al'} と {ac'} に縮約され、縮約しない場合は個数や順位の強調だと解釈される。
+    {avôl ile lêk}, {acál ile cav} はほとんど必ず {al’} と {ac’} に縮約され、縮約しない場合は個数や順位の強調だと解釈される。
   >
   \p<
     なお、「以上」や「以下」を表したいときは {ile} が別の助詞に置き換えられるが、その形には縮約形がないため、縮約は行われない。
     個数や順位の強調という意味合いもない。
   >
-  \h2|tag="sla"|<{s'}>
+  \h2|tag="sla"|<{s’}>
   \todo<
     このサブセクションは執筆中です。
   >

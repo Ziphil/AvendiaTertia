@@ -47,10 +47,10 @@
     p string.gsub(/\n/, "\\n")
     p string.gsub(/\n/, "\\\n")
     p string.gsub(/\n/, "\\\\n")
-    p string.gsub(/\n/, '\n')
-    p string.gsub(/\n/, '\\n')
-    p string.gsub(/\n/, '\\\n')
-    p string.gsub(/\n/, '\\\\n')
+    p string.gsub(/\n/, ’\n’)
+    p string.gsub(/\n/, ’\\n’)
+    p string.gsub(/\n/, ’\\\n’)
+    p string.gsub(/\n/, ’\\\\n’)
   >
   \p<
     さて、上のプログラムの出力がどうなるか分かりますか?

@@ -282,7 +282,7 @@
     この定理からすぐに、以下の Bernstein の定理が従う。
   >
   \thm|type="thm"|<
-    \name<Bernstein の定理\fl<—'s theorem>>
+    \name<Bernstein の定理\fl<—’s theorem>>
     \p<
       集合 &m<X, Y> をとる。
       2 つの単射 &m<f: Y \to; X, g: X \to; Y> が存在するならば、&m<Y \approx; X> が成り立つ。
@@ -298,7 +298,7 @@
     最後に、すでに知っている基数からそれより真に大きい基数を構成するための、以下の Cantor の定理を証明する。
   >
   \thm|type="thm"|<
-    \name<Cantor の定理\fl<—'s theorem>>
+    \name<Cantor の定理\fl<—’s theorem>>
     \p<
       集合 &m<X> に対し、&m<\lvert; X \rvert; `< \lvert; \frak<P> (X) \rvert;> が成り立つ。
     >

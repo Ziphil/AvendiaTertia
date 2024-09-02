@@ -16,7 +16,7 @@
     {ni} が接続詞として使われるのは、例えば以下のようなときです。
   >
   \xl<
-    \li<\sh<{salat a sakil acik e avaf emic, ni revet a tel e'n lis.}>\ja<そのリンゴは思っていたより大きい。>>
+    \li<\sh<{salat a sakil acik e avaf emic, ni revet a tel e’n lis.}>\ja<そのリンゴは思っていたより大きい。>>
   >
   \p<
     さて、この {ni} 節は文全体を修飾しますが、本来は {emic} を修飾しています。
@@ -31,7 +31,7 @@
     現段階では非文ということになっているので、アスタリスクをつけておきます。
   >
   \xl<
-    \li<\sh|mark="u"|<{salat a sakil acik e avaf emic ini revet a tel e'n lis.}>>
+    \li<\sh|mark="u"|<{salat a sakil acik e avaf emic ini revet a tel e’n lis.}>>
   >
   \p<
     ただ、この表現方法では少し困ることがあります。
@@ -39,14 +39,14 @@
     例えば、上の文の {e avaf emic} が {a sakil acik} より前にあると、以下のようにならざるを得ません。
   >
   \xl<
-    \li<\sh|mark="u"|<{salat e avaf emic ini revet a tel e'n lis a sakil acik.}>>
+    \li<\sh|mark="u"|<{salat e avaf emic ini revet a tel e’n lis a sakil acik.}>>
   >
   \p<
     こうなると、最後の {a sakil acik} の修飾先が分かりにくくなります。
     そこで、文全体を修飾するという形にすることで、{ni} 節を主節から分離して分かりやすくするわけです。
   >
   \xl<
-    \li<\sh<{salat e avaf emic a sakil acik, ni revet a tel e'n lis.}>>
+    \li<\sh<{salat e avaf emic a sakil acik, ni revet a tel e’n lis.}>>
   >
   \p<
     特殊助接詞の接続詞用法を以上のように考えれば統一的ですよね。
@@ -55,20 +55,20 @@
     こう考えるメリットは他にもあって、例えば \a|href="128.html"|<\h<1406>> や \a|href="129.html"|<\h<1414>> で考察した、正しいけれでも少し気持ち悪さが残る以下の文です。
   >
   \xl<
-    \li<\sh<{di'halxafis a'c e tel ozèt iti medel.}>\ja<壊れるくらい強く私を抱きしめて。>>
+    \li<\sh<{di’halxafis a’c e tel ozèt iti medel.}>\ja<壊れるくらい強く私を抱きしめて。>>
   >
   \p<
     これがなぜ気持ち悪かったかというと、以下の言い換えだと考えられていたためです。
   >
   \xl<
-    \li<\sh<{di'halxafis a'c e tel ozèt, ti medelis e tel.}>>
+    \li<\sh<{di’halxafis a’c e tel ozèt, ti medelis e tel.}>>
   >
   \p<
     {medelis} を名詞用法の {medel} に変えると {ti} が {iti} に変わるのが気持ち悪かったわけです。
     しかし、最初に言ったような考え方では、これはさらに以下のような文の言い換えです。
   >
   \xl<
-    \li<\sh<{di'halxafis a'c e tel ozèt iti medelis e tel.}>>
+    \li<\sh<{di’halxafis a’c e tel ozèt iti medelis e tel.}>>
   >
   \p<
     これをもとにすれば、最初の名詞用法を用いた文も気持ち悪くなくなります。
