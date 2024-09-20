@@ -26,26 +26,41 @@
     \main|class="main",id="main"|;
 
     \zp-song|
+      number="10",
+      date="2024/09/19",
+      length="72",
+      song-src="/file/song/10.mp3",
+      score-src="/file/song/10.pdf"
+    |<
+      \zp-description<
+        \p<
+          いつかの帰り道からずっと頭の中で流れていたメロディを書き起こして、続きを付けて曲にまとめました。
+          こういうのをどんどんやっていきたいです。
+        >
+      >
+    >
+    \zp-song|
       number="9",
       date="2024/02/17",
       length="155",
-      song-google-id="1RWwHQDONQlJYyHWcgyhKxHkihgw7leGJ",
-      score-google-id="1nYzcDu3ciNIeNqcqVcAl132oW_a9LtLF"
+      song-src="/file/song/9.mp3",
+      score-src="/file/song/9.pdf"
     |<
       \zp-title-shaleian<xahalkâk adetbel>
       \zp-title-normal<Le soleil dominant>
       \zp-description<
         \p<
           フリジアンスケールを使った暗めの曲を作りたいなーって思ったらこうなりました。
+          後半がちょっと単調になっちゃったのは残念です\k<…>。
         >
       >
     >
     \zp-song|
-      number="8",
+      number="8b",
       date="2023/06/18",
       length="98",
-      song-google-id="1M81A6l_g-UEMC2a83z5UjOXXtnVbguNU",
-      score-google-id="1XwGf0qn4GuN1McHBygaPKO8WFi3ms26y"
+      song-src="/file/song/8-piano.mp3",
+      score-src="/file/song/8-piano.pdf"
     |<
       \zp-title-shaleian<hîxxif axalír — iqi líker>
       \zp-title-normal<Étoiles du sentiment (Version piano)>
@@ -59,7 +74,7 @@
       number="8",
       date="2023/05/05",
       length="99",
-      song-google-id="1Mw1kFngmy5fsDsKv2FShrCBZ5fl3Qujt"
+      song-src="/file/song/8.mp3"
     |<
       \zp-title-shaleian<hîxxif axalír>
       \zp-title-normal<Étoiles du sentiment>
@@ -73,7 +88,7 @@
       number="7",
       date="2023/03/24",
       length="201",
-      song-google-id="1lXzuqJtqdJI9Vf7STZkllkbIaowUnPS0"
+      song-src="/file/song/7.mp3"
     |<
       \zp-title-shaleian<cali kudoq i dîm>
       \zp-title-normal<En route vers l’abîme>
@@ -91,8 +106,8 @@
       number="6",
       date="2023/03/10",
       length="89",
-      song-google-id="1JcmwqkKVepDqIEKZixFg6ocdzk4mEza5",
-      score-google-id="1wq7vnv5SXcoA-PJUNerbOKek_mJ8zMH9"
+      song-src="/file/song/6.mp3",
+      score-src="/file/song/6.pdf"
     |<
       \zp-description<
         \p<
@@ -108,7 +123,7 @@
       number="5",
       date="2023/03/05",
       length="128",
-      song-google-id="1kFViEU7xD2fmrqDE6uauHE920JaXTZEy"
+      song-src="/file/song/5.mp3"
     |<
       \zp-title-shaleian<kedpasif arevez>
       \zp-title-normal<Le patholabyrinthe>
@@ -127,7 +142,7 @@
       number="4",
       date="2023/01/25",
       length="116",
-      song-google-id="1gDjPevhmOBlvfZpFq7Pnc1BcHRV6rSqm"
+      song-src="/file/song/4.mp3"
     |<
       \zp-title-shaleian<fekul aquk>
       \zp-title-normal<Ces souvenirs passés>
@@ -136,7 +151,7 @@
       number="3",
       date="2023/01/09",
       length="66",
-      song-google-id="1XpMOMvYh2g1-f5aFMtB0C0M8WGIknf7J"
+      song-src="/file/song/3.mp3"
     |<
       \zp-description<
         \p<
@@ -149,7 +164,7 @@
       number="2",
       date="2023/01/01",
       length="37",
-      song-google-id="1w9akxAA9YqsYtBFr3Huo7KLHolEXeck0"
+      song-src="/file/song/2.mp3"
     |<
       \zp-title-shaleian<saltefac e'c a kut>
       \zp-title-normal<Ils t’accueillent>
@@ -163,7 +178,7 @@
       number="1",
       date="2022/12/30",
       length="104",
-      song-google-id="1uBIRdYG_ktLgH0sorc7tqZ58uTIVduMC"
+      song-src="/file/song/1.mp3"
     |<
       \zp-title-shaleian<xalír acís>
       \zp-title-normal<Le premier sentiment>

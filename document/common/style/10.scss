@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @use "sass:math" as *;
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;330;600&display=swap");
 @import "util/reset.scss";
 @import "util/common.scss";
 @import "util/font.scss";
@@ -110,12 +110,6 @@ zp-description {
   box-sizing: border-box;
   position: relative;
   z-index: 0;
-  &::before {
-    inset-block-end: -0.1em;
-    content: attr(data-number);
-    position: relative;
-    z-index: 2;
-  }
   &::after {
     inset: 0rpx;
     background-color: var(--highlight-background-color);
@@ -127,6 +121,18 @@ zp-description {
   @include smartphone {
     display: none;
   }
+}
+
+.player-number-inner {
+  inset-block-end: -0.1em;
+  position: relative;
+  z-index: 2;
+}
+
+.player-number-symbol {
+  margin-inline-start: 0.1em;
+  font-size: 50%;
+  font-weight: 330;
 }
 
 .player-information {

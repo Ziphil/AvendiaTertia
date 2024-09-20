@@ -1,9 +1,7 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {
-  Howl
-} from "howler";
+import {Howl} from "howler";
 import {
   ReactElement,
   RefObject,
@@ -13,10 +11,7 @@ import {
   useRef,
   useState
 } from "react";
-import {
-  aria,
-  data
-} from "../util/data";
+import {aria, data} from "../util/data";
 
 
 const PlayerPane = function ({
@@ -24,7 +19,7 @@ const PlayerPane = function ({
   stopsRef
 }: {
   spec: SongSpec,
-  stopsRef: RefObject<Map<number, () => void>>
+  stopsRef: RefObject<Map<string, () => void>>
 }): ReactElement {
 
   const [state, setState] = useState<"playing" | "pausing" | null>(null);
@@ -33,8 +28,10 @@ const PlayerPane = function ({
   const [currentProgress, setCurrentProgress] = useState(0);
   const [totalTime, setTotalTime] = useState(0);
   const [descriptionHeight, setDescriptionHeight] = useState(0);
+
   const howlRef = useRef(createHowl(spec));
   const descriptionElementRef = useRef<HTMLDivElement>(null);
+
   const id = useId();
 
   const playOrPause = useCallback(function (): void {
@@ -105,7 +102,12 @@ const PlayerPane = function ({
   const node = (
     <div className="player-item" {...data({state})}>
       <button className="player-item-top" disabled={spec.description === undefined} onClick={handleClick}>
-        <div className="player-number" {...data({number: spec.number.toString()})}/>
+        <div className="player-number">
+          <span className="player-number-inner">
+            <span>{spec.number.match(/^\d+/)?.[0] ?? "?"}</span>
+            {(!!spec.number.match(/\D+$/)) && (<span className="player-number-symbol">{spec.number.match(/\D+$/)?.[0].toUpperCase() ?? ""}</span>)}
+          </span>
+        </div>
         <div className="player-information">
           <div className="player-title">
             <div className="player-title-shaleian">
@@ -136,7 +138,7 @@ const PlayerPane = function ({
           <div className="player-separator"/>
           <a className="player-button" href={getSourceUrl(spec)} {...data({type: "download"})} title="ダウンロード" {...aria({label: "ダウンロード"})}/>
           <a className="player-button" target="_blank" rel="noreferrer" href={getSongExternalUrl(spec)} {...data({type: "external"})} title="新しいタブ" {...aria({label: "新しいタブ"})}/>
-          {(spec.scoreGoogleId !== undefined) && <a className="player-button" target="_blank" rel="noreferrer" href={getScoreExternalUrl(spec)} {...data({type: "score"})} title="楽譜" {...aria({label: "楽譜"})}/>}
+          {(spec.scorePath !== undefined) && <a className="player-button" target="_blank" rel="noreferrer" href={getScoreExternalUrl(spec)} {...data({type: "score"})} title="楽譜" {...aria({label: "楽譜"})}/>}
         </div>
         <div className="player-item-bottom-right">
           {(state !== null) && ((loading) ? "Loading" : `${formatTime(currentTime)} / ${formatTime(totalTime)}`)}
@@ -168,17 +170,17 @@ function createHtmlObject(html: string): any {
 }
 
 function getSourceUrl(spec: SongSpec): string {
-  const url = `https://drive.google.com/uc?export=download&id=${spec.songGoogleId}`;
+  const url = `${spec.songPath}`;
   return url;
 }
 
 function getSongExternalUrl(spec: SongSpec): string {
-  const url = `https://drive.google.com/file/d/${spec.songGoogleId}/view`;
+  const url = `${spec.songPath}`;
   return url;
 }
 
 function getScoreExternalUrl(spec: SongSpec): string {
-  const url = `https://drive.google.com/file/d/${spec.scoreGoogleId}/view?usp=share_link`;
+  const url = `${spec.scorePath}`;
   return url;
 }
 
@@ -189,12 +191,12 @@ function formatTime(time: number): string {
 }
 
 export type SongSpec = {
-  number: number,
+  number: string,
   title?: {shaleian: string, normal: string},
   date: string,
   length: number,
-  songGoogleId: string,
-  scoreGoogleId?: string,
+  songPath: string,
+  scorePath?: string,
   description?: string
 };
 
