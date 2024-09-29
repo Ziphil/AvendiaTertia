@@ -5,7 +5,6 @@
 \page<
   \name<数の表記と読み>
   \ver<7 代 2 期>
-  \use-math;
 
   \h1|tag="spr"|<数辞の種類>
   \p<
@@ -137,9 +136,9 @@
   >
   \table<
     \tr<\th<位>\th<読み>>
-    \tr<\td<&m<\sp<10><-2>>>\td<[et]>>
-    \tr<\td<&m<\sp<10><-3>>>\td<[il]>>
-    \tr<\td<&m<\sp<10><-4>>>\td<[as]>>
+    \tr<\td<10\sup<−2>>\td<[et]>>
+    \tr<\td<10\sup<−3>>\td<[il]>>
+    \tr<\td<10\sup<−4>>\td<[as]>>
   >
   \p<
     例えば、[·07] は {ziqet} と読み、[·4561] は {bacjesetlamildafas} と読む。
@@ -152,11 +151,11 @@
   >
   \table<
     \tr<\th<位>\th<読み>>
-    \tr<\td<&m<\sp<10><-4>>>\td<[otik]>>
-    \tr<\td<&m<\sp<10><-8>>>\td<[oqek]>>
-    \tr<\td<&m<\sp<10><-12>>>\td<[oyok]>>
-    \tr<\td<&m<\sp<10><-16>>>\td<[opik]>>
-    \tr<\td<&m<\sp<10><-20>>>\td<[oxak]>>
+    \tr<\td<10\sup<−4>>\td<[otik]>>
+    \tr<\td<10\sup<−8>>\td<[oqek]>>
+    \tr<\td<10\sup<−12>>\td<[oyok]>>
+    \tr<\td<10\sup<−16>>\td<[opik]>>
+    \tr<\td<10\sup<−20>>\td<[oxak]>>
   >
   \p<
     例えば、[·4561 3773 3] は {bacjesetlamildafas-hutziqetziqilhutasotik-hutoqek} と読む。

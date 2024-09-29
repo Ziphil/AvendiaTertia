@@ -5,7 +5,6 @@
 \page<
   \name<その他の特殊な形態素>
   \ver<7 代 2 期>
-  \use-math;
 
   \h1|tag="sds",id="quasidecorative"|<飾辞>
   \p<
@@ -37,23 +36,23 @@
   \side<
     \table<
       \tr<\th<接辞>\th<倍数>>
-      \tr<\td<[no]>\td<&m<\sp<10><2>>>>
-      \tr<\td<[ti]>\td<&m<\sp<10><4>>>>
-      \tr<\td<[qe]>\td<&m<\sp<10><8>>>>
-      \tr<\td<[yo]>\td<&m<\sp<10><12>>>>
-      \tr<\td<[pi]>\td<&m<\sp<10><16>>>>
-      \tr<\td<[xa]>\td<&m<\sp<10><20>>>>
-      \tr<\td<[ri]>\td<&m<\sp<10><24>>>>
+      \tr<\td<[no]>\td<10\sup<2>>>
+      \tr<\td<[ti]>\td<10\sup<4>>>
+      \tr<\td<[qe]>\td<10\sup<8>>>
+      \tr<\td<[yo]>\td<10\sup<12>>>
+      \tr<\td<[pi]>\td<10\sup<16>>>
+      \tr<\td<[xa]>\td<10\sup<20>>>
+      \tr<\td<[ri]>\td<10\sup<24>>>
     >
     \table<
       \tr<\th<接辞>\th<倍数>>
-      \tr<\td<[mu]>\td<&m<\sp<10><-2>>>>
-      \tr<\td<[da]>\td<&m<\sp<10><-4>>>>
-      \tr<\td<[ci]>\td<&m<\sp<10><-8>>>>
-      \tr<\td<[hu]>\td<&m<\sp<10><-12>>>>
-      \tr<\td<[ba]>\td<&m<\sp<10><-16>>>>
-      \tr<\td<[je]>\td<&m<\sp<10><-20>>>>
-      \tr<\td<[la]>\td<&m<\sp<10><-24>>>>
+      \tr<\td<[mu]>\td<10\sup<−2>>>
+      \tr<\td<[da]>\td<10\sup<−4>>>
+      \tr<\td<[ci]>\td<10\sup<−8>>>
+      \tr<\td<[hu]>\td<10\sup<−12>>>
+      \tr<\td<[ba]>\td<10\sup<−16>>>
+      \tr<\td<[je]>\td<10\sup<−20>>>
+      \tr<\td<[la]>\td<10\sup<−24>>>
     >
   >
 
