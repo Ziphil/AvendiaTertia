@@ -1,0 +1,22 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<PDF 版>
+  \ver<7 代 2 期>
+
+  \h1<索引>
+  \p<
+    Web 上で公開されているものと同じ内容の PDF 版です。
+    こちらの更新は手動なので、内容が古い可能性があります。
+  >
+  \pdf|src="../../file/reference/1.pdf"|;
+  \p<
+    以下のリンクから PDF ファイルを直接ダウンロードすることもできます。
+  >
+  \form<
+    \a|href="../../file/reference/1.pdf"|<ダウンロード>
+  >
+
+>
