@@ -89,6 +89,9 @@ function createInitialedTermSpecs(specs: Array<ReferenceTermSpec>, outputLanguag
     }
     currentInitialedSpec?.specs.push(spec);
   }
+  if (currentInitialedSpec !== null && currentInitialedSpec.specs.length > 0) {
+    initialedSpecs.push(currentInitialedSpec);
+  }
   return initialedSpecs;
 }
 
