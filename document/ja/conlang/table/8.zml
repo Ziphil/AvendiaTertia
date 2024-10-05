@@ -7,6 +7,7 @@
   \ver<5 代 2 期～ 7 代 2 期>
 
   \h1<音象徴>
+  \h2<文字順>
   \table<
     \tr<\th;\th<[a]>\th<[e]>\th<[i]>\th<[o]>\th<[u]>>
     \tr<\th<[s]>\td<良い>\td<>\td<細い> \td<主要>\td<>>
@@ -17,7 +18,7 @@
     \tr<\th<[g]>\td<>\td<>\td<鋭い>\td<>\td<苦しい>>
     \tr<\th<[f]>\td<女>\td<近い>\td<弱い>\td<外側>\td<>>
     \tr<\th<[v]>\td<大きい>\td<全体>\td<速い>\td<多い>\td<>>
-    \tr<\th<[p]>\td<不明>\td<気楽な>\td<不安>\td<>\td<>>
+    \tr<\th<[p]>\td<不明>\td<気楽>\td<不安>\td<>\td<>>
     \tr<\th<[b]>\td<>\td<鈍い>\td<冷たい>\td<厚い>\td<悪い>>
     \tr<\th<[c]>\td<前>\td<>\td<副次的>\td<>\td<>>
     \tr<\th<[q]>\td<男>\td<>\td<人工>\td<遠い>\td<>>
@@ -29,6 +30,50 @@
     \tr<\th<[m]>\td<>\td<遅い>\td<薄い>\td<柔らかい>\td<>>
     \tr<\th<[y]>\td<肯定>\td<綺麗な>\td<>\td<>\td<>>
     \tr<\th<[h]>\td<軽い>\td<>\td<高い>\td<>\td<>>
+  >
+  \h2<意味順>
+  \side<
+    \table<
+      \tr<\th<＋>\th<－>>
+      \tr<\td<{va} — 大きい>\td<{ti} — 小さい>>
+      \tr<\td<{vo} — 多い>\td<{tu} — 少ない>>
+      \tr<\td<{lo} — 長い>\td<{te} — 短い>>
+      \tr<\td<{da} — 太い>\td<{si} — 細い>>
+      \tr<\td<{do} — 重い>\td<{ha} — 軽い>>
+      \tr<\td<{fe} — 近い>\td<{qo} — 遠い>>
+      \tr<\td<{hi} — 高い>\td<{de} — 低い>>
+      \tr<\td<{ca} — 前>\td<{zi} — 後ろ>>
+      \tr<\td<{fo} — 外側>\td<{ku} — 内側>>
+      \tr<\td<{za} — 熱い>\td<{bi} — 冷たい>>
+      \tr<\td<{vi} — 速い>\td<{me} — 遅い>>
+      \tr<\td<{ka} — 固い>\td<{mo} — 柔らかい>>
+      \tr<\td<{gi} — 鋭い>\td<{be} — 鈍い>>
+    >
+    \table<
+      \tr<\th<＋>\th<－>>
+      \tr<\td<{sa} — 良い>\td<{bu} — 悪い>>
+      \tr<\td<{ya} — 肯定>\td<{du} — 否定>>
+      \tr<\td<{ye} — 綺麗な>\td<{ju} — 汚い>>
+      \tr<\td<{xa} — 明るい>\td<{jo} — 暗い>>
+      \tr<\td<{ra} — 楽しい>\td<{gu} — 苦しい>>
+      \tr<\td<{ze} — 強い>\td<{fi} — 弱い>>
+      \tr<\td<{li} — まっすぐ>\td<{no} — 曲がる>>
+      \tr<\td<{ve} — 全体>\td<{ta} — 部分>>
+      \tr<\td<{so} — 主要>\td<{ci} — 副次的>>
+      \tr<\td<{ko} — 確実>\td<{pa} — 不明>>
+      \tr<\td<{ke} — 安定>\td<{pi} — 不安>>
+      \tr<\td<{qi} — 人工>\td<{na} — 自然>>
+      \tr<\td<{qa} — 男>\td<{fa} — 女>>
+    >
+    \table<
+      \tr<\th<その他>>
+      \tr<\td<{xo} — 格式>>
+      \tr<\td<{pe} — 気楽>>
+      \tr<\td<{re} — 感情>>
+      \tr<\td<{ri} — 流れ>>
+      \tr<\td<{la} — 人間>>
+      \tr<\td<{ni} — 変化>>
+    >
   >
 
 >
