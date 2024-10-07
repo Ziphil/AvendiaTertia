@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## sav まで使用
+  ## sab まで使用
   \hb<初めに>
   \pb<
     \ab|href="1.html",ignore|<初めに>
@@ -44,7 +44,6 @@
   \pb<
     \ab|href="17.html"|<連結詞>
     \ab|href="18.html"|<接続詞>
-    \ab|href="19.html"|<接続詞の特殊構文>
     \ab|href="20.html"|<{kin} 節>
     \ab|href="16.html"|<限定節>
   >
@@ -61,7 +60,7 @@
   >
   \hb<その他の表現>
   \pb<
-    \ab|href="36.html"|<助接辞の特殊構文>
+    \ab|href="36.html"|<助詞や接続詞の特殊構文>
     \ab|href="39.html"|<話法>
     \ab|href="27.html"|<遊離助詞句>
     \ab|href="37.html"|<モノとコト>
