@@ -11,3 +11,7 @@ input[type="button"]:not(:disabled),
 button:not(:disabled) {
   cursor: pointer;
 }
+
+body {
+  font-size-adjust: cap-height 0.66;
+}

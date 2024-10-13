@@ -41,8 +41,7 @@ $serif-font-weight: 400;
 $sans-font-weight: 400;
 $monospace-font-weight: 400;
 
-$sans-font-size: 100%;
-$monospace-font-size: 95%;
+$monospace-font-size: 92%;
 
 $monospace-letter-spacing: -0.08em;
 
@@ -129,6 +128,7 @@ $monospace-letter-spacing: -0.08em;
 @mixin icon-font {
   font-family: "Font Awesome 6 Pro", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   font-weight: 900;
+  font-size-adjust: none;
 }
 
 @mixin text-size-adjust {
