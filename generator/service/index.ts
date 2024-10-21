@@ -1,15 +1,8 @@
 //
 
-import {
-  ZenmlParser
-} from "@zenml/zenml";
-import {
-  AvendiaConfigs,
-  AvendiaOutputLanguage
-} from "../configs";
-import {
-  AvendiaTransformer
-} from "../transformer";
+import {ZenmlParser} from "@zenml/zenml";
+import {AvendiaConfigs, AvendiaOutputLanguage} from "../configs";
+import {AvendiaTransformer} from "../transformer";
 import executeReference from "./reference";
 
 

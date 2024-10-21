@@ -1,9 +1,6 @@
 //
 
-import {
-  AccessOptions,
-  Client as FtpClient
-} from "basic-ftp";
+import {AccessOptions, Client as FtpClient} from "basic-ftp";
 
 
 export class CustomFtpClient {

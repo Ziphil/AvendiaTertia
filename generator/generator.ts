@@ -1,12 +1,7 @@
 //
 
-import {
-  DOMImplementation
-} from "@zenml/xmldom";
-import {
-  ZenmlParser,
-  measureAsync
-} from "@zenml/zenml";
+import {DOMImplementation} from "@zenml/xmldom";
+import {ZenmlParser, measureAsync} from "@zenml/zenml";
 import chalk from "chalk";
 import chokidar from "chokidar";
 import commandLineArgs from "command-line-args";
@@ -16,31 +11,17 @@ import fs from "fs/promises";
 import glob from "glob-promise";
 import pathUtil from "path";
 import sass from "sass";
-import {
-  SourceSpan as SassSourceSpan
-} from "sass";
+import {SourceSpan as SassSourceSpan} from "sass";
 import webpack from "webpack";
-import {
-  Configuration as WebpackConfiguration
-} from "webpack";
+import {Configuration as WebpackConfiguration} from "webpack";
 import pluginManagers from "../plugin";
 import templateManagers from "../template";
 import WEBPACK_CONFIGS from "../webpack-document";
-import {
-  CustomFtpClient
-} from "./client";
-import {
-  AvendiaConfigs,
-  AvendiaLanguage,
-  AvendiaOutputLanguage
-} from "./configs";
-import {
-  AvendiaDocument
-} from "./dom";
+import {CustomFtpClient} from "./client";
+import {AvendiaConfigs, AvendiaLanguage, AvendiaOutputLanguage} from "./configs";
+import {AvendiaDocument} from "./dom";
 import services from "./service";
-import {
-  AvendiaTransformer
-} from "./transformer";
+import {AvendiaTransformer} from "./transformer";
 
 
 export class AvendiaGenerator {

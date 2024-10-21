@@ -2,12 +2,8 @@
 
 import fs from "fs/promises";
 import pathUtil from "path";
-import {
-  AvendiaOutputLanguage
-} from "../configs";
-import type {
-  AvendiaServiceArgs
-} from "./index";
+import {AvendiaOutputLanguage} from "../configs";
+import type {AvendiaServiceArgs} from "./index";
 
 
 const SECTION_TERM_INITIALS = {

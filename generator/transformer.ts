@@ -7,22 +7,13 @@ import {
   NodeLikeOf,
   TemplateManager
 } from "@zenml/zenml";
-import {
-  ZoticaResourceUtils
-} from "@zenml/zotica";
+import {ZoticaResourceUtils} from "@zenml/zotica";
 import dotjs from "dot";
 import TEMPLATE_HTML from "../template/template.html";
 import TRANSLATIONS from "../template/translations.json";
-import {
-  AvendiaConfigs,
-  AvendiaOutputLanguage
-} from "./configs";
-import type {
-  AvendiaDocument
-} from "./dom";
-import type {
-  ReferenceIndex
-} from "./service/reference";
+import {AvendiaConfigs, AvendiaOutputLanguage} from "./configs";
+import type {AvendiaDocument} from "./dom";
+import type {ReferenceIndex} from "./service/reference";
 
 
 export class AvendiaTransformer extends BaseTransformer<AvendiaDocument, AvendiaTransformerEnvironments, AvendiaTransformerVariables> {

@@ -1,10 +1,6 @@
 //
 
-import {
-  Configuration,
-  DefinePlugin,
-  ProvidePlugin
-} from "webpack";
+import {Configuration, DefinePlugin, ProvidePlugin} from "webpack";
 
 
 let config = {
