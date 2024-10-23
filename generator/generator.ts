@@ -200,7 +200,7 @@ export class AvendiaGenerator {
       logger: {debug: logMessage, warn: logMessage}
     };
     const cssString = sass.renderSync(options).css.toString("utf-8");
-    const cssTree = cssTreeUtil.parse(cssString);
+    const cssTree = cssTreeUtil.parse(cssString, {parseCustomProperty: true});
     cssTreeUtil.walk(cssTree, (node) => {
       if (node.type === "Dimension") {
         if (node.unit === "rpx") {
