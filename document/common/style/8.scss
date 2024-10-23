@@ -9,7 +9,7 @@
 @import "main-module/inline/common.scss";
 
 
-$home-width: 85vw;
+$home-width: 85cqi;
 $home-max-width: 1200rpx;
 
 
@@ -44,6 +44,11 @@ body {
   background-color: $page-background-color;
   overflow-x: auto;
   overflow-y: scroll;
+}
+
+.main {
+  container-name: main;
+  container-type: inline-size;
 }
 
 .centralize {
@@ -104,7 +109,7 @@ body {
 .header-flavor {
   margin-top: 0rpx;
   font-family: "Gilit Web";
-  font-size: 28rpx;
+  font-size: 22rpx;
   font-weight: bold;
   color: $blue-color;
   letter-spacing: 0.07em;
@@ -126,28 +131,103 @@ $card-item-title-height: 42rpx;
 $link-height: 60rpx;
 
 .card-table-block {
+  width: 100cqi;
   margin-top: 60rpx;
+  display: flex;
+  flex-direction: column;
 }
 
-.link-table {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30rpx 40rpx;
-  @include medium-screen {
-    width: $home-width;
-    max-width: $home-max-width;  
+.card-table-carousel {
+  width: 100cqi;
+  margin-block: -10rpx;
+  padding-block: 10rpx;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.card-table-button {
+  @include icon-font;
+  font-size: 200%;
+  color: $orange-color;
+  position: absolute;
+  &:hover {
+    color: $dark-orange-color;
   }
+  &[data-position="left"] {
+    inset-block-start: calc(50% - 0.5em);
+    inset-inline-start: 20rpx;
+  }
+  &[data-position="right"] {
+    inset-block-start: calc(50% - 0.5em);
+    inset-inline-end: 20rpx;
+  }
+  &[data-position="left"]::before {
+    content: "\F053";
+  }
+  &[data-position="right"]::before {
+    content: "\F054";
+  }
+  @include small-screen {
+    display: none;
+  }
+}
+
+.card-table-section {
+  width: 100cqi;
+  flex: 0 0 auto;
+  position: relative;
+  scroll-snap-align: start;
+  --card-width: calc((100cqi - 80rpx) / 3);
+  @include medium-screen {
+    --card-width: calc((100cqi - 40rpx) / 2);
+  }
+  @include small-screen {
+    --card-width: 100%;
+  }
+}
+
+.card-header {
+  width: $home-width;
+  max-width: $home-max-width;
+  margin-bottom: 30rpx;
+  font-size: 200%;
+  color: $blue-color;
+  letter-spacing: 0.1em;
   @include small-screen {
     width: 100%;
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;
-    grid-template-columns: repeat(1, 1fr);
+    box-sizing: border-box;
+  }
+}
+
+.link-table {
+  width: $home-width;
+  max-width: $home-max-width;
+  margin-bottom: 30rpx;
+  display: flex;
+  column-gap: 40rpx;
+  row-gap: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  container-name: table;
+  container-type: inline-size;
+  @include small-screen {
+    width: 100%;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
     box-sizing: border-box;
   }
 }
 
 .link-item {
-  width: div($home-max-width - 60rpx, 3);
+  width: var(--card-width);
   height: $link-height;
   color: $black-blue-color;
   background-color: white;
@@ -158,6 +238,7 @@ $link-height: 60rpx;
   overflow: hidden;
   cursor: pointer;
   transition: color 0.2s;
+  flex: 0 0 auto;
   z-index: 0;
   &:hover {
     color: white;
@@ -191,12 +272,6 @@ $link-height: 60rpx;
     z-index: -2;
     content: "";
   }
-  @media screen and (max-width: #{$home-max-width * (100vw / $home-width)}) {
-    width: calc((#{$home-width} - 60rpx) / 3);
-  }
-  @include medium-screen {
-    width: 100%;
-  }
 }
 
 .link-title {
@@ -211,25 +286,25 @@ $link-height: 60rpx;
 }
 
 .card-table {
-  margin-top: 30rpx;
   width: $home-width;
   max-width: $home-max-width;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30rpx 40rpx;
-  @include medium-screen {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  column-gap: 40rpx;
+  row-gap: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  container-name: table;
+  container-type: inline-size;
   @include small-screen {
     width: 100%;
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;
-    grid-template-columns: repeat(1, 1fr);
     box-sizing: border-box;
   }
 }
 
 .card-item {
+  width: var(--card-width);
   height: $card-item-height;
   background-color: white;
   box-shadow: 3rpx 3rpx 0rpx 0rpx $shadow-color;
@@ -239,6 +314,7 @@ $link-height: 60rpx;
   overflow: hidden;
   cursor: pointer;
   transition: color 0.2s;
+  flex: 0 0 auto;
   z-index: 0;
   &:hover {
     color: white;
