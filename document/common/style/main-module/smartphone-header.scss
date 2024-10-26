@@ -44,33 +44,31 @@
   vertical-align: 0.5em;
 }
 
-$header-list-vertical-gap: 12rpx;
-$header-list-horizontal-gap: 0rpx;
+$header-list-vertical-gap: 10rpx;
+$header-list-horizontal-gap: 10rpx;
 $header-item-height: 35rpx;
 
 .header-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: $header-list-vertical-gap $header-list-horizontal-gap;
+  display: flex;
+  flex-direction: column;
+  row-gap: $header-list-vertical-gap;
   flex-grow: 1;
   position: relative;
   z-index: 0;
-  &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 0rpx;
-    right: 0rpx;
-    box-shadow: 3rpx 3rpx 0rpx 0rpx $shadow-color;
-    background-color: $main-background-color;
-    transform: skew($skew-angle);
-    position: absolute;
-    z-index: -2;
-    content: "";
-  }
+  container-name: header-list;
+  container-type: inline-size;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  column-gap: $header-list-horizontal-gap;
+  justify-content: center;
 }
 
 .header-item {
   padding: 0rpx 10rpx;
+  width: calc((100cqi - #{$header-list-horizontal-gap} * 2) / 3);
   height: $header-item-height;
   font-size: 120%;
   color: mix($orange-color, $text-color, 30%);
@@ -86,17 +84,15 @@ $header-item-height: 35rpx;
     bottom: 0rpx;
     left: 0rpx;
     right: 0rpx;
+    box-shadow: 3rpx 3rpx 0rpx 0rpx $shadow-color;
     background-position: 0% 0%;
     background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, transparent 0% 50%, mix($orange-color, $main-background-color, 20%) 50% 100%);
+    background-image: linear-gradient(to bottom, $main-background-color 50%, $white-orange-color 50%);
     transform: skew($skew-angle);
     transition: background-position 0.2s;
     position: absolute;
     z-index: -2;
     content: "";
-  }
-  & +&::before {
-    border-left: 1rpx $orange-color solid;
   }
   &:hover::before {
     background-position: 0% 100%;

@@ -38,22 +38,22 @@
         \div|class="card-table-carousel"|<
           \section|class="card-table-section centralize",id="shaleian"|<
             \h1|class="card-header"|<
-              \a|class="card-header-text",href="conlang"|<シャレイア語>
+              \a|class="card-header-text",href="/shaleian"|<シャレイア語>
             >
             \nav|class="link-table"|<
-              \a|class="link-item",href="conlang/document/16.html"|<
+              \a|class="link-item",href="/shaleian/document/16.html"|<
                 \div|class="link-title"|<
                   \div|class="link-title-japanese"|<シャレイア語とは>
                 >
               >
-              \a|class="link-item",href="conlang/document/24.html"|<
+              \a|class="link-item",href="/shaleian/document/24.html"|<
                 \div|class="link-title"|<
                   \div|class="link-title-japanese"|<ブランドアイデンティティ>
                 >
               >
             >
             \nav|class="card-table"|<
-              \a|class="card-item",href="conlang/course/"|<
+              \a|class="card-item",href="/shaleian/introduction/"|<
                 \div|class="card-title"|<
                   \div|class="card-title-japanese"|<入門資料>
                 >
@@ -64,9 +64,9 @@
                   >
                 >
               >
-              \a|class="card-item",href="conlang/reference/"|<
+              \a|class="card-item",href="/shaleian/grammar/"|<
                 \div|class="card-title"|<
-                  \div|class="card-title-japanese"|<文法詳細>
+                  \div|class="card-title-japanese"|<文法>
                 >
                 \div|class="card-explanation"|<
                   \div|class="card-explanation-text"|<
@@ -75,7 +75,7 @@
                   >
                 >
               >
-              \a|class="card-item",href="conlang/database/"|<
+              \a|class="card-item",href="/shaleian/database/"|<
                 \div|class="card-title"|<
                   \div|class="card-title-japanese"|<データベース>
                 >
@@ -85,7 +85,7 @@
                   >
                 >
               >
-              \a|class="card-item",href="conlang/translation/"|<
+              \a|class="card-item",href="/shaleian/translation/"|<
                 \div|class="card-title"|<
                   \div|class="card-title-japanese"|<翻訳>
                 >
@@ -96,7 +96,7 @@
                   >
                 >
               >
-              \a|class="card-item",href="conlang/work/"|<
+              \a|class="card-item",href="/shaleian/work/"|<
                 \div|class="card-title"|<
                   \div|class="card-title-japanese"|<創作>
                 >
@@ -106,7 +106,7 @@
                   >
                 >
               >
-              \a|class="card-item",href="diary/conlang/"|<
+              \a|class="card-item",href="/shaleian/diary/"|<
                 \div|class="card-title"|<
                   \div|class="card-title-japanese"|<製作日記>
                 >
@@ -118,14 +118,63 @@
                 >
               >
             >
+            \button|class="card-table-button",data-position="right",data-ref="fennese"|;
+          >
+          \section|class="card-table-section centralize",id="fennese"|<
+            \h1|class="card-header"|<
+              \a|class="card-header-text",href="/natural"|<フェンナ語>
+            >
+            \nav|class="link-table"|<
+              \a|class="link-item",href="/fennese/document/1.html"|<
+                \div|class="link-title"|<
+                  \div|class="link-title-japanese"|<フェンナ語とは>
+                >
+              >
+            >
+            \nav|class="card-table"|<
+              \a|class="card-item",href="/fennese/introduction/"|<
+                \div|class="card-title"|<
+                  \div|class="card-title-japanese"|<入門資料>
+                >
+                \div|class="card-explanation"|<
+                  \div|class="card-explanation-text"|<
+                    初学者向けのシャレイア語文法の解説を読むことができます。
+                    書籍として出版もされています。
+                  >
+                >
+              >
+              \a|class="card-item",href="/fennese/grammar/"|<
+                \div|class="card-title"|<
+                  \div|class="card-title-japanese"|<文法>
+                >
+                \div|class="card-explanation"|<
+                  \div|class="card-explanation-text"|<
+                    シャレイア語文法の詳細な解説です。
+                    文法の確認に利用できます。
+                  >
+                >
+              >
+              \a|class="card-item",href="/fennese/translation/"|<
+                \div|class="card-title"|<
+                  \div|class="card-title-japanese"|<翻訳>
+                >
+                \div|class="card-explanation"|<
+                  \div|class="card-explanation-text"|<
+                    様々な小説や楽曲のシャレイア語訳を読むことができます。
+                    アイドルマスターの楽曲の翻訳が多めです。
+                  >
+                >
+              >
+            >
+            \button|class="card-table-button",data-position="left",data-ref="shaleian"|;
             \button|class="card-table-button",data-position="right",data-ref="natural"|;
           >
           \section|class="card-table-section centralize",id="natural"|<
             \h1|class="card-header"|<
-              \a|class="card-header-text",href="diary"|<自然言語>
+              \a|class="card-header-text",href="/natural"|<自然言語>
             >
             \nav|class="card-table"|<
-              \a|class="card-item",href="/diary/greek"|<
+              \a|class="card-item",href="/natural/greek-diary"|<
                 \div|class="card-title"|<
                   \div|class="card-title-japanese"|<古典ギリシャ語>
                 >
@@ -135,7 +184,7 @@
                   >
                 >
               >
-              \a|class="card-item",href="/diary/akkadian"|<
+              \a|class="card-item",href="/natural/akkadian-diary"|<
                 \div|class="card-title"|<
                   \div|class="card-title-japanese"|<アッカド語>
                 >
@@ -146,7 +195,7 @@
                   >
                 >
               >
-              \a|class="card-item",href="/diary/slavonic"|<
+              \a|class="card-item",href="/natural/slavonic-diary"|<
                 \div|class="card-title"|<
                   \div|class="card-title-japanese"|<古代教会スラブ語>
                 >
@@ -157,7 +206,33 @@
                 >
               >
             >
-            \button|class="card-table-button",data-position="left",data-ref="shaleian"|;
+            \h1|class="card-header"|<
+              \a|class="card-header-text",href="/mathematics"|<数理科学>
+            >
+            \nav|class="card-table"|<
+              \a|class="card-item",href="/mathematics/mathematics-diary"|<
+                \div|class="card-title"|<
+                  \div|class="card-title-japanese"|<数学>
+                >
+                \div|class="card-explanation"|<
+                  \div|class="card-explanation-text"|<
+                     数学の勉強ノートです。
+                     圏論や型理論が専門でした。
+                  >
+                >
+              >
+              \a|class="card-item",href="/mathematics/programming-diary"|<
+                \div|class="card-title"|<
+                  \div|class="card-title-japanese"|<プログラミング>
+                >
+                \div|class="card-explanation"|<
+                  \div|class="card-explanation-text"|<
+                    プログラミング理論関係の勉強ノートです。
+                  >
+                >
+              >
+            >
+            \button|class="card-table-button",data-position="left",data-ref="fennese"|;
           >
         >
       >
@@ -191,11 +266,11 @@
                 逆に言えば、言語を見ることで、それを話したり書いたりする人々の文化や物事の捉え方を感じ取ることができます。
                 シャレイア語は、製作者である私自身の世界の捉え方を積極的に反映させることで、自己表現の一種として制作されています。
                 すでに述べたようにシャレイア語は芸術言語ですが、まさにこの意味で芸術の一種なのです。
-                より詳しくは、\a|class="link",href="conlang/document/16.html"|<こちら>をご覧ください。
+                より詳しくは、\a|class="link",href="/shaleian/document/16.html"|<こちら>をご覧ください。
               >
               \p|class="introduction-paragraph"|<
                 \span|class="large-screen"|<右>\span|class="small-screen"|<下>の文章は、シャレイア語に翻訳された『不思議の国のアリス』の冒頭部分です。
-                翻訳の全文は\a|class="link",href="conlang/translation/44.html"|<こちら>で読むことができます。
+                翻訳の全文は\a|class="link",href="/shaleian/translation/44.html"|<こちら>で読むことができます。
               >
             >
             \div|class="introduction-sample-container"|<

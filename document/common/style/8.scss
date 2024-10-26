@@ -198,6 +198,9 @@ $link-height: 60rpx;
   font-size: 200%;
   color: $blue-color;
   letter-spacing: 0.1em;
+  &:not(:first-child) {
+    margin-top: 50rpx;
+  }
   @include small-screen {
     width: 100%;
     padding-left: $main-smartphone-horizontal-padding;

@@ -63,7 +63,7 @@
 }
 
 .header-right {
-  padding: 0rpx 0rpx 0rpx 50rpx;
+  padding: 0rpx 0rpx 0rpx 25rpx;
   flex-shrink: 0;
   flex-grow: 0;
   display: flex;
@@ -98,17 +98,25 @@
 }
 
 $header-list-vertical-gap: 12rpx;
-$header-list-horizontal-gap: 20rpx;
+$header-list-horizontal-gap: 10rpx;
+$header-item-width: 140rpx;
 $header-item-height: 35rpx;
 
 .header-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: $header-list-vertical-gap $header-list-horizontal-gap;
+  display: flex;
+  flex-direction: column;
+  row-gap: $header-list-vertical-gap;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  column-gap: $header-list-horizontal-gap;
+  justify-content: center;
 }
 
 .header-item {
-  padding: 0rpx 30rpx;
+  width: $header-item-width;
   height: $header-item-height;
   font-size: 120%;
   color: $black-orange-color;
@@ -119,9 +127,7 @@ $header-item-height: 35rpx;
   cursor: pointer;
   position: relative;
   z-index: 0;
-  &:nth-child(n+3) {
-    right: ($header-list-vertical-gap + $header-item-height) * $skew-tan; 
-  }
+  flex: 0 0 auto;
   &::before {
     top: 0rpx;
     bottom: 0rpx;

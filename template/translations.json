@@ -4,44 +4,44 @@
   "caption": {"ja": "人工言語シャレイア語", "en": "Sheleian Constructed Language"},
   "page": {
     "top": {"ja": "トップ", "en": "Top"},
-    "conlang": {
+    "shaleian": {
       "index": {"ja": "シャレイア語", "en": "Shaleian"},
-      "grammar": {"ja": "文法概略", "en": "Abridged grammar"},
-      "reference": {"ja": "文法詳細", "en": "Complete grammar"},
-      "course": {"ja": "入門資料", "en": "Introduction"},
+      "introduction": {"ja": "入門資料", "en": "Introduction"},
+      "grammar": {"ja": "文法", "en": "Grammar"},
       "database": {"ja": "データベース", "en": "Database"},
       "culture": {"ja": "文化", "en": "Culture"},
       "work": {"ja": "創作", "en": "Works"},
       "translation": {"ja": "翻訳", "en": "Translations"},
-      "theory": {"ja": "シャレイア語論", "en": "Studies"},
       "document": {"ja": "資料", "en": "Documents"},
-      "table": {"ja": "一覧表", "en": "Tables"}
+      "table": {"ja": "一覧表", "en": "Tables"},
+      "diary": {"ja": "製作日記", "en": "Diary"},
+      "theory": {"ja": "シャレイア語論", "en": "Studies"},
+      "old": {"ja": "過去の情報", "en": "Past information"}
     },
-    "application": {
-      "index": {"ja": "ソフトウェア", "en": "Softwares"},
-      "download": {"ja": "ダウンロード", "en": "Download"},
-      "web": {"ja": "Web アプリ", "en": "Web application"}
+    "fennese": {
+      "index": {"ja": "フェンナ語", "en": "Fennese"}
     },
-    "diary": {
-      "index": {"ja": "日記", "en": "Diary"},
-      "conlang": {"ja": "シャレイア語", "en": "Shaleian"},
+    "natural": {
+      "index": {"ja": "自然言語", "en": "Natural languages"},
+      "french": {"ja": "フランス語", "en": "French"},
       "greek": {"ja": "古典ギリシャ語", "en": "Ancient Greek"},
+      "greek-diary": {"ja": "日記 / 古典ギリシャ語", "en": "Diary · Ancient Greek"},
       "akkadian": {"ja": "アッカド語", "en": "Akkadian"},
+      "akkadian-diary": {"ja": "日記 / アッカド語", "en": "Diary · Akkadian"},
       "slavonic": {"ja": "古代教会スラブ語", "en": "Old Church Slavonic"},
-      "language": {"ja": "自然言語", "en": "Languages"},
+      "slavonic-diary": {"ja": "日記 / 古代教会スラブ語", "en": "Diary · Old Church Slavonic"}
+    },
+    "mathematics": {
+      "index": {"ja": "数理科学", "en": "Mathematical sciences"},
       "mathematics": {"ja": "数学", "en": "Mathematics"},
-      "application": {"ja": "プログラミング", "en": "Programming"},
-      "game": {"ja": "ゲーム制作", "en": "Game"}
+      "mathematics-diary": {"ja": "日記 / 数学", "en": "Diary · Mathematics"},
+      "programming": {"ja": "プログラミング", "en": "Programming"},
+      "programming-diary": {"ja": "日記 / プログラミング", "en": "Diary · Programming"}
     },
     "other": {
       "index": {"ja": "その他", "en": "Others"},
-      "french": {"ja": "フランス語", "en": "French"},
-      "greek": {"ja": "古典ギリシャ語", "en": "Ancient Greek"},
-      "akkadian": {"ja": "アッカド語", "en": "Akkadian"},
-      "slavonic": {"ja": "古代教会スラブ語", "en": "Old Church Slavonic"},
-      "language": {"ja": "自然言語", "en": "Languages"},
-      "mathematics": {"ja": "数学", "en": "Mathematics"},
-      "tsolitaire": {"ja": "Tsolitaire", "en": "Tsolitaire"},
+      "application": {"ja": "アプリケーション", "en": "Applications"},
+      "game-diary": {"ja": "日記 / ゲーム製作", "en": "Diary · Game"},
       "other": {"ja": "その他", "en": "Others"}
     },
     "error": {

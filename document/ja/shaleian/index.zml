@@ -4,16 +4,21 @@
 
 \page<
 
+  \hb<資料>
   \pb<
     \ab|href="course/"|<入門資料>
-    \ab|href="reference/"|<文法詳細>
-    \ab|href="grammar/"|<文法概略>
+    \ab|href="grammar/"|<文法>
     \ab|href="database/"|<データベース>
     \ab|href="culture/"|<文化>
     \ab|href="translation/"|<翻訳>
     \ab|href="work/"|<創作>
     \ab|href="document/"|<資料>
     \ab|href="table/"|<一覧表>
+    \ab|href="old/"|<過去の資料>
+  >
+  \hb<日記>
+  \pb<
+    \ab|href="diary/"|<製作日記>
   >
 
 >

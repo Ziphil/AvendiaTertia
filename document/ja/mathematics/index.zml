@@ -1,0 +1,17 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+
+  \hb<日記>
+  \pb<
+    \ab|href="mathematics-diary/"|<数学>
+    \ab|href="programming-diary/"|<プログラミング>
+  >
+  \hb<まとめ>
+  \pb<
+    \ab|href="mathematics/"|<数学>
+  >
+
+>

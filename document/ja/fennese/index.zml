@@ -4,9 +4,10 @@
 
 \page<
 
+  \hb<資料>
   \pb<
-    \ab|href="download/"|<ダウンロード>
-    \ab|href="web/"|<Web アプリ>
+    \ab|href="grammar/"|<文法>
   >
+
 
 >
