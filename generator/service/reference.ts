@@ -29,7 +29,7 @@ async function createSectionIndex(outputLanguage: AvendiaOutputLanguage, args: A
 }
 
 async function createSectionSpecFromPage(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceSectionSpec> {
-  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/" + href.replace(/\.html$/, ".zml");
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/shaleian/grammar/" + href.replace(/\.html$/, ".zml");
   const initialVariables = {path: documentPath, language: outputLanguage};
   const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
   const inputDocument = args.parser.tryParse(inputString);
@@ -57,7 +57,7 @@ async function createTermIndex(outputLanguage: AvendiaOutputLanguage, args: Aven
 }
 
 async function createTermSpecsFromPage(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<Array<ReferenceTermSpec>> {
-  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/" + href.replace(/\.html$/, ".zml");
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/shaleian/grammar/" + href.replace(/\.html$/, ".zml");
   const initialVariables = {path: documentPath, language: outputLanguage};
   const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
   const inputDocument = args.parser.tryParse(inputString);
@@ -92,7 +92,7 @@ function createInitialedTermSpecs(specs: Array<ReferenceTermSpec>, outputLanguag
 }
 
 async function iteratePages<T>(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs, operate: (href: string) => T | Promise<T>): Promise<Array<T>> {
-  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/conlang/reference/index.zml";
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/shaleian/grammar/index.zml";
   const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
   const inputDocument = args.parser.tryParse(inputString);
   const indexElements = inputDocument.searchXpath("//ab") as Array<Element>;
