@@ -4,16 +4,21 @@
 
 \page<
 
+  \hb<Resources>
   \pb<
-    \ab|href="grammar/"|<Abridged grammar>
-    \ab|href="course/"|<Introduction>
+    \ab|href="introduction/"|<Introduction>
+    \ab|href="grammar/"|<Grammar>
     \ab|href="database/"|<Database>
     \ab|href="culture/"|<Culture>
-    \ab|href="work/"|<Works>
     \ab|href="translation/"|<Translations>
-    \ab|href="theory/"|<Studies>
+    \ab|href="work/"|<Works>
     \ab|href="document/"|<Documents>
     \ab|href="table/"|<Tables>
+    \ab|href="old/"|<Past information>
+  >
+  \hb<Diary>
+  \pb<
+    \ab|href="diary/"|<Diary>
   >
 
 >
