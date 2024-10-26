@@ -19,7 +19,12 @@
       "old": {"ja": "過去の情報", "en": "Past information"}
     },
     "fennese": {
-      "index": {"ja": "フェンナ語", "en": "Fennese"}
+      "index": {"ja": "フェンナ語", "en": "Fennese"},
+      "introduction": {"ja": "入門資料", "en": "Introduction"},
+      "grammar": {"ja": "文法", "en": "Grammar"},
+      "translation": {"ja": "翻訳", "en": "Translations"},
+      "document": {"ja": "資料", "en": "Documents"},
+      "diary": {"ja": "製作日記", "en": "Diary"}
     },
     "natural": {
       "index": {"ja": "自然言語", "en": "Natural languages"},
