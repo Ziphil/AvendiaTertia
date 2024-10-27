@@ -13,6 +13,13 @@
   font-family: "Chord Font";
 }
 
+.mark {
+  font-size: 80%;
+  vertical-align: 0.3906em;
+  line-height: 0;
+  color: $gray-color;
+}
+
 .radical {
   margin-inline: 0.15em;
   @include box($gray-color, true, true);

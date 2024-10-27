@@ -30,6 +30,15 @@ manager.registerElementRule("ms", true, (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("mk", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("mark");
+    self.appendTextNode("⁎");
+  });
+  return self;
+});
+
 manager.registerElementRule("rd", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
