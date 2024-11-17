@@ -5,7 +5,7 @@
 \page<
   \name<管理人紹介>
 
-  \h1<名前について>
+  \h1<名前>
   \p<
     私は、自分の名前として「Ziphil Aleshlas」か「Ziphil Shaleiras」のどちらかを使います。
     名前の後ろの方を省略して「Ziphil」とだけ言う場合もあります。
@@ -26,13 +26,14 @@
   \h2<人工言語>
   \p<
     私の趣味のうち最も主要なものが人工言語です。
-    「シャレイア語」と呼ばれる人工言語を 2012 年から制作しています。
+    2012 年から「シャレイア語」と呼ばれる人工言語を制作しています。
+    2024 年からは「フェンナ語」というもう 1 つの言語も制作し始めました。
     思いの外長くやってるなと思ってます。
     今後もやります。
   >
   \p<
-    シャレイア語に関する制作物や考察などは、このサイトにメインコンテンツとしてまとめてあります。
-    また、私の Twitter アカウントの 1 つである \ae|href="https://twitter.com/Ziphil"|<@Ziphil> では、シャレイア語に関するあれこれを呟きます。
+    シャレイア語やフェンナ語に関する制作物や考察などは、このサイトにメインコンテンツとしてまとめてあります。
+    また、私の Twitter アカウント \ae|href="https://twitter.com/Ziphil"|<@Ziphil> では、人工言語に関するあれこれを呟きます。
     ただし、このアカウントは私のメインアカウントでもあるので、人工言語以外の雑談なども呟きます。
   >
   \p<
@@ -43,22 +44,20 @@
   >
   \h2<プログラミング>
   \p<
-    プログラミングが好きです。
+    プログラミングが好きで、現在はフロントエンドエンジニアとして働いています。
     普段は主に TypeScript を使っていますが、用途に合わせてそれ以外の言語も使います。
     書けるプログラミング言語は以下の通りです (上のものほど熟達)。
   >
   \ul<
     \li<TypeScript (Web 開発)>
     \li<Ruby (小物スクリプトの作成)>
-    \li<Groovy>
     \li<Haskell>
-    \li<JavaScript>
     \li<Java>
     \li<Kotlin>
   >
   \p<
-    「ZpDIC」という人工言語の辞書データの編集や閲覧に特化したアプリケーションを開発しており、\ae|href="http://zpdic.ziphil.com"|<こちら>で公開しています。
-    その他のプロダクトも\a|href="../../application"|<こちらのページ>か \ae|href="https://github.com/Ziphil/Repositories"|<GitHub のリポジトリまとめ>から見ることができます。
+    「ZpDIC」という人工言語の辞書データの編集や閲覧に特化したアプリケーションを開発しており、\ae|href="https://zpdic.ziphil.com"|<こちら>で公開しています。
+    その他のプロダクトも \ae|href="https://github.com/Ziphil/Repositories"|<GitHub のリポジトリまとめ>から見ることができます。
   >
   \h2<数学>
   \p<
@@ -66,17 +65,31 @@
     専門分野は型理論の圏論的意味論です。
   >
   \p<
-    このサイトの中の\a|href="../../diary/mathematics/"|<ここ>や\a|href="../../other/mathematics/"|<ここ>に、私が勉強した内容のまとめなどを公開しています。
+    このサイトの\a|href="../../mathematics/"|<数理科学のページ>では、私が勉強した内容のまとめなどを公開しています。
     自分用という意味合いが強いですが、誰かの役に立てば良いなと思っています。
   >
-  \h1<連絡など>
+  \h1<出演など>
+  \h2<QuizKnock>
   \p<
-    私と連絡をとりたい場合は、Twitter でリプライを送っていただくのが一番早いと思います。
-    以下は私の主な Twitter アカウントです。
+    \ae|href="https://www.portal.quizknock.com"|<QuizKnock> の YouTube チャンネルにたびたび出演させていただいています。
+    以下は私が出演している代表的な動画です。
   >
-  \ul<
-    \li<\ae|href="https://twitter.com/Ziphil"|<@Ziphil> (人工言語, その他)>
-    \li<\ae|href="https://twitter.com/Ziphil_Beta"|<@Ziphil_Beta> (数学)>
+  \youtube|code="r4AKMeUhRf4"|;
+  \youtube|code="ltHeLGGxsfw"|;
+  \h2<國學院大學若木祭>
+  \p<
+    2024 年 11 月 3 日に行われた國學院大學の文化祭「若木祭」において、國學院大學言語研究会主催のトークショーに出演させていただきました。
+    以下にアーカイブがあります。
+  >
+  \youtube|code="o34w4tyVnqs"|; 
+  \h1<連絡>
+  \p<
+    私への連絡は以下の方法でお願いします。
+    Twitter でリプライか DM を送っていただくのが一番早いと思います。
+  >
+  \el|type="par"|<
+    \li<\et<Twitter>\ed<\ae|href="https://twitter.com/Ziphil"|<@Ziphil>>>
+    \li<\et<メール>\ed<ziphil.shaleiras❖gmail.com (❖ → @)>>
   >
   \h1<代名詞について>
   \p<
