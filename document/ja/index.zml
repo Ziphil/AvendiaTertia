@@ -169,6 +169,17 @@
                   >
                 >
               >
+              \a|class="card-item",href="/fennese/diary/"|<
+                \div|class="card-title"|<
+                  \div|class="card-title-japanese"|<製作日記>
+                >
+                \div|class="card-explanation"|<
+                  \div|class="card-explanation-text"|<
+                    フェンナ語を作りながら思ったことをまとめてあります。
+                    製作過程を垣間見ることができます。
+                  >
+                >
+              >
             >
             \button|class="card-table-button",data-position="left",data-ref="shaleian"|;
             \button|class="card-table-button",data-position="right",data-ref="natural"|;
