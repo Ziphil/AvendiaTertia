@@ -28,7 +28,7 @@ export class Executor extends BaseExecutor {
   private contentElement!: HTMLDivElement;
 
   protected prepare(): void {
-    const locationSupported = location.pathname.match(/^\/conlang\/.+\/\d+(\.html)?$/);
+    const locationSupported = location.pathname.match(/^\/shaleian\/.+\/\d+(\.html)?$/);
     const deviceSupported = !navigator.userAgent.match(/iPhone|Android.+Mobile/);
     console.log(location.pathname, locationSupported, deviceSupported);
     if (locationSupported && deviceSupported) {
