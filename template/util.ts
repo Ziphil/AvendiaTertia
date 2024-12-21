@@ -72,15 +72,18 @@ function createNamePrefix(transformer: AvendiaLightTransformer, element: Element
 }
 
 export function getReferenceIndex(transformer: AvendiaLightTransformer): ReferenceIndex {
+  const path = transformer.variables.path;
   const language = transformer.variables.language;
-  const index = transformer.environments.referenceIndexes.get(language);
-  if (index === undefined) {
+  const splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
+  const rootDir = splitRelativePath.slice(0, 2).join("/");
+  const indexes = transformer.environments.referenceIndexes.get(language);
+  if (indexes === undefined) {
     const indexPath = transformer.environments.configs.getReferenceIndexPath(language);
-    const index = JSON.parse(fs.readFileSync(indexPath, {encoding: "utf-8"}));
-    transformer.environments.referenceIndexes.set(language, index);
-    return index;
+    const indexes = JSON.parse(fs.readFileSync(indexPath, {encoding: "utf-8"}));
+    transformer.environments.referenceIndexes.set(language, indexes);
+    return indexes[rootDir];
   } else {
-    return index;
+    return indexes[rootDir];
   }
 }
 

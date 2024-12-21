@@ -77,7 +77,7 @@ export type AvendiaTransformerEnvironments = {
   configs: AvendiaConfigs,
   mathStyleString: string,
   mathScriptString: string,
-  referenceIndexes: Map<AvendiaOutputLanguage, ReferenceIndex>
+  referenceIndexes: Map<AvendiaOutputLanguage, Record<string, ReferenceIndex>>
 };
 export type AvendiaTransformerVariables = {
   path: string,

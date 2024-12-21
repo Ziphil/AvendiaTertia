@@ -10,26 +10,39 @@ const SECTION_TERM_INITIALS = {
   ja: [["あ", "あ行"], ["か", "か行"], ["さ", "さ行"], ["た", "た行"], ["な", "な行"], ["は", "は行"], ["ま", "ま行"], ["や", "や行"], ["ら", "ら行"], ["わ", "わ行"]],
   en: [["a", "A–D"], ["e", "E–H"], ["i", "I–L"], ["m", "M–P"], ["q", "Q–T"], ["u", "U–Z"]]
 };
+const ROOT_DOCUMENT_DIRS = [
+  "shaleian/grammar",
+  "fennese/grammar"
+];
 
 export default async function execute(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<void> {
   const outputPath = args.configs.getReferenceIndexPath("ja");
-  const outputObject = {
-    section: await createSectionIndex(outputLanguage, args),
-    term: await createTermIndex(outputLanguage, args)
-  };
+  const outputObjectEntries = await Promise.all(ROOT_DOCUMENT_DIRS.map(async (rootDocumentDir) => {
+    const outputObject = await createReferenceIndex(rootDocumentDir, outputLanguage, args);
+    return [rootDocumentDir, outputObject] as const;
+  }));
+  const outputObject = Object.fromEntries(outputObjectEntries);
   const outputString = JSON.stringify(outputObject, undefined, 2);
   await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
   await fs.writeFile(outputPath, outputString, {encoding: "utf-8"});
 }
 
-async function createSectionIndex(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceIndex["section"]> {
-  const specs = await iteratePages(outputLanguage, args, (href) => createSectionSpecFromPage(href, outputLanguage, args));
+async function createReferenceIndex(rootDocumentDir: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceIndex> {
+  const [sectionIndex, termIndex] = await Promise.all([
+    createSectionIndex(rootDocumentDir, outputLanguage, args),
+    createTermIndex(rootDocumentDir, outputLanguage, args)
+  ]);
+  return {section: sectionIndex, term: termIndex};
+}
+
+async function createSectionIndex(rootDocumentDir: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceSectionIndex> {
+  const specs = await iteratePages(rootDocumentDir, outputLanguage, args, (href) => createSectionSpecFromPage(rootDocumentDir, href, outputLanguage, args));
   const hrefs = Object.fromEntries(createSectionHrefEntries(specs));
   return {specs, hrefs};
 }
 
-async function createSectionSpecFromPage(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceSectionSpec> {
-  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/shaleian/grammar/" + href.replace(/\.html$/, ".zml");
+async function createSectionSpecFromPage(rootDocumentDir: string, href: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceSectionSpec> {
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/" + rootDocumentDir + "/" + href.replace(/\.html$/, ".zml");
   const initialVariables = {path: documentPath, language: outputLanguage};
   const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
   const inputDocument = args.parser.tryParse(inputString);
@@ -50,14 +63,14 @@ function createSectionHrefEntries(specs: Array<ReferenceSectionSpec>): Array<[ta
   return entries;
 }
 
-async function createTermIndex(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceIndex["term"]> {
-  const specs = await iteratePages(outputLanguage, args, (href) => createTermSpecsFromPage(href, outputLanguage, args)).then((specs) => specs.flat());
+async function createTermIndex(rootDocumentDir: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<ReferenceTermIndex> {
+  const specs = await iteratePages(rootDocumentDir, outputLanguage, args, (href) => createTermSpecsFromPage(rootDocumentDir, href, outputLanguage, args)).then((specs) => specs.flat());
   const initialedSpecs = createInitialedTermSpecs(specs, outputLanguage);
   return {specs: initialedSpecs};
 }
 
-async function createTermSpecsFromPage(href: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<Array<ReferenceTermSpec>> {
-  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/shaleian/grammar/" + href.replace(/\.html$/, ".zml");
+async function createTermSpecsFromPage(rootDocumentDir: string, href: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<Array<ReferenceTermSpec>> {
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/" + rootDocumentDir + "/" + href.replace(/\.html$/, ".zml");
   const initialVariables = {path: documentPath, language: outputLanguage};
   const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
   const inputDocument = args.parser.tryParse(inputString);
@@ -91,8 +104,9 @@ function createInitialedTermSpecs(specs: Array<ReferenceTermSpec>, outputLanguag
   return initialedSpecs;
 }
 
-async function iteratePages<T>(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs, operate: (href: string) => T | Promise<T>): Promise<Array<T>> {
-  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/shaleian/grammar/index.zml";
+/** `rootDocumentDir` に指定されたフォルダの index ファイルを参照し、そこからリンクされている各ページに対して `operate` 関数を呼び出します。*/
+async function iteratePages<T>(rootDocumentDir: string, outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs, operate: (href: string) => T | Promise<T>): Promise<Array<T>> {
+  const documentPath = args.configs.getDocumentDirPath(outputLanguage) + "/" + rootDocumentDir + "/index.zml";
   const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
   const inputDocument = args.parser.tryParse(inputString);
   const indexElements = inputDocument.searchXpath("//ab") as Array<Element>;
@@ -111,6 +125,10 @@ export type ReferenceSectionSpec = {
   content: string,
   childSpecs: Array<ReferenceSectionSpec>
 };
+export type ReferenceSectionIndex = {
+  specs: Array<ReferenceSectionSpec>,
+  hrefs: Record<string, string | undefined>
+};
 
 export type ReferenceTermSpec = {
   href: string,
@@ -123,13 +141,11 @@ export type ReferenceInitialedTermSpec = {
   text: string,
   specs: Array<ReferenceTermSpec>
 };
+export type ReferenceTermIndex = {
+  specs: Array<ReferenceInitialedTermSpec>
+};
 
 export type ReferenceIndex = {
-  section: {
-    specs: Array<ReferenceSectionSpec>,
-    hrefs: Record<string, string | undefined>
-  },
-  term: {
-    specs: Array<ReferenceInitialedTermSpec>
-  }
+  section: ReferenceSectionIndex,
+  term: ReferenceTermIndex
 };
