@@ -18,7 +18,7 @@ export class Executor extends BaseExecutor {
 
   private jump(): void {
     const tag = window.location.hash.replace(/^#/, "");
-    const hrefs = REFERENCE_INDEX_JSON.section.hrefs as Record<string, string>;
+    const hrefs = REFERENCE_INDEX_JSON["shaleian/grammar"].section.hrefs as Record<string, string>;
     const href = hrefs[tag];
     if (href) {
       window.location.replace(href);
