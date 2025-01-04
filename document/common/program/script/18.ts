@@ -25,7 +25,6 @@ export class Executor extends BaseExecutor {
   protected prepare(): void {
     const locationSupported = location.pathname.match(/^\/shaleian\/.+\/\d+(\.html)?$/);
     const deviceSupported = !navigator.userAgent.match(/iPhone|Android.+Mobile/);
-    console.log(location.pathname, locationSupported, deviceSupported);
     if (locationSupported && deviceSupported) {
       this.storeDictionary();
       this.prepareButtons();

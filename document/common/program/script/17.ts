@@ -15,8 +15,10 @@ export class Executor extends BaseExecutor {
   }
 
   private jump(): void {
+    const rootDirMatch = window.location.pathname.match(/^\/(\w+\/\w+)/);
+    const rootDir = (rootDirMatch !== null) ? rootDirMatch[1] : "";
     const tag = window.location.hash.replace(/^#/, "");
-    const hrefs = REFERENCE_INDEX_JSON["shaleian/grammar"].section.hrefs as Record<string, string>;
+    const hrefs = (REFERENCE_INDEX_JSON as any)[rootDir]?.section.hrefs as Record<string, string>;
     const href = hrefs[tag];
     if (href) {
       window.location.replace(href);
