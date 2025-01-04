@@ -2,9 +2,7 @@
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
 import query from "jquery";
-import {
-  BaseExecutor
-} from "./module/executor";
+import {BaseExecutor} from "./module/executor";
 
 
 const SPEED = 700;

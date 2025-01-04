@@ -1,8 +1,6 @@
 //
 
-import {
-  AvendiaTemplateManager
-} from "../../generator/transformer";
+import {AvendiaTemplateManager} from "../../generator/transformer";
 
 
 const MUSIC_SYMBOL_SPECS = new Map([

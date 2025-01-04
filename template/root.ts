@@ -1,12 +1,7 @@
 //
 
-import {
-  AvendiaOutputLanguage
-} from "../generator/configs";
-import {
-  AvendiaLightTransformer,
-  AvendiaTemplateManager
-} from "../generator/transformer";
+import type {AvendiaOutputLanguage} from "../generator/configs";
+import {AvendiaLightTransformer, AvendiaTemplateManager} from "../generator/transformer";
 
 
 const manager = new AvendiaTemplateManager();

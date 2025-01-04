@@ -2,9 +2,7 @@
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
 import REFERENCE_INDEX_JSON from "../../../../log/reference/ja.json";
-import {
-  BaseExecutor
-} from "./module/executor";
+import {BaseExecutor} from "./module/executor";
 
 
 export class Executor extends BaseExecutor {

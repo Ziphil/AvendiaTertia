@@ -1,12 +1,8 @@
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {
-  BaseExecutor
-} from "./module/executor";
-import {
-  FloorMath
-} from "./module/math";
+import {BaseExecutor} from "./module/executor";
+import {FloorMath} from "./module/math";
 
 
 type Hairia = number;

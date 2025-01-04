@@ -1,11 +1,7 @@
 //
 
-import {
-  AvendiaTemplateManager
-} from "../../generator/transformer";
-import {
-  getReferenceIndex
-} from "../util";
+import {AvendiaTemplateManager} from "../../generator/transformer";
+import {getReferenceIndex} from "../util";
 
 
 const manager = new AvendiaTemplateManager();

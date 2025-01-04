@@ -1,13 +1,7 @@
 //
 
-import {
-  AvendiaTemplateManager
-} from "../../generator/transformer";
-import {
-  NumberRefType,
-  getNumber,
-  setNumber
-} from "../util";
+import {AvendiaTemplateManager} from "../../generator/transformer";
+import {NumberRefType, getNumber, setNumber} from "../util";
 
 
 const manager = new AvendiaTemplateManager();

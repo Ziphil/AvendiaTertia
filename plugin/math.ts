@@ -1,12 +1,7 @@
 //
 
-import {
-  SimpleZenmlPlugin,
-  ZenmlPluginManager
-} from "@zenml/zenml";
-import {
-  ZoticaZenmlPlugin
-} from "@zenml/zotica";
+import {SimpleZenmlPlugin, ZenmlPluginManager} from "@zenml/zenml";
+import {ZoticaZenmlPlugin} from "@zenml/zotica";
 
 
 const manager = new ZenmlPluginManager();

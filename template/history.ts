@@ -1,8 +1,6 @@
 //
 
-import {
-  AvendiaTemplateManager
-} from "../generator/transformer";
+import {AvendiaTemplateManager} from "../generator/transformer";
 import TRANSLATIONS from "~/template/translations.json";
 
 

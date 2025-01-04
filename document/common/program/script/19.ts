@@ -1,19 +1,11 @@
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {
-  createElement
-} from "react";
-import {
-  createRoot
-} from "react-dom/client";
-import {
-  BaseExecutor
-} from "./module/executor";
+import {createElement} from "react";
+import {createRoot} from "react-dom/client";
+import {BaseExecutor} from "./module/executor";
 import PlayerList from "./player-module/player-list";
-import {
-  SongSpec
-} from "./player-module/player-pane";
+import {SongSpec} from "./player-module/player-pane";
 
 
 export class Executor extends BaseExecutor {

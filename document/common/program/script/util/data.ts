@@ -1,8 +1,6 @@
 //
 
-import {
-  AriaAttributes
-} from "react";
+import {AriaAttributes} from "react";
 
 
 export function data(object: Record<string, string | boolean | null | undefined>): Partial<Record<`data-${string}`, string>> {

@@ -1,18 +1,9 @@
 //
 
-import type {
-  AvendiaDocumentFragment,
-  AvendiaElement
-} from "../../generator/dom";
-import type {
-  ReferenceSectionSpec
-} from "../../generator/service/reference";
-import {
-  AvendiaTemplateManager
-} from "../../generator/transformer";
-import {
-  getReferenceIndex
-} from "../../template/util";
+import type {AvendiaDocumentFragment, AvendiaElement} from "../../generator/dom";
+import type {ReferenceSectionSpec} from "../../generator/service/reference";
+import {AvendiaTemplateManager} from "../../generator/transformer";
+import {getReferenceIndex} from "../../template/util";
 
 
 const manager = new AvendiaTemplateManager();

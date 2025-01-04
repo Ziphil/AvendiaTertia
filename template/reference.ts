@@ -1,12 +1,7 @@
 //
 
-import type {
-  ReferenceSectionSpec,
-  ReferenceTermSpec
-} from "../generator/service/reference";
-import {
-  AvendiaTemplateManager
-} from "../generator/transformer";
+import type {ReferenceSectionSpec, ReferenceTermSpec} from "../generator/service/reference";
+import {AvendiaTemplateManager} from "../generator/transformer";
 
 
 const manager = new AvendiaTemplateManager();

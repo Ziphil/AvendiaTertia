@@ -1,9 +1,7 @@
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {
-  BaseExecutor
-} from "./module/executor";
+import {BaseExecutor} from "./module/executor";
 
 
 const DICTIONARY_URL = "https://en.oxforddictionaries.com/definition/";

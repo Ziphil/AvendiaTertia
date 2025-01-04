@@ -1,8 +1,6 @@
 //
 
-import {
-  AvendiaTemplateManager
-} from "../../generator/transformer";
+import {AvendiaTemplateManager} from "../../generator/transformer";
 
 
 const GREEK_DIACRITICS = new Map([["a", "´"], ["g", "`"], ["s", "᾿"], ["sa", "῎"], ["sg", "῍"], ["r", "῾"], ["ra", "῞"], ["rg", "῝"], ["i", "ι"]]);

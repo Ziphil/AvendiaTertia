@@ -1,8 +1,6 @@
 //
 
-import {
-  AvendiaTemplateManager
-} from "../generator/transformer";
+import {AvendiaTemplateManager} from "../generator/transformer";
 
 
 const INLINE_TAG_NAMES = ["x", "xn", "a"];

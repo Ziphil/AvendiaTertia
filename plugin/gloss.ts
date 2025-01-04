@@ -1,10 +1,6 @@
 //
 
-import {
-  Builder,
-  SimpleZenmlPlugin,
-  ZenmlPluginManager
-} from "@zenml/zenml";
+import {Builder, SimpleZenmlPlugin, ZenmlPluginManager} from "@zenml/zenml";
 import CONJUGATIONS from "~/plugin/conjugations.json";
 
 

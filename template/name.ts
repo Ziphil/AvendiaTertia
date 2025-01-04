@@ -1,8 +1,6 @@
 //
 
-import {
-  AvendiaTemplateManager
-} from "../generator/transformer";
+import {AvendiaTemplateManager} from "../generator/transformer";
 
 
 const manager = new AvendiaTemplateManager();

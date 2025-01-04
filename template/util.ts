@@ -1,12 +1,8 @@
 //
 
 import fs from "fs";
-import type {
-  ReferenceIndex
-} from "../generator/service/reference";
-import type {
-  AvendiaLightTransformer
-} from "../generator/transformer";
+import type {ReferenceIndex} from "../generator/service/reference";
+import type {AvendiaLightTransformer} from "../generator/transformer";
 import TRANSLATIONS from "~/template/translations.json";
 
 

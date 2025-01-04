@@ -1,10 +1,7 @@
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {
-  Instance as PopperInstance,
-  createPopper
-} from "@popperjs/core";
+import {Instance as PopperInstance, createPopper} from "@popperjs/core";
 import axios from "axios";
 import localforage from "localforage";
 import {
@@ -15,9 +12,7 @@ import {
   Parser,
   Word
 } from "soxsot";
-import {
-  BaseExecutor
-} from "./module/executor";
+import {BaseExecutor} from "./module/executor";
 
 
 export class Executor extends BaseExecutor {

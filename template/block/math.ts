@@ -1,12 +1,7 @@
 //
 
-import {
-  AvendiaTemplateManager
-} from "../../generator/transformer";
-import {
-  getNumber,
-  setNumber
-} from "../util";
+import {AvendiaTemplateManager} from "../../generator/transformer";
+import {getNumber, setNumber} from "../util";
 import TRANSLATIONS from "~/template/translations.json";
 
 
