@@ -58,6 +58,7 @@
   >
   \xol<
     \li|tag="1"|<\sh<{salot a qos e qâz i tel.}>\ja<あの人は私の父親だ。>>
+    \li|tag="2"|<\sh<{dozet qòcasas a tel e ces te qel.}>\ja<あのときに彼に話しかけるべきだった。>>
   >
   \h2|tag="scz"|<指示代辞>
   \p<
@@ -65,13 +66,22 @@
     このときに指す対象は、指示代辞と同じ文にあることもあれば、それ以前の文にあることもある。
   >
   \xol<
-    \li|tag="1"|<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>\ja<この絵画はとても重要で高価なものなので、大切に扱いなさい。>>
+    \li|tag="1"|<\sh<{vade salot a qinat afik e asokes, ditat yalfesis a loc e cit.}>\ja<この絵画は重要なので、大切に扱いなさい。>>
   >
   \p<
     指す対象が同じ文にある場合に限り、指示代辞より後ろに現れるものを指すことがある。
   >
   ## TODO: 後ろを指す場合に同じ文でなければならないのは本当かな
   ## どのみち例文は欲しい
+  \p<
+    別の場所で言及されるものと同じものを指すという性質上、指示代辞が指すものは基本的に限定されている。
+    しかし、一般論について述べた表現を受ける場合には、指示代辞が指すものが不定的であることがある。
+    なお、この用法では、指示代辞ではなく一般代辞も使われることが多い。
+  >
+  \xol<
+    \li|tag="2"|<\sh<{sâfat a tel e dales. pa lat a loc e cit?}>\ja<私は犬が好きだ。あなたもそれが好きですか?>>
+    \li|tag="3"|<\sh<{sâfat a tel e dales. pa lat a loc e met?}>\ja<私は犬が好きだ。あなたもそれが好きですか?>>
+  >
   \h2|tag="sct"|<疑問代辞>
   \p<
     疑問代辞は、それが置かれた箇所に当てはまるものを問う疑問文を作る。
