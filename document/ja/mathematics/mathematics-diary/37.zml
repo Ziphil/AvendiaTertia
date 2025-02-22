@@ -16,7 +16,7 @@
     >
   >
   \p<
-    この定理は、Wood\ref|type="bib",ref="wsrt"|; によって予想され、Rosebrugh–Wood\ref|type="bib",ref="racc"|; によって証明されたものである。
+    この定理は、Wood\mref|type="bib",ref="wsrt"|; によって予想され、Rosebrugh–Wood\mref|type="bib",ref="racc"|; によって証明されたものである。
     この事実が何に使えるのかはよく分からないが、とにかく結果の意味不明さに興味をもったので、日記としてまとめながら証明を追ってみようと思う。
   >
   \p<
@@ -189,7 +189,7 @@
     >
   >
   \p<
-    以上の補題を用いると、\ref|type="thm",ref="main"|; の主張の必要性が証明できる。
+    以上の補題を用いると、\mref|type="thm",ref="main"|; の主張の必要性が証明できる。
   >
   \thm|type="prp"|<
     \p<
@@ -202,13 +202,13 @@
       また、対象と射を全くもたない圏を &m<\bfrm<0>> で表し、対象と射をそれぞれ 1 つしかもたない圏を &m<\bfrm<1>> で表す。
     >
     \p<
-      まず &m<\sb<Y><\bfrm<0>>> に\ref|type="thm",ref="adj"|; を適用すると &m<\exists; \sb<Y><\bfrm<0>> \dashv; \sp<\sb<Y><\bfrm<0>>><*>> が得られる。
-      さらに\ref|type="thm",ref="yoneda"|; を適用すれば &m<\sp<\sb<Y><\bfrm<0>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<0>><\circ;>>>> が得られる。
+      まず &m<\sb<Y><\bfrm<0>>> に\mref|type="thm",ref="adj"|; を適用すると &m<\exists; \sb<Y><\bfrm<0>> \dashv; \sp<\sb<Y><\bfrm<0>>><*>> が得られる。
+      さらに\mref|type="thm",ref="yoneda"|; を適用すれば &m<\sp<\sb<Y><\bfrm<0>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<0>><\circ;>>>> が得られる。
       ところで &m<\sp<\bfrm<Set>><\sp<\bfrm<0>><\circ;>> \cong; \bfrm<1>> であるから、最終的に &m<\exists; \sb<Y><\bfrm<0>> \dashv; \sp<\sb<Y><\bfrm<0>>><*> \dashv; \sb<Y><\bfrm<1>>> が得られたことになる。
     >
     \p<
-      この随伴列に\ref|type="thm",ref="adjprev"|; を適用すると &m<(\exists; \sb<Y><\bfrm<0>>) \sp<><*> \dashv; \sp<\sb<Y><\bfrm<0>>><**> \dashv; \sb<Y><\bfrm<1>> \sp<><*>> が得られる。
-      さらにこの両端の関手について、\ref|type="thm",ref="adj"|; によって &m<\exists; \exists; \sb<Y><\bfrm<0>> \dashv; (\exists; \sb<Y><\bfrm<0>>) \sp<><*>> が得られ、\ref|type="thm",ref="yoneda"|; によって &m<\sp<\sb<Y><\bfrm<1>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<1>><\circ;>>>> が得られる。
+      この随伴列に\mref|type="thm",ref="adjprev"|; を適用すると &m<(\exists; \sb<Y><\bfrm<0>>) \sp<><*> \dashv; \sp<\sb<Y><\bfrm<0>>><**> \dashv; \sb<Y><\bfrm<1>> \sp<><*>> が得られる。
+      さらにこの両端の関手について、\mref|type="thm",ref="adj"|; によって &m<\exists; \exists; \sb<Y><\bfrm<0>> \dashv; (\exists; \sb<Y><\bfrm<0>>) \sp<><*>> が得られ、\mref|type="thm",ref="yoneda"|; によって &m<\sp<\sb<Y><\bfrm<1>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<1>><\circ;>>>> が得られる。
       ところで &m<\sp<\bfrm<Set>><\sp<\bfrm<1>><\circ;>> \cong; \bfrm<Set>> であることから、結局、
       &mb<
         \exists; \exists; \sb<Y><\bfrm<0>> \dashv; (\exists; \sb<Y><\bfrm<0>>) \sp<><*> \dashv; \sp<\sb<Y><\bfrm<0>>><**> \dashv; \sb<Y><\bfrm<1>> \sp<><*> \dashv; \sb<Y><\bfrm<Set>>
@@ -266,7 +266,7 @@
     >
   >
   \p<
-    では次回は、\ref|type="thm",ref="main"|; の主張の十分性の方の証明を行おうと思う。
+    では次回は、\mref|type="thm",ref="main"|; の主張の十分性の方の証明を行おうと思う。
   >
   \h1<参考文献>
   \ol<

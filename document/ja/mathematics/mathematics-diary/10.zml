@@ -9,7 +9,7 @@
   \h1<日記 (2018 年 6 月 27 日)>
   \p<
     今後しばらく、最近私が勉強している依存型の圏論的意味論についてまとめていこうと思う。
-    特に、Jacobs\ref|type="bib",ref="clt"|; が提唱したファイブレーションと内包圏を用いたものに触れていくつもりである。
+    特に、Jacobs\mref|type="bib",ref="clt"|; が提唱したファイブレーションと内包圏を用いたものに触れていくつもりである。
     余力があれば他のモデルについてもまとめたいとは思っているが、おそらく思っただけになると思う。
   >
   \p<
@@ -18,7 +18,7 @@
   >
   \p<
     初めに、基本的な道具であるファイブレーションを定義する。
-    これは Grothendieck\ref|type="bib",ref="gerg"|; が降下理論の文脈で導入した概念だが、型理論の文脈でも有用であることが分かり広く使われている。
+    これは Grothendieck\mref|type="bib",ref="gerg"|; が降下理論の文脈で導入した概念だが、型理論の文脈でも有用であることが分かり広く使われている。
     定義のため、まずはカルテシアン射に関する準備をする。
   >
   \thm|type="def"|<
@@ -26,7 +26,7 @@
       関手 &m<p: \scr<E> \to; \scr<B>> を考える。
       &m<\scr<E>> の射 &m<f: X \to; Y> が以下の条件を満たすとする。
       すなわち、&m<\scr<E>> の射 &m<g: Z \to; Y> であって、ある &m<\scr<B>> の射 &m<w: pZ \to; pX> によって &m<pg = pf \circ; w> と分解できるものに対し、&m<\scr<E>> の射 &m<h: Z \to; X> であって、&m<ph = w> かつ &m<f \circ; h = g> をともに満たすものが唯一存在する。
-      このとき、&m<f> は &m<p> に関して\em<カルテシアン\fl<cartesian>> であるという。
+      このとき、&m<f> は &m<p> に関して\def<カルテシアン\fl<cartesian>> であるという。
       図式では、
       &mb<
         \diag<
@@ -66,12 +66,12 @@
   \thm|type="def"|<
     \p<
       関手 &m<p: \scr<E> \to; \scr<B>> に対し、任意の &m<\scr<B>> の射 &m<u: I \to; J> および &m<\scr<E>> の対象 &m<Y> で &m<pY = J> を満たすものに対し、&m<\scr<E>> のカルテシアン射 &m<f: X \to; Y> であって &m<pf = u> を満たすものが存在するとする。
-      このとき、&m<p> を\em<ファイブレーション\fl<fibration>> という。
-      また、&m<f> を &m<p> に沿った &m<u> の\em<持ち上げ\fl<lifting>> といい、&m<f> の定義域を &m<\sp<u><*> Y> で表し、&m<f> 自身は &m<\sb<\overline<u>><Y>> で表す。
+      このとき、&m<p> を\def<ファイブレーション\fl<fibration>> という。
+      また、&m<f> を &m<p> に沿った &m<u> の\def<持ち上げ\fl<lifting>> といい、&m<f> の定義域を &m<\sp<u><*> Y> で表し、&m<f> 自身は &m<\sb<\overline<u>><Y>> で表す。
     >
   >
   \p<
-    \ref|type="thm",ref="uniqcart"|; によって、ファイブレーションに沿った持ち上げは同型の違いを除いて一意に定まる。
+    \mref|type="thm",ref="uniqcart"|; によって、ファイブレーションに沿った持ち上げは同型の違いを除いて一意に定まる。
   >
   \p<
     以降では、ファイブレーションを表すときは矢印の上に丸を付けて &m<p: \scr<E> \ring<\to;> \scr<B>> のように表すことにする。
@@ -142,13 +142,13 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="arcart"|; より明らかである。
+      \mref|type="thm",ref="arcart"|; より明らかである。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> は引き戻しをもつとする。
-      ファイブレーション &m<\op|ord|<cod>: \sp<\scr<C>><\to;> \ring<\to;> \scr<C>> を &m<\scr<C>> に付随する\em<終域ファイブレーション\fl<codomain fibration>> という。
+      ファイブレーション &m<\op|ord|<cod>: \sp<\scr<C>><\to;> \ring<\to;> \scr<C>> を &m<\scr<C>> に付随する\def<終域ファイブレーション\fl<codomain fibration>> という。
     >
   >
   \p<
@@ -195,7 +195,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> をとる。
-      ファイブレーション &m<\op|ord|<ind>: \bfrm<Fam> (\scr<C>) \ring<\to;> \bfrm<Set>> を &m<\scr<C>> に付随する\em<族ファイブレーション\fl<family fibration>> という。
+      ファイブレーション &m<\op|ord|<ind>: \bfrm<Fam> (\scr<C>) \ring<\to;> \bfrm<Set>> を &m<\scr<C>> に付随する\def<族ファイブレーション\fl<family fibration>> という。
     >
   >
   \p<
@@ -217,7 +217,7 @@
     >
     \p<
       として定義する。
-      この &m<\sb<\scr<E>><I>> を &m<I> 上の\em<ファイバー圏\fl<fibre category>> という。
+      この &m<\sb<\scr<E>><I>> を &m<I> 上の\def<ファイバー圏\fl<fibre category>> という。
     >
   >
   \p<
@@ -227,7 +227,7 @@
   \thm|type="def"|<
     \p<
       ファイブレーション &m<p: \scr<E> \ring<\to;> \scr<B>> を考える。
-      &m<\scr<E>> の射 &m<f: X \to; Y> が &m<p> によって恒等射に移るとき、&m<f> は\em<垂直\fl<vertical>> であるという。
+      &m<\scr<E>> の射 &m<f: X \to; Y> が &m<p> によって恒等射に移るとき、&m<f> は\def<垂直\fl<vertical>> であるという。
     >
   >
   \p<

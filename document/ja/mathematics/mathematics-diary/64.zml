@@ -32,7 +32,7 @@
   >  
   \prf<
     \p<
-      \ref|type="thm",ref="cmcol"|; を用いれば容易である。
+      \mref|type="thm",ref="cmcol"|; を用いれば容易である。
     >
   >
   \p<
@@ -46,12 +46,12 @@
   \prf<
     \p<
       \a|href="63.html#uni"|<定理 7.5> により、ある正則基数 &m<`k> がとれて、&m<`F> と &m<`C> がともに &m<`k>-到達可能かつ &m<`k>-表示対象を保つようにできる。
-      すると、&m<\scr<C>> と &m<\scr<D>> はともに &m<`k>-有向余極限をもち、さらに &m<`F> は &m<`k>-有向余極限を保つから、\ref|type="thm",ref="cmcol"|; によって &m<`F \bdarr; `C> は &m<`k>-有向余極限をもつ。
+      すると、&m<\scr<C>> と &m<\scr<D>> はともに &m<`k>-有向余極限をもち、さらに &m<`F> は &m<`k>-有向余極限を保つから、\mref|type="thm",ref="cmcol"|; によって &m<`F \bdarr; `C> は &m<`k>-有向余極限をもつ。
       さらに、
       &mb<
         \scr<A> \coloneqq; `{h \in; `F \bdarr; `C: `F C \to; `C D \mid; &raw<&m<`F C> と &m<`C D> はともに &m<`k>-表示可能>`}
       >
-      とおくと、\ref|type="thm",ref="cmpres"|; によってこの元は全て &m<`k>-到達可能である。
+      とおくと、\mref|type="thm",ref="cmpres"|; によってこの元は全て &m<`k>-到達可能である。
       また、\a|href="60.html#pressm"|<定理 4.5> によって &m<\scr<E>> の &m<`k>-到達可能対象は同型の違いを除いて集合サイズしかないから、&m<\scr<A>> は本質的小である。
       したがって、あとは &m<`F \bdarr; `C> の任意の対象が &m<\scr<A>> の元の &m<`k>-有向余極限として表せることを示せば良い。
     >
@@ -170,7 +170,7 @@
         >
       >
       が可換になる。
-      このとき、&m<`F> は\em<解集合条件\fl<solution set condition>> を満たすといい、&m<`{\sb<g><l>: D \to; `F \sb<C><l>`} \sb<><l \in; L>> を &m<D> の\em<解集合\fl<solution set>> という。
+      このとき、&m<`F> は\def<解集合条件\fl<solution set condition>> を満たすといい、&m<`{\sb<g><l>: D \to; `F \sb<C><l>`} \sb<><l \in; L>> を &m<D> の\def<解集合\fl<solution set>> という。
     >
   >
   \thm|type="thm",id="solset"|<
@@ -181,7 +181,7 @@
   \prf<
     \p<
       任意に &m<\scr<D>> の元 &m<D> をとる。
-      \ref|type="thm",ref="cmacc"|; により、ある正則基数 &m<`k> について &m<D \bdarr; `F> は &m<`k>-到達可能である。
+      \mref|type="thm",ref="cmacc"|; により、ある正則基数 &m<`k> について &m<D \bdarr; `F> は &m<`k>-到達可能である。
       ここで、&m<\scr<A> \coloneqq; \op<Ob> (\sb<\bfrm<Pres>><`k> (D \bdarr; `F))> が解集合になることを示す。
     >
     \p<

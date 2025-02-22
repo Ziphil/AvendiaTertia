@@ -43,7 +43,7 @@
       &mb<
         \scr<A> \coloneqq; `{\bf<y> S \in; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>> \mid; &raw<&m<S> は &m<\scr<S>> の対象>`}
       >
-      とおくと、&m<\scr<S>> が小であることから &m<\scr<A>> も小で、さらに\ref|type="thm",ref="reppres"|; によって &m<\scr<A>> の元は全て有限表示可能である。
+      とおくと、&m<\scr<S>> が小であることから &m<\scr<A>> も小で、さらに\mref|type="thm",ref="reppres"|; によって &m<\scr<A>> の元は全て有限表示可能である。
       以降、&m<\scr<A>> が極限的生成子であることを示す。
     >
     \p<
@@ -161,13 +161,13 @@
     \p<
       \label<条件 2 &m<\raarr;> 条件 3>
       &m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とおき、制限 Yoneda 埋め込み &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考える。
-      \ref|type="thm",ref="colpres"|; によって &m<\bf<z>> は &m<`k>-有向余極限を保存し、\ref|type="thm",ref="replp"|; と\a|href="62.html#lock"|<定理 6.1> によって &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は &m<`k>-到達可能である。
+      \mref|type="thm",ref="colpres"|; によって &m<\bf<z>> は &m<`k>-有向余極限を保存し、\mref|type="thm",ref="replp"|; と\a|href="62.html#lock"|<定理 6.1> によって &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は &m<`k>-到達可能である。
       したがって、&m<\bf<z>> は &m<`k>-到達可能である。
       これにより、\a|href="64.html#solset"|<定理 8.5> が使えて &m<\bf<z>> が解集合条件を満たすことが分かる。
       また、&m<\bf<z>> が極限を保存することも容易に分かる。
-      以上によって、\ref|type="thm",ref="adj"|; が使えて &m<\bf<z>> は左随伴をもつ。
+      以上によって、\mref|type="thm",ref="adj"|; が使えて &m<\bf<z>> は左随伴をもつ。
       さらに、\a|href="61.html#presden"|<定理 5.6> と\a|href="61.html#denff"|<補題 5.3> によって &m<\bf<z>> は忠実充満であるから、&m<\scr<C>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の反射的部分圏と圏同値になる。
-      したがって、\ref|type="thm",ref="cocompsub"|; が使えて &m<\scr<C>> が余完備であることが示される。
+      したがって、\mref|type="thm",ref="cocompsub"|; が使えて &m<\scr<C>> が余完備であることが示される。
     >
     \p<
       \label<条件 3 &m<\raarr;> 条件 1>

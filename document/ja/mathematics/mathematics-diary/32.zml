@@ -26,7 +26,7 @@
         >
       >
       を考える。
-      線型空間 &m<V> に対し、&m<TV> を &m<V> 上の\em<自由代数\fl<free algebra>> という。
+      線型空間 &m<V> に対し、&m<TV> を &m<V> 上の\def<自由代数\fl<free algebra>> という。
     >
   >
   \p<
@@ -52,7 +52,7 @@
         >
       >
       を考える。
-      線型空間 &m<V> に対し、&m<CV> を &m<V> 上の\em<余自由余代数\fl<cofree coalgebra>> という。
+      線型空間 &m<V> に対し、&m<CV> を &m<V> 上の\def<余自由余代数\fl<cofree coalgebra>> という。
     >
   >
   \p<
@@ -71,7 +71,7 @@
         >
       >
       を可換にする余代数の射 &m<\tilde<s>: D \to; C> が一意に存在するとする。
-      このとき、組 &m<(C, `p)> を &m<V> 上の\em<余自由余代数\fl<cofree coalgebra>> という。
+      このとき、組 &m<(C, `p)> を &m<V> 上の\def<余自由余代数\fl<cofree coalgebra>> という。
     >
   >
   \p<
@@ -144,7 +144,7 @@
   \thm|type="thm"|<
     \p<
       線型空間 &m<V> をとる。
-      \ref|type="thm",ref="cof",nolink|; の通りに &m<`p> をとり、標準的に &m<V \subseteq; \sp<V><**>> と見なすとき、
+      \mref|type="thm",ref="cof",nolink|; の通りに &m<`p> をとり、標準的に &m<V \subseteq; \sp<V><**>> と見なすとき、
       &mb<
         C \coloneqq; \bigcup<\stack<\cc<E \subseteq; T (\sp<V><*>) \sp<><\diamond;> \text< 部分余代数>> \cc<`p (E) \subseteq; V>>> E
       >
@@ -153,18 +153,18 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="cof"|; と\ref|type="thm",ref="sub"|; を組み合わせれば良い。
+      \mref|type="thm",ref="cof"|; と\mref|type="thm",ref="sub"|; を組み合わせれば良い。
     >
   >
   \p<
-    \ref|type="thm",ref="sub"|; の証明はまだ私もきちんと行ってないので省略したが、たぶんそんなに難しくないと思うので、できたらこの日記に追記しておこうと思う。
+    \mref|type="thm",ref="sub"|; の証明はまだ私もきちんと行ってないので省略したが、たぶんそんなに難しくないと思うので、できたらこの日記に追記しておこうと思う。
   >
   \p<
-    この 2 日間で述べた余自由余代数の構成は、Sweedler\ref|type="bib",ref="hax"|; によるものである。
+    この 2 日間で述べた余自由余代数の構成は、Sweedler\mref|type="bib",ref="hax"|; によるものである。
     これ以外にもいくつか (当然同型だが) 別の構成方法は知られている。
-    例えば Block–Leroux\ref|type="bib",ref="bgdc"|; は、表現可能な線型写像という概念を定義し、多項式環からテンソル代数への表現可能な線型写像が成す空間として構成している。
+    例えば Block–Leroux\mref|type="bib",ref="bgdc"|; は、表現可能な線型写像という概念を定義し、多項式環からテンソル代数への表現可能な線型写像が成す空間として構成している。
     この構成は Sweedler のものよりもシンプルだが、表現可能性という条件がそれほど構成的でないのが欠点に思える。
-    また、Murfet\ref|type="bib",ref="mscc"|; は、局所コホモロジーを用いたアプローチを行っている。
+    また、Murfet\mref|type="bib",ref="mscc"|; は、局所コホモロジーを用いたアプローチを行っている。
     これは私の知識が足りず全く理解できていない。
   >
   \h1<参考文献>

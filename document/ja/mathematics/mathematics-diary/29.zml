@@ -86,7 +86,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="lim"|; によって &m<\sb<\bfrm<Sh>><J> (\scr<C>)> の極限は &m<\bfrm<PSh> (\scr<C>)> の極限として計算でき、層化はプラス構成 2 回として定義されていたので、プラス構成関手 &m<\sp<\text<->><+>: \bfrm<PSh> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> が有限極限を保存することを示せば良い。
+      \mref|type="thm",ref="lim"|; によって &m<\sb<\bfrm<Sh>><J> (\scr<C>)> の極限は &m<\bfrm<PSh> (\scr<C>)> の極限として計算でき、層化はプラス構成 2 回として定義されていたので、プラス構成関手 &m<\sp<\text<->><+>: \bfrm<PSh> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> が有限極限を保存することを示せば良い。
     >
     \p<
       有限図式 &m<`F: \scr<J> \to; \bfrm<PSh> (\scr<C>)> および対象 &m<C> をとる。

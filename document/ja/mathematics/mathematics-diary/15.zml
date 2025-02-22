@@ -15,7 +15,7 @@
   >
   \thm|type="def"|<
     \p<
-      モノイダル圏 &m<\scr<V>> の元 &m<X> に対し、&m<\sb<\op<Hom>><\scr<V>> (1, X)> を &m<X> の\em<台集合\fl<underlying set>> という。
+      モノイダル圏 &m<\scr<V>> の元 &m<X> に対し、&m<\sb<\op<Hom>><\scr<V>> (1, X)> を &m<X> の\def<台集合\fl<underlying set>> という。
     >
   >
   \p<
@@ -145,7 +145,7 @@
   >
   \prf<
     \p<
-      &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to; \scr<D>> の間の射対象を、\ref|type="thm",ref="nat"|; の &m<\lbbracket; F, G \rbbracket;> とする。
+      &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to; \scr<D>> の間の射対象を、\mref|type="thm",ref="nat"|; の &m<\lbbracket; F, G \rbbracket;> とする。
       あとは合成を表す射と恒等射を与える射を構成すれば良い。
     >
     \p<
@@ -183,7 +183,7 @@
     >
     \p<
       さて、任意に &m<\scr<C>> の対象 &m<B, C> をとる。
-      まず &m<\lbbracket; F, G \rbbracket;> について、\ref|type="thm",ref="nat"|; で図式 &m<\wheart;> の可換性を導いたのと同様にして、
+      まず &m<\lbbracket; F, G \rbbracket;> について、\mref|type="thm",ref="nat"|; で図式 &m<\wheart;> の可換性を導いたのと同様にして、
       &mb<
         &mark<\wspade;>
         \diag<
@@ -321,7 +321,7 @@
   \thm|type="def"|<
     \p<
       完備対称モノイダル閉圏 &m<\scr<V>> をとる。
-      &m<\scr<V>>-豊穣小圏 &m<\scr<C>> と &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、\ref|type="thm",ref="funcat"|; で構成された &m<\scr<V>>-豊穣圏を &m<\scr<C>, \scr<D>> の\em<豊穣関手圏\fl<enriched functor category>> といい、&m<\bfrm<Fun> (\scr<C>, \scr<D>)> で表す。
+      &m<\scr<V>>-豊穣小圏 &m<\scr<C>> と &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、\mref|type="thm",ref="funcat"|; で構成された &m<\scr<V>>-豊穣圏を &m<\scr<C>, \scr<D>> の\def<豊穣関手圏\fl<enriched functor category>> といい、&m<\bfrm<Fun> (\scr<C>, \scr<D>)> で表す。
     >
   >
   \p<

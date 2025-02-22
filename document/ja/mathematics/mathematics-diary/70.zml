@@ -20,13 +20,13 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<X>, \scr<Y>> および関手 &m<F, G: \scr<X> \to; \scr<Y>> と自然変換 &m<`f, `c: F \raarr; G> をとる。
-      組 &m<(F, G, `f, `c)> を &m<\scr<X>> 上の\em<方程式\fl<equation>> という。
+      組 &m<(F, G, `f, `c)> を &m<\scr<X>> 上の\def<方程式\fl<equation>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<X>> 上の方程式 &m<(F, G, `f, `c)> をとる。
-      &m<\scr<X>> の対象 &m<C> が &m<\sb<`f><C> = \sb<`g><C>> を満たすとき、&m<C> を &m<(F, G, `f, `c)> の\em<解\fl<solution>> という。
+      &m<\scr<X>> の対象 &m<C> が &m<\sb<`f><C> = \sb<`g><C>> を満たすとき、&m<C> を &m<(F, G, `f, `c)> の\def<解\fl<solution>> という。
     >
   >
   \p<
@@ -129,7 +129,7 @@
   >
   \prf<
     \p<
-      &m<F> は余極限を保存するから、\ref|type="thm",ref="close"|; によって &m<\bfrm<Sol> (F, G, `f, `c)> は余極限に関して閉じている。
+      &m<F> は余極限を保存するから、\mref|type="thm",ref="close"|; によって &m<\bfrm<Sol> (F, G, `f, `c)> は余極限に関して閉じている。
       さらに、&m<\scr<X>> は余完備だから、これより &m<\bfrm<Sol> (F, G, `f, `c)> も余完備である。
       したがって、&m<\scr<X>> は冪化可能であることを合わせて、関手
       &mb<
@@ -151,7 +151,7 @@
         >
       >
       がとれる。
-      &m<F> は余極限を保存するから特に全射を保存するので、\ref|type="thm",ref="epi"|; によって &m<X> は解である。
+      &m<F> は余極限を保存するから特に全射を保存するので、\mref|type="thm",ref="epi"|; によって &m<X> は解である。
       したがって &m<X \subseteq; \bf<r> A> であり、
       &mb<
         \diag<
@@ -270,7 +270,7 @@
       &mb<
         (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \tailrarr; ((A, \bar<A>, a), (d, m), (e, u))
       >
-      をとると、\ref|type="thm",ref="monomono"|; によって &m<f: (B, d', e') \tailrarr; (A, d, e)> は &m<\bfrm<PComon> (\scr<C>)> における部分対象である。
+      をとると、\mref|type="thm",ref="monomono"|; によって &m<f: (B, d', e') \tailrarr; (A, d, e)> は &m<\bfrm<PComon> (\scr<C>)> における部分対象である。
     >
     \p<
       一方、
@@ -297,7 +297,7 @@
         > 
       >
       は可換である。
-      したがって、\ref|type="thm",ref="monoepi"|; によって &m<\bar<p>> は &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> における商対象である。
+      したがって、\mref|type="thm",ref="monoepi"|; によって &m<\bar<p>> は &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> における商対象である。
     >
     \p<
       以上の議論により、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> における &m<((A, \bar<A>, a), (d, m), (e, u))> の部分対象 &m<(f, \bar<f>)> に対し、
@@ -340,10 +340,10 @@
   \prf<
     \p<
       仮定から &m<\scr<C>> は完備かつ余完備だから、&m<\bfrm<Chu> (\scr<C>, \bbot;)> は特に余完備であり、さらに忘却関手 &m<U: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<Chu> (\scr<C>, \bbot;)> が余極限を生成することから &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> も余完備である。
-      さらに、仮定と\ref|type="thm",ref="wellpow"|; によって &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は冪化可能である。
+      さらに、仮定と\mref|type="thm",ref="wellpow"|; によって &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は冪化可能である。
       また、仮定から &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は全射単射分解をもつ。
       最後に、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) = \bfrm<Sol> (F, G, `f, `c)> と表したときの &m<F> は忘却関手だったから、これは余極限を保存する。
-      以上によって\ref|type="thm",ref="corefl"|; が使えるので、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は余反射的であり、これは &m<I> に右随伴関手が存在するということである。
+      以上によって\mref|type="thm",ref="corefl"|; が使えるので、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は余反射的であり、これは &m<I> に右随伴関手が存在するということである。
     >
   >
   \p<
@@ -380,7 +380,7 @@
   >
   \prf<
     \p<
-      仮定と\ref|type="thm",ref="main"|; から、包含関手 &m<I: \bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は右随伴関手をもつ。
+      仮定と\mref|type="thm",ref="main"|; から、包含関手 &m<I: \bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は右随伴関手をもつ。
       さらに、仮定と\a|href="69.html#adjcomp"|<定理 5.3> から、忘却関手 &m<U: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<Chu> (\scr<C>, \bbot;)> も右随伴関手をもつ。
       したがって、これらの合成 &m<U \circ; I> も右随伴関手をもつが、これは &m<\bfrm<Chu> (\scr<C>, \bbot;)> が Lafont 圏であるということである。
     >

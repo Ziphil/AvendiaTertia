@@ -47,7 +47,7 @@
         >
       >
       がともに可換であるとする。
-      このとき、&m<F> を &m<\scr<V>>-\em<豊穣関手\fl<enriched functor>> といい、&m<F: \scr<C> \to; \scr<D>> で表す。
+      このとき、&m<F> を &m<\scr<V>>-\def<豊穣関手\fl<enriched functor>> といい、&m<F: \scr<C> \to; \scr<D>> で表す。
     >
   >
   \thm|type="def",id="nat"|<
@@ -73,7 +73,7 @@
         >
       >
       が可換であるとする。
-      このとき、&m<`g> を &m<\scr<V>>-\em<豊穣自然変換\fl<enriched natural transformation>> といい、&m<`g: F \raarr; G> で表す。
+      このとき、&m<`g> を &m<\scr<V>>-\def<豊穣自然変換\fl<enriched natural transformation>> といい、&m<`g: F \raarr; G> で表す。
     >
   >
   \p<
@@ -178,7 +178,7 @@
         >
       >
       の可換性と同値である。
-      この図式の最も右になる 2 つの射は、テンソル積の随伴で &m<\scr<V>> の合成を表す射に移るから、この図式全体をテンソル積の随伴で移せば、\ref|type="thm",ref="nat"|; の図式が得られる。
+      この図式の最も右になる 2 つの射は、テンソル積の随伴で &m<\scr<V>> の合成を表す射に移るから、この図式全体をテンソル積の随伴で移せば、\mref|type="thm",ref="nat"|; の図式が得られる。
       以上で、命題が示された。
     >
   >

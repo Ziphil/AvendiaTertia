@@ -29,7 +29,7 @@
     >
     \p<
       を満たすとする。
-      このとき、&m<A> を\em<整合空間\fl<coherence space>> という。
+      このとき、&m<A> を\def<整合空間\fl<coherence space>> という。
     >
   >
   \p<
@@ -39,7 +39,7 @@
   \p<
     整合空間の定義に関していくつか注意を述べておく。
     まず、2 つ目の項目で部分集合 &m<S \subseteq; A> に課された条件は、任意の 2 元 &m<a, a' \in; S> に対して &m<a \cup; a'> が &m<A> に属していれば良く &m<S> に属する必要はないので、単に &m<S> が有向であるということよりも強い条件である。
-    また、この項目において &m<S = \empty;> とおくことで、&m<\empty; \in; A> であることが分かる。
+    また、この項目において &m<S = \defpty;> とおくことで、&m<\defpty; \in; A> であることが分かる。
   >
   \p<
     整合空間は、反射的無向グラフとも見なすことができる。
@@ -58,7 +58,7 @@
         x \closure; x' \coloniff; `{x, x'`} \in; A
       >
       で定める。
-      このとき、反射的無向グラフ &m<(\lvert; A \rvert;, \closure|ord|;)> を &m<A> の\em<網\fl<web>> といい、&m<\op<web> (A)> で表す。
+      このとき、反射的無向グラフ &m<(\lvert; A \rvert;, \closure|ord|;)> を &m<A> の\def<網\fl<web>> といい、&m<\op<web> (A)> で表す。
     >
   >
   \p<
@@ -68,7 +68,7 @@
   \thm|type="def"|<
     \p<
       反射的無向グラフ &m<(G, \closure|ord|;)> の頂点から成る集合 &m<a \subseteq; G> を考える。
-      任意の 2 頂点 &m<x, x' \in; a> に対して &m<x \closure; x'> が成り立つとき、&m<a> を &m<G> の\em<クリーク\fl<clique>> という。
+      任意の 2 頂点 &m<x, x' \in; a> に対して &m<x \closure; x'> が成り立つとき、&m<a> を &m<G> の\def<クリーク\fl<clique>> という。
       &m<G> のクリーク全体の集合を &m<\op<clique> (G)> で表す。
     >
   >
@@ -92,7 +92,7 @@
     >
   >
   \p<
-    以上のことから、整合空間を定義するには、\ref|type="thm",ref="cohsp"|; の 2 条件を満たす集合を与えるか、反射的無向グラフを与えるかすれば良い。
+    以上のことから、整合空間を定義するには、\mref|type="thm",ref="cohsp"|; の 2 条件を満たす集合を与えるか、反射的無向グラフを与えるかすれば良い。
     また、与えられた整合空間の元を 1 つ与えるのと、その整合空間の網のクリークを 1 つ与えるのは同じことである。
     以降、整合空間とその網は断りなく同一視する。
   >
@@ -105,13 +105,13 @@
     >
     \ul<
       \li<
-        &m<\lvert; A \rvert;> の元を &m<A> の\em<トークン\fl<token>> という。
+        &m<\lvert; A \rvert;> の元を &m<A> の\def<トークン\fl<token>> という。
       >
       \li<
-        トークン &m<x, x' \in; \lvert; A \rvert;> に対し、上で定まる関係 &m<\closure|ord|;> について &m<x \closure; x'> が成り立つとき、&m<x> と &m<x'> は\em<整合的\fl<coherent>> であるという。
+        トークン &m<x, x' \in; \lvert; A \rvert;> に対し、上で定まる関係 &m<\closure|ord|;> について &m<x \closure; x'> が成り立つとき、&m<x> と &m<x'> は\def<整合的\fl<coherent>> であるという。
       >
       \li<
-        部分集合 &m<a \subseteq; \lvert; A \rvert;> に対し、&m<a> の任意の 2 元が整合的であるとき、&m<a> 自身も\em<整合的\fl<coherent>> であるという。
+        部分集合 &m<a \subseteq; \lvert; A \rvert;> に対し、&m<a> の任意の 2 元が整合的であるとき、&m<a> 自身も\def<整合的\fl<coherent>> であるという。
       >
     >
     \p<
@@ -123,7 +123,7 @@
           \c<x \asymp; x'> \c<\coloniff;> \c<x \closure;\not|style="margin-left:-0.68em;margin-right:0.15em;"|; x' \scor; x = x'> \br;
         >
       >
-      で定め、これらを満たすトークンをそれぞれ\em<狭義整合的\fl<strictly coherent>>, \em<狭義非整合的\fl<strictly incoherent>>, \em<非整合的\fl<incoherent>> であるという。
+      で定め、これらを満たすトークンをそれぞれ\def<狭義整合的\fl<strictly coherent>>, \def<狭義非整合的\fl<strictly incoherent>>, \def<非整合的\fl<incoherent>> であるという。
     >
   >
   \p<
@@ -149,8 +149,8 @@
       >
     >
     \p<
-      を満たすとき、&m<f> は\em<安定\fl<stable>> であるという。
-      また、これらの条件をそれぞれ\em<単調性\fl<monotonicity>>, \em<連続性\fl<continuity>>, \em<安定性\fl<stability>> という。
+      を満たすとき、&m<f> は\def<安定\fl<stable>> であるという。
+      また、これらの条件をそれぞれ\def<単調性\fl<monotonicity>>, \def<連続性\fl<continuity>>, \def<安定性\fl<stability>> という。
     >
   >
   \p<
@@ -163,7 +163,7 @@
     しかし、ある写像が安定であることを示す際、たいていの場合で単調性が自明で、連続性を示すときに単調性を使うことが多いため、ここでは単調性と連続性を両方を条件として書いた。
   >
   \p<
-    すでに述べたように、任意の整合空間には &m<\empty;> が元として属するが、安定写像が &m<\empty;> を保存する必要はない。
+    すでに述べたように、任意の整合空間には &m<\defpty;> が元として属するが、安定写像が &m<\defpty;> を保存する必要はない。
     これを条件として課さないのは、領域理論において Scott 連続関数に最小元の保存を課さないのと同じ理由で、不動点を考える際に不都合が生じるからである。
   >
   \p<

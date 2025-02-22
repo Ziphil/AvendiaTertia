@@ -25,7 +25,7 @@
         (d, e) \sqsubseteq; (d', e') \coloniff; d \sqsubseteq; d' \scand; e \sqsubseteq; e'
       >
       で定める。
-      この &m<D \times; E> を &m<D> と &m<E> の\em<直積\fl<direct product>> という。
+      この &m<D \times; E> を &m<D> と &m<E> の\def<直積\fl<direct product>> という。
     >
   >
   \p<
@@ -77,7 +77,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="proddir"|; から従う。
+      \mref|type="thm",ref="proddir"|; から従う。
     >
   >
   \thm|type="prp",id="prodind"|<
@@ -100,7 +100,7 @@
   \prf<
     \p<
       任意の &m<d \in; D, e \in; E> に対して &m<\sb<f><d>, \sb<f><e>> が全て連続であるとする。
-      この連続性と\ref|type="thm",ref="proddir"|; によって、&m<D \times; E> の有向部分集合 &m<S> に対し、
+      この連続性と\mref|type="thm",ref="proddir"|; によって、&m<D \times; E> の有向部分集合 &m<S> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\bigsqcup<(a, b) \in; S> f (a, b)> \c<=> \c<\bigsqcup<a \in; \sb<`p><1> (S)> \bigsqcup<b \in; \sb<`p><2> (T)> \sb<f><a> (b)> \br;
@@ -116,7 +116,7 @@
     >
     \p<
       逆に、&m<f> が連続であるとする。
-      任意の &m<d \in; D> および 有向部分集合 &m<B \subseteq; E> に対し、再び\ref|type="thm",ref="proddir"|; によって、
+      任意の &m<d \in; D> および 有向部分集合 &m<B \subseteq; E> に対し、再び\mref|type="thm",ref="proddir"|; によって、
       &mb<
         \array|align="rcl"|<
           \c<\bigsqcup<b \in; B> \sb<f><d> (b)> \c<=> \c<\bigsqcup<b \in; B> f (d, b)> \br;
@@ -157,7 +157,7 @@
         >
       >
       で定める。
-      この &m<D \times; E> を &m<D> と &m<E> の\em<スマッシュ積\fl<smash product>> という。
+      この &m<D \times; E> を &m<D> と &m<E> の\def<スマッシュ積\fl<smash product>> という。
     >
   >
   \p<

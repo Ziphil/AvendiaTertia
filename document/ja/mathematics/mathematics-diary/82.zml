@@ -11,7 +11,7 @@
     \a|href="80.html"|<7 月 7 日>と \a|href="81.html"|<10 月 9 日>で、それぞれレンズの van Laarhoven エンコーディングとプロ関手エンコーディングについて触れた。
     今回は、レンズのコエンドを用いた表現方法について触れる。
     概念の定義にコエンドを用いるが、その後で集合としての具体的な表示も行うので、コエンドを知らなくても読めるようにはしたつもりである。
-    コエンドの基本については Loregian\ref|type="bib",ref="ccx"|; を参照すると良い。
+    コエンドの基本については Loregian\mref|type="bib",ref="ccx"|; を参照すると良い。
   >
   \p<
     さて、少々天下り的ではあるが、次のような集合を定義する。
@@ -24,7 +24,7 @@
         \sb<\op<Lens>><\scr<C>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<C>> (\op<Hom> (S, K \times; A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))
       >
       とおく。
-      この元 &m<`g> を\em<コエンドレンズ\fl<coend lens>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
+      この元 &m<`g> を\def<コエンドレンズ\fl<coend lens>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
     >
   >
   \p<
@@ -79,7 +79,7 @@
         >
       >
       と定める。
-      これによって得られる素朴レンズ &m<\langle; \sp<l><\ppr;>, \sp<r><\ppr;> \rangle; \sb<><K \times; L>: (S, \bar<S>) \to; (\bar<B>, B)> を &m<\langle; l, r \rangle; \sb<><K>> と &m<\langle; l', r' \rangle; \sb<><L>> の\em<合成\fl<composition>> という。
+      これによって得られる素朴レンズ &m<\langle; \sp<l><\ppr;>, \sp<r><\ppr;> \rangle; \sb<><K \times; L>: (S, \bar<S>) \to; (\bar<B>, B)> を &m<\langle; l, r \rangle; \sb<><K>> と &m<\langle; l', r' \rangle; \sb<><L>> の\def<合成\fl<composition>> という。
     >
   >
   \thm|type="def"|<
@@ -173,7 +173,7 @@
   >
   \prf<
     \p<
-      圏同型 &m<\bfrm<PLens> (\scr<C>) \cong; \bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> はすでに\a|href="81.html#homiso"|<定理 2.10> で示されているので、\ref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
+      圏同型 &m<\bfrm<PLens> (\scr<C>) \cong; \bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> はすでに\a|href="81.html#homiso"|<定理 2.10> で示されているので、\mref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
     >
   >
   \p<

@@ -24,7 +24,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
-      &m<\scr<C>> の対象 &m<A> と射 &m<`a: FA \to; A> の組 &m<(A, `a)> を &m<F>-\em<代数\fl<algebra>> という。
+      &m<\scr<C>> の対象 &m<A> と射 &m<`a: FA \to; A> の組 &m<(A, `a)> を &m<F>-\def<代数\fl<algebra>> という。
     >
   >
   \thm|type="def"|<
@@ -39,7 +39,7 @@
           \ar|s="3",e="4",inv|<f> \ar|s="2",e="4"|<`b>
         >
       >
-      を可換にするとき、&m<f> を &m<F>-\em<代数の射\fl<algebra morphism>> という。
+      を可換にするとき、&m<f> を &m<F>-\def<代数の射\fl<algebra morphism>> という。
     >
   >
   \p<
@@ -54,7 +54,7 @@
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       ある &m<F>-代数 &m<(S, `s)> を考えるとき、任意の &m<F>-代数 &m<(A, `a)> に対して、&m<F>-代数の射 &m<f: (S, `s) \to; (A, `a)> が一意に存在するとする。
-      このとき、&m<(S, `s)> を &m<F>-\em<始代数\fl<initial algebra>> という。
+      このとき、&m<(S, `s)> を &m<F>-\def<始代数\fl<initial algebra>> という。
     >
   >
   \p<
@@ -67,7 +67,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
-      &m<F>-代数 &m<(A, `a)> に対し、&m<F>-始代数 &m<(S, `s)> からの唯一の射 &m<f: (S, `s) \to; (A, `a)> を、&m<(A, `a)> による\em<下方射\fl<catamorphism>> と呼んで &m<\rm<cata> (A, `a)> で表す。
+      &m<F>-代数 &m<(A, `a)> に対し、&m<F>-始代数 &m<(S, `s)> からの唯一の射 &m<f: (S, `s) \to; (A, `a)> を、&m<(A, `a)> による\def<下方射\fl<catamorphism>> と呼んで &m<\rm<cata> (A, `a)> で表す。
     >
   >
   \p<
@@ -135,7 +135,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
-      &m<\scr<C>> の対象 &m<C> と射 &m<`g: C \to; FC> の組 &m<(C, `g)> を &m<F>-\em<余代数\fl<coalgebra>> という。
+      &m<\scr<C>> の対象 &m<C> と射 &m<`g: C \to; FC> の組 &m<(C, `g)> を &m<F>-\def<余代数\fl<coalgebra>> という。
     >
   >
   \thm|type="def"|<
@@ -150,20 +150,20 @@
           \ar|s="3",e="4",inv|<Fh> \ar|s="2",e="4"|<`d>
         >
       >
-      を可換にするとき、&m<h> を &m<F>-\em<余代数の射\fl<coalgebra morphism>> という。
+      を可換にするとき、&m<h> を &m<F>-\def<余代数の射\fl<coalgebra morphism>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       ある &m<F>-余代数 &m<(T, `t)> を考えるとき、任意の &m<F>-余代数 &m<(C, `g)> に対して、&m<F>-余代数の射 &m<h: (C, `g) \to; (T, `t)> が一意に存在するとする。
-      このとき、&m<(T, `t)> を &m<F>-\em<終余代数\fl<terminal coalgebra>> という。
+      このとき、&m<(T, `t)> を &m<F>-\def<終余代数\fl<terminal coalgebra>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
-      &m<F>-余代数 &m<(C, `g)> に対し、&m<F>-終余代数 &m<(T, `t)> への唯一の射 &m<h: (C, `g) \to; (T, `t)> を、&m<(C, `g)> による\em<上方射\fl<anamorphism>> と呼んで &m<\rm<ana> (C, `g)> で表す。
+      &m<F>-余代数 &m<(C, `g)> に対し、&m<F>-終余代数 &m<(T, `t)> への唯一の射 &m<h: (C, `g) \to; (T, `t)> を、&m<(C, `g)> による\def<上方射\fl<anamorphism>> と呼んで &m<\rm<ana> (C, `g)> で表す。
     >
   >
   \p<

@@ -8,7 +8,7 @@
 
   \h1<日記 (2019 年 7 月 27 日)>
   \p<
-    2 年ほど前に層とトポスについて MacLane–Moerdijk\ref|type="bib",ref="clt"|; を読んで勉強したが、忘れつつあるので少しずつ復習しようと思う。
+    2 年ほど前に層とトポスについて MacLane–Moerdijk\mref|type="bib",ref="clt"|; を読んで勉強したが、忘れつつあるので少しずつ復習しようと思う。
     今日は、層の定義を思い出す。
   >
   \p<
@@ -22,7 +22,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象 &m<C> に対し、&m<\bf<y> C> の部分関手を &m<C> 上の\em<篩\fl<sieve>> という。
+      圏 &m<\scr<C>> の対象 &m<C> に対し、&m<\bf<y> C> の部分関手を &m<C> 上の\def<篩\fl<sieve>> という。
     >
   >
   \p<
@@ -34,7 +34,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象 &m<C> に対し、&m<\bf<y> C> 自身を &m<C> 上の\em<極大篩\fl<maximal sieve>> といい、&m<\sb<\top;><C>> で表す。
+      圏 &m<\scr<C>> の対象 &m<C> に対し、&m<\bf<y> C> 自身を &m<C> 上の\def<極大篩\fl<maximal sieve>> といい、&m<\sb<\top;><C>> で表す。
     >
   >
   \p<
@@ -52,7 +52,7 @@
           \ar|s="2",e="4",tip="hook"|; \ar|s="3",e="4",inv|<\bf<y> h>
         >
       >
-      で定まる &m<D> 上の篩 &m<\sp<h><*> S> を、&m<h> による &m<S> の\em<引き戻し\fl<pullback>> という。
+      で定まる &m<D> 上の篩 &m<\sp<h><*> S> を、&m<h> による &m<S> の\def<引き戻し\fl<pullback>> という。
     >
   >
   \p<
@@ -80,7 +80,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> をとる。
-      各対象 &m<C> に対して &m<C> 上の篩の集まり &m<JC> を定める対応を考えるとき、この対応 &m<J> が \em<Grothendieck 位相\fl<— topology>> であるとは、3 条件
+      各対象 &m<C> に対して &m<C> 上の篩の集まり &m<JC> を定める対応を考えるとき、この対応 &m<J> が \def<Grothendieck 位相\fl<— topology>> であるとは、3 条件
     >
     \ol<
       \li<
@@ -96,8 +96,8 @@
     >
     \p<
       が全て満たされることをいう。
-      また、各対象 &m<C> に対して、&m<JC> の元を &m<C> の\em<被覆篩\fl<covering sieve>> という。 
-      さらに、上記の 2 番目と 3 番目の条件は、それぞれ\em<安定性\fl<stability>> および\em<推移性\fl<transitivity>> と呼ばれる。
+      また、各対象 &m<C> に対して、&m<JC> の元を &m<C> の\def<被覆篩\fl<covering sieve>> という。 
+      さらに、上記の 2 番目と 3 番目の条件は、それぞれ\def<安定性\fl<stability>> および\def<推移性\fl<transitivity>> と呼ばれる。
     >
   >
   \p<
@@ -132,7 +132,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> に対し、関手 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> を &m<\scr<C>> 上の\em<前層\fl<presheaf>> という。
+      圏 &m<\scr<C>> に対し、関手 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> を &m<\scr<C>> 上の\def<前層\fl<presheaf>> という。
     >
   >
   \p<
@@ -140,13 +140,13 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> とその上の Grothendieck 位相 &m<J> の組 &m<(\scr<C>, J)> を\em<景\fl<site>> という。
+      圏 &m<\scr<C>> とその上の Grothendieck 位相 &m<J> の組 &m<(\scr<C>, J)> を\def<景\fl<site>> という。
     >
   >
   \thm|type="def",id="sheaf"|<
     \p<
       景 &m<(\scr<C>, J)> をとる。
-      関手 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> が &m<\scr<C>> 上の\em<層\fl<sheaf>> であるとは、任意の被覆篩 &m<S \in; JC> と任意の自然変換 &m<a: S \to; P> に対し、図式
+      関手 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> が &m<\scr<C>> 上の\def<層\fl<sheaf>> であるとは、任意の被覆篩 &m<S \in; JC> と任意の自然変換 &m<a: S \to; P> に対し、図式
       &mb<
         \diag<
           \v<S> \v<P> \br;
@@ -164,13 +164,13 @@
   \thm|type="def"|<
     \p<
       景 &m<(\scr<C>, J)> をとり、前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> および被覆篩 &m<S \in; JC> を考える。
-      各射 &m<f \in; S: D \to; C> に対して元 &m<\sb<a><f> \in; PD> を定めている族 &m<(\sb<a><f>) \sb<><f \in; S>> が &m<S> に関する &m<P> の\em<適合族\fl<matching family>> であるとは、篩に属する任意の射 &m<f \in; S: D \to; C> と任意の射 &m<g: E \to; D> に対し、&m<\sb<a><f> \cdot; g = \sb<a><f \circ; g>> が成り立つことである。
+      各射 &m<f \in; S: D \to; C> に対して元 &m<\sb<a><f> \in; PD> を定めている族 &m<(\sb<a><f>) \sb<><f \in; S>> が &m<S> に関する &m<P> の\def<適合族\fl<matching family>> であるとは、篩に属する任意の射 &m<f \in; S: D \to; C> と任意の射 &m<g: E \to; D> に対し、&m<\sb<a><f> \cdot; g = \sb<a><f \circ; g>> が成り立つことである。
     >
   >
   \thm|type="def"|<
     \p<
       景 &m<(\scr<C>, J)> をとり、前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> および被覆篩 &m<S \in; JC> を考え、その適合族 &m<(\sb<a><f>) \sb<><f \in; S>> をとる。
-      元 &m<\bar<a> \in; PC> が &m<(\sb<a><f>) \sb<><f \in; S>> の\em<融合\fl<amalgamation>> であるとは、任意の射 &m<f \in; S: D \to; C> に対し、&m<\bar<a> \cdot; f = \sb<a><f>> が成り立つことである。
+      元 &m<\bar<a> \in; PC> が &m<(\sb<a><f>) \sb<><f \in; S>> の\def<融合\fl<amalgamation>> であるとは、任意の射 &m<f \in; S: D \to; C> に対し、&m<\bar<a> \cdot; f = \sb<a><f>> が成り立つことである。
     >
   >
   \thm|type="prp",id="shfeq"|<

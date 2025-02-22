@@ -13,7 +13,7 @@
   \thm|type="def"|<
     \p<
       正則基数 &m<`k> をとる。
-      圏 &m<\scr<C>> の対象 &m<C> について、表現可能関手 &m<\op<Hom> (C, \hyphen;): \scr<C> \to; \bfrm<Set>> が &m<`k>-有向余極限を保存するとき、&m<C> は &m<`k>-\em<表示可能\fl<presentable>> であるという。
+      圏 &m<\scr<C>> の対象 &m<C> について、表現可能関手 &m<\op<Hom> (C, \hyphen;): \scr<C> \to; \bfrm<Set>> が &m<`k>-有向余極限を保存するとき、&m<C> は &m<`k>-\def<表示可能\fl<presentable>> であるという。
     >
   >
   \thm|type="lem",id="preseq"|<
@@ -79,12 +79,12 @@
     \p<
       &m<`k>-小図式 &m<G: \scr<K> \to; \scr<C>> の余極限 &m<(\sb<c><k>: Gk \to; C) \sb<><k \in; \scr<K>>> で、&m<\scr<K>> の各対象 &m<k> について &m<\scr<C>> で &m<Gk> が &m<`k>-表示可能であるものをとる。
       このとき、&m<C> も &m<`k>-表示可能であることを示せば良い。
-      そのために\ref|type="thm",ref="preseq"|; を用いる。
+      そのために\mref|type="thm",ref="preseq"|; を用いる。
     >
     \p<
       &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> および &m<\scr<C>> の射 &m<f: C \to; D> をとる。
       &m<f> が本質的に一意に分解できることを示せば良い。
-      まず、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rcomp; f: Gk \to; D> を考えると、&m<Gk> が &m<`k>-表示可能で &m<D> が &m<`k>-有向余極限であることから、\ref|type="thm",ref="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<j><k>> が存在して、
+      まず、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rcomp; f: Gk \to; D> を考えると、&m<Gk> が &m<`k>-表示可能で &m<D> が &m<`k>-有向余極限であることから、\mref|type="thm",ref="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<j><k>> が存在して、
       &mb<
         \diag<
           \v<Gk> \v<C> \v<D> \br;
@@ -165,7 +165,7 @@
         \sb<c><k> \rcomp; f = \sb<c><k> \rcomp; g \rcomp; \sb<d><i> = \sb<c><k> \rcomp; g' \rcomp; \sb<d><i>
       >
       が存在することになる。
-      &m<Gk> は &m<`k>-表示可能で &m<D> は &m<`k>-有向余極限なので、\ref|type="thm",ref="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<i>> が存在して、
+      &m<Gk> は &m<`k>-表示可能で &m<D> は &m<`k>-有向余極限なので、\mref|type="thm",ref="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<i>> が存在して、
       &mb<
         \sb<c><k> \rcomp; g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = \sb<c><k> \rcomp; g' \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort;
       >
@@ -179,7 +179,7 @@
   >
   \h1<追記 (2020 年 8 月 5 日)>
   \p<
-    \ref|type="thm",ref="preseq"|; にフィルター余極限の場合の条件を追加した。
+    \mref|type="thm",ref="preseq"|; にフィルター余極限の場合の条件を追加した。
   >
   \h1<参考文献>
   \ol<

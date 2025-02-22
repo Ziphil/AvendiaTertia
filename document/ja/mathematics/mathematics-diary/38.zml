@@ -9,7 +9,7 @@
   \h1<日記 (2020 年 4 月 6 日)>
   \p<
     \a|href="35.html"|<4 月 5 日>の続き。
-    前回は、Bierman による線型圏と Seely によるモデル (を修正したもの) の関係について述べたが、今回は Lafont\ref|type="bib",ref="llcm"|; によって提案されたモデルとの関係について述べる。
+    前回は、Bierman による線型圏と Seely によるモデル (を修正したもの) の関係について述べたが、今回は Lafont\mref|type="bib",ref="llcm"|; によって提案されたモデルとの関係について述べる。
   >
   \p<
     モデルの定義に入る前に、コモノイドについて復習しておこう。
@@ -43,7 +43,7 @@
           >
         >
       >
-      が全て可換であるとき、組 &m<(A, \sbsp<d><A><\pr;>, \sbsp<e><A><\pr;>)> を\em<可換コモノイド\fl<commutative comonoid>> という。
+      が全て可換であるとき、組 &m<(A, \sbsp<d><A><\pr;>, \sbsp<e><A><\pr;>)> を\def<可換コモノイド\fl<commutative comonoid>> という。
       なお、最後の図式の右側の垂直な射は、テンソル積の左右を入れ替える同型射である。
       それ以外のラベルのない射は、対称モノイダル圏に定まる構造射が誘導する同型射である。
     >
@@ -66,7 +66,7 @@
           \ar|s="2",e="4"|<\sbsp<e><B><\pr;>> \ar|s="3",e="4",line="2",tip="none"|;
         >
       >
-      をともに可換にするとき、&m<f> を\em<可換コモノイドの射\fl<commutative comonoid morphism>> という。
+      をともに可換にするとき、&m<f> を\def<可換コモノイドの射\fl<commutative comonoid morphism>> という。
     >
   >
   \p<
@@ -77,7 +77,7 @@
   \thm|type="def"|<
     \p<
       対称モノイダル圏 &m<\scr<C>> について、忘却関手 &m<U: \bfrm<Comon> (\scr<C>) \to; \scr<C>> に右随伴関手 &m<G: \scr<C> \to; \bfrm<Comon> (\scr<C>)> が存在するとする。
-      このとき、&m<\scr<C>> を \em<Lafont 圏\fl<— category>> という。
+      このとき、&m<\scr<C>> を \def<Lafont 圏\fl<— category>> という。
     >
   >
   \p<

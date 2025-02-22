@@ -13,7 +13,7 @@
   \thm|type="def"|<
     \p<
       有限完備な圏 &m<\scr<F>> をとる。
-      終対象からの射 &m<\top;: 1 \to; `V> が\em<部分対象分類子\fl<subobject classifier>> であるとは、任意の単射 &m<m: M \tailrarr; F> に対し、射 &m<`x: F \to; `V> が一意に存在して、図式
+      終対象からの射 &m<\top;: 1 \to; `V> が\def<部分対象分類子\fl<subobject classifier>> であるとは、任意の単射 &m<m: M \tailrarr; F> に対し、射 &m<`x: F \to; `V> が一意に存在して、図式
       &mb<
         \diag<
           \v<M> \v<1> \br;
@@ -47,7 +47,7 @@
   \thm|type="def"|<
     \p<
       景 &m<(\scr<C>, J)> をとる。
-      &m<C> 上の篩 &m<S> が &m<J> に関して\em<閉\fl<closed>> であるとは、任意の射 &m<f: D \to; C> に対して、&m<\sp<f><*> S \in; JD> ならば &m<f \in; S> が成り立つことである。
+      &m<C> 上の篩 &m<S> が &m<J> に関して\def<閉\fl<closed>> であるとは、任意の射 &m<f: D \to; C> に対して、&m<\sp<f><*> S \in; JD> ならば &m<f \in; S> が成り立つことである。
     >
   >
   \p<
@@ -74,7 +74,7 @@
       &mb<
         \overline<S> \coloneqq; `{ f \mid; \op<cod> f = C, \sp<f><*> S \in; J (\op<dom> f) `}
       >
-      を &m<S> の\em<閉包\fl<closure>> という。
+      を &m<S> の\def<閉包\fl<closure>> という。
     >
   >
   \thm|type="prp"|<
@@ -110,13 +110,13 @@
   >
   \prf<
     \p<
-      &m<S \subseteq; \overline<S>> であるから &m<\sp<h><*> S \subseteq; \sp<h><*> \overline<S>> であるが、\ref|type="thm",ref="clstab"|; によって右辺は閉なので、両辺の閉包をとれば &m<\overline<\sp<h><*> S> \subseteq; \sp<h><*> \overline<S>> を得る。
+      &m<S \subseteq; \overline<S>> であるから &m<\sp<h><*> S \subseteq; \sp<h><*> \overline<S>> であるが、\mref|type="thm",ref="clstab"|; によって右辺は閉なので、両辺の閉包をとれば &m<\overline<\sp<h><*> S> \subseteq; \sp<h><*> \overline<S>> を得る。
       逆に、任意に &m<f \in; \sp<h><*> \overline<S>: E \to; D> をとると、&m<h \circ; f \in; \overline<S>> より &m<\sp<f><*> (\sp<h><*> S) \in; JE> であるから、すなわち &m<f \in; \overline<\sp<h><*> S>> が成り立つ。
       これより、&m<\overline<\sp<h><*> S> \supseteq; \sp<h><*> \overline<S>> も示された。
     >
   >
   \p<
-    \ref|type="thm",ref="clstab"|; によって、篩が閉であるという性質は引き戻しによって保存されるので、対象に対してその上の閉篩を返す対応は関手になる。
+    \mref|type="thm",ref="clstab"|; によって、篩が閉であるという性質は引き戻しによって保存されるので、対象に対してその上の閉篩を返す対応は関手になる。
   >
   \thm|type="def"|<
     \p<
@@ -197,7 +197,7 @@
       逆の包含関係である &m<\sp<f><*> U \supseteq; \sb<S><f>> は明らかに成り立つので、&m<\sp<f><*> U = \sb<S><f>> が成り立つ。
     >
     \p<
-      さて、&m<\sb<S><f>> は閉であることと\ref|type="thm",ref="starpres"|; を用いると、
+      さて、&m<\sb<S><f>> は閉であることと\mref|type="thm",ref="starpres"|; を用いると、
       &mb<
         \sp<f><*> \overline<U> = \overline<\sp<f><*> U> = \overline<\sb<S><f>> = \sb<S><f>
       >

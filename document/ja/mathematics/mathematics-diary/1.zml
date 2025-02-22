@@ -13,7 +13,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象 &m<S> に対し、表現可能関手 &m<\sb<\op<Hom>><\scr<C>> (S, \text<->): \scr<C> \to; \bfrm<Set>> がフィルター余極限を保存するとき、&m<S> は\em<有限\fl<finite>> であるという。
+      圏 &m<\scr<C>> の対象 &m<S> に対し、表現可能関手 &m<\sb<\op<Hom>><\scr<C>> (S, \text<->): \scr<C> \to; \bfrm<Set>> がフィルター余極限を保存するとき、&m<S> は\def<有限\fl<finite>> であるという。
       圏 &m<\scr<C>> の有限対象全体は &m<\op<Fin> (\scr<C>)> で表す。
     >
   >
@@ -64,7 +64,7 @@
         FX \cong; \coprod<i \in; I><> \sb<K><i> \backslash; \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)
       >
       と表せるとする。
-      このとき、&m<F> は\em<解析的\fl<analytic>> であるという。
+      このとき、&m<F> は\def<解析的\fl<analytic>> であるという。
       ここで、&m<\sb<K><i> \backslash; \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)> は左からの群作用
       &mb<
         \array|align="rcl"|<
@@ -91,12 +91,12 @@
       >
     >
     \p<
-      がともに成り立っているとき、&m<S> は\em<推移的\fl<transitive>> であるという。
+      がともに成り立っているとき、&m<S> は\def<推移的\fl<transitive>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の射 &m<f: U \to; X> に対し、&m<f> をスライス圏 &m<\scr<C> `/ X> の対象と見なすと推移的であるとき、&m<f> を &m<X> の\em<弱正規形\fl<weak normal form>> という。
+      圏 &m<\scr<C>> の射 &m<f: U \to; X> に対し、&m<f> をスライス圏 &m<\scr<C> `/ X> の対象と見なすと推移的であるとき、&m<f> を &m<X> の\def<弱正規形\fl<weak normal form>> という。
     >
   >
   \p<
@@ -125,7 +125,7 @@
   >
   \prf<
     \p<
-      Hasegawa\ref|type="bib",ref="htaa"|; を参照。
+      Hasegawa\mref|type="bib",ref="htaa"|; を参照。
       もしかしたらここにも書くかもしれない。
     >
   >
@@ -141,7 +141,7 @@
         FX \cong; \coprod<i \in; I><> \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)
       >
       と表せるとする。
-      このとき、&m<F> は\em<正規\fl<normal>> であるという。
+      このとき、&m<F> は\def<正規\fl<normal>> であるという。
     >
   >
   \p<
@@ -152,7 +152,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の射 &m<f: U \to; X> に対し、&m<f> をスライス圏 &m<\scr<C> `/ X> の対象と見なすと始対象であるとき、&m<f> を &m<X> の\em<正規形\fl<normal form>> という。
+      圏 &m<\scr<C>> の射 &m<f: U \to; X> に対し、&m<f> をスライス圏 &m<\scr<C> `/ X> の対象と見なすと始対象であるとき、&m<f> を &m<X> の\def<正規形\fl<normal form>> という。
     >
   >
   \p<
@@ -179,7 +179,7 @@
   >
   \prf<
     \p<
-      Hasegawa\ref|type="bib",ref="htaa"|; を参照。
+      Hasegawa\mref|type="bib",ref="htaa"|; を参照。
     >
   >
   \p<

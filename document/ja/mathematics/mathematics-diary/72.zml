@@ -31,7 +31,7 @@
         >
       >
       で定義する。
-      これによって定まる整合空間 &m<A \times; B> を &m<A> と &m<B> の\em<直積\fl<direct product>> という。
+      これによって定まる整合空間 &m<A \times; B> を &m<A> と &m<B> の\def<直積\fl<direct product>> という。
     >
   >
   \p<
@@ -127,7 +127,7 @@
         \c; \c<y> \c<\longmapsto;> \c<(2, y)>
       >
     >
-    はともに\ref|type="thm",ref="invimg"|; の条件を満たすから、安定写像 &m<\sb<`p><1>: A \times; B \to; A> と &m<\sb<`p><2>: A \times; B \to; B> が誘導される。
+    はともに\mref|type="thm",ref="invimg"|; の条件を満たすから、安定写像 &m<\sb<`p><1>: A \times; B \to; A> と &m<\sb<`p><2>: A \times; B \to; B> が誘導される。
     具体的には、
     &mb<
       \array|align="rrcl"|<
@@ -193,7 +193,7 @@
         >
       >
       で定義する。
-      これによって定まる整合空間 &m<A + B> を &m<A> と &m<B> の\em<直和\fl<direct sum>> という。
+      これによって定まる整合空間 &m<A + B> を &m<A> と &m<B> の\def<直和\fl<direct sum>> という。
     >
   >
   \p<
@@ -215,7 +215,7 @@
   >
   \p<
     直和への包含射は、直積からの射影と同様に定義される。
-    ただし、\ref|type="thm",ref="invimg"|; ではなく\ref|type="thm",ref="dirimg"|; を用いる。
+    ただし、\mref|type="thm",ref="invimg"|; ではなく\mref|type="thm",ref="dirimg"|; を用いる。
     整合空間 &m<A, B> に対し、
     &mb<
       \array|align="rrcl"|<
@@ -227,7 +227,7 @@
         \c; \c<y> \c<\longmapsto;> \c<(2, y)>
       >
     >
-    はともに\ref|type="thm",ref="dirimg"|; の条件を満たすから、安定写像 &m<\sb<`i><1>: A \to; A + B> と &m<\sb<`i><2>: B \to; A + B> が誘導される。
+    はともに\mref|type="thm",ref="dirimg"|; の条件を満たすから、安定写像 &m<\sb<`i><1>: A \to; A + B> と &m<\sb<`i><2>: B \to; A + B> が誘導される。
     具体的には、
     &mb<
       \array|align="rrcl"|<
@@ -244,12 +244,12 @@
   \p<
     さて、残念なことに、整合空間の直和は圏論的な余積ではない。
     余積にならないことは以下の観察から分かる。
-    整合空間 &m<A, B> に対し、\ref|type="thm",ref="sumset"|; によって、
+    整合空間 &m<A, B> に対し、\mref|type="thm",ref="sumset"|; によって、
     &mb<
       A + B = `{`{1`} \times; a \mid; a \in; A`} \cup; `{`{2`} \times; b \mid; b \in; B`}
     >
-    と書けるわけだが、この右辺の 2 つの集合は実は非交ではなく、&m<\empty;> が両方に属してしまっている。
-    そのため、別の整合空間 &m<C> および安定写像 &m<f: A \to; C> と &m<g: B \to; C> に対して、&m<f (\empty;) = g (\empty;)> が成り立っていない限り適切な写像 &m<h: A + B \to; C> を定義できない。
+    と書けるわけだが、この右辺の 2 つの集合は実は非交ではなく、&m<\defpty;> が両方に属してしまっている。
+    そのため、別の整合空間 &m<C> および安定写像 &m<f: A \to; C> と &m<g: B \to; C> に対して、&m<f (\defpty;) = g (\defpty;)> が成り立っていない限り適切な写像 &m<h: A + B \to; C> を定義できない。
   >
   \p<
     以上の理由から、通常の論理の意味論を整合空間で展開する際に、選言の解釈としては直和は役に立たない。

@@ -14,7 +14,7 @@
   \thm|type="def"|<
     \p<
       トポス &m<\scr<E>> において、任意の全射 &m<e: X \headrarr; I> に対してある射 &m<s: I \to; X> が存在して &m<e \circ; s = \sb<\rm<id>><I>> を満たすとする。
-      このとき、&m<\scr<E>> は\em<選択公理\fl<axiom of choice>> を満たすという。
+      このとき、&m<\scr<E>> は\def<選択公理\fl<axiom of choice>> を満たすという。
     >
   >
   \thm|type="def"|<
@@ -29,7 +29,7 @@
       >
       が存在したとすると、&m<u> と &m<v> の少なくとも一方は同型射になっているとする。
       ここで、&m<P \bb<N>> は &m<\bb<N>> の冪対象である。
-      このとき、&m<\scr<E>> は\em<連続体仮説\fl<continuum hypothesis>> を満たすという。
+      このとき、&m<\scr<E>> は\def<連続体仮説\fl<continuum hypothesis>> を満たすという。
     >
   >
   \p<
@@ -64,7 +64,7 @@
       &mb<
         \sp<><\forall;> q \leq; p \ssbin; \sp<><\exists;> d \leq; q \ssbin; d \in; D
       >
-      が成り立つとき、&m<D> は\em<稠密\fl<dense>> であるという。
+      が成り立つとき、&m<D> は\def<稠密\fl<dense>> であるという。
     >
   >
   \thm|type="def"|<
@@ -73,7 +73,7 @@
       &mb<
         Jp \coloneqq; `{D \mid; &raw<&m<D> は &m<p> 上の稠密な篩>`}
       >
-      で定めたとき、&m<J> を\em<稠密位相\fl<dense topology>> という。
+      で定めたとき、&m<J> を\def<稠密位相\fl<dense topology>> という。
     >
   >
   \p<
@@ -117,7 +117,7 @@
         \op<char> (F) \neq; \op<char> (0): F \to; \sb<`V><\rm<Sh>>
       >
       である。
-      これにより、\ref|type="thm",ref="gen"|; を用いると、ある元 &m<p \in; \bfrm<P>> と射 &m<f: \bf<y> p \to; F> が存在し、
+      これにより、\mref|type="thm",ref="gen"|; を用いると、ある元 &m<p \in; \bfrm<P>> と射 &m<f: \bf<y> p \to; F> が存在し、
       &mb<
         \op<char> (F) \circ; f \neq; \op<char> (0) \circ; f: \bf<y> p \to; \sb<`V><\rm<Sh>>
       >
@@ -138,7 +138,7 @@
     \p<
       具体的に &m<\op<Sub> (F)> の任意の族の交わりと結びを構成することができる。
       また、&m<\op<Sub> (F)> の任意の元に対してその補元が存在することも比較的容易に示せる。
-      証明の詳細は、MacLane\ref|type="bib",ref="sgl"|; の III.8 節などを参照してほしい。
+      証明の詳細は、MacLane\mref|type="bib",ref="sgl"|; の III.8 節などを参照してほしい。
     >
   >
   \thm|type="thm"|<
@@ -205,8 +205,8 @@
     >
     \p<
       &m<M \neq; I> を仮定して矛盾を導く。
-      \ref|type="thm",ref="compsub"|; によって &m<\op<Sub> (I)> は Boole 代数だから、&m<\neg; M \neq; 0> である。
-      したがって、\ref|type="thm",ref="morph"|; によって、ある表現可能関手 &m<V> と射 &m<f: V \to; \neg; M> がとれ、&m<V \ncong; 0> である。
+      \mref|type="thm",ref="compsub"|; によって &m<\op<Sub> (I)> は Boole 代数だから、&m<\neg; M \neq; 0> である。
+      したがって、\mref|type="thm",ref="morph"|; によって、ある表現可能関手 &m<V> と射 &m<f: V \to; \neg; M> がとれ、&m<V \ncong; 0> である。
       引き戻し 
       &mb<
         \diag<
@@ -219,7 +219,7 @@
       を考えると、トポスの引き戻しは全射を保存するから、&m<e'> は全射である。
       &m<X' \cong; 0> とすると、&m<e'> は始対象からの射だから単射となり、したがって同型射となるが、それは &m<V \ncong; 0> に反する。
       したがって、&m<X' \ncong; 0> が成り立つ。
-      再び\ref|type="thm",ref="morph"|; を用いれば、表現可能関手 &m<W> と射 &m<g: W \to; X'> がとれて、&m<W \ncong; 0> である。
+      再び\mref|type="thm",ref="morph"|; を用いれば、表現可能関手 &m<W> と射 &m<g: W \to; X'> がとれて、&m<W \ncong; 0> である。
     >
     \p<
       ここで、全射と単射による分解 
@@ -231,7 +231,7 @@
         >
       >
       を考えると、まず &m<W \ncong; 0> より &m<Z \ncong; 0> である。
-      さらに\ref|type="thm",ref="subyp"|; によって &m<W> から 1 への射は単射だから、可換図式 
+      さらに\mref|type="thm",ref="subyp"|; によって &m<W> から 1 への射は単射だから、可換図式 
       &mb<
         \diag<
           \v<W> \v<1> \br;
@@ -264,7 +264,7 @@
   \thm|type="def"|<
     \p<
       &m<p \in; \sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> 上の篩 &m<S> をとる。
-      &m<S> が\em<閉\fl<closed>> であるとは、
+      &m<S> が\def<閉\fl<closed>> であるとは、
       &mb<
         \sp<><\forall;> q \leq; p \ssbin; (S \darr|bin|; q \in; Jq \implies; q \in; S)
       >
@@ -302,7 +302,7 @@
   \prf<
     \p<
       この命題の証明はここでは省略する。
-      MacLane\ref|type="bib",ref="sgl"|; の I.4 節と III.7 節などを参照してほしい。
+      MacLane\mref|type="bib",ref="sgl"|; の I.4 節と III.7 節などを参照してほしい。
     >
   >
   \h2<単射列の構成>
@@ -356,7 +356,7 @@
   \prf<
     \p<
       任意に &m<p \in; \bfrm<P>> および &m<(b, n) \in; B \times; \bb<N>> をとる。
-      このとき、&m<\op<char> (A) \sb<><p> (b, n) \in; `V p> が &m<\sb<`V><\rm<Sh>> p> に属していることを示せば良いが、\ref|type="thm",ref="expsubc"|; によって、それはこれが閉篩であることを示すのと同値である。
+      このとき、&m<\op<char> (A) \sb<><p> (b, n) \in; `V p> が &m<\sb<`V><\rm<Sh>> p> に属していることを示せば良いが、\mref|type="thm",ref="expsubc"|; によって、それはこれが閉篩であることを示すのと同値である。
     >
     \p<
       閉篩の定義の対偶を示す。
@@ -491,8 +491,8 @@
       右側の単射は、次に述べるように &m<\bf<a> g> である。
     >
     \p<
-      \ref|type="thm",ref="gmono"|; によって &m<g> は単射であるが、層化関手は単射を保存するから &m<\bf<a> g: \bf<a> `D B \to; \bf<a> \sp<\sb<`V><\rm<Sh>>><`D \bb<N>>> も単射である。
-      \ref|type="thm",ref="iso"|; によってこれの終域は &m<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>> と同型だから、まさに &m<\bf<a> g> が命題の図式の右側の単射を与えている。
+      \mref|type="thm",ref="gmono"|; によって &m<g> は単射であるが、層化関手は単射を保存するから &m<\bf<a> g: \bf<a> `D B \to; \bf<a> \sp<\sb<`V><\rm<Sh>>><`D \bb<N>>> も単射である。
+      \mref|type="thm",ref="iso"|; によってこれの終域は &m<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>> と同型だから、まさに &m<\bf<a> g> が命題の図式の右側の単射を与えている。
     >
   >
   \h2<全射の存在性>
@@ -580,7 +580,7 @@
   \prf<
     \p<
       &m<0 \ncong; 1> かつ &m<\op<Epi> (X, Y) \cong; 0> が成り立つとし、さらに全射 &m<g: X \headrarr; Y> が存在すると仮定する。
-      このとき &m<(`p, g): 1 \times; X \to; 1 \times; Y> も全射になるから、&m<\widehat<g>: 1 \to; \sp<Y><X>> を冪の随伴で &m<g> と対応する射とすると、\ref|type="thm",ref="epiepi"|; によって、図式 
+      このとき &m<(`p, g): 1 \times; X \to; 1 \times; Y> も全射になるから、&m<\widehat<g>: 1 \to; \sp<Y><X>> を冪の随伴で &m<g> と対応する射とすると、\mref|type="thm",ref="epiepi"|; によって、図式 
       &mb<
         \diag<
           \v<1> \v<\sp<Y><X>> \br;
@@ -601,7 +601,7 @@
   >
   \thm|type="def"|<
     \p<
-      相異なる 2 元 &m<p, p' \in; \bfrm<P>> に対し、&m<q \leq; p> かつ &m<q \leq; p'> を満たす &m<q \in; \bfrm<P>> が存在しないとき、&m<p> と &m<p'> は\em<両立しない\fl<incompatible>> という。
+      相異なる 2 元 &m<p, p' \in; \bfrm<P>> に対し、&m<q \leq; p> かつ &m<q \leq; p'> を満たす &m<q \in; \bfrm<P>> が存在しないとき、&m<p> と &m<p'> は\def<両立しない\fl<incompatible>> という。
     >
   >
   \thm|type="lem",id="incomp"|<
@@ -683,8 +683,8 @@
       &m<\frak<U>> の代わりに &m<\frak<U> \setminus; `{0`}> を考えることで、初めから &m<\frak<U>> には 0 は属さないとして良い。
     >
     \p<
-      各 &m<U \in; \frak<U>> に対し &m<U \ncong; 0> だから、\ref|type="thm",ref="morph"|; を用いると、ある元 &m<\sb<p><U> \in; \bfrm<P>> と射 &m<\sb<f><U>: \bf<y> \sb<p><U> \to; U> がとれる。
-      \ref|type="thm",ref="subyp"|; によって &m<\bf<y> \sb<p><U>> も 1 の部分対象だから、&m<\sb<f><U>> の存在は &m<\op<Sub> (1)> で &m<\bf<y> \sb<p><U> \subseteq; U> が成り立つことを意味する。
+      各 &m<U \in; \frak<U>> に対し &m<U \ncong; 0> だから、\mref|type="thm",ref="morph"|; を用いると、ある元 &m<\sb<p><U> \in; \bfrm<P>> と射 &m<\sb<f><U>: \bf<y> \sb<p><U> \to; U> がとれる。
+      \mref|type="thm",ref="subyp"|; によって &m<\bf<y> \sb<p><U>> も 1 の部分対象だから、&m<\sb<f><U>> の存在は &m<\op<Sub> (1)> で &m<\bf<y> \sb<p><U> \subseteq; U> が成り立つことを意味する。
     >
     \p<
       ここで、相異なる &m<U, U' \in; \frak<U>> からとると、
@@ -694,14 +694,14 @@
       が成り立つ。
       これにより、任意の &m<q \in; \bfrm<P>> に対して、
       &mb<
-        \op<Hom> (q, \sb<p><U>) \cap; \op<Hom> (q, \sb<p><U'>) = \empty;
+        \op<Hom> (q, \sb<p><U>) \cap; \op<Hom> (q, \sb<p><U'>) = \defpty;
       >
       が分かり、これはすなわち 
       &mb<
         A \coloneqq; `{\sb<p><U> \in; \bfrm<P> \mid; U \in; \frak<U>`}
       >
       の相異なる 2 元は両立しないことを意味している。
-      \ref|type="thm",ref="incomp"|; によって &m<A> は高々可算なので、&m<\frak<U>> も高々可算である。
+      \mref|type="thm",ref="incomp"|; によって &m<A> は高々可算なので、&m<\frak<U>> も高々可算である。
     >
   >
   \thm|type="prp",id="preserve"|<
@@ -715,7 +715,7 @@
       ある無限集合 &m<S, T> が存在して、&m<\op<Epi> (S, T) \cong; 0> および &m<\op<Epi> (\widetilde<S>, \widetilde<T>) \ncong; 0> がともに成り立つと仮定する。
     >
     \p<
-      まず\ref|type="thm",ref="morph"|; によって、ある表現可能関手 &m<X> と射 &m<f: X \to; \op<Epi> (\widetilde<S>, \widetilde<T>)> が存在する。
+      まず\mref|type="thm",ref="morph"|; によって、ある表現可能関手 &m<X> と射 &m<f: X \to; \op<Epi> (\widetilde<S>, \widetilde<T>)> が存在する。
       さらに &m<X \ncong; 0> である。
       &m<m: \op<Epi> (\widetilde<S>, \widetilde<T>) \tailrarr; \widetilde<T> \sp<><\widetilde<S>>> を部分対象を与える単射とする。
       このとき、明らかに 
@@ -727,7 +727,7 @@
           \ar|s="3",e="2",inv|<m>
         >
       >
-      は可換だから、\ref|type="thm",ref="epiepi"|; によって &m<g \coloneqq; (`p, \widehat<m \circ; f>): X \times; \widetilde<S> \to; X \times; \widetilde<T>> は全射である。
+      は可換だから、\mref|type="thm",ref="epiepi"|; によって &m<g \coloneqq; (`p, \widehat<m \circ; f>): X \times; \widetilde<S> \to; X \times; \widetilde<T>> は全射である。
     >
     \p<
       さて、各 &m<s \in; S> および &m<t \in; T> に対し、これを &m<s: 1 \to; S> と &m<t: 1 \to; T> という &m<\bfrm<Set>> の射と見なして、引き戻し 
@@ -809,14 +809,14 @@
         \sb<U><st> \cap; \sb<U><st'> = 0
       >
       が得られる。
-      ところで &m<X> は表現可能関手だったから、\ref|type="thm",ref="subyp"|;  により 1 への射は単射である。
+      ところで &m<X> は表現可能関手だったから、\mref|type="thm",ref="subyp"|;  により 1 への射は単射である。
       したがって、&m<\sb<U><st>, \sb<U><st'>> は 1 の部分対象とも見なすことができ、&m<\op<Sub> (1)> においても上の等式は成り立つ。
       このことから、
       &mb<
         \sb<\frak<U>><s> \coloneqq; `{\sb<U><st> \in; \op<Sub> (1) \mid; t \in; T`}
       >
       はどの相異なる 2 元をとっても交わりをもたない。
-      したがって、\ref|type="thm",ref="suslin"|; によって、&m<\sb<\frak<U>><s>> は高々可算である。
+      したがって、\mref|type="thm",ref="suslin"|; によって、&m<\sb<\frak<U>><s>> は高々可算である。
       さらに、
       &mb<
         \sb<W><s> \coloneqq; `{t \in; T \mid; (s, t) \in; W`}
@@ -849,7 +849,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="monomono"|; によって、単射列 
+      \mref|type="thm",ref="monomono"|; によって、単射列 
       &mb<
         \diag<
           \v<\widetilde<\bb<N>>> \v<\widetilde<\sp<2><\bb<N>>>> \v<\widetilde<B>> \v<\sp<\sb<`V><\rm<Sh>>><\widetilde<\bb<N>>>>
@@ -862,10 +862,10 @@
       &m<\sp<2><\bb<N>>> は &m<\bb<N>> よりも真に濃度が大きいから、&m<\bfrm<Set>> で全射 &m<\bb<N> \headrarr; \sp<2><\bb<N>>> は存在しない。
       &m<\bfrm<Set>> では &m<\op<Epi> (\bb<N>, \sp<2><\bb<N>>)> はそのような全射そのもの全体の集合だったから、これにより &m<\op<Epi> (\bb<N>, \sp<2><\bb<N>>) \cong; 0> が成り立つ。
       同じようにして、&m<\op<Epi> (\sp<2><\bb<N>>, B) \cong; 0> も成り立つ。
-      したがって、\ref|type="thm",ref="preserve"|; により、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> で &m<\op<Epi> (\widetilde<\bb<N>>, \widetilde<\sp<2><\bb<N>>>) \cong; 0> および &m<\op<Epi> (\widetilde<\sp<2><\bb<N>>>, \widetilde<B>) \cong; 0> が成り立つ。
+      したがって、\mref|type="thm",ref="preserve"|; により、&m<\bfrm<Sh> (\sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>)> で &m<\op<Epi> (\widetilde<\bb<N>>, \widetilde<\sp<2><\bb<N>>>) \cong; 0> および &m<\op<Epi> (\widetilde<\sp<2><\bb<N>>>, \widetilde<B>) \cong; 0> が成り立つ。
     >
     \p<
-      このことから、まず &m<\op<Epi> (\widetilde<\bb<N>>, \widetilde<\sp<2><\bb<N>>>) \cong; 0> と\ref|type="thm",ref="noepi"|; によって、&m<u> は同型射になり得ない。
+      このことから、まず &m<\op<Epi> (\widetilde<\bb<N>>, \widetilde<\sp<2><\bb<N>>>) \cong; 0> と\mref|type="thm",ref="noepi"|; によって、&m<u> は同型射になり得ない。
       さらに、&m<w \circ; v> が同型射だとすると、&m<w> は全射となる。
       もともと &m<w> は単射だから &m<w> は同型射となり、したがって &m<v> も同型射である。
       しかし、これは &m<\op<Epi> (\widetilde<\sp<2><\bb<N>>>, \widetilde<B>) \cong; 0> に反する。

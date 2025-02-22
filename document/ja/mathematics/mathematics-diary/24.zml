@@ -26,13 +26,13 @@
         >
       >
       が可換であるとする。
-      このとき、&m<`a> を\em<双自然変換\fl<dinatural transformation>> といい、&m<`a: F \raarr; G> で表す。
+      このとき、&m<`a> を\def<双自然変換\fl<dinatural transformation>> といい、&m<`a: F \raarr; G> で表す。
     >
   >
   \thm|type="def"|<
     \p<
       関手 &m<F: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
-      &m<\scr<D>> の対象 &m<D> に対して &m<`a: \sb<`D><D> \raarr; F> の形の双自然変換を、&m<D> における &m<F> の\em<楔\fl<wedge>> といい、&m<`a: D \ddot<\to;> F> で表す。
+      &m<\scr<D>> の対象 &m<D> に対して &m<`a: \sb<`D><D> \raarr; F> の形の双自然変換を、&m<D> における &m<F> の\def<楔\fl<wedge>> といい、&m<`a: D \ddot<\to;> F> で表す。
       ここで、&m<\sb<`D><D>> は &m<D> に値をもつ定値関手である。
     >
   >
@@ -63,7 +63,7 @@
         >
       >
       は可換である。
-      このとき、&m<\bar<D>> を &m<F> の\em<エンド\fl<end>> といい、
+      このとき、&m<\bar<D>> を &m<F> の\def<エンド\fl<end>> といい、
       &mb<
         \bar<D> \eqqcolon; \int<C \in; \scr<C>> F (C, C)
       >
@@ -77,7 +77,7 @@
   \thm|type="def"|<
     \p<
       関手 &m<F: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
-      &m<\scr<D>> の対象 &m<D> に対して &m<`a: F \raarr; \sb<`D><D>> の形の双自然変換を、&m<D> における &m<F> の\em<余楔\fl<cowedge>> といい、&m<`a: F \ddot<\to;> D> で表す。
+      &m<\scr<D>> の対象 &m<D> に対して &m<`a: F \raarr; \sb<`D><D>> の形の双自然変換を、&m<D> における &m<F> の\def<余楔\fl<cowedge>> といい、&m<`a: F \ddot<\to;> D> で表す。
     >
   >
   \thm|type="def"|<
@@ -93,7 +93,7 @@
         >
       >
       は可換である。
-      このとき、&m<\bar<D>> を &m<F> の\em<コエンド\fl<coend>> といい、
+      このとき、&m<\bar<D>> を &m<F> の\def<コエンド\fl<coend>> といい、
       &mb<
         \bar<D> \eqqcolon; \int<><C \in; \scr<C>> F (C, C)
       >
@@ -126,7 +126,7 @@
     >
     \p<
       によって定める。
-      この圏を &m<\scr<C>> の\em<捻れた射の圏\fl<twisted arrow category>> という。
+      この圏を &m<\scr<C>> の\def<捻れた射の圏\fl<twisted arrow category>> という。
     >
   >
   \p<
@@ -195,7 +195,7 @@
     エンドの記号として積分記号を用いるのが、このことから頷けるだろう。
   >
   \p<
-    \ref|type="thm",ref="hom"|; と\ref|type="thm",ref="nat"|; を用いることで、いろいろな圏論上の概念がエンドやコエンドで表すことができるようになる。
+    \mref|type="thm",ref="hom"|; と\mref|type="thm",ref="nat"|; を用いることで、いろいろな圏論上の概念がエンドやコエンドで表すことができるようになる。
     次回はそれについて触れていきたいと思う。
   >
   \h1<参考文献>

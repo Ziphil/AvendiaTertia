@@ -23,15 +23,15 @@
   \thm|type="def"|<
     \p<
       集合 &m<X> 上の関係 &m<\prec;> をとる。
-      &m<X> の空でない部分集合が &m<\prec;> に関して極小な元を属するとき、&m<\prec;> を\em<整礎関係\fl<well-founded relation>> という。
-      また、対 &m<(X, \prec|ord|;)> を\em<整礎集合\fl<well-founded set>> という。
+      &m<X> の空でない部分集合が &m<\prec;> に関して極小な元を属するとき、&m<\prec;> を\def<整礎関係\fl<well-founded relation>> という。
+      また、対 &m<(X, \prec|ord|;)> を\def<整礎集合\fl<well-founded set>> という。
     >
   >
   \thm|type="def"|<
     \p<
       集合 &m<X> 上の関係 &m<\preceq;> をとる。
-      &m<X> 上で &m<\preceq;> が全順序であり、&m<X> 上で &m<\prec;> が整礎関係であるとき、&m<\preceq;> を\em<整列順序\fl<well-order>> という。
-      また、対 &m<(X, \preceq|ord|;)> を\em<整列集合\fl<well-ordered set>> という。
+      &m<X> 上で &m<\preceq;> が全順序であり、&m<X> 上で &m<\prec;> が整礎関係であるとき、&m<\preceq;> を\def<整列順序\fl<well-order>> という。
+      また、対 &m<(X, \preceq|ord|;)> を\def<整列集合\fl<well-ordered set>> という。
     >
   >
   \p<
@@ -65,8 +65,8 @@
       >
     >
     \p<
-      をともに満たすとき、&m<`a> を\em<順序数\fl<ordinal>> という。
-      また、1 つ目の条件を &m<`a> の\em<推移性\fl<transitivity>> と呼び、2 つ目の条件を &m<`a> の\em<三分性\fl<trichotomy>> と呼ぶことにする。
+      をともに満たすとき、&m<`a> を\def<順序数\fl<ordinal>> という。
+      また、1 つ目の条件を &m<`a> の\def<推移性\fl<transitivity>> と呼び、2 つ目の条件を &m<`a> の\def<三分性\fl<trichotomy>> と呼ぶことにする。
     >
   >
   \p<
@@ -141,7 +141,7 @@
     \p<
       定理中の 2 つの主張は明らかに同値なので、2 つ目の主張のみを示す。
       まず、左の条件から右の条件を導くため、&m<`b \subset; `a> を仮定する。
-      すると、&m<`a \setminus; `b \neq; \empty;> であり、\ref|type="thm",ref="wellord"|; によって &m<`a> は整列集合だから、&m<`j \in; \min; (`a \setminus; `b)> がとれる。
+      すると、&m<`a \setminus; `b \neq; \defpty;> であり、\mref|type="thm",ref="wellord"|; によって &m<`a> は整列集合だから、&m<`j \in; \min; (`a \setminus; `b)> がとれる。
       以降、&m<`j = `b> であることを示す。
     >
     \p<
@@ -174,7 +174,7 @@
   >
   \p<
     任意の順序数は &m<\ineq;> によって順序付けられていると見なしたことを思い出そう。
-    ここで、\ref|type="thm",ref="elemord"|; によって順序数の元は順序数であり、\ref|type="thm",ref="elemsub"|; によって順序数同士であれば &m<\ineq;> と &m<\subseteq;> は同値であった。
+    ここで、\mref|type="thm",ref="elemord"|; によって順序数の元は順序数であり、\mref|type="thm",ref="elemsub"|; によって順序数同士であれば &m<\ineq;> と &m<\subseteq;> は同値であった。
     したがって、順序数は &m<\subseteq;> によって順序付けられていると見なしても、全く同じ順序集合が得られることになる。
     以降では、このことを踏まえて、順序数に関しては同値である &m<\ineq;> と &m<\subseteq;> をともに &m<\leq;> で表すことにする。
   >
@@ -195,11 +195,11 @@
   >
   \prf<
     \p<
-      &m<`g \coloneqq; `a \cap; `b> とおくと、\ref|type="thm",ref="ordcap"|; によってこれは順序数である。
+      &m<`g \coloneqq; `a \cap; `b> とおくと、\mref|type="thm",ref="ordcap"|; によってこれは順序数である。
       以降、&m<`g = `a> または &m<`g = `b> が成り立つことを背理法によって示す。
       そこで、&m<`g \neq; `a> かつ &m<`g \neq; `b> であると仮定する。
       まず、定義から &m<`g \subseteq; `a> であるから、&m<`g \subset; `a> が成り立つ。
-      すると、\ref|type="thm",ref="elemsub"|; によって &m<`g \in; `a> が得られる。 
+      すると、\mref|type="thm",ref="elemsub"|; によって &m<`g \in; `a> が得られる。 
       同様にして、&m<`g \in; `b> も得られる。
       したがって、&m<`g \in; `a \cap; `b = `g> が成り立つことになるが、これは基礎公理に矛盾する。
     >
@@ -222,7 +222,7 @@
     \p<
       次に、&m<\bigcup|in|; \scr<F>> の三分性を示す。
       任意に元 &m<`j, `h \in; \bigcup|in|; \scr<F>> をとると、ある順序数 &m<`a, `b \in; \scr<F>> が存在して &m<`j \in; `a> および &m<`h \in; `b> が成り立つ。
-      \ref|type="thm",ref="tri"|; によって、&m<`b = `a> もしくは &m<`b \subset; `a> もしくは &m<`b \supset; `a> のいずれかが成り立つから、各場合について議論する。
+      \mref|type="thm",ref="tri"|; によって、&m<`b = `a> もしくは &m<`b \subset; `a> もしくは &m<`b \supset; `a> のいずれかが成り立つから、各場合について議論する。
     >
     \p<
       &m<`b = `a> であれば &m<`j, `h \in; `a> であるから、&m<`a> の三分性によって &m<`h = `j> か &m<`h \in; `j> か &m<`h \ni; `j> のいずれかが成り立つことが分かる。
@@ -236,8 +236,8 @@
   \thm|type="def"|<
     \p<
       半順序集合 &m<X> の部分集合 &m<S \subseteq; X> をとる。
-      任意の元 &m<x, y \in; X> に対し、&m<x \in; S> かつ &m<y \preceq; x> ならば &m<y \in; S> が成り立つとき、&m<S> を &m<X> の\em<切片\fl<segment>> という。
-      さらに、&m<S \neq; X> であるとき、&m<S> は\em<真\fl<proper>> であるという。
+      任意の元 &m<x, y \in; X> に対し、&m<x \in; S> かつ &m<y \preceq; x> ならば &m<y \in; S> が成り立つとき、&m<S> を &m<X> の\def<切片\fl<segment>> という。
+      さらに、&m<S \neq; X> であるとき、&m<S> は\def<真\fl<proper>> であるという。
     >
   >
   \thm|type="def"|<
@@ -246,7 +246,7 @@
       &mb<
         O (x) \coloneqq; `{y \in; X \mid; y \prec; x`} \subseteq; X
       >
-      を &m<x> が生成する &m<X> の\em<切片\fl<segment>> という。
+      を &m<x> が生成する &m<X> の\def<切片\fl<segment>> という。
     >
   >
   \thm|type="lem",id="segid"|<
@@ -272,7 +272,7 @@
   >
   \prf<
     \p<
-      Ciesielski\ref|type="bib",ref="stw"|; の定理 4.1.6 を参照。
+      Ciesielski\mref|type="bib",ref="stw"|; の定理 4.1.6 を参照。
     >
   >
   \p<
@@ -297,7 +297,7 @@
     >
     \p<
       任意に &m<`j \in; `a> をとり、&m<O (`j) \subseteq; Z> であるとする。
-      この仮定と\ref|type="thm",ref="segid"|; により、
+      この仮定と\mref|type="thm",ref="segid"|; により、
       &mb<
         \array|align="rcl"|<
           \c<f (`j)> \c<=> \c<O (f (`j))> \br;
@@ -360,7 +360,7 @@
   >
   \prf<
     \p<
-      Ciesielski\ref|type="bib",ref="stw"|; の補題 4.1.9 を参照。
+      Ciesielski\mref|type="bib",ref="stw"|; の補題 4.1.9 を参照。
     >
   >
   \p<
@@ -373,7 +373,7 @@
   >
   \prf<
     \p<
-      一意性は\ref|type="thm",ref="isoeq"|; からすぐに従うので、以下では存在を示す。
+      一意性は\mref|type="thm",ref="isoeq"|; からすぐに従うので、以下では存在を示す。
       まず、元 &m<x \in; X> に対し、
       &mb<
         \array|align="rcl"|<
@@ -388,7 +388,7 @@
       >
       とおく。
       定義から、各 &m<x \in; Z> に対して、順序数 &m<`a> と順序同型写像 &m<f: \bar<O> (x) \to; `a> が存在する。
-      \ref|type="thm",ref="isoeq"|; によって &m<`a> は一意に定まり、さらに\ref|type="thm",ref="isouniq"|; によって &m<f> も一意に定まる。
+      \mref|type="thm",ref="isoeq"|; によって &m<`a> は一意に定まり、さらに\mref|type="thm",ref="isouniq"|; によって &m<f> も一意に定まる。
       したがって、以降はこれらをそれぞれ &m<\sb<`a><x>> と &m<\sb<f><x>> で表すことにする。
     >
     \p<
@@ -402,10 +402,10 @@
         \sb<f><x> `[\bar<O> (y)`] = \bar<O> (\sb<f><x> (y)) = O (\sb<f><x> (y)) \cup; `{\sb<f><x> (y)`}
       >
       が成り立つ。
-      &m<\sb<f><x> (y) \in; \sb<`a><y>> であって &m<\sb<`a><y>> は順序数だから、\ref|type="thm",ref="segid"|; によって &m<O (\sb<f><x> (y)) = \sb<f><x> (y)> が成り立つ。
-      また、\ref|type="thm",ref="elemord"|; によって &m<\sb<f><x> (y)> は順序数だから、さらに\ref|type="thm",ref="succ"|; によって &m<\sb<f><x> (y) \cup; `{\sb<f><x> (y)`}> も順序数である。
+      &m<\sb<f><x> (y) \in; \sb<`a><y>> であって &m<\sb<`a><y>> は順序数だから、\mref|type="thm",ref="segid"|; によって &m<O (\sb<f><x> (y)) = \sb<f><x> (y)> が成り立つ。
+      また、\mref|type="thm",ref="elemord"|; によって &m<\sb<f><x> (y)> は順序数だから、さらに\mref|type="thm",ref="succ"|; によって &m<\sb<f><x> (y) \cup; `{\sb<f><x> (y)`}> も順序数である。
       したがって、これと等しい &m<\sb<f><x> `[\bar<O> (y)`]> も順序数である。
-      ここで\ref|type="thm",ref="isoim"|; を使えば、制限 &m<\sb<f><x> \rvert; \sb<><\bar<O> (y)>: \bar<O> (y) \to; \sb<f><x> `[\bar<O> (y)`]> が順序同型写像であることが分かる。
+      ここで\mref|type="thm",ref="isoim"|; を使えば、制限 &m<\sb<f><x> \rvert; \sb<><\bar<O> (y)>: \bar<O> (y) \to; \sb<f><x> `[\bar<O> (y)`]> が順序同型写像であることが分かる。
       ところで、&m<\sb<f><y>: \bar<O> (y) \to; \sb<`a><y>> は &m<\bar<O> (y)> から何らかの順序数への一意な順序同型写像であったから、&m<\sb<f><x> \rvert; \sb<><\bar<O> (y)> = \sb<f><y>> でなければならない。
       すなわち、&m<\sb<f><y> \subseteq; \sb<f><x>> である。
     >
@@ -420,8 +420,8 @@
       この写像を &m<f> とおく。
       各 &m<\sb<f><y>> が順序同型写像であることから、この &m<f> が狭義単調増加な全射であることがすぐに従う。
       また、&m<f> の定義域 &m<\bigcup|in|<y> \bar<O> (y)> は &m<O (x)> に等しい。
-      さらに、\ref|type="thm",ref="ordcup"|; により、&m<f> の値域 &m<`a \coloneqq; \bigcup|in|<y> \sb<`a><y>> は順序数である。
-      したがって、\ref|type="thm",ref="isoim"|; によって &m<f> は順序同型写像である。
+      さらに、\mref|type="thm",ref="ordcup"|; により、&m<f> の値域 &m<`a \coloneqq; \bigcup|in|<y> \sb<`a><y>> は順序数である。
+      したがって、\mref|type="thm",ref="isoim"|; によって &m<f> は順序同型写像である。
     >
     \p<
       上記の議論で得られた順序同型写像 &m<f: O (x) \to; `a> の拡張として、
@@ -436,7 +436,7 @@
       >
       を考える。
       &m<\tilde<f>> は &m<f> に 1 点の行き先を追加した拡張であり、追加された 1 点とその像はそれぞれ定義域と値域の最大元であるから、&m<\tilde<f>> も順序同型写像である。
-      \ref|type="thm",ref="succ"|; によって &m<`a \cup; `{`a`}> は順序数であるから、これにより &m<x \in; Z> が示された。
+      \mref|type="thm",ref="succ"|; によって &m<`a \cup; `{`a`}> は順序数であるから、これにより &m<x \in; Z> が示された。
     >
     \p<
       以上により &m<Z = X> であるから、写像
@@ -449,7 +449,7 @@
   >
   \thm|type="def"|<
     \p<
-      整列集合 &m<X> に対し、&m<X \cong; `a> を満たすような順序数 &m<`a> を &m<X> の\em<順序型\fl<order type>> といい、&m<\op<ord> X> で表す。
+      整列集合 &m<X> に対し、&m<X \cong; `a> を満たすような順序数 &m<`a> を &m<X> の\def<順序型\fl<order type>> といい、&m<\op<ord> X> で表す。
     >
   >
   \h1<追記 (2020 年 5 月 31 日)>

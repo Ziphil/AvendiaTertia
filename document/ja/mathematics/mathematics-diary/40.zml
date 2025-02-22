@@ -19,7 +19,7 @@
     さらに、詳細は省略するが、この 2 つの操作が互いによく振る舞うように、いくつかの条件 (いわゆるモナド則) が満たされている必要がある。
   >
   \p<
-    このような組 &m<(`#, `h, \sp<\text<->><*>)> は Kleisli トリプルと呼ばれ、計算の概念を圏論的に扱う枠組みとして、Moggi\ref|type="bib",ref="mncm"|; の研究以来注目されてきた。
+    このような組 &m<(`#, `h, \sp<\text<->><*>)> は Kleisli トリプルと呼ばれ、計算の概念を圏論的に扱う枠組みとして、Moggi\mref|type="bib",ref="mncm"|; の研究以来注目されてきた。
     Kleisli トリプルはモナドという概念と等価であることが知られており、それゆえに、このアイデアをプログラミング言語に落とし込んだものもモナドと呼ばれている。
     圏論的には、Kleisli トリプルよりモナドの方が扱いやすいため、以降はモナドの方を扱うことにする。
   >
@@ -45,7 +45,7 @@
         >
       >
       が全て可換であるとする。
-      このとき、&m<(`#, `m, `h)> を\em<モナド\fl<monad>> という。
+      このとき、&m<(`#, `m, `h)> を\def<モナド\fl<monad>> という。
     >
   >
   \p<
@@ -87,7 +87,7 @@
         >
       >
       が全て可換であるとする。
-      このとき、&m<(`#, `h, `m)> を\em<強モナド\fl<strong monad>> といい、&m<`t> を\em<強度\fl<strength>> という。
+      このとき、&m<(`#, `h, `m)> を\def<強モナド\fl<strong monad>> といい、&m<`t> を\def<強度\fl<strength>> という。
     >
   >
   \p<
@@ -187,7 +187,7 @@
     >
     \p<
       を満たすように定まっている。
-      このとき、&m<\overline<\hyphen;>> を &m<\frak<T>> の\em<解釈\fl<interpretation>> という。
+      このとき、&m<\overline<\hyphen;>> を &m<\frak<T>> の\def<解釈\fl<interpretation>> という。
     >
   >
   \thm|type="def"|<
@@ -195,7 +195,7 @@
       型システム &m<\frak<T>> を考える。
       有限直積をもつ圏 &m<\scr<C>> と解釈 &m<\overline<\hyphen;>> が、次の条件を満たすとする。
       すなわち、&m<\frak<T>> における同じ型をもつ任意の型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、&m<\frak<T>> において &m<M = N> ならば &m<\scr<C>> の射として &m<\overline<M> = \overline<N>> が成り立つ。
-      このとき、&m<(\scr<C>, \overline<\hyphen;>)> を &m<\frak<T>> の\em<モデル\fl<model>> という。
+      このとき、&m<(\scr<C>, \overline<\hyphen;>)> を &m<\frak<T>> の\def<モデル\fl<model>> という。
     >
   >
   \p<

@@ -31,7 +31,7 @@
   \thm|type="def"|<
     \p<
       正則基数 &m<`k> をとる。
-      圏 &m<\scr<I>> について、&m<\op<Mor> (\scr<I>)> が集合であってその濃度が &m<`k> 未満であるとき、&m<\scr<I>> は &m<`k>-\em<小\fl<small>> であるという。
+      圏 &m<\scr<I>> について、&m<\op<Mor> (\scr<I>)> が集合であってその濃度が &m<`k> 未満であるとき、&m<\scr<I>> は &m<`k>-\def<小\fl<small>> であるという。
     >
   >
   \p<
@@ -55,7 +55,7 @@
       >
     >
     \p<
-      を全て満たすとき、&m<\scr<I>> は &m<`k>-\em<フィルター\fl<filtered>> であるという。
+      を全て満たすとき、&m<\scr<I>> は &m<`k>-\def<フィルター\fl<filtered>> であるという。
     >
   >
   \thm|type="lem",id="fileq"|<
@@ -83,7 +83,7 @@
   \thm|type="def"|<
     \p<
       正則基数 &m<`k> をとる。
-      小圏 &m<\scr<I>> が半順序かつ &m<`k>-フィルターであるとき、&m<\scr<I>> は &m<`k>-\em<有向\fl<directed>> であるという。
+      小圏 &m<\scr<I>> が半順序かつ &m<`k>-フィルターであるとき、&m<\scr<I>> は &m<`k>-\def<有向\fl<directed>> であるという。
     >
   >
   \p<
@@ -129,7 +129,7 @@
         \scr<K> \coloneqq; `{\scr<A> \subseteq; \scr<I> \mid; &raw<&m<\scr<A>> は &m<`k>-小であって等号に関して唯一の終対象をもつ>`}
       >
       とおき、包含関係によって順序を入れる。
-      すると、濃度が &m<`k> 未満の &m<\scr<K>> の部分集合 &m<`{\sb<\scr<A>><l>`} \sb<><l \in; L>> に対し、&m<\bar<\scr<A>> \coloneqq; \bigcup|in|<l \in; L> \sb<\scr<A>><l>> とおくと、これの射全体の集合は濃度が &m<`k> 未満の集合を &m<`k> 未満個合併したものであるから、\ref|type="thm",ref="regcard"|; によってその濃度は &m<`k> 未満である。 
+      すると、濃度が &m<`k> 未満の &m<\scr<K>> の部分集合 &m<`{\sb<\scr<A>><l>`} \sb<><l \in; L>> に対し、&m<\bar<\scr<A>> \coloneqq; \bigcup|in|<l \in; L> \sb<\scr<A>><l>> とおくと、これの射全体の集合は濃度が &m<`k> 未満の集合を &m<`k> 未満個合併したものであるから、\mref|type="thm",ref="regcard"|; によってその濃度は &m<`k> 未満である。 
       したがって、仮定の条件によって &m<\bar<\scr<A>> \sp<><*>> をとることができ、定義から &m<\bar<\scr<A>> \sp<><*>> に &m<\scr<K>> に属し、さらに &m<\bar<\scr<A>> \sp<><*>> は &m<`{\sb<\scr<A>><l>`} \sb<><l \in; L>> の上界を与える。
       以上により、&m<\scr<K>> は &m<`k>-有向である。
     >
@@ -159,7 +159,7 @@
   \thm|type="lem",id="conex"|<
     \p<
       正則基数 &m<`k> をとる。
-      任意の &m<`k>-フィルター圏 &m<\scr<I>> に対し、ある &m<`k>-フィルター圏 &m<\scr<I>'> と終関手 &m<H': \scr<I>' \to; \scr<I>> が存在し、さらに &m<\scr<I>'> は\ref|type="thm",ref="fdcon"|; の条件を満たす。
+      任意の &m<`k>-フィルター圏 &m<\scr<I>> に対し、ある &m<`k>-フィルター圏 &m<\scr<I>'> と終関手 &m<H': \scr<I>' \to; \scr<I>> が存在し、さらに &m<\scr<I>'> は\mref|type="thm",ref="fdcon"|; の条件を満たす。
     >
   >
   \prf<
@@ -167,10 +167,10 @@
       &m<`k> は順序集合であるから圏と見なし、&m<\scr<I>' \coloneqq; \scr<I> \times; `k> とおく。
       &m<`k> 自身が &m<`k>-フィルターであることは容易に分かるから、&m<\scr<I>> が &m<`k>-フィルターであることを合わせれば、&m<\scr<I>'> も &m<`k>-フィルターであることが分かる。
       また、射影関手 &m<H': \scr<I>' \to; \scr<I>> を考えると、これが終であることも容易に分かる。
-      したがって、あとは &m<\scr<I>'> は\ref|type="thm",ref="fdcon"|; の条件を満たすことを示せば良い。
+      したがって、あとは &m<\scr<I>'> は\mref|type="thm",ref="fdcon"|; の条件を満たすことを示せば良い。
     >
     \p<
-      任意に &m<`k>-小な部分圏 &m<\scr<A> \subseteq; \scr<I>'> をとると、&m<\scr<I>'> は &m<`k>-フィルターであるから、\ref|type="thm",ref="fileq"|; によって余錐 &m<(\sb<u><a>: a \to; (i, `a)) \sb<><a \in; \scr<A>>> が存在する。
+      任意に &m<`k>-小な部分圏 &m<\scr<A> \subseteq; \scr<I>'> をとると、&m<\scr<I>'> は &m<`k>-フィルターであるから、\mref|type="thm",ref="fileq"|; によって余錐 &m<(\sb<u><a>: a \to; (i, `a)) \sb<><a \in; \scr<A>>> が存在する。
       ここで、部分圏 &m<\sp<\scr<A>><*> \subseteq; \scr<I>'> を次のように定義する。
       まず、&m<`a + 1 \in; `k> であることに注意して、&m<\top; \coloneqq; (i, `a + 1)> は &m<\scr<I>'> の対象であることを踏まえて、
       &mb<
@@ -182,14 +182,14 @@
         \sb<\op<Hom>><\sp<\scr<A>><*>> (a, a') \coloneqq; \case<
           \c<\sb<\op<Hom>><\scr<A>> (a, a')> \c<(a \in; \scr<A>, a' \in; \scr<A>)> \br;
           \c<`{\sb<u><a> \rcomp; v`}> \c<(a \in; \scr<A>, a' = \top;)> \br;
-          \c<\empty;> \c<(a = \top;, a' \in; \scr<A>)> \br;
+          \c<\defpty;> \c<(a = \top;, a' \in; \scr<A>)> \br;
           \c<`{\sb<\rm<id>><\top;>`}> \c<(a = \top;, a' = \top;)> \br;
         >
       >
       と定める。
       すると、&m<(\sb<u><a>) \sb<><a \in; \scr<A>>> が余錐であることから &m<\sp<\scr<A>><*>> が合成に関して閉じていることが分かるので、&m<\sp<\scr<A>><*>> は矛盾なく定義されている。
       さらに、射集合の定義から、&m<\top;> は &m<\sp<\scr<A>><*>> の唯一の終対象になる。
-      以上により、&m<\scr<I>'> は\ref|type="thm",ref="fdcon"|; の条件を満たす。
+      以上により、&m<\scr<I>'> は\mref|type="thm",ref="fdcon"|; の条件を満たす。
     >
   >
   \thm|type="thm",id="fd"|<
@@ -200,12 +200,12 @@
   >
   \prf<
     \p<
-      終関手の合成が再び終になることに注意すれば、\ref|type="thm",ref="fdcon"|; と\ref|type="thm",ref="conex"|; から直ちに従う。
+      終関手の合成が再び終になることに注意すれば、\mref|type="thm",ref="fdcon"|; と\mref|type="thm",ref="conex"|; から直ちに従う。
     >
   >
   \p<
     終関手とは、それを前に合成しても余極限が変わらないようなものであった。
-    したがって、\ref|type="thm",ref="fd"|; が述べているのは、任意のフィルター余極限は図式を適切に取り替えることで有向余極限と見なすことができるということである。
+    したがって、\mref|type="thm",ref="fd"|; が述べているのは、任意のフィルター余極限は図式を適切に取り替えることで有向余極限と見なすことができるということである。
     今後定義する局所表示可能圏や到達可能圏は有向余極限に関する条件が課されたものであるが、考えたい余極限がフィルターであっても有向であることは少ないので、この定理は非常に重要になる。
   >
   \h1<参考文献>

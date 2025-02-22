@@ -80,7 +80,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="calclan"|; により &m<\sb<\op<Lan>><\bf<y>> \bf<y>> は存在して各点で、&m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の対象 &m<P> に対し、
+      \mref|type="thm",ref="calclan"|; により &m<\sb<\op<Lan>><\bf<y>> \bf<y>> は存在して各点で、&m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の対象 &m<P> に対し、
       &mb<
         (\sb<\op<Lan>><\bf<y>> \bf<y>) P \cong; \op<Hom> (\bf<y> \hyphen;, P)
       >
@@ -96,7 +96,7 @@
   >
   \prf<
     \p<
-      &m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の対象 &m<P> と &m<\scr<D>> の対象 &m<D> に対し、\a|href="76.html#homrep"|<命題 1.12> と\ref|type="thm",ref="calclan"|; を使うと、
+      &m<\sp<\bfrm<Set>><\sp<\scr<C>><\circ;>>> の対象 &m<P> と &m<\scr<D>> の対象 &m<D> に対し、\a|href="76.html#homrep"|<命題 1.12> と\mref|type="thm",ref="calclan"|; を使うと、
       &mb<
         \array|align="rcl"|<
           \c<\sb<\op<Hom>><\scr<D>> ((\sb<\op<Lan>><\bf<y>> F) P, D)> \c<\cong;> \c<\sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (\bf<y> \hyphen;, P), \op<Hom> (F \hyphen;, D))> \br;
@@ -119,14 +119,14 @@
   \prf<
     \p<
       &m<F \coloneqq; G \circ; \bf<y>> とおくと定理の主張が成り立つことを示す。
-      &m<G> は左随伴関手だから、\ref|type="thm",ref="adjpres"|; によって &m<G> は左 Kan 拡張を保存する。
-      したがって、\ref|type="thm",ref="calclany"|; によって、
+      &m<G> は左随伴関手だから、\mref|type="thm",ref="adjpres"|; によって &m<G> は左 Kan 拡張を保存する。
+      したがって、\mref|type="thm",ref="calclany"|; によって、
       &mb<
         G \cong; G \circ; \sb<\op<Lan>><\bf<y>> \bf<y> \cong; \sb<\op<Lan>><\bf<y>> (G \circ; \bf<y>) = \sb<\op<Lan>><\bf<y>> F
       >
       が成り立つ。
       &m<\sb<\op<Lan>><\bf<y>> \bf<y>> が各点だったから、&m<G = \sb<\op<Lan>><\bf<y>> (G \circ; \bf<y>)> も各点である。
-      これより\ref|type="thm",ref="adj"|; が使えて、随伴 &m<G \dashv; \sb<\op<Lan>><F> \bf<y>> が成り立つ。
+      これより\mref|type="thm",ref="adj"|; が使えて、随伴 &m<G \dashv; \sb<\op<Lan>><F> \bf<y>> が成り立つ。
       随伴の一意性により、&m<H \cong; \sb<\op<Lan>><F> \bf<y>> である。
     >
   >

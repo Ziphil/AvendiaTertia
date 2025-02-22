@@ -9,7 +9,7 @@
   \h1<日記 (2020 年 10 月 11 日)>
   \p<
     \a|href="39.html"|<4 月 8 日>には Chu 構成を導入し、それがスター自律圏になること、すなわち線型論理の否定演算子に対応する演算を定められることを示した。
-    したがって、さらにこれが線型圏の構造をもってくれれば非常に嬉しいのだが、実は Chu 構成のベースとなる圏に多少の条件を課せばそれが可能であることが Barr\ref|type="bib",ref="bacm"|; によって知られている。
+    したがって、さらにこれが線型圏の構造をもってくれれば非常に嬉しいのだが、実は Chu 構成のベースとなる圏に多少の条件を課せばそれが可能であることが Barr\mref|type="bib",ref="bacm"|; によって知られている。
     この証明は以下の 3 ステップから成る。
   >
   \ol<
@@ -35,7 +35,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> に関手 &m<\otimes|ord|;: \scr<C> \times; \scr<C> \to; \scr<C>> と対象 &m<\top;> が定まっているとする。
-      対象 &m<A> に 2 つの射 &m<d: A \to; A \otimes; A, e: A \to; \top;> が単に定まっているとき、組 &m<(A, d, e)> を\em<前コモノイド\fl<precomonoid>> という。
+      対象 &m<A> に 2 つの射 &m<d: A \to; A \otimes; A, e: A \to; \top;> が単に定まっているとき、組 &m<(A, d, e)> を\def<前コモノイド\fl<precomonoid>> という。
     >
   >
   \p<
@@ -333,7 +333,7 @@
         >
       >
       を可換にする &m<\bfrm<PMon> (\scr<C> `/ \sp<X><\bbot;>)> の射 &m<\bar<r>: ((\bar<X>, \sp<x><\sharp;>), m, u) \to; ((\bar<Y>, \sp<y><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>)> が存在する。
-      \ref|type="thm",ref="chuslice"|; によって、これは &m<\bfrm<PComon> (\scr<X>)> の射
+      \mref|type="thm",ref="chuslice"|; によって、これは &m<\bfrm<PComon> (\scr<X>)> の射
       &mb<
         (\rm<id>, \bar<r>): ((X, \bar<Y>, \sp<y><\sharp;>), (d, \sp<m><\ppr;>), (e, \sp<u><\ppr;>)) \longto; ((X, \bar<X>, \sp<x><\sharp;>), (d, m), (e, u))
       >

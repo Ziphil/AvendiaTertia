@@ -27,7 +27,7 @@
   \thm|type="def"|<
     \p<
       有限積をもつ圏 &m<\scr<C>> をとる。
-      対象 &m<S, \bar<S>, A, \bar<A>> に対し、2 つの射 &m<g: S \to; A> と &m<p: S \times; \bar<A> \to; \bar<S>> から成る組 &m<(g, p)> を\em<素朴レンズ\fl<naive lens>> と呼び、&m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)> で表す。
+      対象 &m<S, \bar<S>, A, \bar<A>> に対し、2 つの射 &m<g: S \to; A> と &m<p: S \times; \bar<A> \to; \bar<S>> から成る組 &m<(g, p)> を\def<素朴レンズ\fl<naive lens>> と呼び、&m<(g, p): (S, \bar<S>) \ring<\to;> (A, \bar<A>)> で表す。
     >
   >
   \p<
@@ -54,7 +54,7 @@
       >
       と定める。
       なお、図式中の &m<\sb<\rm<diag>><S>: S \to; S \times; S> は対角射である。
-      これによって得られる素朴レンズ &m<(\sp<g><\ppr;>, \sp<p><\ppr;>): (S, \bar<S>) \ring<\to;> (\bar<B>, B)> を &m<(g, p)> と &m<(g', p')> の\em<合成\fl<composition>> という。
+      これによって得られる素朴レンズ &m<(\sp<g><\ppr;>, \sp<p><\ppr;>): (S, \bar<S>) \ring<\to;> (\bar<B>, B)> を &m<(g, p)> と &m<(g', p')> の\def<合成\fl<composition>> という。
     >
   >
   \p<
@@ -129,7 +129,7 @@
       >
       が全て可換であるとする。
       なお、ラベルのない射は標準的な同型射を表している。
-      このとき、&m<`s> を &m<F> に対する\em<強度\fl<strength>> といい、組 &m<(F, `s)> を\em<自己強関手\fl<strong endofunctor>> という。
+      このとき、&m<`s> を &m<F> に対する\def<強度\fl<strength>> といい、組 &m<(F, `s)> を\def<自己強関手\fl<strong endofunctor>> という。
     >
   >
   \p<
@@ -147,7 +147,7 @@
           \ar|s="1",e="3",inv|<\sb<`s><M \bar<X>>> \ar|s="2",e="4"|<\sb<`t><M \bar<X>>>
         >
       >
-      が可換であるとき、&m<`u> を\em<強自然変換\fl<strong natural transformation>> といい、&m<`u: (F, `s) \raarr; (G, `t)> で表す。
+      が可換であるとき、&m<`u> を\def<強自然変換\fl<strong natural transformation>> といい、&m<`u: (F, `s) \raarr; (G, `t)> で表す。
     >
   >
   \p<
@@ -186,7 +186,7 @@
         >
       >
       とおく。
-      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \op<Hom> (A, \hyphen; \bar<A>) \raarr; \op<Hom> (S, \hyphen; \bar<S>)> を \em<van Laarhoven レンズ\fl<— lens>> という。
+      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \op<Hom> (A, \hyphen; \bar<A>) \raarr; \op<Hom> (S, \hyphen; \bar<S>)> を \def<van Laarhoven レンズ\fl<— lens>> という。
     >
   >
   \thm|type="def"|<
@@ -321,7 +321,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="rep"|; と Yoneda の補題により、
+      \mref|type="thm",ref="rep"|; と Yoneda の補題により、
       &mb<
         \array|align="rcl"|<
           \c<\sb<\op<Hom>><\bfrm<LLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))> \c<=> \c<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (A, \hyphen; \bar<A>), \op<Hom> (S, \hyphen; \bar<S>))> \br;
@@ -351,7 +351,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
+      \mref|type="thm",ref="homiso"|; の全単射が合成を保つことを示せば良い。
       単純に計算するだけなので、ここでは詳細は省略する。
     >
   >

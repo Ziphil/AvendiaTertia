@@ -17,7 +17,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<\sb<\rm<id>><X>: X \to; X> が &m<X> の正規形であるとき、&m<X> を\em<正規対象\fl<normal object>> という。
+      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<\sb<\rm<id>><X>: X \to; X> が &m<X> の正規形であるとき、&m<X> を\def<正規対象\fl<normal object>> という。
     >
   >
   \p<
@@ -98,9 +98,9 @@
   \prf<
     \p<
       任意に射 &m<f: (X, x) \to; (X, x)> をとる。
-      \ref|type="thm",ref="wnn"|; によって &m<(X, x)> は正規対象でもあるから、&m<\sb<\rm<id>><(X, x)>> は正規形である。
+      \mref|type="thm",ref="wnn"|; によって &m<(X, x)> は正規対象でもあるから、&m<\sb<\rm<id>><(X, x)>> は正規形である。
       さらに\a|href="1.html#norm"|<定理 1.9> により &m<F> は引き戻しを保つから、&m<\bfrm<El> (F)> は引き戻しをもつ。
-      したがって\ref|type="thm",ref="comp"|; を用いれば、&m<f = f \circ; \sb<\rm<id>><(X, x)>> も正規形であることが分かる。
+      したがって\mref|type="thm",ref="comp"|; を用いれば、&m<f = f \circ; \sb<\rm<id>><(X, x)>> も正規形であることが分かる。
     >
     \p<
       さて、&m<\sp<\bfrm<Set>><A>> において余等化子
@@ -121,7 +121,7 @@
         >
       >
       が可換になる。
-      これにより &m<\bfrm<El> (F) `/ (X, x)> の 2 本の射 &m<f, \sb<\rm<id>><X>: g \circ; f \to; g> が定まるが、\ref|type="thm",ref="comp"|; によって &m<g \circ; f> は正規形なので、&m<f = \sb<\rm<id>><X>> となる。
+      これにより &m<\bfrm<El> (F) `/ (X, x)> の 2 本の射 &m<f, \sb<\rm<id>><X>: g \circ; f \to; g> が定まるが、\mref|type="thm",ref="comp"|; によって &m<g \circ; f> は正規形なので、&m<f = \sb<\rm<id>><X>> となる。
     >
     \p<
       以上により、&m<(X, x)> 上の自己射は恒等射に限るので、&m<\sb<\op<Aut>><\bfrm<El> (F)> ((X, x)) = 1> である。
@@ -152,7 +152,7 @@
       >
       である。
       この &m<c> は &m<(`g, c)> という形の &m<\bfrm<El> (F)> の弱正規対象の同型類の代表元全体を回る。
-      しかし、今 &m<F> は正規なので、\ref|type="thm",ref="unit"|; により、
+      しかし、今 &m<F> は正規なので、\mref|type="thm",ref="unit"|; により、
       &mb<
         \sp<F><\sharp;> `g = \coprod<c><> \sb<\op<Aut>><\bfrm<Nat> (\sp<\bfrm<Set>><A>)> (`g)
       >
@@ -179,7 +179,7 @@
   >
   \h1<追記 (2019 年 1 月 21 日)>
   \p<
-    正規関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> に対して、\ref|type="thm",ref="main"|; の証明中で &m<\widetilde<F>> を構成したが、これはもう少し簡単に書き表せる。
+    正規関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> に対して、\mref|type="thm",ref="main"|; の証明中で &m<\widetilde<F>> を構成したが、これはもう少し簡単に書き表せる。
     実際、
     &mb<
       \array|align="rcl"|<

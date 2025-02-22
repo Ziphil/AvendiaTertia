@@ -8,7 +8,7 @@
 
   \h1<日記 (2020 年 7 月 27 日)>
   \p<
-    最近、Adámek–Rosický\ref|type="bib",ref="lpa"|; をのんびり読み始めたので、重要な部分をまとめていこうと思う。
+    最近、Adámek–Rosický\mref|type="bib",ref="lpa"|; をのんびり読み始めたので、重要な部分をまとめていこうと思う。
   >
   \p<
     このシリーズを通して則ることにする記号に関する慣習について補足しておく。
@@ -27,7 +27,7 @@
     \p<
       小圏の間の関手 &m<H: \scr<K> \to; \scr<I>> をとる。
       任意の関手 &m<F: \scr<I> \to; \scr<C>> に対し、&m<\op<colim> F> と &m<\op<colim> (H \rcomp; F)> のうちどちらか一方が存在するならばもう一方も存在し、そのとき自然な射 &m<\op<colim> (H \rcomp; F) \to; \op<colim> F> は同型射であるとする。
-      このとき、&m<H> は\em<終\fl<final>> であるという。
+      このとき、&m<H> は\def<終\fl<final>> であるという。
     >
   >
   \p<
@@ -96,12 +96,12 @@
         C \sim; C' \implied; \multi<f><><><><\exists;>: C \to; C'
       >
       を満たす最小の同値関係として定義する。
-      対象 &m<C, C'> が &m<C \sim; C'> を満たすとき、&m<C> と &m<C'> は\em<射で結ばれる\fl<connected by morphisms>> という。
+      対象 &m<C, C'> が &m<C \sim; C'> を満たすとき、&m<C> と &m<C'> は\def<射で結ばれる\fl<connected by morphisms>> という。
     >
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> に対し、&m<\scr<C>> が空でなく、任意の &m<\scr<C>> の 2 つの対象が射で結ばれるとき、&m<\scr<C>> は\em<連結\fl<connected>> であるという。
+      圏 &m<\scr<C>> に対し、&m<\scr<C>> が空でなく、任意の &m<\scr<C>> の 2 つの対象が射で結ばれるとき、&m<\scr<C>> は\def<連結\fl<connected>> であるという。
     >
   >
   \thm|type="thm",id="fineq"|<
@@ -124,7 +124,7 @@
     \p<
       \label<条件 1 &m<\raarr;> 条件 2>
       任意に &m<\scr<I>> の対象 &m<i> をとり、&m<F \coloneqq; \op<Hom> (i, \hyphen;): \scr<I> \to; \bfrm<Set>> とおく。
-      \ref|type="thm",ref="setcol"|; により、
+      \mref|type="thm",ref="setcol"|; により、
       &mb<
         \op<colim> (H \rcomp; F) = \paren<\coprod<k \in; \scr<K>> \op<Hom> (i, Hk)> `/ \sim|ord|;
       >
@@ -137,7 +137,7 @@
       したがって、&m<x \sim; x'> であるとは、&m<i \darr|bin|; H> において &m<x> と &m<x'> が射で結ばれることを意味している。
     >
     \p<
-      一方、仮定から &m<\op<colim> F \cong; \op<colim> (H \rcomp; F)> が成り立つが、\ref|type="thm",ref="onep"|; によって &m<\op<colim> F = 1> であるから、&m<\op<colim> (H \rcomp; F) = 1> も成り立つ。
+      一方、仮定から &m<\op<colim> F \cong; \op<colim> (H \rcomp; F)> が成り立つが、\mref|type="thm",ref="onep"|; によって &m<\op<colim> F = 1> であるから、&m<\op<colim> (H \rcomp; F) = 1> も成り立つ。
       これにより、上の表示を使うと、任意の &m<\coprod|in|<k \in; \scr<K>> \op<Hom> (i, Hk)> の元が &m<\sim;> で結ばれるということが分かるが、&m<\sim;> とは 2 つの元が &m<i \darr|bin|; H> の射で結ばれるという関係であった。
       したがって、&m<i \darr|bin|; H> の任意の対象が射で結ばれることになり、さらに &m<i \darr|bin|; H> は空でないので、&m<i \darr|bin|; H> は連結である。
     >

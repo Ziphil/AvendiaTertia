@@ -9,7 +9,7 @@
   \h1<初めに>
   \p<
     この文書は、Day によるプロモノイダル圏の理論を簡潔にまとめたものである。
-    各種定理の証明方法は概ね Day\ref|type="bib",ref="dcbc"|; の論文に従っているが、議論の流れや細かい記号などは変更してある部分がある。
+    各種定理の証明方法は概ね Day\mref|type="bib",ref="dcbc"|; の論文に従っているが、議論の流れや細かい記号などは変更してある部分がある。
   >
   \h1<準備>
   \h2<モノイダル圏>
@@ -53,19 +53,19 @@
         >
       >
       がともに可換であるとする。
-      このような自然な写像の組 &m<(\bar<`a>, \bar<`l>, \bar<`r>)> を組 &m<(\scr<D>, \otimes|ord|;, \top;)> 上の\em<モノイダル整合構造\fl<monoidal coherent structure>> という。
-      さらに、これら全てのデータの組 &m<(\scr<D>, \otimes|ord|;, \top;, \bar<`a>, \bar<`l>, \bar<`r>)> を\em<モノイダル圏\fl<monoidal category>> という。
+      このような自然な写像の組 &m<(\bar<`a>, \bar<`l>, \bar<`r>)> を組 &m<(\scr<D>, \otimes|ord|;, \top;)> 上の\def<モノイダル整合構造\fl<monoidal coherent structure>> という。
+      さらに、これら全てのデータの組 &m<(\scr<D>, \otimes|ord|;, \top;, \bar<`a>, \bar<`l>, \bar<`r>)> を\def<モノイダル圏\fl<monoidal category>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<D>> をとり、関手 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> を考える。
-      任意の &m<\scr<D>> の対象 &m<A> に対し、片方の変数を固定した関手 &m<A \otimes; \hyphen;> と &m<\hyphen; \otimes; A> がどちらも右随伴をもつとき、&m<\otimes;> は\em<双閉\fl<biclosed>> であるという。
+      任意の &m<\scr<D>> の対象 &m<A> に対し、片方の変数を固定した関手 &m<A \otimes; \hyphen;> と &m<\hyphen; \otimes; A> がどちらも右随伴をもつとき、&m<\otimes;> は\def<双閉\fl<biclosed>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
-      モノイダル圏 &m<\scr<D>> に定まる演算 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> が双閉であるとき、&m<\scr<D>> は\em<双閉\fl<biclosed>> であるという。
+      モノイダル圏 &m<\scr<D>> に定まる演算 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> が双閉であるとき、&m<\scr<D>> は\def<双閉\fl<biclosed>> であるという。
     >
   >
   \h2<コエンド>
@@ -84,7 +84,7 @@
           \ar|s="1",e="2"|<`f> \ar|s="1",e="4",inv|<`c> \ar|s="2",e="4"|<h>
         >
       >
-      が可換であるとき、&m<S> を &m<K> の\em<コエンド\fl<coend>> といい、
+      が可換であるとき、&m<S> を &m<K> の\def<コエンド\fl<coend>> といい、
       &mb<
         S \coloneqq; \int<><X> K (X, X)
       >
@@ -107,8 +107,8 @@
   \thm|type="def"|<
     \p<
       関手 &m<K: \scr<C> \to; \scr<S>> をとる。
-      任意の &m<\scr<C>> の対象 &m<X> に対し、関手 &m<\sb<\op<Hom>><\scr<S>> (KX, \hyphen;): \scr<S> \to; \bfrm<Set>> が左随伴をもつとき、&m<\scr<S>> は &m<K>-\em<テンソル付き\fl<tensored>> であるという。
-      また、この左随伴は &m<\hyphen; \odot; KX: \bfrm<Set> \to; \scr<S>> で表し、この値を\em<テンソル対象\fl<tensor object>> という。
+      任意の &m<\scr<C>> の対象 &m<X> に対し、関手 &m<\sb<\op<Hom>><\scr<S>> (KX, \hyphen;): \scr<S> \to; \bfrm<Set>> が左随伴をもつとき、&m<\scr<S>> は &m<K>-\def<テンソル付き\fl<tensored>> であるという。
+      また、この左随伴は &m<\hyphen; \odot; KX: \bfrm<Set> \to; \scr<S>> で表し、この値を\def<テンソル対象\fl<tensor object>> という。
     >
   >
   \p<
@@ -149,7 +149,7 @@
       &mb<
         \sbsp<z><A><K, M>: \int<><X> (\sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX) \longto; KA
       >
-      を、一般に \em<Yoneda 射\fl<— morphism>> という。
+      を、一般に \def<Yoneda 射\fl<— morphism>> という。
     >
   >
   \p<
@@ -212,7 +212,7 @@
           \c<h> \c<\longmapsto;> \c<h \circ; \hyphen;>
         >
       >
-      が全単射であり、それが &m<A, B> に関して自然であるとき、&m<M> は\em<稠密\fl<dense>> であるという。
+      が全単射であり、それが &m<A, B> に関して自然であるとき、&m<M> は\def<稠密\fl<dense>> であるという。
     >
   >
   \thm|type="prp",id="denseequiv"|<
@@ -364,8 +364,8 @@
         >
       >
       がともに可換であるとする。
-      このような自然な写像の組 &m<(`a, `l, `r)> を組 &m<(\scr<C>, P, J)> 上の\em<プロモノイダル整合構造\fl<promonoidal coherent structure>> という。
-      さらに、これら全てのデータの組 &m<(\scr<C>, P, J, `a, `l, `r)> を\em<プロモノイダル圏\fl<promonoidal category>> という。
+      このような自然な写像の組 &m<(`a, `l, `r)> を組 &m<(\scr<C>, P, J)> 上の\def<プロモノイダル整合構造\fl<promonoidal coherent structure>> という。
+      さらに、これら全てのデータの組 &m<(\scr<C>, P, J, `a, `l, `r)> を\def<プロモノイダル圏\fl<promonoidal category>> という。
     >
   >
   \p<
@@ -487,8 +487,8 @@
   \prf< 
     \p<
       モノイダル圏 &m<\scr<D>> をとる。
-      &m<M = \sb<\rm<id>><\scr<D>>> とすると、\ref|type="thm",ref="rep"|; によって、\ref|type="thm",ref="rela"|; の条件中にある Yoneda 射は同型になる。
-      したがって、\ref|type="thm",ref="rela"|; を適用すれば良い。
+      &m<M = \sb<\rm<id>><\scr<D>>> とすると、\mref|type="thm",ref="rep"|; によって、\mref|type="thm",ref="rela"|; の条件中にある Yoneda 射は同型になる。
+      したがって、\mref|type="thm",ref="rela"|; を適用すれば良い。
     >
   >
   \p<
@@ -514,7 +514,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="rela"|; の逆の構成を行う。
+      \mref|type="thm",ref="rela"|; の逆の構成を行う。
       &m<(\scr<C>, P, J)> 上のプロモノイダル整合構造 &m<(`a, `l, `r)> をとる。
       ここで、図式 C の垂直な射は全て同型だから、これらの図式を可換にするような自然な同型写像
       &mb<
@@ -525,7 +525,7 @@
         >
       >
       が得られる。
-      ここで\ref|type="thm",ref="lift"|; を用いると、これらの自然な同型写像は、
+      ここで\mref|type="thm",ref="lift"|; を用いると、これらの自然な同型写像は、
       &mb<
         \array|align="rrcl"|<
           \c<\sb<\bar<`a>><A, B, C>:> \c<(A \otimes; B) \otimes; C> \c<\to;> \c<A \otimes; (B \otimes; C)> \br;
@@ -535,8 +535,8 @@
       >
       に持ち上げることができる。
       例えば、&m<\bar<`l>> を得るには以下のようにすれば良い。
-      &m<K \coloneqq; \top; \otimes; \hyphen;, L \coloneqq; \sb<\rm<id>><\scr<D>>> とおくと、仮定によって &m<M> は稠密で &m<K> は右随伴をもつので、\ref|type="thm",ref="lift"|; の条件が満たされる。
-      そこで、自然変換 &m<\bar<`l>': K \circ; M \raarr; L \circ; M> に対して\ref|type="thm",ref="lift"|; を使えば、自然変換 &m<\bar<`l>: K \raarr; L> であって &m<\bar<`l>' = \bar<`l> * M> なるものが得られる。
+      &m<K \coloneqq; \top; \otimes; \hyphen;, L \coloneqq; \sb<\rm<id>><\scr<D>>> とおくと、仮定によって &m<M> は稠密で &m<K> は右随伴をもつので、\mref|type="thm",ref="lift"|; の条件が満たされる。
+      そこで、自然変換 &m<\bar<`l>': K \circ; M \raarr; L \circ; M> に対して\mref|type="thm",ref="lift"|; を使えば、自然変換 &m<\bar<`l>: K \raarr; L> であって &m<\bar<`l>' = \bar<`l> * M> なるものが得られる。
     >
     \p<
       さて、このように定めると、&m<\bar<`a>, \bar<`l>, \bar<`r>> は図式 &m<\rm<M>'> を可換にする。
@@ -570,7 +570,7 @@
         \int<><X> (\op<Hom> (\bf<y> X, F) \odot; \bf<y> X) \cong; \int<><X> (FX \odot; \bf<y> X)
       >
       が成り立つ。
-      &m<\scr<C>> の対象 &m<Z> に対して、この右辺の &m<Z> での値を考えると、\ref|type="thm",ref="rep"|; によって、
+      &m<\scr<C>> の対象 &m<Z> に対して、この右辺の &m<Z> での値を考えると、\mref|type="thm",ref="rep"|; によって、
       &mb<
         \array|align="rcl"|<
           \c<\paren<\int<><X> (FX \odot; \bf<y> X)> Z> \c<\cong;> \c<\int<><X> (FX \odot; \bf<y> X) Z> \br;
@@ -584,7 +584,7 @@
         \int<><X> (\op<Hom> (\bf<y> X, F) \odot; \bf<y> X) \cong; F
       >
       が示された。
-      このコエンドを与える射は\ref|type="thm",ref="denseequiv"|; のものと同一なので、\ref|type="thm",ref="denseequiv"|; によって &m<\bf<y>> は稠密である。
+      このコエンドを与える射は\mref|type="thm",ref="denseequiv"|; のものと同一なので、\mref|type="thm",ref="denseequiv"|; によって &m<\bf<y>> は稠密である。
     >
   >
   \p<
@@ -601,11 +601,11 @@
         >
       >
       とおくと、これは関手 &m<\otimes;: \widehat<\scr<C>> \times; \widehat<\scr<C>> \to; \widehat<\scr<C>>> を定める。
-      これを &m<P> による \em<Day 畳み込み\fl<— convolution>> という。
+      これを &m<P> による \def<Day 畳み込み\fl<— convolution>> という。
     >
   >
   \p<
-    この Day 畳み込みは\ref|type="thm",ref="rela"|; および\ref|type="thm",ref="relb"|; の条件を満たす。
+    この Day 畳み込みは\mref|type="thm",ref="rela"|; および\mref|type="thm",ref="relb"|; の条件を満たす。
     これを続く 2 つの補題で証明する。
   >
   \thm|type="lem",id="dayconvcl"|<
@@ -660,7 +660,7 @@
   \prf<
     \p<
       &m<\scr<C>> の対象 &m<A, Z> をとる。
-      \ref|type="thm",ref="dayconvcl"|; によって、関手 &m<\hyphen; \otimes; \bf<y> A: \widehat<\scr<C>> \to; \widehat<\scr<C>>> は右随伴をもつ。
+      \mref|type="thm",ref="dayconvcl"|; によって、関手 &m<\hyphen; \otimes; \bf<y> A: \widehat<\scr<C>> \to; \widehat<\scr<C>>> は右随伴をもつ。
       さらに、関手 &m<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \hyphen;): \widehat<\scr<C>> \to; \bfrm<Set>> も右随伴をもつ。
       実際、
       &mb<
@@ -679,7 +679,7 @@
     >
     \p<
       さて、任意に &m<\widehat<\scr<C>>> の対象 &m<F> をとる。
-      \ref|type="thm",ref="yonffd"|; によって &m<\bf<y>> は稠密なので、\ref|type="thm",ref="denseequiv"|; を使うと、
+      \mref|type="thm",ref="yonffd"|; によって &m<\bf<y>> は稠密なので、\mref|type="thm",ref="denseequiv"|; を使うと、
       &mb<
         F \cong; \int<><X> (\op<Hom> (\bf<y> X, F) \odot; \bf<y> X)
       >
@@ -704,7 +704,7 @@
     >
   >
   \p<
-    以上により、\ref|type="thm",ref="relb"|; を用いる準備が整った。
+    以上により、\mref|type="thm",ref="relb"|; を用いる準備が整った。
   >
   \thm|type="thm",id="funccat"|<
     \p<
@@ -714,7 +714,7 @@
   >
   \prf<
     \p<
-      まず、\ref|type="thm",ref="rela"|; の通りに &m<\otimes|ord|;, J> から &m<P', J'> を構成する。
+      まず、\mref|type="thm",ref="rela"|; の通りに &m<\otimes|ord|;, J> から &m<P', J'> を構成する。
       すなわち、
       &mb<
         \array|align="rrcl"|<
@@ -727,7 +727,7 @@
         >
       >
       と定める。
-      すると、&m<\scr<C>> の対象 &m<A, B, Z> に対し、Day 畳み込みの定義と\ref|type="thm",ref="rep"|; によって、
+      すると、&m<\scr<C>> の対象 &m<A, B, Z> に対し、Day 畳み込みの定義と\mref|type="thm",ref="rep"|; によって、
       &mb<
         \array|align="rcl"|<
           \c<P' (Z, A, B)> \c<=> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; \bf<y> B)> \br;
@@ -741,8 +741,8 @@
       さらに、Yoneda の補題によって、&m<J> と &m<J'> も同型であることが分かる。
     >
     \p<
-      さて、\ref|type="thm",ref="yonffd"|;, \ref|type="thm",ref="dayconvcl"|;, \ref|type="thm",ref="yoniso"|; によって、\ref|type="thm",ref="rela"|;, \ref|type="thm",ref="relb"|; の計 4 条件が全て成り立つことが分かっている。
-      したがって、\ref|type="thm",ref="relb"|; を用いれば、この定理の主張が示される。
+      さて、\mref|type="thm",ref="yonffd"|;, \mref|type="thm",ref="dayconvcl"|;, \mref|type="thm",ref="yoniso"|; によって、\mref|type="thm",ref="rela"|;, \mref|type="thm",ref="relb"|; の計 4 条件が全て成り立つことが分かっている。
+      したがって、\mref|type="thm",ref="relb"|; を用いれば、この定理の主張が示される。
     >
   >
   \p<
@@ -756,9 +756,9 @@
   \prf<
     \p<
      モノイダル圏 &m<\scr<C>> をとる。
-      \ref|type="thm",ref="monpro"|; によって、&m<\scr<C>> はプロモノイダル圏の構造をもつ。
-      \ref|type="thm",ref="funccat"|; を用いて、この構造に対応する &m<\widehat<\scr<C>>> 上のモノイダル圏の構造をとると、Yoneda 埋め込み &m<\bf<y>: \scr<C> \to; \widehat<\scr<C>>> によって、&m<\scr<C>> は &m<\widehat<\scr<C>>> に埋め込める。
-      \ref|type="thm",ref="dayconvcl"|; によって、&m<\widehat<\scr<C>>> 上のモノイダル圏の構造は双閉であり、構成から明らかに &m<\bf<y>> はモノイダル圏の構造を保存する。
+      \mref|type="thm",ref="monpro"|; によって、&m<\scr<C>> はプロモノイダル圏の構造をもつ。
+      \mref|type="thm",ref="funccat"|; を用いて、この構造に対応する &m<\widehat<\scr<C>>> 上のモノイダル圏の構造をとると、Yoneda 埋め込み &m<\bf<y>: \scr<C> \to; \widehat<\scr<C>>> によって、&m<\scr<C>> は &m<\widehat<\scr<C>>> に埋め込める。
+      \mref|type="thm",ref="dayconvcl"|; によって、&m<\widehat<\scr<C>>> 上のモノイダル圏の構造は双閉であり、構成から明らかに &m<\bf<y>> はモノイダル圏の構造を保存する。
       以上により、主張が示された。
     >
   >

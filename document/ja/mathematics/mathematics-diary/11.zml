@@ -17,8 +17,8 @@
   \thm|type="def"|<
     \p<
       ファイブレーション &m<p: \scr<E> \ring<\to;> \scr<B>> をとる。
-      &m<\scr<B>> の射 &m<u: I \to; J> と &m<\sb<\scr<E>><J>> の対象 &m<Y> の組に対し、&m<u> の持ち上げ &m<\sb<\overline<u>><Y>: \sp<u><*> Y \to; Y> が 1 つ定まっているとき、&m<p> を\em<劈開\fl<cloven>> であるという。
-      また、ここで定められた &m<\sb<\overline<u>><Y>> を &m<u> の\em<劈開\fl<cleavage>> という。
+      &m<\scr<B>> の射 &m<u: I \to; J> と &m<\sb<\scr<E>><J>> の対象 &m<Y> の組に対し、&m<u> の持ち上げ &m<\sb<\overline<u>><Y>: \sp<u><*> Y \to; Y> が 1 つ定まっているとき、&m<p> を\def<劈開\fl<cloven>> であるという。
+      また、ここで定められた &m<\sb<\overline<u>><Y>> を &m<u> の\def<劈開\fl<cleavage>> という。
     >
   >
   \p<
@@ -79,8 +79,8 @@
         \sp<u><*> \circ; \sp<v><*> = \sp<(v \circ; u)><*> \qquad;
         \sb<\rm<id>><I> \sp<><*> = \sb<\rm<id>><\sb<\scr<E>><I>>
       >
-      が成り立つとき、&m<p> を\em<分裂\fl<split>> であるという。
-      また、この場合、選ばれた各持ち上げのことを特に\em<分裂\fl<splitting>> という。
+      が成り立つとき、&m<p> を\def<分裂\fl<split>> であるという。
+      また、この場合、選ばれた各持ち上げのことを特に\def<分裂\fl<splitting>> という。
     >
   >
   \p<

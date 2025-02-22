@@ -112,7 +112,7 @@
       >
       と書ける。
       ここで、任意の &m<\sb<\frak<P>><`l> (C)> の元 &m<Y> に対し、&m<Y \sqcup; `{\top;`}> は最大元をもつので &m<`k>-有向であるから &m<&m<\sb<\bfrm<DPos>><`k>>> の対象である。
-      さらに、\ref|type="thm",ref="pkdir"|; により &m<\sb<\frak<P>><`l> (C)> は &m<`l>-有向だから、上記の和集合は &m<\sb<\bfrm<DPos>><`k>> 内の &m<`l>-有向余極限と見なせる。
+      さらに、\mref|type="thm",ref="pkdir"|; により &m<\sb<\frak<P>><`l> (C)> は &m<`l>-有向だから、上記の和集合は &m<\sb<\bfrm<DPos>><`k>> 内の &m<`l>-有向余極限と見なせる。
       これより、包含写像 &m<f: C \to; \sp<C><*>> を考えると、今述べたように &m<\sp<C><*>> は &m<`l>-有向余極限で &m<C> は &m<`l>-表示可能なので、ある &m<\sb<\frak<P>><`l> (C)> の元 &m<Y> が存在して、
       &mb<
         \diag|hor="thn"|<
@@ -128,7 +128,7 @@
       \label<十分性>
       &m<\sb<\bfrm<DPos>><`k>> の対象 &m<C> であって &m<\lvert; C \rvert; `< `l> であるものをとる。
       &m<`l>-有向図式 &m<F: \scr<I> \to; \sb<\bfrm<DPos>><`k>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> および射 &m<f: C \to; D> をとる。
-      &m<\sb<\bfrm<DPos>><`k>> の射が包含写像であることと、\ref|type="thm",ref="dircol"|; による余極限の具体的な表示を用いれば、これは、
+      &m<\sb<\bfrm<DPos>><`k>> の射が包含写像であることと、\mref|type="thm",ref="dircol"|; による余極限の具体的な表示を用いれば、これは、
       &mb<
         C \subseteq; \bigcup<i \in; \scr<I>> Fi = D
       >
@@ -157,8 +157,8 @@
   >
   \prf<
     \p<
-      まず、\ref|type="thm",ref="dircol"|; によって &m<\sb<\bfrm<DPos>><`k>> は &m<`k>-有向余極限をもつ。
-      また、\ref|type="thm",ref="pkdir"|; により、&m<\sb<\bfrm<DPos>><`k>> の &m<`k>-表示可能対象は濃度が &m<`k> 未満の対象であるから、そのようなものは同型の違いを除けば集合サイズしかない。
+      まず、\mref|type="thm",ref="dircol"|; によって &m<\sb<\bfrm<DPos>><`k>> は &m<`k>-有向余極限をもつ。
+      また、\mref|type="thm",ref="pkdir"|; により、&m<\sb<\bfrm<DPos>><`k>> の &m<`k>-表示可能対象は濃度が &m<`k> 未満の対象であるから、そのようなものは同型の違いを除けば集合サイズしかない。
       したがって、\a|href="60.html#pressm"|<定理 4.5> により、あとは &m<\sb<\bfrm<DPos>><`k>> の任意の対象が &m<`k>-表示可能対象の &m<`k>-有向余極限として書けることを示せば良い。
     >
     \p<
@@ -170,7 +170,7 @@
       >
       と書ける。
       ここで、任意の &m<\sb<\frak<P>><`l> (C)> の元 &m<Y> に対し、&m<Y \cup; `{\sb<\top;><Y>`}> は最大元をもつので &m<`k>-有向であるから &m<&m<\sb<\bfrm<DPos>><`k>>> の対象である。
-      さらに、\ref|type="thm",ref="pkdir"|; により &m<\sb<\frak<P>><`k> (C)> は &m<`k>-有向だから、上記の和集合は &m<\sb<\bfrm<DPos>><`k>> 内の &m<`k>-有向余極限である。
+      さらに、\mref|type="thm",ref="pkdir"|; により &m<\sb<\frak<P>><`k> (C)> は &m<`k>-有向だから、上記の和集合は &m<\sb<\bfrm<DPos>><`k>> 内の &m<`k>-有向余極限である。
       これにより、&m<C> を &m<`k>-有向余極限として表せた。
     >
   >
@@ -237,20 +237,20 @@
   \prf<
     \p<
       \label<条件 1 &m<\raarr;> 条件 2>
-      \ref|type="thm",ref="diracc"|; によって &m<\sb<\bfrm<DPos>><`k>> は &m<`k>-到達可能だから、明らかである。
+      \mref|type="thm",ref="diracc"|; によって &m<\sb<\bfrm<DPos>><`k>> は &m<`k>-到達可能だから、明らかである。
     >
     \p<
       \label<条件 2 &m<\raarr;> 条件 3>
       集合 &m<X> であって &m<\lvert; X \rvert; `< `l> であるものをとる。
-      \ref|type="thm",ref="pkdir"|; によって &m<\sb<\frak<P>><`k> (X)> は &m<`k>-有向順序集合だから、これは &m<\sb<\bfrm<DPos>><`k>> の対象である。
+      \mref|type="thm",ref="pkdir"|; によって &m<\sb<\frak<P>><`k> (X)> は &m<`k>-有向順序集合だから、これは &m<\sb<\bfrm<DPos>><`k>> の対象である。
       仮定から &m<\sb<\bfrm<DPos>><`k>> は &m<`l>-到達可能だから、ある &m<`l>-表示可能対象の &m<`l>-有向図式 &m<F: \scr<I> \to; \sb<\bfrm<DPos>><`k>> が存在して、&m<\sb<\frak<P>><`k> (X) = \op<colim> F> と書ける。
       この余極限余錐を &m<(\sb<c><i>: Fi \to; \sb<\frak<P>><`k> (X)) \sb<><i \in; \scr<I>>> とおく。
       ここで、各 &m<\scr<I>> の対象 &m<i> に対し、&m<Fi> は &m<\sb<\bfrm<DPos>><`k>> の対象であるから &m<`k>-有向順序集合である。
-      また、&m<Fi> は &m<\sb<\bfrm<DPos>><`k>> で &m<`l>-表示可能だから、\ref|type="thm",ref="dircard"|; を使えば &m<\lvert; Fi \rvert; `< `l> であることも分かる。
+      また、&m<Fi> は &m<\sb<\bfrm<DPos>><`k>> で &m<`l>-表示可能だから、\mref|type="thm",ref="dircard"|; を使えば &m<\lvert; Fi \rvert; `< `l> であることも分かる。
       さらに、&m<\sb<\bfrm<DPos>><`k>> の射は包含写像だったので、&m<Fi \subseteq; \sb<\frak<P>><`k> (X)> である。
     >
     \p<
-      任意の &m<X> の元 &m<x> に対し、単元集合 &m<`{x`}> は &m<\sb<\frak<P>><`k> (X)> の元だから、\ref|type="thm",ref="dircol"|; による余極限の具体的な表示を見れば、ある &m<\scr<I>> の対象 &m<\sb<i><x>> が存在して &m<`{x`} \in; F \sb<i><x>> であることが分かる。
+      任意の &m<X> の元 &m<x> に対し、単元集合 &m<`{x`}> は &m<\sb<\frak<P>><`k> (X)> の元だから、\mref|type="thm",ref="dircol"|; による余極限の具体的な表示を見れば、ある &m<\scr<I>> の対象 &m<\sb<i><x>> が存在して &m<`{x`} \in; F \sb<i><x>> であることが分かる。
       &m<\lvert; X \rvert; `< `l> であって &m<\scr<I>> は &m<`l>-有向だから、&m<`{\sb<i><x>`} \sb<><x \in; X>> の上界 &m<\bar<i>> がとれる。
       すると、任意の &m<X> の元 &m<x> に対して一斉に &m<`{x`} \in; F \bar<i>> となる。
       すなわち、&m<F \bar<i>> は任意の単元集合を属する。
@@ -369,7 +369,7 @@
   \thm|type="def"|<
     \p<
       正則基数 &m<`k, `l> をとり、&m<`k `< `l> であるとする。
-      上記定理の条件のいずれか (したがって全て) が成り立つとき、&m<`k> は &m<`l> より\em<激しく小さい\fl<sharply smaller>> といい、&m<`k \smt; `l> で表す。
+      上記定理の条件のいずれか (したがって全て) が成り立つとき、&m<`k> は &m<`l> より\def<激しく小さい\fl<sharply smaller>> といい、&m<`k \smt; `l> で表す。
     >
   >
   \p<
@@ -391,8 +391,8 @@
     >
   >
   \p<
-    \ref|type="thm",ref="smtarb"|; により、任意の正則基数に対してそれよりも激しく大きい正則基数が存在することが分かる。
-    しかし、\ref|type="thm",ref="smtanti"|; により、単に大きいからといって激しく大きいとは限らないことも分かる。
+    \mref|type="thm",ref="smtarb"|; により、任意の正則基数に対してそれよりも激しく大きい正則基数が存在することが分かる。
+    しかし、\mref|type="thm",ref="smtanti"|; により、単に大きいからといって激しく大きいとは限らないことも分かる。
     ということで、到達可能圏の正則基数の取り替えについては、なかなかセンシティブな問題がある。
   >
   \p<
@@ -409,7 +409,7 @@
       各 &m<L> の元 &m<l> に対し、&m<\sb<\scr<C>><l>> は &m<\sb<`k><l>>-局所表示可能であるとする。
       このとき、&m<\sup; [] `{\sb<`k><l>`} \sb<><l \in; L>> と &m<`s> のどちらよりも大きい正則基数 &m<`l> をとれば良い。
       実際、明らかに &m<`s \leq; `l> である。
-      さらに、任意の &m<L> の元 &m<l> に対し、&m<\sb<`k><l> \leq; `l> であることから、\ref|type="thm",ref="lock"|; によって &m<\scr<C>> は &m<`l>-局所表示可能である。
+      さらに、任意の &m<L> の元 &m<l> に対し、&m<\sb<`k><l> \leq; `l> であることから、\mref|type="thm",ref="lock"|; によって &m<\scr<C>> は &m<`l>-局所表示可能である。
     >
   >
   \thm|type="thm",id="accup"|<
@@ -423,7 +423,7 @@
       各 &m<L> の元 &m<l> に対し、&m<\sb<\scr<C>><l>> は &m<\sb<`k><l>>-到達可能であるとする。
       このとき、&m<\sup; [] `{\sb<`k><l>`} \sb<><l \in; L>> と &m<`s> のどちらよりも大きい正則基数 &m<`l'> をとり、&m<`l \coloneqq; \sp<(\sp<2><`l'>)><+>> とすれば良い。
       実際、まず &m<`s \leq; `l' `< `l> である。
-      さらに、任意の &m<L> の元 &m<l> に対し、&m<\sb<`k><l> \leq; `l'> であることから、\ref|type="thm",ref="smtarb"|; によって &m<\sb<`k><l> \smt; `l> であり、\ref|type="thm",ref="acck"|; によって &m<\scr<C>> は &m<`l>-到達可能である。
+      さらに、任意の &m<L> の元 &m<l> に対し、&m<\sb<`k><l> \leq; `l'> であることから、\mref|type="thm",ref="smtarb"|; によって &m<\sb<`k><l> \smt; `l> であり、\mref|type="thm",ref="acck"|; によって &m<\scr<C>> は &m<`l>-到達可能である。
     >
   >
   \h1<追記 (2020 年 8 月 10 日)>
@@ -432,7 +432,7 @@
   >
   \h1<追記 (2020 年 8 月 11 日)>
   \p<
-    今後の議論で使うため、\ref|type="thm",ref="acck"|; に条件を追加した。
+    今後の議論で使うため、\mref|type="thm",ref="acck"|; に条件を追加した。
     それに伴って、証明も少し変更した。
   >
   \h1<参考文献>

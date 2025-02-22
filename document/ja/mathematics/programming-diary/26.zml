@@ -12,7 +12,7 @@
     しかし、残念なことに &m<\bfrm<Set>> では実用上現れる関手が代数的コンパクトになることは稀である。
     では、どういった圏のどういった関手であれば代数的コンパクトになるのだろうか。
     ここでは、完備順序集合の圏に関して知られている結果をまとめようと思う。
-    証明は Barr\ref|type="bib",ref="bacf"|; によるものを参考にした。
+    証明は Barr\mref|type="bib",ref="bacf"|; によるものを参考にした。
   >
   \p<
     点付き完備順序集合とその間の厳密な連続写像が成す圏を &m<\sb<\bfrm<PDcpo>><!>> で表す。
@@ -50,8 +50,8 @@
           \ar|s="1",e="2"|<\sb<f><0>> \ar|s="2",e="3"|<\sb<f><1>> \ar|s="3",e="4"|<\sb<f><2>>
         >
       >
-      の形の図式を &m<\scr<C>> 上の\em<鎖\fl<chain>> という。
-      また、&m<\scr<C>> がこのような形の図式の余極限を全てもつならば、&m<\scr<C>> は\em<鎖余完備\fl<chain-cocomplete>> であるという。
+      の形の図式を &m<\scr<C>> 上の\def<鎖\fl<chain>> という。
+      また、&m<\scr<C>> がこのような形の図式の余極限を全てもつならば、&m<\scr<C>> は\def<鎖余完備\fl<chain-cocomplete>> であるという。
     >
   >
   \thm|type="def"|<
@@ -63,8 +63,8 @@
           \ar|s="2",e="1",inv|<\sb<g><0>> \ar|s="3",e="2",inv|<\sb<g><1>> \ar|s="4",e="3",inv|<\sb<g><2>>
         >
       >
-      の形の図式を &m<\scr<C>> 上の\em<余鎖\fl<cochain>> という。
-      また、&m<\scr<C>> がこのような形の図式の極限を全てもつならば、&m<\scr<C>> は\em<余鎖完備\fl<cochain-complete>> であるという。
+      の形の図式を &m<\scr<C>> 上の\def<余鎖\fl<cochain>> という。
+      また、&m<\scr<C>> がこのような形の図式の極限を全てもつならば、&m<\scr<C>> は\def<余鎖完備\fl<cochain-complete>> であるという。
     >
   >
   \p<
@@ -418,7 +418,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="zero"|; によって、&m<\scr<C>> は始対象と終対象をともにもつから、図式
+      \mref|type="thm",ref="zero"|; によって、&m<\scr<C>> は始対象と終対象をともにもつから、図式
       &mb<
         \diag<
           \v<0> \v<F 0> \v<\sp<F><2> 0> \v<\cdots;> \br;
@@ -446,18 +446,18 @@
           >
         >
       >
-      とおくと、&m<F> が射集合の順序を保存することから、\ref|type="thm",ref="lem"|; の 4 つの条件を全て満たしていることが分かる。
-      したがって、\ref|type="thm",ref="lem"|; により、上部の鎖の余極限と下部の余鎖の極限がともに存在して一致する。
+      とおくと、&m<F> が射集合の順序を保存することから、\mref|type="thm",ref="lem"|; の 4 つの条件を全て満たしていることが分かる。
+      したがって、\mref|type="thm",ref="lem"|; により、上部の鎖の余極限と下部の余鎖の極限がともに存在して一致する。
       それを &m<S> とおく。
     >
     \p<
-      各自然数 &m<n, m> に対し、\ref|type="thm",ref="lem"|; の証明の通りに &m<\multi<p><m><n>: \sb<S><n> \to; \sb<T><m>, \multi<u><\infty;><n>: \sb<S><n> \to; S, \multi<v><n><\infty;>: S \to; \sb<T><n>> をとる。
+      各自然数 &m<n, m> に対し、\mref|type="thm",ref="lem"|; の証明の通りに &m<\multi<p><m><n>: \sb<S><n> \to; \sb<T><m>, \multi<u><\infty;><n>: \sb<S><n> \to; S, \multi<v><n><\infty;>: S \to; \sb<T><n>> をとる。
       すると、定義によって、
       &mb<
         \multi<p><m + 1><n + 1> = F \multi<p><m><n>
       >
       が成り立つことが容易に示せる。
-      さらに、\ref|type="thm",ref="adamek"|; と\ref|type="thm",ref="coadamek"|; の通りに、射 &m<`s': S \to; FS, `t': FS \to; S> をとる。
+      さらに、\mref|type="thm",ref="adamek"|; と\mref|type="thm",ref="coadamek"|; の通りに、射 &m<`s': S \to; FS, `t': FS \to; S> をとる。
     >
     \p<
       任意の自然数 &m<n, m> に対し、
@@ -477,7 +477,7 @@
     >
     \p<
       以上により、&m<`s'> と &m<`t'> は互いに逆射だから同型射である。
-      したがって、\ref|type="thm",ref="adamek"|; によって &m<(S, `s'\sp<><-1>)> は &m<F>-始代数であり、\ref|type="thm",ref="coadamek"|; によって &m<(S, `s')> は &m<F>-終余代数である。
+      したがって、\mref|type="thm",ref="adamek"|; によって &m<(S, `s'\sp<><-1>)> は &m<F>-始代数であり、\mref|type="thm",ref="coadamek"|; によって &m<(S, `s')> は &m<F>-終余代数である。
       すなわち、&m<F> は代数的コンパクトである。
     >
   >
@@ -496,7 +496,7 @@
   >
   \h1<追記 (2019 年 12 月 13 日)>
   \p<
-    \ref|type="thm",ref="main"|; の議論が埋められていなかった箇所を埋め、全体を少し書き直しました。
+    \mref|type="thm",ref="main"|; の議論が埋められていなかった箇所を埋め、全体を少し書き直しました。
     元論文に書かれていた条件を見落としていたのが原因でした。
     このことを指摘してくださった \ae|href="https://twitter.com/Mizunashi_Mana"|<@Mizunashi_Mana> 氏には、この場を借りて感謝します。
   >

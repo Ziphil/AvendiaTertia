@@ -134,7 +134,7 @@
   \h2<外国語表記>
   \p<
     外国語表記\fl<foreign word> は小さめに表示されます。
-    強調表示と一緒に\em<モノイダル整合構造\fl<monoidal coherent structure>> のように使うことが多いです。
+    強調表示と一緒に\def<モノイダル整合構造\fl<monoidal coherent structure>> のように使うことが多いです。
   >
   \h2<音楽記号>
   \p<
@@ -486,10 +486,10 @@
       \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) = \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>) = 0
     >
     で与えられる。
-    この\ref|type="eq",ref="stat"|; を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の停留点である。
+    この\mref|type="eq",ref="stat"|; を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の停留点である。
   >
   \p<
-    以下の\ref|type="eq",ref="taylor"|; を見よ。
+    以下の\mref|type="eq",ref="taylor"|; を見よ。
   >
   \p<
     関数の近似的な振る舞いを調べるのには、Taylor 展開が有効である。
@@ -525,7 +525,7 @@
         >
       >
       と定める。
-      なお、&m<\op<fin> (a)> の元は &m<a> の\em<有限近似\fl<finite approximant>> と呼ばれる。
+      なお、&m<\op<fin> (a)> の元は &m<a> の\def<有限近似\fl<finite approximant>> と呼ばれる。
     >
   >
   \p<
@@ -553,8 +553,8 @@
     >
   >
   \p<
-    \ref|type="thm",ref="def"|; と\ref|type="thm",ref="minmin"|; を用いると、以下のような安定写像の特徴付けが得られる。
-    また、\ref|type="thm",ref="test"|; のように後から出てくる定理も参照できるか調べる。
+    \mref|type="thm",ref="def"|; と\mref|type="thm",ref="minmin"|; を用いると、以下のような安定写像の特徴付けが得られる。
+    また、\mref|type="thm",ref="test"|; のように後から出てくる定理も参照できるか調べる。
   >
   \thm|type="prp",id="stbapp"|<
     \name<ここに定理名\fl<theorem name here>>
@@ -586,7 +586,7 @@
     >
     \p<
       ここで &m<\op<elfin> (\ring<a>, y)> を考えると、&m<\ring<a>> が有限集合であることから &m<\op<elfin> (\ring<a>, y)> も有限集合である。
-      したがって、&m<\op<elfin> (\ring<a>, y)> には必ず極小元が存在するが、\ref|type="thm",ref="minmin"|; によってそれは最小元である。
+      したがって、&m<\op<elfin> (\ring<a>, y)> には必ず極小元が存在するが、\mref|type="thm",ref="minmin"|; によってそれは最小元である。
       &m<\ring<a> \subseteq; a> より &m<\op<elfin> (\ring<a>, y)> の最小元は &m<\op<elfin> (a, y)> の最小元でもあるから、これで示された。
     >
     \p<
@@ -617,9 +617,9 @@
   >
   \h1|id="bibliography-reference"|<参考文献の参照>
   \p<
-    スター自律圏を構成する一般的な方法はいくつか知られており、その中で代表的なものとして、Chu\ref|type="bib",ref="csac"|; による Chu 構成と de Paiva\ref|type="bib",ref="pdcx"|; によるダイアレクティカ圏がある。
-    Chu 構成は、名前の通り Chu\ref|type="bib",ref="csac"|; によって導入された構成方法で、まさにスター自律圏を構成する方法として考えられた。
-    ダイアレクティカ圏は、de Paiva\ref|type="bib",ref="pdcx"|; によって導入された構成方法で、Gödel\ref|type="bib",ref="gueb"|; が考案したダイアレクティカ解釈を圏論的に再構築することで得られたものである。
+    スター自律圏を構成する一般的な方法はいくつか知られており、その中で代表的なものとして、Chu\mref|type="bib",ref="csac"|; による Chu 構成と de Paiva\mref|type="bib",ref="pdcx"|; によるダイアレクティカ圏がある。
+    Chu 構成は、名前の通り Chu\mref|type="bib",ref="csac"|; によって導入された構成方法で、まさにスター自律圏を構成する方法として考えられた。
+    ダイアレクティカ圏は、de Paiva\mref|type="bib",ref="pdcx"|; によって導入された構成方法で、Gödel\mref|type="bib",ref="gueb"|; が考案したダイアレクティカ解釈を圏論的に再構築することで得られたものである。
     この 2 つの構成方法は様々な点で似通ってはいるものの、モノダイル構造の定義が両者で少し異なっており、両者を統一して扱うことはそれほど単純ではなかった。
   >
   \h1<参考文献>

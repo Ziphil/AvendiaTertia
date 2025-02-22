@@ -17,10 +17,10 @@
       \frac<\partial; f><\partial; x> (\sb<x><0>, \sb<y><0>) = \frac<\partial; f><\partial; y> (\sb<x><0>, \sb<y><0>) = 0
     >
     で与えられる。
-    この\ref|type="eq",ref="stat"|; を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の\em<停留点\fl<stationary point>> もしくは\em<臨界点\fl<critical point>> と呼ばれる。
+    この\mref|type="eq",ref="stat"|; を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の\def<停留点\fl<stationary point>> もしくは\def<臨界点\fl<critical point>> と呼ばれる。
   >
   \p<
-    さて、ここで問題となるのは、\ref|type="eq",ref="stat"|; が極大点や極小点を与える必要条件にすぎないということである。
+    さて、ここで問題となるのは、\mref|type="eq",ref="stat"|; が極大点や極小点を与える必要条件にすぎないということである。
     すなわち、停留点が必ずしも極大点や極小点になるわけではないのである。
     ここで、関数 &m<f (x, y)> についてより深い考察が必要になる。
   >
@@ -39,8 +39,8 @@
     ここで &m<`r \coloneqq; \sqrt<\sp<h><2> + \sp<k><2>>> とした。
   >
   \p<
-    以下では\ref|type="eq",ref="stat"|; は成り立っているものとする。
-    このとき、\ref|type="eq",ref="taylor"|; は、
+    以下では\mref|type="eq",ref="stat"|; は成り立っているものとする。
+    このとき、\mref|type="eq",ref="taylor"|; は、
     &mb<
       f (\sb<x><0> + h, \sb<y><0> + k) - f (\sb<x><0>, \sb<y><0>) = \frac<1><2> \paren<\sp<h><2> \frac<\sp<\partial;><2> f><\partial; \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)> + o (\sp<`r><2>)
     >
@@ -61,7 +61,7 @@
       B \coloneqq; \frac<\sp<\partial;><2> f><\partial; x \partial; y> (\sb<x><0>, \sb<y><0>) \qquad;
       C \coloneqq; \frac<\sp<\partial;><2> f><\partial; \sp<y><2>> (\sb<x><0>, \sb<y><0>)
     >
-    とおけば、\ref|type="eq",ref="qf"|; は、
+    とおけば、\mref|type="eq",ref="qf"|; は、
     &mb<
       X = A \sp<h><2> + B hk + C \sp<k><2>
     >
@@ -95,9 +95,9 @@
       >>
     >
     という、対称的な形が出てくる。
-    この行列を \em<Hesse 行列\fl<—sian matrix>> と呼び、&m<\scr<H> f (\sb<x><0>, \sb<y><0>)> と書く。
+    この行列を \def<Hesse 行列\fl<—sian matrix>> と呼び、&m<\scr<H> f (\sb<x><0>, \sb<y><0>)> と書く。
     変数の値を明示せず、単に &m<\scr<H> f> と書くこともある。
-    また、Hesse 行列の行列式を \em<Hesse 行列式\fl<—sian determinant>> もしくは\em<ヘッシアン\fl<hessian>> と呼ぶ。
+    また、Hesse 行列の行列式を \def<Hesse 行列式\fl<—sian determinant>> もしくは\def<ヘッシアン\fl<hessian>> と呼ぶ。
   >
   \p<
     この Hesse 行列を用いると、これまで議論してきた極大極小条件を簡潔に記述することができる。
@@ -187,7 +187,7 @@
     ここでも同じようにして表記を変えてみる。
   >
   \p<
-    まず、上\ref|type="eq",ref="diff"|; は、
+    まず、上\mref|type="eq",ref="diff"|; は、
     &mb<
       f \paren<\matrix<\cc<\sb<x><0> + h> \cc<\sb<y><0> + k>>> = \paren<\matrix<\c<\frac<\partial; f><\partial; x> \paren<\matrix<\cc<\sb<x><0>> \cc<\sb<y><0>>>>> \c<\frac<\partial; f><\partial; y> \paren<\matrix<\cc<\sb<x><0>> \cc<\sb<y><0>>>>>>> \paren<\matrix<\cc<h> \cc<k>>> + o \vert<\matrix<\cc<h> \cc<k>>>
     >
@@ -201,7 +201,7 @@
   >
   \p<
     さて、こう書いてしまえば、多変数から多変数への写像の微分可能性も容易に定義できる。
-    例えば、前項に示した、2 変数から 2 変数への写像 &m<\bf<f> (\bf<x>)> を考えれば、\ref|type="eq",ref="vec"|; を参考にして、
+    例えば、前項に示した、2 変数から 2 変数への写像 &m<\bf<f> (\bf<x>)> を考えれば、\mref|type="eq",ref="vec"|; を参考にして、
     &mb<
       \bf<f> (\sb<\bf<x>><0> + \bf<h>) =
       \paren<\matrix<
@@ -211,7 +211,7 @@
       \bf<h> + o \lvert; \bf<h> \rvert;
     >
     と表せることを、微分可能性の定義としても良さそうである。
-    このとき、右辺第 1 項に現れる行列を、\em<Jacobi 行列\fl<—bian matrix>> と呼び、&m<\scr<J> \bf<f> (\sb<\bf<x>><0>)> と書く。
+    このとき、右辺第 1 項に現れる行列を、\def<Jacobi 行列\fl<—bian matrix>> と呼び、&m<\scr<J> \bf<f> (\sb<\bf<x>><0>)> と書く。
     単に &m<\scr<J> \bf<f>> とだけ書く場合もある。
   >
   \h2<一般の Jacobi 行列>
@@ -239,14 +239,14 @@
     &mb<
       \bf<f> (\sb<\bf<x>><0> + \bf<h>) = \scr<J> \bf<f> (\sb<\bf<x>><0>) \bf<h> + o \lvert; \bf<h> \rvert;
     >
-    が成り立つとき、写像 &m<\bf<f> (\bf<x>)> は点 &m<\sb<\bf<x>><0>> で\em<微分可能\fl<differentiable>> というのである。
+    が成り立つとき、写像 &m<\bf<f> (\bf<x>)> は点 &m<\sb<\bf<x>><0>> で\def<微分可能\fl<differentiable>> というのである。
   >
   \p<
     多変数のベクトル表記と Jacobi 行列を用いることで、多変数から多変数への写像の微分や積分も、通常の関数と同じように表記し扱うことができるようになる。
   >
   \h2<Jacobi 行列式>
   \p<
-    Jacobi 行列の行列式を、\em<Jacobi 行列式\fl<—bian determinant>> や\em<ヤコビアン\fl<jacobian>> という。
+    Jacobi 行列の行列式を、\def<Jacobi 行列式\fl<—bian determinant>> や\def<ヤコビアン\fl<jacobian>> という。
     ここでは詳しく述べないが、Jacobi 行列式は重積分の変数変換の際に用いられる。
   >
 

@@ -35,7 +35,7 @@
         (x, y) \preceq; (x', y') \coloniff; x \prec; x' \scor; (x = x' \scand; y \preceq; y')
       >
       で定める。
-      この関係は\em<辞書式順序\fl<lexicographic order>> と呼ばれる。
+      この関係は\def<辞書式順序\fl<lexicographic order>> と呼ばれる。
     >
   >
   \thm|type="lem"|<
@@ -63,7 +63,7 @@
           \c<`a \cdot; `b> \c<\coloneqq;> \c<\op<ord> (`b \times; `a)>
         >
       >
-      と定め、それぞれ &m<`a, `b> の\em<和\fl<sum>> と\em<積\fl<product>> という。 
+      と定め、それぞれ &m<`a, `b> の\def<和\fl<sum>> と\def<積\fl<product>> という。 
     >
   >
   \p<
@@ -176,7 +176,7 @@
   >
   \prf<
     \p<
-      &m<X \setminus; S \neq; \empty;> であるから、&m<x \coloneqq; \min; (X \setminus; S)> がとれる。
+      &m<X \setminus; S \neq; \defpty;> であるから、&m<x \coloneqq; \min; (X \setminus; S)> がとれる。
       この &m<x> について &m<S = O (x)> であることを示す。
     >
     \p<
@@ -201,7 +201,7 @@
     \p<
       &m<`a> の任意の切片 &m<S> をとる。
       &m<S = `a> であれば、&m<`a> は順序数だから &m<S> も順序集である。
-      &m<S \neq; `a> であれば、\ref|type="thm",ref="segone"|; によって、ある元 &m<`j \in; `a> に対して &m<S = O (`j)> と書ける。
+      &m<S \neq; `a> であれば、\mref|type="thm",ref="segone"|; によって、ある元 &m<`j \in; `a> に対して &m<S = O (`j)> と書ける。
       一方、\a|href="47.html#segid"|<補題 1.13> によって、&m<O (`j) = `j> も成り立つ。
       これにより &m<S = `j> が得られたが、\a|href="47.html#elemord"|<定理 1.6> によって &m<`j> は順序数だから、&m<S> も順序数である。
     >
@@ -239,7 +239,7 @@
     \p<
       仮に &m<`a \leq; `b> ではないとすると、\a|href="47.html#tri"|<定理 1.9> によって &m<`a `> `b> が成り立つ。
       これはすなわち &m<`a \supset; `b> であるということなので、&m<f> の終域を拡張して &m<f: `a \to; `a> と見なせる。
-      ところで、&m<`a `> `b> は &m<`a \ni; `b> でもあるということなので、\ref|type="thm",ref="wellinc"|; を適用すれば &m<`b \leq; f (`b)> を得る。
+      ところで、&m<`a `> `b> は &m<`a \ni; `b> でもあるということなので、\mref|type="thm",ref="wellinc"|; を適用すれば &m<`b \leq; f (`b)> を得る。
       しかし、もともと &m<f> の終域は &m<`b> であったから、&m<f (`b) \in; `b> すなわち &m<f (`b) `< `b> が成り立つはずである。
       これは矛盾である。
       以上により、&m<`a \leq; `b> が示された。
@@ -287,7 +287,7 @@
       >
       が成り立つ。
       以上の議論をまとめれば、&m<`g + `b> の真の切片 &m<S \subset; `g + `b> が存在して &m<S \cong; `g + `a> が成り立つということが示せたことになる。
-      \ref|type="thm",ref="segord"|; によって &m<S> はある順序数と同型であるが、&m<S \cong; `g + `a> であるからその順序数とは &m<`g + `a> である。
+      \mref|type="thm",ref="segord"|; によって &m<S> はある順序数と同型であるが、&m<S \cong; `g + `a> であるからその順序数とは &m<`g + `a> である。
       したがって、&m<`g + `a \subset; `g + `b> すなわち &m<`g + `a `< `g + `b> が示された。
     >
     \p<
@@ -298,7 +298,7 @@
       >
       が存在する。
       これは明らかに狭義単調増加写像である。
-      したがって、これに適切な順序同型写像を合成することで、狭義単調増加写像 &m<f': `a + `g \to; `b + `g> が得られるので、\ref|type="thm",ref="incord"|; によって &m<`a + `g \leq; `b + `g> である。
+      したがって、これに適切な順序同型写像を合成することで、狭義単調増加写像 &m<f': `a + `g \to; `b + `g> が得られるので、\mref|type="thm",ref="incord"|; によって &m<`a + `g \leq; `b + `g> である。
     >
     \p<
       3 つ目の主張を示す。

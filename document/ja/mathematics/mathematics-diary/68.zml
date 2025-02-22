@@ -8,7 +8,7 @@
 
   \h1<日記 (2020 年 10 月 1 日)>
   \p<
-    今日は、Adámek–Rosický\ref|type="bib",ref="lpa"|; において局所表示可能圏の表現定理として紹介されている定理を証明する。
+    今日は、Adámek–Rosický\mref|type="bib",ref="lpa"|; において局所表示可能圏の表現定理として紹介されている定理を証明する。
   >
   \thm|type="def"|<
     \p<
@@ -76,7 +76,7 @@
         >>
       >
       と表せる。
-      \ref|type="thm",ref="pfil"|; によって &m<\bfrm<El> (P)> は &m<`k>-フィルターであり、&m<\bf<y>: \scr<S> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の像は全て &m<\tilde<\scr<C>>> に属するので、&m<P> が &m<\tilde<\scr<C>>> の対象の &m<`k>-フィルター余極限で書けたことになる。
+      \mref|type="thm",ref="pfil"|; によって &m<\bfrm<El> (P)> は &m<`k>-フィルターであり、&m<\bf<y>: \scr<S> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の像は全て &m<\tilde<\scr<C>>> に属するので、&m<P> が &m<\tilde<\scr<C>>> の対象の &m<`k>-フィルター余極限で書けたことになる。
       一方、\a|href="65.html#colpres"|<補題 9.3> によって &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は &m<`k>-有向余極限を保存するが、\a|href="58.html#fd"|<定理 2.8> によって &m<`k>-フィルター余極限は &m<`k>-有向余極限に取り替えられるから、&m<\bf<z>> は &m<`k>-フィルター余極限も保存する。
       すなわち、&m<\tilde<\scr<C>>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の部分圏として &m<`k>-フィルター余極限をとる操作で閉じている。
       以上により、&m<P> は &m<\tilde<\scr<C>>> に属する。
@@ -114,7 +114,7 @@
   \prf<
     \p<
       \label<条件 1 &m<\raarr;> 条件 2>
-      \ref|type="thm",ref="equiv"|; によって &m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とすれば良い。
+      \mref|type="thm",ref="equiv"|; によって &m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とすれば良い。
     >
     \p<
       \label<条件 2 &m<\raarr;> 条件 3>

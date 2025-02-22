@@ -20,7 +20,7 @@
     が成り立つことが知られている。
     一方で、この &m<Z> を閉じたラムダ項のみに制限した命題
     &mb<
-      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; [\sb|rel|<\vdash;><\rm<`l> `b `h> MZ = NZ]) \implies; [\sb|rel|<\vdash;><\rm<`l> `b `h> M = N]
+      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\defpty;> \ssbin; [\sb|rel|<\vdash;><\rm<`l> `b `h> MZ = NZ]) \implies; [\sb|rel|<\vdash;><\rm<`l> `b `h> M = N]
     >
     は一般には成り立たない。
     この反例を構成する。
@@ -55,7 +55,7 @@
     ラムダ項 &m<M> の Gödel 数 は &m<`# M> とし、&m<M> の Gödel 数の Church 数を &m<\lceil; M \rceil; \equiv; `# M> で表す。
   >
   \p<
-    ラムダ項全体は &m<\rm<`L>> で表し、閉じたラムダ項全体は &m<\sp<\rm<`L>><\empty;>> で表す。
+    ラムダ項全体は &m<\rm<`L>> で表し、閉じたラムダ項全体は &m<\sp<\rm<`L>><\defpty;>> で表す。
   >
   \h1<Gödel 数の逆関数>
   \p<
@@ -71,7 +71,7 @@
           \c<P, Q \in; \op<Comb> (\scr<A>)> \c<\implies;> \c<PQ \in; \op<Comb> (\scr<A>)>
         >
       >
-      このとき、&m<\op<Comb> (\scr<A>)> の元を &m<\scr<A>> の\em<結合\fl<combination>> という。
+      このとき、&m<\op<Comb> (\scr<A>)> の元を &m<\scr<A>> の\def<結合\fl<combination>> という。
       &m<\scr<A> = `{ \sb<M><1>, \cdots;, \sb<M><n> `}> のときは、&m<\op<Comb> (\scr<A>)> を単に &m<\op<Comb> `{ \sb<M><1>, \cdots;, \sb<M><n> `}> と書く。
     >
   >
@@ -79,7 +79,7 @@
     \p<
       あるコンビネータ &m<\bfrm<X>> であって、
       &mb<
-        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; \sp<><\exists;> \sp<M><*> \in; \op<Comb> `{ \bfrm<X> `} \ssbin; \sp<M><*> \sb|rel|<\headrarr;><`b> M
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\defpty;> \ssbin; \sp<><\exists;> \sp<M><*> \in; \op<Comb> `{ \bfrm<X> `} \ssbin; \sp<M><*> \sb|rel|<\headrarr;><`b> M
       >
       を満たすものが存在する。
     >
@@ -189,15 +189,15 @@
     \p<
       閉じたラムダ項 &m<G> であって、
       &mb<
-        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; G \lceil; M \rceil; \sb|rel|<=><`b> \underline<$ \sp<M><*>>
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\defpty;> \ssbin; G \lceil; M \rceil; \sb|rel|<=><`b> \underline<$ \sp<M><*>>
       >
       を満たすものが存在する。
-      なお、&m<\sp<M><*>> は\ref|type="thm",ref="mstar"|; で定義されたものである。
+      なお、&m<\sp<M><*>> は\mref|type="thm",ref="mstar"|; で定義されたものである。
     >
   >
   \prf<
     \p<
-      \ref|type="thm",ref="mstar"|; の証明から、閉じたラムダ項 &m<M> に対し、&m<\sp<M><*>> は &m<M> から再帰的に決定できる。
+      \mref|type="thm",ref="mstar"|; の証明から、閉じたラムダ項 &m<M> に対し、&m<\sp<M><*>> は &m<M> から再帰的に決定できる。
       したがって、
       &mb<
         g: `# M \longmapsto; $ \sp<M><*>
@@ -214,14 +214,14 @@
     \p<
       コンビネータ &m<\bfrm<E>> であって、
       &mb<
-        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; \bfrm<E> \lceil; M \rceil; \sb|rel|<=><`b> M
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\defpty;> \ssbin; \bfrm<E> \lceil; M \rceil; \sb|rel|<=><`b> M
       >
       を満たすものが存在する。
     >
   >
   \prf<
     \p<
-      \ref|type="thm",ref="deff"|; の &m<F> と\ref|type="thm",ref="defg"|; の &m<G> を用いて、
+      \mref|type="thm",ref="deff"|; の &m<F> と\mref|type="thm",ref="defg"|; の &m<G> を用いて、
       &mb<
         \bfrm<E> \equiv; \rm<`l> u. \sfun; u F (G u)
       >
@@ -236,7 +236,7 @@
   \h1<標準簡約列>
   \thm|type="def"|<
     \p<
-      &m<`b>-簡約から成る\em<標準簡約列\fl<standard reduction sequence>> を、以下によって再帰的に定義する。
+      &m<`b>-簡約から成る\def<標準簡約列\fl<standard reduction sequence>> を、以下によって再帰的に定義する。
     >
     \ol<
       \li<
@@ -425,7 +425,7 @@
         F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>) \sb|rel|<=><`b> F \underline<n> (G \underline<n>) (\bfrm<E> \sfun; \underline<m + n - 1>) 
       >
       が成り立つことである。
-      これと\ref|type="thm",ref="fuvw"|; と\ref|type="thm",ref="gu"|; を用いれば、
+      これと\mref|type="thm",ref="fuvw"|; と\mref|type="thm",ref="gu"|; を用いれば、
       &mb<
         \array|align="rcl"|<
           \c<F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>)> \c<\sb|rel|<=><`b>> \c<F \underline<n> (F (\bfrm<`S> \underline<n>) (G (\bfrm<`S> \underline<n>)) (\bfrm<E> (\bfrm<`S> \underline<n>)) (G \underline<n>)) (\bfrm<E> \underline<n>)> \br;
@@ -449,7 +449,7 @@
   \prf<
     \p<
       &m<n = `# Z, n' = `# Z'> とおけば、&m<\bfrm<E> \underline<n> \sb|rel|<=><`b> Z, \bfrm<E> \underline<n'> \sb|rel|<=><`b> Z'> である。
-      したがって、\ref|type="thm",ref="fngnen"|; を用いれば、
+      したがって、\mref|type="thm",ref="fngnen"|; を用いれば、
       &mb<
         \array|align="rcl"|<
           \c<MZ> \c<\sb|rel|<=><`b>> \c<F \underline<0> (G \underline<0>) (\bfrm<E> \underline<n>)> \br;
@@ -512,9 +512,9 @@
       また、&m<(\rm<`l> w. \sfun; P) W \sb|rel|<\to;><h> Q> が成り立つ。
     >
     \p<
-      &m<\rm<`l> w. \sfun; P> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項なので、\ref|type="thm",ref="srsq"|; によって &m<`t> を構成する全ての簡約は冠頭簡約である。
+      &m<\rm<`l> w. \sfun; P> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項なので、\mref|type="thm",ref="srsq"|; によって &m<`t> を構成する全ての簡約は冠頭簡約である。
       したがって、&m<(\rm<`l> w. \sfun; P) W \sb|rel|<\to;><h> Q> と合わせて &m<FUVW \sb|rel|<\headrarr;><h> Q> が成り立つ。
-      さらに、&m<(\rm<`l> w. \sfun; P) W> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項だから、\ref|type="thm",ref="fuvw"|; の証明で行った計算を見ることで、
+      さらに、&m<(\rm<`l> w. \sfun; P) W> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項だから、\mref|type="thm",ref="fuvw"|; の証明で行った計算を見ることで、
       &mb<
         Q \equiv; FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)
       >
@@ -576,8 +576,8 @@
         `p: Q \to; \cdots; \to; Z'
       >
       は長さ &m<l> 未満の標準簡約列である。
-      また、\ref|type="thm",ref="srsq"|; により &m<FUV \sb|rel|<\headrarr;><h> Q> が成り立つ。
-      これより、\ref|type="thm",ref="fuvw"|; の証明の計算を見れば、
+      また、\mref|type="thm",ref="srsq"|; により &m<FUV \sb|rel|<\headrarr;><h> Q> が成り立つ。
+      これより、\mref|type="thm",ref="fuvw"|; の証明の計算を見れば、
       &mb<
         Q \equiv; \rm<`l> w. \sfun; FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) w V) (\bfrm<E> U)
       >
@@ -641,12 +641,12 @@
       >
       は長さ &m<l> 未満の標準簡約列である。
       &m<`t> の長さを &m<l'> とする。
-      また、\ref|type="thm",ref="srsq"|; により &m<FUVW \sb|rel|<\headrarr;><h> Q> が成り立つから、
+      また、\mref|type="thm",ref="srsq"|; により &m<FUVW \sb|rel|<\headrarr;><h> Q> が成り立つから、
       &mb<
         Q \equiv; FU (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV) (\bfrm<E> U)
       >
       が分かる。
-      &m<y \in; \op<FV> (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV)> かつ &m<y \nin; \op<FV> (Z)> だから、\ref|type="thm",ref="fuvwtoza"|; より、長さ &m<l'> 以下の標準簡約列
+      &m<y \in; \op<FV> (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV)> かつ &m<y \nin; \op<FV> (Z)> だから、\mref|type="thm",ref="fuvwtoza"|; より、長さ &m<l'> 以下の標準簡約列
       &mb<
         `r: F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV \to; \cdots; \to; Z'
       >
@@ -684,8 +684,8 @@
     \p<
       &m<M> は閉じているので &m<y \nin; \op<FV> (Mx)> であり、&m<\op<FV> (Mx) \supseteq; \op<FV> (Z') = \op<FV> (Z)> が成り立つから、&m<y \nin; \op<FV> (Z)> でもある。
       また、明らかに &m<y \in; \op<FV> (y)> である。
-      さらに、&m<My \equiv; F \underline<0> (G \underline<0>) y> であるから、これは\ref|type="thm",ref="fuvwtozb"|; が使える形である。
-      したがって、\ref|type="thm",ref="fuvwtozb"|; により、あるラムダ項 &m<W'> が存在して、&m<y \sb|rel|<\headrarr;><`b> W'> かつ &m<y \nin; \op<FV> (W')> が成り立つ。
+      さらに、&m<My \equiv; F \underline<0> (G \underline<0>) y> であるから、これは\mref|type="thm",ref="fuvwtozb"|; が使える形である。
+      したがって、\mref|type="thm",ref="fuvwtozb"|; により、あるラムダ項 &m<W'> が存在して、&m<y \sb|rel|<\headrarr;><`b> W'> かつ &m<y \nin; \op<FV> (W')> が成り立つ。
       &m<y> は変項なので、&m<W' \equiv; y> でなければならず、これより &m<y \nin; \op<FV> (y)> となり矛盾である。
     >
   >
@@ -693,14 +693,14 @@
     \p<
       上で定義した &m<M, N> は、
       &mb<
-        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
+        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\defpty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
       >
       を満たさない。
     >
   >
   \prf<
     \p<
-      任意に閉じたラムダ項 &m<Z> をとると、&m<\bfrm<I>> も閉じたラムダ項だから、\ref|type="thm",ref="mzmz"|; によって &m<MZ \sb|rel|<=><`b> M \bfrm<I>> である。
+      任意に閉じたラムダ項 &m<Z> をとると、&m<\bfrm<I>> も閉じたラムダ項だから、\mref|type="thm",ref="mzmz"|; によって &m<MZ \sb|rel|<=><`b> M \bfrm<I>> である。
       一方、&m<N> の定義により、&m<NZ \sb|rel|<=><`b> M \bfrm<I>> である。
       したがって、&m<MZ \sb|rel|<=><`b`h> NZ> を得る。
     >
@@ -708,7 +708,7 @@
       &m<M \sb|rel|<=><`b`h> N> と仮定する。
       任意の変項 &m<x, y> に対し、&m<Mx \sb|rel|<=><`b`h> Nx> および &m<Mx \sb|rel|<=><`b`h> Ny> である。
       さらに &m<N> の定義から、&m<Nx \sb|rel|<=><`b`h> M \bfrm<I>> および &m<Ny \sb|rel|<=><`b`h> M \bfrm<I>> も成り立つ。
-      以上により &m<Mx \sb|rel|<=><`b`h> My> を得るが、これは\ref|type="thm",ref="mxmy"|; に反する。
+      以上により &m<Mx \sb|rel|<=><`b`h> My> を得るが、これは\mref|type="thm",ref="mxmy"|; に反する。
       したがって、&m<M \sb|rel|<\neq;><`b`h> N> である。
     >
   >
@@ -716,7 +716,7 @@
   \p<
     前節で示したように、閉じたラムダ項に対してのみの外延性
     &mb<
-      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
+      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\defpty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
     >
     は一般には成り立たないが、&m<M> と &m<N> が特定の条件を満たしている範囲であれば成り立つ。
     その条件の 1 つとして、以下のものが知られている。
@@ -727,7 +727,7 @@
       &mb<
         \sp<><\forall;> N \in; \rm<`L> \ssbin; \sp<><\exists;> M' \in; \rm<`L> \ssbin; M \sb|rel|<\headrarr;><`b`h> M' \scand; N \in; \op<Sub> (M')
       >
-      が成り立つとき、&m<M> を &m<`b`h>-\em<普遍生成子\fl<universal generator>> という。
+      が成り立つとき、&m<M> を &m<`b`h>-\def<普遍生成子\fl<universal generator>> という。
       なお、&m<\op<Sub> (M')> は &m<M'> の部分項全体の集合を表す。
     >
   >
@@ -735,7 +735,7 @@
     \p<
       ラムダ項 &m<M, N> のうち、どちらか一方が &m<`b`h>-普遍生成子でなければ、
       &mb<
-        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
+        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\defpty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
       >
       が成り立つ。
     >

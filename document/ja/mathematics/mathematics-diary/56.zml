@@ -20,7 +20,7 @@
     \p<
       圏 &m<\scr<A>, \scr<B>, \scr<C>> を考える。
       2 つの関手 &m<\sb<F><\rm<L>>: \scr<A> \times; \lvert; \scr<B> \rvert; \to; \scr<C>> と &m<\sb<F><\rm<R>>: \lvert; \scr<A> \rvert; \times; \scr<B> \to; \scr<C>> について、任意の &m<\scr<A>> の対象 &m<A> と &m<\scr<B>> の対象 &m<B> に対して &m<\sb<F><\rm<L>> (A, B) = \sb<F><\rm<R>> (A, B)> が成り立っているとする。
-      このとき、組 &m<(\sb<F><\rm<L>>, \sb<F><\rm<R>>)> を\em<バイノイダル関手\fl<binoidal functor>> といい、&m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> で表す。
+      このとき、組 &m<(\sb<F><\rm<L>>, \sb<F><\rm<R>>)> を\def<バイノイダル関手\fl<binoidal functor>> といい、&m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> で表す。
     >
   >
   \p<
@@ -39,7 +39,7 @@
           \ar|s="2",e="4",dash|; \ar|s="3",e="4",dash|;
         >
       >
-      によって得られる圏 &m<\scr<A> \rhombus; \scr<B>> を、&m<\scr<A>> と &m<\scr<B>> の\em<奇妙テンソル積\fl<funny tensor product>> という。
+      によって得られる圏 &m<\scr<A> \rhombus; \scr<B>> を、&m<\scr<A>> と &m<\scr<B>> の\def<奇妙テンソル積\fl<funny tensor product>> という。
     >
   >
   \p<
@@ -48,7 +48,7 @@
   \thm|type="prp"|<
     \p<
       圏 &m<\scr<A>, \scr<B>, \scr<C>> を考える。
-      \ref|type="thm",ref="binf",nolink|; の意味におけるバイノイダル関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> を与えることは、\ref|type="thm",ref="ften",nolink|; の記号における通常の関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> を与えることと同値である。
+      \mref|type="thm",ref="binf",nolink|; の意味におけるバイノイダル関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> を与えることは、\mref|type="thm",ref="ften",nolink|; の記号における通常の関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> を与えることと同値である。
     >
   >
   \prf<
@@ -61,7 +61,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<D>> の上に関手 &m<\bowtie|ord|;: \scr<D> \rhombus; \scr<D> \to; \scr<D>> が定まっているとき、&m<\scr<D>> を\em<バイノイダル圏\fl<binoidal category>> という。
+      圏 &m<\scr<D>> の上に関手 &m<\bowtie|ord|;: \scr<D> \rhombus; \scr<D> \to; \scr<D>> が定まっているとき、&m<\scr<D>> を\def<バイノイダル圏\fl<binoidal category>> という。
     >
   >
   \p<
@@ -71,7 +71,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<B>, \scr<C>> と関手 &m<F, G: \scr<B> \to; \scr<C>> を考える。
-      &m<\scr<B>> の対象 &m<B> に対して &m<\scr<C>> の射 &m<\sb<`u><B>: FB \to; GB> が単に定まっている族 &m<(\sb<`u><B>) \sb<><B \in; \scr<B>>> を、&m<F> から &m<G> への\em<不自然変換\fl<unnatural transformation>> といい、&m<`u: F \vertraarr; G> で表す。
+      &m<\scr<B>> の対象 &m<B> に対して &m<\scr<C>> の射 &m<\sb<`u><B>: FB \to; GB> が単に定まっている族 &m<(\sb<`u><B>) \sb<><B \in; \scr<B>>> を、&m<F> から &m<G> への\def<不自然変換\fl<unnatural transformation>> といい、&m<`u: F \vertraarr; G> で表す。
     >
   >
   \thm|type="def"|<
@@ -112,7 +112,7 @@
   >
   \thm|type="def"|<
     \p<
-      &m<(\bfrm<Cat>, \rhombus|ord|;)>-豊穣圏のことを\em<半双圏\fl<sesquicategory>> という。
+      &m<(\bfrm<Cat>, \rhombus|ord|;)>-豊穣圏のことを\def<半双圏\fl<sesquicategory>> という。
     >
   >
   \p<

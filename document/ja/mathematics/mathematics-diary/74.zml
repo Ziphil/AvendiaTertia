@@ -8,7 +8,7 @@
 
   \h1<日記 (2021 年 3 月 12 日)>
   \p<
-    Hyland–Schalk\ref|type="bib",ref="hgom"|; の二重貼り合わせ圏についてまとめる。
+    Hyland–Schalk\mref|type="bib",ref="hgom"|; の二重貼り合わせ圏についてまとめる。
   >
   \thm|type="def"|<
     \p<
@@ -38,7 +38,7 @@
       >
     >
     \p<
-      この圏 &m<\bfrm<Gl> (\scr<C>`; F, G)> を、&m<F> と &m<G> による\em<二重貼り合わせ圏\fl<double gluing category>> という。
+      この圏 &m<\bfrm<Gl> (\scr<C>`; F, G)> を、&m<F> と &m<G> による\def<二重貼り合わせ圏\fl<double gluing category>> という。
     >
   >
   \p<
@@ -78,7 +78,7 @@
           >
         >
         がともに可換である。
-        この射を &m<F> と &m<G> の\em<簡約射\fl<contraction>> と呼ぶ。
+        この射を &m<F> と &m<G> の\def<簡約射\fl<contraction>> と呼ぶ。
       >
     >
     \p<
@@ -159,7 +159,7 @@
         >
       >
       とおくと、これは &m<F = \op<Hom> (\top;, \hyphen;)> と &m<G = \op<Hom> (\hyphen;, \bbot;)> の簡約射の公理を満たす。
-      以上によって、\ref|type="thm",ref="moncl"|; を使えば &m<\bfrm<Gl> (\scr<C>`; F, G)> も対称モノイダル閉圏になることが分かる。
+      以上によって、\mref|type="thm",ref="moncl"|; を使えば &m<\bfrm<Gl> (\scr<C>`; F, G)> も対称モノイダル閉圏になることが分かる。
     >
     \p<
       さらに、この部分圏である &m<\bfrm<Gl> (\scr<C>, \bbot;)> は、今与えられた &m<\bfrm<Gl> (\scr<C>`; F, G)> のモノイダル構造に関して閉じていることが確かめられる。
@@ -167,7 +167,7 @@
     >
   >
   \p<
-    次回は、\ref|type="thm",ref="moncls"|; で与えられる &m<\bfrm<Gl> (\scr<C>, \bbot;)> のモノイダル構造を具体的に書き下し、特定の条件のもとではこれがさらに線型圏になることを示す予定である。
+    次回は、\mref|type="thm",ref="moncls"|; で与えられる &m<\bfrm<Gl> (\scr<C>, \bbot;)> のモノイダル構造を具体的に書き下し、特定の条件のもとではこれがさらに線型圏になることを示す予定である。
   >
   \h1<参考文献>
   \ol<

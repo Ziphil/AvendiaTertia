@@ -23,7 +23,7 @@
           \c; \c<\ltort; s: S \to; C \rtort;> \c<\longmapsto;> \c<S>
         >
       >
-      の余錐 &m<(s: Gs \to; C) \sb<><s \in; \scr<S> `/ C>> が余極限になるとき、&m<\scr<S>> は\em<稠密\fl<dense>> であるという。
+      の余錐 &m<(s: Gs \to; C) \sb<><s \in; \scr<S> `/ C>> が余極限になるとき、&m<\scr<S>> は\def<稠密\fl<dense>> であるという。
     >
   >
   \thm|type="def",id="ryon"|<
@@ -40,7 +40,7 @@
           >>
         >
       >
-      を\em<制限 Yoneda 埋め込み\fl<restricted — embedding>>という。
+      を\def<制限 Yoneda 埋め込み\fl<restricted — embedding>>という。
     >
   >
   \p<
@@ -64,7 +64,7 @@
   >
   \prf<
     \p<
-      まず、\ref|type="thm",ref="den"|; 中の関手 &m<G: \scr<S> `/ C \to; \scr<C>> について、&m<G> の余錐 &m<(\sb<d><s>: Gs \to; D) \sb<><s \in; \scr<S> `/ C>> と自然変換 &m<d: \bf<z> C \raarr; \bf<z> D> は同じものであることが観察できる。
+      まず、\mref|type="thm",ref="den"|; 中の関手 &m<G: \scr<S> `/ C \to; \scr<C>> について、&m<G> の余錐 &m<(\sb<d><s>: Gs \to; D) \sb<><s \in; \scr<S> `/ C>> と自然変換 &m<d: \bf<z> C \raarr; \bf<z> D> は同じものであることが観察できる。
     >
     \p<
       &m<\scr<S>> が稠密であるということは、余錐 &m<(s: Gs \to; C) \sb<><s \in; \scr<S> `/ C>> が余極限であることであった。
@@ -231,10 +231,10 @@
     \p<
       &m<`k>-局所表示可能圏 &m<\scr<C>> をとり、&m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とおく。
       さらに、制限 Yoneda 埋め込み &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考える。
-      \ref|type="thm",ref="presden"|; により &m<\scr<S>> は稠密だから、\ref|type="thm",ref="denff"|; により &m<\bf<z>> は忠実充満である。
-      さらに、&m<\scr<C>> は余完備だから、\ref|type="thm",ref="leftadj"|; により &m<\bf<z>> は左随伴をもつ。
+      \mref|type="thm",ref="presden"|; により &m<\scr<S>> は稠密だから、\mref|type="thm",ref="denff"|; により &m<\bf<z>> は忠実充満である。
+      さらに、&m<\scr<C>> は余完備だから、\mref|type="thm",ref="leftadj"|; により &m<\bf<z>> は左随伴をもつ。
       以上により、&m<\scr<C>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の反射的部分圏と圏同値である。
-      &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は完備だから、最後に\ref|type="thm",ref="compsub"|; を使えば &m<\scr<C>> も完備であることが従う。
+      &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は完備だから、最後に\mref|type="thm",ref="compsub"|; を使えば &m<\scr<C>> も完備であることが従う。
     >
   >
   \p<
@@ -250,7 +250,7 @@
   \prf<
     \p<
       &m<`k>-到達可能圏 &m<\scr<C>> をとり、&m<\scr<S> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> とおき、制限 Yoneda 埋め込み &m<\bf<z>: \scr<C> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> を考える。
-      \ref|type="thm",ref="presden"|; と\ref|type="thm",ref="denff"|; によって &m<\bf<z>> は忠実充満で、\ref|type="thm",ref="monopres"|; によって &m<\bf<z>> は単射を保存する。
+      \mref|type="thm",ref="presden"|; と\mref|type="thm",ref="denff"|; によって &m<\bf<z>> は忠実充満で、\mref|type="thm",ref="monopres"|; によって &m<\bf<z>> は単射を保存する。
       したがって、任意の &m<\scr<C>> の対象 &m<C> に対し、
       &mb<
         \array|align="rrcl"|<

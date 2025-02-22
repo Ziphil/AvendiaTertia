@@ -37,7 +37,7 @@
           \ar|s="1",e="2",line="0",pos="18",name="c",inv|; \ar|s="3",e="2",line="0",pos="25",name="d"|; \ar|s="c",e="d",line="2"|<`h>
         >
       >
-      このとき、&m<L> を &m<K> に沿った &m<F> の\em<左 Kan 拡張\fl<left — extension>> といい、&m<`h> をその\em<単位\fl<unit>> という。
+      このとき、&m<L> を &m<K> に沿った &m<F> の\def<左 Kan 拡張\fl<left — extension>> といい、&m<`h> をその\def<単位\fl<unit>> という。
       また、&m<(L, `h)> は &m<\sb<\op<Lan>><K> F> で表される。
     >
   >
@@ -63,7 +63,7 @@
           \ar|s="1",e="2",line="0",pos="18",name="c",inv|; \ar|s="3",e="2",line="0",pos="25",name="d"|; \ar|s="d",e="c",line="2",inv|<`e>
         >
       >
-      このとき、&m<R> を &m<K> に沿った &m<F> の\em<右 Kan 拡張\fl<right — extension>> といい、&m<`e> をその\em<余単位\fl<counit>> という。
+      このとき、&m<R> を &m<K> に沿った &m<F> の\def<右 Kan 拡張\fl<right — extension>> といい、&m<`e> をその\def<余単位\fl<counit>> という。
       また、&m<(R, `e)> は &m<\sb<\op<Ran>><K> F> で表される。
     >
   >
@@ -296,8 +296,8 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="lem"|; によって、\ref|type="thm",ref="colimrep"|; の余極限を定める図式の余錐とこの定理のコエンドを定める図式の余楔は 1 対 1 に対応するから、\ref|type="thm",ref="colimrep"|; の余極限とこの定理のコエンドは一致する。
-      したがって、この定理の主張は\ref|type="thm",ref="colimrep"|; から従う。
+      \mref|type="thm",ref="lem"|; によって、\mref|type="thm",ref="colimrep"|; の余極限を定める図式の余錐とこの定理のコエンドを定める図式の余楔は 1 対 1 に対応するから、\mref|type="thm",ref="colimrep"|; の余極限とこの定理のコエンドは一致する。
+      したがって、この定理の主張は\mref|type="thm",ref="colimrep"|; から従う。
     >
   >
   \p<
@@ -308,7 +308,7 @@
   \thm|type="def"|<
     \p<
       関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとり、&m<(L, `h) = \sb<\op<Lan>><K> F> が存在するとする。
-      関手 &m<G: \scr<D> \to; \scr<E>> が &m<(G \circ; L, G * `h) = \sb<\op<Lan>><K> (G \circ; F)> を満たすとき、&m<G> は &m<\sb<\op<Lan>><K> F> を\em<保存する\fl<preserve>> という。
+      関手 &m<G: \scr<D> \to; \scr<E>> が &m<(G \circ; L, G * `h) = \sb<\op<Lan>><K> (G \circ; F)> を満たすとき、&m<G> は &m<\sb<\op<Lan>><K> F> を\def<保存する\fl<preserve>> という。
       &mb<
         \diag<
           \v<\scr<C>> \v<\scr<D>> \v<\scr<E>> \br;
@@ -323,7 +323,7 @@
   \thm|type="def"|<
     \p<
       関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとり、&m<(L, `h) = \sb<\op<Lan>><K> F> が存在するとする。
-      任意の &m<\scr<D>> の対象 &m<D> に対し、関手 &m<\op<Hom> (\hyphen;, D): \scr<D> \to; \sp<\bfrm<Set>><\circ;>> が &m<\sb<\op<Lan>><K> F> を保存するとき、&m<\sb<\op<Lan>><K> F> は\em<各点\fl<pointwise>> であるという。
+      任意の &m<\scr<D>> の対象 &m<D> に対し、関手 &m<\op<Hom> (\hyphen;, D): \scr<D> \to; \sp<\bfrm<Set>><\circ;>> が &m<\sb<\op<Lan>><K> F> を保存するとき、&m<\sb<\op<Lan>><K> F> は\def<各点\fl<pointwise>> であるという。
       &mb<
         \diag<
           \v<\scr<C>> \v<\scr<D>> \v<\sp<\bfrm<Set>><\circ;>> \br;
@@ -382,7 +382,7 @@
       &mb<
         \op<Hom> (L \hyphen;, D) = \sb<\op<Lan>><K> \op<Hom> (F \hyphen;, D): \scr<S> \to; \sp<\bfrm<Set>><\circ;>
       >
-      が成り立つので、\ref|type="thm",ref="rep"|; によって、
+      が成り立つので、\mref|type="thm",ref="rep"|; によって、
       &mb<
         \sb<\op<Hom>><`[\scr<S>, \sp<\bfrm<Set>><\circ;>`]> (\op<Hom> (L \hyphen;, D), \op<Hom> (\hyphen;, S)) \cong; \sb<\op<Hom>><`[\scr<C>, \sp<\bfrm<Set>><\circ;>`]> (\op<Hom> (F \hyphen;, D), \op<Hom> (K \hyphen;, S))
       >
@@ -393,7 +393,7 @@
         \sb<\op<Hom>><`[\sp<\scr<S>><\circ;>, \bfrm<Set>`]> (\op<Hom> (\hyphen;, S), \op<Hom> (L \hyphen;, D)) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
       >
       が成り立つということである。
-      最後に、\ref|type="thm",ref="lem"|; によって、
+      最後に、\mref|type="thm",ref="lem"|; によって、
       &mb<
         &mark<3>
         \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D)) \cong; \op<Cocone> (\sp<`F><S>, D)
@@ -412,12 +412,12 @@
     >
     \p<
       \label<条件 2 &m<\raarr;> 条件 1>
-      \ref|type="thm",ref="colimrep"|; によって &m<L = \sb<\op<Lan>><K> F> である。
+      \mref|type="thm",ref="colimrep"|; によって &m<L = \sb<\op<Lan>><K> F> である。
       さらに、表現可能関手は余極限を保存するから、これは各点である。
     >
     \p<
       \label<条件 2 &m<\lraarr;> 条件 3>
-      \ref|type="thm",ref="lem"|; によって条件 2 の余極限と条件 3 のコエンドは一致するから、条件 2 と条件 3 は明らかに同値である。
+      \mref|type="thm",ref="lem"|; によって条件 2 の余極限と条件 3 のコエンドは一致するから、条件 2 と条件 3 は明らかに同値である。
     >
   >
   \p<
@@ -439,8 +439,8 @@
         >>
       >
       が存在する。
-      \ref|type="thm",ref="colimrep"|; によって、これは関手 &m<L: \scr<S> \to; \scr<D>> を定めて &m<L = \sb<\op<Lan>><K> F> を満たす。
-      また、\ref|type="thm",ref="main"|; によって、これは各点である。
+      \mref|type="thm",ref="colimrep"|; によって、これは関手 &m<L: \scr<S> \to; \scr<D>> を定めて &m<L = \sb<\op<Lan>><K> F> を満たす。
+      また、\mref|type="thm",ref="main"|; によって、これは各点である。
     >
   >
   \thm|type="prp",id="homrep"|<
@@ -466,7 +466,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="main"|; により、&m<L = \sb<\op<Lan>><K> F> であってこれが各点であることは、任意の &m<\scr<S>> の対象 &m<S> に対して、
+      \mref|type="thm",ref="main"|; により、&m<L = \sb<\op<Lan>><K> F> であってこれが各点であることは、任意の &m<\scr<S>> の対象 &m<S> に対して、
       &mb<
         LS = \op<colim> \tort<\diag|bl|<
           \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
@@ -479,7 +479,7 @@
         \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \op<Cocone> (\sp<`F><S>, D)
       >
       が自然に成り立つことと同値である。
-      さらに、\ref|type="thm",ref="lem"|; により、これは、
+      さらに、\mref|type="thm",ref="lem"|; により、これは、
       &mb<
         \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
       >

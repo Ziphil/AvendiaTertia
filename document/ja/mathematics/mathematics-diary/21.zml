@@ -22,7 +22,7 @@
       &mb<
         `[A, L`] \sb<><\scr<C>> \cong; \lbbracket; W, `[A, F \hyphen;`] \sb<><\scr<C>> \rbbracket; \sb<><\scr<J> \to; \bfrm<Cat>>
       >
-      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の 2-\em<極限\fl<limit>> といい、&m<\sb<\lim;><W> F> で表す。
+      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の 2-\def<極限\fl<limit>> といい、&m<\sb<\lim;><W> F> で表す。
     >
   >
   \p<
@@ -31,7 +31,7 @@
   \thm|type="def"|<
     \p<
       2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Cat>> をとる。
-      &m<\scr<C>> の対象 &m<A> に対して、2-自然変換 &m<`s: W \raarr; `[A, F \hyphen;`]> を &m<F> と &m<W> に関する\em<柱\fl<cylinder>> という。
+      &m<\scr<C>> の対象 &m<A> に対して、2-自然変換 &m<`s: W \raarr; `[A, F \hyphen;`]> を &m<F> と &m<W> に関する\def<柱\fl<cylinder>> という。
     >
   >
   \p<
@@ -73,7 +73,7 @@
       >
     >
     \p<
-      このとき、&m<`h> は \em<1 次元的普遍性\fl<one-dimensional universality>> を満たすという。
+      このとき、&m<`h> は \def<1 次元的普遍性\fl<one-dimensional universality>> を満たすという。
     >
   >
   \thm|type="def"|<
@@ -122,7 +122,7 @@
       >
     >
     \p<
-      このとき、&m<`h> は \em<2 次元的普遍性\fl<two-dimensional universality>> を満たすという。
+      このとき、&m<`h> は \def<2 次元的普遍性\fl<two-dimensional universality>> を満たすという。
     >
   >
   \p<

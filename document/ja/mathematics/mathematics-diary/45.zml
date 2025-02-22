@@ -299,7 +299,7 @@
       \sb<`f><ABC> = \overline<h: `[A \times; B, C`] \vdash; \rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; h: A \buharprarr; `[B, C`]>
     >
     と定めると、これが &m<\scr<C>> で逆射 &m<\sb<`c><ABC>: A \buharprarr; `[B, C`] \to; `[A \times; B, C`]> をもつ。
-    このとき、\ref|type="thm",ref="shnat"|; によって &m<\sb<`f><ABC>> は全ての変数について自然だから、特に &m<\scr<C>> における自然な同型
+    このとき、\mref|type="thm",ref="shnat"|; によって &m<\sb<`f><ABC>> は全ての変数について自然だから、特に &m<\scr<C>> における自然な同型
     &mb<
       `[A \times; B, C`] \cong; A \buharprarr; `[B, C`] 
     >
@@ -318,7 +318,7 @@
   \thm|type="def"|<
     \p<
       豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> において、&m<\scr<C>>-豊穣関手 &m<J \text<-> \ltimes; B: \scr<C> \to; \scr<D>> および &m<`[B, \text<->`]: \scr<D> \to; \scr<C>> が &m<\scr<C>>-豊穣随伴を成しており、この随伴の単位が上記の &m<`h> で与えられるとする。
-      このとき、&m<(\scr<C>`; \scr<D>, J)> は\em<閉\fl<closed>> であるという。
+      このとき、&m<(\scr<C>`; \scr<D>, J)> は\def<閉\fl<closed>> であるという。
     >
   >
   \p<
@@ -331,11 +331,11 @@
   >
   \prf<
     \p<
-      \a|href="44.html#sc"|<定理 4.3> と\ref|type="thm",ref="equiv"|; から従う。
+      \a|href="44.html#sc"|<定理 4.3> と\mref|type="thm",ref="equiv"|; から従う。
     >
   >
   \p<
-    ところで、今回扱った &m<\bfrm<ArrowApply>> の構造はモナドの構造と同値であることが、Lindley–Wadler–Yallop\ref|type="bib",ref="lioa"|; などによって証明されている。
+    ところで、今回扱った &m<\bfrm<ArrowApply>> の構造はモナドの構造と同値であることが、Lindley–Wadler–Yallop\mref|type="bib",ref="lioa"|; などによって証明されている。
     型システムとしてのモナドは圏論としては強モナドと対応する (例えば \a|href="40.html"|<4 月 10 日>を参照) ので、これと今回の結果を合わせれば、以下が示せたことになる。
   >
   \thm|type="thm"|<

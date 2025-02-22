@@ -14,7 +14,7 @@
   >
   \p<
     否定結合子の解釈には、スター自律圏の構造を使うのが一般的である。
-    これは Barr\ref|type="bib",ref="sac"|; によって導入された構造で、圏の全ての対象がその圏の中に双対をもつようなものである。
+    これは Barr\mref|type="bib",ref="sac"|; によって導入された構造で、圏の全ての対象がその圏の中に双対をもつようなものである。
     スター自律圏の記述には、以下の 2 種類の方法がある。
   >
   \thm|type="def",id="sca"|<
@@ -26,8 +26,8 @@
         \op<Hom> (A \otimes; B, \sp<C><*>) \cong; \op<Hom> (A, (B \otimes; C) \sp<><*>)
       >
       が成り立つ。
-      このとき、&m<\scr<C>> を\em<スター自律圏\fl<star-autonomous category>> という。
-      また、関手 &m<\sp<\text<->><*>> を\em<双対関手\fl<dualising functor>> と呼ぶ。
+      このとき、&m<\scr<C>> を\def<スター自律圏\fl<star-autonomous category>> という。
+      また、関手 &m<\sp<\text<->><*>> を\def<双対関手\fl<dualising functor>> と呼ぶ。
     >
   >
   \thm|type="def",id="scb"|<
@@ -35,8 +35,8 @@
       対称モノイダル圏 &m<\scr<C>> を考える。
       &m<\scr<C>> がモノイダル閉であり、次の条件を満たすような対象 &m<\bot;> が定まっているとする。
       すなわち、任意の対象 &m<A> に対して、モノイダル閉性の余単位 &m<\sb<`e><A \bot;>: A \otimes; (A \rmulti|bin|; \bot;) \to; \bot;> の転置 &m<\sb<`k><A>: A \to; (A \rmulti|bin|; \bot;) \rmulti|bin|; \bot;> は同型射である。
-      このとき、&m<\scr<C>> を\em<スター自律圏\fl<star-autonomous category>> という。
-      また、対象 &m<\bot;> を\em<大域的双対対象\fl<global dualising object>> と呼ぶ。
+      このとき、&m<\scr<C>> を\def<スター自律圏\fl<star-autonomous category>> という。
+      また、対象 &m<\bot;> を\def<大域的双対対象\fl<global dualising object>> と呼ぶ。
     >
   >
   \p<
@@ -54,7 +54,7 @@
   >
   \p<
     スター自律圏とは任意の対象が双対をもつような圏であるわけだが、もとの圏がモノイダル閉で引き戻しをもつならば、全ての対象が双対をもつとは限らない場合でも、双対をもつように圏を拡大できることが知られている。
-    この操作は Chu\ref|type="bib",ref="csa"|; によるもので、Chu 構成と呼ばれる。
+    この操作は Chu\mref|type="bib",ref="csa"|; によるもので、Chu 構成と呼ばれる。
   >
   \thm|type="def"|<
     \p<
@@ -81,7 +81,7 @@
       >
     >
     \p<
-      この圏 &m<\bfrm<Chu> (\scr<C>, \bbot;)> を、&m<\scr<C>> による \em<Chu 構成\fl<— construction>> という。
+      この圏 &m<\bfrm<Chu> (\scr<C>, \bbot;)> を、&m<\scr<C>> による \def<Chu 構成\fl<— construction>> という。
     >
   >
   \thm|type="thm"|<
@@ -191,7 +191,7 @@
     >
   >
   \p<
-    \ref|type="thm",ref="stequiv"|; の証明によって、スター自律圏の対象 &m<A, B> に対し、モノイダル閉圏の構造と双対関手は &m<A \rmulti|bin|; B \cong; (A \otimes; \sp<B><*>) \sp<><*>> という関係で結びついていることが分かる。
+    \mref|type="thm",ref="stequiv"|; の証明によって、スター自律圏の対象 &m<A, B> に対し、モノイダル閉圏の構造と双対関手は &m<A \rmulti|bin|; B \cong; (A \otimes; \sp<B><*>) \sp<><*>> という関係で結びついていることが分かる。
     このことから、&m<\bfrm<Chu> (\scr<C>, \bbot;)> の対象 &m<(A, \bar<A>, a), (B, \bar<B>, b)> に対し、引き戻し
     &mb<
       \diag<

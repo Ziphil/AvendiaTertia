@@ -24,7 +24,7 @@
       >
     >
     \p<
-      をともに満たすとき、&m<\scr<C>> は &m<`k>-\em<局所表示可能\fl<locally presentable>> であるという。
+      をともに満たすとき、&m<\scr<C>> は &m<`k>-\def<局所表示可能\fl<locally presentable>> であるという。
     >
   >
   \thm|type="def"|<
@@ -41,7 +41,7 @@
       >
     >
     \p<
-      をともに満たすとき、&m<\scr<C>> は &m<`k>-\em<到達可能\fl<accessible>> であるという。
+      をともに満たすとき、&m<\scr<C>> は &m<`k>-\def<到達可能\fl<accessible>> であるという。
     >
   >
   \p<
@@ -55,7 +55,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象から成るクラス &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> について、&m<\scr<A>> の同型類の全体が集合サイズであるとき、&m<\scr<A>> は\em<本質的小\fl<essentially small>> であるという。
+      圏 &m<\scr<C>> の対象から成るクラス &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> について、&m<\scr<A>> の同型類の全体が集合サイズであるとき、&m<\scr<A>> は\def<本質的小\fl<essentially small>> であるという。
     >
   >
   \p<
@@ -146,7 +146,7 @@
     >
     \p<
       \label<条件 1 &m<\raarr;> 条件 2>
-      &m<\scr<A>> は集合であるから、\ref|type="thm",ref="splsub"|; を使えば、
+      &m<\scr<A>> は集合であるから、\mref|type="thm",ref="splsub"|; を使えば、
       &mb<
         \scr<A>' \coloneqq; \bigcup<A \in; \scr<A>> \sp<\op<Sub>><\rm<sp>> (A)
       >
@@ -190,7 +190,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="pressm"|; から直ちに従う。
+      \mref|type="thm",ref="pressm"|; から直ちに従う。
     >
   >
   \p<
@@ -201,14 +201,14 @@
     \p<
       圏 &m<\scr<C>> の対象から成る集合 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> をとる。
       &m<\scr<C>> の射 &m<f, f': C \to; D> について、任意の &m<\scr<A>> の元 &m<A> と任意の &m<\scr<C>> の射 &m<a: A \to; C> に対して &m<a \rcomp; f = a \rcomp; f'> であるとすると、&m<f = f'> が成り立つとする。
-      このとき、&m<\scr<A>> を\em<生成子\fl<generator>> という。
+      このとき、&m<\scr<A>> を\def<生成子\fl<generator>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> の生成子 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> をとる。
       &m<\scr<C>> の対象 &m<C> の部分対象 &m<m: M \tailrarr; C> について、任意の &m<\scr<A>> の元 &m<A> と任意の &m<\scr<C>> の射 &m<a: A \to; C> に対して &m<a> は &m<m> を経由して分解されるとすると、&m<m> は同型射になるとする。
-      このとき、&m<\scr<A>> は\em<極限的\fl<extremal>> であるという。
+      このとき、&m<\scr<A>> は\def<極限的\fl<extremal>> であるという。
     >
   >
   \thm|type="thm",id="exgen"|<
@@ -386,7 +386,7 @@
   >
   \h1<追記 (2020 年 8 月 2 日)>
   \p<
-    Adámek–Rosický\ref|type="bib",ref="lpa"|; では、極限的生成子が存在するなら冪化可能であると主張されており、それをもとに\ref|type="thm",ref="pressm"|; を示している。
+    Adámek–Rosický\mref|type="bib",ref="lpa"|; では、極限的生成子が存在するなら冪化可能であると主張されており、それをもとに\mref|type="thm",ref="pressm"|; を示している。
     残念ながら、\ae|href="https://math.stackexchange.com/questions/253927/a-category-with-a-strong-generator-is-well-powered"|<Stack Exchange の回答>で指摘されているように、極限的生成子が存在するなら冪化可能であるという主張は一般には成り立たない。
     したがって、&m<\scr<C>> が &m<`k>-到達可能である場合に &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> が小になるという性質を、Adámek–Rosický と同様の方法では示すことができない。
     この性質は要所要所で用いるので示せないのは困るのだが、私はまだこの性質の正しい証明ができていないので、ご存知の方は \ae|href="https://twitter.com/Ziphil_Beta"|<@Ziphil_Beta> までご連絡していただけると助かります。

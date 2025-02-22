@@ -39,7 +39,7 @@
           \c; \c<P> \c<\longmapsto;> \c<\sp<P><+>>
         >
       >
-      を定めるが、これを\em<プラス構成関手\fl<plus construction functor>> という。
+      を定めるが、これを\def<プラス構成関手\fl<plus construction functor>> という。
       射の対応は明らかな方法で定める。
       なお、最初の式の右辺は関手 &m<\sb<\op<Hom>><\bfrm<PSh> (\scr<C>)> (\text<->, P): \sp<JC><\circ;> \to; \bfrm<Set>> の余極限である。
     >
@@ -89,7 +89,7 @@
   \thm|type="def",id="sepsheaf"|<
     \p<
       景 &m<(\scr<C>, J)> をとる。
-      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> が\em<分離\fl<separated>> であるとは、任意の被覆篩 &m<S \in; JC> と任意の自然変換 &m<a: S \to; P> に対し、図式
+      前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> が\def<分離\fl<separated>> であるとは、任意の被覆篩 &m<S \in; JC> と任意の自然変換 &m<a: S \to; P> に対し、図式
       &mb<
         \diag<
           \v<S> \v<P> \br;
@@ -146,7 +146,7 @@
   \prf<
     \p<
       任意に被覆篩 &m<W \in; JC> をとる。
-      \ref|type="thm",ref="equiv"|; によって、
+      \mref|type="thm",ref="equiv"|; によって、
       &mb<
         \text<-> \circ; W: \op<Hom> (\bf<y> C, \sp<P><+>) \to; \op<Hom> (W, \sp<P><+>)
       >
@@ -358,7 +358,7 @@
           \c; \c<P> \c<\longmapsto;> \c<\sp<P><++>>
         >
       >
-      を\em<層化関手\fl<sheafification functor>> という。
+      を\def<層化関手\fl<sheafification functor>> という。
     >
   >
   \p<

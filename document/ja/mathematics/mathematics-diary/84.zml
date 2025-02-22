@@ -12,7 +12,7 @@
     さらに、レンズを一般化してオプティックという概念を導入し、レンズの場合と同様にコエンドによるエンコーディングとプロ関手を用いたエンコーディングを定式化し、これらが等価であることも示した。
   >
   \p<
-    このオプティックの 2 つのエンコーディングが等価であることは \a|href="83.html"|<10 月 12 日>ですでに示したが、今日は Román\ref|type="bib",ref="rpot"|; による別の証明をまとめようと思う。
+    このオプティックの 2 つのエンコーディングが等価であることは \a|href="83.html"|<10 月 12 日>ですでに示したが、今日は Román\mref|type="bib",ref="rpot"|; による別の証明をまとめようと思う。
     この証明は、前回の証明よりも見通しが良く、Tambara 加群がコモナド余代数やモナド代数として実現できることに注目しているという特徴がある。
   >
   \p<
@@ -22,13 +22,13 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> およびモノイダル圏 &m<\scr<K>> をとる。
-      &m<\bfrm<End> (\scr<C>)> を合成に関してモノイダル圏と見なすとき、強モノイダル関手 &m<\oslash;: \scr<K> \to; \bfrm<End> (\scr<C>)> のことを &m<\scr<K>> の &m<\scr<C>> への\em<作用\fl<action>> という。
+      &m<\bfrm<End> (\scr<C>)> を合成に関してモノイダル圏と見なすとき、強モノイダル関手 &m<\oslash;: \scr<K> \to; \bfrm<End> (\scr<C>)> のことを &m<\scr<K>> の &m<\scr<C>> への\def<作用\fl<action>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>, \bar<\scr<C>>> とモノイダル圏 &m<\scr<K>> について、&m<\scr<K>> の &m<\scr<C>> への作用 &m<\oslash|ord|;: \scr<K> \to; \bfrm<End> (\scr<C>)> および &m<\scr<K>> の &m<\bar<\scr<C>>> への作用 &m<\obackslash|ord|;: \scr<K> \to; \bfrm<End> (\bar<\scr<C>>)> が定まっているとする。
-      これらの組 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> を\em<オプティック領域\fl<optic domain>> と呼ぶ。
+      これらの組 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> を\def<オプティック領域\fl<optic domain>> と呼ぶ。
     >
   >
   \p<
@@ -41,7 +41,7 @@
       &mb<
         \sb<\rm<COptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<K>> (\sb<\op<Hom>><\scr<C>> (S, K \oslash; A) \times; \sb<\op<Hom>><\bar<\scr<C>>> (K \obackslash; \bar<A>, \bar<S>))
       >
-      の元 &m<`g> を\em<コエンドオプティック\fl<coend optic>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
+      の元 &m<`g> を\def<コエンドオプティック\fl<coend optic>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
     >
   >
   \p<
@@ -76,7 +76,7 @@
       >
       が全て可換であるとする。
       なお、ラベルのない射は標準的な同型射を表している。
-      このとき、&m<`j> を &m<P> に対する \em<Tambara 構造\fl<— structure>> といい、組 &m<(P, `j)> を \em<Tambara 加群\fl<— module>> という。
+      このとき、&m<`j> を &m<P> に対する \def<Tambara 構造\fl<— structure>> といい、組 &m<(P, `j)> を \def<Tambara 加群\fl<— module>> という。
     >
   >
   \thm|type="def"|<
@@ -92,7 +92,7 @@
           \ar|s="1",e="3",inv|<\sb<`j><M X \bar<X>>> \ar|s="2",e="4"|<\sb<`z><M X \bar<X>>>
         >
       >
-      が可換であるとき、&m<`u> を \em<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `j) \raarr; (Q, `z)> で表す。
+      が可換であるとき、&m<`u> を \def<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `j) \raarr; (Q, `z)> で表す。
     >
   >
   \thm|type="def"|<
@@ -119,7 +119,7 @@
       &mb<
         \sb<\rm<POptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<(P, `j) \in; \bfrm<Tamb> (\scr<W>)> \op<Hom> (P (A, \bar<A>), P (S, \bar<S>))
       >
-      の元 &m<`f> を\em<プロ関手オプティック\fl<profunctor optic>> と呼ぶ。
+      の元 &m<`f> を\def<プロ関手オプティック\fl<profunctor optic>> と呼ぶ。
     >
   >
   \p<
@@ -205,7 +205,7 @@
   >
   \p<
     すでに述べたように、オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> 上の Tambara 加群 &m<(P, `j)> の構造射 &m<`j> は、自然変換 &m<`j: P \raarr; \sb<`F><\scr<W>> P> と見なせる。
-    この &m<`j> が本当に Tambara 加群の構造射になるためには、さらに\ref|type="thm",ref="tamb"|; 中の図式 &m<\wheart;> を可換にする必要があるが、実は &m<`j> がこの図式を可換にすることと &m<`j> が &m<\sb<`F><\scr<W>>> 上のコモナド余代数になることが同値になっている。
+    この &m<`j> が本当に Tambara 加群の構造射になるためには、さらに\mref|type="thm",ref="tamb"|; 中の図式 &m<\wheart;> を可換にする必要があるが、実は &m<`j> がこの図式を可換にすることと &m<`j> が &m<\sb<`F><\scr<W>>> 上のコモナド余代数になることが同値になっている。
     すなわち、&m<\scr<W>> 上の Tambara 加群と &m<\sb<`F><\scr<W>>> 上の余代数は 1 対 1 に対応する。
     この対応は、さらに圏同値にもなる。
   >
@@ -337,7 +337,7 @@
     >
     \p<
       以上により、式 &m<\wspade;> 中の 2 つの図式と式 &m<\wheart;> 中の 2 つの図式の可換性は同値である。
-      すなわち、&m<`j> を自然変換 &m<`j: P \raarr; `F P> と見なしたときに &m<`j> が &m<`F> 上のコモナド余代数になることと、&m<`j> を\ref|type="thm",ref="tamb"|; にあるような写像の族と見なしたときに &m<`j> が Tambara 加群になることは同値である。
+      すなわち、&m<`j> を自然変換 &m<`j: P \raarr; `F P> と見なしたときに &m<`j> が &m<`F> 上のコモナド余代数になることと、&m<`j> を\mref|type="thm",ref="tamb"|; にあるような写像の族と見なしたときに &m<`j> が Tambara 加群になることは同値である。
       これより、&m<`F> 上のコモナド余代数 &m<(P, `j)> と Tambara 加群 &m<(P, `j)> は 1 対 1 に対応する。
     >
     \p<
@@ -434,7 +434,7 @@
   >
   \prf<
     \p<
-      最初の主張は Eilenberg–Moore\ref|type="bib",ref="eaft"|; の命題 3.1 に記載がある。
+      最初の主張は Eilenberg–Moore\mref|type="bib",ref="eaft"|; の命題 3.1 に記載がある。
       次の主張も &m<`m> と &m<`h> の構成を用いて計算することで確かめられる。
     >
   >
@@ -452,7 +452,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="adj"|; と\ref|type="thm",ref="monad"|; からすぐに従う。
+      \mref|type="thm",ref="adj"|; と\mref|type="thm",ref="monad"|; からすぐに従う。
     >
   >
   \thm|type="thm",id="tambadj"|<
@@ -465,7 +465,7 @@
   \prf<
     \p<
       コモナド理論の一般論から、コモナド &m<\sb<`F><\scr<W>>> は関手 &m<\sb<\tilde<`F>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`F><\scr<W>>>> を誘導し、これは忘却関手の右随伴になる。
-      一方で、\ref|type="thm",ref="tambeq"|; より &m<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`F><\scr<W>>>> は &m<\bfrm<Tamb> (\scr<W>)> と圏同値だから、この関手は &m<\sb<\tilde<`F>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Tamb> (\scr<W>)> と見なすこともでき、忘却関手の右随伴を与える。
+      一方で、\mref|type="thm",ref="tambeq"|; より &m<\bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`F><\scr<W>>>> は &m<\bfrm<Tamb> (\scr<W>)> と圏同値だから、この関手は &m<\sb<\tilde<`F>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Tamb> (\scr<W>)> と見なすこともでき、忘却関手の右随伴を与える。
     >
     \p<
       同様にして、モナド &m<\sb<`C><\scr<W>>> は関手 &m<\sb<\tilde<`C>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \sp<><\sb<`C><\scr<W>>>> を誘導し、これを &m<\sb<\tilde<`C>><\scr<W>>: \bfrm<Prof> (\bar<\scr<C>>, \scr<C>) \to; \bfrm<Tamb> (\scr<W>)> と見なせば、忘却関手の左随伴になる。
@@ -513,7 +513,7 @@
           \c; \c<(X, \bar<X>)> \c<\longmapsto;> \c<\op<Hom> (X, A) \times; \op<Hom> (\bar<A>, \bar<X>)>
         >
       >
-      とおくと、\ref|type="thm",ref="tambadj"|; などを用いて、
+      とおくと、\mref|type="thm",ref="tambadj"|; などを用いて、
       &mb<
         \array|align="rcl"|<
           \c<\sb<\rm<POptic>><\scr<W>> (S, \bar<S>`; A, \bar<A>)> \c<=> \c<\int<(P, `j) \in; \bfrm<Tamb> (\scr<W>)> \op<Hom> (P (A, \bar<A>), P (S, \bar<S>))> \br;

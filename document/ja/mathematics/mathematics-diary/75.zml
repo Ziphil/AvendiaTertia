@@ -31,7 +31,7 @@
           \ar|s="2",e="5"|<\sb<`d><A>> \ar|s="5",e="4"|<! \sb<`e><A>> \ar|s="5",e="6",inv|<\sb<`e><!A>>
         >
       >
-      がともに可換であるとき、組 &m<(!, `d, `e)> を\em<コモナド\fl<comonad>> という。
+      がともに可換であるとき、組 &m<(!, `d, `e)> を\def<コモナド\fl<comonad>> という。
     >
   >
   \p<
@@ -77,8 +77,8 @@
       >
     >
     \p<
-      このような圏 &m<\sp<\scr<C>><!>> を、&m<(!, `d, `e)> の\em<余 Eilenberg–Moore 圏\fl<co— category>> という。
-      また、&m<\sp<\scr<C>><!>> の対象は、&m<\scr<C>> 上の &m<!>-\em<余代数\fl<coalgebra>> と呼ばれる。
+      このような圏 &m<\sp<\scr<C>><!>> を、&m<(!, `d, `e)> の\def<余 Eilenberg–Moore 圏\fl<co— category>> という。
+      また、&m<\sp<\scr<C>><!>> の対象は、&m<\scr<C>> 上の &m<!>-\def<余代数\fl<coalgebra>> と呼ばれる。
     >
   >
   \p<
@@ -164,7 +164,7 @@
       >
     >
     \p<
-      このような圏 &m<\scr<C>> を、&m<(!, `d, `e)> の\em<余 Kleisli 圏\fl<co— category>> という。
+      このような圏 &m<\scr<C>> を、&m<(!, `d, `e)> の\def<余 Kleisli 圏\fl<co— category>> という。
     >
   >
   \thm|type="prp",id="kliso"|<
@@ -241,7 +241,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="kliso"|; の圏同値を用いて &m<\sb<\scr<C>><!>> を &m<\sb<\bfrm<F>><!> (\scr<C>)> に置き換えれば、
+      \mref|type="thm",ref="kliso"|; の圏同値を用いて &m<\sb<\scr<C>><!>> を &m<\sb<\bfrm<F>><!> (\scr<C>)> に置き換えれば、
       &mb<
         \array|align="rrcl"|<
           \c<\sbsp<F><!><\pr;>:> \c<\sb<\bfrm<F>><!> (\scr<C>)> \c<\longto;> \c<\scr<C>> \br;
@@ -261,7 +261,7 @@
         >
       >
       が随伴になることを示せば良いことが分かる。
-      しかし、これは\ref|type="thm",ref="emadj"|; の随伴を &m<\sb<\bfrm<F>><!> (\scr<C>) \subseteq; \sp<\scr<C>><!>> に制限しただけであるから、明らかに随伴になっている。
+      しかし、これは\mref|type="thm",ref="emadj"|; の随伴を &m<\sb<\bfrm<F>><!> (\scr<C>) \subseteq; \sp<\scr<C>><!>> に制限しただけであるから、明らかに随伴になっている。
     >
   >
   \p<
@@ -292,7 +292,7 @@
   \p<
     コモナドから始めて余 Eilenberg–Moore 圏もしくは余 Kleisli 圏との随伴を作り、そこから再びコモナドを作り直すと、もとのコモナドと同じものが得られる。
     すなわち、全てのコモナドは何らかの随伴対から標準的に得られるということである。
-    実際、余 Kleisli 圏は、この「全てのコモナドは何らかの随伴対から標準的に得られるか」という問いに対する答えとして Kleisli\ref|type="bib",ref="kesc"|; が考案したものである。
+    実際、余 Kleisli 圏は、この「全てのコモナドは何らかの随伴対から標準的に得られるか」という問いに対する答えとして Kleisli\mref|type="bib",ref="kesc"|; が考案したものである。
   >
   \thm|type="prp"|<
     \p<
@@ -304,9 +304,9 @@
     \p<
       余 Eilenberg–Moore 圏との随伴について考える。
       &m<\sp<F><!> \dashv; \sp<G><!>: \sp<\scr<C>><!> \to; \scr<C>> の単位と余単位をそれぞれ &m<`h': \rm<id> \raarr; \sp<G><!> \circ; \sp<A><!>, `e': \sp<F><!> \circ; \sp<G><!> \raarr; \rm<id>> とおく。
-      \ref|type="thm",ref="emadj"|; の証明における構成を見ると、&m<\sp<\scr<C>><!>> の対象 &m<(A, a)> に対し &m<\sbsp<`h><(A, a)><\pr;> = a> と書けることが分かる。
-      したがって、\ref|type="thm",ref="comon"|; の構成によって &m<`h'> から得られる自然変換を &m<`d'> とおくと、&m<\scr<C>> の対象 &m<A> に対して &m<\sbsp<`d><A><\pr;> = F \sbsp<`h><GA><\pr;> = \sb<`d><A>> が分かるから、&m<`d' = `d> が成り立つ。
-      さらに、再び\ref|type="thm",ref="emadj"|; の証明における構成を見れば、&m<`e' = `e> であることも分かる。
+      \mref|type="thm",ref="emadj"|; の証明における構成を見ると、&m<\sp<\scr<C>><!>> の対象 &m<(A, a)> に対し &m<\sbsp<`h><(A, a)><\pr;> = a> と書けることが分かる。
+      したがって、\mref|type="thm",ref="comon"|; の構成によって &m<`h'> から得られる自然変換を &m<`d'> とおくと、&m<\scr<C>> の対象 &m<A> に対して &m<\sbsp<`d><A><\pr;> = F \sbsp<`h><GA><\pr;> = \sb<`d><A>> が分かるから、&m<`d' = `d> が成り立つ。
+      さらに、再び\mref|type="thm",ref="emadj"|; の証明における構成を見れば、&m<`e' = `e> であることも分かる。
       最後に、&m<! = \sp<G><!> \circ; \sp<F><!>> は構成から明らかである。
     >
     \p<
@@ -390,12 +390,12 @@
           \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
         >
       >
-      を\em<分裂等化子\fl<split equaliser>> という。
+      を\def<分裂等化子\fl<split equaliser>> という。
     >
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の等化子について、それが &m<\scr<C>> を定義域とする任意の関手で保存されるとき、それを\em<絶対等化子\fl<absolute equaliser>> という。
+      圏 &m<\scr<C>> の等化子について、それが &m<\scr<C>> を定義域とする任意の関手で保存されるとき、それを\def<絶対等化子\fl<absolute equaliser>> という。
     >
   >
   \thm|type="prp",id="splabs"|<
@@ -511,12 +511,12 @@
     >
     \p<
       \label<条件 2 &m<\raarr;> 条件 3>
-      \ref|type="thm",ref="splabs"|; より分裂等化子は絶対等化子だから、これは明らかである。
+      \mref|type="thm",ref="splabs"|; より分裂等化子は絶対等化子だから、これは明らかである。
     >
     \p<
       \label<条件 3 &m<\raarr;> 条件 1>
       &m<K> が本質的全射かつ忠実充満であることを示す。
-      ここで、\ref|type="thm",ref="comp"|; によって &m<K \circ; L = I> であり、&m<I> は充満部分圏の包含関手と同型であることから充満なので、&m<K> も充満である。
+      ここで、\mref|type="thm",ref="comp"|; によって &m<K \circ; L = I> であり、&m<I> は充満部分圏の包含関手と同型であることから充満なので、&m<K> も充満である。
       したがって、あとは &m<K> は忠実かつ本質的全射であることを示せば良い。
     >
     \p<
@@ -556,7 +556,7 @@
     >
     \p<
       次に、&m<K> が忠実であることを示す。
-      \ref|type="thm",ref="comp"|; から &m<\sp<F><!> \circ; K = F> であるから、&m<F> が忠実であることを示せば十分である。
+      \mref|type="thm",ref="comp"|; から &m<\sp<F><!> \circ; K = F> であるから、&m<F> が忠実であることを示せば十分である。
       任意に &m<\scr<D>> の射 &m<h, k: X \to; Y> をとり、&m<Fh = Fk> であるとする。
       このとき、
       &mb<

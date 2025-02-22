@@ -51,7 +51,7 @@
   \thm|type="def"|<
     \p<
       関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> をとる。
-      &m<F> が余極限と広義引き戻しを保つとき、&m<F> は\em<線型\fl<linear>> であるという。
+      &m<F> が余極限と広義引き戻しを保つとき、&m<F> は\def<線型\fl<linear>> であるという。
     >
   >
   \p<
@@ -91,7 +91,7 @@
     >
   >
   \p<
-    以上のようにすると、\ref|type="thm",ref="nf"|; と同様の形の圏同値が線型関手に関しても存在する。
+    以上のようにすると、\mref|type="thm",ref="nf"|; と同様の形の圏同値が線型関手に関しても存在する。
   >
   \thm|type="thm",id="lnf"|<
     \p<
@@ -119,7 +119,7 @@
         >
       >
       とおく。
-      すると、\ref|type="thm",ref="nf"|; の証明と同様にして、これらの対応が定理中の圏同値を与えることが示せる。
+      すると、\mref|type="thm",ref="nf"|; の証明と同様にして、これらの対応が定理中の圏同値を与えることが示せる。
       詳細はここでは省略することにする。
     >
   >
@@ -166,7 +166,7 @@
           \c; \c<(c, a)> \c<\longmapsto;> \c<\coprod<b \in; B><> (N (c, b) \times; M (b, a))>
         >
       >
-      として集合族 &m<N \circ; M \in; \sp<\bfrm<Set>><C \times; A>> を定義し、これを &m<M> と &m<N> の\em<合成\fl<composition>> という。
+      として集合族 &m<N \circ; M \in; \sp<\bfrm<Set>><C \times; A>> を定義し、これを &m<M> と &m<N> の\def<合成\fl<composition>> という。
     >
   >
   \p<

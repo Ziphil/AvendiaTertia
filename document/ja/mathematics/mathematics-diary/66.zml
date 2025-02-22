@@ -23,7 +23,7 @@
         >
       >
       が可換になるとする。
-      このとき、&m<A> は &m<m> に\em<直交する\fl<orthogonal>> という。
+      このとき、&m<A> は &m<m> に\def<直交する\fl<orthogonal>> という。
     >
   >
   \thm|type="def"|<
@@ -44,13 +44,13 @@
     >
     \ul<
       \li<
-        このとき、&m<\scr<A>> は &m<\scr<C>> の\em<直交クラス\fl<orthogonality class>> であるという。
+        このとき、&m<\scr<A>> は &m<\scr<C>> の\def<直交クラス\fl<orthogonality class>> であるという。
       >
       \li<
-        特に &m<\scr<M>> を集合サイズにとれるときは、&m<\scr<A>> は &m<\scr<C>> の\em<小直交クラス\fl<small-orthogonality class>> であるという。
+        特に &m<\scr<M>> を集合サイズにとれるときは、&m<\scr<A>> は &m<\scr<C>> の\def<小直交クラス\fl<small-orthogonality class>> であるという。
       >
       \li<
-        特に &m<\scr<M>> に属する全ての射の始域と終域が &m<`k>-表示可能にとれるときは、&m<\scr<A>> は &m<\scr<C>> の &m<`k>-\em<直交クラス\fl<orthogonality class>> であるという。
+        特に &m<\scr<M>> に属する全ての射の始域と終域が &m<`k>-表示可能にとれるときは、&m<\scr<A>> は &m<\scr<C>> の &m<`k>-\def<直交クラス\fl<orthogonality class>> であるという。
       >
     >
     \p<
@@ -139,7 +139,7 @@
         任意の族 &m<(\sb<x><i> \in; P F i) \sb<><i \in; \scr<I>>> であって各 &m<\scr<I>> の射 &m<u: i \to; i'> について &m<(P F u) \sb<x><i> = \sb<x><i'>> が成り立っているものに対して、元 &m<x \in; P S> が一意に存在し、任意の &m<\scr<I>> の対象 &m<i> に対し、&m<(P \sb<s><i>) x = \sb<x><i>> が成り立つ。
       >
       \li<
-        \ref|type="thm",ref="setlim"|; の表示において、
+        \mref|type="thm",ref="setlim"|; の表示において、
         &mb<
           \array|align="rrcl"|<
             \c<Ш:> \c<P S> \c<\longto;> \c<\sb<\op<lim>><i> P F i> \br;

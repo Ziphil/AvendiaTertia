@@ -172,7 +172,7 @@
         \sb<\op<Hom>><\scr<V>> (X, N) \cong; `{\scr<V> \text<-豊穣自然変換 > `g: X \otimes; F \hyphen; \raarr; G `}
       >
       が &m<X> に関して自然に成り立つとする。
-      このとき、&m<N> を &m<F> から &m<G> への\em<自然変換対象\fl<natural transformation object>> といい、&m<\lbbracket; F, G \rbbracket; \sb<><\scr<C> \to; \scr<D>>> で表す。
+      このとき、&m<N> を &m<F> から &m<G> への\def<自然変換対象\fl<natural transformation object>> といい、&m<\lbbracket; F, G \rbbracket; \sb<><\scr<C> \to; \scr<D>>> で表す。
     >
   >
   \p<
@@ -227,7 +227,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="natobj"|; により、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
+      \mref|type="thm",ref="natobj"|; により、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
       &mb<
         \op<Hom> (X, FK) \cong; `{ \scr<V> \text<-豊穣自然変換 > `g: X \otimes; `[K, \hyphen;`] \raarr; F `}
       >
@@ -323,7 +323,7 @@
       >
       が示された。
       あとはこの全単射が &m<X> に関して自然であることを示せば良い。
-      そのためには、\ref|type="thm",ref="natiso"|; のときと同様に上の式の右辺を &m<SX> と書くことにしたとき、
+      そのためには、\mref|type="thm",ref="natiso"|; のときと同様に上の式の右辺を &m<SX> と書くことにしたとき、
       &mb<
         \diag<
           \v<\op<Hom> (X, FK)> \v<SX> \br;

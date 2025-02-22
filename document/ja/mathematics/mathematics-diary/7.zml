@@ -14,7 +14,7 @@
   >
   \p<
     項の定義にも様々なバリエーションがあり、広く受け入れられている定義というのは特にないようである。
-    ここでは Bierman\ref|type="bib",ref="bill"|; の定義を用いる。
+    ここでは Bierman\mref|type="bib",ref="bill"|; の定義を用いる。
     項の定義を個別に行うことはただ冗長なだけなのでここではせず、型付け規則と同時に項も定義することにする。
   >
   \p<
@@ -135,7 +135,7 @@
           >
         >
       >
-      以上によって定義される項を\em<線型項\fl<linear term>> という。
+      以上によって定義される項を\def<線型項\fl<linear term>> という。
     >
   >
   \p<
@@ -179,13 +179,13 @@
         >
       >
       とおいた。
-      以上によって定義される簡約を &m<`b>-\em<簡約\fl<reduction>> という。
+      以上によって定義される簡約を &m<`b>-\def<簡約\fl<reduction>> という。
     >
   >
   \p<
     項の代入の定義はここでは省略する。
     これは、以下の定理が示すように、代入によって型が変わらないよううまく定義されている。
-    線型論理に対応する項の定義は、実は Abramsky\ref|type="bib",ref="acil"|; などが Bierman より前に行っていたが、この型付け体系は代入による型の不変性が成立しないことが、後に Wadler\ref|type="bib",ref="wtns"|; によって証明された。
+    線型論理に対応する項の定義は、実は Abramsky\mref|type="bib",ref="acil"|; などが Bierman より前に行っていたが、この型付け体系は代入による型の不変性が成立しないことが、後に Wadler\mref|type="bib",ref="wtns"|; によって証明された。
     Bierman の定義では、この問題が解消されている。
   >
   \thm|type="thm"|<
@@ -217,14 +217,14 @@
         \lbbracket; `G \rbbracket; = \lbbracket; \sb<A><1> \rbbracket; \otimes; \cdots; \otimes; \lbbracket; \sb<A><k> \rbbracket;
       >
       とおくと、各型割り当て &m<`G \vdash; M: A> に対し、射 &m<\lbbracket; M \rbbracket;: \lbbracket; `G \rbbracket; \to; \lbbracket; A \rbbracket;> が 1 つ定まっているとする。
-      このとき、&m<\scr<C>> を\em<線型構造\fl<linear structure>> という。
+      このとき、&m<\scr<C>> を\def<線型構造\fl<linear structure>> という。
     >
   >
   \thm|type="def"|<
     \p<
       対称モノイダル圏 &m<\scr<C>> を考える。
       &m<\scr<C>> が線型構造であって、任意の &m<`b>-簡約 &m<M \sb<\squigrarr;><`b> N> に対して &m<\lbbracket; M \rbbracket; = \lbbracket; N \rbbracket;> が成り立っているとする。
-      このとき、&m<\scr<C>> を\em<線型モデル\fl<linear model>> という。
+      このとき、&m<\scr<C>> を\def<線型モデル\fl<linear model>> という。
     >
   >
   \h1<参考文献>

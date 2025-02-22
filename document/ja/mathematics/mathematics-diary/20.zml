@@ -44,7 +44,7 @@
         >
       >
       が等しいとする。
-      このとき、&m<`J> を\em<自然調整\fl<natural modification>> といい、&m<`J: `s \raaarr; `t> で表す。
+      このとき、&m<`J> を\def<自然調整\fl<natural modification>> といい、&m<`J: `s \raaarr; `t> で表す。
     >
   >
   \p<
@@ -93,7 +93,7 @@
       &mb<
         (`C \hat<\circ;> `J) \sb<><A> \coloneqq; \sb<`C><A> \dot<\circ;> \sb<`J><A>: \sb<`s><A> \raarr; \sb<`r><A>
       >
-      によって定まる自然調整 &m<`C \hat<\circ;> `J: `s \raaarr; `r> を、&m<`J> と &m<`C> の\em<垂直合成\fl<vertical composition>> という。
+      によって定まる自然調整 &m<`C \hat<\circ;> `J: `s \raaarr; `r> を、&m<`J> と &m<`C> の\def<垂直合成\fl<vertical composition>> という。
     >
   >
   \thm|type="def"|<
@@ -103,7 +103,7 @@
       &mb<
         (`C \hat<*> `J) \sb<><A> \coloneqq; \sb<`C><A> * \sb<`J><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`f><A> \circ; \sb<`t><A>
       >
-      によって定まる自然調整 &m<`C \hat<*> `J: `r \dot<\circ;> `s \raaarr; `f \dot<\circ;> `t> を、&m<`J> と &m<`C> の\em<水平合成\fl<horizontal composition>> という。
+      によって定まる自然調整 &m<`C \hat<*> `J: `r \dot<\circ;> `s \raaarr; `f \dot<\circ;> `t> を、&m<`J> と &m<`C> の\def<水平合成\fl<horizontal composition>> という。
     >
   >
   \p<
@@ -180,7 +180,7 @@
       &mb<
         (`C \hat<\ast;> `s) \sb<><A> \coloneqq; \sb<`C><A> \ast; \sb<`s><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`f><A> \circ; \sb<`s><A>
       >
-      によって定まる自然調整 &m<`C \hat<\ast;> `s: `r \dot<\circ;> `s \raaarr; `f \dot<\circ;> `s> を、&m<`s> と &m<`C> の\em<左髭結合\fl<left whiskering>> という。
+      によって定まる自然調整 &m<`C \hat<\ast;> `s: `r \dot<\circ;> `s \raaarr; `f \dot<\circ;> `s> を、&m<`s> と &m<`C> の\def<左髭結合\fl<left whiskering>> という。
     >
   >
   \thm|type="def"|<
@@ -190,7 +190,7 @@
       &mb<
         (`r \hat<\ast;> `J) \sb<><A> \coloneqq; \sb<`r><A> \ast; \sb<`J><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`r><A> \circ; \sb<`t><A>
       >
-      によって定まる自然調整 &m<`r \hat<\ast;> `J: `r \dot<\circ;> `s \raaarr; `r \dot<\circ;> `t> を、&m<`J> と &m<`r> の\em<右髭結合\fl<right whiskering>> という。
+      によって定まる自然調整 &m<`r \hat<\ast;> `J: `r \dot<\circ;> `s \raaarr; `r \dot<\circ;> `t> を、&m<`J> と &m<`r> の\def<右髭結合\fl<right whiskering>> という。
     >
   >
   \p<

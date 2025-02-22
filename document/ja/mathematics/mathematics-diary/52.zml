@@ -19,7 +19,7 @@
   >
   \p<
     1 日目である今日は、継続とは何かについて触れようと思う。
-    これを書くにあたっては Griffin\ref|type="bib",ref="gftn"|; を大いに参考にした。
+    これを書くにあたっては Griffin\mref|type="bib",ref="gftn"|; を大いに参考にした。
   >
   \p<
     まず、通常のラムダ計算の体系を思い出そう。
@@ -29,7 +29,7 @@
   \thm|type="def"|<
     \p<
       計算体系 &m<\sb<\rm<`l>><>> の言語を以下のように定める。
-      可算集合 &m<\bb<V>> を固定し、この元を\em<変項\fl<variable>> と呼ぶ。
+      可算集合 &m<\bb<V>> を固定し、この元を\def<変項\fl<variable>> と呼ぶ。
       さらに、変項をメタ変項 &m<x> で表すことにし、その上で、
       &mb<
         \array|align="rcl"|<
@@ -38,7 +38,7 @@
         >
       >
       とする。
-      このとき、&m<M> と &m<V> で定まるものをそれぞれ\em<項\fl<term>> と\em<値\fl<value>> という。
+      このとき、&m<M> と &m<V> で定まるものをそれぞれ\def<項\fl<term>> と\def<値\fl<value>> という。
     >
   >
   \p<
@@ -55,7 +55,7 @@
         >
       >
       とする。
-      これによって定まるものを\em<値呼び評価環境\fl<call-by-value evaluation environment>> という。
+      これによって定まるものを\def<値呼び評価環境\fl<call-by-value evaluation environment>> という。
     >
   >
   \p<
@@ -69,7 +69,7 @@
         E `[(\rm<`l> x. \sfun; M) V`] \squigrarr; E `[M `[x \coloneqq; V`]`]
       >
       で定める。
-      これを\em<値呼び簡約\fl<call-by-value reduction>> という。
+      これを\def<値呼び簡約\fl<call-by-value reduction>> という。
     >
   >
   \p<
@@ -143,8 +143,8 @@
   \p<
     通常のラムダ計算では、継続 (つまり評価環境) は評価をするときにメタな視点から使われるにすぎず、言語の中から操作することはできない。
     したがって、言語の中で継続を操作できるようにするためには、何らかの方法で通常のラムダ計算を拡張する必要がある。
-    その拡張の 1 つに Parigot\ref|type="bib",ref="plca"|; の &m<\rm<`l`m>>-計算があり、ここでは継続を変数に束縛する構文を追加することで一級継続を実現している。
-    しかし、これにいきなり触れると定義を直観的に理解するのが少し難しいので、まずはよりシンプルな Felleisen et al\ref|type="bib",ref="fsts"|; の &m<\sb<\rm<`l>><\rm<c>>>-計算を扱おうと思う。
+    その拡張の 1 つに Parigot\mref|type="bib",ref="plca"|; の &m<\rm<`l`m>>-計算があり、ここでは継続を変数に束縛する構文を追加することで一級継続を実現している。
+    しかし、これにいきなり触れると定義を直観的に理解するのが少し難しいので、まずはよりシンプルな Felleisen et al\mref|type="bib",ref="fsts"|; の &m<\sb<\rm<`l>><\rm<c>>>-計算を扱おうと思う。
   >
   \p<
     &m<\sb<\rm<`l>><\rm<c>>>-計算は、通常のラムダ計算に &m<\tt<abort>> と &m<\tt<cont>> という 2 つの演算子を加えたものである。

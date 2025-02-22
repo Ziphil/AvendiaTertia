@@ -45,7 +45,17 @@ manager.registerElementRule("math-block", "page", (transformer, document, elemen
   return self;
 });
 
-manager.registerElementRule("ref", "page", (transformer, document, element, scope, args) => {
+manager.registerElementRule("def", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendTextNode(" 「");
+  self.appendElement("em", (self) => {
+    self.appendChild(transformer.apply());
+  });
+  self.appendTextNode("」 ");
+  return self;
+});
+
+manager.registerElementRule("mref", "page", (transformer, document, element, scope, args) => {
   const self = document.createDocumentFragment();
   const refId = element.getAttribute("ref");
   const rawType = element.getAttribute("type");

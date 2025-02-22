@@ -148,7 +148,7 @@
           \c<\tt|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<second> G>
         >
       >
-      に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と\ref|type="thm",ref="second"|; の一部そのものである。
+      に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と\mref|type="thm",ref="second"|; の一部そのものである。
     >
     \p<
       さらに、&m<\scr<D>> に前モノイダル圏の構造を定める。
@@ -239,7 +239,7 @@
   >
   \prf<
     \p<
-      \a|href="43.html#sound"|<命題 3.1> と\ref|type="thm",ref="comp"|; から従う。
+      \a|href="43.html#sound"|<命題 3.1> と\mref|type="thm",ref="comp"|; から従う。
     >
   >
   \p<

@@ -14,7 +14,7 @@
     例えば、今例に挙げた単純型付きラムダ計算はカルテシアン閉圏と対応するので、直観主義論理と単純型付きラムダ計算とカルテシアン閉圏という 3 つの数学的対象は実質同じものと言える。
   >
   \p<
-    さて、1987 年に Girard\ref|type="bib",ref="gllx"|; によって線型論理という新しい論理体系が導入された。
+    さて、1987 年に Girard\mref|type="bib",ref="gllx"|; によって線型論理という新しい論理体系が導入された。
     すると、今の述べた Curry–Howard–Lambek 対応において、線型論理と対応する圏の構造とはどのようなものだろうかという疑問が湧いてくる。
     そのような圏の構造については、線型論理の発表から盛んに研究されており、いくつかの候補が提唱されている。
     今後しばらく、それらの圏についてまとめていこうと思う。
@@ -26,7 +26,7 @@
     代わりに、終対象を &m<1> で表す。
   >
   \p<
-    まずは、Bierman\ref|type="bib",ref="bill"|; による線型圏を挙げる。
+    まずは、Bierman\mref|type="bib",ref="bill"|; による線型圏を挙げる。
     私はこの圏が線型論理に対応する圏として最も適切だと (今のところ) 感じているので、以降の議論はこの圏をベースとする。
     なお、この圏については \a|href="8.html"|<2018 年 3 月 5 日>ですでに詳しく触れているので、ここでは定義をおさらいするに留める。
   >
@@ -49,7 +49,7 @@
       >
     >
     \p<
-      このとき、&m<\scr<C>> を\em<線型圏\fl<linear category>> という。
+      このとき、&m<\scr<C>> を\def<線型圏\fl<linear category>> という。
     >
   >
   \p<
@@ -79,7 +79,7 @@
       >
     >
     \p<
-      このように定めた圏 &m<\scr<C>> を、&m<\scr<C>> の\em<余 Kleisli 圏\fl<co— category>> という。
+      このように定めた圏 &m<\scr<C>> を、&m<\scr<C>> の\def<余 Kleisli 圏\fl<co— category>> という。
     >
   >
   \p<
@@ -135,7 +135,7 @@
     以降、&m<\scr<C>> が有限直積をもつ文脈では、&m<\sb<\scr<C>><!>> を直積によってモノイダル圏と見なす。
   >
   \p<
-    次に扱う圏は、Seely\ref|type="bib",ref="slls"|; によって導入されたものである。
+    次に扱う圏は、Seely\mref|type="bib",ref="slls"|; によって導入されたものである。
     オリジナルの定義では、圏に課している条件が少なく、線型論理 (とそこから作られる計算体系) におけるいくつかの等式が、圏の射に対応させたときに等しくならない可能性があった。
     そのため、ここではオリジナルの定義ではなく、Bierman によって修正された定義を述べる。
     この定義のモチベーションは、圏に定まったコモノイドが定める余 Kleisli 圏をカルテシアン閉にすることである。
@@ -157,7 +157,7 @@
       >
     >
     \p<
-      このとき、&m<\scr<C>> を\em<新 Seely 圏\fl<new — category>> という。
+      このとき、&m<\scr<C>> を\def<新 Seely 圏\fl<new — category>> という。
     >
   >
   \p<
@@ -252,7 +252,7 @@
   \prf<
     \p<
       &m<\sb<\scr<C>><!>> が有限直積をもつことはすでに述べた通りである。
-      任意の &m<\scr<C>> の対象 &m<A, B, C> に対し、\ref|type="thm",ref="xinv"|; より &m<\sb<\tilde<`x>><CA>: FC \otimes; FA \to; F (C \times; A)> は同型射であるが、&m<F> の定義によってこれは &m<! C \otimes; ! A \cong; ! (C \times; A)> が成り立つということである。
+      任意の &m<\scr<C>> の対象 &m<A, B, C> に対し、\mref|type="thm",ref="xinv"|; より &m<\sb<\tilde<`x>><CA>: FC \otimes; FA \to; F (C \times; A)> は同型射であるが、&m<F> の定義によってこれは &m<! C \otimes; ! A \cong; ! (C \times; A)> が成り立つということである。
       これに加えて &m<\scr<C>> のモノイダル閉性を用いれば、
       &mb<
         \array|align="rcl"|<
@@ -279,7 +279,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="kleiadj"|; より &m<! = F \circ; G> であるから、! のモノイダル構造は、各対象 &m<A, B> に対し、
+      \mref|type="thm",ref="kleiadj"|; より &m<! = F \circ; G> であるから、! のモノイダル構造は、各対象 &m<A, B> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\sb<\tilde<`f>><AB>> \c<\coloneqq;> \c<\tort<\diag<
@@ -293,7 +293,7 @@
         >
       >
       で定まる。
-      さらに、\ref|type="thm",ref="xinv"|; を用いて、各対象 &m<A> に対し、
+      さらに、\mref|type="thm",ref="xinv"|; を用いて、各対象 &m<A> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\sb<d><A>> \c<\coloneqq;> \c<\tort<\diag<

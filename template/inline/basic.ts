@@ -29,15 +29,6 @@ manager.registerElementRule("fl", "page", (transformer, document, element) => {
   return self;
 });
 
-manager.registerElementRule("em", "page", (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendElement("em", (self) => {
-    self.addClassName("emphasis");
-    self.appendChild(transformer.apply());
-  });
-  return self;
-});
-
 manager.registerElementRule("small", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {

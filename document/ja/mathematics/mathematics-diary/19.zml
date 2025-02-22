@@ -87,14 +87,14 @@
         >
       >
       も等しいとする。
-      このとき、&m<F> を 2-\em<弛緩関手\fl<lax functor>> といい、&m<F: \scr<C> \to; \scr<D>>  で表す。
+      このとき、&m<F> を 2-\def<弛緩関手\fl<lax functor>> といい、&m<F: \scr<C> \to; \scr<D>>  で表す。
     >
   >
   \thm|type="def"|<
     \p<
       2-圏 &m<\scr<C>, \scr<D>> をとる。
-      上記定義において、任意の &m<\scr<C>> の対象 &m<A, B, C> に対して &m<\sb<`m><ABC>, \sb<`j><A>> が同型射であるとき、&m<F> を 2-\em<擬関手\fl<pseudofunctor>> という。
-      任意の &m<\scr<C>> の対象 &m<A, B, C> に対して &m<\sb<`m><ABC>, \sb<`j><A>> が恒等射であるときは、単に &m<F> を 2-\em<関手\fl<functor>> という。
+      上記定義において、任意の &m<\scr<C>> の対象 &m<A, B, C> に対して &m<\sb<`m><ABC>, \sb<`j><A>> が同型射であるとき、&m<F> を 2-\def<擬関手\fl<pseudofunctor>> という。
+      任意の &m<\scr<C>> の対象 &m<A, B, C> に対して &m<\sb<`m><ABC>, \sb<`j><A>> が恒等射であるときは、単に &m<F> を 2-\def<関手\fl<functor>> という。
     >
   >
   \p<
@@ -152,14 +152,14 @@
         >
       >
       が等しいとする。
-      このとき、&m<`s> を 2-\em<弛緩自然変換\fl<lax natural transformation>> といい、&m<`s: F \raarr; G> で表す。
+      このとき、&m<`s> を 2-\def<弛緩自然変換\fl<lax natural transformation>> といい、&m<`s: F \raarr; G> で表す。
     >
   >
   \thm|type="def"|<
     \p<
       2-圏 &m<\scr<C>, \scr<D>> と 2-弛緩関手 &m<F, G: \scr<C> \to; \scr<D>> をとる。
-      上記定義において、任意の &m<\scr<C>> の対象 &m<A, B> に対して &m<\sb<`n><AB>> が同型射であるとき、&m<`s> を 2-\em<擬自然変換\fl<pseudonatural transformation>> という。
-      任意の &m<\scr<C>> の対象 &m<A, B> に対して &m<\sb<`n><AB>> が恒等射であるときは、単に &m<`s> を 2-\em<自然変換\fl<natural transformation>> という。
+      上記定義において、任意の &m<\scr<C>> の対象 &m<A, B> に対して &m<\sb<`n><AB>> が同型射であるとき、&m<`s> を 2-\def<擬自然変換\fl<pseudonatural transformation>> という。
+      任意の &m<\scr<C>> の対象 &m<A, B> に対して &m<\sb<`n><AB>> が恒等射であるときは、単に &m<`s> を 2-\def<自然変換\fl<natural transformation>> という。
     >
   >
   \p<

@@ -9,7 +9,7 @@
   \h1<日記 (2019 年 11 月 9 日)>
   \p<
     計算体系の表示的意味論を構築するときに用いられる概念に領域というものがあるが、最近これに触れる機会が多くなってきたので、改めて復習というか整理をしておこうと思う。
-    主なリファレンスは Abramsky–Jung\ref|type="bib",ref="adtx"|; である。
+    主なリファレンスは Abramsky–Jung\mref|type="bib",ref="adtx"|; である。
   >
   \p<
     順序集合に関する基本的な用語の定義や性質は既知とする。
@@ -22,17 +22,17 @@
   \thm|type="def"|<
     \p<
       順序集合 &m<D> の部分集合 &m<A> を考える。
-      &m<A> が空でなく、任意の &m<A> の 2 元集合が &m<A> に上界をもつとき、&m<A> は\em<有向\fl<directed>> であるという。
+      &m<A> が空でなく、任意の &m<A> の 2 元集合が &m<A> に上界をもつとき、&m<A> は\def<有向\fl<directed>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
-      順序集合 &m<D> に対し、任意の &m<D> の有向部分集合が &m<D> に上限をもつとき、&m<D> は\em<有向完備\fl<directed-complete>> もしくは単に\em<完備\fl<complete>> であるという。
+      順序集合 &m<D> に対し、任意の &m<D> の有向部分集合が &m<D> に上限をもつとき、&m<D> は\def<有向完備\fl<directed-complete>> もしくは単に\def<完備\fl<complete>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
-      順序集合 &m<D> に対し、&m<D> の最小元が存在するとき、&m<D> は\em<点付き\fl<pointed>> であるという。
+      順序集合 &m<D> に対し、&m<D> の最小元が存在するとき、&m<D> は\def<点付き\fl<pointed>> であるという。
     >
   >
   \p<
@@ -63,20 +63,20 @@
     \p<
       順序集合 &m<D, E> と写像 &m<f: D \to; E> をとる。
       任意の 2 元 &m<d, d' \in; D> に対し、&m<d \sqsubseteq; d'> ならば &m<f (d) \sqsubseteq; f (d')> が成り立つとする。
-      このとき、&m<f> は\em<単調\fl<monotonic>> であるという。
+      このとき、&m<f> は\def<単調\fl<monotonic>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
       完備順序集合 &m<D, E> と写像 &m<f: D \to; E> をとる。
       任意の &m<D> の有向部分集合 &m<A> に対し、&m<\bigsqcup|in|; f (A)> が存在して &m<f (\bigsqcup|in|; A) = \bigsqcup|in|; f (A)> が成り立つとする。
-      このとき、&m<f> は\em<連続\fl<continuous>> であるという。
+      このとき、&m<f> は\def<連続\fl<continuous>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
       点付き順序集合 &m<D, E> と写像 &m<f: D \to; E> をとる。
-      &m<f> が最小元を保つとき、&m<f> は\em<厳密\fl<strict>> であるという。
+      &m<f> が最小元を保つとき、&m<f> は\def<厳密\fl<strict>> であるという。
     >
   >
   \p<
@@ -145,7 +145,7 @@
   >
   \prf<
     \p<
-      \ref|type="thm",ref="comp"|; と同様である。
+      \mref|type="thm",ref="comp"|; と同様である。
     >
   >
   \p<

@@ -10,7 +10,7 @@
   \p<
     最近、モノイダル圏上に定義される余自由余代数の具体的な構成に興味が出てきた。
     そこで、とりあえず最も基本的な例として、線型空間の圏における余自由余代数について少し勉強したので、軽くまとめておこうと思う。
-    以降の議論は、Sweedler\ref|type="bib",ref="hax"|; によるものである。
+    以降の議論は、Sweedler\mref|type="bib",ref="hax"|; によるものである。
   >
   \p<
     余代数の前に、代数の定義をおさらいしておく。
@@ -33,7 +33,7 @@
         >
       >
       がともに可換であるとする。
-      このとき、3 つ組 &m<(A, `m, `h)> を &m<\scr<V>> の\em<代数\fl<algebra>> もしくは\em<モノイド\fl<monoid>> という。
+      このとき、3 つ組 &m<(A, `m, `h)> を &m<\scr<V>> の\def<代数\fl<algebra>> もしくは\def<モノイド\fl<monoid>> という。
     >
   >
   \p<
@@ -57,7 +57,7 @@
         >
       >
       がともに可換であるとする。
-      このとき、3 つ組 &m<(C, `d, `e)> を &m<\scr<V>> の\em<余代数\fl<coalgebra>> もしくは\em<コモノイド\fl<comonoid>> という。
+      このとき、3 つ組 &m<(C, `d, `e)> を &m<\scr<V>> の\def<余代数\fl<coalgebra>> もしくは\def<コモノイド\fl<comonoid>> という。
     >
   >
   \p<
@@ -80,7 +80,7 @@
         >
       >
       がともに可換であるとする。
-      このとき、&m<s> を &m<(C, `m, `h)> から &m<(D, `m', `h')> への\em<代数の射\fl<algebra morphism>> という。
+      このとき、&m<s> を &m<(C, `m, `h)> から &m<(D, `m', `h')> への\def<代数の射\fl<algebra morphism>> という。
     >
   >
   \p<
@@ -162,13 +162,13 @@
   \thm|type="def"|<
     \p<
       線型空間 &m<X> の部分空間 &m<Y> をとる。
-      商空間 &m<X `/ Y> が有限次元であるとき、&m<Y> は\em<余有限\fl<cofinite>> であるという。
+      商空間 &m<X `/ Y> が有限次元であるとき、&m<Y> は\def<余有限\fl<cofinite>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
       代数 &m<A> の線型空間としての部分空間 &m<I> をとる。
-      任意の &m<a \in; A> と &m<u \in; I> について、&m<ua \in; I> および &m<au \in; I> が成り立つとき、&m<I> を &m<A> の\em<イデアル\fl<ideal>> という。
+      任意の &m<a \in; A> と &m<u \in; I> について、&m<ua \in; I> および &m<au \in; I> が成り立つとき、&m<I> を &m<A> の\def<イデアル\fl<ideal>> という。
     >
   >
   \p<
@@ -313,12 +313,12 @@
       であるから、&m<A \otimes; I \subseteq; \op<Ker> \sp<`m><*> (f)> が成り立つ。
       同様の計算により &m<I \otimes; A \subseteq; \op<Ker> \sp<`m><*> (f)> も成り立つ。
       したがって、&m<K \coloneqq; A \otimes; I + I \otimes; A> とおけば &m<K \subseteq; \op<Ker> \sp<`m><*> (f)> が成り立つ。
-      \ref|type="thm",ref="com"|; の証明で行った議論と同様にして、&m<K> は余有限イデアルであることが分かるので、&m<\sp<`m><*> (f) \in; \sp<(A \otimes; A)><\diamond;>> が得られる。
-      以上により、\ref|type="thm",ref="com"|; を用いて &m<\sp<`m><*> (\sp<A><\diamond;>) \subseteq; \sp<(A \otimes; A)><\diamond;> = \sp<A><\diamond;> \otimes; \sp<A><\diamond;>> が示された。
+      \mref|type="thm",ref="com"|; の証明で行った議論と同様にして、&m<K> は余有限イデアルであることが分かるので、&m<\sp<`m><*> (f) \in; \sp<(A \otimes; A)><\diamond;>> が得られる。
+      以上により、\mref|type="thm",ref="com"|; を用いて &m<\sp<`m><*> (\sp<A><\diamond;>) \subseteq; \sp<(A \otimes; A)><\diamond;> = \sp<A><\diamond;> \otimes; \sp<A><\diamond;>> が示された。
     >
   >
   \p<
-    \ref|type="thm",ref="multi"|; によって、代数 &m<(A, `m, `h)> があると、
+    \mref|type="thm",ref="multi"|; によって、代数 &m<(A, `m, `h)> があると、
     &mb<
       \array|align="rrcl"|<
         \c<`d:> \c<\sp<A><\diamond;>> \c<\longto;> \c<\sp<A><\diamond;> \otimes; \sp<A><\diamond;>> \br;
@@ -452,7 +452,7 @@
   >
   \prf<
     \p<
-      余代数 &m<C> に対して、\ref|type="thm",ref="psi"|; によって &m<i: C \to; \sp<C><**>> の終域を狭めたものを &m<`c: C \to; \sp<C><* \diamond;>> とおく。
+      余代数 &m<C> に対して、\mref|type="thm",ref="psi"|; によって &m<i: C \to; \sp<C><**>> の終域を狭めたものを &m<`c: C \to; \sp<C><* \diamond;>> とおく。
       また、代数 &m<A> に対しては、&m<j: \sp<A><\diamond;> \hookrarr; \sp<A><*>> を包含写像として、合成
       &mb<
         \diag<
@@ -477,7 +477,7 @@
   >
   \h1<追記 (2020 年 2 月 10 日)>
   \p<
-    \ref|type="thm",ref="close"|; とその証明を付け足し、その他の箇所で説明が曖昧だった点を修正しました。
+    \mref|type="thm",ref="close"|; とその証明を付け足し、その他の箇所で説明が曖昧だった点を修正しました。
     この補題の証明のアイデアと説明が曖昧な点の指摘は、\ae|href="https://twitter.com/wktkshn"|<@wktkshn> 氏によるものです。
     この場を借りて感謝します。
   >

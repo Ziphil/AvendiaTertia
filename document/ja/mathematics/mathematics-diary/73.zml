@@ -23,7 +23,7 @@
         >
       >
       と定める。
-      なお、&m<\op<fin> (a)> の元は &m<a> の\em<有限近似\fl<finite approximant>> と呼ばれる。
+      なお、&m<\op<fin> (a)> の元は &m<a> の\def<有限近似\fl<finite approximant>> と呼ばれる。
     >
   >
   \p<
@@ -99,7 +99,7 @@
     >
     \p<
       ここで &m<\op<elfin> (\ring<a>, y)> を考えると、&m<\ring<a>> が有限集合であることから &m<\op<elfin> (\ring<a>, y)> も有限集合である。
-      したがって、&m<\op<elfin> (\ring<a>, y)> には必ず極小元が存在するが、\ref|type="thm",ref="minmin"|; によってそれは最小元である。
+      したがって、&m<\op<elfin> (\ring<a>, y)> には必ず極小元が存在するが、\mref|type="thm",ref="minmin"|; によってそれは最小元である。
       &m<\ring<a> \subseteq; a> より &m<\op<elfin> (\ring<a>, y)> の最小元は &m<\op<elfin> (a, y)> の最小元でもあるから、これで示された。
     >
     \p<
@@ -110,7 +110,7 @@
       まず、&m<f> の連続性を示す。
       任意に有向部分集合 &m<S \subseteq; A> をとると、&m<f> の単調性によって &m<\bigcup|in|<a \in; S> f (a) \subseteq; f (\bigcup|in|<a \in; S> a)> は成り立つから、この逆の包含関係を示せば良い。
       そこで、&m<\bar<a> \coloneqq; \bigcup|in|<a \in; S> a> とおき、&m<y \in; f (\bar<a>)> をとる。
-      仮定から最小元 &m<\ring<a> \in; \op<elfin> (\bar<a>, y)> がとれるが、&m<\ring<a>> は有限集合で &m<\ring<a> \subseteq; \bigcup|in|<a \in; S> a> であるから、\ref|type="thm",ref="finex"|; によって、ある &m<a \in; S> が存在して &m<\ring<a> \subseteq; a> が成り立つ。
+      仮定から最小元 &m<\ring<a> \in; \op<elfin> (\bar<a>, y)> がとれるが、&m<\ring<a>> は有限集合で &m<\ring<a> \subseteq; \bigcup|in|<a \in; S> a> であるから、\mref|type="thm",ref="finex"|; によって、ある &m<a \in; S> が存在して &m<\ring<a> \subseteq; a> が成り立つ。
       &m<f> の単調性から &m<f (\ring<a>) \subseteq; f (a)> なので &m<y \in; f (a)> が得られ、これより &m<y \in; \bigcup|in|<a \in; S> f (a)> が分かる。
       以上により、&m<f (\bigcup|in|<a \in; S> a) \subseteq; \bigcup|in|<a \in; S> f (a)> である。
     >
@@ -131,7 +131,7 @@
   \thm|type="def"|<
     \p<
       整合空間 &m<A, B> の間の安定写像 &m<f: A \to; B> をとる。
-      ある &m<\ring<a> \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<(\ring<a>, y)> が &m<\op<elfin> (\ring<a>, y)> の最小元であるとき、組 &m<(\ring<a>, y)> を &m<f> の\em<トレース\fl<trace>> という。
+      ある &m<\ring<a> \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<(\ring<a>, y)> が &m<\op<elfin> (\ring<a>, y)> の最小元であるとき、組 &m<(\ring<a>, y)> を &m<f> の\def<トレース\fl<trace>> という。
       また、&m<f> のトレース全体の集合を &m<\op<tr> (f)> で表す。
     >
   >
@@ -153,7 +153,7 @@
       右辺の集合を &m<g (a)> と書くことにし、両方の包含関係を示す。
     >
     \p<
-      任意の &m<y \in; f (a)> に対し、\ref|type="thm",ref="stbapp"|; によって、最小元 &m<\ring<a> \in; \op<elfin> (a, y)> がとれる。
+      任意の &m<y \in; f (a)> に対し、\mref|type="thm",ref="stbapp"|; によって、最小元 &m<\ring<a> \in; \op<elfin> (a, y)> がとれる。
       しかし &m<\ring<a> \subseteq; a> だから、&m<\ring<a>> は &m<\op<elfin> (\ring<a>, y)> の最小元でもある。
       これより &m<(\ring<a>, y) \in; \op<tr> (f)> であり、&m<y \in; g (a)> が得られた。
       以上により、&m<f (a) \subseteq; g (a)> である。
@@ -167,7 +167,7 @@
   \p<
     さて、今日の本題は、整合空間 &m<A, B> に対してその冪 &m<A \buharprarr; B> を定義することであった。
     これを素朴に安定写像 &m<f: A \to; B> 全体の集合としたいところだが、安定写像自身は集合ではないので、集合の集合である整合空間と見なすことはできない。
-    しかし、\ref|type="thm",ref="trres"|; によって安定写像と 1 対 1 に対応することが分かったトレースは集合なので、安定写像自身ではなくそのトレースの全体の集合を考えることで、整合空間の枠組みに入れることができる。
+    しかし、\mref|type="thm",ref="trres"|; によって安定写像と 1 対 1 に対応することが分かったトレースは集合なので、安定写像自身ではなくそのトレースの全体の集合を考えることで、整合空間の枠組みに入れることができる。
     すなわち、
     &mb<
       A \buharprarr; B \coloneqq; `{\op<tr> (f) \mid; &raw<&m<f: A \to; B> は安定>`}
@@ -195,7 +195,7 @@
         \ring<a> \sb<\closure;><!A> \ring<a>' \coloniff; \ring<a> \cup; \ring<a>' \in; A
       >
       で定義する。
-      これによって定まる整合空間 &m<!A> を &m<A> の\em<線型化\fl<linearisation>> という。
+      これによって定まる整合空間 &m<!A> を &m<A> の\def<線型化\fl<linearisation>> という。
     >
   >
   \thm|type="def"|<
@@ -211,7 +211,7 @@
         \ltort; \ring<a> \sb<\closure;><!A> \ring<a>' \implies; y \sb<\closure;><B> y' \rtort; \scand; \ltort; \ring<a> \sb<\frown;><!A> \ring<a>' \implies; y \sb<\frown;><B> y' \rtort;
       >
       で定義する。
-      これによって定まる整合空間 &m<A \buharprarr; B> を &m<A> と &m<B> の\em<冪\fl<exponential>> という。
+      これによって定まる整合空間 &m<A \buharprarr; B> を &m<A> と &m<B> の\def<冪\fl<exponential>> という。
     >
   >
   \p<
@@ -240,7 +240,7 @@
         >
       >
       とおく。
-      すると、これは矛盾なく定義された安定写像であり、さらに\ref|type="thm",ref="trres"|; を使うと &m<c = \rm<tr> (f)> が示せるので、&m<c \in; C> が分かる。
+      すると、これは矛盾なく定義された安定写像であり、さらに\mref|type="thm",ref="trres"|; を使うと &m<c = \rm<tr> (f)> が示せるので、&m<c \in; C> が分かる。
       以上により、&m<A \buharprarr; B \subseteq; C> である。
     >
     \p<
