@@ -14,17 +14,17 @@
   line-height: 0;
 }
 
-.foreign {
-  font-size: 80%;
+.part {
 }
 
-.emphasis {
-  font-weight: inherit;
-  font-style: inherit;
-  background-image: linear-gradient($blue-color, $blue-color);
-  background-size: 100% 2rpx;
-  background-position: left bottom;
-  background-repeat: no-repeat;
+.part-mark {
+  font-size: 90%;
+  vertical-align: 0.15em;
+  line-height: 0;
+}
+
+.foreign {
+  font-size: 80%;
 }
 
 .small {

@@ -18,6 +18,19 @@ manager.registerElementRule("h", ["page", "page.section-table"], (transformer, d
   return self;
 });
 
+manager.registerElementRule("part", ["page", "page.section-table"], (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("part");
+    self.appendElement("span", (self) => {
+      self.addClassName("part-mark");
+      self.appendTextNode("#");
+    });
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("fl", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {

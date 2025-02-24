@@ -14,7 +14,7 @@
   >
   \hb<Haskell>
   \pb<
-    \ab|href="21.html",date="19/04/29"|<lens の仕組みを理解したい (その 2)>
+    \ab|href="21.html",date="19/04/29"|<lens の仕組みを理解したい \part<2>>
     \ab|href="20.html",date="19/04/25"|<lens の仕組みを理解したい>
     \ab|href="19.html",date="19/03/11"|<\m<Monad> と \m<Applicative> の違い>
     \ab|href="18.html",date="19/03/11"|<\m<Monad> と \m<ArrowApply> の同値性>
