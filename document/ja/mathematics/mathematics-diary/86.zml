@@ -1,0 +1,293 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<重要な恒真式>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2025 年 2 月 24 日)>
+  \p<
+    前回は、モデルを用いて妥当性や恒真性の定義をした。
+    今日は、その例として、全てのクラスにおいて成立する恒真式や妥当性の間の関係性をいくつか挙げる。
+  >
+  \p<
+    本題に入る前に記号に関して注意をしておく。
+    モデル &m<\scr<M> = (W, \sim|ord|;, P)> において、その世界とは元 &m<`a \in; W> のことであった。
+    以降ではこれを、あたかも &m<`a> が &m<\scr<M>> の元であるかのように &m<`a \in; \scr<M>> と書くことがある。
+    また、世界の間の二項関係は、特に断りがない限り常に &m<\sim;> で書く。
+  >
+  \p<
+    ではまず、通常の命題論理において恒真な式は、様相論理においても恒真であることを示そう。
+    そのためには、様相論理の式が「命題論理において恒真」とはどのような意味なのかを明確にしておく必要がある。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<\sb<\tt<p>><n>>, &m<\tbox; X>, &m<\trhombus; X> の形をした式を\def<命題論理的原子式\fl<propositional atomic sentence>>と呼ぶ。
+    >
+  >
+  \p<
+    様相論理の式は、通常の命題論理に &m<\tbox; X>, &m<\trhombus; X> の形をした式を追加したものであった。
+    したがって、ある式 &m<A> に含まれるこのような式を全て原子式だと思ってしまえば、&m<A> を通常の命題論理の式と見なすことができる。
+  >
+  \thm|type="def"|<
+    \p<
+      式 &m<A> に対し、&m<A> に含まれる命題論理的原子式を全て原子式だと見なしたとき、それが命題論理の式として恒真であるとする。
+      このとき、&m<A> は \def<命題論理的恒真\fl<propositionally tautological>>であるという。
+    >
+  >
+  \p<
+    例えば、&m<\sb<\tt<p>><0> \buharprarr; \sb<\tt<p>><0>> や &m<(\sb<\tt<p>><0> \wedge; \neg; \sb<\tt<p>><1>) \vee; (\neg; \sb<\tt<p>><0> \vee; \sb<\tt<p>><1>)> は命題論理的恒真である。
+    また、命題論理的恒真性を考える際に様相式のところは原子式と見なすので、&m<\sb<\tbox; \tt<p>><0> \vee; \neg; \tbox; \sb<\tt<p>><0>> や &m<\trhombus; (\sb<\tt<p>><0> \wedge; \tbox; \sb<\tt<p>><1>) \buharprarr; \trhombus; (\sb<\tt<p>><0> \wedge; \tbox; \sb<\tt<p>><1>)> なども命題論理的恒真である。
+  >
+  \thm|type="thm",id="pl"|<
+    \p<
+      任意のモデルのクラス &m<\frak<C>> をとる。
+      式 &m<A> に対し、&m<A> が命題論理的恒真であれば、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> が成り立つ。
+    >
+  >
+  \p<
+    命題論理の意味論もいくつかあるが、ここでは原子式への真偽値の割り当てを用いたものを使うことにする。
+    すなわち、ある式が恒真であるとは、そこに含まれる原子式にどのように真偽値を割り当てても式全体が真値になることをいう。
+    具体的な定義はここでは省略する。
+    また、原子式に割り当てる真偽値は 1 と 0 で書くことにする。
+  >
+  \prf<
+    \p<
+      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
+    >
+    \p<
+      ここで、命題論理的原子式に対する真偽値の割り当て &m<V> を、
+      &mb<
+        \sbsp<V><`a><\scr<M>> (X) \coloneqq; \case<
+          \c<1> \c<(\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; X)> \br;
+          \c<0> \c<(&raw<上記以外>)>
+        >
+      >
+      で定める。
+      このように定めた &m<\sbsp<V><`a><\scr<M>>> は、全ての (命題論理的原子式以外の) 式 &m<B> に対して、
+      &mb<
+        &mark<\wheart;>
+        \sbsp<V><`a><\scr<M>> (B) = 1 \iff; \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; B
+      >
+      を満たす。
+      これは、式に対しての真偽値の割り当てと様相論理における妥当性の定義を見比べることで、&m<B> の構造に関する帰納法から簡単に示すことができる。
+    >
+    \p<
+      さて、仮定から &m<A> は命題論理的恒真なので、特に &m<\sbsp<V><`a><\scr<M>> (A) = 1> である。
+      したがって、命題 &m<\wheart;> より &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つ。
+      &m<`a> と &m<\scr<M>> は任意だったので、これで &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> が示された。
+    >
+  >
+  \p<
+    この事実は、「命題論理的に妥当な式変形は様相論理でも妥当」という形で用いられることが多い。
+    厳密に述べれば次のようになる。
+  >
+  \thm|type="prp",id="plx"|<
+    \p<
+      任意のモデルのクラス &m<\frak<C>> をとる。
+      式 &m<A, A'> に対し、&m<A \buharprarr; A'> が命題論理的恒真であれば、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; A \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; A'
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> を仮定する。
+      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
+      このとき、仮定から特に &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つ。
+      また、&m<A \buharprarr; A'> は命題論理的恒真だから、\mref|type="thm",ref="pl"|; により &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A \buharprarr; A'> が成り立ち、特に &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A \buharprarr; A'> が成り立つ。
+      この 2 つからは &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A'> が得られる。
+      &m<`a> と &m<\scr<M>> は任意だったので、これで &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A'> が示された。
+    >
+  >
+  \p<
+    次に、様相に関わる恒真式のうち、特に重要なものを 2 つ挙げる。
+  >
+  \thm|type="thm",id="k"|<
+    \p<
+      任意のモデルのクラス &m<\frak<C>> をとる。
+      式 &m<A, B> に対し、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)
+      >
+      が常に成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
+      このとき、
+      &mb<
+        &mark<\wheart;>
+        \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)
+      >
+      を示せば良い。
+      妥当性の定義から、そのためには &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; (A \buharprarr; B)> と &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> を仮定して &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; B> を示せば良い。
+    >
+    \p<
+      任意に &m<`b \in; \scr<M>> であって &m<`a \sim; `b> を満たすものをとる。
+      すると、仮定の &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; (A \buharprarr; B)> から特に &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A \buharprarr; B> が成り立つことが分かる。
+      同様にして、仮定の &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> からは &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が得られる。
+      この 2 つからは &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; B> が導かれる。
+      今 &m<`b> は任意だったので、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; B> が成り立つ。
+    >
+    \p<
+      最後に、&m<`a> と &m<\scr<M>> は任意だったので、これで命題 &m<\wheart;> は示された。
+    >
+  >
+  \thm|type="thm"|<
+    \p<
+      任意のモデルのクラス &m<\frak<C>> をとる。
+      式 &m<A> に対し、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \trhombus; A \buharplrarr; \neg; \tbox; \neg; A
+      >
+      が常に成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
+      このとき、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \trhombus; A> と &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \neg; \tbox; \neg; A> が同値であることを示せば良いが、これは妥当性の定義を見ればすぐに分かる。
+      実際、
+    >
+    \ul<
+      \li*<
+         &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \neg; \tbox; \neg; A> が成り立つ。
+      >
+      \li*<
+         &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; \neg; A> が成り立たない。
+      >
+      \li*<
+        ある &m<`b \in; \scr<M>> に対し、&m<`a \sim; `b> が成り立ち、かつ &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \neg; A> は成り立ない。
+      >
+      \li*<
+        ある &m<`b \in; \scr<M>> に対し、&m<`a \sim; `b> が成り立ち、かつ &m<\sbsp<\vxdash|ord|;><`b><\scr<M>>  A> が成り立つ。
+      >
+      \li*<
+        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \trhombus; A> が成り立つ。
+      >
+    >
+    \p<
+      が順番に同値であることが分かる。
+    >
+  >
+  \p<
+    この定理から、&m<\trhombus;> は &m<\tbox;> の双対として定義できることが分かるので、言語に &m<\trhombus;> を入れるのは冗長とも言える。
+    実際、言語に &m<\trhombus;> を入れずに、&m<\trhombus; A> を &m<\neg; \tbox; \neg; A> の略記と見なす流派もある。
+    この記事では、Chellas に倣って、他から定義可能なものでも一通りの演算子を言語に入れる方式を採用した。
+  >
+  \p<
+    次に示すのは、恒真性の間の含意関係である。
+    これも今後重要になる。
+  >
+  \thm|type="thm",id="rn"|<
+    \p<
+      任意のモデルのクラス &m<\frak<C>> をとる。
+      式 &m<A> に対し、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; A \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; A
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> を仮定する。
+      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとり、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \box; A> を示す。
+    >
+    \p<
+      任意に &m<`b \in; \scr<M>> であって &m<`a \sim; `b> を満たすものをとる。
+      すると、仮定の &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> から、特に &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が分かる。
+      &m<`b> は任意だったので、これで &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \box; A> が示された。
+    >
+  >
+  \p<
+    ここで、モデルのクラス &m<\frak<C>> と式 &m<A> に対して、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> ならば &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; A> が成り立つということは、&m<\sp<\vxdash|ord|;><\frak<C>> A \buharprarr; \tbox; A> が成り立つことと同値ではないことに注意したい。
+    前者は上で実際に示したように成り立つが、後者はほとんどの場合で成り立たない。
+    どちらも、証明しようとすると、モデル &m<\scr<M> \in; \frak<C>> と世界 &m<`a \in; \scr<M>> に対して &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; A> を示すことになる点では同じである。
+    しかし、前者の証明では、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> を仮定しているので、&m<`a> とは異なる世界 &m<`b \in; \scr<M>> に対して &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つことを利用できる。
+    一方で後者の証明では、仮定として使えるのは  &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> だけなので、&m<\scr<M>> がかなり強い制約を満たしていない限り、これだけから &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> を導くことは難しい。
+  >
+  \p<
+    最後に、\mref|type="thm",ref="k"|; と\mref|type="thm",ref="rn"|; からは以下が導かれる。
+    ここで、式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> に対して、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>> は左から順に &m<\wedge;> を適用した式を表すものとする。
+    また、&m<n = 0> のときのこの式は &m<\top;> を表すものとする。
+  >
+  \thm|type="prp",id="rk"|<
+    \p<
+      任意のモデルのクラス &m<\frak<C>> をとる。
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n> \buharprarr; \tbox; B
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<n> に関する帰納法による。
+    >
+    \p<
+      &m<n = 0> のとき。
+      示すべきは、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \top; \buharprarr; B \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \top; \buharprarr; \tbox; B
+      >
+      である。
+      ここで、妥当性の定義を見ることで、任意の式 &m<C> に対して &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \top; \buharprarr; C> と &m<\sp<\vxdash|ord|;><\frak<C>>  C> は同値であることが分かる。
+      したがって、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; B \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; B
+      >
+      を示せば良いことになるが、これは\mref|type="thm",ref="rn"|; そのものである。
+    >
+    \p<
+      &m<n \geq; 1> のとき。
+      帰納法の仮定と、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
+      >
+      が成り立つことを仮定する。
+      すると、\mref|type="thm",ref="plx"|; により、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n - 1>) \buharprarr; (\sb<A><n> \buharprarr; B)
+      >
+      が成り立つ。
+      これに帰納法の仮定を用いれば、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; (\tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1>) \buharprarr; \tbox; (\sb<A><n> \buharprarr; B)
+      >
+      さて、\mref|type="thm",ref="k"|; により、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; (\sb<A><n> \buharprarr; B) \buharprarr; (\tbox; \sb<A><n> \buharprarr; \tbox; B)
+      >
+      が成り立つので、これと前の式を合わせれば、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; (\tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1>) \buharprarr; (\tbox; \sb<A><n> \buharprarr; \tbox; B)
+      >
+      が分かる。
+      再び\mref|type="thm",ref="plx"|; を使えば、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n> \buharprarr; \tbox; B
+      >
+      が示された。
+    >
+  >
+  \p<
+    この他にも恒真式や妥当性の含意関係は様々あるが、特にここで挙げた 4 つの定理は、様相論理の演繹体系の公理や推論規則に対応するという点で重要である。
+    演繹体系については次の次くらいの日記で触れることになりそうである。
+  >
+  \p<
+    次回は、特定のクラスにおける恒真式のうち重要なものに触れる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
