@@ -23,7 +23,7 @@
   >
   \thm|type="def"|<
     \p<
-      &m<\sb<\tt<p>><n>>, &m<\tbox; X>, &m<\trhombus; X> の形をした式を\def<命題論理的原子式\fl<propositional atomic sentence>>と呼ぶ。
+      &m<\sb<\tt<p>><n>>, &m<\tbox; X>, &m<\trhombus; X> の形をした式を \def<命題論理的原子式\fl<propositional atomic sentence>>と呼ぶ。
     >
   >
   \p<
@@ -33,7 +33,7 @@
   \thm|type="def"|<
     \p<
       式 &m<A> に対し、&m<A> に含まれる命題論理的原子式を全て原子式だと見なしたとき、それが命題論理の式として恒真であるとする。
-      このとき、&m<A> は \def<命題論理的恒真\fl<propositionally tautological>>であるという。
+      このとき、&m<A> は  \def<命題論理的恒真\fl<propositionally tautological>>であるという。
     >
   >
   \p<

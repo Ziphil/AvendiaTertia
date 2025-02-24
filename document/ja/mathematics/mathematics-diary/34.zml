@@ -25,7 +25,7 @@
         (d, e) \sqsubseteq; (d', e') \coloniff; d \sqsubseteq; d' \scand; e \sqsubseteq; e'
       >
       で定める。
-      この &m<D \times; E> を &m<D> と &m<E> の\def<直積\fl<direct product>> という。
+      この &m<D \times; E> を &m<D> と &m<E> の \def<直積\fl<direct product>> という。
     >
   >
   \p<
@@ -157,7 +157,7 @@
         >
       >
       で定める。
-      この &m<D \times; E> を &m<D> と &m<E> の\def<スマッシュ積\fl<smash product>> という。
+      この &m<D \times; E> を &m<D> と &m<E> の \def<スマッシュ積\fl<smash product>> という。
     >
   >
   \p<

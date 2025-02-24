@@ -170,7 +170,7 @@
         >
       >
       が可換になる。
-      このとき、&m<`F> は\def<解集合条件\fl<solution set condition>> を満たすといい、&m<`{\sb<g><l>: D \to; `F \sb<C><l>`} \sb<><l \in; L>> を &m<D> の\def<解集合\fl<solution set>> という。
+      このとき、&m<`F> は \def<解集合条件\fl<solution set condition>> を満たすといい、&m<`{\sb<g><l>: D \to; `F \sb<C><l>`} \sb<><l \in; L>> を &m<D> の \def<解集合\fl<solution set>> という。
     >
   >
   \thm|type="thm",id="solset"|<

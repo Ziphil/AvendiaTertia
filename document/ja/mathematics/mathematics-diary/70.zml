@@ -20,13 +20,13 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<X>, \scr<Y>> および関手 &m<F, G: \scr<X> \to; \scr<Y>> と自然変換 &m<`f, `c: F \raarr; G> をとる。
-      組 &m<(F, G, `f, `c)> を &m<\scr<X>> 上の\def<方程式\fl<equation>> という。
+      組 &m<(F, G, `f, `c)> を &m<\scr<X>> 上の \def<方程式\fl<equation>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<X>> 上の方程式 &m<(F, G, `f, `c)> をとる。
-      &m<\scr<X>> の対象 &m<C> が &m<\sb<`f><C> = \sb<`g><C>> を満たすとき、&m<C> を &m<(F, G, `f, `c)> の\def<解\fl<solution>> という。
+      &m<\scr<X>> の対象 &m<C> が &m<\sb<`f><C> = \sb<`g><C>> を満たすとき、&m<C> を &m<(F, G, `f, `c)> の \def<解\fl<solution>> という。
     >
   >
   \p<

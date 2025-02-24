@@ -40,11 +40,11 @@
     \ul<
       \li<
         集まり &m<\op<Ob> (\scr<C>)> が定まっている。
-        この元を &m<\scr<C>> の\def<対象\fl<object>> という。
+        この元を &m<\scr<C>> の \def<対象\fl<object>> という。
       >
       \li<
         &m<\scr<C>> の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> に対し、集合 &m<\sb<\op<Hom>><\scr<C>> (`G \mid; `D)> が定まっている。
-        この元を &m<\scr<C>> の\def<多射\fl<polymorphism>> といい、&m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> のように表す。
+        この元を &m<\scr<C>> の \def<多射\fl<polymorphism>> といい、&m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> のように表す。
       >
       \li<
         &m<\scr<C>> の対象 &m<A> に対し、元
@@ -52,7 +52,7 @@
           \sb<\rm<id>><A> \in; \sb<\op<Hom>><\scr<C>> (A \mid; A)
         >
         が定まっている。
-        これを &m<\scr<C>> における &m<A> 上の\def<恒等射\fl<identity>> という。
+        これを &m<\scr<C>> における &m<A> 上の \def<恒等射\fl<identity>> という。
       >
       \li<
         &m<\scr<C>> の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;, \langle; `L \rangle;, \langle; `L' \rangle;, \langle; `S \rangle;> および対象 &m<A> に対し、写像
@@ -63,7 +63,7 @@
           >
         >
         が定まっている。
-        これを &m<\scr<C>> の\def<合成\fl<composition>> という。
+        これを &m<\scr<C>> の \def<合成\fl<composition>> という。
       >
       \li<
         &m<\scr<C>> の対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;, `t: \langle; `D \rangle; \to; \langle; `D' \rangle;> に対し、写像
@@ -74,7 +74,7 @@
           >
         >
         が定まっている。
-        これを &m<\scr<C>> の\def<交換\fl<exchange>> という。
+        これを &m<\scr<C>> の \def<交換\fl<exchange>> という。
       >
     >
     \p<
@@ -139,7 +139,7 @@
       >
     >
     \p<
-      このとき、&m<\scr<C>> を\def<対称多圏\fl<symmetric polycategory>> という。
+      このとき、&m<\scr<C>> を \def<対称多圏\fl<symmetric polycategory>> という。
     >
   >
   \p<
@@ -190,7 +190,7 @@
       >
     >
     \p<
-      このとき、&m<F> を\def<対称多関手\fl<symmetric polyfunctor>> といい、&m<F: \scr<C> \to; \scr<D>> で表す。
+      このとき、&m<F> を \def<対称多関手\fl<symmetric polyfunctor>> といい、&m<F: \scr<C> \to; \scr<D>> で表す。
     >
   >
   \p<
@@ -198,15 +198,15 @@
   >
   \thm|type="def"|<
     \p<
-      多圏 &m<\scr<C>> の多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> について、&m<`# \langle; `D \rangle; = 1> のときは &m<f> を特に\def<複射\fl<multimorphism>> という。
-      また、&m<`# \langle; `G \rangle; = `# \langle; `D \rangle; = 1> のときは &m<f> を単に\def<射\fl<morphism>> という。
+      多圏 &m<\scr<C>> の多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> について、&m<`# \langle; `D \rangle; = 1> のときは &m<f> を特に \def<複射\fl<multimorphism>> という。
+      また、&m<`# \langle; `G \rangle; = `# \langle; `D \rangle; = 1> のときは &m<f> を単に \def<射\fl<morphism>> という。
     >
   >
   \thm|type="def"|<
     \p<
       多圏 &m<\scr<C>> をとる。
       任意の &m<\scr<C>> の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> について、&m<`# \langle; `D \rangle; \neq; 1> ならば &m<\sb<\op<Hom>><\scr<C>> (`F \mid; `D) = \defpty;> が成り立っているとする。
-      このとき、&m<\scr<C>> を\def<複圏\fl<multicategory>> という。
+      このとき、&m<\scr<C>> を \def<複圏\fl<multicategory>> という。
     >
   >
   \p<
@@ -231,7 +231,7 @@
           >     
         >
         が同型射になるとする。
-        このとき、&m<A \otimes; B> を &m<A> と &m<B> の\def<テンソル積\fl<tensor product>> という。
+        このとき、&m<A \otimes; B> を &m<A> と &m<B> の \def<テンソル積\fl<tensor product>> という。
       >
       \li<
         ある対象 &m<\top;> と多射 &m<\sb<`f><\top;>: \langle; \rangle; \to; \langle; \top; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
@@ -242,7 +242,7 @@
           >     
         >
         が同型射になるとする。
-        このとき、&m<\top;> を\def<単位\fl<unit>> という。
+        このとき、&m<\top;> を \def<単位\fl<unit>> という。
       >
       \li<
         ある対象 &m<A \oplus; B> と多射 &m<\sb<`c><AB>: \langle; A \oplus; B \rangle; \to; \langle; A, B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
@@ -253,7 +253,7 @@
           >     
         >
         が同型射になるとする。
-        このとき、&m<A \oplus; B> を &m<A> と &m<B> の\def<余テンソル積\fl<cotensor product>> という。
+        このとき、&m<A \oplus; B> を &m<A> と &m<B> の \def<余テンソル積\fl<cotensor product>> という。
       >
       \li<
         ある対象 &m<\bot;> と多射 &m<\sb<`c><\bot;>: \langle; \bot; \rangle; \to; \langle; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
@@ -264,7 +264,7 @@
           >     
         >
         が同型射になるとする。
-        このとき、&m<\bot;> を\def<余単位\fl<counit>> という。
+        このとき、&m<\bot;> を \def<余単位\fl<counit>> という。
       >
       \li<
         ある対象 &m<A \brmulti; B> と多射 &m<\sb<`j><AB>: \langle; A \brmulti; B, A \rangle; \to; \langle; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
@@ -275,7 +275,7 @@
           >     
         >
         が同型射になるとする。
-        このとき、&m<A \brmulti; B> を &m<A> と &m<B> の\def<冪\fl<exponential>> という。
+        このとき、&m<A \brmulti; B> を &m<A> と &m<B> の \def<冪\fl<exponential>> という。
       >
       \li<
         ある対象 &m<\sp<A><\bot;>> と多射 &m<\sb<`h><A>: \langle; \rangle; \to; \langle; A, \sp<A><\bot;> \rangle;>, &m<\sb<`e><A>: \langle; \sp<A><\bot;>, A \rangle; \to; \langle; \rangle;> について、
@@ -284,11 +284,11 @@
           \sb<`h><A> \sb<\rcomp;><\sp<A><\bot;>> \sb<`e><A> = \sb<\rm<id>><A>
         >
         がともに成り立つとする。
-        このとき、&m<\sp<A><\bot;>> を &m<A> の\def<双対\fl<dual>> という。
+        このとき、&m<\sp<A><\bot;>> を &m<A> の \def<双対\fl<dual>> という。
       >
     >
     \p<
-      さらに、&m<\scr<C>> の任意の対象に対して上記の各演算が存在するとき、&m<\scr<C>> はその演算を\def<もつ\fl<has>> という。
+      さらに、&m<\scr<C>> の任意の対象に対して上記の各演算が存在するとき、&m<\scr<C>> はその演算を \def<もつ\fl<has>> という。
     >
   >
   \p<

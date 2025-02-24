@@ -172,7 +172,7 @@
         \sb<\op<Hom>><\scr<V>> (X, N) \cong; `{\scr<V> \text<-豊穣自然変換 > `g: X \otimes; F \hyphen; \raarr; G `}
       >
       が &m<X> に関して自然に成り立つとする。
-      このとき、&m<N> を &m<F> から &m<G> への\def<自然変換対象\fl<natural transformation object>> といい、&m<\lbbracket; F, G \rbbracket; \sb<><\scr<C> \to; \scr<D>>> で表す。
+      このとき、&m<N> を &m<F> から &m<G> への \def<自然変換対象\fl<natural transformation object>> といい、&m<\lbbracket; F, G \rbbracket; \sb<><\scr<C> \to; \scr<D>>> で表す。
     >
   >
   \p<

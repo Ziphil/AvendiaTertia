@@ -64,7 +64,7 @@
     \p<
       ラムダ項 &m<M> に含まれる &m<`b>-基 &m<R \equiv; (\rm<`l> x. \sfun; P) Q> を &m<R' \equiv; P `[x \coloneqq; Q`]> に簡約して得られるラムダ項を &m<N> とする。
       また、&m<M> に含まれる &m<`b>-基 &m<S> をとる。
-      このとき、&m<R> による &m<S> の\def<残基\fl<residue>> を以下によって定義する。
+      このとき、&m<R> による &m<S> の \def<残基\fl<residue>> を以下によって定義する。
     >
     \p<
       &m<R> と &m<S> が同じであるとき。
@@ -122,7 +122,7 @@
   \thm|type="def"|<
     \p<
       ラムダ項 &m<M> に含まれる &m<`b>-基 &m<R> を簡約して得られるラムダ項を &m<N> とする。
-      このとき、&m<N> に含まれる &m<`b>-基であって、&m<M> に含まれるどんな &m<`b>-基の残基でもないようなものを、&m<R> によって\def<生成された基\fl<created redex>> という。
+      このとき、&m<N> に含まれる &m<`b>-基であって、&m<M> に含まれるどんな &m<`b>-基の残基でもないようなものを、&m<R> によって \def<生成された基\fl<created redex>> という。
     >
   >
   \p<
@@ -346,7 +346,7 @@
           \c<\op<dpt> (A \buharprarr; B)> \c<=> \c<\max; (\op<dpt> (A), \op<dpt> (B)) + 1>
         >
       >
-      このとき、&m<\op<dpt> (A)> を &m<A> の\def<深さ\fl<depth>> という。
+      このとき、&m<\op<dpt> (A)> を &m<A> の \def<深さ\fl<depth>> という。
     >
   >
   \thm|type="def"|<
@@ -355,7 +355,7 @@
       &mb<
         \op<dpt> (R) = \op<dpt> (A \buharprarr; B)
       >
-      と定義し、&m<\op<dpt> (R)> を &m<R> の\def<深さ\fl<depth>> という。
+      と定義し、&m<\op<dpt> (R)> を &m<R> の \def<深さ\fl<depth>> という。
     >
   >
   \thm|type="lem",id="lemresidue"|<
@@ -539,7 +539,7 @@
   >
   \thm|type="def"|<
     \p<
-      ラムダ項 &m<M> が\def<強計算可能 \fl<strongly computable>> であることを、以下によって型に関して再帰的に定義する。
+      ラムダ項 &m<M> が \def<強計算可能 \fl<strongly computable>> であることを、以下によって型に関して再帰的に定義する。
     >
     \ul<
       \li<
@@ -941,7 +941,7 @@
   \thm|type="def"|<
     \p<
       ラムダ項 &m<M> に含まれる &m<\rm<`l> x. \sfun; P> という形の部分項について、&m<x \in; \op<FV> (P)> であるか &m<x> と &m<P> の型がともに原始型であるとする。
-      このとき、&m<M> は\def<単純\fl<simple>> であるという。
+      このとき、&m<M> は \def<単純\fl<simple>> であるという。
     >
   >
   \thm|type="lem",id="stepsix"|<

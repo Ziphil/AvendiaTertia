@@ -71,7 +71,7 @@
           \c<P, Q \in; \op<Comb> (\scr<A>)> \c<\implies;> \c<PQ \in; \op<Comb> (\scr<A>)>
         >
       >
-      このとき、&m<\op<Comb> (\scr<A>)> の元を &m<\scr<A>> の\def<結合\fl<combination>> という。
+      このとき、&m<\op<Comb> (\scr<A>)> の元を &m<\scr<A>> の \def<結合\fl<combination>> という。
       &m<\scr<A> = `{ \sb<M><1>, \cdots;, \sb<M><n> `}> のときは、&m<\op<Comb> (\scr<A>)> を単に &m<\op<Comb> `{ \sb<M><1>, \cdots;, \sb<M><n> `}> と書く。
     >
   >
@@ -236,7 +236,7 @@
   \h1<標準簡約列>
   \thm|type="def"|<
     \p<
-      &m<`b>-簡約から成る\def<標準簡約列\fl<standard reduction sequence>> を、以下によって再帰的に定義する。
+      &m<`b>-簡約から成る \def<標準簡約列\fl<standard reduction sequence>> を、以下によって再帰的に定義する。
     >
     \ol<
       \li<

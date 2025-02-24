@@ -35,7 +35,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> に関手 &m<\otimes|ord|;: \scr<C> \times; \scr<C> \to; \scr<C>> と対象 &m<\top;> が定まっているとする。
-      対象 &m<A> に 2 つの射 &m<d: A \to; A \otimes; A, e: A \to; \top;> が単に定まっているとき、組 &m<(A, d, e)> を\def<前コモノイド\fl<precomonoid>> という。
+      対象 &m<A> に 2 つの射 &m<d: A \to; A \otimes; A, e: A \to; \top;> が単に定まっているとき、組 &m<(A, d, e)> を \def<前コモノイド\fl<precomonoid>> という。
     >
   >
   \p<

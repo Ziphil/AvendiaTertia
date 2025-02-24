@@ -35,7 +35,7 @@
         (x, y) \preceq; (x', y') \coloniff; x \prec; x' \scor; (x = x' \scand; y \preceq; y')
       >
       で定める。
-      この関係は\def<辞書式順序\fl<lexicographic order>> と呼ばれる。
+      この関係は \def<辞書式順序\fl<lexicographic order>> と呼ばれる。
     >
   >
   \thm|type="lem"|<
@@ -63,7 +63,7 @@
           \c<`a \cdot; `b> \c<\coloneqq;> \c<\op<ord> (`b \times; `a)>
         >
       >
-      と定め、それぞれ &m<`a, `b> の\def<和\fl<sum>> と\def<積\fl<product>> という。 
+      と定め、それぞれ &m<`a, `b> の \def<和\fl<sum>> と \def<積\fl<product>> という。 
     >
   >
   \p<

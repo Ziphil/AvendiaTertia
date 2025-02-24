@@ -23,7 +23,7 @@
         >
       >
       と定める。
-      なお、&m<\op<fin> (a)> の元は &m<a> の\def<有限近似\fl<finite approximant>> と呼ばれる。
+      なお、&m<\op<fin> (a)> の元は &m<a> の \def<有限近似\fl<finite approximant>> と呼ばれる。
     >
   >
   \p<
@@ -131,7 +131,7 @@
   \thm|type="def"|<
     \p<
       整合空間 &m<A, B> の間の安定写像 &m<f: A \to; B> をとる。
-      ある &m<\ring<a> \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<(\ring<a>, y)> が &m<\op<elfin> (\ring<a>, y)> の最小元であるとき、組 &m<(\ring<a>, y)> を &m<f> の\def<トレース\fl<trace>> という。
+      ある &m<\ring<a> \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<(\ring<a>, y)> が &m<\op<elfin> (\ring<a>, y)> の最小元であるとき、組 &m<(\ring<a>, y)> を &m<f> の \def<トレース\fl<trace>> という。
       また、&m<f> のトレース全体の集合を &m<\op<tr> (f)> で表す。
     >
   >
@@ -195,7 +195,7 @@
         \ring<a> \sb<\closure;><!A> \ring<a>' \coloniff; \ring<a> \cup; \ring<a>' \in; A
       >
       で定義する。
-      これによって定まる整合空間 &m<!A> を &m<A> の\def<線型化\fl<linearisation>> という。
+      これによって定まる整合空間 &m<!A> を &m<A> の \def<線型化\fl<linearisation>> という。
     >
   >
   \thm|type="def"|<
@@ -211,7 +211,7 @@
         \ltort; \ring<a> \sb<\closure;><!A> \ring<a>' \implies; y \sb<\closure;><B> y' \rtort; \scand; \ltort; \ring<a> \sb<\frown;><!A> \ring<a>' \implies; y \sb<\frown;><B> y' \rtort;
       >
       で定義する。
-      これによって定まる整合空間 &m<A \buharprarr; B> を &m<A> と &m<B> の\def<冪\fl<exponential>> という。
+      これによって定まる整合空間 &m<A \buharprarr; B> を &m<A> と &m<B> の \def<冪\fl<exponential>> という。
     >
   >
   \p<

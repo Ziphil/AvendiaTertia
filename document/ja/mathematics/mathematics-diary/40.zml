@@ -45,7 +45,7 @@
         >
       >
       が全て可換であるとする。
-      このとき、&m<(`#, `m, `h)> を\def<モナド\fl<monad>> という。
+      このとき、&m<(`#, `m, `h)> を \def<モナド\fl<monad>> という。
     >
   >
   \p<
@@ -87,7 +87,7 @@
         >
       >
       が全て可換であるとする。
-      このとき、&m<(`#, `h, `m)> を\def<強モナド\fl<strong monad>> といい、&m<`t> を\def<強度\fl<strength>> という。
+      このとき、&m<(`#, `h, `m)> を \def<強モナド\fl<strong monad>> といい、&m<`t> を \def<強度\fl<strength>> という。
     >
   >
   \p<
@@ -187,7 +187,7 @@
     >
     \p<
       を満たすように定まっている。
-      このとき、&m<\overline<\hyphen;>> を &m<\frak<T>> の\def<解釈\fl<interpretation>> という。
+      このとき、&m<\overline<\hyphen;>> を &m<\frak<T>> の \def<解釈\fl<interpretation>> という。
     >
   >
   \thm|type="def"|<
@@ -195,7 +195,7 @@
       型システム &m<\frak<T>> を考える。
       有限直積をもつ圏 &m<\scr<C>> と解釈 &m<\overline<\hyphen;>> が、次の条件を満たすとする。
       すなわち、&m<\frak<T>> における同じ型をもつ任意の型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、&m<\frak<T>> において &m<M = N> ならば &m<\scr<C>> の射として &m<\overline<M> = \overline<N>> が成り立つ。
-      このとき、&m<(\scr<C>, \overline<\hyphen;>)> を &m<\frak<T>> の\def<モデル\fl<model>> という。
+      このとき、&m<(\scr<C>, \overline<\hyphen;>)> を &m<\frak<T>> の \def<モデル\fl<model>> という。
     >
   >
   \p<

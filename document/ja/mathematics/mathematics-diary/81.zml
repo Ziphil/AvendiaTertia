@@ -28,7 +28,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> に対し、関手 &m<P: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \bfrm<Set>> のことを\def<自己プロ関手\fl<endoprofunctor>> といい、&m<P: \scr<C> \vertrarr; \scr<C>> で表す。
+      圏 &m<\scr<C>> に対し、関手 &m<P: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \bfrm<Set>> のことを \def<自己プロ関手\fl<endoprofunctor>> といい、&m<P: \scr<C> \vertrarr; \scr<C>> で表す。
     >
   >
   \p<
@@ -85,7 +85,7 @@
       >
       が全て可換であるとする。
       なお、ラベルのない射は標準的な同型射を表している。
-      このとき、&m<`j> を &m<P> に対する \def<Tambara 構造\fl<— structure>> といい、組 &m<(P, `j)> を \def<Tambara 加群\fl<— module>> という。
+      このとき、&m<`j> を &m<P> に対する  \def<Tambara 構造\fl<— structure>> といい、組 &m<(P, `j)> を  \def<Tambara 加群\fl<— module>> という。
     >
   >
   \p<
@@ -103,7 +103,7 @@
           \ar|s="1",e="3",inv|<\sb<`j><M X \bar<X>>> \ar|s="2",e="4"|<\sb<`z><M X \bar<X>>>
         >
       >
-      が可換であるとき、&m<`u> を \def<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `j) \raarr; (Q, `z)> で表す。
+      が可換であるとき、&m<`u> を  \def<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `j) \raarr; (Q, `z)> で表す。
     >
   >
   \p<
@@ -180,7 +180,7 @@
         >
       >
       とおく。
-      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> を\def<プロ関手レンズ\fl<profunctor lens>> という。
+      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> を \def<プロ関手レンズ\fl<profunctor lens>> という。
     >
   >
   \thm|type="def"|<

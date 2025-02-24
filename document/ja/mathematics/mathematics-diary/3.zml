@@ -17,7 +17,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<\sb<\rm<id>><X>: X \to; X> が &m<X> の正規形であるとき、&m<X> を\def<正規対象\fl<normal object>> という。
+      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<\sb<\rm<id>><X>: X \to; X> が &m<X> の正規形であるとき、&m<X> を \def<正規対象\fl<normal object>> という。
     >
   >
   \p<

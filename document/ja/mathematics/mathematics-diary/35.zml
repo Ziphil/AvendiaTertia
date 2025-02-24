@@ -49,7 +49,7 @@
       >
     >
     \p<
-      このとき、&m<\scr<C>> を\def<線型圏\fl<linear category>> という。
+      このとき、&m<\scr<C>> を \def<線型圏\fl<linear category>> という。
     >
   >
   \p<
@@ -79,7 +79,7 @@
       >
     >
     \p<
-      このように定めた圏 &m<\scr<C>> を、&m<\scr<C>> の\def<余 Kleisli 圏\fl<co— category>> という。
+      このように定めた圏 &m<\scr<C>> を、&m<\scr<C>> の \def<余 Kleisli 圏\fl<co— category>> という。
     >
   >
   \p<
@@ -157,7 +157,7 @@
       >
     >
     \p<
-      このとき、&m<\scr<C>> を\def<新 Seely 圏\fl<new — category>> という。
+      このとき、&m<\scr<C>> を \def<新 Seely 圏\fl<new — category>> という。
     >
   >
   \p<

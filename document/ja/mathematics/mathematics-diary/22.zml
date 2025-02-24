@@ -21,7 +21,7 @@
   \thm|type="def"|<
     \p<
       2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \scr<J> \to; \scr<C>> があるとする。
-      &m<\bfrm<1>> の唯一の対象への定値関手 &m<\sb<`D><\bfrm<1>>: \scr<J> \to; \bfrm<Cat>> を重みとして用いた &m<F> の 2-極限を\def<錐状極限\fl<conical limit>> といい、単に &m<\lim; F> で表す。
+      &m<\bfrm<1>> の唯一の対象への定値関手 &m<\sb<`D><\bfrm<1>>: \scr<J> \to; \bfrm<Cat>> を重みとして用いた &m<F> の 2-極限を \def<錐状極限\fl<conical limit>> といい、単に &m<\lim; F> で表す。
     >
   >
   \p<
@@ -107,7 +107,7 @@
       >
     >
     \p<
-      このとき、族 &m<(\sb<\bar<`s>><I>) \sb<><I \in; \scr<J>>> を &m<F> の\def<錐\fl<cone>> といい、&m<\bar<`s>: A \daarr; F> で表す。
+      このとき、族 &m<(\sb<\bar<`s>><I>) \sb<><I \in; \scr<J>>> を &m<F> の \def<錐\fl<cone>> といい、&m<\bar<`s>: A \daarr; F> で表す。
     >
   >
   \p<
@@ -162,7 +162,7 @@
       >
     >
     \p<
-      このとき、族 &m<(\sb<\bar<`J>><I>) \sb<><I \in; \scr<J>>> を\def<錐の射\fl<morphism of cones>> といい、&m<\bar<`J>: \bar<`s> \raaarr; \bar<`t>> で表す。
+      このとき、族 &m<(\sb<\bar<`J>><I>) \sb<><I \in; \scr<J>>> を \def<錐の射\fl<morphism of cones>> といい、&m<\bar<`J>: \bar<`s> \raaarr; \bar<`t>> で表す。
     >
   >
   \p<
@@ -186,7 +186,7 @@
       >
     >
     \p<
-      このとき、&m<\bar<`h>> は \def<1 次元的普遍性\fl<one-dimensional universality>> を満たすという。
+      このとき、&m<\bar<`h>> は  \def<1 次元的普遍性\fl<one-dimensional universality>> を満たすという。
     >
   >
   \thm|type="def"|<
@@ -216,7 +216,7 @@
       >
     >
     \p<
-      このとき、&m<\bar<`h>> は \def<2 次元的普遍性\fl<two-dimensional universality>> を満たすという。
+      このとき、&m<\bar<`h>> は  \def<2 次元的普遍性\fl<two-dimensional universality>> を満たすという。
     >
   >
   \p<

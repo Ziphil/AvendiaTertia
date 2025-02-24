@@ -22,7 +22,7 @@
   >
   \thm|type="def"|<
     \p<
-      集合 &m<X, Y> に対し、全単射 &m<f: X \to; Y> が存在するとき、&m<X> と &m<Y> は\def<等濃\fl<equipotent>> であるといい、&m<X \approx; Y> で表す。
+      集合 &m<X, Y> に対し、全単射 &m<f: X \to; Y> が存在するとき、&m<X> と &m<Y> は \def<等濃\fl<equipotent>> であるといい、&m<X \approx; Y> で表す。
     >
   >
   \p<
@@ -76,7 +76,7 @@
   >
   \thm|type="def"|<
     \p<
-      集合 &m<X> に対し、&m<X \approx; `k> を満たすような最小の順序数 &m<`k> を &m<X> の\def<濃度\fl<cardinality>> といい、&m<\lvert; X \rvert;> や &m<\op<card> X> で表す。
+      集合 &m<X> に対し、&m<X \approx; `k> を満たすような最小の順序数 &m<`k> を &m<X> の \def<濃度\fl<cardinality>> といい、&m<\lvert; X \rvert;> や &m<\op<card> X> で表す。
     >
   >
   \p<
@@ -99,7 +99,7 @@
   >
   \thm|type="def"|<
     \p<
-      順序数 &m<`k> に対し、ある集合 &m<X> が存在して &m<\lvert; X \rvert; = `k> が成り立つとき、&m<`k> を\def<基数\fl<cardinal>> という。
+      順序数 &m<`k> に対し、ある集合 &m<X> が存在して &m<\lvert; X \rvert; = `k> が成り立つとき、&m<`k> を \def<基数\fl<cardinal>> という。
     >
   >
   \p<

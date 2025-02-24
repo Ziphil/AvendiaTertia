@@ -50,8 +50,8 @@
           \ar|s="1",e="2"|<\sb<f><0>> \ar|s="2",e="3"|<\sb<f><1>> \ar|s="3",e="4"|<\sb<f><2>>
         >
       >
-      の形の図式を &m<\scr<C>> 上の\def<鎖\fl<chain>> という。
-      また、&m<\scr<C>> がこのような形の図式の余極限を全てもつならば、&m<\scr<C>> は\def<鎖余完備\fl<chain-cocomplete>> であるという。
+      の形の図式を &m<\scr<C>> 上の \def<鎖\fl<chain>> という。
+      また、&m<\scr<C>> がこのような形の図式の余極限を全てもつならば、&m<\scr<C>> は \def<鎖余完備\fl<chain-cocomplete>> であるという。
     >
   >
   \thm|type="def"|<
@@ -63,8 +63,8 @@
           \ar|s="2",e="1",inv|<\sb<g><0>> \ar|s="3",e="2",inv|<\sb<g><1>> \ar|s="4",e="3",inv|<\sb<g><2>>
         >
       >
-      の形の図式を &m<\scr<C>> 上の\def<余鎖\fl<cochain>> という。
-      また、&m<\scr<C>> がこのような形の図式の極限を全てもつならば、&m<\scr<C>> は\def<余鎖完備\fl<cochain-complete>> であるという。
+      の形の図式を &m<\scr<C>> 上の \def<余鎖\fl<cochain>> という。
+      また、&m<\scr<C>> がこのような形の図式の極限を全てもつならば、&m<\scr<C>> は \def<余鎖完備\fl<cochain-complete>> であるという。
     >
   >
   \p<

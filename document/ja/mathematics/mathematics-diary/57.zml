@@ -27,7 +27,7 @@
     \p<
       小圏の間の関手 &m<H: \scr<K> \to; \scr<I>> をとる。
       任意の関手 &m<F: \scr<I> \to; \scr<C>> に対し、&m<\op<colim> F> と &m<\op<colim> (H \rcomp; F)> のうちどちらか一方が存在するならばもう一方も存在し、そのとき自然な射 &m<\op<colim> (H \rcomp; F) \to; \op<colim> F> は同型射であるとする。
-      このとき、&m<H> は\def<終\fl<final>> であるという。
+      このとき、&m<H> は \def<終\fl<final>> であるという。
     >
   >
   \p<
@@ -96,12 +96,12 @@
         C \sim; C' \implied; \multi<f><><><><\exists;>: C \to; C'
       >
       を満たす最小の同値関係として定義する。
-      対象 &m<C, C'> が &m<C \sim; C'> を満たすとき、&m<C> と &m<C'> は\def<射で結ばれる\fl<connected by morphisms>> という。
+      対象 &m<C, C'> が &m<C \sim; C'> を満たすとき、&m<C> と &m<C'> は \def<射で結ばれる\fl<connected by morphisms>> という。
     >
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> に対し、&m<\scr<C>> が空でなく、任意の &m<\scr<C>> の 2 つの対象が射で結ばれるとき、&m<\scr<C>> は\def<連結\fl<connected>> であるという。
+      圏 &m<\scr<C>> に対し、&m<\scr<C>> が空でなく、任意の &m<\scr<C>> の 2 つの対象が射で結ばれるとき、&m<\scr<C>> は \def<連結\fl<connected>> であるという。
     >
   >
   \thm|type="thm",id="fineq"|<

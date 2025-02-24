@@ -100,7 +100,7 @@
       >
     >
     \p<
-      このとき、&m<\scr<S>> を\def<小さい射のクラス\fl<class of small maps>> と呼び、&m<\scr<S>> に属する射を\def<小さい射\fl<small map>> と呼ぶ。
+      このとき、&m<\scr<S>> を \def<小さい射のクラス\fl<class of small maps>> と呼び、&m<\scr<S>> に属する射を \def<小さい射\fl<small map>> と呼ぶ。
     >
   >
   \p<
@@ -180,7 +180,7 @@
   >
   \thm|type="def"|<
     \p<
-      対象 &m<I, X> と部分対象 &m<S \tailrarr; I \times; X> に対して、積の射影との合成 &m<S \to; I> が小さい射であるとき、&m<S> を &m<I> で添字付けられた &m<X> の\def<小さい部分対象の族\fl<family of small subobjects>> という。
+      対象 &m<I, X> と部分対象 &m<S \tailrarr; I \times; X> に対して、積の射影との合成 &m<S \to; I> が小さい射であるとき、&m<S> を &m<I> で添字付けられた &m<X> の \def<小さい部分対象の族\fl<family of small subobjects>> という。
     >
   >
   \p<
@@ -219,7 +219,7 @@
         >
       >
       をとったとき、&m<`m \circ; t \leq; `n> と &m<`l \circ; \sb<`p><2> \leq; `n \circ; \sb<`p><1>> が同値になるということである。
-      このとき、&m<`m> を &m<g> に沿った &m<`l> の\def<上限\fl<supremum>> という。
+      このとき、&m<`m> を &m<g> に沿った &m<`l> の \def<上限\fl<supremum>> という。
     >
   >
   \p<
@@ -241,8 +241,8 @@
   >
   \thm|type="def"|<
     \p<
-      &m<\scr<S>>-完備な上半束対象 &m<L> と射 &m<s: L \to; L> の対を、\def<Zermelo–Fraenkel 代数\fl<— algebra>> という。
-      さらに、この &m<s> は\def<後続射\fl<successor map>> という。
+      &m<\scr<S>>-完備な上半束対象 &m<L> と射 &m<s: L \to; L> の対を、 \def<Zermelo–Fraenkel 代数\fl<— algebra>> という。
+      さらに、この &m<s> は \def<後続射\fl<successor map>> という。
     >
   >
   \p<
@@ -256,7 +256,7 @@
         x \varepsilon|rel|; y \iff; s (x) \leq; y
       >
       として定義する。
-      この &m<\varepsilon;> を\def<所属関係\fl<membership relation>> という。
+      この &m<\varepsilon;> を \def<所属関係\fl<membership relation>> という。
     >
   >
   \p<
@@ -285,7 +285,7 @@
       >
     >
     \p<
-      これを\def<冪集合公理\fl<axiom of powersets>> という。
+      これを \def<冪集合公理\fl<axiom of powersets>> という。
     >
   >
   \p<

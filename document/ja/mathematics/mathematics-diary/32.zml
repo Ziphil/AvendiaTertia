@@ -26,7 +26,7 @@
         >
       >
       を考える。
-      線型空間 &m<V> に対し、&m<TV> を &m<V> 上の\def<自由代数\fl<free algebra>> という。
+      線型空間 &m<V> に対し、&m<TV> を &m<V> 上の \def<自由代数\fl<free algebra>> という。
     >
   >
   \p<
@@ -52,7 +52,7 @@
         >
       >
       を考える。
-      線型空間 &m<V> に対し、&m<CV> を &m<V> 上の\def<余自由余代数\fl<cofree coalgebra>> という。
+      線型空間 &m<V> に対し、&m<CV> を &m<V> 上の \def<余自由余代数\fl<cofree coalgebra>> という。
     >
   >
   \p<
@@ -71,7 +71,7 @@
         >
       >
       を可換にする余代数の射 &m<\tilde<s>: D \to; C> が一意に存在するとする。
-      このとき、組 &m<(C, `p)> を &m<V> 上の\def<余自由余代数\fl<cofree coalgebra>> という。
+      このとき、組 &m<(C, `p)> を &m<V> 上の \def<余自由余代数\fl<cofree coalgebra>> という。
     >
   >
   \p<

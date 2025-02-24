@@ -49,7 +49,7 @@
     >
     \p<
       によって定義する。
-      この &m<\sp<\scr<C>><\circ;>> を &m<\scr<C>> の\def<反転圏\fl<opposite category>> という。
+      この &m<\sp<\scr<C>><\circ;>> を &m<\scr<C>> の \def<反転圏\fl<opposite category>> という。
     >
   >
   \p<
@@ -92,7 +92,7 @@
     >
     \p<
       によって定義する。
-      この &m<\scr<C> \otimes; \scr<D>> を &m<\scr<C>, \scr<D>> の\def<テンソル積\fl<tensor product>> という。
+      この &m<\scr<C> \otimes; \scr<D>> を &m<\scr<C>, \scr<D>> の \def<テンソル積\fl<tensor product>> という。
     >
   >
   \p<
@@ -146,7 +146,7 @@
       &mb<
         `[A, L`] \sb<><\scr<C>> \cong; \lbbracket; W, `[A, F \hyphen;`] \sb<><\scr<C>> \rbbracket; \sb<><\scr<J> \to; \scr<V>>
       >
-      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の\def<重み付き極限\fl<weighted limit>> といい、&m<\sb|fun|<\lim;><W> F> で表す。
+      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の \def<重み付き極限\fl<weighted limit>> といい、&m<\sb|fun|<\lim;><W> F> で表す。
     >
   >
   \p<
@@ -235,7 +235,7 @@
       &mb<
         `[L, A`] \sb<><\scr<C>> \cong; \lbbracket; W, `[F \hyphen;, A`] \sb<><\scr<C>> \rbbracket; \sb<><\sp<\scr<J>><\circ;> \to; \scr<V>>
       >
-      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の\def<重み付き余極限\fl<weighted colimit>> といい、&m<\sb|fun|<\op<colim>><W> F> で表す。
+      が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の \def<重み付き余極限\fl<weighted colimit>> といい、&m<\sb|fun|<\op<colim>><W> F> で表す。
     >
   >
   \p<
@@ -249,7 +249,7 @@
     \p<
       対称モノイダル閉圏 &m<\scr<V>> を考える。
       &m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \sp<\scr<C>><\circ;> \otimes; \scr<C> \to; \scr<D>> をとる。
-      重み付き極限 &m<\sb|fun|<\lim;><\widetilde<\scr<C>>> F> を &m<F> の\def<エンド\fl<end>> といい、&m<\int|in|<\scr<C>><> F> で表す。
+      重み付き極限 &m<\sb|fun|<\lim;><\widetilde<\scr<C>>> F> を &m<F> の \def<エンド\fl<end>> といい、&m<\int|in|<\scr<C>><> F> で表す。
     >
   >
   \p<
@@ -259,7 +259,7 @@
     \p<
       対称モノイダル閉圏 &m<\scr<V>> を考える。
       &m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \scr<C> \otimes; \sp<\scr<C>><\circ;> \to; \scr<D>> をとる。
-      重み付き余極限 &m<\sb|fun|<\op<colim>><\widetilde<\scr<C>>> F> を &m<F> の\def<コエンド\fl<coend>> といい、&m<\int|in|<><\scr<C>> F> で表す。
+      重み付き余極限 &m<\sb|fun|<\op<colim>><\widetilde<\scr<C>>> F> を &m<F> の \def<コエンド\fl<coend>> といい、&m<\int|in|<><\scr<C>> F> で表す。
     >
   >
   \p<

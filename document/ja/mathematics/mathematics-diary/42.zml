@@ -22,7 +22,7 @@
     \p<
       カルテシアン閉圏 &m<\scr<C>> および &m<\scr<C>>-豊穣圏 &m<\scr<D>> を考える。
       &m<\scr<D>> の対象 &m<A, B> に対し、&m<\scr<C>>-豊穣関手 &m<\text<-> \ltimes; B: \scr<D> \to; \scr<D>> および &m<A \rtimes; \text<->: \scr<D> \to; \scr<D>> がそれぞれ定まっていて、対象について &m<A \ltimes; B = A \rtimes; B> が成り立っているとする。
-      このとき、&m<\scr<D>> を\def<バイノイダル圏\fl<binoidal category>> という。
+      このとき、&m<\scr<D>> を \def<バイノイダル圏\fl<binoidal category>> という。
     >
   >
   \p<
@@ -83,7 +83,7 @@
           >>
         >
       >
-      がともに可換であるとき、&m<f> は\def<中心的\fl<central>> であるという。
+      がともに可換であるとき、&m<f> は \def<中心的\fl<central>> であるという。
       なお、水平なラベルのない射は標準的な同型射であり、残りのラベルのない射は合成を表す射である。
     >
   >
@@ -131,7 +131,7 @@
     >
     \p<
       という構造が定まっており、モノイダル圏と同様の一貫性条件 (五角形図式と三角形図式に対応するもの) を満たすとする。
-      このとき、&m<\scr<D>> を\def<対称前モノイダル圏\fl<symmetric premonoidal category>> という。
+      このとき、&m<\scr<D>> を \def<対称前モノイダル圏\fl<symmetric premonoidal category>> という。
     >
   >
   \p<
@@ -181,7 +181,7 @@
       >
     >
     \p<
-      が全て成り立つとき、&m<J> を\def<厳密対称前モノイダル関手\fl<strict symmetric premonoidal functor>> という。
+      が全て成り立つとき、&m<J> を \def<厳密対称前モノイダル関手\fl<strict symmetric premonoidal functor>> という。
     >
   >
   \p<
@@ -206,7 +206,7 @@
     >
     \p<
       を満たすとする。
-      このとき、&m<(\scr<C>`; \scr<D>, J)> を\def<豊穣 Freyd 圏\fl<enriched — category>> という。
+      このとき、&m<(\scr<C>`; \scr<D>, J)> を \def<豊穣 Freyd 圏\fl<enriched — category>> という。
     >
   >
   \p<

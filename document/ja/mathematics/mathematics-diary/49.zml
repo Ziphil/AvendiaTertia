@@ -20,13 +20,13 @@
   >
   \thm|type="def"|<
     \p<
-      順序数 &m<`a> に対し、&m<`a \cup; `{`a`}> を &m<`a> の\def<後続数\fl<successor>> という。
+      順序数 &m<`a> に対し、&m<`a \cup; `{`a`}> を &m<`a> の \def<後続数\fl<successor>> という。
     >
   >
   \thm|type="def"|<
     \p<
       順序数 &m<`a> に対し、ある順序数 &m<`b> が存在して &m<`a = `b \cup; `{`b`}> と書けたとする。
-      このとき、&m<`b> を &m<`a> の\def<先行数\fl<predecessor>> という。
+      このとき、&m<`b> を &m<`a> の \def<先行数\fl<predecessor>> という。
     >
   >
   \p<
@@ -58,8 +58,8 @@
   \thm|type="def"|<
     \p<
       順序数 &m<`a> をとる。
-      &m<`a> が先行数をもつならば、&m<`a> を\def<後続順序数\fl<successor ordinal>> という。
-      &m<`a> が先行数をもたないならば、&m<`a> を\def<極限順序数\fl<limit ordinal>> という。
+      &m<`a> が先行数をもつならば、&m<`a> を \def<後続順序数\fl<successor ordinal>> という。
+      &m<`a> が先行数をもたないならば、&m<`a> を \def<極限順序数\fl<limit ordinal>> という。
     >
   >
   \p<
@@ -85,7 +85,7 @@
       >
     >
     \p<
-      をともに満たすとき、&m<X> は\def<帰納的\fl<inductive>> であるという。
+      をともに満たすとき、&m<X> は \def<帰納的\fl<inductive>> であるという。
     >
   >
   \thm|type="axm"|<
@@ -216,7 +216,7 @@
   >
   \thm|type="def"|<
     \p<
-      上記の定理で存在が示された順序数を以降は常に &m<\rm<`v>> で表し、この元を\def<自然数\fl<natural number>> という。
+      上記の定理で存在が示された順序数を以降は常に &m<\rm<`v>> で表し、この元を \def<自然数\fl<natural number>> という。
     >
   >
   \p<

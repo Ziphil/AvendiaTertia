@@ -38,7 +38,7 @@
       >
     >
     \p<
-      この圏 &m<\bfrm<Gl> (\scr<C>`; F, G)> を、&m<F> と &m<G> による\def<二重貼り合わせ圏\fl<double gluing category>> という。
+      この圏 &m<\bfrm<Gl> (\scr<C>`; F, G)> を、&m<F> と &m<G> による \def<二重貼り合わせ圏\fl<double gluing category>> という。
     >
   >
   \p<
@@ -78,7 +78,7 @@
           >
         >
         がともに可換である。
-        この射を &m<F> と &m<G> の\def<簡約射\fl<contraction>> と呼ぶ。
+        この射を &m<F> と &m<G> の \def<簡約射\fl<contraction>> と呼ぶ。
       >
     >
     \p<

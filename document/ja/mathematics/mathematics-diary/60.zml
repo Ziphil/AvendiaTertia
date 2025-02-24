@@ -55,7 +55,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象から成るクラス &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> について、&m<\scr<A>> の同型類の全体が集合サイズであるとき、&m<\scr<A>> は\def<本質的小\fl<essentially small>> であるという。
+      圏 &m<\scr<C>> の対象から成るクラス &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> について、&m<\scr<A>> の同型類の全体が集合サイズであるとき、&m<\scr<A>> は \def<本質的小\fl<essentially small>> であるという。
     >
   >
   \p<
@@ -201,14 +201,14 @@
     \p<
       圏 &m<\scr<C>> の対象から成る集合 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> をとる。
       &m<\scr<C>> の射 &m<f, f': C \to; D> について、任意の &m<\scr<A>> の元 &m<A> と任意の &m<\scr<C>> の射 &m<a: A \to; C> に対して &m<a \rcomp; f = a \rcomp; f'> であるとすると、&m<f = f'> が成り立つとする。
-      このとき、&m<\scr<A>> を\def<生成子\fl<generator>> という。
+      このとき、&m<\scr<A>> を \def<生成子\fl<generator>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> の生成子 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> をとる。
       &m<\scr<C>> の対象 &m<C> の部分対象 &m<m: M \tailrarr; C> について、任意の &m<\scr<A>> の元 &m<A> と任意の &m<\scr<C>> の射 &m<a: A \to; C> に対して &m<a> は &m<m> を経由して分解されるとすると、&m<m> は同型射になるとする。
-      このとき、&m<\scr<A>> は\def<極限的\fl<extremal>> であるという。
+      このとき、&m<\scr<A>> は \def<極限的\fl<extremal>> であるという。
     >
   >
   \thm|type="thm",id="exgen"|<

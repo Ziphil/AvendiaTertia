@@ -24,7 +24,7 @@
   \h1|id="basic"|<体の基本>
   \thm|type="def"|<
     \p<
-      &m<K> が単位元をもつ可換環で &m<\langle; 0 \rangle;> が極大イデアルになるとき、&m<K> を\def<体>という。
+      &m<K> が単位元をもつ可換環で &m<\langle; 0 \rangle;> が極大イデアルになるとき、&m<K> を \def<体>という。
     >
   >
   \p<
@@ -51,7 +51,7 @@
   \thm|type="def"|<
     \p<
       体 &m<K> に対し、環の準同型写像 &m<`f: \bb<Z> \to; K> をとる。
-      &m<\op<Ker> `f = \langle; p \rangle;> を満たす素数もしくは 0 である &m<p> を、&m<K> の\def<標数>といい &m<\op<char> K> で表す。
+      &m<\op<Ker> `f = \langle; p \rangle;> を満たす素数もしくは 0 である &m<p> を、&m<K> の \def<標数>といい &m<\op<char> K> で表す。
     >
   >
   \thm|type="prp",id="primefield"|<
@@ -76,7 +76,7 @@
       &mb<
         `f: K \to; K`; x \mapsto; \sp<x><p>
       >
-      を \def<Frobenius 写像>と呼ぶ。
+      を  \def<Frobenius 写像>と呼ぶ。
       &m<\op<Im> `f> を &m<\sp<K><p>> と書く。
     >
   >
@@ -88,14 +88,14 @@
   >
   \thm|type="def"|<
     \p<
-      体 &m<K, L> の間に準同型写像 &m<`f: K \to; L> があるとき、&m<L> を &m<K> の\def<拡大体>といい、&m<K> を &m<L> の\def<部分体>という。
+      体 &m<K, L> の間に準同型写像 &m<`f: K \to; L> があるとき、&m<L> を &m<K> の \def<拡大体>といい、&m<K> を &m<L> の \def<部分体>という。
       この関係があるとき &m<L `/ K> と表す。
     >
   >
   \thm|type="def"|<
     \p<
       体の拡大 &m<L `/ K> を考える。
-      &m<K> を含む &m<L> の部分体を拡大 &m<L `/ K> の\def<中間体>という。
+      &m<K> を含む &m<L> の部分体を拡大 &m<L `/ K> の \def<中間体>という。
     >
   >
   \p<
@@ -117,8 +117,8 @@
         \sb<`f><x>: K `[X`] \to; L`; f \mapsto; f (x)
       >
       とおくと、これは体の準同型写像である。
-      あるモニック多項式 &m<P> によって &m<\op<Ker> \sb<`f><x> = \langle; P \rangle;> と書けるとき、&m<x> は &m<K> 上\def<代数的>であるといい、&m<P> を &m<x> の &m<K> 上\def<最小多項式>という。
-      &m<\op<Ker> \sb<`f><x> = \langle; 0 \rangle;> のときは、&m<x> は &m<K> 上\def<超越的>であるという。
+      あるモニック多項式 &m<P> によって &m<\op<Ker> \sb<`f><x> = \langle; P \rangle;> と書けるとき、&m<x> は &m<K> 上 \def<代数的>であるといい、&m<P> を &m<x> の &m<K> 上 \def<最小多項式>という。
+      &m<\op<Ker> \sb<`f><x> = \langle; 0 \rangle;> のときは、&m<x> は &m<K> 上 \def<超越的>であるという。
     >
   >
   \p<
@@ -128,8 +128,8 @@
   \thm|type="def"|<
     \p<
       体の拡大 &m<L `/ K> を考える。
-      &m<L> の任意の元が &m<K> 上代数的であるとき、&m<L> を &m<K> の\def<代数拡大>という。
-      そうでないとき、&m<L> を &m<K> の\def<超越拡大>という。
+      &m<L> の任意の元が &m<K> 上代数的であるとき、&m<L> を &m<K> の \def<代数拡大>という。
+      そうでないとき、&m<L> を &m<K> の \def<超越拡大>という。
     >
   >
   \p<
@@ -141,8 +141,8 @@
   \thm|type="def"|<
     \p<
       体の拡大 &m<L `/ K> を考え、&m<x \in; L> は &m<K> 上代数的であるとする。
-      このとき、上記の記号での体 &m<\op<Im> \sb<`f><x> \leq; L> を &m<x> によって &m<K> 上\def<生成される部分体>といい &m<K (x)> で表す。
-      また、&m<x> を &m<K (x)> の\def<生成元>という。
+      このとき、上記の記号での体 &m<\op<Im> \sb<`f><x> \leq; L> を &m<x> によって &m<K> 上 \def<生成される部分体>といい &m<K (x)> で表す。
+      また、&m<x> を &m<K (x)> の \def<生成元>という。
     >
   >
   \p<
@@ -199,8 +199,8 @@
   \thm|type="def"|<
     \p<
       体の拡大 &m<L `/ K> を考え、&m<x \in; L> は &m<K> 上代数的であるとする。
-      このとき、上記の記号での体 &m<\op<Im> \sb<\tilde<`f>><x> \leq; L> を &m<x> によって &m<K> 上\def<生成される部分体>といい &m<K (x)> で表す。
-      また、&m<x> を &m<K (x)> の\def<生成元>という。
+      このとき、上記の記号での体 &m<\op<Im> \sb<\tilde<`f>><x> \leq; L> を &m<x> によって &m<K> 上 \def<生成される部分体>といい &m<K (x)> で表す。
+      また、&m<x> を &m<K (x)> の \def<生成元>という。
     >
   >
   \p<
@@ -224,7 +224,7 @@
   \thm|type="def"|<
     \p<
       体の拡大 &m<L `/ K> を考え、部分集合 &m<S \subseteq; L> をとる。
-      &m<S> を含む最小の &m<K> の拡大体を &m<S> によって &m<K> 上\def<生成される部分体>といい &m<K (S)> で表す。
+      &m<S> を含む最小の &m<K> の拡大体を &m<S> によって &m<K> 上 \def<生成される部分体>といい &m<K (S)> で表す。
       &m<S \eqqcolon; `{\sb<x><1>, \cdots;, \sb<x><n>`}> であるときは、&m<K (S)> を &m<K (\sb<x><1>, \cdots;, \sb<x><n>)> で表す。
     >
   >
@@ -234,8 +234,8 @@
   >
   \thm|type="def"|<
     \p<
-      体の拡大 &m<L `/ K> において、&m<K>-線型空間としての &m<L> の次元を &m<L> の &m<K> 上\def<拡大次数>といい、&m<`[L \colon|rel|; K`]> で表す。
-      &m<`[L \colon|rel|; K`] `< \infty;> のとき、&m<L> は &m<K> の\def<有限次拡大>という。
+      体の拡大 &m<L `/ K> において、&m<K>-線型空間としての &m<L> の次元を &m<L> の &m<K> 上 \def<拡大次数>といい、&m<`[L \colon|rel|; K`]> で表す。
+      &m<`[L \colon|rel|; K`] `< \infty;> のとき、&m<L> は &m<K> の \def<有限次拡大>という。
     >
   >
   \p<
@@ -368,7 +368,7 @@
   \h1|id="comp"|<合成体>
   \thm|type="def"|<
     \p<
-      体の拡大 &m<L `/ K> とその中間体 &m<\sb<M><1>, \sb<M><2>> に対し、&m<K (\sb<M><1> \cup; \sb<M><2>)> を &m<\sb<M><1>> と &m<\sb<M><2>> の\def<合成体>といい &m<\sb<M><1> \cdot; \sb<M><2>> で表す。
+      体の拡大 &m<L `/ K> とその中間体 &m<\sb<M><1>, \sb<M><2>> に対し、&m<K (\sb<M><1> \cup; \sb<M><2>)> を &m<\sb<M><1>> と &m<\sb<M><2>> の \def<合成体>といい &m<\sb<M><1> \cdot; \sb<M><2>> で表す。
     >
   >
   \p<
@@ -689,7 +689,7 @@
   \h1|id="rootadj"|<根の添加と分解体>
   \thm|type="def"|<
     \p<
-      体 &m<K> と既約多項式 &m<P \in; K `[X`]> に対し、&m<K `[X`] `/ \langle; P \rangle;> を &m<K> に &m<P> の\def<根を添加した体>という。
+      体 &m<K> と既約多項式 &m<P \in; K `[X`]> に対し、&m<K `[X`] `/ \langle; P \rangle;> を &m<K> に &m<P> の \def<根を添加した体>という。
     >
   >
   \p<
@@ -703,8 +703,8 @@
       &mb<
         P = \prod<i = 1><n> (X - \sb<a><i>)
       >
-      と 1 次式の積に分解するとき、&m<K'> を &m<P> の\def<分解体>という。
-      さらに、&m<K' = K (\sb<a><1>, \cdots;, \sb<a><n>)> であれば、&m<K'> を &m<P> の\def<最小分解体>という。
+      と 1 次式の積に分解するとき、&m<K'> を &m<P> の \def<分解体>という。
+      さらに、&m<K' = K (\sb<a><1>, \cdots;, \sb<a><n>)> であれば、&m<K'> を &m<P> の \def<最小分解体>という。
     >
   >
   \p<
@@ -934,8 +934,8 @@
     \p<
       体 &m<K> とその拡大体 &m<L, K'> をとり、&m<a \in; L> とする。
       &m<a> が &m<K> 上代数的であるとし、その最小多項式を &m<P \in; K `[X`]> とする。
-      このとき、&m<x \in; K'> が &m<P (x) = 0> を満たすならば、&m<x> は &m<a> の\def<共役>であるという。
-      さらに、&m<K'> が &m<P> の分解体となるとき、&m<K'> は &m<a> の\def<共役を全て属する>という。
+      このとき、&m<x \in; K'> が &m<P (x) = 0> を満たすならば、&m<x> は &m<a> の \def<共役>であるという。
+      さらに、&m<K'> が &m<P> の分解体となるとき、&m<K'> は &m<a> の \def<共役を全て属する>という。
     >
   >
   \p<
@@ -1154,7 +1154,7 @@
   \thm|type="def"|<
     \p<
       体 &m<K> に対し、多項式 &m<P \in; K `[X`]> を考える。
-      &m<P> の分解体 &m<K'> に対して &m<P \in; K' `[X`]> が相異なる 1 次式の積に分解できるとき、&m<P> を\def<分離多項式>という。
+      &m<P> の分解体 &m<K'> に対して &m<P \in; K' `[X`]> が相異なる 1 次式の積に分解できるとき、&m<P> を \def<分離多項式>という。
     >
   >
   \p<
@@ -1170,7 +1170,7 @@
       &mb<
         P' \coloneqq; \sum<i = 1><n> i \sb<a><i> \sp<X><i - 1>
       >
-      を &m<P> の\def<微分>という。
+      を &m<P> の \def<微分>という。
     >
   >
   \p<
@@ -1506,8 +1506,8 @@
   \thm|type="def"|<
     \p<
       体の拡大 &m<L `/ K> を考える。
-      &m<a \in; L> が &m<K> 上代数的であり、その最小多項式が分離多項式であるとき、&m<a> は &m<K> 上\def<分離的>であるという。
-      また、&m<L> が &m<K> の代数拡大であり、&m<L> の任意の元が &m<K> 上分離的であるとき、&m<L> は &m<K> の\def<分離拡大>という。
+      &m<a \in; L> が &m<K> 上代数的であり、その最小多項式が分離多項式であるとき、&m<a> は &m<K> 上 \def<分離的>であるという。
+      また、&m<L> が &m<K> の代数拡大であり、&m<L> の任意の元が &m<K> 上分離的であるとき、&m<L> は &m<K> の \def<分離拡大>という。
     >
   >
   \p<
@@ -1658,7 +1658,7 @@
       &mb<
         \sb<L><\rm<s>> \coloneqq; `{a \in; L \mid; &raw<&m<a> は &m<K> 上分離的>`}
       >
-      を &m<L> における &m<K> の\def<分離閉包>という。
+      を &m<L> における &m<K> の \def<分離閉包>という。
     >
   >
   \thm|type="prp",id="algebraicsplit"|<
@@ -1717,7 +1717,7 @@
   >
   \thm|type="def"|<
     \p<
-      体 &m<K> が\mref|type="thm",ref="algebraicsplit",nolink|; の同値な条件を満たすとき、&m<K> を\def<完全体>という。
+      体 &m<K> が\mref|type="thm",ref="algebraicsplit",nolink|; の同値な条件を満たすとき、&m<K> を \def<完全体>という。
     >
   >
   \p<
@@ -1885,7 +1885,7 @@
   \h1|id="normal"|<正規拡大>
   \thm|type="def"|<
     \p<
-      代数拡大 &m<L `/ K> に対し、&m<L> が &m<L> 自身の任意の元の共役を全て属するとき、&m<L `/ K> を\def<正規拡大>という。
+      代数拡大 &m<L `/ K> に対し、&m<L> が &m<L> 自身の任意の元の共役を全て属するとき、&m<L `/ K> を \def<正規拡大>という。
     >
   >
   \thm|type="prp",id="normalmor"|<
@@ -1951,8 +1951,8 @@
   >
   \thm|type="def"|<
     \p<
-      有限次拡大 &m<L `/ K> に対し、&m<`# \sb<\op<Aut>><K> (L) = `[L \colon|rel|; K`]> を満たすとき &m<L `/ K> を \def<Galois 拡大>という。
-      また、&m<\op<Gal> (L `/ K) \coloneqq; \sb<\op<Aut>><K> (L)> を &m<L `/ K> の \def<Galois 群>という。
+      有限次拡大 &m<L `/ K> に対し、&m<`# \sb<\op<Aut>><K> (L) = `[L \colon|rel|; K`]> を満たすとき &m<L `/ K> を  \def<Galois 拡大>という。
+      また、&m<\op<Gal> (L `/ K) \coloneqq; \sb<\op<Aut>><K> (L)> を &m<L `/ K> の  \def<Galois 群>という。
     >
   >
   \p<
@@ -2066,7 +2066,7 @@
   >
   \thm|type="def"|<
     \p<
-      有限次分離拡大 &m<L `/ K> に対し、上記の &m<\tilde<L>> を &m<L> の \def<Galois 閉包>という。
+      有限次分離拡大 &m<L `/ K> に対し、上記の &m<\tilde<L>> を &m<L> の  \def<Galois 閉包>という。
     >
   >
   \p<
@@ -2078,7 +2078,7 @@
       &mb<
         \sp<L><G> \coloneqq; `{x \in; L \mid; &raw<任意の &m<`s \in; G> に対し &m<`s (x) = x>>`}
       >
-      を &m<G> における\def<不変部分体>という。
+      を &m<G> における \def<不変部分体>という。
     >
   >
   \p<
@@ -2372,7 +2372,7 @@
   >
   \thm|type="def"|<
     \p<
-      Galois 拡大 &m<L `/ K> に対し、&m<\op<Gal> (L `/ K)> が Abel 群であるとき &m<L `/ K> を \def<Abel 拡大>という。
+      Galois 拡大 &m<L `/ K> に対し、&m<\op<Gal> (L `/ K)> が Abel 群であるとき &m<L `/ K> を  \def<Abel 拡大>という。
     >
   >
   \p<
@@ -2416,7 +2416,7 @@
       >
     >
     となる。
-    これは\def<対称式>と呼ばれるものである。
+    これは \def<対称式>と呼ばれるものである。
     これに対し、&m<K \coloneqq; k (\sb<S><1>, \cdots;, \sb<S><n>) \subseteq; L> とおく。
     &m<\sb<S><i>> たちは &m<G> の作用によってどれも不変なので、&m<K> の任意の元も &m<G> の作用で不変だから、&m<K \subseteq; \sp<L><G>> は分かる。
     また、&m<\sb<P><n> \in; K `[X`]> である。
@@ -2495,7 +2495,7 @@
   >
   \thm|type="def"|<
     \p<
-      体 &m<K> と &m<\op<char> K> でわり切れない正整数 &m<n> に対し、上記の &m<M> の生成元を \def<1 の原始> &m<n> \def<乗根>といい &m<\sb<`z><n>> と書く。
+      体 &m<K> と &m<\op<char> K> でわり切れない正整数 &m<n> に対し、上記の &m<M> の生成元を  \def<1 の原始> &m<n>  \def<乗根>といい &m<\sb<`z><n>> と書く。
     >
   >
   \p<
@@ -2539,8 +2539,8 @@
   >
   \thm|type="def"|<
     \p<
-      &m<\bb<Q>> における原始 &m<n> 乗根 &m<\sb<`z><n>> の &m<\bb<Q>> 上最小多項式 &m<P \in; \bb<Q> `[X`]> を &m<n> 番目の\def<円分多項式>という。
-      また、&m<\bb<Q>> の拡大体 &m<\bb<Q> (\sb<`z><n>)> を\def<円分体>という。
+      &m<\bb<Q>> における原始 &m<n> 乗根 &m<\sb<`z><n>> の &m<\bb<Q>> 上最小多項式 &m<P \in; \bb<Q> `[X`]> を &m<n> 番目の \def<円分多項式>という。
+      また、&m<\bb<Q>> の拡大体 &m<\bb<Q> (\sb<`z><n>)> を \def<円分体>という。
     >
   >
   \thm|type="prp",id="cyclointeger"|<
@@ -2677,7 +2677,7 @@
   \thm|type="def"|<
     \p<
       体 &m<K> と &m<\op<char> K> でわり切れない正整数 &m<m> をとり、&m<\sb<`z><m> \in; K> であるとする。
-      &m<\sb<a><1>, \cdots;, \sb<a><n> \in; \sp<K><\times;>> に対して &m<L \coloneqq; K (\sqrt<\sb<a><1>><m>, \cdots;, \sqrt<\sb<a><n>><m>)> を &m<K> の \def<Kummer 拡大>という。
+      &m<\sb<a><1>, \cdots;, \sb<a><n> \in; \sp<K><\times;>> に対して &m<L \coloneqq; K (\sqrt<\sb<a><1>><m>, \cdots;, \sqrt<\sb<a><n>><m>)> を &m<K> の  \def<Kummer 拡大>という。
     >
   >
   \thm|type="prp",id="kummerabel"|<
@@ -2816,7 +2816,7 @@
       &mb<
         P \coloneqq; \sp<X><n> - \sb<a><n - 1> \sp<X><n - 1> + \cdots; + \sp<([- 1])><n> \sb<a><0> \in; K (\sb<a><0>, \cdots;, \sb<a><n - 1>) `[X`]
       >
-      を &m<K> 上 &m<n> 次\def<一般多項式>という。
+      を &m<K> 上 &m<n> 次 \def<一般多項式>という。
     >
   >
   \p<
@@ -2850,7 +2850,7 @@
   \h1|id="closure"|<代数閉包>
   \thm|type="def"|<
     \p<
-      体 &m<K> 上の既約多項式が 1 次式のみであるとき、&m<K> を\def<代数閉体>という。
+      体 &m<K> 上の既約多項式が 1 次式のみであるとき、&m<K> を \def<代数閉体>という。
     >
   >
   \thm|type="prp"|<
@@ -2874,7 +2874,7 @@
   >
   \thm|type="def"|<
     \p<
-      体 &m<K> に対し、&m<K> の代数拡大で代数閉体であるものを &m<K> の\def<代数閉包>といい、それを &m<\overline<K>> で表す。
+      体 &m<K> に対し、&m<K> の代数拡大で代数閉体であるものを &m<K> の \def<代数閉包>といい、それを &m<\overline<K>> で表す。
     >
   >
   \thm|type="prp",id="closurepoly"|<
@@ -2948,7 +2948,7 @@
       &mb<
         `f: K `[\sb<X><1>, \cdots;, \sb<X><n>`] \to; L`; f \mapsto; f (\sb<x><1>, \cdots;, \sb<x><n>)
   >
-      が単射であるとき、&m<\sb<x><1>, \cdots;, \sb<x><n>> は &m<K> 上\def<代数的独立>であるという。
+      が単射であるとき、&m<\sb<x><1>, \cdots;, \sb<x><n>> は &m<K> 上 \def<代数的独立>であるという。
     >
   >
   \thm|type="def"|<
@@ -2969,7 +2969,7 @@
   >
   \thm|type="def"|<
     \p<
-      拡大 &m<L `/ K> に対し、&m<L> の &m<K> 上超越基底の個数を &m<L> の &m<K> 上\def<超越次数>といい、それを &m<\sb<\op<trdeg>><K> L> で表す。
+      拡大 &m<L `/ K> に対し、&m<L> の &m<K> 上超越基底の個数を &m<L> の &m<K> 上 \def<超越次数>といい、それを &m<\sb<\op<trdeg>><K> L> で表す。
       超越基底が存在しない場合は、&m<\sb<\op<trdeg>><K> L = \infty;> とする。
     >
   >

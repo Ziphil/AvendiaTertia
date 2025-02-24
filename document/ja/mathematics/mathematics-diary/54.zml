@@ -21,7 +21,7 @@
   \thm|type="def"|<
     \p<
       計算体系 &m<\rm<`l`m>> の言語を以下のように定める。
-      可算集合 &m<\bb<V>> と &m<\bb<N>> を固定し、この元をそれぞれ\def<変項\fl<variable>> と\def<名前\fl<name>> と呼ぶ。
+      可算集合 &m<\bb<V>> と &m<\bb<N>> を固定し、この元をそれぞれ \def<変項\fl<variable>> と \def<名前\fl<name>> と呼ぶ。
       さらに、変項と名前をそれぞれメタ変項 &m<x> と &m<a> で表すことにし、その上で、
       &mb<
         \array|align="rcl"|<
@@ -30,7 +30,7 @@
         >
       >
       とする。
-      このとき、&m<M> と &m<V> で定まるものをそれぞれ\def<項\fl<term>> と\def<値\fl<value>> という。
+      このとき、&m<M> と &m<V> で定まるものをそれぞれ \def<項\fl<term>> と \def<値\fl<value>> という。
     >
   >
   \p<
@@ -63,7 +63,7 @@
   >
   \thm|type="def"|<
     \p<
-      計算体系 &m<\rm<`l`m>> において、項に含まれるある部分項を記号 &m<`[`]> に置き換えて得られるものを\def<環境\fl<environment>> という。
+      計算体系 &m<\rm<`l`m>> において、項に含まれるある部分項を記号 &m<`[`]> に置き換えて得られるものを \def<環境\fl<environment>> という。
     >
   >
   \p<
@@ -89,7 +89,7 @@
         >
       >
       と再帰的に定める。
-      このとき、&m<M> から &m<M `[a \coloneqq; b \mid; E`]> を得る操作を\def<混合代入\fl<mixed substitution>> という。
+      このとき、&m<M> から &m<M `[a \coloneqq; b \mid; E`]> を得る操作を \def<混合代入\fl<mixed substitution>> という。
     >
   >
   \p<
@@ -113,7 +113,7 @@
         >
       >
       で定める。
-      さらに、関係 &m<\squigrarr;> を &m<\rhd;> の合同閉包として定め、これを\def<値呼び簡約\fl<call-by-value reduction>> という。
+      さらに、関係 &m<\squigrarr;> を &m<\rhd;> の合同閉包として定め、これを \def<値呼び簡約\fl<call-by-value reduction>> という。
     >
   >
   \p<

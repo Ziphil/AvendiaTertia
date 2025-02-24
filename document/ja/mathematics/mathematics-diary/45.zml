@@ -318,7 +318,7 @@
   \thm|type="def"|<
     \p<
       豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> において、&m<\scr<C>>-豊穣関手 &m<J \text<-> \ltimes; B: \scr<C> \to; \scr<D>> および &m<`[B, \text<->`]: \scr<D> \to; \scr<C>> が &m<\scr<C>>-豊穣随伴を成しており、この随伴の単位が上記の &m<`h> で与えられるとする。
-      このとき、&m<(\scr<C>`; \scr<D>, J)> は\def<閉\fl<closed>> であるという。
+      このとき、&m<(\scr<C>`; \scr<D>, J)> は \def<閉\fl<closed>> であるという。
     >
   >
   \p<

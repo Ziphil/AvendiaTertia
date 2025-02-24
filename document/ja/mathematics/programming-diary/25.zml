@@ -54,7 +54,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
-      &m<F> が上の命題の同値な 2 条件のいずれか (したがって両方) を満たすとき、&m<F> は\def<代数的コンパクト\fl<algebraically compact>> であるという。
+      &m<F> が上の命題の同値な 2 条件のいずれか (したがって両方) を満たすとき、&m<F> は \def<代数的コンパクト\fl<algebraically compact>> であるという。
     >
   >
   \p<
@@ -96,7 +96,7 @@
           \ar|s="1",e="2"|<\op<ana> (C, `g)> \ar|s="2",e="3"|<\op<cata> (A, `a)>
         >
       >
-      を、&m<(A, `a)> と &m<(C, `g)> による\def<質料射\fl<hylomorphism>> と呼んで &m<\op<hylo> (A, C, `a, `g)> で表す。
+      を、&m<(A, `a)> と &m<(C, `g)> による \def<質料射\fl<hylomorphism>> と呼んで &m<\op<hylo> (A, C, `a, `g)> で表す。
     >
   >
   \p<
@@ -112,7 +112,7 @@
           \ar|s="1",e="2"|<\op<cata> (A, `a)> \ar|s="2",e="3"|<\op<ana> (A, `g)> 
         >
       >
-      を、&m<(A, `a)> と &m<(A, `g)> による\def<形相射\fl<metamorphism>> と呼んで &m<\op<meta> (A, `a, `g)> で表す。
+      を、&m<(A, `a)> と &m<(A, `g)> による \def<形相射\fl<metamorphism>> と呼んで &m<\op<meta> (A, `a, `g)> で表す。
     >
   >
   \p<

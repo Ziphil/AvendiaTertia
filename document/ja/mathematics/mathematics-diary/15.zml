@@ -15,7 +15,7 @@
   >
   \thm|type="def"|<
     \p<
-      モノイダル圏 &m<\scr<V>> の元 &m<X> に対し、&m<\sb<\op<Hom>><\scr<V>> (1, X)> を &m<X> の\def<台集合\fl<underlying set>> という。
+      モノイダル圏 &m<\scr<V>> の元 &m<X> に対し、&m<\sb<\op<Hom>><\scr<V>> (1, X)> を &m<X> の \def<台集合\fl<underlying set>> という。
     >
   >
   \p<
@@ -321,7 +321,7 @@
   \thm|type="def"|<
     \p<
       完備対称モノイダル閉圏 &m<\scr<V>> をとる。
-      &m<\scr<V>>-豊穣小圏 &m<\scr<C>> と &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、\mref|type="thm",ref="funcat"|; で構成された &m<\scr<V>>-豊穣圏を &m<\scr<C>, \scr<D>> の\def<豊穣関手圏\fl<enriched functor category>> といい、&m<\bfrm<Fun> (\scr<C>, \scr<D>)> で表す。
+      &m<\scr<V>>-豊穣小圏 &m<\scr<C>> と &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、\mref|type="thm",ref="funcat"|; で構成された &m<\scr<V>>-豊穣圏を &m<\scr<C>, \scr<D>> の \def<豊穣関手圏\fl<enriched functor category>> といい、&m<\bfrm<Fun> (\scr<C>, \scr<D>)> で表す。
     >
   >
   \p<

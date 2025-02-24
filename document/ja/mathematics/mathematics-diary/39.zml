@@ -26,8 +26,8 @@
         \op<Hom> (A \otimes; B, \sp<C><*>) \cong; \op<Hom> (A, (B \otimes; C) \sp<><*>)
       >
       が成り立つ。
-      このとき、&m<\scr<C>> を\def<スター自律圏\fl<star-autonomous category>> という。
-      また、関手 &m<\sp<\text<->><*>> を\def<双対関手\fl<dualising functor>> と呼ぶ。
+      このとき、&m<\scr<C>> を \def<スター自律圏\fl<star-autonomous category>> という。
+      また、関手 &m<\sp<\text<->><*>> を \def<双対関手\fl<dualising functor>> と呼ぶ。
     >
   >
   \thm|type="def",id="scb"|<
@@ -35,8 +35,8 @@
       対称モノイダル圏 &m<\scr<C>> を考える。
       &m<\scr<C>> がモノイダル閉であり、次の条件を満たすような対象 &m<\bot;> が定まっているとする。
       すなわち、任意の対象 &m<A> に対して、モノイダル閉性の余単位 &m<\sb<`e><A \bot;>: A \otimes; (A \rmulti|bin|; \bot;) \to; \bot;> の転置 &m<\sb<`k><A>: A \to; (A \rmulti|bin|; \bot;) \rmulti|bin|; \bot;> は同型射である。
-      このとき、&m<\scr<C>> を\def<スター自律圏\fl<star-autonomous category>> という。
-      また、対象 &m<\bot;> を\def<大域的双対対象\fl<global dualising object>> と呼ぶ。
+      このとき、&m<\scr<C>> を \def<スター自律圏\fl<star-autonomous category>> という。
+      また、対象 &m<\bot;> を \def<大域的双対対象\fl<global dualising object>> と呼ぶ。
     >
   >
   \p<
@@ -81,7 +81,7 @@
       >
     >
     \p<
-      この圏 &m<\bfrm<Chu> (\scr<C>, \bbot;)> を、&m<\scr<C>> による \def<Chu 構成\fl<— construction>> という。
+      この圏 &m<\bfrm<Chu> (\scr<C>, \bbot;)> を、&m<\scr<C>> による  \def<Chu 構成\fl<— construction>> という。
     >
   >
   \thm|type="thm"|<

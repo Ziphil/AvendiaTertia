@@ -22,17 +22,17 @@
   \thm|type="def"|<
     \p<
       順序集合 &m<D> の部分集合 &m<A> を考える。
-      &m<A> が空でなく、任意の &m<A> の 2 元集合が &m<A> に上界をもつとき、&m<A> は\def<有向\fl<directed>> であるという。
+      &m<A> が空でなく、任意の &m<A> の 2 元集合が &m<A> に上界をもつとき、&m<A> は \def<有向\fl<directed>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
-      順序集合 &m<D> に対し、任意の &m<D> の有向部分集合が &m<D> に上限をもつとき、&m<D> は\def<有向完備\fl<directed-complete>> もしくは単に\def<完備\fl<complete>> であるという。
+      順序集合 &m<D> に対し、任意の &m<D> の有向部分集合が &m<D> に上限をもつとき、&m<D> は \def<有向完備\fl<directed-complete>> もしくは単に \def<完備\fl<complete>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
-      順序集合 &m<D> に対し、&m<D> の最小元が存在するとき、&m<D> は\def<点付き\fl<pointed>> であるという。
+      順序集合 &m<D> に対し、&m<D> の最小元が存在するとき、&m<D> は \def<点付き\fl<pointed>> であるという。
     >
   >
   \p<
@@ -63,20 +63,20 @@
     \p<
       順序集合 &m<D, E> と写像 &m<f: D \to; E> をとる。
       任意の 2 元 &m<d, d' \in; D> に対し、&m<d \sqsubseteq; d'> ならば &m<f (d) \sqsubseteq; f (d')> が成り立つとする。
-      このとき、&m<f> は\def<単調\fl<monotonic>> であるという。
+      このとき、&m<f> は \def<単調\fl<monotonic>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
       完備順序集合 &m<D, E> と写像 &m<f: D \to; E> をとる。
       任意の &m<D> の有向部分集合 &m<A> に対し、&m<\bigsqcup|in|; f (A)> が存在して &m<f (\bigsqcup|in|; A) = \bigsqcup|in|; f (A)> が成り立つとする。
-      このとき、&m<f> は\def<連続\fl<continuous>> であるという。
+      このとき、&m<f> は \def<連続\fl<continuous>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
       点付き順序集合 &m<D, E> と写像 &m<f: D \to; E> をとる。
-      &m<f> が最小元を保つとき、&m<f> は\def<厳密\fl<strict>> であるという。
+      &m<f> が最小元を保つとき、&m<f> は \def<厳密\fl<strict>> であるという。
     >
   >
   \p<

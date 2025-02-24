@@ -33,7 +33,7 @@
         >
       >
       がともに可換であるとする。
-      このとき、3 つ組 &m<(A, `m, `h)> を &m<\scr<V>> の\def<代数\fl<algebra>> もしくは\def<モノイド\fl<monoid>> という。
+      このとき、3 つ組 &m<(A, `m, `h)> を &m<\scr<V>> の \def<代数\fl<algebra>> もしくは \def<モノイド\fl<monoid>> という。
     >
   >
   \p<
@@ -57,7 +57,7 @@
         >
       >
       がともに可換であるとする。
-      このとき、3 つ組 &m<(C, `d, `e)> を &m<\scr<V>> の\def<余代数\fl<coalgebra>> もしくは\def<コモノイド\fl<comonoid>> という。
+      このとき、3 つ組 &m<(C, `d, `e)> を &m<\scr<V>> の \def<余代数\fl<coalgebra>> もしくは \def<コモノイド\fl<comonoid>> という。
     >
   >
   \p<
@@ -80,7 +80,7 @@
         >
       >
       がともに可換であるとする。
-      このとき、&m<s> を &m<(C, `m, `h)> から &m<(D, `m', `h')> への\def<代数の射\fl<algebra morphism>> という。
+      このとき、&m<s> を &m<(C, `m, `h)> から &m<(D, `m', `h')> への \def<代数の射\fl<algebra morphism>> という。
     >
   >
   \p<
@@ -162,13 +162,13 @@
   \thm|type="def"|<
     \p<
       線型空間 &m<X> の部分空間 &m<Y> をとる。
-      商空間 &m<X `/ Y> が有限次元であるとき、&m<Y> は\def<余有限\fl<cofinite>> であるという。
+      商空間 &m<X `/ Y> が有限次元であるとき、&m<Y> は \def<余有限\fl<cofinite>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
       代数 &m<A> の線型空間としての部分空間 &m<I> をとる。
-      任意の &m<a \in; A> と &m<u \in; I> について、&m<ua \in; I> および &m<au \in; I> が成り立つとき、&m<I> を &m<A> の\def<イデアル\fl<ideal>> という。
+      任意の &m<a \in; A> と &m<u \in; I> について、&m<ua \in; I> および &m<au \in; I> が成り立つとき、&m<I> を &m<A> の \def<イデアル\fl<ideal>> という。
     >
   >
   \p<

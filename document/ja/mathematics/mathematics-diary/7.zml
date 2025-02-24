@@ -135,7 +135,7 @@
           >
         >
       >
-      以上によって定義される項を\def<線型項\fl<linear term>> という。
+      以上によって定義される項を \def<線型項\fl<linear term>> という。
     >
   >
   \p<
@@ -217,14 +217,14 @@
         \lbbracket; `G \rbbracket; = \lbbracket; \sb<A><1> \rbbracket; \otimes; \cdots; \otimes; \lbbracket; \sb<A><k> \rbbracket;
       >
       とおくと、各型割り当て &m<`G \vdash; M: A> に対し、射 &m<\lbbracket; M \rbbracket;: \lbbracket; `G \rbbracket; \to; \lbbracket; A \rbbracket;> が 1 つ定まっているとする。
-      このとき、&m<\scr<C>> を\def<線型構造\fl<linear structure>> という。
+      このとき、&m<\scr<C>> を \def<線型構造\fl<linear structure>> という。
     >
   >
   \thm|type="def"|<
     \p<
       対称モノイダル圏 &m<\scr<C>> を考える。
       &m<\scr<C>> が線型構造であって、任意の &m<`b>-簡約 &m<M \sb<\squigrarr;><`b> N> に対して &m<\lbbracket; M \rbbracket; = \lbbracket; N \rbbracket;> が成り立っているとする。
-      このとき、&m<\scr<C>> を\def<線型モデル\fl<linear model>> という。
+      このとき、&m<\scr<C>> を \def<線型モデル\fl<linear model>> という。
     >
   >
   \h1<参考文献>

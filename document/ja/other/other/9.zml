@@ -134,7 +134,7 @@
   \h2<外国語表記>
   \p<
     外国語表記\fl<foreign word> は小さめに表示されます。
-    強調表示と一緒に\def<モノイダル整合構造\fl<monoidal coherent structure>> のように使うことが多いです。
+    強調表示と一緒に \def<モノイダル整合構造\fl<monoidal coherent structure>> のように使うことが多いです。
   >
   \h2<音楽記号>
   \p<
@@ -525,7 +525,7 @@
         >
       >
       と定める。
-      なお、&m<\op<fin> (a)> の元は &m<a> の\def<有限近似\fl<finite approximant>> と呼ばれる。
+      なお、&m<\op<fin> (a)> の元は &m<a> の \def<有限近似\fl<finite approximant>> と呼ばれる。
     >
   >
   \p<

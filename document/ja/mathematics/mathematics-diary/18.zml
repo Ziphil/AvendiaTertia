@@ -63,7 +63,7 @@
       &mb<
         g \circ; f \coloneqq; \sb<c><ABC> (f, g): A \to; C
       >
-      を &m<f> と &m<g> の\def<合成\fl<composition>> という。
+      を &m<f> と &m<g> の \def<合成\fl<composition>> という。
     >
   >
   \p<
@@ -75,7 +75,7 @@
       &mb<
         `b \dot|bin|<\circ;> `a \coloneqq; `b \diamond; `a: f \raarr; h
       >
-      を &m<`a> と &m<`b> の\def<垂直合成\fl<vertical composition>> という。
+      を &m<`a> と &m<`b> の \def<垂直合成\fl<vertical composition>> という。
       ここで、&m<\diamond;> は &m<`[A, B`]> の合成である。
     >
   >
@@ -85,7 +85,7 @@
       &mb<
         `b * `a \coloneqq; \sb<c><ABC> (`a, `b): h \circ; f \raarr; k \circ; g
       >
-      を &m<`a> と &m<`b> の\def<水平合成\fl<horizontal composition>> という。
+      を &m<`a> と &m<`b> の \def<水平合成\fl<horizontal composition>> という。
     >
   >
   \p<
@@ -143,7 +143,7 @@
       &mb<
         `b \ast; f \coloneqq; \sb<c><ABC> (\sb<\rm<id>><f>, `b): h \circ; f \raarr; k \circ; f
       >
-      を &m<f> と &m<`b> の\def<左髭結合\fl<left whiskering>> という。
+      を &m<f> と &m<`b> の \def<左髭結合\fl<left whiskering>> という。
     >
   >
   \thm|type="def"|<
@@ -152,7 +152,7 @@
       &mb<
         h \ast; `a \coloneqq; \sb<c><ABC> (`a, \sb<\rm<id>><h>): h \circ; f \raarr; h \circ; g
       >
-      をそれぞれ &m<`a> と &m<h> の\def<右髭結合\fl<right whiskering>>  という。
+      をそれぞれ &m<`a> と &m<h> の \def<右髭結合\fl<right whiskering>>  という。
     >
   >
   \p<

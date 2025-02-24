@@ -47,11 +47,11 @@ manager.registerElementRule("math-block", "page", (transformer, document, elemen
 
 manager.registerElementRule("def", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  self.appendTextNode(" 「");
+  self.appendTextNode("「");
   self.appendElement("em", (self) => {
     self.appendChild(transformer.apply());
   });
-  self.appendTextNode("」 ");
+  self.appendTextNode("」");
   return self;
 });
 

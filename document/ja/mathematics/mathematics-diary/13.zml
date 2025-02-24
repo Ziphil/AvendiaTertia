@@ -62,8 +62,8 @@
         >
       >
       がともに可換であるとする。
-      このとき、&m<\scr<V>> を\def<モノイダル圏\fl<monoidal category>> という。
-      また、&m<\otimes;> を &m<\scr<V>> の\def<テンソル積\fl<tensor product>> といい、&m<1> を &m<\scr<V>> の\def<単位対象\fl<unit object>> という。
+      このとき、&m<\scr<V>> を \def<モノイダル圏\fl<monoidal category>> という。
+      また、&m<\otimes;> を &m<\scr<V>> の \def<テンソル積\fl<tensor product>> といい、&m<1> を &m<\scr<V>> の \def<単位対象\fl<unit object>> という。
     >
   >
   \p<
@@ -105,13 +105,13 @@
         >
       >
       がともに可換であるとする。
-      このとき、&m<\scr<V>> は\def<対称\fl<symmetric>> であるという。
+      このとき、&m<\scr<V>> は \def<対称\fl<symmetric>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
       モノイダル圏 &m<\scr<V>> を考える。
-      任意の &m<\scr<V>> の対象 &m<Y> に対し、関手 &m<\text<-> \otimes; Y: \scr<V> \to; \scr<V>> が右随伴をもつとき、&m<\scr<V>> は\def<閉\fl<closed>> であるという。
+      任意の &m<\scr<V>> の対象 &m<Y> に対し、関手 &m<\text<-> \otimes; Y: \scr<V> \to; \scr<V>> が右随伴をもつとき、&m<\scr<V>> は \def<閉\fl<closed>> であるという。
       この右随伴関手は &m<Y \rmulti|bin|; \text<->: \scr<V> \to; \scr<V>> で表す。
     >
   >
@@ -144,7 +144,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<V>> は有限直積をもつとする。
-      このとき、直積と終対象によって &m<\scr<V>> を対称モノイダル圏と見なしたものを、\def<カルテシアン圏\fl<cartesian category>> と呼ぶ。
+      このとき、直積と終対象によって &m<\scr<V>> を対称モノイダル圏と見なしたものを、 \def<カルテシアン圏\fl<cartesian category>> と呼ぶ。
     >
   >
   \p<
@@ -204,7 +204,7 @@
       >
       が全て可換であるとする。
       このとき、&m<\scr<C>> を &m<\scr<V>>-\def<豊穣圏\fl<enriched category>> という。
-      また、&m<\op<Ob> (\scr<C>)> の元を &m<\scr<C>> の\def<対象\fl<object>> といい、対象 &m<A, B> に対する &m<`[A, B`]> を &m<\scr<C>> の\def<射対象\fl<homomorphism object>> という。
+      また、&m<\op<Ob> (\scr<C>)> の元を &m<\scr<C>> の \def<対象\fl<object>> といい、対象 &m<A, B> に対する &m<`[A, B`]> を &m<\scr<C>> の \def<射対象\fl<homomorphism object>> という。
     >
   >
   \p<

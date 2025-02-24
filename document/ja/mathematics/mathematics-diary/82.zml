@@ -24,7 +24,7 @@
         \sb<\op<Lens>><\scr<C>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<C>> (\op<Hom> (S, K \times; A) \times; \op<Hom> (K \times; \bar<A>, \bar<S>))
       >
       とおく。
-      この元 &m<`g> を\def<コエンドレンズ\fl<coend lens>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
+      この元 &m<`g> を \def<コエンドレンズ\fl<coend lens>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
     >
   >
   \p<
@@ -79,7 +79,7 @@
         >
       >
       と定める。
-      これによって得られる素朴レンズ &m<\langle; \sp<l><\ppr;>, \sp<r><\ppr;> \rangle; \sb<><K \times; L>: (S, \bar<S>) \to; (\bar<B>, B)> を &m<\langle; l, r \rangle; \sb<><K>> と &m<\langle; l', r' \rangle; \sb<><L>> の\def<合成\fl<composition>> という。
+      これによって得られる素朴レンズ &m<\langle; \sp<l><\ppr;>, \sp<r><\ppr;> \rangle; \sb<><K \times; L>: (S, \bar<S>) \to; (\bar<B>, B)> を &m<\langle; l, r \rangle; \sb<><K>> と &m<\langle; l', r' \rangle; \sb<><L>> の \def<合成\fl<composition>> という。
     >
   >
   \thm|type="def"|<

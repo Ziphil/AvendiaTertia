@@ -31,7 +31,7 @@
   \thm|type="def"|<
     \p<
       2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>, W: \scr<J> \to; \bfrm<Cat>> をとる。
-      &m<\scr<C>> の対象 &m<A> に対して、2-自然変換 &m<`s: W \raarr; `[A, F \hyphen;`]> を &m<F> と &m<W> に関する\def<柱\fl<cylinder>> という。
+      &m<\scr<C>> の対象 &m<A> に対して、2-自然変換 &m<`s: W \raarr; `[A, F \hyphen;`]> を &m<F> と &m<W> に関する \def<柱\fl<cylinder>> という。
     >
   >
   \p<
@@ -73,7 +73,7 @@
       >
     >
     \p<
-      このとき、&m<`h> は \def<1 次元的普遍性\fl<one-dimensional universality>> を満たすという。
+      このとき、&m<`h> は  \def<1 次元的普遍性\fl<one-dimensional universality>> を満たすという。
     >
   >
   \thm|type="def"|<
@@ -122,7 +122,7 @@
       >
     >
     \p<
-      このとき、&m<`h> は \def<2 次元的普遍性\fl<two-dimensional universality>> を満たすという。
+      このとき、&m<`h> は  \def<2 次元的普遍性\fl<two-dimensional universality>> を満たすという。
     >
   >
   \p<

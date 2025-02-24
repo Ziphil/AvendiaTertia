@@ -88,7 +88,7 @@
       >
     >
     \p<
-      このとき、&m<`V> を &m<\scr<C>> 上の &m<\scr<S>>-値\def<反変加群\fl<contravariant module>> といい、&m<`V: \sp<\scr<C>><\circ;> \vertrarr; \scr<S>> で表す。
+      このとき、&m<`V> を &m<\scr<C>> 上の &m<\scr<S>>-値 \def<反変加群\fl<contravariant module>> といい、&m<`V: \sp<\scr<C>><\circ;> \vertrarr; \scr<S>> で表す。
     >
   >
   \p<
@@ -106,7 +106,7 @@
   >
   \thm|type="def"|<
     \p<
-      対称複圏 &m<\scr<C>> とそれ上の &m<\bfrm<Poly>>-値反変加群 &m<`V: \sp<\scr<C>><\circ;> \vertrarr; \bfrm<Poly>> の組 &m<(\scr<C>, `V)> を\def<線型超教義\fl<linear hyperdoctrine>> という。
+      対称複圏 &m<\scr<C>> とそれ上の &m<\bfrm<Poly>>-値反変加群 &m<`V: \sp<\scr<C>><\circ;> \vertrarr; \bfrm<Poly>> の組 &m<(\scr<C>, `V)> を \def<線型超教義\fl<linear hyperdoctrine>> という。
     >
   >
   \p<
@@ -116,7 +116,7 @@
   \thm|type="def"|<
     \p<
       線型超教義 &m<(\scr<C>, `V)> を固定する。
-      &m<\scr<C>> の対象 &m<A, \bar<A>> および &m<`V \langle; A, \bar<A> \rangle;> の対象 &m<a> から成る組 &m<(A, \bar<A>, a)> を\def<双対組\fl<duality triple>> という。
+      &m<\scr<C>> の対象 &m<A, \bar<A>> および &m<`V \langle; A, \bar<A> \rangle;> の対象 &m<a> から成る組 &m<(A, \bar<A>, a)> を \def<双対組\fl<duality triple>> という。
     >
   >
   \thm|type="def"|<
@@ -135,7 +135,7 @@
         u: \langle; \sbsp<g><1><*> \sbsp<a><1>, \cdots;, \sbsp<g><n><*> \sbsp<a><n> \rangle; \to; \langle; \sbsp<f><1><*> \sbsp<b><1>, \cdots;, \sbsp<f><m><*> \sbsp<b><m> \rangle; 
       >
       をとる。
-      これらが成す組 &m<(\sb<f><1>, \cdots;, \sb<f><m> \mid; \sb<g><1>, \cdots;, \sb<g><n> \mid; u)> を\def<双対組の多射\fl<polymorphism of duality triples>> という。
+      これらが成す組 &m<(\sb<f><1>, \cdots;, \sb<f><m> \mid; \sb<g><1>, \cdots;, \sb<g><n> \mid; u)> を \def<双対組の多射\fl<polymorphism of duality triples>> という。
     >
   >
   \p<

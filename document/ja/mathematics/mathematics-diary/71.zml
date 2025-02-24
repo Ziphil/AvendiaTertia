@@ -29,7 +29,7 @@
     >
     \p<
       を満たすとする。
-      このとき、&m<A> を\def<整合空間\fl<coherence space>> という。
+      このとき、&m<A> を \def<整合空間\fl<coherence space>> という。
     >
   >
   \p<
@@ -58,7 +58,7 @@
         x \closure; x' \coloniff; `{x, x'`} \in; A
       >
       で定める。
-      このとき、反射的無向グラフ &m<(\lvert; A \rvert;, \closure|ord|;)> を &m<A> の\def<網\fl<web>> といい、&m<\op<web> (A)> で表す。
+      このとき、反射的無向グラフ &m<(\lvert; A \rvert;, \closure|ord|;)> を &m<A> の \def<網\fl<web>> といい、&m<\op<web> (A)> で表す。
     >
   >
   \p<
@@ -68,7 +68,7 @@
   \thm|type="def"|<
     \p<
       反射的無向グラフ &m<(G, \closure|ord|;)> の頂点から成る集合 &m<a \subseteq; G> を考える。
-      任意の 2 頂点 &m<x, x' \in; a> に対して &m<x \closure; x'> が成り立つとき、&m<a> を &m<G> の\def<クリーク\fl<clique>> という。
+      任意の 2 頂点 &m<x, x' \in; a> に対して &m<x \closure; x'> が成り立つとき、&m<a> を &m<G> の \def<クリーク\fl<clique>> という。
       &m<G> のクリーク全体の集合を &m<\op<clique> (G)> で表す。
     >
   >
@@ -105,13 +105,13 @@
     >
     \ul<
       \li<
-        &m<\lvert; A \rvert;> の元を &m<A> の\def<トークン\fl<token>> という。
+        &m<\lvert; A \rvert;> の元を &m<A> の \def<トークン\fl<token>> という。
       >
       \li<
-        トークン &m<x, x' \in; \lvert; A \rvert;> に対し、上で定まる関係 &m<\closure|ord|;> について &m<x \closure; x'> が成り立つとき、&m<x> と &m<x'> は\def<整合的\fl<coherent>> であるという。
+        トークン &m<x, x' \in; \lvert; A \rvert;> に対し、上で定まる関係 &m<\closure|ord|;> について &m<x \closure; x'> が成り立つとき、&m<x> と &m<x'> は \def<整合的\fl<coherent>> であるという。
       >
       \li<
-        部分集合 &m<a \subseteq; \lvert; A \rvert;> に対し、&m<a> の任意の 2 元が整合的であるとき、&m<a> 自身も\def<整合的\fl<coherent>> であるという。
+        部分集合 &m<a \subseteq; \lvert; A \rvert;> に対し、&m<a> の任意の 2 元が整合的であるとき、&m<a> 自身も \def<整合的\fl<coherent>> であるという。
       >
     >
     \p<
@@ -123,7 +123,7 @@
           \c<x \asymp; x'> \c<\coloniff;> \c<x \closure;\not|style="margin-left:-0.68em;margin-right:0.15em;"|; x' \scor; x = x'> \br;
         >
       >
-      で定め、これらを満たすトークンをそれぞれ\def<狭義整合的\fl<strictly coherent>>, \def<狭義非整合的\fl<strictly incoherent>>, \def<非整合的\fl<incoherent>> であるという。
+      で定め、これらを満たすトークンをそれぞれ \def<狭義整合的\fl<strictly coherent>>,  \def<狭義非整合的\fl<strictly incoherent>>,  \def<非整合的\fl<incoherent>> であるという。
     >
   >
   \p<
@@ -149,8 +149,8 @@
       >
     >
     \p<
-      を満たすとき、&m<f> は\def<安定\fl<stable>> であるという。
-      また、これらの条件をそれぞれ\def<単調性\fl<monotonicity>>, \def<連続性\fl<continuity>>, \def<安定性\fl<stability>> という。
+      を満たすとき、&m<f> は \def<安定\fl<stable>> であるという。
+      また、これらの条件をそれぞれ \def<単調性\fl<monotonicity>>,  \def<連続性\fl<continuity>>,  \def<安定性\fl<stability>> という。
     >
   >
   \p<

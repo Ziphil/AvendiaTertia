@@ -33,7 +33,7 @@
         A \wedge; A \mid; A \vee; A \mid; A \buharprarr; A \mid;
         \box|ord|; A \mid; \trhombus; A
       >
-      これによって定まる記号列 &m<A> を\def<式\fl<formula>>と呼び、特に &m<\sb<\tt<p>><n>> の形のものを\def<原子式\fl<atomic formula>>と呼ぶ。
+      これによって定まる記号列 &m<A> を \def<式\fl<formula>>と呼び、特に &m<\sb<\tt<p>><n>> の形のものを \def<原子式\fl<atomic formula>>と呼ぶ。
     >
   >
   \p<
@@ -66,8 +66,8 @@
       >
     >
     \p<
-      このとき、対 &m<(W, \sim|ord|;)> を\def<フレーム\fl<frame>>と呼び、組 &m<(W, \sim|ord|;, P)> を\def<モデル\fl<model>>と呼ぶ。
-      また、&m<W> の元をしばしば\def<世界\fl<world>>と呼ぶ。
+      このとき、対 &m<(W, \sim|ord|;)> を \def<フレーム\fl<frame>>と呼び、組 &m<(W, \sim|ord|;, P)> を \def<モデル\fl<model>>と呼ぶ。
+      また、&m<W> の元をしばしば \def<世界\fl<world>>と呼ぶ。
     >
   >
   \p<
@@ -129,7 +129,7 @@
       >
     >
     \p<
-      &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つとき、&m<A> は &m<`a> において\def<妥当\fl<valid>> であるという。
+      &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つとき、&m<A> は &m<`a> において \def<妥当\fl<valid>> であるという。
     >
   >
   \p<
@@ -140,7 +140,7 @@
     \p<
       モデル &m<\scr<M> = (W, \sim|ord|;, P)> をとる。
       式 &m<A> に対して、&m<\sp<\vxdash|ord|;><\scr<M>> \srel; A> が成り立つことを、任意の &m<`a \in; W> に対して &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つことと定める。
-      このとき、&m<A> は &m<\scr<M>> において\def<妥当\fl<valid>> であるという。
+      このとき、&m<A> は &m<\scr<M>> において \def<妥当\fl<valid>> であるという。
     >
   >
   \p<
@@ -158,7 +158,7 @@
     \p<
       モデルから成るクラス &m<\frak<C>> をとる。
       式 &m<A> に対して、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> が成り立つことを、任意の &m<\scr<M> \in; \frak<C>> に対して &m<\sp<\vxdash|ord|;><\scr<M>> \srel; A> が成り立つことと定める。
-      このとき、&m<A> を単に\def<妥当\fl<valid>> もしくは\def<恒真\fl<tautological>> であるという。
+      このとき、&m<A> を単に \def<妥当\fl<valid>> もしくは \def<恒真\fl<tautological>> であるという。
     >
   >
   \p<

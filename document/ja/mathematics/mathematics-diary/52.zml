@@ -29,7 +29,7 @@
   \thm|type="def"|<
     \p<
       計算体系 &m<\sb<\rm<`l>><>> の言語を以下のように定める。
-      可算集合 &m<\bb<V>> を固定し、この元を\def<変項\fl<variable>> と呼ぶ。
+      可算集合 &m<\bb<V>> を固定し、この元を \def<変項\fl<variable>> と呼ぶ。
       さらに、変項をメタ変項 &m<x> で表すことにし、その上で、
       &mb<
         \array|align="rcl"|<
@@ -38,7 +38,7 @@
         >
       >
       とする。
-      このとき、&m<M> と &m<V> で定まるものをそれぞれ\def<項\fl<term>> と\def<値\fl<value>> という。
+      このとき、&m<M> と &m<V> で定まるものをそれぞれ \def<項\fl<term>> と \def<値\fl<value>> という。
     >
   >
   \p<
@@ -55,7 +55,7 @@
         >
       >
       とする。
-      これによって定まるものを\def<値呼び評価環境\fl<call-by-value evaluation environment>> という。
+      これによって定まるものを \def<値呼び評価環境\fl<call-by-value evaluation environment>> という。
     >
   >
   \p<
@@ -69,7 +69,7 @@
         E `[(\rm<`l> x. \sfun; M) V`] \squigrarr; E `[M `[x \coloneqq; V`]`]
       >
       で定める。
-      これを\def<値呼び簡約\fl<call-by-value reduction>> という。
+      これを \def<値呼び簡約\fl<call-by-value reduction>> という。
     >
   >
   \p<

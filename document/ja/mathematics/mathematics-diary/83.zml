@@ -18,7 +18,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> およびモノイダル圏 &m<\scr<K>> をとる。
-      &m<\bfrm<End> (\scr<C>)> を合成に関してモノイダル圏と見なすとき、強モノイダル関手 &m<\oslash;: \scr<K> \to; \bfrm<End> (\scr<C>)> のことを &m<\scr<K>> の &m<\scr<C>> への\def<作用\fl<action>> という。
+      &m<\bfrm<End> (\scr<C>)> を合成に関してモノイダル圏と見なすとき、強モノイダル関手 &m<\oslash;: \scr<K> \to; \bfrm<End> (\scr<C>)> のことを &m<\scr<K>> の &m<\scr<C>> への \def<作用\fl<action>> という。
     >
   >
   \p<
@@ -48,7 +48,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>, \bar<\scr<C>>> とモノイダル圏 &m<\scr<K>> について、&m<\scr<K>> の &m<\scr<C>> への作用 &m<\oslash|ord|;: \scr<K> \to; \bfrm<End> (\scr<C>)> および &m<\scr<K>> の &m<\bar<\scr<C>>> への作用 &m<\obackslash|ord|;: \scr<K> \to; \bfrm<End> (\bar<\scr<C>>)> が定まっているとする。
-      これらの組 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> を\def<オプティック領域\fl<optic domain>> と呼ぶ。
+      これらの組 &m<(\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> を \def<オプティック領域\fl<optic domain>> と呼ぶ。
     >
   >
   \thm|type="def"|<
@@ -58,7 +58,7 @@
       &mb<
         \sb<\rm<Optic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<K>> (\sb<\op<Hom>><\scr<C>> (S, K \oslash; A) \times; \sb<\op<Hom>><\bar<\scr<C>>> (K \obackslash; \bar<A>, \bar<S>))
       >
-      の元 &m<`g> を\def<コエンドオプティック\fl<coend optic>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
+      の元 &m<`g> を \def<コエンドオプティック\fl<coend optic>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
     >
   >
   \p<
@@ -130,7 +130,7 @@
       >
       が全て可換であるとする。
       なお、ラベルのない射は標準的な同型射を表している。
-      このとき、&m<`j> を &m<P> に対する \def<Tambara 構造\fl<— structure>> といい、組 &m<(P, `j)> を \def<Tambara 加群\fl<— module>> という。
+      このとき、&m<`j> を &m<P> に対する  \def<Tambara 構造\fl<— structure>> といい、組 &m<(P, `j)> を  \def<Tambara 加群\fl<— module>> という。
     >
   >
   \thm|type="def"|<
@@ -146,7 +146,7 @@
           \ar|s="1",e="3",inv|<\sb<`j><M X \bar<X>>> \ar|s="2",e="4"|<\sb<`z><M X \bar<X>>>
         >
       >
-      が可換であるとき、&m<`u> を \def<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `j) \raarr; (Q, `z)> で表す。
+      が可換であるとき、&m<`u> を  \def<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `j) \raarr; (Q, `z)> で表す。
     >
   >
   \thm|type="def"|<
@@ -177,7 +177,7 @@
         >
       >
       とおく。
-      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> を\def<プロ関手オプティック\fl<profunctor optic>> という。
+      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> を \def<プロ関手オプティック\fl<profunctor optic>> という。
     >
   >
   \thm|type="def"|<

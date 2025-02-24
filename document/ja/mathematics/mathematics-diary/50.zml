@@ -145,7 +145,7 @@
     \name<選択公理\fl<axiom of choice>>
     \p<
       空でない集合から成る集合 &m<\scr<F>> に対し、関数 &m<`G: \scr<F> \to; \bigcup|in|; \scr<F>> が存在し、任意の &m<S \in; \scr<F>> に対して &m<`G (S) \in; S> が成り立つ。
-      なお、&m<`G> は &m<\scr<F>> 上の\def<選択関数\fl<choice function>> と呼ばれる。
+      なお、&m<`G> は &m<\scr<F>> 上の \def<選択関数\fl<choice function>> と呼ばれる。
     >
   >
   \p<

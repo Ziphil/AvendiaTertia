@@ -53,19 +53,19 @@
         >
       >
       がともに可換であるとする。
-      このような自然な写像の組 &m<(\bar<`a>, \bar<`l>, \bar<`r>)> を組 &m<(\scr<D>, \otimes|ord|;, \top;)> 上の\def<モノイダル整合構造\fl<monoidal coherent structure>> という。
-      さらに、これら全てのデータの組 &m<(\scr<D>, \otimes|ord|;, \top;, \bar<`a>, \bar<`l>, \bar<`r>)> を\def<モノイダル圏\fl<monoidal category>> という。
+      このような自然な写像の組 &m<(\bar<`a>, \bar<`l>, \bar<`r>)> を組 &m<(\scr<D>, \otimes|ord|;, \top;)> 上の \def<モノイダル整合構造\fl<monoidal coherent structure>> という。
+      さらに、これら全てのデータの組 &m<(\scr<D>, \otimes|ord|;, \top;, \bar<`a>, \bar<`l>, \bar<`r>)> を \def<モノイダル圏\fl<monoidal category>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<D>> をとり、関手 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> を考える。
-      任意の &m<\scr<D>> の対象 &m<A> に対し、片方の変数を固定した関手 &m<A \otimes; \hyphen;> と &m<\hyphen; \otimes; A> がどちらも右随伴をもつとき、&m<\otimes;> は\def<双閉\fl<biclosed>> であるという。
+      任意の &m<\scr<D>> の対象 &m<A> に対し、片方の変数を固定した関手 &m<A \otimes; \hyphen;> と &m<\hyphen; \otimes; A> がどちらも右随伴をもつとき、&m<\otimes;> は \def<双閉\fl<biclosed>> であるという。
     >
   >
   \thm|type="def"|<
     \p<
-      モノイダル圏 &m<\scr<D>> に定まる演算 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> が双閉であるとき、&m<\scr<D>> は\def<双閉\fl<biclosed>> であるという。
+      モノイダル圏 &m<\scr<D>> に定まる演算 &m<\otimes|ord|;: \scr<D> \times; \scr<D> \to; \scr<D>> が双閉であるとき、&m<\scr<D>> は \def<双閉\fl<biclosed>> であるという。
     >
   >
   \h2<コエンド>
@@ -84,7 +84,7 @@
           \ar|s="1",e="2"|<`f> \ar|s="1",e="4",inv|<`c> \ar|s="2",e="4"|<h>
         >
       >
-      が可換であるとき、&m<S> を &m<K> の\def<コエンド\fl<coend>> といい、
+      が可換であるとき、&m<S> を &m<K> の \def<コエンド\fl<coend>> といい、
       &mb<
         S \coloneqq; \int<><X> K (X, X)
       >
@@ -108,7 +108,7 @@
     \p<
       関手 &m<K: \scr<C> \to; \scr<S>> をとる。
       任意の &m<\scr<C>> の対象 &m<X> に対し、関手 &m<\sb<\op<Hom>><\scr<S>> (KX, \hyphen;): \scr<S> \to; \bfrm<Set>> が左随伴をもつとき、&m<\scr<S>> は &m<K>-\def<テンソル付き\fl<tensored>> であるという。
-      また、この左随伴は &m<\hyphen; \odot; KX: \bfrm<Set> \to; \scr<S>> で表し、この値を\def<テンソル対象\fl<tensor object>> という。
+      また、この左随伴は &m<\hyphen; \odot; KX: \bfrm<Set> \to; \scr<S>> で表し、この値を \def<テンソル対象\fl<tensor object>> という。
     >
   >
   \p<
@@ -149,7 +149,7 @@
       &mb<
         \sbsp<z><A><K, M>: \int<><X> (\sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX) \longto; KA
       >
-      を、一般に \def<Yoneda 射\fl<— morphism>> という。
+      を、一般に  \def<Yoneda 射\fl<— morphism>> という。
     >
   >
   \p<
@@ -212,7 +212,7 @@
           \c<h> \c<\longmapsto;> \c<h \circ; \hyphen;>
         >
       >
-      が全単射であり、それが &m<A, B> に関して自然であるとき、&m<M> は\def<稠密\fl<dense>> であるという。
+      が全単射であり、それが &m<A, B> に関して自然であるとき、&m<M> は \def<稠密\fl<dense>> であるという。
     >
   >
   \thm|type="prp",id="denseequiv"|<
@@ -364,8 +364,8 @@
         >
       >
       がともに可換であるとする。
-      このような自然な写像の組 &m<(`a, `l, `r)> を組 &m<(\scr<C>, P, J)> 上の\def<プロモノイダル整合構造\fl<promonoidal coherent structure>> という。
-      さらに、これら全てのデータの組 &m<(\scr<C>, P, J, `a, `l, `r)> を\def<プロモノイダル圏\fl<promonoidal category>> という。
+      このような自然な写像の組 &m<(`a, `l, `r)> を組 &m<(\scr<C>, P, J)> 上の \def<プロモノイダル整合構造\fl<promonoidal coherent structure>> という。
+      さらに、これら全てのデータの組 &m<(\scr<C>, P, J, `a, `l, `r)> を \def<プロモノイダル圏\fl<promonoidal category>> という。
     >
   >
   \p<
@@ -601,7 +601,7 @@
         >
       >
       とおくと、これは関手 &m<\otimes;: \widehat<\scr<C>> \times; \widehat<\scr<C>> \to; \widehat<\scr<C>>> を定める。
-      これを &m<P> による \def<Day 畳み込み\fl<— convolution>> という。
+      これを &m<P> による  \def<Day 畳み込み\fl<— convolution>> という。
     >
   >
   \p<

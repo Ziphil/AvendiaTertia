@@ -23,15 +23,15 @@
   \thm|type="def"|<
     \p<
       集合 &m<X> 上の関係 &m<\prec;> をとる。
-      &m<X> の空でない部分集合が &m<\prec;> に関して極小な元を属するとき、&m<\prec;> を\def<整礎関係\fl<well-founded relation>> という。
-      また、対 &m<(X, \prec|ord|;)> を\def<整礎集合\fl<well-founded set>> という。
+      &m<X> の空でない部分集合が &m<\prec;> に関して極小な元を属するとき、&m<\prec;> を \def<整礎関係\fl<well-founded relation>> という。
+      また、対 &m<(X, \prec|ord|;)> を \def<整礎集合\fl<well-founded set>> という。
     >
   >
   \thm|type="def"|<
     \p<
       集合 &m<X> 上の関係 &m<\preceq;> をとる。
-      &m<X> 上で &m<\preceq;> が全順序であり、&m<X> 上で &m<\prec;> が整礎関係であるとき、&m<\preceq;> を\def<整列順序\fl<well-order>> という。
-      また、対 &m<(X, \preceq|ord|;)> を\def<整列集合\fl<well-ordered set>> という。
+      &m<X> 上で &m<\preceq;> が全順序であり、&m<X> 上で &m<\prec;> が整礎関係であるとき、&m<\preceq;> を \def<整列順序\fl<well-order>> という。
+      また、対 &m<(X, \preceq|ord|;)> を \def<整列集合\fl<well-ordered set>> という。
     >
   >
   \p<
@@ -65,8 +65,8 @@
       >
     >
     \p<
-      をともに満たすとき、&m<`a> を\def<順序数\fl<ordinal>> という。
-      また、1 つ目の条件を &m<`a> の\def<推移性\fl<transitivity>> と呼び、2 つ目の条件を &m<`a> の\def<三分性\fl<trichotomy>> と呼ぶことにする。
+      をともに満たすとき、&m<`a> を \def<順序数\fl<ordinal>> という。
+      また、1 つ目の条件を &m<`a> の \def<推移性\fl<transitivity>> と呼び、2 つ目の条件を &m<`a> の \def<三分性\fl<trichotomy>> と呼ぶことにする。
     >
   >
   \p<
@@ -236,8 +236,8 @@
   \thm|type="def"|<
     \p<
       半順序集合 &m<X> の部分集合 &m<S \subseteq; X> をとる。
-      任意の元 &m<x, y \in; X> に対し、&m<x \in; S> かつ &m<y \preceq; x> ならば &m<y \in; S> が成り立つとき、&m<S> を &m<X> の\def<切片\fl<segment>> という。
-      さらに、&m<S \neq; X> であるとき、&m<S> は\def<真\fl<proper>> であるという。
+      任意の元 &m<x, y \in; X> に対し、&m<x \in; S> かつ &m<y \preceq; x> ならば &m<y \in; S> が成り立つとき、&m<S> を &m<X> の \def<切片\fl<segment>> という。
+      さらに、&m<S \neq; X> であるとき、&m<S> は \def<真\fl<proper>> であるという。
     >
   >
   \thm|type="def"|<
@@ -246,7 +246,7 @@
       &mb<
         O (x) \coloneqq; `{y \in; X \mid; y \prec; x`} \subseteq; X
       >
-      を &m<x> が生成する &m<X> の\def<切片\fl<segment>> という。
+      を &m<x> が生成する &m<X> の \def<切片\fl<segment>> という。
     >
   >
   \thm|type="lem",id="segid"|<
@@ -449,7 +449,7 @@
   >
   \thm|type="def"|<
     \p<
-      整列集合 &m<X> に対し、&m<X \cong; `a> を満たすような順序数 &m<`a> を &m<X> の\def<順序型\fl<order type>> といい、&m<\op<ord> X> で表す。
+      整列集合 &m<X> に対し、&m<X \cong; `a> を満たすような順序数 &m<`a> を &m<X> の \def<順序型\fl<order type>> といい、&m<\op<ord> X> で表す。
     >
   >
   \h1<追記 (2020 年 5 月 31 日)>

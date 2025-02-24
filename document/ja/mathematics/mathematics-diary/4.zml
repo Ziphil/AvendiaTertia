@@ -26,7 +26,7 @@
           \ar|s="3",e="4",inv|<\sb<`n><T>> \ar|s="2",e="4"|<Gu>
         >
       >
-      が引き戻しであるとき、&m<`n> は\def<カルテシアン\fl<cartesian>> であるという。
+      が引き戻しであるとき、&m<`n> は \def<カルテシアン\fl<cartesian>> であるという。
     >
   >
   \p<
@@ -42,7 +42,7 @@
           \c; \c<X> \c<\longmapsto;> \c<(F X) b>
         >
       >
-      が正規であるとき、&m<F> は\def<正規\fl<normal>> であるという。
+      が正規であるとき、&m<F> は \def<正規\fl<normal>> であるという。
     >
   >
   \p<

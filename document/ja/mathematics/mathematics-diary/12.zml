@@ -54,7 +54,7 @@
         >
       >
       が可換であるとする。
-      このとき &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> と書き、これを &m<\scr<B>> 上の\def<添字付き圏\fl<indexed category>> という。
+      このとき &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> と書き、これを &m<\scr<B>> 上の \def<添字付き圏\fl<indexed category>> という。
     >
   >
   \p<
@@ -152,7 +152,7 @@
     >
     \p<
       によって定める。
-      この圏を &m<`C> による \def<Grothendieck 構成\fl<— construction>> という。
+      この圏を &m<`C> による  \def<Grothendieck 構成\fl<— construction>> という。
     >
   >
   \thm|type="prp"|<
@@ -209,7 +209,7 @@
   >
   \thm|type="def"|<
     \p<
-      添字付き圏 &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> について、上記の定義の記号で &m<\sb<`h><I>> および &m<\sb<`m><uv>> たちが全て恒等な自然変換であるとき、&m<`C> は\def<厳密\fl<strict>> であるという。
+      添字付き圏 &m<`C: \sp<\scr<B>><\circ;> \to; \bfrm<Cat>> について、上記の定義の記号で &m<\sb<`h><I>> および &m<\sb<`m><uv>> たちが全て恒等な自然変換であるとき、&m<`C> は \def<厳密\fl<strict>> であるという。
     >
   >
   \thm|type="prp"|<

@@ -14,7 +14,7 @@
   \thm|type="def"|<
     \p<
       トポス &m<\scr<E>> において、任意の全射 &m<e: X \headrarr; I> に対してある射 &m<s: I \to; X> が存在して &m<e \circ; s = \sb<\rm<id>><I>> を満たすとする。
-      このとき、&m<\scr<E>> は\def<選択公理\fl<axiom of choice>> を満たすという。
+      このとき、&m<\scr<E>> は \def<選択公理\fl<axiom of choice>> を満たすという。
     >
   >
   \thm|type="def"|<
@@ -29,7 +29,7 @@
       >
       が存在したとすると、&m<u> と &m<v> の少なくとも一方は同型射になっているとする。
       ここで、&m<P \bb<N>> は &m<\bb<N>> の冪対象である。
-      このとき、&m<\scr<E>> は\def<連続体仮説\fl<continuum hypothesis>> を満たすという。
+      このとき、&m<\scr<E>> は \def<連続体仮説\fl<continuum hypothesis>> を満たすという。
     >
   >
   \p<
@@ -64,7 +64,7 @@
       &mb<
         \sp<><\forall;> q \leq; p \ssbin; \sp<><\exists;> d \leq; q \ssbin; d \in; D
       >
-      が成り立つとき、&m<D> は\def<稠密\fl<dense>> であるという。
+      が成り立つとき、&m<D> は \def<稠密\fl<dense>> であるという。
     >
   >
   \thm|type="def"|<
@@ -73,7 +73,7 @@
       &mb<
         Jp \coloneqq; `{D \mid; &raw<&m<D> は &m<p> 上の稠密な篩>`}
       >
-      で定めたとき、&m<J> を\def<稠密位相\fl<dense topology>> という。
+      で定めたとき、&m<J> を \def<稠密位相\fl<dense topology>> という。
     >
   >
   \p<
@@ -264,7 +264,7 @@
   \thm|type="def"|<
     \p<
       &m<p \in; \sp<\bfrm<Set>><\sp<\bfrm<P>><\circ;>>> 上の篩 &m<S> をとる。
-      &m<S> が\def<閉\fl<closed>> であるとは、
+      &m<S> が \def<閉\fl<closed>> であるとは、
       &mb<
         \sp<><\forall;> q \leq; p \ssbin; (S \darr|bin|; q \in; Jq \implies; q \in; S)
       >
@@ -601,7 +601,7 @@
   >
   \thm|type="def"|<
     \p<
-      相異なる 2 元 &m<p, p' \in; \bfrm<P>> に対し、&m<q \leq; p> かつ &m<q \leq; p'> を満たす &m<q \in; \bfrm<P>> が存在しないとき、&m<p> と &m<p'> は\def<両立しない\fl<incompatible>> という。
+      相異なる 2 元 &m<p, p' \in; \bfrm<P>> に対し、&m<q \leq; p> かつ &m<q \leq; p'> を満たす &m<q \in; \bfrm<P>> が存在しないとき、&m<p> と &m<p'> は \def<両立しない\fl<incompatible>> という。
     >
   >
   \thm|type="lem",id="incomp"|<

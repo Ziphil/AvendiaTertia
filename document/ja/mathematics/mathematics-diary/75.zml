@@ -31,7 +31,7 @@
           \ar|s="2",e="5"|<\sb<`d><A>> \ar|s="5",e="4"|<! \sb<`e><A>> \ar|s="5",e="6",inv|<\sb<`e><!A>>
         >
       >
-      がともに可換であるとき、組 &m<(!, `d, `e)> を\def<コモナド\fl<comonad>> という。
+      がともに可換であるとき、組 &m<(!, `d, `e)> を \def<コモナド\fl<comonad>> という。
     >
   >
   \p<
@@ -77,7 +77,7 @@
       >
     >
     \p<
-      このような圏 &m<\sp<\scr<C>><!>> を、&m<(!, `d, `e)> の\def<余 Eilenberg–Moore 圏\fl<co— category>> という。
+      このような圏 &m<\sp<\scr<C>><!>> を、&m<(!, `d, `e)> の \def<余 Eilenberg–Moore 圏\fl<co— category>> という。
       また、&m<\sp<\scr<C>><!>> の対象は、&m<\scr<C>> 上の &m<!>-\def<余代数\fl<coalgebra>> と呼ばれる。
     >
   >
@@ -164,7 +164,7 @@
       >
     >
     \p<
-      このような圏 &m<\scr<C>> を、&m<(!, `d, `e)> の\def<余 Kleisli 圏\fl<co— category>> という。
+      このような圏 &m<\scr<C>> を、&m<(!, `d, `e)> の \def<余 Kleisli 圏\fl<co— category>> という。
     >
   >
   \thm|type="prp",id="kliso"|<
@@ -390,12 +390,12 @@
           \ar|s="1",e="2"|<m> \ar|s="2",e="3",shift="3"|<f> \ar|s="2",e="3",shift="-3",inv|<g>
         >
       >
-      を\def<分裂等化子\fl<split equaliser>> という。
+      を \def<分裂等化子\fl<split equaliser>> という。
     >
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の等化子について、それが &m<\scr<C>> を定義域とする任意の関手で保存されるとき、それを\def<絶対等化子\fl<absolute equaliser>> という。
+      圏 &m<\scr<C>> の等化子について、それが &m<\scr<C>> を定義域とする任意の関手で保存されるとき、それを \def<絶対等化子\fl<absolute equaliser>> という。
     >
   >
   \thm|type="prp",id="splabs"|<

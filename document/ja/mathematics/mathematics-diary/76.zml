@@ -37,7 +37,7 @@
           \ar|s="1",e="2",line="0",pos="18",name="c",inv|; \ar|s="3",e="2",line="0",pos="25",name="d"|; \ar|s="c",e="d",line="2"|<`h>
         >
       >
-      このとき、&m<L> を &m<K> に沿った &m<F> の\def<左 Kan 拡張\fl<left — extension>> といい、&m<`h> をその\def<単位\fl<unit>> という。
+      このとき、&m<L> を &m<K> に沿った &m<F> の \def<左 Kan 拡張\fl<left — extension>> といい、&m<`h> をその \def<単位\fl<unit>> という。
       また、&m<(L, `h)> は &m<\sb<\op<Lan>><K> F> で表される。
     >
   >
@@ -63,7 +63,7 @@
           \ar|s="1",e="2",line="0",pos="18",name="c",inv|; \ar|s="3",e="2",line="0",pos="25",name="d"|; \ar|s="d",e="c",line="2",inv|<`e>
         >
       >
-      このとき、&m<R> を &m<K> に沿った &m<F> の\def<右 Kan 拡張\fl<right — extension>> といい、&m<`e> をその\def<余単位\fl<counit>> という。
+      このとき、&m<R> を &m<K> に沿った &m<F> の \def<右 Kan 拡張\fl<right — extension>> といい、&m<`e> をその \def<余単位\fl<counit>> という。
       また、&m<(R, `e)> は &m<\sb<\op<Ran>><K> F> で表される。
     >
   >
@@ -308,7 +308,7 @@
   \thm|type="def"|<
     \p<
       関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとり、&m<(L, `h) = \sb<\op<Lan>><K> F> が存在するとする。
-      関手 &m<G: \scr<D> \to; \scr<E>> が &m<(G \circ; L, G * `h) = \sb<\op<Lan>><K> (G \circ; F)> を満たすとき、&m<G> は &m<\sb<\op<Lan>><K> F> を\def<保存する\fl<preserve>> という。
+      関手 &m<G: \scr<D> \to; \scr<E>> が &m<(G \circ; L, G * `h) = \sb<\op<Lan>><K> (G \circ; F)> を満たすとき、&m<G> は &m<\sb<\op<Lan>><K> F> を \def<保存する\fl<preserve>> という。
       &mb<
         \diag<
           \v<\scr<C>> \v<\scr<D>> \v<\scr<E>> \br;
@@ -323,7 +323,7 @@
   \thm|type="def"|<
     \p<
       関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとり、&m<(L, `h) = \sb<\op<Lan>><K> F> が存在するとする。
-      任意の &m<\scr<D>> の対象 &m<D> に対し、関手 &m<\op<Hom> (\hyphen;, D): \scr<D> \to; \sp<\bfrm<Set>><\circ;>> が &m<\sb<\op<Lan>><K> F> を保存するとき、&m<\sb<\op<Lan>><K> F> は\def<各点\fl<pointwise>> であるという。
+      任意の &m<\scr<D>> の対象 &m<D> に対し、関手 &m<\op<Hom> (\hyphen;, D): \scr<D> \to; \sp<\bfrm<Set>><\circ;>> が &m<\sb<\op<Lan>><K> F> を保存するとき、&m<\sb<\op<Lan>><K> F> は \def<各点\fl<pointwise>> であるという。
       &mb<
         \diag<
           \v<\scr<C>> \v<\scr<D>> \v<\sp<\bfrm<Set>><\circ;>> \br;

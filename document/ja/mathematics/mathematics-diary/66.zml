@@ -23,7 +23,7 @@
         >
       >
       が可換になるとする。
-      このとき、&m<A> は &m<m> に\def<直交する\fl<orthogonal>> という。
+      このとき、&m<A> は &m<m> に \def<直交する\fl<orthogonal>> という。
     >
   >
   \thm|type="def"|<
@@ -44,10 +44,10 @@
     >
     \ul<
       \li<
-        このとき、&m<\scr<A>> は &m<\scr<C>> の\def<直交クラス\fl<orthogonality class>> であるという。
+        このとき、&m<\scr<A>> は &m<\scr<C>> の \def<直交クラス\fl<orthogonality class>> であるという。
       >
       \li<
-        特に &m<\scr<M>> を集合サイズにとれるときは、&m<\scr<A>> は &m<\scr<C>> の\def<小直交クラス\fl<small-orthogonality class>> であるという。
+        特に &m<\scr<M>> を集合サイズにとれるときは、&m<\scr<A>> は &m<\scr<C>> の \def<小直交クラス\fl<small-orthogonality class>> であるという。
       >
       \li<
         特に &m<\scr<M>> に属する全ての射の始域と終域が &m<`k>-表示可能にとれるときは、&m<\scr<A>> は &m<\scr<C>> の &m<`k>-\def<直交クラス\fl<orthogonality class>> であるという。

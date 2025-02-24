@@ -16,7 +16,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<\sb<\rm<id>><X>: X \to; X> が &m<X> の弱正規形であるとき、&m<X> を\def<弱正規対象\fl<weak normal object>> という。
+      圏 &m<\scr<C>> の対象 &m<X> に対し、&m<\sb<\rm<id>><X>: X \to; X> が &m<X> の弱正規形であるとき、&m<X> を \def<弱正規対象\fl<weak normal object>> という。
     >
   >
   \p<
@@ -34,7 +34,7 @@
           \ar|s="3",e="4",inv|<\sb<`n><T>> \ar|s="2",e="4"|<Gu>
         >
       >
-      が弱引き戻しであるとき、&m<`n> は\def<弱カルテシアン\fl<weak cartesian>> であるという。
+      が弱引き戻しであるとき、&m<`n> は \def<弱カルテシアン\fl<weak cartesian>> であるという。
     >
   >
   \p<

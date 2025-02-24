@@ -22,7 +22,7 @@
   \thm|type="def"|<
     \p<
       2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \bfrm<1> \to; \scr<C>, W: \bfrm<1> \to; \bfrm<Cat>> があるとする。
-      上記の通り &m<\bar<F>> と &m<\bar<W>> を定めたとき、&m<\sb<\lim;><W> F> を &m<\bar<F>> と &m<\bar<W>> の\def<余テンソル対象\fl<cotensor object>> といい、&m<\bar<W> \pitchfork; \bar<F>> で表す。
+      上記の通り &m<\bar<F>> と &m<\bar<W>> を定めたとき、&m<\sb<\lim;><W> F> を &m<\bar<F>> と &m<\bar<W>> の \def<余テンソル対象\fl<cotensor object>> といい、&m<\bar<W> \pitchfork; \bar<F>> で表す。
     >
   >
   \p<
@@ -32,7 +32,7 @@
   \thm|type="def"|<
     \p<
       2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \bfrm<1> \to; \scr<C>, W: \bfrm<1> \to; \bfrm<Cat>> があるとする。
-      上記の通り &m<\bar<F>> と &m<\bar<W>> を定めたとき、&m<\sb<\op<colim>><W> F> を &m<\bar<F>> と &m<\bar<W>> の\def<テンソル対象\fl<tensor object>> といい、&m<\bar<W> \odot; \bar<F>> で表す。
+      上記の通り &m<\bar<F>> と &m<\bar<W>> を定めたとき、&m<\sb<\op<colim>><W> F> を &m<\bar<F>> と &m<\bar<W>> の \def<テンソル対象\fl<tensor object>> といい、&m<\bar<W> \odot; \bar<F>> で表す。
     >
   >
   \p<

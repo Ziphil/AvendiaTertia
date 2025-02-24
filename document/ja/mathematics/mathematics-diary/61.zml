@@ -23,7 +23,7 @@
           \c; \c<\ltort; s: S \to; C \rtort;> \c<\longmapsto;> \c<S>
         >
       >
-      の余錐 &m<(s: Gs \to; C) \sb<><s \in; \scr<S> `/ C>> が余極限になるとき、&m<\scr<S>> は\def<稠密\fl<dense>> であるという。
+      の余錐 &m<(s: Gs \to; C) \sb<><s \in; \scr<S> `/ C>> が余極限になるとき、&m<\scr<S>> は \def<稠密\fl<dense>> であるという。
     >
   >
   \thm|type="def",id="ryon"|<
@@ -40,7 +40,7 @@
           >>
         >
       >
-      を\def<制限 Yoneda 埋め込み\fl<restricted — embedding>>という。
+      を \def<制限 Yoneda 埋め込み\fl<restricted — embedding>>という。
     >
   >
   \p<
