@@ -75,7 +75,7 @@
     >
     \p<
       さて、仮定から &m<A> は命題論理的恒真なので、特に &m<\sbsp<V><`a><\scr<M>> (A) = 1> である。
-      したがって、命題 &m<\wheart;> より &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つ。
+      したがって、主張 &m<\wheart;> より &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つ。
       &m<`a> と &m<\scr<M>> は任意だったので、これで &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> が示された。
     >
   >
@@ -135,7 +135,7 @@
       今 &m<`b> は任意だったので、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; B> が成り立つ。
     >
     \p<
-      最後に、&m<`a> と &m<\scr<M>> は任意だったので、これで命題 &m<\wheart;> は示された。
+      最後に、&m<`a> と &m<\scr<M>> は任意だったので、これで主張 &m<\wheart;> は示された。
     >
   >
   \thm|type="thm"|<
