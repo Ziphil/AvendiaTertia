@@ -1,0 +1,294 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<重要な恒真式 \part<2>>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2025 年 2 月 25 日)>
+  \p<
+    前回は、全てのクラスにおいて成り立つ恒真式の例をいくつか挙げた。
+    今回は、全てのクラスに対して恒真というわけではないが、条件を付けたクラスに対しては恒真になるような式を扱う。
+    これらは、特定の様相を念頭に置くと意味的にも成り立ってほしいものなので、重要である。
+  >
+  \p<
+    今回扱うのは以下の 5 つの式 (スキーマ) である。
+  >
+  \thm|type="def",id="schdef"|<
+    \p<
+      スキーマ &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> を、各式 &m<A> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \cc<\sb<\bfrm<D>><A>><\colonequiv;><\tbox; A \buharprarr; \trhombus; A>
+          \cc<\sb<\bfrm<T>><A>><\colonequiv;><\tbox; A \buharprarr; A>
+          \cc<\sb<\bfrm<B>><A>><\colonequiv;><A \buharprarr; \tbox; \trhombus; A>
+          \cc<\sb<\bfrm<4>><A>><\colonequiv;><\tbox; A \buharprarr; \tbox; \tbox; A>
+          \cc<\sb<\bfrm<5>><A>><\colonequiv;><\trhombus; A \buharprarr; \tbox; \trhombus; A>
+        >
+      >
+      とすることで定める。
+    >
+  >
+  \p<
+    &m<\bfrm<4>> と &m<\bfrm<5>> という名前は、Lewis–Langford\mref|type="bib",ref="lslx"|; の研究に由来する。
+    Lewis–Langford は様相論理の演繹体系を公理が少ない順に 5 段階提案しており、そのうち 4 段階目で追加されるのが &m<\bfrm<4>> で、5 段階目で追加されるのが &m<\bfrm<5>> である。
+    この 4 段階目と 5 段階目の体系はそれぞれ &m<\bfrm<S4>> と &m<\bfrm<S5>> と呼ばれ、以降も活発に研究されており、この勉強ノートでも後日触れる予定である。
+    3 段階目以前の体系は、今扱っているフレームによる意味論が使えないため、この勉強ノートでは少なくともしばらくは扱わない。
+  >
+  \p<
+    さて、今定義した 5 つの式は全て様相式から様相式への含意の形をしている。
+    そこで、次のような一般化をしよう。
+    なおここで、自然数 &m<n> に対し、&m<\sp<\tbox;><n> A> や &m<\sp<\trhombus;><n> A> によって &m<A> にそれぞれ &m<\tbox;> や &m<\trhombus;> を &m<n> 回適用した式を表すことにする。
+  >
+  \thm|type="def"|<
+    \p<
+      自然数 &m<k, l, m, n> に対してスキーマ &m<\sp<\bfrm<G>><klmn>> を、各式 &m<A> に対し、
+      &mb<
+        \sbsp<\bfrm<G>><A><klmn> \colonequiv; \sp<\trhombus;><k> \sp<\box;><l> A \buharprarr; \sp<\tbox;><m> \sp<\trhombus;><n> A
+      >
+      とすることで定める。
+    >
+  >
+  \p<
+    すると、最初に定義した 5 つのスキーマは、これの特殊な場合として、
+    &mb<
+      \bfrm<D> \equiv; \sp<\bfrm<G>><0101> \xquad;
+      \bfrm<T> \equiv; \sp<\bfrm<G>><0100> \xquad;
+      \bfrm<B> \equiv; \sp<\bfrm<G>><0011> \xquad;
+      \bfrm<4> \equiv; \sp<\bfrm<G>><0120> \xquad;
+      \bfrm<5> \equiv; \sp<\bfrm<G>><1011>
+    >
+    のように書ける。
+  >
+  \p<
+    これら 5 つのスキーマは、全てのモデルに対して恒真にはならないが、モデルの世界の間の二項関係が特定の性質を満たすという条件のもとでは恒真になる。
+    その二項関係の性質とは次の 5 つである。
+    Euclid 性は若干マイナーだが、他はよく知られた性質であろう。
+  >
+  \thm|type="def",id="reldef"|<
+    \p<
+       集合 &m<W> 上の二項関係 &m<\sim;> をとる。
+       これの性質を、
+    >
+    \ul<
+      \li*<
+        任意の &m<`a \in; W> に対して、ある &m<`b \in; W> が存在して &m<`a \sim; `b> が成り立つとき、&m<\sim;> は \def<直列\fl<serial>> であるという。
+      >
+      \li*<
+        任意の &m<`a \in; W> に対して &m<`a \sim; `a> が成り立つとき、&m<\sim;> は \def<反射的\fl<reflexive>> であるという。
+      >
+      \li*<
+        任意の &m<`a, `b \in; W> に対して、&m<`a \sim; `b> ならば &m<`b \sim; `a> が成り立つとき、&m<\sim;> は \def<対称的\fl<symmetric>> であるという。
+      >
+      \li*<
+        任意の &m<`a, `b, `g \in; W> に対して、&m<`a \sim; `b> かつ &m<`b \sim; `g> ならば &m<`a \sim; `g> が成り立つとき、&m<\sim;> は \def<推移的\fl<transitive>> であるという。
+      >
+      \li*<
+        任意の &m<`a, `b, `g \in; W> に対して、&m<`a \sim; `b> かつ &m<`a \sim; `g> ならば &m<`b \sim; `g> が成り立つとき、&m<\sim;> は \def<Euclid 的\fl<—ean>> であるという。
+      >
+    >
+    \p<
+      と定める。
+    >
+  >
+  \p<
+    実はこれらの性質は、1 つの概念の特殊な場合として記述できる。
+    そのために、一旦準備をしよう。
+  >
+  \thm|type="def"|<
+    \p<
+      自然数 &m<n> をとる。
+      集合 &m<W> 上の二項関係 &m<\sim;> に対し、同じく集合 &m<W> 上の二項関係 &m<\sp<\sim|ord|;><n>> を、再帰的に
+    >
+    \ul<
+      \li*<
+        &m<n = 0> のとき。
+        各 &m<`a, `b \in; W> に対し、&m<`a \sp<\sim;><0> `b> であるとは、 &m<`a = `b> が成り立つこととする。 
+      >
+      \li*<
+        &m<n \geq; 1> のとき。
+        各 &m<`a, `b \in; W> に対し、&m<`a \sp<\sim;><n> `b> であるとは、ある &m<`g \in; W> が存在して &m<`a \sp<\sim;><n - 1> `g> かつ &m<`g \sim; `b> が成り立つこととする。 
+      >
+    >
+    \p<
+      によって定義する。
+    >
+  >
+  \p<
+    すなわち、自然数 &m<n> と二項関係 &m<\sim;> に対して、元 &m<`a, `b \in; W> が &m<`a \sp<\sim;><n> `b> を満たすのは、
+    &mb<
+      `a \sim; \sb<`g><1> \sim; \cdots; \sim; \sb<`g><n - 1> \sim; `b
+    >
+    となるような元 &m<\sb<`g><1>, \cdots;, \sb<`g><n - 1> \in; W> が存在するときである。
+    また、&m<\sp<\sim|ord|;><1>> はもとの &m<\sim;> と同一で、&m<\sp<\sim|ord|;><0>> は恒等関係である。
+  >
+  \p<
+    この概念を用いると、様相が複数適用された式の妥当性を次のように記述できる。
+  >
+  \thm|type="prp",id="nth"|<
+    \p<
+      自然数 &m<n> をとる。
+      モデル &m<\scr<M>> とその世界 &m<`a \in; W> を考える。
+      式 &m<A> に対し、
+    >
+    \ol<
+      \li*<
+        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><n> A> が成り立つことは、全ての &m<`b \in; W> に対して、&m<`a \sp<\sim;><n> `b> ならば &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つことと同値である。
+      >
+      \li*<
+        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\trhombus;><n> A> が成り立つことは、ある &m<`b \in; W> が存在して、&m<`a \sp<\sim;><n> `b> かつ &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つことと同値である。
+      >
+    >
+    \p<
+      がともに成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \label<主張 1>
+      &m<n> に関する帰納法による。
+      &m<n = 0> のときは明らかである。
+      &m<n \geq; 1> のときは、途中で帰納法の仮定を使うことで、
+    >
+    \ul<
+      \li*<
+        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><n> A> が成り立つ。
+      >
+      \li*<
+        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; (\sp<\tbox;><n - 1> A)> が成り立つ。
+      >
+      \li*<
+        任意の &m<`g \in; W> に対して、&m<`a \sim; `g> ならば &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><n - 1> A> が成り立つ。
+      >
+      \li*<
+        任意の &m<`g \in; W> に対して、&m<`a \sim; `g> ならば、さらに任意の &m<`b \in; W> に対して、&m<`g \sp<\sim;><n - 1> `b> ならば &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つ。
+      >
+      \li*<
+        任意の &m<`g, `b \in; W> に対して、&m<`a \sim; `g> かつ &m<`g \sp<\sim;><n - 1> `b> ならば &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つ。
+      >
+      \li*<
+        任意の &m<`g \in; W> に対して、&m<`a \sp<\sim;><n> `b> ならば、&m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つ。
+      >
+    >
+    \p<
+      が順に同値であることが分かる。
+      これで主張は示された。
+    >
+    \p<
+      \label<主張 2>
+      上と全く同じ議論によって示すことができる。
+    >
+  >
+  \p<
+    では、\mref|type="thm",ref="reldef"|; の一般化の話に戻ろう。
+    二項関係に対し、近親性という性質を以下のように定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      自然数 &m<k, l, m, n> をとる。
+      集合 &m<W> 上の二項関係 &m<\sim;> が次の性質を満たすとする。
+      すなわち、任意の元 &m<`a, `b, `g \in; W> に対し、&m<`a \sp<\sim;><k> `g> かつ &m<`a \sp<\sim;><m> `b> ならば、ある元 &m<`d \in; W> が存在して &m<`g \sp<\sim;><l> `d> かつ &m<`b \sp<\sim;><n> `d> が成り立つ。
+      このとき、&m<\sim;> は &m<(k, l, m, n)>-\def<近親的\fl<incestual>> であるという。
+    >
+  >
+  \p<
+    すると、\mref|type="thm",ref="reldef"|; で挙げた 5 つの二項関係の 性質は、全て近親性の特殊な場合である。
+  >
+  \thm|type="prp",id="relequiv"|<
+    \p<
+       集合 &m<W> 上の二項関係 &m<\sim;> に対して、
+    >
+    \ul<
+      \li*<
+        &m<\sim;> が &m<(0, 1, 0, 1)>-近親的であることは、&m<\sim;> が直列であることと同値である。
+      >
+      \li*<
+        &m<\sim;> が &m<(0, 1, 0, 0)>-近親的であることは、&m<\sim;> が反射的であることと同値である。
+      >
+      \li*<
+        &m<\sim;> が &m<(0, 0, 1, 1)>-近親的であることは、&m<\sim;> が対称であることと同値である。
+      >
+      \li*<
+        &m<\sim;> が &m<(0, 1, 2, 0)>-近親的であることは、&m<\sim;> が推移的であることと同値である。
+      >
+      \li*<
+        &m<\sim;> が &m<(1, 0, 1, 1)>-近親的であることは、&m<\sim;> が Euclid 的であることと同値である。
+      >
+    >
+    \p<
+      が全て成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      定義からすぐに分かる。
+    >
+  >
+  \p<
+    以降、世界の間の二項関係が何らかの性質 &m<`F> を満たすようなモデルのことを、単に「&m<`F> を満たすモデル」と言うことにする。
+    例えば、反射的なモデルとは、世界の間の二項関係が反射的であるようなモデルのことである。
+  >
+  \p<
+    さらに、自然数 &m<k, l, m, n> に対し、&m<(k, l, m, n)>-近親的なモデルの全体を &m<\sp<\bfrm<Inces>><klmn>> と書くことにする。 
+    同様に、直列, 反射的, 対照的, 推移的, Euclid 的なモデルの全体を順に &m<\bfrm<Ser>>, &m<\bfrm<Refl>>, &m<\bfrm<Sym>>, &m<\bfrm<Tran>>, &m<\bfrm<Euc>> と書くことにする。
+    すると、\mref|type="thm",ref="relequiv"|; により、
+    &mb<
+      \bfrm<Ser> = \sp<\bfrm<Inces>><0101> \xquad;
+      \bfrm<Refl> = \sp<\bfrm<Inces>><0100> \xquad;
+      \bfrm<Sym> = \sp<\bfrm<Inces>><0011> \xquad;
+      \bfrm<Tran> = \sp<\bfrm<Inces>><0120> \xquad;
+      \bfrm<Euc> = \sp<\bfrm<Inces>><1011>
+    >
+    である。
+  >
+  \p<
+    以上の準備のもと、\mref|type="thm",ref="schdef"|; にある 5 つのスキーマが、それぞれ\mref|type="thm",red="reldef"|; にある 5 つの性質を満たすモデルのクラスにおいて恒真になることを示そう。
+  >
+  \thm|type="thm"|<
+    \p<
+      自然数 &m<k, l, m, n> に対して、
+      &mb<
+        \sp<\vxdash|ord|;><\sp<\bfrm<Inces>><klmn>> \srel; \sp<\bfrm<B>><klmn>
+      >
+      が成り立つ。
+      特に、
+      &mb<
+        \sp<\vxdash|ord|;><\bfrm<Ser>> \srel; \bfrm<D> \xquad;
+        \sp<\vxdash|ord|;><\bfrm<Refl>> \srel; \bfrm<T> \xquad;
+        \sp<\vxdash|ord|;><\bfrm<Sym>> \srel; \bfrm<B> \xquad;
+        \sp<\vxdash|ord|;><\bfrm<Tran>> \srel; \bfrm<4> \xquad;
+        \sp<\vxdash|ord|;><\bfrm<Euc>> \srel; \bfrm<5>
+      >
+      が全て成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      後半の 5 つの命題は前半の特殊な場合である。
+      以下で前半の主張を示す。
+      適宜\mref|type="thm",ref="nth"|; を用いる。
+    >
+    \p<
+      任意にモデル &m<\scr<M> \in; \sp<\bfrm<Inces>><klmn>> とその世界 &m<`a \in; \scr<M>> をとる。
+      &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\trhombus;><k> \sp<\tbox;><l> A> を仮定して、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><m> \sp<\trhombus;><n> A> を示せば良い。
+      そのために、任意に &m<`b \in; \scr<M>> であって &m<`a \sp<\sim;><m> `b> を満たすものをとる。
+      ここで仮定から、&m<`g \in; \scr<M>> であって &m<`a \sp<\sim;><k> `g> を満たすものが存在して、&m<\sbsp<\vxdash|ord|;><`g><\scr<M>> \srel; \sp<\tbox;><l> A> が成り立つ。
+      ここで、&m<\sim;> は &m<(k, l, m, n)>-親近的であるから、ある &m<`d \in; \scr<M>> が存在して、&m<`g \sp<\sim;><l> `d> かつ &m<`b \sp<\sim;><n> `d> がともに成り立つ。
+      このうち &m<`g \sp<\sim;><l> `d> と &m<\sbsp<\vxdash|ord|;><`g><\scr<M>> \srel; \sp<\tbox;><l> A> により、&m<\sbsp<\vxdash|ord|;><`d><\scr<M>> \srel; A> が得られる。
+      したがって、今 &m<`b \sp<\sim;><n> `d> であるから、&m<&m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; \sp<\trhombus;><n> A>> が分かる。
+      最後に、&m<`b> の任意性により、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><m> \sp<\trhombus;><n> A> が示された。
+    >
+  >
+  \p<
+    次回の内容は、どうしようか考え中である。
+    モデルの話を続けて生成モデルやフィルトレーションを扱うか、一旦モデルの話を中断して演繹体系の話に移るか、どちらかにする予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+    \li|id="lslx"|<C. I. Lewis, C. H. Langford (1932)『Symbolic Logic』Dover>
+  >
+
+>
