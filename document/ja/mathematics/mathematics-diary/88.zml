@@ -1,0 +1,135 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<様相論理の演繹体系>
+  \use-math|prefix="4"|;
+
+  \h1<日記 (2025 年 2 月 26 日)>
+  \p<
+    今回は、意味論の話を一度置いておいて、演繹体系の話に移ろうと思う。
+  >
+  \p<
+    まずは、演繹体系周りの用語と記号を確認しておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      式の集合を \def<理論\fl<theory>> という。
+    >
+  >
+  \p<
+    基本的に「理論」といった場合は、何らかの意味で正しいと思えるような式の集合を指す。
+    特に、公理と推論規則から成る何らかの演繹体系において証明できる式全体の集合を指すことが多い。
+    そこで、以降しばしば、演繹体系 &m<\frak<D>> とその体系で証明できる式全体 &m<\rm<Th> (\frak<D>)> を同一視する。
+    以下の定理の定義も、この同一視によるものである。
+  >
+  \thm|type="def"|<
+    \p<
+      理論 &m<\frak<T>> に対し、その元 &m<A \in; \frak<T>> の \def<定理\fl<theorem>> という。
+      このとき、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A> と書く。
+    >
+  >
+  \p<
+    さて、我々は初回の \a|href="84.html"|<2 月 23 日>に、様相論理における式を、命題論理の式に &m<\tbox;> と &m<\trhombus;> という 2 つの形の様相演算子を追加する形で定義した。
+    この様相演算子の解釈には、「～というのは必然である」や「～ということは常識である」など様々あり、どのような解釈をするかによって成り立ってほしい定理は変わり得る。
+    そのため、様相論理の演繹体系は様々あり、特に公理の選び方にいくつもの種類がある。
+    そのようなもののうち、一旦我々が考えるのは、次で定義する正規性を満たす理論である。
+  >
+  \thm|type="def"|<
+    \p<
+      理論 &m<\frak<T>> と推論規則 &m<`D> を考え、&m<`D> を
+      &mb<
+        \tree<\axm<\sb<A><1>> \axm<\cdots;> \axm<\sb<A><n>> \infr|n="3"|<B><`D><>>
+      >
+      と書く。
+      &m<`D> の仮定 &m<\sb<A><1>, \cdots;, \sb<A><n>> が &m<\frak<T>> に属するならば、それに対応する結論 &m<B> も &m<\frak<T>> に属するとき、&m<\frak<T>> は &m<`D> で \def<閉じている\fl<closed>>
+      という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      理論 &m<\frak<T>> が、3 条件
+    >
+    \ul<
+      \li*<
+        全ての命題論理的恒真式は &m<\frak<T>> に属する。
+      >
+      \li*<
+        スキーマ &m<\bfrm<K>, \sp<\bfrm<Df><\trhombus;>>> を、各式 &m<A, B> に対し、
+        &mb<
+          \array|align="rcl"|<
+            \cc<\sb<\bfrm<K>><AB>><\colonequiv;>< \tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)>
+            \cc<\sbsp<\bfrm<Df>><A><\trhombus;>><\colonequiv;><\trombus; A \buharplrarr; \neg; \tbox; \neg; A>
+          >
+        >
+        と定義するとき、これらはどちらも &m<\frak<T>> に含まれる。
+      >
+      \li*<
+        推論規則
+        &mb<
+          \tree<\axm<A> \axm<A \buharprarr; B> \infr|n="2"|<B><\rm<MP>><>> \xquad;
+          \tree<\axm<A> \infr|n="1"|<\tbox; A><\rm<RN>>>
+        >
+        で &m<\frak<T>> は閉じている。
+      >
+    >
+    \p<
+      を満たすとする。
+      このとき、&m<\frak<T>> は \def<正規\fl<normal>> であるという。
+    >
+  >
+  \p<
+    これを満たす最小の演繹体系は &m<\bfrm<K>> と呼ばれ、以降の議論のベースとなる。
+  >
+  \thm|type="def"|<
+    \p<
+      演繹体系 &m<\bfrm<K>> を、
+    >
+    \ul<
+      \li*<
+        公理は、全ての命題論理的恒真式と上記 &m<\bfrm<K>, \sp<\bfrm<Df>><\trhombus;>> の全体とする。
+      >
+      \li*<
+        推論規則は、上記 MP, RN とする。
+      >
+    >
+    \p<
+      で定める。
+    >
+  >
+  \p<
+    あらゆる命題論理的恒真式を公理に入れるのは若干乱暴ではあるが、様相論理の本質は様相なので、様相に関わらない部分の議論を省略するためにこのようにしている。
+  >
+  \p<
+    この &m<\bfrm<K>> は必要最低限の公理だけを入れたものなので、特定の様相演算子の解釈では成り立ってほしい式が証明できないことがある。
+    特に、\a|href="87.html#schdef"|<定義 3.1> にある &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> はどれもこの公理だけからは証明できない。
+    そこで、これらのうちいくつかを &m<\bfrm<K>> に公理として追加した演繹体系も考えたく、そのために記号を用意しておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      スキーマ &m<\sb<`G><1>, \cdots;, \sb<`G><n>> に対し、&m<\bfrm<K>> に &m<\sb<`G><1>, \cdots;, \sb<`G><n>> の全体を公理として追加して得られる演繹体系を、&m<\bfrm<K> `[\sb<`G><1>, \cdots;, \sb<`G><n>`]> で表す。
+    >
+  >
+  \p<
+    &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> の追加の仕方は全部で 32 通りあるが、いくつかの追加方法は結局等価な演繹体系を与えるので、最終的に得られる異なる演繹体系はこれより少なく 15 種類であることが知られている。
+    この 15 種類のうちで歴史的に重要なのが、&m<\bfrm<K> `[\bfrm<D>`], \bfrm<K> `[\bfrm<T>`], \bfrm<K> `[\bfrm<T>, \bfrm<B>`], \bfrm<K> `[\bfrm<T>, \bfrm<4>`], \bfrm<K> `[\bfrm<T>, \bfrm<5>`]> の 5 種類である。
+    &m<\bfrm<K> `[\bfrm<D>`]> は、様相を「～は義務である」と「～は許されている」で解釈する義務論理のベースである。
+    また &m<\bfrm<K> `[\bfrm<T>`]> は、様相を「～は必然である」と「～は可能である」と解釈する真理論理のベースである。
+    &m<\bfrm<K> `[\bfrm<T>, \bfrm<B>`]> は、Brouwer 様相論理と呼ばれてよく研究された。
+    こう呼ばれてはいるが、Brouwer との直接的な関係は薄いようである。
+    最後の &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> と &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> は、それぞれ &m<\bfrm<S4>> と &m<\bfrm<S5>> とも呼ばれ、様相論理の黎明期に Lewis–Langford\mref|type="bib",ref="lslx"|; が定式化したものである。
+  >
+  \p<
+    さて、これで意味論と演繹体系の定義が終わったので、やはり気になるのは健全性, 完全性, 決定可能性である。
+    この勉強ノートの一旦の目標をこれらを示すこととしよう。
+    ただ次回はまず、最も弱い体系である &m<\bfrm<K>> でどのような式が証明できるかを見ていくことにする。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+    \li|id="lslx"|<C. I. Lewis, C. H. Langford (1932)『Symbolic Logic』Dover>
+  >
+
+>
