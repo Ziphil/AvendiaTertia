@@ -197,12 +197,12 @@
   \prf<
     \p<
       &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> を仮定する。
-      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとり、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \box; A> を示す。
+      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとり、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> を示す。
     >
     \p<
       任意に &m<`b \in; \scr<M>> であって &m<`a \sim; `b> を満たすものをとる。
       すると、仮定の &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> から、特に &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が分かる。
-      &m<`b> は任意だったので、これで &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \box; A> が示された。
+      &m<`b> は任意だったので、これで &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> が示された。
     >
   >
   \p<

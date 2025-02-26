@@ -79,7 +79,7 @@
         任意の &m<`a \in; W> に対して &m<`a \sim; `a> が成り立つとき、&m<\sim;> は \def<反射的\fl<reflexive>> であるという。
       >
       \li*<
-        任意の &m<`a, `b \in; W> に対して、&m<`a \sim; `b> ならば &m<`b \sim; `a> が成り立つとき、&m<\sim;> は \def<対称的\fl<symmetric>> であるという。
+        任意の &m<`a, `b \in; W> に対して、&m<`a \sim; `b> ならば &m<`b \sim; `a> が成り立つとき、&m<\sim;> は \def<対称\fl<symmetric>> であるという。
       >
       \li*<
         任意の &m<`a, `b, `g \in; W> に対して、&m<`a \sim; `b> かつ &m<`b \sim; `g> ならば &m<`a \sim; `g> が成り立つとき、&m<\sim;> は \def<推移的\fl<transitive>> であるという。
@@ -193,7 +193,7 @@
     >
   >
   \p<
-    すると、\mref|type="thm",ref="reldef"|; で挙げた 5 つの二項関係の 性質は、全て近親性の特殊な場合である。
+    すると、\mref|type="thm",ref="reldef"|; で挙げた 5 つの二項関係の性質は、全て近親性の特殊な場合である。
   >
   \thm|type="prp",id="relequiv"|<
     \p<
@@ -231,7 +231,7 @@
   >
   \p<
     さらに、自然数 &m<k, l, m, n> に対し、&m<(k, l, m, n)>-近親的なモデルの全体を &m<\sp<\bfrm<Inces>><klmn>> と書くことにする。 
-    同様に、直列, 反射的, 対照的, 推移的, Euclid 的なモデルの全体を順に &m<\bfrm<Ser>>, &m<\bfrm<Refl>>, &m<\bfrm<Sym>>, &m<\bfrm<Tran>>, &m<\bfrm<Euc>> と書くことにする。
+    同様に、直列, 反射的, 対称, 推移的, Euclid 的なモデルの全体を順に &m<\bfrm<Ser>>, &m<\bfrm<Refl>>, &m<\bfrm<Sym>>, &m<\bfrm<Tran>>, &m<\bfrm<Euc>> と書くことにする。
     すると、\mref|type="thm",ref="relequiv"|; により、
     &mb<
       \bfrm<Ser> = \sp<\bfrm<Inces>><0101> \xquad;
