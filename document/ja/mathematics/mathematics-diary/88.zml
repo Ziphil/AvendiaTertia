@@ -26,7 +26,7 @@
   >
   \thm|type="def"|<
     \p<
-      理論 &m<\frak<T>> に対し、その元 &m<A \in; \frak<T>> の \def<定理\fl<theorem>> という。
+      理論 &m<\frak<T>> に対し、その元 &m<A \in; \frak<T>> を &m<\frak<T>> の \def<定理\fl<theorem>> という。
       このとき、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A> と書く。
     >
   >
