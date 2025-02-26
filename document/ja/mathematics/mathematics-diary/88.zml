@@ -60,7 +60,7 @@
         &mb<
           \array|align="rcl"|<
             \cc<\sb<\bfrm<K>><AB>><\colonequiv;>< \tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)>
-            \cc<\sbsp<\bfrm<Df>><A><\trhombus;>><\colonequiv;><\trombus; A \buharplrarr; \neg; \tbox; \neg; A>
+            \cc<\sbsp<\bfrm<Df>><A><\trhombus;>><\colonequiv;><\trhombus; A \buharplrarr; \neg; \tbox; \neg; A>
           >
         >
         と定義するとき、これらはどちらも &m<\frak<T>> に含まれる。
