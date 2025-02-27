@@ -249,7 +249,7 @@
     \p<
       自然数 &m<k, l, m, n> に対して、
       &mb<
-        \sp<\vxdash|ord|;><\sp<\bfrm<Inces>><klmn>> \srel; \sp<\bfrm<B>><klmn>
+        \sp<\vxdash|ord|;><\sp<\bfrm<Inces>><klmn>> \srel; \sp<\bfrm<G>><klmn>
       >
       が成り立つ。
       特に、
