@@ -80,7 +80,12 @@
     >
   >
   \p<
-    これを満たす最小の演繹体系は &m<\bfrm<K>> と呼ばれ、以降の議論のベースとなる。
+    ここでも注意すべきなのは、正規な理論 &m<\frak<T>> と式 &m<A> に対して、規則 RN により &m<\sp<\vxdash|ord|;><\frak<T>> \srel; A> ならば &m<\sp<\vxdash|ord|;><\frak<T>> \srel; \tbox; A> が成り立つが、だからといって &m<\sp<\vxdash|ord|;><\frak<T>> \srel; A \buharprarr; \tbox; A> が成り立つわけではない点である。
+    後者は &m<\frak<T>> にかなり強い公理を加えない限り証明できない。  
+  >
+  \p<
+    正規性を満たす最小の演繹体系は &m<\bfrm<K>> と呼ばれ、以降の議論のベースとなる。
+    改めて定義しておこう。
   >
   \thm|type="def"|<
     \p<
