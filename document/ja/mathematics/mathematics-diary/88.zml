@@ -56,11 +56,11 @@
         全ての命題論理的恒真式は &m<\frak<T>> に属する。
       >
       \li*<
-        スキーマ &m<\bfrm<K>, \sp<\bfrm<Df><\trhombus;>>> を、各式 &m<A, B> に対し、
+        スキーマ &m<\bfrm<K>, \sp<\bfrm<Dual>><\trhombus;>> を、各式 &m<A, B> に対し、
         &mb<
           \array|align="rcl"|<
             \cc<\sb<\bfrm<K>><AB>><\colonequiv;>< \tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)>
-            \cc<\sbsp<\bfrm<Df>><A><\trhombus;>><\colonequiv;><\trhombus; A \buharplrarr; \neg; \tbox; \neg; A>
+            \cc<\sbsp<\bfrm<Dual>><A><\trhombus;>><\colonequiv;><\trhombus; A \buharplrarr; \neg; \tbox; \neg; A>
           >
         >
         と定義するとき、これらはどちらも &m<\frak<T>> に含まれる。
@@ -88,7 +88,7 @@
     >
     \ul<
       \li*<
-        公理は、全ての命題論理的恒真式と上記 &m<\bfrm<K>, \sp<\bfrm<Df>><\trhombus;>> の全体とする。
+        公理は、全ての命題論理的恒真式と上記 &m<\bfrm<K>, \sp<\bfrm<Dual>><\trhombus;>> の全体とする。
       >
       \li*<
         推論規則は、上記 MP, RN とする。
@@ -118,7 +118,7 @@
     また &m<\bfrm<K> `[\bfrm<T>`]> は、様相を「～は必然である」と「～は可能である」と解釈する真理論理のベースである。
     &m<\bfrm<K> `[\bfrm<T>, \bfrm<B>`]> は、Brouwer 様相論理と呼ばれてよく研究された。
     こう呼ばれてはいるが、Brouwer との直接的な関係は薄いようである。
-    最後の &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> と &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> は、それぞれ &m<\bfrm<S4>> と &m<\bfrm<S5>> とも呼ばれ、様相論理の黎明期に Lewis–Langford\mref|type="bib",ref="lslx"|; が定式化したものである。
+    最後の &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> と &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> は、それぞれ &m<\bfrm<S4>> と &m<\bfrm<S5>> とも呼ばれ、様相論理の黎明期に Lewis–Langford\mref|type="bib",ref="lslx"|; が定式化したものと同等である。
   >
   \p<
     さて、これで意味論と演繹体系の定義が終わったので、やはり気になるのは健全性, 完全性, 決定可能性である。

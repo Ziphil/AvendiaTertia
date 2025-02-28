@@ -82,25 +82,31 @@
   \p<
     この事実は、「命題論理的に妥当な式変形は様相論理でも妥当」という形で用いられることが多い。
     厳密に述べれば次のようになる。
+    ここで、式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> に対して、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>> は左から順に &m<\wedge;> を適用した式を表すものとする。
+    また、&m<n = 0> のときのこの式は &m<\top;> を表すものとする。
   >
-  \thm|type="prp",id="plx"|<
+  \thm|type="prp",id="rpl"|<
     \p<
       任意のモデルのクラス &m<\frak<C>> をとる。
-      式 &m<A, A'> に対し、&m<A \buharprarr; A'> が命題論理的恒真であれば、
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> が命題論理的恒真であれば、
       &mb<
-        \sp<\vxdash|ord|;><\frak<C>> \srel; A \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; A'
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1> \scand; \cdots; \scand; \sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n> \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; B
       >
       が成り立つ。
     >
   >
   \prf<
     \p<
-      &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> を仮定する。
+      &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> が全て成り立つと仮定する。
       任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
-      このとき、仮定から特に &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つ。
-      また、&m<A \buharprarr; A'> は命題論理的恒真だから、\mref|type="thm",ref="pl"|; により &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A \buharprarr; A'> が成り立ち、特に &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A \buharprarr; A'> が成り立つ。
-      この 2 つからは &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A'> が得られる。
-      &m<`a> と &m<\scr<M>> は任意だったので、これで &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A'> が示された。
+      まず、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> は命題論理的恒真だから、\mref|type="thm",ref="pl"|; により、
+      &mb<
+        \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
+      >
+      が成り立つ。
+      妥当性の定義から、これは &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> が全て成り立つならば &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が成り立つことを意味する。
+      今 &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> が全て成り立つことは仮定されているから、これより &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が得られる。
+      &m<`a> と &m<\scr<M>> は任意だったので、これで &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が示された。
     >
   >
   \p<
@@ -214,8 +220,6 @@
   >
   \p<
     最後に、\mref|type="thm",ref="k"|; と\mref|type="thm",ref="rn"|; からは以下が導かれる。
-    ここで、式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> に対して、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>> は左から順に &m<\wedge;> を適用した式を表すものとする。
-    また、&m<n = 0> のときのこの式は &m<\top;> を表すものとする。
   >
   \thm|type="prp",id="rk"|<
     \p<
@@ -238,7 +242,7 @@
         \sp<\vxdash|ord|;><\frak<C>> \srel; \top; \buharprarr; B \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \top; \buharprarr; \tbox; B
       >
       である。
-      ここで、妥当性の定義を見ることで、任意の式 &m<C> に対して &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \top; \buharprarr; C> と &m<\sp<\vxdash|ord|;><\frak<C>>  C> は同値であることが分かる。
+      ここで、妥当性の定義を見ることで、任意の式 &m<C> に対して &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \top; \buharprarr; C> と &m<\sp<\vxdash|ord|;><\frak<C>> \srel; C> は同値であることが分かる。
       したがって、
       &mb<
         \sp<\vxdash|ord|;><\frak<C>> \srel; B \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; B
@@ -252,7 +256,7 @@
         \sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
       >
       が成り立つことを仮定する。
-      すると、\mref|type="thm",ref="plx"|; により、
+      すると、\mref|type="thm",ref="rpl"|; により、
       &mb<
         \sp<\vxdash|ord|;><\frak<C>> \srel; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n - 1>) \buharprarr; (\sb<A><n> \buharprarr; B)
       >
@@ -270,7 +274,7 @@
         \sp<\vxdash|ord|;><\frak<C>> \srel; (\tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1>) \buharprarr; (\tbox; \sb<A><n> \buharprarr; \tbox; B)
       >
       が分かる。
-      再び\mref|type="thm",ref="plx"|; を使えば、
+      再び\mref|type="thm",ref="rpl"|; を使えば、
       &mb<
         \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n> \buharprarr; \tbox; B
       >
