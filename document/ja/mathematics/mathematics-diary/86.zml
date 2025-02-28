@@ -258,12 +258,12 @@
       が成り立つことを仮定する。
       すると、\mref|type="thm",ref="rpl"|; により、
       &mb<
-        \sp<\vxdash|ord|;><\frak<C>> \srel; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n - 1>) \buharprarr; (\sb<A><n> \buharprarr; B)
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n - 1> \buharprarr; (\sb<A><n> \buharprarr; B)
       >
       が成り立つ。
       これに帰納法の仮定を用いれば、
       &mb<
-        \sp<\vxdash|ord|;><\frak<C>> \srel; (\tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1>) \buharprarr; \tbox; (\sb<A><n> \buharprarr; B)
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1> \buharprarr; \tbox; (\sb<A><n> \buharprarr; B)
       >
       さて、\mref|type="thm",ref="k"|; により、
       &mb<
@@ -271,7 +271,7 @@
       >
       が成り立つので、これと前の式を合わせれば、
       &mb<
-        \sp<\vxdash|ord|;><\frak<C>> \srel; (\tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1>) \buharprarr; (\tbox; \sb<A><n> \buharprarr; \tbox; B)
+        \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1> \buharprarr; (\tbox; \sb<A><n> \buharprarr; \tbox; B)
       >
       が分かる。
       再び\mref|type="thm",ref="rpl"|; を使えば、
