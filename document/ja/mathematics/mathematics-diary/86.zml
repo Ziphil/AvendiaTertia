@@ -3,7 +3,7 @@
 
 
 \page<
-  \name<重要な恒真式>
+  \name<重要な恒真式 (意味論版)>
   \use-math|prefix="2"|;
 
   \h1<日記 (2025 年 2 月 24 日)>
@@ -144,7 +144,7 @@
       最後に、&m<`a> と &m<\scr<M>> は任意だったので、これで主張 &m<\wheart;> は示された。
     >
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="dualrhom"|<
     \p<
       任意のモデルのクラス &m<\frak<C>> をとる。
       式 &m<A> に対し、
