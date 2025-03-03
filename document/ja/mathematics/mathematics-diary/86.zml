@@ -39,6 +39,7 @@
   \p<
     例えば、&m<\sb<\tt<p>><0> \buharprarr; \sb<\tt<p>><0>> や &m<(\sb<\tt<p>><0> \wedge; \neg; \sb<\tt<p>><1>) \vee; (\neg; \sb<\tt<p>><0> \vee; \sb<\tt<p>><1>)> は命題論理的恒真である。
     また、命題論理的恒真性を考える際に様相式のところは原子式と見なすので、&m<\sb<\tbox; \tt<p>><0> \vee; \neg; \tbox; \sb<\tt<p>><0>> や &m<\trhombus; (\sb<\tt<p>><0> \wedge; \tbox; \sb<\tt<p>><1>) \buharprarr; \trhombus; (\sb<\tt<p>><0> \wedge; \tbox; \sb<\tt<p>><1>)> なども命題論理的恒真である。
+    ただし、&m<\tbox; (\sb<\tt<p>><0> \buharprarr; \sb<\tt<p>><0>)> は命題論理的恒真ではない。
   >
   \thm|type="thm",id="pl"|<
     \p<
