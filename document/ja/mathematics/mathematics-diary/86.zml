@@ -85,7 +85,7 @@
     ここで、式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> に対して、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>> は左から順に &m<\wedge;> を適用した式を表すものとする。
     また、&m<n = 0> のときのこの式は &m<\top;> を表すものとする。
   >
-  \thm|type="prp",id="rpl"|<
+  \thm|type="thm",id="rpl"|<
     \p<
       任意のモデルのクラス &m<\frak<C>> をとる。
       式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> が命題論理的恒真であれば、
