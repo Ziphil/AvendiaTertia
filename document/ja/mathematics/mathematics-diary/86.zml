@@ -59,19 +59,19 @@
     \p<
       ここで、命題論理的原子式に対する真偽値の割り当て &m<V> を、
       &mb<
-        \sbsp<V><`a><\scr<M>> (X) \coloneqq; \case<
-          \c<1> \c<(\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; X)> \br;
+        \sbsp<V><`a><\scr<M>> (P) \coloneqq; \case<
+          \c<1> \c<(\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; P)> \br;
           \c<0> \c<(&raw<上記以外>)>
         >
       >
       で定める。
-      このように定めた &m<\sbsp<V><`a><\scr<M>>> は、全ての (命題論理的原子式以外の) 式 &m<B> に対して、
+      このように定めた &m<\sbsp<V><`a><\scr<M>>> は、全ての (命題論理的原子式以外の) 式 &m<X> に対して、
       &mb<
         &mark<\wheart;>
-        \sbsp<V><`a><\scr<M>> (B) = 1 \iff; \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; B
+        \sbsp<V><`a><\scr<M>> (X) = 1 \iff; \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; X
       >
       を満たす。
-      これは、式に対しての真偽値の割り当てと様相論理における妥当性の定義を見比べることで、&m<B> の構造に関する帰納法から簡単に示すことができる。
+      これは、式に対しての真偽値の割り当てと様相論理における妥当性の定義を見比べることで、&m<X> の構造に関する帰納法から簡単に示すことができる。
     >
     \p<
       さて、仮定から &m<A> は命題論理的恒真なので、特に &m<\sbsp<V><`a><\scr<M>> (A) = 1> である。
@@ -265,6 +265,7 @@
       &mb<
         \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1> \buharprarr; \tbox; (\sb<A><n> \buharprarr; B)
       >
+      が得られる。
       さて、\mref|type="thm",ref="k"|; により、
       &mb<
         \sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; (\sb<A><n> \buharprarr; B) \buharprarr; (\tbox; \sb<A><n> \buharprarr; \tbox; B)
