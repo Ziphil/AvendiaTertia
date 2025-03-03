@@ -1,0 +1,252 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<重要な恒真式 (演繹体系版)>
+  \use-math|prefix="5"|;
+
+  \h1<日記 (2025 年 3 月 3 日)>
+  \p<
+    今回は、全ての正規な理論で証明できる式について触れる。
+  >
+  \p<
+    まずは、\a|href="86.html#rpl"|<定理 2.4> の意味論版を証明する。
+  >
+  \thm|type="thm",id="rpl"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> が命題論理的恒真であれば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \scand; \cdots; \scand; \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><n> \implies; \sp<\vdash|ord|;><\frak<T>> \srel; B
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      まず、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> が命題論理的恒真であるということは、&m<\sb<A><1> \buharprarr; (\sb<A><2> \buharprarr; (\cdots; (\sb<A><n> \buharprarr; B) \cdots; ))> が命題論理的恒真であるということである。
+      したがって、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \buharprarr; (\sb<A><2> \buharprarr; (\cdots; (\sb<A><n> \buharprarr; B) \cdots; ))
+      >
+      が成り立つ。
+      ここで、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1>> から &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><n>> を全て仮定すれば、規則 MP を &m<n> 回適用することで、&m<\sp<\vdash|ord|;><\frak<T>> \srel; B> を導くことができる。
+    >
+  >
+  \p<
+     この定理は大変重要で、以降息をするように使う。
+     今後「定理 5.1 により」と言って式変形を何度も行うが、そのときは変形前の式と変形後の式を &m<\buharprarr;> で結んだ式が命題論理的恒真であることを確かめれば良い。
+     特に断りがなければ、その恒真性は明らかである。
+  >
+  \p<
+    次に、\a|href="86.html#rk"|<命題 2.8> の演繹体系版を証明する。
+    証明はほとんどパラレルにできる。
+  >
+  \thm|type="prp",id="rk"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n> \buharprarr; \tbox; B
+      >
+      が成り立つ。
+      特に、式 &m<A, B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; B \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; B
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<n> に関する帰納法による。
+    >
+    \p<
+      &m<n = 0> のとき。
+      示すべきは、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \top; \buharprarr; B \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \top; \buharprarr; \tbox; B
+      >
+      である。
+      そこで、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \top; \buharprarr; B> を仮定する。
+      ここで、&m<\top;> は命題論理的恒真だから &m<\sp<\vdash|ord|;><\frak<T>> \srel; \top;> が成り立つので、これと前の式に規則 MP を適用することで &m<\sp<\vdash|ord|;><\frak<T>> \srel; B> が分かり、さらにこれに規則 RN を適用すれば &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; B> が得られる。
+      ここで、&m<\tbox; B \buharprarr; (\top; \buharprarr; \tbox; B)> は命題論理的恒真だから、\mref|type="thm",ref="rpl"|; によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \top; \buharprarr; \tbox; B> が得られる。
+    >
+    \p<
+      &m<n \geq; 1> のとき。
+      帰納法の仮定と、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
+      >
+      が成り立つことを仮定する。
+      すると、\mref|type="thm",ref="rpl"|; により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n - 1> \buharprarr; (\sb<A><n> \buharprarr; B)
+      >
+      が成り立つ。
+      これに帰納法の仮定を用いれば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1> \buharprarr; \tbox; (\sb<A><n> \buharprarr; B)
+      >
+      が得られる。
+      さて、&m<\frak<T>> が &m<\bfrm<K>> を含むことから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (\sb<A><n> \buharprarr; B) \buharprarr; (\tbox; \sb<A><n> \buharprarr; \tbox; B)
+      >
+      が成り立つので、今得られた 2 つの式に\mref|type="thm",ref="rpl"|; を使うことで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n - 1> \buharprarr; (\tbox; \sb<A><n> \buharprarr; \tbox; B)
+      >
+      が分かる。
+      再び\mref|type="thm",ref="rpl"|; を使えば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n> \buharprarr; \tbox; B
+      >
+      が示された。
+    >
+  >
+  \p<
+    次の命題も重要である。
+  >
+  \thm|type="prp",id="re"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<A, B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharplrarr; B \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharplrarr; \tbox; B
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; A \buharplrarr; B> が成り立つと仮定する。
+      すると、\mref|type="thm",ref="rpl"|; により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; B> と &m<\sp<\vdash|ord|;><\frak<T>> \srel; B \buharprarr; A> がともに成り立つ。
+      このそれぞれに\mref|type="thm",ref="rk"|; を使うことで、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; B> と &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; B \buharprarr; \tbox; A> が得られる。
+      この 2 つに\mref|type="thm",ref="rpl"|; を使えば、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharplrarr; \tbox; B> が分かる。
+    >
+  >
+  \p<
+    \mref|type="thm",ref="rk"|; と\mref|type="thm",ref="re"|; は &m<\tbox;> に関する主張であるが、同様の主張が &m<\trhombus;> に関しても成り立つ。
+  >
+  \thm|type="prp",id="rkdual"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<A> と式 &m<\sb<B><1>, \cdots;, \sb<B><n> \srel; (n \geq; 0)> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; \sb<B><1> \vee; \cdots; \vee; \sb<B><n> \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \trhombus; \sb<B><1> \vee; \cdots; \vee; \trhombus; \sb<B><n>
+      >
+      が成り立つ。
+      特に、式 &m<A, B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; B \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \trhombus; B
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; \sb<B><1> \vee; \cdots; \vee; \sb<B><n>
+      >
+      を仮定する。
+      すると、\mref|type="thm",ref="rpl"|; により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \sb<B><1> \wedge; \cdots; \wedge; \neg; \sb<B><n> \buharprarr; \neg; A
+      >
+      が分かる。
+      これに\mref|type="thm",ref="rk"|; を適用すると、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \neg; \sb<B><1> \wedge; \cdots; \wedge; \tbox; \neg; \sb<B><n> \buharprarr; \tbox; \neg; A
+      >
+      が得られる。
+      再び\mref|type="thm",ref="rpl"|; を使えば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \tbox; \neg; A \buharprarr; \neg; \tbox; \neg; \sb<B><1> \vee; \cdots; \vee; \neg; \tbox; \neg; \sb<B><n>
+      >
+      が分かる。
+      さて、&m<\frak<T>> が &m<\sp<\bfrm<Dual>><\trhombus;>> を含むことから &m<\sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharplrarr; \neg; \tbox; \neg; A> 等が成り立つので、これと上の式に\mref|type="thm",ref="rpl"|; を適用することで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \trhombus; \sb<B><1> \vee; \cdots; \vee; \trhombus; \sb<B><n>
+      >
+      が示された。
+    >
+  >
+  \thm|type="prp",id="redual"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<A, B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharplrarr; B \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharplrarr; \trhombus; B
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \mref|type="thm",ref="re"|; と同様に示せる。
+    >
+  >
+  \p<
+    次に、&m<\box;> は &m<\wedge;> に関して分配的であることを示そう。
+  >
+  \thm|type="prp",id="r"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<A, B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharplrarr; \tbox; A \wedge; \tbox; B
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \mref|type="thm",ref="rpl"|; により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; A \wedge; \tbox; B> と &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \wedge; \tbox; B \buharprarr; \tbox; (A \wedge; B)> が成り立つことを示せば良い。
+    >
+    \p<
+      まず &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; A \wedge; \tbox; B> を示す。
+      命題論理的恒真性により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A \wedge; B \buharprarr; A> と &m<\sp<\vdash|ord|;><\frak<T>> \srel; A \wedge; B \buharprarr; B> はともに成り立つ。
+      これにそれぞれ\mref|type="thm",ref="rk"|; を適用すれば、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; A> と &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; B> が得られる。
+      これらと\mref|type="thm",ref="rpl"|; により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; A \wedge; \tbox; B> が分かる。
+    >
+    \p<
+      次に &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \wedge; \tbox; B \buharprarr; \tbox; (A \wedge; B)> を示す。
+      命題論理的恒真性により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A \wedge; B \buharprarr; A \wedge; B> が成り立つ。
+      これに\mref|type="thm",ref="rk"|; を適用すれば、そのまま &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \wedge; \tbox; B \buharprarr; \tbox; (A \wedge; B)> が分かる。
+    >
+  >
+  \p<
+    双対的に、&m<\trhombus;> は &m<\vee;> に関して分配的である。
+  >
+  \thm|type="prp",id="rdual"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<A, B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; (A \vee; B) \buharplrarr; \trhombus; A \vee; \trhombus; B
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \mref|type="thm",ref="rkdual"|; を使うことで、\mref|type="thm",ref="r"|; と同様に示せる。
+    >
+  >
+  \p<
+    他にも重要な恒真式は様々あり、Chellas\mref|type="bib",ref="cmlx"|; の 4.1 節の演習問題でたくさん取り上げられている。
+    しかしこの勉強ノートでは、一旦この辺りにしておいて、他のものは必要に応じて取り上げていくことにする。
+  >
+  \p<
+    次回は、同値な式による書き換えについて触れる予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
