@@ -1,0 +1,173 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<代入定理>
+  \use-math|prefix="6"|;
+
+  \h1<日記 (2025 年 3 月 4 日)>
+  \p<
+    今回は、代入による恒真性の保存について取り上げる。
+  >
+  \p<
+    \a|href="89.html#rpl"|<定理 5.1> は大変便利で、これを使うことで恒真性を保ったまま様々に式変形することができる。 
+    実際、前回は証明のいたるところでこの定理を用いた。
+  >
+  \p<
+    しかし、この定理だけでは少し不十分である。
+    例を 1 つ挙げて不十分性を説明しよう。
+    正規な理論では、各式 &m<A> について &m<\vdash|ord|; \srel; \neg; \tbox; \neg; A \buharplrarr; \trhombus; A> が成り立つ。
+    つまり、&m<\neg; \tbox; \neg; A> と &m<\trhombus; A> は同値であるということなので、&m<\neg; \tbox; \neg; A> と &m<\trhombus; A> は互いに交換可能であってほしい。
+    例えば、今ある式 &m<A, B> について &m<\vdash|ord|; \srel; \neg; \tbox; \neg; A \buharprarr; B> が成り立っているとする。
+    このとき、この式の &m<\neg; \tbox; \neg; A> の部分を &m<\trhombus; A> に置き換えて &m<\vdash|ord|; \srel; \trhombus; A \buharprarr; B> も成り立っていてほしい。
+    定理 5.1 を使うことで、これが正しいことは分かる。
+    なぜなら、
+    &mb<
+      (\neg; \tbox; \neg; A \buharprarr; B) \wedge; (\neg; \tbox; \neg; A \buharplrarr; \trhombus; A) \buharprarr; (\trhombus; A \buharprarr; B)
+    >
+    は命題論理的恒真だからである。
+    では、今度は &m<\vdash|ord|; \srel; \tbox; (\neg; \tbox; \neg; A \buharprarr; B)> が成り立っているとしよう。
+    この場合も、この式の &m<\neg; \tbox; \neg; A> の部分を &m<\trhombus; A> に置き換えて &m<\vdash|ord|; \srel; \tbox; (\trhombus; A \buharprarr; B)> が成り立っていてほしい。
+    しかし、これは定理 5.1 からはすぐに分からない。
+    素直に定理 5.1 を使おうとすると、
+    &mb<
+      \tbox; (\neg; \tbox; \neg; A \buharprarr; B) \wedge; (\neg; \tbox; \neg; A \buharplrarr; \trhombus; A) \buharprarr; \tbox; (\trhombus; A \buharprarr; B)
+    >
+    が命題論理的恒真であることを言う必要があるが、これは命題論理的恒真ではない。
+    なぜなら、命題論理的恒真性を考える際には様相式の部分を丸ごと原子式と見なすので、この式の命題論理的恒真性は、相異なる原子式 &m<P, Q, R, S> に対して
+    &mb<
+      P \wedge; (\neg; Q \buharplrarr; R) \buharprarr; S
+    >
+    が命題論理的恒真であるという意味である。
+    この式は明らかに恒真ではない。
+  >
+  \p<
+    幸いなことに、我々には\a|href="89.html#re"|<命題 5.3> と\a|href="89.html#redual"|<命題 5.5> がある。
+    これらの命題は、2 つの式が同値ならば双方に同じ様相演算子を適用したものも同値であることを述べている。
+    これにより、様相演算子の中であっても同値な式であれば交換可能であることが分かる。
+    改めて、これを定理の形でまとめておこう。
+  >
+  \thm|type="thm",id="rep"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<A, A', B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharplrarr; A' \implies; \sp<\vdash|ord|;><\frak<T>> \srel; B \buharplrarr; B `{A \coloneqq; A'`}
+      >
+      が成り立つ。
+      ここで、&m<B `{A \coloneqq; A'`}> は、&m<B> の中に部分式として出現する &m<A> のいくつか (0 個でも良いし全部でなくても良い) を &m<A'> に置き換えた式を表す。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; A \buharplrarr; A'> を仮定する。
+      &m<B> の構造に関する帰納法を用いる。
+    >
+    \p<
+      まず、&m<A \equiv; B> であるときに定理の主張を示す。
+      このとき、&m<B `{A \coloneqq; A'`}> は &m<B> か &m<A'> のいずれかである。
+      &m<B `{A \coloneqq; A'`} \equiv; B> のときは、示すべきは &m<\sp<\vdash|ord|;><\frak<T>> \srel; B \buharplrarr; B> であるが、これは明らかに成り立つ。
+      &m<B `{A \coloneqq; A'`} \equiv; A'> のときは、示すべきは &m<\sp<\vdash|ord|;><\frak<T>> \srel; B \buharplrarr; A'> であるが、今 &m<A \equiv; B> だったのでこれは仮定そのものである。
+      以上により、この場合は定理の主張が示された。
+    >
+    \p<
+      次に、&m<A \nequiv; B> の場合を考える。
+      &m<B> の構造によって場合分けをする。
+    >
+    \p<
+      &m<B \equiv; \sb<\tt<p>><n>> のとき。
+      今 &m<A \nequiv; \sb<\tt<p>><n>> であって &m<\sb<\tt<p>><n>> は自分自身以外に部分式をもたないので、&m<\sb<\tt<p>><n> `{A \coloneqq; A'`}> において置き換えは実際には起こっておらず、&m<\sb<\tt<p>><n> `{A \coloneqq; A'`} \equiv; \sb<\tt<p>><n>> である。
+      したがって、示すべきは &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<\tt<p>><n> \buharplrarr; \sb<\tt<p>><n>> であるが、これは明らかに成り立つ。
+    >
+    \p<
+      &m<B \equiv; \top;> や &m<B \equiv; \bot;> のときも、上の場合と同様に示される。
+    >
+    \p<
+      &m<B \equiv; X \wedge; Y> のとき。
+      帰納法の仮定により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; X \buharplrarr; X `{A \coloneqq; A'`} \xquad;
+        \sp<\vdash|ord|;><\frak<T>> \srel; Y \buharplrarr; Y `{A \coloneqq; A'`}
+      >
+      がともに成り立つ。
+      これに\a|href="89.html#rpl"|<定理 5.1> を使うことで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; X \wedge; Y \buharplrarr; X `{A \coloneqq; A'`} \wedge; Y `{A \coloneqq; A'`}
+      >
+      が分かる。
+      さて、今 &m<A \nequiv; X \wedge; Y> だから、&m<(X \wedge; Y) `{A \coloneqq; A'`}> における置き換えは (起こっているとしたら) &m<X> と &m<Y> の内部である。
+      したがって、
+      &mb<
+        (X \wedge; Y) `{A \coloneqq; A'`} \equiv; X `{A \coloneqq; A'`} \wedge; Y `{A \coloneqq; A'`}
+      >
+      と書ける。
+      これと上の式を合わせれば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; X \wedge; Y \buharplrarr; (X \wedge; Y) `{A \coloneqq; A'`}
+      >
+      が得られるが、これはまさに示したかった &m<\sp<\vdash|ord|;><\frak<T>> \srel; B \buharplrarr; B `{A \coloneqq; A'`}> である。
+    >
+    \p<
+      &m<B \equiv; X \vee; Y> や &m<B \equiv; X \buharprarr; Y> や &m<B \equiv; \neg; X> のときも、上記と同様に\a|href="89.html#rpl"|<定理 5.1> から示される。
+    >
+    \p<
+      &m<B \equiv; \tbox; X> のとき。
+      帰納法の仮定により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; X \buharplrarr; X `{A \coloneqq; A'`}
+      >
+      が成り立つ。
+      今度は\a|href="89.html#re"|<命題 5.3> を使うことで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; X \buharplrarr; \tbox; (X `{A \coloneqq; A'`})
+      >
+      が分かる。
+      今 &m<A \nequiv; \tbox; X> だから、
+      &mb<
+        (\tbox; X) `{A \coloneqq; A'`} \equiv; \tbox; (X `{A \coloneqq; A'`})
+      >
+      と書くことができ、これにより、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; X \buharplrarr; (\tbox; X) `{A \coloneqq; A'`}
+      >
+      が得られた。
+      これが示したかった式である。
+    >
+    \p<
+      &m<B \equiv; \trhombus; X> のときは、\a|href="89.html#redual"|<命題 5.5> を使うことで同様の議論で示される。
+    >
+    \p<
+      これで全ての場合が尽くされたので、定理の主張が示された。
+    >
+  >
+  \p<
+    この定理は、以下のように式変形の手段として使うことが多い。
+  >
+  \thm|type="thm",id="repvar"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<A, A', B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharplrarr; A' \scand; \sp<\vdash|ord|;><\frak<T>> \srel; B \implies; \sp<\vdash|ord|;><\frak<T>> \srel; B `{A \coloneqq; A'`}
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; A \buharplrarr; A'> を仮定すれば、\mref|type="thm",ref="rep"|; によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; B \buharplrarr; B `{A \coloneqq; A'`}> が成り立つ。
+      さらに &m<\sp<\vdash|ord|;><\frak<T>> \srel; B> が成り立っていれば、これと\a|href="89.html#rpl"|<定理 5.1> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; B `{A \coloneqq; A'`}> が得られる。
+    >
+  >
+  \p<
+    次回は双対について触れる。
+    この次回で一旦、全ての正規な論理で成り立つ性質に関する議論は閉じる予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
