@@ -96,7 +96,7 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; X \wedge; Y \buharplrarr; X `{A \coloneqq; A'`} \wedge; Y `{A \coloneqq; A'`}
       >
       が分かる。
-      さて、今 &m<A \nequiv; X \wedge; Y> だから、&m<(X \wedge; Y) `{A \coloneqq; A'`}> における置き換えは (起こっているとしたら) &m<X> と &m<Y> の内部である。
+      さて、今 &m<A \nequiv; X \wedge; Y> だから、&m<(X \wedge; Y) `{A \coloneqq; A'`}> における置き換えは (起こっているとしたら) &m<X> と &m<Y> の内部で起こっている。
       したがって、
       &mb<
         (X \wedge; Y) `{A \coloneqq; A'`} \equiv; X `{A \coloneqq; A'`} \wedge; Y `{A \coloneqq; A'`}
