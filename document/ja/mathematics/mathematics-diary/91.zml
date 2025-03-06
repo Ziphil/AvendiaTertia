@@ -1,0 +1,303 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<双対と de Morgan の法則>
+  \use-math|prefix="7"|;
+
+  \h1<日記 (2025 年 3 月 6 日)>
+  \p<
+    今回は、様相論理版の de Morgan の法則を証明して、様相式に対するその応用を考える。
+  >
+  \p<
+    まずは、式の双対を定義しよう。
+  >
+  \thm|type="def"|<
+    \p<
+      式 &m<A> に対して、式 &m<\sp<A><*>> を次のように帰納的に定義する。
+      &mb<
+        \array|align="rcl"|<
+          \cc<\sp<\sb<\tt<p>><n>><*>><\colonequiv;><\sb<\neg; \tt<p>><n>>
+          \cc<\sp<\top;><*>><\colonequiv;><\bot;>
+          \cc<\sp<\bot;><*>><\colonequiv;><\top;>
+          \cc<\sp<(\neg; A)><*>><\colonequiv;><\neg; \sp<A><*>>
+          \cc<\sp<(A \wedge; B)><*>><\colonequiv;><\sp<B><*> \vee; \sp<A><*>>
+          \cc<\sp<(A \vee; B)><*>><\colonequiv;><\sp<B><*> \wedge; \sp<A><*>>
+          \cc<\sp<(A \buharprarr; B)><*>><\colonequiv;><\sp<B><*> \setminus; \sp<A><*>>
+          \cc<\sp<(\tbox; A)><*>><\colonequiv;><\trhombus; \sp<A><*>>
+          \cc<\sp<(\trhombus; A)><*>><\colonequiv;><\tbox; \sp<A><*>>
+        >
+      >
+      この &m<\sp<A><*>> を &m<A> の \def<双対\fl<dual>> という。
+      なお上記で、式 &m<A, B> に対して、
+      &mb<
+        B \setminus; A \colonequiv; B \wedge; \neg; A
+      >
+      と書いた。
+    >
+  >
+  \p<
+    すると、de Morgan の法則は次のように述べられる。
+    式変形のための道具はすでにかなり揃っているので、証明はただやるだけである。
+  >
+  \thm|type="thm",id="dual"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<A> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharplrarr; \neg; \sp<A><*>
+      >
+      が成り立つ。
+      したがって特に、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \iff; \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \sp<A><*>
+      >
+      も成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      後半の主張は、前半の主張と\a|href="89.html#rpl"|<定理 5.1> から従う。
+      以降、前半の主張を示す。
+      &m<A> の構造に関する帰納法による。
+    >
+    \p<
+      &m<A \equiv; \sb<\tt<p>><n>> のとき。
+      双対の定義によって示すべきは &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<\tt<p>><n> \buharplrarr; \neg; \neg; \sb<\tt<p>><n>> であるが、これは明らかに成り立つ。
+    >
+    \p<
+      &m<A \equiv; \top;> や &m<A \equiv; \bot;> のときも、同様に明らかに定理の主張は成り立つ。
+    >
+    \p<
+      &m<A \equiv; X \wedge; Y> のとき。
+      帰納法の仮定により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; X \buharplrarr; \neg; \sp<X><*> \xquad;
+        \sp<\vdash|ord|;><\frak<T>> \srel; Y \buharplrarr; \neg; \sp<Y><*> 
+      >
+      がともに成り立つ。
+      ここで、
+      &mb<
+         \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \sp<X><*> \wedge; \neg; \sp<Y><*> \buharplrarr; \neg; (\sp<Y><*> \vee; \sp<X><*>)
+      >
+      である。
+      上の 2 つの式と\a|href="90.html#repvar"|<定理 6.2> を使うことでこの式の &m<\neg; \sp<X><*>> と &m<\neg; \sp<Y><*>> を書き換えることで、
+      &mb<
+         \sp<\vdash|ord|;><\frak<T>> \srel;  X \wedge; Y \buharplrarr; \neg; (\sp<Y><*> \vee; \sp<X><*>)
+      >
+      が得られる。
+      &m<\neg; \sp<(X \wedge; Y)><*> \equiv; \neg; (\sp<Y><*> \vee; \sp<X><*>)> だから、これがまさに示すべき主張である。
+    >
+    \p<
+      &m<A \equiv; X \vee; Y> や &m<A \equiv; X \buharprarr; Y> や &m<A \equiv; \neg; X> のときも、上記と同様に示される。
+    >
+    \p<
+      &m<A \equiv; \tbox; X> のとき。
+      帰納法の仮定により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; X \buharplrarr; \neg; \sp<X><*>
+      >
+      が成り立つ。
+      これと\a|href="89.html#re"|<命題 5.3> により、
+      &mb<
+        &mark<\wheart;>
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; X \buharplrarr; \tbox; \neg; \sp<X><*>
+      >
+      が分かる。
+      さて一方、正規な理論が &m<\sp<\bfrm<Dual>><\trhombus;>> を含むことから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \sp<X><*> \buharplrarr; \neg; \tbox; \neg; \sp<X><*>
+      >
+      が成り立つ。
+      ここからは、\a|href="89.html#rpl"|<定理 5.1> などによって、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \neg; \sp<X><*> \buharplrarr; \neg; \trhombus; \sp<X><*> 
+      >
+      が分かる。
+      これと\a|href="90.html#repvar"|<定理 6.2> によって、主張 &m<\wheart;> に含まれる &m<\tbox; \neg; \sp<X><*>> の部分を置き換えることで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; X \buharplrarr; \neg; \trhombus; \sp<X><*> 
+      >
+      が得られる。
+      &m<\neg; \sp<(\tbox; X)><*> \equiv; \neg; \trhombus; \sp<X><*>> だから、これがまさに示すべき主張である。
+    >
+    \p<
+      &m<A \equiv; \trhombus; X> のときも、これと同様に示される。
+    >
+    \p<
+      これで全ての場合が尽くされたので、定理の主張が示された。
+    >
+  >
+  \p<
+    この定理の応用として、様相式の双対に関する主張を紹介しよう。
+    主張を述べやすくするために、まず「様相列」という概念を導入する。
+  >
+  \thm|type="def"|<
+    \p<
+      &m<\tbox;> もしくは &m<\trhombus;> から成る有限の長さの列 (空でも良い) を \def<様相列\fl<modality sequence>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      様相列 &m<`f> に対し、&m<`f> を構成している &m<\tbox;> と &m<\trhombus;> を入れ替えて得られる様相列を、&m<`f> の \def<双対\fl<dual>> といって &m<\sp<`f><*>> で表す。
+    >
+  >
+  \p<
+    例えば、&m<\tbox; \tbox; \trhombus;> や &m<\trhombus; \tbox; \trhombus; \trhombus; \tbox; \trhombus;> などが様相列である。
+    これらの双対は、それぞれ &m<\trhombus; \trhombus; \tbox;> と &m<\tbox; \trhombus; \tbox; \tbox; \trhombus; \tbox;> である。
+  >
+  \p<
+    また、様相列 &m<`f> と式 &m<A> に対し、&m<`f> を構成する様相を右から順に &m<A> に適用して得られる式を &m<`f A> と書くことにする。
+    例えば、様相列 &m<`f \colonequiv; \tbox; \tbox; \trhombus;> に対し、&m<`f A> とはそのまま &m<\tbox; \tbox; \trhombus; A> のことである。
+    また、任意の様相列 &m<`f> と式 &m<A> に対し、&m<(`f A) \sp<><*> \equiv; \sp<`f><*> \sp<A><*>> となることにも注目したい。
+  >
+  \p<
+    様相列の双対については、\mref|type="thm",ref="dual"|; によって以下の定理が成り立つ。
+    厳密性は欠けるが端的に言ってしまえば、様相列 &m<`f> に対して、&m<`f> と &m<\neg; \sp<`f><*> \neg;> は同値な演算子だということである。
+  >
+  \thm|type="thm",id="dualmod"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      様相列 &m<`f> と式 &m<A> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharplrarr; \neg; \sp<`f><*> \neg; A
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      まず\mref|type="thm",ref="dual"|; によって、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharplrarr; \neg; (`f A)\sp<><*>
+      >
+      が成り立つ。
+      双対の定義から &m<(`f A) \sp<><*> \equiv; \sp<`f><*> \sp<A><*>> であるから、これは
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharplrarr; \neg; \sp<`f><*> \sp<A><*>
+      >
+      が成り立つということである。
+      さて、\mref|type="thm",ref="dual"|; を\a|href="89.html#rpl"|<定理 5.1> で少し変形することで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sp<A><*> \buharplrarr; \neg; A 
+      >
+      が得られるから、これら 2 つの式に\a|href="90.html#repvar"|<定理 6.2> を使うことで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharplrarr; \neg; \sp<`f><*> \neg; A
+      >
+      が示された。
+    >
+  >
+  \p<
+    この定理からは、様相式から様相式への含意の形をしたスキーマがそれの (含意式としての) 双対と同値であることが分かる。
+  >
+  \thm|type="thm",id="contra"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      様相列 &m<`f, `c> に対し、2 命題
+    >
+    \ol<
+      \li*<
+        任意の式 &m<A> に対し、
+        &mb<
+          \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharprarr; `c A
+        >
+        が成り立つ。
+      >
+      \li*<
+        任意の式 &m<A> に対し、
+        &mb<
+          \sp<\vdash|ord|;><\frak<T>> \srel; \sp<`c><*> A \buharprarr; \sp<`f><*> A
+        >
+        が成り立つ。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<主張 1 &m<\rxarr;> 主張 2>
+      任意に式 &m<A> をとる。
+      仮定から、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; `f \neg; A \buharprarr; `c \neg; A
+      >
+      が成り立つ。
+      \mref|type="thm",ref="dualmod"|; と\a|href="90.html#repvar"|<定理 6.2> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \sp<`f><*> \neg; \neg; A \buharprarr; \neg; \sp<`c><*> \neg; \neg; A
+      >
+      が得られる。
+      ここからは、まず\a|href="89.html#rpl"|<定理 5.1> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sp<`c><*> \neg; \neg; A \buharprarr; \sp<`f><*> \neg; \neg; A
+      >
+      が分かる。
+      そして &m<\sp<\vdash|ord|;><\frak<T>> \srel; \neg; \neg; A \buharplrarr; A> であるから、\a|href="90.html#repvar"|<定理 6.2> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sp<`c><*> A \buharprarr; \sp<`f><*> A
+      >
+      が示された。
+    >
+    \p<
+      \label<主張 2 &m<\rxarr;> 主張 1>
+      こちら向きも上記とほぼ同様に示せる。
+      任意の式 &m<A> をとると、仮定から、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sp<`c><*> \neg; A \buharprarr; \sp<`f><*> \neg; A
+      >
+      が成り立つ。
+      \a|href="89.html#rpl"|<定理 5.1> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \sp<`f><*> \neg; A \buharprarr; \neg; \sp<`c><*> \neg; A
+      >
+      が分かる。
+      \mref|type="thm",ref="dualmod"|; と\a|href="90.html#repvar"|<定理 6.2> を使えば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharprarr; `c A
+      >
+      が示された。
+    >
+  >
+  \p<
+    さて、\a|href="87.html"|<2 月 25 日>では、重要なスキーマとして &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> を紹介した。
+    改めてここで定義を確認しておくと、各式 &m<A> に対して、
+    &mb<
+      \array|align="rcl"|<
+        \cc<\sb<\bfrm<D>><A>><\colonequiv;><\tbox; A \buharprarr; \trhombus; A>
+        \cc<\sb<\bfrm<T>><A>><\colonequiv;><\tbox; A \buharprarr; A>
+        \cc<\sb<\bfrm<B>><A>><\colonequiv;><A \buharprarr; \tbox; \trhombus; A>
+        \cc<\sb<\bfrm<4>><A>><\colonequiv;><\tbox; A \buharprarr; \tbox; \tbox; A>
+        \cc<\sb<\bfrm<5>><A>><\colonequiv;><\trhombus; A \buharprarr; \tbox; \trhombus; A>
+      >
+    >
+    であった。
+    これらは全て、様相式から様相式への含意の形をしている。
+    そこで、それぞれの双対として、スキーマ &m<\sp<\bfrm<D>><\dagger;>, \sp<\bfrm<T>><\dagger;>, \sp<\bfrm<B>><\dagger;>, \sp<\bfrm<4>><\dagger;>, \sp<\bfrm<5>><\dagger;>> を、各式 &m<A> に対して、
+    &mb<
+      \array|align="rcl"|<
+        \cc<\sbsp<\bfrm<D>><A><\dagger;>><\colonequiv;><\tbox; A \buharprarr; \trhombus; A>
+        \cc<\sbsp<\bfrm<T>><A><\dagger;>><\colonequiv;><A \buharprarr; \trhombus; A>
+        \cc<\sbsp<\bfrm<B>><A><\dagger;>><\colonequiv;><\trhombus; \tbox; A \buharprarr; A>
+        \cc<\sbsp<\bfrm<4>><A><\dagger;>><\colonequiv;><\trhombus; \trhombus; A \buharprarr; \trhombus; A>
+        \cc<\sbsp<\bfrm<5>><A><\dagger;>><\colonequiv;><\trhombus; \tbox; A \buharprarr; \trhombus; A>
+      >
+    >
+    と定義しよう。
+    &m<\bfrm<D>> だけその双対が自分自身と一致しているが、それ以外は異なる形のスキーマが得られている。
+    しかし\mref|type="thm",ref="contra"|; により、&m<\bfrm<T>> を公理として追加することと &m<\sp<\bfrm<T>><\dagger;>> を公理として追加することは結局同値であり、他のスキーマについても同じことが言える。
+  >
+  \p<
+    次回以降はしばらく、ベースとなる演繹体系 &m<\bfrm<K>> に対してスキーマ &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> を追加するとどうなるかについて詳しく見ていく。
+    次回はまず、&m<\bfrm<D>> を追加した体系 &m<\bfrm<K> `[\bfrm<D>`]> を扱う。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
