@@ -283,16 +283,16 @@
         \cc<\sbsp<\bfrm<T>><A><\dagger;>><\colonequiv;><A \buharprarr; \trhombus; A>
         \cc<\sbsp<\bfrm<B>><A><\dagger;>><\colonequiv;><\trhombus; \tbox; A \buharprarr; A>
         \cc<\sbsp<\bfrm<4>><A><\dagger;>><\colonequiv;><\trhombus; \trhombus; A \buharprarr; \trhombus; A>
-        \cc<\sbsp<\bfrm<5>><A><\dagger;>><\colonequiv;><\trhombus; \tbox; A \buharprarr; \trhombus; A>
+        \cc<\sbsp<\bfrm<5>><A><\dagger;>><\colonequiv;><\trhombus; \tbox; A \buharprarr; \tbox; A>
       >
     >
     と定義しよう。
     &m<\bfrm<D>> だけその双対が自分自身と一致しているが、それ以外は異なる形のスキーマが得られている。
-    しかし\mref|type="thm",ref="contra"|; により、&m<\bfrm<T>> を公理として追加することと &m<\sp<\bfrm<T>><\dagger;>> を公理として追加することは結局同値であり、他のスキーマについても同じことが言える。
+    しかし\mref|type="thm",ref="contra"|; により、&m<\bfrm<T>> を公理として追加することと &m<\sp<\bfrm<T>><\dagger;>> を公理として追加することは結局同値である。
+    他のスキーマについても同じことが言える。
   >
   \p<
-    次回以降はしばらく、ベースとなる演繹体系 &m<\bfrm<K>> に対してスキーマ &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> を追加するとどうなるかについて詳しく見ていく。
-    次回はまず、&m<\bfrm<D>> を追加した体系 &m<\bfrm<K> `[\bfrm<D>`]> を扱う。
+    次回は、ベースとなる演繹体系 &m<\bfrm<K>> に対してスキーマ &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> を追加するとどうなるかについて詳しく見ていく。
   >
   \h1<参考文献>
   \ol<

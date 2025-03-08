@@ -247,18 +247,21 @@
   >
   \thm|type="thm"|<
     \p<
+      任意のモデルのクラス &m<\frak<C>> をとる。
       自然数 &m<k, l, m, n> に対して、
       &mb<
-        \sp<\vxdash|ord|;><\sp<\bfrm<Inces>><klmn>> \srel; \sp<\bfrm<G>><klmn>
+        \frak<C> \subseteq; \sp<\bfrm<Inces>><klmn> \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \sp<\bfrm<G>><klmn>
       >
       が成り立つ。
       特に、
       &mb<
-        \sp<\vxdash|ord|;><\bfrm<Ser>> \srel; \bfrm<D> \xquad;
-        \sp<\vxdash|ord|;><\bfrm<Refl>> \srel; \bfrm<T> \xquad;
-        \sp<\vxdash|ord|;><\bfrm<Sym>> \srel; \bfrm<B> \xquad;
-        \sp<\vxdash|ord|;><\bfrm<Tran>> \srel; \bfrm<4> \xquad;
-        \sp<\vxdash|ord|;><\bfrm<Euc>> \srel; \bfrm<5>
+        \array|align="rcl"|<
+          \cc<\frak<C> \subseteq; \bfrm<Ser>><\implies;><\sp<\vxdash|ord|;><\frak<C>> \srel; \bfrm<D>>
+          \cc<\frak<C> \subseteq; \bfrm<Refl>><\implies;><\sp<\vxdash|ord|;><\frak<C>> \srel; \bfrm<T>>
+          \cc<\frak<C> \subseteq; \bfrm<Sym>><\implies;><\sp<\vxdash|ord|;><\frak<C>> \srel; \bfrm<B>>
+          \cc<\frak<C> \subseteq; \bfrm<Tran>><\implies;><\sp<\vxdash|ord|;><\frak<C>> \srel; \bfrm<4>>
+          \cc<\frak<C> \subseteq; \bfrm<Euc>><\implies;><\sp<\vxdash|ord|;><\frak<C>> \srel; \bfrm<5>>
+        >
       >
       が全て成り立つ。
     >
@@ -270,7 +273,8 @@
       適宜\mref|type="thm",ref="nth"|; を用いる。
     >
     \p<
-      任意にモデル &m<\scr<M> \in; \sp<\bfrm<Inces>><klmn>> とその世界 &m<`a \in; \scr<M>> をとる。
+      &m<\frak<C> \subseteq; \sp<\bfrm<Inces>><klmn>> を仮定する。
+      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
       &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\trhombus;><k> \sp<\tbox;><l> A> を仮定して、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><m> \sp<\trhombus;><n> A> を示せば良い。
       そのために、任意に &m<`b \in; \scr<M>> であって &m<`a \sp<\sim;><m> `b> を満たすものをとる。
       ここで仮定から、&m<`g \in; \scr<M>> であって &m<`a \sp<\sim;><k> `g> を満たすものが存在して、&m<\sbsp<\vxdash|ord|;><`g><\scr<M>> \srel; \sp<\tbox;><l> A> が成り立つ。
