@@ -260,7 +260,7 @@
     これらの関係から同型になる追加パターンを整理していくと、&m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> の合計 32 通りの追加パターンのうち 17 通りは他のパターンと同型になることが分かる。
     残る 15 通りは次の図のように整理できる。
     &mb<
-      \diag|hor="thn,-6,54,sthn,thn",ver="vthn,vthn,thk,vthn,vthn,thk,vthn,vthn"|<
+      \diag|hor="thn,-6,54,sthn,thn",ver="vthn,vthn,thn,vthn,vthn,thn,vthn,vthn"|<
         \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> \v; \v; \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> \br;
         \v<\vph<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]>> \br;
         \v<\bfrm<K> `[\bfrm<T>`]> \v; \v; \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<B>`]> \br;
@@ -272,7 +272,7 @@
         \v<\bfrm<K>> \v; \v; \v; \v<\bfrm<K> `[\bfrm<B>`]>
         \ar|s="2",e="6",tip="none"|; \ar|s="8",e="12",tip="none"|; \ar|s="8",e="2",tip="none"|; \ar|s="12",e="6",tip="none"|;
         \ar|s="14",e="16",tip="none"|; \ar|s="20",e="24",tip="none"|; \ar|s="20",e="14",tip="none"|; \ar|s="20",e="19",tip="none"|; \ar|s="19",e="16",tip="none"|;
-        \ar|s="20",e="8",tip="none"|; \ar|s="14",e="2",tip="none"|; \ar|s="24",e="12",tip="none"|; \ar|s="16",e="6",bend="-20",tip="none"|;
+        \ar|s="20",e="8",tip="none"|; \ar|s="14",e="2",tip="none"|; \ar|s="24",e="12",tip="none"|; \ar|s="16",e="6",bend="-25",tip="none"|;
         \ar|s="26",e="28",tip="none"|; \ar|s="34",e="38",tip="none"|; \ar|s="34",e="26",tip="none"|; \ar|s="34",e="33",tip="none"|; \ar|s="33",e="28",tip="none"|; \ar|s="38",e="30",tip="none"|; \ar|s="28",e="30",tip="none"|;
         \ar|s="34",e="20",tip="none"|; \ar|s="26",e="14",tip="none"|; \ar|s="38",e="24",tip="none"|; \ar|s="33",e="19",tip="none"|; \ar|s="28",e="16",tip="none"|; \ar|s="30",e="6",tip="none"|;
       >
