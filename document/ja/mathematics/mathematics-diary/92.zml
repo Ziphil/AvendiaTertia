@@ -1,0 +1,297 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<スキームの間の関係性>
+  \use-math|prefix="8"|;
+
+  \h1<日記 (2025 年 3 月 8 日)>
+  \p<
+    我々は \a|href="88.html"|<2 月 26 日>に、様相論理の議論を行うためのベースとなる性質として正規性を定義し、そのようなもののうち最小の体系として &m<\bfrm<K>> を定式化した。
+    それから前回まで見てきたように、正規性だけからでも様々な性質が導かれる。
+    しかし、証明することのできる式の量という面では、&m<\bfrm<K>> は公理が少なすぎて、様相として何を念頭に置いているかによっては不十分なことが多い。
+    そこで、&m<\bfrm<K>> に公理をいくつか追加することを考えたい。
+  >
+  \p<
+    追加する公理として最も有名なのが、\a|href="87.html"|<2 月 25 日>に紹介した &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> である。
+    素朴に考えれば、これらを追加して得られる体系は、この 5 種類それぞれに入れるか入れないかの選択ができるので、全部で &m<\sp<2><5> = 32> 通りのはずである。
+    しかし、これら 5 種類のスキームは互いに完全に独立というわけではなく、いくつかのスキームを入れるとそこから別のスキームが導かれてしまうことがある。
+    今回は、このようなスキームの間の証明可能性の関係について触れていく。
+  >
+  \p<
+    ここで参照用に、&m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> とその双対 &m<\sp<\bfrm<D>><\dagger;>, \sp<\bfrm<T>><\dagger;>, \sp<\bfrm<B>><\dagger;>, \sp<\bfrm<4>><\dagger;>, \sp<\bfrm<5>><\dagger;>> の定義を確認しておこう。
+    各式 &m<A> に対して、
+    &mb<
+      \array|align="rclcrcl"|<
+        \cc<\sb<\bfrm<D>><A>><\colonequiv;><\tbox; A \buharprarr; \trhombus; A><\xquad;><\sbsp<\bfrm<D>><A><\dagger;>><\colonequiv;><\tbox; A \buharprarr; \trhombus; A>
+        \cc<\sb<\bfrm<T>><A>><\colonequiv;><\tbox; A \buharprarr; A><\xquad;><\sbsp<\bfrm<T>><A><\dagger;>><\colonequiv;><A \buharprarr; \trhombus; A>
+        \cc<\sb<\bfrm<B>><A>><\colonequiv;><A \buharprarr; \tbox; \trhombus; A><\xquad;><\sbsp<\bfrm<B>><A><\dagger;>><\colonequiv;><\trhombus; \tbox; A \buharprarr; A>
+        \cc<\sb<\bfrm<4>><A>><\colonequiv;><\tbox; A \buharprarr; \tbox; \tbox; A><\xquad;><\sbsp<\bfrm<4>><A><\dagger;>><\colonequiv;><\trhombus; \trhombus; A \buharprarr; \trhombus; A>
+        \cc<\sb<\bfrm<5>><A>><\colonequiv;><\trhombus; A \buharprarr; \tbox; \trhombus; A><\xquad;><\sbsp<\bfrm<5>><A><\dagger;>><\colonequiv;><\trhombus; \tbox; A \buharprarr; \tbox; A>
+      >
+    >
+    であった。
+    \a|href="91.html#contra"|<定理 7.6> により、このうちのあるスキームを追加するのとその双対を追加するのは同値であることも思い出しておきたい。
+  >
+  \p<
+    最初に示すのは、公理として &m<\bfrm<T>> の方が &m<\bfrm<D>> より強いことである。
+  >
+  \thm|type="prp",id="td"|<
+    \p<
+      正規な理論 &m<\frak<T>> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T> \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<D>
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>> が成り立っていると仮定する。
+      この仮定により、任意の式 &m<A> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; A
+      >
+      が成り立つ。
+      また、\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<T>><\dagger;>> でもあるから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; \trhombus; A
+      >
+      も成り立つ。
+      これらに\a|href="89.html#rpl"|<定理 5.1> を使うことで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \trhombus; A
+      >
+      が得られる。
+      全ての &m<A> に対してこれが得られたので、すなわち &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<D>> が成り立つ。
+    >
+  >
+  \p<
+    次に、&m<\bfrm<B>> が含まれているという状況のもとでは、&m<\bfrm<4>> と &m<\bfrm<5>> は互いに一方を仮定すればもう一方を導くことができる。
+  >
+  \thm|type="prp",id="bqp"|<
+    \p<
+      正規な理論 &m<\frak<T>> に対し、
+      &mb<
+        \array|type="rcl"|<
+          \cc<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<4>><\implies;><\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<5>>
+          \cc<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<5>><\implies;><\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<4>>
+        >
+      >
+      がともに成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      まず、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<4>> が成り立っていると仮定する。
+      任意に式 &m<A> をとる。
+      特に &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<4>> であり、さらに\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<4>><\dagger;>> でもあるから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \trhombus; A \buharprarr; \trhombus; A
+      >
+      が成り立つ。
+      これと\a|href="89.html#rk"|<命題 5.2> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \trhombus; \trhombus; A \buharprarr; \tbox; \trhombus; A
+      >
+      も成り立つ。
+      ここで &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> であることから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \tbox; \trhombus; \trhombus; A
+      >
+      が成り立つから、今得られた 2 つの主張に\a|href="89.html#rpl"|<定理 5.1> を適用すれば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \tbox; \trhombus; A
+      >
+      が得られる。
+      &m<A> は任意だったから、これで &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<5>> が示された。
+    >
+    \p<
+      次に、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<5>> が成り立っていると仮定する。
+      任意に式 &m<A> をとる。
+      \a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<5>><\dagger;>> でもあるから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \tbox; A \buharprarr; \tbox; A
+      >
+      が成り立つ。
+      これと\a|href="89.html#rk"|<命題 5.2> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \trhombus; \tbox; A \buharprarr; \tbox; \tbox; A
+      >
+      も成り立つ。
+      ここで &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> であることから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \trhombus; \tbox; A
+      >
+      が成り立つから、今得られた 2 つの主張に\a|href="89.html#rpl"|<定理 5.1> を使えば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \tbox; A
+      >
+      が得られる。
+      &m<A> は任意だったから、これで &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<4>> が示された。
+    >
+  >
+  \p<
+    \mref|type="thm",ref="td"|; で証明したように、単独では &m<\bfrm<T>> の方が &m<\bfrm<D>> より強い。
+    しかし、&m<\bfrm<B>> と &m<\bfrm<4>> がすでに含まれているという状況では、&m<\bfrm<D>> の方から &m<\bfrm<T>> が導けるので、結果的にこのときは &m<\bfrm<T>> と &m<\bfrm<D>> は同値になる。
+  >
+  \thm|type="prp",id="dbqt"|<
+    \p<
+      正規な理論 &m<\frak<T>> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<D>, \bfrm<B>, \bfrm<4> \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<D>, \bfrm<B>, \bfrm<4>> が成り立つと仮定する。
+      任意に式 &m<A> をとる。
+      まず、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<4>> であるから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \tbox; A
+      >
+      が成り立つ。
+      次に、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<D>> によって、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \tbox; A \buharprarr; \trhombus; \tbox; A
+      >
+      が分かる。
+      さらに、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> と\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<B>><\dagger;>> でもあるから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \tbox; A \buharprarr; A
+      >
+      が成り立つ。
+      ここまでで得られた 3 つの主張に\a|href="89.html#rpl"|<定理 5.1> を使えば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; A
+      >
+      が得られる。
+      &m<A> は任意だったから、これで &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>> が示された。
+    >
+  >
+  \p<
+    &m<\bfrm<T>> と &m<\bfrm<5>> の組み合わせは最も強い。
+    \mref|type="thm",ref="td"|; によってまず &m<\bfrm<D>> が導かれることが分かるが、さらに &m<\bfrm<B>> と &m<\bfrm<4>> も導くことができる。
+  >
+  \thm|type="prp",id="tpbq"|<
+    \p<
+      正規な理論 &m<\frak<T>> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>, \bfrm<5> \implies; \sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<4>
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>, \bfrm<5>> が成り立つと仮定する。
+      まず、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> を示すため、任意に式 &m<A> をとる。
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>> と\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<T>><\dagger;>> であるから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; \trhombus; A
+      >
+      が成り立つ。
+      さらに、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<5>> でもあるから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \tbox; \trhombus; A
+      >
+      も成り立つ。
+      ここまでで得られた 3 つの主張に\a|href="89.html#rpl"|<定理 5.1> を使えば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; \tbox; \trhombus; A
+      >
+      が得られる。
+      &m<A> は任意だったから、これで &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> が示された。
+    >
+    \p<
+      次に、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<4>> を示すため、改めて任意に式 &m<A> をとる。
+      上記により &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> が成り立つことが分かっているので、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \trhombus; \tbox; A
+      >
+      が成り立つ。
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<5>> と\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<5>><\dagger;>> であるから、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \tbox; A \buharprarr; \tbox; A
+      >
+      が成り立つが、これと\a|href="89.html#rk"|<命題 5.2> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \trhombus; \tbox; A \buharprarr; \tbox; \tbox; A
+      >
+      も得られる。
+      これと最初の主張に\a|href="89.html#rpl"|<定理 5.1> を使えば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \tbox; A
+      >
+      が得られる。
+      &m<A> は任意だったから、これで &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<4>> も示された。
+    >
+  >
+  \p<
+    以上を、証明可能性の同値性という形でもまとめておこう。
+  >
+  \thm|type="prp",id="equiv"|<
+    \p<
+      正規な理論 &m<\frak<T>> に対し、
+      &mb<
+        \array|align="c"|<
+          \cc<\array|align="rcl"|<
+            \cc<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>><\iff;><\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>, \bfrm<D>>
+            \cc<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<5>><\iff;><\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<4>>
+          >>
+          \cc<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>, \bfrm<5> \iff; \sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<D>, \bfrm<B>, \bfrm<4> \iff; \sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>, \bfrm<B>, \bfrm<4>>
+        >
+      >
+      が全て成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      これまでに示した\mref|type="thm",ref="td"|;, \mref|type="thm",ref="bqp"|;, \mref|type="thm",ref="dbqt"|;, \mref|type="thm",ref="tpbq"|; からすぐに分かる。
+    >
+  >
+  \p<
+    これにより、例えば &m<\bfrm<T>> と &m<\bfrm<D>> を両方とも追加した体系は、単に &m<\bfrm<T>> だけを追加した体系と同型である。
+    同様に、&m<\bfrm<B>> と &m<\bfrm<4>> を追加した体系は、&m<\bfrm<4>> の代わりに &m<\bfrm<5>> を追加した体系と同型である。
+    さらに、&m<\bfrm<D>> もしくは &m<\bfrm<T>> に加えて &m<\bfrm<B>> と &m<\bfrm<4>> も追加した体系は、それら 3 つの代わりに &m<\bfrm<T>> と &m<\bfrm<5>> を追加した体系と同型である。
+    これらの関係から同型になる追加パターンを整理していくと、&m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> の合計 32 通りの追加パターンのうち 17 通りは他のパターンと同型になることが分かる。
+    残る 15 通りは次の図のように整理できる。
+    &mb<
+      \diag|hor="thn,-6,54,sthn,thn",ver="vthn,vthn,thk,vthn,vthn,thk,vthn,vthn"|<
+        \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> \v; \v; \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> \br;
+        \v<\vph<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]>> \br;
+        \v<\bfrm<K> `[\bfrm<T>`]> \v; \v; \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<B>`]> \br;
+        \v; \v<\bfrm<K> `[\bfrm<D>, \bfrm<4>`]> \v; \v<\bfrm<K> `[\bfrm<D>, \bfrm<4>, \bfrm<5>`]> \br;
+        \v; \v; \v<\bfrm<K> `[\bfrm<D>, \bfrm<5>`]> \br;
+        \v<\bfrm<K> `[\bfrm<D>`]> \v; \v; \v; \v<\bfrm<K> `[\bfrm<D>, \bfrm<B>`]> \br;
+        \v; \v<\bfrm<K> `[\bfrm<4>`]> \v; \v<\bfrm<K> `[\bfrm<4>, \bfrm<5>`]> \v; \v<\bfrm<K> `[\bfrm<B>, \bfrm<5>`]> \br;
+        \v; \v; \v<\bfrm<K> `[\bfrm<5>`]> \br;
+        \v<\bfrm<K>> \v; \v; \v; \v<\bfrm<K> `[\bfrm<B>`]>
+        \ar|s="2",e="6",tip="none"|; \ar|s="8",e="12",tip="none"|; \ar|s="8",e="2",tip="none"|; \ar|s="12",e="6",tip="none"|;
+        \ar|s="14",e="16",tip="none"|; \ar|s="20",e="24",tip="none"|; \ar|s="20",e="14",tip="none"|; \ar|s="20",e="19",tip="none"|; \ar|s="19",e="16",tip="none"|;
+        \ar|s="20",e="8",tip="none"|; \ar|s="14",e="2",tip="none"|; \ar|s="24",e="12",tip="none"|; \ar|s="16",e="6",bend="-20",tip="none"|;
+        \ar|s="26",e="28",tip="none"|; \ar|s="34",e="38",tip="none"|; \ar|s="34",e="26",tip="none"|; \ar|s="34",e="33",tip="none"|; \ar|s="33",e="28",tip="none"|; \ar|s="38",e="30",tip="none"|; \ar|s="28",e="30",tip="none"|;
+        \ar|s="34",e="20",tip="none"|; \ar|s="26",e="14",tip="none"|; \ar|s="38",e="24",tip="none"|; \ar|s="33",e="19",tip="none"|; \ar|s="28",e="16",tip="none"|; \ar|s="30",e="6",tip="none"|;
+      >
+    >
+    線で繋がっているところには包含関係があり、上や右に行くほど強い体系である。
+    例えば、&m<\bfrm<K> `[\bfrm<D>, \bfrm<4>, \bfrm<5>`]> と &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> は線で繋がっていて &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> の方が右上にあるので、&m<\bfrm<K> `[\bfrm<D>, \bfrm<4>, \bfrm<5>`]> で証明可能な式は &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> でも証明可能ということである。
+  >
+  \p<
+    なお、この段階で分かっているのは、上記以外のパターンが上記の 15 パターンに帰着することと、上記の 15 パターンの間に図の通りの包含関係があることだけである。
+    図が示す包含関係が真の包含であること、すなわち包含関係のある 2 つの体系のうち一方で証明できて一方では証明できない式が存在することは、まだ分かっていない。
+    実際にはこれら 15 パターンは全て相異なるのだが、その証明には完全性の議論が必要なので、この勉強ノートでそれをしっかり証明するのはもう少し後になる。
+  >
+  \p<
+    すぐに完全性の話に移りたいところではあるが、次回はまずは、健全性について触れる予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
