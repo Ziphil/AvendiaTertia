@@ -98,15 +98,15 @@
   >
   \prf<
     \p<
-      &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> が全て成り立つと仮定する。
+      &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> までが全て成り立つと仮定する。
       任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
       まず、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> は命題論理的恒真だから、\mref|type="thm",ref="pl"|; により、
       &mb<
         \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
       >
       が成り立つ。
-      妥当性の定義から、これは &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> が全て成り立つならば &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が成り立つことを意味する。
-      今 &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> が全て成り立つことは仮定されているから、これより &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が得られる。
+      妥当性の定義から、これは &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> までが全て成り立つならば &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が成り立つことを意味する。
+      今 &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> までが全て成り立つことは仮定されているから、これより &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が得られる。
       &m<`a> と &m<\scr<M>> は任意だったので、これで &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が示された。
     >
   >

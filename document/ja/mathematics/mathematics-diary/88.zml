@@ -70,7 +70,7 @@
         スキーマ &m<\bfrm<K>, \sp<\bfrm<Dual>><\trhombus;>> を、各式 &m<A, B> に対し、
         &mb<
           \array|align="rcl"|<
-            \cc<\sb<\bfrm<K>><AB>><\colonequiv;>< \tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)>
+            \cc<\sb<\bfrm<K>><AB>><\colonequiv;><\tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)>
             \cc<\sbsp<\bfrm<Dual>><A><\trhombus;>><\colonequiv;><\trhombus; A \buharplrarr; \neg; \tbox; \neg; A>
           >
         >

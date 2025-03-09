@@ -245,7 +245,7 @@
   \p<
     以上の準備のもと、\mref|type="thm",ref="schdef"|; にある 5 つのスキーマが、それぞれ\mref|type="thm",red="reldef"|; にある 5 つの性質を満たすモデルのクラスにおいて恒真になることを示そう。
   >
-  \thm|type="thm"|<
+  \thm|type="prp",id="schval"|<
     \p<
       任意のモデルのクラス &m<\frak<C>> をとる。
       自然数 &m<k, l, m, n> に対して、

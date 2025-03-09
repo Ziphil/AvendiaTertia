@@ -31,7 +31,7 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \buharprarr; (\sb<A><2> \buharprarr; (\cdots; (\sb<A><n> \buharprarr; B) \cdots; ))
       >
       が成り立つ。
-      ここで、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1>> から &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><n>> を全て仮定すれば、規則 MP を &m<n> 回適用することで、&m<\sp<\vdash|ord|;><\frak<T>> \srel; B> を導くことができる。
+      ここで、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1>> から &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><n>> までを全て仮定すれば、規則 MP を &m<n> 回適用することで、&m<\sp<\vdash|ord|;><\frak<T>> \srel; B> を導くことができる。
     >
   >
   \p<
