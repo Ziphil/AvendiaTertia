@@ -190,7 +190,7 @@
       ここに出てきた式はそれぞれ &m<\bfrm<B>> と &m<\bfrm<5>> に属するから、これにより &m<\sp<\nvxdash|ord|;><\bfrm<Refl> \cap; \bfrm<Tran>> \srel; \bfrm<B>> と &m<\sp<\nvxdash|ord|;><\bfrm<Refl> \cap; \bfrm<Tran>> \srel; \bfrm<5>> が示されたことになる。
       したがって、\mref|type="thm",ref="sound"|; の対偶と\mref|type="thm",ref="syninc"|; により、&m<\frak<T> \subseteq; \bfrm<K> `[\bfrm<T>, \bfrm<4>`]> を満たす理論 &m<\frak<T>> に対して、&m<\sp<\nvdash|ord|;><\frak<T>> \srel; \bfrm<B>> と &m<\sp<\nvdash|ord|;><\frak<T>> \srel; \bfrm<5>> が成り立つ。
       これより、&m<\frak<U> \supseteq; \bfrm<K> `[\bfrm<B>`]> もしくは &m<\frak<U> \supseteq; \bfrm<K> `[\bfrm<5>`]> を満たす理論 &m<\frak<U>> に対して、&m<\frak<T>> では &m<\bfrm<B>> と &m<\bfrm<5>> がどちらも証明できないのに対して &m<\frak<U>> では &m<\bfrm<B>> と &m<\bfrm<5>> のどちらかは証明できるので、&m<\frak<T> \neq; \frak<U>> である。
-      このことからは特に、&m<\bfrm<K> `[\bfrm<T>`] \neq; \bfrm<K> `[\bfrm<T>, \bfrm<B>`]> や &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`] \neq; \bfrm<K> `[\bfrm<T>, \bfrm<5>`]> などが分かる。
+      このことからは例えば、&m<\bfrm<K> `[\bfrm<T>`] \neq; \bfrm<K> `[\bfrm<T>, \bfrm<B>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`] \neq; \bfrm<K> `[\bfrm<T>, \bfrm<5>`]>, &m<\bfrm<K> `[\bfrm<D>`] \neq; \bfrm<K> `[\bfrm<D>, \bfrm<B>`]>, &m<\bfrm<K> \neq; \bfrm<K> `[\bfrm<5>`]>  などが分かる。
     >
   >
   \p<
