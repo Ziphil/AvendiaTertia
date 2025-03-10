@@ -1,0 +1,206 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<健全性>
+  \use-math|prefix="9"|;
+
+  \h1<日記 (2025 年 3 月 10 日)>
+  \p<
+    今回のテーマは、健全性である。
+    すなわち、演繹体系で証明可能な式は全て意味論的にも恒真であるという性質である。
+    演繹体系と意味論を結びつける重要な性質である。
+  >
+  \p<
+    本題に入る前に、理論を大きくしても式の証明可能性は崩れないこと、逆にモデルのクラスは小さくしても恒真性が崩れないことを、明らかではあるが改めて述べておく。
+  >
+  \thm|type="thm",id="syninc"|<
+    \p<
+      理論 &m<\frak<T>, \frak<U>> に対し、&m<\frak<T> \subseteq; \frak<U>> であるとする。
+      このとき、任意の式 &m<A> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; A \implies; \sp<\vdash|ord|;><\frak<U>> \srel; A
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      定義から明らかである。
+    >
+  >
+  \thm|type="thm",id="seminc"|<
+    \p<
+      モデルのクラス &m<\frak<C>, \frak<D>> に対し、&m<\frak<C> \supseteq; \frak<D>> であるとする。
+      このとき、任意の式 &m<A> に対し、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; A \implies; \sp<\vxdash|ord|;><\frak<D>> \srel; A
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      こちらも定義から明らかである。
+    >
+  >
+  \p<
+    では、健全性の証明に移ろう。
+    とはいえ、健全性の本質となる議論は \a|href="86.html"|<2 月 24 日>にほとんど終えているので、健全性の証明はそこで示した結果をまとめるだけである。
+  >
+  \thm|type="thm",id="sound"|<
+    \p<
+      スキーマ &m<\sb<`G><1>, \cdots;, \sb<`G><n>> とモデルのクラス &m<\sb<\frak<C>><1>, \cdots;, \sb<\frak<C>><n>> に対し、
+      &mb<
+        \sp<\vxdash|ord|;><\sb<\frak<C>><1>> \srel; \sb<`G><1> \xquad; \cdots; \xquad; \sp<\vxdash|ord|;><\sb<\frak<C>><n>> \srel; \sb<`G><n>
+      >
+      が全て成り立っているならば、任意の式 &m<A> に対し、
+      &mb<
+         \sp<\vdash|ord|;><\bfrm<K> `[\sb<`G><1>, \cdots;, \sb<`G><n>`]> \srel; A \implies; \sp<\vxdash|ord|;><\sb<\frak<C>><1> \cap; \cdots; \cap; \sb<\frak<C>><n>> \srel; A
+      >
+      が成り立つ。
+      なお、&m<n = 0> のときは、&m<\sb<\frak<C>><1> \cap; \cdots; \cap; \sb<\frak<C>><n>> はあらゆるモデル全体のクラスを表すとする。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vxdash|ord|;><\sb<\frak<C>><1>> \srel; \sb<`G><1>> から &m<\sp<\vxdash|ord|;><\sb<\frak<C>><n>> \srel; \sb<`G><n>> が全て成り立っていると仮定する。
+      証明は、&m<\sp<\vdash|ord|;><\bfrm<K> `[\sb<`G><1>, \cdots;, \sb<`G><n>`]> \srel; A> の導出に関する帰納法で行う。 
+      なお、記号を簡単にするため、以降 &m<\tilde<\bfrm<K>> \coloneqq; \bfrm<K> `[\sb<`G><1>, \cdots;, \sb<`G><n>`]> と &m<\tilde<\frak<C>> \coloneqq; \sb<\frak<C>><1> \cap; \cdots; \cap; \sb<\frak<C>><n>> と書く。
+    >
+    \p<
+      &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; A> が公理であるとき。
+      このときは、さらに 4 つの場合に分けられる。
+      &m<A> が命題論理的恒真であるときは、\a|href="86.html#pl"|<定理 2.3> によって &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
+      &m<A> が &m<\bfrm<K>> に属するときは、\a|href="86.html#k"|<定理 2.5> から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
+      &m<A> が &m<\sp<\bfrm<Dual>><\trhombus;>> に属するときも、\a|href="86.html#dualrhom"|<定理 2.6> から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
+      最後に &m<A> が &m<\tilde<\bfrm<K>>> で追加された公理 &m<\sb<`G><i> \srel; (1 \leq; i \leq; n)> であったときは、最初の仮定から &m<\sp<\vxdash|ord|;><\sb<\frak<C>><i>> \srel; A> が成り立っているので、&m<\sb<\frak<C>><i> \supseteq; \tilde<\frak<C>>> と\mref|type="thm",ref="seminc"|; によって &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> も成り立つ。
+    >
+    \p<
+      &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; A> が推論規則 MP の帰結であるとき。
+      すなわち、&m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; X> と &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; X \buharprarr; A> からこれが導かれているとき。
+      帰納法の仮定から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X> と &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X \buharprarr; A> が成り立つが、\a|href="86.html#rpl"|<定理 2.4> を使うことでこれらから &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が導かれる。
+    >
+    \p<
+      &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; A> が推論規則 RN の帰結であるとき。
+      すなわち、&m<A \equiv; \tbox; X> と書けて &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; X> からこれが導かれているとき。
+      帰納法の仮定から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X> が成り立つが、\a|href="86.html#rn"|<定理 2.7> を使うことで &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; \tbox; X> すなわち &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が導かれる。
+    >
+    \p<
+      これで全ての場合が尽くされたので、定理の主張が示された。
+    >
+  >
+  \p<
+    我々は、追加するスキーマとしては &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> の 5 種類をこれまで考えてきた。
+    これらが恒真となるモデルのクラスは、\a|href="87.html#schval"|<命題 3.8> で示した通りである。
+    例えば、&m<\bfrm<T>> は対称なモデル全体のクラスで恒真であったから、\mref|type="thm",ref="sound"|; により、これを追加した体系 &m<\bfrm<K> `[\bfrm<T>`]> は対称なモデル全体に対して健全であるが分かる。
+    同様に、&m<\bfrm<4>> は推移的なモデル全体のクラスで恒真であったから、&m<\bfrm<T>> と &m<\bfrm<4>> を両方追加した体系 &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> は対称かつ推移的なモデル全体に対して健全である。
+    ところで、対称かつ推移的な関係とは半順序のことなので、&m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> は半順序モデル全体に対して健全であるとも言える。
+  >
+  \p<
+    この議論を、\a|href="88.html"|<2 月 26 日>に重要だとして挙げた 5 つの体系 (と &m<\bfrm<K>> 自身) について、改めてまとめておこう。
+    ここで、直列, 反射的, 対称, 半順序, 同値関係のモデル全体のクラスをそれぞれ &m<\bfrm<Ser>>, &m<\bfrm<Refl>>, &m<\bfrm<Sym>>, &m<\bfrm<Pord>>, &m<\bfrm<Equiv>> と書くことにする。
+    また、あらゆるモデル全体のクラスは &m<\bfrm<All>> と書く。
+  >
+  \thm|type="prp",id="soundex"|<
+    \p<
+      任意の式 &m<A> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \cc<\sp<\vdash|ord|;><\bfrm<K>> \srel; A><\implies;><\sp<\vxdash|ord|;><\bfrm<All>> \srel; A>
+          \cc<\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<D>`]> \srel; A><\implies;><\sp<\vxdash|ord|;><\bfrm<Ser>> \srel; A>
+          \cc<\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<T>`]> \srel; A><\implies;><\sp<\vxdash|ord|;><\bfrm<Refl>> \srel; A>
+          \cc<\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<T>, \bfrm<B>`]> \srel; A><\implies;><\sp<\vxdash|ord|;><\bfrm<Refl> \cap; \bfrm<Sym>> \srel; A>
+          \cc<\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> \srel; A><\implies;><\sp<\vxdash|ord|;><\bfrm<Pord>> \srel; A>
+          \cc<\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> \srel; A><\implies;><\sp<\vxdash|ord|;><\bfrm<Equiv>> \srel; A>
+        >
+      >
+      が全て成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      全て\mref|type="thm",ref="sound"|; の特別な場合である。
+      追加されているスキーマが恒真となるモデルのクラスについては、\a|href="87.html#schval"|<命題 3.8> を参照すれば良い。
+    >
+    \p<
+      なお、最後の &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> については少しコメントが必要かもしれない。
+      \mref|type="thm",ref="sound"|; によって &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> が反射的かつ Euclid 的なモデル全体に対して健全であることはすぐに分かるが、実は反射的かつ Euclid 的な関係とは同値関係のことである。
+      このことは直接確かめることもできるが、\a|href="92.html#equiv"|<命題 8.5> によって &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> が &m<\bfrm<K> `[\bfrm<T>, \bfrm<B>, \bfrm<4>`]> と同型であることを踏まえるとすぐに分かる。
+      &m<\bfrm<K> `[\bfrm<T>, \bfrm<B>, \bfrm<4>`]> に対応するのは反射的かつ対称かつ推移的なモデル全体であるが、反射的かつ対称かつ推移的な関係とはまさに同値関係である。
+    >
+  >
+  \p<
+    なお、上記 6 つの含意関係は実は逆も成り立つ。
+    すなわち、健全であるのに加えて完全でもある。
+    この完全性が次回以降のテーマになるのだが、完全性の証明は結構複雑で簡単ではないので、しばらくは完全性を証明するための道具を整備していくことになる。
+  >
+  \p<
+    さて、\mref|type="thm",ref="sound"|; で示された健全性は、むしろその対偶の方が有用である。
+    すなわち、意味論側で恒真ではないことが分かった式は、対応する演繹体系では証明できないということである。
+    これを利用して 2 つの演繹体系の片方で証明できる式がもう一方では証明できないことを示せば、それらが同型でないことが分かる。
+    この手法で、\a|href="92.html"|<3 月 8 日>に挙げた 15 種類の体系が全て異なることを示すことができる。
+  >
+  \thm|type="prp",id="dist"|<
+    \p<
+      &m<\bfrm<K>> に &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> のうちいくつかを公理として追加して得られる相異なる体系は、以下の図に示す通りのちょうど 15 種類である。
+      &mb<
+        \diag|hor="thn,-6,54,sthn,thn",ver="vthn,vthn,thn,vthn,vthn,thn,vthn,vthn"|<
+          \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> \v; \v; \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> \br;
+          \v<\vph<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]>> \br;
+          \v<\bfrm<K> `[\bfrm<T>`]> \v; \v; \v; \v<\bfrm<K> `[\bfrm<T>, \bfrm<B>`]> \br;
+          \v; \v<\bfrm<K> `[\bfrm<D>, \bfrm<4>`]> \v; \v<\bfrm<K> `[\bfrm<D>, \bfrm<4>, \bfrm<5>`]> \br;
+          \v; \v; \v<\bfrm<K> `[\bfrm<D>, \bfrm<5>`]> \br;
+          \v<\bfrm<K> `[\bfrm<D>`]> \v; \v; \v; \v<\bfrm<K> `[\bfrm<D>, \bfrm<B>`]> \br;
+          \v; \v<\bfrm<K> `[\bfrm<4>`]> \v; \v<\bfrm<K> `[\bfrm<4>, \bfrm<5>`]> \v; \v<\bfrm<K> `[\bfrm<B>, \bfrm<5>`]> \br;
+          \v; \v; \v<\bfrm<K> `[\bfrm<5>`]> \br;
+          \v<\bfrm<K>> \v; \v; \v; \v<\bfrm<K> `[\bfrm<B>`]>
+          \ar|s="2",e="6",tip="none"|; \ar|s="8",e="12",tip="none"|; \ar|s="8",e="2",tip="none"|; \ar|s="12",e="6",tip="none"|;
+          \ar|s="14",e="16",tip="none"|; \ar|s="20",e="24",tip="none"|; \ar|s="20",e="14",tip="none"|; \ar|s="20",e="19",tip="none"|; \ar|s="19",e="16",tip="none"|;
+          \ar|s="20",e="8",tip="none"|; \ar|s="14",e="2",tip="none"|; \ar|s="24",e="12",tip="none"|; \ar|s="16",e="6",bend="-25",tip="none"|;
+          \ar|s="26",e="28",tip="none"|; \ar|s="34",e="38",tip="none"|; \ar|s="34",e="26",tip="none"|; \ar|s="34",e="33",tip="none"|; \ar|s="33",e="28",tip="none"|; \ar|s="38",e="30",tip="none"|; \ar|s="28",e="30",tip="none"|;
+          \ar|s="34",e="20",tip="none"|; \ar|s="26",e="14",tip="none"|; \ar|s="38",e="24",tip="none"|; \ar|s="33",e="19",tip="none"|; \ar|s="28",e="16",tip="none"|; \ar|s="30",e="6",tip="none"|;
+        >
+      >
+      これらの体系はどの 2 つをとっても互いに同型ではない。
+      したがって特に、線で結ばれている 2 つの体系は真の包含関係である。
+      すなわち、右もしくは上にある体系の方がもう一方の体系よりも真に多くの式を証明することができる。
+    >
+  >
+  \prf<
+    \p<
+      公理の追加で得られるあらゆる体系が上記の 15 種類の体系に帰結させられることは、\a|href="92.html#equiv"|<命題 8.5> から分かる。
+      また、それらの間の包含関係も、\a|href="92.html#td"|<命題 8.1>, \a|href="92.html#bqp"|<命題 8.2>, \a|href="92.html#dbqt"|<命題 8.3>, \a|href="92.html#tpbq"|<命題 8.4> を適宜使うことですぐに分かる。
+      これの具体的な議論は省略する。
+      したがって、後は上記の 15 種類の体系が互いに同型でないことを示せば良い。
+      これも、代表的なところだけ証明して、残りは省略する。
+    >
+    \p<
+      モデル &m<\scr<M> \coloneqq; (W, \sim|ord|;, P)> を、相異なる元 &m<`a, `b> をとって、
+      &mb<
+        \array|align="rcl"|<
+          \cc<W><\coloneqq;><`{`a, `b`}>
+          \cc<\sim|ord|;><\coloneqq;><`{(`a, `a), (`b, `b), (`a, `b)`}>
+          \cc<\sb<P><n>><\coloneqq;><`{`a`} \quad; (n \geq; 0)>
+        >
+      >
+      で定めると、この &m<\scr<M>> は反射的かつ推移的であり、すなわち &m<\scr<M> \in; \bfrm<Refl> \cap; \bfrm<Tran>> である。
+      一方、&m<\sbsp<\nvxdash|ord|;><`a><\scr<M>> \srel; \sb<\tt<p>><0> \buharprarr; \tbox; \trhombus; \sb<\tt<p>><0>> かつ &m<\sbsp<\nvxdash|ord|;><`a><\scr<M>> \srel; \trhombus; \sb<\tt<p>><0> \buharprarr; \tbox; \trhombus; \sb<\tt<p>><0>> であることも容易に確かめられる。
+      ここに出てきた式はそれぞれ &m<\bfrm<B>> と &m<\bfrm<5>> に属するから、これにより &m<\sp<\nvxdash|ord|;><\bfrm<Refl> \cap; \bfrm<Tran>> \srel; \bfrm<B>> と &m<\sp<\nvxdash|ord|;><\bfrm<Refl> \cap; \bfrm<Tran>> \srel; \bfrm<5>> が示されたことになる。
+      したがって、\mref|type="thm",ref="sound"|; の対偶と\mref|type="thm",ref="syninc"|; により、&m<\frak<T> \subseteq; \bfrm<K> `[\bfrm<T>, \bfrm<4>`]> を満たす理論 &m<\frak<T>> に対して、&m<\sp<\nvdash|ord|;><\frak<T>> \srel; \bfrm<B>> と &m<\sp<\nvdash|ord|;><\frak<T>> \srel; \bfrm<5>> が成り立つ。
+      これより、&m<\frak<U> \supseteq; \bfrm<K> `[\bfrm<B>`]> もしくは &m<\frak<U> \supseteq; \bfrm<K> `[\bfrm<5>`]> を満たす理論 &m<\frak<U>> に対して、&m<\frak<T>> では &m<\bfrm<B>> と &m<\bfrm<5>> がどちらも証明できないのに対して &m<\frak<U>> では &m<\bfrm<B>> と &m<\bfrm<5>> のどちらかは証明できるので、&m<\frak<T> \neq; \frak<U>> である。
+      このことからは特に、&m<\bfrm<K> `[\bfrm<T>`] \neq; \bfrm<K> `[\bfrm<T>, \bfrm<B>`]> や &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`] \neq; \bfrm<K> `[\bfrm<T>, \bfrm<5>`]> などが分かる。
+    >
+  >
+  \p<
+    以上で、健全性が示されて、論理体系を考える上での 1 つの重要なテーマが決着した。
+    次回からは、完全性の証明を目指して準備を行っていく予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
