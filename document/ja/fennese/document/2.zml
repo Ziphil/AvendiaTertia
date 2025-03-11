@@ -13,12 +13,12 @@
   \side<
     \table<
       \tr<\th;\th<機能的>\th<意味的>>
-      \tr<\td<\mk;[к]>\td<>\td<場所>>
+      \tr<\td<\mk;[к]>\td<>\td<名詞化>>
       \tr<\td<\mk;[г]>\td<>\td<指大>>
-      \tr<\td<\mk;[х]>\td<遠称>\td<>>
+      \tr<\td<\mk;[х]>\td<遠称, 対格>\td<>>
       \tr<\td<\mk;[ҕ]>\td<>\td<>>
       \tr<\td<\mk;[т]>\td<相関, 具格 2>\td<>>
-      \tr<\td<\mk;[д]>\td<受動態>\td<>>
+      \tr<\td<\mk;[д]>\td<受動態>\td<場所>>
       \tr<\td<\mk;[с]>\td<中称>\td<>>
       \tr<\td<\mk;[з]>\td<>\td<外>>
       \tr<\td<\mk;[п]>\td<>\td<>>
@@ -29,7 +29,7 @@
     \table<
       \tr<\th;\th<機能的>\th<意味的>>
       \tr<\td<\mk;[ҫ]>\td<与格>\td<>>
-      \tr<\td<\mk;[ҙ]>\td<>\td<名詞化>>
+      \tr<\td<\mk;[ҙ]>\td<>\td<再帰>>
       \tr<\td<\mk;[ш]>\td<二人称>\td<同伴>>
       \tr<\td<\mk;[ж]>\td<>\td<>>
       \tr<\td<\mk;[ц]>\td<一人称単数>\td<上>>
@@ -45,7 +45,7 @@
       \tr<\td<\mk;[л]>\td<不定詞, 定>\td<>>
       \tr<\td<\mk;[р]>\td<分詞>\td<>>
       \tr<\td<\mk;[й]>\td<近称, 処格>\td<物>>
-      \tr<\td<\mk;[ў]>\td<関係, 奪格 1>\td<>>
+      \tr<\td<\mk;[ў]>\td<関係, 具格 1>\td<>>
       \tr<\td<\mk;[ъ]>\td<三人称>\td<>>
     >
   >
