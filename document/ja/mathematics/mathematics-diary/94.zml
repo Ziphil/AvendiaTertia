@@ -1,0 +1,218 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<極大整合的集合と Lindenbaum の補題>
+  \use-math|prefix="10"|;
+
+  \h1<日記 (2025 年 3 月 17 日)>
+  \p<
+    ここからしばらくの目標は、完全性の証明である。
+    すなわち、理論 &m<\frak<T>> とそれに対応するモデルのクラス &m<\frak<C>> に対し、あらゆる式 &m<A> について &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> ならば &m<\sp<\vdash|ord|;><\frak<T>> \srel; A> が成り立つことを示したい。
+    そのためには、うまくモデル &m<\scr<M> \in; \frak<C>> を作って、あらゆる式 &m<A> について &m<\sp<\vxdash|ord|;><\scr<M>> \srel; A> ならば &m<\sp<\vdash|ord|;><\frak<T>> \srel; A> となるようにすれば良い。
+    このようなモデルは「正準モデル」と呼ばれる。
+  >
+  \p<
+    最大の問題はどうすれば正準モデルを構成できるのかという点であるが、これには極大整合的集合を用いた手法が知られている。
+    そこで今回は、極大整合的集合を定義して、その存在を保証する Lindenbaum の補題を証明する。
+  >
+  \p<
+    これまでは、ある式 1 つだけをとって、それが恒真 (もしくは証明可能) かどうかを考えてきた。
+    ここからは、式と式との関係性、すなわちある式から別の式が導けるかどうかを考えたい。
+    この関係は次のように定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G> と式 &m<A> に対し、ある有限個 (0 個でも良い) の式 &m<\sb<B><1>, \cdots;, \sb<B><n> \in; `G> が存在して &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<B><1> \wedge; \cdots; \wedge; \sb<B><n> \buharprarr; A> が成り立つとき、&m<A> は &m<`G> から \def<導出可能\fl<deducible>> であるという。
+      このとき、&m<`G \sp<\vdash;><\frak<T>> A> と書く。
+    >
+  >
+  \p<
+    導出可能関係の左辺は式の集合であるが、これが有限集合のときは、単にその元を並べて書くことがある。
+    したがって例えば、式 &m<A, B, C> に対して、&m<B \sp<\vdash;><\frak<T>> A> とは &m<`{ B `} \sp<\vdash;><\frak<T>> A> の意味であり、&m<B, C \sp<\vdash;><\frak<T>> A> とは &m<`{ B, C `} \sp<\vdash;><\frak<T>> A> の意味である。
+    また、左辺に式の集合や式そのものが並列されている場合は、良い具合にそれら全体の集合を表すことにする。
+    例えば、式の集合 &m<`G, `D> と式 &m<A, B> に対して、&m<`G, B \sp<\vdash;><\frak<T>> `A> と書いたら &m<`G \cup; `{ B `} \sp<\vdash;><\frak<T>> A> を意味し、&m<`G, `D \sp<\vdash;><\frak<T>> `A> と書いたら &m<`G \cup; `D \sp<\vdash;><\frak<T>> A> を意味するといった具合である。
+  >
+  \p<
+    まず明らかに、証明可能であることは空集合から導出可能であることと同値である。
+  >
+  \thm|type="thm",id="empded"|<
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式 &m<A> に対し、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A> が成り立つことと &m<\empty; \sp<\vdash;><\frak<T>> A> が成り立つことは同値である。
+      すなわち、&m<A> が証明可能であることと &m<A> が空集合から導出可能であることは同値である。
+    >
+  >
+  \prf<
+    \p<
+      定義から明らかである。
+    >
+  >
+  \p<
+    これにより、式 &m<A> に対して &m<\sp<\vdash|ord|;><\frak<T>> \srel; A> と書いたとき、&m<A> が証明可能であると解釈しても、0 個の式から &m<A> が導出可能であることを表すために左辺に何も書いてないのだと解釈しても、同じことである。
+    そのため、記号の意味が曖昧になることはない。
+  >
+  \p<
+    続いて、集合の整合性を定義しよう。
+    これは別の日本語訳として「無矛盾」と呼ばれることもあるが、メタな意味での矛盾と区別するため、ここでは「整合的」という用語を使うことにする。
+  >
+  \thm|type="def"|<
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G> に対して、&m<`G \sp<\vdash;><\frak<T>> \bot;> が成り立たないとき、&m<`G> は &m<\frak<T>>-\def<整合的\fl<consistent>> であるという。
+    >
+  >
+  \p<
+    後々のために、整合的集合に関する性質を 2 つ示しておく。
+  >
+  \thm|type="thm",id="consub"|<
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G, `D> が &m<`G \subseteq; `D> を満たすとする。
+      このとき、&m<`D> が &m<\frak<T>>-整合的であれば、&m<`G> も &m<\frak<T>>-整合的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<`G \subseteq; `D> であるとし、さらに &m<`D> が整合的であるとする。
+      任意に式 &m<\sb<B><1>, \cdots;, \sb<B><n> \in; `G> をとると、&m<`G \subseteq; `D> なのでこれらは &m<`D> の元でもあるから、&m<`D> の整合性によって、&m<\sp<\nvdash|ord|;><\frak<T>> \srel; \sb<B><1> \wedge; \cdots; \wedge; \sb<B><n> \buharprarr; \bot;> である。
+      したがって、&m<`G> は整合的である。
+    >
+  >
+  \thm|type="thm",id="confin"|<
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G> に対し、2 条件
+    >
+    \ol<
+      \li*<
+        &m<`G> は &m<\frak<T>>-整合的である。
+      >
+      \li*<
+        任意の有限部分集合 &m<`G' \subseteq; `G> に対して、&m<`G'> は &m<\frak<T>>-整合的である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\rxarr;> 条件 2>
+      これは\mref|type="thm",ref="consub"|; によって明らかである。
+    >
+    \p<
+      \label<条件 2 &m<\rxarr;> 条件 1>
+      条件 2 を仮定する。
+      矛盾を導くため、&m<`G> が整合的でないとすると、ある式 &m<\sb<B><1>, \cdots;, \sb<B><n> \in; `G> が存在して &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<B><1> \wedge; \cdots; \wedge; \sb<B><n> \buharprarr; \bot;> が成り立つ。
+      ここで、集合 &m<`{ \sb<B><1>, \cdots;, \sb<B><n> `}> は &m<`G> の有限部分集合であるから、仮定から &m<`{ \sb<B><1>, \cdots;, \sb<B><n> `}> は整合的である。
+      しかし、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<B><1> \wedge; \cdots; \wedge; \sb<B><n> \buharprarr; \bot;> が成り立つことは、&m<`{ \sb<B><1>, \cdots;, \sb<B><n> `}> の整合性に反する。
+      よって、&m<`G> は整合的である。
+    >
+  >
+  \p<
+    さて、正準モデルを構成する際に重要になるのが、整合的集合の中でも極大なもの、すなわち整合性を保ちながらそれ以上式を追加することができないものである。
+  >
+  \thm|type="def"|<
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G> が、2 条件
+    >
+    \ul<
+      \li*<
+        &m<`G> は &m<\frak<T>>-整合的である。
+      >
+      \li*<
+        式 &m<A> に対して、&m<`G \cup; `{ A `}> も &m<\frak<T>>-整合的ならば &m<A \in; `G> が成り立つ。
+      >
+    >
+    \p<
+      をともに満たすとき、&m<`G> は &m<\frak<T>>-\def<極大整合的\fl<maximally consistent>> であるという。
+    >
+  >
+  \p<
+    極大整合的な集合は必ず存在する。
+    より強く、任意の整合的な集合から、それの拡大として極大整合的な集合を得ることができる。
+    これを保証するのが、次に示す Lindenbaum の補題である。
+  >
+  \thm|type="thm",id="lindenbaum"|<
+    \name<Lindenbaum の補題\fl<—’s lemma>>
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G> に対し、&m<`G> が &m<\frak<T>>-整合的ならば、ある式の集合 &m<`D> が存在して、&m<`G \subseteq; `D> であってかつ &m<`D> は &m<\frak<T>>-極大整合的である。 
+    >
+  >
+  \p<
+    証明の方針は単純で、整合性が崩れない限り &m<`G> に式を追加するという操作を、全ての式に対して行うだけである。
+    証明の本質は、この構成の正当化である。
+  >
+  \prf<
+    \p<
+      &m<`G> が整合的であると仮定する。
+      また、式は可算個しかないので、全ての式を適当に番号付けして &m<\sb<A><1>, \sb<A><2>, \cdots;> としておく。
+    >
+    \p<
+      式の集合の列 &m<(\sb<`D><n>) \sb<><n \geq; 0>> を、
+      &mb<
+        \array|align="rcl"|<
+          \cc<\sb<`D><0>><\coloneqq;><`G>
+          \cc<\sb<`D><n>><\coloneqq;><\case<
+            \cc<\sb<`D><n - 1> \cup; `{ \sb<A><n> `}><(\sb<`D><n - 1> \cup; `{ \sb<A><n> `} &raw< は整合的>)>
+            \cc<\sb<`D><n - 1>><(&raw<上記以外>)>
+          > \quad; (n \geq; 1)>
+        >
+      >
+      と再帰的に定義する。
+      すると明らかに、これは集合の増大列であって、各 &m<\sb<`D><n>> は整合的である。 
+    >
+    \p<
+      この列を用いて、
+      &mb<
+        `D \coloneqq; \bigcup<n \geq; 0> \sb<`D><n>
+      >
+      とし、これが主張の性質を満たすことを以下に示す。
+    >
+    \p<
+      まず、&m<`G = \sb<`D><0> \subseteq; `D> であることから、&m<`G \subseteq; `D> が成り立つことはすぐに分かる。
+    >
+    \p<
+      次に、&m<`D> が整合的であることを示す。
+      そのためには、\mref|type="thm",ref="confin"|; により、任意の有限部分集合 &m<`D' \subseteq; `D> が整合的であることを示せば良い。
+      そこで逆に、ある有限部分集合 &m<`D' \subseteq; `D> が整合的ではないと仮定する。
+      これは有限集合だから、
+      &mb<
+        `D`' \eqqcolon; `{ \sb<A><\sb<n><1>>, \cdots;, \sb<A><\sb<n><k>> `}
+      >
+      と書ける。
+      ここで、各 &m<i> に対して、&m<\sb<A><\sb<n><i>> \in; `D> であるので、&m<`D> の定義によってある &m<\sb<m><i>> が存在して &m<\sb<A><\sb<n><i>> \in; \sb<`D><\sb<m><i>>> である。
+      こうして得られた &m<\sb<m><1>, \cdots;, \sb<m><k>> のうち最大のものを &m<m> とおく。
+      すると、任意の &m<i> に対して、&m<\sb<`D><\sb<m><i>> \subseteq; \sb<`D><m>> であることから &m<\sb<A><\sb<n><i>> \in; \sb<`D><m>> が分かる。
+      すなわち、&m<`D' \subseteq; \sb<`D><m>> が成り立つ。
+      最初の仮定から &m<`D'> は整合的ではないので、\mref|type="thm",ref="consub"|; によって &m<\sb<`D><m>> も整合的ではないはずであるが、これは矛盾である。
+      したがって、&m<`D> が整合的であることが示された。
+    >
+    \p<
+      最後に、&m<`D> が極大整合的であることを示す。
+      そのために、任意に式 &m<A> をとり、&m<`D \cup; `{ A `}> が整合的であると仮定する。
+      全ての式に番号付けをしたので、ある &m<n> が存在して &m<A = \sb<A><n>> である。
+      ここで、&m<\sb<`D><n - 1> \cup; `{ \sb<A><n> `} \subseteq; `D \cup; `{ \sb<A><n> `}> であるから、\mref|type="thm",ref="consub"|; によって &m<\sb<`D><n - 1> \cup; `{ \sb<A><n> `}> は整合的である。
+      すると、定義により &m<\sb<`D><n> = \sb<`D><n - 1> \cup; `{ \sb<A><n> `}> が成り立つから、
+      &mb<
+        A = \sb<A><n> \in; \sb<`D><n - 1> \cup; `{ \sb<A><n> `} = \sb<`D><n> \subseteq; `D
+      >
+      となり、結局 &m<A \in; `D> が得られた。
+      これで、&m<`D> が極大整合的であることも示された。 
+    >
+  >
+  \p<
+    次回は、式の導出可能性や集合の整合性に関して、正準モデルを構成するために必要となる様々な性質を見ていく予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
