@@ -176,7 +176,7 @@
   >
   \prf<
     \p<
-      &m<X \setminus; S \neq; \defpty;> であるから、&m<x \coloneqq; \min; (X \setminus; S)> がとれる。
+      &m<X \setminus; S \neq; \empty;> であるから、&m<x \coloneqq; \min; (X \setminus; S)> がとれる。
       この &m<x> について &m<S = O (x)> であることを示す。
     >
     \p<

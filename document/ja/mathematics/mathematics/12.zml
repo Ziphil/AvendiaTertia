@@ -694,7 +694,7 @@
       が成り立つ。
       これにより、任意の &m<q \in; \bfrm<P>> に対して、
       &mb<
-        \op<Hom> (q, \sb<p><U>) \cap; \op<Hom> (q, \sb<p><U'>) = \defpty;
+        \op<Hom> (q, \sb<p><U>) \cap; \op<Hom> (q, \sb<p><U'>) = \empty;
       >
       が分かり、これはすなわち 
       &mb<

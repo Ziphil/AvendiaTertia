@@ -141,7 +141,7 @@
     \p<
       定理中の 2 つの主張は明らかに同値なので、2 つ目の主張のみを示す。
       まず、左の条件から右の条件を導くため、&m<`b \subset; `a> を仮定する。
-      すると、&m<`a \setminus; `b \neq; \defpty;> であり、\mref|type="thm",ref="wellord"|; によって &m<`a> は整列集合だから、&m<`j \in; \min; (`a \setminus; `b)> がとれる。
+      すると、&m<`a \setminus; `b \neq; \empty;> であり、\mref|type="thm",ref="wellord"|; によって &m<`a> は整列集合だから、&m<`j \in; \min; (`a \setminus; `b)> がとれる。
       以降、&m<`j = `b> であることを示す。
     >
     \p<

@@ -69,7 +69,7 @@
         >
       >
       とおくと、置換公理図式によってこれは集合である。
-      \a|href="50.html#wellthm"|<定理 4.4> によって、&m<X> 上の整列順序は少なくとも 1 つ存在するから、&m<\scr<F> \neq; \defpty;> である。
+      \a|href="50.html#wellthm"|<定理 4.4> によって、&m<X> 上の整列順序は少なくとも 1 つ存在するから、&m<\scr<F> \neq; \empty;> である。
       また、&m<\scr<F>> は順序数の大小関係について整列集合である。
       したがって、&m<`k \coloneqq; \min; \scr<F>> がとれ、明らかにこれが存在を示したかったものである。
     >
@@ -212,7 +212,7 @@
         単射 &m<f: Y \to; X> が存在する。
       >
       \li<
-        全射 &m<g: X \to; Y> が存在するか、&m<Y = \defpty;> である。
+        全射 &m<g: X \to; Y> が存在するか、&m<Y = \empty;> である。
       >
     >
     \p<
@@ -226,7 +226,7 @@
     >
     \p<
       \label<条件 1 &m<\raarr;> 条件 3>
-      &m<Y = \defpty;> の場合は条件 3 は明らかに成り立つから、&m<Y \neq; \defpty;> の場合を考える。
+      &m<Y = \empty;> の場合は条件 3 は明らかに成り立つから、&m<Y \neq; \empty;> の場合を考える。
       元 &m<y \in; Y> を 1 つとって固定する。
       仮定から &m<\lvert; Y \rvert; \subseteq; \lvert; X \rvert;> であることに注意して、
       &mb<
@@ -248,10 +248,10 @@
     >
     \p<
       \label<条件 3 &m<\raarr;> 条件 2>
-      &m<Y = \defpty;> の場合は一意な写像 &m<f: \defpty; \to; X> が単射であるから、条件 2 が示された。
-      したがって、以下では &m<Y \neq; \defpty;> とする。
+      &m<Y = \empty;> の場合は一意な写像 &m<f: \empty; \to; X> が単射であるから、条件 2 が示された。
+      したがって、以下では &m<Y \neq; \empty;> とする。
       このとき、仮定から全射 &m<g: X \to; Y> がとれる。
-      ここで、&m<`G: \frak<P> (X) \setminus; `{\defpty;`} \to; X> を選択関数として、
+      ここで、&m<`G: \frak<P> (X) \setminus; `{\empty;`} \to; X> を選択関数として、
       &mb<
         \array|align="rrcl"|<
           \c<f:> \c<Y> \c<\longto;> \c<X> \br;

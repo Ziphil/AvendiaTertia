@@ -20,7 +20,7 @@
     が成り立つことが知られている。
     一方で、この &m<Z> を閉じたラムダ項のみに制限した命題
     &mb<
-      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\defpty;> \ssbin; [\sb|rel|<\vdash;><\rm<`l> `b `h> MZ = NZ]) \implies; [\sb|rel|<\vdash;><\rm<`l> `b `h> M = N]
+      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; [\sb|rel|<\vdash;><\rm<`l> `b `h> MZ = NZ]) \implies; [\sb|rel|<\vdash;><\rm<`l> `b `h> M = N]
     >
     は一般には成り立たない。
     この反例を構成する。
@@ -55,7 +55,7 @@
     ラムダ項 &m<M> の Gödel 数 は &m<`# M> とし、&m<M> の Gödel 数の Church 数を &m<\lceil; M \rceil; \equiv; `# M> で表す。
   >
   \p<
-    ラムダ項全体は &m<\rm<`L>> で表し、閉じたラムダ項全体は &m<\sp<\rm<`L>><\defpty;>> で表す。
+    ラムダ項全体は &m<\rm<`L>> で表し、閉じたラムダ項全体は &m<\sp<\rm<`L>><\empty;>> で表す。
   >
   \h1<Gödel 数の逆関数>
   \p<
@@ -79,7 +79,7 @@
     \p<
       あるコンビネータ &m<\bfrm<X>> であって、
       &mb<
-        \sp<><\forall;> M \in; \sp<\rm<`L>><\defpty;> \ssbin; \sp<><\exists;> \sp<M><*> \in; \op<Comb> `{ \bfrm<X> `} \ssbin; \sp<M><*> \sb|rel|<\headrarr;><`b> M
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; \sp<><\exists;> \sp<M><*> \in; \op<Comb> `{ \bfrm<X> `} \ssbin; \sp<M><*> \sb|rel|<\headrarr;><`b> M
       >
       を満たすものが存在する。
     >
@@ -189,7 +189,7 @@
     \p<
       閉じたラムダ項 &m<G> であって、
       &mb<
-        \sp<><\forall;> M \in; \sp<\rm<`L>><\defpty;> \ssbin; G \lceil; M \rceil; \sb|rel|<=><`b> \underline<$ \sp<M><*>>
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; G \lceil; M \rceil; \sb|rel|<=><`b> \underline<$ \sp<M><*>>
       >
       を満たすものが存在する。
       なお、&m<\sp<M><*>> は\mref|type="thm",ref="mstar"|; で定義されたものである。
@@ -214,7 +214,7 @@
     \p<
       コンビネータ &m<\bfrm<E>> であって、
       &mb<
-        \sp<><\forall;> M \in; \sp<\rm<`L>><\defpty;> \ssbin; \bfrm<E> \lceil; M \rceil; \sb|rel|<=><`b> M
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; \bfrm<E> \lceil; M \rceil; \sb|rel|<=><`b> M
       >
       を満たすものが存在する。
     >
@@ -693,7 +693,7 @@
     \p<
       上で定義した &m<M, N> は、
       &mb<
-        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\defpty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
+        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
       >
       を満たさない。
     >
@@ -716,7 +716,7 @@
   \p<
     前節で示したように、閉じたラムダ項に対してのみの外延性
     &mb<
-      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\defpty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
+      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
     >
     は一般には成り立たないが、&m<M> と &m<N> が特定の条件を満たしている範囲であれば成り立つ。
     その条件の 1 つとして、以下のものが知られている。
@@ -735,7 +735,7 @@
     \p<
       ラムダ項 &m<M, N> のうち、どちらか一方が &m<`b`h>-普遍生成子でなければ、
       &mb<
-        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\defpty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
+        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
       >
       が成り立つ。
     >

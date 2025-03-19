@@ -205,13 +205,13 @@
   \thm|type="def"|<
     \p<
       多圏 &m<\scr<C>> をとる。
-      任意の &m<\scr<C>> の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> について、&m<`# \langle; `D \rangle; \neq; 1> ならば &m<\sb<\op<Hom>><\scr<C>> (`F \mid; `D) = \defpty;> が成り立っているとする。
+      任意の &m<\scr<C>> の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> について、&m<`# \langle; `D \rangle; \neq; 1> ならば &m<\sb<\op<Hom>><\scr<C>> (`F \mid; `D) = \empty;> が成り立っているとする。
       このとき、&m<\scr<C>> を \def<複圏\fl<multicategory>> という。
     >
   >
   \p<
     定義から、複圏とは複射しか存在しない多圏のことであり、Lambek\mref|type="bib",ref="ldsc"|; が導入した複圏と同じものになっている。
-    また、射しか存在しない多圏、すなわち任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> について &m<`# \langle; `G \rangle; \neq; 1> かつ &m<`# \langle; `D \rangle; \neq; 1> ならば &m<\op<Hom> (`G \mid; `D) = \defpty;> であるような多圏は、通常の意味での圏と同じものになる。
+    また、射しか存在しない多圏、すなわち任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;> について &m<`# \langle; `G \rangle; \neq; 1> かつ &m<`# \langle; `D \rangle; \neq; 1> ならば &m<\op<Hom> (`G \mid; `D) = \empty;> であるような多圏は、通常の意味での圏と同じものになる。
     この同一視により、通常の圏を多圏と見なすことができる。
   >
   \p<

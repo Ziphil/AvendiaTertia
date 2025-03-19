@@ -182,7 +182,7 @@
         \sb<\op<Hom>><\sp<\scr<A>><*>> (a, a') \coloneqq; \case<
           \c<\sb<\op<Hom>><\scr<A>> (a, a')> \c<(a \in; \scr<A>, a' \in; \scr<A>)> \br;
           \c<`{\sb<u><a> \rcomp; v`}> \c<(a \in; \scr<A>, a' = \top;)> \br;
-          \c<\defpty;> \c<(a = \top;, a' \in; \scr<A>)> \br;
+          \c<\empty;> \c<(a = \top;, a' \in; \scr<A>)> \br;
           \c<`{\sb<\rm<id>><\top;>`}> \c<(a = \top;, a' = \top;)> \br;
         >
       >
