@@ -94,7 +94,7 @@
     以上のイメージを踏まえて、モデルに属するある世界における式の妥当性を以下のように定義する。
     特に、原子式と様相式の妥当性の定義に注目されたい。
   >
-  \thm|type="def"|<
+  \thm|type="def",id="sem"|<
     \p<
       モデル &m<\scr<M> = (W, \sim|ord|;, P)> の世界 &m<`a \in; W> を考える。
       式 &m<A> に対し、命題 &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> を以下で再帰的に定義する。
@@ -122,10 +122,10 @@
         &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A \buharprarr; B> であるのは、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> ならば &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; B> が成り立つときである。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \box|ord|; A> であるのは、全ての &m<`b \in; W> に対して、&m<`a \sim; `b> ならば &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つときである。
+        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \box|ord|; A> であるのは、&m<`b \in; W> であって &m<`a \sim; `b> を満たすもの全てに対して &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つときである。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \trhombus; A> であるのは、ある &m<`b \in; W> が存在して、&m<`a \sim; `b> かつ &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つときである。
+        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \trhombus; A> であるのは、&m<`b \in; W> であって &m<`a \sim; `b> を満たすものが存在して &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つときである。
       >
     >
     \p<

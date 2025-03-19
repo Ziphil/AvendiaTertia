@@ -25,15 +25,15 @@
   \thm|type="def"|<
     \p<
       理論 &m<\frak<T>> をとる。
-      式の集合 &m<`G> と式 &m<A> に対し、ある有限個 (0 個でも良い) の式 &m<\sb<B><1>, \cdots;, \sb<B><n> \in; `G> が存在して &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<B><1> \wedge; \cdots; \wedge; \sb<B><n> \buharprarr; A> が成り立つとき、&m<A> は &m<`G> から \def<導出可能\fl<deducible>> であるという。
+      式の集合 &m<`G> と式 &m<A> に対し、ある有限個 (0 個でも良い) の式 &m<\sb<G><1>, \cdots;, \sb<G><n> \in; `G> が存在して &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; A> が成り立つとき、&m<A> は &m<`G> から \def<導出可能\fl<deducible>> であるという。
       このとき、&m<`G \sp<\vdash;><\frak<T>> A> と書く。
     >
   >
   \p<
     導出可能関係の左辺は式の集合であるが、これが有限集合のときは、単にその元を並べて書くことがある。
-    したがって例えば、式 &m<A, B, C> に対して、&m<B \sp<\vdash;><\frak<T>> A> とは &m<`{ B `} \sp<\vdash;><\frak<T>> A> の意味であり、&m<B, C \sp<\vdash;><\frak<T>> A> とは &m<`{ B, C `} \sp<\vdash;><\frak<T>> A> の意味である。
+    したがって例えば、式 &m<A, G, H> に対して、&m<G \sp<\vdash;><\frak<T>> A> とは &m<`{ G `} \sp<\vdash;><\frak<T>> A> の意味であり、&m<G, H \sp<\vdash;><\frak<T>> A> とは &m<`{ G, H `} \sp<\vdash;><\frak<T>> A> の意味である。
     また、左辺に式の集合や式そのものが並列されている場合は、良い具合にそれら全体の集合を表すことにする。
-    例えば、式の集合 &m<`G, `D> と式 &m<A, B> に対して、&m<`G, B \sp<\vdash;><\frak<T>> `A> と書いたら &m<`G \cup; `{ B `} \sp<\vdash;><\frak<T>> A> を意味し、&m<`G, `D \sp<\vdash;><\frak<T>> `A> と書いたら &m<`G \cup; `D \sp<\vdash;><\frak<T>> A> を意味するといった具合である。
+    例えば、式の集合 &m<`G, `D> と式 &m<A, G> に対して、&m<`G, G \sp<\vdash;><\frak<T>> `A> と書いたら &m<`G \cup; `{ G `} \sp<\vdash;><\frak<T>> A> を意味し、&m<`G, `D \sp<\vdash;><\frak<T>> `A> と書いたら &m<`G \cup; `D \sp<\vdash;><\frak<T>> A> を意味するといった具合である。
   >
   \p<
     まず明らかに、証明可能であることは空集合から導出可能であることと同値である。
@@ -65,20 +65,67 @@
     >
   >
   \p<
-    後々のために、整合的集合に関する性質を 2 つ示しておく。
+    後々のために、導出可能性や整合性に関する性質をいくつか示しておく。
+    まず、式の集合を大きいものや小さいものに取り替えることを考える。
+  >
+  \thm|type="thm",id="dedsub"|<
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G, `D> が &m<`G \subseteq; `D> を満たすとする。
+      式 &m<A> に対し、&m<`G \sp<\vdash;><\frak<T>> A> が成り立つならば &m<`D \sp<\vdash;><\frak<T>> A> も成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<`G \sp<\vdash;><\frak<T>> A> が成り立つと仮定する。
+      導出可能性の定義から、ある式 &m<\sb<G><1>, \cdots;, \sb<G><n> \in; `G> が存在して &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; A> が成り立つ。
+      ここで、&m<`G \subseteq; `D> であるから &m<\sb<G><1>, \cdots;, \sb<G><n> \in; `D> でもある。
+      したがって、&m<`D \sp<\vdash;><\frak<T>> A> が成り立つ。
+    >
   >
   \thm|type="thm",id="consub"|<
     \p<
       理論 &m<\frak<T>> をとる。
       式の集合 &m<`G, `D> が &m<`G \subseteq; `D> を満たすとする。
-      このとき、&m<`D> が &m<\frak<T>>-整合的であれば、&m<`G> も &m<\frak<T>>-整合的である。
+      このとき、&m<`D> が &m<\frak<T>>-整合的ならば &m<`G> も &m<\frak<T>>-整合的である。
     >
   >
   \prf<
     \p<
-      &m<`G \subseteq; `D> であるとし、さらに &m<`D> が整合的であるとする。
-      任意に式 &m<\sb<B><1>, \cdots;, \sb<B><n> \in; `G> をとると、&m<`G \subseteq; `D> なのでこれらは &m<`D> の元でもあるから、&m<`D> の整合性によって、&m<\sp<\nvdash|ord|;><\frak<T>> \srel; \sb<B><1> \wedge; \cdots; \wedge; \sb<B><n> \buharprarr; \bot;> である。
-      したがって、&m<`G> は整合的である。
+      対偶をとって、 &m<`G> が整合的でなければ &m<`D> も整合的でないことを示せば良い。
+      すなわち、&m<`G \sp<\vdash;><\frak<T>> \bot;> が成り立つならば &m<`D \sp<\vdash;><\frak<T>> \bot;> も成り立つことを示せば良いが、それは\mref|type="thm",ref="dedsub"|; から従う。
+    >
+  >
+  \p<
+    次に、導出可能性や整合性がある種の有限性をもつことを示す。
+  >
+  \thm|type="thm",id="dedfin"|<
+    \p<
+      理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G> と式 &m<A>に対し、2 条件
+    >
+    \ol<
+      \li*<
+        &m<`G \sp<\vdash;><\frak<T>> A> が成り立つ。
+      >
+      \li*<
+        ある有限部分集合 &m<\sp<`G><\circ;> \subseteq; `G> に対して、&m<\sp<`G><\circ;> \sp<\vdash;><\frak<T>> A> が成り立つ。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\rxarr;> 条件 2>
+      &m<`G \sp<\vdash;><\frak<T>> A> が成り立つと仮定する。
+      すると、ある式 &m<\sb<G><1>, \cdots;, \sb<G><n> \in; `G> が存在して &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; A> が成り立つ。
+      ここで、集合 &m<\sp<`G><\circ;> \coloneqq; `{ \sb<G><1>, \cdots;, \sb<G><n> `}> とおくと、&m<\sp<`G><\circ;>> は &m<`G> の有限部分集合であり、&m<\sp<`G><\circ;> \sp<\vdash;><\frak<T>> A> が成り立つ。
+    >
+    \p<
+      \label<条件 2 &m<\rxarr;> 条件 1>
+      これは\mref|type="thm",ref="dedsub"|; によって明らかである。
     >
   >
   \thm|type="thm",id="confin"|<
@@ -91,7 +138,7 @@
         &m<`G> は &m<\frak<T>>-整合的である。
       >
       \li*<
-        任意の有限部分集合 &m<`G' \subseteq; `G> に対して、&m<`G'> は &m<\frak<T>>-整合的である。
+        任意の有限部分集合 &m<\sp<`G><\circ;> \subseteq; `G> に対して、&m<\sp<`G><\circ;>> は &m<\frak<T>>-整合的である。
       >
     >
     \p<
@@ -100,16 +147,18 @@
   >
   \prf<
     \p<
-      \label<条件 1 &m<\rxarr;> 条件 2>
-      これは\mref|type="thm",ref="consub"|; によって明らかである。
+      両者の対偶をとることで、結局、2 条件
+    >
+    \ul<
+      \li*<
+        &m<`G \sp<\vdash;><\frak<T>> \bot;> が成り立つ。
+      >
+      \li*<
+        ある有限部分集合 &m<\sp<`G><\circ;> \subseteq; `G> に対して、&m<\sp<`G><\circ;> \sp<\vdash;><\frak<T>> \bot;> が成り立つ。
+      >
     >
     \p<
-      \label<条件 2 &m<\rxarr;> 条件 1>
-      条件 2 を仮定する。
-      矛盾を導くため、&m<`G> が整合的でないとすると、ある式 &m<\sb<B><1>, \cdots;, \sb<B><n> \in; `G> が存在して &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<B><1> \wedge; \cdots; \wedge; \sb<B><n> \buharprarr; \bot;> が成り立つ。
-      ここで、集合 &m<`{ \sb<B><1>, \cdots;, \sb<B><n> `}> は &m<`G> の有限部分集合であるから、仮定から &m<`{ \sb<B><1>, \cdots;, \sb<B><n> `}> は整合的である。
-      しかし、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<B><1> \wedge; \cdots; \wedge; \sb<B><n> \buharprarr; \bot;> が成り立つことは、&m<`{ \sb<B><1>, \cdots;, \sb<B><n> `}> の整合性に反する。
-      よって、&m<`G> は整合的である。
+      が同値であることを示せば良いが、それは\mref|type="thm",ref="dedfin"|; からすぐに従う。
     >
   >
   \p<
