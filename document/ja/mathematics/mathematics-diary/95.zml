@@ -3,23 +3,115 @@
 
 
 \page<
-  \name<>
+  \name<極大整合的集合と論理演算子>
   \use-math|prefix="11"|;
 
   \h1<日記 (2025 年 3 月 20 日)>
   \p<
-    
+    今回は、正準モデルを定義する際の鍵となる、極大整合的集合と論理演算子の関係について述べる。
+    すなわち、極大整合的集合 &m<`G> と式 &m<A, B> について、&m<A \wedge; B \in; `G> や &m<\tbox; A \in; `G> などとなるのはどういうときかを明らかにする。
   >
-  \thm|type="thm",id="redrpl"|<
+  \p<
+    まずは、導出可能性を扱う際に便利な性質を 2 つ示しておこう。
+  >
+  \thm|type="thm",id="dedrpl"|<
     \p<
       正規な理論 &m<\frak<T>> をとり、式の集合 &m<`G> をとる。
-      式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> が命題論理的恒真であれば、
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
+      >
+      が成り立つならば、
       &mb<
         `G \sp<\vdash;><\frak<T>> \sb<A><1> \scand; \cdots; \scand; `G \sp<\vdash;><\frak<T>> \sb<A><n> \implies; `G \sp<\vdash;><\frak<T>> B
       >
       が成り立つ。
-      特に、&m<B> が命題論理的恒真であれば、&m<`G \sp<\vdash;><\frak<T>> B> が成り立つ。
     >
+  >
+  \prf<
+    \p<
+      &m<`G \sp<\vdash;><\frak<T>> \sb<A><1>> から &m<`G \sp<\vdash;><\frak<T>> \sb<A><n>> までが全て成り立つと仮定する。
+      定義により、&m<\sb<G><11>, \cdots;, \sb<G><1 \sb<m><1>>, \cdots;, \sb<G><n1>, \cdots;, \sb<G><n \sb<m><n>> \in; `G> が存在して、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><11> \wedge; \cdots; \wedge; \sb<G><1 \sb<m><1>> \buharprarr; \sb<A><1> \xquad;
+        \cdots; \xquad;
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><n1> \wedge; \cdots; \wedge; \sb<G><n \sb<m><n>> \buharprarr; \sb<A><n>
+      >
+      が全て成り立つ。
+      すると、\a|href="89.html#rpl"|<定理 5.1> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><11> \wedge; \cdots; \wedge; \sb<G><1 \sb<m><1>> \wedge; \cdots; \wedge; \sb<G><n1> \wedge; \cdots; \wedge; \sb<G><n \sb<m><n>> \buharprarr; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>
+      >
+      が成り立つ。
+      さらに今 &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> が成り立つから、再び\a|href="89.html#rpl"|<定理 5.1> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><11> \wedge; \cdots; \wedge; \sb<G><1 \sb<m><1>> \wedge; \cdots; \wedge; \sb<G><n1> \wedge; \cdots; \wedge; \sb<G><n \sb<m><n>> \buharprarr; B
+      >
+      が得られる。
+      すなわち、&m<`G \sp<\vdash;><\frak<T>> B> が示された。
+    >
+  >
+  \thm|type="thm",id="dedimp"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G> と式 &m<A, B> に対し、2 条件
+    >
+    \ol<
+      \li*<
+        &m<`G \sp<\vdash;><\frak<T>> A \buharprarr; B> が成り立つ。
+      >
+      \li*<
+        &m<`G \cup; `{ A `} \sp<\vdash;><\frak<T>> B> が成り立つ。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\rxarr;> 条件 2>
+      &m<`G \sp<\vdash;><\frak<T>> A \buharprarr; B> が成り立つと仮定する。
+      すると定義から、&m<\sb<G><1>, \cdots;, \sb<G><n> \in; `G> が存在して、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; (A \buharprarr; B)
+      >
+      が成り立つ。
+      ここから\a|href="89.html#rpl"|<定理 5.1> を使うことで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \wedge; A \buharprarr; B
+      >
+      が得られる。
+      今 &m<\sb<G><1>, \cdots;, \sb<G><n>, A \in; `G \cup; `{ A `}> であるから、&m<`G \cup; `{ A `} \sp<\vdash;><\frak<T>> B> が示された。
+    >
+    \p<
+      \label<条件 2 &m<\rxarr;> 条件 1>
+      &m<`G \cup; `{ A `} \sp<\vdash;><\frak<T>> B> が成り立つと仮定する。
+      すると定義から、&m<\sb<G><1>, \cdots;, \sb<G><n> \in; `G \cup; `{ A `}> が存在して、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; B
+      >
+      が成り立つ。
+      ここで、適宜順番を入れ替えることで、ある &m<k> について &m<\sb<G><1>, \cdots;, \sb<G><k> \in; `G> かつ &m<\sb<G><k + 1> \equiv; \cdots; \equiv; \sb<G><n> \equiv; A> が成り立つようにする。
+      このとき、
+      &mb<
+        \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \equiv; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><k> \wedge; A \wedge; \cdots; \wedge; A
+      >
+      であるから、\a|href="89.html#rpl"|<定理 5.1> を使うことで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><k> \wedge; A \buharprarr; B
+      >
+      が得られ、さらに、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><k> \buharprarr; (A \buharprarr; B)
+      >
+      も得られる。
+      これは &m<`G \sp<\vdash;><\frak<T>> A \buharprarr; B> を意味する。
+    >
+  >
+  \p<
+    続いて、整合性の別の特徴付けを与えておこう。
+    我々は整合性を &m<\bot;> が導出可能でないこととして定義したが、ある式の肯定と否定が同時に導出可能でないことと定義することもできる。
   >
   \thm|type="thm",id="convar"|<
     \p<
@@ -43,52 +135,59 @@
       \label<条件 1 &m<\rxarr;> 条件 2>
       対偶を示す。
       ある式 &m<A> が存在して、&m<`G \sp<\vdash;><\frak<T>> A> と &m<`G \sp<\vdash;><\frak<T>> \neg; A> が両方とも成り立っていると仮定する。
-      すると、&m<A \wedge; \neg; A \buharprarr; \bot;> が命題論理的恒真であることから、\mref|type="thm",ref="redrpl"|; によって &m<`G \sp<\vdash;><\frak<T>> \bot;> が成り立つ。
+      すると、&m<A \wedge; \neg; A \buharprarr; \bot;> が命題論理的恒真であることから、\mref|type="thm",ref="dedrpl"|; によって &m<`G \sp<\vdash;><\frak<T>> \bot;> が成り立つ。
       すなわち、&m<`G> は整合的でない。
     >
     \p<
       \label<条件 2 &m<\rxarr;> 条件 1>
       こちらも対偶を示す。
       &m<`G> は整合的でないと仮定すると、&m<`G \sp<\vdash;><\frak<T>> \bot;> が成り立つ。
-      一方、&m<\neg; \bot;> は命題論理的恒真だから、\mref|type="thm",ref="redrpl"|; によって &m<`G \sp<\vdash;><\frak<T>> \neg; \bot;> も成り立つ。
+      一方、&m<\neg; \bot;> は命題論理的恒真だから、\mref|type="thm",ref="dedrpl"|; によって &m<`G \sp<\vdash;><\frak<T>> \neg; \bot;> も成り立つ。
       すなわち、&m<`G \sp<\vdash;><\frak<T>> \bot;> と &m<`G \sp<\vdash;><\frak<T>> \neg; \bot;> が両方とも成り立っているので、条件 2 の否定が示された。
     >
   >
-  \thm|type="thm",id="redcon"|<
+  \p<
+    また、整合性に関して、次の性質も便利である。
+  >
+  \thm|type="thm",id="dedcon"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> と式 &m<A> に対し、2 条件
     >
     \ol<
       \li*<
-        &m<`G \sp<\vdash;><\frak<T>> A> が成り立つ。
+        &m<`G \cup; `{A`}> は &m<\frak<T>>-整合的である。
       >
       \li*<
-        &m<`G \cup; `{\neg; A`}> は &m<\frak<T>>-整合的ではない。
+        &m<`G \sp<\vdash;><\frak<T>> \neg; A> は成り立たない。
       >
     >
     \p<
       は同値である。
     >
   >
-  \thm|type="thm",id="redcondual"|<
+  \prf<
     \p<
-      正規な理論 &m<\frak<T>> をとる。
-      式の集合 &m<`G> と式 &m<A> に対し、2 条件
-    >
-    \ol<
-      \li*<
-        &m<`G \sp<\vdash;><\frak<T>> \neg; A> が成り立つ。
-      >
-      \li*<
-        &m<`G \cup; `{A`}> は &m<\frak<T>>-整合的ではない。
-      >
+      \label<条件 1 &m<\rxarr;> 条件 2>
+      対偶を示す。
+      &m<`G \sp<\vdash;><\frak<T>> \neg; A> が成り立つと仮定する。
+      \a|href="94.html#dedsub"|<定理 10.4> によって &m<`G \cup; `{ A `} \sp<\vdash;><\frak<T>> \neg; A> も成り立つ。
+      一方、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \neg; A \buharprarr; \neg; A> であるから、定義より &m<`G \cup; `{ \neg; A `} \sp<\vdash;><\frak<T>> \neg; A> も成り立つ。
+      したがって、\mref|type="thm",ref="convar"|; によって &m<`G \cup; `{ A `}> は整合的でない。
     >
     \p<
-      は同値である。
+      \label<条件 2 &m<\rxarr;> 条件 1>
+      こちらも対偶を示す。
+      &m<`G \cup; `{ A `}> は整合的でないと仮定する。
+      すなわち、&m<`G \cup; `{ A `} \sp<\vdash;><\frak<T>> \bot;> が成り立つと仮定する。
+      すると、\mref|type="thm",ref="dedimp"|; から &m<`G \sp<\vdash;><\frak<T>> A \buharprarr; \bot;> が得られる。
+      さらに、\mref|type="thm",ref="dedrpl"|; を使えば &m<`G \sp<\vdash;><\frak<T>> \neg; A> が分かる。
     >
   >
-  \thm|type="thm",id="belred"|<
+  \p<
+    さらに、極大整合性に関する重要な性質として、そこから導出可能であることとそれに所属することが同値になることを示しておこう。
+  >
+  \thm|type="thm",id="belded"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> が &m<\frak<T>>-極大整合的であれば、任意の式 &m<A> に対して、2 条件
@@ -111,7 +210,7 @@
       &m<`G \sp<\vdash;><\frak<T>> A> が成り立つと仮定する。
       矛盾を導くため、&m<A \nin; `G> であったとする。
       すると、&m<`G> の極大整合性によって、&m<`G \cup; `{A`}> は整合的ではない。
-      したがって、\mref|type="thm",ref="redcondual"|; によって &m<`G \sp<\vdash;><\frak<T>> \neg; A> が成り立つ。
+      したがって、\mref|type="thm",ref="dedcon"|; によって &m<`G \sp<\vdash;><\frak<T>> \neg; A> が成り立つ。
       一方で最初に &m<`G \sp<\vdash;><\frak<T>> A> と仮定していたから、\mref|type="thm",ref="convar"|; によって &m<`G> は整合的でない。
       これは矛盾である。
       したがって、&m<A \in; `G> が示された。
@@ -120,6 +219,30 @@
       \label<条件 2 &m<\rxarr;> 条件 1>
       &m<A \in; `G> が成り立つと仮定する。
       常に &m<\sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; A> であるから、定義より &m<`G \sp<\vdash;><\frak<T>> A> が得られる。
+    >
+  >
+  \p<
+    これを使うと、極大整合的集合については、\mref|type="thm",ref="dedrpl"|; を次のように言い換えることができる。
+  >
+  \thm|type="thm",id="dedrplvar"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      さらに、式の集合 &m<`G> が &m<\frak<T>>-極大整合的であるとする。
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
+      >
+      が成り立つならば、
+      &mb<
+        \sb<A><1> \in; `G \scand; \cdots; \scand; \sb<A><n> \in; `G \implies; B \in; `G
+      >
+      が成り立つ。
+      特に、&m<\sp<\vdash|ord|;><\frak<T>> \srel; B> ならば &m<B \in; `G> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \mref|type="thm",ref="dedrpl"|; と\mref|type="thm",ref="belded"|; から明らかである。
     >
   >
   \p<
@@ -158,38 +281,38 @@
   \prf<
     \p<
       \label<主張 1>
-      &m<\top;> は命題論理的恒真だから、\mref|type="thm",ref="redrpl"|; によって &m<`G \sp<\vdash;><\frak<T>> \top;> が成り立つ。
-      したがって、\mref|type="thm",ref="belred"|; によって &m<\top; \in; `G> が成り立つ。
+      &m<\top;> は命題論理的恒真だから、\mref|type="thm",ref="dedrpl"|; によって &m<`G \sp<\vdash;><\frak<T>> \top;> が成り立つ。
+      したがって、\mref|type="thm",ref="belded"|; によって &m<\top; \in; `G> が成り立つ。
     >
     \p<
       \label<主張 2>
-      仮に &m<\bot; \in; `G> であったとすると、\mref|type="thm",ref="belred"|; によって &m<`G \sp<\vdash;><\frak<T>> \bot;> が成り立つが、これは &m<`G> の整合性に反する。
+      仮に &m<\bot; \in; `G> であったとすると、\mref|type="thm",ref="belded"|; によって &m<`G \sp<\vdash;><\frak<T>> \bot;> が成り立つが、これは &m<`G> の整合性に反する。
       したがって、&m<\bot; \nin; `G> が示された。
     >
     \p<
       \label<主張 3>
       まず &m<\neg; A \in; `G> が成り立つと仮定する。
       ここで、矛盾を導くためにさらに &m<A \in; `G> も成り立つとする。
-      すると、\mref|type="thm",ref="belred"|; によって &m<`G \sp<\vdash;><\frak<T>> \neg; A> と &m<`G \sp<\vdash;><\frak<T>> A> がともに成り立つが、\mref|type="thm",ref="convar"|; によって &m<`G> が整合的でないことになってしまうので、矛盾が生じる。
+      すると、\mref|type="thm",ref="belded"|; によって &m<`G \sp<\vdash;><\frak<T>> \neg; A> と &m<`G \sp<\vdash;><\frak<T>> A> がともに成り立つが、\mref|type="thm",ref="convar"|; によって &m<`G> が整合的でないことになってしまうので、矛盾が生じる。
       したがって、&m<A \nin; `G> が示された。
     >
     \p<
       逆に、&m<A \nin; `G> が成り立つと仮定する。
       ここで、矛盾を導くためにさらに &m<\neg; A \nin; `G> も成り立つとする。
-      すると、\mref|type="thm",ref="belred"|; によって &m<`G \sp<\vdash;><\frak<T>> \neg; A> が成り立つことはないから、\mref|type="thm",ref="redcondual"|; によって &m<`G \cup; `{A`}> は整合的である。
+      すると、\mref|type="thm",ref="belded"|; によって &m<`G \sp<\vdash;><\frak<T>> \neg; A> が成り立つことはないから、\mref|type="thm",ref="dedcon"|; によって &m<`G \cup; `{A`}> は整合的である。
       &m<`G> の極大性によって &m<A \in; `G> が成り立つことになるが、これは最初の仮定に矛盾する。
       したがって、&m<\neg; A \in; `G> が示された。
     >
     \p<
       \label<主張 4>
       まず &m<A \wedge; B \in; `G> が成り立つと仮定する。
-      すると、\mref|type="thm",ref="belred"|; によって &m<`G \sp<\vdash;><\frak<T>> A \wedge; B> が成り立つ。
-      今 &m<A \wedge; B \buharprarr; A> と &m<A \wedge; B \buharprarr; B> は命題論理的恒真だから、それぞれに\mref|type="thm",ref="redrpl"|; を使うことで &m<`G \sp<\vdash;><\frak<T>> A> と &m<`G \sp<\vdash;><\frak<T>> B> が得られる。
-      再び\mref|type="thm",ref="belred"|; を使うことで、&m<A \in; `G> かつ &m<B \in; `G> が示された。
+      すると、\mref|type="thm",ref="belded"|; によって &m<`G \sp<\vdash;><\frak<T>> A \wedge; B> が成り立つ。
+      今 &m<A \wedge; B \buharprarr; A> と &m<A \wedge; B \buharprarr; B> は命題論理的恒真だから、それぞれに\mref|type="thm",ref="dedrpl"|; を使うことで &m<`G \sp<\vdash;><\frak<T>> A> と &m<`G \sp<\vdash;><\frak<T>> B> が得られる。
+      再び\mref|type="thm",ref="belded"|; を使えば &m<A \in; `G> かつ &m<B \in; `G> が示された。
     >
     \p<
       逆に、&m<A \in; `G> かつ &m<B \in; `G> が成り立つと仮定する。
-      すると、\mref|type="thm",ref="belred"|; によって &m<`G \sp<\vdash;><\frak<T>> A> と &m<`G \sp<\vdash;><\frak<T>> B> がともに成り立つ。
+      すると、\mref|type="thm",ref="belded"|; によって &m<`G \sp<\vdash;><\frak<T>> A> と &m<`G \sp<\vdash;><\frak<T>> B> がともに成り立つ。
       すなわち定義により、式 &m<\sb<G><1>, \cdots;, \sb<G><n>, \sb<H><1>, \cdots;, \sb<H><m> \in; `G> が存在して、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; A \xquad;
@@ -201,20 +324,56 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \wedge; \sb<H><1> \wedge; \cdots; \wedge; \sb<H><m> \buharprarr; A \wedge; B
       >
       が得られるから、定義より &m<`G \sp<\vdash;><\frak<T>> A \wedge; B> が分かる。
-      最後に、\mref|type="thm",ref="belred"|; によって &m<A \wedge; B \in; `G> が示された。
+      最後に、\mref|type="thm",ref="belded"|; を使えば &m<A \wedge; B \in; `G> が示された。
     >
     \p<
       \label<主張 5>
-      &m<A \vee; B \nin; `G> が成り立つことと &m<A \nin; `G> かつ &m<B \nin; `G> が成り立つことが同値であることを示せば良い。
-      ここで、&m<A \vee; B \nin; `G> が成り立つことは、主張 3 により &m<\neg; (A \vee; B) \in; `G> が成り立つことと同値であり、さらに\mref|type="thm",ref="belred"|; により &m<`G \sp<\vdash;><\frak<T>> \neg; (A \vee; B)> が成り立つことと同値である。
-      一方で、&m<A \nin; `G> かつ &m<B \nin; `G> が成り立つことは、主張 3 により &m<\neg; A \in; `G> かつ &m<\neg; B \in; `G> が成り立つことと同値であり、主張 4 により &m<\neg; A \wedge; \neg; B \in; `G> が成り立つことと同値で、さらに\mref|type="thm",ref="belred"|; により &m<`G \sp<\vdash;><\frak<T>> \neg; A \wedge; \neg; B> が成り立つことと同値である。
-      したがって、結局 &m<`G \sp<\vdash;><\frak<T>> \neg; (A \vee; B)> と &m<`G \sp<\vdash;><\frak<T>> \neg; A \wedge; \neg; B> が同値であることを示せば良い。
-      これは、&m<\neg; (A \vee; B) \buharplrarr; \neg; A \wedge; \neg; B> が命題論理的恒真であることから、\mref|type="thm",ref="redrpl"|; を使えば分かる。
+      両者の否定をとって、&m<A \vee; B \nin; `G> であることと &m<A \nin; `G> かつ &m<B \nin; `G> であることが同値であることを示せば良い。
+      ここで、&m<A \vee; B \nin; `G> であることは、主張 3 により &m<\neg; (A \vee; B) \in; `G> であることと同値である。
+      一方で、&m<A \nin; `G> かつ &m<B \nin; `G> が成り立つことは、主張 3 により &m<\neg; A \in; `G> かつ &m<\neg; B \in; `G> が成り立つことと同値であり、さらに主張 4 により &m<\neg; A \wedge; \neg; B \in; `G> であることとも同値である。
+      したがって、結局 &m<\neg; (A \vee; B) \in; `G> と &m<\neg; A \wedge; \neg; B \in; `G> が同値であることを示せば良い。
+      これは、&m<\neg; (A \vee; B) \buharplrarr; \neg; A \wedge; \neg; B> が命題論理的恒真であることから、\mref|type="thm",ref="dedrplvar"|; を使えば分かる。
     >
     \p<
       \label<主張 6>
       証明の方針は主張 5 と同じである。
-      主張 3 と主張 4 と\mref|type="thm",ref="belred"|; を使うことで &m<`G \sp<\vdash;><\frak<T>> \neg; (A \buharprarr; B)> と &m<`G \sp<\vdash;><\frak<T>> A \wedge; \neg; B> の同値性に帰着でき、これは\mref|type="thm",ref="redrpl"|; を使うことで示すことができる。
+      主張 3 と主張 4 を使うことで &m<\neg; (A \buharprarr; B) \in; `G> と &m< A \wedge; \neg; B \in; `G> の同値性に帰着でき、これは\mref|type="thm",ref="dedrplvar"|; を使うことで示すことができる。
+    >
+  >
+  \p<
+     これの主張 3 が特に便利で、これを利用することで導出可能性の別の特徴付けが得られる。
+  >
+  \thm|type="thm",id="dedvar"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G> と式 &m<A> に対して、2 条件
+    >
+    \ol<
+      \li*<
+        &m<`G \sp<\vdash;><\frak<T>> A> が成り立つ。
+      >
+      \li*<
+        任意の &m<\frak<T>>-極大整合的集合 &m<`D> であって &m<`G \subseteq; `D> を満たすものに対し、&m<A \in; `D> が成り立つ。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<主張 1 &m<\rxarr;> 主張 2>
+      &m<`G \sp<\vdash;><\frak<T>> A> が成り立つと仮定する。
+      任意に &m<\frak<T>>-極大整合的集合 &m<`D> をとって、&m<`G \subseteq; `D> であるとする。
+      すると、\a|href="94.html#dedsub"|<定理 10.4> により &m<`D \sp<\vdash;><\frak<T>> A> が成り立ち、\mref|type="thm",ref="belded"|; により &m<A \in; `D> が得られる。
+    >
+    \p<
+      \label<主張 2 &m<\rxarr;> 主張 1>
+      対偶を示すため、&m<`G \sp<\vdash;><\frak<T>> A> が成り立たないと仮定する。
+      すると、\mref|type="thm",ref="dedrpl"|; により &m<`G \sp<\vdash;><\frak<T>> \neg; \neg; A> も成り立たないので、\mref|type="thm",ref="dedcon"|; により &m<`G \cup; `{ \neg; A `}> は整合的である。
+      そこで\a|href="94.html#lindenbaum"|<定理 10.9> を使って、極大整合的集合 &m<`D> であって &m<`G \cup; `{ \neg; A `} \subseteq; `D> を満たすものをとる。
+      特に &m<\neg; A \in; `D> であるから、\mref|type="thm",ref="maxpl"|; により &m<A \nin; `D> が得られる。
+      これで、主張 2 の否定が示された。
     >
   >
   \p<
@@ -239,24 +398,118 @@
     である。
   >
   \p<
-    この記号を使うと、様相式が極大整合的集合に属するかどうかについては、次のように述べられる。
+    このような集合については、次が成り立つことが観察できる。
   >
-  \thm|type="thm",id="maxpl"|<
+  \thm|type="thm",id="incdual"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式の集合 &m<`G, `D> に対し、&m<`G, `D> がどちらも &m<\frak<T>>-極大整合的であれば、
+      &mb<
+        \sp<\tbox;><-1> `G \subseteq; `D \iff; `D \subseteq; \sp<\trhombus;><-1> `G
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\tbox;><-1> `G \subseteq; `D> が成り立つと仮定する。
+      任意に式 &m<A \in; `D> をとると、\mref|type="thm",ref="maxpl"|; によって &m<\neg; A \nin; `D> が成り立つ。
+      すると、仮定から &m<\neg; A \nin; \sp<\tbox;><-1> `G> が分かり、これは &m<\tbox; \neg; A \nin; `G> であることを意味する。
+      再び\mref|type="thm",ref="maxpl"|; を使えば &m<\neg; \tbox; \neg; A \in; `G> が得られる。
+      ところで &m<\sp<\vdash|ord|;><\frak<T>> \srel; \neg; \tbox; \neg; A \buharplrarr; \trhombus; A> であるから、\mref|type="thm",ref="dedrplvar"|; によって &m<\trhombus; A \in; `G> が分かり、すなわち &m<A \in; \sp<\trhombus;><-1> `G> が得られる。
+      &m<A> は任意だったから、これで &m<`D \subseteq; \sp<\trhombus;><-1> `G> が示された。
+    >
+    \p<
+      逆に、&m<`D \subseteq; \sp<\trhombus;><-1> `G> が成り立つと仮定する。
+      任意に式 &m<A \in; \sp<\tbox;><-1> `G> をとると、まず &m<\tbox; A \in; `G> が成り立つ。
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharplrarr; \neg; \trhombus; \neg; A> であるから、\mref|type="thm",ref="dedrplvar"|; によって &m<\neg; \trhombus; \neg; A \in; `G> が分かる。
+      したがって、\mref|type="thm",ref="maxpl"|; によって &m<\trhombus; \neg; A \nin; `G> が得られ、さらに &m<\neg; A \nin; \sp<\trhombus;><-1> `G> も分かる。
+      すると、仮定から &m<\neg; A \nin; `D> が分かるが、さらに\mref|type="thm",ref="dedrplvar"|; によって &m<A \in; `D> も得られる。
+      &m<A> は任意だったから、これで &m<\sp<\tbox;><-1> `G \subseteq; `D> が示された。
+    >
+  >
+  \p<
+    本題に戻って、様相式が極大整合的集合に属するかどうかについては、次のように述べられる。
+  >
+  \thm|type="thm",id="maxmod"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> が &m<\frak<T>>-極大整合的であれば、任意の式 &m<A> に対して、
     >
     \ol<
       \li*<
-        &m<\tbox; A \in; `G> が成り立つことは、全ての &m<\sp<\tbox;><-1> `G \subseteq; `D> を満たす &m<\frak<T>>-極大整合的集合 &m<`D> に対して &m<A \in; `D> が成り立つことと同値である。
+        &m<\tbox; A \in; `G> が成り立つことは、&m<\frak<T>>-極大整合的集合 &m<`D> であって &m<\sp<\tbox;><-1> `G \subseteq; `D> を満たすもの全てに対して &m<A \in; `D> が成り立つことと同値である。
       >
       \li*<
-        &m<\trhombus; A \in; `G> が成り立つことは、ある &m<\trhombus; `D \subseteq; `G> を満たす &m<\frak<T>>-極大整合的集合 &m<`D> に対して &m<A \in; `D> が成り立つことと同値である。
+        &m<\trhombus; A \in; `G> が成り立つことは、&m<\frak<T>>-極大整合的集合 &m<`D> であって &m<`D \subseteq; \sp<\trhombus;><-1> `G> を満たすものが存在して &m<A \in; `D> が成り立つことと同値である。
       >    
     >
     \p<
       がともに成り立つ。
     >
+  >
+  \prf<
+    \p<
+      \label<主張 1>
+       まず &m<\tbox; A \in; `G> が成り立つと仮定する。
+       任意に極大整合的集合 &m<`D> であって &m<\sp<\tbox;><-1> `G \subseteq; `D> を満たすものをとると、仮定から &m<A \in; \sp<\tbox;><-1> `G> なので、&m<A \in; `D> が得られる。
+    >
+    \p<
+      逆に、極大整合的集合 &m<`D> であって &m<\sp<\tbox;><-1> `G \subseteq; `D> を満たすものに対して &m<A \in; `D> が成り立つことを仮定する。
+      \mref|type="thm",ref="dedvar"|; により、これは &m<\sp<\tbox;><-1> `G \sp<\vdash;><\frak<T>> A> が成り立つことを意味する。
+      つまり、式 &m<\sb<G><1>, \cdots;, \sb<G><n> \in; \sp<\tbox;><-1> `G> が存在して、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; A
+      >
+      が成り立つということである。
+      すると、\a|href="89.html#rk"|<命題 5.2> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<G><1> \wedge; \cdots; \wedge; \tbox; \sb<G><n> \buharprarr; \tbox; A
+      >
+      が得られる。
+      &m<\sb<G><1>, \cdots;, \sb<G><n> \in; \sp<\tbox;><-1> `G> だったから &m<\tbox; \sb<G><1>, \cdots;, \tbox; \sb<G><n> \in; `G>が成り立つので、これより &m<`G \sp<\vdash;><\frak<T>> \tbox; A> が分かる。
+      最後に\mref|type="thm",ref="belded"|; により、&m<\tbox; A \in; `G> が示された。
+    >
+    \p<
+      \label<主張 2>
+      互いの否定が同値であることを示す。
+      前者の否定すなわち &m<\trhombus; A \nin; `G> であることは、\mref|type="thm",ref="maxpl"|; によって &m<\neg; \trhombus; A \in; `G> であることと同値であり、\mref|type="thm",ref="dedrplvar"|; によって &m<\tbox; \neg; A \in; `G> であることとも同値である。
+      主張 1 によって、このことは、
+    >
+    \ul<
+      \li*<
+        &m<\frak<T>>-極大整合的集合 &m<`D> であって &m<\sp<\tbox;><-1> `G \subseteq; `D> を満たすもの全てに対して、&m<\neg; A \in; `D> が成り立つ。
+      >
+    >
+    \p<
+      と同値である。
+      ところで、\mref|type="thm",ref="incdual"|; によって &m<\sp<\tbox;><-1> `G \subseteq; `D> と &m<`D \subseteq; \sp<\trhombus;><-1> `G> が同値で、\mref|type="thm",ref="maxpl"|; によって &m<\neg; A \in; `D> と &m<A \nin; `D> が同値だから、結局これは、
+    >
+    \ul<
+      \li*<
+        &m<\frak<T>>-極大整合的集合 &m<`D> であって &m<`D \subseteq; \sp<\trhombus;><-1> `G> を満たすもの全てに対して、&m<A \nin; `D> が成り立つ。
+      >
+    >
+    \p<
+      とも同値である。
+      これはまさに後者の否定である。
+    >
+  >
+  \p<
+    さて、\mref|type="thm",ref="maxpl"|; と\mref|type="thm",ref="maxmod"|; で得られた結果と、フレーム意味論における論理演算子の解釈である\a|href="85.html#sem"|<定義 1.3> を見比べると、ほとんど同じ形をしていることに気付くだろう。
+    ここから、正規な理論 &m<\frak<T>> に対し、&m<\sp<W><\frak<T>>> を &m<\frak<T>>-極大整合的集合の全体とし、その間の関係 &m<\sp<\sim|ord|;><\frak<T>>> を
+    &mb<
+      `G \sp<\sim;><\frak<T>> `D \coloniff; \sp<\tbox;><-1> `G \subseteq; `D
+    >
+    とすることで、モデル &m<\sp<\scr<M>><\frak<T>> = (\sp<W><\frak<T>>, \sp<\sim|ord|;><\frak<T>>, \sp<P><\frak<T>>)> を作ると、その世界 (つまり &m<\frak<T>>-極大整合的集合) &m<`G> と式 &m<A> に対して、
+    &mb<
+      \sbsp<\vxdash|ord|;><`G><\scr<M>> \srel; A \iff; A \in; `G
+    >
+    が成り立つようにできそうである。
+    実はこれがまさに、今目標としている正準モデルになる。
+  >
+  \p<
+    次回は、このアイデアで実際に正準モデルが作れることを示し、ついに完全性を証明する。
   >
   \h1<参考文献>
   \ol<
