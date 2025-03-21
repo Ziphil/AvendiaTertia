@@ -467,7 +467,7 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<G><1> \wedge; \cdots; \wedge; \tbox; \sb<G><n> \buharprarr; \tbox; A
       >
       が得られる。
-      &m<\sb<G><1>, \cdots;, \sb<G><n> \in; \sp<\tbox;><-1> `G> だったから &m<\tbox; \sb<G><1>, \cdots;, \tbox; \sb<G><n> \in; `G>が成り立つので、これより &m<`G \sp<\vdash;><\frak<T>> \tbox; A> が分かる。
+      &m<\sb<G><1>, \cdots;, \sb<G><n> \in; \sp<\tbox;><-1> `G> だったから &m<\tbox; \sb<G><1>, \cdots;, \tbox; \sb<G><n> \in; `G> が成り立つので、これより &m<`G \sp<\vdash;><\frak<T>> \tbox; A> が分かる。
       最後に\mref|type="thm",ref="belded"|; により、&m<\tbox; A \in; `G> が示された。
     >
     \p<
@@ -503,7 +503,7 @@
     >
     とすることで、モデル &m<\sp<\scr<M>><\frak<T>> = (\sp<W><\frak<T>>, \sp<\sim|ord|;><\frak<T>>, \sp<P><\frak<T>>)> を作ると、その世界 (つまり &m<\frak<T>>-極大整合的集合) &m<`G> と式 &m<A> に対して、
     &mb<
-      \sbsp<\vxdash|ord|;><`G><\scr<M>> \srel; A \iff; A \in; `G
+      \sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; A \iff; A \in; `G
     >
     が成り立つようにできそうである。
     実はこれがまさに、今目標としている正準モデルになる。
