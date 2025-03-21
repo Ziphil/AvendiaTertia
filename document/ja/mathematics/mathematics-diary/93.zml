@@ -15,7 +15,7 @@
   \p<
     本題に入る前に、理論を大きくしても式の証明可能性は崩れないこと、逆にモデルのクラスは小さくしても恒真性が崩れないことを、明らかではあるが改めて述べておく。
   >
-  \thm|type="thm",id="syninc"|<
+  \thm|type="prp",id="syninc"|<
     \p<
       理論 &m<\frak<T>, \frak<U>> に対し、&m<\frak<T> \subseteq; \frak<U>> であるとする。
       このとき、任意の式 &m<A> に対し、
@@ -30,7 +30,7 @@
       定義から明らかである。
     >
   >
-  \thm|type="thm",id="seminc"|<
+  \thm|type="prp",id="seminc"|<
     \p<
       モデルのクラス &m<\frak<C>, \frak<D>> に対し、&m<\frak<C> \supseteq; \frak<D>> であるとする。
       このとき、任意の式 &m<A> に対し、
@@ -72,20 +72,20 @@
     \p<
       &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; A> が公理であるとき。
       このときは、さらに 4 つの場合に分けられる。
-      &m<A> が命題論理的恒真であるときは、\a|href="86.html#pl"|<定理 2.3> によって &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
-      &m<A> が &m<\bfrm<K>> に属するときは、\a|href="86.html#k"|<定理 2.5> から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
-      &m<A> が &m<\sp<\bfrm<Dual>><\trhombus;>> に属するときも、\a|href="86.html#dualrhom"|<定理 2.6> から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
+      &m<A> が命題論理的恒真であるときは、\a|href="86.html#pl"|<命題 2.3> によって &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
+      &m<A> が &m<\bfrm<K>> に属するときは、\a|href="86.html#k"|<命題 2.5> から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
+      &m<A> が &m<\sp<\bfrm<Dual>><\trhombus;>> に属するときも、\a|href="86.html#dualrhom"|<命題 2.6> から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
       最後に &m<A> が &m<\tilde<\bfrm<K>>> で追加された公理 &m<\sb<`G><i> \srel; (1 \leq; i \leq; n)> であったときは、最初の仮定から &m<\sp<\vxdash|ord|;><\sb<\frak<C>><i>> \srel; A> が成り立っているので、&m<\sb<\frak<C>><i> \supseteq; \tilde<\frak<C>>> と\mref|type="thm",ref="seminc"|; によって &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> も成り立つ。
     >
     \p<
       &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; A> が推論規則 MP の帰結であるとき。
       すなわち、&m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; X> と &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; X \buharprarr; A> からこれが導かれているとき。
-      帰納法の仮定から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X> と &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X \buharprarr; A> が成り立つが、\a|href="86.html#rpl"|<定理 2.4> を使うことでこれらから &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が導かれる。
+      帰納法の仮定から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X> と &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X \buharprarr; A> が成り立つが、\a|href="86.html#rpl"|<命題 2.4> を使うことでこれらから &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が導かれる。
     >
     \p<
       &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; A> が推論規則 RN の帰結であるとき。
       すなわち、&m<A \equiv; \tbox; X> と書けて &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; X> からこれが導かれているとき。
-      帰納法の仮定から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X> が成り立つが、\a|href="86.html#rn"|<定理 2.7> を使うことで &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; \tbox; X> すなわち &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が導かれる。
+      帰納法の仮定から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; X> が成り立つが、\a|href="86.html#rn"|<命題 2.7> を使うことで &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; \tbox; X> すなわち &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が導かれる。
     >
     \p<
       これで全ての場合が尽くされたので、定理の主張が示された。
@@ -103,7 +103,7 @@
     ここで、直列, 反射的, 対称, 半順序, 同値関係のモデル全体のクラスをそれぞれ &m<\bfrm<Ser>>, &m<\bfrm<Refl>>, &m<\bfrm<Sym>>, &m<\bfrm<Pord>>, &m<\bfrm<Equiv>> と書くことにする。
     また、あらゆるモデル全体のクラスは &m<\bfrm<All>> と書く。
   >
-  \thm|type="prp",id="soundex"|<
+  \thm|type="thm",id="soundex"|<
     \p<
       任意の式 &m<A> に対し、
       &mb<
@@ -142,7 +142,7 @@
     これを利用して 2 つの演繹体系の片方で証明できる式がもう一方では証明できないことを示せば、それらが同型でないことが分かる。
     この手法で、\a|href="92.html"|<3 月 8 日>に挙げた 15 種類の体系が全て異なることを示すことができる。
   >
-  \thm|type="prp",id="dist"|<
+  \thm|type="thm",id="dist"|<
     \p<
       &m<\bfrm<K>> に &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> のうちいくつかを公理として追加して得られる相異なる体系は、以下の図に示す通りのちょうど 15 種類である。
       &mb<

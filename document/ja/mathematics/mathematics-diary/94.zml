@@ -38,7 +38,7 @@
   \p<
     まず明らかに、証明可能であることは空集合から導出可能であることと同値である。
   >
-  \thm|type="thm",id="empded"|<
+  \thm|type="prp",id="empded"|<
     \p<
       理論 &m<\frak<T>> をとる。
       式 &m<A> に対し、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A> が成り立つことと &m<\empty; \sp<\vdash;><\frak<T>> A> が成り立つことは同値である。
@@ -68,7 +68,7 @@
     後々のために、導出可能性や整合性に関する性質をいくつか示しておく。
     まず、式の集合を大きいものや小さいものに取り替えることを考える。
   >
-  \thm|type="thm",id="dedsub"|<
+  \thm|type="prp",id="dedsub"|<
     \p<
       理論 &m<\frak<T>> をとる。
       式の集合 &m<`G, `D> が &m<`G \subseteq; `D> を満たすとする。
@@ -83,7 +83,7 @@
       したがって、&m<`D \sp<\vdash;><\frak<T>> A> が成り立つ。
     >
   >
-  \thm|type="thm",id="consub"|<
+  \thm|type="prp",id="consub"|<
     \p<
       理論 &m<\frak<T>> をとる。
       式の集合 &m<`G, `D> が &m<`G \subseteq; `D> を満たすとする。
@@ -99,7 +99,7 @@
   \p<
     次に、導出可能性や整合性がある種の有限性をもつことを示す。
   >
-  \thm|type="thm",id="dedfin"|<
+  \thm|type="prp",id="dedfin"|<
     \p<
       理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> と式 &m<A>に対し、2 条件
@@ -128,7 +128,7 @@
       これは\mref|type="thm",ref="dedsub"|; によって明らかである。
     >
   >
-  \thm|type="thm",id="confin"|<
+  \thm|type="prp",id="confin"|<
     \p<
       理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> に対し、2 条件
@@ -186,7 +186,7 @@
     より強く、任意の整合的な集合から、それの拡大として極大整合的な集合を得ることができる。
     これを保証するのが、次に示す Lindenbaum の補題である。
   >
-  \thm|type="thm",id="lindenbaum"|<
+  \thm|type="prp",id="lindenbaum"|<
     \name<Lindenbaum の補題\fl<—’s lemma>>
     \p<
       理論 &m<\frak<T>> をとる。

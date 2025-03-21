@@ -32,7 +32,7 @@
       >
     >
     であった。
-    \a|href="91.html#contra"|<定理 7.6> により、このうちのあるスキーマを追加するのとその双対を追加するのは同値であることも思い出しておきたい。
+    \a|href="91.html#contra"|<命題 7.6> により、このうちのあるスキーマを追加するのとその双対を追加するのは同値であることも思い出しておきたい。
   >
   \p<
     最初に示すのは、公理として &m<\bfrm<T>> の方が &m<\bfrm<D>> より強いことである。
@@ -54,12 +54,12 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; A
       >
       が成り立つ。
-      また、\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<T>><\dagger;>> でもあるから、
+      また、\a|href="91.html#contra"|<命題 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<T>><\dagger;>> でもあるから、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; \trhombus; A
       >
       も成り立つ。
-      これらに\a|href="89.html#rpl"|<定理 5.1> を使うことで、
+      これらに\a|href="89.html#rpl"|<命題 5.1> を使うことで、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \trhombus; A
       >
@@ -86,7 +86,7 @@
     \p<
       まず、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<4>> が成り立っていると仮定する。
       任意に式 &m<A> をとる。
-      特に &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<4>> であり、さらに\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<4>><\dagger;>> でもあるから、
+      特に &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<4>> であり、さらに\a|href="91.html#contra"|<命題 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<4>><\dagger;>> でもあるから、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \trhombus; A \buharprarr; \trhombus; A
       >
@@ -100,7 +100,7 @@
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \tbox; \trhombus; \trhombus; A
       >
-      が成り立つから、今得られた 2 つの主張に\a|href="89.html#rpl"|<定理 5.1> を適用すれば、
+      が成り立つから、今得られた 2 つの主張に\a|href="89.html#rpl"|<命題 5.1> を適用すれば、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \tbox; \trhombus; A
       >
@@ -110,7 +110,7 @@
     \p<
       次に、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>, \bfrm<5>> が成り立っていると仮定する。
       任意に式 &m<A> をとる。
-      \a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<5>><\dagger;>> でもあるから、
+      \a|href="91.html#contra"|<命題 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<5>><\dagger;>> でもあるから、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \tbox; A \buharprarr; \tbox; A
       >
@@ -124,7 +124,7 @@
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \trhombus; \tbox; A
       >
-      が成り立つから、今得られた 2 つの主張に\a|href="89.html#rpl"|<定理 5.1> を使えば、
+      が成り立つから、今得られた 2 つの主張に\a|href="89.html#rpl"|<命題 5.1> を使えば、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \tbox; A
       >
@@ -159,12 +159,12 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \tbox; A \buharprarr; \trhombus; \tbox; A
       >
       が分かる。
-      さらに、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> と\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<B>><\dagger;>> でもあるから、
+      さらに、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> と\a|href="91.html#contra"|<命題 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<B>><\dagger;>> でもあるから、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \tbox; A \buharprarr; A
       >
       が成り立つ。
-      ここまでで得られた 3 つの主張に\a|href="89.html#rpl"|<定理 5.1> を使えば、
+      ここまでで得られた 3 つの主張に\a|href="89.html#rpl"|<命題 5.1> を使えば、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; A
       >
@@ -189,7 +189,7 @@
     \p<
       &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>, \bfrm<5>> が成り立つと仮定する。
       まず、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<B>> を示すため、任意に式 &m<A> をとる。
-      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>> と\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<T>><\dagger;>> であるから、
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<T>> と\a|href="91.html#contra"|<命題 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<T>><\dagger;>> であるから、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; \trhombus; A
       >
@@ -199,7 +199,7 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; A \buharprarr; \tbox; \trhombus; A
       >
       も成り立つ。
-      ここまでで得られた 3 つの主張に\a|href="89.html#rpl"|<定理 5.1> を使えば、
+      ここまでで得られた 3 つの主張に\a|href="89.html#rpl"|<命題 5.1> を使えば、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; A \buharprarr; \tbox; \trhombus; A
       >
@@ -213,7 +213,7 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \trhombus; \tbox; A
       >
       が成り立つ。
-      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<5>> と\a|href="91.html#contra"|<定理 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<5>><\dagger;>> であるから、
+      &m<\sp<\vdash|ord|;><\frak<T>> \srel; \bfrm<5>> と\a|href="91.html#contra"|<命題 7.6> によって &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sp<\bfrm<5>><\dagger;>> であるから、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \tbox; A \buharprarr; \tbox; A
       >
@@ -222,7 +222,7 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \trhombus; \tbox; A \buharprarr; \tbox; \tbox; A
       >
       も得られる。
-      これと最初の主張に\a|href="89.html#rpl"|<定理 5.1> を使えば、
+      これと最初の主張に\a|href="89.html#rpl"|<命題 5.1> を使えば、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \buharprarr; \tbox; \tbox; A
       >

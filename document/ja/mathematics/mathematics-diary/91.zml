@@ -41,7 +41,7 @@
     すると、de Morgan の法則は次のように述べられる。
     式変形のための道具はすでにかなり揃っているので、証明はただやるだけである。
   >
-  \thm|type="thm",id="dual"|<
+  \thm|type="prp",id="dual"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式 &m<A> に対し、
@@ -58,7 +58,7 @@
   >
   \prf<
     \p<
-      後半の主張は、前半の主張と\a|href="89.html#rpl"|<定理 5.1> から従う。
+      後半の主張は、前半の主張と\a|href="89.html#rpl"|<命題 5.1> から従う。
       以降、前半の主張を示す。
       &m<A> の構造に関する帰納法による。
     >
@@ -67,7 +67,7 @@
       双対の定義によって示すべきは &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<\tt<p>><n> \buharplrarr; \neg; \neg; \sb<\tt<p>><n>> であるが、これは明らかに成り立つ。
     >
     \p<
-      &m<A \equiv; \top;> や &m<A \equiv; \bot;> のときも、同様に明らかに定理の主張は成り立つ。
+      &m<A \equiv; \top;> や &m<A \equiv; \bot;> のときも、同様に明らかに命題の主張は成り立つ。
     >
     \p<
       &m<A \equiv; X \wedge; Y> のとき。
@@ -82,7 +82,7 @@
          \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \sp<X><*> \wedge; \neg; \sp<Y><*> \buharplrarr; \neg; (\sp<Y><*> \vee; \sp<X><*>)
       >
       である。
-      上の 2 つの式と\a|href="90.html#repvar"|<定理 6.2> を使うことでこの式の &m<\neg; \sp<X><*>> と &m<\neg; \sp<Y><*>> を書き換えることで、
+      上の 2 つの式と\a|href="90.html#repvar"|<命題 6.2> を使うことでこの式の &m<\neg; \sp<X><*>> と &m<\neg; \sp<Y><*>> を書き換えることで、
       &mb<
          \sp<\vdash|ord|;><\frak<T>> \srel;  X \wedge; Y \buharplrarr; \neg; (\sp<Y><*> \vee; \sp<X><*>)
       >
@@ -110,12 +110,12 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; \sp<X><*> \buharplrarr; \neg; \tbox; \neg; \sp<X><*>
       >
       が成り立つ。
-      ここからは、\a|href="89.html#rpl"|<定理 5.1> などによって、
+      ここからは、\a|href="89.html#rpl"|<命題 5.1> などによって、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \neg; \sp<X><*> \buharplrarr; \neg; \trhombus; \sp<X><*> 
       >
       が分かる。
-      これと\a|href="90.html#repvar"|<定理 6.2> によって、主張 &m<\wheart;> に含まれる &m<\tbox; \neg; \sp<X><*>> の部分を置き換えることで、
+      これと\a|href="90.html#repvar"|<命題 6.2> によって、主張 &m<\wheart;> に含まれる &m<\tbox; \neg; \sp<X><*>> の部分を置き換えることで、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; X \buharplrarr; \neg; \trhombus; \sp<X><*> 
       >
@@ -126,11 +126,11 @@
       &m<A \equiv; \trhombus; X> のときも、これと同様に示される。
     >
     \p<
-      これで全ての場合が尽くされたので、定理の主張が示された。
+      これで全ての場合が尽くされたので、命題の主張が示された。
     >
   >
   \p<
-    この定理の応用として、様相式の双対に関する主張を紹介しよう。
+    この命題の応用として、様相式の双対に関する主張を紹介しよう。
     主張を述べやすくするために、まず「様相列」という概念を導入する。
   >
   \thm|type="def"|<
@@ -153,10 +153,10 @@
     また、任意の様相列 &m<`f> と式 &m<A> に対し、&m<(`f A) \sp<><*> \equiv; \sp<`f><*> \sp<A><*>> となることにも注目したい。
   >
   \p<
-    様相列の双対については、\mref|type="thm",ref="dual"|; によって以下の定理が成り立つ。
+    様相列の双対については、\mref|type="thm",ref="dual"|; によって以下の命題が成り立つ。
     厳密性は欠けるが端的に言ってしまえば、様相列 &m<`f> に対して、&m<`f> と &m<\neg; \sp<`f><*> \neg;> は同値な演算子だということである。
   >
-  \thm|type="thm",id="dualmod"|<
+  \thm|type="prp",id="dualmod"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       様相列 &m<`f> と式 &m<A> に対し、
@@ -178,11 +178,11 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharplrarr; \neg; \sp<`f><*> \sp<A><*>
       >
       が成り立つということである。
-      さて、\mref|type="thm",ref="dual"|; を\a|href="89.html#rpl"|<定理 5.1> で少し変形することで、
+      さて、\mref|type="thm",ref="dual"|; を\a|href="89.html#rpl"|<命題 5.1> で少し変形することで、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sp<A><*> \buharplrarr; \neg; A 
       >
-      が得られるから、これら 2 つの式に\a|href="90.html#repvar"|<定理 6.2> を使うことで、
+      が得られるから、これら 2 つの式に\a|href="90.html#repvar"|<命題 6.2> を使うことで、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharplrarr; \neg; \sp<`f><*> \neg; A
       >
@@ -190,9 +190,9 @@
     >
   >
   \p<
-    この定理からは、様相式から様相式への含意の形をしたスキーマがそれの (含意式としての) 双対と同値であることが分かる。
+    この命題からは、様相式から様相式への含意の形をしたスキーマがそれの (含意式としての) 双対と同値であることが分かる。
   >
-  \thm|type="thm",id="contra"|<
+  \thm|type="prp",id="contra"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       様相列 &m<`f, `c> に対し、2 条件
@@ -226,17 +226,17 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; `f \neg; A \buharprarr; `c \neg; A
       >
       が成り立つ。
-      \mref|type="thm",ref="dualmod"|; と\a|href="90.html#repvar"|<定理 6.2> により、
+      \mref|type="thm",ref="dualmod"|; と\a|href="90.html#repvar"|<命題 6.2> により、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \sp<`f><*> \neg; \neg; A \buharprarr; \neg; \sp<`c><*> \neg; \neg; A
       >
       が得られる。
-      ここからは、まず\a|href="89.html#rpl"|<定理 5.1> により、
+      ここからは、まず\a|href="89.html#rpl"|<命題 5.1> により、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sp<`c><*> \neg; \neg; A \buharprarr; \sp<`f><*> \neg; \neg; A
       >
       が分かる。
-      そして &m<\sp<\vdash|ord|;><\frak<T>> \srel; \neg; \neg; A \buharplrarr; A> であるから、\a|href="90.html#repvar"|<定理 6.2> により、
+      そして &m<\sp<\vdash|ord|;><\frak<T>> \srel; \neg; \neg; A \buharplrarr; A> であるから、\a|href="90.html#repvar"|<命題 6.2> により、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sp<`c><*> A \buharprarr; \sp<`f><*> A
       >
@@ -250,12 +250,12 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \sp<`c><*> \neg; A \buharprarr; \sp<`f><*> \neg; A
       >
       が成り立つ。
-      \a|href="89.html#rpl"|<定理 5.1> により、
+      \a|href="89.html#rpl"|<命題 5.1> により、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \sp<`f><*> \neg; A \buharprarr; \neg; \sp<`c><*> \neg; A
       >
       が分かる。
-      \mref|type="thm",ref="dualmod"|; と\a|href="90.html#repvar"|<定理 6.2> を使えば、
+      \mref|type="thm",ref="dualmod"|; と\a|href="90.html#repvar"|<命題 6.2> を使えば、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; `f A \buharprarr; `c A
       >

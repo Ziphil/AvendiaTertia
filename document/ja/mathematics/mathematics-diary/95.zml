@@ -14,7 +14,7 @@
   \p<
     まずは、導出可能性を扱う際に便利な性質を 2 つ示しておこう。
   >
-  \thm|type="thm",id="dedrpl"|<
+  \thm|type="prp",id="dedrpl"|<
     \p<
       正規な理論 &m<\frak<T>> をとり、式の集合 &m<`G> をとる。
       式 &m<\sb<A><1>, \cdots;, \sb<A><n> \srel; (n \geq; 0)> と式 &m<B> に対し、
@@ -38,12 +38,12 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><n1> \wedge; \cdots; \wedge; \sb<G><n \sb<m><n>> \buharprarr; \sb<A><n>
       >
       が全て成り立つ。
-      すると、\a|href="89.html#rpl"|<定理 5.1> により、
+      すると、\a|href="89.html#rpl"|<命題 5.1> により、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><11> \wedge; \cdots; \wedge; \sb<G><1 \sb<m><1>> \wedge; \cdots; \wedge; \sb<G><n1> \wedge; \cdots; \wedge; \sb<G><n \sb<m><n>> \buharprarr; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>
       >
       が成り立つ。
-      さらに今 &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> が成り立つから、再び\a|href="89.html#rpl"|<定理 5.1> により、
+      さらに今 &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> が成り立つから、再び\a|href="89.html#rpl"|<命題 5.1> により、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><11> \wedge; \cdots; \wedge; \sb<G><1 \sb<m><1>> \wedge; \cdots; \wedge; \sb<G><n1> \wedge; \cdots; \wedge; \sb<G><n \sb<m><n>> \buharprarr; B
       >
@@ -51,7 +51,7 @@
       すなわち、&m<`G \sp<\vdash;><\frak<T>> B> が示された。
     >
   >
-  \thm|type="thm",id="dedimp"|<
+  \thm|type="prp",id="dedimp"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> と式 &m<A, B> に対し、2 条件
@@ -77,7 +77,7 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; (A \buharprarr; B)
       >
       が成り立つ。
-      ここから\a|href="89.html#rpl"|<定理 5.1> を使うことで、
+      ここから\a|href="89.html#rpl"|<命題 5.1> を使うことで、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \wedge; A \buharprarr; B
       >
@@ -97,7 +97,7 @@
       &mb<
         \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \equiv; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><k> \wedge; A \wedge; \cdots; \wedge; A
       >
-      であるから、\a|href="89.html#rpl"|<定理 5.1> を使うことで、
+      であるから、\a|href="89.html#rpl"|<命題 5.1> を使うことで、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><k> \wedge; A \buharprarr; B
       >
@@ -113,7 +113,7 @@
     続いて、整合性の別の特徴付けを与えておこう。
     我々は整合性を &m<\bot;> が導出可能でないこととして定義したが、ある式の肯定と否定が同時に導出可能でないことと定義することもできる。
   >
-  \thm|type="thm",id="convar"|<
+  \thm|type="prp",id="convar"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> に対し、2 条件
@@ -149,7 +149,7 @@
   \p<
     また、整合性に関して、次の性質も便利である。
   >
-  \thm|type="thm",id="dedcon"|<
+  \thm|type="prp",id="dedcon"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> と式 &m<A> に対し、2 条件
@@ -171,7 +171,7 @@
       \label<条件 1 &m<\rxarr;> 条件 2>
       対偶を示す。
       &m<`G \sp<\vdash;><\frak<T>> \neg; A> が成り立つと仮定する。
-      \a|href="94.html#dedsub"|<定理 10.4> によって &m<`G \cup; `{ A `} \sp<\vdash;><\frak<T>> \neg; A> も成り立つ。
+      \a|href="94.html#dedsub"|<命題 10.4> によって &m<`G \cup; `{ A `} \sp<\vdash;><\frak<T>> \neg; A> も成り立つ。
       一方、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \neg; A \buharprarr; \neg; A> であるから、定義より &m<`G \cup; `{ \neg; A `} \sp<\vdash;><\frak<T>> \neg; A> も成り立つ。
       したがって、\mref|type="thm",ref="convar"|; によって &m<`G \cup; `{ A `}> は整合的でない。
     >
@@ -187,7 +187,7 @@
   \p<
     さらに、極大整合性に関する重要な性質として、そこから導出可能であることとそれに所属することが同値になることを示しておこう。
   >
-  \thm|type="thm",id="belded"|<
+  \thm|type="prp",id="belded"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> が &m<\frak<T>>-極大整合的であれば、任意の式 &m<A> に対して、2 条件
@@ -224,7 +224,7 @@
   \p<
     これを使うと、極大整合的集合については、\mref|type="thm",ref="dedrpl"|; を次のように言い換えることができる。
   >
-  \thm|type="thm",id="dedrplvar"|<
+  \thm|type="prp",id="dedrplvar"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       さらに、式の集合 &m<`G> が &m<\frak<T>>-極大整合的であるとする。
@@ -249,7 +249,7 @@
     以上の準備のもと、極大整合的集合に対する所属関係においては、各論理演算子が意味論的に妥当な振る舞いをすることが示せる。
     これが正準モデルを定義するための鍵となる。
   >
-  \thm|type="thm",id="maxpl"|<
+  \thm|type="prp",id="maxpl"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> が &m<\frak<T>>-極大整合的であれば、任意の式 &m<A, B> に対して、
@@ -319,7 +319,7 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<H><1> \wedge; \cdots; \wedge; \sb<H><m> \buharprarr; B
       >
       がともに成り立つ。
-      ここから\a|href="89.html#rpl"|<定理 5.1> により、
+      ここから\a|href="89.html#rpl"|<命題 5.1> により、
       &mb<
         \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \wedge; \sb<H><1> \wedge; \cdots; \wedge; \sb<H><m> \buharprarr; A \wedge; B
       >
@@ -343,7 +343,7 @@
   \p<
      これの主張 3 が特に便利で、これを利用することで導出可能性の別の特徴付けが得られる。
   >
-  \thm|type="thm",id="dedvar"|<
+  \thm|type="prp",id="dedvar"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> と式 &m<A> に対して、2 条件
@@ -365,13 +365,13 @@
       \label<主張 1 &m<\rxarr;> 主張 2>
       &m<`G \sp<\vdash;><\frak<T>> A> が成り立つと仮定する。
       任意に &m<\frak<T>>-極大整合的集合 &m<`D> をとって、&m<`G \subseteq; `D> であるとする。
-      すると、\a|href="94.html#dedsub"|<定理 10.4> により &m<`D \sp<\vdash;><\frak<T>> A> が成り立ち、\mref|type="thm",ref="belded"|; により &m<A \in; `D> が得られる。
+      すると、\a|href="94.html#dedsub"|<命題 10.4> により &m<`D \sp<\vdash;><\frak<T>> A> が成り立ち、\mref|type="thm",ref="belded"|; により &m<A \in; `D> が得られる。
     >
     \p<
       \label<主張 2 &m<\rxarr;> 主張 1>
       対偶を示すため、&m<`G \sp<\vdash;><\frak<T>> A> が成り立たないと仮定する。
       すると、\mref|type="thm",ref="dedrpl"|; により &m<`G \sp<\vdash;><\frak<T>> \neg; \neg; A> も成り立たないので、\mref|type="thm",ref="dedcon"|; により &m<`G \cup; `{ \neg; A `}> は整合的である。
-      そこで\a|href="94.html#lindenbaum"|<定理 10.9> を使って、極大整合的集合 &m<`D> であって &m<`G \cup; `{ \neg; A `} \subseteq; `D> を満たすものをとる。
+      そこで\a|href="94.html#lindenbaum"|<命題 10.9> を使って、極大整合的集合 &m<`D> であって &m<`G \cup; `{ \neg; A `} \subseteq; `D> を満たすものをとる。
       特に &m<\neg; A \in; `D> であるから、\mref|type="thm",ref="maxpl"|; により &m<A \nin; `D> が得られる。
       これで、主張 2 の否定が示された。
     >
@@ -400,7 +400,7 @@
   \p<
     このような集合については、次が成り立つことが観察できる。
   >
-  \thm|type="thm",id="incdual"|<
+  \thm|type="prp",id="incdual"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G, `D> に対し、&m<`G, `D> がどちらも &m<\frak<T>>-極大整合的であれば、
@@ -431,7 +431,7 @@
   \p<
     本題に戻って、様相式が極大整合的集合に属するかどうかについては、次のように述べられる。
   >
-  \thm|type="thm",id="maxmod"|<
+  \thm|type="prp",id="maxmod"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式の集合 &m<`G> が &m<\frak<T>>-極大整合的であれば、任意の式 &m<A> に対して、
