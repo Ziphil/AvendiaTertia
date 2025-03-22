@@ -1,0 +1,143 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<完全性>
+  \use-math|prefix="12"|;
+
+  \h1<日記 (2025 年 3 月 22 日)>
+  \p<
+    今回は、ついに完全性を証明する。
+    とはいえ、その本質的な議論は前回までで終わっているので、後はそれらをまとめるだけである。
+  >
+  \p<
+    まずは、正準モデルを定義しよう。
+  >
+  \thm|type="def",id="canmod"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      モデル &m<\sp<\scr<M>><\frak<T>> = (\sp<W><\frak<T>>, \sp<\sim|ord|;><\frak<T>>, \sp<P><\frak<T>>)> を以下で定める。
+    >
+    \ul<
+      \li*<
+        &m<\sp<W><\frak<T>>> は、
+        &mb<
+          \sp<W><\frak<T>> \coloneqq; `{ `G \mid; &raw<&m<`G> は &m<\frak<T>>-極大整合的集合> `}
+        >
+        とする。
+      >
+      \li*<
+        &m<\sp<\sim|ord|;><\frak<T>>> は、各 &m<`G, `D \in; \sp<W><\frak<T>>> に対して、
+        &mb<
+          `G \sp<\sim;><\frak<T>> `D \coloniff; \sp<\tbox;><- 1> `G \subseteq; `D
+        >
+        であるとして定める。
+      >
+      \li*<
+        &m<\sp<P><\frak<T>>> は、各 &m<n \in; \bb<N>> に対して、
+        &mb<
+          \sbsp<P><n><\frak<T>> \coloneqq; \set<`G><\array|align="l"|<
+            \cc<&raw<&m<`G> は &m<\frak<T>>-極大整合的集合>>
+            \cc<\sb<\tt<p>><n> \in; `G>
+          >>
+        >
+        であるとして定める。
+      >
+    >
+    \p<
+      このとき、この &m<\sp<\scr<M>><\frak<T>>> を &m<\frak<T>> による \def<正準モデル\fl<canonical model>> という。
+    >
+  >
+  \p<
+    正準モデルでの世界 (すなわち極大整合的集合) における式の妥当性は、その極大整合的集合への所属関係と同値になる。
+  >
+  \thm|type="prp",id="valbel"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      任意の &m<\frak<T>>-極大整合的集合 &m<`G> と式 &m<A> に対し、
+      &mb<
+        \sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; A \iff; A \in; `G
+      > 
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<A> の構造に関する帰納法による。
+    >
+    \p<
+      &m<A \equiv; \sb<\tt<p>><n>> のとき。
+      &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; \sb<\tt<p>><n>> であるとは &m<`G \in; \sbsp<P><n><\frak<T>>> であるということだが、定義からこれは &m<\sb<\tt<p>><n> \in; `G> と同値である。
+    >
+    \p<
+      &m<A \equiv; X \wedge; Y> のとき。
+      &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; X \wedge; Y> であるとは &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; X> と &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; Y> がともに成り立つことである。
+      帰納法の仮定により、これは &m<X \in; `G> かつ &m<Y \in; `G> がともに成り立つことと同値である。
+      ここで\a|href="95.html#maxpl"|<命題 11.6> により、これは &m<X \wedge; Y \in; `G> とも同値である。
+    >
+    \p<
+      &m<A> が要素式以外の他の形のとき、すなわち &m<A \equiv; \top;>, &m<A \equiv; \bot;>, &m<A \equiv; \neg; X>, &m<A \equiv; X \vee; Y>, &m<A \equiv; X \buharprarr; Y> のいずれかで書ける場合も、\a|href="95.html#maxpl"|<命題 11.6> から上記と全く同様に従う。
+      &m<A \equiv; \tbox; X> のときは、\a|href="95.html#maxmod"|<命題 11.12> を使うことでやはり同様に示せる。
+      &m<A \equiv; \trhombus; X> のときは、\a|href="95.html#incdual"|<命題 11.9> を使うことで &m<`G, `D \in; \sp<W><\frak<T>>> に対して &m<`G \sp<\sim;><\frak<T>> `D> が &m<`D \subseteq; \sp<\trhombus;><-1> `G> と同値にもなることを思い出せば、同じく\a|href="95.html#maxmod"|<命題 11.12> から示せる。
+    >
+    \p<
+      これで全ての場合が尽くされたので、命題の主張が示された。
+    >
+  >
+  \p<
+    これを用いると、正準モデルでの (世界によらない) 妥当性が、証明可能性と同値になることが分かる。
+  >
+  \thm|type="prp",id="valprov"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      任意の式 &m<A> に対し、
+      &mb<
+        \sp<\vxdash|ord|;><\sp<\scr<M>><\frak<T>>> \srel; A \iff; \sp<\vdash|ord|;><\frak<T>> \srel; A
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<\vxdash|ord|;><\scr<M>> \srel; A> が成り立つことは、任意の世界 &m<`G \in; \sp<W><\frak<T>>> に対して &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; A> が成り立つことである。
+      &m<\sp<W><\frak<T>>> の定義と\mref|type="thm",ref="valbel"|; によって、これは、任意の &m<\frak<T>>-極大整合的集合 &m<`G> に対して &m<A \in; `G> が成り立つことと同値である。
+      \a|href="95.html#dedvar"|<命題 11.8> を使えば、これが &m<\sp<\vdash|ord|;><\frak<T>> \srel; A> と同値であることが分かる。
+    >
+  >
+  \p<
+    最後に、これを用いることで、完全性を次のように述べることができる。
+    すなわち、正規な理論は、その正準モデルを属するようなモデルのクラスに対して完全である。
+  >
+  \thm|type="thm",id="comp"|<
+    \p<
+      正規な理論 &m<\frak<T>> とモデルのクラス &m<\frak<C>> に対し、&m<\sp<\scr<M>><\frak<T>> \in; \frak<C>> ならば、
+      &mb<
+        \sp<\vxdash|ord|;><\frak<C>> \srel; A \implies; \sp<\vdash|ord|;><\frak<T>> \srel; A
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \mref|type="thm",ref="valprov"|; から明らかである。
+    >
+  >
+  \p<
+    さて、我々は正規な理論として特に &m<\bfrm<K>> にいくつかのスキーマを追加したものを考えていて、その中でもさらに &m<\bfrm<K> `[\bfrm<D>`]>, &m<\bfrm<K> `[\bfrm<T>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<B>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> の 5 種類が重要であると述べてきた。
+    これらの体系は、それぞれ &m<\bfrm<Ser>>, &m<\bfrm<Refl>>, &m<\bfrm<Refl> \cap; \bfrm<Sym>>, &m<\bfrm<Pord>>, &m<\bfrm<Equiv>> に対応しており、この対応するモデルのクラスに対して健全であった。
+    これは\a|href="93.html#soundex"|<定理 9.4> で示した通りである。
+    そこで、これらの体系がそれぞれ対応するモデルのクラスに対して完全でもあることを証明したい。
+    そのためには、上記の定理により、&m<\bfrm<K> `[\bfrm<D>`]>, &m<\bfrm<K> `[\bfrm<T>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<B>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> の正準モデルがそれぞれ &m<\bfrm<Ser>>, &m<\bfrm<Refl>>, &m<\bfrm<Refl> \cap; \bfrm<Sym>>, &m<\bfrm<Pord>>, &m<\bfrm<Equiv>> に属することを示せば良い。
+  >
+  \p<
+    そこで次回は、上記の 5 種類の体系の正準モデルの性質を調べることにする。
+    これで完全性に関するトピックは一旦閉じることになる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
