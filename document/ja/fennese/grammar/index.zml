@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## tkf まで使用
+  ## tkr まで使用
   \hb<初めに>
   \pb<
     \ab|href="16.html",ignore|<初めに>
@@ -28,6 +28,7 @@
   \pb<
     \ab|href="3.html"|<基本語順>
     \ab|href="11.html"|<類>
+    \ab|href="17.html"|<格>
     \ab|href="8.html"|<時制>
     \ab|href="9.html"|<相>
     \ab|href="15.html"|<相関詞と関係詞>
