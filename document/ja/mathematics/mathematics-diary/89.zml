@@ -195,27 +195,46 @@
   \thm|type="prp",id="r"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
-      式 &m<A, B> に対し、
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n>> に対し、
       &mb<
-        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharplrarr; \tbox; A \wedge; \tbox; B
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>) \buharplrarr; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n>
       >
       が成り立つ。
     >
   >
   \prf<
     \p<
-      \mref|type="thm",ref="rpl"|; により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; A \wedge; \tbox; B> と &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \wedge; \tbox; B \buharprarr; \tbox; (A \wedge; B)> が成り立つことを示せば良い。
+      \mref|type="thm",ref="rpl"|; により、
+      &mb<
+        \array|align="r"|<
+          \cc<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>) \buharprarr; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n>>
+          \cc<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n> \buharprarr; \tbox; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>)>
+        >
+      >
+      がともに成り立つことを示せば良い。
     >
     \p<
-      まず &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; A \wedge; \tbox; B> を示す。
-      命題論理的恒真性により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A \wedge; B \buharprarr; A> と &m<\sp<\vdash|ord|;><\frak<T>> \srel; A \wedge; B \buharprarr; B> はともに成り立つ。
-      これにそれぞれ\mref|type="thm",ref="rk"|; を適用すれば、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; A> と &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; B> が得られる。
-      これらと\mref|type="thm",ref="rpl"|; により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (A \wedge; B) \buharprarr; \tbox; A \wedge; \tbox; B> が分かる。
+      まず 1 つ目を示す。
+      命題論理的恒真性により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; \sb<A><1>> から &m<\sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; \sb<A><n>> までが全て成り立つ。
+      これに\mref|type="thm",ref="rk"|; を適用すれば、&m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>) \buharprarr; \tbox; \sb<A><1>> から &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>) \buharprarr; \tbox; \sb<A><n>> までが得られる。
+      これらと\mref|type="thm",ref="rpl"|; により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>) \buharprarr; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n>
+      >
+      が分かる。
     >
     \p<
-      次に &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \wedge; \tbox; B \buharprarr; \tbox; (A \wedge; B)> を示す。
-      命題論理的恒真性により、&m<\sp<\vdash|ord|;><\frak<T>> \srel; A \wedge; B \buharprarr; A \wedge; B> が成り立つ。
-      これに\mref|type="thm",ref="rk"|; を適用すれば、そのまま &m<\sp<\vdash|ord|;><\frak<T>> \srel; \tbox; A \wedge; \tbox; B \buharprarr; \tbox; (A \wedge; B)> が分かる。
+      次に 2 つ目を示す。
+      命題論理的恒真性により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>
+      >
+      が成り立つ。
+      これに\mref|type="thm",ref="rk"|; を適用すれば、そのまま
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><1> \wedge; \cdots; \wedge; \tbox; \sb<A><n> \buharprarr; \tbox; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>)
+      >
+      が分かる。
     >
   >
   \p<
