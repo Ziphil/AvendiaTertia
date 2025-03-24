@@ -1,0 +1,66 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<完全性>
+  \use-math|prefix="13"|;
+
+  \h1<日記 (2025 年 3 月 25 日)>
+  \p<
+    さて前回で、一般的な形での完全性が証明された。
+    今回は、&m<\bfrm<K> `[\bfrm<D>`]>, &m<\bfrm<K> `[\bfrm<T>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<B>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]>, &m<\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> の 5 つの体系に対して、より具体的な形で完全性を証明する。
+    そのために、体系に &m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> が追加されているときに、その正準モデルがどのような形になるのかをより精密に調べる。
+  >
+  \p<
+    5 種類のスキーマそれぞれについて個別に議論しても良い (その方が手数は増えるが易しい) が、\a|href="87.html"|<2 月 25 日>でも述べたようにこれらのスキーマは全て同様の形をしているので、より一般化した形で一気に議論を進めてしまおうと思う。
+    ここで、これらのスキーマの一般化について、少し思い出しておこう。
+    自然数 &m<k, l, m, n> と式 &m<A> に対し、
+    &mb<
+      \sbsp<\bfrm<G>><A><klmn> \colonequiv; \sp<\trhombus;><k> \sp<\box;><l> A \buharprarr; \sp<\tbox;><m> \sp<\trhombus;><n> A
+    >
+    と定義すると、&m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> は、
+    &mb<
+      \bfrm<D> \equiv; \sp<\bfrm<G>><0101> \xquad;
+      \bfrm<T> \equiv; \sp<\bfrm<G>><0100> \xquad;
+      \bfrm<B> \equiv; \sp<\bfrm<G>><0011> \xquad;
+      \bfrm<4> \equiv; \sp<\bfrm<G>><0120> \xquad;
+      \bfrm<5> \equiv; \sp<\bfrm<G>><1011>
+    >
+    と書けるのであった。
+    そこで以降は、体系に &m<\sp<\bfrm<G>><klmn>> が含まれているときに、その正準モデルがどうなるかを調べることにする。
+  >
+  \p<
+    まずは準備として、&m<\tbox;> と &m<\vee;> の分配性について触れておこう。
+    \a|href="89.html#r"|<命題 5.6> によって &m<\tbox;> と &m<\wedge;> は分配するが、&m<\tbox;> と &m<\vee;> については一方の含意関係しか一般には成り立たない。
+  >
+  \thm|type="prp",id=""|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n>> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><1> \vee; \cdots; \vee; \tbox; \sb<A><n> \buharprarr; \tbox; (\sb<A><1> \vee; \cdots; \vee; \sb<A><n>)
+      >
+      が成り立つ。
+    >
+  >
+  \p<
+    今回は使わないが、双対的に &m<\trhombus;> と &m<\wedge;> に関しては以下が成り立つ。 
+  >
+  \thm|type="prp",id=""|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n>> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>) \buharprarr; \trhombus; \sb<A><1> \wedge; \cdots; \wedge; \trhombus; \sb<A><n> 
+      >
+      が成り立つ。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="cmlx"|<B. F. Chellas (1980)『Modal Logic』Cambridge University Press>
+    \li|id="bmlx"|<P. Blackburn, M. de Rijke, Y. Venema (2001)『Modal Logic』Cambridge University Press>
+  >
+
+>
