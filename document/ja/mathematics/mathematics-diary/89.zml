@@ -243,9 +243,9 @@
   \thm|type="prp",id="rdual"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
-      式 &m<A, B> に対し、
+      式 &m<\sb<A><1>, \cdots;, \sb<A><n>> に対し、
       &mb<
-        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; (A \vee; B) \buharplrarr; \trhombus; A \vee; \trhombus; B
+        \sp<\vdash|ord|;><\frak<T>> \srel;  \trhombus; \sb<A><1> \vee; \cdots; \vee; \trhombus; \sb<A><n> \buharplrarr; \trhombus; (\sb<A><1> \vee; \cdots; \vee; \sb<A><n>)
       >
       が成り立つ。
     >
