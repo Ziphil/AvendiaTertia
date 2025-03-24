@@ -37,8 +37,8 @@
   \thm|type="def"|<
     \p<
       理論 &m<\frak<T>> をとる。
-      スキーマ &m<`G> に対して、任意の式 &m<A \in; `G> に対して &m<A> が &m<\frak<T>> で証明可能であるとき、 &m<`G> 自身も &m<\frak<T>> で \def<証明可能\fl<provable>> であるという。
-      このとき、&m<\sp<\vdash|ord|;><\frak<T>> \srel; `G> と書く。
+      スキーマ &m<`S> に対して、任意の式 &m<A \in; `S> に対して &m<A> が &m<\frak<T>> で証明可能であるとき、 &m<`S> 自身も &m<\frak<T>> で \def<証明可能\fl<provable>> であるという。
+      このとき、&m<\sp<\vdash|ord|;><\frak<T>> \srel; `S> と書く。
     >
   >
   \p<
@@ -132,7 +132,7 @@
   >
   \thm|type="def"|<
     \p<
-      スキーマ &m<\sb<`G><1>, \cdots;, \sb<`G><n>> に対し、&m<\bfrm<K>> に &m<\sb<`G><1>, \cdots;, \sb<`G><n>> の全体を公理として追加して得られる演繹体系を、&m<\bfrm<K> `[\sb<`G><1>, \cdots;, \sb<`G><n>`]> で表す。
+      スキーマ &m<\sb<`S><1>, \cdots;, \sb<`S><n>> に対し、&m<\bfrm<K>> に &m<\sb<`S><1>, \cdots;, \sb<`S><n>> の全体を公理として追加して得られる演繹体系を、&m<\bfrm<K> `[\sb<`S><1>, \cdots;, \sb<`S><n>`]> で表す。
     >
   >
   \p<

@@ -57,7 +57,7 @@
       正規な理論 &m<\frak<T>> をとる。
       任意の &m<\frak<T>>-極大整合的集合 &m<`G> と式 &m<A> に対し、
       &mb<
-        \sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; A \iff; A \in; `G
+        `G \sp<\vxdash;><\sp<\scr<M>><\frak<T>>> A \iff; A \in; `G
       > 
       が成り立つ。
     >
@@ -68,11 +68,11 @@
     >
     \p<
       &m<A \equiv; \sb<\tt<p>><n>> のとき。
-      &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; \sb<\tt<p>><n>> であるとは &m<`G \in; \sbsp<P><n><\frak<T>>> であるということだが、定義からこれは &m<\sb<\tt<p>><n> \in; `G> と同値である。
+      &m<`G \sp<\vxdash;><\sp<\scr<M>><\frak<T>>> \sb<\tt<p>><n>> であるとは &m<`G \in; \sbsp<P><n><\frak<T>>> であるということだが、定義からこれは &m<\sb<\tt<p>><n> \in; `G> と同値である。
     >
     \p<
       &m<A \equiv; X \wedge; Y> のとき。
-      &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; X \wedge; Y> であるとは &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; X> と &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; Y> がともに成り立つことである。
+      &m<`G \sp<\vxdash;><\sp<\scr<M>><\frak<T>>> X \wedge; Y> であるとは &m<`G \sp<\vxdash;><\sp<\scr<M>><\frak<T>>> X> と &m<`G \sp<\vxdash;><\sp<\scr<M>><\frak<T>>> Y> がともに成り立つことである。
       帰納法の仮定により、これは &m<X \in; `G> かつ &m<Y \in; `G> がともに成り立つことと同値である。
       ここで\a|href="95.html#maxpl"|<命題 11.6> により、これは &m<X \wedge; Y \in; `G> とも同値である。
     >
@@ -100,7 +100,7 @@
   >
   \prf<
     \p<
-      &m<\sp<\vxdash|ord|;><\scr<M>> \srel; A> が成り立つことは、任意の世界 &m<`G \in; \sp<W><\frak<T>>> に対して &m<\sbsp<\vxdash|ord|;><`G><\sp<\scr<M>><\frak<T>>> \srel; A> が成り立つことである。
+      &m<\sp<\vxdash|ord|;><\scr<M>> \srel; A> が成り立つことは、任意の世界 &m<`G \in; \sp<W><\frak<T>>> に対して &m<`G \sp<\vxdash;><\sp<\scr<M>><\frak<T>>> A> が成り立つことである。
       &m<\sp<W><\frak<T>>> の定義と\mref|type="thm",ref="valbel"|; によって、これは、任意の &m<\frak<T>>-極大整合的集合 &m<`G> に対して &m<A \in; `G> が成り立つことと同値である。
       \a|href="95.html#dedvar"|<命題 11.8> を使えば、これが &m<\sp<\vdash|ord|;><\frak<T>> \srel; A> と同値であることが分かる。
     >
@@ -132,7 +132,7 @@
   >
   \p<
     そこで次回は、上記の 5 種類の体系の正準モデルの性質を調べることにする。
-    これで完全性に関するトピックは一旦閉じることになる。
+    それで完全性に関するトピックは一旦閉じることになる。
   >
   \h1<参考文献>
   \ol<

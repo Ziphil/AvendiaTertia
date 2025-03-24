@@ -31,9 +31,10 @@
         \sb<\tt<p>><n> \mid; \top; \mid; \bot; \mid;
         \neg; A \mid;
         A \wedge; A \mid; A \vee; A \mid; A \buharprarr; A \mid;
-        \box|ord|; A \mid; \trhombus; A
+        \tbox; A \mid; \trhombus; A
       >
-      これによって定まる記号列 &m<A> を \def<式\fl<formula>>と呼び、特に &m<\sb<\tt<p>><n>> の形のものを \def<原子式\fl<atomic formula>>と呼ぶ。
+      これによって定まる記号列 &m<A> を \def<式\fl<formula>>と呼ぶ。
+      さらに特に、&m<\sb<\tt<p>><n>> の形のものを \def<原子式\fl<atomic formula>>と呼び、&m<\tbox; A> か &m<\trhombus; A> の形のものを \def<様相式\fl<modal formula>>と呼ぶ。
     >
   >
   \p<
@@ -42,7 +43,7 @@
     また、&m<(A \buharprarr; B) \wedge; (B \buharprarr; A)> のことを &m<A \buharplrarr; B> と略記する。
   >
   \p<
-    さて、定義から分かるように、様相論理における式には、通常の命題論理に対して &m<\box|ord|; A> と &m<\trhombus; A> という 2 つの形の式が追加されている。
+    さて、定義から分かるように、様相論理における式には、通常の命題論理に対して &m<\tbox; A> と &m<\trhombus; A> という 2 つの形の式が追加されている。
     これが、先程述べた「～というのは必然である」や「将来～だろう」のような、様相を含む言明を表す式である。
   >
   \p<
@@ -97,39 +98,39 @@
   \thm|type="def",id="sem"|<
     \p<
       モデル &m<\scr<M> = (W, \sim|ord|;, P)> の世界 &m<`a \in; W> を考える。
-      式 &m<A> に対し、命題 &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> を以下で再帰的に定義する。
+      式 &m<A> に対し、命題 &m<`a \sp<\vxdash;><\scr<M>> A> を以下で再帰的に定義する。
     >
     \ul<
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sb<\tt<p>><n>> であるのは、&m<`a \in; \sb<P><n>> が成り立つときである。
+        &m<`a \sp<\vxdash;><\scr<M>> \sb<\tt<p>><n>> であるのは、&m<`a \in; \sb<P><n>> が成り立つときである。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \top;> は常に真である。
+        &m<`a \sp<\vxdash;><\scr<M>> \top;> は常に真である。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \bot;> は常に偽である。
+        &m<`a \sp<\vxdash;><\scr<M>> \bot;> は常に偽である。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \neg; A> であるのは、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立たないときである。
+        &m<`a \sp<\vxdash;><\scr<M>> \neg; A> であるのは、&m<`a \sp<\vxdash;><\scr<M>> A> が成り立たないときである。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A \wedge; B> であるのは、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> かつ &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; B> が成り立つときである。
+        &m<`a \sp<\vxdash;><\scr<M>> A \wedge; B> であるのは、&m<`a \sp<\vxdash;><\scr<M>> A> かつ &m<`a \sp<\vxdash;><\scr<M>> B> が成り立つときである。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A \vee; B> であるのは、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> または &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; B> が成り立つときである。
+        &m<`a \sp<\vxdash;><\scr<M>> A \vee; B> であるのは、&m<`a \sp<\vxdash;><\scr<M>> A> または &m<`a \sp<\vxdash;><\scr<M>> B> が成り立つときである。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A \buharprarr; B> であるのは、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> ならば &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; B> が成り立つときである。
+        &m<`a \sp<\vxdash;><\scr<M>> A \buharprarr; B> であるのは、&m<`a \sp<\vxdash;><\scr<M>> A> ならば &m<`a \sp<\vxdash;><\scr<M>> B> が成り立つときである。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \box|ord|; A> であるのは、&m<`b \in; W> であって &m<`a \sim; `b> を満たすもの全てに対して &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つときである。
+        &m<`a \sp<\vxdash;><\scr<M>> \tbox; A> であるのは、&m<`b \in; W> であって &m<`a \sim; `b> を満たすもの全てに対して &m<`b \sp<\vxdash;><\scr<M>> A> が成り立つときである。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \trhombus; A> であるのは、&m<`b \in; W> であって &m<`a \sim; `b> を満たすものが存在して &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つときである。
+        &m<`a \sp<\vxdash;><\scr<M>> \trhombus; A> であるのは、&m<`b \in; W> であって &m<`a \sim; `b> を満たすものが存在して &m<`b \sp<\vxdash;><\scr<M>> A> が成り立つときである。
       >
     >
     \p<
-      &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つとき、&m<A> は &m<`a> において \def<妥当\fl<valid>> であるという。
+      &m<`a \sp<\vxdash;><\scr<M>> A> が成り立つとき、&m<A> は &m<`a> において \def<妥当\fl<valid>> であるという。
     >
   >
   \p<
@@ -139,7 +140,7 @@
   \thm|type="def"|<
     \p<
       モデル &m<\scr<M> = (W, \sim|ord|;, P)> をとる。
-      式 &m<A> に対して、&m<\sp<\vxdash|ord|;><\scr<M>> \srel; A> が成り立つことを、任意の &m<`a \in; W> に対して &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つことと定める。
+      式 &m<A> に対して、&m<\sp<\vxdash|ord|;><\scr<M>> \srel; A> が成り立つことを、任意の &m<`a \in; W> に対して &m<`a \sp<\vxdash;><\scr<M>> A> が成り立つことと定める。
       このとき、&m<A> は &m<\scr<M>> において \def<妥当\fl<valid>> であるという。
     >
   >
@@ -176,7 +177,7 @@
   >
   \p<
     定義はこの通りだが、基本的に「スキーマ」といった場合は、特定の形をした式の全体を指すことが多い。
-    例えば、スキーマ &m<`G> をある式 &m<A> について &m<\sb<`G><A> \coloneqq; \tbox; A \buharprarr; \trhombus; A> の形で書けるもの全体をとするといった具合である。
+    例えば、スキーマ &m<`S> をある式 &m<A> について &m<\sb<`S><A> \coloneqq; \tbox; A \buharprarr; \trhombus; A> の形で書けるもの全体をとするといった具合である。
   >
   \p<
     スキーマの妥当性は、そのスキーマに属する全ての式が妥当であるとして定義する。
@@ -184,8 +185,8 @@
   \thm|type="def"|<
     \p<
       モデルから成るクラス &m<\frak<C>> をとる。
-      スキーマ &m<`G> に対して、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; `G> が成り立つことを、任意の式 &m<A \in; `G> について &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> が成り立つことと定める。
-      このとき、&m<`G> は &m<\frak<C>> において \def<妥当\fl<valid>> もしくは \def<恒真\fl<tautological>> であるという。
+      スキーマ &m<`S> に対して、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; `S> が成り立つことを、任意の式 &m<A \in; `S> について &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> が成り立つことと定める。
+      このとき、&m<`S> は &m<\frak<C>> において \def<妥当\fl<valid>> もしくは \def<恒真\fl<tautological>> であるという。
     >
   >
   \p<

@@ -51,13 +51,13 @@
   >
   \thm|type="thm",id="sound"|<
     \p<
-      スキーマ &m<\sb<`G><1>, \cdots;, \sb<`G><n>> とモデルのクラス &m<\sb<\frak<C>><1>, \cdots;, \sb<\frak<C>><n>> に対し、
+      スキーマ &m<\sb<`S><1>, \cdots;, \sb<`S><n>> とモデルのクラス &m<\sb<\frak<C>><1>, \cdots;, \sb<\frak<C>><n>> に対し、
       &mb<
-        \sp<\vxdash|ord|;><\sb<\frak<C>><1>> \srel; \sb<`G><1> \xquad; \cdots; \xquad; \sp<\vxdash|ord|;><\sb<\frak<C>><n>> \srel; \sb<`G><n>
+        \sp<\vxdash|ord|;><\sb<\frak<C>><1>> \srel; \sb<`S><1> \xquad; \cdots; \xquad; \sp<\vxdash|ord|;><\sb<\frak<C>><n>> \srel; \sb<`S><n>
       >
       が全て成り立っているならば、任意の式 &m<A> に対し、
       &mb<
-         \sp<\vdash|ord|;><\bfrm<K> `[\sb<`G><1>, \cdots;, \sb<`G><n>`]> \srel; A \implies; \sp<\vxdash|ord|;><\sb<\frak<C>><1> \cap; \cdots; \cap; \sb<\frak<C>><n>> \srel; A
+         \sp<\vdash|ord|;><\bfrm<K> `[\sb<`S><1>, \cdots;, \sb<`S><n>`]> \srel; A \implies; \sp<\vxdash|ord|;><\sb<\frak<C>><1> \cap; \cdots; \cap; \sb<\frak<C>><n>> \srel; A
       >
       が成り立つ。
       なお、&m<n = 0> のときは、&m<\sb<\frak<C>><1> \cap; \cdots; \cap; \sb<\frak<C>><n>> はあらゆるモデル全体のクラスを表すとする。
@@ -65,9 +65,9 @@
   >
   \prf<
     \p<
-      &m<\sp<\vxdash|ord|;><\sb<\frak<C>><1>> \srel; \sb<`G><1>> から &m<\sp<\vxdash|ord|;><\sb<\frak<C>><n>> \srel; \sb<`G><n>> が全て成り立っていると仮定する。
-      証明は、&m<\sp<\vdash|ord|;><\bfrm<K> `[\sb<`G><1>, \cdots;, \sb<`G><n>`]> \srel; A> の導出に関する帰納法で行う。 
-      なお、記号を簡単にするため、以降 &m<\tilde<\bfrm<K>> \coloneqq; \bfrm<K> `[\sb<`G><1>, \cdots;, \sb<`G><n>`]> と &m<\tilde<\frak<C>> \coloneqq; \sb<\frak<C>><1> \cap; \cdots; \cap; \sb<\frak<C>><n>> と書く。
+      &m<\sp<\vxdash|ord|;><\sb<\frak<C>><1>> \srel; \sb<`S><1>> から &m<\sp<\vxdash|ord|;><\sb<\frak<C>><n>> \srel; \sb<`S><n>> が全て成り立っていると仮定する。
+      証明は、&m<\sp<\vdash|ord|;><\bfrm<K> `[\sb<`S><1>, \cdots;, \sb<`S><n>`]> \srel; A> の導出に関する帰納法で行う。 
+      なお、記号を簡単にするため、以降 &m<\tilde<\bfrm<K>> \coloneqq; \bfrm<K> `[\sb<`S><1>, \cdots;, \sb<`S><n>`]> と &m<\tilde<\frak<C>> \coloneqq; \sb<\frak<C>><1> \cap; \cdots; \cap; \sb<\frak<C>><n>> と書く。
     >
     \p<
       &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; A> が公理であるとき。
@@ -75,7 +75,7 @@
       &m<A> が命題論理的恒真であるときは、\a|href="86.html#pl"|<命題 2.3> によって &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
       &m<A> が &m<\bfrm<K>> に属するときは、\a|href="86.html#k"|<命題 2.5> から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
       &m<A> が &m<\sp<\bfrm<Dual>><\trhombus;>> に属するときも、\a|href="86.html#dualrhom"|<命題 2.6> から &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> が成り立つ。
-      最後に &m<A> が &m<\tilde<\bfrm<K>>> で追加された公理 &m<\sb<`G><i> \srel; (1 \leq; i \leq; n)> であったときは、最初の仮定から &m<\sp<\vxdash|ord|;><\sb<\frak<C>><i>> \srel; A> が成り立っているので、&m<\sb<\frak<C>><i> \supseteq; \tilde<\frak<C>>> と\mref|type="thm",ref="seminc"|; によって &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> も成り立つ。
+      最後に &m<A> が &m<\tilde<\bfrm<K>>> で追加された公理 &m<\sb<`S><i> \srel; (1 \leq; i \leq; n)> であったときは、最初の仮定から &m<\sp<\vxdash|ord|;><\sb<\frak<C>><i>> \srel; A> が成り立っているので、&m<\sb<\frak<C>><i> \supseteq; \tilde<\frak<C>>> と\mref|type="thm",ref="seminc"|; によって &m<\sp<\vxdash|ord|;><\tilde<\frak<C>>> \srel; A> も成り立つ。
     >
     \p<
       &m<\sp<\vdash|ord|;><\tilde<\bfrm<K>>> \srel; A> が推論規則 MP の帰結であるとき。
@@ -182,7 +182,7 @@
         \array|align="rcl"|<
           \cc<W><\coloneqq;><`{`a, `b`}>
           \cc<\sim|ord|;><\coloneqq;><`{(`a, `a), (`b, `b), (`a, `b)`}>
-          \cc<\sb<P><n>><\coloneqq;><`{`a`} \quad; (n \geq; 0)>
+          \cc<\sb<P><n>><\coloneqq;><`{`a`} \quad; (n \in; \bb<N>)>
         >
       >
       で定めると、この &m<\scr<M>> は反射的かつ推移的であり、すなわち &m<\scr<M> \in; \bfrm<Refl> \cap; \bfrm<Tran>> である。

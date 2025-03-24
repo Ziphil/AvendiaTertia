@@ -61,7 +61,7 @@
       ここで、命題論理的原子式に対する真偽値の割り当て &m<V> を、
       &mb<
         \sbsp<V><`a><\scr<M>> (P) \coloneqq; \case<
-          \c<1> \c<(\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; P)> \br;
+          \c<1> \c<(`a \sp<\vxdash;><\scr<M>> P)> \br;
           \c<0> \c<(&raw<上記以外>)>
         >
       >
@@ -69,14 +69,14 @@
       このように定めた &m<\sbsp<V><`a><\scr<M>>> は、全ての (命題論理的原子式以外の) 式 &m<X> に対して、
       &mb<
         &mark<\wheart;>
-        \sbsp<V><`a><\scr<M>> (X) = 1 \iff; \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; X
+        \sbsp<V><`a><\scr<M>> (X) = 1 \iff; `a \sp<\vxdash;><\scr<M>> X
       >
       を満たす。
       これは、式に対しての真偽値の割り当てと様相論理における妥当性の定義を見比べることで、&m<X> の構造に関する帰納法から簡単に示すことができる。
     >
     \p<
       さて、仮定から &m<A> は命題論理的恒真なので、特に &m<\sbsp<V><`a><\scr<M>> (A) = 1> である。
-      したがって、主張 &m<\wheart;> より &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> が成り立つ。
+      したがって、主張 &m<\wheart;> より &m<`a \sp<\vxdash;><\scr<M>> A> が成り立つ。
       &m<`a> と &m<\scr<M>> は任意だったので、これで &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> が示された。
     >
   >
@@ -102,7 +102,7 @@
       任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
       まず、&m<\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B> は命題論理的恒真だから、\mref|type="thm",ref="pl"|; により、
       &mb<
-        \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
+        `a \sp<\vxdash;><\scr<M>> \sb<A><1> \wedge; \cdots; \wedge; \sb<A><n> \buharprarr; B
       >
       が成り立つ。
       妥当性の定義から、これは &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><1>> から &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \sb<A><n>> までが全て成り立つならば &m<\sp<\vxdash|ord|;><\frak<C>> \srel; B> が成り立つことを意味する。
@@ -129,17 +129,17 @@
       このとき、
       &mb<
         &mark<\wheart;>
-        \sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)
+        `a \sp<\vxdash;><\scr<M>> \tbox; (A \buharprarr; B) \buharprarr; (\tbox; A \buharprarr; \tbox; B)
       >
       を示せば良い。
-      妥当性の定義から、そのためには &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; (A \buharprarr; B)> と &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> を仮定して &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; B> を示せば良い。
+      妥当性の定義から、そのためには &m<`a \sp<\vxdash;><\scr<M>> \tbox; (A \buharprarr; B)> と &m<`a \sp<\vxdash;><\scr<M>> \tbox; A> を仮定して &m<`a \sp<\vxdash;><\scr<M>> \tbox; B> を示せば良い。
     >
     \p<
       任意に &m<`b \in; \scr<M>> であって &m<`a \sim; `b> を満たすものをとる。
-      すると、仮定の &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; (A \buharprarr; B)> から特に &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A \buharprarr; B> が成り立つことが分かる。
-      同様にして、仮定の &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> からは &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が得られる。
-      この 2 つからは &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; B> が導かれる。
-      今 &m<`b> は任意だったので、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; B> が成り立つ。
+      すると、仮定の &m<`a \sp<\vxdash;><\scr<M>> \tbox; (A \buharprarr; B)> から特に &m<`b \sp<\vxdash;><\scr<M>> A \buharprarr; B> が成り立つことが分かる。
+      同様にして、仮定の &m<`a \sp<\vxdash;><\scr<M>> \tbox; A> からは &m<`b \sp<\vxdash;><\scr<M>> A> が得られる。
+      この 2 つからは &m<`b \sp<\vxdash;><\scr<M>> B> が導かれる。
+      今 &m<`b> は任意だったので、&m<`a \sp<\vxdash;><\scr<M>> \tbox; B> が成り立つ。
     >
     \p<
       最後に、&m<`a> と &m<\scr<M>> は任意だったので、これで主張 &m<\wheart;> は示された。
@@ -158,24 +158,24 @@
   \prf<
     \p<
       任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
-      このとき、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \trhombus; A> と &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \neg; \tbox; \neg; A> が同値であることを示せば良いが、これは妥当性の定義を見ればすぐに分かる。
+      このとき、&m<`a \sp<\vxdash;><\scr<M>> \trhombus; A> と &m<`a \sp<\vxdash;><\scr<M>> \neg; \tbox; \neg; A> が同値であることを示せば良いが、これは妥当性の定義を見ればすぐに分かる。
       実際、
     >
     \ul<
       \li*<
-         &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \neg; \tbox; \neg; A> が成り立つ。
+         &m<`a \sp<\vxdash;><\scr<M>> \neg; \tbox; \neg; A> が成り立つ。
       >
       \li*<
-         &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; \neg; A> が成り立たない。
+         &m<`a \sp<\vxdash;><\scr<M>> \tbox; \neg; A> が成り立たない。
       >
       \li*<
-        ある &m<`b \in; \scr<M>> に対し、&m<`a \sim; `b> が成り立ち、かつ &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \neg; A> は成り立ない。
+        ある &m<`b \in; \scr<M>> に対し、&m<`a \sim; `b> が成り立ち、かつ &m<`b \sp<\vxdash;><\scr<M>> \neg; A> は成り立ない。
       >
       \li*<
-        ある &m<`b \in; \scr<M>> に対し、&m<`a \sim; `b> が成り立ち、かつ &m<\sbsp<\vxdash|ord|;><`b><\scr<M>>  A> が成り立つ。
+        ある &m<`b \in; \scr<M>> に対し、&m<`a \sim; `b> が成り立ち、かつ &m<`b \sp<\vxdash;><\scr<M>>  A> が成り立つ。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \trhombus; A> が成り立つ。
+        &m<`a \sp<\vxdash;><\scr<M>> \trhombus; A> が成り立つ。
       >
     >
     \p<
@@ -204,20 +204,20 @@
   \prf<
     \p<
       &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> を仮定する。
-      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとり、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> を示す。
+      任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとり、&m<`a \sp<\vxdash;><\scr<M>> \tbox; A> を示す。
     >
     \p<
       任意に &m<`b \in; \scr<M>> であって &m<`a \sim; `b> を満たすものをとる。
-      すると、仮定の &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> から、特に &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が分かる。
-      &m<`b> は任意だったので、これで &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> が示された。
+      すると、仮定の &m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> から、特に &m<`b \sp<\vxdash;><\scr<M>> A> が分かる。
+      &m<`b> は任意だったので、これで &m<`a \sp<\vxdash;><\scr<M>> \tbox; A> が示された。
     >
   >
   \p<
-    ここで、モデルのクラス &m<\frak<C>> と式 &m<A> に対して、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> ならば &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; A> が成り立つということは、&m<\sp<\vxdash|ord|;><\frak<C>> A \buharprarr; \tbox; A> が成り立つことと同値ではないことに注意したい。
+    ここで、モデルのクラス &m<\frak<C>> と式 &m<A> に対して、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> ならば &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; A> が成り立つということは、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A \buharprarr; \tbox; A> が成り立つことと同値ではないことに注意したい。
     前者は上で実際に示したように成り立つが、後者はほとんどの場合で成り立たない。
     どちらも、証明しようとすると、モデル &m<\scr<M> \in; \frak<C>> と世界 &m<`a \in; \scr<M>> に対して &m<\sp<\vxdash|ord|;><\frak<C>> \srel; \tbox; A> を示すことになる点では同じである。
-    しかし、前者の証明では、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> を仮定しているので、&m<`a> とは異なる世界 &m<`b \in; \scr<M>> に対して &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つことを利用できる。
-    一方で後者の証明では、仮定として使えるのは  &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; A> だけなので、&m<\scr<M>> がかなり強い制約を満たしていない限り、これだけから &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; A> を導くことは難しい。
+    しかし、前者の証明では、&m<\sp<\vxdash|ord|;><\frak<C>> \srel; A> を仮定しているので、&m<`a> とは異なる世界 &m<`b \in; \scr<M>> に対して &m<`b \sp<\vxdash;><\scr<M>> A> が成り立つことを利用できる。
+    一方で後者の証明では、仮定として使えるのは  &m<`a \sp<\vxdash;><\scr<M>> A> だけなので、&m<\scr<M>> がかなり強い制約を満たしていない限り、これだけから &m<`a \sp<\vxdash;><\scr<M>> \tbox; A> を導くことは難しい。
   >
   \p<
     最後に、\mref|type="thm",ref="k"|; と\mref|type="thm",ref="rn"|; からは以下が導かれる。

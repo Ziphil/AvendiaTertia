@@ -39,13 +39,13 @@
   \p<
     さて、今定義した 5 つの式は全て様相式から様相式への含意の形をしている。
     そこで、次のような一般化をしよう。
-    なおここで、自然数 &m<n> に対し、&m<\sp<\tbox;><n> A> や &m<\sp<\trhombus;><n> A> によって &m<A> にそれぞれ &m<\tbox;> や &m<\trhombus;> を &m<n> 回適用した式を表すことにする。
+    なおここで、自然数 &m<p> に対し、&m<\sp<\tbox;><p> A> や &m<\sp<\trhombus;><p> A> によって &m<A> にそれぞれ &m<\tbox;> や &m<\trhombus;> を &m<p> 回適用した式を表すことにする。
   >
   \thm|type="def"|<
     \p<
-      自然数 &m<k, l, m, n> に対してスキーマ &m<\sp<\bfrm<G>><klmn>> を、各式 &m<A> に対し、
+      自然数 &m<p, q, r, s> に対してスキーマ &m<\sp<\bfrm<G>><pqrs>> を、各式 &m<A> に対し、
       &mb<
-        \sbsp<\bfrm<G>><A><klmn> \colonequiv; \sp<\trhombus;><k> \sp<\box;><l> A \buharprarr; \sp<\tbox;><m> \sp<\trhombus;><n> A
+        \sbsp<\bfrm<G>><A><pqrs> \colonequiv; \sp<\trhombus;><p> \sp<\box;><q> A \buharprarr; \sp<\tbox;><r> \sp<\trhombus;><s> A
       >
       とすることで定める。
     >
@@ -98,17 +98,17 @@
   >
   \thm|type="def"|<
     \p<
-      自然数 &m<n> をとる。
-      集合 &m<W> 上の二項関係 &m<\sim;> に対し、同じく集合 &m<W> 上の二項関係 &m<\sp<\sim|ord|;><n>> を、再帰的に
+      自然数 &m<p> をとる。
+      集合 &m<W> 上の二項関係 &m<\sim;> に対し、同じく集合 &m<W> 上の二項関係 &m<\sp<\sim|ord|;><p>> を、再帰的に
     >
     \ul<
       \li*<
-        &m<n = 0> のとき。
+        &m<p = 0> のとき。
         各 &m<`a, `b \in; W> に対し、&m<`a \sp<\sim;><0> `b> であるとは、 &m<`a = `b> が成り立つこととする。 
       >
       \li*<
-        &m<n \geq; 1> のとき。
-        各 &m<`a, `b \in; W> に対し、&m<`a \sp<\sim;><n> `b> であるとは、ある &m<`g \in; W> が存在して &m<`a \sp<\sim;><n - 1> `g> かつ &m<`g \sim; `b> が成り立つこととする。 
+        &m<p \geq; 1> のとき。
+        各 &m<`a, `b \in; W> に対し、&m<`a \sp<\sim;><p> `b> であるとは、ある &m<`g \in; W> が存在して &m<`a \sp<\sim;><p - 1> `g> かつ &m<`g \sim; `b> が成り立つこととする。 
       >
     >
     \p<
@@ -116,11 +116,11 @@
     >
   >
   \p<
-    すなわち、自然数 &m<n> と二項関係 &m<\sim;> に対して、元 &m<`a, `b \in; W> が &m<`a \sp<\sim;><n> `b> を満たすのは、
+    すなわち、自然数 &m<p> と二項関係 &m<\sim;> に対して、元 &m<`a, `b \in; W> が &m<`a \sp<\sim;><p> `b> を満たすのは、
     &mb<
-      `a \sim; \sb<`g><1> \sim; \cdots; \sim; \sb<`g><n - 1> \sim; `b
+      `a \sim; \sb<`g><1> \sim; \cdots; \sim; \sb<`g><p - 1> \sim; `b
     >
-    となるような元 &m<\sb<`g><1>, \cdots;, \sb<`g><n - 1> \in; W> が存在するときである。
+    となるような元 &m<\sb<`g><1>, \cdots;, \sb<`g><p - 1> \in; W> が存在するときである。
     また、&m<\sp<\sim|ord|;><1>> はもとの &m<\sim;> と同一で、&m<\sp<\sim|ord|;><0>> は恒等関係である。
   >
   \p<
@@ -128,16 +128,16 @@
   >
   \thm|type="prp",id="nth"|<
     \p<
-      自然数 &m<n> をとる。
+      自然数 &m<p> をとる。
       モデル &m<\scr<M>> とその世界 &m<`a \in; W> を考える。
       式 &m<A> に対し、
     >
     \ol<
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><n> A> が成り立つことは、全ての &m<`b \in; W> に対して、&m<`a \sp<\sim;><n> `b> ならば &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つことと同値である。
+        &m<`a \sp<\vxdash;><\scr<M>> \sp<\tbox;><p> A> が成り立つことは、全ての &m<`b \in; W> に対して、&m<`a \sp<\sim;><p> `b> ならば &m<`b \sp<\vxdash;><\scr<M>> A> が成り立つことと同値である。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\trhombus;><n> A> が成り立つことは、ある &m<`b \in; W> が存在して、&m<`a \sp<\sim;><n> `b> かつ &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つことと同値である。
+        &m<`a \sp<\vxdash;><\scr<M>> \sp<\trhombus;><p> A> が成り立つことは、ある &m<`b \in; W> が存在して、&m<`a \sp<\sim;><p> `b> かつ &m<`b \sp<\vxdash;><\scr<M>> A> が成り立つことと同値である。
       >
     >
     \p<
@@ -147,28 +147,28 @@
   \prf<
     \p<
       \label<主張 1>
-      &m<n> に関する帰納法による。
+      &m<p> に関する帰納法による。
       &m<n = 0> のときは明らかである。
       &m<n \geq; 1> のときは、途中で帰納法の仮定を使うことで、
     >
     \ul<
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><n> A> が成り立つ。
+        &m<`a \sp<\vxdash;><\scr<M>> \sp<\tbox;><p> A> が成り立つ。
       >
       \li*<
-        &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \tbox; (\sp<\tbox;><n - 1> A)> が成り立つ。
+        &m<`a \sp<\vxdash;><\scr<M>> \tbox; (\sp<\tbox;><n - 1> A)> が成り立つ。
       >
       \li*<
-        任意の &m<`g \in; W> に対して、&m<`a \sim; `g> ならば &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><n - 1> A> が成り立つ。
+        任意の &m<`g \in; W> に対して、&m<`a \sim; `g> ならば &m<`a \sp<\vxdash;><\scr<M>> \sp<\tbox;><n - 1> A> が成り立つ。
       >
       \li*<
-        任意の &m<`g \in; W> に対して、&m<`a \sim; `g> ならば、さらに任意の &m<`b \in; W> に対して、&m<`g \sp<\sim;><n - 1> `b> ならば &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つ。
+        任意の &m<`g \in; W> に対して、&m<`a \sim; `g> ならば、さらに任意の &m<`b \in; W> に対して、&m<`g \sp<\sim;><n - 1> `b> ならば &m<`b \sp<\vxdash;><\scr<M>> A> が成り立つ。
       >
       \li*<
-        任意の &m<`g, `b \in; W> に対して、&m<`a \sim; `g> かつ &m<`g \sp<\sim;><n - 1> `b> ならば &m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つ。
+        任意の &m<`g, `b \in; W> に対して、&m<`a \sim; `g> かつ &m<`g \sp<\sim;><n - 1> `b> ならば &m<`b \sp<\vxdash;><\scr<M>> A> が成り立つ。
       >
       \li*<
-        任意の &m<`g \in; W> に対して、&m<`a \sp<\sim;><n> `b> ならば、&m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; A> が成り立つ。
+        任意の &m<`g \in; W> に対して、&m<`a \sp<\sim;><p> `b> ならば、&m<`b \sp<\vxdash;><\scr<M>> A> が成り立つ。
       >
     >
     \p<
@@ -186,10 +186,10 @@
   >
   \thm|type="def"|<
     \p<
-      自然数 &m<k, l, m, n> をとる。
+      自然数 &m<p, q, r, s> をとる。
       集合 &m<W> 上の二項関係 &m<\sim;> が次の性質を満たすとする。
-      すなわち、任意の元 &m<`a, `b, `g \in; W> に対し、&m<`a \sp<\sim;><k> `g> かつ &m<`a \sp<\sim;><m> `b> ならば、ある元 &m<`d \in; W> が存在して &m<`g \sp<\sim;><l> `d> かつ &m<`b \sp<\sim;><n> `d> が成り立つ。
-      このとき、&m<\sim;> は &m<(k, l, m, n)>-\def<近親的\fl<incestual>> であるという。
+      すなわち、任意の元 &m<`a, `b, `g \in; W> に対し、&m<`a \sp<\sim;><p> `g> かつ &m<`a \sp<\sim;><r> `b> ならば、ある元 &m<`d \in; W> が存在して &m<`g \sp<\sim;><q> `d> かつ &m<`b \sp<\sim;><s> `d> が成り立つ。
+      このとき、&m<\sim;> は &m<(p, q, r, s)>-\def<近親的\fl<incestual>> であるという。
     >
   >
   \p<
@@ -230,7 +230,7 @@
     例えば、反射的なモデルとは、世界の間の二項関係が反射的であるようなモデルのことである。
   >
   \p<
-    さらに、自然数 &m<k, l, m, n> に対し、&m<(k, l, m, n)>-近親的なモデルの全体を &m<\sp<\bfrm<Inces>><klmn>> と書くことにする。 
+    さらに、自然数 &m<p, q, r, s> に対し、&m<(p, q, r, s)>-近親的なモデルの全体を &m<\sp<\bfrm<Inces>><pqrs>> と書くことにする。 
     同様に、直列, 反射的, 対称, 推移的, Euclid 的なモデルの全体を順に &m<\bfrm<Ser>>, &m<\bfrm<Refl>>, &m<\bfrm<Sym>>, &m<\bfrm<Tran>>, &m<\bfrm<Euc>> と書くことにする。
     すると、\mref|type="thm",ref="relequiv"|; により、
     &mb<
@@ -248,9 +248,9 @@
   \thm|type="prp",id="schval"|<
     \p<
       任意のモデルのクラス &m<\frak<C>> をとる。
-      自然数 &m<k, l, m, n> に対して、
+      自然数 &m<p, q, r, s> に対して、
       &mb<
-        \frak<C> \subseteq; \sp<\bfrm<Inces>><klmn> \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \sp<\bfrm<G>><klmn>
+        \frak<C> \subseteq; \sp<\bfrm<Inces>><pqrs> \implies; \sp<\vxdash|ord|;><\frak<C>> \srel; \sp<\bfrm<G>><pqrs>
       >
       が成り立つ。
       特に、
@@ -273,15 +273,15 @@
       適宜\mref|type="thm",ref="nth"|; を用いる。
     >
     \p<
-      &m<\frak<C> \subseteq; \sp<\bfrm<Inces>><klmn>> を仮定する。
+      &m<\frak<C> \subseteq; \sp<\bfrm<Inces>><pqrs>> を仮定する。
       任意にモデル &m<\scr<M> \in; \frak<C>> とその世界 &m<`a \in; \scr<M>> をとる。
-      &m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\trhombus;><k> \sp<\tbox;><l> A> を仮定して、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><m> \sp<\trhombus;><n> A> を示せば良い。
-      そのために、任意に &m<`b \in; \scr<M>> であって &m<`a \sp<\sim;><m> `b> を満たすものをとる。
-      ここで仮定から、&m<`g \in; \scr<M>> であって &m<`a \sp<\sim;><k> `g> を満たすものが存在して、&m<\sbsp<\vxdash|ord|;><`g><\scr<M>> \srel; \sp<\tbox;><l> A> が成り立つ。
-      ここで、&m<\sim;> は &m<(k, l, m, n)>-親近的であるから、ある &m<`d \in; \scr<M>> が存在して、&m<`g \sp<\sim;><l> `d> かつ &m<`b \sp<\sim;><n> `d> がともに成り立つ。
-      このうち &m<`g \sp<\sim;><l> `d> と &m<\sbsp<\vxdash|ord|;><`g><\scr<M>> \srel; \sp<\tbox;><l> A> により、&m<\sbsp<\vxdash|ord|;><`d><\scr<M>> \srel; A> が得られる。
-      したがって、今 &m<`b \sp<\sim;><n> `d> であるから、&m<&m<\sbsp<\vxdash|ord|;><`b><\scr<M>> \srel; \sp<\trhombus;><n> A>> が分かる。
-      最後に、&m<`b> の任意性により、&m<\sbsp<\vxdash|ord|;><`a><\scr<M>> \srel; \sp<\tbox;><m> \sp<\trhombus;><n> A> が示された。
+      &m<`a \sp<\vxdash;><\scr<M>> \sp<\trhombus;><p> \sp<\tbox;><q> A> を仮定して、&m<`a \sp<\vxdash;><\scr<M>> \sp<\tbox;><r> \sp<\trhombus;><s> A> を示せば良い。
+      そのために、任意に &m<`b \in; \scr<M>> であって &m<`a \sp<\sim;><r> `b> を満たすものをとる。
+      ここで仮定から、&m<`g \in; \scr<M>> であって &m<`a \sp<\sim;><p> `g> を満たすものが存在して、&m<`g \sp<\vxdash;><\scr<M>> \sp<\tbox;><q> A> が成り立つ。
+      ここで、&m<\sim;> は &m<(p, q, r, s)>-親近的であるから、ある &m<`d \in; \scr<M>> が存在して、&m<`g \sp<\sim;><q> `d> かつ &m<`b \sp<\sim;><s> `d> がともに成り立つ。
+      このうち &m<`g \sp<\sim;><q> `d> と &m<`g \sp<\vxdash;><\scr<M>> \sp<\tbox;><q> A> により、&m<`d \sp<\vxdash;><\scr<M>> A> が得られる。
+      したがって、今 &m<`b \sp<\sim;><s> `d> であるから、&m<&m<`b \sp<\vxdash;><\scr<M>> \sp<\trhombus;><s> A>> が分かる。
+      最後に、&m<`b> の任意性により、&m<`a \sp<\vxdash;><\scr<M>> \sp<\tbox;><r> \sp<\trhombus;><s> A> が示された。
     >
   >
   \p<
