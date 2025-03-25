@@ -3,7 +3,7 @@
 
 
 \page<
-  \name<完全性>
+  \name<正準モデルの性質>
   \use-math|prefix="13"|;
 
   \h1<日記 (2025 年 3 月 25 日)>
@@ -44,6 +44,25 @@
       が成り立つ。
     >
   >
+  \prf<
+    \p<
+      各 &m<i \srel; (1 \leq; i \leq; n)> に対し、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<A><i> \buharprarr; \sb<A><1> \vee; \cdots; \vee; \sb<A><n>
+      >
+      が成り立つ。
+      すると、\a|href="89.html#rk"|<命題 5.2> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><i> \buharprarr; \tbox; (\sb<A><1> \vee; \cdots; \vee; \sb<A><n>)
+      >
+      が分かる。
+      これが全ての &m<i> について成り立つから、\a|href="89.html#rpl"|<命題 5.1> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \sb<A><1> \vee; \cdots; \vee; \tbox; \sb<A><n> \buharprarr; \tbox; (\sb<A><1> \vee; \cdots; \vee; \sb<A><n>)
+      >
+      が得られる。
+    >
+  >
   \p<
     今回は使わないが、双対的に &m<\trhombus;> と &m<\wedge;> に関しては以下が成り立つ。 
   >
@@ -55,6 +74,30 @@
         \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>) \buharprarr; \trhombus; \sb<A><1> \wedge; \cdots; \wedge; \trhombus; \sb<A><n> 
       >
       が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      まず\mref|type="thm",ref="vee"|; により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \neg; \sb<A><1> \vee; \cdots; \vee; \tbox; \neg; \sb<A><n> \buharprarr; \tbox; (\neg; \sb<A><1> \vee; \cdots; \vee; \neg; \sb<A><n>)
+      >
+      が成り立つ。
+      \a|href="90.html#repvar"|<命題 6.2> を用いて &m<\tbox; (\neg; \sb<A><1> \vee; \cdots; \vee; \neg; \sb<A><n>)> の部分を置き換えれば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \tbox; \neg; \sb<A><1> \vee; \cdots; \vee; \tbox; \neg; \sb<A><n> \buharprarr; \tbox; \neg; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>)
+      >
+      が得られる。
+      すると、再び\a|href="90.html#repvar"|<命題 6.2> によって、&m<\trhombus;> と &m<\wedge;> の双対性から、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \neg; \trhombus; \sb<A><1> \vee; \cdots; \vee; \neg; \trhombus; \sb<A><n> \buharprarr; \neg; \trhombus; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>)
+      >
+      が分かる。
+      最後に\a|href="89.html#rpl"|<命題 5.1> により、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \trhombus; (\sb<A><1> \wedge; \cdots; \wedge; \sb<A><n>) \buharprarr; \trhombus; \sb<A><1> \wedge; \cdots; \wedge; \trhombus; \sb<A><n>
+      >
+      が得られる。
     >
   >
   \p<
@@ -75,21 +118,38 @@
   \thm|type="prp",id="incdualp"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
-      自然数 &m<p> と &m<\frak<T>>-極大整合的 &m<`G, `D> に対し、
+      自然数 &m<p> に対し、
       &mb<
         \array|align="rcl"|<
-          \cc<\sp<\tbox;><-p> `G \subseteq; `D><\iff;><`G \subseteq; \sp<\tbox;><p> `D>
           \cc<\sp<\trhombus;><p> `D \subseteq; `G><\iff;><`D \subseteq; \sp<\trhombus;><-p> `G>
         >
       >
       がともに成り立つ。
-      また、
+      さらに、&m<`G, `D> がどちらも &m<\frak<T>>-極大整合的であれば、自然数 &m<p> に対し、
       &mb<
         \array|align="rcl"|<
           \cc<\sp<\tbox;><-p> `G \subseteq; `D><\iff;><`D \subseteq; \sp<\trhombus;><-p> `G>
         >
       >
       も成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      1 つ目の同値性を示す。
+      まず &m<\sp<\trhombus;><p> `D \subseteq; `G> が成り立つと仮定する。
+      任意に &m<A \in; `D> をとると、&m<\sp<\trhombus;><p> A \in; \sp<\trhombus;><p> `D> であるから、仮定より &m<\sp<\trhombus;><p> A \in; `G> が得られる。
+      すなわち、&m<A \in; \sp<\trhombus;><-p> `G> が成り立つ。
+      &m<A> は任意だったから、これで &m<`D \subseteq; \sp<\trhombus;><-p> `G> が示された。
+    >
+    \p<
+      逆に &m<`D \subseteq; \sp<\trhombus;><-p> `G> が成り立つと仮定する。
+      任意に &m<A \in; \sp<\trhombus;><p> `D> をとると、ある式 &m<B \in; `D> が存在して &m<A \equiv; \sp<\trhombus;><p> B> と書ける。
+      仮定から &m<B \in; \sp<\trhombus;><-p> `G> が成り立つから、&m<\sp<\trhombus;><p> B \in; `G> が分かり、すなわち &m<A \in; `G> が得られる。
+      &m<A> は任意だったから、これで &m<\sp<\trhombus;><p> `D \subseteq; `G> が示された。
+    >
+    \p<
+      2 つ目の同値性は、\a|href="95.html#incdual"|<命題 11.9> と全く同様に示せる。
     >
   >
   \p<
@@ -110,6 +170,108 @@
       が成り立つ。
     >
   >
+  \prf<
+    \p<
+      &m<p> に関する帰納法による。
+    >
+    \p<
+      &m<p = 0> のときは、&m<`G = `D> と &m<`G \subseteq; `D> の同値性を示せば良い。
+      &m<`G = `D> であれば、当然 &m<`G \subseteq; `D> が成り立つ。
+      逆に &m<`G \subseteq; `D> であれば、&m<`G> の極大性から &m<`G = `D> でなければならない。
+      これで、この場合に命題の主張は示された。
+    >
+    \p<
+      &m<p \geq; 1> のとき。
+      &m<\sp<\sim|ord|;><p>> の定義により、&m<`G \sp<\sim;><p> `D> であることは、以下の条件と同値である。
+    >
+    \ul<
+      \li*<
+        ある極大整合的集合 &m<`U> が存在して、&m<`G \sp<\sim;><p - 1> `U> かつ &m<`U \sim; `D> が成り立つ。
+      >
+    >
+    \p<
+      帰納法の仮定と &m<\sim;> の定義により、これはさらに以下とも同値である。
+    >
+    \ul<
+      \li*<
+        ある極大整合的集合 &m<`U> が存在して、&m<\sp<\tbox;><- p + 1> `G \subseteq; `U> かつ &m<\sp<\tbox;><- 1> `U \subseteq; `D> が成り立つ。
+      >
+    >
+    \p<
+      以上の観察のもと、命題の同値性を示す。
+    >
+    \p<
+      まず、上記条件を仮定する。
+      すなわち、ある極大整合的集合 &m<`U> が存在して、&m<\sp<\tbox;><- p + 1> `G \subseteq; `U> かつ &m<\sp<\tbox;><- 1> `U \subseteq; `D> が成り立つとする。
+      ここから &m<\sp<\tbox;><- p> `G \subseteq; `D> を示したい。
+      そこで、任意に &m<A \in; \sp<\tbox;><- p> `G> をとると、これは &m<\sp<\tbox;><p> A \in; `G> が成り立つということである。
+      &m<\sp<\tbox;><p> A \equiv; \sp<\tbox;><p - 1> (\tbox; A)> だから、これより &m<\tbox; A \in; \sp<\tbox;><- p + 1> `G> が分かる。
+      今 &m<\sp<\tbox;><- p + 1> `G \subseteq; `U> であるから、&m<\tbox; A \in; `U> すなわち &m<A \in; \sp<\tbox;><- 1> `D> が得られる。
+      さらに &m<\sp<\tbox;><- 1> `U \subseteq; `D> でもあるから、&m<A \in; `D> が得られる。
+      &m<A> は任意だったから、これで &m<\sp<\tbox;><- p> `G \subseteq; `D> が示された。
+    >
+    \p<
+      逆に、&m<\sp<\tbox;><- p> `G \subseteq; `D> が成り立つと仮定する。
+      示すべきは、すでに述べたように以下の条件である。
+    >
+    \ul<
+      \li*<
+        ある極大整合的集合 &m<`U> が存在して、&m<\sp<\tbox;><- p + 1> `G \subseteq; `U> かつ &m<\sp<\tbox;><- 1> `U \subseteq; `D> が成り立つ。
+      >
+    >
+    \p<
+      しかし\mref|type="thm",ref="incdualp"|; により、これは以下と同値である。
+    > 
+    \ul<
+      \li*<
+        ある極大整合的集合 &m<`U> が存在して、&m<\sp<\tbox;><- p + 1> `G \subseteq; `U> かつ &m<\trhombus; `D \subseteq; `U> が成り立つ。
+      >
+    >
+    \p<
+      すなわち、以下と同値である。
+    >
+    \ul<
+      \li*<
+        ある極大整合的集合 &m<`U> が存在して、&m<\sp<\tbox;><- p + 1> `G \cup; \trhombus; `D \subseteq; `U> が成り立つ。
+      >
+    >
+    \p<
+      ところで、\a|href="94.html#lindenbaum"|<命題 10.9> により、これを示すためには、&m<\sp<\tbox;><- p + 1> `G \cup; \trhombus; `D> が整合的であることを示せば良い。
+      そこで、以下では &m<\sp<\tbox;><- p + 1> `G \cup; \trhombus; `D> が整合的であることを示す。
+    >
+    \p<
+      矛盾を導くため、&m<\sp<\tbox;><- p + 1> `G \cup; \trhombus; `D> が整合的でないと仮定する。
+      これは &m<\sp<\tbox;><- p + 1> `G \cup; \trhombus; `D \sp<\vdash;><\frak<T>> \bot;> であるということだから、ある式 &m<\sb<G><1>, \cdots;, \sb<G><n> \in; \sp<\tbox;><- p + 1> `G> と &m<\sb<H><1>, \cdots;, \sb<H><m> \in; \trhombus; `D> が存在して、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \wedge; \sb<H><1> \wedge; \cdots; \wedge; \sb<H><m> \buharprarr; \bot;
+      >
+      が成り立つ。
+      &m<\trhombus; `D> の定義により、さらに &m<\sbsp<H><1><\pr;>, \cdots;, \sbsp<H><m><\pr;> \in; `D> が存在して、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \wedge; \trhombus; \sbsp<H><1><\pr;> \wedge; \cdots; \wedge; \trhombus; \sbsp<H><m><\pr;> \buharprarr; \bot;
+      >
+      が成り立つ。
+      ここで\mref|type="thm",ref=""|; を使えば、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sb<G><1> \wedge; \cdots; \wedge; \sb<G><n> \buharprarr; \tbox; \neg; (\sbsp<H><1><\pr;> \wedge; \cdots; \wedge; \sbsp<H><m><\pr;>)
+      >
+      が得られ、さらに\a|href="89.html#rk"|<命題 5.2> を &m<p - 1> 回適用することで、
+      &mb<
+        \sp<\vdash|ord|;><\frak<T>> \srel; \sp<\tbox;><p - 1> \sb<G><1> \wedge; \cdots; \wedge; \sp<\tbox;><p - 1> \sb<G><n> \buharprarr; \sp<\tbox;><p> \neg; (\sbsp<H><1><\pr;> \wedge; \cdots; \wedge; \sbsp<H><m><\pr;>)
+      >
+      が分かる。
+      今 &m<\sp<\tbox;><p - 1> \sb<G><1>, \cdots;, \sp<\tbox;><p - 1> \sb<G><n> \in; `G> であるから、これより、
+      &mb<
+        `G \sp<\vdash;><\frak<T>> \sp<\tbox;><p>  \neg; (\sbsp<H><1><\pr;> \wedge; \cdots; \wedge; \sbsp<H><m><\pr;>)
+      >
+      が得られたことになる。
+      したがって、\a|href="95.html#belded"|<命題 11.5> により &m<\sp<\tbox;><p> \neg; (\sbsp<H><1><\pr;> \wedge; \cdots; \wedge; \sbsp<H><m><\pr;>) \in; `G> が成り立つので、&m<\neg; (\sbsp<H><1><\pr;> \wedge; \cdots; \wedge; \sbsp<H><m><\pr;>) \in; \sp<\tbox;><- p> `G> である。
+      ところで最初に &m<\sp<\tbox;><- p> `G \subseteq; `D> を仮定していたので、&m<\neg; (\sbsp<H><1><\pr;> \wedge; \cdots; \wedge; \sbsp<H><m><\pr;>) \in; `D> が分かる。
+      一方で &m<\sbsp<H><1><\pr;>, \cdots;, \sbsp<H><m><\pr;> \in; `D> であったから、\a|href="95.html#maxpl"|<命題 11.7> より &m<\sbsp<H><1><\pr;> \wedge; \cdots; \wedge; \sbsp<H><m><\pr;> \in; `D> も成り立つ。
+      これは\a|href="95.html#maxpl"|<命題 11.7> に矛盾する。
+      したがって、仮定は誤りで、&m<\sp<\tbox;><- p + 1> `G \cup; \trhombus; `D> は整合的である。
+    >
+  >
   \p<
     これをもとに、各自然数 &m<p, q, r, s> に対して、理論が &m<\sp<\bfrm<G>><pqrs>> を含むときの正準モデルが期待した性質を実際にもつことが示せる。
   >
@@ -119,7 +281,28 @@
       自然数 &m<p, q, r, s> に対し、&m<\frak<T>> が &m<\sp<\bfrm<G>><pqrs>> を含むならば、その正準モデル &m<\sp<\scr<M>><\frak<T>>> は &m<(p, q, r, s)>-近親的である。
     >
   >
-
+  \prf<
+    \p<
+      正準モデルが &m<(p, q, r, s)>-近親的であることは、関係の定義と\mref|type="thm",ref="simp"|; により、以下が成り立つことである。
+    >
+    \ul<
+      \li*<
+        任意の極大整合的集合 &m<`G, `D, `U> に対し、&m<\sp<\tbox;><- p> `G \subseteq; `U> かつ &m<\sp<\tbox;><- r> `G \subseteq; `D> が成り立つならば、ある極大整合的集合 &m<`J> が存在して、&m<\sp<\tbox;><- q> `U \subseteq; `J> かつ &m<\sp<\tbox;><- s> `D \subseteq; `J> が成り立つ。
+      >
+    >
+    \p<
+      これを示したいが、\a|href="94.html#lindenbaum"|<命題 10.9> により、以下を示せば十分である。
+    >
+    \ul<
+      \li*<
+        任意の極大整合的集合 &m<`G, `D, `U> に対し、&m<\sp<\tbox;><- p> `G \subseteq; `U> かつ &m<\sp<\tbox;><- r> `G \subseteq; `D> が成り立つならば、&m<\sp<\tbox;><- q> `U \cup; \sp<\tbox;><- s> `D> は整合的である。
+      >
+    >
+    \p<
+      これを示そう。
+      そこで、極大整合的集合  &m<`G, `D, `U> をとり、&m<\sp<\tbox;><- p> `G \subseteq; `U> かつ &m<\sp<\tbox;><- r> `G \subseteq; `D> が成り立っているとする。
+    >
+  >
   \thm|type="thm",id="compg"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
