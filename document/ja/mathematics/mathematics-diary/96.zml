@@ -111,7 +111,7 @@
   >
   \thm|type="thm",id="comp"|<
     \p<
-      正規な理論 &m<\frak<T>> とモデルのクラス &m<\frak<C>> に対し、&m<\sp<\scr<M>><\frak<T>> \in; \frak<C>> ならば、
+      正規な理論 &m<\frak<T>> とモデルのクラス &m<\frak<C>> に対し、&m<\sp<\scr<M>><\frak<T>> \in; \frak<C>> ならば、任意の式 &m<A> に対し、
       &mb<
         \sp<\vxdash|ord|;><\frak<C>> \srel; A \implies; \sp<\vdash|ord|;><\frak<T>> \srel; A
       >

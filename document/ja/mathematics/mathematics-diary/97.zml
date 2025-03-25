@@ -15,9 +15,9 @@
   \p<
     5 種類のスキーマそれぞれについて個別に議論しても良い (その方が手数は増えるが易しい) が、\a|href="87.html"|<2 月 25 日>でも述べたようにこれらのスキーマは全て同様の形をしているので、より一般化した形で一気に議論を進めてしまおうと思う。
     ここで、これらのスキーマの一般化について、少し思い出しておこう。
-    自然数 &m<k, l, m, n> と式 &m<A> に対し、
+    自然数 &m<p, q, r, s> と式 &m<A> に対し、
     &mb<
-      \sbsp<\bfrm<G>><A><klmn> \colonequiv; \sp<\trhombus;><k> \sp<\box;><l> A \buharprarr; \sp<\tbox;><m> \sp<\trhombus;><n> A
+      \sbsp<\bfrm<G>><A><pqrs> \colonequiv; \sp<\trhombus;><p> \sp<\box;><q> A \buharprarr; \sp<\tbox;><r> \sp<\trhombus;><s> A
     >
     と定義すると、&m<\bfrm<D>, \bfrm<T>, \bfrm<B>, \bfrm<4>, \bfrm<5>> は、
     &mb<
@@ -28,13 +28,13 @@
       \bfrm<5> \equiv; \sp<\bfrm<G>><1011>
     >
     と書けるのであった。
-    そこで以降は、体系に &m<\sp<\bfrm<G>><klmn>> が含まれているときに、その正準モデルがどうなるかを調べることにする。
+    そこで以降は、体系に &m<\sp<\bfrm<G>><pqrs>> が含まれているときに、その正準モデルがどうなるかを調べることにする。
   >
   \p<
     まずは準備として、&m<\tbox;> と &m<\vee;> の分配性について触れておこう。
     \a|href="89.html#r"|<命題 5.6> によって &m<\tbox;> と &m<\wedge;> は分配するが、&m<\tbox;> と &m<\vee;> については一方の含意関係しか一般には成り立たない。
   >
-  \thm|type="prp",id=""|<
+  \thm|type="prp",id="vee"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式 &m<\sb<A><1>, \cdots;, \sb<A><n>> に対し、
@@ -47,7 +47,7 @@
   \p<
     今回は使わないが、双対的に &m<\trhombus;> と &m<\wedge;> に関しては以下が成り立つ。 
   >
-  \thm|type="prp",id=""|<
+  \thm|type="prp",id="veedual"|<
     \p<
       正規な理論 &m<\frak<T>> をとる。
       式 &m<\sb<A><1>, \cdots;, \sb<A><n>> に対し、
@@ -56,6 +56,118 @@
       >
       が成り立つ。
     >
+  >
+  \p<
+    ここで、\a|href="95.html"|<3 月 20 日>に用意した記号を拡張しよう。
+    そこでは、式の集合 &m<`G> に対して &m<\tbox; `G> や &m<\sp<\tbox;><- 1> `G> などを定義した。
+    これの指数を拡張して、自然数 &m<p> と式の集合 &m<`G> に対し、
+    &mb<
+      \array|align="rcl"|<
+        \cc<\sp<\tbox;><p> `G><\coloneqq;><`{\sp<\tbox;><p> A \mid; A \in; `G`}>
+        \cc<\sp<\trhombus;><p> `G><\coloneqq;><`{\sp<\trhombus;><p> A \mid; A \in; `G`}>
+        \cc<\sp<\tbox;><-p> `G><\coloneqq;><`{A \mid; \sp<\tbox;><p> A \in; `G`}>
+        \cc<\sp<\trhombus;><-p> `G><\coloneqq;><`{A \mid; \sp<\trhombus;><p> A \in; `G`}>
+      >
+    >
+    と書くことにする。
+    この記号については、次が成り立つ。
+  >
+  \thm|type="prp",id="incdualp"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      自然数 &m<p> と &m<\frak<T>>-極大整合的 &m<`G, `D> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \cc<\sp<\tbox;><-p> `G \subseteq; `D><\iff;><`G \subseteq; \sp<\tbox;><p> `D>
+          \cc<\sp<\trhombus;><p> `D \subseteq; `G><\iff;><`D \subseteq; \sp<\trhombus;><-p> `G>
+        >
+      >
+      がともに成り立つ。
+      また、
+      &mb<
+        \array|align="rcl"|<
+          \cc<\sp<\tbox;><-p> `G \subseteq; `D><\iff;><`D \subseteq; \sp<\trhombus;><-p> `G>
+        >
+      >
+      も成り立つ。
+    >
+  >
+  \p<
+    では、正準モデルにおける世界 (すなわち極大整合的集合) の間の関係について調べていこう。
+    自然数 &m<p> に対し、この関係を &m<p> 回繰り返して得られる関係は、とても自然な形に書ける。
+  >
+  \thm|type="prp",id="simp"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      &m<\frak<T>>-極大整合的集合の間の関係 &m<\sim;> を、各 &m<`G, `D> に対し、
+      &mb<
+        `G \sim; `D \coloniff; \sp<\tbox;><- 1> `G \subseteq; `D
+      >
+      で定めると、任意の自然数 &m<p> に対して、
+      &mb<
+        `G \sp<\sim;><p> `D \iff; \sp<\tbox;><- p> `G \subseteq; `D
+      >
+      が成り立つ。
+    >
+  >
+  \p<
+    これをもとに、各自然数 &m<p, q, r, s> に対して、理論が &m<\sp<\bfrm<G>><pqrs>> を含むときの正準モデルが期待した性質を実際にもつことが示せる。
+  >
+  \thm|type="prp",id="simp"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      自然数 &m<p, q, r, s> に対し、&m<\frak<T>> が &m<\sp<\bfrm<G>><pqrs>> を含むならば、その正準モデル &m<\sp<\scr<M>><\frak<T>>> は &m<(p, q, r, s)>-近親的である。
+    >
+  >
+
+  \thm|type="thm",id="compg"|<
+    \p<
+      正規な理論 &m<\frak<T>> をとる。
+      自然数 &m<p, q, r, s> に対し、&m<\frak<T>> が &m<\sp<\bfrm<G>><pqrs>> を含むならば、任意の式 &m<A> に対し、
+      &mb<
+        \sp<\vxdash|ord|;><\sp<\bfrm<Inces>><pqrs>> \srel; A \implies; \sp<\vdash|ord|;><\frak<T>> \srel; A
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      \mref|type="thm",ref="simp"|; と\a|href="96.html#comp"|<定理 12.4> から従う。
+    >
+  >
+  \p<
+    これまで重要だと挙げた 5 つの体系については、特に次のように述べられる。
+    これは\a|href="93.html#soundex"|<定理 9.4> の逆である。
+  >
+  \thm|type="thm",id="compex"|<
+    \p<
+      任意の式 &m<A> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \cc<\sp<\vxdash|ord|;><\bfrm<All>> \srel; A><\implies;><\sp<\vdash|ord|;><\bfrm<K>> \srel; A>
+          \cc<\sp<\vxdash|ord|;><\bfrm<Ser>> \srel; A><\implies;><\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<D>`]> \srel; A>
+          \cc<\sp<\vxdash|ord|;><\bfrm<Refl>> \srel; A><\implies;><\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<T>`]> \srel; A>
+          \cc<\sp<\vxdash|ord|;><\bfrm<Refl> \cap; \bfrm<Sym>> \srel; A><\implies;><\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<T>, \bfrm<B>`]> \srel; A>
+          \cc<\sp<\vxdash|ord|;><\bfrm<Pord>> \srel; A><\implies;><\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> \srel; A>
+          \cc<\sp<\vxdash|ord|;><\bfrm<Equiv>> \srel; A><\implies;><\sp<\vdash|ord|;><\bfrm<K> `[\bfrm<T>, \bfrm<5>`]> \srel; A>
+        >
+      >
+      が全て成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      全て\mref|type="thm",ref="compg"|; から従う。
+      適宜\a|href="87.html#relequiv"|<命題 3.7> を参照せよ。
+    >
+  >
+  \p<
+    以上で、&m<\bfrm<K> `[\bfrm<D>`]> や &m<\bfrm<K> `[\bfrm<T>, \bfrm<4>`]> といった体系の (そして陽には述べていないが他のパターンでスキーマを追加した体系についても) 完全性が具体的に示された。
+    \a|href="93.html"|<3 月 10 日>で示した健全性と合わせれば、これらの理論について、演繹体系での証明可能性を論じることと意味論での恒真性を論じることが同値だと分かったことになる。
+    したがって、これらの理論における式について調べたければ、演繹体系と意味論のうち便利な方を適宜用いることができるわけである。
+  >
+  \p<
+    次回以降は、一般に論理体系を考える上での重要なテーマの最後として、決定可能性について触れていく予定である。    
   >
   \h1<参考文献>
   \ol<
