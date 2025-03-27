@@ -132,7 +132,7 @@ $link-height: 60rpx;
 
 .card-table-block {
   width: 100cqi;
-  margin-top: 60rpx;
+  margin-top: 50rpx;
   display: flex;
   flex-direction: column;
 }
@@ -393,7 +393,7 @@ $link-height: 60rpx;
 }
 
 .ad-block {
-  margin-top: 60rpx;
+  margin-top: 50rpx;
 }
 
 .ad {
@@ -406,7 +406,7 @@ $link-height: 60rpx;
 }
 
 .introduction-block {
-  margin-top: 60rpx;
+  margin-top: 50rpx;
   padding: 50rpx 0rpx;
   background-color: white;
 }
@@ -714,27 +714,78 @@ $link-height: 60rpx;
   }
 }
 
-.anniversary {
+.announcement-block {
+  margin-top: 50rpx;
+}
+
+.announcement {
   width: $home-width;
-  max-width: $home-max-width;
-  margin-top: 30rpx;
+  max-width: $home-max-width * 0.5;
+  column-gap: 40rpx;
+  row-gap: 30rpx;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  container-name: announcement;
+  container-type: inline-size;
   @include small-screen {
     width: 100%;
+    max-width: none;
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;
+    flex-direction: column;
     box-sizing: border-box;
   }
 }
 
-.anniversary-image {
-  max-width: 100%;
+.announcement-left {
+  flex: 0 0 auto;
 }
 
-.anniversary-text {
-  margin-top: 8rpx;
+.announcement-right {
+  flex: 1 1 auto;
+}
+
+.announcement-image {
+  width: 25cqi;
+  @include small-screen {
+    width: 40cqi;
+  }
+}
+
+.announcement-header {
+  margin-bottom: 15rpx;
+  font-size: 150%;
+  color: $blue-color;
+  letter-spacing: 0.1em;
+}
+
+.announcement-message {
+  margin-bottom: 15rpx;
+  line-height: $line-height;
+  text-align: justify;
+}
+
+.announcement-button-list {
+  column-gap: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  padding: 1rpx 10rpx;
+  color: white;
+  line-height: $line-height;
+  text-align: center;
+  box-shadow: 2rpx 2rpx 0rpx 0rpx $shadow-color;
+  background-position: 0% 0%;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, $orange-color 50%, $dark-orange-color 50%);
+  transition: background-position 0.2s;
+  display: inline-block;
+  &:hover {
+    background-position: 0% 100%;
+  }
 }
 
 .link,
