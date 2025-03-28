@@ -1,0 +1,13 @@
+{
+  "patterns": {
+    "‹КаТө̄П›": {"category": "verb", "type": "ground"},
+    "‹КаТТө̄П›": {"category": "verb", "type": "doubleMedial"},
+    "‹КаТө̄ППе›": {"category": "verb", "type": "doubleFinal"},
+    "‹аККаТө̄П›": {"category": "verb", "type": "doubleInitial"},
+    "‹Кө̄ТаП›": {"category": "substantive", "type": "ground"},
+    "‹Кө̄ТТаП›": {"category": "substantive", "type": "doubleMedial"},
+    "‹Кө̄ТaППе›": {"category": "substantive", "type": "doubleFinal"},
+    "‹аККө̄ТаП›": {"category": "substantive", "type": "doubleInitial"}
+  },
+  "alphabets": ["к", "г", "х", "ҕ", "т", "д", "с", "з", "п", "б", "ф", "в", "ҫ", "ҙ", "ш", "ж", "ц", "ӟ", "ч", "ӝ", "ӈ", "н", "м", "л", "р", "й", "ў", "ъ"]
+}

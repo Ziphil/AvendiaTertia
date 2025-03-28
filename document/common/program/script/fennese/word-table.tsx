@@ -1,0 +1,75 @@
+/// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
+/// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
+
+import {ReactElement} from "react";
+import DATA from "./data.json";
+import {WORD_PATTERN_CATEGORY, WORD_PATTERN_TYPE, Word, WordRoot} from "./word";
+import WordRow from "./word-row";
+
+
+const WordTable = function ({
+  words
+}: {
+  words: Array<Word>
+}): ReactElement {
+
+  const groupedWords = groupWords(words);
+
+  const node = (
+    <div className="word-table">
+      <div className="word-header-row">
+        <div/>
+        {WORD_PATTERN_CATEGORY.map((category) => WORD_PATTERN_TYPE.map((type) => (
+          <div key={category + "-" + type} className="word-header-cell">
+            <span>
+              {(category === "verb") ? (
+                <>用言 </>
+              ) : (
+                <>体言 </>
+              )}
+              {(type === "ground") ? (
+                <>G 型</>
+              ) : (type === "doubleMedial") ? (
+                <>D<sub className="sub">2</sub> 型</>
+              ) : (type === "doubleFinal") ? (
+                <>D<sub className="sub">3</sub> 型</>
+              ) : (type === "doubleInitial") ? (
+                <>D<sub className="sub">1</sub> 型</>
+              ) : null}
+            </span>
+          </div>
+        )))}
+      </div>
+      {groupedWords.map(([rootString, {root, words}]) => (
+        (root !== null) && <WordRow key={rootString} root={root} words={words}/>
+      ))}
+    </div>
+  );
+  return node;
+
+};
+
+
+function groupWords(words: Array<Word>): Array<[string, {root: WordRoot | null, words: Array<Word>}]> {
+  const groupedWords = new Map<string, {root: WordRoot | null, words: Array<Word>}>();
+  for (const word of words) {
+    const rootString = word.root?.join("-") ?? "";
+    if (!groupedWords.has(rootString)) {
+      groupedWords.set(rootString, {root: word.root, words: []});
+    }
+    groupedWords.get(rootString)!.words.push(word);
+  }
+  const groupedWordEntries = Array.from(groupedWords.entries());
+  groupedWordEntries.sort(([, {root: firstRoot}], [, {root: secondRoot}]) => {
+    if (firstRoot !== null && secondRoot !== null) {
+      const firstRootIndices = firstRoot.map((radical) => DATA.alphabets.indexOf(radical).toString().padStart(2, "0"));
+      const secondRootIndices = secondRoot.map((radical) => DATA.alphabets.indexOf(radical).toString().padStart(2, "0"));
+      return firstRootIndices.join("-").localeCompare(secondRootIndices.join("-"));
+    } else {
+      return 0;
+    }
+  });
+  return groupedWordEntries;
+}
+
+export default WordTable;
