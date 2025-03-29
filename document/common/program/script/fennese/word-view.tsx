@@ -14,9 +14,11 @@ const WordView = function ({
   basic: boolean
 }): ReactElement {
 
+  const dictionaryUrl = `https://zpdic.ziphil.com/dictionary/fennese?kind=exact&number=${word.number}`;
+
   const node = (
     <div className="word-view" {...data({basic})}>
-      <div className="word-view-name sans">{word.name}</div>
+      <a className="word-view-name sans" href={dictionaryUrl} target="_blank" rel="noopener noreferrer">{word.name}</a>
       <div className="word-view-equivalent">{word.equivalents.join(", ")}</div>
     </div>
   );

@@ -5,6 +5,7 @@ import DATA from "./data.json";
 
 export interface Word {
 
+  readonly number: number;
   readonly name: string;
   readonly equivalents: Array<string>;
   readonly root: WordRoot | null;
@@ -25,6 +26,7 @@ function createWord(rawWord: any): Word {
   const rawTranslations = rawWord["translations"] as Array<any>;
   const rawRelations = rawWord["relations"] as Array<any>;
   const word = {
+    number: +rawWord["entry"]["id"],
     name: rawWord["entry"]["form"],
     equivalents: rawTranslations.map((rawTranslation) => rawTranslation["forms"][0]),
     root: parseRoot(rawRelations.filter((rawRelation) => rawRelation["title"] === "語根").map((rawRelation) => rawRelation["entry"]["form"])[0]),
