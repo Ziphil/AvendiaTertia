@@ -11,6 +11,7 @@
 html {
   height: 100%;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,23 +29,64 @@ body {
   overflow: auto;
 }
 
+.navigation {
+  min-width: 1000rpx;
+  padding-inline: $main-horizontal-padding;
+  margin-block-end: 40rpx;
+  column-gap: 15rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @include smartphone {
+    padding-inline: $main-smartphone-horizontal-padding;
+  }
+}
+
+.navigation-link {
+  width: 0.8em;
+  font-size: 150%;
+  color: $blue-color;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
 .word-table {
   min-width: 1000rpx;
   padding-inline: $main-horizontal-padding;
   row-gap: 5rpx;
   display: grid;
-  grid-template-columns: max-content repeat(8, 1fr);
+  grid-template-columns: max-content max-content repeat(8, 1fr);
   @include smartphone {
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }
 
 .word-row {
+  min-height: 33rpx;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+.word-row-main {
   padding-block: 5rpx;
   background-color: $main-background-color;
   display: grid;
   grid-template-columns: subgrid;
-  grid-column: 1 / -1;
+  grid-column: 2 / -1;
+}
+
+.word-initial-radical {
+  padding-inline-end: 10rpx;
+  padding-block-start: 3rpx;
+  font-size: 150%;
+  color: $blue-color;
+  text-align: center;
+  text-transform: uppercase;
+  &[data-first] {
+    border-block-start: 1rpx solid $blue-color;
+  }
 }
 
 .word-root {

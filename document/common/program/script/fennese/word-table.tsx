@@ -19,6 +19,7 @@ const WordTable = function ({
     <div className="word-table">
       <div className="word-header-row">
         <div/>
+        <div/>
         {WORD_PATTERN_CATEGORY.map((category) => WORD_PATTERN_TYPE.map((type) => (
           <div key={category + "-" + type} className="word-header-cell">
             <span>
@@ -40,8 +41,8 @@ const WordTable = function ({
           </div>
         )))}
       </div>
-      {groupedWords.map(([rootString, {root, words}]) => (
-        (root !== null) && <WordRow key={rootString} root={root} words={words}/>
+      {groupedWords.map(([rootString, {root, words, first}]) => (
+        (root !== null) && <WordRow key={rootString} root={root} words={words} first={first}/>
       ))}
     </div>
   );
@@ -50,12 +51,12 @@ const WordTable = function ({
 };
 
 
-function groupWords(words: Array<Word>): Array<[string, {root: WordRoot | null, words: Array<Word>}]> {
-  const groupedWords = new Map<string, {root: WordRoot | null, words: Array<Word>}>();
+function groupWords(words: Array<Word>): Array<[string, {root: WordRoot | null, words: Array<Word>, first: boolean}]> {
+  const groupedWords = new Map<string, {root: WordRoot | null, words: Array<Word>, first: boolean}>();
   for (const word of words) {
     const rootString = word.root?.join("-") ?? "";
     if (!groupedWords.has(rootString)) {
-      groupedWords.set(rootString, {root: word.root, words: []});
+      groupedWords.set(rootString, {root: word.root, words: [], first: false});
     }
     groupedWords.get(rootString)!.words.push(word);
   }
@@ -69,6 +70,16 @@ function groupWords(words: Array<Word>): Array<[string, {root: WordRoot | null, 
       return 0;
     }
   });
+  let currentRadical = "";
+  for (const [, wordSpec] of groupedWordEntries) {
+    if (wordSpec.root !== null) {
+      const radical = wordSpec.root[0];
+      if (radical !== currentRadical) {
+        currentRadical = radical;
+        wordSpec.first = true;
+      }
+    }
+  }
   return groupedWordEntries;
 }
 

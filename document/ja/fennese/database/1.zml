@@ -18,6 +18,37 @@
   >
   \body<
 
+    \nav|class="navigation"|<
+      \a|class="navigation-link",href="#к"|<\span|class="sans"|<к>>
+      \a|class="navigation-link",href="#г"|<\span|class="sans"|<г>>
+      \a|class="navigation-link",href="#х"|<\span|class="sans"|<х>>
+      \a|class="navigation-link",href="#ҕ"|<\span|class="sans"|<ҕ>>
+      \a|class="navigation-link",href="#т"|<\span|class="sans"|<т>>
+      \a|class="navigation-link",href="#д"|<\span|class="sans"|<д>>
+      \a|class="navigation-link",href="#с"|<\span|class="sans"|<с>>
+      \a|class="navigation-link",href="#з"|<\span|class="sans"|<з>>
+      \a|class="navigation-link",href="#п"|<\span|class="sans"|<п>>
+      \a|class="navigation-link",href="#б"|<\span|class="sans"|<б>>
+      \a|class="navigation-link",href="#ф"|<\span|class="sans"|<ф>>
+      \a|class="navigation-link",href="#в"|<\span|class="sans"|<в>>
+      \a|class="navigation-link",href="#ҫ"|<\span|class="sans"|<ҫ>>
+      \a|class="navigation-link",href="#ҙ"|<\span|class="sans"|<ҙ>>
+      \a|class="navigation-link",href="#ш"|<\span|class="sans"|<ш>>
+      \a|class="navigation-link",href="#ж"|<\span|class="sans"|<ж>>
+      \a|class="navigation-link",href="#ц"|<\span|class="sans"|<ц>>
+      \a|class="navigation-link",href="#ӟ"|<\span|class="sans"|<ӟ>>
+      \a|class="navigation-link",href="#ч"|<\span|class="sans"|<ч>>
+      \a|class="navigation-link",href="#ӝ"|<\span|class="sans"|<ӝ>>
+      \a|class="navigation-link",href="#ӈ"|<\span|class="sans"|<ӈ>>
+      \a|class="navigation-link",href="#н"|<\span|class="sans"|<н>>
+      \a|class="navigation-link",href="#м"|<\span|class="sans"|<м>>
+      \a|class="navigation-link",href="#л"|<\span|class="sans"|<л>>
+      \a|class="navigation-link",href="#р"|<\span|class="sans"|<р>>
+      \a|class="navigation-link",href="#й"|<\span|class="sans"|<й>>
+      \a|class="navigation-link",href="#ў"|<\span|class="sans"|<ў>>
+      \a|class="navigation-link",href="#ъ"|<\span|class="sans"|<ъ>>
+    >
+
     \div|id="root"|;
 
   >
