@@ -79,7 +79,7 @@ function createWordFromZpdic(rawWord: any): Word {
 
 function parseRoot(rawRoot: string | undefined): WordRoot | null {
   if (rawRoot !== undefined) {
-    const match = rawRoot.match(/^‹(.+)-(.+)-(.+)›$/);
+    const match = rawRoot.match(/^√(.+)-(.+)-(.+)$/);
     if (match !== null) {
       return [match[1].toLowerCase(), match[2].toLowerCase(), match[3].toLowerCase()];
     } else {
