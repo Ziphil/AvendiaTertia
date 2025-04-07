@@ -85,7 +85,7 @@ function createInitialedTermSpecs(specs: Array<ReferenceTermSpec>, outputLanguag
   specs.sort((firstSpec, secondSpec) => firstSpec.key.localeCompare(secondSpec.key, outputLanguage));
   for (const spec of specs) {
     while (true) {
-      const [currentInitialKey, currentInitialText] = SECTION_TERM_INITIALS[outputLanguage][currentInitialIndex];
+      const [currentInitialKey, currentInitialText] = SECTION_TERM_INITIALS[outputLanguage][currentInitialIndex] ?? [];
       if (currentInitialKey !== undefined && spec.key.localeCompare(currentInitialKey, outputLanguage) >= 0) {
         if (currentInitialedSpec !== null) {
           initialedSpecs.push(currentInitialedSpec);
