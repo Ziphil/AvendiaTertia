@@ -85,6 +85,15 @@ manager.registerElementRule("abbr", "page", (transformer, document, element) => 
   return self;
 });
 
+manager.registerElementRule("ib", true, (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("inline-block");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 manager.registerElementRule("ch", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   if (element.hasAttribute("c")) {
@@ -97,9 +106,10 @@ manager.registerElementRule("ch", true, (transformer, document, element) => {
     }
   } else if (element.hasAttribute("dz")) {
     const query = element.getAttribute("dz");
+    const kind = (query === "x") ? "ten" : "eleven";
     self.appendElement("span", (self) => {
       self.addClassName("dozenal");
-      self.setAttribute("data-query", query);
+      self.setAttribute("data-kind", kind);
       self.appendElement("span", (self) => {
         self.addClassName("dozenal-main");
         self.appendTextNode((query === "x") ? "↊" : "↋");
