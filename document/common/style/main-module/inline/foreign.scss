@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.cuneiform-sentence {
+  font-family: "Assurbanipal Web";
+  font-size: 150%;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  word-break: break-all;
+  font-size-adjust: none !important;
+  position: relative;
+  bottom: -0.15em;
+}
+
+.cuneiform {
+  font-family: "Assurbanipal Web";
+  font-size: 150%;
+  letter-spacing: 0em;
+  line-height: 1;
+  font-size-adjust: none !important;
+  position: relative;
+  bottom: -0.15em;
+}
+
+.cuneiform-break {
+  margin-inline: 0.3em;
+  opacity: 0.5;
+  &::after {
+    content: "·";
+  }
+}
+
+.hieroglyph-sentence {
+  font-size: 140%;
+  line-height: 1;
+  font-size-adjust: none !important;
+  position: relative;
+  bottom: -0.2em;
+}
+
+.hieroglyph {
+  font-size: 140%;
+  line-height: 1;
+  font-size-adjust: none !important;
+  position: relative;
+  bottom: -0.2em;
+}

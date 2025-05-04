@@ -19,6 +19,46 @@ manager.registerElementRule("use-script", "header", (transformer, document, elem
   return self;
 });
 
+manager.registerElementRule("use-hiero", "header", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("link", (self) => {
+    self.setAttribute("rel", "stylesheet");
+    self.setAttribute("type", "text/css");
+    self.setAttribute("href", "https://nederhof.github.io/hierojax/hierojax.css");
+  });
+  self.appendElement("script", (self) => {
+    self.setAttribute("type", "text/javascript");
+    self.setAttribute("src", "https://nederhof.github.io/hierojax/hierojax.js");
+  });
+  self.appendElement("script", (self) => {
+    self.setAttribute("type", "text/javascript");
+    self.appendTextNode(`
+      class CustomHieroJax extends HieroJax {
+        startLoadingFonts() {
+          const hierojax = this;
+          this.fonts = [new FontFace("Hieroglyphic", "url(/material/font/new-gardiner.ttf)") ];
+          this.nFonts = this.fonts.length;
+          this.nFontsLoaded = 0;
+          this.fonts.forEach((font) => {
+            font.load().then((loadedFont) => {
+              document.fonts.add(loadedFont);
+              hierojax.nFontsLoaded ++;
+            });
+          });
+        }
+      }
+      const h = new CustomHieroJax();
+      window.addEventListener("DOMContentLoaded", () => {
+        console.log("[Hierojax] Start", h);
+        h.processFragments();
+      });
+    `, (self) => self.options.raw = true);
+  });
+  self.appendTextNode("\n");
+  return self;
+});
+
+
 manager.registerElementRule("use-math", "header", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const mathStyleString = transformer.environments.mathStyleString;

@@ -27,7 +27,7 @@ import historyManager from "./history";
 import htmlManager from "./html";
 import inlineBasicManager from "./inline/basic";
 import inlineCommonManager from "./inline/common";
-import inlineCuneiformManager from "./inline/cuneiform";
+import inlineForeignManager from "./inline/foreign";
 import inlineGreekManager from "./inline/greek";
 import inlineLinkManager from "./inline/link";
 import inlineMathManager from "./inline/math";
@@ -68,7 +68,7 @@ export default [
   inlineBasicManager,
   inlineLinkManager,
   inlineGreekManager,
-  inlineCuneiformManager,
+  inlineForeignManager,
   inlineMiscManager,
   inlineMathManager,
   inlineReferenceManager,
