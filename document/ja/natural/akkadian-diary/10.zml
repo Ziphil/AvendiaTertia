@@ -45,37 +45,34 @@
   >
   \xl<
     \li<
-      \sh<\cns*<
-        \cn|name="TAG"|<𒋳> \cn|name="MA"|<𒈠> \cn|name="A"|<𒀀> \cn|name="PI"|<𒉿> \cn|name="LUM"|<𒈝> \cn|name="A"|<𒀀> \cn|name="PI"|<𒉿> \cn|name="LAM"|<𒇴> \cnbr;
-        \cn|name="U2"|<𒌑> \cn|name="UB"|<𒌒> \cn|name="BI"|<𒁉> \cn|name="IR"|<𒅕> \cn|name="MA"|<𒈠> \k<…>
-      >>
+      \sh<\cns<𒋳𒈠𒀀𒉿𒈝𒀀𒉿𒇴>\cnbr;\cns<𒌑𒌒𒁉𒅕𒈠>\k<…>>
       \gloss<
-        \li<\sh<\cn|name="TAG"|<𒋳>>\ex<[šum]>>
-        \li<\sh<\cn|name="MA"|<𒈠>>\ex<[ma]>>
-        \li<\sh<\cn|name="A"|<𒀀>>\ex<[a]>>
-        \li<\sh<\cn|name="PI"|<𒉿>>\ex<[wi]>>
-        \li<\sh<\cn|name="LUM"|<𒈝>>\ex<[lum]>>
-        \li<\sh<\cn|name="A"|<𒀀>>\ex<[a]>>
-        \li<\sh<\cn|name="PI"|<𒉿>>\ex<[wi]>>
-        \li<\sh<\cn|name="LAM"|<𒇴>>\ex<[lam]>>
-        \li<\sh<\cn|name="U2"|<𒌑>>\ex<[u]\sub<2>>>
-        \li<\sh<\cn|name="UB"|<𒌒>>\ex<[ub]>>
-        \li<\sh<\cn|name="BI"|<𒁉>>\ex<[bi]>>
-        \li<\sh<\cn|name="IR"|<𒅕>>\ex<[ir]>>
-        \li<\sh<\cn|name="MA"|<𒈠>>\ex<[ma]>>
+        \li<\sh<\cn<𒋳>>\ex<[šum]>>
+        \li<\sh<\cn<𒈠>>\ex<[ma]>>
+        \li<\sh<\cn<𒀀>>\ex<[a]>>
+        \li<\sh<\cn<𒉿>>\ex<[wi]>>
+        \li<\sh<\cn<𒈝>>\ex<[lum]>>
+        \li<\sh<\cn<𒀀>>\ex<[a]>>
+        \li<\sh<\cn<𒉿>>\ex<[wi]>>
+        \li<\sh<\cn<𒇴>>\ex<[lam]>>
+        \li<\sh<\cn<𒌑>>\ex<[u]\sub<2>>>
+        \li<\sh<\cn<𒌒>>\ex<[ub]>>
+        \li<\sh<\cn<𒁉>>\ex<[bi]>>
+        \li<\sh<\cn<𒅕>>\ex<[ir]>>
+        \li<\sh<\cn<𒈠>>\ex<[ma]>>
       >
       \ja<{šumma awīlum awīlam ubbirma….}>
     >
   >
   \p<
-    \cns<\cn|name="U2"|<𒌑> \cn|name="UB"|<𒌒> \cn|name="BI"|<𒁉> \cn|name="IR"|<𒅕> \cn|name="MA"|<𒈠>> の部分が前回からの続きです。
+    \cns<𒌑𒌒𒁉𒅕𒈠> の部分が前回からの続きです。
   >
   \p<
-    この箇所は \cn|name="U2"|<𒌑> という文字から始まりますが、これは [u] を表す音節文字です。
-    実は、[u] を表す音節文字には、\cn|name="U"|<𒌋> というすごくシンプルな文字もあります。
+    この箇所は \cns<𒌑> という文字から始まりますが、これは [u] を表す音節文字です。
+    実は、[u] を表す音節文字には、\cns<𒌋> というすごくシンプルな文字もあります。
     このように 1 つの音節を表す音節文字は複数存在することがあるわけですが、翻字ではそれらを区別するために番号を振る (1 番は省略する) ことになっています。
     この番号は概ね頻度の高い順に振られています。
-    そのため、[u] を表す音節文字のうち、\cn|name="U"|<𒌋> は最も頻度が高いので単に [u] と翻字され、\cn|name="U2"|<𒌑> は次に頻度が高いので [u]\sub<2> と翻字されます。
+    そのため、[u] を表す音節文字のうち、\cns<𒌋> は最も頻度が高いので単に [u] と翻字され、\cns<𒌑> は次に頻度が高いので [u]\sub<2> と翻字されます。
     なお、同じ音節を表す文字を区別するために、番号を振るのではなくダイアクリティカルマークを付ける流儀もありますが、個人的にあまり好きではないので、この学習ログでは採用しません。
   >
   \p<

@@ -96,35 +96,30 @@
   >
   \xl<
     \li<
-      \sh<\cns*<
-        \cn|name="TAG"|<𒋳> \cn|name="MA"|<𒈠> \cn|name="A"|<𒀀> \cn|name="PI"|<𒉿> \cn|name="LUM"|<𒈝> \cn|name="A"|<𒀀> \cn|name="PI"|<𒉿> \cn|name="LAM"|<𒇴> \cnbr;
-        \cn|name="U2"|<𒌑> \cn|name="UB"|<𒌒> \cn|name="BI"|<𒁉> \cn|name="IR"|<𒅕> \cn|name="MA"|<𒈠> \cnbr;
-        \cn|name="NE"|<𒉈> \cn|name="IR"|<𒅕> \cn|name="UD"|<𒌓> \cn|name="E"|<𒂊> \cn|name="LI"|<𒇷> \cn|name="ŠU"|<𒋗> \cnbr;
-        \cn|name="A2"|<𒀉> \cn|name="DI"|<𒁲> \cn|name="MA"|<𒈠> \k<…>
-      >>
+      \sh<\cns<𒋳𒈠𒀀𒉿𒈝𒀀𒉿𒇴>\cnbr;\cns<𒌑𒌒𒁉𒅕𒈠>\cnbr;\cns<𒉈𒅕𒌓𒂊𒇷𒋗>\cnbr;\cns<𒀉𒁲𒈠>\k<…>>
       \gloss<
-        \li<\sh<\cn|name="TAG"|<𒋳>>\ex<[šum]>>
-        \li<\sh<\cn|name="MA"|<𒈠>>\ex<[ma]>>
-        \li<\sh<\cn|name="A"|<𒀀>>\ex<[a]>>
-        \li<\sh<\cn|name="PI"|<𒉿>>\ex<[wi]>>
-        \li<\sh<\cn|name="LUM"|<𒈝>>\ex<[lum]>>
-        \li<\sh<\cn|name="A"|<𒀀>>\ex<[a]>>
-        \li<\sh<\cn|name="PI"|<𒉿>>\ex<[wi]>>
-        \li<\sh<\cn|name="LAM"|<𒇴>>\ex<[lam]>>
-        \li<\sh<\cn|name="U2"|<𒌑>>\ex<[u]\sub<2>>>
-        \li<\sh<\cn|name="UB"|<𒌒>>\ex<[ub]>>
-        \li<\sh<\cn|name="BI"|<𒁉>>\ex<[bi]>>
-        \li<\sh<\cn|name="IR"|<𒅕>>\ex<[ir]>>
-        \li<\sh<\cn|name="MA"|<𒈠>>\ex<[ma]>>
-        \li<\sh<\cn|name="NE"|<𒉈>>\ex<[ne]>>
-        \li<\sh<\cn|name="IR"|<𒅕>>\ex<[er]>>
-        \li<\sh<\cn|name="UD"|<𒌓>>\ex<[tam]>>
-        \li<\sh<\cn|name="E"|<𒂊>>\ex<[e]>>
-        \li<\sh<\cn|name="LI"|<𒇷>>\ex<[li]>>
-        \li<\sh<\cn|name="ŠU"|<𒋗>>\ex<[šu]>>
-        \li<\sh<\cn|name="A2"|<𒀉>>\ex<[id]>>
-        \li<\sh<\cn|name="DI"|<𒁲>>\ex<[di]>>
-        \li<\sh<\cn|name="MA"|<𒈠>>\ex<[ma]>>
+        \li<\sh<\cn<𒋳>>\ex<[šum]>>
+        \li<\sh<\cn<𒈠>>\ex<[ma]>>
+        \li<\sh<\cn<𒀀>>\ex<[a]>>
+        \li<\sh<\cn<𒉿>>\ex<[wi]>>
+        \li<\sh<\cn<𒈝>>\ex<[lum]>>
+        \li<\sh<\cn<𒀀>>\ex<[a]>>
+        \li<\sh<\cn<𒉿>>\ex<[wi]>>
+        \li<\sh<\cn<𒇴>>\ex<[lam]>>
+        \li<\sh<\cn<𒌑>>\ex<[u]\sub<2>>>
+        \li<\sh<\cn<𒌒>>\ex<[ub]>>
+        \li<\sh<\cn<𒁉>>\ex<[bi]>>
+        \li<\sh<\cn<𒅕>>\ex<[ir]>>
+        \li<\sh<\cn<𒈠>>\ex<[ma]>>
+        \li<\sh<\cn<𒉈>>\ex<[ne]>>
+        \li<\sh<\cn<𒅕>>\ex<[er]>>
+        \li<\sh<\cn<𒌓>>\ex<[tam]>>
+        \li<\sh<\cn<𒂊>>\ex<[e]>>
+        \li<\sh<\cn<𒇷>>\ex<[li]>>
+        \li<\sh<\cn<𒋗>>\ex<[šu]>>
+        \li<\sh<\cn<𒀉>>\ex<[id]>>
+        \li<\sh<\cn<𒁲>>\ex<[di]>>
+        \li<\sh<\cn<𒈠>>\ex<[ma]>>
       >
       \ja<{šumma awīlum awīlam ubbirma nērtam elīšu iddīma….}>
     >

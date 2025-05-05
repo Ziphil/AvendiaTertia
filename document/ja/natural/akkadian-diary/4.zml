@@ -88,16 +88,16 @@
   >
   \xl<
     \li<
-      \sh<\cns<\cn|name="TAG"|<𒋳> \cn|name="MA"|<𒈠> \cn|name="A"|<𒀀> \cn|name="PI"|<𒉿> \cn|name="LUM"|<𒈝> \cn|name="A"|<𒀀> \cn|name="PI"|<𒉿> \cn|name="LAM"|<𒇴> \k<…>>>
+      \sh<\cns<𒋳𒈠𒀀𒉿𒈝𒀀𒉿𒇴>\k<…>>
       \gloss<
-        \li<\sh<\cn|name="TAG"|<𒋳>>\ex<[šum]>>
-        \li<\sh<\cn|name="MA"|<𒈠>>\ex<[ma]>>
-        \li<\sh<\cn|name="A"|<𒀀>>\ex<[a]>>
-        \li<\sh<\cn|name="PI"|<𒉿>>\ex<[wi]>>
-        \li<\sh<\cn|name="LUM"|<𒈝>>\ex<[lum]>>
-        \li<\sh<\cn|name="A"|<𒀀>>\ex<[a]>>
-        \li<\sh<\cn|name="PI"|<𒉿>>\ex<[wi]>>
-        \li<\sh<\cn|name="LAM"|<𒇴>>\ex<[lam]>>
+        \li<\sh<\cn<𒋳>>\ex<[šum]>>
+        \li<\sh<\cn<𒈠>>\ex<[ma]>>
+        \li<\sh<\cn<𒀀>>\ex<[a]>>
+        \li<\sh<\cn<𒉿>>\ex<[wi]>>
+        \li<\sh<\cn<𒈝>>\ex<[lum]>>
+        \li<\sh<\cn<𒀀>>\ex<[a]>>
+        \li<\sh<\cn<𒉿>>\ex<[wi]>>
+        \li<\sh<\cn<𒇴>>\ex<[lam]>>
       >
       \ja<{šumma awīlum awīlam….}>
     >
