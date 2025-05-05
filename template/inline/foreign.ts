@@ -41,6 +41,9 @@ manager.registerElementRule("hrs", "page", (transformer, document, element) => {
       self.addClassName("hierojax");
       self.setAttribute("data-type", "svg");
       self.setAttribute("data-separated", "true");
+      if (element.hasAttribute("rtl")) {
+        self.setAttribute("data-dir", "hrl");
+      }
       self.appendTextNode(convertExtendedMdc(element.textContent ?? ""));
     });
   });
@@ -55,6 +58,9 @@ manager.registerElementRule("hr", "page", (transformer, document, element) => {
       self.addClassName("hierojax");
       self.setAttribute("data-type", "svg");
       self.setAttribute("data-separated", "true");
+      if (element.hasAttribute("rtl")) {
+        self.setAttribute("data-dir", "hrl");
+      }
       self.appendTextNode(convertExtendedMdc(element.textContent ?? ""));
     });
   });
