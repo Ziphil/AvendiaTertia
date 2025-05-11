@@ -19,13 +19,12 @@
     \li<\rterm|key="とくしゅし",id="special"|<特殊詞\fl<special>>>
     \li<\rterm|key="かんとうし",id="interjection"|<間投詞\fl<interjection>>>
     \li<\rterm|key="ぜんちし",id="preposition"|<前置詞\fl<preposition>>>
+    \li<\rterm|key="れんけつし",id="connective"|<連結詞\fl<connective>>>
     \li<\rterm|key="しょうし",id="particle"|<小詞\fl<particle>>>
   >
   \p<
-    小詞はさらに次のように分類できる。
-  >
-  \todo<
-    小詞の分類は整理中です。
+    小詞はさらにその用法の応じて分類される。
+    詳細は \rref|ref="tdf"|; に譲る。
   >
   \h2|tag="tgq"|<品詞と単語分類>
   \p<
@@ -55,6 +54,7 @@
     \li<特殊詞>
     \li<間投詞>
     \li<前置詞>
+    \li<連結詞>
     \li<小詞>
   >
   \h1|tag="tgu"|<修飾>
@@ -74,6 +74,7 @@
     \tr<\td<特殊詞>\td<動詞, 名詞, 形容詞, 副詞>>
     \tr<\td<間投詞>\td<なし>>
     \tr<\td<前置詞>\td<名詞>>
+    \tr<\td<連結詞>\td<なし>>
     \tr<\td<小詞>\td<種類に依存する>>
   >
   \p<
