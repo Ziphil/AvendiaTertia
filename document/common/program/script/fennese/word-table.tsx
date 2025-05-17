@@ -3,17 +3,17 @@
 
 import {ReactElement} from "react";
 import DATA from "./data.json";
-import {WORD_PATTERN_CATEGORY, WORD_PATTERN_TYPE, Word, WordRoot} from "./word";
+import {Dictionary, WORD_PATTERN_CATEGORY, WORD_PATTERN_TYPE, Word, WordRoot} from "./word";
 import WordRow from "./word-row";
 
 
 const WordTable = function ({
-  words
+  dictionary
 }: {
-  words: Array<Word>
+  dictionary: Dictionary
 }): ReactElement {
 
-  const groupedWords = groupWords(words);
+  const groupedWords = groupWords(dictionary.words);
 
   const node = (
     <div className="word-table">
@@ -44,6 +44,10 @@ const WordTable = function ({
       {groupedWords.map(([rootString, {root, words, first}]) => (
         (root !== null) && <WordRow key={rootString} root={root} words={words} first={first}/>
       ))}
+      <div className="word-footer-row">
+        <div className="root-count">{dictionary.rootCount}</div>
+        <div className="word-count">{dictionary.wordCount}</div>
+      </div>
     </div>
   );
   return node;

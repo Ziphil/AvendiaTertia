@@ -33,22 +33,43 @@ body {
   min-width: 1000rpx;
   padding-inline: $main-horizontal-padding;
   margin-block-end: 40rpx;
-  column-gap: 15rpx;
+  row-gap: 10rpx;
+  column-gap: 10rpx;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   @include smartphone {
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }
 
+.navigation-group {
+  column-gap: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .navigation-link {
-  width: 0.8em;
+  width: 1.5em;
+  height: 1.5em;
   font-size: 150%;
-  color: $blue-color;
+  color: white;
+  background-color: $orange-color;
+  box-shadow: 2rpx 2rpx 0rpx 0rpx $shadow-color;
+  background-position: 0% 0%;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, $orange-color 50%, $dark-orange-color 50%);
+  transition: background-position 0.2s;
   text-align: center;
   text-transform: uppercase;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  &:hover {
+    background-position: 0% 100%;
+  }
 }
 
 .word-table {
@@ -129,7 +150,7 @@ body {
   flex: 0 0 auto;
   .word-view[data-basic] & {
     text-decoration-line: underline;
-    text-decoration-color: $blue-color;
+    text-decoration-color: $orange-color;
   }
 }
 
@@ -154,4 +175,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.word-footer-row {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+.root-count {
+  padding-inline-end: 3px;
+  color: $blue-color;
+  text-align: end;
+  grid-column: 2;
+}
+
+.word-count {
+  padding-inline-end: 3px;
+  color: $blue-color;
+  text-align: end;
+  grid-column: 10;
 }

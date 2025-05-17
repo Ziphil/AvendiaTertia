@@ -15,16 +15,25 @@ export interface Word {
 }
 
 
-export async function getWords(): Promise<Array<Word>> {
+export interface Dictionary {
+
+  readonly words: Array<Word>;
+  readonly rootCount: number;
+  readonly wordCount: number;
+
+}
+
+
+export async function getDictionary(): Promise<Dictionary> {
   const apiKey = location.search.match(/apiKey=([^&]+)/)?.[1] ?? null;
   if (apiKey !== null) {
-    return await getWordsFromApi(apiKey);
+    return await getDictionaryFromApi(apiKey);
   } else {
-    return await getWordsFromFile();
+    return await getDictionaryFromFile();
   }
 }
 
-export async function getWordsFromApi(apiKey: string): Promise<Array<Word>> {
+export async function getDictionaryFromApi(apiKey: string): Promise<Dictionary> {
   const fetchRawWords = async function (page: number): Promise<[Array<any>, number]> {
     const response = await fetch(`https://zpdic.ziphil.com/api/v0/dictionary/fennese/words?text=&skip=${page * 100}&limit=100`, {headers: {"X-Api-Key": apiKey}});
     const json = await response.json();
@@ -37,16 +46,20 @@ export async function getWordsFromApi(apiKey: string): Promise<Array<Word>> {
   }));
   const rawWords = [...firstRawWords, ...lastRawWords.flat()];
   const words = rawWords.map(createWordFromZpdic);
-  console.log("Words fetched from api");
-  return words;
+  const rootCount = calcRootCountFromZpdic(rawWords);
+  const wordCount = calcWordCountFromZpdic(rawWords);
+  console.log(`Words fetched from api: ${rootCount} roots, ${wordCount} words`);
+  return {words, rootCount, wordCount};
 }
 
-export async function getWordsFromFile(): Promise<Array<Word>> {
+export async function getDictionaryFromFile(): Promise<Dictionary> {
   const response = await fetch("/file/dictionary/2.json");
   const json = await response.json();
   const words = json["words"].map(createWordFromOtm);
-  console.log("Words fetched from file");
-  return words;
+  const rootCount = calcRootCountFromOtm(json["words"]);
+  const wordCount = calcWordCountFromOtm(json["words"]);
+  console.log(`Words fetched from file: ${rootCount} roots, ${wordCount} words`);
+  return {words, rootCount, wordCount};
 }
 
 function createWordFromOtm(rawWord: any): Word {
@@ -142,6 +155,42 @@ function parseAffixesFromZpdic(rawRelations: Array<any>): Array<string> {
     }
   }).filter((affix) => affix !== null);
   return affixes;
+}
+
+function calcRootCountFromOtm(rawWords: Array<any>): number {
+  const roots = new Set<string>();
+  for (const rawWord of rawWords) {
+    const rawRelations = rawWord["relations"] as Array<any>;
+    const rawRoot = rawRelations.filter((rawRelation) => rawRelation["title"] === "語根").map((rawRelation) => rawRelation["entry"]["form"])[0];
+    if (rawRoot?.match(/^√(.+)-(.+)-(.+)$/)) {
+      roots.add(rawRoot);
+    }
+  }
+  return roots.size;
+}
+
+function calcRootCountFromZpdic(rawWords: Array<any>): number {
+  const roots = new Set<string>();
+  for (const rawWord of rawWords) {
+    const rawRelations = rawWord["relations"] as Array<any>;
+    const rawRoot = rawRelations.filter((rawRelation) => rawRelation["titles"][0] === "語根").map((rawRelation) => rawRelation["name"])[0];
+    if (rawRoot?.match(/^√(.+)-(.+)-(.+)$/)) {
+      roots.add(rawRoot);
+    }
+  }
+  return roots.size;
+}
+
+function calcWordCountFromOtm(rawWords: Array<any>): number {
+  const otherCount = rawWords.filter((rawWord) => rawWord["tags"].includes("語根") || rawWord["tags"].includes("語型") || rawWord["tags"].includes("語型接辞")).length;
+  const wordCount = rawWords.length - otherCount;
+  return wordCount;
+}
+
+function calcWordCountFromZpdic(rawWords: Array<any>): number {
+  const otherCount = rawWords.filter((rawWord) => rawWord["tags"].includes("語根") || rawWord["tags"].includes("語型") || rawWord["tags"].includes("語型接辞")).length;
+  const wordCount = rawWords.length - otherCount;
+  return wordCount;
 }
 
 export type WordRoot = [string, string, string];
