@@ -1,13 +1,13 @@
 {
   "patterns": {
-    "‹катө̄п›": {"category": "verb", "type": "ground"},
-    "‹каттө̄п›": {"category": "verb", "type": "doubleMedial"},
-    "‹катө̄ппе›": {"category": "verb", "type": "doubleFinal"},
-    "‹аккатө̄п›": {"category": "verb", "type": "doubleInitial"},
-    "‹кө̄тап›": {"category": "substantive", "type": "ground"},
-    "‹кө̄ттап›": {"category": "substantive", "type": "doubleMedial"},
-    "‹кө̄тaппе›": {"category": "substantive", "type": "doubleFinal"},
-    "‹аккө̄тап›": {"category": "substantive", "type": "doubleInitial"}
+    "‹катө̂п›": {"category": "verb", "type": "ground"},
+    "‹каттө̂п›": {"category": "verb", "type": "doubleMedial"},
+    "‹катө̂ппе›": {"category": "verb", "type": "doubleFinal"},
+    "‹аккатө̂п›": {"category": "verb", "type": "doubleInitial"},
+    "‹кө̂тап›": {"category": "substantive", "type": "ground"},
+    "‹кө̂ттап›": {"category": "substantive", "type": "doubleMedial"},
+    "‹кө̂тaппе›": {"category": "substantive", "type": "doubleFinal"},
+    "‹аккө̂тап›": {"category": "substantive", "type": "doubleInitial"}
   },
   "alphabets": ["к", "г", "х", "ҕ", "т", "д", "с", "з", "п", "б", "ф", "в", "ҫ", "ҙ", "ш", "ж", "ц", "ӟ", "ч", "ӝ", "ӈ", "н", "м", "л", "р", "й", "ў", "ъ"]
 }
