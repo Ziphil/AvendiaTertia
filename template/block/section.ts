@@ -40,4 +40,13 @@ manager.registerElementRule(["h1", "h2", "h3"], "page", (transformer, document, 
   return self;
 });
 
+manager.registerElementRule(["hsep"], "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("hr", (self) => {
+    self.addClassName("section-separator");
+    self.setBlockType("bordered", "bordered");
+  });
+  return self;
+});
+
 export default manager;
