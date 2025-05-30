@@ -1,0 +1,103 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<学習ログ概要>
+  \use-hiero;
+
+  \h1<概要>
+  \p<
+    この学習ログは、私が中期エジプト語を勉強しながら学んだ内容をまとめたものです。
+    『The Story of the Shipwrecked Sailor』の原文を読み解くことを目標に据えて、そのために必要な文法事項を適宜学んでいくという形式をとっています。
+    なお、作品の最初から読むわけではなく、メインの物語が始まる前の部分は飛ばしています。
+  >
+  \p<
+    参考にしている文献は J. P. Allen による以下の 2 冊です。
+  >
+  \ul<
+    \li<『\ae|href="https://www.amazon.co.jp/dp/1107663288"|<Middle Egyptian: An Introduction to the Language and Culture of Hieroglyphs>』(Third Edition)>
+    \li<『\ae|href="https://www.amazon.co.jp/dp/1107087430"|<Middle Egyptian Literature: Eight Literary Works of the Middle Kingdom>』>
+  >
+  \p<
+    エジプト語の文法はまだまだ研究途上で定説は存在しないようです。
+    この学習ログで説明する文法は J. P. Allen によるものに大いに基づいているため、別の学者による文献とは食い違う可能性があります。
+  >
+  \h1<『The Story of the Shipwrecked Sailor』本文まとめ>
+  \h2<§2 (col 23～32): 水夫の物語の始まり>
+  \xl<
+    \li<
+      \sh<\hrs<N40-m-D54:k-w-A1 r b-i-N42:F18-N25:n I3:I3-G7>>
+      \gloss<
+        \li<\sh<\hr<N40>>\ex<[šm]>>
+        \li<\sh<\hr<m>>\ex<[m]>>
+        \li<\sh<\hr<D54>>\ex<\sup<det>>>
+        \li<\sh<\hr<k>>\ex<[k]>>
+        \li<\sh<\hr<w>>\ex<[w]>>
+        \li<\sh<\hr<A1>>\ex<\sup<det>>>
+        \li<\sh<\hr<r>>\ex<[r]>>
+        \li<\sh<\hr<b>>\ex<[b]>>
+        \li<\sh<\hr<i>>\ex<[j]>>
+        \li<\sh<\hr<N42>>\ex<[bjʔ]>>
+        \li<\sh<\hr<F18>>\ex<\sup<det>>>
+        \li<\sh<\hr<N25>>\ex<\sup<det>>>
+        \li<\sh<\hr<n>>\ex<[n]>>
+        \li<\sh<\hr<I3>>\ex<‹[jtj]›>>
+        \li<\sh<\hr<I3>>\ex<‹[jtj]›>>
+        \li<\sh<\hr<G7>>\ex<\sup<det>>>
+      >
+      \ja<{šm⹀kw r bjʔ n jtj.}>
+      \gloss<
+        \li<\sh<{šm}>\bs<{šm}>\ex<行く\mph<|状>>>
+        \li<\sh<{⹀kw}>\bs<{⹀kw}>\ex<\mph<状人代|一.単>>>
+        \li<\sh<{r}>\bs<{r}>\ex<～に>>
+        \li<\sh<{bjʔ}>\bs<{bjʔ}>\ex<天\mph<|単>>>
+        \li<\sh<{n}>\bs<{n}>\ex<～のために>>
+        \li<\sh<{jtj}>\bs<{jtj}>\ex<君主\mph<|単>>>
+      >
+      \ja<私は鉱山地域へ君主のために行った。>
+    >
+    \li<
+      \sh<\hrs<h-A-D54:k-w-A1 r M14-w-r:N36 m d:p*t-P1 n:t V23:D42 V1:V20*V20 m F40:Z7-s V23:D42 V20*V20:V20*V20 m s-x-w-D32 s>>
+      \gloss<
+        \li<\sh<\hr<h>>\ex<[h]>>
+        \li<\sh<\hr<A>>\ex<[ʔ]>>
+        \li<\sh<\hr<D54>>\ex<\sup<det>>>
+        \li<\sh<\hr<k>>\ex<[k]>>
+        \li<\sh<\hr<w>>\ex<[w]>>
+        \li<\sh<\hr<A1>>\ex<\sup<det>>>
+        \li<\sh<\hr<r>>\ex<[r]>>
+        \li<\sh<\hr<M14>>\ex<[wʔḏ]>>
+        \li<\sh<\hr<w>>\ex<[w]>>
+        \li<\sh<\hr<r>>\ex<[r]>>
+        \li<\sh<\hr<N36>>\ex<\sup<det>>>
+        \li<\sh<\hr<m>>\ex<[m]>>
+        \li<\sh<\hr<d>>\ex<[d]>>
+        \li<\sh<\hr<p>>\ex<[p]>>
+        \li<\sh<\hr<t>>\ex<[t]>>
+        \li<\sh<\hr<P1>>\ex<\sup<det>>>
+        \li<\sh<\hr<n>>\ex<[n]>>
+        \li<\sh<\hr<t>>\ex<[t]>>
+        \li<\sh<\hr<V23>>\ex<[mḥ]>>
+        \li<\sh<\hr<D42>>\ex<\sup<det>>>
+        \li<\sh<\hr<V1:V20*V20>>\ex<‹[120]›>>
+        \li<\sh<\hr<m>>\ex<[m]>>
+        \li<\sh<\hr<F40>>\ex<[ʔw]>>
+        \li<\sh<\hr<Z7>>\ex<[w]>>
+        \li<\sh<\hr<s>>\ex<[s]>>
+        \li<\sh<\hr<V23>>\ex<[mḥ]>>
+        \li<\sh<\hr<D42>>\ex<\sup<det>>>
+        \li<\sh<\hr<V20*V20:V20*V20>>\ex<‹[40]›>>
+        \li<\sh<\hr<m>>\ex<[m]>>
+        \li<\sh<\hr<s>>\ex<[s]>>
+        \li<\sh<\hr<x>>\ex<[ḫ]>>
+        \li<\sh<\hr<w>>\ex<[w]>>
+        \li<\sh<\hr<D32>>\ex<\sup<det>>>
+        \li<\sh<\hr<s>>\ex<[s]>>
+      >
+      \ja<{hʔ⹀kw r wʔḏ-wr m dpt nt mḥ 120 m ʔw⹀s, mḥ 40 m sḫw⹀s.}>
+      \ja<私は、長さが 120 キュビトで幅が 40 キュビトの船で海を下った。>
+    >
+  >
+
+>
