@@ -3,35 +3,35 @@
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../material/font/3.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2") format("woff2");
+  src: url("/material/font/alegreya-italic.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../material/font/4.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaErEBBsBhlBjvfkSLk_xHM8pxULg.woff2") format("woff2");
-  font-weight: 700;
+  src: url("/material/font/alegreya-bold-italic.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaErEBBsBhlBjvfkSLk_xHM8pxULg.woff2") format("woff2");
+  font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../material/font/5.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaBrEBBsBhlBjvfkSLhx6g.woff2") format("woff2");
+  src: url("/material/font/alegreya.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaBrEBBsBhlBjvfkSLhx6g.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../material/font/6.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaGrEBBsBhlBjvfkSpa4r3Owp4.woff2") format("woff2");
-  font-weight: 700;
+  src: url("/material/font/alegreya-bold.otf") format("opentype"), url("https://fonts.gstatic.com/s/alegreya/v10/4UaGrEBBsBhlBjvfkSpa4r3Owp4.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Brill Web";
-  src: url("../material/font/14.woff2") format("woff2");
+  src: url("/material/font/brill.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-feature-settings: "lnum" 1;
@@ -41,7 +41,7 @@
 
 @font-face {
   font-family: "Brill Web";
-  src: url("../material/font/15.woff2") format("woff2");
+  src: url("/material/font/brill-bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-feature-settings: "lnum" 1;
@@ -51,7 +51,7 @@
 
 @font-face {
   font-family: "Brill Web";
-  src: url("../material/font/16.woff2") format("woff2");
+  src: url("/material/font/brill-italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-feature-settings: "lnum" 1;
@@ -61,7 +61,7 @@
 
 @font-face {
   font-family: "Brill Web";
-  src: url("../material/font/17.woff2") format("woff2");
+  src: url("/material/font/brill-bold-italic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
   font-feature-settings: "lnum" 1;
@@ -111,7 +111,7 @@
 
 @font-face {
   font-family: "Inter Web";
-  src: url("../material/font/19.woff2") format("woff2");
+  src: url("/material/font/inter.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -135,54 +135,54 @@
 
 @font-face {
   font-family: "Assurbanipal Web";
-  src: url("../material/font/18.ttf") format("truetype");
+  src: url("/material/font/assurbanipal.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Vekos Web";
-  src: url("../material/font/7.woff") format("woff"), url("../material/font/7.ttf") format("truetype");
+  src: url("/material/font/vekos.woff") format("woff"), url("/material/font/vekos.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilit Web";
-  src: url("../material/font/8.ttf") format("truetype");
+  src: url("/material/font/gilit.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilit Web";
-  src: url("../material/font/9.ttf") format("truetype");
+  src: url("/material/font/gilit-bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Kaleg Round Expanded Web";
-  src: url("/material/font/11.ttf") format("truetype");
+  src: url("/material/font/kalege-round-expanded.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Kaleg Round Expanded Web";
-  src: url("/material/font/12.ttf") format("truetype");
+  src: url("/material/font/kalege-round-expanded-bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Chord Font";
-  src: url("/material/font/13.ttf") format("truetype");
+  src: url("/material/font/chord.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Hieroglyphic";
-  src: url("/material/font/new-gardiner.ttf") format("truetype");
+  src: url("/material/font/gardiner.ttf") format("truetype");
 }
