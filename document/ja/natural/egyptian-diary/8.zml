@@ -58,7 +58,7 @@
       \ja<私は鉱山地域へ君主のために行った。>
     >
     \li<
-      \sh<\hrs<h-A-D54:k-w-A1 r M14-w-r:N36 m d:p*t-P1 n:t V23:D42 V1:V20*V20 m F40:Z7-s V23:D42 V20*V20:V20*V20 m s-x-w-D32 s>>
+      \sh<\hrs<h-A-D54:k-w-A1 r M14-w-r:N36 m d:p*t-P1 n:t V23:D42 V1:V20i m F40:Z7-s V23:D42 V20c m s-x-w-D32 s>>
       \gloss<
         \li<\sh<\hr<h>>\ex<[h]>>
         \li<\sh<\hr<A>>\ex<[ʔ]>>
@@ -80,14 +80,14 @@
         \li<\sh<\hr<t>>\ex<[t]>>
         \li<\sh<\hr<V23>>\ex<[mḥ]>>
         \li<\sh<\hr<D42>>\ex<\sup<det>>>
-        \li<\sh<\hr<V1:V20*V20>>\ex<‹[120]›>>
+        \li<\sh<\hr<V1:V20i>>\ex<‹[120]›>>
         \li<\sh<\hr<m>>\ex<[m]>>
         \li<\sh<\hr<F40>>\ex<[ʔw]>>
         \li<\sh<\hr<Z7>>\ex<[w]>>
         \li<\sh<\hr<s>>\ex<[s]>>
         \li<\sh<\hr<V23>>\ex<[mḥ]>>
         \li<\sh<\hr<D42>>\ex<\sup<det>>>
-        \li<\sh<\hr<V20*V20:V20*V20>>\ex<‹[40]›>>
+        \li<\sh<\hr<V20c>>\ex<‹[40]›>>
         \li<\sh<\hr<m>>\ex<[m]>>
         \li<\sh<\hr<s>>\ex<[s]>>
         \li<\sh<\hr<x>>\ex<[ḫ]>>
@@ -96,7 +96,7 @@
         \li<\sh<\hr<s>>\ex<[s]>>
       >
       \ja<{hʔ⹀kw r wʔḏ-wr m dpt nt mḥ 120 m ʔw⹀s, mḥ 40 m sḫw⹀s.}>
-      \ja<私は、長さが 120 キュビトで幅が 40 キュビトの船で海を下った。>
+      \ja<私は、長さが 120 キュビットで幅が 40 キュビットの船で海を下った。>
     >
   >
 
