@@ -1,0 +1,41 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<表音字母表>
+  \use-hiero;
+
+  \h1<1 子音字母, 2 子音字母>
+  \table<
+    \tr<\th;\th<-∅>\th<-[ʔ]>\th<-[j]>\th<-[ʕ]>\th<-[w]>\th<-[b]>\th<-[p]>\th<-[m]>\th<-[n]>\th<-[r]>\th<-[ḥ]>\th<-[ḫ]>\th<-[z]>\th<-[s]>\th<-[q]>\th<-[k]>\th<-[t]>\th<-[ṯ]>\th<-[d]>\th<-[ḏ]>>
+    \tr<\th<[ʔ]->\td<\hrs<A>>\td<>\td<>\td<>\td<\hrs<Aw>>\td<\hrs<Ab>>\td<>\td<>\td<>\td<>\td<>\td<\hrs<Ax>, \hrs<Ax2>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[j]->\td<\hrs<i>, \hrs<y>>\td<>\td<>\td<>\td<\hrs<iw>, \hrs<iw2>>\td<\hrs<ib>, \hrs<ib2>>\td<>\td<\hrs<im>, \hrs<im2>>\td<\hrs<in>, \hrs<in2>, \hrs<in3>, \hrs<in4>>\td<\hrs<ir>, \hrs<ir2>>\td<\hrs<iH>>\td<>\td<\hrs<iz>>\td<\hrs<is>, \hrs<is2>>\td<>\td<\hrs<ik>>\td<\hrs<it>>\td<\hrs<iT>>\td<>\td<>>
+    \tr<\th<[ʕ]->\td<\hrs<a>>\td<\hrs<aA>>\td<>\td<>\td<>\td<\hrs<ab>>\td<>\td<>\td<>\td<>\td<\hrs<aH>>\td<>\td<>\td<>\td<\hrs<aq>>\td<>\td<>\td<>\td<>\td<\hrs<aD>, \hrs<aD2>>>
+    \tr<\th<[w]->\td<\hrs<w>, \hrs<W>>\td<\hrs<wA>>\td<>\td<\hrs<wa>>\td<>\td<>\td<\hrs<wp>>\td<>\td<\hrs<wn>, \hrs<wn2>>\td<\hrs<wr>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<wD>>>
+    \tr<\th<[b]->\td<\hrs<b>>\td<\hrs<bA>, \hrs<bA2>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<bH>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[p]->\td<\hrs<p>>\td<\hrs<pA>, \hrs<pA2>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<pr>>\td<\hrs<pH>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<pd>>\td<\hrs<pD>>>
+    \tr<\th<[m]->\td<\hrs<m>, \hrs<M>>\td<\hrs<mA>>\td<\hrs<mi>, \hrs<mi2>, \hrs<mi3>>\td<>\td<\hrs<mw>>\td<>\td<>\td<\hrs<mm>>\td<\hrs<mn>, \hrs<mn2>>\td<\hrs<mr>, \hrs<mr2>, \hrs<mr3>, \hrs<mr4>>\td<\hrs<mH>>\td<>\td<>\td<\hrs<ms>>\td<>\td<>\td<\hrs<mt>, \hrs<mt2>>\td<>\td<\hrs<md>>\td<>>
+    \tr<\th<[n]->\td<\hrs<n>, \hrs<N>>\td<>\td<\hrs<ni>, \hrs<ni2>>\td<>\td<\hrs<nw>, \hrs<nw2>>\td<\hrs<nb>>\td<>\td<\hrs<nm>, \hrs<nm2>>\td<\hrs<nn>>\td<\hrs<nr>>\td<\hrs<nH>>\td<>\td<>\td<\hrs<ns>>\td<>\td<>\td<>\td<>\td<>\td<\hrs<nD>>>
+    \tr<\th<[r]->\td<\hrs<r>>\td<>\td<>\td<>\td<\hrs<rw>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<rs>>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[h]->\td<\hrs<h>>\td<>\td<>\td<>\td<>\td<\hrs<hb>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[ḥ]->\td<\hrs<H>>\td<\hrs<HA>>\td<>\td<>\td<\hrs<Hw>>\td<>\td<\hrs<Hp>>\td<\hrs<Hm>, \hrs<Hm2>>\td<\hrs<Hn>, \hrs<Hn2>, \hrs<Hn3>>\td<\hrs<Hr>, \hrs<Hr2>>\td<>\td<>\td<\hrs<Hz>>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<HD>>>
+    \tr<\th<[ḫ]->\td<\hrs<x>>\td<\hrs<xA>, \hrs<xA2>>\td<>\td<\hrs<xa>>\td<\hrs<xw>>\td<>\td<>\td<\hrs<xm>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<xt>>\td<>\td<>\td<>>
+    \tr<\th<[ẖ]->\td<\hrs<X>>\td<\hrs<XA>>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<Xn>, \hrs<Xn2>>\td<\hrs<Xr>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[z]->\td<\hrs<z>>\td<\hrs<zA>, \hrs<zA2>, \hrs<zA3>>\td<>\td<>\td<>\td<>\td<\hrs<zp>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[s]->\td<\hrs<s>>\td<\hrs<sA>, \hrs<sA2>>\td<>\td<>\td<\hrs<sw>>\td<>\td<>\td<>\td<\hrs<sn>>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<sk>>\td<\hrs<st>, \hrs<st2>>\td<\hrs<sT>>\td<>\td<\hrs<sD>>>
+    \tr<\th<[š]->\td<\hrs<S>>\td<\hrs<SA>, \hrs<SA2>>\td<>\td<>\td<\hrs<Sw>>\td<>\td<>\td<\hrs<Sm>>\td<\hrs<Sn>, \hrs<Sn2>>\td<>\td<>\td<>\td<>\td<\hrs<Ss>>\td<>\td<>\td<>\td<>\td<\hrs<Sd>>\td<>>
+    \tr<\th<[q]->\td<\hrs<q>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<qn>>\td<>\td<>\td<>\td<>\td<\hrs<qs>>\td<>\td<>\td<>\td<>\td<\hrs<qd>>\td<>>
+    \tr<\th<[k]->\td<\hrs<k>>\td<\hrs<kA>>\td<>\td<>\td<>\td<>\td<\hrs<kp>>\td<\hrs<km>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[g]->\td<\hrs<g>>\td<>\td<>\td<>\td<>\td<\hrs<gb>>\td<>\td<\hrs<gm>>\td<>\td<>\td<>\td<>\td<>\td<\hrs<gs>>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[t]->\td<\hrs<t>>\td<\hrs<tA>, \hrs<tA2>, \hrs<tA3>>\td<\hrs<ti>>\td<>\td<>\td<>\td<>\td<\hrs<tm>>\td<>\td<\hrs<tr>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[ṯ]->\td<\hrs<T>>\td<\hrs<TA>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<Tz>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[d]->\td<\hrs<d>>\td<>\td<\hrs<di>, \hrs<di2>>\td<>\td<>\td<>\td<\hrs<tp>, \hrs<tp2>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<[ḏ]->\td<\hrs<D>>\td<\hrs<DA>>\td<\hrs<Di>>\td<>\td<\hrs<Dw>>\td<\hrs<Db>>\td<>\td<>\td<>\td<\hrs<Dr>>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\hrs<Dd>>\td<\hrs<DD>>>
+  >
+  \h1<3 子音字母>
+  \todo<
+    準備中です。
+  >
+
+>
