@@ -77,7 +77,7 @@
 .header-title {
   font-size: 400%;
   font-family: $special-font-family;
-  color: white;
+  color: var(--main-background-color);
   text-decoration: none;
   cursor: pointer;
 }

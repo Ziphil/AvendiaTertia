@@ -50,7 +50,7 @@ $content-item-height: 90rpx;
   height: $content-item-height;
   padding-inline: 32rpx;
   color: var(--black-blue-color);
-  background-color: white;
+  background-color: var(--main-background-color);
   box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ $content-item-height: 90rpx;
     box-shadow: none;
   }
   &:not([data-disabled]):hover {
-    color: white;
+    color: var(--main-background-color);
   }
   &::before {
     width: calc(100% - #{$content-item-height * $skew-tan} - 6rpx);

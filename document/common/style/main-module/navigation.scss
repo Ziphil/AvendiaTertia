@@ -39,7 +39,7 @@
   display: inline;
   &:not(:nth-child(1))::before {
     @include icon-font;
-    margin-inline-end: fix-em($blank-margin, 90%);
+    margin-inline: fix-em($blank-margin, 90%);
     font-size: 90%;
     color: var(--blue-color);
     line-height: 0;
