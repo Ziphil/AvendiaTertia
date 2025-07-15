@@ -6,15 +6,15 @@
 
 
 .main {
-  --background-color: #{$main-background-color};
   width: $main-width;
   max-width: $main-max-width;
   margin: 40rpx auto 0rpx auto;
   padding: $main-vertical-padding $main-horizontal-padding;
   box-sizing: content-box;
-  background-color: $main-background-color;
+  background-color: var(--main-background-color);
   overflow: hidden;
-  @include smartphone {
+  --current-background-color: var(--main-background-color);
+  @include mobile {
     width: 100%;
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;

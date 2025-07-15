@@ -25,7 +25,7 @@ $form-input-horizontal-padding: 10rpx;
 
 .form-input {
   padding: $form-input-vertical-padding $form-input-horizontal-padding;
-  background-color: $block-background-color;
+  background-color: var(--block-background-color);
   line-height: $line-height;
   text-align: left;
   box-sizing: content-box;
@@ -33,13 +33,13 @@ $form-input-horizontal-padding: 10rpx;
 
 .form-button {
   padding: $form-input-vertical-padding $form-input-horizontal-padding;
-  color: var(--background-color);
+  color: var(--current-background-color);
   line-height: $line-height;
   text-align: center;
-  box-shadow: 2rpx 2rpx 0rpx 0rpx $shadow-color;
+  box-shadow: 2rpx 2rpx 0rpx 0rpx var(--shadow-color);
   background-position: 0% 0%;
   background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, $orange-color 50%, $dark-orange-color 50%);
+  background-image: linear-gradient(to bottom, var(--orange-color) 50%, var(--dark-orange-color) 50%);
   transition: background-position 0.2s;
   display: inline-block;
   &:hover {

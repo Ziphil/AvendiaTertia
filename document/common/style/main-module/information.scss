@@ -6,16 +6,16 @@
 
 
 .information {
-  --background-color: #{$main-background-color};
   width: 100%;
   max-width: 600rpx;
   margin: 40rpx auto 0rpx auto;
   padding: $main-vertical-padding 30rpx;
   box-sizing: content-box;
-  background-color: $main-background-color;
+  background-color: var(--main-background-color);
   overflow: hidden;
   display: none;
-  @include smartphone {
+  --current-background-color: var(--main-background-color);
+  @include mobile {
     width: 100%;
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;

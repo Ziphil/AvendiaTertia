@@ -6,8 +6,8 @@
 
 .navigation {
   padding: 10rpx 0rpx;
-  background-color: $header-background-color;
-  @include smartphone {
+  background-color: var(--header-background-color);
+  @include mobile {
     width: 100%;
   }
 }
@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @include smartphone {
+  @include mobile {
     width: 100%;
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;
@@ -38,7 +38,7 @@
   &:not(:nth-child(1))::before {
     @include icon-font;
     margin: 0em fix-em($blank-margin, 90%);
-    color: $blue-color;
+    color: var(--blue-color);
     font-size: 90%;
     opacity: 0.5;
     line-height: 0;
@@ -50,7 +50,7 @@
   &:nth-child(1) >.navigation-link::before {
     @include icon-font;
     font-size: 90%;
-    color: $blue-color;
+    color: var(--blue-color);
     content: "\F015";
   }
 }

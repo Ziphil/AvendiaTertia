@@ -17,20 +17,20 @@
   font-size: 80%;
   vertical-align: 0.3906em;
   line-height: 0;
-  color: $gray-color;
+  color: var(--gray-color);
 }
 
 .radical {
   margin-inline: 0.15em;
-  @include box($gray-color, true, true);
+  @include box(var(--gray-color), true, true);
 }
 
 .box {
   margin-inline: 0.15em;
-  @include box($blue-color, false);
+  @include box(var(--blue-color), false);
 }
 
 .label {
   margin-right: $blank-margin;
-  color: $blue-color;
+  color: var(--blue-color);
 }

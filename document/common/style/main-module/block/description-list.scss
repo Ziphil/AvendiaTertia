@@ -26,7 +26,7 @@ $description-dash-width: 1.1em;
     margin-right: fix-em($blank-margin, 90%);
     margin-left: fix-em(0em - $bullet-width - $blank-margin, 90%);
     font-size: 90%;
-    color: $blue-color;
+    color: var(--blue-color);
     text-align: right;
     display: inline-block;
     content: "\F0DA";
@@ -41,7 +41,8 @@ $description-dash-width: 1.1em;
     margin-left: $description-dash-width + $blank-margin;
   }
   &::before {
-    color: mix($blue-color, $header-background-color, 50%);
+    color: var(--blue-color);
+    opacity: 0.5;
     .description-list[data-type="desc"] & {
       @include icon-font;
       width: fix-em($description-arrow-width, 90%);

@@ -55,7 +55,7 @@ zp-description {
   padding-block-end: 40rpx;
   margin-inline: auto;
   box-sizing: content-box;
-  @include smartphone {
+  @include mobile {
     width: 100%;
     padding-inline: $main-smartphone-horizontal-padding;
     box-sizing: border-box;
@@ -91,7 +91,7 @@ zp-description {
   height: $player-item-top-height;
   display: flex;
   align-items: center; 
-  @include smartphone {
+  @include mobile {
     height: $player-item-top-height * 0.9;
   }
 } 
@@ -119,7 +119,7 @@ zp-description {
     z-index: 1;
     content: "";
   }
-  @include smartphone {
+  @include mobile {
     display: none;
   }
 }
@@ -144,7 +144,7 @@ zp-description {
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
-  @include smartphone {
+  @include mobile {
     margin-inline-start: 20rpx;
   }
 }
@@ -167,7 +167,7 @@ zp-description {
   transform: skew(-3deg, 0deg);
   white-space: nowrap;
   overflow: hidden;
-  @include smartphone {
+  @include mobile {
     font-size: 180% * 0.9;
   }
 }
@@ -177,7 +177,7 @@ zp-description {
   transform: skew(-3deg, 0deg);
   white-space: nowrap;
   overflow: hidden;
-  @include smartphone {
+  @include mobile {
     font-size: 110% * 0.9;
   }
 }
@@ -226,7 +226,7 @@ zp-description {
   background-color: white;
   border-inline-start: 2rpx solid var(--highlight-background-color);
   border-inline-end: 2rpx solid var(--background-color);
-  @include smartphone {
+  @include mobile {
     border-inline-start: 2rpx solid var(--background-color);
   }
 }

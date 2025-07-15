@@ -44,13 +44,7 @@ $small-line-height: 1.2;
 $program-line-height: 1.5;
 
 
-@mixin small-screen {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
-
-@mixin smartphone {
+@mixin mobile {
   @media screen and (max-width: 880px) {
     @content;
   }
@@ -58,6 +52,18 @@ $program-line-height: 1.5;
 
 @mixin desktop {
   @media screen and (min-width: 881px) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media screen and (min-width: 641px) {
     @content;
   }
 }
@@ -81,14 +87,16 @@ $program-line-height: 1.5;
       border: 1px $color solid;
     }
   } @else {
-    color: var(--background-color);
+    color: var(--current-background-color);
     background-color: $color;
   }
 }
 
 @mixin justify {
-  text-align: justify;
-  @include smartphone {
+  @include desktop {
+    text-align: justify;
+  }
+  @include mobile {
     text-align: unset;
   }
 }

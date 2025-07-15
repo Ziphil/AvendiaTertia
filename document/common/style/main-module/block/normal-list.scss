@@ -17,7 +17,7 @@ $normal-list-column-gap: 30px;
   }
   &[data-column="3"] {
     column-count: 3;
-    @include smartphone {
+    @include mobile {
       column-count: 2;
     }
   }
@@ -32,7 +32,7 @@ $normal-list-column-gap: 30px;
     margin-right: fix-em($blank-margin, 90%);
     margin-left: fix-em(0em - ($bullet-width + $blank-margin), 90%);
     font-size: 90%;
-    color: $blue-color;
+    color: var(--blue-color);
     text-align: right;
     display: inline-block;
     content: "\F0DA";
@@ -47,7 +47,7 @@ $normal-list-column-gap: 30px;
   margin-left: 1em + $bordered-blank-margin;
   counter-increment: normal-list;
   &::before {
-    @include box($blue-color, false);
+    @include box(var(--blue-color), false);
     margin-left: fix-em(0em - (1em + $bordered-blank-margin), 80%);
     margin-right: fix-em($bordered-blank-margin, 80%);
     content: counter(normal-list);

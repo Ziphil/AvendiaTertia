@@ -38,7 +38,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @include smartphone {
+  @include mobile {
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }
@@ -78,7 +78,7 @@ body {
   row-gap: 5rpx;
   display: grid;
   grid-template-columns: max-content max-content repeat(8, 1fr);
-  @include smartphone {
+  @include mobile {
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }

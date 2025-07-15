@@ -20,10 +20,10 @@
 .footer-icon-item {
   @include icon-font;
   font-weight: normal;
-  color: $orange-color;
+  color: var(--orange-color);
   cursor: pointer;
   &:hover {
-    color: $dark-orange-color;
+    color: var(--dark-orange-color);
   }
   &[data-brand="twitter"]::before {
     content: "\F099";

@@ -13,8 +13,8 @@ $popup-arrow-size: 8rpx;
   padding: 8rpx 10rpx;
   font-size: 80%;
   line-height: 1.2;
-  background-color: $main-background-color;
-  border: 1rpx $blue-color solid;
+  background-color: var(--main-background-color);
+  border: 1rpx var(--blue-color) solid;
   position: relative;
   z-index: 100;
   &[aria-hidden="true"] {
@@ -34,7 +34,7 @@ $popup-arrow-size: 8rpx;
     width: $popup-arrow-size;
     height: $popup-arrow-size;
     position: absolute;
-    background: $blue-color;
+    background: var(--blue-color);
     visibility: visible;
     transform: rotate(45deg);
     content: "";
@@ -43,7 +43,7 @@ $popup-arrow-size: 8rpx;
     }
   }
   &::after {
-    background: $main-background-color;
+    background: var(--main-background-color);
   }
   [data-popper-placement^="top"] >& {
     bottom: div($popup-arrow-size, -2);
@@ -77,7 +77,7 @@ $popup-arrow-size: 8rpx;
   font-size: 80%;
   text-align: center;
   line-height: 1;
-  border: 1rpx $blue-color solid;
+  border: 1rpx var(--blue-color) solid;
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -91,7 +91,7 @@ $popup-arrow-size: 8rpx;
 .popup-small-head {
   margin: 0px 3px 0px 0px;
   font-size: 80%;
-  color: $blue-color;
+  color: var(--blue-color);
 }
 
 .popup-right-margin {

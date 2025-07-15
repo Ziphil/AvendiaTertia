@@ -12,7 +12,7 @@ $todo-horizontal-padding: 12rpx;
   padding-block: $todo-vertical-padding;
   padding-inline: $todo-horizontal-padding;
   column-gap: $blank-margin;
-  border: 1rpx $blue-color dashed;
+  border: 1rpx var(--blue-color) dashed;
   display: flex;
   align-items: center;
   &::before {
@@ -20,7 +20,7 @@ $todo-horizontal-padding: 12rpx;
     width: fix-em($bullet-width, 90%);
     margin-right: fix-em($blank-margin, 90%);
     font-size: 90%;
-    color: $blue-color;
+    color: var(--blue-color);
     content: "\F06A";
     flex-grow: 0;
     flex-shrink: 0;

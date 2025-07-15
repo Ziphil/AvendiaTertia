@@ -14,7 +14,7 @@ $subsection-height: 36rpx;
   margin-right: 0rpx - $main-horizontal-padding;
   line-height: $line-height;
   overflow: hidden;
-  @include smartphone {
+  @include mobile {
     margin-left: 0rpx - $main-smartphone-horizontal-padding;
     margin-right: 0rpx - $main-smartphone-horizontal-padding;  
   }
@@ -25,11 +25,11 @@ $subsection-height: 36rpx;
   padding: 0rpx $main-horizontal-padding;
   font-size: 130%;
   font-weight: normal;
-  color: var(--background-color);
+  color: var(--current-background-color);
   line-height: $section-height;
   position: relative;
   z-index: 0;
-  @include smartphone {
+  @include mobile {
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;
   }
@@ -38,7 +38,7 @@ $subsection-height: 36rpx;
     bottom: 0rpx;
     left: 0rpx;
     right: 0rpx;
-    background-color: $blue-color;
+    background-color: var(--blue-color);
     position: absolute;
     z-index: -2;
     content: "";
@@ -48,14 +48,14 @@ $subsection-height: 36rpx;
     bottom: 0rpx;
     right: -20rpx;
     width: 20rpx - 3rpx + $main-horizontal-padding;
-    border-left: 6rpx $main-background-color solid;
-    background-color: $orange-color;
+    border-left: 6rpx var(--main-background-color) solid;
+    background-color: var(--orange-color);
     background-origin: padding-box;
     transform: skew($skew-angle);
     position: absolute;
     z-index: -1;
     content: "";
-    @include smartphone {
+    @include mobile {
       width: 20rpx - 3rpx + $main-smartphone-horizontal-padding;
     }
   }
@@ -67,7 +67,7 @@ $subsection-height: 36rpx;
   margin-right: 0rpx - $main-horizontal-padding;
   line-height: $line-height;
   overflow: hidden;
-  @include smartphone {
+  @include mobile {
     margin-left: 0rpx - $main-smartphone-horizontal-padding;
     margin-right: 0rpx - $main-smartphone-horizontal-padding;  
   }
@@ -78,11 +78,11 @@ $subsection-height: 36rpx;
   padding: 0rpx $main-horizontal-padding;
   font-size: 110%;
   font-weight: normal;
-  color: $blue-color;
+  color: var(--blue-color);
   line-height: $subsection-height;
   position: relative;
   z-index: 0;
-  @include smartphone {
+  @include mobile {
     padding-left: $main-smartphone-horizontal-padding;
     padding-right: $main-smartphone-horizontal-padding;
   }
@@ -91,12 +91,12 @@ $subsection-height: 36rpx;
     bottom: 0rpx;
     left: 0rpx;
     right: $main-horizontal-padding;
-    border-top: 1rpx $blue-color solid;
-    border-bottom: 1rpx $blue-color solid;
+    border-top: 1rpx var(--blue-color) solid;
+    border-bottom: 1rpx var(--blue-color) solid;
     position: absolute;
     z-index: -2;
     content: "";
-    @include smartphone {
+    @include mobile {
       right: $main-smartphone-horizontal-padding;
     }
   }
@@ -105,12 +105,12 @@ $subsection-height: 36rpx;
     top: 0rpx;
     bottom: 0rpx;
     right: 0rpx;
-    border-top: 1rpx $orange-color solid;
-    border-bottom: 1rpx $orange-color solid;
+    border-top: 1rpx var(--orange-color) solid;
+    border-bottom: 1rpx var(--orange-color) solid;
     position: absolute;
     z-index: -2;
     content: "";
-    @include smartphone {
+    @include mobile {
       width: $main-smartphone-horizontal-padding;
     }
   }
@@ -126,7 +126,7 @@ $subsection-height: 36rpx;
   overflow: hidden;
   position: relative;
   z-index: 0;
-  @include smartphone {
+  @include mobile {
     margin-left: 0rpx - $main-smartphone-horizontal-padding;
     margin-right: 0rpx - $main-smartphone-horizontal-padding;  
     padding-left: $main-smartphone-horizontal-padding;
@@ -137,11 +137,11 @@ $subsection-height: 36rpx;
     bottom: 0rpx;
     left: 0rpx;
     right: $main-horizontal-padding;
-    border-top: 1rpx $blue-color solid;
+    border-top: 1rpx var(--blue-color) solid;
     position: absolute;
     z-index: -2;
     content: "";
-    @include smartphone {
+    @include mobile {
       right: $main-smartphone-horizontal-padding;
     }
   }
@@ -150,11 +150,11 @@ $subsection-height: 36rpx;
     top: 50%;
     bottom: 0rpx;
     right: 0rpx;
-    border-top: 1rpx $orange-color solid;
+    border-top: 1rpx var(--orange-color) solid;
     position: absolute;
     z-index: -2;
     content: "";
-    @include smartphone {
+    @include mobile {
       width: $main-smartphone-horizontal-padding;
     }
   }
@@ -165,8 +165,8 @@ $subsection-height: 36rpx;
   padding: 0em 0.5em;
   font-size: 105%;
   font-weight: normal;
-  color: $blue-color;
-  background-color: $main-background-color;
+  color: var(--blue-color);
+  background-color: var(--main-background-color);
   position: relative;
   z-index: 0;
 }
@@ -189,6 +189,6 @@ $subsection-height: 36rpx;
 }
 
 .section-separator {
-  border-block-end: 1rpx $blue-color dashed;
+  border-block-end: 1rpx var(--blue-color) dashed;
   opacity: 0.7;
 }

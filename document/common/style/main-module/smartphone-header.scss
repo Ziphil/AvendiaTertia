@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $blue-color;
+  background-color: var(--blue-color);
 }
 
 .header-right {
@@ -25,8 +25,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 6rpx $header-background-color solid;
-  background-color: $orange-color;
+  border-top: 6rpx var(--header-background-color) solid;
+  background-color: var(--orange-color);
 }
 
 .header-title {
@@ -71,7 +71,7 @@ $header-item-height: 35rpx;
   width: calc((100cqi - #{$header-list-horizontal-gap} * 2) / 3);
   height: $header-item-height;
   font-size: 120%;
-  color: mix($orange-color, $text-color, 30%);
+  color: var(--black-orange-color);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -84,10 +84,10 @@ $header-item-height: 35rpx;
     bottom: 0rpx;
     left: 0rpx;
     right: 0rpx;
-    box-shadow: 3rpx 3rpx 0rpx 0rpx $shadow-color;
+    box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
     background-position: 0% 0%;
     background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, $main-background-color 50%, $white-orange-color 50%);
+    background-image: linear-gradient(to bottom, var(--main-background-color) 50%, var(--white-orange-color) 50%);
     transform: skew($skew-angle);
     transition: background-position 0.2s;
     position: absolute;

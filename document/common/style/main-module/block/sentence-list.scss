@@ -7,13 +7,13 @@
 
 .sentence-list {
   @include justify;
-  --background-color: #{$block-background-color};
   margin-left: 0rpx - $main-horizontal-padding;
   margin-right: 0rpx - $main-horizontal-padding;
   padding: $block-vertical-padding $main-horizontal-padding;
   line-height: $line-height;
-  background-color: $block-background-color;
-  @include smartphone {
+  background-color: var(--block-background-color);
+  --current-background-color: var(--block-background-color);
+  @include mobile {
     margin-left: 0rpx - $main-smartphone-horizontal-padding;
     margin-right: 0rpx - $main-smartphone-horizontal-padding;  
     padding-left: $main-smartphone-horizontal-padding;
@@ -34,7 +34,7 @@
     margin-right: fix-em($blank-margin, 90%);
     margin-left: fix-em(0em - $bullet-width - $blank-margin, 90%);
     font-size: 90%;
-    color: $blue-color;
+    color: var(--blue-color);
     text-align: right;
     display: inline-block;
     content: "\F0DA";
@@ -49,7 +49,7 @@
     margin-right: fix-em($blank-margin, 90%);
     margin-left: fix-em(0em - ($bullet-width + $blank-margin + $arrow-width + $blank-margin) - $blank-margin, 90%);
     font-size: 90%;
-    color: $blue-color;
+    color: var(--blue-color);
     text-align: right;
     display: inline-block;
     content: "\F061";
@@ -59,7 +59,7 @@
 .sentence-list[data-type="ordered"] >.sentence-item {
   margin-left: 1em + $blank-margin;
   &::before {
-    @include box($blue-color, false);
+    @include box(var(--blue-color), false);
     margin-left: fix-em(0em - (1em + $bordered-blank-margin), 80%);
     margin-right: fix-em($bordered-blank-margin, 80%);
     content: attr(data-tag);
@@ -74,7 +74,7 @@
     margin-right: fix-em($blank-margin, 90%);
     margin-left: fix-em(0em - (1em + $blank-margin + $arrow-width + $blank-margin) - $blank-margin, 90%);
     font-size: 90%;
-    color: $blue-color;
+    color: var(--blue-color);
     text-align: right;
     display: inline-block;
     content: "\F061";
@@ -83,5 +83,5 @@
 
 .sentence-mark {
   margin-right: 0.1em;
-  color: $blue-color;
+  color: var(--blue-color);
 }

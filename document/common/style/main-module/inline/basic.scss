@@ -38,8 +38,8 @@
   padding: 0.1em 0em;
   line-height: 100%;
   white-space: break-spaces;
-  border: 1rpx $blue-color solid;
-  background-image: linear-gradient(-45deg, transparent 33%, $blue-color 33% 50%, transparent 50% 83%, $blue-color 83%);
+  border: 1rpx var(--blue-color) solid;
+  background-image: linear-gradient(-45deg, transparent 33%, var(--blue-color) 33% 50%, transparent 50% 83%, var(--blue-color) 83%);
   background-size: 3rpx 3rpx;
 }
 

@@ -49,5 +49,5 @@
 
 .code {
   @extend .monospace;
-  background-color: $block-background-color;
+  background-color: var(--block-background-color);
 }

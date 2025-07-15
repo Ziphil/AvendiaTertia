@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+
+@mixin shaleian-color {
+  --text-color: hsl(0, 0%, 20%);
+  --blue-color: hsl(198, 75%, 50%);
+  --dark-blue-color: hsl(205, 75%, 40%);
+  --black-blue-color: #{mix(hsl(198, 75%, 50%), hsl(0, 0, 20%), 40%)};
+  --white-blue-color: #{mix(hsl(198, 75%, 50%), white, 20%)};
+  --orange-color: hsl(35, 75%, 50%);
+  --dark-orange-color: hsl(28, 75%, 40%);
+  --black-orange-color: #{mix(hsl(35, 75%, 50%), hsl(0, 0, 20%), 40%)};
+  --white-orange-color: #{mix(hsl(35, 75%, 50%), white, 20%)};
+  --gray-color: hsl(0, 0%, 50%);
+  --shadow-color: hsla(0, 0%, 0%, 0.1);
+  --page-background-color: hsl(198, 60%, 94%);
+  --header-background-color: white;
+  --main-background-color: white;
+  --block-background-color: hsl(198, 60%, 96%);
+}

@@ -6,6 +6,7 @@
 @import "util/common.scss";
 @import "util/font.scss";
 @import "main-module/variable.scss";
+@import "main-module/color.scss";
 @import "main-module/footer.scss";
 @import "main-module/information.scss";
 @import "main-module/ad.scss";
@@ -42,7 +43,7 @@
 @include desktop {
   @import "main-module/header.scss";
 }
-@include smartphone {
+@include mobile {
   @import "main-module/smartphone-header.scss";
 }
 
@@ -52,17 +53,18 @@ html {
 }
 
 body {
-  @include scrollbar(5rpx, 0rpx, transparent, $orange-color);
+  @include scrollbar(5rpx, 0rpx, transparent, var(--orange-color));
   @include text-size-adjust;
+  @include shaleian-color;
   margin: 0rpx;
   padding: 0rpx;
-  color: $text-color;
+  color: var(--text-color);
   font-family: $serif-font-family;
   font-weight: $serif-font-weight;
   font-feature-settings: "lnum" 1, "palt" 1, "pkna" 1;
   line-height: 1;
   text-decoration-skip-ink: none;
-  background-color: $page-background-color;
+  background-color: var(--page-background-color);
   overflow-x: auto;
   overflow-y: scroll;
 }

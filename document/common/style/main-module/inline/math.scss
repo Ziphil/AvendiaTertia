@@ -29,7 +29,7 @@
 }
 
 .math-mark {
-  @include box($blue-color, true);
+  @include box(var(--blue-color), true);
   left: 0rpx;
   position: absolute;
   user-select: none;
@@ -53,6 +53,6 @@ math-o[data-cont=":"] {
 
 .ref[data-type="bibliography"] {
   font-size: 80%;
-  color: $blue-color;
+  color: var(--blue-color);
   vertical-align: 0.3906em;
 }
