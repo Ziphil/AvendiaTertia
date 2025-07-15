@@ -18,6 +18,17 @@ function getMainClassName(path: string, language: AvendiaOutputLanguage, transfo
   }
 }
 
+function getScheme(path: string, transformer: AvendiaLightTransformer): string {
+  const splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, transformer.variables.language);
+  if (splitRelativePath[0] === "shaleian") {
+    return "shaleian";
+  } else if (splitRelativePath[0] === "fennese") {
+    return "fennese";
+  } else {
+    return "default";
+  }
+}
+
 manager.registerElementRule("page", "", (transformer, document, element) => {
   const path = transformer.variables.path;
   const language = transformer.variables.language;
@@ -27,6 +38,7 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   const mainNode = document.createDocumentFragment();
   transformer.variables.foreignLanguage = (language === "ja") ? "en" : "ja";
   transformer.variables.mode = "page";
+  transformer.variables.scheme = getScheme(path, transformer);
   navigationNode.appendChild(transformer.call("navigation", element));
   navigationNode.appendChild(transformer.apply(element, "navigation"));
   headerNode.appendChild(transformer.call("analytics", element));
