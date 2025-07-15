@@ -6,22 +6,25 @@
 
 .footer {
   width: 100%;
-  margin: 30rpx 0rpx 20rpx 0rpx;
+  margin-block-start: 30rpx;
+  margin-block-end: 20rpx;
   text-align: center;
 }
 
 .footer-icon-list {
+  column-gap: 15rpx;
   font-size: 140%;
   display: flex;
   justify-content: center;
-  column-gap: 15rpx;
 }
 
 .footer-icon-item {
   @include icon-font;
   font-weight: normal;
-  color: var(--orange-color);
   cursor: pointer;
+  &:not(:hover) {
+    color: var(--orange-color);
+  }
   &:hover {
     color: var(--dark-orange-color);
   }
@@ -40,7 +43,7 @@
 }
 
 .footer-copyright {
-  margin-top: 10rpx;
+  margin-block-start: 10rpx;
   font-size: 80%;
   display: block;
 }
@@ -52,7 +55,7 @@
 }
 
 .footer-counter {
-  margin-top: 5rpx;
+  margin-block-start: 5rpx;
   font-size: 80%;
   display: block;
 }

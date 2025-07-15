@@ -5,42 +5,47 @@
 
 
 .error-main {
-  width: $main-width;
   max-width: $main-max-width;
-  margin: 40rpx auto 0rpx auto;
-  padding: 5rpx 0rpx 10rpx 0rpx;
-  box-sizing: content-box;
+  margin-block-start: 40rpx;
+  margin-block-end: 0rpx;
+  margin-inline: auto;
+  padding-block-start: 5rpx;
+  padding-block-end: 10rpx;
+  @include desktop {
+    width: $main-width;
+    padding-inline: 0rpx;
+    box-sizing: content-box;
+  }
   @include mobile {
     width: 100%;
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    padding-inline: $main-smartphone-horizontal-padding;
     box-sizing: border-box;
   }
 }
 
 .error-code-container {
+  column-gap: 30rpx;
+  color: var(--blue-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--blue-color);
-  gap: 0rpx 30rpx;
 }
 
 .error-code {
-  margin-bottom: -0.15em;
-  font-family: $special-font-family;
+  margin-block-end: -0.15em;
   font-size: 500%;
+  font-family: $special-font-family;
 }
 
 .error-message {
-  font-family: "Gilit Web";
   font-size: 150%;
+  font-family: "Gilit Web";
   font-weight: bold;
   line-height: 1.2;
 }
 
 .error-description {
-  margin-top: 10rpx;
+  margin-block-start: 10rpx;
   color: var(--black-blue-color);
   display: flex;
   justify-content: center;

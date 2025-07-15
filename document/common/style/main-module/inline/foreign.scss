@@ -10,10 +10,10 @@
   font-size: 150%;
   letter-spacing: 0.1em;
   line-height: 1;
+  inset-block-end: -0.15em;
   word-break: break-all;
   font-size-adjust: none !important;
   position: relative;
-  bottom: -0.15em;
 }
 
 .cuneiform {
@@ -21,9 +21,9 @@
   font-size: 150%;
   letter-spacing: 0em;
   line-height: 1;
+  inset-block-end: -0.15em;
   font-size-adjust: none !important;
   position: relative;
-  bottom: -0.15em;
 }
 
 .cuneiform-break {
@@ -37,15 +37,15 @@
 .hieroglyph-sentence {
   font-size: 140%;
   line-height: 1;
+  inset-block-end: -0.2em;
   font-size-adjust: none !important;
   position: relative;
-  bottom: -0.2em;
 }
 
 .hieroglyph {
   font-size: 140%;
   line-height: 1;
+  inset-block-end: -0.2em;
   font-size-adjust: none !important;
   position: relative;
-  bottom: -0.2em;
 }

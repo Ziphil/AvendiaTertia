@@ -9,19 +9,18 @@ $program-number-width: 25rpx;
 $program-line-horizontal-padding: 10rpx;
 
 .program-container {
-  margin-left: 0rpx - $main-horizontal-padding;
-  margin-right: 0rpx - $main-horizontal-padding;
-  padding: 0rpx $main-horizontal-padding;
   background-color: var(--block-background-color);
   --current-background-color: var(--block-background-color);
+  @include desktop {
+    margin-inline: 0rpx - $main-horizontal-padding;
+    padding-inline: $main-horizontal-padding;
+  }
   @include mobile {
-    margin-left: 0rpx - $main-smartphone-horizontal-padding;
-    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    padding-inline: $main-smartphone-horizontal-padding;
   }
   &[data-type="pre"] +&[data-type="samp"] {
-    margin-top: 3rpx;
+    margin-block-start: 3rpx;
   }
 }
 
@@ -40,20 +39,20 @@ $program-line-horizontal-padding: 10rpx;
 }
 
 .program-number {
-  border-right: 1px var(--main-background-color) solid;
   font-size: 80%;
   color: var(--blue-color);
+  border-inline-end: solid 1px var(--main-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  &::before {
-    content: attr(data-number);
-  }
   &:first-of-type {
-    padding-top: $block-vertical-padding;
+    padding-block-start: $block-vertical-padding;
   }
   &:last-of-type {
-    padding-bottom: $block-vertical-padding;
+    padding-block-end: $block-vertical-padding;
+  }
+  &::before {
+    content: attr(data-number);
   }
 }
 
@@ -64,13 +63,13 @@ $program-line-horizontal-padding: 10rpx;
   line-height: $program-line-height;
   letter-spacing: $monospace-letter-spacing;
   white-space: pre-wrap;
-  .program-number +& {
-    padding-left: $program-line-horizontal-padding;
-  }
   &:first-of-type {
-    padding-top: $block-vertical-padding;
+    padding-block-start: $block-vertical-padding;
   }
   &:last-of-type {
-    padding-bottom: $block-vertical-padding;
+    padding-block-end: $block-vertical-padding;
+  }
+  .program-number +& {
+    padding-inline-start: $program-line-horizontal-padding;
   }
 }

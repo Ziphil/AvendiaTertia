@@ -10,51 +10,50 @@ $subsection-height: 36rpx;
 
 .section {
   height: $section-height;
-  margin-left: 0rpx - $main-horizontal-padding;
-  margin-right: 0rpx - $main-horizontal-padding;
   line-height: $line-height;
   overflow: hidden;
+  @include desktop {
+    margin-inline: 0rpx - $main-horizontal-padding;
+  }
   @include mobile {
-    margin-left: 0rpx - $main-smartphone-horizontal-padding;
-    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
+    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
   }
 }
 
 .section-inner {
   height: 100%;
-  padding: 0rpx $main-horizontal-padding;
   font-size: 130%;
   font-weight: normal;
   color: var(--current-background-color);
   line-height: $section-height;
   position: relative;
   z-index: 0;
+  @include desktop {
+    padding-inline: $main-horizontal-padding;
+  }
   @include mobile {
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    padding-inline: $main-smartphone-horizontal-padding;
   }
   &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 0rpx;
-    right: 0rpx;
+    inset: 0rpx;
     background-color: var(--blue-color);
     position: absolute;
     z-index: -2;
     content: "";
   }
   &::after {
-    top: 0rpx;
-    bottom: 0rpx;
-    right: -20rpx;
-    width: 20rpx - 3rpx + $main-horizontal-padding;
-    border-left: 6rpx var(--main-background-color) solid;
+    inset-block: 0rpx;
+    inset-inline-end: -20rpx;
+    border-inline-start: solid 6rpx var(--main-background-color);
     background-color: var(--orange-color);
     background-origin: padding-box;
     transform: skew($skew-angle);
     position: absolute;
     z-index: -1;
     content: "";
+    @include desktop {
+      width: 20rpx - 3rpx + $main-horizontal-padding;
+    }
     @include mobile {
       width: 20rpx - 3rpx + $main-smartphone-horizontal-padding;
     }
@@ -63,53 +62,54 @@ $subsection-height: 36rpx;
 
 .subsection {
   height: $subsection-height;
-  margin-left: 0rpx - $main-horizontal-padding;
-  margin-right: 0rpx - $main-horizontal-padding;
   line-height: $line-height;
   overflow: hidden;
+  @include desktop {
+    margin-inline: 0rpx - $main-horizontal-padding;
+  }
   @include mobile {
-    margin-left: 0rpx - $main-smartphone-horizontal-padding;
-    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
+    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
   }
 }
 
 .subsection-inner {
   height: 100%;
-  padding: 0rpx $main-horizontal-padding;
   font-size: 110%;
   font-weight: normal;
   color: var(--blue-color);
   line-height: $subsection-height;
   position: relative;
   z-index: 0;
+  @include desktop {
+    padding-inline: $main-horizontal-padding;
+  }
   @include mobile {
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    padding-inline: $main-smartphone-horizontal-padding;
   }
   &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 0rpx;
-    right: $main-horizontal-padding;
-    border-top: 1rpx var(--blue-color) solid;
-    border-bottom: 1rpx var(--blue-color) solid;
+    inset-block: 0rpx;
+    inset-inline-start: 0rpx;
+    border-block: solid 1rpx var(--blue-color);
     position: absolute;
     z-index: -2;
     content: "";
+    @include desktop {
+      inset-inline-end: $main-horizontal-padding;
+    }
     @include mobile {
-      right: $main-smartphone-horizontal-padding;
+      inset-inline-end: $main-smartphone-horizontal-padding;
     }
   }
   &::after {
-    width: $main-horizontal-padding;
-    top: 0rpx;
-    bottom: 0rpx;
-    right: 0rpx;
-    border-top: 1rpx var(--orange-color) solid;
-    border-bottom: 1rpx var(--orange-color) solid;
+    inset-block: 0rpx;
+    inset-inline-end: 0rpx;
+    border-block: solid 1rpx var(--orange-color);
     position: absolute;
     z-index: -2;
     content: "";
+    @include desktop {
+      width: $main-horizontal-padding;
+    }
     @include mobile {
       width: $main-smartphone-horizontal-padding;
     }
@@ -117,43 +117,45 @@ $subsection-height: 36rpx;
 }
 
 .subsubsection {
-  margin-left: 0rpx - $main-horizontal-padding;
-  margin-right: 0rpx - $main-horizontal-padding;
-  padding-left: $main-horizontal-padding;
-  padding-right: $main-horizontal-padding;
   line-height: $line-height;
   display: flex;
   overflow: hidden;
   position: relative;
   z-index: 0;
+  @include desktop {
+    margin-inline: 0rpx - $main-horizontal-padding;
+    padding-inline: $main-horizontal-padding;
+  }
   @include mobile {
-    margin-left: 0rpx - $main-smartphone-horizontal-padding;
-    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    padding-inline: $main-smartphone-horizontal-padding;
   }
   &::before {
-    top: 50%;
-    bottom: 0rpx;
-    left: 0rpx;
-    right: $main-horizontal-padding;
-    border-top: 1rpx var(--blue-color) solid;
+    inset-block-start: 50%;
+    inset-block-end: 0rpx;
+    inset-inline-start: 0rpx;
+    border-block-start: solid 1rpx var(--blue-color);
     position: absolute;
     z-index: -2;
     content: "";
+    @include desktop {
+      inset-inline-end: $main-horizontal-padding;
+    }
     @include mobile {
-      right: $main-smartphone-horizontal-padding;
+      inset-inline-end: $main-smartphone-horizontal-padding;
     }
   }
   &::after {
-    width: $main-horizontal-padding;
-    top: 50%;
-    bottom: 0rpx;
-    right: 0rpx;
-    border-top: 1rpx var(--orange-color) solid;
+    inset-block-start: 50%;
+    inset-block-end: 0rpx;
+    inset-inline-end: 0rpx;
+    border-block-start: solid 1rpx var(--orange-color);
     position: absolute;
     z-index: -2;
     content: "";
+    @include desktop {
+      width: $main-horizontal-padding;
+    }
     @include mobile {
       width: $main-smartphone-horizontal-padding;
     }
@@ -161,8 +163,8 @@ $subsection-height: 36rpx;
 }
 
 .subsubsection-inner {
-  margin: 0em -0.5em;
-  padding: 0em 0.5em;
+  margin-inline: -0.5em;
+  padding-inline: 0.5em;
   font-size: 105%;
   font-weight: normal;
   color: var(--blue-color);
@@ -174,7 +176,7 @@ $subsection-height: 36rpx;
 .section-tag,
 .subsection-tag,
 .subsubsection-tag {
-  margin-right: fix-em($blank-margin, 80%);
+  margin-inline-end: fix-em($blank-margin, 80%);
   font-size: 80%;
   text-transform: uppercase;
   opacity: 0.7;
@@ -183,12 +185,12 @@ $subsection-height: 36rpx;
 .section-number,
 .subsection-number,
 .subsubsection-number {
-  margin-right: fix-em($blank-margin, 80%);
+  margin-inline-end: fix-em($blank-margin, 80%);
   font-size: 80%;
   opacity: 0.7;
 }
 
 .section-separator {
-  border-block-end: 1rpx var(--blue-color) dashed;
+  border-block-end: dashed 1rpx var(--blue-color);
   opacity: 0.7;
 }

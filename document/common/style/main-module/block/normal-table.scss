@@ -15,14 +15,15 @@ $normal-table-cell-horizontal-padding: 10rpx;
 }
 
 .normal-table-caption {
-  margin-top: -$additional-block-vertical-margin;
+  margin-block-start: -$additional-block-vertical-margin;
   text-align: center;
 }
 
 .normal-table th,
 .normal-table td {
-  padding: $normal-table-cell-vertical-padding $normal-table-cell-horizontal-padding;
-  border: 1rpx var(--block-background-color) solid;
+  padding-block: $normal-table-cell-vertical-padding;
+  padding-inline: $normal-table-cell-horizontal-padding;
+  border: solid 1rpx var(--block-background-color);
 }
 
 .normal-table th {

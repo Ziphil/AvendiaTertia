@@ -9,16 +9,15 @@ $translation-list-column-gap: 15px;
 
 .translation-list {
   @include justify;
+  column-gap: $translation-list-column-gap * 2;
   line-height: $line-height;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: ($translation-list-column-gap * 2);
   position: relative;
   &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 50%;
-    border-right: 1rpx var(--blue-color) solid;
+    inset-block: 0rpx;
+    inset-inline-start: 50%;
+    border-inline-end: solid 1rpx var(--blue-color);
     position: absolute;
     content: "";
   }

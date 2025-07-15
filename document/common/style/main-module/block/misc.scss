@@ -12,23 +12,21 @@ $todo-horizontal-padding: 12rpx;
   padding-block: $todo-vertical-padding;
   padding-inline: $todo-horizontal-padding;
   column-gap: $blank-margin;
-  border: 1rpx var(--blue-color) dashed;
+  border: dashed 1rpx var(--blue-color);
   display: flex;
   align-items: center;
   &::before {
     @include icon-font;
     width: fix-em($bullet-width, 90%);
-    margin-right: fix-em($blank-margin, 90%);
+    margin-inline-end: fix-em($blank-margin, 90%);
     font-size: 90%;
     color: var(--blue-color);
     content: "\F06A";
-    flex-grow: 0;
-    flex-shrink: 0;
+    flex: 0 0 auto;
   }
 }
 
 .todo-inner {
   line-height: $line-height;
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 1 1 auto;
 }

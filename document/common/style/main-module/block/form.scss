@@ -13,35 +13,39 @@ $form-input-horizontal-padding: 10rpx;
 }
 
 .form-table {
-  margin: 0rpx auto;
+  margin-inline: auto;
   line-height: $line-height;
   border-collapse: collapse;
   white-space: nowrap;
 }
 
 .form-table tr +tr td {
-  padding-top: 5rpx;
+  padding-block-start: 5rpx;
 }
 
 .form-input {
-  padding: $form-input-vertical-padding $form-input-horizontal-padding;
-  background-color: var(--block-background-color);
+  padding-block: $form-input-vertical-padding;
+  padding-inline: $form-input-horizontal-padding;
   line-height: $line-height;
-  text-align: left;
+  background-color: var(--block-background-color);
+  text-align: start;
   box-sizing: content-box;
 }
 
 .form-button {
-  padding: $form-input-vertical-padding $form-input-horizontal-padding;
+  padding-block: $form-input-vertical-padding;
+  padding-inline: $form-input-horizontal-padding;
   color: var(--current-background-color);
   line-height: $line-height;
   text-align: center;
   box-shadow: 2rpx 2rpx 0rpx 0rpx var(--shadow-color);
-  background-position: 0% 0%;
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, var(--orange-color) 50%, var(--dark-orange-color) 50%);
   transition: background-position 0.2s;
   display: inline-block;
+  &:not(:hover) {
+    background-position: 0% 0%;
+  }
   &:hover {
     background-position: 0% 100%;
   }

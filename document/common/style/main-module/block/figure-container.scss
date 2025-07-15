@@ -9,14 +9,14 @@ $figure-container-column-gap: 40px;
 
 .figure-container {
   @include scrollbar(0rpx, 0rpx, transparent, transparent);
+  column-gap: $figure-container-column-gap;
   display: flex;
   align-items: center;
-  column-gap: $figure-container-column-gap;
   overflow: auto;
   >:first-child {
-    margin-left: auto;
+    margin-inline-start: auto;
   }
   >:last-child {
-    margin-right: auto;
+    margin-inline-end: auto;
   }
 }

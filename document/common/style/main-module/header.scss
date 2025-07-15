@@ -9,20 +9,18 @@
   height: 120rpx;
   position: relative;
   &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 0%;
-    right: 50%;
+    inset-inline-start: 0%;
+    inset-inline-end: 50%;
+    inset-block: 0rpx;
     background-color: var(--blue-color);
     position: absolute;
     z-index: -100;
     content: "";
   }
   &::after {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 50%;
-    right: 0%;
+    inset-inline-start: 50%;
+    inset-inline-end: 0%;
+    inset-block: 0rpx;
     background-color: var(--orange-color);
     position: absolute;
     z-index: -100;
@@ -34,7 +32,7 @@
   width: $main-width;
   max-width: $main-max-width;
   height: 100%;
-  margin: 0rpx auto;
+  margin-inline: auto;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -42,17 +40,14 @@
 }
 
 .header-left {
-  flex-grow: 1;
   display: flex;
   align-items: center;
   position: relative;
+  flex-grow: 1;
   z-index: 1;
   &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 0rpx;
-    right: 0rpx;
-    border-right: 15rpx var(--header-background-color) solid;
+    inset: 0rpx;
+    border-inline-end: solid 15rpx var(--header-background-color);
     background-color: var(--blue-color);
     background-origin: padding-box;
     transform: skew($skew-angle);
@@ -63,18 +58,14 @@
 }
 
 .header-right {
-  padding: 0rpx 0rpx 0rpx 25rpx;
-  flex-shrink: 0;
-  flex-grow: 0;
+  padding-inline-start: 25rpx;
   display: flex;
   align-items: center;
   position: relative;
+  flex: 0 0 auto;
   z-index: 2;
   &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 0rpx;
-    right: 0rpx;
+    inset: 0rpx;
     background-color: var(--orange-color);
     transform: skew($skew-angle);
     position: absolute;
@@ -84,17 +75,17 @@
 }
 
 .header-title {
-  font-family: $special-font-family;
   font-size: 400%;
+  font-family: $special-font-family;
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
 .header-title-version {
-  margin: 0em 0em 0em 0.1em;
-  font-size: 70%;
+  margin-inline-start: 0.1em;
   vertical-align: 0.5em;
+  font-size: 70%;
 }
 
 $header-list-vertical-gap: 12rpx;
@@ -103,15 +94,15 @@ $header-item-width: 140rpx;
 $header-item-height: 35rpx;
 
 .header-list {
+  row-gap: $header-list-vertical-gap;
   display: flex;
   flex-direction: column;
-  row-gap: $header-list-vertical-gap;
 }
 
 .header-row {
+  column-gap: $header-list-horizontal-gap;
   display: flex;
   flex-direction: row;
-  column-gap: $header-list-horizontal-gap;
   justify-content: center;
 }
 
@@ -129,12 +120,8 @@ $header-item-height: 35rpx;
   z-index: 0;
   flex: 0 0 auto;
   &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 0rpx;
-    right: 0rpx;
+    inset: 0rpx;
     box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
-    background-position: 0% 0%;
     background-size: 100% 200%;
     background-image: linear-gradient(to bottom, var(--main-background-color) 50%, var(--white-orange-color) 50%);
     transform: skew($skew-angle);
@@ -143,11 +130,14 @@ $header-item-height: 35rpx;
     z-index: -2;
     content: "";
   }
+  &:not(:hover)::before {
+    background-position: 0% 0%;
+  }
   &:hover::before {
     background-position: 0% 100%;
   }
 }
 
 .header-title {
-  margin-bottom: -0.15em;
+  margin-block-end: -0.15em;
 }

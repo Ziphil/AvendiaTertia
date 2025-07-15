@@ -15,7 +15,7 @@
 
 .paragraph-number {
   @include box(var(--gray-color), true);
-  margin-right: fix-em($bordered-blank-margin, 80%);
+  margin-inline-end: fix-em($bordered-blank-margin, 80%);
   &::before {
     content: attr(data-number);
   }

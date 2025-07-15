@@ -8,21 +8,21 @@
 $proof-horizontal-padding: 12rpx;
 
 .theorem {
-  margin-left: 0rpx - $main-horizontal-padding;
-  margin-right: 0rpx - $main-horizontal-padding;
-  padding: $block-vertical-padding $main-horizontal-padding;
+  padding-block: $block-vertical-padding;
   background-color: var(--block-background-color);
   --current-background-color: var(--block-background-color);
+  @include desktop {
+    margin-inline: 0rpx - $main-horizontal-padding;
+    padding-inline: $main-horizontal-padding;
+  }
   @include mobile {
-    margin-left: 0rpx - $main-smartphone-horizontal-padding;
-    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    padding-inline: $main-smartphone-horizontal-padding;
   }
 }
 
 .theorem-number-wrapper {
-  margin-right: $blank-margin;
+  margin-inline-end: $blank-margin;
   color: var(--blue-color);
   line-height: $line-height;
   float: left;
@@ -32,12 +32,12 @@ $proof-horizontal-padding: 12rpx;
 }
 
 .proof {
-  padding-left: $proof-horizontal-padding;
-  border-left: 3rpx var(--blue-color) double;
+  padding-inline-start: $proof-horizontal-padding;
+  border-inline-start: double 3rpx var(--blue-color);
 }
 
 .proof-label {
-  margin-right: $blank-margin;
+  margin-inline-end: $blank-margin;
   color: var(--blue-color);
   line-height: $line-height;
   float: left;

@@ -9,17 +9,17 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
 
 .quiz-list {
   @include justify;
-  margin-left: 0rpx - $main-horizontal-padding;
-  margin-right: 0rpx - $main-horizontal-padding;
-  padding: $block-vertical-padding $main-horizontal-padding;
+  padding-block: $block-vertical-padding;
   line-height: $line-height;
   background-color: var(--block-background-color);
   --current-background-color: var(--block-background-color);
+  @include desktop {
+    margin-inline: 0rpx - $main-horizontal-padding;
+    padding-inline: $main-horizontal-padding;
+  }
   @include mobile {
-    margin-left: 0rpx - $main-smartphone-horizontal-padding;
-    margin-right: 0rpx - $main-smartphone-horizontal-padding;  
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    padding-inline: $main-smartphone-horizontal-padding;
   }
 }
 
@@ -29,68 +29,69 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
 }
 
 .quiz-item {
-  margin-left: $bullet-width + $blank-margin;
+  margin-inline-start: $bullet-width + $blank-margin;
   &::before {
     @include icon-font;
     width: fix-em($bullet-width, 90%);
-    margin-right: fix-em($blank-margin, 90%);
-    margin-left: fix-em(0em - $bullet-width - $blank-margin, 90%);
+    margin-inline-end: fix-em($blank-margin, 90%);
+    margin-inline-start: fix-em(0em - $bullet-width - $blank-margin, 90%);
     font-size: 90%;
     color: var(--blue-color);
-    text-align: right;
+    text-align: end;
     display: inline-block;
     content: "\F0DA";
   }
 }
 
 .quiz-nested-item:not([data-unmarked]) {
-  margin-left: $quiz-nested-list-marker-width + $blank-margin;
+  margin-inline-start: $quiz-nested-list-marker-width + $blank-margin;
   &::before {
     @include icon-font;
     width: fix-em($quiz-nested-list-marker-width, 90%);
-    margin-right: fix-em($blank-margin, 90%);
-    margin-left: fix-em(0em - $quiz-nested-list-marker-width - $blank-margin, 90%);
+    margin-inline-end: fix-em($blank-margin, 90%);
+    margin-inline-start: fix-em(0em - $quiz-nested-list-marker-width - $blank-margin, 90%);
     font-size: 90%;
     color: var(--blue-color);
-    text-align: right;
+    text-align: end;
     display: inline-block;
     content: "\F061";
   }
 }
 
 .quiz-nested-item[data-unmarked] {
-  margin-left: $bullet-width + $blank-margin;
+  margin-inline-start: $bullet-width + $blank-margin;
 }
 
 .quiz-answer-item {
   &::before {
-    margin-right: $blank-margin;
+    margin-inline-end: $blank-margin;
     font-family: $special-font-family;
     color: var(--blue-color);
     content: "A.";
   }
 }
 
-.quiz-answer-item .quiz-masked {
-  display: none;
-}
-
-.quiz-answer-item:hover .quiz-masked {
-  display: inline;
+.quiz-masked {
+  .quiz-answer-item:not(:hover) & {
+    display: none;
+  }
+  .quiz-answer-item:hover & {
+    display: inline;
+  }
 }
 
 .quiz-answer-item .box {
-  margin-right: $bordered-blank-margin;
+  margin-inline-end: $bordered-blank-margin;
 }
 
 .quiz-blank {
   width: 4em;
-  padding: 0.1em 0em;
+  padding-block: 0.1em;
   font-family: $serif-font-family;
   color: var(--blue-color);
-  line-height: 100%;
+  line-height: 1;
   text-align: center;
-  border: 1rpx var(--blue-color) solid;
+  border: solid 1rpx var(--blue-color);
   display: inline-block;
   &::before {
     content: "?";
@@ -107,11 +108,11 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
   counter-increment: quiz-choice-list;
   display: inline;
   & +& {
-    margin-left: 30rpx;
+    margin-inline-start: 30rpx;
   }
   &::before {
     @include box(var(--blue-color), false);
-    margin-right: fix-em($bordered-blank-margin, 80%);
+    margin-inline-end: fix-em($bordered-blank-margin, 80%);
     content: counter(quiz-choice-list);
   }
 }

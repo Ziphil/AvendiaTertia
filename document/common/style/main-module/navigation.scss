@@ -5,7 +5,7 @@
 
 
 .navigation {
-  padding: 10rpx 0rpx;
+  padding-block: 10rpx;
   background-color: var(--header-background-color);
   @include mobile {
     width: 100%;
@@ -13,17 +13,19 @@
 }
 
 .navigation-inner {
-  width: $main-width;
   max-width: $main-max-width;
-  margin: 0rpx auto;
+  margin-inline: auto;
   line-height: $small-line-height;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include desktop {
+    width: $main-width;
+    padding-inline: 0rpx;
+  }
   @include mobile {
     width: 100%;
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    padding-inline: $main-smartphone-horizontal-padding;
     box-sizing: border-box;
   }
 }
@@ -37,11 +39,11 @@
   display: inline;
   &:not(:nth-child(1))::before {
     @include icon-font;
-    margin: 0em fix-em($blank-margin, 90%);
-    color: var(--blue-color);
+    margin-inline-end: fix-em($blank-margin, 90%);
     font-size: 90%;
-    opacity: 0.5;
+    color: var(--blue-color);
     line-height: 0;
+    opacity: 0.5;
     content: "\F101";
   }
   &:nth-child(1) >.navigation-link >* {
@@ -62,11 +64,10 @@
 }
 
 .navigation-version {
-  margin-left: 30rpx;
+  margin-inline-start: 30rpx;
   white-space: nowrap;
-  flex-grow: 0;
-  flex-shrink: 0;
+  flex: 0 0 auto;
   &[data-caution] {
-    color: hsl(307, 100%, 60%);
+    color: var(--red-color);
   }
 }

@@ -6,7 +6,7 @@
 
 
 .math-container {
-  margin: ($block-vertical-margin + $additional-block-vertical-margin - 2rpx) 0rpx;
+  margin-block: $block-vertical-margin + $additional-block-vertical-margin - 2rpx;
   display: flex;
   align-items: center;
   position: relative;
@@ -14,30 +14,31 @@
 
 .math-inner-container {
   @include scrollbar(0rpx, 0rpx, transparent, transparent);
-  margin: 0rpx auto;
+  margin-inline: auto;
+  line-height: 1;
   display: flex;
   align-items: baseline;
-  line-height: 1;
   overflow-x: auto;
   overflow-y: hidden;
 }
 
 .math {
-  margin: 0rpx auto;
-  padding: 2rpx 2rpx;
+  margin-inline: auto;
+  padding-block: 2rpx;
+  padding-inline: 2rpx;
   display: block;
 }
 
 .math-mark {
   @include box(var(--blue-color), true);
-  left: 0rpx;
-  position: absolute;
+  inset-inline-start: 0rpx;
   user-select: none;
+  position: absolute;
 }
 
 math-i:not(.fun):not(.rm)[data-cont="f"] {
-  padding-left: 0.15em;
-  padding-right: 0.1em;
+  padding-inline-start: 0.15em;
+  padding-inline-end: 0.1em;
 }
 
 math-i.tt {
@@ -53,6 +54,6 @@ math-o[data-cont=":"] {
 
 .ref[data-type="bibliography"] {
   font-size: 80%;
-  color: var(--blue-color);
   vertical-align: 0.3906em;
+  color: var(--blue-color);
 }

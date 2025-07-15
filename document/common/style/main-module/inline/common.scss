@@ -48,6 +48,10 @@
 }
 
 .code {
-  @extend .monospace;
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
+  font-weight: $monospace-font-weight;
+  letter-spacing: $monospace-letter-spacing;
   background-color: var(--block-background-color);
+  white-space: pre-wrap;
 }

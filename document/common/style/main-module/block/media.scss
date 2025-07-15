@@ -8,9 +8,8 @@
 .pdf {
   width: 100%;
   max-width: $main-max-width * 0.8;
+  margin-inline: auto;
   aspect-ratio: 1 / 1.4;
-  margin-left: auto;
-  margin-right: auto;
   display: block !important;
   box-sizing: border-box;
 }
@@ -18,8 +17,7 @@
 .slide {
   width: 100%;
   max-width: $main-max-width * 0.8;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   display: block;
   box-sizing: border-box;
   .speakerdeck-iframe {
@@ -31,9 +29,8 @@
 .youtube {
   width: 100%;
   max-width: $main-max-width * 0.8;
+  margin-inline: auto;
   aspect-ratio: 16 / 9;
-  margin-left: auto;
-  margin-right: auto;
   display: block;
   box-sizing: border-box;
   iframe {

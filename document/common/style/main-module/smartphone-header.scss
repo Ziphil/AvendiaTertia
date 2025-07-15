@@ -13,35 +13,37 @@
 }
 
 .header-left {
-  padding: 20rpx $main-smartphone-horizontal-padding;
+  padding-block: 20rpx;
+  padding-inline: $main-smartphone-horizontal-padding;
+  background-color: var(--blue-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--blue-color);
 }
 
 .header-right {
-  padding: 15rpx $main-smartphone-horizontal-padding;
+  padding-block: 15rpx;
+  padding-inline: $main-smartphone-horizontal-padding;
+  border-block-start: solid 6rpx var(--header-background-color);
+  background-color: var(--orange-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 6rpx var(--header-background-color) solid;
-  background-color: var(--orange-color);
 }
 
 .header-title {
-  margin-bottom: -0.15em;
-  font-family: $special-font-family;
+  margin-block-end: -0.15em;
   font-size: 400%;
+  font-family: $special-font-family;
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
 .header-title-version {
-  margin: 0em 0em 0em 0.1em;
-  font-size: 70%;
+  margin-inline-start: 0.1em;
   vertical-align: 0.5em;
+  font-size: 70%;
 }
 
 $header-list-vertical-gap: 10rpx;
@@ -49,27 +51,27 @@ $header-list-horizontal-gap: 10rpx;
 $header-item-height: 35rpx;
 
 .header-list {
+  row-gap: $header-list-vertical-gap;
   display: flex;
   flex-direction: column;
-  row-gap: $header-list-vertical-gap;
-  flex-grow: 1;
   position: relative;
+  flex-grow: 1;
   z-index: 0;
   container-name: header-list;
   container-type: inline-size;
 }
 
 .header-row {
+  column-gap: $header-list-horizontal-gap;
   display: flex;
   flex-direction: row;
-  column-gap: $header-list-horizontal-gap;
   justify-content: center;
 }
 
 .header-item {
-  padding: 0rpx 10rpx;
   width: calc((100cqi - #{$header-list-horizontal-gap} * 2) / 3);
   height: $header-item-height;
+  padding-inline: 10rpx;
   font-size: 120%;
   color: var(--black-orange-color);
   text-decoration: none;
@@ -80,12 +82,8 @@ $header-item-height: 35rpx;
   position: relative;
   z-index: 0;
   &::before {
-    top: 0rpx;
-    bottom: 0rpx;
-    left: 0rpx;
-    right: 0rpx;
+    inset: 0rpx;
     box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
-    background-position: 0% 0%;
     background-size: 100% 200%;
     background-image: linear-gradient(to bottom, var(--main-background-color) 50%, var(--white-orange-color) 50%);
     transform: skew($skew-angle);
@@ -93,6 +91,9 @@ $header-item-height: 35rpx;
     position: absolute;
     z-index: -2;
     content: "";
+  }
+  &:not(:hover)::before {
+    background-position: 0% 0%;
   }
   &:hover::before {
     background-position: 0% 100%;

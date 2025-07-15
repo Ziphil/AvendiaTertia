@@ -6,13 +6,15 @@
 
 
 .link {
-  color: var(--orange-color);
   text-decoration: none;
-  background-image: single-color(var(--orange-color));
   background-size: 100% 1rpx;
   background-position: left bottom;
   background-repeat: no-repeat;
   cursor: pointer;
+  &:not(:hover) {
+    color: var(--orange-color);
+    background-image: single-color(var(--orange-color));
+  }
   &:hover {
     color: var(--dark-orange-color);
     background-image: single-color(var(--dark-orange-color));

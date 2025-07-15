@@ -6,48 +6,52 @@
 
 
 .main {
-  width: $main-width;
   max-width: $main-max-width;
-  margin: 40rpx auto 0rpx auto;
-  padding: $main-vertical-padding $main-horizontal-padding;
-  box-sizing: content-box;
+  margin-block-start: 40rpx;
+  margin-block-end: 0rpx;
+  margin-inline: auto;
+  padding-block: $main-vertical-padding;
   background-color: var(--main-background-color);
   overflow: hidden;
   --current-background-color: var(--main-background-color);
+  @include desktop {
+    width: $main-width;
+    padding-inline: $main-horizontal-padding;
+    box-sizing: content-box;
+  }
   @include mobile {
     width: 100%;
-    padding-left: $main-smartphone-horizontal-padding;
-    padding-right: $main-smartphone-horizontal-padding;
+    padding-inline: $main-smartphone-horizontal-padding;
     box-sizing: border-box;
   }
 }
 
 .block[data-bottom-block-type="text"] +.block[data-top-block-type="text"] {
-  margin-top: $block-vertical-margin;
+  margin-block-start: $block-vertical-margin;
 }
 
 .block[data-bottom-block-type="text"][data-section] +.block[data-top-block-type="text"],
 .block[data-bottom-block-type="text"] +.block[data-top-block-type="text"][data-section] {
-  margin-top: $block-vertical-margin + $additional-section-vertical-margin;
+  margin-block-start: $block-vertical-margin + $additional-section-vertical-margin;
 }
 
 .block[data-bottom-block-type="text"] +.block[data-top-block-type="bordered"],
 .block[data-bottom-block-type="bordered"] +.block[data-top-block-type="text"] {
-  margin-top: $block-vertical-margin + $additional-block-vertical-margin;
+  margin-block-start: $block-vertical-margin + $additional-block-vertical-margin;
 }
 
 .block[data-bottom-block-type="text"][data-section] +.block[data-top-block-type="bordered"],
 .block[data-bottom-block-type="text"] +.block[data-top-block-type="bordered"][data-section],
 .block[data-bottom-block-type="bordered"][data-section] +.block[data-top-block-type="text"],
 .block[data-bottom-block-type="bordered"] +.block[data-top-block-type="text"][data-section] {
-  margin-top: $block-vertical-margin + $additional-block-vertical-margin + $additional-section-vertical-margin;
+  margin-block-start: $block-vertical-margin + $additional-block-vertical-margin + $additional-section-vertical-margin;
 }
 
 .block[data-bottom-block-type="bordered"] +.block[data-top-block-type="bordered"] {
-  margin-top: $block-vertical-margin + $additional-block-vertical-margin * 2;
+  margin-block-start: $block-vertical-margin + $additional-block-vertical-margin * 2;
 }
 
 .block[data-bottom-block-type="bordered"][data-section] +.block[data-top-block-type="bordered"] ,
 .block[data-bottom-block-type="bordered"] +.block[data-top-block-type="bordered"][data-section] {
-    margin-top: $block-vertical-margin + $additional-block-vertical-margin * 2 + $additional-section-vertical-margin;
+  margin-block-start: $block-vertical-margin + $additional-block-vertical-margin * 2 + $additional-section-vertical-margin;
 }

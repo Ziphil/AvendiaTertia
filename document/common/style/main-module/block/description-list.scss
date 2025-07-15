@@ -18,13 +18,13 @@ $description-dash-width: 1.1em;
 }
 
 .description-left {
-  margin-left: $bullet-width + $blank-margin;
-  margin-right: $blank-margin;
+  margin-inline-start: $bullet-width + $blank-margin;
+  margin-inline-end: $blank-margin;
   &::before {
     @include icon-font;
     width: fix-em($bullet-width, 90%);
-    margin-right: fix-em($blank-margin, 90%);
-    margin-left: fix-em(0em - $bullet-width - $blank-margin, 90%);
+    margin-inline-end: fix-em($blank-margin, 90%);
+    margin-inline-start: fix-em(0em - $bullet-width - $blank-margin, 90%);
     font-size: 90%;
     color: var(--blue-color);
     text-align: right;
@@ -35,10 +35,10 @@ $description-dash-width: 1.1em;
 
 .description-right {
   .description-list[data-type="desc"] & {
-    margin-left: $description-arrow-width + $blank-margin;
+    margin-inline-start: $description-arrow-width + $blank-margin;
   }
   .description-list[data-type="par"] & {
-    margin-left: $description-dash-width + $blank-margin;
+    margin-inline-start: $description-dash-width + $blank-margin;
   }
   &::before {
     color: var(--blue-color);
@@ -46,16 +46,16 @@ $description-dash-width: 1.1em;
     .description-list[data-type="desc"] & {
       @include icon-font;
       width: fix-em($description-arrow-width, 90%);
-      margin-right: fix-em($blank-margin, 90%);
-      margin-left: fix-em(0em - $description-arrow-width - $blank-margin, 90%);  
+      margin-inline-end: fix-em($blank-margin, 90%);
+      margin-inline-start: fix-em(0em - $description-arrow-width - $blank-margin, 90%);  
       font-size: 90%;
       display: inline-block;
       content: "\F105";
     }
     .description-list[data-type="par"] & {
       width: $description-dash-width;
-      margin-right: $blank-margin;
-      margin-left: 0em - $description-dash-width - $blank-margin;
+      margin-inline-end: $blank-margin;
+      margin-inline-start: 0em - $description-dash-width - $blank-margin;
       display: inline-block;
       content: "—";
     }
