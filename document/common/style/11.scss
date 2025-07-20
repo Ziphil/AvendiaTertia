@@ -20,7 +20,7 @@ body {
   @include text-size-adjust;
   @include fennese-scheme;
   margin: 0rpx;
-  padding-block: 40rpx;
+  padding-block-end: 40rpx;
   color: var(--text-color);
   font-family: $serif-font-family;
   font-weight: normal;
@@ -33,13 +33,21 @@ body {
 
 .navigation {
   min-width: 1000rpx;
-  padding-inline: $main-horizontal-padding;
-  margin-block-end: 40rpx;
+  padding-block: 40rpx;
   row-gap: 10rpx;
   column-gap: 10rpx;
+  inset-block-start: 0rpx;
+  background-image: linear-gradient(to bottom, var(--page-background-color) 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, rgb(0 0 0 / 1) 70%, rgb(0 0 0 / 0) 100%);
+  mask-composite: intersect;
+  backdrop-filter: blur(3rpx);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: sticky;
+  @include desktop {
+    padding-inline: $main-horizontal-padding;
+  }
   @include mobile {
     padding-inline: $main-smartphone-horizontal-padding;
   }
@@ -76,10 +84,12 @@ body {
 
 .word-table {
   min-width: 1000rpx;
-  padding-inline: $main-horizontal-padding;
   row-gap: 5rpx;
   display: grid;
   grid-template-columns: max-content max-content repeat(8, 1fr);
+  @include desktop {
+    padding-inline: $main-horizontal-padding;
+  }
   @include mobile {
     padding-inline: $main-smartphone-horizontal-padding;
   }
