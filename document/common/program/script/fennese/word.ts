@@ -24,9 +24,18 @@ export interface Dictionary {
 }
 
 
+const API_URLS = {
+  zpdic: "https://zpdic.ziphil.com/api/v0/dictionary/fennese/words",
+  google: "https://script.google.com/macros/s/AKfycbxXib3bXPFx0eYP_No0Kb2YVtFriB6t2KGqiRnLoeIx3DRtcgjpBbf5aWgN0Vhmqg/exec"
+};
+
 export async function getDictionary(): Promise<Dictionary> {
+  const params = new URLSearchParams(window.location.search);
+  const apiKey = params.get("key");
   const fetchRawWords = async function (page: number): Promise<[Array<any>, number]> {
-    const response = await fetch(`https://script.google.com/macros/s/AKfycbxXib3bXPFx0eYP_No0Kb2YVtFriB6t2KGqiRnLoeIx3DRtcgjpBbf5aWgN0Vhmqg/exec?text=&skip=${page * 100}&limit=100`);
+    const response = (!!apiKey)
+      ? await fetch(`${API_URLS.zpdic}?text=&skip=${page * 100}&limit=100`, {headers: {"X-Api-Key": apiKey}})
+      : await fetch(`${API_URLS.google}?text=&skip=${page * 100}&limit=100`);
     const json = await response.json();
     return [json["words"], json["total"]];
   };
