@@ -153,6 +153,8 @@ export class AvendiaGenerator {
         await this.transformNormalScss(documentPath, outputPath, documentLanguage, outputLanguage);
       } else if (extension === "ts") {
         await this.transformNormalTs(documentPath, outputPath, documentLanguage, outputLanguage);
+      } else if (extension === "cgi") {
+        await this.transformNormalRaw(documentPath, outputPath, documentLanguage, outputLanguage);
       }
     }));
   }
@@ -226,6 +228,12 @@ export class AvendiaGenerator {
     } as const;
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await createWebpackPromise(configs);
+  }
+
+  private async transformNormalRaw(documentPath: string, outputPath: string, documentLanguage: AvendiaLanguage, outputLanguage: AvendiaOutputLanguage): Promise<void> {
+    const inputString = await fs.readFile(documentPath, {encoding: "utf-8"});
+    await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
+    await fs.writeFile(outputPath, inputString, {encoding: "utf-8"});
   }
 
   private async uploadNormal(documentPath: string, documentLanguage: AvendiaLanguage): Promise<void> {
