@@ -38,7 +38,7 @@ body {
   column-gap: 10rpx;
   inset-block-start: 0rpx;
   background-image: linear-gradient(to bottom, var(--page-background-color) 0%, transparent 100%);
-  mask-image: linear-gradient(to bottom, rgb(0 0 0 / 1) 70%, rgb(0 0 0 / 0) 100%);
+  mask-image: linear-gradient(to bottom, rgb(0 0 0 / 1) calc(100% - 40rpx), rgb(0 0 0 / 0) 100%);
   mask-composite: intersect;
   backdrop-filter: blur(3rpx);
   display: flex;
