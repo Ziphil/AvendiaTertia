@@ -216,11 +216,11 @@ body {
 }
 
 .affix-table {
-  width: 800rpx;
+  width: 900rpx;
   row-gap: 5rpx;
   column-gap: 10rpx;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-self: center;
 }
 
@@ -231,6 +231,7 @@ body {
 }
 
 .affix-cell {
+  min-width: 0rpx;
   padding-block: 5rpx;
   padding-inline: 10rpx;
   row-gap: 3rpx;
