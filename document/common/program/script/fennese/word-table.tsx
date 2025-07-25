@@ -1,9 +1,9 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
+import {NormalWord, PATTERN_CATEGORIES, PATTERN_TYPES, RADICALS, Root, Word} from "ogorasso";
 import {ReactElement} from "react";
-import DATA from "./data.json";
-import {Dictionary, WORD_PATTERN_CATEGORY, WORD_PATTERN_TYPE, Word, WordRoot} from "./word";
+import {Dictionary} from "./word";
 import WordRow from "./word-row";
 
 
@@ -20,21 +20,21 @@ const WordTable = function ({
       <div className="word-header-row">
         <div/>
         <div/>
-        {WORD_PATTERN_CATEGORY.map((category) => WORD_PATTERN_TYPE.map((type) => (
-          <div key={category + "-" + type} className="word-header-cell">
+        {PATTERN_CATEGORIES.map((patternCategory) => PATTERN_TYPES.map((patternType) => (
+          <div key={patternCategory + "-" + patternType} className="word-header-cell">
             <span>
-              {(category === "verb") ? (
+              {(patternCategory === "verb") ? (
                 <>用言 </>
               ) : (
                 <>体言 </>
               )}
-              {(type === "ground") ? (
+              {(patternType === "ground") ? (
                 <>G 型</>
-              ) : (type === "doubleMedial") ? (
+              ) : (patternType === "doubleMedial") ? (
                 <>D<sub className="sub">2</sub> 型</>
-              ) : (type === "doubleFinal") ? (
+              ) : (patternType === "doubleFinal") ? (
                 <>D<sub className="sub">3</sub> 型</>
-              ) : (type === "doubleInitial") ? (
+              ) : (patternType === "doubleInitial") ? (
                 <>D<sub className="sub">1</sub> 型</>
               ) : null}
             </span>
@@ -55,31 +55,33 @@ const WordTable = function ({
 };
 
 
-function groupWords(words: Array<Word>): Array<[string, {root: WordRoot | null, words: Array<Word>, first: boolean}]> {
-  const groupedWords = new Map<string, {root: WordRoot | null, words: Array<Word>, first: boolean}>();
+function groupWords(words: Array<Word>): Array<[string, {root: Root, words: Array<NormalWord>, first: boolean}]> {
+  const groupedWords = new Map<string, {root: Root, words: Array<NormalWord>, first: boolean}>();
   for (const word of words) {
-    const rootString = word.root?.join("-") ?? "";
-    if (!groupedWords.has(rootString)) {
-      groupedWords.set(rootString, {root: word.root, words: [], first: false});
+    if (word.kind === "normal" && word.anatomy !== null) {
+      const rootString = word.anatomy.root.join("-");
+      if (!groupedWords.has(rootString)) {
+        groupedWords.set(rootString, {root: word.anatomy.root, words: [], first: false});
+      }
+      groupedWords.get(rootString)!.words.push(word);
     }
-    groupedWords.get(rootString)!.words.push(word);
   }
   const groupedWordEntries = Array.from(groupedWords.entries());
   groupedWordEntries.sort(([, {root: firstRoot}], [, {root: secondRoot}]) => {
     if (firstRoot !== null && secondRoot !== null) {
-      const firstRootIndices = firstRoot.map((radical) => DATA.alphabets.indexOf(radical).toString().padStart(2, "0"));
-      const secondRootIndices = secondRoot.map((radical) => DATA.alphabets.indexOf(radical).toString().padStart(2, "0"));
+      const firstRootIndices = firstRoot.map((radical) => RADICALS.indexOf(radical).toString().padStart(2, "0"));
+      const secondRootIndices = secondRoot.map((radical) => RADICALS.indexOf(radical).toString().padStart(2, "0"));
       return firstRootIndices.join("-").localeCompare(secondRootIndices.join("-"));
     } else {
       return 0;
     }
   });
-  let currentRadical = "";
+  let currentInitialRadical = "";
   for (const [, wordSpec] of groupedWordEntries) {
     if (wordSpec.root !== null) {
-      const radical = wordSpec.root[0];
-      if (radical !== currentRadical) {
-        currentRadical = radical;
+      const initialRadical = wordSpec.root[0];
+      if (initialRadical !== currentInitialRadical) {
+        currentInitialRadical = initialRadical;
         wordSpec.first = true;
       }
     }

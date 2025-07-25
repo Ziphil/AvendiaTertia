@@ -1,16 +1,16 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
+import {NormalWord} from "ogorasso";
 import {ReactElement} from "react";
 import {data} from "../util/data";
-import {Word} from "./word";
 
 
 const WordView = function ({
   word,
   basic
 }: {
-  word: Word,
+  word: NormalWord,
   basic: boolean
 }): ReactElement {
 
@@ -18,8 +18,8 @@ const WordView = function ({
 
   const node = (
     <div className="word-view" {...data({basic})}>
-      <a className="word-view-name sans" href={dictionaryUrl} target="_blank" rel="noopener noreferrer">{word.name}</a>
-      <div className="word-view-equivalent">{word.equivalents.join(", ")}</div>
+      <a className="word-view-name sans" href={dictionaryUrl} target="_blank" rel="noopener noreferrer">{word.form}</a>
+      <div className="word-view-equivalent">{word.equivalents.map((equivalent) => equivalent.terms[0]).join(", ")}</div>
     </div>
   );
   return node;
