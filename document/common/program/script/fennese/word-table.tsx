@@ -16,7 +16,7 @@ const WordTable = function ({
   const groupedWords = groupWords(dictionary.words);
 
   const node = (
-    <div className="word-table">
+    <article className="word-table">
       <div className="word-header-row">
         <div/>
         <div/>
@@ -42,13 +42,13 @@ const WordTable = function ({
         )))}
       </div>
       {groupedWords.map(([rootString, {root, words, first}]) => (
-        (root !== null) && <WordRow key={rootString} root={root} words={words} first={first}/>
+        <WordRow key={rootString} root={root} words={words} first={first}/>
       ))}
       <div className="word-footer-row">
         <div className="root-count">{dictionary.rootCount}</div>
         <div className="word-count">{dictionary.wordCount}</div>
       </div>
-    </div>
+    </article>
   );
   return node;
 
