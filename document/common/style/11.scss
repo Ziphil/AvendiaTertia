@@ -87,6 +87,8 @@ body {
   row-gap: 40rpx;
   display: flex;
   flex-direction: column;
+  container-name: root;
+  container-type: inline-size;
   @include desktop {
     padding-inline: $main-horizontal-padding;
   }
@@ -215,13 +217,25 @@ body {
   grid-column: 10;
 }
 
+.affix-table-container {
+  column-gap: 60rpx;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .affix-table {
-  width: 900rpx;
   row-gap: 5rpx;
   column-gap: 10rpx;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-self: center;
+  grid-template-columns: repeat(var(--column-count), calc((100cqw - 40rpx * 2 - 84rpx) / 8));
+  flex: 0 0 auto;
+  &[data-count="4"] {
+    --column-count: 4;
+  }
+  &[data-count="2"] {
+    --column-count: 2;
+  }
 }
 
 .affix-row {
