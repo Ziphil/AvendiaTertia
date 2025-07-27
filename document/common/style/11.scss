@@ -133,7 +133,7 @@ body {
 .word-root {
   margin-block: -5rpx;
   padding-block: 5rpx;
-  padding-inline: 10rpx;
+  padding-inline: 5rpx;
   color: var(--main-background-color);
   background-color: var(--blue-color);
   display: flex;
@@ -228,7 +228,7 @@ body {
   row-gap: 5rpx;
   column-gap: 10rpx;
   display: grid;
-  grid-template-columns: repeat(var(--column-count), calc((100cqw - 40rpx * 2 - 84rpx) / 8));
+  grid-template-columns: repeat(var(--column-count), calc((100cqw - 40rpx * 2 - 117rpx) / 8));
   flex: 0 0 auto;
   &[data-count="4"] {
     --column-count: 4;
