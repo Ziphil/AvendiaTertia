@@ -45,6 +45,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   position: sticky;
+  z-index: 10;
   @include desktop {
     padding-inline: $main-horizontal-padding;
   }
