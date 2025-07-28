@@ -13,7 +13,7 @@ const WordTable = function ({
   dictionary: Dictionary
 }): ReactElement {
 
-  const groupedWords = groupWords(dictionary.words);
+  const wordSpecs = groupWords(dictionary.words);
 
   const node = (
     <article className="word-table">
@@ -41,8 +41,8 @@ const WordTable = function ({
           </div>
         )))}
       </div>
-      {groupedWords.map(([rootString, {root, words, first}]) => (
-        <WordRow key={rootString} root={root} words={words} first={first}/>
+      {wordSpecs.map(([rootNumber, {root, words, foreign, first}]) => (
+        <WordRow key={rootNumber} root={root} words={words} foreign={foreign} first={first}/>
       ))}
       <div className="word-footer-row">
         <div className="root-count">{dictionary.rootCount}</div>
@@ -55,19 +55,31 @@ const WordTable = function ({
 };
 
 
-function groupWords(words: Array<Word>): Array<[string, {root: Root, words: Array<NormalWord>, first: boolean}]> {
-  const groupedWords = new Map<string, {root: Root, words: Array<NormalWord>, first: boolean}>();
+function getForeignRootNumbers(words: Array<Word>): Set<number> {
+  const foreignRootNumbers = new Set<number>();
   for (const word of words) {
-    if (word.kind === "normal" && word.anatomy !== null) {
-      const rootString = word.anatomy.root.join("-");
-      if (!groupedWords.has(rootString)) {
-        groupedWords.set(rootString, {root: word.anatomy.root, words: [], first: false});
-      }
-      groupedWords.get(rootString)!.words.push(word);
+    if (word.kind === "root" && word.foreign) {
+      foreignRootNumbers.add(word.number);
     }
   }
-  const groupedWordEntries = Array.from(groupedWords.entries());
-  groupedWordEntries.sort(([, {root: firstRoot}], [, {root: secondRoot}]) => {
+  return foreignRootNumbers;
+}
+
+function groupWords(words: Array<Word>): Array<[number, WordSpec]> {
+  const wordSpecs = new Map<number, WordSpec>();
+  const foreignRootNumbers = getForeignRootNumbers(words);
+  for (const word of words) {
+    if (word.kind === "normal" && word.anatomy !== null) {
+      const rootNumber = word.anatomy.number;
+      if (!wordSpecs.has(rootNumber)) {
+        const foreign = foreignRootNumbers.has(rootNumber);
+        wordSpecs.set(rootNumber, {root: word.anatomy.root, words: [], foreign, first: false});
+      }
+      wordSpecs.get(rootNumber)!.words.push(word);
+    }
+  }
+  const wordSpecEntries = Array.from(wordSpecs.entries());
+  wordSpecEntries.sort(([, {root: firstRoot}], [, {root: secondRoot}]) => {
     if (firstRoot !== null && secondRoot !== null) {
       const firstRootIndices = firstRoot.map((radical) => RADICALS.indexOf(radical).toString().padStart(2, "0"));
       const secondRootIndices = secondRoot.map((radical) => RADICALS.indexOf(radical).toString().padStart(2, "0"));
@@ -77,7 +89,7 @@ function groupWords(words: Array<Word>): Array<[string, {root: Root, words: Arra
     }
   });
   let currentInitialRadical = "";
-  for (const [, wordSpec] of groupedWordEntries) {
+  for (const [, wordSpec] of wordSpecEntries) {
     if (wordSpec.root !== null) {
       const initialRadical = wordSpec.root[0];
       if (initialRadical !== currentInitialRadical) {
@@ -86,7 +98,14 @@ function groupWords(words: Array<Word>): Array<[string, {root: Root, words: Arra
       }
     }
   }
-  return groupedWordEntries;
+  return wordSpecEntries;
 }
+
+type WordSpec = {
+  root: Root,
+  words: Array<NormalWord>,
+  foreign: boolean,
+  first: boolean
+};
 
 export default WordTable;

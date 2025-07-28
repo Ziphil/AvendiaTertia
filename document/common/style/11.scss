@@ -116,6 +116,9 @@ body {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 2 / -1;
+  &[data-foreign] {
+    opacity: 0.3;
+  }
 }
 
 .word-initial-radical {

@@ -10,10 +10,12 @@ import WordCell from "./word-cell";
 const WordRow = function ({
   root,
   words,
+  foreign,
   first
 }: {
   root: Root,
   words: Array<NormalWord>,
+  foreign: boolean,
   first: boolean
 }): ReactElement {
 
@@ -22,7 +24,7 @@ const WordRow = function ({
       <div className="word-initial-radical" {...data({first})}>
         <span className="sans">{(first) ? root[0] : null}</span>
       </div>
-      <div className="word-row-main">
+      <div className="word-row-main" {...data({foreign})}>
         <div className="word-root">
           <span className="word-root-radical sans">{root[0]}</span>
           <span className="word-root-separator">-</span>
