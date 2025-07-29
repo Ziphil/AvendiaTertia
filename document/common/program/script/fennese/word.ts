@@ -22,7 +22,7 @@ export async function getDictionary(): Promise<Dictionary> {
   const apiKey = params.get("key");
   const rawWords = (!!apiKey) ? await fetchRawWordsFromApi(apiKey) : await fetchRawWordsFromFile();
   const words = rawWords.map(convertWord);
-  const rootCount = words.filter((word) => word.kind === "root").length;
+  const rootCount = words.filter((word) => word.kind === "root" && !word.foreign).length;
   const wordCount = words.filter((word) => word.kind === "normal").length;
   console.log(`Words fetched from api: ${rootCount} roots, ${wordCount} words`);
   return {words, rootCount, wordCount};
