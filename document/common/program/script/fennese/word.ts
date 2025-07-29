@@ -14,16 +14,23 @@ export interface Dictionary {
 
 const API_URLS = {
   zpdic: "https://zpdic.ziphil.com/api/v0/dictionary/fennese/words",
-  google: "https://script.google.com/macros/s/AKfycbxXib3bXPFx0eYP_No0Kb2YVtFriB6t2KGqiRnLoeIx3DRtcgjpBbf5aWgN0Vhmqg/exec"
+  google: "https://script.google.com/macros/s/AKfycbxsOZxTOmlYYrr6Mfw5n0_ZevxblJYQB42nBcswi1oVY-l__w_i8KmhMZFvTlI5pLVA/exec"
 };
 
 export async function getDictionary(): Promise<Dictionary> {
   const params = new URLSearchParams(window.location.search);
   const apiKey = params.get("key");
+  const rawWords = (!!apiKey) ? await fetchRawWordsFromApi(apiKey) : await fetchRawWordsFromFile();
+  const words = rawWords.map(convertWord);
+  const rootCount = words.filter((word) => word.kind === "root").length;
+  const wordCount = words.filter((word) => word.kind === "normal").length;
+  console.log(`Words fetched from api: ${rootCount} roots, ${wordCount} words`);
+  return {words, rootCount, wordCount};
+}
+
+export async function fetchRawWordsFromApi(apiKey: string): Promise<Array<any>> {
   const fetchRawWords = async function (page: number): Promise<[Array<any>, number]> {
-    const response = (!!apiKey)
-      ? await fetch(`${API_URLS.zpdic}?text=&skip=${page * 100}&limit=100`, {headers: {"X-Api-Key": apiKey}})
-      : await fetch(`${API_URLS.google}?text=&skip=${page * 100}&limit=100`);
+    const response = await fetch(`${API_URLS.zpdic}?text=&skip=${page * 100}&limit=100`, {headers: {"X-Api-Key": apiKey}});
     const json = await response.json();
     return [json["words"], json["total"]];
   };
@@ -33,9 +40,11 @@ export async function getDictionary(): Promise<Dictionary> {
     return lastRawWords;
   }));
   const rawWords = [...firstRawWords, ...lastRawWords.flat()];
-  const words = rawWords.map(convertWord);
-  const rootCount = words.filter((word) => word.kind === "root").length;
-  const wordCount = words.filter((word) => word.kind === "normal").length;
-  console.log(`Words fetched from api: ${rootCount} roots, ${wordCount} words`);
-  return {words, rootCount, wordCount};
+  return rawWords;
+}
+
+export async function fetchRawWordsFromFile(): Promise<Array<any>> {
+  const response = await fetch(API_URLS.google);
+  const json = await response.json();
+  return json["words"];
 }
