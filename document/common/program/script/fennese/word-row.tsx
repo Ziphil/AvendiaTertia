@@ -29,8 +29,12 @@ const WordRow = function ({
           <span className="word-root-radical sans">{root[0]}</span>
           <span className="word-root-separator">-</span>
           <span className="word-root-radical sans">{root[1]}</span>
-          <span className="word-root-separator">-</span>
-          <span className="word-root-radical sans">{root[2]}</span>
+          {(root.length > 2) && (
+            <Fragment>
+              <span className="word-root-separator">-</span>
+              <span className="word-root-radical sans">{root[2]}</span>
+            </Fragment>
+          )}
           {(root.length > 3) && (
             <Fragment>
               <span className="word-root-separator">-</span>

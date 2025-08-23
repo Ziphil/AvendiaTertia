@@ -30,7 +30,7 @@ const AffixTable = function ({
                 ) : (affixType === "postthematic") ? (
                   <>幹母音後</>
                 ) : (affixType === "poststem") ? (
-                  <>語幹後</>
+                  <>語末</>
                 ) : null}
               </span>
             </div>
