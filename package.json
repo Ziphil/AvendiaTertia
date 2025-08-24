@@ -91,7 +91,7 @@
     "jquery": "^3.6.0",
     "jsdom": "^26.1.0",
     "localforage": "^1.10.0",
-    "ogorasso": "^0.1.0",
+    "ogorasso": "^0.2.0",
     "parsimmon": "^1.18.1",
     "process": "^0.11.10",
     "react": "^18.2.0",

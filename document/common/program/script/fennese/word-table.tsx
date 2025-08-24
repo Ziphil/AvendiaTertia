@@ -69,11 +69,11 @@ function groupWords(words: Array<Word>): Array<[number, WordSpec]> {
   const wordSpecs = new Map<number, WordSpec>();
   const foreignRootNumbers = getForeignRootNumbers(words);
   for (const word of words) {
-    if (word.kind === "normal" && word.anatomy !== null) {
-      const rootNumber = word.anatomy.number;
+    if (word.kind === "normal" && word.anatomy?.kind === "simplex") {
+      const rootNumber = word.anatomy.root.number;
       if (!wordSpecs.has(rootNumber)) {
         const foreign = foreignRootNumbers.has(rootNumber);
-        wordSpecs.set(rootNumber, {root: word.anatomy.root, words: [], foreign, first: false});
+        wordSpecs.set(rootNumber, {root: word.anatomy.root.root, words: [], foreign, first: false});
       }
       wordSpecs.get(rootNumber)!.words.push(word);
     }
@@ -90,12 +90,10 @@ function groupWords(words: Array<Word>): Array<[number, WordSpec]> {
   });
   let currentInitialRadical = "";
   for (const [, wordSpec] of wordSpecEntries) {
-    if (wordSpec.root !== null) {
-      const initialRadical = wordSpec.root[0];
-      if (initialRadical !== currentInitialRadical) {
-        currentInitialRadical = initialRadical;
-        wordSpec.first = true;
-      }
+    const initialRadical = wordSpec.root[0];
+    if (initialRadical !== currentInitialRadical) {
+      currentInitialRadical = initialRadical;
+      wordSpec.first = true;
     }
   }
   return wordSpecEntries;

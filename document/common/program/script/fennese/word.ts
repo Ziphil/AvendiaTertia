@@ -13,7 +13,7 @@ export interface Dictionary {
 
 
 const API_URLS = {
-  zpdic: "https://zpdic.ziphil.com/api/v0/dictionary/fennese/words",
+  zpdic: "https://zpdic.ziphil.com/api/v1/dictionary/fennese/words",
   google: "https://script.google.com/macros/s/AKfycbxsOZxTOmlYYrr6Mfw5n0_ZevxblJYQB42nBcswi1oVY-l__w_i8KmhMZFvTlI5pLVA/exec"
 };
 
@@ -25,6 +25,7 @@ export async function getDictionary(): Promise<Dictionary> {
   const rootCount = words.filter((word) => word.kind === "root" && !word.foreign).length;
   const wordCount = words.filter((word) => word.kind === "normal").length;
   console.log(`Words fetched from api: ${rootCount} roots, ${wordCount} words`);
+  console.log(words);
   return {words, rootCount, wordCount};
 }
 

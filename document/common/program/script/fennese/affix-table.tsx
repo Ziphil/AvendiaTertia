@@ -23,13 +23,13 @@ const AffixTable = function ({
           {AFFIX_TYPES.map((affixType) => (
             <div key={affixType} className="affix-header-cell">
               <span>
-                {(affixType === "prestem") ? (
+                {(affixType === "prefixal") ? (
                   <>語幹前</>
                 ) : (affixType === "prethematic") ? (
                   <>幹母音前</>
                 ) : (affixType === "postthematic") ? (
                   <>幹母音後</>
-                ) : (affixType === "poststem") ? (
+                ) : (affixType === "suffixal") ? (
                   <>語末</>
                 ) : null}
               </span>
@@ -40,7 +40,7 @@ const AffixTable = function ({
           {AFFIX_TYPES.map((affixType) => (
             <div key={affixType} className="affix-cell">
               {affixWords[affixType].map((word) => (
-                <AffixView key={word.toString()} word={word}/>
+                <AffixView key={word.number} word={word}/>
               ))}
             </div>
           ))}
@@ -66,7 +66,7 @@ const AffixTable = function ({
           {ADDITIONAL_TYPES.map((affixType) => (
             <div key={affixType} className="affix-cell">
               {affixWords[affixType].map((word) => (
-                <AffixView key={word.toString()} word={word}/>
+                <AffixView key={word.number} word={word}/>
               ))}
             </div>
           ))}
@@ -79,41 +79,37 @@ const AffixTable = function ({
 };
 
 
-const AFFIX_TYPES = ["prestem", "prethematic"] as const;
+const AFFIX_TYPES = ["prefixal", "prethematic"] as const;
 const ADDITIONAL_TYPES = ["preposition", "special", "particle"] as const;
 
 type AdditionalType = (typeof ADDITIONAL_TYPES)[number];
 
 function getAffixWords(words: Array<Word>): Record<AffixType, Array<AffixWord>> & Record<AdditionalType, Array<NormalWord>> {
   const affixWords = {
-    prestem: [] as Array<AffixWord>,
+    prefixal: [] as Array<AffixWord>,
     prethematic: [] as Array<AffixWord>,
     postthematic: [] as Array<AffixWord>,
-    poststem: [] as Array<AffixWord>,
+    suffixal: [] as Array<AffixWord>,
     preposition: [] as Array<NormalWord>,
     special: [] as Array<NormalWord>,
     particle: [] as Array<NormalWord>
   };
   for (const word of words) {
     if (word.kind === "affix") {
-      const affixType = getAffixType(word.affix);
+      const affixType = getAffixType(word.spelling);
       if (affixType !== null) {
         affixWords[affixType].push(word);
       }
-    } else if (word.kind === "normal" && word.equivalents[0]?.titles[0] === "前置詞") {
+    } else if (word.kind === "normal" && word.sections[0]?.equivalents[0]?.titles[0] === "前置詞") {
       affixWords.preposition.push(word);
-    } else if (word.kind === "normal" && word.equivalents[0]?.titles[0] === "特殊詞") {
+    } else if (word.kind === "normal" && word.sections[0]?.equivalents[0]?.titles[0] === "特殊詞") {
       affixWords.special.push(word);
-    } else if (word.kind === "normal" && word.equivalents[0]?.titles[0] === "小詞") {
+    } else if (word.kind === "normal" && word.sections[0]?.equivalents[0]?.titles[0] === "小詞") {
       affixWords.particle.push(word);
     }
   }
   for (const affixType of [...AFFIX_TYPES, ...ADDITIONAL_TYPES]) {
-    affixWords[affixType].sort((first, second) => {
-      const firstForm = "affix" in first ? first.affix : first.form;
-      const secondForm = "affix" in second ? second.affix : second.form;
-      return firstForm.length - secondForm.length;
-    });
+    affixWords[affixType].sort((first, second) => first.spelling.length - second.spelling.length);
   }
   return affixWords;
 }
