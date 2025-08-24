@@ -237,6 +237,9 @@ body {
   &[data-count="4"] {
     --column-count: 4;
   }
+  &[data-count="3"] {
+    --column-count: 3;
+  }
   &[data-count="2"] {
     --column-count: 2;
   }
