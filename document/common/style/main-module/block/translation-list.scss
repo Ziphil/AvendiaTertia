@@ -12,11 +12,11 @@ $translation-list-column-gap: 15px;
   column-gap: $translation-list-column-gap * 2;
   line-height: $line-height;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 9fr 11fr;
   position: relative;
   &::before {
     inset-block: 0rpx;
-    inset-inline-start: 50%;
+    inset-inline-start: calc((100% - #{$translation-list-column-gap * 2}) * 0.45 + #{$translation-list-column-gap});
     border-inline-end: solid 1rpx var(--blue-color);
     position: absolute;
     content: "";
