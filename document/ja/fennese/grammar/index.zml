@@ -5,16 +5,17 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## tpt まで使用
+  ## tpv まで使用
   \hb<初めに>
   \pb<
     \ab|href="16.html",ignore|<初めに>
     \ab|href="13.html",ignore|<目次>
     \ab|href="14.html",ignore|<索引>
   >
-  \hb<音韻論>
+  \hb<音韻論と正書法>
   \pb<
-    \ab|href="1.html"|<文字と音素>
+    \ab|href="1.html"|<音素>
+    \ab|href="25.html"|<文字>
     \ab|href="18.html"|<表層形への変換規則> 
   >
   \hb<形態論>
