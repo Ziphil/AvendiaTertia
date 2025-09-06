@@ -6,6 +6,14 @@ import TRANSLATIONS from "~/template/translations.json";
 
 const manager = new AvendiaTemplateManager();
 
+function getVersionLatest(content: string, scheme?: string): boolean {
+  if (scheme === "shaleian") {
+    return content === "*" || !!content.match(/(7\s*代|Version\s*([0-9\.]+–)?7)\s*$/) || !!content.match(/(7\s*代\s*2\s*期|Version\s*([0-9\.]+–)?7\.2)\s*$/);
+  } else {
+    return true;
+  }
+}
+
 manager.registerElementFactory("navigation", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const path = transformer.variables.path;
@@ -64,10 +72,11 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
 
 manager.registerElementRule("ver", "navigation", (transformer, document, element) => {
   const self = document.createDocumentFragment();
+  const scheme = transformer.variables.scheme;
   self.appendElement("div", (self) => {
     self.addClassName("navigation-version");
     const content = element.textContent;
-    if (content === "*" || content?.match(/(7\s*代|Version\s*([0-9\.]+–)?7)\s*$/) || content?.match(/(7\s*代\s*2\s*期|Version\s*([0-9\.]+–)?7\.2)\s*$/)) {
+    if (content && getVersionLatest(content, scheme)) {
       transformer.variables.version = content;
       transformer.variables.latest = true;
     } else {
