@@ -46,6 +46,18 @@ manager.registerElementRule("rd", "page", (transformer, document, element) => {
   return self;
 });
 
+manager.registerElementRule("sbr", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("superbreviation");
+    self.appendElement("span", (self) => {
+      self.addClassName("superbreviation-main");
+      self.appendChild(transformer.apply());
+    });
+  });
+  return self;
+});
+
 manager.registerElementRule("box", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {

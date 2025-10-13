@@ -25,6 +25,27 @@
   @include box(var(--gray-color), true, true);
 }
 
+.superbreviation {
+  min-width: 1em;
+  display: inline-block;
+}
+
+.superbreviation-main {
+  padding-inline: 0.1em;
+  margin-block-end: -1.05em;
+  line-height: 1;
+  text-align: center;
+  display: block;
+}
+
+.superbreviation::after {
+  width: 100%;
+  border-block-start: 0.06em solid currentcolor;
+  vertical-align: 0.15em;
+  display: inline-flex;
+  content: "";
+}
+
 .box {
   margin-inline: 0.15em;
   @include box(var(--blue-color), false);
