@@ -66,11 +66,13 @@ body {
   background-color: var(--page-background-color);
   overflow-x: auto;
   overflow-y: scroll;
-  &[data-scheme="default"],
   &[data-scheme="shaleian"] {
     @include shaleian-scheme;
   }
   &[data-scheme="fennese"] {
     @include fennese-scheme;
+  }
+  &[data-scheme="default"] {
+    @include default-scheme;
   }
 }
