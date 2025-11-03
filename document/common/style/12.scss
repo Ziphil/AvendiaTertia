@@ -53,25 +53,23 @@ body {
   }
   @include small-screen {
     grid-template-columns: 1fr;
-    grid-template-rows: 5fr 5fr 3fr;
+    grid-template-rows: 5fr 5fr 4fr;
   }
 }
 
 .shaleian {
   @include shaleian-scheme;
   color: var(--text-color);
-  background-color: var(--page-background-color);
+  background-image: radial-gradient(circle at center, var(--page-background-color) 20%, var(--page-dark-background-color));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   @include large-screen {
-    row-gap: 60rpx;
     grid-row: 1 / span 1;
     grid-column: 1 / span 1;
   }
   @include small-screen {
-    row-gap: 30rpx;
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
   }
@@ -131,18 +129,16 @@ body {
 .fennese {
   @include fennese-scheme;
   color: var(--text-color);
-  background-color: var(--page-background-color);
+  background-image: radial-gradient(circle at center, var(--page-background-color) 20%, var(--page-dark-background-color));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   @include large-screen {
-    row-gap: 60rpx;
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
   }
   @include small-screen {
-    row-gap: 30rpx;
     grid-row: 2 / span 1;
     grid-column: 1 / -1;
   }
@@ -200,7 +196,7 @@ body {
 .other {
   @include default-scheme;
   color: var(--text-color);
-  background-color: var(--page-background-color);
+  background-image: radial-gradient(circle at center, var(--page-background-color) 20%, var(--page-dark-background-color));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,7 +207,6 @@ body {
     grid-column: 1 / -1;
   }
   @include small-screen {
-    row-gap: 30rpx;
     flex-direction: column;
     grid-row: 3 / span 1;
     grid-column: 1 / -1;
@@ -251,6 +246,7 @@ body {
 
 .link {
   padding-inline: 40rpx;
+  position: relative;
   overflow: hidden;
 }
 
@@ -268,6 +264,29 @@ body {
 }
 
 .link-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  @include large-screen {
+    &[data-direction="vertical"] {
+      width: 70%;
+    }
+    &[data-direction="vertical"]::before {
+      margin-block-start: 40rpx;
+      margin-block-end: 40rpx;
+      height: 2rpx;
+      align-self: stretch;
+      background-color: var(--blue-color);
+      opacity: 0.5;
+      content: "";
+    }
+  }
+  @include small-screen {
+    margin-block-start: 30rpx;
+  }
+}
+
+.link-message-text {
   font-size: 24rpx;
   display: flex;
   align-items: center;
@@ -278,5 +297,51 @@ body {
     display: inline-block;
     opacity: 0.5;
     content: "\F35A";
+  }
+}
+
+.link-decoration {
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.5;
+  position: absolute;
+  transition: inset 0.2s;
+  .link:not(:hover) & {
+    --inset: 10rpx;
+  }
+  .link:hover & {
+    --inset: 20rpx;
+  }
+  @include large-screen {
+    --size: 60rpx;
+    --border-width: 3rpx;
+  }
+  @include small-screen {
+    --size: 40rpx;
+    --border-width: 3rpx;
+  }
+  &[data-position="top-left"] {
+    inset-block-start: var(--inset);
+    inset-inline-start: var(--inset);
+    border-block-start: solid var(--border-width) var(--blue-color);
+    border-inline-start: solid var(--border-width) var(--blue-color);
+  }
+  &[data-position="top-right"] {
+    inset-block-start: var(--inset);
+    inset-inline-end: var(--inset);
+    border-block-start: solid var(--border-width) var(--blue-color);
+    border-inline-end: solid var(--border-width) var(--blue-color);
+  }
+  &[data-position="bottom-left"] {
+    inset-block-end: var(--inset);
+    inset-inline-start: var(--inset);
+    border-block-end: solid var(--border-width) var(--blue-color);
+    border-inline-start: solid var(--border-width) var(--blue-color);
+  }
+  &[data-position="bottom-right"] {
+    inset-block-end: var(--inset);
+    inset-inline-end: var(--inset);
+    border-block-end: solid var(--border-width) var(--blue-color);
+    border-inline-end: solid var(--border-width) var(--blue-color);
   }
 }

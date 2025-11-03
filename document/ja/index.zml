@@ -21,6 +21,10 @@
     \main|class="main"|<
 
       \a|class="shaleian link",href="/shaleian/"|<
+        \div|class="link-decoration",data-position="top-left",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="top-right",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="bottom-left",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="bottom-right",aria-hidden="true"|;
         \div|class="shaleian-visual link-visual"|<
           \div|class="shaleian-visual-background",aria-hidden="true"|<
             \img|class="shaleian-visual-logo",src="/material/logo/2.svg",alt=""|;
@@ -30,12 +34,18 @@
             \div|class="shaleian-visual-flavor"|<Official Website of\wbr; Shaleian Language>
           >
         >
-        \p|class="link-message"|<
-          シャレイア語について
+        \div|class="link-message",data-direction="vertical"|<
+          \p|class="link-message-text"|<
+            シャレイア語について
+          >
         >
       >
 
       \a|class="fennese link",href="/fennese/"|<
+        \div|class="link-decoration",data-position="top-left",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="top-right",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="bottom-left",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="bottom-right",aria-hidden="true"|;
         \div|class="fennese-visual link-visual"|<
           \div|class="fennese-visual-background",aria-hidden="true"|<
             \img|class="fennese-visual-logo",src="/material/logo/4.svg",alt=""|;
@@ -45,12 +55,18 @@
             \div|class="fennese-visual-flavor"|<Official Website of\wbr; Fennese Language>
           >
         >
-        \p|class="link-message"|<
-          フェンナ語について
+        \div|class="link-message",data-direction="vertical"|<
+          \p|class="link-message-text"|<
+            フェンナ語について
+          >
         >
       >
 
       \a|class="other link",href="/other/"|<
+        \div|class="link-decoration",data-position="top-left",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="top-right",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="bottom-left",aria-hidden="true"|;
+        \div|class="link-decoration",data-position="bottom-right",aria-hidden="true"|;
         \div|class="other-visual link-visual"|<
           \div|class="other-visual-content"|<
             \h1|class="other-visual-title"|<
@@ -59,8 +75,10 @@
             >
           >
         >
-        \p|class="link-message"|<
-          自然言語 · 数理科学
+        \div|class="link-message",data-direction="horizontal"|<
+          \p|class="link-message-text"|<
+            自然言語 · 数理科学
+          >
         >
       >
 
