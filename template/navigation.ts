@@ -16,6 +16,7 @@ function getVersionLatest(content: string, scheme?: string): boolean {
 
 manager.registerElementFactory("navigation", (transformer, document, element) => {
   const self = document.createDocumentFragment();
+  const scheme = transformer.variables.scheme;
   const path = transformer.variables.path;
   const language = transformer.variables.language;
   const splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
@@ -66,7 +67,7 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
     }
   }));
   transformer.variables.title = title;
-  transformer.variables.pageTitle = ((title) ? title + " — " : "") + TRANSLATIONS.title[language];
+  transformer.variables.pageTitle = ((title) ? title + " — " : "") + TRANSLATIONS.title[scheme!]![language];
   return self;
 });
 

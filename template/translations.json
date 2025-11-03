@@ -1,7 +1,10 @@
 {
   "language": {"ja": "日本語", "en": "English"},
-  "title": {"ja": "Avendia", "en": "Avendia"},
-  "caption": {"ja": "人工言語シャレイア語", "en": "Sheleian Constructed Language"},
+  "title": {
+    "shaleian": {"ja": "Avendia: シャレイア語公式サイト", "en": "Avendia: Official Website of Shaleian Language"},
+    "fennese": {"ja": "Лефжо̂чло: フェンナ語公式サイト", "en": "Лефжо̂чло: Official Website of Fennese Language"},
+    "default": {"ja": "Τὰ Ζιφίλου Βιβλία", "en": "Τὰ Ζιφίλου Βιβλία"}
+  },
   "page": {
     "top": {"ja": "トップ", "en": "Top"},
     "shaleian": {
@@ -30,7 +33,6 @@
     },
     "other": {
       "index": {"ja": "その他", "en": "Others"},
-      "french": {"ja": "フランス語", "en": "French"},
       "greek": {"ja": "古典ギリシャ語", "en": "Ancient Greek"},
       "greek-diary": {"ja": "日記 / 古典ギリシャ語", "en": "Diary · Ancient Greek"},
       "akkadian": {"ja": "アッカド語", "en": "Akkadian"},
@@ -39,6 +41,7 @@
       "egyptian-diary": {"ja": "日記 / エジプト語", "en": "Diary · Egyptian"},
       "slavonic": {"ja": "古代教会スラブ語", "en": "Old Church Slavonic"},
       "slavonic-diary": {"ja": "日記 / 古代教会スラブ語", "en": "Diary · Old Church Slavonic"},
+      "french": {"ja": "フランス語", "en": "French"},
       "mathematics": {"ja": "数学", "en": "Mathematics"},
       "mathematics-diary": {"ja": "日記 / 数学", "en": "Diary · Mathematics"},
       "programming": {"ja": "プログラミング", "en": "Programming"},
