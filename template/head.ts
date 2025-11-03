@@ -5,7 +5,7 @@ import {AvendiaTemplateManager} from "../generator/transformer";
 
 const manager = new AvendiaTemplateManager();
 
-manager.registerElementRule("use-script", "header", (transformer, document, element) => {
+manager.registerElementRule("use-script", "head", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("script", (self) => {
     const content = element.textContent;
@@ -19,7 +19,7 @@ manager.registerElementRule("use-script", "header", (transformer, document, elem
   return self;
 });
 
-manager.registerElementRule("use-hiero", "header", (transformer, document, element) => {
+manager.registerElementRule("use-hiero", "head", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("link", (self) => {
     self.setAttribute("rel", "stylesheet");
@@ -59,7 +59,7 @@ manager.registerElementRule("use-hiero", "header", (transformer, document, eleme
 });
 
 
-manager.registerElementRule("use-math", "header", (transformer, document, element) => {
+manager.registerElementRule("use-math", "head", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const mathStyleString = transformer.environments.mathStyleString;
   const mathScriptString = transformer.environments.mathScriptString;
@@ -75,7 +75,7 @@ manager.registerElementRule("use-math", "header", (transformer, document, elemen
   return self;
 });
 
-manager.registerElementRule("base", "header", (transformer, document, element) => {
+manager.registerElementRule("base", "head", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("base", (self) => {
     self.setAttribute("href", element.getAttribute("href"));
@@ -84,11 +84,11 @@ manager.registerElementRule("base", "header", (transformer, document, element) =
   return self;
 });
 
-manager.registerElementRule(true, "header", (transformer, document) => {
+manager.registerElementRule(true, "head", (transformer, document) => {
   return document.createDocumentFragment();
 });
 
-manager.registerTextRule("header", (transformer, document) => {
+manager.registerTextRule("head", (transformer, document) => {
   return document.createDocumentFragment();
 });
 

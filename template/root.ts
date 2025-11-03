@@ -32,23 +32,25 @@ function getScheme(path: string, transformer: AvendiaLightTransformer): string {
 manager.registerElementRule("page", "", (transformer, document, element) => {
   const path = transformer.variables.path;
   const language = transformer.variables.language;
+  const foreignLanguage = (language === "ja") ? "en" : "ja";
+  const scheme = getScheme(path, transformer);
   const mainClassName = getMainClassName(path, language, transformer);
-  const navigationNode = document.createDocumentFragment();
-  const headerNode = document.createDocumentFragment();
-  const mainNode = document.createDocumentFragment();
-  transformer.variables.foreignLanguage = (language === "ja") ? "en" : "ja";
+  transformer.variables.foreignLanguage = foreignLanguage;
   transformer.variables.mode = "page";
-  transformer.variables.scheme = getScheme(path, transformer);
+  transformer.variables.scheme = scheme;
+  const navigationNode = document.createDocumentFragment();
+  const headNode = document.createDocumentFragment();
+  const mainNode = document.createDocumentFragment();
   navigationNode.appendChild(transformer.call("navigation", element));
   navigationNode.appendChild(transformer.apply(element, "navigation"));
-  headerNode.appendChild(transformer.call("analytics", element));
-  headerNode.appendChild(transformer.apply(element, "header"));
+  headNode.appendChild(transformer.call("analytics", element));
+  headNode.appendChild(transformer.apply(element, "head"));
   mainNode.appendElement("article", (self) => {
     self.addClassName(mainClassName);
     self.appendChild(transformer.apply(element, "page"));
   });
   transformer.variables.navigationNode = navigationNode;
-  transformer.variables.headerNode = headerNode;
+  transformer.variables.headNode = headNode;
   return mainNode;
 });
 

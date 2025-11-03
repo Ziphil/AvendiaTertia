@@ -90,7 +90,7 @@ export type AvendiaTransformerVariables = {
   version?: string,
   latest?: boolean,
   navigationNode?: NodeLikeOf<AvendiaDocument>,
-  headerNode?: NodeLikeOf<AvendiaDocument>,
+  headNode?: NodeLikeOf<AvendiaDocument>,
   number: {theorem: number, equation: number, bibliography: number},
   numbers: {theorem: Map<string, number>, equation: Map<string, number>, bibliography: Map<string, number>},
   namePrefixes: {theorem: Map<string, string | null>, equation: Map<string, string | null>, bibliography: Map<string, string | null>},

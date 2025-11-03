@@ -22,7 +22,7 @@ import blockTranslationListManager from "./block/translation-list";
 import contentTableManager from "./content-table";
 import errorManager from "./error";
 import fallbackManager from "./fallback";
-import headerManager from "./header";
+import headManager from "./head";
 import historyManager from "./history";
 import htmlManager from "./html";
 import inlineBasicManager from "./inline/basic";
@@ -41,7 +41,7 @@ import rootManager from "./root";
 
 export default [
   rootManager,
-  headerManager,
+  headManager,
   navigationManager,
   contentTableManager,
   errorManager,
