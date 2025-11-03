@@ -29,33 +29,8 @@
           >
           \div|class="header-content"|<
             \div|class="header-title"|<Avendia>
-            \div|class="header-flavor"|<Official Website of Shaleian Language>
+            \div|class="header-flavor"|<Official Website of\wbr; Shaleian Language>
           >
-        >
-      >
-
-      \article|class="announcement-block centralize"|<
-        \div|class="announcement"|<
-          \div|class="announcement-left"|<
-            \img|class="announcement-image",src="/file/other/6.jpg",alt=""|;
-          >
-          \div|class="announcement-right"|<
-            \h1|class="announcement-header"|<『入門 シャレイア語』新版発売中!>
-            \p|class="announcement-message"|<
-              シャレイア語を一から学ぶことができる入門書の新版です。
-              最新の文法に合わせて記述を全面的に見直し、学んだ内容を確認するための演習問題も豊富に収録しました。
-            >
-            \div|class="announcement-button-list"|<
-              \a|class="button",href="https://www.amazon.co.jp/dp/B0F26HZQ86/",target="_blank"|<Amazon 商品ページ>
-              \a|class="link",href="/shaleian/introduction/30.html"|<本の詳細を見る>
-            >
-          >
-        >
-      >
-
-      \div|class="separator-block centralize",aria-hidden="true"|<
-        \div|class="separator"|<
-          \div|class="separator-mark"|;
         >
       >
 
@@ -182,6 +157,31 @@
             \ins|class="adsbygoogle",style="display:block;width:100%;height:90px;",data-ad-client="ca-pub-9429549748934508",data-ad-slot="8515086829"|;
             \script~<
               (adsbygoogle = window.adsbygoogle || []).push({});
+            >
+          >
+        >
+      >
+
+      \div|class="separator-block centralize",aria-hidden="true"|<
+        \div|class="separator"|<
+          \div|class="separator-mark"|;
+        >
+      >
+
+      \article|class="announcement-block centralize"|<
+        \div|class="announcement"|<
+          \div|class="announcement-left"|<
+            \img|class="announcement-image",src="/file/other/6.jpg",alt=""|;
+          >
+          \div|class="announcement-right"|<
+            \h1|class="announcement-header"|<『入門 シャレイア語』新版発売中!>
+            \p|class="announcement-message"|<
+              シャレイア語を一から学ぶことができる入門書の新版です。
+              最新の文法に合わせて記述を全面的に見直し、学んだ内容を確認するための演習問題も豊富に収録しました。
+            >
+            \div|class="announcement-button-list"|<
+              \a|class="button",href="https://www.amazon.co.jp/dp/B0F26HZQ86/",target="_blank"|<Amazon 商品ページ>
+              \a|class="link",href="/shaleian/introduction/30.html"|<本の詳細を見る>
             >
           >
         >

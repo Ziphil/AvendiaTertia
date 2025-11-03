@@ -74,6 +74,9 @@ body {
   height: 250rpx;
   position: relative;
   z-index: 0;
+  @include small-screen {
+    padding-inline: $main-smartphone-horizontal-padding;
+  }
 }
 
 .header-background {
@@ -113,7 +116,10 @@ body {
   font-family: var(--special-font-family);
   font-weight: 600;
   color: var(--blue-color);
+  line-height: $small-line-height;
+  text-align: center;
   text-transform: uppercase;
+  white-space: nowrap;
   -webkit-text-stroke: 4rpx var(--page-background-color);
   paint-order: stroke;
 }
