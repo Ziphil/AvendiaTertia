@@ -83,7 +83,7 @@ manager.registerElementFactory("title", (transformer, document, element) => {
     self.appendElement("span", (self) => {
       self.addClassName("header-title-text");
       self.setAttribute("data-size", "single");
-      self.appendTextNode("ЛЕФЕЖОЧЛО");
+      self.appendTextNode("ЛЕФЖОЧЛО");
     });
   } else {
     self.appendElement("span", (self) => {

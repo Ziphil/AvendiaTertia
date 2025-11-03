@@ -59,7 +59,7 @@
 }
 
 .header-right {
-  padding-inline-start: 25rpx;
+  padding-inline-start: 40rpx;
   display: flex;
   align-items: center;
   position: relative;
@@ -97,7 +97,7 @@
   }
   body[data-scheme="default"] &[data-size="small"] {
     letter-spacing: 0.35em;
-    text-indent: -0.1em;
+    text-indent: -0.2em;
   }
   body[data-scheme="default"] &[data-size="large"] {
     letter-spacing: 0.15em;

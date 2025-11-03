@@ -53,7 +53,7 @@
   }
   body[data-scheme="default"] &[data-size="small"] {
     letter-spacing: 0.35em;
-    text-indent: -0.1em;
+    text-indent: -0.2em;
   }
   body[data-scheme="default"] &[data-size="large"] {
     letter-spacing: 0.15em;
@@ -69,8 +69,8 @@ $header-item-height: 35rpx;
 
 .header-list {
   row-gap: $header-list-vertical-gap;
+  column-gap: $header-list-horizontal-gap;
   display: flex;
-  flex-direction: column;
   position: relative;
   flex-grow: 1;
   z-index: 0;
@@ -79,10 +79,7 @@ $header-item-height: 35rpx;
 }
 
 .header-row {
-  column-gap: $header-list-horizontal-gap;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: contents;
 }
 
 .header-item {
