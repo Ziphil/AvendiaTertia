@@ -269,7 +269,8 @@ body {
   align-items: center;  
   @include large-screen {
     &[data-direction="vertical"] {
-      width: 70%;
+      width: 640rpx;
+      max-width: 100%;
     }
     &[data-direction="vertical"]::before {
       margin-block-start: 40rpx;
