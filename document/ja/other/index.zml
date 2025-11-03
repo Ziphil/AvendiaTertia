@@ -4,13 +4,31 @@
 
 \page<
 
-  \hb<日記>
+  \hb<自然言語日記>
   \pb<
-    \ab|href="game-diary/"|<ゲーム製作>
+    \ab|href="greek-diary/"|<古典ギリシャ語>
+    \ab|href="akkadian-diary/"|<アッカド語>
+    \ab|href="egyptian-diary/"|<エジプト語>
+    \ab|href="slavonic-diary/"|<古代教会スラブ語>
+  >
+  \hb<自然言語まとめ>
+  \pb<
+    \ab|href="greek/"|<古典ギリシャ語>
+    \ab|href="egyptian/"|<エジプト語>
+    \ab|href="slavonic/"|<古代教会スラブ語>
+    \ab|href="french/"|<フランス語>
+  >
+  \hb<数理科学日記>
+  \pb<
+    \ab|href="mathematics-diary/"|<数学>
+    \ab|href="programming-diary/"|<プログラミング>
+  >
+  \hb<数理科学まとめ>
+  \pb<
+    \ab|href="mathematics/"|<数学>
   >
   \hb<その他>
   \pb<
-    \ab|href="application/"|<アプリケーション>
     \ab|href="other/"|<その他>
   >
 
