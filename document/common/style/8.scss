@@ -98,8 +98,8 @@ body {
 .header-title {
   margin-block-start: 95rpx;
   font-size: 84rpx;
-  font-family: $special-font-family;
-  font-weight: bold;
+  font-family: var(--special-font-family);
+  font-weight: 600;
   color: var(--blue-color);
   letter-spacing: 0.15em;
   text-indent: 0.15em;
@@ -110,7 +110,8 @@ body {
 .header-flavor {
   margin-block-start: 5rpx;
   font-size: 24rpx;
-  font-family: $special-font-family;
+  font-family: var(--special-font-family);
+  font-weight: 600;
   color: var(--blue-color);
   text-transform: uppercase;
   -webkit-text-stroke: 4rpx var(--page-background-color);
@@ -478,8 +479,9 @@ $link-height: 60rpx;
 }
 
 .count-number {
-  font-family: $special-font-family;
+  font-family: var(--special-font-family);
   font-size: 250%;
+  font-weight: 600;
   color: var(--blue-color);
   text-align: right;
 }

@@ -41,10 +41,10 @@ zp-description {
 
 .header {
   margin-block-start: 40rpx;
-  font-family: $special-font-family;
+  font-family: "Josefin Sans";
   font-size: 250%;
   font-weight: 600;
-  color: $blue-color;
+  color: hsl(198, 75%, 50%);
   text-align: center;
 }
 
@@ -71,13 +71,15 @@ zp-description {
 }
 
 .player-item {
-  --background-color: #{hsl(198, 60%, 94%)};
-  --highlight-background-color: #{hsl(198, 60%, 86%)};
-  --highlight-color: #{hsl(198, 75%, 50%)};
-  --dark-highlight-color: #{hsl(205, 75%, 50%)};
   background-color: var(--background-color);
   overflow: hidden;
   position: relative;
+  &:not([data-state]) {
+    --background-color: #{hsl(198, 60%, 94%)};
+    --highlight-background-color: #{hsl(198, 60%, 86%)};
+    --highlight-color: #{hsl(198, 75%, 50%)};
+    --dark-highlight-color: #{hsl(205, 75%, 50%)};
+  }
   &[data-state] {
     --background-color: #{hsl(35, 60%, 94%)};
     --highlight-background-color: #{hsl(35, 60%, 86%)};
@@ -102,7 +104,7 @@ zp-description {
   margin-inline-start: tan(abs($skew-angle)) * $player-item-top-height * -0.5;
   padding-inline-start: tan(abs($skew-angle)) * $player-item-top-height * 0.35;
   font-size: 250%;
-  font-family: $special-font-family;
+  font-family: "Josefin Sans";
   font-weight: 300;
   color: var(--highlight-color);
   display: flex;

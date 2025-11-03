@@ -13,6 +13,7 @@
   padding-block: $main-vertical-padding;
   background-color: var(--main-background-color);
   overflow: hidden;
+  flex: 1 1 auto;
   --current-background-color: var(--main-background-color);
   @include desktop {
     width: $main-width;

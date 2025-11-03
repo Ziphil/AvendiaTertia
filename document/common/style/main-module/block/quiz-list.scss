@@ -64,8 +64,8 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
 
 .quiz-answer-item {
   &::before {
+    @include special-font;
     margin-inline-end: $blank-margin;
-    font-family: $special-font-family;
     color: var(--blue-color);
     content: "A.";
   }

@@ -1,23 +1,6 @@
 @charset "utf-8";
 
 
-$text-color: hsl(0, 0, 20%);
-$blue-color: hsl(198, 75%, 50%);
-$dark-blue-color: hsl(205, 75%, 40%);
-$black-blue-color: mix($blue-color, $text-color, 40%);
-$white-blue-color: mix($blue-color, white, 20%);
-$orange-color: hsl(35, 75%, 50%);
-$dark-orange-color: hsl(28, 75%, 40%);
-$black-orange-color: mix($orange-color, $text-color, 40%);
-$white-orange-color: mix($orange-color, white, 20%);
-$gray-color: hsl(0, 0, 50%);
-$shadow-color: rgba(black, 0.1);
-
-$page-background-color: hsl(198, 60%, 94%);
-$header-background-color: white;
-$main-background-color: white;
-$block-background-color: hsl(198, 60%, 96%);
-
 $main-vertical-padding: 25px;
 $main-horizontal-padding: 40rpx;
 $main-smartphone-horizontal-padding: 20rpx;
@@ -37,18 +20,12 @@ $main-max-width: 960rpx;
 $skew-angle: -15deg;
 $skew-tan: tan(abs($skew-angle));
 
-$special-font-family: "Josefin Sans";
-
 $line-height: 1.7;
 $small-line-height: 1.2;
 $program-line-height: 1.5;
 
+$text-color: hsl(0, 0%, 20%);
 
-@mixin mobile {
-  @media screen and (max-width: 880px) {
-    @content;
-  }
-}
 
 @mixin desktop {
   @media screen and (min-width: 881px) {
@@ -56,14 +33,20 @@ $program-line-height: 1.5;
   }
 }
 
-@mixin small-screen {
-  @media screen and (max-width: 640px) {
+@mixin mobile {
+  @media screen and (max-width: 880px) {
     @content;
   }
 }
 
 @mixin large-screen {
   @media screen and (min-width: 641px) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media screen and (max-width: 640px) {
     @content;
   }
 }
@@ -90,6 +73,12 @@ $program-line-height: 1.5;
     color: var(--current-background-color);
     background-color: $color;
   }
+}
+
+@mixin special-font {
+  font-family: var(--special-font-family);
+  font-weight: var(--special-font-weight, bold);
+  translate: 0em var(--special-font-compensation, 0em);
 }
 
 @mixin justify {

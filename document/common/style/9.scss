@@ -171,9 +171,11 @@ $max-logo-size: 220rpx;
 }
 
 .timeline-item {
-  --timeline-color: #{$blue-color};
+  &:not(:nth-child(2n)) {
+    --timeline-color: hsl(198, 75%, 50%);
+  }
   &:nth-child(2n) {
-    --timeline-color: #{$orange-color};
+    --timeline-color: hsl(35, 75%, 50%);
   }
 }
 
@@ -189,7 +191,8 @@ $timeline-date-size: 100rpx;
   width: $timeline-date-size;
   height: $timeline-date-size;
   border-radius: 50%;
-  font-family: $special-font-family;
+  font-family: "Josefin Sans";
+  font-weight: 600;
   color: white;
   display: flex;
   flex-grow: 0;
@@ -230,7 +233,8 @@ $timeline-date-size: 100rpx;
 
 .timeline-number {
   margin: 0em 0.2em;
-  font-family: $special-font-family;
+  font-family: "Josefin Sans";
+  font-weight: 600;
   font-size: 280%;
   &:first-child {
     margin-left: 0em;

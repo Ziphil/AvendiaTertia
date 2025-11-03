@@ -32,9 +32,9 @@
 }
 
 .error-code {
+  @include special-font;
   margin-block-end: -0.15em;
   font-size: 500%;
-  font-family: $special-font-family;
 }
 
 .error-message {

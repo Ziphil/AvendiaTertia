@@ -78,7 +78,6 @@ manager.registerElementRule("ver", "navigation", (transformer, document, element
     const content = element.textContent;
     if (content && getVersionLatest(content, scheme)) {
       transformer.variables.version = content;
-      transformer.variables.latest = true;
     } else {
       self.setAttribute("data-caution", "");
     }

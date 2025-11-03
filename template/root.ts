@@ -38,19 +38,24 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   transformer.variables.foreignLanguage = foreignLanguage;
   transformer.variables.mode = "page";
   transformer.variables.scheme = scheme;
-  const navigationNode = document.createDocumentFragment();
   const headNode = document.createDocumentFragment();
+  const navigationNode = document.createDocumentFragment();
+  const titleNode = document.createDocumentFragment();
+  const linkNode = document.createDocumentFragment();
   const mainNode = document.createDocumentFragment();
-  navigationNode.appendChild(transformer.call("navigation", element));
-  navigationNode.appendChild(transformer.apply(element, "navigation"));
   headNode.appendChild(transformer.call("analytics", element));
   headNode.appendChild(transformer.apply(element, "head"));
+  navigationNode.appendChild(transformer.call("navigation", element));
+  navigationNode.appendChild(transformer.apply(element, "navigation"));
+  titleNode.appendChild(transformer.call("title", element));
   mainNode.appendElement("article", (self) => {
     self.addClassName(mainClassName);
     self.appendChild(transformer.apply(element, "page"));
   });
-  transformer.variables.navigationNode = navigationNode;
   transformer.variables.headNode = headNode;
+  transformer.variables.navigationNode = navigationNode;
+  transformer.variables.titleNode = titleNode;
+  transformer.variables.linkNode = linkNode;
   return mainNode;
 });
 
@@ -62,6 +67,36 @@ manager.registerElementRule("html", "", (transformer, document, element) => {
     self.setAttribute("lang", language);
     self.appendChild(transformer.apply(element, "html"));
   });
+  return self;
+});
+
+manager.registerElementFactory("title", (transformer, document, element) => {
+  const scheme = transformer.variables.scheme;
+  const self = document.createDocumentFragment();
+  if (scheme === "shaleian") {
+    self.appendElement("span", (self) => {
+      self.addClassName("header-title-text");
+      self.setAttribute("data-size", "single");
+      self.appendTextNode("Avendia");
+    });
+  } else if (scheme === "fennese") {
+    self.appendElement("span", (self) => {
+      self.addClassName("header-title-text");
+      self.setAttribute("data-size", "single");
+      self.appendTextNode("ЛЕФЕЖОЧЛО");
+    });
+  } else {
+    self.appendElement("span", (self) => {
+      self.addClassName("header-title-text");
+      self.setAttribute("data-size", "small");
+      self.appendTextNode("ΤΑ ΖΙΦΙΛΟΥ");
+    });
+    self.appendElement("span", (self) => {
+      self.addClassName("header-title-text");
+      self.setAttribute("data-size", "large");
+      self.appendTextNode("ΒΙΒΛΙΑ");
+    });
+  }
   return self;
 });
 

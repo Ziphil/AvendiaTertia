@@ -23,10 +23,13 @@
     <header class="header">
       <div class="header-inner">
         <div class="header-left">
-          <a class="header-title" href="/">Avendia<span class="header-title-version">20</span></a>
+          <a class="header-title" href="/">
+            {{= it.variables.titleNode?.toString() }}
+          </a>
         </div>
         <div class="header-right">
           <nav class="header-list">
+            {{= it.variables.linkNode?.toString() }}
             <div class="header-row">
               <a class="header-item" href="/shaleian/">{{= it.translations.page.shaleian.index[it.variables.language] }}</a>
               <a class="header-item" href="/fennese/">{{= it.translations.page.fennese.index[it.variables.language] }}</a>
@@ -44,16 +47,6 @@
 {{= it.variables.navigationNode?.toString() }}
       </div>
     </nav>
-
-    <aside class="information" id="template-information">
-      <p class="information-explanation">
-        {{= it.translations.page.information.notice[it.variables.language].join("\n") }}
-      </p>
-      <div class="information-button-container">
-        <button class="form-button" id="template-enable-popup">{{= it.translations.page.information.enable[it.variables.language] }}</button>
-        <button class="form-button" id="template-download-dictionary">{{= it.translations.page.information.download[it.variables.language] }}</button>
-      </div>
-    </aside>
 
     <aside class="ad">
       <div class="ad-inner" align="center">

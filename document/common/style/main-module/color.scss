@@ -18,6 +18,9 @@
   --block-background-color: hsl(198, 60%, 96%);
   --header-background-color: white;
   --main-background-color: white;
+  --special-font-family: "Josefin Sans";
+  --special-font-weight: 600;
+  --special-font-compensation: 0.15em;
 }
 
 @mixin fennese-scheme {
@@ -37,6 +40,8 @@
   --block-background-color: hsl(240, 8%, 22%);
   --header-background-color: hsl(240, 10%, 15%);
   --main-background-color: hsl(240, 10%, 15%);
+  --special-font-family: "Ysabeau";
+  --special-font-weight: 700;
 }
 
 @mixin default-scheme {
@@ -56,4 +61,6 @@
   --block-background-color: hsl(215, 90%, 98%);
   --header-background-color: white;
   --main-background-color: white;
+  --special-font-family: "EB Garamond";
+  --special-font-weight: 600;
 }

@@ -8,6 +8,7 @@
   width: 100%;
   height: 120rpx;
   position: relative;
+  flex: 0 0 auto;
   &::before {
     inset-inline-start: 0%;
     inset-inline-end: 50%;
@@ -75,17 +76,35 @@
 }
 
 .header-title {
-  font-size: 400%;
-  font-family: $special-font-family;
   color: var(--main-background-color);
   text-decoration: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header-title-version {
-  margin-inline-start: 0.1em;
-  vertical-align: 0.5em;
-  font-size: 70%;
+.header-title-text {
+  @include special-font;
+  &[data-size="single"] {
+    font-size: 400%;
+  }
+  &[data-size="small"] {
+    font-size: 150%;
+  }
+  &[data-size="large"] {
+    font-size: 350%;
+  }
+  body[data-scheme="default"] &[data-size="small"] {
+    letter-spacing: 0.35em;
+    text-indent: -0.1em;
+  }
+  body[data-scheme="default"] &[data-size="large"] {
+    letter-spacing: 0.15em;
+  }
+  body[data-scheme="fennese"] &[data-size="single"] {
+    letter-spacing: -0.03em;
+  }
 }
 
 $header-list-vertical-gap: 12rpx;
@@ -136,8 +155,4 @@ $header-item-height: 35rpx;
   &:hover::before {
     background-position: 0% 100%;
   }
-}
-
-.header-title {
-  margin-block-end: -0.15em;
 }
