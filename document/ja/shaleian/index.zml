@@ -2,23 +2,334 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 
-\page<
-
-  \hb<資料>
-  \pb<
-    \ab|href="introduction/"|<入門資料>
-    \ab|href="grammar/"|<文法>
-    \ab|href="database/"|<データベース>
-    \ab|href="culture/"|<文化>
-    \ab|href="translation/"|<翻訳>
-    \ab|href="work/"|<創作>
-    \ab|href="document/"|<資料>
-    \ab|href="table/"|<一覧表>
-    \ab|href="old/"|<過去の情報>
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \meta|name="twitter:card",content="summary"|;
+    \meta|name="twitter:site",content="@Ziphil"|;
+    \meta|property="og:url",content="https://ziphil.com"|;
+    \meta|property="og:title",content="Avendia"|;
+    \meta|property="og:description",content="人工言語「シャレイア語」の公式サイトです。"|;
+    \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
+    \script|src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508",crossorigin="anonymous",async|;
+    \script|src="/program/script/12.js"|;
+    \script|src="/program/script/20.js"|;
+    \link|rel="stylesheet",type="text/css",href="/style/8.css"|;
+    \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
+    \title<Avendia>
   >
-  \hb<日記>
-  \pb<
-    \ab|href="diary/"|<製作日記>
-  >
+  \body<
+    \main|class="main"|<
 
+      \header|class="header-block centralize"|<
+        \div|class="header"|<
+          \div|class="header-background",aria-hidden="true"|<
+            \img|class="header-logo",src="/material/logo/2.svg",alt=""|;
+          >
+          \div|class="header-content"|<
+            \div|class="header-title"|<Avendia>
+            \div|class="header-flavor"|<Official Website of Shaleian Language>
+          >
+        >
+      >
+
+      \article|class="announcement-block centralize"|<
+        \div|class="announcement"|<
+          \div|class="announcement-left"|<
+            \img|class="announcement-image",src="/file/other/6.jpg",alt=""|;
+          >
+          \div|class="announcement-right"|<
+            \h1|class="announcement-header"|<『入門 シャレイア語』新版発売中!>
+            \p|class="announcement-message"|<
+              シャレイア語を一から学ぶことができる入門書の新版です。
+              最新の文法に合わせて記述を全面的に見直し、学んだ内容を確認するための演習問題も豊富に収録しました。
+            >
+            \div|class="announcement-button-list"|<
+              \a|class="button",href="https://www.amazon.co.jp/dp/B0F26HZQ86/",target="_blank"|<Amazon 商品ページ>
+              \a|class="link",href="/shaleian/introduction/30.html"|<本の詳細を見る>
+            >
+          >
+        >
+      >
+
+      \div|class="separator-block centralize",aria-hidden="true"|<
+        \div|class="separator"|<
+          \div|class="separator-mark"|;
+        >
+      >
+
+      \article|class="card-table-block centralize"|<
+        \nav|class="card-table"|<
+          \a|class="card-item",href="/shaleian/introduction/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<入門資料>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                初学者向けのシャレイア語文法の解説を読むことができます。
+                書籍として出版もされています。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/grammar/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<文法>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                シャレイア語文法の詳細な解説です。
+                文法の確認に利用できます。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/database/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<データベース>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                シャレイア語の辞典を閲覧したり、シャレイア文字のフォントをダウンロードしたりできます。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/translation/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<翻訳>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                様々な小説や楽曲のシャレイア語訳を読むことができます。
+                アイドルマスターの楽曲の翻訳が多めです。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/work/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<創作>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                シャレイア語で書かれたオリジナルの文章などを読むことができます。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/culture/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<文化>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                シャレイア語に特有の文化や慣習についてまとめてあります。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/document/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<資料>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                シャレイア語に関する様々な資料集です。
+                これまでの歴史や、学習に利用できる例文集や、単語などの便利な一覧表などがあります。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/old/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<過去の情報>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                昔のシャレイア語の文法を見ることができます。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/diary/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<製作日記>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                シャレイア語を作る上での疑問点や考察を綴ったものです。
+                製作過程を垣間見ることができます。
+              >
+            >
+          >
+        >
+        \nav|class="link-table"|<
+          \a|class="link-item",href="/shaleian/document/16.html"|<
+            \div|class="link-title"|<
+              \div|class="link-title-japanese"|<シャレイア語とは>
+            >
+          >
+          \a|class="link-item",href="/shaleian/document/24.html"|<
+            \div|class="link-title"|<
+              \div|class="link-title-japanese"|<ブランドアイデンティティ>
+            >
+          >
+          \a|class="link-item",href="/other/other/2.html"|<
+            \div|class="link-title"|<
+              \div|class="link-title-japanese"|<作者について>
+            >
+          >
+        >
+      >
+
+      \aside|class="ad-block centralize"|<
+        \div|class="ad"|<
+          \div|class="ad-inner",align="center"|<
+            \ins|class="adsbygoogle",style="display:block;width:100%;height:90px;",data-ad-client="ca-pub-9429549748934508",data-ad-slot="8515086829"|;
+            \script~<
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            >
+          >
+        >
+      >
+
+      \article|class="introduction-block"|<
+        \div|class="introduction"|<
+          \h1|class="introduction-header"|<
+            \span|class="introduction-header-text"|<人工言語とは>
+          >
+          \div|class="introduction-content"|<
+            \div|class="introduction-explanation"|<
+              \p|class="introduction-paragraph"|<
+                人工言語とは、自然とでき上がった言語である日本語や英語などに対し、人間が意図的に作り上げた言語のことを指します。
+                人工言語には様々な種類があり、その 1 つは、共通の母語をもたない人との間で意思疎通を行うために作られた「国際補助語」と呼ばれるものです。
+                また、製作そのものを楽しむためや小説などの雰囲気を強めるために作られる「芸術言語」というものもあります。
+                このサイトで紹介するシャレイア語は、芸術言語に分類されます。
+              >
+              \p|class="introduction-paragraph"|<
+                言語というのは文化に大きく影響を受けるものです。
+                逆に言えば、言語を見ることで、それを話したり書いたりする人々の文化や物事の捉え方を感じ取ることができます。
+                シャレイア語は、製作者である私自身の世界の捉え方を積極的に反映させることで、自己表現の一種として制作されています。
+                すでに述べたようにシャレイア語は芸術言語ですが、まさにこの意味で芸術の一種なのです。
+                より詳しくは、\a|class="link",href="/shaleian/document/16.html"|<こちら>をご覧ください。
+              >
+              \p|class="introduction-paragraph"|<
+                \span|class="large-screen"|<右>\span|class="small-screen"|<下>の文章は、シャレイア語に翻訳された『不思議の国のアリス』の冒頭部分です。
+                翻訳の全文は\a|class="link",href="/shaleian/translation/44.html"|<こちら>で読むことができます。
+              >
+            >
+            \div|class="introduction-sample-container"|<
+              \div|class="introduction-sample"|<
+                \div|class="introduction-sample-inner"|<
+                  \p|class="introduction-paragraph"|<
+                    a ʻalis, pôzac ovel ebam e'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.
+                    zesqikas a ces la tal al'atis é al'aqec e xoq lîdac e a hinof, dà dukavat a cit e qinat o lek.
+                    lo, revas a ces.
+                    «pa salot e pil a sokus i xoq ide qinat o lek?»
+                  >
+                  \p|class="introduction-paragraph"|<
+                    ce, soxas a ces qi soxot — duqifat lîgifas a's e cal, vade meberad o folnasad ovel ebam a's li zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.
+                    te cal, cákas obâl cife vilis ca fîc ica ces a hapet axac kavat a e lisaz ahafas.
+                  >
+                  \p|class="introduction-paragraph"|<
+                    dusalat a cal e aniszaz ebam….
+                  >
+                >
+              >
+            >
+          >
+          \div|class="introduction-separator",aria-hidden="true"|<
+            \div|class="separator"|<
+              \div|class="separator-mark"|;
+            >
+          >
+          \h1|class="introduction-header"|<
+            \span|class="introduction-header-text"|<造語放送>
+          >
+          \div|class="introduction-content"|<
+            \div|class="introduction-explanation"|<
+              \p|class="introduction-paragraph"|<
+                シャレイア語は、製作者である私自身の世界の捉え方を反映させた言語です。
+                したがって、その単語の語義は、私が世界をどう区切っていてどう区切りたいかに従って決められます。
+                そのため、単語を作るときはかなりの時間を費やして、その単語が指す範囲はどこからどこまでなのかをじっくりと考察しています。
+              >
+              \p|class="introduction-paragraph"|<
+                そのような造語作業中に私が何を考えているのかを皆さんにお伝えするため、私が造語する様子を定期的に YouTube で生配信しています。
+                配信していたらぜひお越しください。
+                \span|class="large-screen"|<右>\span|class="small-screen"|<下>の動画は、最新の配信アーカイブです。
+              >
+              \dl|class="introduction-table"|<
+                \div|class="introduction-item"|<
+                  \dt|class="introduction-item-heading"|<YouTube チャンネル>
+                  \dd|class="introduction-item-content"|<\a|class="link",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg",target="_blank"|<Ziphil Shaleiras>>
+                >
+                \div|class="introduction-item"|<
+                  \dt|class="introduction-item-heading"|<日時>
+                  \dd|class="introduction-item-content"|<毎週土曜日 22 時頃～>
+                >
+              >
+            >
+            \div|class="introduction-youtube"|<
+              \iframe|class="introduction-youtube-iframe",src="https://www.youtube.com/embed/?list=PLcxDffCpcTPLPokhX-GHMrU2mjaENx-bh"|;
+            >
+          >
+        >
+      >
+
+      \article|class="count-table-block centralize"|<
+        \div|class="count-table-container"|<
+          \dl|class="count-table",data-size="large"|<
+            \dt|class="count-text"|<\span|class="large-screen"|<現在の>単語数>
+            \dd|class="count-number",id="whole-count"|<?>
+          >
+          \dl|class="count-table",data-size="small"|<
+            \dt|class="count-text"|<1 週間前から>
+            \dd|class="count-number"|<\span|class="count-plus"|<+>\span|id="week-count"|<?>>
+            \dt|class="count-text"|<1 ヶ月前から>
+            \dd|class="count-number"|<\span|class="count-plus"|<+>\span|id="month-count"|<?>>
+            \dt|class="count-text"|<1 年前から>
+            \dd|class="count-number"|<\span|class="count-plus"|<+>\span|id="year-count"|<?>>
+          >
+        >
+      >
+
+      \div|class="separator-block centralize",aria-hidden="true"|<
+        \div|class="separator"|<
+          \div|class="separator-mark"|;
+        >
+      >
+
+      \article|class="other-block centralize"|<
+        \div|class="other"|<
+          \div|class="other-column"|<
+            \h1|class="other-header"|<
+              \span|class="other-header-text"|<連絡先>
+            >
+            \div|class="contact-table"|<
+              \a|class="contact-icon",data-brand="twitter",href="https://twitter.com/Ziphil",target="_blank"|;
+              \div|class="contact-explanation"|<
+                主に Twitter 上で活動しています。
+                私への連絡は Twitter を介するのが最も早く確実です。
+              >
+              \a|class="contact-icon",data-brand="youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank"|;
+              \div|class="contact-explanation"|<
+                シャレイア語の製作過程を YouTube ライブで配信することがあります。
+                配信日時は Twitter や Discord で告知します。
+              >
+              \a|class="contact-icon",data-brand="discord",href="https://discord.gg/qdRyE2ZExf",target="_blank"|;
+              \div|class="contact-explanation"|<
+                シャレイア語の Discord サーバーを運営しています。
+                単に雑談したり、質問を受け付けたりしています。
+              >
+              \a|class="contact-icon",data-brand="github",href="https://github.com/Ziphil",target="_blank"|;
+              \div|class="contact-explanation"|<
+                シャレイア語に関する様々なデータはほとんど GitHub で管理しています。
+              >
+            >
+          >
+          \div|class="other-column"|<
+            \h1|class="other-header"|<
+              \div|class="other-header-text"|<更新履歴>
+            >
+            \history|size="5"|;
+          >
+        >
+      >
+
+    >
+  >
 >

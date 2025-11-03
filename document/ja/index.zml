@@ -28,8 +28,8 @@
             \img|class="header-logo",src="/material/logo/2.svg",alt=""|;
           >
           \div|class="header-content"|<
-            \div|class="header-title",data-content="Avendia"|<Avendia>
-            \div|class="header-flavor",data-content="FeTiCwaT cA cOk A sWElWEf",aria-hidden="true"|<FeTiCwaT cA cOk A sWElWEf>
+            \div|class="header-title"|<Avendia>
+            \div|class="header-flavor"|<Official Website of Shaleian Language>
           >
         >
       >
@@ -53,7 +53,7 @@
         >
       >
 
-      \article|class="separator-block centralize"|<
+      \div|class="separator-block centralize",aria-hidden="true"|<
         \div|class="separator"|<
           \div|class="separator-mark"|;
         >
@@ -333,7 +333,7 @@
               >
             >
           >
-          \div|class="introduction-separator"|<
+          \div|class="introduction-separator",aria-hidden="true"|<
             \div|class="separator"|<
               \div|class="separator-mark"|;
             >
@@ -388,7 +388,7 @@
         >
       >
 
-      \article|class="separator-block centralize"|<
+      \div|class="separator-block centralize",aria-hidden="true"|<
         \div|class="separator"|<
           \div|class="separator-mark"|;
         >
