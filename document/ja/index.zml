@@ -9,13 +9,13 @@
     \meta|name="twitter:card",content="summary"|;
     \meta|name="twitter:site",content="@Ziphil"|;
     \meta|property="og:url",content="https://ziphil.com"|;
-    \meta|property="og:title",content="Avendia · Лефжо̂чло · Τὰ Ζιφίλου Βιβλία"|;
+    \meta|property="og:title",content="Avendia · Лофжо̂чло · Τὰ Ζιφίλου Βιβλία"|;
     \meta|property="og:description",content="Ziphil の人工言語作品や勉強ノートがまとめられたサイト群です。"|;
     \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
     \script|src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508",crossorigin="anonymous",async|;
     \link|rel="stylesheet",type="text/css",href="/style/12.css"|;
     \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
-    \title<Avendia · Лефжо̂чло · Τὰ Ζιφίλου Βιβλία>
+    \title<Avendia · Лофжо̂чло · Τὰ Ζιφίλου Βιβλία>
   >
   \body<
     \main|class="main"|<
@@ -41,7 +41,7 @@
             \img|class="fennese-visual-logo",src="/material/logo/4.svg",alt=""|;
           >
           \div|class="fennese-visual-content"|<
-            \h1|class="fennese-visual-title"|<ЛЕФЖОЧЛО>
+            \h1|class="fennese-visual-title"|<ЛОФЖОЧЛО>
             \div|class="fennese-visual-flavor"|<Official Website of\wbr; Fennese Language>
           >
         >
