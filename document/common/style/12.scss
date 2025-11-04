@@ -194,7 +194,7 @@ body {
 }
 
 .other {
-  @include default-scheme;
+  @include other-scheme;
   color: var(--text-color);
   background-image: radial-gradient(circle at center, var(--page-background-color) 20%, var(--page-dark-background-color));
   display: flex;
