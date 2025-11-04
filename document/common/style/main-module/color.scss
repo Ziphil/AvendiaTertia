@@ -17,8 +17,9 @@
   --page-background-color: hsl(198, 60%, 94%);
   --page-dark-background-color: hsl(198, 60%, 90%);
   --block-background-color: hsl(198, 60%, 96%);
-  --header-background-color: white;
   --main-background-color: white;
+  --footer-background-color: hsl(0, 0%, 90%);
+  --footer-text-color: hsl(0, 0%, 50%);
   --special-font-family: "Josefin Sans";
   --special-font-weight: 600;
   --special-font-compensation: 0.15em;
@@ -40,13 +41,13 @@
   --page-background-color: hsl(240, 6%, 25%);
   --page-dark-background-color: hsl(240, 6%, 17%);
   --block-background-color: hsl(240, 8%, 22%);
-  --header-background-color: hsl(240, 10%, 15%);
   --main-background-color: hsl(240, 10%, 15%);
   --special-font-family: "Ysabeau";
   --special-font-weight: 500;
+  --special-font-compensation: 0em;
 }
 
-@mixin default-scheme {
+@mixin other-scheme {
   --text-color: hsl(0, 0%, 20%);
   --blue-color: hsl(230, 60%, 60%);
   --dark-blue-color: hsl(230, 55%, 50%);
@@ -62,8 +63,10 @@
   --page-background-color: hsl(215, 20%, 96%);
   --page-dark-background-color: hsl(215, 20%, 88%);
   --block-background-color: hsl(215, 90%, 98%);
-  --header-background-color: white;
   --main-background-color: white;
+  --footer-background-color: hsl(0, 0%, 90%);
+  --footer-text-color: hsl(0, 0%, 50%);
   --special-font-family: "EB Garamond";
   --special-font-weight: 600;
+  --special-font-compensation: 0em;
 }

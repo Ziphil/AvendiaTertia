@@ -25,7 +25,7 @@ function getScheme(path: string, transformer: AvendiaLightTransformer): string {
   } else if (splitRelativePath[0] === "fennese") {
     return "fennese";
   } else {
-    return "default";
+    return "other";
   }
 }
 

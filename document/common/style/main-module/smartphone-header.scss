@@ -24,7 +24,7 @@
 .header-right {
   padding-block: 15rpx;
   padding-inline: $main-smartphone-horizontal-padding;
-  border-block-start: solid 6rpx var(--header-background-color);
+  border-block-start: solid 6rpx var(--main-background-color);
   background-color: var(--orange-color);
   display: flex;
   align-items: center;
@@ -34,10 +34,10 @@
 .header-title {
   color: var(--main-background-color);
   text-decoration: none;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .header-title-text {
@@ -51,14 +51,14 @@
   &[data-size="large"] {
     font-size: 350%;
   }
-  body[data-scheme="default"] &[data-size="small"] {
+  .header-title[data-scheme="other"] &[data-size="small"] {
     letter-spacing: 0.35em;
     text-indent: -0.2em;
   }
-  body[data-scheme="default"] &[data-size="large"] {
+  .header-title[data-scheme="other"] &[data-size="large"] {
     letter-spacing: 0.15em;
   }
-  body[data-scheme="fennese"] &[data-size="single"] {
+  .header-title[data-scheme="fennese"] &[data-size="single"] {
     letter-spacing: -0.03em;
   }
 }

@@ -17,12 +17,12 @@
     <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508" crossorigin="anonymous" async></script>
     <title>{{= it.variables.pageTitle }}</title>
   </head>
-  <body data-scheme="{{= it.variables.scheme ?? 'default' }}">
+  <body data-scheme="{{= it.variables.scheme }}">
 
     <header class="header">
       <div class="header-inner">
         <div class="header-left">
-          <a class="header-title" href="/">
+          <a class="header-title" href="/{{= it.variables.scheme }}/" data-scheme="{{= it.variables.scheme }}">
             {{= it.variables.titleNode?.toString() }}
           </a>
         </div>
@@ -59,19 +59,56 @@
 {{= it.document.toString() }}
 
     <footer class="footer">
-      <address class="footer-icon-list">
-        <a class="footer-icon-item" data-brand="twitter" href="https://twitter.com/Ziphil" target="_blank"></a>
-        <a class="footer-icon-item" data-brand="youtube" href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/" target="_blank"></a>
-        <a class="footer-icon-item" data-brand="discord" href="https://discord.gg/qdRyE2ZExf" target="_blank"></a>
-        <a class="footer-icon-item" data-brand="github" href="https://github.com/Ziphil" target="_blank"></a>
-      </address>
-      <small class="footer-copyright">
-        <span class="footer-copyright-year">© 2009–{{= new Date().getFullYear() }}</span><span class="footer-copyright-author">Ziphil</span>
-      </small>
-      <small class="footer-counter">
-        <script src="http://counter1.fc2.com/counter.php?id=3102008"></script>
-        <noscript><img alt="counter" src="http://counter1.fc2.com/counter_img.php?id=3102008"></noscript> 
-      </small>
+      <div class="footer-inner">
+        <nav class="footer-site-list">
+          <a class="footer-site-item" href="/shaleian/">
+            <div class="footer-site-title" data-scheme="shaleian">
+              <span class="footer-site-title-text" data-size="single">
+                Avendia
+              </span>
+            </div>
+            <div class="footer-site-description">
+              {{= it.translations.description.shaleian[it.variables.language] }}
+            </div>
+          </a>
+          <a class="footer-site-item" href="/fennese/">
+            <div class="footer-site-title" data-scheme="fennese">
+              <span class="footer-site-title-text" data-size="single">
+                ЛОФЖОЧЛО
+              </span>
+            </div>
+            <div class="footer-site-description">
+              {{= it.translations.description.fennese[it.variables.language] }}
+            </div>
+          </a>
+          <a class="footer-site-item" href="/other/">
+            <div class="footer-site-title" data-scheme="other">
+              <span class="footer-site-title-text" data-size="small">
+                ΤΑ ΖΙΦΙΛΟΥ
+              </span>
+              <span class="footer-site-title-text" data-size="large">
+                ΒΙΒΛΙΑ
+              </span>
+            </div>
+            <div class="footer-site-description">
+              {{= it.translations.description.other[it.variables.language] }}
+            </div>
+          </a>
+        </nav>
+        <address class="footer-icon-list">
+          <a class="footer-icon-item" data-brand="twitter" href="https://twitter.com/Ziphil" target="_blank" rel="noopener noreferrer"></a>
+          <a class="footer-icon-item" data-brand="youtube" href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/" target="_blank" rel="noopener noreferrer"></a>
+          <a class="footer-icon-item" data-brand="discord" href="https://discord.gg/qdRyE2ZExf" target="_blank" rel="noopener noreferrer"></a>
+          <a class="footer-icon-item" data-brand="github" href="https://github.com/Ziphil" target="_blank" rel="noopener noreferrer"></a>
+        </address>
+        <small class="footer-copyright">
+          <span class="footer-copyright-year">© 2009–{{= new Date().getFullYear() }}</span><span class="footer-copyright-author">Ziphil</span>
+        </small>
+        <small class="footer-counter">
+          <script src="http://counter1.fc2.com/counter.php?id=3102008"></script>
+          <noscript><img src="http://counter1.fc2.com/counter_img.php?id=3102008" alt=""></noscript> 
+        </small>
+      </div>
     </footer>
 
   </body>

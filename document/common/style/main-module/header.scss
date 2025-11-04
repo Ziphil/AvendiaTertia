@@ -48,7 +48,7 @@
   z-index: 1;
   &::before {
     inset: 0rpx;
-    border-inline-end: solid 15rpx var(--header-background-color);
+    border-inline-end: solid 15rpx var(--main-background-color);
     background-color: var(--blue-color);
     background-origin: padding-box;
     transform: skew($skew-angle);
@@ -78,10 +78,10 @@
 .header-title {
   color: var(--main-background-color);
   text-decoration: none;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .header-title-text {
@@ -95,14 +95,14 @@
   &[data-size="large"] {
     font-size: 350%;
   }
-  body[data-scheme="default"] &[data-size="small"] {
+  .header-title[data-scheme="other"] &[data-size="small"] {
     letter-spacing: 0.35em;
     text-indent: -0.2em;
   }
-  body[data-scheme="default"] &[data-size="large"] {
+  .header-title[data-scheme="other"] &[data-size="large"] {
     letter-spacing: 0.15em;
   }
-  body[data-scheme="fennese"] &[data-size="single"] {
+  .header-title[data-scheme="fennese"] &[data-size="single"] {
     letter-spacing: -0.03em;
   }
 }

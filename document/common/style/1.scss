@@ -76,7 +76,7 @@ body {
   &[data-scheme="fennese"] {
     @include fennese-scheme;
   }
-  &[data-scheme="default"] {
-    @include default-scheme;
+  &[data-scheme="other"] {
+    @include other-scheme;
   }
 }
