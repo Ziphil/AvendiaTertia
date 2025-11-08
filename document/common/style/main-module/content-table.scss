@@ -50,7 +50,7 @@ $content-item-height: 90rpx;
 .content-item {
   height: $content-item-height;
   padding-inline: 32rpx;
-  color: var(--black-blue-color);
+  color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
   background-color: var(--main-background-color);
   box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
   display: flex;
@@ -77,7 +77,7 @@ $content-item-height: 90rpx;
     inset-block: 0rpx;
     background-color: var(--blue-color);
     transform: skew($skew-angle);
-    transition: left 0.2s;
+    transition: inset-inline-start 0.2s;
     position: absolute;
     z-index: -1;
     content: "";

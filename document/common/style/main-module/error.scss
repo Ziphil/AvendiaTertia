@@ -46,7 +46,7 @@
 
 .error-description {
   margin-block-start: 10rpx;
-  color: var(--black-blue-color);
+  color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
   display: flex;
   justify-content: center;
 }

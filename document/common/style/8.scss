@@ -167,7 +167,7 @@ $link-height: 60rpx;
 .link-item {
   width: var(--card-width);
   height: $link-height;
-  color: var(--black-blue-color);
+  color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
   background-color: white;
   box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
   display: flex;
@@ -397,7 +397,7 @@ $link-height: 60rpx;
   height: 100%;
   font-family: "Vekos Web";
   font-size: 110%;
-  color: var(--black-blue-color);
+  color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
   background-color: var(--block-background-color);
   display: flex;
   align-items: center;
@@ -475,7 +475,7 @@ $link-height: 60rpx;
 
 .count-text {
   inset-block-end: 0.05em;
-  color: var(--black-blue-color);
+  color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
   text-align: right;
   position: relative;
 }
