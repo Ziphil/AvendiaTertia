@@ -13,6 +13,7 @@
 $home-width: 85cqi;
 $home-max-width: 1200rpx;
 
+$skew-angle: -15deg;
 
 @mixin large-screen {
   @media screen and (min-width: 1151px) {
@@ -184,7 +185,7 @@ $link-height: 60rpx;
   &::before {
     width: 100%;
     inset-block: 0rpx;
-    inset-inline-start: calc(0% - #{div($link-height, 2) * $skew-tan} - 6rpx);
+    inset-inline-start: calc(0% - #{div($link-height, 2) * tan(abs($skew-angle))} - 6rpx);
     background-position: 0% $link-height;
     background-size: 100% $link-height;
     background-image: single-color(var(--blue-color));
@@ -201,7 +202,7 @@ $link-height: 60rpx;
   &::after {
     width: 100%;
     inset-block: 0rpx;
-    inset-inline-end: calc(-100% + #{div($link-height * $skew-tan, 2)});
+    inset-inline-end: calc(-100% + #{div($link-height * tan(abs($skew-angle)), 2)});
     background-color: var(--orange-color);
     position: absolute;
     transform: skew($skew-angle);
@@ -259,7 +260,7 @@ $link-height: 60rpx;
   &::before {
     width: 100%;
     inset-block: 0rpx;
-    inset-inline-start: calc(0% - #{div($card-item-height, 2) * $skew-tan} - 6rpx);
+    inset-inline-start: calc(0% - #{div($card-item-height, 2) * tan(abs($skew-angle))} - 6rpx);
     background-position: 0% ($card-item-height - $card-item-title-height);
     background-size: 100% $card-item-height;
     background-image: single-color(var(--blue-color));
@@ -276,7 +277,7 @@ $link-height: 60rpx;
   &::after {
     width: 100%;
     inset-block: 0rpx;
-    inset-inline-end: calc(-100% + #{div($card-item-height * $skew-tan, 2)});
+    inset-inline-end: calc(-100% + #{div($card-item-height * tan(abs($skew-angle)), 2)});
     background-color: var(--orange-color);
     position: absolute;
     transform: skew($skew-angle);

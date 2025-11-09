@@ -5,6 +5,7 @@
 
 
 $content-item-height: 90rpx;
+$content-item-skew-angle: -15deg;
 
 .content-table-main {
   max-width: $main-max-width;
@@ -72,25 +73,25 @@ $content-item-height: 90rpx;
     color: var(--main-background-color);
   }
   &::before {
-    width: calc(100% - #{$content-item-height * $skew-tan} - 6rpx);
-    inset-inline-start: calc(-100% + #{$content-item-height * $skew-tan} + 6rpx + #{div($content-item-height * $skew-tan, 2)});
+    width: calc(100% - #{$content-item-height * tan(abs($content-item-skew-angle))} - 6rpx);
+    inset-inline-start: calc(-100% + #{$content-item-height * tan(abs($content-item-skew-angle))} + 6rpx + #{div($content-item-height * tan(abs($content-item-skew-angle)), 2)});
     inset-block: 0rpx;
     background-color: var(--blue-color);
-    transform: skew($skew-angle);
+    transform: skew($content-item-skew-angle);
     transition: inset-inline-start 0.2s;
     position: absolute;
     z-index: -1;
     content: "";
   }
   &:not([data-disabled]):hover::before {
-    inset-inline-start: calc(#{div($content-item-height * $skew-tan, 2)});
+    inset-inline-start: calc(#{div($content-item-height * tan(abs($content-item-skew-angle)), 2)});
   }
   &::after {
     width: 100%;
-    inset-inline-end: calc(-100% + #{div($content-item-height * $skew-tan, 2)});
+    inset-inline-end: calc(-100% + #{div($content-item-height * tan(abs($content-item-skew-angle)), 2)});
     inset-block: 0rpx;
     background-color: var(--orange-color);
-    transform: skew($skew-angle);
+    transform: skew($content-item-skew-angle);
     position: absolute;
     z-index: -2;
     content: "";

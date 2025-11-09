@@ -7,6 +7,7 @@
 
 $section-height: 42rpx;
 $subsection-height: 36rpx;
+$section-skew-angle: -15deg;
 
 .section {
   height: $section-height;
@@ -47,7 +48,7 @@ $subsection-height: 36rpx;
     border-inline-start: solid 6rpx var(--main-background-color);
     background-color: var(--orange-color);
     background-origin: padding-box;
-    transform: skew($skew-angle);
+    transform: skew($section-skew-angle);
     position: absolute;
     z-index: -1;
     content: "";

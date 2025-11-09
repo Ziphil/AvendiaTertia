@@ -4,6 +4,8 @@
 @import "../main-module/variable.scss";
 
 
+$header-skew-angle: -15deg;
+
 .header {
   width: 100%;
   height: 120rpx;
@@ -51,7 +53,7 @@
     border-inline-end: solid 15rpx var(--main-background-color);
     background-color: var(--blue-color);
     background-origin: padding-box;
-    transform: skew($skew-angle);
+    transform: skew($header-skew-angle);
     position: absolute;
     z-index: -10;
     content: "";
@@ -68,7 +70,7 @@
   &::before {
     inset: 0rpx;
     background-color: var(--orange-color);
-    transform: skew($skew-angle);
+    transform: skew($header-skew-angle);
     position: absolute;
     z-index: -10;
     content: "";
@@ -143,7 +145,7 @@ $header-item-height: 35rpx;
     box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
     background-size: 100% 200%;
     background-image: linear-gradient(to bottom, var(--main-background-color) 50%, color-mix(in oklch, var(--orange-color) 20%, var(--main-background-color)) 50%);
-    transform: skew($skew-angle);
+    transform: skew($header-skew-angle);
     transition: background-position 0.2s;
     position: absolute;
     z-index: -2;
