@@ -22,7 +22,7 @@
   \body<
     \main|class="main"|<
 
-      \header|class="header-block centralize"|<
+      \header|class="header-block"|<
         \div|class="header"|<
           \div|class="header-background",aria-hidden="true"|<
             \img|class="header-logo",src="/material/logo/2.svg",alt=""|;
@@ -34,7 +34,7 @@
         >
       >
 
-      \article|class="card-table-block centralize"|<
+      \article|class="card-table-block"|<
         \nav|class="card-table"|<
           \a|class="card-item",href="/shaleian/introduction/"|<
             \div|class="card-title"|<
@@ -151,7 +151,7 @@
         >
       >
 
-      \aside|class="ad-block centralize"|<
+      \aside|class="ad-block"|<
         \div|class="ad"|<
           \div|class="ad-inner",align="center"|<
             \ins|class="adsbygoogle",style="display:block;width:100%;height:90px;",data-ad-client="ca-pub-9429549748934508",data-ad-slot="8515086829"|;
@@ -162,13 +162,13 @@
         >
       >
 
-      \div|class="separator-block centralize",aria-hidden="true"|<
+      \div|class="separator-block",aria-hidden="true"|<
         \div|class="separator"|<
           \div|class="separator-mark"|;
         >
       >
 
-      \article|class="announcement-block centralize"|<
+      \article|class="announcement-block"|<
         \div|class="announcement"|<
           \div|class="announcement-left"|<
             \img|class="announcement-image",src="/file/other/6.jpg",alt=""|;
@@ -270,7 +270,7 @@
         >
       >
 
-      \article|class="count-table-block centralize"|<
+      \article|class="count-table-block"|<
         \div|class="count-table-container"|<
           \dl|class="count-table",data-size="large"|<
             \dt|class="count-text"|<\span|class="large-screen"|<現在の>単語数>
@@ -287,13 +287,13 @@
         >
       >
 
-      \div|class="separator-block centralize",aria-hidden="true"|<
+      \div|class="separator-block",aria-hidden="true"|<
         \div|class="separator"|<
           \div|class="separator-mark"|;
         >
       >
 
-      \article|class="other-block centralize"|<
+      \article|class="other-block"|<
         \div|class="other"|<
           \div|class="other-column"|<
             \h1|class="other-header"|<
