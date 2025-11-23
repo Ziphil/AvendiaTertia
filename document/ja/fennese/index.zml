@@ -2,19 +2,235 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 
-\page<
-
-  \hb<資料>
-  \pb<
-    \ab|href="introduction/"|<入門資料>
-    \ab|href="grammar/"|<文法>
-    \ab|href="database/"|<データベース>
-    \ab|href="translation/"|<翻訳>
-    \ab|href="document/"|<資料>
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \meta|name="twitter:card",content="summary"|;
+    \meta|name="twitter:site",content="@Ziphil"|;
+    \meta|property="og:url",content="https://ziphil.com/fennese"|;
+    \meta|property="og:title",content="Лофжочло"|;
+    \meta|property="og:description",content="人工言語「フェンナ語」の公式サイトです。"|;
+    \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
+    \script|src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508",crossorigin="anonymous",async|;
+    \link|rel="stylesheet",type="text/css",href="/style/13.css"|;
+    \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
+    \title<Лофжочло>
   >
-  \hb<日記>
-  \pb<
-    \ab|href="diary/"|<製作日記>
-  >
+  \body<
+    \main|class="main"|<
 
+      \article|class="top-block"|<
+        \div|class="top"|<
+          \div|class="top-left"|<
+            \header|class="visual"|<
+              \div|class="visual-background",aria-hidden="true"|<
+                \img|class="visual-logo",src="/material/fennese/1.svg",alt=""|;
+              >
+              \div|class="visual-content"|<
+                \div|class="visual-title"|<Лофжочло>
+                \div|class="visual-flavor"|<Леделат\br;Лефеннеорашшоват>
+              >
+            >
+            \div|class="catch"|<
+              \p|class="catch-paragraph"|<
+                \span|class="catch-line"|<Тосо рацело аффедди>
+                \span|class="catch-line"|<севесхе лоргоцлов>
+              >
+              \p|class="catch-paragraph"|<
+                \span|class="catch-line"|<Тедди хед тезбеҕҕе>
+                \span|class="catch-line"|<Лоззе зохука>
+              >
+            >
+          >
+          \nav|class="card-table"|<
+            \a|class="card-item",href="/fennese/introduction/"|<
+              \div|class="card-background",aria-hidden="true"|;
+              \div|class="card-title"|<
+                \div|class="card-title-japanese"|<入門資料>
+              >
+              \div|class="card-explanation"|<
+                \div|class="card-explanation-text"|<
+                  初学者向けのフェンナ語文法の解説を読むことができます。
+                  現在準備中です。
+                >
+              >
+            >
+            \a|class="card-item",href="/fennese/grammar/"|<
+              \div|class="card-background",aria-hidden="true"|;
+              \div|class="card-title"|<
+                \div|class="card-title-japanese"|<文法>
+              >
+              \div|class="card-explanation"|<
+                \div|class="card-explanation-text"|<
+                  フェンナ語文法の詳細な解説です。
+                  文法の確認に利用できます。
+                >
+              >
+            >
+            \a|class="card-item",href="/fennese/database/"|<
+              \div|class="card-background",aria-hidden="true"|;
+              \div|class="card-title"|<
+                \div|class="card-title-japanese"|<データベース>
+              >
+              \div|class="card-explanation"|<
+                \div|class="card-explanation-text"|<
+                  フェンナ語の辞典を閲覧できます。
+                  語根ごとにまとめられた単語の一覧もあります。
+                >
+              >
+            >
+            \a|class="card-item",href="/fennese/translation/"|<
+              \div|class="card-background",aria-hidden="true"|;
+              \div|class="card-title"|<
+                \div|class="card-title-japanese"|<翻訳>
+              >
+              \div|class="card-explanation"|<
+                \div|class="card-explanation-text"|<
+                  様々な文献や楽曲のフェンナ語訳を読むことができます。
+                >
+              >
+            >
+            \a|class="card-item",href="/fennese/document/"|<
+              \div|class="card-background",aria-hidden="true"|;
+              \div|class="card-title"|<
+                \div|class="card-title-japanese"|<資料>
+              >
+              \div|class="card-explanation"|<
+                \div|class="card-explanation-text"|<
+                  フェンナ語に関する様々な資料集です。
+                >
+              >
+            >
+            \a|class="card-item",href="/fennese/diary/"|<
+              \div|class="card-background",aria-hidden="true"|;
+              \div|class="card-title"|<
+                \div|class="card-title-japanese"|<製作日記>
+              >
+              \div|class="card-explanation"|<
+                \div|class="card-explanation-text"|<
+                  フェンナ語を作る上での疑問点や考察を綴ったものです。
+                  製作過程を垣間見ることができます。
+                >
+              >
+            >
+          >
+        >
+      >
+
+      \article|class="introduction-block"|<
+        \div|class="introduction"|<
+          \h1|class="introduction-header"|<
+            \span|class="introduction-header-text"|<人工言語とは>
+          >
+          \div|class="introduction-content"|<
+            \div|class="introduction-explanation",data-position="left"|<
+              \div|class="introduction-explanation-inner",data-position="left"|<
+                \div|class="introduction-explanation-innerinner",data-position="left"|<
+                  \p|class="introduction-paragraph",data-position="left"|<
+                    人工言語とは、長い年月をかけて自然に発生した日本語や英語などの「自然言語」とは対照的に、特定の目的のために人為的に創造された言語のことを指します。
+                    その種類は多岐に渡り、異なる母語をもつ人々が円滑に意思疎通するための「国際補助語」、言語学的な仮説の検証を行うための「工学言語」、そして個人的な美的感覚や架空の世界観を表現するための「芸術言語」などがあります。
+                  >
+                  \p|class="introduction-paragraph",data-position="left"|<
+                    その中でも芸術言語では、架空世界のリアリティを高めたり、言語の音や表現の美しさを追求したりすることが、創作の主眼に置かれます。
+                    例えば、架空の世界を舞台にした小説や映像作品において、そこで話されている独自の言語を作ることにより、その世界が本当に存在するかのような臨場感を演出することができます。
+                    また、作者にとって理想的な音の響きや表現の美しさを組み込むことで、詩や絵画のような芸術作品として成立させることも可能です。
+                  >
+                >
+              >
+            >
+            \div|class="introduction-explanation",data-position="right"|<
+              \div|class="introduction-explanation-inner",data-position="right"|<
+                \div|class="introduction-explanation-innerinner",data-position="right"|<
+                  \p|class="introduction-paragraph",data-position="right"|<
+                    Planlingvoj estas lingvoj intence kreitaj por specifaj celoj, kontraste al “naturaj lingvoj” kiel la japana aŭ la angla, kiuj nature estiĝis tra longa tempodaŭro.
+                    Iliaj specoj estas diversaj: “internaciaj helplingvoj” por ebligi glatan komunikadon inter homoj kun malsamaj gepatraj lingvoj`; “eksperimentaj lingvoj” por konfirmi lingvistikajn hipotezojn`; kaj “artaj lingvoj” por esprimi personan estetikan senton aŭ fikcian mondkoncepton.
+                  >
+                  \p|class="introduction-paragraph",data-position="right"|<
+                    Inter tiuj ĉe artaj lingvoj, la fokuso de la kreado kuŝas en la pliigado de la realeco de fikcia mondo aŭ en la serĉado de beleco en lingvaj sonoj kaj esprimoj.
+                    Ekzemple, en romanoj aŭ filmoj kiuj okazas en fikcia mondo, kreante unikan lingvon parolatan tie, oni povas krei etoson kvazaŭ tiu mondo vere ekzistus.
+                    Krome, enkorpigante sonsonan kaj espriman belecon idealajn por la aŭtoro, oni povas establi la lingvon kiel artan verkon similan al poezio aŭ pentraĵo.
+                  >
+                >
+              >
+            >
+          >
+          \h1|class="introduction-header"|<
+            \span|class="introduction-header-text"|<フェンナ語とは>
+          >
+          \div|class="introduction-content"|<
+            \div|class="introduction-explanation",data-position="left"|<
+              \div|class="introduction-explanation-inner",data-position="left"|<
+                \div|class="introduction-explanation-innerinner",data-position="left"|<
+                  \p|class="introduction-paragraph",data-position="left"|<
+                    人工言語とは、自然とでき上がった言語である日本語や英語などに対し、人間が意図的に作り上げた言語のことを指します。
+                    人工言語には様々な種類があり、その 1 つは、共通の母語をもたない人との間で意思疎通を行うために作られた「国際補助語」と呼ばれるものです。
+                    また、製作そのものを楽しむためや小説などの雰囲気を強めるために作られる「芸術言語」というものもあります。
+                    このサイトで紹介するフェンナ語は、芸術言語に分類されます。
+                  >
+                  \p|class="introduction-paragraph",data-position="left"|<
+                    人工言語とは、自然とでき上がった言語である日本語や英語などに対し、人間が意図的に作り上げた言語のことを指します。
+                    人工言語には様々な種類があり、その 1 つは、共通の母語をもたない人との間で意思疎通を行うために作られた「国際補助語」と呼ばれるものです。
+                    また、製作そのものを楽しむためや小説などの雰囲気を強めるために作られる「芸術言語」というものもあります。
+                    このサイトで紹介するフェンナ語は、芸術言語に分類されます。
+                  >
+                >
+              >
+            >
+            \div|class="introduction-explanation",data-position="right"|<
+              \div|class="introduction-explanation-inner",data-position="right"|<
+                \div|class="introduction-explanation-innerinner",data-position="right"|<
+                  \p|class="introduction-paragraph",data-position="right"|<
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  >
+                >
+              >
+            >
+          >
+        >
+      >
+
+      \article|class="other-block"|<
+        \div|class="other"|<
+          \div|class="other-column",data-position="left"|<
+            \h1|class="other-header"|<
+              \span|class="other-header-text"|<連絡先>
+            >
+            \div|class="contact-table"|<
+              \a|class="contact-item",href="https://twitter.com/Ziphil",target="_blank"|<
+                \div|class="contact-icon",data-brand="twitter"|;
+                \div|class="contact-explanation"|<
+                  主に Twitter 上で活動しています。
+                  私への連絡は Twitter を介するのが最も早く確実です。
+                >
+              >
+              \a|class="contact-item",href="https://youtube.com/@ziphil",target="_blank"|<
+                \div|class="contact-icon",data-brand="youtube"|;
+                \div|class="contact-explanation"|<
+                  フェンナ語の製作過程を YouTube ライブで配信することがあります。
+                  配信日時は Twitter や Discord で告知します。
+                >
+              >
+              \a|class="contact-item",href="https://github.com/Ziphil",target="_blank"|<
+                \div|class="contact-icon",data-brand="github"|;
+                \div|class="contact-explanation"|<
+                  フェンナ語に関する様々なデータはほとんど GitHub で管理しています。
+                >
+              >
+            >
+          >
+          \div|class="other-column",data-position="right"|<
+            \h1|class="other-header"|<
+              \div|class="other-header-text"|<更新履歴>
+            >
+            \history|size="4"|;
+          >
+        >
+      >
+
+    >
+  >
 >
