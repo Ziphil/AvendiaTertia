@@ -184,6 +184,7 @@ $card-item-gap: 30rpx;
 
 .card-table {
   padding-block: 60rpx;
+  margin-inline-end: -40rpx;
   row-gap: $card-item-gap;
   display: grid;
   grid-template-columns: 1fr;
@@ -299,49 +300,23 @@ $card-item-gap: 30rpx;
 }
 
 .introduction-content {
-  column-gap: 0rpx;
+  column-gap: 40rpx;
   display: grid;
   grid-template-columns: 4fr 3fr;
 }
 
 .introduction-explanation {
-  &[data-position="right"] {
-    container-type: size;
-  }
-}
-
-.introduction-explanation-inner {
-  height: 100%;
-  &[data-position="left"] {
+  &:not([data-language="fennese"]) {
     line-height: $line-height;
   }
-  &[data-position="right"] {
-    margin-inline-start: calc(100cqh * #{tan($skew-angle)} + 40rpx);
+  &[data-language="fennese"] {
     font-size: 90%;
     font-family: var(--special-font-family);
     color: oklch(from var(--blue-color) l c h / 0.5);
-    line-height: 1.4;
+    line-height: 1.5;
+    letter-spacing: -0.05em;
     font-variant-caps: small-caps;
     text-transform: capitalize;
-    letter-spacing: -0.05em;
-  }
-  &[data-position="left"]::before {
-    height: 100%;
-    aspect-ratio: tan(abs($skew-angle)) / 1;
-    shape-outside: polygon(100% 0%, 0% 100%, 100% 100%);
-    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
-    float: right;
-    display: block;
-    content: "";
-  }
-  &[data-position="right"]::before {
-    height: 100%;
-    aspect-ratio: tan(abs($skew-angle)) / 1;
-    shape-outside: polygon(0% 0%, 100% 0%, 0% 100%);
-    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-    float: left;
-    display: block;
-    content: "";
   }
 }
 
@@ -368,18 +343,17 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 }
 
 .other {
-  display: flex;
+  display: grid;
   @include nonsmall-screen {
     width: $home-width;
     max-width: $home-max-width;
-    flex-direction: row;
+    grid-template-columns: 4fr 3fr;
   }
   @include small-screen {
     width: 100%;
     row-gap: 50rpx;
-    column-gap: 0rpx;
     padding-inline: $main-smartphone-horizontal-padding;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     box-sizing: border-box;
   }
 }
@@ -387,7 +361,6 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 .other-column {
   padding-block-start: 50rpx;
   padding-block-end: 60rpx;
-  flex: 1 1 0rpx;
   container-name: other-column;
   container-type: inline-size;
   position: relative;
