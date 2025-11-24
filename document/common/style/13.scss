@@ -184,7 +184,7 @@ $card-item-gap: 30rpx;
 
 .card-table {
   padding-block: 60rpx;
-  margin-inline-end: -40rpx;
+  margin-inline-end: -60rpx;
   row-gap: $card-item-gap;
   display: grid;
   grid-template-columns: 1fr;
@@ -276,9 +276,9 @@ $card-item-gap: 30rpx;
 
 .introduction-block {
   padding-block: 60rpx;
-  border-block-start: solid 2rpx var(--main-background-color);
-  border-block-end: solid 2rpx var(--main-background-color);
-  background-color: oklch(from var(--main-background-color) l c h / 0.8);
+  border-block-start: solid 2rpx oklch(from var(--main-background-color) l c h / 1);
+  border-block-end: solid 2rpx oklch(from var(--main-background-color) l c h / 1);
+  background-color: var(--main-background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
