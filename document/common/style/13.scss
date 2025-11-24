@@ -276,6 +276,8 @@ $card-item-gap: 30rpx;
 
 .introduction-block {
   padding-block: 60rpx;
+  border-block-start: solid 2rpx var(--main-background-color);
+  border-block-end: solid 2rpx var(--main-background-color);
   background-color: oklch(from var(--main-background-color) l c h / 0.8);
   display: flex;
   flex-direction: column;
@@ -484,7 +486,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     inset-block: 0rpx;
     inset-inline-start: -100vi;
     inset-inline-end: var(--base-offset);
-    background-color: oklch(from var(--main-background-color) l c h / 0.8);
+    background-color: oklch(from var(--main-background-color) l c h / 0.3);
     transform: skew($skew-angle);
     content: "";
     position: absolute;

@@ -137,13 +137,13 @@
             >
             \div|class="introduction-explanation",data-language="fennese",aria-hidden="true"|<
               \p|class="introduction-paragraph"|<
-                Planlingvoj estas lingvoj intence kreitaj por specifaj celoj, kontraste al “naturaj lingvoj” kiel la japana aŭ la angla, kiuj nature estiĝis tra longa tempodaŭro.
-                Iliaj specoj estas diversaj: “internaciaj helplingvoj” por ebligi glatan komunikadon inter homoj kun malsamaj gepatraj lingvoj`; “eksperimentaj lingvoj” por konfirmi lingvistikajn hipotezojn`; kaj “artaj lingvoj” por esprimi personan estetikan senton aŭ fikcian mondkoncepton.
+                ## Planlingvoj estas lingvoj intence kreitaj por specifaj celoj, kontraste al “naturaj lingvoj” kiel la japana aŭ la angla, kiuj nature estiĝis tra longa tempodaŭro.
+                ## Iliaj specoj estas diversaj: “internaciaj helplingvoj” por ebligi glatan komunikadon inter homoj kun malsamaj gepatraj lingvoj`; “eksperimentaj lingvoj” por konfirmi lingvistikajn hipotezojn`; kaj “artaj lingvoj” por esprimi personan estetikan senton aŭ fikcian mondkoncepton.
               >
               \p|class="introduction-paragraph"|<
-                Inter tiuj ĉe artaj lingvoj, la fokuso de la kreado kuŝas en la pliigado de la realeco de fikcia mondo aŭ en la serĉado de beleco en lingvaj sonoj kaj esprimoj.
-                Ekzemple, en romanoj aŭ filmoj kiuj okazas en fikcia mondo, kreante unikan lingvon parolatan tie, oni povas krei etoson kvazaŭ tiu mondo vere ekzistus.
-                Krome, enkorpigante sonsonan kaj espriman belecon idealajn por la aŭtoro, oni povas establi la lingvon kiel artan verkon similan al poezio aŭ pentraĵo.
+                ## Inter tiuj ĉe artaj lingvoj, la fokuso de la kreado kuŝas en la pliigado de la realeco de fikcia mondo aŭ en la serĉado de beleco en lingvaj sonoj kaj esprimoj.
+                ## Ekzemple, en romanoj aŭ filmoj kiuj okazas en fikcia mondo, kreante unikan lingvon parolatan tie, oni povas krei etoson kvazaŭ tiu mondo vere ekzistus.
+                ## Krome, enkorpigante sonsonan kaj espriman belecon idealajn por la aŭtoro, oni povas establi la lingvon kiel artan verkon similan al poezio aŭ pentraĵo.
               >
             >
           >
@@ -153,24 +153,21 @@
           \div|class="introduction-content"|<
             \div|class="introduction-explanation"|<
               \p|class="introduction-paragraph"|<
-                人工言語とは、自然とでき上がった言語である日本語や英語などに対し、人間が意図的に作り上げた言語のことを指します。
-                人工言語には様々な種類があり、その 1 つは、共通の母語をもたない人との間で意思疎通を行うために作られた「国際補助語」と呼ばれるものです。
-                また、製作そのものを楽しむためや小説などの雰囲気を強めるために作られる「芸術言語」というものもあります。
-                このサイトで紹介するフェンナ語は、芸術言語に分類されます。
+                フェンナ語は、Ziphil が\a|class="link",href="/shaleian/"|<シャレイア語>に次いで製作を始めた 2 つ目の人工言語です。
+                アラビア語のように語根と語型によって単語が作られるのが特徴の 1 つです。
+                また、規則的な基層形からの音変化を経て表層形が得られるというシステムをもち、語形変化に 1 つしか規則がないにも関わらず、実際の文で現れる形は多様で不規則に見えることがあるのも特徴です。
               >
               \p|class="introduction-paragraph"|<
-                人工言語とは、自然とでき上がった言語である日本語や英語などに対し、人間が意図的に作り上げた言語のことを指します。
-                人工言語には様々な種類があり、その 1 つは、共通の母語をもたない人との間で意思疎通を行うために作られた「国際補助語」と呼ばれるものです。
-                また、製作そのものを楽しむためや小説などの雰囲気を強めるために作られる「芸術言語」というものもあります。
-                このサイトで紹介するフェンナ語は、芸術言語に分類されます。
+                フェンナ語の最大のコンセプトは、「美しい外国語」です。
+                外国語の歌が母国語の歌より綺麗で心地良く聴こえたり、外国語が書かれていると少しオシャレに見えたりすることはよくあるでしょう。
+                これは、外国語には、理解できないもしくは見慣れないからこその美しさがあるからです。
+                フェンナ語は、このような美しさを楽しむために作っています。
               >
             >
             \div|class="introduction-explanation",data-language="fennese",aria-hidden="true"|<
               \p|class="introduction-paragraph"|<
-                Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              >
+              \p|class="introduction-paragraph"|<
               >
             >
           >
