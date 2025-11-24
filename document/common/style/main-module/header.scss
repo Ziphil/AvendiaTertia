@@ -106,6 +106,7 @@ $header-skew-angle: -15deg;
   }
   .header-title[data-scheme="fennese"] &[data-size="single"] {
     letter-spacing: -0.03em;
+    text-transform: uppercase;
   }
 }
 
