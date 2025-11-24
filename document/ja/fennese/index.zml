@@ -197,6 +197,12 @@
         \div|class="other"|<
           \div|class="other-column",data-position="left"|<
             \h1|class="other-header"|<
+              \div|class="other-header-text"|<更新履歴>
+            >
+            \history|size="4"|;
+          >
+          \div|class="other-column",data-position="right"|<
+            \h1|class="other-header"|<
               \span|class="other-header-text"|<連絡先>
             >
             \div|class="contact-table"|<
@@ -211,7 +217,7 @@
                 \div|class="contact-icon",data-brand="youtube"|;
                 \div|class="contact-explanation"|<
                   フェンナ語の製作過程を YouTube ライブで配信することがあります。
-                  配信日時は Twitter や Discord で告知します。
+                  配信日時は Twitter などで告知します。
                 >
               >
               \a|class="contact-item",href="https://github.com/Ziphil",target="_blank"|<
@@ -221,12 +227,6 @@
                 >
               >
             >
-          >
-          \div|class="other-column",data-position="right"|<
-            \h1|class="other-header"|<
-              \div|class="other-header-text"|<更新履歴>
-            >
-            \history|size="4"|;
           >
         >
       >

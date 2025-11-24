@@ -255,7 +255,7 @@ $card-item-gap: 30rpx;
 }
 
 .card-title {
-  margin-inline-start: 30rpx;
+  margin-inline-start: 25rpx;
   height: $card-item-title-height;
   color: var(--main-background-color);
   font-size: 130%;
@@ -391,19 +391,19 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   container-name: other-column;
   container-type: inline-size;
   position: relative;
-  &[data-position="left"]::before {
-    inset-inline-end: calc(50cqi);
-    inset-inline-start: -100vi;
+  &:nth-child(2)::before {
+    inset-inline-start: calc(100cqi - 125rpx);
+    inset-inline-end: -100vi;
     inset-block: 0rpx;
     background-color: var(--blue-color);
-    transform: skew(-$skew-angle);
+    transform: skew($skew-angle);
     opacity: 0.3;
     z-index: -1;
     position: absolute;
     content: ""
   }
-  &[data-position="right"] {
-    margin-inline-start: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1) - $history-item-height * 0.5) * tan($skew-angle)} + 80rpx);
+  &:nth-child(2) {
+    margin-inline-start: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1) - $history-item-height * 0.5) * tan($skew-angle)} + 60rpx);
   }
 }
 
@@ -412,7 +412,11 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   font-size: 150%;
   color: var(--blue-color);
   letter-spacing: 0.1em;
+  .other-column:nth-child(2) & {
+    margin-inline-start: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1)) * tan(-$skew-angle)});
+  }
 }
+
 .contact-table {
   row-gap: $contact-item-gap;
   display: flex;
@@ -421,7 +425,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 
 .contact-item {
   height: $contact-item-height;
-  padding-inline: 20rpx;
+  padding-inline: 25rpx;
   column-gap: 20rpx;
   margin-inline-start: (($contact-item-height + $contact-item-gap) * ($contact-item-count - 1)) * tan(-$skew-angle);
   translate: var(--base-offset) 0rpx;
@@ -431,9 +435,9 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   align-items: center;
   cursor: pointer;
   position: relative;
-  @for $index from 1 through $contact-item-count {
+  @for $index from 1 through 8 {
     &:nth-child(#{$index}) {
-      --base-offset: #{(($contact-item-height + $contact-item-gap) * ($contact-item-count - $index)) * tan($skew-angle)};
+      --base-offset: #{(($contact-item-height + $contact-item-gap) * ($index - 1)) * tan($skew-angle)};
     };
   }
   &::before {
@@ -442,7 +446,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     inset-inline-end: 0rpx;
     border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
     background-color: var(--main-background-color);
-    transform: skew(-$skew-angle);
+    transform: skew($skew-angle);
     filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
     backdrop-filter: blur(5rpx);  
     content: "";
@@ -450,13 +454,13 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     z-index: -1;
   }
   &:hover {
-    translate: calc(var(--base-offset) + 20rpx) 0rpx;
+    translate: calc(var(--base-offset) - 20rpx) 0rpx;
   }
 }
 
 .contact-icon {
   @include icon-font;
-  width: 80rpx;
+  width: 70rpx;
   font-size: 400%;
   font-weight: normal;
   color: var(--blue-color);
@@ -494,8 +498,6 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 
 .history-item {
   height: $history-item-height;
-  padding-inline-start: 20rpx;
-  translate: var(--base-offset) 0rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -507,10 +509,10 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   }
   &::before {
     inset-block: 0rpx;
-    inset-inline-start: 0rpx;
-    inset-inline-end: -100vi;
+    inset-inline-start: -100vi;
+    inset-inline-end: var(--base-offset);
     background-color: oklch(from var(--main-background-color) l c h / 0.8);
-    transform: skew(-$skew-angle);
+    transform: skew($skew-angle);
     content: "";
     position: absolute;
     z-index: -1;
