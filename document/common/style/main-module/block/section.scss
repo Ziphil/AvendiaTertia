@@ -119,7 +119,6 @@ $section-skew-angle: -15deg;
 
 .subsubsection {
   line-height: $line-height;
-  display: flex;
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -140,10 +139,10 @@ $section-skew-angle: -15deg;
     z-index: -2;
     content: "";
     @include desktop {
-      inset-inline-end: $main-horizontal-padding;
+      width: calc(#{$main-horizontal-padding} - 0.5rem);
     }
     @include mobile {
-      inset-inline-end: $main-smartphone-horizontal-padding;
+      width: calc(#{$main-smartphone-horizontal-padding} - 0.5rem);
     }
   }
   &::after {
@@ -164,14 +163,26 @@ $section-skew-angle: -15deg;
 }
 
 .subsubsection-inner {
-  margin-inline: -0.5em;
-  padding-inline: 0.5em;
   font-size: 105%;
   font-weight: normal;
   color: var(--blue-color);
-  background-color: var(--main-background-color);
-  position: relative;
+  display: flex;
+  align-items: baseline;
   z-index: 0;
+  &::after {
+    margin-inline-start: 0.5rem;
+    border-block-start: solid 1rpx var(--blue-color);
+    align-self: center;
+    flex: 1 1 auto;
+    z-index: -2;
+    content: "";
+    @include desktop {
+      width: $main-horizontal-padding;
+    }
+    @include mobile {
+      width: $main-smartphone-horizontal-padding;
+    }
+  }
 }
 
 .section-tag,
