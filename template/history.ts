@@ -48,7 +48,7 @@ manager.registerElementRule("page", "history", (transformer, document, element) 
           self.addClassName("navigation-item");
           self.appendElement("a", (self) => {
             self.addClassName("navigation-link");
-            self.setAttribute("href", firstCategory + "/" + secondCategory + "/" + convertedPath);
+            self.setAttribute("href", "/" + firstCategory + "/" + secondCategory + "/" + convertedPath);
             self.appendChild(transformer.apply(nameElement, "page"));
           });
         });
