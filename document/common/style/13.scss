@@ -15,26 +15,14 @@ $home-max-width: 1200rpx;
 
 $skew-angle: -9deg;
 
-@mixin large-screen {
-  @media screen and (min-width: 1151px) {
-    @content;
-  }
-}
-
-@mixin medium-screen {
-  @media screen and (max-width: 1150px) and (min-width: 801px) {
-    @content;
-  }
-}
-
 @mixin nonsmall-screen {
-  @media screen and (min-width: 801px) {
+  @media screen and (min-width: 1201px) {
     @content;
   }
 }
 
 @mixin small-screen {
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }
@@ -63,6 +51,7 @@ body {
 .main {
   container-name: main;
   container-type: inline-size;
+  overflow-x: hidden;
 }
 
 .top-block {
@@ -73,21 +62,39 @@ body {
 }
 
 .top {
-  width: $home-width;
-  max-width: $home-max-width;
-  column-gap: 100rpx;
-  display: flex;
-  flex-direction: row;
-}
-
-.top-left {
   padding-block-start: 60rpx;
   padding-block-end: 60rpx;
   display: flex;
+  @include desktop {
+    width: $home-width;
+    max-width: $home-max-width;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+  @include nonsmall-screen {
+    column-gap: 100rpx;
+    flex-direction: row;
+  }
+  @include small-screen {
+    row-gap: 50rpx;
+    flex-direction: column;
+  }
+}
+
+.top-left {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
   flex: 0 0 auto;
+  @include nonsmall-screen {
+    align-items: flex-start;
+  }
+  @include small-screen {
+    align-items: center;
+  }
 }
 
 .visual {
@@ -127,11 +134,17 @@ body {
   color: var(--orange-color);
   -webkit-text-stroke: 4rpx oklch(from black l c h / 0.5);
   filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
-  margin-inline: -0.15em;
-  letter-spacing: 0.15em;
-  text-indent: 0.15em;
   paint-order: stroke;
   text-transform: uppercase;
+  @include desktop {
+    margin-inline: -0.15em;
+    letter-spacing: 0.15em;
+    text-indent: 0.15em;  
+  }
+  @include mobile {
+    letter-spacing: 0em;
+    text-indent: 0em;
+    }
 }
 
 .visual-flavor {
@@ -167,6 +180,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @include small-screen {
+    display: none;
+  }
 }
 
 .catch-paragraph {
@@ -183,8 +199,6 @@ $card-item-title-height: 42rpx;
 $card-item-gap: 30rpx;
 
 .card-table {
-  padding-block: 60rpx;
-  margin-inline-end: -60rpx;
   row-gap: $card-item-gap;
   display: grid;
   grid-template-columns: 1fr;
@@ -192,16 +206,20 @@ $card-item-gap: 30rpx;
   position: relative;
   flex: 1 1 auto;
   z-index: 0;
-  &::before {
-    inset-inline-start: 50rpx;
-    inset-inline-end: -100vi;
-    inset-block: 0rpx;
-    background-color: var(--blue-color);
-    transform: skew($skew-angle);
-    opacity: 0.3;
-    z-index: -1;
-    position: absolute;
-    content: ""
+  @include nonsmall-screen {
+    margin-inline-end: -60rpx;
+    &::before {
+      inset-inline-start: 50rpx;
+      inset-inline-end: -100vi;
+      inset-block-start: -60rpx;
+      inset-block-end: -60rpx;
+      background-color: var(--blue-color);
+      transform: skew($skew-angle);
+      opacity: 0.3;
+      z-index: -1;
+      position: absolute;
+      content: ""
+    }
   }
 }
 
@@ -225,10 +243,12 @@ $card-item-gap: 30rpx;
   display: flex;
   flex-direction: column;
   z-index: 1;
-  @for $index from 1 through 8 {
-    &:nth-child(#{$index}) {
-      --base-offset: #{(($card-item-height + $card-item-gap) * ($index - 1)) * tan($skew-angle)};
-    };
+  @include nonsmall-screen {
+    @for $index from 1 through 8 {
+      &:nth-child(#{$index}) {
+        --base-offset: #{(($card-item-height + $card-item-gap) * ($index - 1)) * tan($skew-angle)};
+      };
+    }
   }
   &:hover {
     translate: calc(var(--base-offset) - 30rpx) 0rpx;
@@ -275,20 +295,28 @@ $card-item-gap: 30rpx;
 }
 
 .introduction-block {
+  margin-inline: -100rpx;
+  padding-inline: 100rpx;
   padding-block: 60rpx;
-  border-block-start: solid 2rpx oklch(from var(--main-background-color) l c h / 1);
-  border-block-end: solid 2rpx oklch(from var(--main-background-color) l c h / 1);
   background-color: var(--main-background-color);
+  box-shadow: 0rpx 0rpx 50rpx oklch(from black l c h / 0.3) inset;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .introduction {
-  width: $home-width;
-  max-width: $home-max-width;
   display: flex;
   flex-direction: column;
+  @include desktop {
+    width: $home-width;
+    max-width: $home-max-width;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
 }
 
 .introduction-header {
@@ -302,9 +330,15 @@ $card-item-gap: 30rpx;
 }
 
 .introduction-content {
-  column-gap: 40rpx;
   display: grid;
-  grid-template-columns: 4fr 3fr;
+  @include desktop {
+    column-gap: 40rpx;
+    grid-template-columns: 4fr 3fr;
+  }
+  @include mobile {
+    row-gap: 20rpx;
+    grid-template-columns: 1fr;
+  }
 }
 
 .introduction-explanation {
@@ -345,13 +379,15 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 }
 
 .other {
+  padding-block-start: 50rpx;
+  padding-block-end: 60rpx;
   display: grid;
-  @include nonsmall-screen {
+  @include desktop {
     width: $home-width;
     max-width: $home-max-width;
     grid-template-columns: 4fr 3fr;
   }
-  @include small-screen {
+  @include mobile {
     width: 100%;
     row-gap: 50rpx;
     padding-inline: $main-smartphone-horizontal-padding;
@@ -361,24 +397,25 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 }
 
 .other-column {
-  padding-block-start: 50rpx;
-  padding-block-end: 60rpx;
   container-name: other-column;
   container-type: inline-size;
   position: relative;
-  &:nth-child(2)::before {
-    inset-inline-start: calc(100cqi - 125rpx);
-    inset-inline-end: -100vi;
-    inset-block: 0rpx;
-    background-color: var(--blue-color);
-    transform: skew($skew-angle);
-    opacity: 0.3;
-    z-index: -1;
-    position: absolute;
-    content: ""
-  }
-  &:nth-child(2) {
-    margin-inline-start: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1) - $history-item-height * 0.5) * tan($skew-angle)} + 60rpx);
+  @include desktop {
+    &:nth-child(2)::before {
+      inset-inline-start: calc(100cqi - 125rpx);
+      inset-inline-end: -100vi;
+      inset-block-start: -50rpx;
+      inset-block-end: -60rpx;
+      background-color: var(--blue-color);
+      transform: skew($skew-angle);
+      opacity: 0.3;
+      z-index: -1;
+      position: absolute;
+      content: ""
+    }
+    &:nth-child(2) {
+      margin-inline-start: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1) - $history-item-height * 0.5) * tan($skew-angle)} + 60rpx);
+    }
   }
 }
 
@@ -387,8 +424,10 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   font-size: 150%;
   color: var(--blue-color);
   letter-spacing: 0.1em;
-  .other-column:nth-child(2) & {
-    margin-inline-start: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1)) * tan(-$skew-angle)});
+  @include desktop {
+    .other-column:nth-child(2) & {
+      margin-inline-start: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1)) * tan(-$skew-angle)});
+    }
   }
 }
 
@@ -402,18 +441,20 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   height: $contact-item-height;
   padding-inline: 25rpx;
   column-gap: 20rpx;
-  margin-inline-start: (($contact-item-height + $contact-item-gap) * ($contact-item-count - 1)) * tan(-$skew-angle);
-  translate: var(--base-offset) 0rpx;
+  translate: var(--base-offset, 0rpx) 0rpx;
   transition: translate 0.2s;
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
   position: relative;
-  @for $index from 1 through 8 {
-    &:nth-child(#{$index}) {
-      --base-offset: #{(($contact-item-height + $contact-item-gap) * ($index - 1)) * tan($skew-angle)};
-    };
+  @include desktop {
+    margin-inline-start: (($contact-item-height + $contact-item-gap) * ($contact-item-count - 1)) * tan(-$skew-angle);
+    @for $index from 1 through 8 {
+      &:nth-child(#{$index}) {
+        --base-offset: #{(($contact-item-height + $contact-item-gap) * ($index - 1)) * tan($skew-angle)};
+      };
+    }
   }
   &::before {
     inset-block: 0rpx;
@@ -477,15 +518,17 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   flex-direction: column;
   justify-content: center;
   position: relative;
-  @for $index from 1 through 8 {
-    &:nth-child(#{$index}) {
-      --base-offset: #{(($history-item-height + $history-item-gap) * ($index - 1)) * tan(-$skew-angle)};
-    };
+  @include desktop {
+    @for $index from 1 through 8 {
+      &:nth-child(#{$index}) {
+        --base-offset: #{(($history-item-height + $history-item-gap) * ($index - 1)) * tan(-$skew-angle)};
+      };
+    }
   }
   &::before {
     inset-block: 0rpx;
     inset-inline-start: -100vi;
-    inset-inline-end: var(--base-offset);
+    inset-inline-end: var(--base-offset, 0rpx);
     background-color: oklch(from var(--main-background-color) l c h / 0.3);
     transform: skew($skew-angle);
     content: "";
