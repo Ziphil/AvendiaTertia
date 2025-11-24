@@ -209,7 +209,7 @@ $card-item-gap: 30rpx;
   @include nonsmall-screen {
     margin-inline-end: -60rpx;
     &::before {
-      inset-inline-start: 50rpx;
+      inset-inline-start: 60rpx;
       inset-inline-end: -100vi;
       inset-block-start: -60rpx;
       inset-block-end: -60rpx;
@@ -385,6 +385,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   @include desktop {
     width: $home-width;
     max-width: $home-max-width;
+    column-gap: 40rpx;
     grid-template-columns: 4fr 3fr;
   }
   @include mobile {
@@ -401,6 +402,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   container-type: inline-size;
   position: relative;
   @include desktop {
+    --additional-gap: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1) - $history-item-height * 0.5) * tan($skew-angle)} + 20rpx);
     &:nth-child(2)::before {
       inset-inline-start: calc(100cqi - 125rpx);
       inset-inline-end: -100vi;
@@ -413,8 +415,11 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
       position: absolute;
       content: ""
     }
+    &:nth-child(1) {
+      margin-inline-end: calc(var(--additional-gap) / 2);
+    }
     &:nth-child(2) {
-      margin-inline-start: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1) - $history-item-height * 0.5) * tan($skew-angle)} + 60rpx);
+      margin-inline-start: calc(var(--additional-gap) / 2);
     }
   }
 }
