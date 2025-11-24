@@ -375,13 +375,12 @@ $link-height: 60rpx;
   display: flex;
   align-items: center;
   @include nonsmall-screen {
-    flex-direction: row;
     column-gap: 60rpx;
+    flex-direction: row;
   }
   @include small-screen {
-    flex-direction: column;
     row-gap: 30rpx;
-    column-gap: 0rpx;
+    flex-direction: column;
   }
 }
 
