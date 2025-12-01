@@ -50,7 +50,10 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   titleNode.appendChild(transformer.call("title", element));
   mainNode.appendElement("article", (self) => {
     self.addClassName(mainClassName);
-    self.appendChild(transformer.apply(element, "page"));
+    self.appendElement("div", (self) => {
+      self.addClassName(`${mainClassName}-inner`);
+      self.appendChild(transformer.apply(element, "page"));
+    });
   });
   transformer.variables.headNode = headNode;
   transformer.variables.navigationNode = navigationNode;

@@ -8,13 +8,16 @@ $content-item-height: 90rpx;
 $content-item-skew-angle: -15deg;
 
 .content-table-main {
-  max-width: $main-max-width;
   margin-block-start: 40rpx;
   margin-block-end: 0rpx;
   margin-inline: auto;
+  flex: 1 1 auto;
+}
+
+.content-table-main-inner {
+  max-width: $main-max-width;
   padding-block-start: 5rpx;
   padding-block-end: 10rpx;
-  flex: 1 1 auto;
   @include desktop {
     width: $main-width;
     padding-inline: 0rpx;
