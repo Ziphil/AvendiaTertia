@@ -745,11 +745,13 @@ $link-height: 60rpx;
   line-height: $line-height;
   text-align: center;
   box-shadow: 2rpx 2rpx 0rpx 0rpx var(--shadow-color);
-  background-position: 0% 0%;
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, var(--orange-color) 50%, var(--dark-orange-color) 50%);
   transition: background-position 0.2s;
   display: inline-block;
+  &:not(:hover) {
+    background-position: 0% 0%;
+  }
   &:hover {
     background-position: 0% 100%;
   }

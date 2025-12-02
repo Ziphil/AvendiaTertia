@@ -42,6 +42,7 @@ body {
   font-feature-settings: "lnum" 1, "palt" 1, "pkna" 1;
   line-height: 1;
   text-decoration-skip-ink: none;
+  background-color: var(--page-background-color);
   background-image: radial-gradient(circle at center, var(--page-background-color) 20%, var(--page-dark-background-color));
   background-attachment: fixed;
   overflow-x: auto;
@@ -237,7 +238,6 @@ $card-item-gap: 30rpx;
 
 .card-item {
   height: $card-item-height;
-  translate: var(--base-offset) 0rpx;
   transition: translate 0.2s;
   position: relative;
   display: flex;
@@ -250,8 +250,13 @@ $card-item-gap: 30rpx;
       };
     }
   }
+  &:not(:hover) {
+    translate: var(--base-offset) 0rpx;
+    --background-position: 0%;
+  }
   &:hover {
     translate: calc(var(--base-offset) - 30rpx) 0rpx;
+    --background-position: 100%;
   }
 }
 
@@ -259,12 +264,17 @@ $card-item-gap: 30rpx;
   inset: 0rpx;
   border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
   background-color: var(--main-background-color);
+  background-image: linear-gradient(to right, transparent 50%, oklch(from var(--blue-color) l c h / 0.1) 50%);
+  background-position: var(--background-position) 0%;
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
   transform: skew($skew-angle);
   filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
   backdrop-filter: blur(5rpx);
   position: absolute;
   display: flex;
   flex-direction: column;
+  transition: background-position 0.2s;
   z-index: -1;
   &::before {
     margin-block-start: -1rpx;
@@ -446,7 +456,6 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   height: $contact-item-height;
   padding-inline: 25rpx;
   column-gap: 20rpx;
-  translate: var(--base-offset, 0rpx) 0rpx;
   transition: translate 0.2s;
   display: flex;
   flex-direction: row;
@@ -467,15 +476,25 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     inset-inline-end: 0rpx;
     border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
     background-color: var(--main-background-color);
+    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--blue-color) l c h / 0.1) 50%);
+    background-position: var(--background-position) 0%;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
     transform: skew($skew-angle);
     filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
     backdrop-filter: blur(5rpx);  
+    transition: background-position 0.2s;
     content: "";
     position: absolute;
     z-index: -1;
   }
+  &:not(:hover) {
+    translate: var(--base-offset, 0rpx) 0rpx;
+    --background-position: 0%;
+  }
   &:hover {
     translate: calc(var(--base-offset) - 20rpx) 0rpx;
+    --background-position: 100%;
   }
 }
 
