@@ -9,12 +9,12 @@
   width: 100%;
   margin-block-start: 40rpx;
   margin-block-end: 0rpx;
-  margin-inline: auto;
   flex: 1 1 auto;
 }
 
 .main-inner {
   max-width: $main-max-width;
+  margin-inline: auto;
   padding-block: $main-vertical-padding;
   background-color: var(--main-background-color);
   --current-background-color: var(--main-background-color);
