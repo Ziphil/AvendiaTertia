@@ -6,6 +6,7 @@
 
 
 .main {
+  width: 100%;
   margin-block-start: 40rpx;
   margin-block-end: 0rpx;
   margin-inline: auto;
@@ -16,7 +17,6 @@
   max-width: $main-max-width;
   padding-block: $main-vertical-padding;
   background-color: var(--main-background-color);
-  overflow: hidden;
   --current-background-color: var(--main-background-color);
   @include desktop {
     width: $main-width;

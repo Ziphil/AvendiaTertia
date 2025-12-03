@@ -7,7 +7,7 @@
 
 .footer {
   width: 100%;
-  margin-block-start: 80rpx;
+  margin-block-start: 100rpx;
   margin-block-end: 0rpx;
   color: var(--footer-text-color);
   background-color: var(--footer-background-color);
@@ -15,7 +15,7 @@
 
 .footer-inner {
   max-width: $main-max-width;
-  padding-block: 30rpx;
+  padding-block: 20rpx;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -96,7 +96,7 @@
 }
 
 .footer-icon-list {
-  margin-block-start: 20rpx;
+  margin-block-start: 15rpx;
   column-gap: 20rpx;
   font-size: 150%;
   display: flex;

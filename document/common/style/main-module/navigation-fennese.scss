@@ -4,10 +4,13 @@
 @import "../main-module/variable.scss";
 
 
+$navigation-skew-angle: -9deg;
+
 .navigation {
   width: 100%;
-  background-color: var(--main-background-color);
   flex: 0 0 auto;
+  position: relative;
+  z-index: 0;
 }
 
 .navigation-inner {
@@ -17,15 +20,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 0;
+  &::before {
+    inset-block: 0rpx;
+    background-color: var(--main-background-color);
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
   @include desktop {
     width: $main-width;
     max-width: $main-max-width;
     padding-inline: 0rpx;
+    &::before {
+      inset-inline-start: -100vi;
+      inset-inline-end: 0rpx - $main-horizontal-padding;  
+      transform: skew($navigation-skew-angle);
+    }
   }
   @include mobile {
     width: 100%;
     padding-inline: $main-smartphone-horizontal-padding;
     box-sizing: border-box;
+    &::before {
+      inset-inline-start: 0rpx;
+      inset-inline-end: 0rpx;
+    }
   }
 }
 

@@ -15,6 +15,7 @@ $section-skew-angle: -15deg;
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
   z-index: 0;
   &::before {
     inset-block: 0rpx;
@@ -58,6 +59,7 @@ $section-skew-angle: -15deg;
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
   z-index: 0;
   &::before {
     inset-block: 0rpx;
@@ -97,6 +99,7 @@ $section-skew-angle: -15deg;
   margin-inline: calc(0rpx - var(--horizontal-padding));
   display: flex;
   position: relative;
+  overflow: hidden;
   z-index: 0;
   &::before {
     width: calc(var(--horizontal-padding) - 0.5rem);
