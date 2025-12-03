@@ -11,154 +11,115 @@ $section-skew-angle: -15deg;
 
 .section {
   height: $section-height;
-  line-height: $line-height;
-  overflow: hidden;
-  @include desktop {
-    margin-inline: 0rpx - $main-horizontal-padding;
-  }
-  @include mobile {
-    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
-  }
-}
-
-.section-inner {
-  height: 100%;
-  font-size: 130%;
-  font-weight: normal;
-  color: var(--current-background-color);
-  line-height: $section-height;
+  margin-inline: calc(0rpx - var(--horizontal-padding));  
+  display: flex;
+  align-items: center;
   position: relative;
   z-index: 0;
-  @include desktop {
-    padding-inline: $main-horizontal-padding;
-  }
-  @include mobile {
-    padding-inline: $main-smartphone-horizontal-padding;
-  }
   &::before {
-    inset: 0rpx;
-    background-color: var(--blue-color);
-    position: absolute;
-    z-index: -2;
-    content: "";
-  }
-  &::after {
     inset-block: 0rpx;
-    inset-inline-end: -20rpx;
-    border-inline-start: solid 6rpx var(--main-background-color);
-    background-color: var(--orange-color);
-    background-origin: padding-box;
+    inset-inline-start: -100vi;
+    inset-inline-end: calc(var(--horizontal-padding) + 2rpx);
+    background-color: var(--blue-color);
     transform: skew($section-skew-angle);
     position: absolute;
     z-index: -1;
     content: "";
-    @include desktop {
-      width: 20rpx - 3rpx + $main-horizontal-padding;
-    }
-    @include mobile {
-      width: 20rpx - 3rpx + $main-smartphone-horizontal-padding;
-    }
   }
+  &::after {
+    inset-block: 0rpx;
+    inset-inline-end: -100vi;
+    inset-inline-start: calc(100% - var(--horizontal-padding) + 2rpx);
+    background-color: var(--orange-color);
+    transform: skew($section-skew-angle);
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
+  @include desktop {
+    --horizontal-padding: #{$main-horizontal-padding};
+  }
+  @include mobile {
+    --horizontal-padding: #{$main-smartphone-horizontal-padding};
+  }
+}
+
+.section-inner {
+  padding-inline: var(--horizontal-padding);
+  font-size: 130%;
+  font-weight: normal;
+  color: var(--current-background-color);
+  line-height: $line-height;
 }
 
 .subsection {
   height: $subsection-height;
-  line-height: $line-height;
-  overflow: hidden;
+  margin-inline: calc(0rpx - var(--horizontal-padding));  
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  &::before {
+    inset-block: 0rpx;
+    inset-inline-start: 0rpx;
+    inset-inline-end: calc(var(--horizontal-padding));
+    border-block: solid 1rpx var(--blue-color);
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
+  &::after {
+    inset-block: 0rpx;
+    inset-inline-end: 0rpx;
+    inset-inline-start: calc(100% - var(--horizontal-padding));
+    border-block: solid 1rpx var(--orange-color);
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
   @include desktop {
-    margin-inline: 0rpx - $main-horizontal-padding;
+    --horizontal-padding: #{$main-horizontal-padding};
   }
   @include mobile {
-    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    --horizontal-padding: #{$main-smartphone-horizontal-padding};
   }
 }
 
 .subsection-inner {
-  height: 100%;
+  padding-inline: var(--horizontal-padding);
   font-size: 110%;
   font-weight: normal;
   color: var(--blue-color);
-  line-height: $subsection-height;
-  position: relative;
-  z-index: 0;
-  @include desktop {
-    padding-inline: $main-horizontal-padding;
-  }
-  @include mobile {
-    padding-inline: $main-smartphone-horizontal-padding;
-  }
-  &::before {
-    inset-block: 0rpx;
-    inset-inline-start: 0rpx;
-    border-block: solid 1rpx var(--blue-color);
-    position: absolute;
-    z-index: -2;
-    content: "";
-    @include desktop {
-      inset-inline-end: $main-horizontal-padding;
-    }
-    @include mobile {
-      inset-inline-end: $main-smartphone-horizontal-padding;
-    }
-  }
-  &::after {
-    inset-block: 0rpx;
-    inset-inline-end: 0rpx;
-    border-block: solid 1rpx var(--orange-color);
-    position: absolute;
-    z-index: -2;
-    content: "";
-    @include desktop {
-      width: $main-horizontal-padding;
-    }
-    @include mobile {
-      width: $main-smartphone-horizontal-padding;
-    }
-  }
+  line-height: $line-height;
 }
 
 .subsubsection {
-  line-height: $line-height;
-  overflow: hidden;
+  margin-inline: calc(0rpx - var(--horizontal-padding));
+  display: flex;
   position: relative;
   z-index: 0;
-  @include desktop {
-    margin-inline: 0rpx - $main-horizontal-padding;
-    padding-inline: $main-horizontal-padding;
-  }
-  @include mobile {
-    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
-    padding-inline: $main-smartphone-horizontal-padding;
-  }
   &::before {
-    inset-block-start: 50%;
-    inset-block-end: 0rpx;
-    inset-inline-start: 0rpx;
+    width: calc(var(--horizontal-padding) - 0.5rem);
+    margin-inline-end: 0.5rem;
     border-block-start: solid 1rpx var(--blue-color);
-    position: absolute;
-    z-index: -2;
+    align-self: center;
+    flex: 0 0 auto;
+    z-index: -1;
     content: "";
-    @include desktop {
-      width: calc(#{$main-horizontal-padding} - 0.5rem);
-    }
-    @include mobile {
-      width: calc(#{$main-smartphone-horizontal-padding} - 0.5rem);
-    }
   }
   &::after {
-    inset-block-start: 50%;
-    inset-block-end: 0rpx;
-    inset-inline-end: 0rpx;
+    width: var(--horizontal-padding);
     border-block-start: solid 1rpx var(--orange-color);
-    position: absolute;
-    z-index: -2;
+    align-self: center;
+    flex: 0 0 auto;
+    z-index: -1;
     content: "";
-    @include desktop {
-      width: $main-horizontal-padding;
-    }
-    @include mobile {
-      width: $main-smartphone-horizontal-padding;
-    }
+  }
+  @include desktop {
+    --horizontal-padding: #{$main-horizontal-padding};
+  }
+  @include mobile {
+    --horizontal-padding: #{$main-smartphone-horizontal-padding};
   }
 }
 
@@ -166,22 +127,18 @@ $section-skew-angle: -15deg;
   font-size: 105%;
   font-weight: normal;
   color: var(--blue-color);
+  line-height: $line-height;
   display: flex;
   align-items: baseline;
-  z-index: 0;
+  flex: 1 1 auto;
   &::after {
+    width: var(--horizontal-padding);
     margin-inline-start: 0.5rem;
     border-block-start: solid 1rpx var(--blue-color);
     align-self: center;
     flex: 1 1 auto;
-    z-index: -2;
+    z-index: -1;
     content: "";
-    @include desktop {
-      width: $main-horizontal-padding;
-    }
-    @include mobile {
-      width: $main-smartphone-horizontal-padding;
-    }
   }
 }
 

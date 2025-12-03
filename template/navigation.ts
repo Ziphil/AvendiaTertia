@@ -8,7 +8,7 @@ const manager = new AvendiaTemplateManager();
 
 function getVersionLatest(content: string, scheme?: string): boolean {
   if (scheme === "shaleian") {
-    return content === "*" || !!content.match(/(7\s*代|Version\s*([0-9\.]+–)?7)\s*$/) || !!content.match(/(7\s*代\s*2\s*期|Version\s*([0-9\.]+–)?7\.2)\s*$/);
+    return content === "*" || !!content.match(/(7\s*代|Version\s*([0-9\.]+–)?7)\s*$/) || !!content.match(/(7\s*代\s*3\s*期|Version\s*([0-9\.]+–)?7\.3)\s*$/);
   } else {
     return true;
   }

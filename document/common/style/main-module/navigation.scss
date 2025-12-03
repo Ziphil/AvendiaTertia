@@ -14,14 +14,14 @@
 }
 
 .navigation-inner {
-  max-width: $main-max-width;
   margin-inline: auto;
-  line-height: $small-line-height;
+  line-height: $program-line-height;
   display: flex;
   align-items: center;
   justify-content: space-between;
   @include desktop {
     width: $main-width;
+    max-width: $main-max-width;
     padding-inline: 0rpx;
   }
   @include mobile {

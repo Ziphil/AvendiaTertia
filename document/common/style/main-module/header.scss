@@ -9,37 +9,30 @@ $header-skew-angle: -15deg;
 .header {
   width: 100%;
   height: 120rpx;
-  position: relative;
+  background-color: var(--main-background-color);
   flex: 0 0 auto;
-  &::before {
-    inset-inline-start: 0%;
-    inset-inline-end: 50%;
-    inset-block: 0rpx;
-    background-color: var(--blue-color);
-    position: absolute;
-    z-index: -100;
-    content: "";
-  }
-  &::after {
-    inset-inline-start: 50%;
-    inset-inline-end: 0%;
-    inset-block: 0rpx;
-    background-color: var(--orange-color);
-    position: absolute;
-    z-index: -100;
-    content: "";
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .header-inner {
-  width: $main-width;
-  max-width: $main-max-width;
   height: 100%;
+  column-gap: 15rpx;
   margin-inline: auto;
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  box-sizing: border-box;
+  @include desktop {
+    width: $main-width;
+    max-width: $main-max-width;
+    padding-inline: $main-horizontal-padding;
+    box-sizing: content-box;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
 }
 
 .header-left {
@@ -49,8 +42,9 @@ $header-skew-angle: -15deg;
   flex-grow: 1;
   z-index: 1;
   &::before {
-    inset: 0rpx;
-    border-inline-end: solid 15rpx var(--main-background-color);
+    inset-block: 0rpx;
+    inset-inline-start: -100vi;
+    inset-inline-end: 0rpx;
     background-color: var(--blue-color);
     background-origin: padding-box;
     transform: skew($header-skew-angle);
@@ -61,14 +55,15 @@ $header-skew-angle: -15deg;
 }
 
 .header-right {
-  padding-inline-start: 40rpx;
   display: flex;
   align-items: center;
   position: relative;
   flex: 0 0 auto;
   z-index: 2;
   &::before {
-    inset: 0rpx;
+    inset-block: 0rpx;
+    inset-inline-end: -100vi;
+    inset-inline-start: 0rpx;
     background-color: var(--orange-color);
     transform: skew($header-skew-angle);
     position: absolute;

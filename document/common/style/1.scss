@@ -7,6 +7,7 @@
 @import "util/font.scss";
 @import "main-module/variable.scss";
 @import "main-module/color.scss";
+@import "main-module/header.scss";
 @import "main-module/footer.scss";
 @import "main-module/information.scss";
 @import "main-module/ad.scss";
@@ -40,18 +41,11 @@
 @import "main-module/inline/misc.scss";
 @import "main-module/inline/math.scss";
 
-@include desktop {
-  @import "main-module/header.scss";
-}
-@include mobile {
-  @import "main-module/smartphone-header.scss";
-}
-
 
 html {
   height: 100%;
   font-size: 16px;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
