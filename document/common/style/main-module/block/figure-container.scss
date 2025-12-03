@@ -19,4 +19,10 @@ $figure-container-column-gap: 40px;
   >:last-child {
     margin-inline-end: auto;
   }
+  @include desktop {
+    margin-inline: 0rpx - $main-horizontal-padding;
+  }
+  @include mobile {
+    margin-inline: 0rpx - $main-smartphone-horizontal-padding;
+  }
 }

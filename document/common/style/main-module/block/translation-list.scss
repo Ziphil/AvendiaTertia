@@ -12,13 +12,23 @@ $translation-list-column-gap: 15px;
   column-gap: $translation-list-column-gap * 2;
   line-height: $line-height;
   display: grid;
-  grid-template-columns: 9fr 11fr;
   position: relative;
   &::before {
     inset-block: 0rpx;
-    inset-inline-start: calc((100% - #{$translation-list-column-gap * 2}) * 0.45 + #{$translation-list-column-gap});
     border-inline-end: solid 1rpx var(--blue-color);
     position: absolute;
     content: "";
+  }
+  @include desktop {
+    grid-template-columns: 9fr 11fr;
+    &::before {
+      inset-inline-start: calc((100% - #{$translation-list-column-gap * 2}) * 0.45 + #{$translation-list-column-gap});
+    }
+  }
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+    &::before {
+      inset-inline-start: calc((100% - #{$translation-list-column-gap * 2}) * 0.5 + #{$translation-list-column-gap});
+    }
   }
 }
