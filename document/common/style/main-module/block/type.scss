@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.block[data-bottom-block-type="text"] +.block[data-top-block-type="text"] {
+  margin-block-start: $block-vertical-margin;
+}
+
+.block[data-bottom-block-type="text"][data-section] +.block[data-top-block-type="text"],
+.block[data-bottom-block-type="text"] +.block[data-top-block-type="text"][data-section] {
+  margin-block-start: $block-vertical-margin + $additional-section-vertical-margin;
+}
+
+.block[data-bottom-block-type="text"] +.block[data-top-block-type="bordered"],
+.block[data-bottom-block-type="bordered"] +.block[data-top-block-type="text"] {
+  margin-block-start: $block-vertical-margin + $additional-block-vertical-margin;
+}
+
+.block[data-bottom-block-type="text"][data-section] +.block[data-top-block-type="bordered"],
+.block[data-bottom-block-type="text"] +.block[data-top-block-type="bordered"][data-section],
+.block[data-bottom-block-type="bordered"][data-section] +.block[data-top-block-type="text"],
+.block[data-bottom-block-type="bordered"] +.block[data-top-block-type="text"][data-section] {
+  margin-block-start: $block-vertical-margin + $additional-block-vertical-margin + $additional-section-vertical-margin;
+}
+
+.block[data-bottom-block-type="bordered"] +.block[data-top-block-type="bordered"] {
+  margin-block-start: $block-vertical-margin + $additional-block-vertical-margin * 2;
+}
+
+.block[data-bottom-block-type="bordered"][data-section] +.block[data-top-block-type="bordered"] ,
+.block[data-bottom-block-type="bordered"] +.block[data-top-block-type="bordered"][data-section] {
+  margin-block-start: $block-vertical-margin + $additional-block-vertical-margin * 2 + $additional-section-vertical-margin;
+}

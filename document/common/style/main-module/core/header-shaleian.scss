@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "../util/common.scss";
-@import "../main-module/variable.scss";
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
 
 
 $header-skew-angle: -15deg;
@@ -39,14 +39,15 @@ $header-skew-angle: -15deg;
   display: flex;
   align-items: center;
   position: relative;
-  flex-grow: 1;
+  flex: 1 1 auto;
   z-index: 1;
   &::before {
     inset-block: 0rpx;
     inset-inline-start: -100vi;
-    inset-inline-end: -100vi;
+    inset-inline-end: 0rpx;
     background-color: var(--blue-color);
     background-origin: padding-box;
+    transform: skew($header-skew-angle);
     position: absolute;
     z-index: -10;
     content: "";
@@ -60,7 +61,19 @@ $header-skew-angle: -15deg;
 }
 
 .header-right {
-  display: none;
+  position: relative;
+  flex: 0 0 auto;
+  z-index: 1;
+  &::before {
+    inset-block: 0rpx;
+    inset-inline-end: -100vi;
+    inset-inline-start: 0rpx;
+    background-color: var(--orange-color);
+    transform: skew($header-skew-angle);
+    position: absolute;
+    z-index: -10;
+    content: "";
+  }
 }
 
 .header-title {
@@ -74,13 +87,5 @@ $header-skew-angle: -15deg;
 
 .header-title-text {
   @include special-font;
-  &[data-size="small"] {
-    font-size: 150%;
-    letter-spacing: 0.35em;
-    text-indent: -0.2em;
-  }
-  &[data-size="large"] {
-    font-size: 350%;
-    letter-spacing: 0.15em;
-  }
+  font-size: 400%;
 }

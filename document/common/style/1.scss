@@ -7,19 +7,18 @@
 @import "util/font.scss";
 @import "main-module/variable.scss";
 @import "main-module/color.scss";
-body[data-scheme="shaleian"] { @import "main-module/header-shaleian.scss"; }
-body[data-scheme="fennese"] { @import "main-module/header-fennese.scss"; }
-body[data-scheme="other"] { @import "main-module/header-other.scss"; }
-@import "main-module/footer.scss";
-@import "main-module/information.scss";
-@import "main-module/ad.scss";
-body[data-scheme="shaleian"] { @import "main-module/navigation.scss"; }
-body[data-scheme="fennese"] { @import "main-module/navigation-fennese.scss"; }
-body[data-scheme="other"] { @import "main-module/navigation.scss"; }
-@import "main-module/content-table.scss";
-@import "main-module/error.scss";
-@import "main-module/popup.scss";
-@import "main-module/block/main.scss";
+body[data-scheme="shaleian"] { @import "main-module/core/header-shaleian.scss"; }
+body[data-scheme="fennese"] { @import "main-module/core/header-fennese.scss"; }
+body[data-scheme="other"] { @import "main-module/core/header-other.scss"; }
+@import "main-module/core/footer.scss";
+@import "main-module/core/ad.scss";
+body[data-scheme="shaleian"] { @import "main-module/core/navigation.scss"; }
+body[data-scheme="fennese"] { @import "main-module/core/navigation-fennese.scss"; }
+body[data-scheme="other"] { @import "main-module/core/navigation.scss"; }
+@import "main-module/main.scss";
+@import "main-module/block/type.scss";
+@import "main-module/block/error.scss";
+@import "main-module/block/content-table.scss";
 body[data-scheme="shaleian"] { @import "main-module/block/section-shaleian.scss"; }
 body[data-scheme="fennese"] { @import "main-module/block/section-fennese.scss"; }
 body[data-scheme="other"] { @import "main-module/block/section-other.scss"; }

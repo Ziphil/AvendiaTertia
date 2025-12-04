@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 @use "sass:math" as *;
-@import "../../util/common.scss";
-@import "../../main-module/variable.scss";
+@import "../util/common.scss";
+@import "../main-module/variable.scss";
 
 
 .main {
@@ -15,10 +15,17 @@
 .main-inner {
   max-width: $main-max-width;
   margin-inline: auto;
-  padding-block: $main-vertical-padding;
-  background-color: var(--main-background-color);
-  backdrop-filter: blur(5rpx);
-  --current-background-color: var(--main-background-color);
+  &:not([data-transparent]) {
+    padding-block: $main-vertical-padding;
+    background-color: var(--main-background-color);
+    backdrop-filter: blur(5rpx);
+    --current-background-color: var(--main-background-color);
+  }
+  &[data-transparent] {
+    padding-block: 0rpx;
+    background-color: transparent;
+    --current-background-color: var(--page-background-color);
+  }
   @include desktop {
     width: $main-width;
     padding-inline: $main-horizontal-padding;

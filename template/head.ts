@@ -36,7 +36,7 @@ manager.registerElementRule("use-hiero", "head", (transformer, document, element
       class CustomHieroJax extends HieroJax {
         startLoadingFonts() {
           const hierojax = this;
-          this.fonts = [new FontFace("Hieroglyphic", "url(/material/font/gardiner.ttf)") ];
+          this.fonts = [new FontFace("Hieroglyphic", "url(/material/font/gardiner.ttf)")];
           this.nFonts = this.fonts.length;
           this.nFontsLoaded = 0;
           this.fonts.forEach((font) => {

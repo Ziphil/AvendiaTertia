@@ -1,27 +1,8 @@
 @charset "utf-8";
 
-@import "../util/common.scss";
-@import "../main-module/variable.scss";
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
 
-
-.error-main {
-  max-width: $main-max-width;
-  margin-block-start: 40rpx;
-  margin-block-end: 0rpx;
-  margin-inline: auto;
-  padding-block-start: 5rpx;
-  padding-block-end: 10rpx;
-  @include desktop {
-    width: $main-width;
-    padding-inline: 0rpx;
-    box-sizing: content-box;
-  }
-  @include mobile {
-    width: 100%;
-    padding-inline: $main-smartphone-horizontal-padding;
-    box-sizing: border-box;
-  }
-}
 
 .error-code-container {
   column-gap: 30rpx;

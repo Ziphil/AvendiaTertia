@@ -1,6 +1,8 @@
 //
 
+import blockContentTableManager from "./block/content-table";
 import blockDescriptionListManager from "./block/description-list";
+import blockErrorManager from "./block/error";
 import blockFigureContainerManager from "./block/figure-container";
 import blockFormManager from "./block/form";
 import blockGlossManager from "./block/gloss";
@@ -19,8 +21,6 @@ import blockSectionManager from "./block/section";
 import blockSectionTableManager from "./block/section-table";
 import blockSentenceListManager from "./block/sentence-list";
 import blockTranslationListManager from "./block/translation-list";
-import contentTableManager from "./content-table";
-import errorManager from "./error";
 import fallbackManager from "./fallback";
 import headManager from "./head";
 import historyManager from "./history";
@@ -43,8 +43,8 @@ export default [
   rootManager,
   headManager,
   navigationManager,
-  contentTableManager,
-  errorManager,
+  blockErrorManager,
+  blockContentTableManager,
   blockSectionManager,
   blockParagraphManager,
   blockNormalListManager,

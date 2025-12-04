@@ -6,15 +6,15 @@ import {AvendiaLightTransformer, AvendiaTemplateManager} from "../generator/tran
 
 const manager = new AvendiaTemplateManager();
 
-function getMainClassName(path: string, language: AvendiaOutputLanguage, transformer: AvendiaLightTransformer): string {
+function getTransparent(path: string, language: AvendiaOutputLanguage, transformer: AvendiaLightTransformer): boolean {
   const splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
   const depth = splitRelativePath.length - 1;
   if (depth >= 1 && depth <= 2 && path.match(/index\.zml$/)) {
-    return "content-table-main";
+    return true;
   } else if (depth === 2 && path.match(/error/)) {
-    return "error-main";
+    return true;
   } else {
-    return "main";
+    return false;
   }
 }
 
@@ -34,7 +34,7 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   const language = transformer.variables.language;
   const foreignLanguage = (language === "ja") ? "en" : "ja";
   const scheme = getScheme(path, transformer);
-  const mainClassName = getMainClassName(path, language, transformer);
+  const transparent = getTransparent(path, language, transformer);
   transformer.variables.foreignLanguage = foreignLanguage;
   transformer.variables.mode = "page";
   transformer.variables.scheme = scheme;
@@ -49,9 +49,12 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   navigationNode.appendChild(transformer.apply(element, "navigation"));
   titleNode.appendChild(transformer.call("title", element));
   mainNode.appendElement("article", (self) => {
-    self.addClassName(mainClassName);
+    self.addClassName("main");
     self.appendElement("div", (self) => {
-      self.addClassName(`${mainClassName}-inner`);
+      self.addClassName("main-inner");
+      if (transparent) {
+        self.setAttribute("data-transparent", "");
+      }
       self.appendChild(transformer.apply(element, "page"));
     });
   });
