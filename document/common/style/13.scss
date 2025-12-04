@@ -30,10 +30,10 @@ $skew-angle: -9deg;
 
 html {
   font-size: 16px;
+  scrollbar-width: thin;
 }
 
 body {
-  @include scrollbar(5rpx, 0rpx, transparent, var(--orange-color));
   @include text-size-adjust;
   @include fennese-scheme;
   color: var(--text-color);

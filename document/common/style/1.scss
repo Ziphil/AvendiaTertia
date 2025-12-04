@@ -20,7 +20,9 @@ body[data-scheme="other"] { @import "main-module/navigation.scss"; }
 @import "main-module/error.scss";
 @import "main-module/popup.scss";
 @import "main-module/block/main.scss";
-@import "main-module/block/section.scss";
+body[data-scheme="shaleian"] { @import "main-module/block/section.scss"; }
+body[data-scheme="fennese"] { @import "main-module/block/section-fennese.scss"; }
+body[data-scheme="other"] { @import "main-module/block/section.scss"; }
 @import "main-module/block/paragraph.scss";
 @import "main-module/block/normal-list.scss";
 @import "main-module/block/description-list.scss";
@@ -51,10 +53,10 @@ html {
   font-size: 16px;
   overflow-x: hidden;
   overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
 body {
-  @include scrollbar(5rpx, 0rpx, transparent, var(--orange-color));
   @include text-size-adjust;
   min-height: 100%;
   margin: 0rpx;

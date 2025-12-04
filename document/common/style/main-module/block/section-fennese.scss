@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$section-height: 42rpx;
+$subsection-height: 36rpx;
+$section-skew-angle: -9deg;
+
+.section {
+  height: $section-height;
+  margin-inline: calc(0rpx - var(--horizontal-padding));  
+  background-color: var(--blue-color);
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  &::after {
+    width: $section-height * tan(-$section-skew-angle);
+    inset-block: 0rpx;
+    inset-inline-end: div($section-height * tan($section-skew-angle), 2);
+    background-color: var(--blue-color);
+    transform: skew($section-skew-angle);
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
+  @include desktop {
+    --horizontal-padding: #{$main-horizontal-padding};
+  }
+  @include mobile {
+    --horizontal-padding: #{$main-smartphone-horizontal-padding};
+  }
+}
+
+.section-inner {
+  padding-inline: var(--horizontal-padding);
+  font-size: 130%;
+  font-weight: normal;
+  color: var(--current-background-color);
+  line-height: $line-height;
+}
+
+.subsection {
+  height: $subsection-height;
+  margin-inline: calc(0rpx - var(--horizontal-padding));  
+  border-block: solid 1rpx var(--blue-color);
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 0;
+  &::before {
+    width: $subsection-height * tan(-$section-skew-angle);
+    inset-block: 0rpx;
+    inset-inline-end: div($subsection-height * tan($section-skew-angle), 2);
+    background-color: var(--main-background-color);
+    transform: skew($section-skew-angle);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+    backdrop-filter: blur(5rpx);
+    position: absolute;
+    z-index: -2;
+    content: "";
+  }
+  &::after {
+    width: $subsection-height * tan(-$section-skew-angle);
+    inset-block: -1rpx;
+    inset-inline-end: div($subsection-height * tan($section-skew-angle), 2);
+    border-block-start: solid 1rpx var(--blue-color);
+    border-inline-end: solid 1rpx var(--blue-color);
+    transform: skew($section-skew-angle);
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
+  @include desktop {
+    --horizontal-padding: #{$main-horizontal-padding};
+  }
+  @include mobile {
+    --horizontal-padding: #{$main-smartphone-horizontal-padding};
+  }
+}
+
+.subsection-inner {
+  padding-inline: var(--horizontal-padding);
+  font-size: 110%;
+  font-weight: normal;
+  color: var(--blue-color);
+  line-height: $line-height;
+}
+
+.subsubsection {
+  margin-inline: calc(0rpx - var(--horizontal-padding));
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  &::before {
+    width: calc(var(--horizontal-padding) - 0.5rem);
+    margin-inline-end: 0.5rem;
+    border-block-start: solid 1rpx var(--blue-color);
+    align-self: center;
+    flex: 0 0 auto;
+    z-index: -1;
+    content: "";
+  }
+  @include desktop {
+    --horizontal-padding: #{$main-horizontal-padding};
+  }
+  @include mobile {
+    --horizontal-padding: #{$main-smartphone-horizontal-padding};
+  }
+}
+
+.subsubsection-inner {
+  font-size: 105%;
+  font-weight: normal;
+  color: var(--blue-color);
+  line-height: $line-height;
+  display: flex;
+  align-items: baseline;
+  flex: 1 1 auto;
+  &::after {
+    width: var(--horizontal-padding);
+    margin-inline-start: 0.5rem;
+    border-block-start: solid 1rpx var(--blue-color);
+    align-self: center;
+    flex: 1 1 auto;
+    z-index: -1;
+    content: "";
+  }
+}
+
+.section-tag,
+.subsection-tag,
+.subsubsection-tag {
+  margin-inline-end: fix-em($blank-margin, 80%);
+  font-size: 80%;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.section-number,
+.subsection-number,
+.subsubsection-number {
+  margin-inline-end: fix-em($blank-margin, 80%);
+  font-size: 80%;
+  opacity: 0.7;
+}
+
+.section-separator {
+  border-block-end: dashed 1rpx var(--blue-color);
+  opacity: 0.7;
+}

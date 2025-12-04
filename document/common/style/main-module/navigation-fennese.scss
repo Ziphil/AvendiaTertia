@@ -21,6 +21,7 @@ $navigation-skew-angle: -9deg;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  backdrop-filter: blur(5rpx);
   z-index: 0;
   &::before {
     inset-block: 0rpx;

@@ -17,6 +17,7 @@
   margin-inline: auto;
   padding-block: $main-vertical-padding;
   background-color: var(--main-background-color);
+  backdrop-filter: blur(5rpx);
   --current-background-color: var(--main-background-color);
   @include desktop {
     width: $main-width;
@@ -27,6 +28,7 @@
     width: 100%;
     padding-inline: $main-smartphone-horizontal-padding;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
 

@@ -4,7 +4,7 @@
 @import "../main-module/variable.scss";
 
 
-$header-skew-angle: -15deg;
+$header-skew-angle: -9deg;
 
 .header {
   width: 100%;
@@ -12,6 +12,19 @@ $header-skew-angle: -15deg;
   flex: 0 0 auto;
   position: relative;
   overflow: hidden;
+  @include desktop {
+    &::before {
+      inset-block: 0rpx;
+      inset-inline-start: calc((100vi - min($main-width, $main-max-width)) / 2 + min($main-width, $main-max-width) + $main-horizontal-padding);
+      inset-inline-end: -100vi;
+      background-color: var(--blue-color);
+      transform: skew($header-skew-angle);
+      opacity: 0.3;
+      position: fixed;
+      z-index: -10;
+      content: "";
+    }
+  }
 }
 
 .header-inner {

@@ -20,9 +20,13 @@ $figure-container-column-gap: 40px;
     margin-inline-end: auto;
   }
   @include desktop {
+    max-width: calc(100% + #{$main-horizontal-padding} * 2);
     margin-inline: 0rpx - $main-horizontal-padding;
+    padding-inline: $main-horizontal-padding;
   }
   @include mobile {
+    max-width: calc(100% + #{$main-smartphone-horizontal-padding} * 2);
     margin-inline: 0rpx - $main-smartphone-horizontal-padding;
+    padding-inline: $main-smartphone-horizontal-padding;
   }
 }
