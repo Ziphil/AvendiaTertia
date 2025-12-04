@@ -20,9 +20,9 @@ body[data-scheme="other"] { @import "main-module/navigation.scss"; }
 @import "main-module/error.scss";
 @import "main-module/popup.scss";
 @import "main-module/block/main.scss";
-body[data-scheme="shaleian"] { @import "main-module/block/section.scss"; }
+body[data-scheme="shaleian"] { @import "main-module/block/section-shaleian.scss"; }
 body[data-scheme="fennese"] { @import "main-module/block/section-fennese.scss"; }
-body[data-scheme="other"] { @import "main-module/block/section.scss"; }
+body[data-scheme="other"] { @import "main-module/block/section-other.scss"; }
 @import "main-module/block/paragraph.scss";
 @import "main-module/block/normal-list.scss";
 @import "main-module/block/description-list.scss";
