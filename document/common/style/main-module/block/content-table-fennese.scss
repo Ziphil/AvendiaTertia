@@ -5,7 +5,7 @@
 
 
 $content-item-height: 90rpx;
-$content-item-skew-angle: -15deg;
+$content-item-skew-angle: -9deg;
 
 .content-table {
   row-gap: 20rpx;
@@ -30,51 +30,45 @@ $content-item-skew-angle: -15deg;
 
 .content-item {
   height: $content-item-height;
-  padding-inline: 32rpx;
+  padding-inline: 25rpx;
   color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
-  background-color: var(--main-background-color);
-  box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
-  transition: color 0.2s;
   z-index: 0;
   &:not([data-disabled]) {
     cursor: pointer;
+    --filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
   }
   &[data-disabled] {
     opacity: 0.5;
-    box-shadow: none;
+    --filter: none;
+  }
+  &:is([data-disabled], :not(:hover)) {
+    --background-position: 0%;
   }
   &:not([data-disabled]):hover {
-    color: var(--main-background-color);
+    --background-position: 100%;
   }
   &::before {
-    width: calc(100% - #{$content-item-height * tan(abs($content-item-skew-angle))} - 6rpx);
-    inset-inline-start: calc(-100% + #{$content-item-height * tan(abs($content-item-skew-angle))} + 6rpx + #{div($content-item-height * tan(abs($content-item-skew-angle)), 2)});
     inset-block: 0rpx;
-    background-color: var(--blue-color);
+    inset-inline-start: 0rpx;
+    inset-inline-end: 0rpx;
+    border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
+    background-color: var(--main-background-color);
+    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--blue-color) l c h / 0.1) 50%);
+    background-position: var(--background-position) 0%;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
     transform: skew($content-item-skew-angle);
-    transition: inset-inline-start 0.2s;
+    filter: var(--filter);
+    backdrop-filter: blur(5rpx); 
+    transition: background-position 0.2s;
+    content: "";
     position: absolute;
     z-index: -1;
-    content: "";
-  }
-  &:not([data-disabled]):hover::before {
-    inset-inline-start: calc(#{div($content-item-height * tan(abs($content-item-skew-angle)), 2)});
-  }
-  &::after {
-    width: 100%;
-    inset-inline-end: calc(-100% + #{div($content-item-height * tan(abs($content-item-skew-angle)), 2)});
-    inset-block: 0rpx;
-    background-color: var(--orange-color);
-    transform: skew($content-item-skew-angle);
-    position: absolute;
-    z-index: -2;
-    content: "";
   }
 }
 
@@ -84,7 +78,7 @@ $content-item-skew-angle: -15deg;
 }
 
 .content-date {
-  margin-block-end: 3rpx;
+  margin-block-end: 5rpx;
   font-size: 80%;
   opacity: 0.7;
 }

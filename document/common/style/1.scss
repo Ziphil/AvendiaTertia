@@ -18,7 +18,9 @@ body[data-scheme="other"] { @import "main-module/core/navigation.scss"; }
 @import "main-module/main.scss";
 @import "main-module/block/type.scss";
 @import "main-module/block/error.scss";
-@import "main-module/block/content-table.scss";
+body[data-scheme="shaleian"] { @import "main-module/block/content-table-shaleian.scss"; }
+body[data-scheme="fennese"] { @import "main-module/block/content-table-fennese.scss"; }
+body[data-scheme="other"] { @import "main-module/block/content-table-other.scss"; }
 body[data-scheme="shaleian"] { @import "main-module/block/section-shaleian.scss"; }
 body[data-scheme="fennese"] { @import "main-module/block/section-fennese.scss"; }
 body[data-scheme="other"] { @import "main-module/block/section-other.scss"; }

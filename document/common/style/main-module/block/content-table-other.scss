@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+$content-item-height: 90rpx;
+
+.content-table {
+  row-gap: 20rpx;
+  column-gap: 30rpx;
+  display: grid;
+  @include large-screen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include small-screen {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.content-head {
+  margin-block-end: 15rpx;
+  font-size: 120%;
+  color: var(--blue-color);
+  &:not(:first-of-type) {
+    margin-block-start: 20rpx;
+  }
+}
+
+.content-item {
+  height: $content-item-height;
+  padding-inline: 25rpx;
+  background-color: var(--main-background-color);
+  box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.2s;
+  z-index: 0;
+  &:not([data-disabled]) {
+    cursor: pointer;
+  }
+  &[data-disabled] {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+  &:is([data-disabled], :not(:hover)) {
+    color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
+    --background-position: calc(100% + 5rpx);
+  }
+  &:not([data-disabled]):hover {
+    color: var(--main-background-color);
+    --background-position: 0%;
+  }
+  &::before {
+    inset-block: 0rpx;
+    inset-inline-start: 0rpx;
+    inset-inline-end: 0rpx;
+    background-image: linear-gradient(to right, var(--blue-color) 50%, transparent 50%);
+    background-position: var(--background-position) 0%;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    transition: background-position 0.2s;
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.content-title {
+  font-size: 130%;
+  line-height: $small-line-height;
+}
+
+.content-date {
+  margin-block-end: 5rpx;
+  font-size: 80%;
+  opacity: 0.7;
+}
