@@ -4,11 +4,12 @@
 @import "../../main-module/variable.scss";
 
 
+$header-height: 120rpx;
 $header-skew-angle: -15deg;
 
 .header {
   width: 100%;
-  height: 120rpx;
+  height: $header-height;
   background-color: var(--main-background-color);
   flex: 0 0 auto;
   position: relative;
