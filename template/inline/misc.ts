@@ -28,7 +28,7 @@ manager.registerElementRule("ms", true, (transformer, document, element) => {
   return self;
 });
 
-manager.registerElementRule("mk", "page", (transformer, document, element) => {
+manager.registerElementRule("mk", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("mark");
@@ -46,7 +46,7 @@ manager.registerElementRule("rd", "page", (transformer, document, element) => {
   return self;
 });
 
-manager.registerElementRule("sbr", "page", (transformer, document, element) => {
+manager.registerElementRule("sbr", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("superbreviation");
