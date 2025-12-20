@@ -3,27 +3,6 @@
 @use "sass:math" as *;
 
 
-@function tint($color, $percent) {
-  @return mix(white, $color, $percent);
-}
-
-@function shade($color, $percent) {
-  @return mix(black, $color, $percent);
-}
-
-@function single-color($color) {
-  @return linear-gradient($color, $color);
-}
-
-@function fix-em($value, $font-percent) {
-  @return div($value, div($font-percent, 100%));
-}
-
-@function line-intrusion($line-height) {
-  @return div($line-height - 1, 2) * 1em;
-}
-
-
 $european-serif-font-family: "Noto Serif", "Noto Naskh Arabic", "Noto Serif Hebrew", "Times New Roman";
 $japanese-serif-font-family: "源ノ明朝", "Yu Mincho", "YuMincho";
 $european-sans-font-family: "Noto Sans Display", "Noto Sans Arabic", "Noto Sans Hebrew", "Arial";
@@ -43,6 +22,14 @@ $monospace-font-size: 92%;
 
 $monospace-letter-spacing: -0.08em;
 
+
+@function single-color($color) {
+  @return linear-gradient($color, $color);
+}
+
+@function fix-em($value, $font-percent) {
+  @return div($value, div($font-percent, 100%));
+}
 
 @mixin scrollbar($size, $margin, $background-color, $thumb-background-color) {
   &::-webkit-scrollbar {
@@ -90,7 +77,7 @@ $monospace-letter-spacing: -0.08em;
     &::before {
       width: 0em;
       height: 0em;
-      margin-top: 0em - line-intrusion($line-height);
+      margin-top: 0em - (div($line-height - 1, 2) * 1em);
       display: block;
       content: "";
     }
@@ -99,28 +86,11 @@ $monospace-letter-spacing: -0.08em;
     &::after {
       width: 0em;
       height: 0em;
-      margin-bottom: 0em - line-intrusion($line-height);
+      margin-bottom: 0em - (div($line-height - 1, 2) * 1em);
       display: block;
       content: "";
     }
   }
-}
-
-@mixin before-after($before-content, $after-content) {
-  &::before {
-    content: $before-content;
-  }
-  &::after {
-    content: $after-content;
-  }
-}
-
-@mixin clearfix {
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
-  } 
 }
 
 @mixin icon-font {
