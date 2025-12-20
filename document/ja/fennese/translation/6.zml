@@ -2,42 +2,111 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 
-\page<
-  \name<『SCP-173』>
-  \ver<β.14 期>
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \meta|name="twitter:card",content="summary"|;
+    \meta|name="twitter:site",content="@Ziphil"|;
+    \meta|property="og:url",content="http://ziphil.com/fennese/translation/6.html"|;
+    \meta|property="og:title",content="SCP-173"|;
+    \meta|property="og:description",content="SCP-173"|;
+    \link|rel="stylesheet",type="text/css",href="/style/14.css"|;
+    \title<SCP-173>
+  >
+  \body<
 
-  \h1<翻訳文>
-  \p<
-    {Лебезхе̂до ли̂ггамо лесевсе̂хро.}
-    ## Item SCP-173 is to be kept in a locked container at all times.
-    {Лески̂п-\ib<ле\sbr<125>> до̀ззалу̂ лодо̂цзу̀к ве вене̂ссасе до̀вегто̂кре.}
-    ## When personnel must enter SCP-173’s container, no fewer than 3 may enter at any time and the door is to be relocked behind them.
-    {Ко̂ддее азоҕалло̂з аддесо̂сак васо̂хла левне̂ссасос лески̂певас-\ib<ле\sbr<125>евас>, по̂хѝ педе̂ббаси аве̂до че̂ко може̂ццако̀ бе̂зо то̂сревзам и леге̂бач до̀вегто̂к хед то̂се.}
-    ## At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.
-    {По̂хѝ педе̂ббаси азоҕалло̂зо че̂ко бе̂всеват залу̂ала ку̂жла лоло̂са лески̂пес-\ib<ле\sbr<125>ес>, ко̂ддесе ло̂ззѐ лоддесо̂сак зану̂ левне̂ссасозам и вегто̂к ох бе̂ввасу̀к.}
-  >
-  \p<
-    {(説明).}
-    ## Moved to Site-19 in 1993.
-    {До̀нсе̂сан (サイト)-\ib<ле\sbr<17>ес> до лофу̂цце \ib<ле\sbr<11\ch|dz="x"|;1>и>.}
-    ## Origin is as of yet unknown.
-    {Ѐ лонцо̂нат е̂к левде̂срес тожу̂л.}
-    ## It is constructed from concrete and rebar with traces of Krylon brand spray paint.
-    ## SCP-173 is animate and extremely hostile.
-    ## The object cannot move while within a direct line of sight.
-    ## Line of sight must not be broken at any time with SCP-173.
-    ## Personnel assigned to enter container are instructed to alert one another before blinking.
-    ## Object is reported to attack by snapping the neck at the base of the skull, or by strangulation.
-    ## In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures.
-  >
-  \p<
-    ## Personnel report sounds of scraping stone originating from within the container when no one is present inside.
-    ## This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty.
-  >
-  \p<
-    ## The reddish brown substance on the floor is a combination of feces and blood.
-    ## Origin of these materials is unknown.
-    ## The enclosure must be cleaned on a bi-weekly basis.
-  >
+    \header|class="header"|<
+      \div|class="header-inner"|<
+        \div|class="title"|<
+          \div|class="title-main"|<Ловг\span|class="circumflex"|<о>доо SCP>
+          \div|class="title-catch"|<Воз\span|class="circumflex"|<е>цла · Севс\span|class="circumflex"|<е>хла · Даз\span|class="circumflex"|<у>ла>
+        >
+      >
+    >
 
+    \main|class="main"|<
+      \div|class="main-inner"|<
+        \div|class="information"|<
+          \dl|class="information-left"|<
+            \div|class="information-left-item"|<
+              \dt|class="information-left-label"|<Лоттосар лутҕев>
+              \dd|class="information-left-value"|<
+                \span|class="information-left-number"|<125>
+              >
+            >
+          >
+          \dl|class="information-right"|<
+            \div|class="information-right-item"|<
+              \dt|class="information-right-label"|<Локоггал Лесевсехар>
+              \dd|class="information-right-value"|<Еклид>
+            >
+          >
+        >
+        \article|class="article"|<
+          \h1|class="heading"|<Лебезхедо лиггамо лесевсехро>
+          \p|class="paragraph"|<
+            ## Item SCP-173 is to be kept in a locked container at all times.
+            {Лески̂п-\ib<ле\sbr<125>> до̀ззалу̂ лодо̂цзу̀к ве вене̂ссасе до̀вегто̂кре.}
+            ## When personnel must enter SCP-173’s container, no fewer than 3 may enter at any time and the door is to be relocked behind them.
+            {Ко̂ддее азоҕалло̂з аддесо̂сак васо̂хла левне̂ссасос лески̂певас-\ib<ле\sbr<125>евас>, по̂хѝ педе̂ббаси аве̂до че̂ко може̂ццако̀ бе̂зо то̂сревзам и леге̂бач до̀вегто̂к хед то̂се.}
+            ## At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.
+            {По̂хѝ педе̂ббаси азоҕалло̂зо че̂ко бе̂всеват залу̂ала ку̂жла лоло̂са лески̂пес-\ib<ле\sbr<125>ес>, ко̂ддесе ло̂ззѐ лоддесо̂сак зану̂ левне̂ссасозам и вегто̂к ох бе̂ввасу̀к.}
+          >
+          \h1|class="heading"|<Лодаззолко>
+          \p|class="paragraph"|<
+            ## Moved to Site-19 in 1993.
+            {До̀нсе̂сан (サイト)-\ib<ле\sbr<17>ес> до лофу̂цце \ib<ле\sbr<11\ch|dz="x"|;1>и>.}
+            ## Origin is as of yet unknown.
+            {Ѐ лонцо̂нат е̂к левде̂срес тожу̂л.}
+            ## It is constructed from concrete and rebar with traces of Krylon brand spray paint.
+            ## SCP-173 is animate and extremely hostile.
+            ## The object cannot move while within a direct line of sight.
+            ## Line of sight must not be broken at any time with SCP-173.
+            ## Personnel assigned to enter container are instructed to alert one another before blinking.
+            ## Object is reported to attack by snapping the neck at the base of the skull, or by strangulation.
+            ## In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures.
+          >
+          \p|class="paragraph"|<
+            ## Personnel report sounds of scraping stone originating from within the container when no one is present inside.
+            ## This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty.
+          >
+          \p|class="paragraph"|<
+            ## The reddish brown substance on the floor is a combination of feces and blood.
+            ## Origin of these materials is unknown.
+            ## The enclosure must be cleaned on a bi-weekly basis.
+          >
+        >
+      >
+    >
+
+    \footer|class="footer"|<
+      \div|class="footer-inner"|<
+        \details|class="license"|<
+          \summary|class="license-label"|<Licence information>
+          \div|class="license-main"|<
+            \div|class="cite"|<
+              © 2025 · Ziphil (CC BY-SA 3.0)
+            >
+            \section|class="original"|<
+              \h1|class="original-heading"|<Original work>
+              \ul|class="original-list"|<
+                \li|class="original-item"|<
+                  \dl|class="original-information-list"|<
+                    \dt|class="original-information-label"|<Title>
+                    \dd|class="original-information-value"|<‘SCP-173’>
+                    \dt|class="original-information-label"|<Author>
+                    \dd|class="original-information-value"|<Moto42>
+                    \dt|class="original-information-label"|<Source>
+                    \dd|class="original-information-value"|<\a|href="https://scpwiki.com/scp-173",target="_blank"|<https:`/`/scpwiki.com`/scp-173>>
+                  >
+                >
+              >
+            >
+          >
+        >
+      >
+    >
+
+  >
 >

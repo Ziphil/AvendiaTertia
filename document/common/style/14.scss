@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau:wght@1..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Geologica:slnt,wght,CRSV@-2,100..900,0&display=swap');
+@import "util/reset.scss";
+@import "util/common.scss";
+@import "util/font.scss";
+@import "main-module/variable.scss";
+@import "main-module/color.scss";
+@import "main-module/inline/common.scss";
+@import "main-module/inline/basic.scss";
+@import "main-module/inline/misc.scss";
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @include text-size-adjust;
+  color: oklch(0.3 0 0);
+  font-family: $serif-font-family;
+  font-weight: normal;
+  font-feature-settings: "lnum" 1, "palt" 1, "pkna" 1;
+  line-height: 1;
+  text-decoration-skip-ink: none;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+.header {
+  width: 100%;
+  color: white;
+  background-image: linear-gradient(to bottom, oklch(0 0.05 20) 25%, oklch(0.38 0.05 20) 100%);
+  border-bottom: solid 2rpx oklch(0.3 0 0);
+  flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-inner {
+  height: 100%;
+  margin-inline: auto;
+  padding-block: 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include desktop {
+    width: $main-width;
+    max-width: $main-max-width;
+    padding-inline: $main-horizontal-padding;
+    justify-content: flex-start;
+    box-sizing: content-box;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+}
+
+.title {
+  row-gap: 12rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-main {
+  font-size: 48rpx;
+  font-family: "Geologica";
+  font-weight: 800;
+  text-shadow: 0rpx 2rpx 2rpx oklch(0 0.05 20 / 0.5);
+}
+
+.title-catch {
+  font-size: 20rpx;
+  font-family: "Geologica";
+  font-weight: 600;
+  color: oklch(0.94 0.06 108);
+  text-shadow: 0rpx 2rpx 2rpx oklch(0 0.05 20 / 0.5);
+}
+
+.footer {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.license-label {
+  color: oklch(0.6 0 0);
+  list-style: none;
+  cursor: pointer;
+  &::before {
+    width: 0.6em;
+    height: 0.6em;
+    margin-inline-end: 0.4em;
+    background-color: currentcolor;
+    display: inline-block;
+    content: "";
+  }
+  .license[open] >&::before {
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  }
+  .license:not([open]) >&::before {
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  }
+}
+
+.license-main {
+  margin-block-start: 8rpx;
+  padding-block: 12rpx;
+  padding-inline: 8rpx;
+  color: oklch(0.6 0 0);
+  background-color: oklch(0.97 0 0);
+}
+
+.original {
+  margin-block-start: 12rpx;
+  padding-block-start: 12rpx;
+  border-block-start: solid 1rpx oklch(0.7 0 0);
+}
+
+.original-heading {
+  font-size: 14rpx;
+}
+
+.original-list {
+  margin-block-start: 8rpx;
+  row-gap: 6rpx;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.original-item {
+  padding-block: 4rpx;
+  padding-inline: 6rpx;
+  font-size: 14rpx;
+  line-height: $small-line-height;
+  border: dashed 1rpx oklch(0.7 0 0);
+}
+
+.original-information-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.original-information-value {
+  &::before {
+    margin-inline: $blank-margin;
+    content: "—";
+  }
+}
+
+.original-information-value a {
+  text-decoration-line: underline;
+  text-decoration-color: oklch(0.5 0 0 / 0.5);
+}
+
+.footer-inner {
+  height: 100%;
+  margin-inline: auto;
+  @include desktop {
+    width: $main-width;
+    max-width: $main-max-width;
+    padding-inline: $main-horizontal-padding;
+    box-sizing: content-box;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.main {
+  width: 100%;
+  padding-block-start: 64rpx;
+  padding-block-end: 64rpx;
+  background-image: linear-gradient(to bottom, oklch(0.9 0 0) 0%, transparent 100%);
+  background-size: 100% 240rpx;
+  background-repeat: no-repeat;
+  flex: 1 1 auto;
+}
+
+.main-inner {
+  max-width: $main-max-width;
+  margin-inline: auto;
+  @include desktop {
+    width: $main-width;
+    padding-inline: $main-horizontal-padding;
+    box-sizing: content-box;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}
+
+.information {
+  padding-inline-end: 16rpx;
+  padding-inline-start: 20rpx;
+  padding-block: 16rpx;
+  line-height: $small-line-height;
+  background-color: oklch(1 0 0 / 0.5);
+  border-block-end: solid 2rpx oklch(0.8 0 0);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.information-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.information-left-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.information-left-label {
+  font-size: 24rpx;
+  font-family: "Geologica";
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.information-left-value {
+  margin-block-start: -8rpx;
+  margin-block-end: -8rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.information-left-number {
+  font-size: 64rpx;
+  font-family: "Geologica";
+  font-weight: 800;
+}
+
+.information-right {
+  row-gap: 8rpx;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
+}
+
+.information-right-item {
+  padding-block: 8rpx;
+  padding-inline-start: 12rpx;
+  border-inline-start: solid 4rpx oklch(0.43 0.17 26);
+  background-color: oklch(0.43 0.17 26 / 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.information-right-label {
+  font-size: 16rpx;
+  font-family: "Geologica";
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.information-right-value {
+  font-size: 32rpx;
+  font-family: "Geologica";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.article {
+  margin-block-start: 48rpx;
+}
+
+.heading {
+  margin-block-start: 32rpx;
+  margin-block-end: 16rpx;
+  font-size: 20rpx;
+  font-family: "Geologica";
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  @include justify;
+  margin-block: 16rpx;
+  line-height: $line-height;
+}
+
+.circumflex {
+  display: inline-block;
+  position: relative;
+  &::before {
+    inset-inline: 0em;
+    inset-block-start: 0em;
+    content: "ˆ";
+    text-align: center;
+    position: absolute;
+  }
+}
