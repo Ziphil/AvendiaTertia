@@ -2,82 +2,12 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 
-\html|lang="ja"|<
-  \head<
-    \meta|charset="UTF-8"|;
-    \script|src="../../program/script/8.js"|;
-    \link|rel="stylesheet",type="text/css",href="../../style/5.css"|;
-    \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
-    \title<単語データからランダムで表示するやつ>
+\page<
+  \name<単語データからランダムで表示するやつ>
+
+  \h1<ページ削除>
+  \p<
+    このページは削除されました。
   >
-  \body<
 
-    \div|class="content"|<
-      \div|class="left"|<
-        \div|class="number"|<
-          \div|id="numerator",class="numerator"|<0>
-          \div|id="denominator",class="denominator"|<0>
-        >
-        \div|class="mark"|<
-          \span|class="wrong",id="wrong-mark"|<>
-          \span|class="correct",id="correct-mark"|<>
-        >
-      >
-      \div|class="main"|<
-        \div|class="question"|<
-          \div|class="english"|<
-            \div|id="english",class="word"|;
-            \div|id="pronunciation",class="pronunciation"|;
-          >
-          \div|id="arrow",class="arrow"|;
-          \div|id="japanese",class="japanese"|;
-        >
-        \div|class="radio"|<
-          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|;\label|for="radio-mode-0"|<英語→日本語>\ch|c="3000"|;\input|type="radio",name="mode",value="1",id="radio-mode-1"|;\label|for="radio-mode-1"|<日本語→英語>\br;
-          \input|type="checkbox",name="enable-sound",id="enable-sound",checked|;\label|for="enable-sound"|<サウンド>\br;
-          \input|type="checkbox",name="show-list",id="show-list"|;\label|for="show-list"|<単語一覧>
-        >
-        \div|class="button"|<
-          \input|class="small left",type="button",value="− 20",id="previous-40"|;\input|class="small middle",type="button",value="− 10",id="previous-20"|;\input|class="small middle",type="button",value="− 5",id="previous-10"|;\input|class="small right",type="button",value="− 1",id="previous-2"|;\ch|c="3000"|;\input|type="button",value="Previous",id="previous-1"|;\ch|c="3000"|;\input|type="button",value="Next",id="next-1"|;\ch|c="3000"|;\input|class="small left",type="button",value="+ 1",id="next-2"|;\input|class="small middle",type="button",value="+ 5",id="next-10"|;\input|class="small middle",type="button",value="+ 10",id="next-20"|;\input|class="small right",type="button",value="+ 20",id="next-40"|;
-        >
-        \div|class="button"|<
-          \input|class="small red icon",type="button",value="",id="mark-1"|;\ch|c="3000"|;\input|class="small gray icon",type="button",value="",id="mark-null"|;\ch|c="3000"|;\input|class="small green icon",type="button",value="",id="mark-0"|;
-        >
-        \div|class="button"|<
-          \input|type="button",value="Reflesh",id="reflesh"|;\ch|c="3000"|;\input|type="button",value="Shuffle",id="shuffle"|;
-        >
-        \div|class="upload"|<
-          \label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple"|;
-        >
-      >
-    >
-
-    \div|class="side list-wrapper",id="list-wrapper"|<
-      \table|id="list"|;
-    >
-    \div|class="side statistics-wrapper"|<
-      \div|id="statistics-1",class="statistics red"|<
-        \div|class="mark"|<>
-        \div|class="number"|<
-          \div|class="numerator"|<0>
-          \div|class="denominator"|<0>
-        >
-      >
-      \div|id="statistics-0",class="statistics green"|<
-        \div|class="mark"|<>
-        \div|class="number"|<
-          \div|class="numerator"|<0>
-          \div|class="denominator"|<0>
-        >
-      >
-    >
-
-    \audio|id="correct-sound",preload="auto"|<
-  	  \source|src="../../file/sound/1.wav",type="audio/wav"|;
-    >
-    \audio|id="wrong-sound",preload="auto"|<
-      \source|src="../../file/sound/2.wav",type="audio/wav"|;
-    >
-
-  >
 >

@@ -2,77 +2,12 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 
-\html|lang="ja"|<
-  \head<
-    \meta|charset="UTF-8"|;
-    \script|src="../../program/script/7.js"|;
-    \link|rel="stylesheet",type="text/css",href="../../style/4.css"|;
-    \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
-    \title<Weblio Vocabulary Rating>
+\page<
+  \name<Weblio Vocabulary Rating>
+
+  \h1<ページ削除>
+  \p<
+    このページは削除されました。
   >
-  \body<
 
-    \div|class="title"|<
-      Weblio Vocabulary Rating
-    >
-
-    \div|class="link"|<
-      \a|href="https://uwl.weblio.jp/vocab-index",target="_blank"|<Start>
-    >
-
-    \div|class="content"|<
-      \div|class="main"|<
-        \div|class="chart"|<
-          \canvas|id="canvas",width="640",height="450"|<
-            \div|class="chart-rating"|;
-            \div|class="chart-date"|;
-            \div|class="chart-message"|;
-            \div|class="chart-axis"|;
-            \div|class="chart-line"|;
-          >
-        >
-        \div|class="caution"|<
-          これは非公式のレーティング表示システムです。
-          このページおよびその製作者は、ウェブリオ株式会社と全く関係ありません。
-        >
-      >
-      \div|class="input"|<
-        \textarea*~|id="input"|<
-          Weblio 語彙力診断の結果を以下のように入力してください。
-          下のボタンを押すと、履歴がブラウザに保存され、レーティングが表示されます。
-
-          2018/01/01, 38.2
-          2018/01/09, 45.3
-          2018/01/12, 51.4
-          2018/01/19, 84.2
-          2018/02/05, 49.1
-          2018/02/13, 76.7
-          2018/02/27, 83.3
-          2018/02/29, 97.9
-          2018/03/14, 90.2
-          2018/03/21, 41.5
-          2018/03/23, 88.5
-          2018/04/07, 118.5
-          2018/04/14, 129.8
-          2018/04/23, 100.0
-          2018/04/26, 172.9
-          2018/05/04, 115.5
-          2018/05/07, 112.6
-          2018/05/13, 101.0
-          2018/05/22, 119.7
-          2018/06/01, 101.4
-        >
-        \div|class="radio"|<
-          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|;\label|for="radio-mode-0"|<回数軸>\ch|c="3000"|;\input|type="radio",name="mode",value="1",id="radio-mode-1"|;\label|for="radio-mode-1"|<日付軸>
-        >
-        \div|class="button"|<
-          \input|type="button",value="Show / Save",id="execute"|;
-        >
-        \div|class="twitter"|<
-          \button|type="button",id="tweet"|<Tweet>
-        >
-      >
-    >
-
-  >
 >

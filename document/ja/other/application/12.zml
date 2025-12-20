@@ -2,49 +2,12 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 
-\html|lang="ja"|<
-  \head<
-    \meta|charset="UTF-8"|;
-    \script|src="../../program/script/9.js"|;
-    \link|rel="stylesheet",type="text/css",href="../../style/6.css"|;
-    \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
-    \title<へきさんかあど>
-  >
-  \body<
+\page<
+  \name<へきさんかあど>
 
-    \div|class="content"|<
-      \div|class="problem"|<
-        \div|class="left"|<
-          \input|id="left",type="text",value="2"|;
-          \div|class="radio"|<
-            \input|type="radio",name="left-mode",value="0",id="radio-left-mode-0"|;\label|for="radio-left-mode-0"|<昇順>\ch|c="3000"|;\input|type="radio",name="left-mode",value="1",id="radio-left-mode-1"|;\label|for="radio-left-mode-1"|<降順>\br;
-            \input|type="radio",name="left-mode",value="2",id="radio-left-mode-2"|;\label|for="radio-left-mode-2"|<ランダム>\ch|c="3000"|;\input|type="radio",name="left-mode",value="3",id="radio-left-mode-3",checked|;\label|for="radio-left-mode-3"|<固定>
-          >
-        >
-        \div|class="operator"|<
-          \input|id="operator",type="button",value="×"|;
-        >
-        \div|class="right"|<
-          \input|id="right",type="text",value="1"|;
-          \div|class="radio"|<
-            \input|type="radio",name="right-mode",value="0",id="radio-right-mode-0",checked|;\label|for="radio-right-mode-0"|<昇順>\ch|c="3000"|;\input|type="radio",name="right-mode",value="1",id="radio-right-mode-1"|;\label|for="radio-right-mode-1"|<降順>\br;
-            \input|type="radio",name="right-mode",value="2",id="radio-right-mode-2"|;\label|for="radio-right-mode-2"|<ランダム>\ch|c="3000"|;\input|type="radio",name="right-mode",value="3",id="radio-right-mode-3"|;\label|for="radio-right-mode-3"|<固定>
-          >
-        >
-        \div|class="equal"|<
-          \input|id="equal",type="button",value="="|;
-        >
-        \div|class="answer"|<
-          \div|id="answer"|;
-        >
-      >
-      \div|class="show"|<
-        \button|id="show"|<Show Table>
-      >
-      \div|class="table-container",id="table-container",style="display:none;"|<
-        \table|id="table"|;
-      >
-    >
-
+  \h1<ページ削除>
+  \p<
+    このページは削除されました。
   >
+
 >

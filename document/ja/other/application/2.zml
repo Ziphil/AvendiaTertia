@@ -2,54 +2,13 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 
-\html|lang="ja"|<
-  \head<
-    \meta|charset="UTF-8"|;
-    \link|rel="stylesheet",type="text/css",href="../../style/3.css"|;
-    \title<ZpDIC>
+\page<
+  \name<Aldiresh>
+
+  \h1<お知らせ>
+  \p<
+    デスクトップ版 ZpDIC はサポートを終了しました。
+    今後は\ae|href="https://zpdic.ziphil.com"|<オンライン版 ZpDIC> のみ開発および運営を行っていきますので、こちらのご利用をご検討ください。
   >
-  \body<
 
-    \div|id="navigation",class="navigation"|<
-      \a|class="title",href="#"|<ZpDIC>
-      \div|class="box"|<
-        \a|href="#features"|<機能>
-        \div|class="line"|;
-        \a|href="#license"|<ライセンス>
-        \div|class="line"|;
-        \a|href="#version-history"|<更新履歴>
-        \div|class="line"|;
-        \a|href="#contact"|<お問い合わせ>
-      >
-    >
-
-    \div|class="head"|<
-      \div|class="logo"|<
-        \div|class="title"|<ZpDIC>
-      >
-      \div|class="information"|<
-        \div|class="copy"|<
-          The\ch|n="nbsp"|;definitive\ch|n="nbsp"|;tool for\ch|n="nbsp"|;all\ch|n="nbsp"|;conlangers
-        >
-        \div|class="download"|<
-          \a|class="button",href="https://zpdic.ziphil.com",target="_blank"|<Web Version>
-        >
-      >
-    >
-
-    \div|class="content"|<
-      \h1|id="license"|<Notice>
-      \div|class="license"|<
-        \p<
-          デスクトップ版 ZpDIC はサポートを終了しました。
-          今後は\a|href="https://zpdic.ziphil.com",target="_blank"|<オンライン版 ZpDIC> のみ開発および運営を行っていきますので、こちらのご利用をご検討ください。
-        >
-      >
-    >
-
-    \div|class="footer"|<
-      \div|class="copyright"|<© Ziphil Aleshlas>
-    >
-
-  > 
 >
