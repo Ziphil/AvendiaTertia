@@ -355,13 +355,11 @@ div.translation#opening div.main table tr td {
 
 span.sans,
 a.sans {
-  font-family: "Arial", "IPA Pゴシック", "ＭＳ Ｐゴシック", sans-serif !important;
-  font-size: 96% !important;
-  line-height: 96% !important;
+  font-family: $sans-font-family !important;
 }
 
 span.japanese {
-  font-family: "IPA明朝", "ＭＳ 明朝", serif;
+  font-family: $japanese-serif-font-family !important;
 }
 
 span.lyrics-space {
