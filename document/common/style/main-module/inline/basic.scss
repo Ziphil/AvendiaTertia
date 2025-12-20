@@ -44,7 +44,7 @@
 }
 
 .inline-block {
-  display: inline-block;
+  white-space: nowrap;
 }
 
 .dozenal {
@@ -55,7 +55,7 @@
   >.dozenal-pseudo {
     inset: 0em;
     line-height: 1;
-    transform: translate(0em, 0em) rotate(180deg);
+    transform: translate(0em, -0.12em) rotate(180deg);
     position: absolute;
     display: inline-block;
     user-select: none;
