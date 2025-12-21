@@ -19,8 +19,11 @@
     \header|class="header"|<
       \div|class="header-inner"|<
         \div|class="title"|<
-          \div|class="title-main"|<Ловг\span|class="circumflex"|<о>доо SCP>
-          \div|class="title-catch"|<Воз\span|class="circumflex"|<е>цла · Севс\span|class="circumflex"|<е>хла · Даз\span|class="circumflex"|<у>ла>
+          \div|class="title-main"|<Ловг\span|class="accent",data-kind="c"|<о>доо SCP>
+          \div|class="title-catch"|<
+            \span|class="nowrap"|<Воз\span|class="diacritic",data-kind="c"|<е>цла · Севс\span|class="diacritic",data-kind="c"|<е>хла · Даз\span|class="diacritic",data-kind="c"|<у>ла>
+            \span|class="nowrap"|<— Леп\span|class="diacritic",data-kind="c"|<е>ббасо Леф\span|class="diacritic",data-kind="c"|<е>нн\span|class="diacritic",data-kind="g"|<о>>
+          >
         >
       >
     >
@@ -47,19 +50,20 @@
           \h1|class="heading"|<Лебезхедо лиггамо лесевсехро>
           \p|class="paragraph"|<
             ## Item SCP-173 is to be kept in a locked container at all times.
-            {Лески̂п-\ib<ле\sbr<125>> до̀ззалу̂ лодо̂цзу̀к ве вене̂ссасе до̀вегто̂кре.}
+            {Лески̂п-\sbr<125> до̀ззалу̂ лодо̂цзу̀к ве вене̂ссасе до̀вегто̂кре.}
             ## When personnel must enter SCP-173’s container, no fewer than 3 may enter at any time and the door is to be relocked behind them.
-            {Ко̂ддее азоҕалло̂з аддесо̂сак васо̂хла левне̂ссасос лески̂певас-\ib<ле\sbr<125>евас>, по̂хѝ педе̂ббаси аве̂до че̂ко може̂ццако̀ бе̂зо то̂сревзам и леге̂бач до̀вегто̂к хед то̂се.}
+            {Ко̂ддее азоҕалло̂з аддесо̂сак васо̂хла левне̂ссасос лески̂певас-\sbr<125>, по̂хѝ педе̂ббаси аве̂до че̂ко може̂ццако̀ бе̂зо то̂сревзам и леге̂бач до̀вегто̂к хед то̂се.}
             ## At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.
-            {По̂хѝ педе̂ббаси азоҕалло̂зо че̂ко бе̂всеват залу̂ала ку̂жла лоло̂са лески̂пес-\ib<ле\sbr<125>ес>, ко̂ддесе ло̂ззѐ лоддесо̂сак зану̂ левне̂ссасозам и вегто̂к ох бе̂ввасу̀к.}
+            {По̂хѝ педе̂ббаси азоҕалло̂зо че̂ко бе̂всеват залу̂ала ку̂жла лоло̂са лески̂пес-\sbr<125>, ко̂ддесе ло̂ззѐ лоддесо̂сак зану̂ левне̂ссасозам и вегто̂к ох бе̂ввасу̀к.}
           >
           \h1|class="heading"|<Лодаззолко>
           \p|class="paragraph"|<
             ## Moved to Site-19 in 1993.
-            {До̀нсе̂сан (サイト)-\ib<ле\sbr<17>ес> до лофу̂цце \ib<ле\sbr<11\ch|dz="x"|;1>и>.}
+            {До̀нсе̂сан лоде̂тҕос-\sbr<17> до лофу̂цце \ib<ле\sbr<11\ch|dz="x"|;1>и>.}
             ## Origin is as of yet unknown.
             {Ѐ лонцо̂нат е̂к левде̂срес тожу̂л.}
             ## It is constructed from concrete and rebar with traces of Krylon brand spray paint.
+            {Сао̂кез ву̂кзозам и (鉄筋), и зало̂ (痕跡) (スプレーペイント)}\sbr<Krylon>{.}
             ## SCP-173 is animate and extremely hostile.
             ## The object cannot move while within a direct line of sight.
             ## Line of sight must not be broken at any time with SCP-173.
@@ -89,7 +93,7 @@
               © 2025 · Ziphil (CC BY-SA 3.0)
             >
             \section|class="original"|<
-              \h1|class="original-heading"|<Original work>
+              \h1|class="original-heading"|<Based on:>
               \ul|class="original-list"|<
                 \li|class="original-item"|<
                   \dl|class="original-information-list"|<
