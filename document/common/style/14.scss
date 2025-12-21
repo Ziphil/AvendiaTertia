@@ -62,7 +62,7 @@ body {
 }
 
 .title {
-  row-gap: 12rpx;
+  row-gap: 4rpx;
   display: flex;
   flex-direction: column;
 }
@@ -71,6 +71,7 @@ body {
   font-size: 48rpx;
   font-family: "Geologica";
   font-weight: 800;
+  line-height: $small-line-height;
   text-shadow: 0rpx 2rpx 2rpx oklch(0 0.05 20 / 0.5);
 }
 
@@ -79,6 +80,7 @@ body {
   font-family: "Geologica";
   font-weight: 600;
   color: oklch(0.94 0.06 108);
+  line-height: $small-line-height;
   text-shadow: 0rpx 2rpx 2rpx oklch(0 0.05 20 / 0.5);
 }
 
@@ -88,7 +90,10 @@ body {
 }
 
 .license-label {
+  padding-block-start: 12rpx;
+  padding-inline-start: 2rpx;
   color: oklch(0.6 0 0);
+  border-block-start: solid 1rpx oklch(0.8 0 0);
   list-style: none;
   cursor: pointer;
   &::before {
@@ -108,17 +113,15 @@ body {
 }
 
 .license-main {
-  margin-block-start: 8rpx;
+  margin-block-start: 12rpx;
   padding-block: 12rpx;
-  padding-inline: 8rpx;
+  padding-inline: 12rpx;
   color: oklch(0.6 0 0);
   background-color: oklch(0.97 0 0);
 }
 
 .original {
   margin-block-start: 12rpx;
-  padding-block-start: 12rpx;
-  border-block-start: solid 1rpx oklch(0.7 0 0);
 }
 
 .original-heading {
@@ -134,11 +137,10 @@ body {
 }
 
 .original-item {
-  padding-block: 4rpx;
-  padding-inline: 6rpx;
+  padding-inline-start: 8rpx;
   font-size: 14rpx;
   line-height: $small-line-height;
-  border: dashed 1rpx oklch(0.7 0 0);
+  border-inline-start: dashed 1rpx oklch(0.8 0 0);
 }
 
 .original-information-list {
@@ -285,6 +287,7 @@ body {
   font-size: 20rpx;
   font-family: "Geologica";
   font-weight: 600;
+  line-height: $small-line-height;
   text-transform: uppercase;
 }
 
@@ -294,14 +297,24 @@ body {
   line-height: $line-height;
 }
 
-.circumflex {
+.diacritic {
   display: inline-block;
   position: relative;
+  &[data-kind="c"] {
+    --diacritic-char: "ˆ";
+  }
+  &[data-kind="g"] {
+    --diacritic-char: "`";
+  }
   &::before {
     inset-inline: 0em;
     inset-block-start: 0em;
-    content: "ˆ";
+    content: var(--diacritic-char);
     text-align: center;
     position: absolute;
   }
+}
+
+.nowrap {
+  white-space: nowrap;
 }
