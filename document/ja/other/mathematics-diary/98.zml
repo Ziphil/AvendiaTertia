@@ -42,7 +42,7 @@
   >
   \thm|type="def"|<
     \p<
-      部分集合 &m<A \subseteq; \sp<\bb<N>><k>> に対して、関数 &m<f: A \to; \bb<N>> のことを &m<\sp<\bb<N>><k>> 上の \def<部分関数\fl<partial function>> と呼び、&m<f: \sp<\bb<N>><k> \vertrarr; \bb<N>> と書く。
+      部分集合 &m<A \subseteq; \sp<\bb<N>><k>> に対して、関数 &m<f: A \to; \bb<N>> のことを &m<\sp<\bb<N>><k>> 上の \def<部分関数\fl<partial function>> と呼び、&m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> と書く。
       このとき、&m<A> を &m<f> の \def<定義域\fl<domain>> と呼び、&m<\op<dom> (f)> で表す。
     >
   >
@@ -52,11 +52,11 @@
   >
   \thm|type="def"|<
     \p<
-      部分関数 &m<f: \sp<\bb<N>><k> \vertrarr; \bb<N>> が &m<\op<dom> (f) = \sp<\bb<N>><k>> を満たすとき、&m<f> を \def<全域関数\fl<total function>> と呼ぶ。
+      部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> が &m<\op<dom> (f) = \sp<\bb<N>><k>> を満たすとき、&m<f> は \def<全域\fl<total>> であるという。
     >
   >
   \p<
-    すなわち、全域関数 &m<f: \sp<\bb<N>><k> \vertrarr; \bb<N>> とは、普通の意味での関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> のことである。
+    すなわち、全域関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> とは、普通の意味での関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> のことである。
   >
   \p<
     さて、今後の議論のためにいくつかの記法や用語を用意しておこう。
@@ -69,7 +69,7 @@
   >
   \thm|type="def"|<
     \p<
-      部分関数 &m<f: \sp<\bb<N>><k> \vertrarr; \bb<N>> および元 &m<\vec<x> \in; \sp<\bb<N>><k>> を考える。
+      部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および元 &m<\vec<x> \in; \sp<\bb<N>><k>> を考える。
       &m<\vec<x> \in; \op<dom> (f)> であるとき、&m<f (\vec<x>)> は \def<定義されている\fl<defined>> といい、&m<f (\vec<x>) \darr|ord|;> と書く。
       逆に &m<\vec<x> \nin; \op<dom> (f)> であるときは、&m<f (\vec<x>)> は \def<定義されていない\fl<undefined>> といい、&m<f (\vec<x>) \uarr|ord|;> と書く。
     >
@@ -79,7 +79,7 @@
     例えば、
     &mb<
       \array|align="rrcl"|<
-        \c<f:> \c<\sp<\bb<N>><2>> \c<\longto;> \c<\bb<N>> \br;
+        \c<f:> \c<\sp<\bb<N>><2>> \c<\dot<\longto;>> \c<\bb<N>> \br;
         \c; \c<(x, y)> \c<\longmapsto;> \c<\case<
           \c<x - y> \c<(x \geq; y)> \br;
           \c<\uarr|ord|;> \c<(x `< y)>
@@ -92,6 +92,35 @@
      部分関数の値を比較することは頻繁にあるが、部分関数の値は定義されないことがあるので少し注意が必要である。
      以降、特に指示がない場合、&m<f (\vec<x>) = g (\vec<y>)> という形の等式が成立するとは、両辺 &m<f (\vec<x>)>, &m<g (\vec<y>)> が両方定義されていて等しいか両方とも定義されていないかのいずれかであるときとする。
      したがって、両辺を定める部分関数の定義域がズレていたら等式は成立していないことになる。
+  >
+  \p<
+    また、 部分関数の値を組み合わせることもよくあるが、特に指示がなければ、式の一部が定義されない場合は式全体が定義されないこととする。
+    例えば、
+    &mb<
+      \array|align="rrcl"|<
+        \c<f:> \c<\sp<\bb<N>><2>> \c<\dot<\longto;>> \c<\bb<N>> \br;
+        \c; \c<(x, y)> \c<\longmapsto;> \c<\case<
+          \c<x - y> \c<(x \geq; y)> \br;
+          \c<\uarr|ord|;> \c<(x `< y)>
+        >>
+      > \qquad;
+       \array|align="rrcl"|<
+        \c<g:> \c<\bb<N>> \c<\dot<\longto;>> \c<\bb<N>> \br;
+        \c; \c<x> \c<\longmapsto;> \c<\case<
+          \c<x `/ 2> \c<(&raw<&m<x> は偶数>)> \br;
+          \c<\uarr|ord|;> \c<(&raw<&m<x> は奇数>)>
+        >>
+      >
+    >
+    と定義した場合、&m<x \in; \bb<N>> に対して &m<f (g (x), 3)> という式は、&m<x> が奇数であれば &m<g (x)> が定義されないので全体も定義されず、さらに &m<x> が偶数であっても &m<g (x)> が 3 未満であれば定義されない。
+    したがって、
+    &mb<
+      \array|align="rrcl"|<
+        \c<h:> \c<\bb<N>> \c<\dot<\longto;>> \c<\bb<N>> \br;
+        \c; \c<x> \c<\longmapsto;> \c<f (g (x), 3)>
+      >
+    >
+    と定めると、この式の字面だけを見れば全域関数に見えるが、実際にはその定義域は &m<`{ x \mid; &raw<&m<x> は偶数かつ &m<x `/ 2 \geq; 3>> `} \subset; \bb<N>> である。
   >
   \p<
     準備は以上にしよう。

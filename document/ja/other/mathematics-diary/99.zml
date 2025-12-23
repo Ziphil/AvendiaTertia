@@ -1,0 +1,376 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<原始再帰的関数>
+  \use-math|prefix="2"|;
+
+  \h1<日記 (2025 年 12 月 23 日)>
+  \p<
+    今回からしばらくは、再帰関数の理論を展開していくことになる。
+  >
+  \p<
+    Hilbert と Ackermann による疑問に対して、Gödel が考案したのが一般再帰関数である。
+    Gödel による定義は方程式系を用いた少し複雑なものだったが、後に Kleene によって整理された結果、すでに知られていた原始再帰関数を拡張したものとして書けることが分かった。
+    そこで、まずは原始再帰関数から導入していこう。
+  >
+  \p<
+    原始再帰関数とは、ベースとなる関数から「合成」と「原始再帰」という 2 つの操作を繰り返して得ることのできる関数のことである。
+    合成とは、知っての通りの関数合成のことだが、改めて定式化しておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<\sb<g><1>, \cdots;, \sb<g><k>: \sp<\bb<N>><l> \dot<\to;> \bb<N>> をとる。
+      部分関数 &m<h: \sp<\bb<N>><l> \dot<\to;> \bb<N>> が、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
+      &mb<
+        h (\vec<x>) = f (\sb<g><1> (\vec<x>), \cdots;, \sb<g><k> (\vec<x>))
+      >
+      を満たすとき、&m<h> は &m<f, \sb<g><1>, \cdots;, \sb<g><k>> から \def<合成\fl<composition>> で得られるという。
+    >
+  >
+  \p<
+    式を見れば分かるように、上記の &m<f, \sb<g><1>, \cdots;, \sb<g><k>> に対して &m<h> は必ず一意に存在する。
+    なお、前回述べた慣習通り、上の等式は両辺が定義されて等しいか両辺とも定義されていないとき成立するので、&m<f, \sb<g><1>, \cdots;, \sb<g><k>> のいずれか 1 つでも全域でなければ &m<h> も全域にはならない。
+  >
+  \p<
+    また、上記の定義は &m<k = 0> の場合を含む。
+    この場合は、&m<f: \sp<\bb<N>><0> \dot<\to;> \bb<N>> とは定数のことだと見なせるから、&m<h> はその &m<f> を値としてとる定数関数となる。
+  >
+  \p<
+    原始再帰は以下のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><k + 2> \dot<\to;> \bb<N>> をとる。
+      部分関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が、任意の &m<\vec<x> \in; \sp<\bb<N>><k>, y \in; \bb<N>> に対して、
+      &mb<
+        \array|align="rcl"|<
+          \c<h (\vec<x>, 0)> \c<=> \c<f (\vec<x>)> \br;
+          \c<h (\vec<x>, y + 1)> \c<=> \c<g (\vec<x>, y, h (\vec<x>, y))>
+        >
+      >
+      を満たすとき、&m<h> は &m<f, g> から \def<原始再帰\fl<primitive recursion>> で得られるという。
+    >
+  >
+  \p<
+    これは、我々がよく行う帰納的定義そのものである。
+    実際、数学的帰納法等により、上記の &m<f, g> に対して &m<h> が必ず一意に存在することが分かる。
+    ただし、やはりこちらでも、&m<f, g> のどちらか一方が全域でなければ &m<h> も全域にはならない。
+  >
+  \p<
+    また、上記の定義は &m<k = 0> の場合も含む。
+    この場合、&m<f: \sp<\bb<N>><0> \dot<\to;> \bb<N>> は定数と見なせて、上記 2 つの式は
+    &mb<
+      \array|align="rcl"|<
+        \c<h (0)> \c<=> \c<f> \br;
+        \c<h (y + 1)> \c<=> \c<g (y, h (y))>
+      >
+    >
+    と書き直せる。
+  >
+  \p<
+    原始再帰の能力は知るには実例を見るのが早いのだが、後に原始再帰関数の具体例を挙げる際に大量に見ることになるので、まずは原始関数の定義を行ってしまおう。
+    原始再帰関数とは、ベースとなる関数から合成と原始再帰を繰り返して得られる関数のことなのだが、そのベースとなる関数には次の 3 種類の関数を採用する。
+  >
+  \thm|type="def"|<
+    \p<
+      全域関数 &m<\op<zero>: \sp<\bb<N>><0> \to; \bb<N>>, &m<\op<succ>: \sp<\bb<N>><1> \to; \bb<N>>, &m<\sbsp<\op<proj>><n><k>: \sp<\bb<N>><k> \to; \bb<N> \srel; (1 \leq; n \leq; k)> を
+      &mb<
+        \array|align="rcl"|<
+          \c<\op|ord|<zero> > \c<\coloneqq;> \c<0> \br;
+          \c<\op<succ> (x)> \c<\coloneqq;> \c<x + 1> \br;
+          \c<\sbsp<\op<proj>><n><k> (\sb<x><1>, \cdots;, \sb<x><k>)> \c<\coloneqq;> \c<\sb<x><n>>
+        >
+      >
+      で定め、順に \def<零関数\fl<zero function>>, \def<後者関数\fl<successor function>>, \def<射影関数\fl<projection function>> と呼ぶ。
+      さらに、これらを総称して \def<初期関数\fl<initial function>> と呼ぶ。
+    >
+  >
+  \p<
+    以上の準備のもと、原始再帰関数は次のように定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      部分関数が \def<原始再帰的\fl<primitive recursive>> であることを、以下によって帰納的に定義する。
+    >
+    \ul<
+      \li<
+        初期関数 &m<\op|ord|<zero>>, &m<\op|ord|<succ>>, &m<\sbsp<\op|ord|<proj>><n><k> \srel; (1 \leq; n \leq; k)> は原始再帰的である。
+      >
+      \li<
+        &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<\sb<g><1>, \cdots;, \sb<g><k>: \sp<\bb<N>><l> \dot<\to;> \bb<N>> が全て原始再帰的ならば、これらから合成で得られる部分関数 &m<h: \sp<\bb<N>><l> \dot<\to;> \bb<N>> も原始再帰的である。
+      >
+      \li<
+        &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><k + 2> \dot<\to;> \bb<N>> がともに原始再帰的ならば、これらから原始再帰で得られる部分関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> も原始再帰的である。
+      >
+    >
+    \p<
+      また、原始再帰的な関数のことを \def<原始再帰関数\fl<primitive recursive function>> と呼ぶ。
+    >
+  >
+  \p<
+    この定義からすぐに分かることとして、原始再帰関数の全域性がある。
+  >
+  \thm|type="thm"|<
+    \p<
+      原始再帰関数は常に全域である。
+    >
+  >
+  \prf<
+    \p<
+      定義から、初期関数は全て全域である。
+      また、合成と原始再帰はどちらも全域関数から全域関数を作る。
+      したがって、原始再帰関数は初期関数から合成と原始再帰を繰り返して得られるものであるから、全て全域である。
+    >
+  >
+  \p<
+    では、原始関数の具体例を見ていこう。
+    まず、定数関数は全て原始再帰的であることが分かる。
+  >
+  \thm|type="prp",id="const"|<
+    \p<
+      定数関数は原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      まず、一定して 0 を値にとる定数関数 &m<z: \sp<\bb<N>><k> \to; \bb<N>> を考えると、これは &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
+      &mb<
+        z (\vec<x>) = \op|ord|<zero>
+      >
+      と書ける。
+      すなわち、&m<z> は &m<\op|ord|<zero>> から合成で得られるため、原始再帰的である。
+    >
+    \p<
+      次に、一定して &m<c \in; \bb<N>> を値にとる定数関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> を考える。
+      これは、上の &m<z> を用いれば、&m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
+      &mb<
+        f (\vec<x>) = \un<\underbrace<\op|ord|<succ> ( \op|ord|<succ> ( \cdots; \op|ord|<succ> (>><c \text< 個>>z (\vec<x>)) \cdots; ))
+      >
+      と書ける。
+      すなわち、&m<f> は &m<z> に &m<\op|ord|<succ>> を &m<c> 回合成したものとして得られるため、原始再帰的である。
+    >
+  >
+  \p<
+    続いて、代表的な演算は全て原始再帰的であることを示そう。
+    まずは加法と乗法である。
+  >
+  \thm|type="prp",id="plus"|<
+    \p<
+      加法関数 &m<\plus|ord|;: \sp<\bb<N>><2> \to; \bb<N>> は原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      まず、全域関数 &m<f: \sp<\bb<N>><1> \to; \bb<N>> および &m<g: \sp<\bb<N>><3> \to; \bb<N>> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<f (x)> \c<\coloneqq;> \c<\sbsp<\op<proj>><1><1> (x)> \br;
+          \c; \c<=> \c<x>
+        > \qquad;
+        \array|align="rcl"|<
+          \c<g (x, y, z)> \c<\coloneqq;> \c<\op<succ> (\sbsp<\op<proj>><3><3> (x, y, z))> \br;
+          \c; \c<=> \c<z + 1>
+        >
+      >
+      で定める。
+      すると、&m<f> は &m<\sbsp<\op|ord|<proj>><1><1>> そのものであるから原始再帰的で、&m<g> も &m<\op|ord|<succ>> と &m<\sbsp<\op|ord|<proj>><3><3>> の合成であるから原始再帰的である。
+      これらを用いることで、加法関数 &m<\plus;> は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\plus; (x, 0)> \c<=> \c<f (x)> \br;
+          \c<\plus; (x, y + 1)> \c<=> \c<g (x, y, \plus|ord|; (x, y))>
+        >
+      >
+      と書ける。
+      すなわち、&m<\plus;> は &m<f> と &m<g> から原始再帰で得られるため、原始再帰的である。
+    >
+  >
+  \thm|type="prp",id="times"|<
+    \p<
+      乗法関数 &m<\times|ord|;: \sp<\bb<N>><2> \to; \bb<N>> は原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      まず、全域関数 &m<f: \sp<\bb<N>><1> \to; \bb<N>> および &m<g: \sp<\bb<N>><3> \to; \bb<N>> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<f (x)> \c<\coloneqq;> \c<0> \br;
+        > \qquad;
+        \array|align="rcl"|<
+          \c<g (x, y, z)> \c<\coloneqq;> \c<\plus|ord|; (\sbsp<\op<proj>><1><3> (x, y, z), \sbsp<\op<proj>><3><3> (x, y, z))> \br;
+          \c; \c<=> \c<x + z>
+        >
+      >
+      で定める。
+      すると、&m<f> は定数関数であるから\mref|type="thm",ref="const"|; より原始再帰的で、&m<g> も  &m<\plus|ord|;>, &m<\sbsp<\op|ord|<proj>><1><3>>, &m<\sbsp<\op|ord|<proj>><3><3>> の合成であるから\mref|type="thm",ref="plus"|; より原始再帰的である。
+      これらを用いることで、乗法関数 &m<\times;> は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\times; (x, 0)> \c<=> \c<f (x)> \br;
+          \c<\times; (x, y + 1)> \c<=> \c<g (x, y, \times|ord|; (x, y))>
+        >
+      >
+      と書ける。
+      すなわち、&m<\plus;> は &m<f> と &m<g> から原始再帰で得られるため、原始再帰的である。
+    >
+  >
+  \p<
+    上の 2 つの証明の核心は、&m<\plus;> や &m<\times;> が原始再帰で得られるという点である。
+    その際に、原始再帰の定義に厳密に合わせるため、かなり回りくどい記述をした。
+    例えば、&m<\plus;> の原始再帰性の証明には &m<\sbsp<\op|ord|<proj>><1><1>> や &m<\sbsp<\op|ord|<proj>><3><3>> を用いたが、本質的には
+    &mb<
+      \array|align="rcl"|<
+        \c<\plus; (x, 0)> \c<=> \c<x> \br;
+        \c<\plus; (x, y + 1)> \c<=> \c<\op<succ> (\plus|ord|; (x, y))>
+      > \qquad;
+    >
+    と書けると言っているにすぎない。
+    しかし、原始再帰の定義に合わせるには、&m<\plus; (x, 0)> の右辺は 1 変数関数の値でなければならないし、&m<\plus; (x, y + 1)> の右辺には &m<x> や &m<y> が登場しなければならない。
+    この定義と辻褄を合わせるために、何もしない関数として &m<\sbsp<\op|ord|<proj>><1><1>> を挿入したり、使わない変数を消すために &m<\sbsp<\op|ord|<proj>><3><3>> を挿入したりしたのである。
+    &m<\times;> の原始再帰性の証明でも同様で、その本質は、 
+    &mb<
+      \array|align="rcl"|<
+        \c<\times; (x, 0)> \c<=> \c<0> \br;
+        \c<\times; (x, y + 1)> \c<=> \c<\plus|ord|; (x, \times|ord|; (x, y))>
+      >
+    >
+    と表現できる点である。
+    しかし、&m<\times; (x, 0)> の右辺で定数を関数値と見なすために &m<f> を導入したり、&m<\times; (x, y + 1)> の右辺で &m<y> を消すために &m<&m<\sbsp<\op|ord|<proj>><1><3>>> や &m<\sbsp<\op|ord|<proj>><3><3>> を挿入したりすることになった。
+  >
+  \p<
+    このように、初期関数に入れられている射影関数は、式の中で用いる変数の数を調整したり入れ替えたりすることで定義と辻褄を合わせるために専ら使われる。
+    また、定数関数も同様の用途で使われることが多い。
+    以降は、このような本質的でない射影関数や定数関数を省略することにするので、定義に厳密に則っているかどうかを確認する際は適宜補って読んでほしい。
+  >
+  \p<
+    では本題に戻り、様々な演算が原始再帰的であることを示していこう。
+    加法と乗法を見たので、順当に次は冪を見る。
+  >
+  \thm|type="prp",id="pow"|<
+    \p<
+      冪関数 &m<\op<pow>: \sp<\bb<N>><2> \to; \bb<N>> を
+      &mb<
+        \op<pow> (x, y) \coloneqq; \sp<x><y>
+      >
+      で定めると、これは原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      これは、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<pow> (x, 0)> \c<=> \c<1> \br;
+          \c<\op<pow> (x, y + 1)> \c<=> \c<x \times; \op<pow> (x, y)>
+        >
+      >
+      と書け、&m<\times;> から原始再帰で得られるため、\mref|type="thm",ref="times"|; より原始再帰的である。
+    >
+  >
+  \p<
+    続いて、減法を見ていこう。
+    しかし、普通の減法の結果は負になる可能性があるため、値域を自然数の範囲に収めるために、負になったら 0 として扱うことにする。
+  >
+  \thm|type="prp",id="pred"|<
+    \p<
+      全域関数 &m<\op|ord|<pred>: \sp<\bb<N>><1> \to; \bb<N>> を
+      &mb<
+        \op|ord|<pred> (x) \coloneqq; \case<
+          \c<x - 1> \c<(x `> 0)> \br;
+          \c<0> \c<(x = 0)>
+        >
+      >
+      で定めると、これは原始再帰的である。
+      これは \def<先行関数\fl<predecessor function>> と呼ばれる。
+    >
+  >
+  \prf<
+    \p<
+      これは、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<pred> (0)> \c<=> \c<0> \br;
+          \c<\op<pred> (x + 1)> \c<=> \c<x>
+        >
+      >
+      と書けるから、原始再帰的である。
+    >
+  >
+  \thm|type="prp",id="minus"|<
+    \p<
+      全域関数 &m<\o|ord|<∸>: \sp<\bb<N>><2> \to; \bb<N>> を
+      &mb<
+        x \o|bin|<∸> y \coloneqq; \case<
+          \c<x - y> \c<(x \geq; y)> \br;
+          \c<0> \c<(x `< y)>
+        >
+      >
+      で定めると、これは原始再帰的である。
+      この演算はしばしば \def<切り捨て減法関数\fl<truncated subtraction>> と呼ばれる。
+    >
+  >
+  \prf<
+    \p<
+      これは、
+      &mb<
+        \array|align="rcl"|<
+          \c<x \o|bin|<∸> 0> \c<=> \c<x> \br;
+          \c<x \o|bin|<∸> (y + 1)> \c<=> \c<\op<pred> (x \o|bin|<∸> y)>
+        >
+      >
+      と書け、&m<\op<pred>> から原始再帰で得られるため、\mref|type="thm",ref="pred"|; より原始再帰的である。
+    >
+  >
+  \p<
+    最後に、総和と総乗を見て今回は終わりにしよう。
+  >
+  \thm|type="prp",id="seq"|<
+    \p<
+      関数 &m<f: \sp<\bb<N>><k + 1> \to; \bb<N>> に対し、全域関数 &m<\sb<`S><f>: \sp<\bb<N>><k + 1> \to; \bb<N>> および &m<\sb<`P><f>: \sp<\bb<N>><k + 1> \to; \bb<N>> を
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<`S><f> (\vec<x>, y)> \c<\coloneqq;> \c<\sum<t `< y> f (\vec<x>, t)> \br;
+          \c; \c<=> \c<f (\vec<x>, 0) + \cdots; + f (x, y - 1)>
+        > \qquad;
+        \array|align="rcl"|<
+          \c<\sb<`P><f> (\vec<x>, y)> \c<\coloneqq;> \c<\prod<t `< y> f (\vec<x>, t)> \br;
+          \c; \c<=> \c<f (\vec<x>, 0) \times; \cdots; \times; f (\vec<x>, y - 1)>
+        >
+      >
+      で定める。
+      &m<f> が原始再帰的ならば、&m<\sb<`S><f>> と &m<\sb<`P><f>> も原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb<`S><f>> は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<`S><f> (\vec<x>, 0)> \c<=> \c<0> \br;
+          \c<\sb<`S><f> (\vec<x>, y + 1)> \c<=> \c<f (\vec<x>, y) + \sb<`S><f> (\vec<x>, y)>
+        >
+      >
+      と書けるから、\mref|type="thm",ref="plus"|; より &m<+> が原始再帰的であるため、&m<f> から原始再帰的なら &m<\sb<`S><f>> も原始再帰的である。
+      同様に &m<\sb<`P><f>> は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<`P><f> (\vec<x>, 0)> \c<=> \c<0> \br;
+          \c<\sb<`P><f> (\vec<x>, y + 1)> \c<=> \c<f (\vec<x>, y) \times; \sb<`P><f> (\vec<x>, y)>
+        >
+      >
+      と書けるから、\mref|type="thm",ref="times"|; より &m<\times;> が原始再帰的であるため、&m<f> から原始再帰的なら &m<\sb<`P><f>> も原始再帰的である。
+    >
+  >
+  \p<
+    ということで、原始再帰関数の例をいくつか見た。
+    次回は、関数ではなく関係の原始再帰性を導入し、その例を見ることにする。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>
