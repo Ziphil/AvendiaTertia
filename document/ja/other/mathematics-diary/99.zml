@@ -306,7 +306,7 @@
         >
       >
       で定めると、これは原始再帰的である。
-      この演算はしばしば \def<切り捨て減法関数\fl<truncated subtraction>> と呼ばれる。
+      この演算はしばしば \def<切り捨て減法\fl<truncated subtraction>> と呼ばれる。
     >
   >
   \prf<
