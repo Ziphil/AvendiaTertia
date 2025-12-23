@@ -49,7 +49,7 @@
     >
     また、自然数 &m<n> に対して、その Church 数を
     &mb<
-      \underline<n> \equiv; \rm<`l> fx. \sfun; \un<\underbrace<f (f ( \cdots; (f>><n \text< 個>> x)))
+      \underline<n> \equiv; \rm<`l> fx. \sfun; \un<\underbrace<f (f ( \cdots; (f>><n \text< 個>> x) \cdots; ))
     >
     と表す。
     ラムダ項 &m<M> の Gödel 数 は &m<`# M> とし、&m<M> の Gödel 数の Church 数を &m<\lceil; M \rceil; \equiv; `# M> で表す。
