@@ -196,8 +196,8 @@
           \c<\sb<\op|ord|<ch>><\geq|ord|;> (x, y)> \c<=> \c<\sb<\op|ord|<ch>><\op<Zero>> (y \o|bin|<∸> x)>
         >
       >
-      と書けるから、\a|href="99.html#minus"|<命題 2.11> と\mref|type="thm",ref="zero"|; によってこれらは原始再帰的である。
-      また、&m<\ls|ord|;> と &m<\gt|ord|;> はそれぞれ &m<\geq|ord|;> と &m<\leq|ord|;> の補集合であるから、\mref|type="thm",ref="comp"|; によってこれらも原始再帰的である。
+      と書けるから、\a|href="99.html#minus"|<命題 2.11> と\mref|type="thm",ref="zero"|; によって原始再帰的である。
+      また、&m<\ls|ord|;> と &m<\gt|ord|;> はそれぞれ &m<\geq|ord|;> と &m<\leq|ord|;> の補集合であるから、\mref|type="thm",ref="comp"|; によって原始再帰的である。
     >
   >
   \thm|type="prp",id="eq"|<

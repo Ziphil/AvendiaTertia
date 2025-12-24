@@ -36,9 +36,12 @@
   position: absolute;
 }
 
+math-i {
+  padding-right: 0em !important;
+}
+
 math-i:not(.fun):not(.rm)[data-cont="f"] {
-  padding-inline-start: 0.15em;
-  padding-inline-end: 0.1em;
+  padding-inline-end: 0.1em !important;
 }
 
 math-i.tt {
