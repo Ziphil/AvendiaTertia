@@ -1,0 +1,241 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<原始再帰的な関係>
+  \use-math|prefix="3"|;
+
+  \h1<日記 (2025 年 12 月 24 日)>
+  \p<
+    今回は、関数ではなく関係に焦点を当てる。
+  >
+  \p<
+    関係とは直積の部分集合であることを思い出そう。
+    計算可能性理論では基本的に自然数を扱うので、自然数の直積の部分集合 &m<P \subseteq; \sp<\bb<N>><k>> を考えることになる。
+  >
+  \p<
+    さらに、関係からは「特性関数」と呼ばれる関数を作ることができ、両者は同一視できるのであった。
+    定義を確認しておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対して、全域関数 &m<\sb<\op<ch>><P>: \sp<\bb<N>><k> \to; \bb<N>> を
+      &mb<
+        \sb<\op<ch>><P> (\vec<x>) \coloneqq; \case<
+          \c<1> \c<(\vec<x> \in; P)> \br;
+          \c<0> \c<(\vec<x> \nin; P)>
+        >
+      >
+      で定義する。
+      これを &m<P> の \def<特性関数\fl<characteristic function>> という。
+    >
+  >
+  \p<
+    そこで今後は、関係とその特性関数を同一視して、関数に対する用語をそのまま関係にも適用することにする。
+    例えば、関係が原始再帰的であるとは、その特性関数が原始再帰的であることを意味することにする。
+  >
+  \p<
+    では、原始再帰的な関係の例をいくつか挙げていこう。
+    まずは、与えられた自然数が 0 であるかもしくは正であるかを判定する関係を見る。
+  >
+  \thm|type="prp",id="zero"|<
+    \p<
+      関係 &m<\op|ord|<Zero>, \op|ord|<Pos> \subseteq; \bb<N>> を
+      &mb<
+        \array|align="rcl"|<
+          \c<x \in; \op|ord|<Zero>> \c<\coloniff;> \c<x = 0> \br;
+          \c<x \in; \op|ord|<Pos>> \c<\coloniff;> \c<x `> 0>
+        >
+      >
+      で定めると、これは原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb<\op|ord|<ch>><\op<Zero>>> と &m<\sb<\op|ord|<ch>><\op<Pos>>> が原始再帰的であることを示せば良い。
+      &m<\sb<\op|ord|<ch>><\op<Zero>>> については、
+      &mb<
+        \sb<\op<ch>><\op<Zero>> (x) \coloneqq; \case<
+          \c<1> \c<(x = 0)> \br;
+          \c<0> \c<(x `> 0)>
+        >
+      >
+      と書けるが、これは
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<ch>><\op<Zero>> (0)> \c<=> \c<1> \br;
+          \c<\sb<\op<ch>><\op<Zero>> (x + 1)> \c<=> \c<0>
+        >
+      >
+      という原始再帰の形で表せる。
+      したがって、&m<\sb<\op|ord|<ch>><\op<Zero>>> は原始再帰的である。
+    >
+    \p<
+      &m<\sb<\op|ord|<ch>><\op<Pos>>> については、ほぼ上記と同様に、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<ch>><\op<Pos>> (0)> \c<=> \c<0> \br;
+          \c<\sb<\op<ch>><\op<Pos>> (x + 1)> \c<=> \c<1>
+        >
+      >
+      という原始再帰の形で表せるから、これも原始再帰的である。
+    >
+  >
+  \p<
+    ところで、この証明に出てきた  &m<\sb<\op|ord|<ch>><\op<Pos>>> は、
+    &mb<
+      \sb<\op<ch>><\op<Pos>> (x) = \case<
+        \c<0> \c<(x = 0)> \br;
+        \c<1> \c<(x `> 0)>
+      >
+    >
+    という関数で、1 以上の引数を 1 に潰す関数と見なせる。
+    これは特性関数を扱う上で便利なので、&m<\op|ord|<sign>> という名前を与えておくことにする。
+  >
+  \p<
+    次に、関係の原始再帰性が基本的な集合演算で閉じていることを示す。
+    まずは、補集合, 共通集合, 和集合をとるという操作について考える。
+    なお、ここでは補集合を &m<\o|ord|<∁>> で表す。
+  >
+  \thm|type="thm",id="comp"|<
+    \p<
+      関係 &m<P\subseteq; \sp<\bb<N>><k>> をとる。
+      &m<P> が原始再帰的ならば、&m<\o|ord|<∁> P> も原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb|ord|<\op<ch>><\op<Zero>>> が引数の 0 と 1 を反転することに注目すれば、&m<\sb<\op<ch>><\o|ord|<∁> P>> は、
+      &mb<
+        \sb<\op<ch>><\o|ord|<∁> P> (\vec<x>) = \sb<\op<ch>><\op<Zero>> (\sb<\op<ch>><P> (\vec<x>))
+      >
+      と書けることが分かる。
+      \mref|type="thm",ref="zero"|; より &m<\sb<\op|ord|<ch>><\op<Zero>>> は原始再帰的であるから、&m<\sb<\op|ord|<ch>><P>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><\o|ord|<∁> P>> も原始再帰的である。
+    >
+  >
+  \thm|type="thm",id="capcup"|<
+    \p<
+      関係 &m<P, Q \subseteq; \sp<\bb<N>><k>> をとる。
+      &m<P> と &m<Q> がともに原始再帰的ならば、&m<P \cap; Q> と &m<P \cup; Q> も原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb|ord|<\op<ch>><P \cap; Q>> は、
+      &mb<
+        \sb<\op<ch>><P \cap; Q> (\vec<x>) = \sb<\op<ch>><P> (\vec<x>) \times; \sb<\op<ch>><Q> (\vec<x>)
+      >
+      と書ける。
+      \a|href="99.html#times"|<命題 2.9> より &m<\times;> は原始再帰的であるから、&m<\sb<\op|ord|<ch>><P>> と &m<\sb<\op|ord|<ch>><Q>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><P \cap; Q>> も原始再帰的である。
+    >
+    \p<
+      &m<\sb|ord|<\op<ch>><P \cup; Q>> については、前に述べた &m<\op|ord|<sign>> を用いることで、
+      &mb<
+        \sb<\op<ch>><P \cup; Q> (\vec<x>) = \op<sign> (\sb<\op<ch>><P> (\vec<x>) + \sb<\op<ch>><Q> (\vec<x>))
+      >
+      と書けることが分かる。
+      すなわち、&m<\sb<\op|ord|<ch>><P \cup; Q>> は &m<\sb<\op|ord|<ch>><P>>, &m<\sb<\op|ord|<ch>><Q>>, &m<\plus;>, &m<\op|ord|<sign>> の合成である。
+      \a|href="99.html#plus"|<命題 2.8> と\mref|type="thm",ref="zero"|; により &m<\plus;> と &m<\op|ord|<sign>> がそれぞれ原始再帰的であることが分かっているので、&m<\sb<\op|ord|<ch>><P>> と &m<\sb<\op|ord|<ch>><Q>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><P \cup; Q>> も原始再帰的である。
+    >
+  >
+  \p<
+    次に、量化子をとる操作について考えるが、一般の量化に対しては原始再帰性は保たれない。
+    ただし、量化の上限を制限すれば原始再帰性は保たれる。
+  >
+  \thm|type="thm",id="quant"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、関係 &m<\bar<\forall;> P, \bar<\exists;> P \subseteq; \sp<\bb<N>><k + 1>> を
+      &mb<
+        \array|align="rcl"|<
+          \c<(\vec<x>, y) \in; \bar<\forall;> P> \c<\coloniff;> \c<\sp<><\forall;> t `< y \ssbin; P (\vec<x>, t)> \br;
+          \c<(\vec<x>, y) \in; \bar<\exists;> P> \c<\coloniff;> \c<\sp<><\exists;> t `< y \ssbin; P (\vec<x>, t)>
+        >
+      >
+      で定める。
+      &m<P> が原始再帰的ならば、&m<\bar<\forall;> P> と &m<\bar<\exists;> P> も原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sb|ord|<\op<ch>><\bar<\forall;> P>> と &m<\sb|ord|<\op<ch>><\bar<\exists;> P>> は、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op<ch>><\bar<\forall;> P> (\vec<x>, y)> \c<=> \c<\prod<t `< y> \sb<\op<ch>><P> (\vec<x>, t)> \br;
+          \c<\sb<\op<ch>><\bar<\exists;> P> (\vec<x>, y)> \c<=> \c<\op|ord|<sign> \paren<\sum<t `< y> \sb<\op<ch>><P> (\vec<x>, t)>>
+        >
+      >
+      と書ける。
+      \a|href="99.html#seq"|<命題 2.12> と\mref|type="thm",ref="zero"|; により、&m<\sb<\op|ord|<ch>><P>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><\bar<\forall;> P>> と &m<\sb<\op|ord|<ch>><\bar<\exists;> P>> も原始再帰的である。
+    >
+  >
+  \p<
+    このくらい準備をしておくと、自然数に関する様々な性質が原始再帰的であることが分かる。
+    例えば、与えられた 2 つの自然数の比較は原始再帰的である。
+  >
+  \thm|type="prp",id="lsgt"|<
+    \p<
+      各種の比較関係 &m<\leq|ord|;, \ls|ord|;, \geq|ord|;, \gt|ord|; \subseteq; \sp<\bb<N>><2>> は原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      まず &m<\sb<\op|ord|<ch>><\leq|ord|;>> と &m<\sb<\op|ord|<ch>><\geq|ord|;>> については、それぞれ
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\op|ord|<ch>><\leq|ord|;> (x, y)> \c<=> \c<\sb<\op|ord|<ch>><\op<Zero>> (x \o|bin|<∸> y)> \br;
+          \c<\sb<\op|ord|<ch>><\geq|ord|;> (x, y)> \c<=> \c<\sb<\op|ord|<ch>><\op<Zero>> (y \o|bin|<∸> x)>
+        >
+      >
+      と書けるから、\a|href="99.html#minus"|<命題 2.11> と\mref|type="thm",ref="zero"|; によってこれらは原始再帰的である。
+      また、&m<\ls|ord|;> と &m<\gt|ord|;> はそれぞれ &m<\geq|ord|;> と &m<\leq|ord|;> の補集合であるから、\mref|type="thm",ref="comp"|; によってこれらも原始再帰的である。
+    >
+  >
+  \thm|type="prp",id="eq"|<
+    \p<
+      等号関係 &m<\eq|ord|; \subseteq; \sp<\bb<N>><2>> は原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\eq|ord|; = \leq|ord|; \cap; \geq|ord|;> であるから、\mref|type="thm",ref="lsgt"|; と\mref|type="thm",ref="capcup"|; により &m<\eq|ord|;> は原始再帰的である。
+    >
+  >
+  \p<
+    これらを応用すれば、整除関係が原始再帰的であることも分かる。
+  >
+  \thm|type="prp",id="div"|<
+    \p<
+      関係 &m<\mid|ord|; \subseteq; \sp<\bb<N>><2>> を
+      &mb<
+        x \mid; y \coloniff; &raw<&m<x> は &m<y> をわり切る>
+      >
+      で定めると、これは原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      まず、わり切ることの定義から、
+      &mb<
+        x \mid; y \iff; \sp<><\exists;> q \ssbin; \ltort; y = q x \rtort;
+      >
+      である。
+      しかし、このような &m<q> が存在するなら &m<y> 以下であるから、&m<q> を &m<y + 1> 未満に制限しても良い。
+      すなわち、
+      &mb<
+        x \mid; y \iff; \sp<><\exists;> q `< y + 1 \ssbin; \ltort; y = q x \rtort;
+      >
+      が成り立つ。
+      この右辺にある式は積, 等号, 和, (上限付き) 量化の組み合わせだが、これらの操作は\a|href="99.html#times"|<命題 2.9>, \mref|type="thm",ref="eq"|;, \a|href="99.html#plus"|<命題 2.8>, \mref|type="thm",ref="quant"|; によって全て原始再帰的だから、上記の関係全体も原始再帰的であることが分かる。
+    >
+  >
+  \p<
+    前回と今回で見てきたように、原始再帰的な範囲内でかなり様々な関数や性質を表現することができる。
+    次回は、さらに多くのことが可能なことを見ていこう。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>
