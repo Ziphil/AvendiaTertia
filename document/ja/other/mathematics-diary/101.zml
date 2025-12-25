@@ -1,0 +1,158 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<場合分けと有界最小化>
+  \use-math|prefix="4"|;
+
+  \h1<日記 (2025 年 12 月 25 日)>
+  \p<
+    今回は、原始再帰的な範囲で可能なことをさらに見ていく。
+  >
+  \p<
+    関数を場合分けによって定義することはよくあるが、場合分けの条件が原始再帰的であれば原始再帰性は保たれる。
+  >
+  \thm|type="thm",id="case"|<
+    \p<
+      部分関数 &m<f, g: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を
+      &mb<
+        h (\vec<x>) \coloneqq; \case<
+          \c<f (\vec<x>)> \c<(\vec<x> \in; P)> \br;
+          \c<g (\vec<x>)> \c<(\vec<x> \nin; P)>
+        >
+      >
+      で定める。
+      &m<f, g, P> が全て原始再帰的であれば、&m<h> も原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<h> は、
+      &mb<
+        h (\vec<x>) = f (\vec<x>) \cdot; \sb<\op<ch>><P> (\vec<x>) + g (\vec<x>) \cdot; \sb<\op<ch>><\o|ord|<∁> P> (\vec<x>)
+      >
+      と書ける。
+      &m<f, g, P> が全て原始再帰的であると仮定すれば、まず\a|href="100.html#comp"|<定理 3.3> により &m<\o|ord|<∁> P> も原始再帰的である。
+      また、\a|href="99.html#plus"|<命題 2.7> と\a|href="99.html#times"|<命題 2.8> より加法と乗法も原始再帰的である。
+      したがって、これらの合成で書けた &m<h> も原始再帰的である。
+    >
+  >
+  \p<
+    この定理を何度も使うことで、2 つ以上の場合分けも原始再帰性を保つことが分かる。
+    例えば、部分関数 &m<\sb<f><1>, \sb<f><2>, \sb<f><3>, g: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および関係 &m<\sb<P><1>, \sb<P><2>, \sb<P><3> \subseteq; \sp<\bb<N>><k>> に対して、部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を
+    &mb<
+      h (\vec<x>) \coloneqq; \case<
+        \c<\sb<f><1> (\vec<x>)> \c<(\vec<x> \in; \sb<P><1>)> \br;
+        \c<\sb<f><2> (\vec<x>)> \c<(\vec<x> \nin; \sb<P><1> \scand; \vec<x> \in; \sb<P><2>)> \br;
+        \c<\sb<f><3> (\vec<x>)> \c<(\vec<x> \nin; \sb<P><1> \scand; \vec<x> \nin; \sb<P><2> \scand; \vec<x> \in; \sb<P><3>)> \br;
+        \c<g (\vec<x>)> \c<(\vec<x> \nin; \sb<P><1> \scand; \vec<x> \nin; \sb<P><2> \scand; \vec<x> \nin; \sb<P><3>)>
+      >
+    >
+    で定めれば、&m<\sb<f><1>, \sb<f><2>, \sb<f><3>, g, \sb<P><1>, \sb<P><2>, \sb<P><3>> が全て原始再帰的なら &m<h> も原始再帰的になる。
+  >
+  \p<
+    続いて、有界最小化演算子を導入しよう。
+    これは、与えられた関係を満たす数を探し出す演算子である。
+  >
+  \thm|type="def"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、数 &m<\bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t) \in; \bb<N>> を
+      &mb<
+        \bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t) \coloneqq; \case<
+          \c<\min; `{ t \mid; t `< y \scand; P (\vec<x>, t) `}> \c<(\sp<><\exists;> t `< y \ssbin; P (\vec<x>, t))> \br;
+          \c<y> \c<(\text<上記以外>)>
+        >
+      >
+      で定義する。
+      この &m<\bar<\rm<`m>>> は \def<有界最小化演算子\fl<bounded minimization operator>> と呼ばれる。
+    >
+  >
+  \p<
+    つまり、&m<\bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t)> とは、&m<t> を 0 から順に増やしながら &m<P (\vec<x>, t)> が成り立つか調べていき、それが始めて成り立ったときの &m<t> のことである。
+    ただし、&m<t> を &m<y - 1> まで増やしても &m<P (\vec<x>, t)> が成り立たなかったら、&m<y> を返す。
+  >
+  \p<
+    有界最小化演算は原始再帰性を保存する。
+  >
+  \thm|type="thm",id="min"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> を
+      &mb<
+        h (\vec<x>, y) \coloneqq; \bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t)
+      >
+      で定める。
+      &m<P> が原始再帰的であれば、&m<h> も原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      &m<h (\vec<x>, y)> を原始再帰の形で書くことを目標とする。
+      まず、定義から明らかに &m<h (\vec<x>, 0) = 0> である。
+      そこで、次に &m<h (\vec<x>, y + 1)> を &m<\vec<x>>, &m<y>, &m<h (\vec<x>, y)> の式で表すことを考える。
+    >
+    \p<
+      もし &m<P (\vec<x>, t)> を満たす &m<t> が &m<y> 未満に存在するならば、そのような &m<t> のうち最小のものが &m<h (\vec<x>, y)> である。
+      これを &m<\tilde<t>> と書くことにする。
+      すると、&m<P (\vec<x>, t)> を満たす &m<y + 1> 未満の &m<t> のうち最小のものも、当然 &m<\tilde<t>> である。
+      すなわち、&m<h (\vec<x>, y + 1) = \tilde<t> = h (\vec<x>, y)> となる。
+    >
+    \p<
+      &m<P (\vec<x>, t)> を満たす &m<t> が &m<y> 未満に存在しない場合、&m<P (\vec<x>, y)> が成り立つかが問題になる。
+      もし &m<P (\vec<x>, y)> が成り立つなら、&m<P (\vec<x>, t)> を満たす &m<y + 1> 未満の &m<t> で最小なものは &m<y> になるため、&m<h (\vec<x>, y) = y> となる。
+      もし &m<P (\vec<x>, y)> が成り立たないなら、&m<P (\vec<x>, t)> を満たす &m<y + 1> 未満の &m<t> は存在しないことになるので、定義から &m<h (\vec<x>, y + 1) = y + 1> となる。
+    >
+    \p<
+      以上をまとめると、&m<h> は、
+      &mb<
+        \array|align="rcl"|<
+          \c<h (\vec<x>, 0)> \c<=> \c<0> \br;
+          \c<h (\vec<x>, y + 1)> \c<=> \c<\case<
+            \c<h (\vec<x>, y)> \c<(h (\vec<x>, y) `< y)> \br;
+            \c<y> \c<(h (\vec<x>, y) = y \scand; P (\vec<x>, y))> \br;
+            \c<y + 1> \c<(h (\vec<x>, y) = y \scand; \scnot; \sfun; P (\vec<x>, y))>
+          >>
+        >
+      >
+      という原始再帰の形で書ける。
+      この後者の式には &m<`<>, &m<=>, &m<\scand;>, &m<\scnot;>, &m<+> が現れているが、\a|href="100.html#lsgt"|<命題 3.6>, \a|href="100.html#eq"|<命題 3.7>, \a|href="100.html#capcup"|<定理 3.4>, \a|href="100.html#comp"|<定理 3.3>, \a|href="99.html#plus"|<命題 2.7> によりこれらは全て原始再帰的である。
+      また、場合分けも使われているが、\mref|type="thm",ref="case"|; によりこれは原始再帰性を保つ。
+      したがって、&m<P> が原始再帰的であれば、&m<h> も原始再帰的である。
+    >
+  >
+  \p<
+    以上、我々は原始再帰的な関数や関係および原始再帰性を保つ演算を様々見てきた。
+    一度ここにまとめておこう。
+  >
+  \ul<
+    \li<定数 (\a|href="99.html#const"|<定理 2.6>)>
+    \li<加算, 減算, 乗算, 冪, 階乗 (\a|href="99.html#plus"|<命題 2.7>, \a|href="99.html#minus"|<命題 2.11>, \a|href="99.html#times"|<命題 2.8>, \a|href="99.html#pow"|<命題 2.9>, \a|href="99.html#fact"|<命題 2.10>)>
+    \li<総和, 総乗 (\a|href="99.html#seq"|<命題 2.13>)>
+    \li<否定, 論理和, 論理積 (\a|href="100.html#comp"|<定理 3.3>, \a|href="100.html#capcup"|<定理 3.4>)>
+    \li<有界量化 (\a|href="100.html#quant"|<定理 3.5>)>
+    \li<大小比較, 等号 (\a|href="100.html#lsgt"|<命題 3.6>, \a|href="100.html#eq"|<命題 3.7>)>
+    \li<整除関係 (\a|href="100.html#div"|<命題 3.8>)>
+    \li<場合分け (\mref|type="thm",ref="case"|;)>
+    \li<有界最小化 (\mref|type="thm",ref="min"|;)>
+  >
+  \p<
+    これらは全て原始再帰的 (もしくは原始再帰性を保つ) である。
+    したがって、これらの合成や原始再帰で書けるものも全て原始再帰的になる。
+    このことから、普段使うほとんどの関数や関係は原始再帰的であると言って良く、逆に原始再帰的でない関数を作るのはなかなか難しい。
+  >
+  \p<
+    そのため、「計算」とは何なのかという疑問が生じ始めた当初は、この「計算できる」関数とは原始再帰的関数であると考えられていた。
+    しかし、Gabriel Sudan 等によって直感的に「計算できる」と思える関数で原始再帰的にならない例が発見され、原始再帰関数の限界が明らかになった。
+    このような「計算できそう」だが原始再帰的にはならない関数のうち特に現在有名なのが、Wilhelm Ackermann が考案した Ackermann 関数である。
+    これについては後で触れることにする。
+  >
+  \p<
+    次回はまだ、原始再帰的関数について考えることにする。
+    次回は、素数に関する演算が原始再帰的であることを見て、自然数列のコーディングについて触れる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>
