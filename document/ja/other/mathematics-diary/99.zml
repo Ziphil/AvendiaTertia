@@ -237,15 +237,17 @@
   >
   \p<
     では本題に戻り、様々な演算が原始再帰的であることを示していこう。
-    加法と乗法を見たので、順当に次は冪を見る。
+    加法と乗法を見たので、次は冪と階乗を見る。
   >
   \thm|type="prp",id="pow"|<
     \p<
-      冪関数 &m<\op|ord|<pow>: \sp<\bb<N>><2> \to; \bb<N>> を
+      冪関数を &m<\op|ord|<pow>: \sp<\bb<N>><2> \to; \bb<N>> と書くことにする。
+      すなわち、
       &mb<
         \op<pow> (x, y) \coloneqq; \sp<x><y>
       >
-      で定めると、これは原始再帰的である。
+      で定める。
+      これは原始再帰的である。
     >
   >
   \prf<
@@ -255,6 +257,23 @@
         \array|align="rcl"|<
           \c<\op<pow> (x, 0)> \c<=> \c<1> \br;
           \c<\op<pow> (x, y + 1)> \c<=> \c<x \times; \op<pow> (x, y)>
+        >
+      >
+      と書け、&m<\times;> から原始再帰で得られるため、\mref|type="thm",ref="times"|; より原始再帰的である。
+    >
+  >
+  \thm|type="prp",id="fact"|<
+    \p<
+      階乗関数 &m<!: \sp<\bb<N>><1> \to; \bb<N>> は原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      これは、
+      &mb<
+        \array|align="rcl"|<
+          \c<0!> \c<=> \c<1> \br;
+          \c<(x + 1)!> \c<=> \c<x \times; x!>
         >
       >
       と書け、&m<\times;> から原始再帰で得られるため、\mref|type="thm",ref="times"|; より原始再帰的である。

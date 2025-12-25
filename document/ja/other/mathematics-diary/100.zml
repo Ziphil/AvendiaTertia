@@ -11,11 +11,13 @@
     今回は、関数ではなく関係に焦点を当てる。
   >
   \p<
-    関係とは直積の部分集合であることを思い出そう。
-    計算可能性理論では基本的に自然数を扱うので、自然数の直積の部分集合 &m<P \subseteq; \sp<\bb<N>><k>> を考えることになる。
+    ここで、数学における (特に自然数の間の) 関係について思い出しておこう。
+    自然数上の &m<k> 項関係とは、素朴には &m<k> 個の自然数の組に対して真偽が定まっている式のことだが、これは直積の部分集合 &m<P \subseteq; \sp<\bb<N>><k>> として定式化できるのであった。
+    この見方では、ある &m<\vec<x>> が &m<P> を満たすとは &m<\vec<x> \in; P> が成り立つことである。
+    そこで以降は、&m<\vec<x>> が &m<P> を満たすことを &m<\vec<x> \in; P> と書いたり &m<P (\vec<x>)> と書いたりする。
   >
   \p<
-    さらに、関係からは「特性関数」と呼ばれる関数を作ることができ、両者は同一視できるのであった。
+    さて、関係からは「特性関数」と呼ばれる関数を作ることができ、両者は同一視できるのであった。
     定義を確認しておこう。
   >
   \thm|type="def"|<
@@ -92,10 +94,10 @@
   >
   \p<
     ところで、この証明に出てきた  &m<\sb<\op|ord|<ch>><\op<Pos>>> は、1 以上の引数を 1 に潰して返す関数と見なせる。
-    これは特性関数を扱う上で便利なので、&m<\op|ord|<sign>> という名前を与えておくことにする。
+    これは特性関数を扱う上で便利なので、&m<\op|ord|<sgn>> という名前を与えておくことにする。
     すなわち、
     &mb<
-      \op<sign> (x) = \case<
+      \op<sgn> (x) = \case<
         \c<0> \c<(x = 0)> \br;
         \c<1> \c<(x `> 0)>
       >
@@ -139,18 +141,18 @@
       \a|href="99.html#times"|<命題 2.9> より &m<\times;> は原始再帰的であるから、&m<\sb<\op|ord|<ch>><P>> と &m<\sb<\op|ord|<ch>><Q>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><P \cap; Q>> も原始再帰的である。
     >
     \p<
-      &m<\sb|ord|<\op<ch>><P \cup; Q>> については、前に述べた &m<\op|ord|<sign>> を用いることで、
+      &m<\sb|ord|<\op<ch>><P \cup; Q>> については、前に述べた &m<\op|ord|<sgn>> を用いることで、
       &mb<
-        \sb<\op<ch>><P \cup; Q> (\vec<x>) = \op<sign> (\sb<\op<ch>><P> (\vec<x>) + \sb<\op<ch>><Q> (\vec<x>))
+        \sb<\op<ch>><P \cup; Q> (\vec<x>) = \op<sgn> (\sb<\op<ch>><P> (\vec<x>) + \sb<\op<ch>><Q> (\vec<x>))
       >
       と書けることが分かる。
-      すなわち、&m<\sb<\op|ord|<ch>><P \cup; Q>> は &m<\sb<\op|ord|<ch>><P>>, &m<\sb<\op|ord|<ch>><Q>>, &m<\plus;>, &m<\op|ord|<sign>> の合成である。
-      \a|href="99.html#plus"|<命題 2.8> と\mref|type="thm",ref="zero"|; により &m<\plus;> と &m<\op|ord|<sign>> がそれぞれ原始再帰的であることが分かっているので、&m<\sb<\op|ord|<ch>><P>> と &m<\sb<\op|ord|<ch>><Q>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><P \cup; Q>> も原始再帰的である。
+      すなわち、&m<\sb<\op|ord|<ch>><P \cup; Q>> は &m<\sb<\op|ord|<ch>><P>>, &m<\sb<\op|ord|<ch>><Q>>, &m<\plus;>, &m<\op|ord|<sgn>> の合成である。
+      \a|href="99.html#plus"|<命題 2.8> と\mref|type="thm",ref="zero"|; により &m<\plus;> と &m<\op|ord|<sgn>> がそれぞれ原始再帰的であることが分かっているので、&m<\sb<\op|ord|<ch>><P>> と &m<\sb<\op|ord|<ch>><Q>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><P \cup; Q>> も原始再帰的である。
     >
   >
   \p<
     次に、量化子をとる操作について考えるが、一般の量化に対しては原始再帰性は保たれない。
-    ただし、量化の上限を制限すれば原始再帰性は保たれる。
+    ただし、量化の上界を制限すれば原始再帰性は保たれる。
   >
   \thm|type="thm",id="quant"|<
     \p<
@@ -171,7 +173,7 @@
       &mb<
         \array|align="rcl"|<
           \c<\sb<\op<ch>><\bar<\forall;> P> (\vec<x>, y)> \c<=> \c<\prod<t `< y> \sb<\op<ch>><P> (\vec<x>, t)> \br;
-          \c<\sb<\op<ch>><\bar<\exists;> P> (\vec<x>, y)> \c<=> \c<\op|ord|<sign> \paren<\sum<t `< y> \sb<\op<ch>><P> (\vec<x>, t)>>
+          \c<\sb<\op<ch>><\bar<\exists;> P> (\vec<x>, y)> \c<=> \c<\op|ord|<sgn> \paren<\sum<t `< y> \sb<\op<ch>><P> (\vec<x>, t)>>
         >
       >
       と書ける。
