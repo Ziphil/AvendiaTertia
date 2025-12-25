@@ -228,13 +228,13 @@
     \p<
       まず、わり切ることの定義から、
       &mb<
-        x \mid; y \iff; \sp<><\exists;> q \ssbin; (y = q x)
+        x \mid; y \iff; \sp<><\exists;> q \ssbin; (y = q \cdot; x)
       >
       である。
       しかし、このような &m<q> が存在するなら &m<y> 以下であるから、&m<q> を &m<y + 1> 未満に制限しても良い。
       すなわち、
       &mb<
-        x \mid; y \iff; \sp<><\exists;> q `< y + 1 \ssbin; (y = q x)
+        x \mid; y \iff; \sp<><\exists;> q `< y + 1 \ssbin; (y = q \cdot; x)
       >
       が成り立つ。
       この右辺にある式は積, 等号, 和, (上限付き) 量化の組み合わせだが、これらの操作は\a|href="99.html#times"|<命題 2.9>, \mref|type="thm",ref="eq"|;, \a|href="99.html#plus"|<命題 2.8>, \mref|type="thm",ref="quant"|; によって全て原始再帰的だから、上記の関係全体も原始再帰的であることが分かる。
