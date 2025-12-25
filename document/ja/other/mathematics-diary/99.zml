@@ -318,7 +318,7 @@
         >
       >
       で定めると、これは原始再帰的である。
-      この演算はしばしば \def<切り捨て減法\fl<truncated subtraction>> と呼ばれる。
+      この演算はしばしば \def<切り捨て減法\fl<truncated subtraction>> や \def<モナス\fl<monus>> と呼ばれる。
     >
   >
   \prf<
@@ -331,6 +331,34 @@
         >
       >
       と書け、&m<\op<pred>> から原始再帰で得られるため、\mref|type="thm",ref="pred"|; より原始再帰的である。
+    >
+  >
+  \p<
+    さらに、最大値や最小値をとる関数も原始再帰的になる。
+  >
+  \thm|type="prp",id="minmax"|<
+    \p<
+      最小値関数 &m<\op|ord|<min>: \sp<\bb<N>><2> \to; \bb<N>> および最大値関数 &m<\op|ord|<max>: \sp<\bb<N>><2> \to; \bb<N>> はともに原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      実は最小値関数は、
+      &mb<
+        \op|ord|<min> (x, y) \coloneqq; x \o|bin|<∸> (x \o|bin|<∸> y)
+      >
+      と書ける。
+      実際、&m<x \leq; y> であれば &m<x \o|bin|<∸> y = 0> であるから &m<x \o|bin|<∸> (x \o|bin|<∸> y) = x> となり、&m<x `> y> であれば &m<x \o|bin|<∸> y = x - y> であるから &m<x \o|bin|<∸> (x \o|bin|<∸> y) = y> が成り立つ。
+      \mref|type="thm",ref="minus"|; より &m<\op|ord|<∸>> は原始再帰的であるため、これを 2 回合成した &m<\op|ord|<min>> も原始再帰的である。
+    >
+    \p<
+      一方で最大値関数は、
+      &mb<
+        \op|ord|<max> (x, y) \coloneqq; y + (x \o|bin|<∸> y)
+      >
+      と書ける。
+      実際、&m<x \leq; y> であれば &m<x \o|bin|<∸> y = 0> であるから &m<y + (x \o|bin|<∸> y) = y> となり、&m<x `> y> であれば &m<x \o|bin|<∸> y = x - y> であるから &m<y + (x \o|bin|<∸> y) = x> が成り立つ。
+      \mref|type="thm",ref="minus"|; と\mref|type="thm",ref="plus"|; より &m<\op|ord|<∸>> と &m<+> は原始再帰的であるため、これらを合成した &m<\op|ord|<max>> も原始再帰的である。
     >
   >
   \p<

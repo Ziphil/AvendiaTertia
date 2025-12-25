@@ -114,9 +114,44 @@
         >
       >
       という原始再帰の形で書ける。
-      この後者の式には &m<`<>, &m<=>, &m<\scand;>, &m<\scnot;>, &m<+> が現れているが、\a|href="100.html#lsgt"|<命題 3.6>, \a|href="100.html#eq"|<命題 3.7>, \a|href="100.html#capcup"|<定理 3.4>, \a|href="100.html#comp"|<定理 3.3>, \a|href="99.html#plus"|<命題 2.7> によりこれらは全て原始再帰的である。
+      この後者の式に現れる演算は、\a|href="100.html#lsgt"|<命題 3.6>, \a|href="100.html#eq"|<命題 3.7>, \a|href="100.html#capcup"|<定理 3.4>, \a|href="100.html#comp"|<定理 3.3>, \a|href="99.html#plus"|<命題 2.7> により全て原始再帰的である。
       また、場合分けも使われているが、\mref|type="thm",ref="case"|; によりこれは原始再帰性を保つ。
       したがって、&m<P> が原始再帰的であれば、&m<h> も原始再帰的である。
+    >
+  >
+  \p<
+    この応用として、除法が原始再帰的であることを示そう。
+    しかし、原始再帰関数は全域でなければならない一方で、0 での除算は普通定義されない。
+    そこで、ここでは任意の &m<x> に対して &m<x `/ 0 = x > であることにしておく。
+  >
+  \thm|type="prp",id="div"|<
+    \p<
+      全域関数 &m<\op|ord|<div>: \sp<\bb<N>><2> \to; \bb<N>> を
+      &mb<
+        \op<div> (x, y) \coloneqq; \case<
+          \c<x> \c<(y = 0)> \br;
+          \c<\lfloor; x `/ y \rfloor;> \c<(y `> 0)> \br;
+        >
+      >
+      で定めると、これは原始再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      まず、有界最小化を用いて、&m<f: \sp<\bb<N>><2> \to; \bb<N>> を、
+      &mb<
+        f (x, y) \coloneqq; \bar<\rm<`m>> t `< x + 1. \srel; x `< t \cdot; y
+      >
+      と定める。
+      すると、&m<y `> 0> のときは、&m<x `< t \cdot; y> を満たす最小の &m<t> は &m<\lfloor; x `/ y \rfloor; + 1> であるから、この式の右辺は &m<\op<div> (x, y) + 1> に等しい。
+      一方 &m<y = 0> のときは、&m<x `< t \cdot; y> を満たす &m<t> は存在しないので、この式の右辺は &m<x + 1> となり、やはり &m<\op<div> (x, y) + 1> に等しい。
+      したがって、この &m<f> を用いることで、&m<\op|ord|<div>> は、
+      &mb<
+        \op<div> (x, y) = f (x, y) \o|bin|<∸> 1
+      >
+      と書ける。
+      ここまでに使用した演算は、\a|href="99.html#plus"|<命題 2.7>, \a|href="99.html#times"|<命題 2.8>, \a|href="100.html#lsgt"|<命題 3.6>, \a|href="99.html#minus"|<命題 2.11> および\mref|type="thm",ref="min"|; により全て原始再帰的である。
+      したがって、&m<\op|ord|<div>> も原始再帰的である。
     >
   >
   \p<
@@ -125,8 +160,9 @@
   >
   \ul<
     \li<定数 (\a|href="99.html#const"|<定理 2.6>)>
-    \li<加算, 減算, 乗算, 冪, 階乗 (\a|href="99.html#plus"|<命題 2.7>, \a|href="99.html#minus"|<命題 2.11>, \a|href="99.html#times"|<命題 2.8>, \a|href="99.html#pow"|<命題 2.9>, \a|href="99.html#fact"|<命題 2.10>)>
-    \li<総和, 総乗 (\a|href="99.html#seq"|<命題 2.13>)>
+    \li<加算, 減算, 乗算, 除算, 冪, 階乗 (\a|href="99.html#plus"|<命題 2.7>, \a|href="99.html#minus"|<命題 2.11>, \a|href="99.html#times"|<命題 2.8>, \mref|type="thm",ref="div"|;, \a|href="99.html#pow"|<命題 2.9>, \a|href="99.html#fact"|<命題 2.10>)>
+    \li<総和, 総乗 (\a|href="99.html#seq"|<命題 2.14>)>
+    \li<最大値, 最小値 (\a|href="99.html#minmax"|<命題 2.13>)>
     \li<否定, 論理和, 論理積 (\a|href="100.html#comp"|<定理 3.3>, \a|href="100.html#capcup"|<定理 3.4>)>
     \li<有界量化 (\a|href="100.html#quant"|<定理 3.5>)>
     \li<大小比較, 等号 (\a|href="100.html#lsgt"|<命題 3.6>, \a|href="100.html#eq"|<命題 3.7>)>
