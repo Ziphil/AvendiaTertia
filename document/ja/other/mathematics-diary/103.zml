@@ -1,0 +1,199 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Ackermann 関数>
+  \use-math|prefix="6"|;
+
+  \h1<日記 (2025 年 12 月 27 日)>
+  \p<
+  >
+  \thm|type="def"|<
+    \p<
+      全域関数 &m<\op|ord|<ack>: \sp<\bb<N>><2> \to; \bb<N>> を
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<ack> (0, y)> \c<=> \c<y + 1> \br;
+          \c<\op<ack> (x + 1, 0)> \c<=> \c<\op<ack> (x, 1)> \br;
+          \c<\op<ack> (x + 1, y + 1)> \c<=> \c<\op<ack> (x, \op<ack> (x + 1, y))>
+        >
+      >
+      で定める。
+      これを \def<Ackermann 関数\fl<— function>> と呼ぶ。
+    >
+  >
+  \p<
+    試しに定義に従って &m<\op<ack> (2, 2)> を計算してみると、
+    &mb<
+      \array|align="rcl"|<
+        \c<\op<ack> (2, 2)> \c<=> \c<\op<ack> (1, \op<ack> (2, 1))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (1, \op<ack> (2, 0)))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (1, \op<ack> (1, 1)))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (1, \op<ack> (0, \op<ack> (1, 0))))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (1, \op<ack> (0, \op<ack> (0, 1))))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (1, \op<ack> (0, 2)))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (1, 3))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, \op<ack> (1, 2)))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, \op<ack> (0, \op<ack> (1, 1))))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, \op<ack> (0, \op<ack> (0, \op<ack> (1, 0)))))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, \op<ack> (0, \op<ack> (0, \op<ack> (0, 1)))))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, \op<ack> (0, \op<ack> (0, 2))))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, \op<ack> (0, 3)))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, 4))> \br;
+        \c; \c<=> \c<\op<ack> (1, 5)> \br;
+        \c; \c<=> \c<\cdots;> \br;
+        \c; \c<=> \c<7> \br;
+      >
+    >
+    となる。
+    &m<(2, 2)> という比較的小さい引数に対してもこのように膨大な回数の式変形が必要にはなるものの、定義式に基づいて機械的に変形していけばどんな引数に対してもいずれは結果が求まる。
+    そのため、この Ackermann 関数を「計算できる」と見なすのは直感的に納得できるだろう。
+    しかし、Ackermann 関数は少なくとも原始再帰的ではない。
+    以降は、これを示すことを目標とする。
+  >
+  \p<
+    まずは、Ackermann 関数の左側の引数に小さい数を渡したときの具体的な値を観察してみよう。
+  >
+  \thm|type="prp",id="ex"|<
+    \p<
+      任意の数 &m<y \in; \bb<N>> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<ack> (0, y)> \c<=> \c<y + 1> \br;
+          \c<\op<ack> (1, y)> \c<=> \c<2 + (y + 3) - 3 = y + 2> \br;
+          \c<\op<ack> (2, y)> \c<=> \c<2 \times; (y + 3) - 3 = 2y + 3> \br;
+        >
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      任意の &m<y> に対して &m<\op<ack> (0, y) = y + 1> が成り立つことは、定義そのものである。
+    >
+    \p<
+      次に、任意の &m<y> に対して &m<\op<ack> (1, y) = y + 2> が成り立つことを &m<y> に関する帰納法により示す。
+      基底ケースである &m<y = 0> のときは、定義により、
+      &mb<
+        \op<ack> (1, 0) = \op<ack> (0, 1) = 1 + 1 = 2
+      >
+      が得られるので成り立つ。
+      次に帰納ステップのために、ある &m<y'> について &m<\op<ack> (1, y') = y + 2> が成り立つことを仮定すると、
+      &mb<
+        \op<ack> (1, y' + 1) = \op<ack> (0, \op<ack> (1, y')) = \op<ack> (0, y' + 2) = (y' + 2) + 1 = (y' + 1) + 2
+      >
+      が得られる。
+      以上で、2 つ目の式が示された。
+    >
+    \p<
+      最後に、任意の &m<y> に対して &m<\op<ack> (2, y) = 2y + 3> を、&m<y> に関する帰納法により示す。
+      基底ケースである &m<y = 0> のときは、
+      &mb<
+        \op<ack> (2, 0) = \op<ack> (1, 1) = 1 + 2 = 3
+      >
+      となり成り立つ。
+      次に帰納ステップのために、ある &m<y'> について &m<\op<ack> (2, y') = 2y' + 3> が成り立つことを仮定すると、
+      &mb<
+        \op<ack> (2, y' + 1) = \op<ack> (1, \op<ack> (2, y')) = \op<ack> (1, 2y' + 3) =  (2y' + 3) + 2 = 2 (y' + 1) + 3
+      >
+      が得られる。
+      以上で、3 つ目の式も示された。
+    >
+  >
+  \p<
+    この右辺からはかなり規則性が見える。
+    &m<\plus;> を繰り返して得られる演算が &m<\times;> であることを踏まえると、&m<\times;> を繰り返して得られる演算は冪であるから、各 &m<y \in; \bb<N>> に対して、
+    &mb<
+      \op<ack> (3, y)  = \sp<2><y + 3> - 3
+    >
+    が成り立つと予想できる。
+    実際これは正しい。
+    さらに、Knuth の矢印表記を用いることより一般に、各 &m<x, y \in; \bb<N>> に対して、
+    &mb<
+      \op<ack> (x, y)  = 2 \sp<\uarr|bin|;><x - 2> (y + 3) - 3
+    >
+    と書けることが知られている。
+    このように、Ackermann 関数の左側の引数は演算の「レベル」のようなものを表していると解釈できる。
+  >
+  \p<
+    さて、以降の議論で使うために、Ackermann 関数に関する不等式をいくつか準備しておこう。
+  >
+  \thm|type="prp",id="gt"|<
+    \p<
+      任意の数 &m<x, y \in; \bb<N>> に対し、
+      &mb<
+        \op<ack> (x, y) `> y
+      >
+      が成り立つ。
+    >
+  >
+  \thm|type="prp",id="rightinc"|<
+    \p<
+      任意の数 &m<x, y \in; \bb<N>> に対し、
+      &mb<
+        \op<ack> (x, y) `< \op<ack> (x, y + 1)
+      >
+      が成り立つ。
+      すなわち、Ackermann 関数は右の変数に関して狭義単調増加である。
+    >
+  >
+  \thm|type="prp",id="swap"|<
+    \p<
+      任意の数 &m<x, y \in; \bb<N>> に対し、
+      &mb<
+        \op<ack> (x, y + 1) \leq; \op<ack> (x + 1, y)
+      >
+      が成り立つ。
+    >
+  >
+  \thm|type="prp",id="leftinc"|<
+    \p<
+      任意の数 &m<x, y \in; \bb<N>> に対し、
+      &mb<
+        \op<ack> (x, y) `< \op<ack> (x + 1, y)
+      >
+      が成り立つ。
+      すなわち、Ackermann 関数は左の変数に関して狭義単調増加である。
+    >
+  >
+  \thm|type="prp",id="nest"|<
+    \p<
+      任意の数 &m<x, y, z \in; \bb<N>> に対し、
+      &mb<
+        \op<ack> (x, \op<ack> (x, y, z)) `< \op<ack> (x + y + 2, z)
+      >
+      が成り立つ。
+    >
+  >
+  \p<
+    Ackermann 関数は原始再帰的ではないことを示す際に重要になるのが、次で定義する「優越する」という関係である。
+  >
+  \thm|type="def"|<
+    \p<
+      全域関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> および &m<u: \sp<\bb<N>><2> \to; \bb<N>> をとる。
+      ある数 &m<`a \in; \bb<N>> が存在して、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
+      &mb<
+        f (\vec<x>) `< u (`a, \max; (\vec<x>))
+      >
+      が成り立つとする。
+      このとき、&m<u> は &m<f> を \def<優越する\fl<majorise>> という。
+    >
+  >
+  \thm|type="prp",id="notself"|<
+    \p<
+      全域関数 &m<u: \sp<\bb<N>><2> \to; \bb<N>> に対し、&m<u> が &m<u> 自身を優越することはない。
+    >
+  >
+  \thm|type="thm",id="maj"|<
+    \p<
+      全域関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> を考える。
+      &m<f> が原始再帰的ならば、&m<\op|ord|<ack>> は &m<f> を優越する。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>
