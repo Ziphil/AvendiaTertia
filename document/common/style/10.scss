@@ -204,19 +204,17 @@ zp-description {
 
 .player-detail-item {
   &::after {
-    @include icon-font;
     width: 1.2em;
-    margin-inline-start: fix-em($blank-margin, 90%);
-    font-size: 90%;
+    margin-inline-start: $blank-margin;
     color: var(--highlight-color);
     display: inline-block;
     text-align: center;
   }
   &[data-type="date"]::after {
-    content: "\F073";
+    @include icon("solid", "\F073");
   }
   &[data-type="length"]::after {
-    content: "\E4BA";
+    @include icon("solid", "\E4BA");
   }
 }
 
@@ -286,27 +284,24 @@ zp-description {
   &:hover {
     color: var(--highlight-background-color);
   }
-  &::before {
-    @include icon-font;
-  }
   &[data-type="play"]::before {
+    @include icon("solid", "\F04B");
     font-size: 150%;
-    content: "\F04B";
   }
   .player-item[data-state="playing"] &[data-type="play"]::before {
-    content: "\F04C";
+    @include icon("solid", "\F04C");
   }
   &[data-type="stop"]::before {
-    content: "\F04D";
+    @include icon("solid", "\F04D");
   }
   &[data-type="download"]::before {
-    content: "\F019";
+    @include icon("solid", "\F019");
   }
   &[data-type="external"]::before {
-    content: "\F08E";
+    @include icon("solid", "\F08E");
   }
   &[data-type="score"]::before {
-    content: "\F001";
+    @include icon("solid", "\F001");
   }
 }
 

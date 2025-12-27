@@ -31,30 +31,26 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
 .quiz-item {
   margin-inline-start: $bullet-width + $blank-margin;
   &::before {
-    @include icon-font;
-    width: fix-em($bullet-width, 90%);
-    margin-inline-end: fix-em($blank-margin, 90%);
-    margin-inline-start: fix-em(0em - $bullet-width - $blank-margin, 90%);
-    font-size: 90%;
+    @include icon("solid", "\F0DA");
+    width: $bullet-width;
+    margin-inline-end: $blank-margin;
+    margin-inline-start: 0em - ($bullet-width + $blank-margin);
     color: var(--blue-color);
     text-align: end;
     display: inline-block;
-    content: "\F0DA";
   }
 }
 
 .quiz-nested-item:not([data-unmarked]) {
   margin-inline-start: $quiz-nested-list-marker-width + $blank-margin;
   &::before {
-    @include icon-font;
-    width: fix-em($quiz-nested-list-marker-width, 90%);
-    margin-inline-end: fix-em($blank-margin, 90%);
-    margin-inline-start: fix-em(0em - $quiz-nested-list-marker-width - $blank-margin, 90%);
-    font-size: 90%;
+    @include icon("solid", "\F061");
+    width: $quiz-nested-list-marker-width;
+    margin-inline-end: $blank-margin;
+    margin-inline-start: 0em - $quiz-nested-list-marker-width - $blank-margin;
     color: var(--blue-color);
     text-align: end;
     display: inline-block;
-    content: "\F061";
   }
 }
 

@@ -498,7 +498,6 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 }
 
 .contact-icon {
-  @include icon-font;
   width: 70rpx;
   font-size: 400%;
   font-weight: normal;
@@ -509,16 +508,16 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   flex: 0 0 auto;
   order: 2;
   &[data-brand="twitter"]::before {
-    content: "\F099";
+    @include icon("brand", "\F099");
   }
   &[data-brand="youtube"]::before {
-    content: "\F167";
+    @include icon("brand", "\F167");
   }
   &[data-brand="discord"]::before {
-    content: "\F392";
+    @include icon("brand", "\F392");
   }
   &[data-brand="github"]::before {
-    content: "\F09B";
+    @include icon("brand", "\F09B");
   }
 }
 
@@ -579,13 +578,11 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     display: none;
   }
   &:not(:nth-child(2))::before {
-    @include icon-font;
-    margin-inline: fix-em($blank-margin, 90%);
+    @include icon("solid", "\F101");
+    margin-inline: $blank-margin;
     color: var(--blue-color);
-    font-size: 90%;
     opacity: 0.5;
     line-height: 0;
-    content: "\F101";
   }
 }
 

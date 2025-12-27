@@ -27,17 +27,15 @@ $normal-list-column-gap: 30px;
 
 .normal-list[data-type="unordered"] >.normal-item,
 .normal-list[data-type="unordered"] .normal-list >.normal-item {
-  margin-inline-start: $bullet-width + $blank-margin;
+  margin-inline-start: $bullet-width + $bordered-blank-margin;
   &::before {
-    @include icon-font;
-    width: fix-em($bullet-width, 90%);
-    margin-inline-end: fix-em($blank-margin, 90%);
-    margin-inline-start: fix-em(0em - ($bullet-width + $blank-margin), 90%);
-    font-size: 90%;
+    @include icon("solid", "\F0DA");
+    width: $bullet-width;
+    margin-inline-end: $bordered-blank-margin;
+    margin-inline-start: 0em - ($bullet-width + $bordered-blank-margin);
     color: var(--blue-color);
     text-align: end;
     display: inline-block;
-    content: "\F0DA";
   }
 }
 

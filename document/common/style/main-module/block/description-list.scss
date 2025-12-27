@@ -6,7 +6,7 @@
 
 
 $description-arrow-width: 0.5em;
-$description-dash-width: 1.1em;
+$description-dash-width: 1em;
 
 .description-list {
   @include justify;
@@ -21,15 +21,13 @@ $description-dash-width: 1.1em;
   margin-inline-start: $bullet-width + $blank-margin;
   margin-inline-end: $blank-margin;
   &::before {
-    @include icon-font;
-    width: fix-em($bullet-width, 90%);
-    margin-inline-end: fix-em($blank-margin, 90%);
-    margin-inline-start: fix-em(0em - $bullet-width - $blank-margin, 90%);
-    font-size: 90%;
+    @include icon("solid", "\F0DA");
+    width: $bullet-width;
+    margin-inline-end: $blank-margin;
+    margin-inline-start: 0em - ($bullet-width + $blank-margin);
     color: var(--blue-color);
     text-align: right;
     display: inline-block;
-    content: "\F0DA";
   }
 }
 
@@ -44,13 +42,11 @@ $description-dash-width: 1.1em;
     color: var(--blue-color);
     opacity: 0.5;
     .description-list[data-type="desc"] & {
-      @include icon-font;
-      width: fix-em($description-arrow-width, 90%);
-      margin-inline-end: fix-em($blank-margin, 90%);
-      margin-inline-start: fix-em(0em - $description-arrow-width - $blank-margin, 90%);  
-      font-size: 90%;
+      @include icon("solid", "\F105");
+      width: $description-arrow-width;
+      margin-inline-end: $blank-margin;
+      margin-inline-start: 0em - ($description-arrow-width + $blank-margin);
       display: inline-block;
-      content: "\F105";
     }
     .description-list[data-type="par"] & {
       width: $description-dash-width;

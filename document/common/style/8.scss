@@ -586,7 +586,6 @@ $link-height: 60rpx;
 }
 
 .contact-icon {
-  @include icon-font;
   font-size: 400%;
   font-weight: normal;
   text-align: center;
@@ -616,19 +615,19 @@ $link-height: 60rpx;
   }
   &[data-brand="twitter"]::before,
   &[data-brand="twitter"]::after {
-    content: "\F099";
+    @include icon("brand", "\F099");
   }
   &[data-brand="youtube"]::before,
   &[data-brand="youtube"]::after {
-    content: "\F167";
+    @include icon("brand", "\F167");
   }
   &[data-brand="discord"]::before,
   &[data-brand="discord"]::after {
-    content: "\F392";
+    @include icon("brand", "\F392");
   }
   &[data-brand="github"]::before,
   &[data-brand="github"]::after {
-    content: "\F09B";
+    @include icon("brand", "\F09B");
   }
 }
 
@@ -663,13 +662,11 @@ $link-height: 60rpx;
     display: none;
   }
   &:not(:nth-child(2))::before {
-    @include icon-font;
-    margin-inline: fix-em($blank-margin, 90%);
+    @include icon("solid", "\F101");
+    margin-inline: $blank-margin;
     color: var(--blue-color);
-    font-size: 90%;
     opacity: 0.5;
     line-height: 0;
-    content: "\F101";
   }
 }
 

@@ -16,12 +16,10 @@ $todo-horizontal-padding: 12rpx;
   display: flex;
   align-items: center;
   &::before {
-    @include icon-font;
-    width: fix-em($bullet-width, 90%);
-    margin-inline-end: fix-em($blank-margin, 90%);
-    font-size: 90%;
+    @include icon("solid", "\F06A");
+    width: $bullet-width;
+    margin-inline-end: $blank-margin;
     color: var(--blue-color);
-    content: "\F06A";
     flex: 0 0 auto;
   }
 }

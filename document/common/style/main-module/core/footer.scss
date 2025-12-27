@@ -105,20 +105,18 @@
 }
 
 .footer-icon-item {
-  @include icon-font;
-  font-weight: normal;
   cursor: pointer;
   &[data-brand="twitter"]::before {
-    content: "\F099";
+    @include icon("brand", "\E61B");
   }
   &[data-brand="youtube"]::before {
-    content: "\F167";
+    @include icon("brand", "\F167");
   }
   &[data-brand="discord"]::before {
-    content: "\F392";
+    @include icon("brand", "\F392");
   }
   &[data-brand="github"]::before {
-    content: "\F09B";
+    @include icon("brand", "\F09B");
   }
 }
 

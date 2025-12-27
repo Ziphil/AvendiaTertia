@@ -29,30 +29,26 @@
 .sentence-list[data-type="unordered"] >.sentence-item {
   margin-inline-start: $bullet-width + $blank-margin;
   &::before {
-    @include icon-font;
-    width: fix-em($bullet-width, 90%);
-    margin-inline-end: fix-em($blank-margin, 90%);
-    margin-inline-start: fix-em(0em - $bullet-width - $blank-margin, 90%);
-    font-size: 90%;
+    @include icon("solid", "\F0DA");
+    width: $bullet-width;
+    margin-inline-end: $blank-margin;
+    margin-inline-start: 0em - ($bullet-width + $blank-margin);
     color: var(--blue-color);
     text-align: end;
     display: inline-block;
-    content: "\F0DA";
   }
 }
 
 .sentence-list[data-type="unordered"] >.sentence-nested-item {
   margin-inline-start: $bullet-width + $blank-margin + $arrow-width + $blank-margin;
   &::before {
-    @include icon-font;
-    width: fix-em($bullet-width + $blank-margin + $arrow-width + $blank-margin, 90%);
-    margin-inline-end: fix-em($blank-margin, 90%);
-    margin-inline-start: fix-em(0em - ($bullet-width + $blank-margin + $arrow-width + $blank-margin) - $blank-margin, 90%);
-    font-size: 90%;
+    @include icon("solid", "\F061");
+    width: $bullet-width + $blank-margin + $arrow-width + $blank-margin;
+    margin-inline-end: $blank-margin;
+    margin-inline-start: 0em - ($bullet-width + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
     color: var(--blue-color);
     text-align: end;
     display: inline-block;
-    content: "\F061";
   }
 }
 
@@ -69,15 +65,13 @@
 .sentence-list[data-type="ordered"] >.sentence-nested-item {
   margin-inline-start: 1em + $blank-margin + $arrow-width + $blank-margin;
   &::before {
-    @include icon-font;
-    width: fix-em(1em + $blank-margin + $arrow-width + $blank-margin, 90%);
-    margin-inline-end: fix-em($blank-margin, 90%);
-    margin-inline-start: fix-em(0em - (1em + $blank-margin + $arrow-width + $blank-margin) - $blank-margin, 90%);
-    font-size: 90%;
+    @include icon("solid", "\F061");
+    width: 1em + $blank-margin + $arrow-width + $blank-margin;
+    margin-inline-end: $blank-margin;
+    margin-inline-start: 0em - (1em + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
     color: var(--blue-color);
     text-align: end;
     display: inline-block;
-    content: "\F061";
   }
 }
 

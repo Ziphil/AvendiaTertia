@@ -59,22 +59,18 @@ $navigation-skew-angle: -9deg;
 .navigation-item {
   display: inline;
   &:not(:nth-child(1))::before {
-    @include icon-font;
-    margin-inline: fix-em($blank-margin, 90%);
-    font-size: 90%;
+    @include icon("solid", "\F101");
+    margin-inline: $blank-margin;
     color: var(--blue-color);
     line-height: 0;
     opacity: 0.5;
-    content: "\F101";
   }
   &:nth-child(1) >.navigation-link >* {
     display: none;
   }
   &:nth-child(1) >.navigation-link::before {
-    @include icon-font;
-    font-size: 90%;
+    @include icon("solid", "\F015");
     color: var(--blue-color);
-    content: "\F015";
   }
 }
 

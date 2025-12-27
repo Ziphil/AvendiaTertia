@@ -15,8 +15,8 @@
     \script|src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508",crossorigin="anonymous",async|;
     \script|src="/program/script/12.js"|;
     \script|src="/program/script/20.js"|;
+    \script|src="https://kit.fontawesome.com/5081c7f16b.js",crossorigin="anonymous"|;
     \link|rel="stylesheet",type="text/css",href="/style/8.css"|;
-    \link|rel="stylesheet",media="all",href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"|;
     \title<Avendia>
   >
   \body<
