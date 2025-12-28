@@ -161,7 +161,7 @@
     \p<
       任意の数 &m<x, y, z \in; \bb<N>> に対し、
       &mb<
-        \op<ack> (x, \op<ack> (x, y, z)) `< \op<ack> (x + y + 2, z)
+        \op<ack> (x, \op<ack> (y, z)) `< \op<ack> (x + y + 2, z)
       >
       が成り立つ。
     >
@@ -185,10 +185,15 @@
       全域関数 &m<u: \sp<\bb<N>><2> \to; \bb<N>> に対し、&m<u> が &m<u> 自身を優越することはない。
     >
   >
-  \thm|type="thm",id="maj"|<
+  \thm|type="prp",id="maj"|<
     \p<
       全域関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> を考える。
       &m<f> が原始再帰的ならば、&m<\op|ord|<ack>> は &m<f> を優越する。
+    >
+  >
+  \thm|type="thm",id="notprimrec"|<
+    \p<
+      &m<\op|ord|<ack>> は原始再帰的ではない。
     >
   >
   \h1<参考文献>
