@@ -85,10 +85,10 @@ manager.registerElementRule("abbr", "page", (transformer, document, element) => 
   return self;
 });
 
-manager.registerElementRule("ib", true, (transformer, document, element) => {
+manager.registerElementRule("nw", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
-    self.addClassName("inline-block");
+    self.addClassName("nowrap");
     self.appendChild(transformer.apply());
   });
   return self;
