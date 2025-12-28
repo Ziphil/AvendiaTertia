@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## tcg まで使用
+  ## tcj まで使用
   \hb<初めに>
   \pb<
     \ab|href="16.html",ignore|<初めに>
@@ -16,6 +16,7 @@
   \pb<
     \ab|href="1.html"|<音素>
     \ab|href="25.html"|<文字>
+    \ab|href="28.html"|<数字>
     \ab|href="18.html"|<表層形への変換規則> 
     \ab|href="27.html"|<約物>
   >
