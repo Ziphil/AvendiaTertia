@@ -30,10 +30,10 @@
     \p<
       &m<h> は、
       &mb<
-        h (\vec<x>) = f (\vec<x>) \cdot; \sb<\op<ch>><P> (\vec<x>) + g (\vec<x>) \cdot; \sb<\op<ch>><\o|ord|<∁> P> (\vec<x>)
+        h (\vec<x>) = f (\vec<x>) \cdot; \sb<\op<ch>><P> (\vec<x>) + g (\vec<x>) \cdot; \sb<\op<ch>><\complement; P> (\vec<x>)
       >
       と書ける。
-      &m<f, g, P> が全て原始再帰的であると仮定すれば、まず\a|href="100.html#comp"|<定理 3.3> により &m<\o|ord|<∁> P> も原始再帰的である。
+      &m<f, g, P> が全て原始再帰的であると仮定すれば、まず\a|href="100.html#comp"|<定理 3.3> により &m<\complement; P> も原始再帰的である。
       また、\a|href="99.html#plus"|<命題 2.7> と\a|href="99.html#times"|<命題 2.8> より加法と乗法も原始再帰的である。
       したがって、これらの合成で書けた &m<h> も原始再帰的である。
     >
@@ -60,7 +60,7 @@
       関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、数 &m<\bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t) \in; \bb<N>> を
       &mb<
         \bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t) \coloneqq; \case<
-          \c<\min; `{ t \mid; t `< y \scand; P (\vec<x>, t) `}> \c<(\sp<><\exists;> t `< y \ssbin; P (\vec<x>, t))> \br;
+          \c<\min; `{ t \mid; P (\vec<x>, t) `}> \c<(\sp<><\exists;> t `< y \ssbin; P (\vec<x>, t))> \br;
           \c<y> \c<(\text<上記以外>)>
         >
       >
@@ -147,7 +147,7 @@
       一方 &m<y = 0> のときは、&m<x `< t \cdot; y> を満たす &m<t> は存在しないので、この式の右辺は &m<x + 1> となり、やはり &m<\op<div> (x, y) + 1> に等しい。
       したがって、この &m<f> を用いることで、&m<\op|ord|<div>> は、
       &mb<
-        \op<div> (x, y) = f (x, y) \o|bin|<∸> 1
+        \op<div> (x, y) = f (x, y) \dotminus; 1
       >
       と書ける。
       ここまでに使用した演算は、\a|href="99.html#plus"|<命題 2.7>, \a|href="99.html#times"|<命題 2.8>, \a|href="100.html#lsgt"|<命題 3.6>, \a|href="99.html#minus"|<命題 2.11> および\mref|type="thm",ref="min"|; により全て原始再帰的である。

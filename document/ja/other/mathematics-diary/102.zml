@@ -140,7 +140,7 @@
       &m<s> における &m<\op<pr> (y)> の指数を得るには、&m<\op<pr> (y) \sp<><1>>, &m<\op<pr> (y) \sp<><2>>, &m<\cdots;> が順に &m<s> をわり切るか調べていけば良い。
       したがって、これを有界最小化として表現することを考えて、&m<@> を、
       &mb<
-        s \atsym|bin|; y \coloneqq; (\bar<\rm<`m>> t `< s. \srel; \op<pr> (y) \sp<><t + 1> \nmid; s) \o|bin|<∸> 1
+        s \atsym|bin|; y \coloneqq; (\bar<\rm<`m>> t `< s. \srel; \op<pr> (y) \sp<><t + 1> \nmid; s) \dotminus; 1
       >
       と定義すれば良い。
       \mref|type="thm",ref="pr"|; によって &m<\op|ord|<pr>> は原始再帰的だから、この関数も原始再帰的である。

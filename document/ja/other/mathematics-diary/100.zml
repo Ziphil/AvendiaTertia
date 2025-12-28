@@ -107,22 +107,22 @@
   \p<
     次に、関係の原始再帰性が基本的な集合演算で閉じていることを示す。
     まずは、補集合, 共通集合, 和集合をとるという操作について考える。
-    なお、ここでは補集合を &m<\o|ord|<∁>> で表す。
+    なお、ここでは補集合を &m<\complement;> で表す。
   >
   \thm|type="thm",id="comp"|<
     \p<
       関係 &m<P\subseteq; \sp<\bb<N>><k>> をとる。
-      &m<P> が原始再帰的ならば、&m<\o|ord|<∁> P> も原始再帰的である。
+      &m<P> が原始再帰的ならば、&m<\complement; P> も原始再帰的である。
     >
   >
   \prf<
     \p<
-      &m<\sb|ord|<\op<ch>><\op<Zero>>> が引数の 0 と 1 を反転することに注目すれば、&m<\sb<\op<ch>><\o|ord|<∁> P>> は、
+      &m<\sb|ord|<\op<ch>><\op<Zero>>> が引数の 0 と 1 を反転することに注目すれば、&m<\sb<\op<ch>><\complement; P>> は、
       &mb<
-        \sb<\op<ch>><\o|ord|<∁> P> (\vec<x>) = \sb<\op<ch>><\op<Zero>> (\sb<\op<ch>><P> (\vec<x>))
+        \sb<\op<ch>><\complement; P> (\vec<x>) = \sb<\op<ch>><\op<Zero>> (\sb<\op<ch>><P> (\vec<x>))
       >
       と書けることが分かる。
-      \mref|type="thm",ref="zero"|; より &m<\sb<\op|ord|<ch>><\op<Zero>>> は原始再帰的であるから、&m<\sb<\op|ord|<ch>><P>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><\o|ord|<∁> P>> も原始再帰的である。
+      \mref|type="thm",ref="zero"|; より &m<\sb<\op|ord|<ch>><\op<Zero>>> は原始再帰的であるから、&m<\sb<\op|ord|<ch>><P>> が原始再帰的ならば &m<\sb<\op|ord|<ch>><\complement; P>> も原始再帰的である。
     >
   >
   \thm|type="thm",id="capcup"|<
@@ -194,8 +194,8 @@
       まず &m<\sb<\op|ord|<ch>><\leq|ord|;>> と &m<\sb<\op|ord|<ch>><\geq|ord|;>> については、それぞれ
       &mb<
         \array|align="rcl"|<
-          \c<\sb<\op|ord|<ch>><\leq|ord|;> (x, y)> \c<=> \c<\sb<\op|ord|<ch>><\op<Zero>> (x \o|bin|<∸> y)> \br;
-          \c<\sb<\op|ord|<ch>><\geq|ord|;> (x, y)> \c<=> \c<\sb<\op|ord|<ch>><\op<Zero>> (y \o|bin|<∸> x)>
+          \c<\sb<\op|ord|<ch>><\leq|ord|;> (x, y)> \c<=> \c<\sb<\op|ord|<ch>><\op<Zero>> (x \dotminus; y)> \br;
+          \c<\sb<\op|ord|<ch>><\geq|ord|;> (x, y)> \c<=> \c<\sb<\op|ord|<ch>><\op<Zero>> (y \dotminus; x)>
         >
       >
       と書けるから、\a|href="99.html#minus"|<命題 2.11> と\mref|type="thm",ref="zero"|; によって原始再帰的である。

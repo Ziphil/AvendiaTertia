@@ -310,9 +310,9 @@
   >
   \thm|type="prp",id="minus"|<
     \p<
-      全域関数 &m<\o|ord|<∸>: \sp<\bb<N>><2> \to; \bb<N>> を
+      全域関数 &m<\dotminus|ord|;: \sp<\bb<N>><2> \to; \bb<N>> を
       &mb<
-        x \o|bin|<∸> y \coloneqq; \case<
+        x \dotminus; y \coloneqq; \case<
           \c<x - y> \c<(x \geq; y)> \br;
           \c<0> \c<(x `< y)>
         >
@@ -326,8 +326,8 @@
       これは、
       &mb<
         \array|align="rcl"|<
-          \c<x \o|bin|<∸> 0> \c<=> \c<x> \br;
-          \c<x \o|bin|<∸> (y + 1)> \c<=> \c<\op<pred> (x \o|bin|<∸> y)>
+          \c<x \dotminus; 0> \c<=> \c<x> \br;
+          \c<x \dotminus; (y + 1)> \c<=> \c<\op<pred> (x \dotminus; y)>
         >
       >
       と書け、&m<\op<pred>> から原始再帰で得られるため、\mref|type="thm",ref="pred"|; より原始再帰的である。
@@ -345,20 +345,20 @@
     \p<
       実は最小値関数は、
       &mb<
-        \op|ord|<min> (x, y) \coloneqq; x \o|bin|<∸> (x \o|bin|<∸> y)
+        \op|ord|<min> (x, y) \coloneqq; x \dotminus; (x \dotminus; y)
       >
       と書ける。
-      実際、&m<x \leq; y> であれば &m<x \o|bin|<∸> y = 0> であるから &m<x \o|bin|<∸> (x \o|bin|<∸> y) = x> となり、&m<x `> y> であれば &m<x \o|bin|<∸> y = x - y> であるから &m<x \o|bin|<∸> (x \o|bin|<∸> y) = y> が成り立つ。
-      \mref|type="thm",ref="minus"|; より &m<\op|ord|<∸>> は原始再帰的であるため、これを 2 回合成した &m<\op|ord|<min>> も原始再帰的である。
+      実際、&m<x \leq; y> であれば &m<x \dotminus; y = 0> であるから &m<x \dotminus; (x \dotminus; y) = x> となり、&m<x `> y> であれば &m<x \dotminus; y = x - y> であるから &m<x \dotminus; (x \dotminus; y) = y> が成り立つ。
+      \mref|type="thm",ref="minus"|; より &m<\dotminus;> は原始再帰的であるため、これを 2 回合成した &m<\op|ord|<min>> も原始再帰的である。
     >
     \p<
       一方で最大値関数は、
       &mb<
-        \op|ord|<max> (x, y) \coloneqq; y + (x \o|bin|<∸> y)
+        \op|ord|<max> (x, y) \coloneqq; y + (x \dotminus; y)
       >
       と書ける。
-      実際、&m<x \leq; y> であれば &m<x \o|bin|<∸> y = 0> であるから &m<y + (x \o|bin|<∸> y) = y> となり、&m<x `> y> であれば &m<x \o|bin|<∸> y = x - y> であるから &m<y + (x \o|bin|<∸> y) = x> が成り立つ。
-      \mref|type="thm",ref="minus"|; と\mref|type="thm",ref="plus"|; より &m<\op|ord|<∸>> と &m<+> は原始再帰的であるため、これらを合成した &m<\op|ord|<max>> も原始再帰的である。
+      実際、&m<x \leq; y> であれば &m<x \dotminus; y = 0> であるから &m<y + (x \dotminus; y) = y> となり、&m<x `> y> であれば &m<x \dotminus; y = x - y> であるから &m<y + (x \dotminus; y) = x> が成り立つ。
+      \mref|type="thm",ref="minus"|; と\mref|type="thm",ref="plus"|; より &m<\dotminus;> と &m<+> は原始再帰的であるため、これらを合成した &m<\op|ord|<max>> も原始再帰的である。
     >
   >
   \p<
