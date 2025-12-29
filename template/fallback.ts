@@ -3,7 +3,7 @@
 import {AvendiaTemplateManager} from "../generator/transformer";
 
 
-const INLINE_TAG_NAMES = ["x", "xn", "a"];
+const INLINE_TAG_NAMES = ["x", "xn", "a", "ae", "an", "nw", "url"];
 const PARENT_TRIM_TAG_NAMES = ["li"];
 const PREVIOUS_SIBLING_TRIM_TAG_NAMES = ["label"];
 
