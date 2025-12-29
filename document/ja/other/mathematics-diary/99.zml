@@ -21,21 +21,21 @@
   >
   \thm|type="def"|<
     \p<
-      部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<\sb<g><1>, \cdots;, \sb<g><k>: \sp<\bb<N>><l> \dot<\to;> \bb<N>> をとる。
-      部分関数 &m<h: \sp<\bb<N>><l> \dot<\to;> \bb<N>> が、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
+      部分関数 &m<\sb<f><0>, \cdots;, \sb<f><l - 1>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><l> \dot<\to;> \bb<N>> をとる。
+      部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> が、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
       &mb<
-        h (\vec<x>) = f (\sb<g><1> (\vec<x>), \cdots;, \sb<g><k> (\vec<x>))
+        h (\vec<x>) = g (\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>))
       >
-      を満たすとき、&m<h> は &m<f, \sb<g><1>, \cdots;, \sb<g><k>> から \def<合成\fl<composition>> で得られるという。
+      を満たすとき、&m<h> は &m<\sb<f><0>, \cdots;, \sb<f><l - 1>, g> から \def<合成\fl<composition>> で得られるという。
     >
   >
   \p<
-    式を見れば分かるように、上記の &m<f, \sb<g><1>, \cdots;, \sb<g><k>> に対して &m<h> は必ず一意に存在する。
-    なお、前回述べた慣習通り、上の等式は両辺が定義されて等しいか両辺とも定義されていないとき成立するので、&m<f, \sb<g><1>, \cdots;, \sb<g><k>> のうち全域でないものがあると &m<h> が全域にならないことがある。
+    式を見れば分かるように、上記の &m<\sb<f><0>, \cdots;, \sb<f><l - 1>, g> に対して &m<h> は必ず一意に存在する。
+    なお、前回述べた慣習通り、上の等式は両辺が定義されて等しいか両辺とも定義されていないとき成立するので、&m<\sb<f><0>, \cdots;, \sb<f><l - 1>, g> のうち全域でないものがあると &m<h> が全域にならないことがある。
   >
   \p<
-    また、上記の定義は &m<k = 0> の場合を含むことに注意せよ。
-    この場合は、&m<f: \sp<\bb<N>><0> \dot<\to;> \bb<N>> とは定数のことだと見なせるから、&m<h> はその &m<f> を値としてとる定数関数となる。
+    また、上記の定義は &m<l = 0> の場合を含むことに注意せよ。
+    この場合は、&m<g: \sp<\bb<N>><0> \dot<\to;> \bb<N>> とは定数のことだと見なせるから、&m<h> はその &m<g> を値としてとる定数関数となる。
   >
   \p<
     原始再帰は以下のように定義される。
@@ -75,12 +75,12 @@
   >
   \thm|type="def"|<
     \p<
-      全域関数 &m<\op<zero>: \sp<\bb<N>><0> \to; \bb<N>>, &m<\op<succ>: \sp<\bb<N>><1> \to; \bb<N>>, &m<\sbsp<\op<proj>><n><k>: \sp<\bb<N>><k> \to; \bb<N> \srel; (1 \leq; n \leq; k)> を
+      全域関数 &m<\op<zero>: \sp<\bb<N>><0> \to; \bb<N>>, &m<\op<succ>: \sp<\bb<N>><1> \to; \bb<N>>, &m<\sbsp<\op<proj>><n><k>: \sp<\bb<N>><k> \to; \bb<N> \srel; (0 \leq; i `< k)> を
       &mb<
         \array|align="rcl"|<
           \c<\op|ord|<zero> > \c<\coloneqq;> \c<0> \br;
           \c<\op<succ> (x)> \c<\coloneqq;> \c<x + 1> \br;
-          \c<\sbsp<\op<proj>><n><k> (\sb<x><1>, \cdots;, \sb<x><k>)> \c<\coloneqq;> \c<\sb<x><n>>
+          \c<\sbsp<\op<proj>><i><k> (\sb<x><0>, \cdots;, \sb<x><k - 1>)> \c<\coloneqq;> \c<\sb<x><i>>
         >
       >
       で定め、順に \def<零関数\fl<zero function>>, \def<後者関数\fl<successor function>>, \def<射影関数\fl<projection function>> と呼ぶ。
@@ -96,13 +96,13 @@
     >
     \ul<
       \li<
-        初期関数 &m<\op|ord|<zero>>, &m<\op|ord|<succ>>, &m<\sbsp<\op|ord|<proj>><n><k> \srel; (1 \leq; n \leq; k)> は原始再帰的である。
+        初期関数 &m<\op|ord|<zero>>, &m<\op|ord|<succ>>, &m<\sbsp<\op|ord|<proj>><i><k> \srel; (0 \leq; i `< k)> は原始再帰的である。
       >
       \li<
-        &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<\sb<g><1>, \cdots;, \sb<g><k>: \sp<\bb<N>><l> \dot<\to;> \bb<N>> が全て原始再帰的ならば、これらから合成で得られる部分関数 &m<h: \sp<\bb<N>><l> \dot<\to;> \bb<N>> も原始再帰的である。
+        部分関数 &m<\sb<f><0>, \cdots;, \sb<f><l - 1>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><l> \dot<\to;> \bb<N>> が全て原始再帰的ならば、これらから合成で得られる部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> も原始再帰的である。
       >
       \li<
-        &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><k + 2> \dot<\to;> \bb<N>> がともに原始再帰的ならば、これらから原始再帰で得られる部分関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> も原始再帰的である。
+        部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><k + 2> \dot<\to;> \bb<N>> がともに原始再帰的ならば、これらから原始再帰で得られる部分関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> も原始再帰的である。
       >
     >
   >
@@ -163,12 +163,12 @@
       まず、全域関数 &m<f: \sp<\bb<N>><1> \to; \bb<N>> および &m<g: \sp<\bb<N>><3> \to; \bb<N>> を、
       &mb<
         \array|align="rcl"|<
-          \c<f (x)> \c<\coloneqq;> \c<\sbsp<\op<proj>><1><1> (x) = x> \br;
-          \c<g (x, y, z)> \c<\coloneqq;> \c<\op<succ> (\sbsp<\op<proj>><3><3> (x, y, z)) = z + 1> \br;
+          \c<f (x)> \c<\coloneqq;> \c<\sbsp<\op<proj>><0><1> (x) = x> \br;
+          \c<g (x, y, z)> \c<\coloneqq;> \c<\op<succ> (\sbsp<\op<proj>><2><3> (x, y, z)) = z + 1> \br;
         >
       >
       で定める。
-      すると、&m<f> は &m<\sbsp<\op|ord|<proj>><1><1>> そのものであるから原始再帰的で、&m<g> も &m<\op|ord|<succ>> と &m<\sbsp<\op|ord|<proj>><3><3>> の合成であるから原始再帰的である。
+      すると、&m<f> は &m<\sbsp<\op|ord|<proj>><0><1>> そのものであるから原始再帰的で、&m<g> も &m<\sbsp<\op|ord|<proj>><2><3>> と &m<\op|ord|<succ>> の合成であるから原始再帰的である。
       これらを用いることで、加法関数 &m<\plus;> は、
       &mb<
         \array|align="rcl"|<
@@ -191,11 +191,11 @@
       &mb<
         \array|align="rcl"|<
           \c<f (x)> \c<\coloneqq;> \c<0> \br;
-          \c<g (x, y, z)> \c<\coloneqq;> \c<\plus|ord|; (\sbsp<\op<proj>><1><3> (x, y, z), \sbsp<\op<proj>><3><3> (x, y, z)) = x + z> \br;
+          \c<g (x, y, z)> \c<\coloneqq;> \c<\plus|ord|; (\sbsp<\op<proj>><0><3> (x, y, z), \sbsp<\op<proj>><2><3> (x, y, z)) = x + z> \br;
         >
       >
       で定める。
-      すると、&m<f> は定数関数であるから\mref|type="thm",ref="const"|; より原始再帰的で、&m<g> も &m<\sbsp<\op|ord|<proj>><1><3>>, &m<\sbsp<\op|ord|<proj>><3><3>>, &m<\plus|ord|;> の合成であるから\mref|type="thm",ref="plus"|; より原始再帰的である。
+      すると、&m<f> は定数関数であるから\mref|type="thm",ref="const"|; より原始再帰的で、&m<g> も &m<\sbsp<\op|ord|<proj>><0><3>>, &m<\sbsp<\op|ord|<proj>><2><3>>, &m<\plus|ord|;> の合成であるから\mref|type="thm",ref="plus"|; より原始再帰的である。
       これらを用いることで、乗法関数 &m<\times;> は、
       &mb<
         \array|align="rcl"|<
@@ -210,7 +210,7 @@
   \p<
     上の 2 つの証明の核心は、&m<\plus;> や &m<\times;> が原始再帰で得られるという点である。
     上の証明でこれを示す際には、原始再帰の定義に厳密に合わせるため、かなり回りくどい記述をした。
-    例えば、&m<\plus;> の原始再帰性の証明には &m<\sbsp<\op|ord|<proj>><1><1>> や &m<\sbsp<\op|ord|<proj>><3><3>> を用いたが、本質的には
+    例えば、&m<\plus;> の原始再帰性の証明には &m<\sbsp<\op|ord|<proj>><0><1>> や &m<\sbsp<\op|ord|<proj>><2><3>> を用いたが、本質的には
     &mb<
       \array|align="rcl"|<
         \c<\plus; (x, 0)> \c<=> \c<x> \br;
@@ -219,7 +219,7 @@
     >
     と書けると言っているにすぎない。
     しかし、原始再帰の定義に合わせるには、&m<\plus; (x, 0)> の右辺は 1 変数関数の値でなければならないし、&m<\plus; (x, y + 1)> の右辺には &m<x> や &m<y> が登場しなければならない。
-    この定義と辻褄を合わせるために、何もしない関数として &m<\sbsp<\op|ord|<proj>><1><1>> を挿入したり、使わない変数を消すために &m<\sbsp<\op|ord|<proj>><3><3>> を挿入したりしたのである。
+    この定義と辻褄を合わせるために、何もしない関数として &m<\sbsp<\op|ord|<proj>><0><1>> を挿入したり、使わない変数を消すために &m<\sbsp<\op|ord|<proj>><2><3>> を挿入したりしたのである。
     &m<\times;> の原始再帰性の証明でも同様で、その本質は、 
     &mb<
       \array|align="rcl"|<
@@ -228,7 +228,7 @@
       >
     >
     と表現できる点である。
-    しかし、&m<\times; (x, 0)> の右辺で定数を関数値と見なすために &m<f> を導入したり、&m<\times; (x, y + 1)> の右辺で &m<y> を消すために &m<&m<\sbsp<\op|ord|<proj>><1><3>>> や &m<\sbsp<\op|ord|<proj>><3><3>> を挿入したりすることになった。
+    しかし、&m<\times; (x, 0)> の右辺で定数を関数値と見なすために &m<f> を導入したり、&m<\times; (x, y + 1)> の右辺で &m<y> を消すために &m<&m<\sbsp<\op|ord|<proj>><0><3>>> や &m<\sbsp<\op|ord|<proj>><2><3>> を挿入したりすることになった。
   >
   \p<
     このように、初期関数に入れられている射影関数は、式の中で用いる変数の数を調整したり入れ替えたりすることで定義と辻褄を合わせるために専ら使われる。
