@@ -6,8 +6,14 @@
   \name<Ackermann 関数>
   \use-math|prefix="6"|;
 
-  \h1<日記 (2025 年 12 月 27 日)>
+  \h1<日記 (2025 年 12 月 29 日)>
   \p<
+    前回までで、原始再帰関数が非常に広い表現力をもっていることを見てきた。
+    そのため、だいたいの「計算できる」と思える関数が原始再帰的な範囲内に収まっていそうに見えるが、実は「計算できそう」でも原始再帰的でない関数の例がいくつか知られている。
+    今回は、その例の 1 つである Ackermann 関数について触れようと思う。
+  >
+  \p<
+    Ackermann 関数とは、以下の式で定義されるものである。
   >
   \thm|type="def"|<
     \p<
@@ -102,19 +108,20 @@
     >
   >
   \p<
-    この右辺からはかなり規則性が見える。
+    この右辺からはかなりの規則性が見出だせる。
     &m<\plus;> を繰り返して得られる演算が &m<\times;> であることを踏まえると、&m<\times;> を繰り返して得られる演算は冪であるから、各 &m<y \in; \bb<N>> に対して、
     &mb<
-      \op<ack> (3, y)  = \sp<2><y + 3> - 3
+      \op<ack> (3, y) = \sp<2><y + 3> - 3
     >
     が成り立つと予想できる。
-    実際これは正しい。
-    さらに、Knuth の矢印表記を用いることより一般に、各 &m<x, y \in; \bb<N>> に対して、
+    実際これは正しく、上の命題と同様に帰納法で容易に示せる。
+    またさらに、この次は冪を繰り返した演算になるはずなので、各 &m<y \in; \bb<N>> に対して、
     &mb<
-      \op<ack> (x, y)  = 2 \sp<\uarr|bin|;><x - 2> (y + 3) - 3
+      \op<ack> (4, y) = \un<\underbrace<\sp<2><\sp<\udots;><\sp<2><2>>>>><y + 3 \text< 個>> - 3
     >
-    と書けることが知られている。
-    このように、Ackermann 関数の左側の引数は演算の「レベル」のようなものを表していると解釈できる。
+    が成り立ちそうであり、実際これも正しい。
+    このように、Ackermann 関数の左側の引数は演算のネストのレベルのようなものを表していると解釈でき、概ね &m<\op<ack> (x, y)> とは &m<x> 重にネストした演算を 2 に &m<y> 回適用させた数になると考えられる。
+    このことから、Ackermann 関数の値は爆発的に増大していくことが分かる。
   >
   \p<
     さて、以降の議論で使うために、Ackermann 関数に関する不等式をいくつか準備しておこう。
@@ -128,6 +135,40 @@
       が成り立つ。
     >
   >
+  \prf<
+    \p<
+      &m<x> に関する帰納法による。
+      基底ケースである &m<x = 0> のときは、任意の &m<y> に対して、
+      &mb<
+        \op<ack> (0, y) = y + 1 `> y
+      >
+      であるから、成立している。
+    >
+    \p<
+      帰納ステップのために、ある &m<x'> が存在して、任意の &m<y> に対し &m<\op<ack> (x', y) `> y> が成り立つことを仮定する。
+      この仮定を何度も使うと、任意の &m<y> に対して、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<ack> (x' + 1, y)> \c<=> \c<\op<ack> (x', \op<ack> (x' + 1, y - 1))> \br;
+          \c; \c<`>> \c<\op<ack> (x' + 1, y - 1)> \br;
+          \c; \c<=> \c<\op<ack> (x', \op<ack> (x' + 1, y - 2))> \br;
+          \c; \c<`>> \c<\op<ack> (x' + 1, y - 2)> \br;
+          \c; \c; \c<\vdots;> \br;
+          \c; \c<`>> \c<\op<ack> (x' + 1, 0)> \br;
+          \c; \c<=> \c<\op<ack> (x', 1)> \br;
+          \c; \c<`>> \c<1> \br;
+        >
+      >
+      という不等式の列が得られるが、ここには &m<y + 1> 個の不等式がある。
+      すなわち、
+      &mb<
+        \un<\underbrace<\op<ack> (x' + 1, y) `> \op<ack> (x' + 1, y - 1) `> \cdots; `> 1>><y + 1 \text< 個>>
+      >
+      という形になっている。
+      これは自然の不等式だから不等号の左右には必ず 1 以上の差があるはずなので、&m<\op<ack> (x' + 1, y) `> y + 1> が成り立つ。
+      以上で帰納ステップも示され、命題の主張が示された。
+    >
+  >
   \thm|type="prp",id="rightinc"|<
     \p<
       任意の数 &m<x, y \in; \bb<N>> に対し、
@@ -138,6 +179,22 @@
       すなわち、Ackermann 関数は右の変数に関して狭義単調増加である。
     >
   >
+  \prf<
+    \p<
+      まず &m<x = 0> のときは、
+      &mb<
+        \op<ack> (0, y) = y + 1 `< y + 2 = \op<ack> (0, y + 1)
+      >
+      であるから成り立っている。
+    >
+    \p<
+      &m<x `> 0> のときは、\mref|type="thm",ref="gt"|; を使うことで、
+      &mb<
+        \op<ack> (x, y) `< \op<ack> (x - 1, \op<ack> (x, y)) = \op<ack> (x, y + 1)
+      >
+      と得られる。
+    >
+  >
   \thm|type="prp",id="swap"|<
     \p<
       任意の数 &m<x, y \in; \bb<N>> に対し、
@@ -145,6 +202,55 @@
         \op<ack> (x, y + 1) \leq; \op<ack> (x + 1, y)
       >
       が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      &m<y> に関する帰納法による。
+      基底ケースである &m<y = 0> のときは、任意の &m<x> に対して、
+      &mb<
+        \op<ack> (x, 1) = \op<ack> (x + 1, 0)
+      >
+      であるから成り立っている。
+    >
+    \p<
+      帰納ステップのために、ある &m<y'> が存在して、任意の &m<x> に対し &m<\op<ack> (x, y' + 1) \leq; \op<ack> (x + 1, y')> が成り立つことを仮定する。
+      このとき、任意の &m<x> に対して、\mref|type="thm",ref="gt"|; により、
+      &mb<
+        y' + 1 `< \op<ack> (x, y' + 1)
+      >
+      が得られる。
+      つまり、
+      &mb<
+        y' + 2 \leq; \op<ack> (x, y' + 1)
+      >
+      が成り立つということである。
+      これと\mref|type="thm",ref="rightinc"|; を使うことで、
+      &mb<
+        &mark<1>
+        \op<ack> (x, y' + 2) \leq; \op<ack> (x, \op<ack> (x, y' + 1))
+      >
+      が分かる。
+      さらに\mref|type="thm",ref="swap"|; を使うことで、
+      &mb<
+        \op<ack> (x, y' + 1) \leq; \op<ack> (x + 1, y')
+      >
+      も得られるので、再び\mref|type="thm",ref="rightinc"|; を使うことで、
+      &mb<
+        &mark<2>
+        \op<ack> (x, \op<ack> (x, y' + 1)) \leq; \op<ack> (x, \op<ack> (x + 1, y'))
+      >
+      が分かる。
+      式 1 と式 2 をまとめれば、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<ack> (x, y' + 2)> \c<\leq;> \c<\op<ack> (x, \op<ack> (x, y' + 1))> \br;
+          \c; \c<\leq;> \c<\op<ack> (x, \op<ack> (x + 1, y'))> \br;
+          \c; \c<=> \c<\op<ack> (x + 1, y' + 1)> \br;
+        >
+      >
+      が得られ、帰納ステップが示された。
+      以上で、命題の主張も示された。
     >
   >
   \thm|type="prp",id="leftinc"|<
@@ -157,6 +263,15 @@
       すなわち、Ackermann 関数は左の変数に関して狭義単調増加である。
     >
   >
+  \prf<
+    \p<
+      任意の &m<x, y> に対し、\mref|type="thm",ref="rightinc"|; と\mref|type="thm",ref="swap"|; を使うことで、
+      &mb<
+        \op<ack> (x, y) `< \op<ack> (x, y + 1) \leq; \op<ack> (x + 1, y)
+      >
+      として得られる。
+    >
+  >
   \thm|type="prp",id="nest"|<
     \p<
       任意の数 &m<x, y, z \in; \bb<N>> に対し、
@@ -166,35 +281,266 @@
       が成り立つ。
     >
   >
+  \prf<
+    \p<
+      任意の &m<x, y, z> に対し、まず\mref|type="thm",ref="leftinc"|; により、
+      &mb<
+        \op<ack> (y, z) `< \op<ack> (x + y + 1, z)
+      >
+      が得られる。
+      &m<x \leq; x + y> であることも踏まえれば、これと\mref|type="thm",ref="leftinc"|; と\mref|type="thm",ref="rightinc"|; により、
+      &mb<
+        &mark<1>
+        \op<ack> (x, \op<ack> (y, z)) `< \op<ack> (x + y, \op<ack> (x + y + 1, z))
+      >
+      が分かる。
+      この右辺については、\mref|type="thm",ref="swap"|; により、
+      &mb<
+        &mark<2>
+        \array|align="rcl"|<
+          \c<\op<ack> (x + y, \op<ack> (x + y + 1, z))> \c<=> \c<\op<ack> (x + y + 1, z + 1))> \br;
+          \c; \c<\leq;> \c<\op<ack> (x + y + 2, z))> \br;
+        >
+      >
+      が得られる。
+      式 1 と式 2 を合わせれば、命題の主張が得られる。
+    >
+  >
   \p<
-    Ackermann 関数は原始再帰的ではないことを示す際に重要になるのが、次で定義する「優越する」という関係である。
+    準備は以上にして、Ackermann 関数が原始再帰的ではないことを示そう。
+    この際に重要になるのが、次で定義する「優越する」という関係である。
   >
   \thm|type="def"|<
     \p<
-      全域関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> および &m<u: \sp<\bb<N>><2> \to; \bb<N>> をとる。
+      全域関数 &m<h: \sp<\bb<N>><k> \to; \bb<N>> および &m<u: \sp<\bb<N>><2> \to; \bb<N>> をとる。
       ある数 &m<`a \in; \bb<N>> が存在して、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
       &mb<
-        f (\vec<x>) `< u (`a, \max; (\vec<x>))
+        h (\vec<x>) `< u (`a, \max; (\vec<x>))
       >
       が成り立つとする。
-      このとき、&m<u> は &m<f> を \def<優越する\fl<majorise>> という。
+      このとき、&m<u> は &m<`a> で &m<h> を \def<優越する\fl<majorise>> という。
     >
+  >
+  \p<
+    Ackermann 関数はあらゆる原始再帰関数を優越することが知られている。
+    定義により、Ackermann 関数がある関数 &m<h> を優越するとは、Ackermann 関数の左の引数を適切に固定すれば、常に &m<h> の値を Ackermann 関数の値で抑えられるということである。
+    ここで、Ackermann 関数の左の引数は演算のネストのレベルのようなものだったことを思い出そう。
+    この見方をすれば、この主張が述べているのは、どんな原始再帰関数 &m<h> を用意しても、演算のネストのレベルを十分大きくとれば、その演算で &m<h> を上から抑えられてしまうということである。
+    逆の見方をすれば、原始再帰関数の範囲では、(加算から始めて) 有限回ネストして得られる演算よりも爆発的に増大するような関数は生み出せないということである。
+  >
+  \p<
+    では、この事実を示そう。
+  >
+  \thm|type="thm",id="maj"|<
+    \p<
+      全域関数 &m<h: \sp<\bb<N>><k> \to; \bb<N>> を考える。
+      &m<h> が原始再帰的ならば、Ackermann 関数は &m<h> を優越する。
+    >
+  >
+  \prf<
+    \p<
+      &m<h> の構造に関する帰納法による。
+      まず、&m<h = \op|ord|<zero>> であれば、
+      &mb<
+        \op|ord|<zero> = 0 `< 1 = \op<ack> (0, 0)
+      >
+      であるから、Ackermann 関数は 0 で &m<\op|ord|<zero>> を優越する。
+    >
+    \p<
+      &m<h = \op|ord|<succ>> であれば、任意の &m<x \in; \bb<N>> に対して、\mref|type="thm",ref="ex"|; により、
+      &mb<
+        \op<succ> (x) = x + 1 `< x + 2 = \op<ack> (1, x)
+      >
+      であるから、Ackermann 関数は 1 で &m<\op|ord|<succ>> を優越する。
+    >
+    \p<
+      &m<h = \sbsp<\op|ord|<proj>><i><k> \srel; (i `< k)> であれば、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
+      &mb<
+        \sbsp<\op<proj>><i><k> (\vec<x>) = \sb<x><i> `< \max; (\vec<x>) + 1 = \op<ack> (0, \max; (\vec<x>))
+      >
+      であるから、Ackermann 関数は 0 で &m<\sbsp<\op|ord|<proj>><i><k>> を優越する。
+    >
+    \p<
+      続いて &m<h: \sp<\bb<N>><k> \to; \bb<N>> が合成で得られている場合を考える。
+      すなわち、原始再帰関数 &m<\sb<f><0>, \cdots;, \sb<f><l - 1>: \sp<\bb<N>><k> \to; \bb<N>> および &m<g: \sp<\bb<N>><l> \to; \bb<N>> によって、
+      &mb<
+        h (\vec<x>) = g (\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>))
+      >
+      と書ける。
+      帰納法の仮定として、Ackermann 関数が &m<\sb<f><0>, \cdots;, \sb<f><l - 1>, g> を全て優越するとする。
+      すなわち、ある数 &m<\sb<`a><0>, \cdots;, \sb<`a><l - 1>, `b> が存在して、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> および &m<\vec<y> \in; \sp<\bb<N>><l>> に対して、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<f><i> (\vec<x>)> \c<`<> \c<\op<ack> (\sb<`a><i>, \max; (\vec<x>))> \br;
+          \c<g (\vec<y>)> \c<`<> \c<\op<ack> (`b, \max; (\vec<y>))> \br;
+        > \quad; (i `< k)
+      >
+      が成り立つと仮定する。
+      ここで &m<\tilde<`a> \coloneqq; \max; (\sb<`a><0>, \cdots;, \sb<`a><l - 1>)> とおくと、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> と任意の &m<i `< l> に対して、\mref|type="thm",ref="rightinc"|; により、
+      &mb<
+        \sb<f><i> (\vec<x>) `< \op<ack> (\sb<`a><i>, \max; (\vec<x>)) \leq; \op<ack> (\tilde<`a>, \max; (\vec<x>))
+      >
+      が成り立つが、右辺は &m<i> に依存していないので、
+      &mb<
+        \max; (\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>)) `< \op<ack> (\tilde<`a>, \max; (\vec<x>))
+      > 
+      が分かる。
+      これを用いると、適宜\mref|type="thm",ref="rightinc"|; や\mref|type="thm",ref="nest"|; を使うことで、
+      &mb<
+        \array|align="rcl"|<
+          \c<h (\vec<x>)> \c<=> \c<g (\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>))> \br;
+          \c; \c<`<> \c<\op<ack> (`b, \max; (\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>)))> \br;
+          \c; \c<`<> \c<\op<ack> (`b, \op<ack> (\tilde<`a>, \max; (\vec<x>)))> \br;
+          \c; \c<`<> \c<\op<ack> (`b + \tilde<`a> + 2, \max; (\vec<x>))> \br;
+        >
+      >
+      が得られる。
+      すなわち、Ackermann 関数は &m<`b + \tilde<`a> + 2> で &m<h> を優越する。
+    >
+    \p<
+      最後に、&m<h: \sp<\bb<N>><k + 1> \to; \bb<N>> が原始再帰で得られている場合を考える。
+      すなわち、原始再帰関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> および &m<g: \sp<\bb<N>><k + 1> \to; \bb<N>> によって、
+      &mb<
+        \array|align="rcl"|<
+          \c<h (\vec<x>, 0)> \c<=> \c<f (\vec<x>)> \br;
+          \c<h (\vec<x>, y + 1)> \c<=> \c<g (\vec<x>, y, h (\vec<x>, y))> \br;
+        >
+      >
+      と書ける。
+      帰納法の仮定として、Ackermann 関数が &m<f, g> をどちらも優越するとする。
+      すなわち、ある数 &m<`a, `b> が存在して、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> と &m<y, z \in; \bb<N>> に対して、
+      &mb<
+        \array|align="rcl"|<
+          \c<f (\vec<x>)> \c<`<> \c<\op<ack> (`a, \max; (\vec<x>))> \br;
+          \c<g (\vec<x>, y, z)> \c<`<> \c<\op<ack> (`b, \max; (\vec<x>, y, z))> \br;
+        >
+      >
+      が成り立つと仮定する。
+      今 &m<`g \coloneqq; \max; (`a, `b) + 1> とおく。
+      ここで補題として、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> と &m<y \in; \bb<N>> に対して、
+      &mb<
+        &mark<\wheart;>
+        h (\vec<x>, y) `< \op<ack> (`g, \max; (\vec<x>) + y))
+      >
+      が成り立つことを、&m<y> に関する帰納法によって以下に示そう。
+    >
+    \p<
+      基底ケースの &m<y = 0> のときを考える。
+      任意の &m<\vec<x>> に対して、&m<`a `< `g> であることと\mref|type="thm",ref="leftinc"|; により、
+      &mb<
+        h (\vec<x>, 0) = f (\vec<x>) `< \op<ack> (`a, \max; (\vec<x>)) `< \op<ack> (`g, \max; (\vec<x>))
+      >
+      が成り立つので、これで示された。
+    >
+    \p<
+      帰納ステップのため、ある &m<y'> が存在して、&m<y = y'> のときに任意の &m<\vec<x>> に対して式 &m<\wheart;> が成り立つことを仮定する。
+      するとまず、任意の &m<\vec<x>> に対して、&m<`b \leq; `g - 1> であることと\mref|type="thm",ref="leftinc"|; により、
+      &mb<
+        &mark<\sb<\wspade;><1>>
+        \array|align="rcl"|<
+          \c<h (\vec<x>, y' + 1)> \c<=> \c<g (\vec<x>, y', h (\vec<x>, y'))> \br;
+          \c; \c<`<> \c<\op<ack> (`b, \max; (\vec<x>, y', h (\vec<x>, y')))> \br;
+          \c; \c<\leq;> \c<\op<ack> (`g - 1, \max; (\vec<x>, y', h (\vec<x>, y')))> \br;
+        >
+      >
+      が成り立つ。
+      ここで、帰納法の仮定から
+      &mb<
+        h (\vec<x>, y') `< \op<ack> (`g, \max; (\vec<x>) + y')
+      >
+      が成り立ち、さらに\mref|type="thm",ref="gt"|; により、
+      &mb<
+        \max; (\vec<x>, y') \leq; \max; (\vec<x>) + y'  `< \op<ack> (`g, \max; (\vec<x>) + y')
+      >
+      も成り立つから、両方を合わせれば、
+      &mb<
+        \max; (\vec<x>, y', h (\vec<x>, y')) `< \op<ack> (`g, \max; (\vec<x>) + y')
+      >
+      が得られる。
+      したがって\mref|type="thm",ref="rightinc"|; により、
+      &mb<
+        &mark<\sb<\wspade;><2>>
+        \array|align="rcl"|<
+          \c<\op<ack> (`g - 1, \max; (\vec<x>, y', h (\vec<x>, y'))> \c<`<> \c<\op<ack> (`g - 1, \op<ack> (`g, \max; (\vec<x>) + y'))> \br;
+          \c; \c<=> \c<\op<ack> (`g, \max; (\vec<x>) + y' + 1)> \br;
+        >
+      >
+      が成り立つ。
+      したがって、式 &m<\sb<\wspade;><1>> と式 &m<\sb<\wspade;><2>> を合わせれば、
+      &mb<
+        h (\vec<x>, y' + 1) `< \op<ack> (`g, \max; (\vec<x>) + y' + 1)
+      >
+      が得られるので、これで帰納ステップが示された。
+    >
+    \p<
+      以上により、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> と &m<y \in; \bb<N>> に対して、式 &m<\wheart;> すなわち
+      &mb<
+        h (\vec<x>, y) `< \op<ack> (`g, \max; (\vec<x>) + y))
+      >
+      が成り立つことが分かった。
+      ここで、\mref|type="thm",ref="ex"|; により、
+      &mb<
+        \array|align="rcl"|<
+          \c<\max; (\vec<x>) + y> \c<`<> \c<2 \sfun; \max; (\vec<x>, y)> \br;
+          \c; \c<\leq;> \c<2 \sfun; \max; (\vec<x>, y) + 3> \br;
+          \c; \c<=> \c<\op<ack> (2, \max; (\vec<x>, y))> \br;
+        >
+      >
+      であるから、これと式 &m<\wheart;> を\mref|type="thm",ref="rightinc"|; で合わせて、最後に\mref|type="thm",ref="nest"|; を使うことで、
+      &mb<
+        \array|align="rcl"|<
+          \c<h (\vec<x>, y)> \c<`<> \c<\op<ack> (`g, \max; (\vec<x>) + y))> \br;
+          \c; \c<`<> \c<\op<ack> (`g, \op<ack> (2, \max; (\vec<x>, y)))> \br;
+          \c; \c<`<> \c<\op<ack> (`g + 4, \max; (\vec<x>, y)))> \br;
+        >
+      >
+      が得られる。 
+      すなわち、Ackermann 関数は &m<`g + 4> で &m<h> を優越する。
+    >
+    \p<
+      以上で全体の帰納法が回ったので、命題の主張の証明が完了した。
+    >
+  >
+  \p<
+    さて、これで Ackermann 関数があらゆる原始再帰関数を優越することが分かった。
+    一方、実は自分自身を優越することはできないため、Ackermann 関数は原始再帰的にはなり得ないことがこれで分かる。
   >
   \thm|type="prp",id="notself"|<
     \p<
       全域関数 &m<u: \sp<\bb<N>><2> \to; \bb<N>> に対し、&m<u> が &m<u> 自身を優越することはない。
     >
   >
-  \thm|type="prp",id="maj"|<
+  \prf<
     \p<
-      全域関数 &m<f: \sp<\bb<N>><k> \to; \bb<N>> を考える。
-      &m<f> が原始再帰的ならば、&m<\op|ord|<ack>> は &m<f> を優越する。
+      仮に &m<u> が &m<u> 自身を優越すると仮定する。
+      すると、ある数 &m<`a> が存在して、任意の &m<x, y> に対して、
+      &mb<
+        u (x, y) `< u (`a, \max; (x, y))
+      >
+      が成り立つことになるが、特に
+      &mb<
+        u (`a, `a) `< u (`a, \max; (`a, `a)) = u (`a, `a)
+      >
+      が得られてしまい、矛盾が生じる。
+      したがって、&m<u> が &m<u> 自身を優越することはない。
     >
   >
   \thm|type="thm",id="notprimrec"|<
     \p<
-      &m<\op|ord|<ack>> は原始再帰的ではない。
+      Ackermann 関数は原始再帰的ではない。
     >
+  >
+  \prf<
+    \p<
+      仮に Ackermann 関数が原始再帰的であったとすると、\mref|type="thm",ref="maj"|; により Ackermann 関数が Ackermann 関数自身を優越することになるが、それは\mref|type="thm",ref="notself"|; に矛盾する。
+      したがって、Ackermann 関数は原始再帰的ではない。
+    >
+  >
+  \p<
+    ということで、Ackermann 関数を「計算できる」関数から除外するのは直感的ではない一方、Ackermann 関数は原始再帰的でないことが分かってしまったので、「計算できる」関数の定義として原始再帰関数を採用するのは不適切であると言える。
+    そのため、原始再帰関数よりも広い関数のクラスを模索する必要がある。
+    それが一般再帰関数である。
+    次回からは、一般再帰関数の理論を進めていく。
   >
   \h1<参考文献>
   \ol<
