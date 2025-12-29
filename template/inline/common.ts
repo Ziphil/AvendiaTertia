@@ -133,4 +133,22 @@ manager.registerElementRule(["c", "m"], ["page", "page.section-table"], (transfo
   return self;
 });
 
+manager.registerElementRule("nw", true, (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("nowrap");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
+manager.registerElementRule("url", true, (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("span", (self) => {
+    self.addClassName("url");
+    self.appendChild(transformer.apply());
+  });
+  return self;
+});
+
 export default manager;

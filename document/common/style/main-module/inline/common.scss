@@ -55,3 +55,11 @@
   background-color: var(--block-background-color);
   white-space: pre-wrap;
 }
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.url {
+  word-break: break-all;
+}
