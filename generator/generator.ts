@@ -255,18 +255,10 @@ export class AvendiaGenerator {
     output += chalk.magenta(Math.min(intervals.upload, 9999).toString().padStart(4));
     output += "  |  ";
     const codeArray = this.configs.getSplitRelativeDocumentPath(documentPath, documentLanguage).map((segment) => {
-      const x = segment.replace(/\.\w+$/, "");
-      if (x === "index") {
-        return "  @";
-      } else if (x.match(/^\d+$/)) {
-        return parseInt(x, 10).toString().padStart(3);
-      } else if (x.match(/^[a-z]+$/)) {
-        return segment.substring(0, 3).padStart(3);
-      } else {
-        return "  ?";
-      }
+      const trimedSegment = segment.replace(/\.\w+$/, "");
+      return (trimedSegment === "index") ? "@" : trimedSegment;
     });
-    const codeString = (documentLanguage.substring(0, 2) + " " + codeArray.join(" ")).padEnd(14);
+    const codeString = `[${documentLanguage}] ` + codeArray.join("/");
     if (succeed) {
       output += chalk.yellow(codeString);
     } else {
@@ -279,9 +271,9 @@ export class AvendiaGenerator {
     let output = "";
     const count = this.count;
     if (count > 0) {
-      output += "-".repeat(39);
+      output += "-".repeat(60);
       output += "\n";
-      output += " ".repeat(27) + count.toString().padStart(5) + " files";
+      output += " " + count.toString().padStart(4) + " files";
     }
     console.log(output);
   }
