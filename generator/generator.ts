@@ -258,7 +258,7 @@ export class AvendiaGenerator {
       const trimedSegment = segment.replace(/\.\w+$/, "");
       return (trimedSegment === "index") ? "@" : trimedSegment;
     });
-    const codeString = `[${documentLanguage}] ` + codeArray.join("/");
+    const codeString = `[${documentLanguage}] ` + codeArray.join(" ");
     if (succeed) {
       output += chalk.yellow(codeString);
     } else {
