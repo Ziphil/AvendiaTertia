@@ -13,7 +13,7 @@
   \p<
     関数を場合分けによって定義することはよくあるが、場合分けの条件が原始再帰的であれば原始再帰性は保たれる。
   >
-  \thm|type="thm",id="case"|<
+  \thm|type="prp",id="case"|<
     \p<
       部分関数 &m<f, g: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を
       &mb<
@@ -57,7 +57,7 @@
   >
   \thm|type="def"|<
     \p<
-      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、数 &m<\bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t) \in; \bb<N>> を
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、数 &m<\bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t)> を
       &mb<
         \bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t) \coloneqq; \case<
           \c<\min; `{ t \mid; P (\vec<x>, t) `}> \c<(\sp<><\exists;> t `< y \ssbin; P (\vec<x>, t))> \br;
@@ -77,7 +77,7 @@
   >
   \thm|type="thm",id="min"|<
     \p<
-      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> を
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、部分関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> を
       &mb<
         h (\vec<x>, y) \coloneqq; \bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t)
       >
@@ -155,7 +155,7 @@
     >
   >
   \p<
-    以上、我々は原始再帰的な関数や関係および原始再帰性を保つ演算を様々見てきた。
+    以上、我々は原始再帰的な関数や関係および原始再帰性を保つ操作を様々見てきた。
     一度ここにまとめておこう。
   >
   \ul<
@@ -163,8 +163,8 @@
     \li<加算, 減算, 乗算, 除算, 冪, 階乗 (\a|href="99.html#plus"|<命題 2.7>, \a|href="99.html#minus"|<命題 2.11>, \a|href="99.html#times"|<命題 2.8>, \mref|type="thm",ref="div"|;, \a|href="99.html#pow"|<命題 2.9>, \a|href="99.html#fact"|<命題 2.10>)>
     \li<総和, 総乗 (\a|href="99.html#seq"|<命題 2.14>)>
     \li<最大値, 最小値 (\a|href="99.html#minmax"|<命題 2.13>)>
-    \li<否定, 論理和, 論理積 (\a|href="100.html#comp"|<定理 3.3>, \a|href="100.html#capcup"|<定理 3.4>)>
-    \li<有界量化 (\a|href="100.html#quant"|<定理 3.5>)>
+    \li<否定, 論理和, 論理積 (\a|href="100.html#comp"|<命題 3.3>, \a|href="100.html#capcup"|<命題 3.4>)>
+    \li<有界量化 (\a|href="100.html#quant"|<命題 3.5>)>
     \li<大小比較, 等号 (\a|href="100.html#lsgt"|<命題 3.6>, \a|href="100.html#eq"|<命題 3.7>)>
     \li<整除関係 (\a|href="100.html#div"|<命題 3.8>)>
     \li<場合分け (\mref|type="thm",ref="case"|;)>
