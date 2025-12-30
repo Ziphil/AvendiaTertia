@@ -37,7 +37,7 @@
       "diary": {"ja": "製作日記", "en": "Diary"}
     },
     "other": {
-      "index": {"ja": "その他", "en": "Others"},
+      "index": {"ja": "図書館", "en": "Library"},
       "greek": {"ja": "古典ギリシャ語", "en": "Ancient Greek"},
       "greek-diary": {"ja": "日記 / 古典ギリシャ語", "en": "Diary / Ancient Greek"},
       "akkadian": {"ja": "アッカド語", "en": "Akkadian"},
