@@ -1,0 +1,261 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<一般再帰関数>
+  \use-math|prefix="7"|;
+
+  \h1<日記 (2025 年 12 月 30 日)>
+  \p<
+    前回まででは、原始再帰関数の広い表現力を見つつ、その限界にも触れた。
+    今回からは、より広い関数のクラスである一般再帰関数を導入する。
+  >
+  \p<
+    \a|href="101.html#min"|<定理 4.3> で示したように、有界な最小化 (関係を満たす数を探す演算) であれば原始再帰性は保存される。
+    したがって、たとえ与えられた関係を満たす数が存在することが事前に分かっていたとしても、それを探索する上界を前もって与えられなければ、原始再帰的な範囲でその数を取得することはできない。
+    この有界性が原始再帰関数の表現力の限界とも言えるだろう。
+    そこで、有界でないかもしれない最小化演算を許すことにしたのが一般再帰関数である。
+  >
+  \p<
+    有界でないかもしれない最小化演算は、次のように定義される。
+  >
+  \thm|type="def"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、定義されないかもしれない数 &m<\rm<`m> t. \sfun; P (\vec<x>, t)> を
+      &mb<
+        \rm<`m> t. \sfun; P (\vec<x>, t) \coloneqq; \case<
+          \c<\min; `{ t \mid; P (\vec<x>, t) `}> \c<(\sp<><\exists;> t \ssbin; P (\vec<x>, t))> \br;
+          \c<\uarr;> \c<(\text<上記以外>)>
+        >
+      >
+      で定義する。
+      この &m<\rm<`m>> は \def<最小化演算子\fl<minimization operator>> と呼ばれる。
+    >
+  >
+  \p<
+
+  >
+  \thm|type="def"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> をとる。
+      部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> が、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
+      &mb<
+        h (\vec<x>) \coloneqq; \rm<`m> t. \sfun; P (\vec<x>, t)
+      >
+      を満たすとき、&m<h> は &m<P> から \def<最小化\fl<minimization>> で得られるという。
+    >
+  >
+  \p<
+    最小化演算子は、与えられた関係を満たす数を 0 から探していって見つかったものを返すが、そもそもそのような数が存在しなかったら未定義となる。
+    そのため、最小化で得られる関数は全域でない真の部分関数になる可能性がある。
+  >
+  \p<
+    これを用いて、一般再帰関数を次のように定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      部分関数が \def<一般再帰的\fl<general recursive>> であることを、以下によって帰納的に定義する。
+    >
+    \ul<
+      \li<
+        初期関数 &m<\op|ord|<zero>>, &m<\op|ord|<succ>>, &m<\sbsp<\op|ord|<proj>><i><k> \srel; (0 \leq; i `< k)> は一般再帰的である。
+      >
+      \li<
+        部分関数 &m<\sb<f><0>, \cdots;, \sb<f><l - 1>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><l> \dot<\to;> \bb<N>> が全て一般再帰的ならば、これらから合成で得られる部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> も一般再帰的である。
+      >
+      \li<
+        部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><k + 2> \dot<\to;> \bb<N>> がともに一般再帰的ならば、これらから原始再帰で得られる部分関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> も一般再帰的である。
+      >
+      \li<
+        関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> が一般再帰的ならば、これらから最小化で得られる部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> も一般再帰的である。
+      >
+    >
+  >
+  \p<
+    一般再帰性の定義には (有界でない) 最小化が含まれているので、一般再帰関数は全域にならない可能性がある。
+    このことは常に注意すべきである。
+    例えば、部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> と &m<g: \sp<\bb<N>><k + 2> \dot<\to;> \bb<N>> から原始再帰で関数 &m<h: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> を作ったとする。
+    つまりこの &m<h> は、
+    &mb<
+      \array|align="rcl"|<
+        \c<h (\vec<x>, 0)> \c<=> \c<f (\vec<x>)> \br;
+        \c<h (\vec<x>, y + 1)> \c<=> \c<g (\vec<x>, y, h (\vec<x>, y))>
+      >
+    >
+    と書ける。
+    ここで、例えばある &m<\vec<x>'> に対して &m<f (\vec<x>')> が定義されなかったとしよう。
+    すると、それに等しい &m<h (\vec<x>', 0)> も定義されないし、そのせいで &m<h (\vec<x>', 1) = g (\vec<x>', 0, h (\vec<x>', 0))> も定義されず、結局全ての &m<y> に対して &m<h (\vec<x>', y)> は定義されないことになる。
+  >
+  \p<
+    さて、一般再帰関数についてすぐ分かることとして、原始再帰関数は全て一般再帰的である。
+    したがって、例えば加算や乗算などの原始再帰的であることが分かっている演算は、全て一般再帰的でもある。
+  >
+  \thm|type="thm"|<
+    \p<
+      部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> に対し、&m<f> が原始再帰的ならば、&m<f> は一般再帰的でもある。
+    >
+  >
+  \prf<
+    \p<
+      定義から明らかである。
+    >
+  >
+  \p<
+    前回までで原始再帰的な関数や関係から新しい原始再帰的な関数や関係を作る操作をいくつか見たが、同じ操作が一般再帰性も保つことを証明しよう。
+  >
+  \thm|type="prp",id="seq"|<
+    \p<
+      部分関数 &m<f: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> に対し、部分関数 &m<\sb<`S><f>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> および &m<\sb<`P><f>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> を
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<`S><f> (\vec<x>, y)> \c<\coloneqq;> \c<\sum<t `< y> f (\vec<x>, t) = f (\vec<x>, 0) + \cdots; + f (x, y - 1)> \br;
+          \c<\sb<`P><f> (\vec<x>, y)> \c<\coloneqq;> \c<\prod<t `< y> f (\vec<x>, t) = f (\vec<x>, 0) \times; \cdots; \times; f (\vec<x>, y - 1)> \br;
+        >
+      >
+      で定める。
+      &m<f> が一般再帰的ならば、&m<\sb<`S><f>> と &m<\sb<`P><f>> も一般再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="99.html#quant"|<命題 2.14> の証明がそのまま通用する。
+    >
+  >
+  \thm|type="prp",id="compcapcup"|<
+    \p<
+      関係 &m<P, Q \subseteq; \sp<\bb<N>><k>> をとる。
+      &m<P> と &m<Q> がともに一般再帰的ならば、&m<\complement; P> も &m<P \cap; Q> も &m<P \cup; Q> も全て一般再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="100.html#comp"|<命題 3.3> と\a|href="100.html#capcup"|<命題 3.4> の証明がそのまま通用する。
+    >
+  >
+  \thm|type="prp",id="quant"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、関係 &m<\bar<\forall;> P, \bar<\exists;> P \subseteq; \sp<\bb<N>><k + 1>> を
+      &mb<
+        \array|align="rcl"|<
+          \c<(\vec<x>, y) \in; \bar<\forall;> P> \c<\coloniff;> \c<\sp<><\forall;> t `< y \ssbin; P (\vec<x>, t)> \br;
+          \c<(\vec<x>, y) \in; \bar<\exists;> P> \c<\coloniff;> \c<\sp<><\exists;> t `< y \ssbin; P (\vec<x>, t)>
+        >
+      >
+      で定める。
+      &m<P> が一般再帰的ならば、&m<\bar<\forall;> P> と &m<\bar<\exists;> P> も一般再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="100.html#quant"|<命題 3.5> の証明がそのまま通用する。
+    >
+  >
+  \p<
+    なお、有界でない量化が一般再帰性を保つとは限らない。
+    すなわち、関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対して、関係 &m<\forall; P, \exists; P \subseteq; \sp<\bb<N>><k>> を
+    &mb<
+      \array|align="rcl"|<
+        \c<\vec<x> \in; \forall; P> \c<\coloniff;> \c<\sp<><\forall;> t \ssbin; P (\vec<x>, t)> \br;
+        \c<\vec<x> \in; \exists; P> \c<\coloniff;> \c<\sp<><\exists;> t \ssbin; P (\vec<x>, t)>
+      >
+    >
+    で定めたとき、&m<P> が一般再帰的であっても、&m<\forall; P> や &m<\exists; P> が一般再帰的になるとは限らない。
+    有界でない最小化が可能なのに有界でない量化ができないのは一見直感に反するかもしれないが、このことは少し証明を試みてみると分かる。
+    試しに、&m<P> が一般再帰的であるとして &m<\exists; P> が一般再帰的であることを示そうとしてみよう。
+    そのためには、&m<\sb<\op|ord|<ch>><\exists; P>> が一般再帰的であることを示す必要がある。
+    しかし、最小化を用いてできるのは、
+    &mb<
+      \array|align="rcl"|<
+        \c<f (\vec<x>)> \c<\coloneqq;> \c<\op<sgn> ((\rm<`m> t. \sfun; P (\vec<x>, t)) + 1)> \br;
+        \c; \c<=> \c<\case<
+          \c<1> \c<(\sp<><\exists;> t \ssbin; P (\vec<x>, t))> \br;
+          \c<\uarr;> \c<(\text<上記以外>)>
+        >>
+      >
+    >
+    という関数を作るところまでである。
+    これは、&m<\vec<x>> に対して &m<P (\vec<x>, t)> を満たす &m<t> が存在しないときに 0 を返すことができていないので、&m<\sb<\op|ord|<ch>><\exists; P>> とは等しくない。
+    この違いは、後で計算可能性と計算可枚挙性の違いとして定式化する。
+  >
+  \p<
+    一般再帰性を保つ操作についての話に戻ろう。
+    次は場合分けによる関数の定義についてである。
+  >
+  \thm|type="prp",id="case"|<
+    \p<
+      部分関数 &m<f, g: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、部分関数 &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を
+      &mb<
+        h (\vec<x>) \coloneqq; \case<
+          \c<f (\vec<x>)> \c<(\vec<x> \in; P)> \br;
+          \c<g (\vec<x>)> \c<(\vec<x> \nin; P)>
+        >
+      >
+      で定める。
+      &m<f, g, P> が全て一般再帰的であれば、&m<h> も一般再帰的である。
+    >
+  >
+  \p<
+    この証明は、\a|href="101.html#case"|<命題 4.1> の証明そのままというわけにはいかない。
+    \a|href="101.html#case"|<命題 4.1> の証明では、&m<h> が
+    &mb<
+      h (\vec<x>) = f (\vec<x>) \sb<\op<ch>><P> (\vec<x>) + g (\vec<x>) \sb<\op<ch>><\complement; P> (\vec<x>)
+    >
+    と書けるとして話を進めたが、今回の状況ではこれは正しくない。
+    なぜなら、&m<f (\vec<x>) \sb<\op<ch>><P> (\vec<x>) + g (\vec<x>) \sb<\op<ch>><\complement; P> (\vec<x>)> という式は、&m<f (\vec<x>)> と &m<g (\vec<x>)> がともに定義されているときに限り全体が定義されるが、一方で、
+    &mb<
+      \case<
+        \c<f (\vec<x>)> \c<(\vec<x> \in; P)> \br;
+        \c<g (\vec<x>)> \c<(\vec<x> \nin; P)>
+      >
+    >
+    という式は、例えば &m<\vec<x> \in; P> でありさえすれば &m<f (\vec<x>)> だけが定義されていれば全体も定義されるからである。
+    このように、両者は定義域が異なる可能性があるのである。
+    そのため、上記の命題の証明には若干の工夫が要る。
+  >
+  \prf<
+    \p<
+      まず、部分関数 &m<\tilde<f>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> を
+      &mb<
+        \array|align="rcl"|<
+          \c<\tilde<f> (\vec<x>, 0)> \c<=> \c<0> \br;
+          \c<\tilde<f> (\vec<x>, y + 1)> \c<=> \c<f (\vec<x>)>
+        >
+      >
+      という原始再帰により定義すると、仮定から &m<f> は一般再帰的なので、この &m<\tilde<f>> も一般再帰的である。
+      これを用いて、部分関数 &m<\sb<f><P>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を
+      &mb<
+        \sb<f><P> (\vec<x>) \coloneqq; \tilde<f> (\vec<x>, \sb<\op<ch>><P> (\vec<x>))
+      >
+      で定めれば、仮定から &m<P> は一般再帰的なので、この &m<\sb<f><P>> も一般再帰的である。
+      すると、この &m<\sb<f><P>> は、
+      &mb<
+        \sb<f><P> (\vec<x>) = \case<
+          \c<f (\vec<x>)> \c<(\vec<x> \in; P)> \br;
+          \c<0> \c<(\vec<x> \nin; P)>
+        >
+      >
+      と書ける。
+    >
+    \p<
+      同様にして &m<\sb<g><\complement; P>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を定めれば、&m<h> は
+      &mb<
+        h (\vec<x>) = \sb<f><P> (\vec<x>) + \sb<g><\complement; P> (\vec<x>)
+      >
+      と書ける。
+      &m<\sb<f><P>> と &m<\sb<g><\complement; P>> も一般再帰的なので、&m<h> も一般再帰的である。
+    >
+  >
+  \p<
+    以上により、\a|href="101.html"|<第 4 回>の最後に挙げた操作は全て一般再帰性も保つことが分かった。
+    これに加えて有界とは限らない最小化も一般再帰的な範囲で可能で、その分だけ一般再帰関数の方が表現力が高くなっている。
+  >
+  \p<
+    次回は、\a|href="103.html"|<第 6 回>で紹介した Ackermann 関数が一般再帰関数にはなっていることを示す予定である。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>
