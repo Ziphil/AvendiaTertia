@@ -1,0 +1,313 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<Ackermann 関数の一般再帰性>
+  \use-math|prefix="8"|;
+
+  \h1<日記 (2025 年 12 月 31 日)>
+  \p<
+    \a|href="103.html"|<第 6 回>では、「計算できそう」だが原始再帰的ではない関数の例として Ackermann 関数を紹介した。
+    その後で、「計算できそう」な関数を含むクラスの候補として一般再帰関数を導入した。
+    そのため、Ackermann 関数が一般再帰的でなかったら意味がないが、幸いきちんと一般再帰的になっている。
+    今回は、その証明を行う。
+  >
+  \p<
+    一般再帰的な範囲では最小化演算子が使えるので、これをうまく使って Ackermann 関数を表現したい。
+    では、どのように最小化演算子を使えば良いだろうか?
+    そのために、まず Ackermann 関数の計算過程を観察してみよう。
+  >
+  \p<
+    例として &m<\op<ack> (2, 1)> を考えることにする。
+    \a|href="103.html"|<第 6 回>にも記載したが、これを計算する過程は次のようになる。
+    &mb<
+      \array|align="rcl"|<
+        \c<\op<ack> (2, 1)> \c<=> \c<\op<ack> (1, \op<ack> (2, 0))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (1, 1))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, \op<ack> (1, 0)))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, \op<ack> (0, 1)))> \br;
+        \c; \c<=> \c<\op<ack> (1, \op<ack> (0, 2))> \br;
+        \c; \c<=> \c<\op<ack> (1, 3)> \br;
+        \c; \c<=> \c<\op<ack> (0, \op<ack> (1, 2))> \br;
+        \c; \c<=> \c<\op<ack> (0, \op<ack> (0, \op<ack> (1, 1)))> \br;
+        \c; \c<=> \c<\op<ack> (0, \op<ack> (0, \op<ack> (0, \op<ack> (1, 0))))> \br;
+        \c; \c<=> \c<\op<ack> (0, \op<ack> (0, \op<ack> (0, \op<ack> (0, 1))))> \br;
+        \c; \c<=> \c<\op<ack> (0, \op<ack> (0, \op<ack> (0, 2)))> \br;
+        \c; \c<=> \c<\op<ack> (0, \op<ack> (0, 3))> \br;
+        \c; \c<=> \c<\op<ack> (0, 4)> \br;
+        \c; \c<=> \c<5> \br;
+      >
+    >
+    この途中には &m<\op<ack> (\hyphen;, \hyphen;)> の形が何重にもネストした形が現れるが、よく見ると、&m<\op<ack> (\hyphen;, \hyphen;)> のネストは常に右側でのみ起こることに気づくだろう。
+    すなわち、&m<\op<ack> (\op<ack> (\hyphen;, \hyphen;), \hyphen;)> のような形は決して表れない。
+    そのため、ネストを平坦化してしまっても情報は失われない。
+    したがって、出てくる数のみを並べて、
+    &mb<
+      \array|align="rcl"|<
+        \c<(2, 1)> \c<\rarr;> \c<(1, 2, 0)> \br;
+        \c; \c<\rarr;> \c<(1, 1, 1)> \br;
+        \c; \c<\rarr;> \c<(1, 0, 1, 0)> \br;
+        \c; \c<\rarr;> \c<(1, 0, 0, 1)> \br;
+        \c; \c<\rarr;> \c<(1, 0, 2)> \br;
+        \c; \c<\rarr;> \c<(1, 3)> \br;
+        \c; \c<\rarr;> \c<(0, 1, 2)> \br;
+        \c; \c<\rarr;> \c<(0, 0, 1, 1)> \br;
+        \c; \c<\rarr;> \c<(0, 0, 0, 1, 0)> \br;
+        \c; \c<\rarr;> \c<(0, 0, 0, 0, 1)> \br;
+        \c; \c<\rarr;> \c<(0, 0, 0, 2)> \br;
+        \c; \c<\rarr;> \c<(0, 0, 3)> \br;
+        \c; \c<\rarr;> \c<(0, 4)> \br;
+        \c; \c<\rarr;> \c<(5)> \br;
+      >
+    >
+    と書いても問題ない。
+    今後の便宜のため、ここに出てくる &m<(1, 2, 0)> や &m<(0, 0, 1, 1)> のような有限列に名前を付けておこう。
+  >
+  \thm|type="def",id="trans"|<
+    \p<
+      自然数の (長さ不定の) 有限数列を \def<Ackermann 列\fl<— sequence>> と呼ぶ。
+    >
+  >
+  \p<
+    さて、上記のように Ackermann 関数の計算を Ackermann 列の変形と見なすのであれば、この変形のルールは次のように書ける。
+  >
+  \thm|type="def",id="trans"|<
+    \p<
+      Ackermann 列の間の関係 &m<\rarr;> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<(\vec<s>, 0, y)> \c<\rarr;> \c<(\vec<s>, y + 1)> \br;
+          \c<(\vec<s>, x + 1, 0)> \c<\rarr;> \c<(\vec<s>, x, 1)> \br;
+          \c<(\vec<s>, x + 1, y + 1)> \c<\rarr;> \c<(\vec<s>, x, x + 1, y)>
+        >
+      >
+      として定める。
+      この右辺を左辺に変形することを \def<Ackermann 変形\fl<— transformation>> と呼ぶ。
+    >
+  >
+  \p<
+    すなわち Ackermann 変形とは、与えられた Ackermann 列の最後の 2 つの数を見て、それに応じてその 2 つの数を 1 つから 3 つの数に置き換える操作である。
+    ただし、長さ 1 の Ackermann 列は変形することができないため、そこまで来たら変形は終わりとする。
+    すると、ある列 &m<(x, y)> から始めて Ackermann 変形を終わるまで繰り返せば、最後に得られた Ackermann 列に属する唯一の数が &m<\op<ack> (x, y)> の値になる。
+  >
+  \thm|type="prp",id="val"|<
+    \p<
+      任意の数 &m<x, y, z \in; \bb<N>> に対し、&m<(x, y)> で始まり &m<(z)> で終わる Ackermann 変形の列
+      &mb<
+        (x, y) \rarr; \vec<s> \sb<><1> \rarr; \cdots; \rarr; \vec<s> \sb<><n - 1> \rarr; (z)
+      >
+      が存在したとする。
+      このとき、&m<\op<ack> (x, y) = z> が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      Ackermann 関数と Ackermann 変形の定義からすぐに分かる。
+    >
+  >
+  \p<
+    以上の観察をすると、Ackermann 関数の計算を最小化演算子で表現する方針が見えてくる。
+    まず、関数 &m<\op|ord|<next>> を、Ackermann 列を受け取ってそれを 1 段階変形した Ackermann 列を返す関数として作る。
+    なお、受け取った Ackermann 列の長さが 1 だったら、変形はすでに終了しているので、それをそのまま返すことにする。
+    例えば、
+    &mb<
+      \array|align="rcl"|<
+        \c<\op|ord|<next> ((2, 1))> \c<=> \c<(1, 2, 0)> \br;
+        \c<\op|ord|<next> ((0, 0, 1, 1))> \c<=> \c<(0, 0, 0, 1, 0)> \br;
+        \c<\op|ord|<next> ((5))> \c<=> \c<(5)> \br;
+      >
+    >
+    である。
+    ここで、ある列 &m<(x, y)> から &m<n> 回変形を繰り返して得られる Ackermann 列を &m<\op|ord|<seqat> (x, y, n)> と書くことにする。
+    この関数は、上の &m<\op|ord|<next>> を使うことで、
+    &mb<
+      \array|align="rcl"|<
+        \c<\op|ord|<seqat> (x, y, 0)> \c<=> \c<(x, y)> \br;
+        \c<\op|ord|<seqat> (x, y, n + 1)> \c<=> \c<\op|ord|<next> (\op|ord|<seqat> (x, y, n))>
+      >
+    >
+    という原始再帰の形で書ける。
+    これを用いると、Ackermann 列の変形が &m<n> 回目で終わっているとは、&m<\op<seqat> (x, y, n) = \op<seqat> (x, y, n + 1)> が成り立つことだと言い換えられる。
+    つまり、そのような &m<n> を最小化演算で取得すれば、Ackermann 列の変形が終わるタイミングを取得できる。
+    すなわち、
+    &mb<
+      \sb<n><\infty;> (x, y) \coloneqq; \rm<`m> n. \srel; \op<seqat> (x, y, n) = \op<seqat> (x, y, n + 1)
+    >
+    とおくわけである。
+    すると、変形が終わったタイミングでの Ackermann 列は &m<\op<seqat> (x, y, \sb<n><\infty;> (x, y))> であり、これは長さ 1 の列になっているはずなので、この列に属する唯一の数としてめでたく &m<\op<ack> (x, y)> が得られる。
+  >
+  \p<
+    ということで、後はこのアイデアを形式的に記述するだけである。
+    ただし、Ackermann 列の取り扱いだけが少し問題になる。
+    我々が一般再帰関数として議論できるのは、固定された個数の数を受け取って 1 つの数を返す関数のみである。
+    しかし、Ackermann 列は長さ不定の有限数列であるから、上で述べた &m<\op|ord|<next>> は長さ不定の有限数列を受け取って長さ不定の有限数列を返す関数になっている。
+    したがって、このままではこれを一般再帰関数の理論に載せられない。
+    ただ、我々は\a|href="102.html"|<第 5 回>で、有限数列のコーディングについてすでに議論している。
+    このコーディングを用いれば、有限数列を 1 つの数で表すことができるし、そのように表された数からもとの有限数列を復元することも可能である。
+    そこで、Ackermann 列をそのまま扱う代わりにそのコーディングを扱うことにして、&m<\op|ord|<next>> 等を自然数上の関数として定義することを考える。
+  >
+  \p<
+    ただ、有限列のコーディングを扱う上での準備が少し足りないので、まずはその準備をしよう。
+    まず、\a|href="102.html#at"|<命題 5.5> で有限列 (のコーディング) から特定のインデックスの要素を抜き出す関数を用意したが、このインデックスを右から数えるものを用意する。
+  >
+  \thm|type="prp",id="invat"|<
+    \p<
+      全域関数 &m<\hat<\atsym|ord|;>: \sp<\bb<N>><2> \to; \bb<N>> であって、任意の数 &m<\sb<x><0>, \cdots;, \sb<x><k - 1>, y \in; \bb<N>> に対し、&m<y `< k> ならば、
+      &mb<
+        \langle; \sb<x><k - 1>, \cdots;, \sb<x><0> \rangle; \hat<\atsym|bin|;> y = \sb<x><y>
+      >
+      を満たし、さらに原始再帰的なものが存在する。
+    >
+  >
+  \prf<
+    \p<
+      &m<\hat<\atsym|ord|;>> を、
+      &mb<
+        `s \hat<\atsym|bin|;> y \coloneqq; `s \atsym|bin|; (\op<len> (`s) \dotminus; y \dotminus; 1)
+      >
+      と定めれば良い。
+    >
+  >
+  \p<
+    すなわち、列のコーディング &m<`s> に対して、&m<`s \hat<\atsym|bin|;> 0> とはその列の最後の要素であり、&m<`s \hat<\atsym|bin|;> 1> とはその列の最後から 2 番目の要素である。
+  >
+  \p<
+    続いて、列の最後の要素をいくつか取り除く関数も用意する。
+  >
+  \thm|type="prp",id="slice"|<
+    \p<
+      全域関数 &m<\hat<\brharpuarr|ord|;>: \sp<\bb<N>><2> \to; \bb<N>> であって、任意の数 &m<\sb<x><0>, \cdots;, \sb<x><k - 1>, y \in; \bb<N>> に対し、&m<y `< k> ならば、
+      &mb<
+        \langle; \sb<x><k - 1>, \cdots;, \sb<x><0> \rangle; \hat<\brharpuarr;> y = \langle; \sb<x><k - 1>, \cdots;, \sb<x><y> \rangle; 
+      >
+      を満たし、さらに原始再帰的なものが存在する。
+    >
+  >
+  \prf<
+    \p<
+      &m<\hat<\brharpuarr|ord|;>> を、
+      &mb<
+        `s \hat<\brharpuarr;> y \coloneqq; \prod<t `< \op<len> (`s) \dotminus; y> \op<pr> (t) \sp<><(`s \atsym; t) + 1>
+      >
+      と定めれば良い。
+    >
+  >
+  \p<
+    最後に、2 つの列を結合する関数を用意する。
+  >
+  \thm|type="prp",id="push"|<
+    \p<
+      全域関数 &m<\ast|ord|;: \sp<\bb<N>><2> \to; \bb<N>> であって、任意の数 &m<\sb<x><0>, \cdots;, \sb<x><k - 1>, \sb<y><0>, \cdots;, \sb<y><l - 1> \in; \bb<N>> に対し、
+      &mb<
+        \langle; \sb<x><0>, \cdots;, \sb<x><k - 1> \rangle; * \langle; \sb<y><0>, \cdots;, \sb<y><l - 1> \rangle; = \langle; \sb<x><0>, \cdots;, \sb<x><k - 1>, \sb<y><0>, \cdots;, \sb<y><l - 1> \rangle; 
+      >
+      を満たし、さらに原始再帰的なものが存在する。
+    >
+  >
+  \prf<
+    \p<
+      &m<\ast;> を、
+      &mb<
+        `s * `t \coloneqq; `s \cdot; \prod<t `< \op<len> (`t)> \op<pr> (\op<len> (`s) + t) \sp<><(`s \atsym; t) + 1>
+      >
+      と定めれば良い。
+    >
+  >
+  \p<
+    では、本題に戻ろう。
+    まずは &m<\op|ord|<next>> を定義する。
+    これは、Ackermann 列 (のコーディング) を受け取ってそれを 1 段階変形した Ackermann 列 (のコーディング) を返す関数である。
+    変形の規則は\mref|type="thm",ref="trans"|; の通りなので、これを列のコーディングに基づいて書き直せば良い。
+  >
+  \thm|type="prp",id="next"|<
+    \p<
+      全域関数 &m<\op|ord|<next>: \bb<N> \to; \bb<N>> であって、次を満たすものが存在する。
+    >
+    \ul<
+      \li<
+        任意の Ackermann 列 &m<\vec<s>> に対して、それが Ackermann 変形できるのならば、変形後の列を &m<\vec<s>'> とすると &m<\op<next> (\langle; \vec<s> \rangle;) = \langle; \vec<s>' \rangle;> が成り立つ。
+      >
+      \li<
+        任意の Ackermann 列 &m<\vec<s>> に対して、それが Ackermann 変形できない (すなわち長さ 1) ならば、&m<\op<next> (\langle; \vec<s> \rangle;) = \langle; \vec<s> \rangle;> が成り立つ。
+      >
+      \li<
+        &m<\op|ord|<next>> は原始再帰的である。
+      >
+    >
+  >
+  \prf<
+    \p<
+      &m<\op|ord|<next>> を、
+      &mb<
+        \op<next> (`s) \coloneqq; \case<
+          \c<`s> \c<(\op<len> (`s) \leq; 1)> \br;
+          \c<(`s \hat<\brharpuarr;> 2) * \langle; (`s \hat<\atsym|bin|;> 0) + 1 \rangle;> \c<(\op<len> (`s) `> 1, `s \hat<\atsym|bin|;> 1 = 0)> \br;
+          \c<(`s \hat<\brharpuarr;> 2) * \langle; (`s \hat<\atsym|bin|;> 1) \dotminus; 1, 1 \rangle;> \c<(\op<len> (`s) `> 1, `s \hat<\atsym|bin|;> 1 `> 0, `s \hat<\atsym|bin|;> 0 = 0)> \br;
+          \c<(`s \hat<\brharpuarr;> 2) * \langle; (`s \hat<\atsym|bin|;> 1) \dotminus; 1, `s \hat<\atsym|bin|;> 1, (`s \hat<\atsym|bin|;> 0) \dotminus; 1 \rangle;> \c<(\op<len> (`s) `> 1, `s \hat<\atsym|bin|;> 1 `> 0, `s \hat<\atsym|bin|;> 0 `> 0)> \br;
+        >
+      >
+      と定めれば良い。
+      ここには原始再帰的な関数や操作しか使われていないので、これは原始再帰的である。
+    >
+  >
+  \p<
+    すると、すでに述べたアイデアにより、Ackermann 関数が一般再帰的に表現できることが分かる。
+  >
+  \thm|type="thm",id="genrec"|<
+    \p<
+      Ackermann 関数は一般再帰的である。
+    >
+  >
+  \prf<
+    \p<
+      まず、関数 &m<\op|ord|<seqat>: \sp<\bb<N>><3> \to; \bb<N>> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op|ord|<seqat> (x, y, 0)> \c<=> \c<\langle; x, y \rangle;> \br;
+          \c<\op|ord|<seqat> (x, y, n + 1)> \c<=> \c<\op<next> (\op|ord|<seqat> (x, y, n))>
+        >
+      >
+      により定める。
+      \mref|type="thm",ref="next"|; により &m<\op|ord|<next>> は原始再帰的だから、この &m<\op|ord|<seqat>> も原始再帰的である。
+      これを用いて、関数 &m<\sb<n><\infty;>: \sp<\bb<N>><2> \to; \bb<N>> を、
+      &mb<
+        \sb<n><\infty;> (x, y) \coloneqq; \rm<`m> n. \srel; \op<seqat> (x, y, n) = \op<seqat> (x, y, n + 1)
+      >
+      により定めると、これは一般再帰的である。
+    >
+    \p<
+      ここで、任意の数 &m<x, y> に対して、
+      &mb<
+        \op<seqat> (x, y, \sb<n><\infty;> (x, y)) = \op<next> (\op<seqat> (x, y, \sb<n><\infty;> (x, y)))
+      >
+      が成り立つから、\mref|type="thm",ref="next"|; の &m<\op|ord|<next>> の性質により、&m<\op<seqat> (x, y, \sb<n><\infty;> (x, y))> は、これ以上 Ackermann 変形できない長さ 1 の列のコーディングになっているはずである。
+      この列の唯一の要素を &m<z \coloneqq; \op<seqat> (x, y, \sb<n><\infty;> (x, y)) \atsym; 0> とおく。
+      すると、各 &m<i `< \sb<n><\infty;> (x, y)> について &m<\op<seqat> (x, y, i)> が表す数列を &m<\vec<s> \sb<><i>> と書けば、
+      &mb<
+        (x, y) \rarr; \vec<s> \sb<><1> \rarr; \cdots; \rarr; \vec<s> \sb<><\sb<n><\infty;> (x, y) - 1> \rarr; (z)
+      >
+      という Ackermann 変形の列が得られているので、\mref|type="thm",ref="val"|; により &m<\op<ack> (x, y) = z> が成り立つ。
+      すなわち、
+      &mb<
+        \op<ack> (x, y) = \op<seqat> (x, y, \sb<n><\infty;> (x, y)) \atsym; 0
+      >
+      と書けるということである。
+      ここには一般再帰的な関数しか表れていないので、これで &m<\op|ord|<ack>> が一般再帰的であることが示された。
+    >
+  >
+  \p<
+    このように、式変形という操作を &m<\op|ord|<next>> という関数に落とし込むことで、計算の終了タイミングを最小化により取得することができるので、その最終結果も一般再帰的に取得できるというわけである。
+    この手法は、Ackermann 関数に限らず、式変形によって最終的に値を得られるように定義された関数であれば適用できる。
+    そのため、直感的に「計算できそう」な関数は一般再帰的に書けると言えるだろう。
+  >
+  \p<
+    次回からは、関数の理論から一旦離れて、形式的な「機械」を扱っていくことにする。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<CWoo (2013)「Ackermann function is total recursive」『PlanetMath』\url<\ae|href="https://planetmath.org/AckermannFunctionIsTotalRecursive"|<https:`/`/planetmath.org`/AckermannFunctionIsTotalRecursive>>>
+    \li|id="ectx"|<CWoo (2013)「Computing the Ackermann function」『PlanetMath』\url<\ae|href="https://planetmath.org/ComputingTheAckermannFunction"|<https:`/`/planetmath.org`/ComputingTheAckermannFunction>>>
+  >
+
+>
