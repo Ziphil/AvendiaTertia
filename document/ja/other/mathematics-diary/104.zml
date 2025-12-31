@@ -23,7 +23,8 @@
   >
   \thm|type="def"|<
     \p<
-      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、定義されないかもしれない数 &m<\rm<`m> t. \sfun; P (\vec<x>, t)> を
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> をとる。
+      数 &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、定義されないかもしれない数 &m<\rm<`m> t. \sfun; P (\vec<x>, t)> を
       &mb<
         \rm<`m> t. \sfun; P (\vec<x>, t) \coloneqq; \case<
           \c<\min; `{ t \mid; P (\vec<x>, t) `}> \c<(\sp<><\exists;> t \ssbin; P (\vec<x>, t))> \br;

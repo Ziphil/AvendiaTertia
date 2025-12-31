@@ -102,7 +102,7 @@
       &mb<
         \op<len> (\langle; \sb<x><0>, \cdots;, \sb<x><k - 1> \rangle;) = k
       >
-      を満たすものが、原始再帰的な関数として存在する。
+      を満たし、さらに原始再帰的なものが存在する。
     >
   >
   \prf<
@@ -110,7 +110,7 @@
       列のコーディングの定義から、コーディングを素因数分解したときに、指数が 0 になる最小の素数の番号がもともとの列の長さである。
       ある素数の指数が 0 であるとはその素数でわり切れないということなので、&m<\op|ord|<len>> は、
       &mb<
-        \op<len> (s) \coloneqq; \bar<\rm<`m>> t `< s. \srel; \op<pr> (t) \nmid; s
+        \op<len> (`s) \coloneqq; \bar<\rm<`m>> t `< `s. \srel; \op<pr> (t) \nmid; `s
       >
       と定義すれば良い。
       \mref|type="thm",ref="pr"|; によって &m<\op|ord|<pr>> は原始再帰的だから、この関数も原始再帰的である。
@@ -131,16 +131,16 @@
       &mb<
         \langle; \sb<x><0>, \cdots;, \sb<x><k - 1> \rangle; \atsym|bin|; y = \sb<x><y>
       >
-      を満たすものが、原始再帰的な関数として存在する。
+      を満たし、さらに原始再帰的なものが存在する。
     >
   >
   \prf<
     \p<
-      コーディングの定義から、&m<s \atsym|bin|; y> とは &m<s> を素因数分解したときの &m<\op<pr> (y)> の指数から 1 をひいた数である。
-      &m<s> における &m<\op<pr> (y)> の指数を得るには、&m<\op<pr> (y) \sp<><1>>, &m<\op<pr> (y) \sp<><2>>, &m<\cdots;> が順に &m<s> をわり切るか調べていけば良い。
+      コーディングの定義から、&m<`s \atsym|bin|; y> とは &m<`s> を素因数分解したときの &m<\op<pr> (y)> の指数から 1 をひいた数である。
+      &m<`s> における &m<\op<pr> (y)> の指数を得るには、&m<\op<pr> (y) \sp<><1>>, &m<\op<pr> (y) \sp<><2>>, &m<\cdots;> が順に &m<`s> をわり切るか調べていけば良い。
       したがって、これを有界最小化として表現することを考えて、&m<@> を、
       &mb<
-        s \atsym|bin|; y \coloneqq; (\bar<\rm<`m>> t `< s. \srel; \op<pr> (y) \sp<><t + 1> \nmid; s) \dotminus; 1
+        `s \atsym|bin|; y \coloneqq; (\bar<\rm<`m>> t `< `s. \srel; \op<pr> (y) \sp<><t + 1> \nmid; `s) \dotminus; 1
       >
       と定義すれば良い。
       \mref|type="thm",ref="pr"|; によって &m<\op|ord|<pr>> は原始再帰的だから、この関数も原始再帰的である。
@@ -155,7 +155,7 @@
     \p<
       部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> に対して、部分関数 &m<\tilde<f>: \bb<N> \dot<\to;> \bb<N>> を
       &mb<
-        \tilde<f> (s) \coloneqq; f (s \atsym|bin|; 0, \cdots;, s \atsym|bin|; (k - 1))
+        \tilde<f> (`s) \coloneqq; f (`s \atsym|bin|; 0, \cdots;, `s \atsym|bin|; (k - 1))
       >
       で定める。
       すると、&m<f> が原始再帰的であることと &m<\tilde<f>> が原始再帰的であることは同値である。

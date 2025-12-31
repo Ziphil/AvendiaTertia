@@ -57,7 +57,8 @@
   >
   \thm|type="def"|<
     \p<
-      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> に対し、数 &m<\bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t)> を
+      関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> をとる。
+      数 &m<\vec<x> \in; \sp<\bb<N>><k>> および &m<y \in; \bb<N>> に対して、数 &m<\bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t)> を
       &mb<
         \bar<\rm<`m>> t `< y. \sfun; P (\vec<x>, t) \coloneqq; \case<
           \c<\min; `{ t \mid; P (\vec<x>, t) `}> \c<(\sp<><\exists;> t `< y \ssbin; P (\vec<x>, t))> \br;
