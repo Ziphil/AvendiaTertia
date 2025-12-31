@@ -256,11 +256,17 @@ body {
 .information-right-item {
   padding-block: 8rpx;
   padding-inline-start: 12rpx;
-  border-inline-start: solid 4rpx oklch(0.43 0.17 26);
-  background-color: oklch(0.43 0.17 26 / 0.2);
+  border-inline-start: solid 4rpx var(--item-color);
+  background-color: oklch(from var(--item-color) l c h / 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  &[data-level="5"] {
+    --item-color: oklch(0.4 0.3 26);
+  }
+  &[data-level="3"] {
+    --item-color: oklch(0.7 0.3 110);
+  }
 }
 
 .information-right-label {
