@@ -55,6 +55,14 @@ math-o[data-cont=":"] {
   font-family: "Zotica Math Web" !important;
 }
 
+math-over >math-o.acc {
+  margin-bottom: -0.1em;
+}
+
+math-under >math-o.acc {
+  margin-top: -0.1em;
+}
+
 .ref[data-type="bibliography"] {
   font-size: 80%;
   vertical-align: 0.3906em;
