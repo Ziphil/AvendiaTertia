@@ -33,9 +33,6 @@
       この &m<\rm<`m>> は \def<最小化演算子\fl<minimization operator>> と呼ばれる。
     >
   >
-  \p<
-
-  >
   \thm|type="def"|<
     \p<
       関係 &m<P \subseteq; \sp<\bb<N>><k + 1>> をとる。
