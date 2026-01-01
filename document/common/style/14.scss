@@ -325,6 +325,15 @@ body {
   }
 }
 
-.nowrap {
-  white-space: nowrap;
+.superbreviation {
+  &::after {
+    opacity: 0.3;
+    vertical-align: 0em;
+    display: inline-flex;
+    content: "";
+  }
+}
+
+.superbreviation-main {
+  margin-block-end: -1.25em;
 }
