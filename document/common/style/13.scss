@@ -578,7 +578,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     display: none;
   }
   &:not(:nth-child(2))::before {
-    @include icon("solid", "\F101");
+    @include icon("regular", "\F101");
     margin-inline: $blank-margin;
     color: var(--blue-color);
     opacity: 0.5;

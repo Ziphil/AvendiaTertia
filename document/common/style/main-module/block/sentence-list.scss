@@ -42,7 +42,7 @@
 .sentence-list[data-type="unordered"] >.sentence-nested-item {
   margin-inline-start: $bullet-width + $blank-margin + $arrow-width + $blank-margin;
   &::before {
-    @include icon("solid", "\F061");
+    @include icon("regular", "\F061");
     width: $bullet-width + $blank-margin + $arrow-width + $blank-margin;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - ($bullet-width + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
@@ -65,7 +65,7 @@
 .sentence-list[data-type="ordered"] >.sentence-nested-item {
   margin-inline-start: 1em + $blank-margin + $arrow-width + $blank-margin;
   &::before {
-    @include icon("solid", "\F061");
+    @include icon("regular", "\F061");
     width: 1em + $blank-margin + $arrow-width + $blank-margin;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - (1em + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;

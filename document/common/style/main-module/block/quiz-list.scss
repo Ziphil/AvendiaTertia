@@ -44,7 +44,7 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
 .quiz-nested-item:not([data-unmarked]) {
   margin-inline-start: $quiz-nested-list-marker-width + $blank-margin;
   &::before {
-    @include icon("solid", "\F061");
+    @include icon("regular", "\F061");
     width: $quiz-nested-list-marker-width;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - $quiz-nested-list-marker-width - $blank-margin;

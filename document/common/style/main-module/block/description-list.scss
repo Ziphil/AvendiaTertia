@@ -42,7 +42,7 @@ $description-dash-width: 1em;
     color: var(--blue-color);
     opacity: 0.5;
     .description-list[data-type="desc"] & {
-      @include icon("solid", "\F105");
+      @include icon("regular", "\F105");
       width: $description-arrow-width;
       margin-inline-end: $blank-margin;
       margin-inline-start: 0em - ($description-arrow-width + $blank-margin);

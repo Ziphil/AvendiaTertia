@@ -12,8 +12,8 @@
     \meta|property="og:title",content="音楽室"|;
     \meta|property="og:description",content="音楽室"|;
     \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
+    \link|rel="stylesheet",href="https://kit.fontawesome.com/5081c7f16b.css",crossorigin="anonymous"|;
     \link|rel="stylesheet",type="text/css",href="/style/10.css"|;
-    \link|rel="stylesheet",media="all",href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"|;
     \script|src="/program/script/19.js"|;
     \title<音楽室 — Avendia>
   >

@@ -37,7 +37,7 @@
 .navigation-item {
   display: inline;
   &:not(:nth-child(1))::before {
-    @include icon("solid", "\F101");
+    @include icon("regular", "\F101");
     margin-inline: $blank-margin;
     color: var(--blue-color);
     line-height: 0;

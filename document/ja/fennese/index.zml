@@ -13,7 +13,7 @@
     \meta|property="og:description",content="人工言語「フェンナ語」の公式サイトです。"|;
     \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
     \script|src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508",crossorigin="anonymous",async|;
-    \script|src="https://kit.fontawesome.com/5081c7f16b.js",crossorigin="anonymous"|;
+    \link|rel="stylesheet",href="https://kit.fontawesome.com/5081c7f16b.css",crossorigin="anonymous"|;
     \link|rel="stylesheet",type="text/css",href="/style/13.css"|;
     \title<Лофжочло>
   >

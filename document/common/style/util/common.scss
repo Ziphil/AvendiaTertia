@@ -98,6 +98,9 @@ $monospace-letter-spacing: -0.08em;
   @if $type == "solid" {
     font-family: "Font Awesome 7 Sharp";
     font-weight: 900;
+  } @else if $type == "regular" {
+    font-family: "Font Awesome 7 Sharp";
+    font-weight: 400;
   } @else if $type == "brand" {
     font-family: "Font Awesome 7 Brands";
     font-weight: 400;

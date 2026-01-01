@@ -155,7 +155,7 @@ zp-description {
 
 .player-title {
   min-width: 0rpx;
-  row-gap: 3rpx;
+  row-gap: 0rpx;
   line-height: 1.2;
   display: flex;
   flex-direction: column;
@@ -163,16 +163,16 @@ zp-description {
 }
 
 .player-title-shaleian {
-  font-size: 140%;
+  font-size: 175%;
   font-family: "Kaleg Round Expanded Web";
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 0.05em;
   word-spacing: -0.2rem;
   transform: skew(-3deg, 0deg);
   white-space: nowrap;
   overflow: hidden;
   @include mobile {
-    font-size: 180% * 0.9;
+    font-size: 175% * 0.9;
   }
 }
 
@@ -211,10 +211,10 @@ zp-description {
     text-align: center;
   }
   &[data-type="date"]::after {
-    @include icon("solid", "\F073");
+    @include icon("regular", "\F073");
   }
   &[data-type="length"]::after {
-    @include icon("solid", "\E4BA");
+    @include icon("regular", "\E4BA");
   }
 }
 
@@ -295,13 +295,13 @@ zp-description {
     @include icon("solid", "\F04D");
   }
   &[data-type="download"]::before {
-    @include icon("solid", "\F019");
+    @include icon("regular", "\F019");
   }
   &[data-type="external"]::before {
-    @include icon("solid", "\F08E");
+    @include icon("regular", "\F08E");
   }
   &[data-type="score"]::before {
-    @include icon("solid", "\F001");
+    @include icon("regular", "\F001");
   }
 }
 

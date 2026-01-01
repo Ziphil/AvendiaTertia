@@ -16,7 +16,7 @@ $todo-horizontal-padding: 12rpx;
   display: flex;
   align-items: center;
   &::before {
-    @include icon("solid", "\F06A");
+    @include icon("regular", "\F06A");
     width: $bullet-width;
     margin-inline-end: $blank-margin;
     color: var(--blue-color);
