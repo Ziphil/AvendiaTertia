@@ -52,29 +52,6 @@ $section-skew-angle: -9deg;
   position: relative;
   box-sizing: border-box;
   z-index: 0;
-  &::before {
-    width: $subsection-height * tan(-$section-skew-angle);
-    inset-block: 0rpx;
-    inset-inline-end: div($subsection-height * tan($section-skew-angle), 2);
-    background-color: var(--main-background-color);
-    transform: skew($section-skew-angle);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
-    backdrop-filter: blur(5rpx);
-    position: absolute;
-    z-index: -2;
-    content: "";
-  }
-  &::after {
-    width: $subsection-height * tan(-$section-skew-angle);
-    inset-block: -1rpx;
-    inset-inline-end: div($subsection-height * tan($section-skew-angle), 2);
-    border-block-start: solid 1rpx var(--blue-color);
-    border-inline-end: solid 1rpx var(--blue-color);
-    transform: skew($section-skew-angle);
-    position: absolute;
-    z-index: -1;
-    content: "";
-  }
   @include desktop {
     --horizontal-padding: #{$main-horizontal-padding};
   }

@@ -58,7 +58,7 @@ $content-item-skew-angle: -9deg;
     inset-inline-end: 0rpx;
     border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
     background-color: var(--main-background-color);
-    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--blue-color) l c h / 0.1) 50%);
+    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--orange-color) l c h / 0.05) 50%);
     background-position: var(--background-position) 0%;
     background-size: 200% 100%;
     background-repeat: no-repeat;

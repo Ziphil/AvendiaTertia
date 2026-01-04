@@ -115,7 +115,7 @@ body {
 
 .visual-logo {
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .visual-content {
@@ -133,7 +133,7 @@ body {
   font-weight: 400;
   color: var(--orange-color);
   -webkit-text-stroke: 4rpx oklch(from black l c h / 0.5);
-  filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
+  filter:  drop-shadow(0rpx 2rpx 10rpx oklch(from white l c h / 0.2)) drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
   paint-order: stroke;
   text-transform: uppercase;
   @include desktop {
@@ -157,6 +157,7 @@ body {
   text-indent: 0.1em;
   color: var(--orange-color);
   -webkit-text-stroke: 3rpx oklch(from black l c h / 0.5);
+  filter: drop-shadow(0rpx 0rpx 2rpx oklch(from black l c h / 0.3));
   line-height: $small-line-height;
   text-align: center;
   white-space: nowrap;
@@ -263,7 +264,7 @@ $card-item-gap: 30rpx;
   inset: 0rpx;
   border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
   background-color: var(--main-background-color);
-  background-image: linear-gradient(to right, transparent 50%, oklch(from var(--blue-color) l c h / 0.1) 50%);
+  background-image: linear-gradient(to right, transparent 50%, oklch(from var(--orange-color) l c h / 0.05) 50%);
   background-position: var(--background-position) 0%;
   background-size: 200% 100%;
   background-repeat: no-repeat;
@@ -475,7 +476,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     inset-inline-end: 0rpx;
     border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
     background-color: var(--main-background-color);
-    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--blue-color) l c h / 0.1) 50%);
+    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--orange-color) l c h / 0.05) 50%);
     background-position: var(--background-position) 0%;
     background-size: 200% 100%;
     background-repeat: no-repeat;
