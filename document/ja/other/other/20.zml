@@ -114,10 +114,10 @@
     \tr<\th<量>\th<単位>\th<記号>\th<定義>\th<値>>
     \tr<\td<時間>\td<tim>\td<Tm>\td<上記>\td<0.17361 s>>
     \tr<\td<長さ>\td<grafut>\td<Gf>\td<上記>\td<0.29568 m>>
-    \tr<\td<速度>\td<vlos>\td<Vl>\td<&m<\rm<Gf> \cdot; \sp<\rm<Tm>><-1>>>\td<1.7031 m`/s>>
-    \tr<\td<加速度>\td<gee>\td<G>\td<&m<\rm<Gf> \cdot; \sp<\rm<Tm>><-2>>>\td<&m<9.8100 \sfun; \rm<m> `/ \sp<\rm<s>><2>>>>
     \tr<\td<面積>\td<surf>\td<Sf>\td<&m<\sp<\rm<Gf>><2>>>\td<&m<8.7428 \cdot; \sp<10><-2> \sfun; \sp<\rm<m>><2>>>>
     \tr<\td<体積>\td<volm>\td<Vm>\td<&m<\sp<\rm<Gf>><3>>>\td<&m<2.5851 \cdot; \sp<10><-2> \sfun; \sp<\rm<m>><3>>>>
+    \tr<\td<速度>\td<vlos>\td<Vl>\td<&m<\rm<Gf> \cdot; \sp<\rm<Tm>><-1>>>\td<1.7031 m`/s>>
+    \tr<\td<加速度>\td<gee>\td<G>\td<&m<\rm<Gf> \cdot; \sp<\rm<Tm>><-2>>>\td<&m<9.8100 \sfun; \rm<m> `/ \sp<\rm<s>><2>>>>
     \tr<\td<質量>\td<maz>\td<Mz>\td<上記>\td<25.850 kg>>
     \tr<\td<密度>\td<denz>\td<Dz>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><-3>>>\td<&m<999.97 \sfun; \rm<kg> `/ \sp<\rm<m>><3>>>>
     \tr<\td<力>\td<mag>\td<Mg>\td<&m<\rm<Mz> \cdot; \rm<Gf> \cdot; \sp<\rm<Tm>><-2>>>\td<&m<253.59 \sfun; \rm<N>>>>
@@ -125,6 +125,14 @@
     \tr<\td<圧力>\td<prem>\td<Pm>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><-1> \cdot; \sp<\rm<Tm>><-2>> (&m<= \srel; \rm<Mg> `/ \rm<Sf>>)>\td<&m<2900.6 \sfun; \rm<Pa>>>>
     \tr<\td<仕事>\td<werg>\td<Wg>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-2>> (&m<= \srel; \rm<Mg> \cdot|ord|; \rm<Gf>>)>\td<&m<74.983 \sfun; \rm<J>>>>
     \tr<\td<熱量>\td<pov>\td<Pv>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-3>> (&m<= \srel; \rm<Wg> `/ \rm<Tm>>)>\td<&m<431.90 \sfun; \rm<W>>>>
+    \tr<\td<電流>\td<kur>\td<Kr>\td<上記>\td<&m<0.49572 \sfun; \rm<A>>>>
+    \tr<\td<電圧>\td<pel>\td<Pl>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-3> \cdot; \sp<\rm<Kr>><-1>> (&m<= \srel; \rm<Pv> `/ \rm<Kr>>)>\td<&m<871.26 \sfun; \rm<V>>>>
+    \tr<\td<電気抵抗>\td<og>\td<Og>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-3> \cdot; \sp<\rm<Kr>><-2>> (&m<= \srel; \rm<Pl> `/ \rm<Kr>>)>\td<&m<1757.6 \sfun; \rm<Ω>>>>
+    \tr<\td<電荷>\td<quel>\td<Ql>\td<&m<\rm<Tm> \cdot; \rm<Kr>>>\td<&m<8.6063 \cdot; \sp<10><-2> \sfun; \rm<C>>>>
+    \tr<\td<静電容量>\td<pel>\td<Pl>\td<&m<\sp<\rm<Mz>><-1> \cdot; \sp<\rm<Gf>><-2> \cdot; \sp<\rm<Tm>><4> \cdot; \sp<\rm<Kr>><4>> (&m<= \srel; \rm<Ql> `/ \rm<Pl>>)>\td<&m<9.8780 \cdot; \sp<10><-5> \sfun; \rm<F>>>>
+    \tr<\td<磁束>\td<flum>\td<Fm>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-2> \cdot; \sp<\rm<Kr>><-1>> (&m<= \srel; \rm<Pl> \cdot|ord|; \rm<Tm>>)>\td<&m<151.26 \sfun; \rm<Wb>>>>
+    \tr<\td<磁束密度>\td<flenz>\td<Fz>\td<&m<\rm<Mz> \cdot; \sp<\rm<Tm>><-2> \cdot; \sp<\rm<Kr>><-1>> (&m<= \srel; \rm<Fm> `/ \rm<Sf>>)>\td<&m<1730.1 \sfun; \rm<T>>>>
+    \tr<\td<温度>\td<calg>\td<Cg>\td<上記>\td<&m<6.9444 \cdot; \sp<10><-4> \sfun; \rm<K>>>>
   >
 
 >
