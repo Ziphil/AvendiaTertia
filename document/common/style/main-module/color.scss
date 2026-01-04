@@ -3,11 +3,11 @@
 
 @mixin shaleian-scheme {
   --text-color: hsl(0, 0%, 20%);
-  --blue-color: hsl(198, 75%, 50%);
-  --dark-blue-color: hsl(205, 75%, 40%);
-  --orange-color: hsl(35, 75%, 50%);
-  --dark-orange-color: hsl(28, 75%, 40%);
-  --red-color: hsl(307, 100%, 60%);
+  --primary-color: hsl(198, 75%, 50%);
+  --primary-active-color: hsl(205, 75%, 40%);
+  --secondary-color: hsl(35, 75%, 50%);
+  --secondary-active-color: hsl(28, 75%, 40%);
+  --caution-cikir: hsl(307, 100%, 60%);
   --gray-color: hsl(0, 0%, 50%);
   --shadow-color: hsla(0, 0%, 0%, 0.1);
   --page-background-color: hsl(198, 60%, 94%);
@@ -22,13 +22,14 @@
 }
 
 @mixin fennese-scheme {
-  --text-color: hsl(25, 3%, 75%);
-  --blue-color: hsl(25, 35%, 60%);
-  --dark-blue-color: hsl(25, 30%, 70%);
-  --orange-color: hsl(70, 0%, 85%);
-  --dark-orange-color: hsl(70, 40%, 85%);
-  --red-color: hsl(307, 100%, 60%);
-  --gray-color: hsl(20, 3%, 60%);
+  --text-color: hsl(25, 3%, 80%);
+  --primary-color: hsl(25, 35%, 65%);
+  --primary-active-color: hsl(25, 35%, 75%);
+  --secondary-color: hsl(70, 50%, 80%);
+  --secondary-active-color: hsl(70, 60%, 70%);
+  --logo-color: hsl(70, 0%, 90%);
+  --caution-cikir: hsl(307, 100%, 60%);
+  --gray-color: hsl(25, 2%, 55%);
   --shadow-color: hsla(0, 0%, 0%, 0.1);
   --page-background-color: hsl(240, 6%, 25%);
   --page-dark-background-color: hsl(240, 6%, 17%);
@@ -43,11 +44,11 @@
 
 @mixin other-scheme {
   --text-color: hsl(0, 0%, 20%);
-  --blue-color: hsl(230, 60%, 60%);
-  --dark-blue-color: hsl(230, 55%, 50%);
-  --orange-color: hsl(240, 50%, 50%);
-  --dark-orange-color: hsl(240, 45%, 40%);
-  --red-color: hsl(307, 100%, 60%);
+  --primary-color: hsl(230, 60%, 60%);
+  --primary-active-color: hsl(230, 55%, 50%);
+  --secondary-color: hsl(240, 50%, 50%);
+  --secondary-active-color: hsl(240, 45%, 40%);
+  --caution-cikir: hsl(307, 100%, 60%);
   --gray-color: hsl(0, 0%, 50%);
   --shadow-color: hsla(0, 0%, 0%, 0.1);
   --page-background-color: hsl(215, 20%, 96%);

@@ -33,7 +33,7 @@ $normal-list-column-gap: 30px;
     width: $bullet-width;
     margin-inline-end: $bordered-blank-margin;
     margin-inline-start: 0em - ($bullet-width + $bordered-blank-margin);
-    color: var(--blue-color);
+    color: var(--primary-color);
     text-align: end;
     display: inline-block;
   }
@@ -47,7 +47,7 @@ $normal-list-column-gap: 30px;
   margin-inline-start: 1em + $bordered-blank-margin;
   counter-increment: normal-list;
   &::before {
-    @include box(var(--blue-color), false);
+    @include box(var(--primary-color), false);
     margin-inline-end: fix-em($bordered-blank-margin, 80%);
     margin-inline-start: fix-em(0em - (1em + $bordered-blank-margin), 80%);
     content: counter(normal-list);

@@ -15,7 +15,7 @@ $translation-list-column-gap: 15px;
   position: relative;
   &::before {
     inset-block: 0rpx;
-    border-inline-end: solid 1rpx var(--blue-color);
+    border-inline-end: solid 1rpx var(--primary-color);
     position: absolute;
     content: "";
   }

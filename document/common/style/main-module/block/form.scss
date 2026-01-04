@@ -38,9 +38,8 @@ $form-input-horizontal-padding: 10rpx;
   color: var(--current-background-color);
   line-height: $line-height;
   text-align: center;
-  box-shadow: 2rpx 2rpx 0rpx 0rpx var(--shadow-color);
   background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, var(--orange-color) 50%, var(--dark-orange-color) 50%);
+  background-image: linear-gradient(to bottom, var(--secondary-color) 50%, var(--secondary-active-color) 50%);
   transition: background-position 0.2s;
   display: inline-block;
   &:not(:hover) {

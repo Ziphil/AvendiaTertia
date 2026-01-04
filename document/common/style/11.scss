@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  @include scrollbar(5rpx, 0rpx, transparent, var(--orange-color));
+  @include scrollbar(5rpx, 0rpx, transparent, var(--secondary-color));
   @include text-size-adjust;
   @include fennese-scheme;
   margin: 0rpx;
@@ -66,11 +66,11 @@ body {
   height: 1.5em;
   font-size: 150%;
   color: var(--main-background-color);
-  background-color: var(--orange-color);
+  background-color: var(--secondary-color);
   box-shadow: 2rpx 2rpx 0rpx 0rpx var(--shadow-color);
   background-position: 0% 0%;
   background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, var(--orange-color) 50%, var(--dark-orange-color) 50%);
+  background-image: linear-gradient(to bottom, var(--secondary-color) 50%, var(--secondary-active-color) 50%);
   transition: background-position 0.2s;
   text-align: center;
   text-transform: uppercase;
@@ -126,11 +126,11 @@ body {
   padding-inline-end: 10rpx;
   padding-block-start: 3rpx;
   font-size: 150%;
-  color: var(--blue-color);
+  color: var(--primary-color);
   text-align: center;
   text-transform: uppercase;
   &[data-first] {
-    border-block-start: solid 1rpx var(--blue-color);
+    border-block-start: solid 1rpx var(--primary-color);
   }
 }
 
@@ -139,7 +139,7 @@ body {
   padding-block: 5rpx;
   padding-inline: 5rpx;
   color: var(--main-background-color);
-  background-color: var(--blue-color);
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,7 +174,7 @@ body {
   flex: 0 0 auto;
   .word-view[data-basic] & {
     text-decoration-line: underline;
-    text-decoration-color: var(--orange-color);
+    text-decoration-color: var(--secondary-color);
   }
 }
 
@@ -195,7 +195,7 @@ body {
 }
 
 .word-header-cell {
-  color: var(--blue-color);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,14 +209,14 @@ body {
 
 .root-count {
   padding-inline-end: 3rpx;
-  color: var(--blue-color);
+  color: var(--primary-color);
   text-align: end;
   grid-column: 2;
 }
 
 .word-count {
   padding-inline-end: 3rpx;
-  color: var(--blue-color);
+  color: var(--primary-color);
   text-align: end;
   grid-column: 10;
 }
@@ -269,7 +269,7 @@ body {
 }
 
 .affix-header-cell {
-  color: var(--blue-color);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;

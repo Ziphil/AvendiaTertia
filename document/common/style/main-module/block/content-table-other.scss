@@ -21,7 +21,7 @@ $content-item-height: 90rpx;
 .content-head {
   margin-block-end: 15rpx;
   font-size: 120%;
-  color: var(--blue-color);
+  color: var(--primary-color);
   &:not(:first-of-type) {
     margin-block-start: 20rpx;
   }
@@ -48,7 +48,7 @@ $content-item-height: 90rpx;
     box-shadow: none;
   }
   &:is([data-disabled], :not(:hover)) {
-    color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
+    color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
     --background-position: calc(100% + 5rpx);
   }
   &:not([data-disabled]):hover {
@@ -59,7 +59,7 @@ $content-item-height: 90rpx;
     inset-block: 0rpx;
     inset-inline-start: 0rpx;
     inset-inline-end: 0rpx;
-    background-image: linear-gradient(to right, var(--blue-color) 50%, transparent 50%);
+    background-image: linear-gradient(to right, var(--primary-color) 50%, transparent 50%);
     background-position: var(--background-position) 0%;
     background-size: 200% 100%;
     background-repeat: no-repeat;

@@ -6,7 +6,7 @@
 
 .error-code-container {
   column-gap: 30rpx;
-  color: var(--blue-color);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,7 @@
 
 .error-description {
   margin-block-start: 10rpx;
-  color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
+  color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
   display: flex;
   justify-content: center;
 }

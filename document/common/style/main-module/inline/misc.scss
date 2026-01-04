@@ -48,10 +48,10 @@
 
 .box {
   margin-inline: 0.15em;
-  @include box(var(--blue-color), false);
+  @include box(var(--primary-color), false);
 }
 
 .label {
   margin-inline-end: $blank-margin;
-  color: var(--blue-color);
+  color: var(--primary-color);
 }

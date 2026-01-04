@@ -22,7 +22,7 @@ $content-item-skew-angle: -9deg;
 .content-head {
   margin-block-end: 15rpx;
   font-size: 120%;
-  color: var(--blue-color);
+  color: var(--primary-color);
   &:not(:first-of-type) {
     margin-block-start: 20rpx;
   }
@@ -31,7 +31,7 @@ $content-item-skew-angle: -9deg;
 .content-item {
   height: $content-item-height;
   padding-inline: 25rpx;
-  color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
+  color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,9 +56,9 @@ $content-item-skew-angle: -9deg;
     inset-block: 0rpx;
     inset-inline-start: 0rpx;
     inset-inline-end: 0rpx;
-    border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
+    border: solid 1rpx oklch(from var(--primary-color) l c h / 0.8);
     background-color: var(--main-background-color);
-    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--orange-color) l c h / 0.05) 50%);
+    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--secondary-color) l c h / 0.05) 50%);
     background-position: var(--background-position) 0%;
     background-size: 200% 100%;
     background-repeat: no-repeat;

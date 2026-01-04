@@ -11,7 +11,7 @@ $subsection-height: 36rpx;
 .section {
   height: $section-height;
   margin-inline: calc(0rpx - var(--horizontal-padding));  
-  background-color: var(--blue-color);
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   position: relative;
@@ -35,7 +35,7 @@ $subsection-height: 36rpx;
 .subsection {
   height: $subsection-height;
   margin-inline: calc(0rpx - var(--horizontal-padding));  
-  border-block: solid 1rpx var(--blue-color);
+  border-block: solid 1rpx var(--primary-color);
   display: flex;
   align-items: center;
   position: relative;
@@ -53,7 +53,7 @@ $subsection-height: 36rpx;
   padding-inline: var(--horizontal-padding);
   font-size: 110%;
   font-weight: normal;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: $line-height;
 }
 
@@ -66,7 +66,7 @@ $subsection-height: 36rpx;
   &::before {
     width: calc(var(--horizontal-padding) - 0.5rem);
     margin-inline-end: 0.5rem;
-    border-block-start: solid 1rpx var(--blue-color);
+    border-block-start: solid 1rpx var(--primary-color);
     align-self: center;
     flex: 0 0 auto;
     z-index: -1;
@@ -83,7 +83,7 @@ $subsection-height: 36rpx;
 .subsubsection-inner {
   font-size: 105%;
   font-weight: normal;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: $line-height;
   display: flex;
   align-items: baseline;
@@ -91,7 +91,7 @@ $subsection-height: 36rpx;
   &::after {
     width: var(--horizontal-padding);
     margin-inline-start: 0.5rem;
-    border-block-start: solid 1rpx var(--blue-color);
+    border-block-start: solid 1rpx var(--primary-color);
     align-self: center;
     flex: 1 1 auto;
     z-index: -1;
@@ -117,6 +117,6 @@ $subsection-height: 36rpx;
 }
 
 .section-separator {
-  border-block-end: dashed 1rpx var(--blue-color);
+  border-block-end: dashed 1rpx var(--primary-color);
   opacity: 0.7;
 }

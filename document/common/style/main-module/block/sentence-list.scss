@@ -33,7 +33,7 @@
     width: $bullet-width;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - ($bullet-width + $blank-margin);
-    color: var(--blue-color);
+    color: var(--primary-color);
     text-align: end;
     display: inline-block;
   }
@@ -46,7 +46,7 @@
     width: $bullet-width + $blank-margin + $arrow-width + $blank-margin;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - ($bullet-width + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
-    color: var(--blue-color);
+    color: var(--primary-color);
     text-align: end;
     display: inline-block;
   }
@@ -55,7 +55,7 @@
 .sentence-list[data-type="ordered"] >.sentence-item {
   margin-inline-start: 1em + $blank-margin;
   &::before {
-    @include box(var(--blue-color), false);
+    @include box(var(--primary-color), false);
     margin-inline-start: fix-em(0em - (1em + $bordered-blank-margin), 80%);
     margin-inline-end: fix-em($bordered-blank-margin, 80%);
     content: attr(data-tag);
@@ -69,7 +69,7 @@
     width: 1em + $blank-margin + $arrow-width + $blank-margin;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - (1em + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
-    color: var(--blue-color);
+    color: var(--primary-color);
     text-align: end;
     display: inline-block;
   }
@@ -77,5 +77,5 @@
 
 .sentence-mark {
   margin-inline-end: 0.1em;
-  color: var(--blue-color);
+  color: var(--primary-color);
 }

@@ -12,12 +12,12 @@
   background-repeat: no-repeat;
   cursor: pointer;
   &:not(:hover) {
-    color: var(--orange-color);
-    background-image: single-color(var(--orange-color));
+    color: var(--secondary-color);
+    background-image: single-color(var(--secondary-color));
   }
   &:hover {
-    color: var(--dark-orange-color);
-    background-image: single-color(var(--dark-orange-color));
+    color: var(--secondary-active-color);
+    background-image: single-color(var(--secondary-active-color));
   }
 }
 

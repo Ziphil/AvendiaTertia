@@ -23,7 +23,7 @@ $proof-horizontal-padding: 12rpx;
 
 .theorem-number-wrapper {
   margin-inline-end: $blank-margin;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: $line-height;
   float: left;
 }
@@ -33,12 +33,12 @@ $proof-horizontal-padding: 12rpx;
 
 .proof {
   padding-inline-start: $proof-horizontal-padding;
-  border-inline-start: double 3rpx var(--blue-color);
+  border-inline-start: double 3rpx var(--primary-color);
 }
 
 .proof-label {
   margin-inline-end: $blank-margin;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: $line-height;
   float: left;
 }

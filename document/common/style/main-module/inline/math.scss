@@ -30,7 +30,7 @@
 }
 
 .math-mark {
-  @include box(var(--blue-color), true);
+  @include box(var(--primary-color), true);
   inset-inline-start: 0rpx;
   user-select: none;
   position: absolute;
@@ -66,5 +66,5 @@ math-under >math-o.acc {
 .ref[data-type="bibliography"] {
   font-size: 80%;
   vertical-align: 0.3906em;
-  color: var(--blue-color);
+  color: var(--primary-color);
 }

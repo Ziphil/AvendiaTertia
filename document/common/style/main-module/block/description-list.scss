@@ -25,7 +25,7 @@ $description-dash-width: 1em;
     width: $bullet-width;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - ($bullet-width + $blank-margin);
-    color: var(--blue-color);
+    color: var(--primary-color);
     text-align: right;
     display: inline-block;
   }
@@ -39,7 +39,7 @@ $description-dash-width: 1em;
     margin-inline-start: $description-dash-width + $blank-margin;
   }
   &::before {
-    color: var(--blue-color);
+    color: var(--primary-color);
     opacity: 0.5;
     .description-list[data-type="desc"] & {
       @include icon("regular", "\F105");

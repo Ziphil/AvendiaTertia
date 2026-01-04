@@ -61,7 +61,7 @@ $navigation-skew-angle: -9deg;
   &:not(:nth-child(1))::before {
     @include icon("regular", "\F101");
     margin-inline: $blank-margin;
-    color: var(--blue-color);
+    color: var(--primary-color);
     line-height: 0;
     opacity: 0.5;
   }
@@ -70,7 +70,7 @@ $navigation-skew-angle: -9deg;
   }
   &:nth-child(1) >.navigation-link::before {
     @include icon("solid", "\F015");
-    color: var(--blue-color);
+    color: var(--primary-color);
   }
 }
 
@@ -85,6 +85,6 @@ $navigation-skew-angle: -9deg;
   white-space: nowrap;
   flex: 0 0 auto;
   &[data-caution] {
-    color: var(--red-color);
+    color: var(--caution-cikir);
   }
 }

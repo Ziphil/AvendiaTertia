@@ -105,7 +105,7 @@ body {
   font-size: relative(84rpx);
   font-family: var(--special-font-family);
   font-weight: 600;
-  color: var(--blue-color);
+  color: var(--primary-color);
   -webkit-text-stroke: relative(6rpx) var(--page-background-color);
   letter-spacing: 0.15em;
   text-indent: 0.15em;
@@ -117,7 +117,7 @@ body {
   font-size: relative(24rpx);
   font-family: var(--special-font-family);
   font-weight: 600;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: $small-line-height;
   text-align: center;
   text-transform: uppercase;
@@ -172,7 +172,7 @@ body {
   font-size: relative(84rpx);
   font-family: var(--special-font-family);
   font-weight: 400;
-  color: var(--blue-color);
+  color: var(--primary-color);
   -webkit-text-stroke: relative(4rpx) var(--page-background-color);
   letter-spacing: 0em;
   text-transform: uppercase;
@@ -185,7 +185,7 @@ body {
   font-size: relative(24rpx);
   font-family: var(--special-font-family);
   font-weight: 600;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: $small-line-height;
   letter-spacing: 0.005em;
   text-transform: uppercase;
@@ -233,7 +233,7 @@ body {
 .other-visual-title-text {
   font-family: var(--special-font-family);
   font-weight: 600;
-  color: var(--blue-color);
+  color: var(--primary-color);
   &[data-size="small"] {
     font-size: relative(84rpx * 3 / 7);
     letter-spacing: 0.35em;
@@ -278,7 +278,7 @@ body {
       margin-block-end: 40rpx;
       height: 2rpx;
       align-self: stretch;
-      background-color: var(--blue-color);
+      background-color: var(--primary-color);
       opacity: 0.5;
       content: "";
     }
@@ -295,7 +295,7 @@ body {
   &::after {
     @include icon("solid", "\F35A");
     margin-inline-start: 10rpx;
-    color: var(--blue-color);
+    color: var(--primary-color);
     display: inline-block;
     opacity: 0.5;
   }
@@ -324,25 +324,25 @@ body {
   &[data-position="top-left"] {
     inset-block-start: var(--inset);
     inset-inline-start: var(--inset);
-    border-block-start: solid var(--border-width) var(--blue-color);
-    border-inline-start: solid var(--border-width) var(--blue-color);
+    border-block-start: solid var(--border-width) var(--primary-color);
+    border-inline-start: solid var(--border-width) var(--primary-color);
   }
   &[data-position="top-right"] {
     inset-block-start: var(--inset);
     inset-inline-end: var(--inset);
-    border-block-start: solid var(--border-width) var(--blue-color);
-    border-inline-end: solid var(--border-width) var(--blue-color);
+    border-block-start: solid var(--border-width) var(--primary-color);
+    border-inline-end: solid var(--border-width) var(--primary-color);
   }
   &[data-position="bottom-left"] {
     inset-block-end: var(--inset);
     inset-inline-start: var(--inset);
-    border-block-end: solid var(--border-width) var(--blue-color);
-    border-inline-start: solid var(--border-width) var(--blue-color);
+    border-block-end: solid var(--border-width) var(--primary-color);
+    border-inline-start: solid var(--border-width) var(--primary-color);
   }
   &[data-position="bottom-right"] {
     inset-block-end: var(--inset);
     inset-inline-end: var(--inset);
-    border-block-end: solid var(--border-width) var(--blue-color);
-    border-inline-end: solid var(--border-width) var(--blue-color);
+    border-block-end: solid var(--border-width) var(--primary-color);
+    border-inline-end: solid var(--border-width) var(--primary-color);
   }
 }

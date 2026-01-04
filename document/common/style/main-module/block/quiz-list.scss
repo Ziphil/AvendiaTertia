@@ -35,7 +35,7 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
     width: $bullet-width;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - ($bullet-width + $blank-margin);
-    color: var(--blue-color);
+    color: var(--primary-color);
     text-align: end;
     display: inline-block;
   }
@@ -48,7 +48,7 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
     width: $quiz-nested-list-marker-width;
     margin-inline-end: $blank-margin;
     margin-inline-start: 0em - $quiz-nested-list-marker-width - $blank-margin;
-    color: var(--blue-color);
+    color: var(--primary-color);
     text-align: end;
     display: inline-block;
   }
@@ -62,7 +62,7 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
   &::before {
     @include special-font;
     margin-inline-end: $blank-margin;
-    color: var(--blue-color);
+    color: var(--primary-color);
     content: "A.";
   }
 }
@@ -84,10 +84,10 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
   width: 4em;
   padding-block: 0.1em;
   font-family: $serif-font-family;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: 1;
   text-align: center;
-  border: solid 1rpx var(--blue-color);
+  border: solid 1rpx var(--primary-color);
   display: inline-block;
   &::before {
     content: "?";
@@ -107,7 +107,7 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
     margin-inline-start: 30rpx;
   }
   &::before {
-    @include box(var(--blue-color), false);
+    @include box(var(--primary-color), false);
     margin-inline-end: fix-em($bordered-blank-margin, 80%);
     content: counter(quiz-choice-list);
   }

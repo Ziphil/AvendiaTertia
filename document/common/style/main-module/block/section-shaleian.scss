@@ -21,7 +21,7 @@ $section-skew-angle: -15deg;
     inset-block: 0rpx;
     inset-inline-start: -100vi;
     inset-inline-end: calc(var(--horizontal-padding) + 2rpx);
-    background-color: var(--blue-color);
+    background-color: var(--primary-color);
     transform: skew($section-skew-angle);
     position: absolute;
     z-index: -1;
@@ -31,7 +31,7 @@ $section-skew-angle: -15deg;
     inset-block: 0rpx;
     inset-inline-end: -100vi;
     inset-inline-start: calc(100% - var(--horizontal-padding) + 2rpx);
-    background-color: var(--orange-color);
+    background-color: var(--secondary-color);
     transform: skew($section-skew-angle);
     position: absolute;
     z-index: -1;
@@ -65,7 +65,7 @@ $section-skew-angle: -15deg;
     inset-block: 0rpx;
     inset-inline-start: 0rpx;
     inset-inline-end: calc(var(--horizontal-padding));
-    border-block: solid 1rpx var(--blue-color);
+    border-block: solid 1rpx var(--primary-color);
     position: absolute;
     z-index: -1;
     content: "";
@@ -74,7 +74,7 @@ $section-skew-angle: -15deg;
     inset-block: 0rpx;
     inset-inline-end: 0rpx;
     inset-inline-start: calc(100% - var(--horizontal-padding));
-    border-block: solid 1rpx var(--orange-color);
+    border-block: solid 1rpx var(--secondary-color);
     position: absolute;
     z-index: -1;
     content: "";
@@ -91,7 +91,7 @@ $section-skew-angle: -15deg;
   padding-inline: var(--horizontal-padding);
   font-size: 110%;
   font-weight: normal;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: $line-height;
 }
 
@@ -104,7 +104,7 @@ $section-skew-angle: -15deg;
   &::before {
     width: calc(var(--horizontal-padding) - 0.5rem);
     margin-inline-end: 0.5rem;
-    border-block-start: solid 1rpx var(--blue-color);
+    border-block-start: solid 1rpx var(--primary-color);
     align-self: center;
     flex: 0 0 auto;
     z-index: -1;
@@ -112,7 +112,7 @@ $section-skew-angle: -15deg;
   }
   &::after {
     width: var(--horizontal-padding);
-    border-block-start: solid 1rpx var(--orange-color);
+    border-block-start: solid 1rpx var(--secondary-color);
     align-self: center;
     flex: 0 0 auto;
     z-index: -1;
@@ -129,7 +129,7 @@ $section-skew-angle: -15deg;
 .subsubsection-inner {
   font-size: 105%;
   font-weight: normal;
-  color: var(--blue-color);
+  color: var(--primary-color);
   line-height: $line-height;
   display: flex;
   align-items: baseline;
@@ -137,7 +137,7 @@ $section-skew-angle: -15deg;
   &::after {
     width: var(--horizontal-padding);
     margin-inline-start: 0.5rem;
-    border-block-start: solid 1rpx var(--blue-color);
+    border-block-start: solid 1rpx var(--primary-color);
     align-self: center;
     flex: 1 1 auto;
     z-index: -1;
@@ -163,6 +163,6 @@ $section-skew-angle: -15deg;
 }
 
 .section-separator {
-  border-block-end: dashed 1rpx var(--blue-color);
+  border-block-end: dashed 1rpx var(--primary-color);
   opacity: 0.7;
 }

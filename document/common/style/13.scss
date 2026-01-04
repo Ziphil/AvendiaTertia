@@ -131,7 +131,7 @@ body {
   font-size: 80rpx;
   font-family: var(--special-font-family);
   font-weight: 400;
-  color: var(--orange-color);
+  color: var(--logo-color);
   -webkit-text-stroke: 4rpx oklch(from black l c h / 0.5);
   filter:  drop-shadow(0rpx 2rpx 10rpx oklch(from white l c h / 0.2)) drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
   paint-order: stroke;
@@ -144,7 +144,7 @@ body {
   @include mobile {
     letter-spacing: 0em;
     text-indent: 0em;
-    }
+  }
 }
 
 .visual-flavor {
@@ -155,7 +155,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-indent: 0.1em;
-  color: var(--orange-color);
+  color: var(--logo-color);
   -webkit-text-stroke: 3rpx oklch(from black l c h / 0.5);
   filter: drop-shadow(0rpx 0rpx 2rpx oklch(from black l c h / 0.3));
   line-height: $small-line-height;
@@ -214,7 +214,7 @@ $card-item-gap: 30rpx;
       inset-inline-end: -100vi;
       inset-block-start: -60rpx;
       inset-block-end: -60rpx;
-      background-color: var(--blue-color);
+      background-color: var(--primary-color);
       transform: skew($skew-angle);
       opacity: 0.3;
       z-index: -1;
@@ -262,9 +262,9 @@ $card-item-gap: 30rpx;
 
 .card-background {
   inset: 0rpx;
-  border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
+  border: solid 1rpx oklch(from var(--primary-color) l c h / 0.8);
   background-color: var(--main-background-color);
-  background-image: linear-gradient(to right, transparent 50%, oklch(from var(--orange-color) l c h / 0.05) 50%);
+  background-image: linear-gradient(to right, transparent 50%, oklch(from var(--secondary-color) l c h / 0.05) 50%);
   background-position: var(--background-position) 0%;
   background-size: 200% 100%;
   background-repeat: no-repeat;
@@ -280,7 +280,7 @@ $card-item-gap: 30rpx;
     margin-block-start: -1rpx;
     margin-inline: -1rpx;
     height: $card-item-title-height;
-    background-color: var(--blue-color);
+    background-color: var(--primary-color);
     content: "";
   }
 }
@@ -332,7 +332,7 @@ $card-item-gap: 30rpx;
 .introduction-header {
   margin-block-end: 30rpx;
   font-size: 200%;
-  color: var(--blue-color);
+  color: var(--primary-color);
   letter-spacing: 0.1em;
   &:not(:first-child) {
     margin-block-start: 50rpx;
@@ -358,7 +358,7 @@ $card-item-gap: 30rpx;
   &[data-language="fennese"] {
     font-size: 90%;
     font-family: var(--special-font-family);
-    color: oklch(from var(--blue-color) l c h / 0.5);
+    color: oklch(from var(--primary-color) l c h / 0.5);
     line-height: 1.5;
     letter-spacing: -0.05em;
     font-variant-caps: small-caps;
@@ -418,7 +418,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
       inset-inline-end: -100vi;
       inset-block-start: -50rpx;
       inset-block-end: -60rpx;
-      background-color: var(--blue-color);
+      background-color: var(--primary-color);
       transform: skew($skew-angle);
       opacity: 0.3;
       z-index: -1;
@@ -437,7 +437,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 .other-header {
   margin-block-end: 30rpx;
   font-size: 150%;
-  color: var(--blue-color);
+  color: var(--primary-color);
   letter-spacing: 0.1em;
   @include desktop {
     .other-column:nth-child(2) & {
@@ -474,9 +474,9 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     inset-block: 0rpx;
     inset-inline-start: 0rpx;
     inset-inline-end: 0rpx;
-    border: solid 1rpx oklch(from var(--blue-color) l c h / 0.8);
+    border: solid 1rpx oklch(from var(--primary-color) l c h / 0.8);
     background-color: var(--main-background-color);
-    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--orange-color) l c h / 0.05) 50%);
+    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--secondary-color) l c h / 0.05) 50%);
     background-position: var(--background-position) 0%;
     background-size: 200% 100%;
     background-repeat: no-repeat;
@@ -502,7 +502,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   width: 70rpx;
   font-size: 400%;
   font-weight: normal;
-  color: var(--blue-color);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -581,7 +581,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   &:not(:nth-child(2))::before {
     @include icon("regular", "\F101");
     margin-inline: $blank-margin;
-    color: var(--blue-color);
+    color: var(--primary-color);
     opacity: 0.5;
     line-height: 0;
   }
@@ -595,11 +595,11 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   background-repeat: no-repeat;
   cursor: pointer;
   &:not(:hover) {
-    color: var(--orange-color);
-    background-image: single-color(var(--orange-color));
+    color: var(--secondary-color);
+    background-image: single-color(var(--secondary-color));
   }
   &:hover {
-    color: var(--dark-orange-color);
-    background-image: single-color(var(--dark-orange-color));
+    color: var(--secondary-active-color);
+    background-image: single-color(var(--secondary-active-color));
   }
 }

@@ -22,7 +22,7 @@ $content-item-skew-angle: -15deg;
 .content-head {
   margin-block-end: 15rpx;
   font-size: 120%;
-  color: var(--blue-color);
+  color: var(--primary-color);
   &:not(:first-of-type) {
     margin-block-start: 20rpx;
   }
@@ -49,7 +49,7 @@ $content-item-skew-angle: -15deg;
     box-shadow: none;
   }
   &:is([data-disabled], :not(:hover)) {
-    color: color-mix(in oklch, var(--blue-color) 50%, var(--text-color));
+    color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
     --inset-inline-start: calc(-100% + #{$content-item-height * tan(abs($content-item-skew-angle))} + 6rpx + #{div($content-item-height * tan(abs($content-item-skew-angle)), 2)});
   }
   &:not([data-disabled]):hover {
@@ -60,7 +60,7 @@ $content-item-skew-angle: -15deg;
     width: calc(100% - #{$content-item-height * tan(abs($content-item-skew-angle))} - 6rpx);
     inset-inline-start: var(--inset-inline-start);
     inset-block: 0rpx;
-    background-color: var(--blue-color);
+    background-color: var(--primary-color);
     transform: skew($content-item-skew-angle);
     transition: inset-inline-start 0.2s;
     position: absolute;
@@ -71,7 +71,7 @@ $content-item-skew-angle: -15deg;
     width: 100%;
     inset-inline-end: calc(-100% + #{div($content-item-height * tan(abs($content-item-skew-angle)), 2)});
     inset-block: 0rpx;
-    background-color: var(--orange-color);
+    background-color: var(--secondary-color);
     transform: skew($content-item-skew-angle);
     position: absolute;
     z-index: -2;
