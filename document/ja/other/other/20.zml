@@ -1,0 +1,130 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<TGM 単位系>
+  \use-math;
+
+  \h1<概要>
+  \p<
+    TGM 単位系とは、The Dozenal Society of Great Britain (DSGB) で提案されている 12 進法ベースの新しい単位系である。
+    詳細は \ae|href="http://www.dozenalsociety.org.uk/apps/tgm.htm"|<DGBM のページ>で公開されている。
+  >
+  \h1<接頭語>
+  \p<
+    以下の接頭語を単位の前につけることで、倍量単位や分量単位を作ることができる。
+  >
+  \side<
+    \table<
+      \tr<\th<接頭語>\th<数>>
+      \tr<\td<zena->\td<&m<\sp<12><1>>>>
+      \tr<\td<duna->\td<&m<\sp<12><2>>>>
+      \tr<\td<trina->\td<&m<\sp<12><3>>>>
+      \tr<\td<quedra->\td<&m<\sp<12><4>>>>
+      \tr<\td<quena->\td<&m<\sp<12><5>>>>
+      \tr<\td<hesa->\td<&m<\sp<12><6>>>>
+      \tr<\td<seva->\td<&m<\sp<12><7>>>>
+      \tr<\td<aka->\td<&m<\sp<12><8>>>>
+      \tr<\td<neena->\td<&m<\sp<12><9>>>>
+      \tr<\td<dexa->\td<&m<\sp<12><10>>>>
+      \tr<\td<lefa->\td<&m<\sp<12><11>>>>
+    >
+    \table<
+      \tr<\th<接頭語>\th<数>>
+      \tr<\td<zeni->\td<&m<\sp<12><-1>>>>
+      \tr<\td<duni->\td<&m<\sp<12><-2>>>>
+      \tr<\td<trini->\td<&m<\sp<12><-3>>>>
+      \tr<\td<quedri->\td<&m<\sp<12><-4>>>>
+      \tr<\td<queni->\td<&m<\sp<12><-5>>>>
+      \tr<\td<hesi->\td<&m<\sp<12><-6>>>>
+      \tr<\td<sevi->\td<&m<\sp<12><-7>>>>
+      \tr<\td<aki->\td<&m<\sp<12><-8>>>>
+      \tr<\td<neeni->\td<&m<\sp<12><-9>>>>
+      \tr<\td<dexi->\td<&m<\sp<12><-10>>>>
+      \tr<\td<lefi->\td<&m<\sp<12><-11>>>>
+    >
+  >
+  \p<
+    これらの接頭語は、単位名称にのみ用いられる。
+    単位記号において、これらの接頭語を記す代わりに、その指数を単位記号の左上もしくは左下に記す。
+    より具体的には、倍量単位ではその指数を単位記号の左上に、分量単位ではその指数 (の絶対値) を単位記号の左下に附す。
+    例えば、hesagrafut と trinimaz はそれぞれ &m<\multi<\rm<Gf>><><><><6>>, &m<\multi<\rm<Mz>><><><3><>> と書かれる。
+  >
+  \h1<基本単位>
+  \h2<時間>
+  \p<
+    時間の基本単位は tim (Tm) であり、&m<1 \sfun; \rm<Tm> = 25`/144 \sfun; \rm<s>> によって定義される。
+  >
+  \p<
+    これは 1 日の長さに由来する。
+    1 日を午前と午後に分け、その半日を &m<\sp<12><5>> 等分したものが 1 Tm である。
+    我々は半日を順に 12 等分, 60 等分, 60 等分して単位を設けているが、これを完全に 12 進法ベースにして順に 12 等分, 144 等分, 144 等分することにすると、このとき得られる最も細かい単位が Tim である。
+  >
+  \h2<長さ>
+  \p<
+    長さの基本単位は grafut (Gf) であり、真空中の光速度を &m<176024043 \sfun; \rm<Gf>`/\rm<Tm>> とすることで定義される。
+    およそ &m<1 \sfun; \rm<Gf> \asiansim; 0.29568 \sfun; \rm<m>> である。
+  >
+  \p<
+    この奇妙な定義値は重力加速度に由来しており、重力加速度が &m<1 \sfun; \rm<Gf>`/\sp<\rm<Tm>><2>> になるように定められている。
+    ただし、上記定義から &m<1 \sfun; \rm<Gf>`/\sp<\rm<Tm>><2>> の値を計算すると &m<9.81005 \sfun; \rm<m>`/\sp<\rm<s>><2>> 程度になり、標準重力加速度 &m<9.80665 \sfun; \rm<m>`/\sp<\rm<s>><2>> とは少しズレている。
+    なぜ\k<…>?
+  >
+  \h2<質量>
+  \p<
+    質量の基本単位は maz (Mz) であり、標準大気圧下の水の最大密度を &m<1 \sfun; \rm<Mz>`/\sp<\rm<Gf>><3>> とすることで定義される。
+    およそ &m<1 \sfun; \rm<Mz> \asiansim; 25.850 \sfun; \rm<kg>> である。
+  >
+  \h2<温度>
+  \p<
+    温度の基本単位は calg (Cg) であり、&m<1 \sfun; \rm<Cg> = 1`/1440 \sfun; \rm<K>> によって定義される。
+  >
+  \p<
+    これは &m<1 \sfun; \rm<Mz> \cdot|ord|; \sp<\rm<Gf>><2> \cdot|ord|; \sp<\rm<Tm>><-2>> の熱量を &m<1 \sfun; \rm<Mz>> の水に加えたときに上昇する温度に由来する。
+    この温度を計算するとおよそ &m<6.932 \cdot; \sp<10><-4> \sfun; \rm<K>> であり、これが &m<1`/1440 \sfun; \rm<K>> に近かったため、換算を簡単にするためにこの値が採用されたようである。
+    あまり聞いたことがないが dK (デシケルビン) を導入すれば、この換算式は &m<\sp<12><2> \sfun; \rm<Cg> = 1 \rm<dK>> ということなので、自然に見えるだろう。
+  >
+  \h2<電流>
+  \p<
+    電流の基本単位は kur (Kr) であり、2 本の理想的な並行導体の間に 1 Gf あたり &m<\sp<12><-9> \sfun; \rm<Mz> \cdot|ord|; \rm<Gf> `/ \sp<\rm<Tm>><2>> の力がかかるような電流を 1 Kr とすることで定義される。
+    およそ &m<1 \sfun; \rm<Kr> \asiansim; 0.49572 \sfun; \rm<A>> である。
+  >
+  \p<
+    2019 年までのアンペアの定義をそのままなぞっただけである。
+  >
+  \h2<分子量>
+  \p<
+    分子量の基本単位は molz (Mlz) であり、12 Mz の炭素 12 に含まれる原子数を 1 Molz とすることで定義される。
+    およそ &m<1 \sfun; \rm<Mlz> \asiansim; 25850 \sfun; \rm<mol>> である。
+  >
+  \p<
+    2019 年までのアボガドロ数の定義をそのままなぞっただけである。
+  >
+  \h2<角度>
+  \p<
+    角度の基本単位は pi (&m<\sp<><\vee;>>) であり、&m<1 \sp<><\vee;> = `p \sfun; \rm<rad>> によって定義される。
+    すなわち、&m<1 \sp<><\vee;> = \text<180°>> である。
+  >
+  \p<
+    我々が日常で使う度数のような特別な尺度は用意せず、理学で用いられるラジアンをもとに円周率 &m<`p> をそのまま単位にしたわけである。
+  >
+  \h1<組立単位>
+  \table<
+    \tr<\th<量>\th<単位>\th<記号>\th<定義>\th<値>>
+    \tr<\td<時間>\td<tim>\td<Tm>\td<上記>\td<0.17361 s>>
+    \tr<\td<長さ>\td<grafut>\td<Gf>\td<上記>\td<0.29568 m>>
+    \tr<\td<速度>\td<vlos>\td<Vl>\td<&m<\rm<Gf> \cdot; \sp<\rm<Tm>><-1>>>\td<1.7031 m`/s>>
+    \tr<\td<加速度>\td<gee>\td<G>\td<&m<\rm<Gf> \cdot; \sp<\rm<Tm>><-2>>>\td<&m<9.8100 \sfun; \rm<m> `/ \sp<\rm<s>><2>>>>
+    \tr<\td<面積>\td<surf>\td<Sf>\td<&m<\sp<\rm<Gf>><2>>>\td<&m<8.7428 \cdot; \sp<10><-2> \sfun; \sp<\rm<m>><2>>>>
+    \tr<\td<体積>\td<volm>\td<Vm>\td<&m<\sp<\rm<Gf>><3>>>\td<&m<2.5851 \cdot; \sp<10><-2> \sfun; \sp<\rm<m>><3>>>>
+    \tr<\td<質量>\td<maz>\td<Mz>\td<上記>\td<25.850 kg>>
+    \tr<\td<密度>\td<denz>\td<Dz>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><-3>>>\td<&m<999.97 \sfun; \rm<kg> `/ \sp<\rm<m>><3>>>>
+    \tr<\td<力>\td<mag>\td<Mg>\td<&m<\rm<Mz> \cdot; \rm<Gf> \cdot; \sp<\rm<Tm>><-2>>>\td<&m<253.59 \sfun; \rm<N>>>>
+    \tr<\td<張力>\td<tenz>\td<Tz>\td<&m<\rm<Mz> \cdot; \sp<\rm<Tm>><-2>> (&m<= \srel; \rm<Mg> `/ \rm<Gf>>)>\td<&m<857.65 \sfun; \rm<N> `/ \rm<m>>>>
+    \tr<\td<圧力>\td<prem>\td<Pm>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><-1> \cdot; \sp<\rm<Tm>><-2>> (&m<= \srel; \rm<Mg> `/ \rm<Sf>>)>\td<&m<2900.6 \sfun; \rm<Pa>>>>
+    \tr<\td<仕事>\td<werg>\td<Wg>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-2>> (&m<= \srel; \rm<Mg> \cdot|ord|; \rm<Gf>>)>\td<&m<74.983 \sfun; \rm<J>>>>
+    \tr<\td<熱量>\td<pov>\td<Pv>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-3>> (&m<= \srel; \rm<Wg> `/ \rm<Tm>>)>\td<&m<431.90 \sfun; \rm<W>>>>
+  >
+
+>
