@@ -129,7 +129,7 @@
     \tr<\td<電圧>\td<pel>\td<Pl>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-3> \cdot; \sp<\rm<Kr>><-1>> (&m<= \srel; \rm<Pv> `/ \rm<Kr>>)>\td<&m<871.26 \sfun; \rm<V>>>>
     \tr<\td<電気抵抗>\td<og>\td<Og>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-3> \cdot; \sp<\rm<Kr>><-2>> (&m<= \srel; \rm<Pl> `/ \rm<Kr>>)>\td<&m<1757.6 \sfun; \rm<Ω>>>>
     \tr<\td<電荷>\td<quel>\td<Ql>\td<&m<\rm<Tm> \cdot; \rm<Kr>>>\td<&m<8.6063 \cdot; \sp<10><-2> \sfun; \rm<C>>>>
-    \tr<\td<静電容量>\td<pel>\td<Pl>\td<&m<\sp<\rm<Mz>><-1> \cdot; \sp<\rm<Gf>><-2> \cdot; \sp<\rm<Tm>><4> \cdot; \sp<\rm<Kr>><4>> (&m<= \srel; \rm<Ql> `/ \rm<Pl>>)>\td<&m<9.8780 \cdot; \sp<10><-5> \sfun; \rm<F>>>>
+    \tr<\td<静電容量>\td<kap>\td<Kp>\td<&m<\sp<\rm<Mz>><-1> \cdot; \sp<\rm<Gf>><-2> \cdot; \sp<\rm<Tm>><4> \cdot; \sp<\rm<Kr>><4>> (&m<= \srel; \rm<Ql> `/ \rm<Pl>>)>\td<&m<9.8780 \cdot; \sp<10><-5> \sfun; \rm<F>>>>
     \tr<\td<磁束>\td<flum>\td<Fm>\td<&m<\rm<Mz> \cdot; \sp<\rm<Gf>><2> \cdot; \sp<\rm<Tm>><-2> \cdot; \sp<\rm<Kr>><-1>> (&m<= \srel; \rm<Pl> \cdot|ord|; \rm<Tm>>)>\td<&m<151.26 \sfun; \rm<Wb>>>>
     \tr<\td<磁束密度>\td<flenz>\td<Fz>\td<&m<\rm<Mz> \cdot; \sp<\rm<Tm>><-2> \cdot; \sp<\rm<Kr>><-1>> (&m<= \srel; \rm<Fm> `/ \rm<Sf>>)>\td<&m<1730.1 \sfun; \rm<T>>>>
     \tr<\td<温度>\td<calg>\td<Cg>\td<上記>\td<&m<6.9444 \cdot; \sp<10><-4> \sfun; \rm<K>>>>
