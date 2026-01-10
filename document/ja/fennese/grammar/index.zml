@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## tcj まで使用
+  ## tcy まで使用
   \hb<初めに>
   \pb<
     \ab|href="16.html",ignore|<初めに>
@@ -24,6 +24,7 @@
   \pb<
     \ab|href="2.html"|<語形変化>
     \ab|href="4.html"|<特殊な単語の語形>
+    \ab|href="29.html"|<借用語と外来語>
     \ab|href="5.html"|<数詞>
     \ab|href="6.html"|<合成語>
     \ab|href="7.html"|<弱母音の消失>
