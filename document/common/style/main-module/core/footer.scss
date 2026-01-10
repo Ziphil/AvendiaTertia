@@ -49,6 +49,10 @@
   &:not(:first-child) {
     border-inline-start: solid 1rpx var(--footer-text-color);
   }
+  &:focus-visible {
+    outline: solid 2rpx oklch(from var(--footer-text-color) l c h / 0.5);
+    outline-offset: 1rpx;
+  }
 }
 
 .footer-site-title {
@@ -106,6 +110,10 @@
 
 .footer-icon-item {
   cursor: pointer;
+  &:focus-visible {
+    outline: solid 2rpx oklch(from var(--footer-text-color) l c h / 0.5);
+    outline-offset: 1rpx;
+  }
   &[data-brand="twitter"]::before {
     @include icon("brand", "\E61B");
   }

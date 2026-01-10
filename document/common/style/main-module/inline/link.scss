@@ -19,6 +19,10 @@
     color: var(--secondary-active-color);
     background-image: single-color(var(--secondary-active-color));
   }
+  &:focus-visible {
+    outline: solid 2rpx oklch(from var(--secondary-color) l c h / 0.5);
+    outline-offset: 1rpx;
+  }
 }
 
 .hidden-link {

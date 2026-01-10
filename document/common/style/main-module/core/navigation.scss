@@ -56,6 +56,10 @@
   color: inherit;
   text-decoration: inherit;
   cursor: pointer;
+  &:focus-visible {
+    outline: solid 2rpx oklch(from var(--primary-color) l c h / 0.5);
+    outline-offset: 1rpx;
+  }
 }
 
 .navigation-version {
