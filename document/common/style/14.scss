@@ -86,10 +86,14 @@ body {
 
 .version {
   opacity: 0.5;
+  @include mobile {
+    display: none;
+  }
 }
 
 .footer {
   width: 100%;
+  margin-block-end: 32rpx;
   flex: 0 0 auto;
 }
 
@@ -214,7 +218,13 @@ body {
   background-color: oklch(1 0 0 / 0.5);
   border-block-end: solid 2rpx oklch(0.8 0 0);
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  @include desktop {
+    grid-template-columns: 10fr 6fr;
+  }
+  @include mobile {
+    row-gap: 12rpx;
+    grid-template-columns: 1fr;
+  }
 }
 
 .information-left {
@@ -229,22 +239,22 @@ body {
 }
 
 .information-left-label {
-  font-size: 24rpx;
+  font-size: 20rpx;
   font-family: "Geologica";
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .information-left-value {
-  margin-block-start: -8rpx;
-  margin-block-end: -8rpx;
+  margin-block-start: -4rpx;
+  margin-block-end: -6rpx;
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
 
 .information-left-number {
-  font-size: 64rpx;
+  font-size: 48rpx;
   font-family: "Geologica";
   font-weight: 800;
 }
@@ -255,12 +265,12 @@ body {
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-auto-flow: row;
+  @include mobile {
+    margin-inline: -8rpx;
+  }
 }
 
 .information-right-item {
-  padding-block: 8rpx;
-  padding-inline-start: 12rpx;
-  border-inline-start: solid 4rpx var(--item-color);
   background-color: oklch(from var(--item-color) l c h / 0.2);
   display: flex;
   flex-direction: column;
@@ -270,6 +280,17 @@ body {
   }
   &[data-level="3"] {
     --item-color: oklch(0.7 0.3 110);
+  }
+  @include desktop {
+    padding-block: 8rpx;
+    padding-inline-start: 12rpx;
+    border-inline-start: solid 4rpx var(--item-color);
+  }
+  @include mobile {
+    padding-block-start: 10rpx;
+    padding-block-end: 8rpx;
+    padding-inline: 8rpx;
+    border-block-start: solid 4rpx var(--item-color);
   }
 }
 
