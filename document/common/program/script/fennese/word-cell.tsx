@@ -1,29 +1,32 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {NormalWord, PatternCategory, PatternType, Root, getPatternCategory, getPatternType} from "ogorasso";
+import {PatternCategory, PatternType, Radicals, Word} from "ogorasso";
 import {ReactElement} from "react";
+import {data} from "../util/data";
 import WordView from "./word-view";
 
 
 const WordCell = function ({
-  root,
+  radicals,
   patternCategory,
   patternType,
   words
 }: {
-  root: Root,
+  radicals: Radicals,
   patternCategory: PatternCategory,
   patternType: PatternType,
-  words: Array<NormalWord>
+  words: Array<Word>
 }): ReactElement {
 
-  const filteredWords = words.filter((word) => word.anatomy?.kind === "simplex" && getPatternCategory(word.anatomy.pattern.spelling) === patternCategory && getPatternType(word.anatomy.pattern.spelling) === patternType);
+  const filteredWords = words.filter((word) => word.anatomy?.kind === "simplex" && word.anatomy.pattern.category === patternCategory && word.anatomy.pattern.type === patternType);
   const basicWords = filteredWords.filter((word) => getBasic(word));
   const affixedWords = filteredWords.filter((word) => !getBasic(word));
 
+  const invalid = radicals.length === 4 && patternType !== "ground";
+
   const node = (
-    <div className="word-cell">
+    <div className="word-cell" {...data({invalid})}>
       {basicWords.map((word) => (
         <WordView key={word.number} word={word} basic={true}/>
       ))}
@@ -37,7 +40,7 @@ const WordCell = function ({
 };
 
 
-function getBasic(word: NormalWord): boolean {
+function getBasic(word: Word): boolean {
   const affixes = (word.anatomy?.kind === "simplex") ? word.anatomy.affixes : undefined;
   if (affixes !== undefined) {
     return Object.values(affixes).every((affixes) => affixes.length <= 0);

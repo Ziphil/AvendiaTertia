@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import {Word, convertWord} from "ogorasso";
+import {Entry, convertEntry} from "ogorasso";
 
 
 export interface Dictionary {
 
-  readonly words: Array<Word>;
+  readonly entries: Array<Entry>;
   readonly rootCount: number;
   readonly wordCount: number;
 
@@ -20,31 +20,31 @@ const API_URLS = {
 export async function getDictionary(): Promise<Dictionary> {
   const params = new URLSearchParams(window.location.search);
   const apiKey = params.get("key");
-  const rawWords = (!!apiKey) ? await fetchRawWordsFromApi(apiKey) : await fetchRawWordsFromFile();
-  const words = rawWords.map(convertWord);
-  const rootCount = words.filter((word) => word.kind === "root" && !word.foreign).length;
-  const wordCount = words.filter((word) => word.kind === "normal").length;
+  const rawEntries = (!!apiKey) ? await fetchRawEntriesFromZpdic(apiKey) : await fetchRawEntriesFromGoogle();
+  const entries = rawEntries.map(convertEntry);
+  const rootCount = entries.filter((entry) => entry.kind === "root" && !entry.borrowed).length;
+  const wordCount = entries.filter((entry) => entry.kind === "word").length;
   console.log(`Words fetched from api: ${rootCount} roots, ${wordCount} words`);
-  console.log(words);
-  return {words, rootCount, wordCount};
+  console.log(entries);
+  return {entries, rootCount, wordCount};
 }
 
-export async function fetchRawWordsFromApi(apiKey: string): Promise<Array<any>> {
-  const fetchRawWords = async function (page: number): Promise<[Array<any>, number]> {
+export async function fetchRawEntriesFromZpdic(apiKey: string): Promise<Array<any>> {
+  const fetchRawEntries = async function (page: number): Promise<[Array<any>, number]> {
     const response = await fetch(`${API_URLS.zpdic}?text=&skip=${page * 100}&limit=100`, {headers: {"X-Api-Key": apiKey}});
     const json = await response.json();
     return [json["words"], json["total"]];
   };
-  const [firstRawWords, total] = await fetchRawWords(0);
-  const lastRawWords = await Promise.all(Array.from({length: Math.floor((total - 1) / 100)}, async (dummy, index) => {
-    const [lastRawWords] = await fetchRawWords(index + 1);
-    return lastRawWords;
+  const [firstRawEntries, total] = await fetchRawEntries(0);
+  const lastRawEntries = await Promise.all(Array.from({length: Math.floor((total - 1) / 100)}, async (dummy, index) => {
+    const [lastRawEntries] = await fetchRawEntries(index + 1);
+    return lastRawEntries;
   }));
-  const rawWords = [...firstRawWords, ...lastRawWords.flat()];
-  return rawWords;
+  const rawEntries = [...firstRawEntries, ...lastRawEntries.flat()];
+  return rawEntries;
 }
 
-export async function fetchRawWordsFromFile(): Promise<Array<any>> {
+export async function fetchRawEntriesFromGoogle(): Promise<Array<any>> {
   const response = await fetch(API_URLS.google);
   const json = await response.json();
   return json["words"];

@@ -1,7 +1,7 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {NormalWord} from "ogorasso";
+import {Word} from "ogorasso";
 import {ReactElement} from "react";
 import {data} from "../util/data";
 
@@ -10,7 +10,7 @@ const WordView = function ({
   word,
   basic
 }: {
-  word: NormalWord,
+  word: Word,
   basic: boolean
 }): ReactElement {
 

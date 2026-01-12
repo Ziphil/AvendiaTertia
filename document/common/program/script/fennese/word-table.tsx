@@ -1,7 +1,7 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {NormalWord, PATTERN_CATEGORIES, PATTERN_TYPES, RADICALS, Root, Word} from "ogorasso";
+import {Entry, PATTERN_CATEGORIES, PATTERN_TYPES, RADICALS, Radicals, Word} from "ogorasso";
 import {ReactElement} from "react";
 import {Dictionary} from "./word";
 import WordRow from "./word-row";
@@ -13,7 +13,7 @@ const WordTable = function ({
   dictionary: Dictionary
 }): ReactElement {
 
-  const wordSpecs = groupWords(dictionary.words);
+  const wordSpecs = groupEntriess(dictionary.entries);
 
   const node = (
     <article className="word-table">
@@ -23,7 +23,7 @@ const WordTable = function ({
         {PATTERN_CATEGORIES.map((patternCategory) => PATTERN_TYPES.map((patternType) => (
           <div key={patternCategory + "-" + patternType} className="word-header-cell">
             <span>
-              {(patternCategory === "verb") ? (
+              {(patternCategory === "verbal") ? (
                 <>用言 </>
               ) : (
                 <>体言 </>
@@ -41,8 +41,8 @@ const WordTable = function ({
           </div>
         )))}
       </div>
-      {wordSpecs.map(([rootNumber, {root, words, foreign, first}]) => (
-        <WordRow key={rootNumber} root={root} words={words} foreign={foreign} first={first}/>
+      {wordSpecs.map(([rootNumber, {radicals, words, borrowed, first}]) => (
+        <WordRow key={rootNumber} radicals={radicals} words={words} borrowed={borrowed} first={first}/>
       ))}
       <div className="word-footer-row">
         <div className="root-count">{dictionary.rootCount}</div>
@@ -55,31 +55,31 @@ const WordTable = function ({
 };
 
 
-function getForeignRootNumbers(words: Array<Word>): Set<number> {
-  const foreignRootNumbers = new Set<number>();
-  for (const word of words) {
-    if (word.kind === "root" && word.foreign) {
-      foreignRootNumbers.add(word.number);
+function getBorrowedRootNumbers(entries: Array<Entry>): Set<number> {
+  const borrowedRootNumbers = new Set<number>();
+  for (const entry of entries) {
+    if (entry.kind === "root" && entry.borrowed) {
+      borrowedRootNumbers.add(entry.number);
     }
   }
-  return foreignRootNumbers;
+  return borrowedRootNumbers;
 }
 
-function groupWords(words: Array<Word>): Array<[number, WordSpec]> {
+function groupEntriess(entries: Array<Entry>): Array<[number, WordSpec]> {
   const wordSpecs = new Map<number, WordSpec>();
-  const foreignRootNumbers = getForeignRootNumbers(words);
-  for (const word of words) {
-    if (word.kind === "normal" && word.anatomy?.kind === "simplex") {
-      const rootNumber = word.anatomy.root.number;
+  const borrowedRootNumbers = getBorrowedRootNumbers(entries);
+  for (const entry of entries) {
+    if (entry.kind === "word" && entry.anatomy?.kind === "simplex") {
+      const rootNumber = entry.anatomy.root.number;
       if (!wordSpecs.has(rootNumber)) {
-        const foreign = foreignRootNumbers.has(rootNumber);
-        wordSpecs.set(rootNumber, {root: word.anatomy.root.root, words: [], foreign, first: false});
+        const borrowed = borrowedRootNumbers.has(rootNumber);
+        wordSpecs.set(rootNumber, {radicals: entry.anatomy.root.radicals, words: [], borrowed, first: false});
       }
-      wordSpecs.get(rootNumber)!.words.push(word);
+      wordSpecs.get(rootNumber)!.words.push(entry);
     }
   }
   const wordSpecEntries = Array.from(wordSpecs.entries());
-  wordSpecEntries.sort(([, {root: firstRoot}], [, {root: secondRoot}]) => {
+  wordSpecEntries.sort(([, {radicals: firstRoot}], [, {radicals: secondRoot}]) => {
     if (firstRoot !== null && secondRoot !== null) {
       const firstRootIndices = firstRoot.map((radical) => RADICALS.indexOf(radical).toString().padStart(2, "0"));
       const secondRootIndices = secondRoot.map((radical) => RADICALS.indexOf(radical).toString().padStart(2, "0"));
@@ -90,7 +90,7 @@ function groupWords(words: Array<Word>): Array<[number, WordSpec]> {
   });
   let currentInitialRadical = "";
   for (const [, wordSpec] of wordSpecEntries) {
-    const initialRadical = wordSpec.root[0];
+    const initialRadical = wordSpec.radicals[0];
     if (initialRadical !== currentInitialRadical) {
       currentInitialRadical = initialRadical;
       wordSpec.first = true;
@@ -100,9 +100,9 @@ function groupWords(words: Array<Word>): Array<[number, WordSpec]> {
 }
 
 type WordSpec = {
-  root: Root,
-  words: Array<NormalWord>,
-  foreign: boolean,
+  radicals: Radicals,
+  words: Array<Word>,
+  borrowed: boolean,
   first: boolean
 };
 

@@ -16,7 +16,6 @@ html {
 }
 
 body {
-  @include scrollbar(5rpx, 0rpx, transparent, var(--secondary-color));
   @include text-size-adjust;
   @include fennese-scheme;
   margin: 0rpx;
@@ -112,12 +111,10 @@ body {
 }
 
 .word-row-main {
-  padding-block: 5rpx;
-  background-color: var(--main-background-color);
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 2 / -1;
-  &[data-foreign] {
+  &[data-borrowed] {
     opacity: 0.3;
   }
 }
@@ -135,7 +132,6 @@ body {
 }
 
 .word-root {
-  margin-block: -5rpx;
   padding-block: 5rpx;
   padding-inline: 5rpx;
   color: var(--main-background-color);
@@ -154,12 +150,15 @@ body {
 
 .word-cell {
   min-width: 0rpx;
+  margin-inline-start: 2rpx;
+  padding-block: 5rpx;
   padding-inline: 10rpx;
   row-gap: 3rpx;
+  background-color: var(--main-background-color);
   display: flex;
   flex-direction: column;
-  &:not(:nth-child(2)) {
-    border-inline-start: double 3rpx var(--block-background-color);
+  &[data-invalid] {
+    opacity: 0;
   }
 }
 
