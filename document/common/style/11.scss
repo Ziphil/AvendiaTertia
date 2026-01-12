@@ -154,11 +154,10 @@ body {
   padding-block: 5rpx;
   padding-inline: 10rpx;
   row-gap: 3rpx;
-  background-color: var(--main-background-color);
   display: flex;
   flex-direction: column;
-  &[data-invalid] {
-    opacity: 0;
+  &:not([data-invalid]) {
+    background-color: var(--main-background-color);
   }
 }
 
