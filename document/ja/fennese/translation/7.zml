@@ -1,0 +1,90 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \meta|name="twitter:card",content="summary"|;
+    \meta|name="twitter:site",content="@Ziphil"|;
+    \meta|property="og:url",content="http://ziphil.com/fennese/translation/6.html"|;
+    \meta|property="og:title",content="SCP-173"|;
+    \meta|property="og:description",content="SCP-173"|;
+    \link|rel="stylesheet",type="text/css",href="/style/14.css"|;
+    \title<SCP-055>
+  >
+  \body<
+
+    \header|class="header"|<
+      \div|class="header-inner"|<
+        \div|class="title"|<
+          \div|class="title-main"|<Ловг\span|class="diacritic",data-kind="c"|<о>доо SCP>
+          \div|class="title-catch"|<
+            \span|class="nowrap"|<Воз\span|class="diacritic",data-kind="c"|<е>цла · Севс\span|class="diacritic",data-kind="c"|<е>хла · Даз\span|class="diacritic",data-kind="c"|<у>ла>
+            \span|class="nowrap"|<— Лоз\span|class="diacritic",data-kind="c"|<о>ннако Леф\span|class="diacritic",data-kind="c"|<е>нно>
+          >
+        >
+        \div|class="version"|<β.17>
+      >
+    >
+
+    \main|class="main"|<
+      \div|class="main-inner"|<
+        \div|class="information"|<
+          \dl|class="information-left"|<
+            \div|class="information-left-item"|<
+              \dt|class="information-left-label"|<Лоттосар лотҕев>
+              \dd|class="information-left-value"|<
+                \span|class="information-left-number"|<55>
+              >
+            >
+          >
+          \dl|class="information-right"|<
+            \div|class="information-right-item",data-level="5"|<
+              \dt|class="information-right-label"|<Локоггал Лесевсехар>
+              \dd|class="information-right-value"|<Кетер>
+            >
+          >
+        >
+        \article|class="article"|<
+          \h1|class="heading"|<Лебезхедо лиггамо лесевсехро>
+          \p|class="paragraph"|<
+            ## Object is kept within a 5 by 5 by 2.5 meter square room constructed of cement (50 centimeter thickness), with a Faraday cage surrounding the cement walls.
+            {Лески̂п-}\sbr<55>{ до̀ззалу̂ ве чеде̂ке ге̂не \sbr<5>евот ме̂тревот и \sbr<5>евот ме̂тревот и \sbr<2·6>евот ме̂тревот, до̀ҕло̂зре че̂ллавут (セメント) ӈе̂ллут \sbr<·6>евот ме̂тревот и (ケージ)-}\sbr<Faraday>{ (包む) лече̂ллава.}
+          >
+          \h1|class="heading"|<Лоболсеко>
+        >
+      >
+    >
+
+    \footer|class="footer"|<
+      \div|class="footer-inner"|<
+        \details|class="license"|<
+          \summary|class="license-label"|<Licence information>
+          \div|class="license-main"|<
+            \div|class="cite"|<
+              © 2026 · Ziphil (CC BY-SA 3.0)
+            >
+            \section|class="original"|<
+              \h1|class="original-heading"|<Based on:>
+              \ul|class="original-list"|<
+                \li|class="original-item"|<
+                  \dl|class="original-information-list"|<
+                    \dt|class="original-information-label"|<Title>
+                    \dd|class="original-information-value"|<‘SCP-055’>
+                    \dt|class="original-information-label"|<Author>
+                    \dd|class="original-information-value"|<qntm `& CptBellman>
+                    \dt|class="original-information-label"|<Source>
+                    \dd|class="original-information-value"|<\a|href="https://scpwiki.com/scp-055",target="_blank"|<https:`/`/scpwiki.com`/scp-055>>
+                  >
+                >
+              >
+            >
+          >
+        >
+      >
+    >
+
+  >
+>
