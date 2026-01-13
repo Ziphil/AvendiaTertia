@@ -1,0 +1,46 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<レジスタマシン>
+  \use-math|prefix="9"|;
+
+  \h1<日記 (2026 年 1 月 13 日)>
+  \p<
+    本題に入る前に、プログラムを見やすくするための記法を導入しておこう。
+    &m<\tt<forward>> 命令や &m<\tt<backward>> 命令は、ポインタの移動先をその命令自身から何個後もしくは前にするかを引数にとる。
+    例えば、&m<\tt|fun|<forward> 3> はポインタを 3 つ後ろに進める。
+    そのため、これらの命令の実行後にポインタがどこに飛ぶかを確認するには、引数の数の分だけ数えながら目で追う必要があり、若干分かりづらい。
+    そこで、命令にラベルを付けておいて、&m<\tt<forward>> や &m<\tt<backward>> の引数にそのラベルを書いてしまうことにする。
+    例えば、&m<\tt|fun|<backward> \rm<A>> と書いてあったら、A とラベル付けされた命令にポインタを飛ばすことを意味する。
+    もし A とラベル付けされた命令が &m<\tt|fun|<backward> \rm<A>> の 3 つ前にあるのであれば、これは &m<\tt|fun|<backward> 3> と書いてあったことにするわけである。
+    また、ちょうど正常終了する位置にポインタを飛ばす &m<\tt<forward>> 命令のことを、単に &m<\tt|fun|<end>> と書いてしまうことにする。
+    例えば、もし &m<\tt|fun|<end>> の後ろに命令が 2 つあるのであれば、これは &m<\tt|fun|<forward> 3> と書いてあったことにするわけである。
+    このような記法を用いれば、前回で恒等関数を計算するプログラムとして挙げた
+    &mb<
+      \array|align="l"|<
+        \c<\tt|fun|<dec> 0> \br;
+        \c<\tt|fun|<forward> 3> \br;
+        \c<\tt|fun|<inc> 1> \br;
+        \c<\tt|fun|<backward> 3>
+      >
+    >
+    というプログラムは、
+    &mb<
+      \array|align="rl"|<
+        \c<\rm<A>:> \c<\tt|fun|<dec> 0> \br;
+        \c; \c<\tt|fun|<end>> \br;
+        \c; \c<\tt|fun|<inc> 1> \br;
+        \c; \c<\tt|fun|<backward> \rm<A>>
+      >
+    >
+    と書くことができる。
+    こちらの方が見やすいので、以降は適宜これらの省略記法を用いることにする。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>
