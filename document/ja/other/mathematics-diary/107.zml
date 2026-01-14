@@ -62,7 +62,7 @@
   >
   \thm|type="def"|<
     \p<
-      原始再帰関数の初期関数 &m<\op<zero>: \sp<\bb<N>><0> \to; \bb<N>>, &m<\op<succ>: \sp<\bb<N>><1> \to; \bb<N>>, &m<\sbsp<\op<proj>><i><k>: \sp<\bb<N>><k> \to; \bb<N> \srel; (0 \leq; i `< k)> は全て計算可能である。
+      原始再帰関数の初期関数 &m<\op|ord|<zero>: \sp<\bb<N>><0> \to; \bb<N>>, &m<\op|ord|<succ>: \sp<\bb<N>><1> \to; \bb<N>>, &m<\sbsp<\op|ord|<proj>><i><k>: \sp<\bb<N>><k> \to; \bb<N> \srel; (0 \leq; i `< k)> は全て計算可能である。
     >
   >
   \prf<
