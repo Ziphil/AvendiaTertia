@@ -14,29 +14,29 @@
   \p<
     本題に入る前に、プログラムを見やすくするための記法を導入しておこう。
     &m<\tt<forward>> 命令や &m<\tt<backward>> 命令は、ポインタの移動先をその命令自身から何個後もしくは前にするかを引数にとる。
-    例えば、&m<\tt|fun|<forward> 3> はポインタを 3 つ後ろに進める。
+    例えば、&m<\tt<forward> \srel; 3> はポインタを 3 つ後ろに進める。
     そのため、これらの命令の実行後にポインタがどこに飛ぶかを確認するには、引数の数の分だけ数えながら目で追う必要があり、若干分かりづらい。
     そこで、命令にラベルを付けておいて、&m<\tt<forward>> や &m<\tt<backward>> の引数にそのラベルを書いてしまうことにする。
-    例えば、&m<\tt|fun|<backward> \rm<A>> と書いてあったら、A とラベル付けされた命令にポインタを飛ばすことを意味する。
-    もし A とラベル付けされた命令が &m<\tt|fun|<backward> \rm<A>> の 3 つ前にあるのであれば、これは &m<\tt|fun|<backward> 3> と書いてあったことにするわけである。
+    例えば、&m<\tt<backward> \srel; \rm<A>> と書いてあったら、A とラベル付けされた命令にポインタを飛ばすことを意味する。
+    もし A とラベル付けされた命令が &m<\tt<backward> \srel; \rm<A>> の 3 つ前にあるのであれば、これは &m<\tt<backward> \srel; 3> と書いてあったことにするわけである。
     また、書かれているプログラムの最後の命令のちょうど次の位置にポインタを飛ばす &m<\tt<forward>> 命令のことを、単に &m<\tt|fun|<end>> と書いてしまうことにする。
-    例えば、もし &m<\tt|fun|<end>> の後ろに命令が 2 つ書かれているのであれば、これは &m<\tt|fun|<forward> 3> と書いてあったことにするわけである。
+    例えば、もし &m<\tt|fun|<end>> の後ろに命令が 2 つ書かれているのであれば、これは &m<\tt<forward> \srel; 3> と書いてあったことにするわけである。
     このような記法を用いれば、前回で恒等関数を計算するプログラムとして挙げた
     &mb<
       \array|align="l"|<
-        \c<\tt|fun|<dec> 0> \br;
-        \c<\tt|fun|<forward> 3> \br;
-        \c<\tt|fun|<inc> 1> \br;
-        \c<\tt|fun|<backward> 3>
+        \c<\tt<dec> \srel; 0> \br;
+        \c<\tt<forward> \srel; 3> \br;
+        \c<\tt<inc> \srel; 1> \br;
+        \c<\tt<backward> \srel; 3>
       >
     >
     というプログラムは、
     &mb<
       \array|align="rl"|<
-        \c<\rm<A>:> \c<\tt|fun|<dec> 0> \br;
+        \c<\rm<A>:> \c<\tt<dec> \srel; 0> \br;
         \c; \c<\tt|fun|<end>> \br;
-        \c; \c<\tt|fun|<inc> 1> \br;
-        \c; \c<\tt|fun|<backward> \rm<A>>
+        \c; \c<\tt<inc> \srel; 1> \br;
+        \c; \c<\tt<backward> \srel; \rm<A>>
       >
     >
     と書くことができる。
@@ -48,19 +48,19 @@
     より一般化して、相異なる自然数 &m<r, s> に対して、&m<r> 番目のレジスタの値を &m<s> 番目に移すプログラムを、
     &mb<
       \array|align="rl"|<
-        \c<\rm<A>:> \c<\tt|fun|<dec> r> \br;
+        \c<\rm<A>:> \c<\tt<dec> \srel; r> \br;
         \c; \c<\tt|fun|<end>> \br;
-        \c; \c<\tt|fun|<inc> s> \br;
-        \c; \c<\tt|fun|<backward> \rm<A>>
+        \c; \c<\tt<inc> \srel; s> \br;
+        \c; \c<\tt<backward> \srel; \rm<A>>
       >
     >
-    のことを、以降は &m<\op<move> r \to; s> と書くことにする。
+    のことを、以降は &m<\rm<move> \srel; r \to; s> と書くことにする。
     なお、このプログラムは &m<r> 番目と &m<s> 番目以外のレジスタの値は一切変化させないことにも注意しておきたい。
   >
   \p<
     では本題に移るが、まずは初期関数が全て計算可能であることを示す。
   >
-  \thm|type="def"|<
+  \thm|type="prp"|<
     \p<
       原始再帰関数の初期関数 &m<\op|ord|<zero>: \sp<\bb<N>><0> \to; \bb<N>>, &m<\op|ord|<succ>: \sp<\bb<N>><1> \to; \bb<N>>, &m<\sbsp<\op|ord|<proj>><i><k>: \sp<\bb<N>><k> \to; \bb<N> \srel; (0 \leq; i `< k)> は全て計算可能である。
     >
@@ -74,13 +74,13 @@
     \p<
       &m<\op|ord|<succ>> を計算するプログラムとは、任意の &m<x \in; \bb<N>> に対して、レジスタが &m<(x, 0, \cdots;)> の状態で実行すると 1 番目のレジスタの値が &m<x + 1> になるようなものである。
       これを実現するには、0 番目のレジスタの値を 1 番目に移した後に 1 番目のレジスタの値を 1 だけ増やせば良い。
-      したがって、&m<\op|ord|<succ>> を計算するプログラムとして &m<(\op<move> 0 \to; 1, \op<inc> 1)> が考えられる。
+      したがって、&m<\op|ord|<succ>> を計算するプログラムとして &m<(\rm<move> \srel; 0 \to; 1, \tt<inc> \srel; 1)> が考えられる。
       よって、&m<\op|ord|<succ>> は計算可能である。
     >
     \p<
       &m<\sbsp<\op|ord|<proj>><i><k>\srel; (0 \leq; i `< k)> を計算するプログラムとは、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、レジスタが &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> の状態で実行すると &m<k> 番目のレジスタの値が &m<\sb<x><i>> になるようなものである。
       これを実現するには、&m<i> 番目のレジスタの値を &m<k> 番目に移せば良い。
-      したがって、&m<\sbsp<\op|ord|<proj>><i><k>> を計算するプログラムとして &m<\op<move> i \to; k> そのものが考えられる。
+      したがって、&m<\sbsp<\op|ord|<proj>><i><k>> を計算するプログラムとして &m<\rm<move> \srel; i \to; k> そのものが考えられる。
       よって、&m<\sbsp<\op|ord|<proj>><i><k>> は計算可能である。
     >
   >
@@ -108,7 +108,7 @@
     また、プログラムの入力と出力がそれぞれ 0 番目から &m<k - 1> 番目までのレジスタと &m<k> 番目のレジスタに固定されているのも不便なので、これも柔軟に変更できるようにしておきたい。
     そこで、プログラムが関数を計算することの定義を、以下のように拡張する。
   >
-  \thm|type="def"|<
+  \thm|type="def",id="prescomp"|<
     \p<
       部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> とプログラム &m<\scr<F>> をとる。
       さらに、相異なる自然数 &m<\sb<r><0>, \cdots;, \sb<r><k - 1>> および自然数 &m<s, t> をとる。
@@ -135,26 +135,26 @@
     自然数 &m<r> に対し、次のプログラムを考える。
     &mb<
       \array|align="rl"|<
-        \c<\rm<A>:> \c<\tt|fun|<dec> r> \br;
+        \c<\rm<A>:> \c<\tt<dec> \srel; r> \br;
         \c; \c<\tt|fun|<end>> \br;
-        \c; \c<\tt|fun|<backward> \rm<A>>
+        \c; \c<\tt<backward> \srel; \rm<A>>
       >
     >
     これは、&m<r> 番目のレジスタの値を減らし続けて、それが 0 になったら終了するプログラムである。
     つまり、&m<r> 番目のレジスタの値を 0 にリセットするわけである。
-    このプログラムは、以降 &m<\op<clear> r> と書くことにする。
+    このプログラムは、以降 &m<\rm<clear> \srel; r> と書くことにする。
   >
   \p<
     また、相異なる自然数 &m<r, s, t> に対し、次のプログラムも考えよう。
     &mb<
       \array|align="rl"|<
-        \c; \c<\op<clear> s> \br;
-        \c; \c<\op<move> r \to; t> \br;
-        \c<\rm<A>:> \c<\tt|fun|<dec> t> \br;
+        \c; \c<\rm<clear> \srel; s> \br;
+        \c; \c<\rm<move> \srel; r \to; t> \br;
+        \c<\rm<A>:> \c<\tt<dec> \srel; t> \br;
         \c; \c<\tt<end>> \br;
-        \c; \c<\tt|fun|<inc> r> \br;
-        \c; \c<\tt|fun|<inc> s> \br;
-        \c; \c<\tt|fun|<backward> \rm<A>> \br;
+        \c; \c<\tt<inc> \srel; r> \br;
+        \c; \c<\tt<inc> \srel; s> \br;
+        \c; \c<\tt<backward> \srel; \rm<A>> \br;
       >
     >
     先に言ってしまうとこれは、&m<r> 番目のレジスタの値を &m<s> 番目のレジスタにコピーするプログラムである。
@@ -164,17 +164,62 @@
     この後の 5 行では、この &m<t> 番目の値を減らしながら &m<r> 番目と &m<s> 番目の値を増やす。
     これにより、&m<r> 番目と &m<s> 番目の値が減らし始める前の &m<t> 番目の値と等しくなったところで、&m<t> 番目の値が 0 になって終了する。
     これで、&m<r> 番目と &m<s> 番目の値がともに最初の &m<r> 番目の値と等しくなるので、結果的に &m<r> 番目の値を &m<s> 番目にコピーしたことになる。
-    このプログラムは、以降 &m<\op<copy> r \to; s `; t> と書くことにする。
+    このプログラムは、以降 &m<\rm<copy> \srel; r \to; s, t> と書くことにする。
+  >
+  \p<
+    以上の準備のもと、ある関数を計算するプログラムから\mref|type="thm",ref="prescomp"|; の条件を満たすプログラムを構成しよう。
   >
   \thm|type="thm"|<
     \p<
        部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> とプログラム &m<\scr<F>> をとる。
        さらに、相異なる自然数 &m<\sb<r><0>, \cdots;, \sb<r><k - 1>> および自然数 &m<s, t> をとる。
-       &m<\scr<F>> が &m<f> を通常の意味で計算するならば、あるプログラム &m<\tilde<\scr<F>>> が存在して、 &m<\tilde<\scr<F>>> は &m<\sb<r><0>, \cdots;, \sb<r><k - 1>> から &m<s> へ &m<t> を保ちながら &m<f> を計算する。
+       &m<\scr<F>> が &m<f> を通常の意味で計算するならば、あるプログラム &m<\scr<F> `[\sb<r><0>, \cdots;, \sb<r><k - 1> \to; s `; t`]> が存在して、これは &m<\sb<r><0>, \cdots;, \sb<r><k - 1>> から &m<s> へ &m<t> を保ちながら &m<f> を計算する。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        m \coloneqq; \max; `{ r \mid; &raw<&m<\scr<F>> に &m<\tt<inc> \srel; r> もしくは &m<\tt<dec> \srel; r> が属する>`}
+      >
+      とおく。
+      レジスタの値を参照したり操作したりするのは &m<\tt<inc>> 命令と &m<\tt<dec>> 命令だけなので、&m<\scr<F>> は &m<m> 番目以前のレジスタしか参照せず、&m<\scr<F>> の動作は &m<m> 番目より後のレジスタの値には依存しない。 
+      また、
+      &mb<
+        w \coloneqq; \max; (\sb<r><0>, \cdots;, \sb<r><k - 1>, t)
+      >
+      とおき、&m<\scr<F>> に属する &m<\tt<inc>> 命令もしくは &m<\tt<dec>> 命令が参照する全てのレジスタ番号に &m<w> を加えて得られるプログラムを &m<\sb<\scr<F>><+ w>> と書くことにする。
+      すると、&m<\sb<\scr<F>><+ w>> は &m<w> 番目から &m<w + m> 番目までのレジスタしか参照しない。
+      したがって、&m<\sb<\scr<F>><+ w>> の動作は &m<w + m> 番目より後のレジスタの値には依存しないし、&m<\sb<\scr<F>><+ w>> の実行中に &m<w> 番目より前のレジスタの値が変化することはない。
+    >
+    \p<
+      ここで、以下のプログラムを &m<\tilde<\scr<F>>> とする。
+      &mb<
+        \array|align="rl"|<
+          \c; \c<\rm<copy> \srel; \sb<r><0> \to; w, w + 1> \br;
+          \c; \c<\rm<copy> \srel; \sb<r><1> \to; w + 1, w + 2> \br;
+          \c; \c<\quad; \vdots;> \br;
+          \c; \c<\rm<copy> \srel; \sb<r><k - 1> \to; w + k - 1, w + k> \br;
+          \c; \c<\rm<clear> \srel; w + k> \br;
+          \c; \c<\rm<clear> \srel; w + k + 1> \br;
+          \c; \c<\quad; \vdots;> \br;
+          \c; \c<\rm<clear> \srel; w + \max; (m, k)> \br;
+          \c; \c<\sb<\scr<F>><+ w>> \br;
+          \c; \c<\rm<move> \srel; w + k \to; s> \br;
+        >
+      >
+      &m<\sb<r><0>> 番目から &m<\sb<r><k - 1>> 番目までのレジスタの値がそれぞれ &m<\sb<x><0>, \cdots;, \sb<x><k - 1>> である状態から、この &m<\tilde<\scr<F>>> の動作を追ってみよう。
+      まず、&m<\sb<r><0>> 番目から &m<\sb<r><k - 1>> 番目までのレジスタの値が &m<w> 番目から &m<w + k - 1> 番目までにコピーされる。
+      すなわち、&m<w> 番目から &m<w + k - 1> 番目までのレジスタの値が順に &m<\sb<x><0>, \cdots;, \sb<x><k - 1>> になる。
+      続いて、&m<w + k> 番目から &m<w + \max; (m, k)> 番目までのレジスタが 0 にリセットされる。
+      これにより、レジスタ番号が &m<w> だけズレていることを除けば、&m<\scr<F>> が &m<f (\vec<x>)> を計算するときと同じ状況になっている。
+      そのため、この後で &m<\sb<\scr<F>><+ w>> が実行されるので、もし &m<f (\vec<x>)> が定義されているならば、これで &m<w + k> 番目のレジスタに &m<f (\vec<x>)> が格納されるはずである。
+      最後に、この &m<w + k> 番目のレジスタの値が &m<s> 番目のレジスタに移されるから、&m<s> 番目のレジスタの値は &m<f (\vec<x>)> になる。
+      また、もし &m<f (\vec<x>)> が定義されていないならば、&m<\sb<\scr<F>><+ w>> の実行は永遠に終了しないはずなので、上記の &m<\tilde<\scr<F>>> も永遠に終了しない。
+      以上により、この &m<\tilde<\scr<F>>> が定理で主張されている &m<\scr<F> `[\sb<r><0>, \cdots;, \sb<r><k - 1> \to; s `; t`]> である。
     >
   >
   \p<
-    以降、上記定理中の &m< &m<\tilde<\scr<F>>>> のことを &m<\scr<F> `[\sb<r><0>, \cdots;, \sb<r><k - 1> \to; s `; t`]> と書くことにする。
   >
   \h1<参考文献>
   \ol<
