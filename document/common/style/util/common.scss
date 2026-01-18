@@ -93,6 +93,23 @@ $monospace-letter-spacing: -0.08em;
   }
 }
 
+@mixin trim-leading {
+  &::before {
+    width: 0em;
+    height: 0em;
+    margin-top: calc((1em - 1lh) / 2);
+    display: block;
+    content: "";
+  }
+  &::after {
+    width: 0em;
+    height: 0em;
+    margin-bottom: calc((1em - 1lh) / 2);
+    display: block;
+    content: "";
+  }
+}
+
 @mixin icon($type: "solid", $codepoint: null) {
   font-size-adjust: none;
   @if $type == "solid" {

@@ -235,10 +235,19 @@ body {
 
 .information-left-item {
   display: flex;
-  flex-direction: column;
+  @include desktop {
+    row-gap: 4rpx;
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .information-left-label {
+  @include trim-leading;
   font-size: 20rpx;
   font-family: "Geologica";
   font-weight: 600;
@@ -246,14 +255,13 @@ body {
 }
 
 .information-left-value {
-  margin-block-start: -4rpx;
-  margin-block-end: -6rpx;
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
 
 .information-left-number {
+  @include trim-leading;
   font-size: 48rpx;
   font-family: "Geologica";
   font-weight: 800;
@@ -265,16 +273,15 @@ body {
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-auto-flow: row;
-  @include mobile {
-    margin-inline: -8rpx;
-  }
 }
 
 .information-right-item {
+  padding-block: 12rpx;
+  padding-inline-start: 12rpx;
+  padding-inline-end: 16rpx;
   background-color: oklch(from var(--item-color) l c h / 0.2);
+  border-inline-start: solid 6rpx var(--item-color);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   &[data-level="5"] {
     --item-color: oklch(0.4 0.3 26);
   }
@@ -282,19 +289,19 @@ body {
     --item-color: oklch(0.7 0.3 110);
   }
   @include desktop {
-    padding-block: 8rpx;
-    padding-inline-start: 12rpx;
-    border-inline-start: solid 4rpx var(--item-color);
+    row-gap: 4rpx;
+    flex-direction: column;
+    justify-content: center;
   }
   @include mobile {
-    padding-block-start: 10rpx;
-    padding-block-end: 8rpx;
-    padding-inline: 8rpx;
-    border-block-start: solid 4rpx var(--item-color);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 .information-right-label {
+  @include trim-leading;
   font-size: 16rpx;
   font-family: "Geologica";
   font-weight: 600;
@@ -302,6 +309,7 @@ body {
 }
 
 .information-right-value {
+  @include trim-leading;
   font-size: 32rpx;
   font-family: "Geologica";
   font-weight: 700;
