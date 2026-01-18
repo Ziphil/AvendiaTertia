@@ -71,28 +71,6 @@ $monospace-letter-spacing: -0.08em;
   }
 }
 
-@mixin line-height($line-height, $directions: top bottom) {
-  line-height: $line-height;
-  @if index($directions, top) {
-    &::before {
-      width: 0em;
-      height: 0em;
-      margin-top: 0em - (div($line-height - 1, 2) * 1em);
-      display: block;
-      content: "";
-    }
-  }
-  @if index($directions, bottom) {
-    &::after {
-      width: 0em;
-      height: 0em;
-      margin-bottom: 0em - (div($line-height - 1, 2) * 1em);
-      display: block;
-      content: "";
-    }
-  }
-}
-
 @mixin trim-leading {
   &::before {
     width: 0em;
