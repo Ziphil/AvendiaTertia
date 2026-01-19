@@ -61,7 +61,7 @@
   \p<
     では本題に移るが、まずは初期関数が全て計算可能であることを示す。
   >
-  \thm|type="prp"|<
+  \thm|type="prp",id="init"|<
     \p<
       原始再帰関数の初期関数 &m<\op|ord|<zero>: \sp<\bb<N>><0> \to; \bb<N>>, &m<\op|ord|<succ>: \sp<\bb<N>><1> \to; \bb<N>>, &m<\sbsp<\op|ord|<proj>><i><k>: \sp<\bb<N>><k> \to; \bb<N> \srel; (0 \leq; i `< k)> は全て計算可能である。
     >
@@ -170,7 +170,7 @@
   \p<
     以上の準備のもと、ある関数を計算するプログラムから\mref|type="thm",ref="prescomp"|; の条件を満たすプログラムを構成しよう。
   >
-  \thm|type="thm"|<
+  \thm|type="prp"|<
     \p<
        部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> とプログラム &m<\scr<F>> をとる。
        さらに、相異なる自然数 &m<\sb<r><0>, \cdots;, \sb<r><k - 1>> および自然数 &m<s, t> をとる。
@@ -223,7 +223,7 @@
   \p<
     この定理を利用すれば、計算可能性が関数の合成で閉じていることが簡単に示せる。
   >
-  \thm|type="thm"|<
+  \thm|type="prp",id="comp"|<
     \p<
       部分関数 &m<\sb<f><0>, \cdots;, \sb<f><l - 1>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> および部分関数 &m<g: \sp<\bb<N>><l> \dot<\to;> \bb<N>> に対し、これらから合成で得られる部分関数を &m<h: \sp<\bb<N>><k> \dot<\to;> \bb<N>> とする。
       &m<\sb<f><0>, \cdots;, \sb<f><l - 1>, g> が全て計算可能ならば、&m<h> も計算可能である。
@@ -242,11 +242,11 @@
           \c<\scr<G> `[ k, \cdots;, k + l - 1 \to; k \mid; 0 `]> \br;
         >
       >
-      &m<0, \cdots;, k - 1> 番目のレジスタの値がそれぞれ &m<\sb<x><0>, \cdots;, \sb<x><k - 1>> である状態から、この &m<\scr<H>> の動作を追う。
+      レジスタが &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> である状態から &m<\scr<H>> の動作を追おう。
       まず、&m<\sb<\scr<F>><0> `[ 0, \cdots;, k - 1 \to; k \mid; k `]> が実行されると、&m<\sb<f><0> (\vec<x>)> が定義されているなら、&m<k> 番目のレジスタにその &m<\sb<f><0> (\vec<x>)> が格納される。
       このとき、&m<k> 番目より前のレジスタの値は変化しないから、 &m<0, \cdots;, k - 1> 番目のレジスタの値は &m<\sb<x><0>, \cdots;, \sb<x><k - 1>> のままである。
-      したがって、次に &m<\sb<\scr<F>><1> `[ 0, \cdots;, k - 1 \to; k + 1 \mid; k + 1 `]> が実行されると、&m<\sb<f><1> (\vec<x>)> が定義されているなら、&m<k + 1> 番目のレジスタにその &m<\sb<f><1> (\vec<x>)> が格納される。
-      これを続けると、&m<\sb<\scr<F>><l - 1> `[ 0, \cdots;, k - 1 \to; k + l - 1 \mid; k + l - 1 `]> の実行が終わった時点では、&m<\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>)> が全て定義されているのであれば、&m<0, \cdots;, k - 1, k, \cdots;, k + l - 1> 番目のレジスタの値はそれぞれ &m<\sb<x><0>, \cdots;, \sb<x><k - 1>, \sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>)> になっているはずである。
+      したがって、次に &m<\sb<\scr<F>><1> `[ 0, \cdots;, k - 1 \to; k + 1 \mid; k + 1 `]> が実行されると、&m<\sb<f><1> (\vec<x>)> が定義されているなら、&m<k + 1> 番目のレジスタに &m<\sb<f><1> (\vec<x>)> が格納される。
+      これを続けると、&m<\sb<\scr<F>><l - 1> `[ 0, \cdots;, k - 1 \to; k + l - 1 \mid; k + l - 1 `]> が実行された時点で、&m<\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>)> が全て定義されているのであれば、&m<0, \cdots;, k - 1, k, \cdots;, k + l - 1> 番目のレジスタの値はそれぞれ &m<\sb<x><0>, \cdots;, \sb<x><k - 1>, \sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>)> になっているはずである。
       そのため、ここで &m<\scr<G> `[ k, \cdots;, k + l - 1 \to; k \mid; 0 `]> が実行されると、&m<g (\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>))> が定義されているなら、&m<k> 番目のレジスタに &m<g (\sb<f><0> (\vec<x>), \cdots;, \sb<f><l - 1> (\vec<x>))> すなわち &m<h (\vec<x>)> が格納される。
     >
     \p<
