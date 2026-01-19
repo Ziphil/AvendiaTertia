@@ -4,7 +4,7 @@
 
 \page<
   \name<表層形への変換規則>
-  \ver<β.18 期>
+  \ver<β.19 期>
 
   \h1|tag="tsk"|<表層形への変換規則>
   \h2|tag="tsg"|<連続軽音節の回避>
@@ -54,7 +54,7 @@
     \tr<\th<\mk;[ӈ-]>\td<>\td<>\td<>\td<>\td<\mk;[нт]>\td<\mk;[нд]>\td<\mk;[нс]>\td<\mk;[нз]>\td<\mk;[мп]>\td<\mk;[мб]>\td<\mk;[мф]>\td<\mk;[мв]>>
     \tr<\th<\mk;[н-]>\td<\mk;[ӈк]>\td<\mk;[ӈг]>\td<\mk;[ӈх]>\td<\mk;[ӈҕ]>\td<>\td<>\td<>\td<>\td<\mk;[мп]>\td<\mk;[мб]>\td<\mk;[мф]>\td<\mk;[мв]>>
     \tr<\th<\mk;[м-]>\td<\mk;[ӈк]>\td<\mk;[ӈг]>\td<\mk;[ӈх]>\td<\mk;[ӈҕ]>\td<\mk;[нт]>\td<\mk;[нд]>\td<\mk;[нс]>\td<\mk;[нз]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[л-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[л-]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<\mk;[дд]>\td<\mk;[сс]>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
     \tr<\th<\mk;[р-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
   >
   \table<
