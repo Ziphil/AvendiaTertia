@@ -92,16 +92,25 @@
     さて、ここまでレジスタマシンの動作を自然言語で述べてきたが、もう少し数学的に厳密な見方もしておこう。
     レジスタマシンはレジスタをもっており、このレジスタはプログラムの実行中に内容が書き換わる。
     一方で、レジスタマシンは「プログラム上の何番目の命令を見るか」という情報も保持しており、これもプログラムの実行中に変化する。
-    これを仮に「ポインタ」と呼ぶことにしよう。
-    すると、レジスタマシンはレジスタとポインタを「状況」としてもち、プログラムの命令とはこの状況を別の状況に変化させるものと見なすことができる。
-    したがって、プログラム &m<\scr<F> \coloneqq; (\sb<c><0>, \cdots;, \sb<c><l - 1>)> を実行するレジスタマシンの動作は、レジスタ &m<\vec<x>> とポインタ &m<p> の対である状況 &m<(\vec<x>, p)> を受け取って、それを 1 ステップ実行した後の状況 &m<(\vec<x>', p')> を返す写像 &m<\sb<\op|ord|<next>><\scr<F>>> として定式化できる。
+    これを「ポインタ」と呼ぶことにしよう。
+    すると、レジスタマシンの状態はメモリとポインタの対で完全に決定する。
+    これを「状況」と呼ぶことにしよう。
+  >
+  \thm|type="def"|<
+    \p<
+      レジスタマシンのメモリ &m<\scr<R>> とポインタを表す自然数 &m<p> の対 &m<(\scr<R>, p)> のことを、レジスタマシンの \def<状況\fl<configuration>> と呼ぶ。
+    >
+  >
+  \p<
+    すると、プログラムの命令とはこの状況を別の状況に変化させるものと見なすことができる。
+    したがって、プログラム &m<\scr<F> \coloneqq; (\sb<c><0>, \cdots;, \sb<c><l - 1>)> を実行するレジスタマシンの動作は、メモリ &m<\scr<R> \coloneqq; (\sb<x><r>) \sb<><r>> とポインタ &m<p> の対である状況 &m<(\scr<R>, p)> を受け取って、それを 1 ステップ実行した後の状況 &m<(\scr<R>', p')> を返す写像 &m<\sb<\op|ord|<next>><\scr<F>>> として定式化できる。
     この写像は、
     &mb<
       \array|align="rcl"|<
         \c<\sb<\op|ord|<next>><\scr<F>> (\vec<x>, p)> \c<\coloneqq;> \c<\case<
           \c<((\sb<x><0>, \cdots;, \sb<x><r - 1>, \sb<x><r> + 1, \sb<x><r + 1>, \cdots;), p + 1)> \c<(\sb<c><p> = \tt<inc> \srel; r)> \br;
-          \c<(\vec<x>, p + 1)> \c<(\sb<c><p> = \tt<dec> \srel; r \scand; \sb<x><r> = 0)> \br;
-          \c<((\sb<x><0>, \cdots;, \sb<x><r - 1>, \sb<x><r> - 1, \sb<x><r + 1>, \cdots;), p + 2)> \c<(\sb<c><p> = \tt<dec> \srel; r \scand; \sb<x><r> `> 0)> \br;
+          \c<(\vec<x>, p + 1)> \c<(\sb<c><p> = \tt<dec> \srel; r, \sb<x><r> = 0)> \br;
+          \c<((\sb<x><0>, \cdots;, \sb<x><r - 1>, \sb<x><r> - 1, \sb<x><r + 1>, \cdots;), p + 2)> \c<(\sb<c><p> = \tt<dec> \srel; r, \sb<x><r> `> 0)> \br;
           \c<(\vec<x>, p + q)> \c<(\sb<c><p> = \tt<forward> \srel; q)> \br;
           \c<(\vec<x>, p - q)> \c<(\sb<c><p> = \tt<backward> \srel; q)> \br;
           \c<(\vec<x>, p)> \c<(&raw<&m<\sb<c><p>> が存在しない>)>
@@ -109,18 +118,18 @@
       >
     >
     と書ける。
-    さて、初期のレジスタを &m<\vec<x>> として、&m<n> ステップ後のレジスタマシンの状況を &m<\sb<\op<configat>><\scr<F>> (\vec<x>)> と書くことにしよう。
+    さて、初期のメモリを &m<\scr<R>> として、&m<n> ステップ後のレジスタマシンの状況を &m<\sb<\op<configat>><\scr<F>> (\scr<R>, n)> と書くことにしよう。
     するとこれは、&m<\sb<\op|ord|<next>><\scr<F>>> を再帰的に呼び出すことで、
     &mb<
       \array|align="rcl"|<
-        \c<\sb<\op<configat>><\scr<F>> (\vec<x>, 0)> \c<=> \c<(\vec<x>, 0)> \br;
-        \c<\sb<\op<configat>><\scr<F>> (\vec<x>, n + 1)> \c<=> \c<\sb<\op|ord|<next>><\scr<F>> (\sb<\op<configat>><\scr<F>> (\vec<x>, n))>
+        \c<\sb<\op<configat>><\scr<F>> (\scr<R>, 0)> \c<=> \c<(\scr<R>, 0)> \br;
+        \c<\sb<\op<configat>><\scr<F>> (\scr<R>, n + 1)> \c<=> \c<\sb<\op|ord|<next>><\scr<F>> (\sb<\op<configat>><\scr<F>> (\scr<R>, n))>
       >
     >
     と定めることができる。
-    これを使えば、プログラムが &m<n> ステップで終了することは、&m<\sb<\op<configat>><\scr<F>> (\vec<x>, n)> の右側成分が負になるか &m<l> 以上になることだと言える。
-    特に、&m<n> ステップで正常終了することは、&m<\sb<\op<configat>><\scr<F>> (\vec<x>, n) = l> が成り立つことだと言える。
-    したがって、この正常終了するときのステップ数を &m<\sbsp<n><\scr<F>><\infty;> (\vec<x>)> と書けば、正常終了時の状況は &m<\sb<\op<configat>><\scr<F>> (\vec<x>, \sbsp<n><\scr<F>><\infty;> (\vec<x>))> として取り出せる。
+    これを使えば、プログラムが &m<n> ステップで終了することは、&m<\sb<\op<configat>><\scr<F>> (\scr<R>, n)> の右側成分が負になるか &m<l> 以上になることだと言える。
+    特に、&m<n> ステップで正常終了することは、&m<\sb<\op<configat>><\scr<F>> (\scr<R>, n) = l> が成り立つことだと言える。
+    したがって、この正常終了するときのステップ数を &m<\sbsp<n><\scr<F>><\infty;> (\scr<R>)> と書けば、正常終了時の状況は &m<\sb<\op<configat>><\scr<F>> (\scr<R>, \sbsp<n><\scr<F>><\infty;> (\scr<R>))> として取り出せる。
   >
   \p<
     このようにレジスタマシンの動作は数学的に厳密に述べられるとはいえ、形式化しすぎても直感的に理解しにくくなってしまうので、以降はレジスタマシンの動作は自然言語で説明することにする。
@@ -153,7 +162,7 @@
   \thm|type="def"|<
     \p<
       部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> とプログラム &m<\scr<F>> をとる。
-      任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、レジスタを &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> に初期化した状態で &m<\scr<F>> を実行すると、次の 2 条件がともに成り立つとする。
+      任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、メモリを &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> に初期化した状態で &m<\scr<F>> を実行すると、次の 2 条件がともに成り立つとする。
     >
     \ul<
       \li*<
