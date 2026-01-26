@@ -4,7 +4,7 @@
 
 \page<
   \name<表層形への変換規則>
-  \ver<β.19 期>
+  \ver<β.20 期>
 
   \h1|tag="tsk"|<表層形への変換規則>
   \h2|tag="tsg"|<連続軽音節の回避>
@@ -79,10 +79,10 @@
     \tr<\th<\mk;[ӟ-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<>\td<>\td<>\td<>>
     \tr<\th<\mk;[ч-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<>\td<\mk;[ӝӝ]>\td<>\td<>\td<>\td<>\td<>>
     \tr<\th<\mk;[ӝ-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ӈ-]>\td<\mk;[нҫ]>\td<\mk;[нҙ]>\td<\mk;[нш]>\td<\mk;[нж]>\td<\mk;[нц]>\td<\mk;[нӟ]>\td<\mk;[нч]>\td<\mk;[нӝ]>\td<>\td<\mk;[нн]>\td<\mk;[мм]>\td<>\td<>>
+    \tr<\th<\mk;[ӈ-]>\td<\mk;[нҫ]>\td<\mk;[нҙ]>\td<\mk;[нш]>\td<\mk;[нж]>\td<\mk;[нц]>\td<\mk;[нӟ]>\td<\mk;[нч]>\td<\mk;[нӝ]>\td<>\td<\mk;[нн]>\td<\mk;[мм]>\td<\mk;[нл]>\td<>>
     \tr<\th<\mk;[н-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<\mk;[мм]>\td<>\td<>>
-    \tr<\th<\mk;[м-]>\td<\mk;[нҫ]>\td<\mk;[нҙ]>\td<\mk;[нш]>\td<\mk;[нж]>\td<\mk;[нц]>\td<\mk;[нӟ]>\td<\mk;[нч]>\td<\mk;[нӝ]>\td<\mk;[ӈӈ]>\td<\mk;[нн]>\td<>\td<>\td<>>
-    \tr<\th<\mk;[л-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[нн]>\td<>\td<>\td<\mk;[рр]>>
+    \tr<\th<\mk;[м-]>\td<\mk;[нҫ]>\td<\mk;[нҙ]>\td<\mk;[нш]>\td<\mk;[нж]>\td<\mk;[нц]>\td<\mk;[нӟ]>\td<\mk;[нч]>\td<\mk;[нӝ]>\td<\mk;[ӈӈ]>\td<\mk;[нн]>\td<>\td<\mk;[нл]>\td<>>
+    \tr<\th<\mk;[л-]>\td<>\td<>\td<>\td<>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<>\td<\mk;[рр]>>
     \tr<\th<\mk;[р-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[лл]>\td<>>
   >
   \h2|tag="tsv"|<弱子音の消失>
