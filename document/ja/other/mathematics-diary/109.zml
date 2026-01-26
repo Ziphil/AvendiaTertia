@@ -1,0 +1,126 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<一般再帰的ならば計算可能>
+  \use-math|prefix="12"|;
+
+  \h1<日記 (2026 年 1 月 21 日)>
+  \p<
+    
+  >
+  \thm|type="def"|<
+    \p<
+      命令 &m<c> に対して自然数 &m<\lceil; c \rceil;> を、
+      &mb<
+        \array|align="rcl"|<
+          \c<\lceil; \tt<inc> \srel; r \rceil;> \c<\coloneqq;> \c<\langle; 0, r \rangle;> \br;
+          \c<\lceil; \tt<dec> \srel; r \rceil;> \c<\coloneqq;> \c<\langle; 1, r \rangle;> \br;
+          \c<\lceil; \tt<forward> \srel; q \rceil;> \c<\coloneqq;> \c<\langle; 2, q \rangle;> \br;
+          \c<\lceil; \tt<backward> \srel; q \rceil;> \c<\coloneqq;> \c<\langle; 3, q \rangle;> \br;
+        >
+      >
+      によって定義する。
+      これを &m<c> の \def<Gödel 数\fl<— number>> と呼ぶ。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      プログラム &m<\scr<F> \eqqcolon; (\sb<c><0>, \cdots;, \sb<c><l - 1>)> に対して自然数 &m<\lceil; \scr<F> \rceil;> を、
+      &mb<
+        \lceil; \scr<F> \rceil; \coloneqq; \langle; \lceil; \sb<c><0> \rceil;, \cdots;, \lceil; \sb<c><l - 1> \rceil; \rangle;
+      >
+      によって定義する。
+      これを &m<\scr<F>> の \def<Gödel 数\fl<— number>> と呼ぶ。
+    >
+  >
+  \p<
+    例えば、プログラム
+    &mb<
+      \array|align="l"|<
+        \c<\tt<dec> \srel; 0> \br;
+        \c<\tt<forward> \srel; 3> \br;
+        \c<\tt<inc> \srel; 1> \br;
+        \c<\tt<backward> \srel; 3>
+      >
+    >
+    を &m<\scr<F>> とすると、この Gödel 数 &m<\lceil; \scr<F> \rceil;> は、
+    &mb<
+      \array|align="rcl"|<
+        \c<\lceil; \scr<F> \rceil;> \c<=> \c<\langle; \lceil; \tt<dec> \srel; 0 \rceil;, \lceil; \tt<forward> \srel; 3 \rceil;, \lceil; \tt<inc> \srel; 1 \rceil;, \lceil; \tt<backward> \srel; 3 \rceil; \rangle;> \br;
+        \c; \c<=> \c<\langle; \langle; 1, 0 \rangle;, \langle; 2, 3 \rangle;, \langle; 0, 1 \rangle;, \langle; 3, 3 \rangle; \rangle;> \br;
+        \c; \c<=> \c<\langle; \sp<2><2> \cdot; \sp<3><1>, \sp<2><3> \cdot; \sp<3><4>, \sp<2><1> \cdot; \sp<3><2>, \sp<2><4> \cdot; \sp<3><4> \rangle;> \br;
+        \c; \c<=> \c<\langle; 12, 648, 18, 1296 \rangle;> \br;
+        \c; \c<=> \c<\sp<2><13> \cdot; \sp<3><649> \cdot; \sp<5><19> \cdot; \sp<7><1297>>
+      >
+    >
+    となる。
+    見ての通り巨大な数になるが、重要なのは数そのものではなく、この数だけからプログラムの情報を完全に復元できる点である。
+    例えば、&m<\scr<F>> の最初の命令の Gödel 数 &m<\lceil; \tt<dec> \srel; 0 \rceil;> は、&m<\lceil; \scr<F> \rceil; @ 0> として取得できる。
+    さらに、この命令がどの種類なのか知りたければ、&m<\lceil; \scr<F> \rceil; @ 0 @ 0> を見てそれが 0 から 3 までのいずれであるかを確認すれば良い。
+  >
+  \p<
+    さて、これでプログラムを自然数にエンコードすることはできたので、次にレジスタマシンの状況を自然数にエンコードしよう。
+    レジスタマシンの状況とはメモリとポインタのことであったが、ポインタはそもそもただの自然数なので、メモリをエンコードできれば良い。
+    そのメモリとは、有限個を除いて 0 であるような自然数の列であった。
+    これのエンコーディングは、有限列のエンコーディングと同様にして、次のように素数の冪で定義することにする。
+  >
+  \thm|type="def"|<
+    \p<
+      レジスタマシンのメモリ &m<\scr<R> \eqqcolon; (\sb<x><r>) \sb<><r \in; \bb<N>>> に対して自然数 &m<\lceil; \scr<R> \rceil;> を、
+      &mb<
+        \lceil; \scr<R> \rceil; \coloneqq; \prod<r \in; \bb<N>> \op<pr> (r) \sp<><\sb<x><r>>
+      >
+      によって定義する。
+      これを &m<\scr<R>> の \def<Gödel 数\fl<— number>> と呼ぶ。
+    >
+  >
+  \p<
+    有限列のエンコーディングとは異なり、指数に 1 をたしていないことに注意してほしい。
+    メモリを構成する自然数は有限個を除いて 0 なので、これによって上の積は実際には有限積になっており、問題なく定義されることが保証されている。
+  >
+  \p<
+    メモリの Gödel 数から各レジスタの値を復元することも可能であり、さらに言えば原始再帰的に可能である。
+  >
+  \thm|type="prp",id="atinf"|<
+    \p<
+      全域関数 &m<\sp<\atsym|ord|;><*>: \sp<\bb<N>><2> \to; \bb<N>> であって、任意のメモリ &m<(\sb<x><r>) \sb<><r \in; \bb<N>>> と自然数 &m<y> に対し、
+      &mb<
+        \lceil; (\sb<x><r>) \sb<><r \in; \bb<N>> \rceil; \sp<\atsym|bin|;><*> y = \sb<x><y>
+      >
+      を満たし、さらに原始再帰的なものが存在する。
+    >
+  >
+  \prf<
+    \p<
+      有限列の場合と同様に、メモリの Gödel 数 &m<`r> に対して、&m<\op<pr> (y) \sp<><1>>, &m<\op<pr> (y) \sp<><2>>, &m<\cdots;> が順に &m<`r> をわり切るか調べていけば良い。
+      したがって、
+      &mb<
+        `r \sp<\atsym|bin|;><*> y \coloneqq; \bar<\rm<`m>> t `< `r. \srel; \op<pr> (y) \sp<><t + 1> \nmid; `r
+      >
+      と定義すれば良い。
+    >
+  >
+  \p<
+    以上で、レジスタマシンに関するデータを全て自然数にエンコードする方法が整った。
+    残る作業は、レジスタマシンの動作を一般再帰関数として表現することである。
+    しかし、そのアイデアはほとんど\a|href="108.html"|<第 9 回>でレジスタマシンの厳密な形式化として述べた通りである。
+    すなわち、命令による状況の変化を関数 next として表現し、それを用いて特定のステップにおける状況を取得する関数 configat を定めるのである。
+  >
+  \thm|type="prp"|<
+    \p<
+      次を満たす原始再帰関数 &m<\op|ord|<next>: \sp<\bb<N>><2> \to; \bb<N>> が存在する。
+      すなわち、任意のプログラム &m<\scr<F>> に対して、レジスタマシンの状況が &m<(\scr<R>, p)> である状態で 1 ステップ実行した後の状況を &m<(\scr<R>', p')> とすると、
+      &mb<
+        \op<next> (\lceil; \scr<F> \rceil;, \langle; \lceil; \scr<R> \rceil;, \lceil; p \rceil; \rangle;) = \langle; \lceil; \scr<R>' \rceil;, \lceil; p' \rceil; \rangle;
+      >
+      が成り立つ。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>
