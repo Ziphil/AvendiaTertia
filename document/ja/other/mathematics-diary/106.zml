@@ -104,16 +104,17 @@
   \p<
     すると、プログラムの命令とはこの状況を別の状況に変化させるものと見なすことができる。
     したがって、プログラム &m<\scr<F> \coloneqq; (\sb<c><0>, \cdots;, \sb<c><l - 1>)> を実行するレジスタマシンの動作は、メモリ &m<\scr<R> \coloneqq; (\sb<x><r>) \sb<><r>> とポインタ &m<p> の対である状況 &m<(\scr<R>, p)> を受け取って、それを 1 ステップ実行した後の状況 &m<(\scr<R>', p')> を返す写像 &m<\sb<\op|ord|<next>><\scr<F>>> として定式化できる。
-    この写像は、
+    ここで便宜上、すでに実行が終了している (すなわちポインタが指す命令が存在しない) 場合でもさらに 1 ステップの実行が可能であると見なし、その場合は状況は変化しないものとする。
+    すると &m<\sb<\op|ord|<next>><\scr<F>>> は、
     &mb<
       \array|align="rcl"|<
-        \c<\sb<\op|ord|<next>><\scr<F>> (\vec<x>, p)> \c<\coloneqq;> \c<\case<
+        \c<\sb<\op|ord|<next>><\scr<F>> (\scr<R>, p)> \c<\coloneqq;> \c<\case<
           \c<((\sb<x><0>, \cdots;, \sb<x><r - 1>, \sb<x><r> + 1, \sb<x><r + 1>, \cdots;), p + 1)> \c<(\sb<c><p> = \tt<inc> \srel; r)> \br;
-          \c<(\vec<x>, p + 1)> \c<(\sb<c><p> = \tt<dec> \srel; r, \sb<x><r> = 0)> \br;
+          \c<(\scr<R>, p + 1)> \c<(\sb<c><p> = \tt<dec> \srel; r, \sb<x><r> = 0)> \br;
           \c<((\sb<x><0>, \cdots;, \sb<x><r - 1>, \sb<x><r> - 1, \sb<x><r + 1>, \cdots;), p + 2)> \c<(\sb<c><p> = \tt<dec> \srel; r, \sb<x><r> `> 0)> \br;
-          \c<(\vec<x>, p + q)> \c<(\sb<c><p> = \tt<forward> \srel; q)> \br;
-          \c<(\vec<x>, p - q)> \c<(\sb<c><p> = \tt<backward> \srel; q)> \br;
-          \c<(\vec<x>, p)> \c<(&raw<&m<\sb<c><p>> が存在しない>)>
+          \c<(\scr<R>, p + q)> \c<(\sb<c><p> = \tt<forward> \srel; q)> \br;
+          \c<(\scr<R>, p - q)> \c<(\sb<c><p> = \tt<backward> \srel; q)> \br;
+          \c<(\scr<R>, p)> \c<(&raw<&m<\sb<c><p>> が存在しない>)>
         >>
       >
     >
