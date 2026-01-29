@@ -6,7 +6,7 @@
   \name<計算可能ならば一般再帰的>
   \use-math|prefix="12"|;
 
-  \h1<日記 (2026 年 1 月 21 日)>
+  \h1<日記 (2026 年 1 月 29 日)>
   \p<
     前回は、一般再帰関数が全て計算可能であることを示した。
     今回は、この逆、すなわち計算可能関数が全て一般再帰的であることを示す。
@@ -71,6 +71,12 @@
     さらに、この命令がどの種類なのか知りたければ、&m<\lceil; \scr<F> \rceil; @ 0 @ 0> を見てそれが 0 から 3 までのいずれであるかを確認すれば良い。
   >
   \p<
+    なお、命令やプログラムの Gödel 数をとる操作は、自然数への単射ではあるが全射にはなっていない。
+    例えば、命令の Gödel 数の左成分は常に 3 以下なので、&m<\langle; 4, 0 \rangle; = 96> はどんな命令の Gödel 数にもなり得ない。
+    同じ理由で、&m<\langle; 96 \rangle; = \sp<2><97>> はどんなプログラムの Gödel 数にもなり得ない。
+    ただし、Gödel 数の全射性が必要になることはないので、これが問題ではない。
+  > 
+  \p<
     さて、これでプログラムを自然数にエンコードすることはできたので、次にレジスタマシンの状況を自然数にエンコードしよう。
     レジスタマシンの状況とはメモリとポインタのことであったが、ポインタはそもそもただの自然数なので、メモリをエンコードできれば良い。
     そのメモリとは、有限個を除いて 0 であるような自然数の列であった。
@@ -91,7 +97,7 @@
     メモリを構成する自然数は有限個を除いて 0 なので、これによって上の積は実際には有限積になっており、問題なく定義されることが保証されている。
   >
   \p<
-    メモリの Gödel 数から各レジスタの値を復元することも可能であり、さらに言えば原始再帰的に可能である。
+    メモリの Gödel 数から各レジスタの値を復元することも可能であり、さらに言えばそれは原始再帰的に可能である。
   >
   \thm|type="prp",id="atinf"|<
     \p<
@@ -119,9 +125,32 @@
     すなわち、命令による状況の変化を関数 next として表現し、それを用いて特定のステップにおける状況を取得する関数 configat を定めるのである。
   >
   \p<
-    まずは next を原始再帰的に定義できることを示そう。
+    本題に入る前に、1 つ便利な関数を定義しておこう。
+  >
+  \thm|type="prp"|<
+    \p<
+      次を満たす原始再帰関数 &m<\op|ord|<updateat>: \sp<\bb<N>><3> \to; \bb<N>> が存在する。
+      メモリ &m<\scr<R>> と自然数 &m<r, x> に対し、&m<\scr<R>> の &m<r> 番目のレジスタの値を &m<x> に更新したメモリを &m<\scr<R>'> とすると、
+      &mb<
+        \op<updateat> (\lceil; \scr<R> \rceil;, r, x) = \lceil; \scr<R>' \rceil;
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      メモリの Gödel 数 &m<\lceil; \scr<R> \rceil;> において &m<r> 番目のレジスタの値は &m<\op<pr> (r)> の指数であるから、
+      &mb<
+        \op<updateat> (`r, r, x) \coloneqq; \op<div> (`r, \op<pr> (r) \sp<><`r \sp<@><*> r>) \cdot; \op<pr> (r) \sp<><x>
+      >
+      とすれば良い。
+      これは原始再帰的である。
+    >
+  >
+  \p<
+    では、next を原始再帰的に定義できることを示そう。
     なお、\a|href="108.html"|<第 9 回>のときと同様に、定義上実行が終了している状態でもさらなる実行が可能であると見なし、その場合はレジスタマシンの状況は変化しなかったものとする。
-    また、異常終了する場合を考える必要はないため、
+    また、以降の議論では、実行が正常終了するか永遠に終了しないかのどちらかの場合のみを考えれば十分であるため、議論を不要に複雑にしないためにも実行が異常終了する場合は考えないことにする。
   >
   \thm|type="prp"|<
     \p<
@@ -129,22 +158,171 @@
       任意のプログラム &m<\scr<F>> をとり、レジスタマシンの状況が &m<(\scr<R>, p)> である状態で 1 ステップ実行した直後の状況を &m<(\scr<R>', p')> とする。
       この 1 ステップの実行の前でも後でも異常終了していないのであれば、
       &mb<
-        \op<next> (\lceil; \scr<F> \rceil;, \langle; \lceil; \scr<R> \rceil;, \lceil; p \rceil; \rangle;) = \langle; \lceil; \scr<R>' \rceil;, \lceil; p' \rceil; \rangle;
+        \op<next> (\lceil; \scr<F> \rceil;, \langle; \lceil; \scr<R> \rceil;, p \rangle;) = \langle; \lceil; \scr<R>' \rceil;, p' \rangle;
       >
       が成り立つ。
     >
   >
+  \prf<
+    \p<
+      &m<`f \coloneqq; \lceil; \scr<F> \rceil;> と &m<`k \coloneqq; \langle; \lceil; \scr<R> \rceil;, p \rangle;> が与えられたとする。
+      式を見やすくするため、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<ins> (`f, p)> \c<\coloneqq;> \c<`f @ p> \br;
+          \c<\op<inskd> (`f, p)> \c<\coloneqq;> \c<\op<ins> (`f, p) @ 0 = `f @ p @ 0> \br;
+          \c<\op<insarg> (`f, p)> \c<\coloneqq;> \c<\op<ins> (`f, p) @ 1 = `f @ p @ 1> \br;
+        >
+      >
+      とおく。
+      すると、&m<\op<ins> (`f, p)> とは状況 &m<(\scr<R>, p)> において参照される命令の Gödel 数であり、&m<\op<inskd> (`f, p)> と &m<\op<insarg> (`f, p)> はそれぞれその命令の種類と引数である。
+      ins, insk, insa は 2 変数の関数として原始再帰的であることにも注目してほしい。
+      さらに、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<mem> (`k)> \c<\coloneqq;> \c<`k @ 0> \br;
+          \c<\op<ptr> (`k)> \c<\coloneqq;> \c<`k @ 1> \br;
+          \c<\op<reg> (`k, r)> \c<\coloneqq;> \c<\op<mem> (`k) \sp<@><*> r = `k @ 0 \sp<@><*> r> \br;
+        >
+      >
+      とおけば、&m<\op<mem> (`k)> と &m<\op<ptr> (`k)> とはそれぞれ &m<\scr<R>> の Gödel 数と &m<p> そのものである。
+      また、&m<\op<reg> (`k, r)> とはこのときの &m<r> 番目のレジスタの値である。
+      mem, ptr, reg も 1 変数もしくは 2 変数の関数として原始再帰的である。
+    >
+    \p<
+      さて、状況 &m<(\scr<R>, p)> において参照される命令が &m<\tt<inc> \srel; r> の形だったとする。
+      すなわち、&m<\op<inskd> (`f, \op<ptr> (`k)) = 0> の場合である。
+      この場合、&m<\scr<R>'> は &m<\scr<R>> の &m<r> 番目のレジスタの値を 1 増やしたものであり、&m<p'> は &m<p + 1> になる。
+      また、この &m<r> は &m<\op<insarg> (`f, \op<ptr> (`k))> として取得できる。
+      簡単のため、
+      &mb<
+        \op<insat> (`f, `k) \coloneqq; \op<insarg> (`f, \op<ptr> (`k))
+      >
+      と書くことにすれば、&m<\scr<R>'> と &m<p'> はそれぞれ &m<`f> と &m<`k> だけを用いて、
+      &mb<
+        \array|align="rcl"|<
+          \c<\lceil; \scr<R>' \rceil;> \c<=> \c<\op<updateat> (\op<mem> (`k), \op<insat> (`f, `k), \op<reg> (`k, \op<insat> (`f, `k)) + 1)> \br;
+          \c<p'> \c<=> \c<\op<ptr> (`k) + 1>
+        >
+      >
+      と表せる。
+      この式の右辺には原始再帰的な演算しか行っていないことに注目したい。
+    >
+    \p<
+      続いて、参照される命令が &m<\tt<dec> \srel; r> の形の場合、すなわち &m<\op<inskd> (`f, \op<ptr> (`k)) = 1> の場合を考える。
+      この場合は、&m<r> 番目のレジスタの値によりさらに場合分けされる。
+      &m<r> 番目のレジスタの値が 0 のとき、すなわち &m<\op<reg> (`k, \op<insat> (`f, `k)) = 0> のときは、メモリは変化せずにポインタが 1 個進むので、
+      &mb<
+        \array|align="rcl"|<
+          \c<\lceil; \scr<R>' \rceil;> \c<=> \c<\op<mem> (`k)> \br;
+          \c<p'> \c<=> \c<\op<ptr> (`k) + 1>
+        >
+      >
+      である。
+      &m<r> 番目のレジスタが正のとき、すなわち &m<\op<reg> (`k, \op<insat> (`f, `k)) `> 0> のときは、そのレジスタの値が 1 減ってポインタは 2 個進むので、
+      &mb<
+        \array|align="rcl"|<
+          \c<\lceil; \scr<R>' \rceil;> \c<=> \c<\op<updateat> (\op<mem> (`k), \op<insat> (`f, `k), \op<reg> (`k, \op<insat> (`f, `k)) \dotminus; 1)> \br;
+          \c<p'> \c<=> \c<\op<ptr> (`k) + 2>
+        >
+      >
+      となる。
+    >
+    \p<
+      次に、参照される命令が &m<\tt<forward> \srel; q> の形の場合、すなわち &m<\op<inskd> (`f, \op<ptr> (`k)) = 3> の場合を考える。
+      この場合は、レジスタの値は変化せず、ポインタだけが &m<q> 個進む。
+      したがって、
+      &mb<
+        \array|align="rcl"|<
+          \c<\lceil; \scr<R>' \rceil;> \c<=> \c<\op<mem> (`k)> \br;
+          \c<p'> \c<=> \c<\op<ptr> (`k) + \op<insarg> (`f, \op<ptr> (`k))>
+        >
+      >
+      と書ける。
+    >
+    \p<
+      最後に、参照される命令が &m<\tt<backward> \srel; q> の形の場合、すなわち &m<\op<inskd> (`f, \op<ptr> (`k)) = 4> の場合を考える。
+      この場合は、ポインタだけが &m<q> 個戻る。
+      したがって、
+      &mb<
+        \array|align="rcl"|<
+          \c<\lceil; \scr<R>' \rceil;> \c<=> \c<\op<mem> (`k)> \br;
+          \c<p'> \c<=> \c<\op<ptr> (`k) \dotminus; \op<insarg> (`f, \op<ptr> (`k))>
+        >
+      >
+      と書ける。
+      2 つ目の式の右辺では結果を自然数に収めるために切り捨て減法を用いているので、&m<\op<ptr> (`k) `< \op<insarg> (`f, \op<ptr> (`k))> である場合は結果は一律 0 になってしまう。
+      しかし、&m<\op<ptr> (`k) `< \op<insarg> (`f, \op<ptr> (`k))> であるとはポインタが 0 未満になって異常終了する場合であり、ここでは異常終了を考える必要はないので、問題にはならない。
+    >
+    \p<
+      以上の考察により、&m<\op<next>> は、
+      &mb<
+        \op<next> (`f, `k) \coloneqq; \case<
+          \c<\angle<\matrix<
+            \c<\op<updateat> (\op<mem> (`k), \op<insat> (`f, `k), \op<reg> (`k, \op<insat> (`f, `k)) + 1)> \br;
+            \c<\op<ptr> (`k) + 1>
+          >>>
+          \c<(\op<inskd> (`f, \op<ptr> (`k)) = 0)> \br;
+          \c<\angle<\matrix<
+            \c<\op<mem> (`k)> \br;
+            \c<\op<ptr> (`k) + 1>
+          >>>
+          \c<(\op<inskd> (`f, \op<ptr> (`k)) = 1, \op<reg> (`k, \op<insat> (`f, `k)) = 0)> \br;
+          \c<\angle<\matrix<
+            \c<\op<updateat> (\op<mem> (`k), \op<insat> (`f, `k), \op<reg> (`k, \op<insat> (`f, `k)) \dotminus; 1)> \br;
+            \c<\op<ptr> (`k) + 2>
+          >>>
+          \c<(\op<inskd> (`f, \op<ptr> (`k)) = 1, \op<reg> (`k, \op<insat> (`f, `k)) `> 0)> \br;
+          \c<\angle<\matrix<
+            \c<\op<mem> (`k)> \br;
+            \c<\op<ptr> (`k) + \op<insarg> (`f, \op<ptr> (`k))>
+          >>>
+          \c<(\op<inskd> (`f, \op<ptr> (`k)) = 2)> \br;
+          \c<\angle<\matrix<
+            \c<\op<mem> (`k)> \br;
+            \c<\op<ptr> (`k) \dotminus; \op<insarg> (`f, \op<ptr> (`k))>
+          >>>
+          \c<(\op<inskd> (`f, \op<ptr> (`k)) = 3)> \br;
+          \c<\angle<\matrix<
+            \c<\op<mem> (`k)> \br;
+            \c<\op<ptr> (`k)>
+          >>>
+          \c<(\text<上記以外>)> \br;
+        >
+      >
+      と定めれば良い。
+      これは原始再帰的である。
+    >
+  >
+  \p<
+    次に、configat も原始再帰的に書けることを示すが、これは\a|href="108.html"|<第 9 回>で述べた形式化と全く同じようにすれば良いだけである。
+  >
   \thm|type="prp"|<
     \p<
       次を満たす原始再帰関数 &m<\op|ord|<configat>: \sp<\bb<N>><3> \to; \bb<N>> が存在する。
-      任意のプログラム &m<\scr<F>> をとる。
-      初期のメモリが &m<\scr<R>> である状態から &m<n> ステップ実行した直後のレジスタマシンの状況を &m<(\sp<\scr<R>><n>, \sp<p><n>)> とする。
+      任意のプログラム &m<\scr<F>> をとり、初期のメモリが &m<\scr<R>> である状態から &m<n> ステップ実行した直後のレジスタマシンの状況を &m<(\sp<\scr<R>><(n)>, \sp<p><(n)>)> とする。
       この途中で異常終了していないのであれば、
       &mb<
-        \op<configat> (\lceil; \scr<F> \rceil;, \lceil; \scr<R> \rceil;, n) = \langle; \lceil; \sp<\scr<R>><n> \rceil;, \lceil; \sp<p><n> \rceil; \rangle;
+        \op<configat> (\lceil; \scr<F> \rceil;, \lceil; \scr<R> \rceil;, n) = \langle; \lceil; \sp<\scr<R>><(n)> \rceil;, \sp<p><(n)> \rangle;
       >
       が成り立つ。
     >
+  >
+  \prf<
+    \p<
+      原始再帰を用いて、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<configat> (`f, `r, 0)> \c<=> \c<\langle; `r, 0 \rangle;> \br;
+          \c<\op<configat> (`f, `r, n + 1)> \c<=> \c<\op<next> (`f, \op<configat> (`f, `r, n))>
+        >
+      >
+      とすれば良い。
+    >
+  >
+  \p<
+    これらを用いれば、プログラムを実行した結果得られる出力も関数として書くことができ、しかもそれを一般再帰的に定義できることが分かる。
+    やはり方針は\a|href="108.html"|<第 9 回>の形式化と同様である。
   >
   \thm|type="prp",id="run"|<
     \p<
@@ -159,6 +337,44 @@
         実行が永遠に終了しないならば、&m<\op<run> (\lceil; \scr<F> \rceil;, \vec<x>)> は定義されない。
       >
     >
+  >
+  \prf<
+    \p<
+      まず、プログラム &m<\scr<F>> を初期のメモリが &m<\scr<R>> である状態から実行したときに、正常終了するステップ数を取得することを考えよう。
+      正常終了するとはポインタがプログラムの長さに一致することだったので、&m<`f \coloneqq; \lceil; \scr<F> \rceil;> と &m<`r \coloneqq; \lceil; \scr<R> \rceil;> が与えられたとき、正常終了するステップ数を &m<\sp<n><\infty;> (`f, `r)> とすると、
+      &mb<
+        \sp<n><\infty;> (`f, `r) = \rm<`m> n. \srel; \op<configat> (`f, `r, n) @ 1 = \op<len> (`f)
+      >
+      が成り立つ。
+      この &m<\sp<n><\infty;>> は 2 変数の関数として一般再帰的である。
+    >
+    \p<
+      さて、自然数列 &m<\vec<x>> に対して、メモリ &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> の Gödel 数を &m<\op<tomem> (\vec<x>)> と書くことにすれば、これは、
+      &mb<
+        \op<tomem> (\vec<x>) = \op<pr> (0) \sp<><\sb<x><0>> \cdot; \cdots; \cdot; \op<pr> (k - 1) \sp<><\sb<x><k - 1>>
+      >
+      と書ける。
+      これは &m<k> 変数の関数として一般再帰的である。
+    >
+    \p<
+      さて、命題の主張通りに &m<\scr<F>> を実行したとしてそれが正常終了したとする。
+      &m<`f \coloneqq; \lceil; \scr<F> \rceil;> とおくと、正常終了時のステップ数は &m<\sp<n><\infty;> (`f, \op<tomem> (\vec<x>))> である。
+      このときの状況は &m<\op<configat> (`f, \op<tomem> (\vec<x>), \sp<n><\infty;> (`f, \op<tomem> (\vec<x>)))> であるから、その &m<k> 番目のレジスタの値は、
+      &mb<
+        \op<configat> (`f, \op<tomem> (\vec<x>), \sp<n><\infty;> (`f, \op<tomem> (\vec<x>))) @ 0 \sp<@><*> k 
+      >
+      である。
+      また、実行が永遠に終了しないのであれば、&m<\sp<n><\infty;> (`f, \op<tomem> (\vec<x>))> が定義されないので、上の式全体も定義されない。
+      ということは、どちらの場合であろうと、
+      &mb<
+        \op<run> (`f, \vec<x>) \coloneqq; \op<configat> (`f, \op<tomem> (\vec<x>), \sp<n><\infty;> (`f, \op<tomem> (\vec<x>))) @ 0 \sp<@><*> k 
+      >
+      と定義すれば良いということである。
+      これは &m<k + 1> 変数の関数として一般再帰的である。
+    >
+  >
+  \p<
+    さて、当初の目的は計算可能関数が全て一般再帰的であることを示すことであったが、それは上の命題からすぐに分かる。
   >
   \thm|type="thm",id="compgenrec"|<
     \p<
