@@ -2,7 +2,7 @@
 
 @use "sass:math" as *;
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau:wght@1..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Geologica:slnt,wght,CRSV@-2,100..900,0&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:slnt,wght,FLAR@-2,100..900,100&display=swap");
 @import "util/reset.scss";
 @import "util/common.scss";
 @import "util/font.scss";
@@ -69,16 +69,16 @@ body {
 
 .title-main {
   font-size: 48rpx;
-  font-family: "Geologica";
-  font-weight: 800;
+  font-family: "Commissioner";
+  font-weight: 775;
   line-height: $small-line-height;
   text-shadow: 0rpx 2rpx 2rpx oklch(0 0.05 20 / 0.5);
 }
 
 .title-catch {
   font-size: 20rpx;
-  font-family: "Geologica";
-  font-weight: 600;
+  font-family: "Commissioner";
+  font-weight: 675;
   color: oklch(0.94 0.06 108);
   line-height: $small-line-height;
   text-shadow: 0rpx 2rpx 2rpx oklch(0 0.05 20 / 0.5);
@@ -249,8 +249,8 @@ body {
 .information-left-label {
   @include trim-leading;
   font-size: 20rpx;
-  font-family: "Geologica";
-  font-weight: 600;
+  font-family: "Commissioner";
+  font-weight: 675;
   text-transform: uppercase;
 }
 
@@ -263,8 +263,8 @@ body {
 .information-left-number {
   @include trim-leading;
   font-size: 48rpx;
-  font-family: "Geologica";
-  font-weight: 800;
+  font-family: "Commissioner";
+  font-weight: 775;
 }
 
 .information-right {
@@ -303,16 +303,16 @@ body {
 .information-right-label {
   @include trim-leading;
   font-size: 16rpx;
-  font-family: "Geologica";
-  font-weight: 600;
+  font-family: "Commissioner";
+  font-weight: 675;
   text-transform: uppercase;
 }
 
 .information-right-value {
   @include trim-leading;
   font-size: 32rpx;
-  font-family: "Geologica";
-  font-weight: 700;
+  font-family: "Commissioner";
+  font-weight: 775;
   text-transform: uppercase;
 }
 
@@ -324,8 +324,8 @@ body {
   margin-block-start: 32rpx;
   margin-block-end: 16rpx;
   font-size: 20rpx;
-  font-family: "Geologica";
-  font-weight: 600;
+  font-family: "Commissioner";
+  font-weight: 675;
   line-height: $small-line-height;
   text-transform: uppercase;
 }
