@@ -339,6 +339,14 @@ body {
   line-height: $line-height;
 }
 
+.normal-list {
+  margin-inline-start: 16rpx;
+}
+
+.normal-item {
+  line-height: $line-height;
+}
+
 .diacritic {
   display: inline-block;
   position: relative;
