@@ -19,13 +19,13 @@
     \header|class="header"|<
       \div|class="header-inner"|<
         \div|class="title"|<
-          \div|class="title-main"|<Ловг\span|class="diacritic",data-kind="c"|<о>доо SCP>
+          \div|class="title-main"|<Ловг\span|class="diacritic",data-kind="c"|<у>доо SCP>
           \div|class="title-catch"|<
-            \span|class="nowrap"|<Воз\span|class="diacritic",data-kind="c"|<е>цла · Севс\span|class="diacritic",data-kind="c"|<е>хла · Даз\span|class="diacritic",data-kind="c"|<у>ла>
-            \span|class="nowrap"|<— Лоз\span|class="diacritic",data-kind="c"|<о>ннако Леф\span|class="diacritic",data-kind="c"|<е>нно>
+            \span|class="nowrap"|<Воз\span|class="diacritic",data-kind="c"|<и>цла · Севс\span|class="diacritic",data-kind="c"|<и>хла · Даз\span|class="diacritic",data-kind="c"|<у>ла>
+            \span|class="nowrap"|<— Лоз\span|class="diacritic",data-kind="c"|<у>ннако Леф\span|class="diacritic",data-kind="c"|<и>нно>
           >
         >
-        \div|class="version"|<β.19>
+        \div|class="version"|<β.21>
       >
     >
 
@@ -34,7 +34,7 @@
         \div|class="information"|<
           \dl|class="information-left"|<
             \div|class="information-left-item"|<
-              \dt|class="information-left-label"|<Лоттосар лотҕев>
+              \dt|class="information-left-label"|<Лоттусар Литҕев>
               \dd|class="information-left-value"|<
                 \span|class="information-left-number"|<173>
               >
@@ -42,55 +42,55 @@
           >
           \dl|class="information-right"|<
             \div|class="information-right-item",data-level="3"|<
-              \dt|class="information-right-label"|<Локоггал Лесевсехар>
-              \dd|class="information-right-value"|<Еклид>
+              \dt|class="information-right-label"|<Локуггал Лесевсихар>
+              \dd|class="information-right-value"|<Уклид>
             >
           >
         >
         \article|class="article"|<
-          \h1|class="heading"|<Лебезхедо лиггамо лесевсехро>
+          \h1|class="heading"|<Лебезхидо лиггамо лесевсихро>
           \p|class="paragraph"|<
             ## Item SCP-173 is to be kept in a locked container at all times.
-            {Лески̂п-}\sbr<173>{ до̀ззалу̂ лодо̂цзу̀к ве вене̂ссасе до̀вегто̂кре.}
+            {Лески̂п-}\sbr<173>{ до̀ззалу̂ лоду̂цзу̀к ве вени̂ссасе до̀вегту̂кре.}
             ## When personnel must enter SCP-173’s container, no fewer than 3 may enter at any time and the door is to be relocked behind them.
-            {Ко̂ддее азоҕалло̂з аддесо̂сак васо̂хла левне̂ссасос лески̂певас-}\sbr<173>{, по̂хѐ педе̂бси ави̂до че̂ко може̂ццако̀ бе̂зе то̂сревзам и леге̂бач до̀вегто̂к хед то̂се.}
+            {Ко̂ддее азоҕаллу̂з аддесу̂сак васу̂хла левни̂ссасос лески̂певас-}\sbr<173>{, пу̂хѐ педи̂бси ави̂до чи̂ко можи̂ццако̀ би̂зе ту̂сревзам и леги̂бач до̀вегту̂к хед то̂се.}
             ## At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.
-            {По̂хѐ педе̂бси азоҕалло̂з че̂ко бе̂всеват залу̂ала ку̂жла лоло̂са лески̂пес-}\sbr<173>{, ко̂ддосе ло̂ззѐ лоддесо̂сак зану̂ левне̂ссасозам и вегто̂к ох бе̂ввасу̀к.}
+            {Пу̂хѐ педи̂бси азоҕаллу̂з чи̂ко би̂всеват залу̂ала ку̂жла лолу̂са лески̂пес-}\sbr<173>{, ко̂ддосе лу̂ззѐ лоддесу̂сак зану̂ левни̂ссасозам и вегту̂к ох би̂ввасу̀к.}
           >
-          \h1|class="heading"|<Лоболсеко>
+          \h1|class="heading"|<Лоболсико>
           \p|class="paragraph"|<
             ## Moved to Site-19 in 1993.
-            {Лески̂п-}\sbr<173>{ до̀нсе̂сан лоде̂тҕос-}\sbr<19>{ до лофу̂цце \nw<ле\sbr<11\ch|dz="x"|;1>и>.}
+            {Лески̂п-}\sbr<173>{ до̀нси̂сан лоди̂тҕос-}\sbr<19>{ до лофу̂цце \nw<ле\sbr<11\ch|dz="x"|;1>и>.}
             ## Origin is as of yet unknown.
-            {Ѐ лонцо̂нат е̂к левде̂срес тожу̂л.}
+            {Ѐ лонцу̂нат е̂к левди̂срес тожу̂л.}
             ## It is constructed from concrete and rebar with traces of Krylon brand spray paint.
-            {Сао̂кез боге̂ткозам и ло̂дҕароко̂лкозам, и зало̂ хеду̂ззацут сезе̂зхароле̂саов ви лоҕо̂ддаловзам }\sbr<Krylon>{.}
+            {Сау̂кез боги̂ткозам и лу̂дҕароку̂лкозам, и зале̂ хеду̂ззацут сези̂зхароли̂саов ви лоҕу̂ддаловзам }\sbr<Krylon>{.}
             ## SCP-173 is animate and extremely hostile.
-            {Е̂к ебо̂наш и сецу̂тѐ задо̂ффар.}
+            {Е̂к ебу̂наш и сецу̂тѐ заду̂ффар.}
             ## The object cannot move while within a direct line of sight. 
-            {Ажжа таду̂ забе̂цла зол со̂кле ве лоло̂си леске̂ффe аффе̂сев.}
+            {Ажжа таду̂ заби̂цла зол су̂кле ве лолу̂си лески̂ффe аффе̂сев.}
             ## Line of sight must not be broken at any time with SCP-173.
-            {Азоҕалло̂з саг ажжа жамо̂ҕла лоло̂са лески̂певас-}\sbr<173>{ по̂хо̀ до̂сре.}
+            {Азоҕаллу̂з саг ажжа жаму̂ҕла лолу̂са лески̂певас-}\sbr<173>{ пу̂хо̀ ду̂сре.}
             ## Personnel assigned to enter container are instructed to alert one another before blinking.
-            {Лоддесо̂сак лодо̀сесо̂гар васо̂хла левне̂ссасос до̀сесфе̂ц сесдо̂ббала левке̂ҕжес ноч табо̂зле.}
+            {Лоддесу̂сак лодо̀сесу̂гар васу̂хла левни̂ссасос до̀сесфи̂ц сесду̂ббала левки̂ҕжес ноч табу̂зле.}
             ## Object is reported to attack by snapping the neck at the base of the skull, or by strangulation.
-            {Ло̂таҕ до̀саммо̂м коззасо̂бло баге̂сар лоӈо̂тта леге̂ттаке лошо̂нoроко̂лков у вало̂ккар ох.}
+            {Ли̂таҕ до̀самму̂м коззасу̂бло баги̂сар лоӈу̂тта леги̂ттаке лошу̂нoроку̂лков у валу̂ккар ох.}
             ## In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures.
-            {Педе̂бси локоззасо̂бле, азоҕалло̂з саво̂лла лебезхе̂да лесевсе̂хра у̂тҕевах веббе̂лкевах локо̂ггалеве-\sbr<4>.}
+            {Педи̂бси локоззасу̂бле, азоҕаллу̂з саву̂лла лебезхи̂да лесевси̂хра у̂тҕевах вебби̂лкевах локу̂ггалеве-\sbr<4>.}
           >
           \p|class="paragraph"|<
             ## Personnel report sounds of scraping stone originating from within the container when no one is present inside.
-            {Асаммо̂ман аддесо̂сак молле̂ннала ре̂лда бе̂ддовзам кодмасе̂пловзамаз ве левне̂ссасозам ко̂ддее асо̂кан ажже̂с леве̂схи.}
+            {Асамму̂ман аддесу̂сак молли̂ннала ри̂лда би̂ддовзам кодмаси̂пловзамаз ве левни̂ссасозам ко̂ддее асу̂кан ажже̂с леви̂схи.}
             ## This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty.
-            {То̂со до̀цу̂то е̂ло фе̂ммасо, и по̂хо̀ чаго̂ткa то̀ ловсо̂кове ашно̂л саммо̂мла фосо̂ттаҕес-}\sbr<HMCL>{ безкахо̂зрес.}
+            {То̂со до̀цу̂то е̂ло фи̂ммасо, и пу̂хо̀ чагу̂ткa то̀ ловсу̂кове ашну̂л самму̂мла фосу̂ттаҕес-}\sbr<HMCL>{ безкаху̂зрес.}
           >
           \p|class="paragraph"|<
             ## The reddish brown substance on the floor is a combination of feces and blood.
-            {Лосо̂к жефе̂нтовот бе̂жжамовот це лозо̂ккове е̂к ваге̂нак зочо̂змовзам и вене̂жассовзам.}
+            {Лосу̂к жефи̂нтовот би̂жжамовот це лозу̂ккове е̂к ваги̂нак зочу̂змовзам и вени̂жассовзам.}
             ## Origin of these materials is unknown.
-            {Лонцо̂нат тѐ ленсо̂акев е̂к тожу̂л.}
+            {Лонцу̂нат тѐ ленсу̂акев е̂к тожу̂л.}
             ## The enclosure must be cleaned on a bi-weekly basis.
-            {Азоҕалло̂з се̂лла леве̂сха левне̂ссасов бевӈебе̂чоу̀к безре̂ццалу̀к.}
+            {Азоҕаллу̂з си̂лла леви̂сха левни̂ссасов бевӈеби̂чоу̀к безри̂ццалу̀к.}
           >
         >
       >
