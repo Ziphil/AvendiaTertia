@@ -71,6 +71,7 @@ body {
   font-size: 48rpx;
   font-family: "Commissioner";
   font-weight: 775;
+  font-variation-settings: "slnt" -2, "FLAR" 100;
   line-height: $small-line-height;
   text-shadow: 0rpx 2rpx 2rpx oklch(0 0.05 20 / 0.5);
 }
@@ -265,6 +266,7 @@ body {
   font-size: 48rpx;
   font-family: "Commissioner";
   font-weight: 775;
+  font-variation-settings: "slnt" -2, "FLAR" 100;
 }
 
 .information-right {
@@ -313,6 +315,7 @@ body {
   font-size: 32rpx;
   font-family: "Commissioner";
   font-weight: 775;
+  font-variation-settings: "slnt" -2, "FLAR" 100;
   text-transform: uppercase;
 }
 
