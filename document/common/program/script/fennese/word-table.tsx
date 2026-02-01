@@ -58,7 +58,7 @@ const WordTable = function ({
 function getBorrowedRootNumbers(entries: Array<Entry>): Set<number> {
   const borrowedRootNumbers = new Set<number>();
   for (const entry of entries) {
-    if (entry.kind === "root" && entry.borrowed) {
+    if (entry.kind === "root" && entry.origin !== "proper") {
       borrowedRootNumbers.add(entry.number);
     }
   }

@@ -22,7 +22,7 @@ export async function getDictionary(): Promise<Dictionary> {
   const apiKey = params.get("key");
   const rawEntries = (!!apiKey) ? await fetchRawEntriesFromZpdic(apiKey) : await fetchRawEntriesFromGoogle();
   const entries = rawEntries.map(convertEntry);
-  const rootCount = entries.filter((entry) => entry.kind === "root" && !entry.borrowed).length;
+  const rootCount = entries.filter((entry) => entry.kind === "root" && entry.origin === "proper").length;
   const wordCount = entries.filter((entry) => entry.kind === "word").length;
   console.log(`Words fetched from api: ${rootCount} roots, ${wordCount} words`);
   console.log(entries);
