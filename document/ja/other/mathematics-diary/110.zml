@@ -17,10 +17,10 @@
   \thm|type="thm",id="enum"|<
     \name<列挙定理\fl<enumeration theorem>>
     \p<
-      次を満たす計算可能関数 &m<\sp<\op|ord|<univ>><k>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
+      次を満たす計算可能関数 &m<\sp<\op|ord|<apply>><k>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
       任意の計算可能関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> に対し、ある自然数 &m<e \in; \bb<N>> が存在して、任意の自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、
       &mb<
-        \sp<\op<univ>><k> (e, \vec<x>) = f (\vec<x>)
+        \sp<\op<apply>><k> (e, \vec<x>) = f (\vec<x>)
       >
       が成り立つ。
     >
@@ -28,15 +28,15 @@
   \prf<
     \p<
       この定理はほとんど\a|href="109.html#run"|<命題 12.8> の言い換えである。
-      実際、この定理が存在を主張している univ とは、\a|href="109.html#run"|<命題 12.8> の run そのものである。
+      実際、この定理が存在を主張している apply とは、\a|href="109.html#run"|<命題 12.8> の run そのものである。
       そのことを以下に示そう。
       任意に計算可能関数 &m<f> をとると、それを計算するプログラム &m<\scr<F>> が存在するので、&m<e \coloneqq; \lceil; \scr<F> \rceil;> とおく。
       すると、\a|href="109.html#run"|<命題 12.8> の主張とは、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して &m<\sp<\op<run>><k> (e, \vec<x>) = f (\vec<x>)> が成り立つということである。
-      つまり、この run は、まさに上記定理が主張している univ が満たすべき性質を満たしている。
+      つまり、この run は、まさに上記定理が主張している apply が満たすべき性質を満たしている。
     >
   >
   \p<
-    この定理の主張は、全ての計算可能関数 &m<f> に対して、その関数の「番号」と呼べるべき自然数 &m<e> を割り当てることができ、その番号 &m<e> と引数 &m<\vec<x>> を渡すとその関数の値 &m<f (\vec<x>)> を何でも計算してくれる計算可能関数 univ が存在するということである。
+    この定理の主張は、全ての計算可能関数 &m<f> に対して、その関数の「番号」と呼べるべき自然数 &m<e> を割り当てることができ、その番号 &m<e> と引数 &m<\vec<x>> を渡すとその関数の値 &m<f (\vec<x>)> を何でも計算してくれる計算可能関数 apply が存在するということである。
     つまり、関数とその番号を同一視してしまえば、この定理は、関数と引数からその値を計算する行為そのものも計算可能であると述べていることになる。
   >
   \p<
@@ -46,7 +46,7 @@
     \p<
       自然数 &m<e \in; \bb<N>> に対し、部分関数 &m<\sp<\lxbracket; e \rxbracket;><k>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を、
       &mb<
-        \sp<\lxbracket; e \rxbracket;><k> (\vec<x>) \coloneqq; \sp<\op<univ>><k> (e, \vec<x>)
+        \sp<\lxbracket; e \rxbracket;><k> (\vec<x>) \coloneqq; \sp<\op<apply>><k> (e, \vec<x>)
       >
       によって定義する。
     >
@@ -67,7 +67,7 @@
   \prf<
     \p<
       上記の集合を &m<S> とおく。
-      任意に &m<S> の元 &m<\lxbracket; e \rxbracket;> をとると、これは計算可能関数 univ の最初の引数を固定しただけのものだから計算可能である。
+      任意に &m<S> の元 &m<\lxbracket; e \rxbracket;> をとると、これは計算可能関数 apply の最初の引数を固定しただけのものだから計算可能である。
       逆に、任意に計算可能関数 &m<f> をとると、\mref|type="thm",ref="enum"|; によってある番号 &m<e> が存在して &m<f = \lxbracket; e \rxbracket;> が成り立つから、&m<f> は &m<S> に属する。
     >
   >
@@ -78,7 +78,27 @@
     したがって、上の定理の &m<\lxbracket; 0 \rxbracket;, \lxbracket; 1 \rxbracket;, \cdots;> という列には、計算可能関数が全て含まれてはいるが、重複がある可能性もある。
   >
   \p<
-    さて、関数を番号付けできるという事実を使うと、計算可能でないものの例がいくつか作れる。
+    さて、計算可能関数を番号付けできるという事実を使うと、対角線論法のような議論をすることで、計算可能でないものの例がいくつか作れる。
+  >
+  \thm|type="prp",id="diag"|<
+    \p<
+      部分関数 &m<`d: \bb<N> \dot<\to;> \bb<N>> を、
+      &mb<
+        `d (x) \coloneqq; \lxbracket; x \rxbracket; (x) + 1
+      >
+      で定義する。
+      これを拡張する全域な計算可能関数は存在しない。
+    >
+  >
+  \prf<
+    \p<
+      そのような全域な計算可能関数 &m<f> が存在したとする。
+      すると\mref|type="thm",ref="enum"|; により、ある番号 &m<e> が存在して &m<f = \lxbracket; e \rxbracket;> が成り立つ。
+      ここで、&m<f> は全域だから &m<f (e)> は必ず定義され、さらに &m<f> は &m<`d> の拡張だから &m<f (e) = `d (e) = \lxbracket; e \rxbracket; (e) + 1> が成り立ち、特に &m<\lxbracket; e \rxbracket; (e)> は定義される。
+      一方で &m<f = \lxbracket; e \rxbracket;> であるから &m<f (e) = \lxbracket; e \rxbracket; (e)> も成り立つ。
+      すなわち &m<\lxbracket; e \rxbracket; (e) = \lxbracket; e \rxbracket; (e) + 1> を得るが、この両辺とも定義された値であるから、これは矛盾である。
+      したがって、命題の主張を満たす全域な計算可能関数は存在しない。
+    >
   >
   \h1<参考文献>
   \ol<
