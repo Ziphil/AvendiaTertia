@@ -327,15 +327,15 @@
   >
   \thm|type="prp",id="run"|<
     \p<
-      次を満たす一般再帰関数 &m<\op|ord|<run>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
+      次を満たす一般再帰関数 &m<\sp<\op|ord|<run>><k>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
       任意のプログラム &m<\scr<F>> をとり、自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対して初期のメモリが &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> である状態でこれを実行したとすると、以下がともに成り立つ。
     >
     \ul<
       \li<
-        実行が正常終了するならば、そのときの &m<k> 番目のレジスタの値が &m<y> とすると、&m<\op<run> (\lceil; \scr<F> \rceil;, \vec<x>) = y> が成り立つ。
+        実行が正常終了するならば、そのときの &m<k> 番目のレジスタの値が &m<y> とすると、&m<\sp<\op<run>><k> (\lceil; \scr<F> \rceil;, \vec<x>) = y> が成り立つ。
       >
       \li<
-        実行が永遠に終了しないならば、&m<\op<run> (\lceil; \scr<F> \rceil;, \vec<x>)> は定義されない。
+        実行が永遠に終了しないならば、&m<\sp<\op<run>><k> (\lceil; \scr<F> \rceil;, \vec<x>)> は定義されない。
       >
     >
   >
@@ -368,7 +368,7 @@
       また、実行が永遠に終了しないのであれば、&m<\sp<n><\infty;> (`f, \op<tomem> (\vec<x>))> が定義されないので、上の式全体も定義されない。
       ということは、どちらの場合であろうと、
       &mb<
-        \op<run> (`f, \vec<x>) \coloneqq; \op<configat> (`f, \op<tomem> (\vec<x>), \sp<n><\infty;> (`f, \op<tomem> (\vec<x>))) @ 0 \sp<@><*> k 
+        \sp<\op<run>><k> (`f, \vec<x>) \coloneqq; \op<configat> (`f, \op<tomem> (\vec<x>), \sp<n><\infty;> (`f, \op<tomem> (\vec<x>))) @ 0 \sp<@><*> k 
       >
       と定義すれば良いということである。
       これは &m<k + 1> 変数の関数として一般再帰的である。

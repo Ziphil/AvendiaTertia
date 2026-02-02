@@ -1,0 +1,88 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<13>
+  \use-math|prefix="13"|;
+
+  \h1<日記 (2026 年 1 月 30 日)>
+  \p<
+    前回までで、関数の一般再帰性と計算可能性が実は全く同じ性質であったことが分かった。
+    今回からは、
+  >
+  \p<
+    なお、一般再帰性と計算可能性は同じ意味なので、以降でこの性質を指すときは「計算可能」という用語に統一する。
+  >
+  \thm|type="thm",id="enum"|<
+    \name<列挙定理\fl<enumeration theorem>>
+    \p<
+      次を満たす計算可能関数 &m<\sp<\op|ord|<univ>><k>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
+      任意の計算可能関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> に対し、ある自然数 &m<e \in; \bb<N>> が存在して、任意の自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、
+      &mb<
+        \sp<\op<univ>><k> (e, \vec<x>) = f (\vec<x>)
+      >
+      が成り立つ。
+    >
+  >
+  \prf<
+    \p<
+      この定理はほとんど\a|href="109.html#run"|<命題 12.8> の言い換えである。
+      実際、この定理が存在を主張している univ とは、\a|href="109.html#run"|<命題 12.8> の run そのものである。
+      そのことを以下に示そう。
+      任意に計算可能関数 &m<f> をとると、それを計算するプログラム &m<\scr<F>> が存在するので、&m<e \coloneqq; \lceil; \scr<F> \rceil;> とおく。
+      すると、\a|href="109.html#run"|<命題 12.8> の主張とは、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して &m<\sp<\op<run>><k> (e, \vec<x>) = f (\vec<x>)> が成り立つということである。
+      つまり、この run は、まさに上記定理が主張している univ が満たすべき性質を満たしている。
+    >
+  >
+  \p<
+    この定理の主張は、全ての計算可能関数 &m<f> に対して、その関数の「番号」と呼べるべき自然数 &m<e> を割り当てることができ、その番号 &m<e> と引数 &m<\vec<x>> を渡すとその関数の値 &m<f (\vec<x>)> を何でも計算してくれる計算可能関数 univ が存在するということである。
+    つまり、関数とその番号を同一視してしまえば、この定理は、関数と引数からその値を計算する行為そのものも計算可能であると述べていることになる。
+  >
+  \p<
+    以降の議論で便利なため、番号 &m<e> に対応する関数を &m<\lxbracket; e \rxbracket;> と書くことにしよう。
+  >
+  \thm|type="def"|<
+    \p<
+      自然数 &m<e \in; \bb<N>> に対し、部分関数 &m<\sp<\lxbracket; e \rxbracket;><k>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を、
+      &mb<
+        \sp<\lxbracket; e \rxbracket;><k> (\vec<x>) \coloneqq; \sp<\op<univ>><k> (e, \vec<x>)
+      >
+      によって定義する。
+    >
+  >
+  \p<
+    列挙定理の系として、計算可能関数を以下のように順番に取得できることが分かる。
+    これが、列挙定理が「列挙定理」と呼ばれている所以である。
+  >
+  \thm|type="thm",id="enumvar"|<
+    \p<
+      集合
+      &mb<
+        `{ \sp<\lxbracket; 0 \rxbracket;><k>, \sp<\lxbracket; 1 \rxbracket;><k>, \sp<\lxbracket; 2 \rxbracket;><k>, \cdots; `}
+      >
+      は &m<k> 変数の計算可能関数全体の集合に一致する。
+    >
+  >
+  \prf<
+    \p<
+      上記の集合を &m<S> とおく。
+      任意に &m<S> の元 &m<\lxbracket; e \rxbracket;> をとると、これは計算可能関数 univ の最初の引数を固定しただけのものだから計算可能である。
+      逆に、任意に計算可能関数 &m<f> をとると、\mref|type="thm",ref="enum"|; によってある番号 &m<e> が存在して &m<f = \lxbracket; e \rxbracket;> が成り立つから、&m<f> は &m<S> に属する。
+    >
+  >
+  \p<
+    注意すべき点として、関数 &m<f> に対して &m<f = \lxbracket; e \rxbracket;> が成り立つような番号 &m<e> が一意であることまでは保証されていない。
+    これまでの議論を追えば、関数の番号というのは結局はその関数を計算するプログラムの Gödel 数であるわけだが、1 つの関数を計算するプログラムが 1 つしかないわけではない。
+    実際、プログラムの適当な位置に &m<\tt<forward> \srel; 1> を挿入してもプログラムの実行にはほとんど影響がないため、同じ関数を計算するプログラムは無数に作れる。
+    したがって、上の定理の &m<\lxbracket; 0 \rxbracket;, \lxbracket; 1 \rxbracket;, \cdots;> という列には、計算可能関数が全て含まれてはいるが、重複がある可能性もある。
+  >
+  \p<
+    さて、関数を番号付けできるという事実を使うと、計算可能でないものの例がいくつか作れる。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>
