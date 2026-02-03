@@ -3,16 +3,16 @@
 
 
 \page<
-  \name<13>
+  \name<列挙定理と停止性問題>
   \use-math|prefix="13"|;
 
-  \h1<日記 (2026 年 1 月 30 日)>
+  \h1<日記 (2026 年 2 月 3 日)>
   \p<
     前回までで、関数の一般再帰性と計算可能性が実は全く同じ性質であったことが分かった。
-    今回からは、
+    今回は、前回の結果を踏まえて、列挙定理と停止性問題という 2 つのトピックについて触れる。
   >
   \p<
-    なお、一般再帰性と計算可能性は同じ意味なので、以降でこの性質を指すときは「計算可能」という用語に統一する。
+    なお、一般再帰性と計算可能性は同じ意味なので、以降でこの性質を指すときは「計算可能」という用語に統一することにする。
   >
   \thm|type="thm",id="enum"|<
     \name<列挙定理\fl<enumeration theorem>>
@@ -31,7 +31,7 @@
       実際、この定理が存在を主張している apply とは、\a|href="109.html#run"|<命題 12.8> の run そのものである。
       そのことを以下に示そう。
       任意に計算可能関数 &m<f> をとると、それを計算するプログラム &m<\scr<F>> が存在するので、&m<e \coloneqq; \lceil; \scr<F> \rceil;> とおく。
-      すると、\a|href="109.html#run"|<命題 12.8> の主張とは、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して &m<\sp<\op<run>><k> (e, \vec<x>) = f (\vec<x>)> が成り立つということである。
+      すると、\a|href="109.html#run"|<命題 12.8> の主張とは、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対して &m<\op<run> (e, \vec<x>) = f (\vec<x>)> が成り立つということである。
       つまり、この run は、まさに上記定理が主張している apply が満たすべき性質を満たしている。
     >
   >
@@ -78,13 +78,45 @@
     したがって、上の定理の &m<\lxbracket; 0 \rxbracket;, \lxbracket; 1 \rxbracket;, \cdots;> という列には、計算可能関数が全て含まれてはいるが、重複がある可能性もある。
   >
   \p<
-    さて、計算可能関数を番号付けできるという事実を使うと、対角線論法のような議論をすることで、計算可能でないものの例がいくつか作れる。
+    さて、計算可能関数を番号付けできたということは、特に 1 変数の計算可能関数について、縦軸と横軸にそれぞれ関数の番号とその関数の値を記した 2 次元の表
+    &mb<
+      \matrix<
+        \c<\lxbracket; 0 \rxbracket; (0)> \c<\lxbracket; 0 \rxbracket; (1)> \c<\lxbracket; 0 \rxbracket; (2)> \c<\cdots;> \br;
+        \c<\lxbracket; 1 \rxbracket; (0)> \c<\lxbracket; 1 \rxbracket; (1)> \c<\lxbracket; 1 \rxbracket; (2)> \c<\cdots;> \br;
+        \c<\lxbracket; 2 \rxbracket; (0)> \c<\lxbracket; 2 \rxbracket; (1)> \c<\lxbracket; 2 \rxbracket; (2)> \c<\cdots;> \br;
+        \c<\vdots;> \c<\vdots;> \c<\vdots;> \c<\ddots;> \br;
+      >
+    >
+    が得られたということである。
+    しかも\mref|type="thm",ref="enum"|; によって、この表の &m<x> 行 &m<y> 列にある成分 &m<\lxbracket; x \rxbracket; (y)> すなわち &m<\op<apply> (x, y)> は計算可能である。
+    ここで、この表に対して対角線論法を適用してみよう。
+    この表の対角線に書かれた値に 1 を加えた値を得る関数
+    &mb<
+      \array|align="rcl"|<
+        \c<`d (x)> \c<\coloneqq;> \c<\lxbracket; x \rxbracket; (x) + 1> \br;
+        \c; \c<=> \c<\op<apply> (x, x) + 1>
+      >
+    >
+    も作ると、これは計算可能である。
+    したがって、この関数自身も上の表のどこかの行として現れているはずである。
+    すなわち、&m<`d = \lxbracket; e \rxbracket;> となる番号 &m<e> が存在するはずである。
+    すると、
+    &mb<
+      \lxbracket; e \rxbracket; (e) = `d (e) = \lxbracket; e \rxbracket; (e) + 1
+    >
+    が成り立つので、何かがおかしい。
+    \k<…>なんてことはなく、関数の値は定義されないことがあるので、&m<\lxbracket; e \rxbracket; (e)> が定義されなければ上の式は両辺定義されない状態で成立する。
+    しかし、この &m<`d> を拡張するような全域な計算可能関数があったとしたら、それは矛盾を生じる。
+    このことを多変数の場合に一般化して改めて述べておこう。
   >
   \thm|type="prp",id="diag"|<
     \p<
-      部分関数 &m<`d: \bb<N> \dot<\to;> \bb<N>> を、
+      部分関数 &m<`d: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を、
       &mb<
-        `d (x) \coloneqq; \lxbracket; x \rxbracket; (x) + 1
+        \array|align="rcl"|<
+          \c<`d (\vec<x>)> \c<\coloneqq;> \c<\lxbracket; \sb<x><0> \rxbracket; \sp<><k> (\sb<x><0>, \cdots;, \sb<x><k - 1>) + 1> \br;
+          \c; \c<=> \c<\sp<\op<apply>><k> (\sb<x><0>, \sb<x><0>, \cdots;, \sb<x><k - 1>) + 1>
+        >
       >
       で定義する。
       これを拡張する全域な計算可能関数は存在しない。
@@ -94,11 +126,54 @@
     \p<
       そのような全域な計算可能関数 &m<f> が存在したとする。
       すると\mref|type="thm",ref="enum"|; により、ある番号 &m<e> が存在して &m<f = \lxbracket; e \rxbracket;> が成り立つ。
-      ここで、&m<f> は全域だから &m<f (e)> は必ず定義され、さらに &m<f> は &m<`d> の拡張だから &m<f (e) = `d (e) = \lxbracket; e \rxbracket; (e) + 1> が成り立ち、特に &m<\lxbracket; e \rxbracket; (e)> は定義される。
-      一方で &m<f = \lxbracket; e \rxbracket;> であるから &m<f (e) = \lxbracket; e \rxbracket; (e)> も成り立つ。
-      すなわち &m<\lxbracket; e \rxbracket; (e) = \lxbracket; e \rxbracket; (e) + 1> を得るが、この両辺とも定義された値であるから、これは矛盾である。
+      ここで、&m<f> は全域だから &m<f (e, \cdots;, e)> は必ず定義され、さらに &m<f> は &m<`d> の拡張だから、
+      &mb<
+        f (e, \cdots;, e) = `d (e, \cdots;, e) = \lxbracket; e \rxbracket; (e, \cdots;, e) + 1
+      >
+      が成り立ち、特に &m<\lxbracket; e \rxbracket; (e, \cdots;, e)> は定義される。
+      一方で &m<f = \lxbracket; e \rxbracket;> であるから、
+      &mb<
+        f (e, \cdots;, e) = \lxbracket; e \rxbracket; (e, \cdots;, e)
+      >
+      も成り立つ。
+      すなわち &m<\lxbracket; e \rxbracket; (e, \cdots;, e) = \lxbracket; e \rxbracket; (e, \cdots;, e) + 1> を得るが、この両辺とも定義された値であるから、これは矛盾である。
       したがって、命題の主張を満たす全域な計算可能関数は存在しない。
     >
+  >
+  \p<
+    この事実から分かることとして、関数の値が定義されるかされないかを判定することは計算可能ではない。
+    プログラムの見方で言い換えれば、プログラムの実行が終了するかしないかを判定することは計算可能ではない。
+    この「プログラムの実行が終了するかどうかを判定するプログラムが存在するか」という問題は「停止性問題」と呼ばれており、次に示すようにこれは否定的に解決された。
+  >
+  \thm|type="thm",id="halt"|<
+    \name<停止性問題の計算不可能性\fl<uncomputability of halting problem>>
+    \p<
+      関係 &m<\sp<\op|ord|<Halt>><k> \subseteq; \sp<\bb<N>><k + 1>> を
+      &mb<
+        (w, \vec<x>) \in; \sp<\op|ord|<Halt>><k> \coloniff; \lxbracket; w \rxbracket; \sp<><k> (\vec<x>) \darr|ord|;
+      >
+      で定めると、これは計算可能ではない。
+    >
+  >
+  \prf<
+    \p<
+      Halt が計算可能であったと仮定する。
+      部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を、
+      &mb<
+        f (\vec<x>) \coloneqq; \case<
+          \c<\op<apply> (\sb<x><0>, \sb<x><0>, \cdots;, \sb<x><k - 1>) + 1> \c<((\sb<x><0>, \vec<x>) \in; \op|ord|<Halt>)> \br;
+          \c<0> \c<((\sb<x><0>, \vec<x>) \nin; \op|ord|<Halt>)> \br;
+        >
+      >
+      で定めると、仮定から Halt は計算可能であり\mref|type="thm",ref="enum"|; から apply も計算可能なので、この &m<f> も計算可能である。
+      また、Halt の定義によって &m<(\sb<x><0>, \vec<x>) \in; \op|ord|<Halt>> であれば &m<\lxbracket; \sb<x><0> \rxbracket; (\vec<x>)> すなわち &m<\op<apply> (\sb<x><0>, \vec<x>)> が定義されるから、この &m<f> は全域である。
+      さらに、この &m<f> は\mref|type="thm",ref="diag"|; の &m<`d> の拡張にもなっている。
+      このような &m<f> の存在は\mref|type="thm",ref="diag"|; に矛盾するから、Halt は計算可能ではあり得ない。
+    >
+  >
+  \p<
+    この事実から特に、ある計算可能関数を定義しようとしたときに、別の計算可能関数の値が定義されるかされないかによって場合分けすることはできないことになる。
+    このことは、次回から扱う枚挙可能性の議論で重要になる。
   >
   \h1<参考文献>
   \ol<
