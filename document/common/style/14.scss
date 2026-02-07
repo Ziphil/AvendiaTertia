@@ -326,11 +326,19 @@ body {
 .heading {
   margin-block-start: 32rpx;
   margin-block-end: 16rpx;
+}
+
+.heading-main {
   font-size: 20rpx;
   font-family: "Commissioner";
   font-weight: 675;
   line-height: $small-line-height;
   text-transform: uppercase;
+}
+
+.heading-sub {
+  margin-inline-start: 8rpx;
+  line-height: $line-height;
 }
 
 .paragraph {

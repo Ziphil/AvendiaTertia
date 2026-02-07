@@ -48,7 +48,9 @@
           >
         >
         \article|class="article"|<
-          \h1|class="heading"|<Лебезхидо лиггамо лесевсихро>
+          \h1|class="heading"|<
+            \span|class="heading-main"|<Лебезхидо Лиггамо Лесевсихро>
+          >
           \p|class="paragraph"|<
             ## Object is kept within a 5 by 5 by 2.5 meter square room constructed of cement (50 centimeter thickness), with a Faraday cage surrounding the cement walls.
             {Лески̂п-}\sbr<55>{ до̀ззалу̂ ве чеди̂ке ги̂не \sbr<\nw<5 М> : \nw<5 М> : \nw<2·Д М>>, до̀ҕлу̂зре чи̂ллавут себги̂тковзам ӈи̂ллут \sbr<\nw<·Д М>> и веку̂ҕажжот-ʻфа̂радеı рацу̂рротез лечи̂ллава.}
@@ -59,7 +61,9 @@
             ## It is further advised that all personnel maintaining or studying other SCP objects in the vicinity try to maintain a distance of at least 50 meters from the geometric center of the room, as long as this is reasonably practical.
             {Асесву̂р (加えて) ко̂х лу̂ззѐ аддесу̂сак везлу̂ар у семму̂ҕар би̂вассѐ аски̂па леси̂мреве зау̂х залу̂ало хи̂втак (少なくとも 50 メートル) локу̂ҕжевзам (幾何学的) лечди̂ков, лоззa ке̂ок ту̂со е̂ко (実行可能な).}
           >
-          \h1|class="heading"|<Леболсико>
+          \h1|class="heading"|<
+            \span|class="heading-main"|<Леболсико>
+          >
           \p|class="paragraph"|<
             ## SCP-055 is a “self-keeping secret” or “anti-meme”.
             {Лески̂п-}\sbr<55>{ е̂к “фегу̂зам залу̂ар лозу̂са” у “шетхи̂ндарекодкаху̂зар”.}
@@ -99,7 +103,10 @@
               >
             >
           >
-          \h1|class="heading"|<Ловдуско 1>
+          \h1|class="heading"|<
+            \span|class="heading-main"|<Ловдуско 1>
+            \span|class="heading-sub"|<{— (分析) лески̂певах-}\sbr<55>>
+          >
         >
       >
     >

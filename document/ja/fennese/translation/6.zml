@@ -48,7 +48,9 @@
           >
         >
         \article|class="article"|<
-          \h1|class="heading"|<Лебезхидо лиггамо лесевсихро>
+          \h1|class="heading"|<
+            \span|class="heading-main"|<Лебезхидо Лиггамо Лесевсихро>
+          >
           \p|class="paragraph"|<
             ## Item SCP-173 is to be kept in a locked container at all times.
             {Лески̂п-}\sbr<173>{ до̀ззалу̂ лоду̂цзу̀к ве вени̂ссасе до̀вегту̂кре.}
@@ -57,7 +59,9 @@
             ## At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.
             {Пе̂хѐ педи̂бси азоҕаллу̂з чи̂ко би̂всеват залу̂ала ку̂жла лолу̂са лески̂пес-}\sbr<173>{, ко̂ддосо лу̂ззѐ лоддесу̂сак зану̂ левни̂ссасозам и вегту̂к ох би̂ввасу̀к.}
           >
-          \h1|class="heading"|<Леболсико>
+          \h1|class="heading"|<
+            \span|class="heading-main"|<Леболсико>
+          >
           \p|class="paragraph"|<
             ## Moved to Site-19 in 1993.
             {Лески̂п-}\sbr<173>{ до̀нси̂сан лоди̂тҕос-}\sbr<19>{ до лофу̂цце \nw<ле\sbr<11\ch|dz="x"|;1>и>.}
