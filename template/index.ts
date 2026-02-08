@@ -28,7 +28,6 @@ import htmlManager from "./html";
 import inlineBasicManager from "./inline/basic";
 import inlineCommonManager from "./inline/common";
 import inlineForeignManager from "./inline/foreign";
-import inlineGreekManager from "./inline/greek";
 import inlineLinkManager from "./inline/link";
 import inlineMathManager from "./inline/math";
 import inlineMiscManager from "./inline/misc";
@@ -67,7 +66,6 @@ export default [
   inlineCommonManager,
   inlineBasicManager,
   inlineLinkManager,
-  inlineGreekManager,
   inlineForeignManager,
   inlineMiscManager,
   inlineMathManager,

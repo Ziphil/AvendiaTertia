@@ -115,4 +115,45 @@ manager.registerElementRule("ch", true, (transformer, document, element) => {
   return self;
 });
 
+const GENERAL_DIACRITICS = new Map([["a", "ˊ"], ["g", "ˋ"], ["c", "ˆ"]]);
+const GREEK_DIACRITICS = new Map([["a", "´"], ["g", "`"], ["s", "᾿"], ["sa", "῎"], ["sg", "῍"], ["r", "῾"], ["ra", "῞"], ["rg", "῝"], ["i", "ͺ"]]);
+
+manager.registerElementRule("d", true, (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const type = element.getAttribute("g") || element.getAttribute("t");
+  self.appendElement("span", (self) => {
+    self.addClassName("diacritic");
+    self.appendElement("span", (self) => {
+      self.addClassName("diacritic-char");
+      self.appendChild(transformer.apply(element, "page"));
+    });
+    if (element.hasAttribute("t")) {
+      self.appendElement("span", (self) => {
+        self.addClassName("diacritic-mark");
+        self.setAttribute("data-domain", "general");
+        self.setAttribute("data-position", "above");
+        self.appendTextNode(GENERAL_DIACRITICS.get(type) ?? "");
+      });
+    } else if (element.hasAttribute("g")) {
+      if (type.replace("i", "") !== "") {
+        self.appendElement("span", (self) => {
+          self.addClassName("diacritic-mark");
+          self.setAttribute("data-domain", "greek");
+          self.setAttribute("data-position", "above");
+          self.appendTextNode(GREEK_DIACRITICS.get(type.replace("i", "")) ?? "");
+        });
+      }
+      if (type.includes("i")) {
+        self.appendElement("span", (self) => {
+          self.addClassName("diacritic-mark");
+          self.setAttribute("data-domain", "greek");
+          self.setAttribute("data-position", "below");
+          self.appendTextNode(GREEK_DIACRITICS.get("i")!);
+        });
+      }
+    }
+  });
+  return self;
+});
+
 export default manager;
