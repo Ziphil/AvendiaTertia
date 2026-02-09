@@ -300,10 +300,10 @@
   \thm|type="prp"|<
     \p<
       次を満たす原始再帰関数 &m<\op|ord|<configat>: \sp<\bb<N>><3> \to; \bb<N>> が存在する。
-      任意のプログラム &m<\scr<F>> をとり、初期のメモリが &m<\scr<R>> である状態から &m<n> ステップ実行した直後のレジスタマシンの状況を &m<(\sp<\scr<R>><(n)>, \sp<p><(n)>)> とする。
+      任意のプログラム &m<\scr<F>> をとり、初期のメモリが &m<\scr<R>> である状態から &m<n> ステップ実行した直後のレジスタマシンの状況を &m<(\sb<\scr<R>><n>, \sb<p><n>)> とする。
       この途中で異常終了していないのであれば、
       &mb<
-        \op<configat> (\lceil; \scr<F> \rceil;, \lceil; \scr<R> \rceil;, n) = \langle; \lceil; \sp<\scr<R>><(n)> \rceil;, \sp<p><(n)> \rangle;
+        \op<configat> (\lceil; \scr<F> \rceil;, \lceil; \scr<R> \rceil;, n) = \langle; \lceil; \sb<\scr<R>><n> \rceil;, \sb<p><n> \rangle;
       >
       が成り立つ。
     >
@@ -327,32 +327,32 @@
   >
   \thm|type="prp",id="run"|<
     \p<
-      次を満たす一般再帰関数 &m<\sp<\op|ord|<run>><k>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
+      次を満たす一般再帰関数 &m<\sp<\op|ord|<run>><(k)>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
       任意のプログラム &m<\scr<F>> をとり、自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対して初期のメモリが &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> である状態でこれを実行したとすると、以下がともに成り立つ。
     >
     \ul<
       \li<
-        実行が正常終了するならば、そのときの &m<k> 番目のレジスタの値が &m<y> とすると、&m<\sp<\op<run>><k> (\lceil; \scr<F> \rceil;, \vec<x>) = y> が成り立つ。
+        実行が正常終了するならば、そのときの &m<k> 番目のレジスタの値が &m<y> とすると、&m<\sp<\op<run>><(k)> (\lceil; \scr<F> \rceil;, \vec<x>) = y> が成り立つ。
       >
       \li<
-        実行が永遠に終了しないならば、&m<\sp<\op<run>><k> (\lceil; \scr<F> \rceil;, \vec<x>)> は定義されない。
+        実行が永遠に終了しないならば、&m<\sp<\op<run>><(k)> (\lceil; \scr<F> \rceil;, \vec<x>)> は定義されない。
       >
     >
   >
   \p<
-    この命題が存在を主張する &m<\sp<\op|ord|<run>><k>> は、もちろん &m<k> に依存するため、ここでは上付き添字として &m<k> を附して記した。
+    この命題が存在を主張する &m<\sp<\op|ord|<run>><(k)>> は、もちろん &m<k> に依存するため、ここでは上付き添字として &m<k> を附して記した。
     ただし以降では、文脈から明らかな場合はこの &m<k> を省略することにする。
     変数の個数 &m<k> に依存する名前の付いた関数は今後もいくつか登場するが、それについても同様に添字は省略することがある。
   >
   \prf<
     \p<
       まず、プログラム &m<\scr<F>> を初期のメモリが &m<\scr<R>> である状態から実行したときに、正常終了するステップ数を取得することを考えよう。
-      正常終了するとはポインタがプログラムの長さに一致することだったので、&m<`f \coloneqq; \lceil; \scr<F> \rceil;> と &m<`r \coloneqq; \lceil; \scr<R> \rceil;> が与えられたとき、正常終了するステップ数を &m<\sp<n><\infty;> (`f, `r)> とすると、
+      正常終了するとはポインタがプログラムの長さに一致することだったので、&m<`f \coloneqq; \lceil; \scr<F> \rceil;> と &m<`r \coloneqq; \lceil; \scr<R> \rceil;> が与えられたとき、正常終了するステップ数を &m<\sb<n><\infty;> (`f, `r)> とすると、
       &mb<
-        \sp<n><\infty;> (`f, `r) = \rm<`m> n. \srel; \op<configat> (`f, `r, n) @ 1 = \op<len> (`f)
+        \sb<n><\infty;> (`f, `r) = \rm<`m> n. \srel; \op<configat> (`f, `r, n) @ 1 = \op<len> (`f)
       >
       が成り立つ。
-      この &m<\sp<n><\infty;>> は 2 変数の関数として一般再帰的である。
+      この &m<\sb<n><\infty;>> は 2 変数の関数として一般再帰的である。
     >
     \p<
       さて、自然数列 &m<\vec<x>> に対して、メモリ &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> の Gödel 数を &m<\op<tomem> (\vec<x>)> と書くことにすれば、これは、
@@ -364,16 +364,16 @@
     >
     \p<
       さて、命題の主張通りに &m<\scr<F>> を実行したとしてそれが正常終了したとする。
-      &m<`f \coloneqq; \lceil; \scr<F> \rceil;> とおくと、正常終了時のステップ数は &m<\sp<n><\infty;> (`f, \op<tomem> (\vec<x>))> である。
-      このときの状況は &m<\op<configat> (`f, \op<tomem> (\vec<x>), \sp<n><\infty;> (`f, \op<tomem> (\vec<x>)))> であるから、その &m<k> 番目のレジスタの値は、
+      &m<`f \coloneqq; \lceil; \scr<F> \rceil;> とおくと、正常終了時のステップ数は &m<\sb<n><\infty;> (`f, \op<tomem> (\vec<x>))> である。
+      このときの状況は &m<\op<configat> (`f, \op<tomem> (\vec<x>), \sb<n><\infty;> (`f, \op<tomem> (\vec<x>)))> であるから、その &m<k> 番目のレジスタの値は、
       &mb<
-        \op<configat> (`f, \op<tomem> (\vec<x>), \sp<n><\infty;> (`f, \op<tomem> (\vec<x>))) @ 0 \sp<@><*> k 
+        \op<configat> (`f, \op<tomem> (\vec<x>), \sb<n><\infty;> (`f, \op<tomem> (\vec<x>))) @ 0 \sp<@><*> k 
       >
       である。
-      また、実行が永遠に終了しないのであれば、&m<\sp<n><\infty;> (`f, \op<tomem> (\vec<x>))> が定義されないので、上の式全体も定義されない。
+      また、実行が永遠に終了しないのであれば、&m<\sb<n><\infty;> (`f, \op<tomem> (\vec<x>))> が定義されないので、上の式全体も定義されない。
       ということは、どちらの場合であろうと、
       &mb<
-        \op<run> (`f, \vec<x>) \coloneqq; \op<configat> (`f, \op<tomem> (\vec<x>), \sp<n><\infty;> (`f, \op<tomem> (\vec<x>))) @ 0 \sp<@><*> k 
+        \op<run> (`f, \vec<x>) \coloneqq; \op<configat> (`f, \op<tomem> (\vec<x>), \sb<n><\infty;> (`f, \op<tomem> (\vec<x>))) @ 0 \sp<@><*> k 
       >
       と定義すれば良いということである。
       これは &m<k + 1> 変数の関数として一般再帰的である。

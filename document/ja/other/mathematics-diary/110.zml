@@ -17,10 +17,10 @@
   \thm|type="thm",id="enum"|<
     \name<列挙定理\fl<enumeration theorem>>
     \p<
-      次を満たす計算可能関数 &m<\sp<\op|ord|<apply>><k>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
+      次を満たす計算可能関数 &m<\sp<\op|ord|<apply>><(k)>: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> が存在する。
       任意の計算可能関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> に対し、ある自然数 &m<e \in; \bb<N>> が存在して、任意の自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、
       &mb<
-        \sp<\op<apply>><k> (e, \vec<x>) = f (\vec<x>)
+        \sp<\op<apply>><(k)> (e, \vec<x>) = f (\vec<x>)
       >
       が成り立つ。
     >
@@ -44,9 +44,9 @@
   >
   \thm|type="def"|<
     \p<
-      自然数 &m<e \in; \bb<N>> に対し、部分関数 &m<\sp<\lxbracket; e \rxbracket;><k>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を、
+      自然数 &m<e \in; \bb<N>> に対し、部分関数 &m<\sp<\lxbracket; e \rxbracket;><(k)>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を、
       &mb<
-        \sp<\lxbracket; e \rxbracket;><k> (\vec<x>) \coloneqq; \sp<\op<apply>><k> (e, \vec<x>)
+        \sp<\lxbracket; e \rxbracket;><(k)> (\vec<x>) \coloneqq; \sp<\op<apply>><(k)> (e, \vec<x>)
       >
       によって定義する。
     >
@@ -59,7 +59,7 @@
     \p<
       集合
       &mb<
-        `{ \sp<\lxbracket; 0 \rxbracket;><k>, \sp<\lxbracket; 1 \rxbracket;><k>, \sp<\lxbracket; 2 \rxbracket;><k>, \cdots; `}
+        `{ \sp<\lxbracket; 0 \rxbracket;><(k)>, \sp<\lxbracket; 1 \rxbracket;><(k)>, \sp<\lxbracket; 2 \rxbracket;><(k)>, \cdots; `}
       >
       は &m<k> 変数の計算可能関数全体の集合に一致する。
     >
@@ -114,8 +114,8 @@
       部分関数 &m<`d: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を、
       &mb<
         \array|align="rcl"|<
-          \c<`d (\vec<x>)> \c<\coloneqq;> \c<\lxbracket; \sb<x><0> \rxbracket; \sp<><k> (\sb<x><0>, \cdots;, \sb<x><k - 1>) + 1> \br;
-          \c; \c<=> \c<\sp<\op<apply>><k> (\sb<x><0>, \sb<x><0>, \cdots;, \sb<x><k - 1>) + 1>
+          \c<`d (\vec<x>)> \c<\coloneqq;> \c<\lxbracket; \sb<x><0> \rxbracket; \sp<><(k)> (\sb<x><0>, \cdots;, \sb<x><k - 1>) + 1> \br;
+          \c; \c<=> \c<\sp<\op<apply>><(k)> (\sb<x><0>, \sb<x><0>, \cdots;, \sb<x><k - 1>) + 1>
         >
       >
       で定義する。
@@ -148,9 +148,9 @@
   \thm|type="thm",id="halt"|<
     \name<停止性問題の計算不可能性\fl<uncomputability of halting problem>>
     \p<
-      関係 &m<\sp<\op|ord|<Halt>><k> \subseteq; \sp<\bb<N>><k + 1>> を
+      関係 &m<\sp<\op|ord|<Halt>><(k)> \subseteq; \sp<\bb<N>><k + 1>> を
       &mb<
-        (w, \vec<x>) \in; \sp<\op|ord|<Halt>><k> \coloniff; \lxbracket; w \rxbracket; \sp<><k> (\vec<x>) \darr|ord|;
+        (w, \vec<x>) \in; \sp<\op|ord|<Halt>><(k)> \coloniff; \lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \darr|ord|;
       >
       で定めると、これは計算可能ではない。
     >

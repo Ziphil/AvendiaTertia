@@ -132,10 +132,10 @@
     つまり、そのような &m<n> を最小化演算で取得すれば、Ackermann 列の変形が終わるタイミングを取得できる。
     すなわち、
     &mb<
-      \sp<n><\infty;> (x, y) \coloneqq; \rm<`m> n. \srel; \op<seqat> (x, y, n) = \op<seqat> (x, y, n + 1)
+      \sb<n><\infty;> (x, y) \coloneqq; \rm<`m> n. \srel; \op<seqat> (x, y, n) = \op<seqat> (x, y, n + 1)
     >
     とおくわけである。
-    すると、変形が終わったタイミングでの Ackermann 列は &m<\op<seqat> (x, y, \sp<n><\infty;> (x, y))> であり、これは長さ 1 の列になっているはずなので、この列に属する唯一の数としてめでたく &m<\op<ack> (x, y)> が得られる。
+    すると、変形が終わったタイミングでの Ackermann 列は &m<\op<seqat> (x, y, \sb<n><\infty;> (x, y))> であり、これは長さ 1 の列になっているはずなので、この列に属する唯一の数としてめでたく &m<\op<ack> (x, y)> が得られる。
   >
   \p<
     ということで、後はこのアイデアを形式的に記述するだけである。
@@ -270,27 +270,27 @@
       >
       により定める。
       \mref|type="thm",ref="next"|; により &m<\op|ord|<next>> は原始再帰的だから、この &m<\op|ord|<seqat>> も原始再帰的である。
-      これを用いて、関数 &m<\sp<n><\infty;>: \sp<\bb<N>><2> \to; \bb<N>> を、
+      これを用いて、関数 &m<\sb<n><\infty;>: \sp<\bb<N>><2> \to; \bb<N>> を、
       &mb<
-        \sp<n><\infty;> (x, y) \coloneqq; \rm<`m> n. \srel; \op<seqat> (x, y, n) = \op<seqat> (x, y, n + 1)
+        \sb<n><\infty;> (x, y) \coloneqq; \rm<`m> n. \srel; \op<seqat> (x, y, n) = \op<seqat> (x, y, n + 1)
       >
       により定めると、これは一般再帰的である。
     >
     \p<
       ここで、任意の数 &m<x, y> に対して、
       &mb<
-        \op<seqat> (x, y, \sp<n><\infty;> (x, y)) = \op<next> (\op<seqat> (x, y, \sp<n><\infty;> (x, y)))
+        \op<seqat> (x, y, \sb<n><\infty;> (x, y)) = \op<next> (\op<seqat> (x, y, \sb<n><\infty;> (x, y)))
       >
-      が成り立つから、\mref|type="thm",ref="next"|; の &m<\op|ord|<next>> の性質により、&m<\op<seqat> (x, y, \sp<n><\infty;> (x, y))> は、これ以上 Ackermann 変形できない長さ 1 の列のコーディングになっているはずである。
-      この列の唯一の要素を &m<z \coloneqq; \op<seqat> (x, y, \sp<n><\infty;> (x, y)) \atsym; 0> とおく。
-      すると、各 &m<i `< \sp<n><\infty;> (x, y)> について &m<\op<seqat> (x, y, i)> が表す数列を &m<\vec<s> \sb<><i>> と書けば、
+      が成り立つから、\mref|type="thm",ref="next"|; の &m<\op|ord|<next>> の性質により、&m<\op<seqat> (x, y, \sb<n><\infty;> (x, y))> は、これ以上 Ackermann 変形できない長さ 1 の列のコーディングになっているはずである。
+      この列の唯一の要素を &m<z \coloneqq; \op<seqat> (x, y, \sb<n><\infty;> (x, y)) \atsym; 0> とおく。
+      すると、各 &m<i `< \sb<n><\infty;> (x, y)> について &m<\op<seqat> (x, y, i)> が表す数列を &m<\vec<s> \sb<><i>> と書けば、
       &mb<
-        (x, y) \rarr; \vec<s> \sb<><1> \rarr; \cdots; \rarr; \vec<s> \sb<><\sp<n><\infty;> (x, y) - 1> \rarr; (z)
+        (x, y) \rarr; \vec<s> \sb<><1> \rarr; \cdots; \rarr; \vec<s> \sb<><\sb<n><\infty;> (x, y) - 1> \rarr; (z)
       >
       という Ackermann 変形の列が得られているので、\mref|type="thm",ref="val"|; により &m<\op<ack> (x, y) = z> が成り立つ。
       すなわち、
       &mb<
-        \op<ack> (x, y) = \op<seqat> (x, y, \sp<n><\infty;> (x, y)) \atsym; 0
+        \op<ack> (x, y) = \op<seqat> (x, y, \sb<n><\infty;> (x, y)) \atsym; 0
       >
       と書けるということである。
       ここには一般再帰的な関数しか表れていないので、これで &m<\op|ord|<ack>> が一般再帰的であることが示された。
