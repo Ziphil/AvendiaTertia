@@ -22,7 +22,7 @@
   >
   \thm|type="def"|<
     \p<
-      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対して、全域関数 &m<\sb<\op<ch>><P>: \sp<\bb<N>><k> \to; \bb<N>> を
+      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対して、全域関数 &m<\sb<\op|ord|<ch>><P>: \sp<\bb<N>><k> \to; \bb<N>> を
       &mb<
         \sb<\op<ch>><P> (\vec<x>) \coloneqq; \case<
           \c<1> \c<(\vec<x> \in; P)> \br;
