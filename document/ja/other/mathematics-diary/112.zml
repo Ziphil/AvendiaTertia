@@ -1,0 +1,103 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<列挙定理と停止性問題>
+  \use-math|prefix="15"|;
+
+  \h1<日記 (2026 年 2 月 3 日)>
+  \p<
+    前回は、計算可能でない関係の例として停止性問題を挙げた。
+    すなわち、関係 &m<\sp<\op|ord|<Halt>><(k)> \subseteq; \sp<\bb<N>><k + 1>> を
+    &mb<
+      (w, \vec<x>) \in; \sp<\op|ord|<Halt>><(k)> \coloniff; \lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \darr|ord|;
+    >
+    で定めると、これは計算可能ではないのであった。
+    ところで、これが計算可能でないというのは、その特性関数
+    &mb<
+      \sb<\op<ch>><\sp<\op|ord|<Halt>><(k)>> (w, \vec<x>) \coloneqq; \case<
+        \c<1> \c<(\lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \darr|ord|;)> \br;
+        \c<0> \c<(\lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \uarr|ord|;)> \br;
+      >
+    >
+    が計算可能でないということである。
+    つまり、関数の番号 &m<w> とそれに渡す引数 &m<\vec<x>> を渡したときに、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されるかされないかに応じて 1 か 0 のどちらかを必ず返す計算可能関数は存在しないということである。
+    しかし、この条件を少し緩めて、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されるなら 1 を返すという条件だけを満たす計算可能関数であれば存在する。
+    実際、関数 &m<f: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> を
+    &mb<
+      f (w, \vec<x>) \coloneqq; \sp<\op<apply>><(k)> (w, \vec<x>) \cdot; 0 + 1
+    >
+    と定めれば、apply が計算可能であることからこの &m<f> も計算可能であり、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されるなら &m<f (w, \vec<x>)> も定義されてその値は常に 1 である。
+    一方で、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されなければ &m<f (w, \vec<x>)> も定義されない。
+    すなわち、この &m<f> は、
+    &mb<
+      f (w, \vec<x>) = \case<
+        \c<1> \c<(\lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \darr|ord|;)> \br;
+        \c<\uarr|ord|;> \c<(\lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \uarr|ord|;)> \br;
+      >
+    >
+    を満たす。
+  >
+  \p<
+    &m<\sb<\op|ord|<ch>><\op|ord|<Halt>>> とこの &m<f> の違いは非常に重要である。
+    これはプログラムの見方をすると分かりやすい。
+    &m<\sb<\op|ord|<ch>><\op|ord|<Halt>>> を計算するプログラムは (もしあったとしたら) 必ず停止するので、このプログラムを走らせて結果が出ていなければ、それは確実にまだ計算途中であるということになる。
+    したがって、結果が出るまでもう少し待てば良い。
+    しかし一方で、&m<f> を計算するプログラムはそもそも停止しないことがあるので、引数 &m<(w, \vec<x>)> を渡して走らせているときに、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されてはいるが単に計算途中であるだけなのか &m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されておらず永遠に停止しないのかは分からない。
+    そのため、結果が出ると信じてさらに待つべきなのか、これは永遠に停止しないと考えて実行を中断すべきなのか、判断しづらい。
+  >
+  \p<
+    今述べた停止性問題のように、真偽に応じて 1 か 0 を必ず返す関数は計算可能にならないものの、真のとき 1 を返すだけの関数であれば計算可能になるような命題は多く存在する。
+    そこで、これを定式化して名前をつけておこう。
+  >
+  \thm|type="def"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対して、部分関数 &m<\sb<\op|ord|<sch>><P>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を
+      &mb<
+        \sb<\op<sch>><P> (\vec<x>) \coloneqq; \case<
+          \c<1> \c<(\vec<x> \in; P)> \br;
+          \c<\uarr|ord|;> \c<(\vec<x> \nin; P)>
+        >
+      >
+      で定義する。
+      これを &m<P> の \def<半特性関数\fl<semicharacteristic function>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、&m<P> の半特性関数が計算可能であるとき、&m<P> は \def<計算可枚挙\fl<computably enumerable>> であるという。
+    >
+  >
+  \p<
+    この用語を使えば、停止性問題は計算可能ではないが計算可枚挙ではあると言える。
+  >
+  \p<
+    さてここからは、計算可枚挙性についてより深く考察していこう。
+    まず明らかに分かることとして、計算可能であれば計算可枚挙である。
+  >
+  \thm|type="thm"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、&m<P> が計算可能ならば、&m<P> は計算可枚挙でもある。
+    >
+  >
+  \prf<
+    \p<
+      &m<P> の半特性関数は、
+      &mb<
+        \sb<\op<sch>><P> (\vec<x>) = \case<
+          \c<1> \c<(\vec<x> \in; P)> \br;
+          \c<\uarr|ord|;> \c<(\vec<x> \nin; P)>
+        >
+      >
+      であった。
+      どんな引数に対しても値が定義されない部分関数は計算可能であるから、&m<P> が計算可能であれば、上の式は計算可能な関係による計算可能関数の場合分けである。
+      すなわち、この &m<\sb<\op|ord|<sch>><P>> は計算可能であることになり、つまり &m<P> は計算可枚挙である。
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
+  >
+
+>

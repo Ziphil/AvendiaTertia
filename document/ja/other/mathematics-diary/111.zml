@@ -3,96 +3,48 @@
 
 
 \page<
-  \name<列挙定理と停止性問題>
+  \name<Kleene の正規形定理>
   \use-math|prefix="14"|;
 
   \h1<日記 (2026 年 2 月 3 日)>
   \p<
-    前回は、計算可能でない関係の例として停止性問題を挙げた。
-    すなわち、関係 &m<\sp<\op|ord|<Halt>><(k)> \subseteq; \sp<\bb<N>><k + 1>> を
-    &mb<
-      (w, \vec<x>) \in; \sp<\op|ord|<Halt>><(k)> \coloniff; \lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \darr|ord|;
-    >
-    で定めると、これは計算可能ではないのであった。
-    ところで、これが計算可能でないというのは、その特性関数
-    &mb<
-      \sb<\op<ch>><\sp<\op|ord|<Halt>><(k)>> (w, \vec<x>) \coloneqq; \case<
-        \c<1> \c<(\lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \darr|ord|;)> \br;
-        \c<0> \c<(\lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \uarr|ord|;)> \br;
-      >
-    >
-    が計算可能でないということである。
-    つまり、関数の番号 &m<w> とそれに渡す引数 &m<\vec<x>> を渡したときに、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されるかされないかに応じて 1 か 0 のどちらかを必ず返す計算可能関数は存在しないということである。
-    しかし、この条件を少し緩めて、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されるなら 1 を返すという条件だけを満たす計算可能関数であれば存在する。
-    実際、関数 &m<f: \sp<\bb<N>><k + 1> \dot<\to;> \bb<N>> を
-    &mb<
-      f (w, \vec<x>) \coloneqq; \sp<\op<apply>><(k)> (w, \vec<x>) \cdot; 0 + 1
-    >
-    と定めれば、apply が計算可能であることからこの &m<f> も計算可能であり、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されるなら &m<f (w, \vec<x>)> も定義されてその値は常に 1 である。
-    一方で、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されなければ &m<f (w, \vec<x>)> も定義されない。
-    すなわち、この &m<f> は、
-    &mb<
-      f (w, \vec<x>) = \case<
-        \c<1> \c<(\lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \darr|ord|;)> \br;
-        \c<\uarr|ord|;> \c<(\lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \uarr|ord|;)> \br;
-      >
-    >
-    を満たす。
+    前回は、計算可能性に関するトピックとして、列挙定理と停止性問題の計算不可能性を扱った。
+    今回は、別のトピックとして、Kleene の正規形定理を扱う。
   >
   \p<
-    &m<\sb<\op|ord|<ch>><\op|ord|<Halt>>> とこの &m<f> の違いは非常に重要である。
-    これはプログラムの見方をすると分かりやすい。
-    &m<\sb<\op|ord|<ch>><\op|ord|<Halt>>> を計算するプログラムは (もしあったとしたら) 必ず停止するので、このプログラムを走らせて結果が出ていなければ、それは確実にまだ計算途中であるということになる。
-    したがって、結果が出るまでもう少し待てば良い。
-    しかし一方で、&m<f> を計算するプログラムはそもそも停止しないことがあるので、引数 &m<(w, \vec<x>)> を渡して走らせているときに、&m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されてはいるが単に計算途中であるだけなのか &m<\lxbracket; w \rxbracket; (\vec<x>)> が定義されておらず永遠に停止しないのかは分からない。
-    そのため、結果が出ると信じてさらに待つべきなのか、これは永遠に停止しないと考えて実行を中断すべきなのか、判断しづらい。
+    Kleene の正規形定理とは、どんな計算可能関数でも「原始再帰関係に 1 回の最小化を施した後に原始再帰関数で最終結果を抽出する」という形で表せることを主張する定理である。
+    定義によれば、計算可能関数とは、初期関数から始めて合成と原始再帰と最小化を自由に組み合わせて得られるような関数のことだが、実はその組み合わせ方として「原始再帰関係\k<→>最小化\k<→>原始再帰関数」という形だけで十分だということである。
   >
   \p<
-    今述べた停止性問題のように、真偽に応じて 1 か 0 を必ず返す関数は計算可能にならないものの、真のとき 1 を返すだけの関数であれば計算可能になるような命題は多く存在する。
-    そこで、これを定式化して名前をつけておこう。
+    実は、この定理の証明の本質的な部分は\a|href="109.html#run"|<命題 12.8> ですでに行っている。
+    そこで、これを示した\a|href="109.html"|<第 12 回>の内容を思い出すことにしよう。
   >
-  \thm|type="def"|<
+  \thm|type="thm",id="enum"|<
+    \name<Kleene の正規形定理\fl<—’s normal form theorem>>
     \p<
-      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対して、部分関数 &m<\sb<\op|ord|<sch>><P>: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を
+      次を満たす原始再帰関係 &m<T \subseteq; \sp<\bb<N>><k + 2>> および原始再帰関数 &m<u: \bb<N> \to; \bb<N>> が存在する。
+      任意の計算可能関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> に対し、ある自然数 &m<e \in; \bb<N>> が存在して、任意の自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、
       &mb<
-        \sb<\op<sch>><P> (\vec<x>) \coloneqq; \case<
-          \c<1> \c<(\vec<x> \in; P)> \br;
-          \c<\uarr|ord|;> \c<(\vec<x> \nin; P)>
-        >
+        f (\vec<x>) = u (\rm<`m> t. \sfun; T (e, \vec<x>, t))
       >
-      で定義する。
-      これを &m<P> の \def<半特性関数\fl<semicharacteristic function>> という。
-    >
-  >
-  \thm|type="def"|<
-    \p<
-      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、&m<P> の半特性関数が計算可能であるとき、&m<P> は \def<計算可枚挙\fl<computably enumerable>> であるという。
-    >
-  >
-  \p<
-    この用語を使えば、停止性問題は計算可能ではないが計算可枚挙ではあると言える。
-  >
-  \p<
-    さてここからは、計算可枚挙性についてより深く考察していこう。
-    まず明らかに分かることとして、計算可能であれば計算可枚挙である。
-  >
-  \thm|type="thm"|<
-    \p<
-      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、&m<P> が計算可能ならば、&m<P> は計算可枚挙でもある。
+      が成り立つ。
     >
   >
   \prf<
     \p<
-      &m<P> の半特性関数は、
+      ここまでの議論により、&m<T> を
       &mb<
-        \sb<\op<sch>><P> (\vec<x>) = \case<
-          \c<1> \c<(\vec<x> \in; P)> \br;
-          \c<\uarr|ord|;> \c<(\vec<x> \nin; P)>
-        >
+        T (e, \vec<x>, t) \coloniff; \op<configat> (e, \op<tomem> (\vec<x>), t) @ 1 = \op<len> (e)
       >
-      であった。
-      どんな引数に対しても値が定義されない部分関数は計算可能であるから、&m<P> が計算可能であれば、上の式は計算可能な関係による計算可能関数の場合分けである。
-      すなわち、この &m<\sb<\op|ord|<sch>><P>> は計算可能であることになり、つまり &m<P> は計算可枚挙である。
+      と定め、&m<u> を
+      &mb<
+        u (y) \coloneqq; \op<configat> (e, \op<tomem> (\vec<x>), y) @ 0 \sp<@><*> k
+      >
+      と定めれば良い。
+      実際、これらは原始再帰的な関数や操作の組み合わせであるから原始再帰的であり、さらに
+      &mb<
+        f (\vec<x>) = u (\rm<`m> t. \sfun; T (e, \vec<x>, t))
+      >
     >
   >
   \h1<参考文献>
