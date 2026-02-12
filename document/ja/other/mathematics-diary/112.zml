@@ -8,7 +8,7 @@
 
   \h1<日記 (2026 年 2 月 3 日)>
   \p<
-    前回は、計算可能でない関係の例として停止性問題を挙げた。
+    \a|href="110.html"|<第 13 回>は、計算可能でない関係の例として停止性問題を挙げた。
     すなわち、関係 &m<\sp<\op|ord|<Halt>><(k)> \subseteq; \sp<\bb<N>><k + 1>> を
     &mb<
       (w, \vec<x>) \in; \sp<\op|ord|<Halt>><(k)> \coloniff; \lxbracket; w \rxbracket; \sp<><(k)> (\vec<x>) \darr|ord|;

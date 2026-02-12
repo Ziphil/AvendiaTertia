@@ -50,17 +50,17 @@
   >
   \p<
     ただし、Kleene の正規形定理はより強く、外側にある &m<\op|ord|<ext>> を &m<`f> にも &m<\vec<x>> にも依存せず最小化の結果だけに依存する形にしても、上記のように書けることを主張する。
-    幸いこれは、&m<\op|ord|<Haltat>> の定義を少し変えて、最小化をとる変数に (ステップ数だけでなく) レジスタマシンの状況も情報としてもつようにすることで証明できる。
-    そのために、少し準備をしよう。
+    幸いこれは、&m<\op|ord|<Haltat>> の定義を次のように少し変えて、最小化をとる変数に (ステップ数だけでなく) メモリの情報を加えておくことで証明できる。
   >
   \thm|type="prp",id="haltat"|<
     \p<
-      次を満たす原始再帰関係 &m<\op|ord|<Haltof> \subseteq; \sp<\bb<N>><3>> が存在する。
-      任意のプログラム &m<\scr<F>> とメモリ &m<\scr<R>> に対し、初期のメモリが &m<\scr<R>> である状態で &m<\scr<F>> を実行したときに途中で異常終了しないならば、以下は同値である。
+      次を満たす原始再帰関係 &m<\sp<\op|ord|<Haltat>><(k)> \subseteq; \sp<\bb<N>><k + 2>> が存在する。
+      任意のプログラム &m<\scr<F>> と自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、初期のメモリが &m<(\sb<x><0>, \cdots;, \sb<x><k - 1>, 0, \cdots;)> である状態から &m<\scr<F>> を実行することを考える。
+      この途中で異常終了しないならば、自然数 &m<`n> に対して以下は同値である。
     >
     \ul<
       \li<
-        &m<\op<Haltof> (\lceil; \scr<F> \rceil;, \lceil; \scr<R> \rceil;, `n)> が成り立つ。
+        &m<\sp<\op<Haltat>><(k)> (\lceil; \scr<F> \rceil;, \vec<x>, `n)> が成り立つ。
       >
       \li<
         ある自然数 &m<n> が存在して、&m<n> ステップ実行直後のメモリを &m<\sb<\scr<R>><n>> と書くことにすると、&m<\sb<\scr<R>><n>> は正常終了している状態であり、さらに &m<`n @ 0 = n > および &m<`n @ 1 = \lceil; \sb<\scr<R>><n> \rceil;> も成り立つ。
@@ -72,10 +72,24 @@
       これは、
       &mb<
         \array|align="rcl"|<
-          \c<\op<Haltat> (`f, \vec<x>, `n)> \c<\coloniff;> \c<\op<configat> (\lceil; \scr<F> \rceil;, \lceil; \scr<R> \rceil;, `n @ 0) = \langle; `n @ 1, \op<len> (`f) \rangle;> \br;
+          \c<\op<Haltat> (`f, \vec<x>, `n)> \c<\coloniff;> \c<\op<configat> (\lceil; \scr<F> \rceil;, \op<tomem> (\vec<x>), `n @ 0) = \langle; `n @ 1, \op<len> (`f) \rangle;> \br;
         >
       >
       とすれば良い。
+      実際、この右辺には原始再帰的な関数や操作しか含まれていないので、この Haltat は原始再帰的である。
+      さらに、\a|href="109.html#configat"|<命題 12.7> で述べられている configat の性質により、以下の 2 条件が同値であることが分かる。
+    >
+    \ul<
+      \li<
+        上記の Haltat について、&m<\op<Haltat> (\lceil; \scr<F> \rceil;, \vec<x>, `n)> が成り立つ。
+      >
+      \li<
+        &m<n \coloneqq; `n @ 0> とおいて、&m<n> ステップ実行直後の状況を &m<(\sb<\scr<R>><n>, \sb<p><n>)> とすれば、&m<\lceil; \sb<\scr<R>><n> \rceil; = `n @ 1> かつ &m<\sb<p><n> = \op<len> (\lceil; \scr<F> \rceil;)> が成り立つ。
+      >
+    >
+    \p<
+      この後者の条件にある &m<\sb<p><n> = \op<len> (\lceil; \scr<F> \rceil;)> であるとは、&m<n> ステップ時点で正常終了の状態であるということである。
+      したがって、この条件は、命題の主張の 2 番目の条件と同値である。
     >
   >
   \p<
@@ -84,7 +98,7 @@
   \thm|type="thm",id="enum"|<
     \name<Kleene の正規形定理\fl<—’s normal form theorem>>
     \p<
-      次を満たす原始再帰関係 &m<\op|ord|<Haltat> \subseteq; \sp<\bb<N>><k + 2>> および原始再帰関数 &m<\op|ord|<ext>: \bb<N> \to; \bb<N>> が存在する。
+      次を満たす原始再帰関係 &m<\sp<\op|ord|<Haltat>><(k)> \subseteq; \sp<\bb<N>><k + 2>> および原始再帰関数 &m<\op|ord|<ext>: \bb<N> \to; \bb<N>> が存在する。
       任意の計算可能関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> に対し、ある自然数 &m<e \in; \bb<N>> が存在して、任意の自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、
       &mb<
         f (\vec<x>) = \op<ext> (\rm<`m> t. \sfun; \op<Haltat> (e, \vec<x>, t))
@@ -94,24 +108,35 @@
   >
   \prf<
     \p<
-      ここまでの議論により、&m<\op|ord|<Haltat>> を
+      &m<f> を計算するプログラムを &m<\scr<F>> として、&m<e \coloneqq; \lceil; \scr<F> \rceil;> と定める。
+      まず、\mref|type="thm",ref="haltat"|; の通りに &m<\op|ord|<Haltat>> をとり、自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対して、
       &mb<
-        \op|ord|<Haltat> (e, \vec<x>, t) \coloniff; \op<configat> (e, \op<tomem> (\vec<x>), t) @ 1 = \op<len> (e)
+        \sb<`n><\infty;> (e, \vec<x>) \coloneqq; \rm<`m> t. \sfun; \op<Haltat> (e, \vec<x>, t)
       >
-      と定め、&m<u> を
+      とおく。
+      すると\mref|type="thm",ref="haltat"|; により、初期のメモリが &m<(\vec<x>, 0, \cdots;)> である状態から &m<\scr<F>> を実行したときに、それが正常終了する最小のステップ数が &m<\sb<`n><\infty;> (e, \vec<x>) @ 0> として得られ、そのときのメモリの Gödel 数が &m<\sb<`n><\infty;> (e, \vec<x>) @ 1> になる。
+      したがって、計算の定義により &m<f (\vec<x>) = \sb<`n><\infty;> (e, \vec<x>) @ 1 \sp<@><*> k> である。
+      そこで、関数 &m<\op|ord|<ext>: \bb<N> \to; \bb<N>> を
       &mb<
-        u (e, y) \coloneqq; \op<configat> (e, \op<tomem> (\vec<x>), y) @ 0 \sp<@><*> k
+        \op<ext> (`n) \coloneqq; `n @ 1 \sp<@><*> k
       >
-      と定めれば良い。
-      実際、これらは原始再帰的な関数や操作の組み合わせであるから原始再帰的であり、さらに
+      で定めれば、これは原始再帰的であり、さらに
       &mb<
-        f (\vec<x>) = u (\rm<`m> t. \sfun; \op|ord|<Haltat> (e, \vec<x>, t))
+        \array|align="rcl"|<
+          \c<f (\vec<x>)> \c<=> \c<\sb<`n><\infty;> (e, \vec<x>) @ 1 \sp<@><*> k> \br;
+          \c; \c<=> \c<\op<ext> (\rm<`m> t. \sfun; \op|ord|<Haltat> (e, \vec<x>, t))> \br;
+        >
       >
+      が成り立つ。
+      Haltat も ext も &m<f> には依存していないため、これらは定理の主張を満たす。
     >
+  >
+  \p<
+    次回からは、新たに計算可枚挙性という概念を導入し、その性質を見ていくことにする。
   >
   \h1<参考文献>
   \ol<
-    \li|id="ectx"|<H. B. Enderton (2011)『Computability \op|ord|<Haltat>heory』Academic Press>
+    \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>
   >
 
 >
