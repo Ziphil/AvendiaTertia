@@ -95,6 +95,111 @@
       すなわち、この &m<\sb<\op|ord|<sch>><P>> は計算可能であることになり、つまり &m<P> は計算可枚挙である。
     >
   >
+  \thm|type="thm",id="equiv"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、以下の 2 条件は同値である。
+    >
+    \ol<
+      \li<
+        &m<P> は計算可枚挙である。
+      >
+      \li<
+        ある自然数 &m<m \in; \bb<N>> と原始再帰的関係 &m<Q \subseteq; \sp<\bb<N>><k + m>> が存在して、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、
+        &mb<
+          \vec<x> \in; P \iff; \sp<><\exists;> \vec<t> \in; \sp<\bb<N>><m> \ssbin; (\vec<x>, \vec<t>) \in; Q
+        >
+        が成り立つ。
+      >
+      \li<
+        ある自然数 &m<m \in; \bb<N>> と計算可能関係 &m<Q \subseteq; \sp<\bb<N>><k + m>> が存在して、任意の &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、
+        &mb<
+          \vec<x> \in; P \iff; \sp<><\exists;> \vec<t> \in; \sp<\bb<N>><m> \ssbin; (\vec<x>, \vec<t>) \in; Q
+        >
+        が成り立つ。
+      >
+    >
+  >
+  \p<
+    条件 2 と条件 3 の違いは、&m<Q> を原始再帰的まで仮定するか単に計算可能なだけにするかのみである。
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      仮定から &m<\sb<\op|ord|<sch>><P>> は計算可能である。
+      したがって、\a|href="111.html#kleene"|<定理 14.2> により、ある自然数 &m<e \in; \bb<N>> が存在して、&m<\sb<\op|ord|<sch>><P>> は
+      &mb<
+        \sb<\op|ord|<sch>><P> (\vec<x>) = \op<ext> (\rm<`m> t. \sfun; \op<Haltat> (e, \vec<x>, t))
+      >
+      と書ける。
+      ここで、ext は原始再帰的だから特に全域なので、&m<\sb<\op|ord|<sch>><P> (\vec<x>)> が定義される必要十分条件は &m<\rm<`m> t. \sfun; \op<Haltat> (e, \vec<x>, t)> が定義されることであり、それは &m<\op<Haltat> (e, \vec<x>, t)> を満たす &m<t> が存在することと同値である。
+      したがって、 &m<Q \subseteq; \sp<\bb<N>><k + 1>> を
+      &mb<
+         Q (\vec<x>, t) \coloniff; \op<Haltat> (e, \vec<x>, t)
+      >
+      で定めれば、\a|href="111.html#kleene"|<定理 14.2> によってこれは原始再帰的であって、
+      &mb<
+        \array|align="rcl"|<
+          \c<P (\vec<x>)> \c<\iff;> \c<\sb<\op|ord|<sch>><P> (\vec<x>) \darr|ord|;> \br;
+          \c; \c<\iff;> \c<\sp<><\exists;> t \ssbin; \op<Haltat> (e, \vec<x>, t)> \br;
+          \c; \c<\iff;> \c<\sp<><\exists;> t \ssbin; Q (\vec<x>, t)> \br;
+        >
+      >
+      が成り立つ。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 3>
+      原始再帰的関係は計算可能だから、これは明らかである。
+    >
+    \p<
+      \label<条件 3 &m<\raarr;> 条件 1>
+      条件の通りの &m<m> と &m<Q> をとり、部分関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> を、
+      &mb<
+        f (\vec<x>) \coloneqq; \rm<`m> `t. \srel; Q (\vec<x>, `t @ 0, \cdots;, `t @ (m - 1))
+      >
+      で定める。
+      仮定から &m<Q> は計算可能だから、この &m<f> も計算可能である。
+      さらに、自然数列のエンコーディングの性質により、
+      &mb<
+        \array|align="rcl"|<
+          \c<f (\vec<x>) \darr|ord|;> \c<\iff;> \c<\sp<><\exists;> `t \in; \bb<N> \ssbin; Q (\vec<x>, `t @ 0, \cdots;, `t @ (m - 1))> \br;
+          \c; \c<\iff;> \c<\sp<><\exists;> \vec<t> \in; \sp<\bb<N>><m> \ssbin; Q (\vec<x>, \sb<t><0>, \cdots;, \sb<t><m - 1>)> \br;
+          \c; \c<\iff;> \c<P (\vec<x>)> \br;
+        >
+      >
+      が成り立つ。
+      そのため &m<\sb<\op|ord|<sch>><P>> は、
+      &mb<
+        \sb<\op|ord|<sch>><P> (\vec<x>) = f (\vec<x>) \cdot; 0 + 1
+      >
+      と書けるから、&m<\sb<\op|ord|<sch>><P>> は計算可能であり、&m<P> は計算可枚挙である。
+    >
+  >
+  \p<
+    1 変数の関係については、以下のような特徴づけもできる。
+  >
+  \thm|type="thm",id="dom"|<
+    \p<
+      関係 &m<P \subseteq; \sp<\bb<N>><k>> に対し、以下の 2 条件は同値である。
+    >
+    \ol<
+      \li<
+        &m<P> は計算可枚挙である。
+      >
+      \li<
+        ある計算可能関数 &m<f: \bb<N> \dot<\to;> \bb<N>> が存在して、&m<P = \op<dom> (f)> が成り立つ。
+      >
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2>
+      &m<P> が計算可枚挙であれば、&m<\sb<\op|ord|<sch>><P>> は計算可能であるが、&m<P = \op<dom> (\sb<\op|ord|<sch>><P>)> である。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1>
+      条件の通りの &m<f> をとると、&m<\sb<\op|ord|<sch>><P>> は &m<\sb<\op<sch>><P> (x) = f (x) \cdot; 0 + 1> と書けるから、これは計算可能であり、&m<P> は計算可枚挙である。
+    >
+  >
   \h1<参考文献>
   \ol<
     \li|id="ectx"|<H. B. Enderton (2011)『Computability Theory』Academic Press>

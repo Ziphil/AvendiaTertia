@@ -95,7 +95,7 @@
   \p<
     これを用いると、以下の Kleene の正規形定理が証明できる。
   >
-  \thm|type="thm",id="enum"|<
+  \thm|type="thm",id="kleene"|<
     \name<Kleene の正規形定理\fl<—’s normal form theorem>>
     \p<
       次を満たす原始再帰関係 &m<\sp<\op|ord|<Haltat>><(k)> \subseteq; \sp<\bb<N>><k + 2>> と原始再帰関数 &m<\sp<\op|ord|<ext>><(k)>: \bb<N> \to; \bb<N>> が存在する。
