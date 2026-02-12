@@ -6,7 +6,7 @@
   \name<Kleene の正規形定理>
   \use-math|prefix="14"|;
 
-  \h1<日記 (2026 年 2 月 3 日)>
+  \h1<日記 (2026 年 2 月 12 日)>
   \p<
     前回は、計算可能性に関するトピックとして、列挙定理と停止性問題の計算不可能性を扱った。
     今回は、別のトピックとして、Kleene の正規形定理を扱う。
@@ -98,10 +98,10 @@
   \thm|type="thm",id="enum"|<
     \name<Kleene の正規形定理\fl<—’s normal form theorem>>
     \p<
-      次を満たす原始再帰関係 &m<\sp<\op|ord|<Haltat>><(k)> \subseteq; \sp<\bb<N>><k + 2>> および原始再帰関数 &m<\op|ord|<ext>: \bb<N> \to; \bb<N>> が存在する。
+      次を満たす原始再帰関係 &m<\sp<\op|ord|<Haltat>><(k)> \subseteq; \sp<\bb<N>><k + 2>> と原始再帰関数 &m<\sp<\op|ord|<ext>><(k)>: \bb<N> \to; \bb<N>> が存在する。
       任意の計算可能関数 &m<f: \sp<\bb<N>><k> \dot<\to;> \bb<N>> に対し、ある自然数 &m<e \in; \bb<N>> が存在して、任意の自然数列 &m<\vec<x> \in; \sp<\bb<N>><k>> に対し、
       &mb<
-        f (\vec<x>) = \op<ext> (\rm<`m> t. \sfun; \op<Haltat> (e, \vec<x>, t))
+        f (\vec<x>) = \sp<\op<ext>><(k)> (\rm<`m> t. \sfun; \sp<\op<Haltat>><(k)> (e, \vec<x>, t))
       >
       が成り立つ。
     >
