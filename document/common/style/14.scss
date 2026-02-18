@@ -345,6 +345,7 @@ body {
   @include justify;
   margin-block: 8rpx;
   line-height: $line-height;
+  display: flow-root;
 }
 
 .normal-list {
@@ -371,6 +372,22 @@ body {
     text-align: center;
     position: absolute;
   }
+}
+
+.document {
+  margin-block: 8rpx;
+}
+
+.document-main {
+  padding-inline: 16rpx;
+  background-color: oklch(0.95 0 0 / 0.5);
+  border: solid 1rpx oklch(0.8 0 0);
+}
+
+.signature {
+  margin-inline-start: 16rpx;
+  line-height: $line-height;
+  float: right;
 }
 
 .superbreviation {
