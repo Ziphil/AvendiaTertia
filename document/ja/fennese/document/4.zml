@@ -1,0 +1,146 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\page<
+  \name<元素と為素>
+  \ver<β.23 期>
+
+  \h1<元素と為素>
+  \h2<四元素と四為素>
+  \p<
+    四元素と四為素は、互いに互いの組み合わせの関係になっている。
+    例えば、火素は破壊素と変化素の組み合わせと解釈でき、逆に破壊素は火素と土素の組み合わせと解釈できる。
+    この関係はシンボルにも表れており、例えば、火素のシンボルは破壊素と変化素のシンボルの両方に見られる共通要素であるし、破壊素のシンボルは火素と土素のシンボルの組み合わせと見なせる。
+  >
+  \p<
+    四元素は以下の通りである。
+  >
+  \table<
+    \tr<\th<記号>\th|col="2"|<元素>\th<関係>\th<色>>
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -32 32 L 0 -32 L 32 32",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<火素>\td<{леби̂жмо}>\td<破壊素\k<＋>変化素>\td<赤色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -24 -30 A 32 36, 0, 1 0, 24 -30",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<水素>\td<{лери̂с}>\td<創造素\k<＋>安定素>\td<青色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -32 L 0 28 M -32 28 L 32 28",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<土素>\td<{лову̂нцо}>\td<破壊素\k<＋>安定素>\td<黄色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -28 -20 A 28 15, 0, 1 1, -2 0 A 28 15, 0, 1 1, -28 20",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<風素>\td<{лофу̂рас}>\td<創造素\k<＋>変化素>\td<緑色>
+    >
+  >
+  \p<
+    四為素は以下の通りである。
+    四為素のシンボルは少し複雑で、前述の通り四元素のシンボルを 2 つ組み合わせたものとも解釈できるし、その現象を象徴する具体物の形を抽象化したものとも解釈できる。
+  >
+  \table<
+    \tr<\th<記号>\th|col="2"|<為素>\th<関係>\th<具体物>\th<色>>
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -32 L 0 32 M -32 12 L 0 -32 L 32 12 M -16 16 L 16 16",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<破壊素>\td<{лобобду̂ддало}>\td<火素\k<＋>地素>\td<剣, 矢>\td<橙色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -18 -28 A 24 18, 0, 1 1, -2 4 L -2 32 M -30 7 A 40 32, 0, 0 0, 30 7",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<創造素>\td<{лозху̂кло}>\td<水素\k<＋>風素>\td<新芽, 杖>\td<水色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -28 -24 A 22 30, 0, 1 0, 0 -28 A 22 30, 0, 1 0, 28 -24",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<変化素>\td<{лоӈҕу̂ло}>\td<火素\k<＋>風素>\td<渦, 螺旋>\td<紫色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -30 L 0 30 M -24 -30 A 28 26, 0, 1 0, 24 -30 M -22 30 L 22 30",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<安定素>\td<{лорассу̂фло}>\td<水素\k<＋>土素>\td<柱, 錨>\td<黄緑色>
+    >
+  >
+  \h2<三元素と三為素>
+  \p<
+    三元素と三為素には、単純な対応関係があり、しばしば対応する両者は同一視される。
+    実際、シンボルは対応するもの同士で同じ形が用いられる。
+  >
+  \p<
+    三元素は以下の通りである。
+  >
+  \table<
+    \tr<\th<記号>\th|col="2"|<元素>\th<色>>
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<理性素>\td<{леши̂бко}>\td<白色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z M 0 -32 L 0 32",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<感情素>\td<{*}>\td<黒色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -36 -20 A 28 26, 0, 1 1, -36 20 M 36 -20 A 28 26, 0, 1 0, 36 20",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<肉体素>\td<{лоду̂зло}>\td<灰色>
+    >
+  >
+  \p<
+    三為素は以下の通りである。
+  >
+  \table<
+    \tr<\th<記号>\th|col="2"|<為素>\th<色>>
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<思考素>\td<{*}>\td<白色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z M 0 -32 L 0 32",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<感覚素>\td<{*}>\td<黒色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -36 -20 A 28 26, 0, 1 1, -36 20 M 36 -20 A 28 26, 0, 1 0, 36 20",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<定着素>\td<{*}>\td<灰色>
+    >
+  >
+  \h1<惑星>
+  \p<
+    フェンナ文化では、上述の哲学をベースにして、惑星に対しても西洋や中国とは異なる意味付けが行われている。
+    太陽と月および地球を除く土星以内の惑星から成る 7 つの主要天体には、四為素と三為素のいずれか 1 つが以下のように割り当てられている。
+  >
+  \table<
+    \tr<\th<記号>\th|col="2"|<惑星>\th<為素>\th<色>>
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 M 12 0 A 12 12, 0, 1 0, -12 0 A 12 12, 0, 1 0, 12 0 Z",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<太陽>\td<{локу̂шро}>\td<思考素>\td<白色 (橙色)>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z M 0 -32 L 0 32",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<月>\td<{лолу̂кас}>\td<感覚素>\td<黒色 (水色)>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -36 -20 A 28 26, 0, 1 1, -36 20 M 36 -20 A 28 26, 0, 1 0, 36 20",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<金星>\td<{лоччу̂зло}>\td<定着素>\td<灰色 (黄緑色)>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -32 L 0 32 M -32 12 L 0 -32 L 32 12 M -16 16 L 16 16",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<火星>\td<{лобобшу̂дад}>\td<破壊素>\td<赤色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -18 -28 A 24 18, 0, 1 1, -2 4 L -2 32 M -30 7 A 40 32, 0, 0 0, 30 7",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<木星>\td<{лозохшу̂ко}>\td<創造素>\td<青色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -28 -24 A 22 30, 0, 1 0, 0 -28 A 22 30, 0, 1 0, 28 -24",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<水星>\td<{лоншу̂ҕо}>\td<変化素>\td<緑色>
+    >
+    \tr<
+      \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -30 L 0 30 M -24 -30 A 28 26, 0, 1 0, 24 -30 M -22 30 L 22 30",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
+      \td<土星>\td<{лоршу̂ссаф}>\td<安定素>\td<黄色>
+    >
+  >
+  \p<
+    太陽と月と金星に割り当てられている色は、三為素の色と同じ無彩色の方が本質的であるが、色相による区別が必要なときは括弧内の色で代用されることも多い。
+  >
+  \p<
+    また、太陽を表すシンボルには、思考素を表す単純な円の代わりに、内部にもう 1 つ円を描いた二重円が用いられることが多い。
+    この慣習は、シンボリズム的な意味があるというよりは、単純に視認性を増すためのものだと考えられている。
+  >
+
+>
