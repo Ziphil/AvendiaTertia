@@ -8,3 +8,14 @@
 .image {
   display: block;
 }
+
+.svg {
+  overflow: visible;
+  &[data-inline] {
+    width: auto;
+    height: 1.1em;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
