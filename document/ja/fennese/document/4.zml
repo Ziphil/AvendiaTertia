@@ -17,22 +17,22 @@
     四元素は以下の通りである。
   >
   \table<
-    \tr<\th<記号>\th|col="2"|<元素>\th<関係>\th<色>>
+    \tr<\th<記号>\th<元素名>\th<関係>\th<色>>
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -32 32 L 0 -32 L 32 32",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<火素>\td<{леби̂жмо}>\td<破壊素\k<＋>変化素>\td<赤色>
+      \td<火素\fl<{леби̂жмо}>>\td<破壊素\k<＋>変化素>\td<赤色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -24 -30 A 32 36, 0, 1 0, 24 -30",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<水素>\td<{лери̂с}>\td<創造素\k<＋>安定素>\td<青色>
+      \td<水素\fl<{лери̂с}>>\td<創造素\k<＋>安定素>\td<青色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -32 L 0 28 M -32 28 L 32 28",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<土素>\td<{лову̂нцо}>\td<破壊素\k<＋>安定素>\td<黄色>
+      \td<土素\fl<{лову̂нцо}>>\td<破壊素\k<＋>安定素>\td<黄色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -28 -20 A 28 15, 0, 1 1, -2 0 A 28 15, 0, 1 1, -28 20",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<風素>\td<{лофу̂рас}>\td<創造素\k<＋>変化素>\td<緑色>
+      \td<風素\fl<{лофу̂рас}>>\td<創造素\k<＋>変化素>\td<緑色>
     >
   >
   \p<
@@ -40,22 +40,22 @@
     四為素のシンボルは少し複雑で、前述の通り四元素のシンボルを 2 つ組み合わせたものとも解釈できるし、その現象を象徴する具体物の形を抽象化したものとも解釈できる。
   >
   \table<
-    \tr<\th<記号>\th|col="2"|<為素>\th<関係>\th<具体物>\th<色>>
+    \tr<\th<記号>\th<為素名>\th<関係>\th<具体物>\th<色>>
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -32 L 0 32 M -32 12 L 0 -32 L 32 12 M -16 16 L 16 16",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<破壊素>\td<{лобобду̂ддало}>\td<火素\k<＋>地素>\td<剣, 矢>\td<橙色>
+      \td<破壊素\fl<{лобобду̂ддало}>>\td<火素\k<＋>地素>\td<剣, 矢>\td<橙色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -18 -28 A 24 18, 0, 1 1, -2 4 L -2 32 M -30 7 A 40 32, 0, 0 0, 30 7",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<創造素>\td<{лозху̂кло}>\td<水素\k<＋>風素>\td<新芽, 杖>\td<水色>
+      \td<創造素\fl<{лозху̂кло}>>\td<水素\k<＋>風素>\td<新芽, 杖>\td<水色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -28 -24 A 22 30, 0, 1 0, 0 -28 A 22 30, 0, 1 0, 28 -24",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<変化素>\td<{лоӈҕу̂ло}>\td<火素\k<＋>風素>\td<渦, 螺旋>\td<紫色>
+      \td<変化素\fl<{лоӈҕу̂ло}>>\td<火素\k<＋>風素>\td<渦, 螺旋>\td<紫色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -30 L 0 30 M -24 -30 A 28 26, 0, 1 0, 24 -30 M -22 30 L 22 30",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<安定素>\td<{лорассу̂фло}>\td<水素\k<＋>土素>\td<柱, 錨>\td<黄緑色>
+      \td<安定素\fl<{лорассу̂фло}>>\td<水素\k<＋>土素>\td<柱, 錨>\td<黄緑色>
     >
   >
   \h2<三元素と三為素>
@@ -67,36 +67,36 @@
     三元素は以下の通りである。
   >
   \table<
-    \tr<\th<記号>\th|col="2"|<元素>\th<色>>
+    \tr<\th<記号>\th<元素名>\th<色>>
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<理性素>\td<{леши̂бко}>\td<白色>
+      \td<理性素\fl<{леши̂бко}>>\td<白色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z M 0 -32 L 0 32",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<感情素>\td<{*}>\td<黒色>
+      \td<感情素>\td<黒色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -36 -20 A 28 26, 0, 1 1, -36 20 M 36 -20 A 28 26, 0, 1 0, 36 20",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<肉体素>\td<{лоду̂зло}>\td<灰色>
+      \td<肉体素\fl<{лоду̂зло}>>\td<灰色>
     >
   >
   \p<
     三為素は以下の通りである。
   >
   \table<
-    \tr<\th<記号>\th|col="2"|<為素>\th<色>>
+    \tr<\th<記号>\th<為素名>\th<色>>
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<思考素>\td<{*}>\td<白色>
+      \td<思考素>\td<白色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z M 0 -32 L 0 32",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<感覚素>\td<{*}>\td<黒色>
+      \td<感覚素>\td<黒色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -36 -20 A 28 26, 0, 1 1, -36 20 M 36 -20 A 28 26, 0, 1 0, 36 20",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<定着素>\td<{*}>\td<灰色>
+      \td<定着素>\td<灰色>
     >
   >
   \h1<惑星>
@@ -105,34 +105,34 @@
     太陽と月および地球を除く土星以内の惑星から成る 7 つの主要天体には、四為素と三為素のいずれか 1 つが以下のように割り当てられている。
   >
   \table<
-    \tr<\th<記号>\th|col="2"|<惑星>\th<為素>\th<色>>
+    \tr<\th<記号>\th<惑星>\th<為素>\th<色>>
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 M 12 0 A 12 12, 0, 1 0, -12 0 A 12 12, 0, 1 0, 12 0 Z",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<太陽>\td<{локу̂шро}>\td<思考素>\td<白色 (橙色)>
+      \td<太陽\fl<{локу̂шро}>>\td<思考素>\td<白色 (橙色)>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 32 0 A 32 32, 0, 1 0, -32 0 A 32 32, 0, 1 0, 32 0 Z M 0 -32 L 0 32",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<月>\td<{лолу̂кас}>\td<感覚素>\td<黒色 (水色)>
+      \td<月\fl<{лолу̂кас}>>\td<感覚素>\td<黒色 (水色)>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -36 -20 A 28 26, 0, 1 1, -36 20 M 36 -20 A 28 26, 0, 1 0, 36 20",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<金星>\td<{лоччу̂зло}>\td<定着素>\td<灰色 (黄緑色)>
+      \td<金星\fl<{лоччу̂зло}>>\td<定着素>\td<灰色 (黄緑色)>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -32 L 0 32 M -32 12 L 0 -32 L 32 12 M -16 16 L 16 16",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<火星>\td<{лобобшу̂дад}>\td<破壊素>\td<赤色>
+      \td<火星\fl<{лобобшу̂дад}>>\td<破壊素>\td<赤色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -18 -28 A 24 18, 0, 1 1, -2 4 L -2 32 M -30 7 A 40 32, 0, 0 0, 30 7",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<木星>\td<{лозохшу̂ко}>\td<創造素>\td<青色>
+      \td<木星\fl<{лозохшу̂ко}>>\td<創造素>\td<青色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M -28 -24 A 22 30, 0, 1 0, 0 -28 A 22 30, 0, 1 0, 28 -24",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<水星>\td<{лоншу̂ҕо}>\td<変化素>\td<緑色>
+      \td<水星\fl<{лоншу̂ҕо}>>\td<変化素>\td<緑色>
     >
     \tr<
       \td<\svg|viewbox="-32 -32 64 64",inline|<\path|d="M 0 -30 L 0 30 M -24 -30 A 28 26, 0, 1 0, 24 -30 M -22 30 L 22 30",style="fill:none;stroke:currentcolor;stroke-width:5;"|;>>
-      \td<土星>\td<{лоршу̂ссаф}>\td<安定素>\td<黄色>
+      \td<土星\fl<{лоршу̂ссаф}>>\td<安定素>\td<黄色>
     >
   >
   \p<
