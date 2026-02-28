@@ -386,8 +386,12 @@ body {
 
 .signature {
   margin-inline-start: 16rpx;
-  line-height: $line-height;
   float: right;
+}
+
+.speaker {
+  margin-inline-end: 4rpx;
+  color: oklch(0.5 0 0);
 }
 
 .superbreviation {
@@ -401,4 +405,12 @@ body {
 
 .superbreviation-main {
   margin-block-end: -1.25em;
+}
+
+.redaction {
+  line-height: 1;
+  white-space: break-spaces;
+  border: dashed 1rpx currentcolor;
+  background-image: linear-gradient(-45deg, transparent 33%, currentcolor 33% 50%, transparent 50% 83%, currentcolor 83%);
+  background-size: 3rpx 3rpx;
 }
