@@ -390,8 +390,18 @@ body {
 }
 
 .speaker {
-  margin-inline-end: 4rpx;
-  color: oklch(0.5 0 0);
+  margin-inline-end: 0.25em;
+  color: oklch(0.6 0 0);
+}
+
+.speaker-name {
+  margin-inline-end: 0.125em;
+  text-decoration: underline;
+}
+
+.depiction {
+  font-size: 90%;
+  color: oklch(0.6 0 0);
 }
 
 .superbreviation {
@@ -408,6 +418,8 @@ body {
 }
 
 .redaction {
+  font-size: 80%;
+  letter-spacing: 0.5em;
   line-height: 1;
   white-space: break-spaces;
   border: dashed 1rpx currentcolor;
