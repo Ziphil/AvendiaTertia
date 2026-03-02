@@ -43,6 +43,7 @@ body {
   height: 100%;
   margin-inline: auto;
   padding-block: 24rpx;
+  column-gap: 24rpx;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -56,7 +57,7 @@ body {
   @include mobile {
     width: 100%;
     padding-inline: $main-smartphone-horizontal-padding;
-    justify-content: flex-start;
+    justify-content: space-between;
     box-sizing: border-box;
   }
 }
@@ -86,10 +87,9 @@ body {
 }
 
 .version {
+  margin-block-end: 4rpx;
   opacity: 0.5;
-  @include mobile {
-    display: none;
-  }
+  flex: 0 0 auto;
 }
 
 .footer {
@@ -396,7 +396,6 @@ body {
 
 .speaker-name {
   margin-inline-end: 0.125em;
-  text-decoration: underline;
 }
 
 .depiction {
