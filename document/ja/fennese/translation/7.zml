@@ -25,7 +25,7 @@
             \span|class="nowrap"|<— Лоз\span|class="diacritic",data-kind="c"|<у>ннако Леф\span|class="diacritic",data-kind="c"|<и>нно>
           >
         >
-        \div|class="version"|<β.22>
+        \div|class="version"|<β.25>
       >
     >
 
@@ -148,7 +148,7 @@
                 {Анно̀к то̂са бамодду̂ везлу̂ала?}
                 \span|class="signature"|<
                   ## Bartholomew Hughes, NSA
-                  \span|class="signature-name"|<{— ‵басоло̂мıу-‵хıу̂з, }\sbr<NSA>>
+                  {— ‵басоло̂мıу-‵хıу̂з, }\sbr<NSA>
                 >
               >
             >
@@ -161,21 +161,21 @@
             \div|class="document-main"|<
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  \span|class="speaker-name"|<{Лешги̂бко ‵хıу̂з}>[`;]
+                  {Лешги̂бко ‵хıу̂з}[ `;]
                 >
                 ## Okay, I’m going to need to ask you some questions about number 55 now.
                 {Цану̂лла, е̂дде езау̂хо нафи̂кла шес зеби̂зха сеф ли̂тҕеве лесси̂мресси̂мреве.}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  \span|class="speaker-name"|<\span|class="redaction"|<       >>[`;]
+                  \span|class="redaction"|<       >[ `;]
                 >
                 ## Number what?
                 {Сеф ли̂тҕеве… анно̂севе?}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  \span|class="speaker-name"|<{Лешги̂бко ‵хıу̂з}>[`;]
+                  {Лешги̂бко ‵хıу̂з}[ `;]
                 >
                 ## SCP object 55.
                 {Ли̂таҕ лески̂п лесси̂мресси̂мар.}
@@ -184,7 +184,7 @@
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  \span|class="speaker-name"|<\span|class="redaction"|<       >>[`;]
+                  \span|class="redaction"|<       >[ `;]
                 >
                 ## Um, I don’t know what you’re talking about.
                 {Е̂, ажжо̀к илси̂ ко̂к тери̂шо сеф но̂се.}
@@ -193,39 +193,96 @@
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  \span|class="speaker-name"|<{Лешги̂бко ‵хıу̂з}>[`;]
+                  {Лешги̂бко ‵хıу̂з}[ `;]
                 >
                 ## Okay, then, ███████, I’d like you to tell me what you’ve been doing for the past two hours.
                 {(よし) (では), \span|class="redaction"|<       >, езо̂ро шес чаҕи̂лла цос ко̂са тесу̂кан ви̂дар ух до леби̂все леди̂ссаре левну̂чамме.}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  \span|class="speaker-name"|<\span|class="redaction"|<       >>[`;]
+                  \span|class="redaction"|<       >[ `;]
                 >
                 ## What?
                 {Анно̂с?}
-                ## I… (subject appears uncomfortable) I don't know.
+                ## I… (subject appears uncomfortable) I don’t know.
                 {Е̂м…, \span|class="depiction"|<(ли̂вас молси̂з цадожу̂ссар)> aжжо̀к иту̂л.}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  \span|class="speaker-name"|<{Лешги̂бко ‵хıу̂з}>[`;]
+                  {Лешги̂бко ‵хıу̂з}[ `;]
                 >
-                ## Okay, then, do you remember that we all agreed that it wasn't spherical?
+                ## Okay, then, do you remember that we all agreed that it wasn’t spherical?
                 {(よし) (では), но̀к тевезлу̂е ко̂к бамошетери̂шно леҕи̂ддут ко̂к хо̂е е̂кан ажжа фи̂сар?}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  \span|class="speaker-name"|<\span|class="redaction"|<       >>[`;]
+                  \span|class="redaction"|<       >[ `;]
                 >
                 ## That what wasn’t… 
                 {Хо̂е е̂кан ажжа….}
                 ## Oh, right!
                 {О̂х, (そうだ)!}
                 ## It isn’t round at all!
-                {Хо̂е е̂к (確かに) ажжа фи̂сар!}
+                {Хо̂е е̂кан (確かに) ажжа фи̂сар!}
                 ## Object 55 isn’t round!
                 {Ли̂тҕеве лесси̂мресси̂мреве е̂к ажжа фи̂сар!}
+              >
+              \p|class="paragraph"|<
+                \span|class="speaker"|<
+                  {Лешги̂бко ‵хıу̂з}[ `;]
+                >
+                ## So you remember it now?
+                {}
+              >
+              \p|class="paragraph"|<
+                \span|class="speaker"|<
+                  \span|class="redaction"|<       >[ `;]
+                >
+                ## Well, no.
+                {}
+                ## I mean, I don’t know what it is, but I know there is one.
+                {}
+                ## It’s something you can’t remember.
+                {}
+                ## And it’s not a sphere.
+                {}
+              >
+              \p|class="paragraph"|<
+                \span|class="speaker"|<
+                  {Лешги̂бко ‵хıу̂з}[ `;]
+                >
+                ## Wait a minute.
+                {Залу̂ала ти̂жно̀ӈ.}
+                ## What’s not a sphere?
+                {Анно̂с е̂к ажжа фи̂сар?}
+              >
+              \p|class="paragraph"|<
+                \span|class="speaker"|<
+                  \span|class="redaction"|<       >[ `;]
+                >
+                ## Object 55.
+                {Ли̂таҕ лесси̂мресси̂мар.}
+              >
+              \p|class="paragraph"|<
+                \span|class="speaker"|<
+                  {Лешги̂бко ‵хıу̂з}[ `;]
+                >
+                ## Object what?
+                {Ли̂таҕ анно̂с?}
+              >
+              \p|class="paragraph"|<
+                \span|class="speaker"|<
+                  \span|class="redaction"|<       >[ `;]
+                >
+                ## Doc, do you remember agreeing that something wasn’t shaped like a sphere?
+                {Лешги̂бко, но̀к товезлу̂о ко̂к бамешетери̂шан ко̂к аффо̂с ажжа зале̂н ди̂злут фи̂срут?}
+              >
+              \p|class="paragraph"|<
+                \span|class="speaker"|<
+                  {Лешги̂бко ‵хıу̂з}[ `;]
+                >
+                ## Oh, right!
+                {О̂х, (そうだ)!}
               >
             >
           >
