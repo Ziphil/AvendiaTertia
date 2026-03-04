@@ -20,7 +20,10 @@ manager.registerElementRule(["h1", "h2", "h3"], "page", (transformer, document, 
     self.appendElement("div", (self) => {
       innerSelf = self;
       self.addClassName(`${className}-inner`);
-      self.appendChild(transformer.apply());
+      self.appendElement("span", (self) => {
+        self.addClassName(`${className}-text`);
+        self.appendChild(transformer.apply());
+      });
     });
     if (element.hasAttribute("tag")) {
       self.setAttribute("id", element.getAttribute("tag"));
