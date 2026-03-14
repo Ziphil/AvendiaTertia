@@ -8,9 +8,10 @@
 
   \h1|tag="tdp"|<相関>
   \p<
-    節の従属構造は、主節と従属節のそれぞれに互いに対応する単語が置かれて、それらが意味的に関係をもつことによって作られる。
+    節の従属構造は、2 つの節のそれぞれに互いに対応する単語が置かれて、それらが意味的に関係をもつことによって作られる。
     この 2 つの単語の関係のことを「\rterm|key="そうかん",id="correlation"|<相関\fl<correlation>>」と呼ぶ。
-    また、相関に関わる単語のうち、主節側に置かれているものを「\rterm|key="そうかんし",id="correlative"|<相関詞\fl<correlative>>」と呼び、従属節側に置かれているものを「\rterm|key="かんけいし",id="relative"|<関係詞\fl<relative>>」と呼ぶ。
+    また、2 つの節のうち、文の主な意味を担う方を「\rterm|key="しゅせつ",id="main-clause"|<主節\fl<main clause>>」と呼び、もう一方を「\rterm|key="じゅうぞくせつ",id="subordinate-clause"|<従属節\fl<subordinate clause>>」と呼ぶ。
+    さらに、相関を作る単語のうち、主節側に置かれているものを「\rterm|key="そうかんし",id="correlative"|<相関詞\fl<correlative>>」と呼び、従属節側に置かれているものを「\rterm|key="かんけいし",id="relative"|<関係詞\fl<relative>>」と呼ぶ。
   >
   \p<
     相関は、節の従属構造が作られる唯一の方法である。
