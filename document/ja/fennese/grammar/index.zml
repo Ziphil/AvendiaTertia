@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## txv まで使用
+  ## txb まで使用
   \hb<初めに>
   \pb<
     \ab|href="16.html",ignore|<初めに>
@@ -38,6 +38,7 @@
     \ab|href="17.html"|<格>
     \ab|href="8.html"|<時制>
     \ab|href="9.html"|<相>
+    \ab|href="32.html"|<態>
     \ab|href="19.html"|<否定表現>
     \ab|href="20.html"|<疑問表現>
     \ab|href="23.html"|<分詞>
