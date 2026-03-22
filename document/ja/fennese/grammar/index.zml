@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## txm まで使用
+  ## txo まで使用
   \hb<初めに>
   \pb<
     \ab|href="16.html",ignore|<初めに>
@@ -44,6 +44,7 @@
     \ab|href="23.html"|<分詞>
     \ab|href="30.html"|<不定詞>
     \ab|href="15.html"|<相関>
+    \ab|href="34.html"|<比較表現>
     \ab|href="10.html"|<人称代詞>
     \ab|href="33.html"|<指示代詞>
     \ab|href="26.html"|<前置詞>
