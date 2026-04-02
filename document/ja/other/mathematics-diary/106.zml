@@ -4,6 +4,7 @@
 
 \page<
   \name<レジスタマシン>
+  \series|num="9",prev="105.html",next="107.html"|<計算可能性理論>
   \use-math|prefix="9"|;
 
   \h1<日記 (2026 年 1 月 14 日)>

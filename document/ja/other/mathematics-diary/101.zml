@@ -4,6 +4,7 @@
 
 \page<
   \name<場合分けと有界最小化>
+  \series|num="4",prev="100.html",next="102.html"|<計算可能性理論>
   \use-math|prefix="4"|;
 
   \h1<日記 (2025 年 12 月 25 日)>

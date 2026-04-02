@@ -4,6 +4,7 @@
 
 \page<
   \name<完全性>
+  \series|num="12",prev="95.html",next="97.html"|<様相論理>
   \use-math|prefix="12"|;
 
   \h1<日記 (2025 年 3 月 22 日)>

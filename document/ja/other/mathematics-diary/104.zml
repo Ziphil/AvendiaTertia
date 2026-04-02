@@ -4,6 +4,7 @@
 
 \page<
   \name<一般再帰関数>
+  \series|num="7",prev="103.html",next="105.html"|<計算可能性理論>
   \use-math|prefix="7"|;
 
   \h1<日記 (2025 年 12 月 30 日)>

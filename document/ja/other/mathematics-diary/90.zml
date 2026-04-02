@@ -4,6 +4,7 @@
 
 \page<
   \name<置換定理>
+  \series|num="6",prev="89.html",next="91.html"|<様相論理>
   \use-math|prefix="6"|;
 
   \h1<日記 (2025 年 3 月 4 日)>

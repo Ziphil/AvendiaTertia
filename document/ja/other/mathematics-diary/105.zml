@@ -4,6 +4,7 @@
 
 \page<
   \name<Ackermann 関数の一般再帰性>
+  \series|num="8",prev="104.html",next="106.html"|<計算可能性理論>
   \use-math|prefix="8"|;
 
   \h1<日記 (2025 年 12 月 31 日)>

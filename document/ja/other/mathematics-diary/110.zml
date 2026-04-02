@@ -4,6 +4,7 @@
 
 \page<
   \name<列挙定理と停止性問題>
+  \series|num="13",prev="109.html",next="111.html"|<計算可能性理論>
   \use-math|prefix="13"|;
 
   \h1<日記 (2026 年 2 月 3 日)>

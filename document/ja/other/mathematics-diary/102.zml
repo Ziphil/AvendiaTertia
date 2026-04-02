@@ -4,6 +4,7 @@
 
 \page<
   \name<自然数列のコーディング>
+  \series|num="5",prev="101.html",next="103.html"|<計算可能性理論>
   \use-math|prefix="5"|;
 
   \h1<日記 (2025 年 12 月 26 日)>

@@ -4,6 +4,7 @@
 
 \page<
   \name<極大整合的集合と Lindenbaum の補題>
+  \series|num="10",prev="93.html",next="95.html"|<様相論理>
   \use-math|prefix="10"|;
 
   \h1<日記 (2025 年 3 月 17 日)>

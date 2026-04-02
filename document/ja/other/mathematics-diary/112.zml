@@ -4,6 +4,7 @@
 
 \page<
   \name<計算可枚挙性>
+  \series|num="15",prev="111.html"|<計算可能性理論>
   \use-math|prefix="15"|;
 
   \h1<日記 (2026 年 2 月 26 日)>

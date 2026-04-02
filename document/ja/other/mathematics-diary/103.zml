@@ -4,6 +4,7 @@
 
 \page<
   \name<Ackermann 関数>
+  \series|num="6",prev="102.html",next="104.html"|<計算可能性理論>
   \use-math|prefix="6"|;
 
   \h1<日記 (2025 年 12 月 29 日)>

@@ -4,6 +4,7 @@
 
 \page<
   \name<重要な恒真式 (意味論版)>
+  \series|num="2",prev="85.html",next="87.html"|<様相論理>
   \use-math|prefix="2"|;
 
   \h1<日記 (2025 年 2 月 24 日)>

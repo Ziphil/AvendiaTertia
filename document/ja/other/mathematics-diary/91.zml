@@ -4,6 +4,7 @@
 
 \page<
   \name<双対と de Morgan の法則>
+  \series|num="7",prev="90.html",next="92.html"|<様相論理>
   \use-math|prefix="7"|;
 
   \h1<日記 (2025 年 3 月 6 日)>

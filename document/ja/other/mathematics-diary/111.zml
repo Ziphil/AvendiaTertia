@@ -4,6 +4,7 @@
 
 \page<
   \name<Kleene の正規形定理>
+  \series|num="14",prev="110.html",next="112.html"|<計算可能性理論>
   \use-math|prefix="14"|;
 
   \h1<日記 (2026 年 2 月 12 日)>

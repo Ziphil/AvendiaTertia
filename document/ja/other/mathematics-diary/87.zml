@@ -4,6 +4,7 @@
 
 \page<
   \name<重要なスキーマ>
+  \series|num="3",prev="86.html",next="88.html"|<様相論理>
   \use-math|prefix="3"|;
 
   \h1<日記 (2025 年 2 月 25 日)>

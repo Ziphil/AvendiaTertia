@@ -4,6 +4,7 @@
 
 \page<
   \name<合成の計算可能性>
+  \series|num="10",prev="106.html",next="108.html"|<計算可能性理論>
   \use-math|prefix="10"|;
 
   \h1<日記 (2026 年 1 月 16 日)>
