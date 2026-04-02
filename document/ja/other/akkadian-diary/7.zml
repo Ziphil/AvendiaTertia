@@ -135,14 +135,14 @@
     \table<
       \caption<{naprusum} (N 型)>
       \tr<\th;\th|col="2"|<結>>
-      \tr<\th<三.単>\td<{ipparis}>\td<[i-n]\rd<I>[a]\rd<II>i\rd<III>>>
-      \tr<\th<二.男.単>\td<{tapparis}>\td<[ta-n]\rd<I>[a]\rd<II>i\rd<III>>>
+      \tr<\th<三.単>\td<{ipparis}>\td<[i-n]\rd<I>[a]\rd<II>[i]\rd<III>>>
+      \tr<\th<二.男.単>\td<{tapparis}>\td<[ta-n]\rd<I>[a]\rd<II>[i]\rd<III>>>
       \tr<\th<二.女.単>\td<{tapparsī}>\td<[ta-n]\rd<I>[a]\rd<II>\rd<III>[-ī]>>
-      \tr<\th<一.単>\td<{apparis}>\td<[a-n]\rd<I>[a]\rd<II>i\rd<III>>>
+      \tr<\th<一.単>\td<{apparis}>\td<[a-n]\rd<I>[a]\rd<II>[i]\rd<III>>>
       \tr<\th<三.男.複>\td<{ipparsū}>\td<[i-n]\rd<I>[a]\rd<II>\rd<III>[-ū]>>
       \tr<\th<三.女.複>\td<{ipparsā}>\td<[i-n]\rd<I>[a]\rd<II>\rd<III>[-ā]>>
       \tr<\th<二.複>\td<{tapparsā}>\td<[ta-n]\rd<I>[a]\rd<II>\rd<III>[-ā]>>
-      \tr<\th<一.複>\td<{nipparis}>\td<[ni-n]\rd<I>[a]\rd<II>i\rd<III>>>
+      \tr<\th<一.複>\td<{nipparis}>\td<[ni-n]\rd<I>[a]\rd<II>[i]\rd<III>>>
     >
   >
   \p<
