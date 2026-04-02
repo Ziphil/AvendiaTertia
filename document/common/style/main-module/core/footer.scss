@@ -84,9 +84,9 @@ $footer-site-title-unit: 5.6rpx;
     text-transform: uppercase;
   }
   .footer-site-title[data-scheme="other"] &[data-size="small"] {
-    font-size: $footer-site-title-unit * 1.5;
-    letter-spacing: 0.35em;
-    text-indent: -0.2em;
+    font-size: $footer-site-title-unit * 1.75;
+    letter-spacing: 0.25em;
+    text-indent: -0.15em;
   }
   .footer-site-title[data-scheme="other"] &[data-size="large"] {
     font-size: $footer-site-title-unit * 3.5;

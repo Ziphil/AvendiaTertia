@@ -78,9 +78,9 @@ $header-title-unit: 16rpx;
 .header-title-text {
   @include special-font;
   &[data-size="small"] {
-    font-size: $header-title-unit * 1.5;
-    letter-spacing: 0.35em;
-    text-indent: -0.2em;
+    font-size: $header-title-unit * 1.75;
+    letter-spacing: 0.25em;
+    text-indent: -0.15em;
   }
   &[data-size="large"] {
     font-size: $header-title-unit * 3.5;
