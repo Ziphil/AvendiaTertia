@@ -4,6 +4,7 @@
 
 \page<
   \name<学習ログ 1 — エジプト語概要>
+  \series|num="1",next="2.html"|<学習ログ>
   \use-hiero;
 
   \h1<日記 (2025 年 5 月 9 日)>

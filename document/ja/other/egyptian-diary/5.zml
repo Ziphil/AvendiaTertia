@@ -4,6 +4,7 @@
 
 \page<
   \name<学習ログ 5 — 状態形>
+  \series|num="5",prev="4.html",next="6.html"|<学習ログ>
   \use-hiero;
 
   \h1<日記 (2025 年 5 月 28 日)>

@@ -4,6 +4,7 @@
 
 \page<
   \name<学習ログ 7 — 数詞>
+  \series|num="7",prev="6.html"|<学習ログ>
   \use-hiero;
   \use-math;
 
