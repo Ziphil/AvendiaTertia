@@ -21,10 +21,10 @@ import blockSectionManager from "./block/section";
 import blockSectionTableManager from "./block/section-table";
 import blockSentenceListManager from "./block/sentence-list";
 import blockTranslationListManager from "./block/translation-list";
+import coreHeadManager from "./core/head";
+import coreHtmlManager from "./core/html";
+import coreNavigationManager from "./core/navigation";
 import fallbackManager from "./fallback";
-import headManager from "./head";
-import historyManager from "./history";
-import htmlManager from "./html";
 import inlineBasicManager from "./inline/basic";
 import inlineCommonManager from "./inline/common";
 import inlineForeignManager from "./inline/foreign";
@@ -32,16 +32,16 @@ import inlineLinkManager from "./inline/link";
 import inlineMathManager from "./inline/math";
 import inlineMiscManager from "./inline/misc";
 import inlineReferenceManager from "./inline/reference";
-import nameManager from "./name";
-import navigationManager from "./navigation";
-import referenceManager from "./reference";
+import metaHistoryManager from "./meta/history";
+import metaNameManager from "./meta/name";
+import metaReferenceManager from "./meta/reference";
 import rootManager from "./root";
 
 
 export default [
   rootManager,
-  headManager,
-  navigationManager,
+  coreHeadManager,
+  coreNavigationManager,
   blockErrorManager,
   blockContentTableManager,
   blockSectionManager,
@@ -70,9 +70,9 @@ export default [
   inlineMiscManager,
   inlineMathManager,
   inlineReferenceManager,
-  historyManager,
-  referenceManager,
-  nameManager,
-  htmlManager,
+  metaHistoryManager,
+  metaReferenceManager,
+  metaNameManager,
+  coreHtmlManager,
   fallbackManager
 ];
