@@ -24,6 +24,7 @@ import blockTranslationListManager from "./block/translation-list";
 import coreHeadManager from "./core/head";
 import coreHtmlManager from "./core/html";
 import coreNavigationManager from "./core/navigation";
+import coreSeriesManager from "./core/series";
 import fallbackManager from "./fallback";
 import inlineBasicManager from "./inline/basic";
 import inlineCommonManager from "./inline/common";
@@ -42,6 +43,7 @@ export default [
   rootManager,
   coreHeadManager,
   coreNavigationManager,
+  coreSeriesManager,
   blockErrorManager,
   blockContentTableManager,
   blockSectionManager,

@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import "../../util/common.scss";
+@import "../../main-module/variable.scss";
+
+
+.series {
+  width: 100%;
+  margin-block-start: 48rpx;
+  margin-block-end: -24rpx;
+  flex: 0 0 auto;
+}
+
+.series-inner {
+  max-width: $main-max-width;
+  margin-inline: auto;
+  padding-block: 16rpx;
+  --current-background-color: var(--main-background-color);
+  background-color: var(--main-background-color);
+  backdrop-filter: blur(6rpx);
+  display: grid;
+  grid-template-columns: max-content max-content 1fr;
+  align-items: center;
+  @include desktop {
+    width: $main-width;
+    padding-inline: $main-horizontal-padding;
+    box-sizing: content-box;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}
+
+.series-main {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: flex-end;
+}
+
+.series-number {
+  font-size: 36rpx;
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+  @include desktop {
+    margin-inline-start: 24rpx;
+  }
+  @include mobile {
+    margin-inline-start: 16rpx;
+  }
+}
+
+.series-number-mark {
+  font-size: 87.5%;
+  vertical-align: 0.15em;
+  line-height: 0;
+}
+
+.series-title {
+  margin-inline-start: 12rpx;
+  row-gap: 6rpx;
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 / span 1;
+  grid-row: 1 / -1;
+}
+
+.series-title-label {
+  font-size: 14rpx;
+  color: var(--primary-color);
+}
+
+.series-title-name {
+  font-size: 20rpx;
+}
+
+.series-link-list {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+}
+
+.series-link-item {
+  text-decoration: none;
+  &[data-direction="previous"] {
+    margin-block-end: 8rpx;
+    padding-block-end: 8rpx;
+    border-block-end: solid 1rpx oklch(from var(--primary-color) l c h / 0.5);
+  }
+  &[data-direction="previous"]::before {
+    @include icon("regular", "\F077");
+    margin-inline-end: $blank-margin;
+  }
+  &[data-direction="next"]::before {
+    @include icon("regular", "\F078");
+    margin-inline-end: $blank-margin;
+  }
+  &:not([data-disabled]) {
+    cursor: pointer;
+    &:not(:hover) {
+      color: var(--secondary-color);
+    }
+    &:hover {
+      color: var(--secondary-active-color);
+    }
+  }
+  &[data-disabled] {
+    color: var(--gray-color);
+  }
+  &:focus-visible {
+    outline: solid 2rpx oklch(from var(--secondary-color) l c h / 0.5);
+    outline-offset: 1rpx;
+  }
+}

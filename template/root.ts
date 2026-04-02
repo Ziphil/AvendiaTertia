@@ -48,6 +48,7 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   navigationNode.appendChild(transformer.call("navigation", element));
   navigationNode.appendChild(transformer.apply(element, "navigation"));
   titleNode.appendChild(transformer.call("title", element));
+  mainNode.appendChild(transformer.call("series", element));
   mainNode.appendElement("article", (self) => {
     self.addClassName("main");
     self.appendElement("div", (self) => {

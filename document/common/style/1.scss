@@ -12,10 +12,11 @@ body[data-scheme="fennese"] { @import "main-module/core/header-fennese.scss"; }
 body[data-scheme="other"] { @import "main-module/core/header-other.scss"; }
 @import "main-module/core/footer.scss";
 @import "main-module/core/ad.scss";
+@import "main-module/core/series.scss";
 body[data-scheme="shaleian"] { @import "main-module/core/navigation.scss"; }
 body[data-scheme="fennese"] { @import "main-module/core/navigation-fennese.scss"; }
 body[data-scheme="other"] { @import "main-module/core/navigation.scss"; }
-@import "main-module/main.scss";
+@import "main-module/core/main.scss";
 @import "main-module/block/type.scss";
 @import "main-module/block/error.scss";
 body[data-scheme="shaleian"] { @import "main-module/block/content-table-shaleian.scss"; }
