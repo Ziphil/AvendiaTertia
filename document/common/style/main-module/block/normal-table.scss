@@ -6,7 +6,7 @@
 
 
 $normal-table-cell-vertical-padding: 1rpx;
-$normal-table-cell-horizontal-padding: 10rpx;
+$normal-table-cell-horizontal-padding: 12rpx;
 
 .normal-table {
   line-height: $line-height;
@@ -15,7 +15,7 @@ $normal-table-cell-horizontal-padding: 10rpx;
 }
 
 .normal-table-caption {
-  margin-block-start: -$additional-block-vertical-margin;
+  margin-block-start: - $additional-block-vertical-margin;
   text-align: center;
 }
 

@@ -7,7 +7,7 @@
 
 .pdf {
   width: 100%;
-  max-width: $main-max-width * 0.8;
+  max-width: $main-max-width * 0.75;
   margin-inline: auto;
   aspect-ratio: 1 / 1.4;
   display: block !important;
@@ -16,7 +16,7 @@
 
 .slide {
   width: 100%;
-  max-width: $main-max-width * 0.8;
+  max-width: $main-max-width * 0.75;
   margin-inline: auto;
   display: block;
   box-sizing: border-box;
@@ -28,7 +28,7 @@
 
 .youtube {
   width: 100%;
-  max-width: $main-max-width * 0.8;
+  max-width: $main-max-width * 0.75;
   margin-inline: auto;
   aspect-ratio: 16 / 9;
   display: block;

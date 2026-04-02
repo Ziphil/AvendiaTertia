@@ -11,7 +11,7 @@
 }
 
 .navigation-inner {
-  padding-block: 10rpx;
+  padding-block: 8rpx;
   margin-inline: auto;
   line-height: $program-line-height;
   display: flex;
@@ -63,7 +63,7 @@
 }
 
 .navigation-version {
-  margin-inline-start: 30rpx;
+  margin-inline-start: 32rpx;
   white-space: nowrap;
   flex: 0 0 auto;
   &[data-caution] {

@@ -12,11 +12,11 @@
   background-color: var(--block-background-color);
   --current-background-color: var(--block-background-color);
   @include desktop {
-    margin-inline: 0rpx - $main-horizontal-padding;
+    margin-inline: - $main-horizontal-padding;
     padding-inline: $main-horizontal-padding;
   }
   @include mobile {
-    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    margin-inline: - $main-smartphone-horizontal-padding;  
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }
@@ -32,7 +32,7 @@
     @include icon("solid", "\F0DA");
     width: $bullet-width;
     margin-inline-end: $blank-margin;
-    margin-inline-start: 0em - ($bullet-width + $blank-margin);
+    margin-inline-start: - ($bullet-width + $blank-margin);
     color: var(--primary-color);
     text-align: end;
     display: inline-block;
@@ -45,7 +45,7 @@
     @include icon("regular", "\F061");
     width: $bullet-width + $blank-margin + $arrow-width + $blank-margin;
     margin-inline-end: $blank-margin;
-    margin-inline-start: 0em - ($bullet-width + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
+    margin-inline-start: - ($bullet-width + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
     color: var(--primary-color);
     text-align: end;
     display: inline-block;
@@ -53,22 +53,22 @@
 }
 
 .sentence-list[data-type="ordered"] >.sentence-item {
-  margin-inline-start: 1em + $blank-margin;
+  margin-inline-start: 16rpx + $blank-margin;
   &::before {
     @include box(var(--primary-color), false);
-    margin-inline-start: fix-em(0em - (1em + $bordered-blank-margin), 80%);
-    margin-inline-end: fix-em($bordered-blank-margin, 80%);
+    margin-inline-start: - (16rpx + $bordered-blank-margin);
+    margin-inline-end: $bordered-blank-margin;
     content: attr(data-tag);
   }
 }
 
 .sentence-list[data-type="ordered"] >.sentence-nested-item {
-  margin-inline-start: 1em + $blank-margin + $arrow-width + $blank-margin;
+  margin-inline-start: 16rpx + $blank-margin + $arrow-width + $blank-margin;
   &::before {
     @include icon("regular", "\F061");
-    width: 1em + $blank-margin + $arrow-width + $blank-margin;
+    width: 16rpx + $blank-margin + $arrow-width + $blank-margin;
     margin-inline-end: $blank-margin;
-    margin-inline-start: 0em - (1em + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
+    margin-inline-start: - (16rpx + $blank-margin + $arrow-width + $blank-margin) - $blank-margin;
     color: var(--primary-color);
     text-align: end;
     display: inline-block;
@@ -76,6 +76,6 @@
 }
 
 .sentence-mark {
-  margin-inline-end: 0.1em;
+  margin-inline-end: 2rpx;
   color: var(--primary-color);
 }

@@ -5,27 +5,27 @@
 @import "../../main-module/variable.scss";
 
 
-$program-number-width: 25rpx;
-$program-line-horizontal-padding: 10rpx;
+$program-number-width: 24rpx;
+$program-line-horizontal-padding: 12rpx;
 
 .program-container {
   background-color: var(--block-background-color);
   --current-background-color: var(--block-background-color);
   @include desktop {
-    margin-inline: 0rpx - $main-horizontal-padding;
+    margin-inline: - $main-horizontal-padding;
     padding-inline: $main-horizontal-padding;
   }
   @include mobile {
-    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    margin-inline: - $main-smartphone-horizontal-padding;  
     padding-inline: $main-smartphone-horizontal-padding;
   }
   &[data-type="pre"] +&[data-type="samp"] {
-    margin-block-start: 3rpx;
+    margin-block-start: 4rpx;
   }
 }
 
 .program-inner-container {
-  @include scrollbar(0rpx, 0rpx, transparent, transparent);
+  @include scrollbar(0rpx, 0rpx);
   overflow: auto;
 }
 

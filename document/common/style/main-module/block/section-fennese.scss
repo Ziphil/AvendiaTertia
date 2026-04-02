@@ -5,8 +5,8 @@
 @import "../../main-module/variable.scss";
 
 
-$section-height: 42rpx;
-$subsection-height: 36rpx;
+$section-height: 44rpx;
+$subsection-height: 40rpx;
 $section-skew-angle: -9deg;
 
 .section {
@@ -62,7 +62,7 @@ $section-skew-angle: -9deg;
 
 .subsection-inner {
   padding-inline: var(--horizontal-padding);
-  font-size: 19rpx;
+  font-size: 20rpx;
   font-weight: normal;
   color: var(--primary-color);
   line-height: $line-height;
@@ -92,7 +92,7 @@ $section-skew-angle: -9deg;
 }
 
 .subsubsection-inner {
-  font-size: 17rpx;
+  font-size: 18rpx;
   font-weight: normal;
   color: var(--primary-color);
   line-height: $line-height;
@@ -113,7 +113,7 @@ $section-skew-angle: -9deg;
 .section-tag,
 .subsection-tag,
 .subsubsection-tag {
-  margin-inline-end: fix-em($blank-margin, 75%);
+  margin-inline-end: $blank-margin;
   font-size: 75%;
   text-transform: uppercase;
   opacity: 0.75;
@@ -122,7 +122,7 @@ $section-skew-angle: -9deg;
 .section-number,
 .subsection-number,
 .subsubsection-number {
-  margin-inline-end: fix-em($blank-margin, 75%);
+  margin-inline-end: $blank-margin;
   font-size: 75%;
   opacity: 0.75;
 }

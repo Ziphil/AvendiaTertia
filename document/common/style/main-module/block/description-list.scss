@@ -5,8 +5,8 @@
 @import "../../main-module/variable.scss";
 
 
-$description-arrow-width: 0.5em;
-$description-dash-width: 1em;
+$description-arrow-width: 8rpx;
+$description-dash-width: 16rpx;
 
 .description-list {
   @include justify;
@@ -24,7 +24,7 @@ $description-dash-width: 1em;
     @include icon("solid", "\F0DA");
     width: $bullet-width;
     margin-inline-end: $blank-margin;
-    margin-inline-start: 0em - ($bullet-width + $blank-margin);
+    margin-inline-start: - ($bullet-width + $blank-margin);
     color: var(--primary-color);
     text-align: right;
     display: inline-block;
@@ -45,13 +45,13 @@ $description-dash-width: 1em;
       @include icon("regular", "\F105");
       width: $description-arrow-width;
       margin-inline-end: $blank-margin;
-      margin-inline-start: 0em - ($description-arrow-width + $blank-margin);
+      margin-inline-start: - ($description-arrow-width + $blank-margin);
       display: inline-block;
     }
     .description-list[data-type="par"] & {
       width: $description-dash-width;
       margin-inline-end: $blank-margin;
-      margin-inline-start: 0em - $description-dash-width - $blank-margin;
+      margin-inline-start: - ($description-dash-width + $blank-margin);
       display: inline-block;
       content: "—";
     }

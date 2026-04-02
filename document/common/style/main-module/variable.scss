@@ -1,18 +1,18 @@
 @charset "utf-8";
 
 
-$main-vertical-padding: 25px;
+$main-vertical-padding: 24px;
 $main-horizontal-padding: 40rpx;
-$main-smartphone-horizontal-padding: 20rpx;
+$main-smartphone-horizontal-padding: 16rpx;
 $block-vertical-margin: 8rpx;
 $block-vertical-padding: 12rpx;
-$additional-block-vertical-margin: 5rpx;
-$additional-section-vertical-margin: 3rpx;
+$additional-block-vertical-margin: 4rpx;
+$additional-section-vertical-margin: 4rpx;
 
-$blank-margin: 0.4em;
-$bordered-blank-margin: 0.5em;
-$bullet-width: 0.5em;
-$arrow-width: 0.9em;
+$blank-margin: 6rpx;
+$bordered-blank-margin: 8rpx;
+$bullet-width: 8rpx;
+$arrow-width: 14rpx;
 
 $main-width: 85vw;
 $main-max-width: 960rpx;
@@ -20,8 +20,6 @@ $main-max-width: 960rpx;
 $line-height: 1.75;
 $small-line-height: 1.25;
 $program-line-height: 1.5;
-
-$text-color: hsl(0, 0%, 20%);
 
 
 @mixin desktop {

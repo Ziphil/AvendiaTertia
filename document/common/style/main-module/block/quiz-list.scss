@@ -6,6 +6,7 @@
 
 
 $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
+$quiz-choice-list-column-gap: 32rpx;
 
 .quiz-list {
   @include justify;
@@ -14,11 +15,11 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
   background-color: var(--block-background-color);
   --current-background-color: var(--block-background-color);
   @include desktop {
-    margin-inline: 0rpx - $main-horizontal-padding;
+    margin-inline: - $main-horizontal-padding;
     padding-inline: $main-horizontal-padding;
   }
   @include mobile {
-    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    margin-inline: - $main-smartphone-horizontal-padding;  
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }
@@ -34,7 +35,7 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
     @include icon("solid", "\F0DA");
     width: $bullet-width;
     margin-inline-end: $blank-margin;
-    margin-inline-start: 0em - ($bullet-width + $blank-margin);
+    margin-inline-start: - ($bullet-width + $blank-margin);
     color: var(--primary-color);
     text-align: end;
     display: inline-block;
@@ -47,7 +48,7 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
     @include icon("regular", "\F061");
     width: $quiz-nested-list-marker-width;
     margin-inline-end: $blank-margin;
-    margin-inline-start: 0em - $quiz-nested-list-marker-width - $blank-margin;
+    margin-inline-start: - ($quiz-nested-list-marker-width + $blank-margin);
     color: var(--primary-color);
     text-align: end;
     display: inline-block;
@@ -104,11 +105,11 @@ $quiz-nested-list-marker-width: $bullet-width + $blank-margin + $arrow-width;
   counter-increment: quiz-choice-list;
   display: inline;
   & +& {
-    margin-inline-start: 30rpx;
+    margin-inline-start: $quiz-choice-list-column-gap;
   }
   &::before {
     @include box(var(--primary-color), false);
-    margin-inline-end: fix-em($bordered-blank-margin, 80%);
+    margin-inline-end: $bordered-blank-margin;
     content: counter(quiz-choice-list);
   }
 }

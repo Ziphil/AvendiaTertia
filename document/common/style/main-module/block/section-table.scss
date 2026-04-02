@@ -6,14 +6,14 @@
 
 
 .section-table-tag {
-  margin-inline-end: fix-em($blank-margin, 75%);
+  margin-inline-end: $blank-margin;
   font-size: 75%;
   opacity: 0.75;
   text-transform: uppercase;
 }
 
 .section-table-number {
-  margin-inline-end: fix-em($blank-margin, 75%);
+  margin-inline-end: $blank-margin;
   font-size: 75%;
   opacity: 0.75;
 }

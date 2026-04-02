@@ -26,11 +26,7 @@ $monospace-letter-spacing: -0.08em;
   @return linear-gradient($color, $color);
 }
 
-@function fix-em($value, $font-percent) {
-  @return div($value, div($font-percent, 100%));
-}
-
-@mixin scrollbar($size, $margin, $background-color, $thumb-background-color) {
+@mixin scrollbar($size, $margin, $background-color: transparent, $thumb-background-color: transparent) {
   &::-webkit-scrollbar {
     width: $size;
     height: $size;

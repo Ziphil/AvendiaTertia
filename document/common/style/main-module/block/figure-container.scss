@@ -8,7 +8,7 @@
 $figure-container-column-gap: 40px;
 
 .figure-container {
-  @include scrollbar(0rpx, 0rpx, transparent, transparent);
+  @include scrollbar(0rpx, 0rpx);
   column-gap: $figure-container-column-gap;
   display: flex;
   align-items: center;
@@ -21,12 +21,12 @@ $figure-container-column-gap: 40px;
   }
   @include desktop {
     max-width: calc(100% + #{$main-horizontal-padding} * 2);
-    margin-inline: 0rpx - $main-horizontal-padding;
+    margin-inline: - $main-horizontal-padding;
     padding-inline: $main-horizontal-padding;
   }
   @include mobile {
     max-width: calc(100% + #{$main-smartphone-horizontal-padding} * 2);
-    margin-inline: 0rpx - $main-smartphone-horizontal-padding;
+    margin-inline: - $main-smartphone-horizontal-padding;
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }

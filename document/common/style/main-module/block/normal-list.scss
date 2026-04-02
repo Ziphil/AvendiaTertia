@@ -5,7 +5,7 @@
 @import "../../main-module/variable.scss";
 
 
-$normal-list-column-gap: 30px;
+$normal-list-column-gap: 32px;
 
 .normal-list {
   @include justify;
@@ -32,7 +32,7 @@ $normal-list-column-gap: 30px;
     @include icon("solid", "\F0DA");
     width: $bullet-width;
     margin-inline-end: $bordered-blank-margin;
-    margin-inline-start: 0em - ($bullet-width + $bordered-blank-margin);
+    margin-inline-start: - ($bullet-width + $bordered-blank-margin);
     color: var(--primary-color);
     text-align: end;
     display: inline-block;
@@ -44,12 +44,12 @@ $normal-list-column-gap: 30px;
 }
 
 .normal-list[data-type="ordered"] >.normal-item {
-  margin-inline-start: 1em + $bordered-blank-margin;
+  margin-inline-start: 16rpx + $bordered-blank-margin;
   counter-increment: normal-list;
   &::before {
     @include box(var(--primary-color), false);
-    margin-inline-end: fix-em($bordered-blank-margin, 80%);
-    margin-inline-start: fix-em(0em - (1em + $bordered-blank-margin), 80%);
+    margin-inline-end: $bordered-blank-margin;
+    margin-inline-start: - (16rpx + $bordered-blank-margin);
     content: counter(normal-list);
   }
 }

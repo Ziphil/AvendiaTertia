@@ -5,8 +5,8 @@
 @import "../../main-module/variable.scss";
 
 
-$section-height: 42rpx;
-$subsection-height: 36rpx;
+$section-height: 44rpx;
+$subsection-height: 40rpx;
 
 .section {
   height: $section-height;
@@ -51,7 +51,7 @@ $subsection-height: 36rpx;
 
 .subsection-inner {
   padding-inline: var(--horizontal-padding);
-  font-size: 19rpx;
+  font-size: 20rpx;
   font-weight: normal;
   color: var(--primary-color);
   line-height: $line-height;
@@ -81,7 +81,7 @@ $subsection-height: 36rpx;
 }
 
 .subsubsection-inner {
-  font-size: 17rpx;
+  font-size: 18rpx;
   font-weight: normal;
   color: var(--primary-color);
   line-height: $line-height;
@@ -102,7 +102,7 @@ $subsection-height: 36rpx;
 .section-tag,
 .subsection-tag,
 .subsubsection-tag {
-  margin-inline-end: fix-em($blank-margin, 75%);
+  margin-inline-end: $blank-margin;
   font-size: 75%;
   text-transform: uppercase;
   opacity: 0.75;
@@ -111,7 +111,7 @@ $subsection-height: 36rpx;
 .section-number,
 .subsection-number,
 .subsubsection-number {
-  margin-inline-end: fix-em($blank-margin, 75%);
+  margin-inline-end: $blank-margin;
   font-size: 75%;
   opacity: 0.75;
 }

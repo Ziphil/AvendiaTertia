@@ -4,12 +4,12 @@
 @import "../../main-module/variable.scss";
 
 
-$content-item-height: 90rpx;
+$content-item-height: 96rpx;
 $content-item-skew-angle: -9deg;
 
 .content-table {
   row-gap: 20rpx;
-  column-gap: 30rpx;
+  column-gap: 24rpx;
   display: grid;
   @include large-screen {
     grid-template-columns: repeat(2, 1fr);
@@ -20,17 +20,17 @@ $content-item-skew-angle: -9deg;
 }
 
 .content-head {
-  margin-block-end: 15rpx;
-  font-size: 19rpx;
+  margin-block-end: 20rpx;
+  font-size: 20rpx;
   color: var(--primary-color);
   &:not(:first-of-type) {
-    margin-block-start: 20rpx;
+    margin-block-start: 24rpx;
   }
 }
 
 .content-item {
   height: $content-item-height;
-  padding-inline: 25rpx;
+  padding-inline: 24rpx;
   color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ $content-item-skew-angle: -9deg;
   z-index: 0;
   &:not([data-disabled]) {
     cursor: pointer;
-    --filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
+    --filter: drop-shadow(0rpx 2rpx 4rpx oklch(from black l c h / 0.3));
   }
   &[data-disabled] {
     opacity: 0.5;

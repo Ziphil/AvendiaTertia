@@ -13,7 +13,7 @@
 }
 
 .math-inner-container {
-  @include scrollbar(0rpx, 0rpx, transparent, transparent);
+  @include scrollbar(0rpx, 0rpx);
   margin-inline: auto;
   line-height: 1;
   display: flex;

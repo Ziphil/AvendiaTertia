@@ -12,11 +12,11 @@ $proof-horizontal-padding: 12rpx;
   background-color: var(--block-background-color);
   --current-background-color: var(--block-background-color);
   @include desktop {
-    margin-inline: 0rpx - $main-horizontal-padding;
+    margin-inline: - $main-horizontal-padding;
     padding-inline: $main-horizontal-padding;
   }
   @include mobile {
-    margin-inline: 0rpx - $main-smartphone-horizontal-padding;  
+    margin-inline: - $main-smartphone-horizontal-padding;  
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }

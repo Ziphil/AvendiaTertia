@@ -4,11 +4,11 @@
 @import "../../main-module/variable.scss";
 
 
-$content-item-height: 90rpx;
+$content-item-height: 96rpx;
 
 .content-table {
   row-gap: 20rpx;
-  column-gap: 30rpx;
+  column-gap: 24rpx;
   display: grid;
   @include large-screen {
     grid-template-columns: repeat(2, 1fr);
@@ -19,19 +19,20 @@ $content-item-height: 90rpx;
 }
 
 .content-head {
-  margin-block-end: 15rpx;
-  font-size: 19rpx;
+  margin-block-end: 20rpx;
+  font-size: 20rpx;
   color: var(--primary-color);
   &:not(:first-of-type) {
-    margin-block-start: 20rpx;
+    margin-block-start: 24rpx;
   }
 }
 
 .content-item {
   height: $content-item-height;
-  padding-inline: 25rpx;
+  padding-inline-start: 26rpx;
+  padding-inline-end: 24rpx;
   background-color: var(--main-background-color);
-  box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
+  box-shadow: 2rpx 2rpx 0rpx 0rpx var(--shadow-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +50,7 @@ $content-item-height: 90rpx;
   }
   &:is([data-disabled], :not(:hover)) {
     color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
-    --background-position: calc(100% + 5rpx);
+    --background-position: calc(100% + 6rpx);
   }
   &:not([data-disabled]):hover {
     color: var(--main-background-color);
@@ -76,7 +77,7 @@ $content-item-height: 90rpx;
 }
 
 .content-date {
-  margin-block-end: 5rpx;
+  margin-block-end: 6rpx;
   font-size: 12rpx;
   opacity: 0.75;
 }
