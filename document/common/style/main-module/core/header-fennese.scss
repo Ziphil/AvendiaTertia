@@ -21,7 +21,7 @@ $header-skew-angle: -9deg;
       background-color: var(--primary-color);
       transform: skew($header-skew-angle);
       transform-origin: center top;
-      opacity: 0.3;
+      opacity: 0.25;
       position: fixed;
       z-index: -10;
       content: "";
@@ -61,7 +61,7 @@ $header-skew-angle: -9deg;
     background-image: url("/material/fennese/1.svg");
     background-size: 140rpx auto;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.25;
     z-index: -1;
     position: absolute;
     content: "";
@@ -89,11 +89,13 @@ $header-skew-angle: -9deg;
   cursor: pointer;
 }
 
+$header-title-unit: 16rpx;
+
 .header-title-text {
   @include special-font;
-  font-size: 400%;
+  font-size: $header-title-unit * 4;
   color: var(--logo-color);
   text-transform: uppercase;
-  -webkit-text-stroke: 4rpx var(--page-background-color);
+  -webkit-text-stroke: ($header-title-unit * 0.25) var(--page-background-color);
   paint-order: stroke;
 }

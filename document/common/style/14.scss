@@ -395,13 +395,13 @@ body {
 }
 
 .depiction {
-  font-size: 90%;
+  font-size: 14rpx;
   color: oklch(0.6 0 0);
 }
 
 .superbreviation {
   &::after {
-    opacity: 0.3;
+    opacity: 0.25;
     vertical-align: 0em;
     display: inline-flex;
     content: "";
@@ -413,7 +413,7 @@ body {
 }
 
 .redaction {
-  font-size: 80%;
+  font-size: 13rpx;
   letter-spacing: 0.5em;
   line-height: 1;
   white-space: break-spaces;

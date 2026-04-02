@@ -55,6 +55,8 @@
   }
 }
 
+$footer-site-title-unit: 5.6rpx;
+
 .footer-site-title {
   display: flex;
   flex-direction: column;
@@ -73,37 +75,34 @@
 
 .footer-site-title-text {
   @include special-font;
-  &[data-size="single"] {
-    font-size: 400% * 0.35;
+  .footer-site-title[data-scheme="shaleian"] &[data-size="single"] {
+    font-size: $footer-site-title-unit * 4;
   }
-  &[data-size="small"] {
-    font-size: 150% * 0.35;
-  }
-  &[data-size="large"] {
-    font-size: 350% * 0.35;
+  .footer-site-title[data-scheme="fennese"] &[data-size="single"] {
+    font-size: $footer-site-title-unit * 4;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
   }
   .footer-site-title[data-scheme="other"] &[data-size="small"] {
+    font-size: $footer-site-title-unit * 1.5;
     letter-spacing: 0.35em;
     text-indent: -0.2em;
   }
   .footer-site-title[data-scheme="other"] &[data-size="large"] {
+    font-size: $footer-site-title-unit * 3.5;
     letter-spacing: 0.15em;
-  }
-  .footer-site-title[data-scheme="fennese"] &[data-size="single"] {
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
   }
 }
 
 .footer-site-description {
-  font-size: 90%;
+  font-size: 14rpx;
   text-align: center;
 }
 
 .footer-icon-list {
   margin-block-start: 15rpx;
   column-gap: 20rpx;
-  font-size: 150%;
+  font-size: 24rpx;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +130,7 @@
 
 .footer-copyright {
   margin-block-start: 10rpx;
-  font-size: 80%;
+  font-size: 12rpx;
 }
 
 .footer-copyright-author {

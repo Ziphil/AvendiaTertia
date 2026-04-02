@@ -73,15 +73,17 @@ $header-skew-angle: -15deg;
   cursor: pointer;
 }
 
+$header-title-unit: 16rpx;
+
 .header-title-text {
   @include special-font;
   &[data-size="small"] {
-    font-size: 150%;
+    font-size: $header-title-unit * 1.5;
     letter-spacing: 0.35em;
     text-indent: -0.2em;
   }
   &[data-size="large"] {
-    font-size: 350%;
+    font-size: $header-title-unit * 3.5;
     letter-spacing: 0.15em;
   }
 }

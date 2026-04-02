@@ -86,7 +86,9 @@ $header-skew-angle: -15deg;
   cursor: pointer;
 }
 
+$header-title-unit: 16rpx;
+
 .header-title-text {
   @include special-font;
-  font-size: 400%;
+  font-size: $header-title-unit * 4;
 }

@@ -26,7 +26,7 @@ $subsection-height: 36rpx;
 
 .section-inner {
   padding-inline: var(--horizontal-padding);
-  font-size: 130%;
+  font-size: 22rpx;
   font-weight: normal;
   color: var(--current-background-color);
   line-height: $line-height;
@@ -51,7 +51,7 @@ $subsection-height: 36rpx;
 
 .subsection-inner {
   padding-inline: var(--horizontal-padding);
-  font-size: 110%;
+  font-size: 19rpx;
   font-weight: normal;
   color: var(--primary-color);
   line-height: $line-height;
@@ -81,7 +81,7 @@ $subsection-height: 36rpx;
 }
 
 .subsubsection-inner {
-  font-size: 105%;
+  font-size: 17rpx;
   font-weight: normal;
   color: var(--primary-color);
   line-height: $line-height;
@@ -102,21 +102,21 @@ $subsection-height: 36rpx;
 .section-tag,
 .subsection-tag,
 .subsubsection-tag {
-  margin-inline-end: fix-em($blank-margin, 80%);
-  font-size: 80%;
+  margin-inline-end: fix-em($blank-margin, 75%);
+  font-size: 75%;
   text-transform: uppercase;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .section-number,
 .subsection-number,
 .subsubsection-number {
-  margin-inline-end: fix-em($blank-margin, 80%);
-  font-size: 80%;
-  opacity: 0.7;
+  margin-inline-end: fix-em($blank-margin, 75%);
+  font-size: 75%;
+  opacity: 0.75;
 }
 
 .section-separator {
   border-block-end: dashed 1rpx var(--primary-color);
-  opacity: 0.7;
+  opacity: 0.75;
 }

@@ -115,7 +115,7 @@ body {
   grid-template-columns: subgrid;
   grid-column: 2 / -1;
   &[data-borrowed] {
-    opacity: 0.3;
+    opacity: 0.25;
   }
 }
 

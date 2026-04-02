@@ -216,7 +216,7 @@ $card-item-gap: 30rpx;
       inset-block-end: -60rpx;
       background-color: var(--primary-color);
       transform: skew($skew-angle);
-      opacity: 0.3;
+      opacity: 0.25;
       z-index: -1;
       position: absolute;
       content: ""
@@ -420,7 +420,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
       inset-block-end: -60rpx;
       background-color: var(--primary-color);
       transform: skew($skew-angle);
-      opacity: 0.3;
+      opacity: 0.25;
       z-index: -1;
       position: absolute;
       content: ""
@@ -563,7 +563,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 .history-date {
   margin-block-end: 5rpx;
   font-size: 80%;
-  opacity: 0.7;
+  opacity: 0.75;
   display: block;
 }
 

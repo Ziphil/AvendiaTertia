@@ -199,7 +199,7 @@ zp-description {
   flex-grow: 0;
   flex-shrink: 0;
   align-items: flex-end;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .player-detail-item {
@@ -308,11 +308,11 @@ zp-description {
 .player-separator {
   width: 1rpx;
   border-inline-start: var(--background-color) 1px solid;
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .player-item-bottom-right {
   color: var(--background-color);
-  opacity: 0.7;
+  opacity: 0.75;
   z-index: 2;
 }

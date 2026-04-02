@@ -89,7 +89,7 @@ body {
 
 .header-logo {
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .header-content {
@@ -433,7 +433,7 @@ $link-height: 60rpx;
 }
 
 .introduction-item-heading {
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .introduction-item-content {
@@ -515,7 +515,7 @@ $link-height: 60rpx;
 .separator {
   display: flex;
   align-items: center;
-  opacity: 0.3;
+  opacity: 0.25;
   &::before,
   &::after {
     border-block-end: 1rpx var(--primary-color) solid;
@@ -646,7 +646,7 @@ $link-height: 60rpx;
 .history-date {
   margin-block-end: 5rpx;
   font-size: 80%;
-  opacity: 0.7;
+  opacity: 0.75;
   display: block;
 }
 

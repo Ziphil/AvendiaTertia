@@ -49,15 +49,14 @@ $text-color: hsl(0, 0%, 20%);
 }
 
 @mixin box($color, $bordered: false, $dotted: false) {
-  width: fix-em(1em, 80%);
-  min-width: fix-em(1em, 80%);
-  height: fix-em(1em, 80%);
-  font-size: 80%;
+  width: 16rpx;
+  height: 16rpx;
+  font-size: 13rpx;
   line-height: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  vertical-align: fix-em(0.12em, 80%);
+  vertical-align: 2rpx;
   box-sizing: border-box;
   @if $bordered {
     color: $color;
