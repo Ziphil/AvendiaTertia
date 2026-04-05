@@ -596,14 +596,14 @@ $link-item-height: 64rpx;
 
 .contact-table {
   row-gap: 16rpx;
-  column-gap: 24rpx;
+  column-gap: 16rpx;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: max-content 1fr;
   align-items: center;
 }
 
 .contact-icon {
-  font-size: 400%;
+  font-size: 64rpx;
   font-weight: normal;
   text-align: center;
   justify-self: center;
