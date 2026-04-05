@@ -47,7 +47,7 @@ html {
 body {
   @include text-size-adjust;
   @include shaleian-scheme;
-  padding-block: 50rpx;
+  margin-block: 48rpx;
   color: var(--text-color);
   font-family: $serif-font-family;
   font-weight: normal;
@@ -55,6 +55,8 @@ body {
   line-height: 1;
   text-decoration-skip-ink: none;
   background-color: var(--page-background-color);
+  display: flex;
+  flex-direction: column;
   overflow-x: auto;
   overflow-y: scroll;
 }
@@ -71,7 +73,7 @@ body {
 }
 
 .header {
-  height: 250rpx;
+  height: 256rpx;
   position: relative;
   z-index: 0;
   @include small-screen {
@@ -99,7 +101,7 @@ body {
 }
 
 .header-title {
-  margin-block-start: 95rpx;
+  margin-block-start: 98rpx;
   font-size: 84rpx;
   font-family: var(--special-font-family);
   font-weight: 600;
@@ -111,7 +113,7 @@ body {
 }
 
 .header-flavor {
-  margin-block-start: 5rpx;
+  margin-block-start: 4rpx;
   font-size: 24rpx;
   font-family: var(--special-font-family);
   font-weight: 600;
@@ -124,21 +126,23 @@ body {
   paint-order: stroke;
 }
 
-$card-item-height: 150rpx;
-$card-item-title-height: 42rpx;
-$link-height: 60rpx;
+$card-item-height: 160rpx;
+$card-item-title-height: 44rpx;
+$card-item-horizontal-gap: 32rpx;
+$card-item-vertical-gap: 24rpx;
+$link-item-height: 64rpx;
 
 .card-table-block {
   width: 100cqi;
-  margin-block-start: 50rpx;
+  margin-block-start: 64rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
   @include large-screen {
-    --card-width: calc((100cqi - 80rpx) / 3);
+    --card-width: calc((100cqi - #{$card-item-horizontal-gap * 2}) / 3);
   }
   @include medium-screen {
-    --card-width: calc((100cqi - 40rpx) / 2);
+    --card-width: calc((100cqi - #{$card-item-horizontal-gap}) / 2);
   }
   @include small-screen {
     --card-width: 100%;
@@ -146,9 +150,9 @@ $link-height: 60rpx;
 }
 
 .link-table {
-  margin-block-start: 50rpx;
-  column-gap: 40rpx;
-  row-gap: 30rpx;
+  margin-block-start: $card-item-vertical-gap;
+  column-gap: $card-item-horizontal-gap;
+  row-gap: $card-item-vertical-gap;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -167,7 +171,7 @@ $link-height: 60rpx;
 
 .link-item {
   width: var(--card-width);
-  height: $link-height;
+  height: $link-item-height;
   color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
   background-color: white;
   box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
@@ -185,9 +189,9 @@ $link-height: 60rpx;
   &::before {
     width: 100%;
     inset-block: 0rpx;
-    inset-inline-start: calc(0% - #{div($link-height, 2) * tan(abs($skew-angle))} - 6rpx);
-    background-position: 0% $link-height;
-    background-size: 100% $link-height;
+    inset-inline-start: calc(0% - #{div($link-item-height, 2) * tan(abs($skew-angle))} - 6rpx);
+    background-position: 0% $link-item-height;
+    background-size: 100% $link-item-height;
     background-image: single-color(var(--primary-color));
     background-repeat: no-repeat;
     position: absolute;
@@ -202,7 +206,7 @@ $link-height: 60rpx;
   &::after {
     width: 100%;
     inset-block: 0rpx;
-    inset-inline-end: calc(-100% + #{div($link-height * tan(abs($skew-angle)), 2)});
+    inset-inline-end: calc(-100% + #{div($link-item-height * tan(abs($skew-angle)), 2)});
     background-color: var(--secondary-color);
     position: absolute;
     transform: skew($skew-angle);
@@ -212,10 +216,10 @@ $link-height: 60rpx;
 }
 
 .link-title {
-  padding-inline-start: 20rpx;
-  height: $link-height;
-  line-height: $link-height;
-  font-size: 130%;
+  padding-inline-start: 16rpx;
+  height: $link-item-height;
+  line-height: $link-item-height;
+  font-size: 22rpx;
   position: relative;
   overflow: hidden;
   flex-grow: 0;
@@ -223,8 +227,8 @@ $link-height: 60rpx;
 }
 
 .card-table {
-  column-gap: 40rpx;
-  row-gap: 30rpx;
+  column-gap: $card-item-horizontal-gap;
+  row-gap: $card-item-vertical-gap;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -245,7 +249,7 @@ $link-height: 60rpx;
   width: var(--card-width);
   height: $card-item-height;
   background-color: white;
-  box-shadow: 3rpx 3rpx 0rpx 0rpx var(--shadow-color);
+  box-shadow: 2rpx 2rpx 0rpx 0rpx var(--shadow-color);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -287,10 +291,10 @@ $link-height: 60rpx;
 }
 
 .card-title {
-  padding-inline-start: 20rpx;
+  padding-inline-start: 16rpx;
   height: $card-item-title-height;
   line-height: $card-item-title-height;
-  font-size: 130%;
+  font-size: 22rpx;
   color: white;
   position: relative;
   overflow: hidden;
@@ -299,8 +303,8 @@ $link-height: 60rpx;
 }
 
 .card-explanation {
-  padding-inline-start: 20rpx;
-  padding-inline-end: 40rpx;
+  padding-inline-start: 16rpx;
+  padding-inline-end: 32rpx;
   display: flex;
   align-items: center;
   flex-grow: 1;
@@ -310,15 +314,15 @@ $link-height: 60rpx;
     height: 1rpx;
     inset-block-end: 0rpx;
     inset-inline-start: 0rpx;
-    inset-inline-end: 43rpx;
+    inset-inline-end: 44rpx;
     transition: border-block-end 0.2s;
     position: absolute;
     content: "";
     .card-item:not(:hover) & {
-      border-block-end: 1px transparent solid;
+      border-block-end: 1rpx transparent solid;
     }
     .card-item:hover & {
-      border-block-end: 1px rgba(white, 0.3) solid;
+      border-block-end: 1rpx alpha(white, 0.25) solid;
     }
   }
 }
@@ -329,15 +333,23 @@ $link-height: 60rpx;
 }
 
 .ad-block {
-  margin-block-start: 50rpx;
+  margin-block-start: 48rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .ad {
-  width: $home-width;
-  max-width: $home-max-width;
+  background-image: linear-gradient(-45deg, transparent 25%, alpha(var(--primary-color), 0.25) 25%, alpha(var(--primary-color), 0.25) 50%, transparent 50%, transparent 75%, alpha(var(--primary-color), 0.25) 75%, alpha(var(--primary-color), 0.25));
+  background-size: 16rpx 16rpx;
+  @include nonsmall-screen {
+    width: $home-width;
+    max-width: $home-max-width;
+  }
+  @include small-screen {
+    width: calc(100% - #{$main-smartphone-horizontal-padding * 2});
+    margin-inline: auto;
+  }
 }
 
 .ad-inner {
@@ -345,8 +357,8 @@ $link-height: 60rpx;
 }
 
 .introduction-block {
-  margin-block-start: 50rpx;
-  padding-block: 50rpx;
+  margin-block-start: 64rpx;
+  padding-block: 64rpx;
   background-color: white;
 }
 
@@ -364,8 +376,8 @@ $link-height: 60rpx;
 }
 
 .introduction-header {
-  margin-block-end: 30rpx;
-  font-size: 200%;
+  margin-block-end: 32rpx;
+  font-size: 32rpx;
   color: var(--primary-color);
   letter-spacing: 0.1em;
 }
@@ -374,11 +386,11 @@ $link-height: 60rpx;
   display: flex;
   align-items: center;
   @include nonsmall-screen {
-    column-gap: 60rpx;
+    column-gap: 64rpx;
     flex-direction: row;
   }
   @include small-screen {
-    row-gap: 30rpx;
+    row-gap: 32rpx;
     flex-direction: column;
   }
 }
@@ -399,18 +411,18 @@ $link-height: 60rpx;
 .introduction-sample {
   height: 100%;
   font-family: "Vekos Web";
-  font-size: 110%;
+  font-size: 18rpx;
   color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
   background-color: var(--block-background-color);
   display: flex;
   align-items: center;
   box-sizing: border-box;
   @include nonsmall-screen {
-    padding-block: 30rpx;
-    padding-inline: 30rpx;
+    padding-block: 24rpx;
+    padding-inline: 32rpx;
   }
   @include small-screen {
-    padding-block: 20rpx;
+    padding-block: 24rpx;
     padding-inline: $main-smartphone-horizontal-padding;
   }
 }
@@ -419,12 +431,12 @@ $link-height: 60rpx;
   line-height: $line-height;
   text-align: justify;
   & +& {
-    margin-block-start: 10rpx;
+    margin-block-start: 12rpx;
   }
 }
 
 .introduction-table {
-  margin-block-start: 20px;
+  margin-block-start: 24rpx;
   display: flex;
 }
 
@@ -437,7 +449,7 @@ $link-height: 60rpx;
 }
 
 .introduction-item-content {
-  font-size: 150%;
+  font-size: 24rpx;
   line-height: $line-height;
 }
 
@@ -448,26 +460,26 @@ $link-height: 60rpx;
 }
 
 .introduction-separator {
-  margin-block: 50rpx;
+  margin-block: 48rpx;
 }
 
 .count-table-block {
-  margin-block-start: 50rpx;
+  margin-block-start: 64rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .count-table-container {
-  row-gap: 5rpx;
+  row-gap: 6rpx;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
 .count-table {
-  row-gap: 5rpx;
-  column-gap: 40rpx;
+  row-gap: 6rpx;
+  column-gap: 48rpx;
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: baseline;
@@ -475,7 +487,7 @@ $link-height: 60rpx;
     font-size: 28rpx;
   }
   &[data-size="small"] {
-    font-size: 20px;
+    font-size: 20rpx;
   }
 }
 
@@ -492,18 +504,23 @@ $link-height: 60rpx;
 
 .count-number {
   font-family: var(--special-font-family);
-  font-size: 250%;
   font-weight: 600;
   color: var(--primary-color);
   text-align: right;
+  &#whole-count {
+    font-size: 72rpx;
+  }
+  &:not(#whole-count) {
+    font-size: 48rpx;
+  }
 }
 
 .count-plus {
-  margin-inline-end: 0.1em;
+  margin-inline-end: 4rpx;
 }
 
 .separator-block {
-  margin-block-start: 50rpx;
+  margin-block-start: 48rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -533,16 +550,16 @@ $link-height: 60rpx;
 }
 
 .separator-mark {
-  width: 6rpx;
-  height: 6rpx;
-  margin-inline: 27rpx;
+  width: 8rpx;
+  height: 8rpx;
+  margin-inline: 28rpx;
   background-color: var(--primary-color);
   flex-grow: 0;
   transform: rotate(45deg);
 }
 
 .other-block {
-  margin-block-start: 50rpx;
+  margin-block-start: 48rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -553,12 +570,12 @@ $link-height: 60rpx;
   @include nonsmall-screen {
     width: $home-width;
     max-width: $home-max-width;
-    column-gap: 60rpx;
+    column-gap: 64rpx;
     flex-direction: row;
   }
   @include small-screen {
     width: 100%;
-    row-gap: 50rpx;
+    row-gap: 48rpx;
     column-gap: 0rpx;
     padding-inline: $main-smartphone-horizontal-padding;
     flex-direction: column;
@@ -571,15 +588,15 @@ $link-height: 60rpx;
 }
 
 .other-header {
-  margin-block-end: 30rpx;
-  font-size: 150%;
+  margin-block-end: 32rpx;
+  font-size: 24rpx;
   color: var(--primary-color);
   letter-spacing: 0.1em;
 }
 
 .contact-table {
-  row-gap: 15rpx;
-  column-gap: 20rpx;
+  row-gap: 16rpx;
+  column-gap: 24rpx;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -607,15 +624,15 @@ $link-height: 60rpx;
     background-position: 0% 100%;
   }
   &:after {
-    inset-block-start: 3rpx;
-    inset-inline-start: 3rpx;
+    inset-block-start: 2rpx;
+    inset-inline-start: 2rpx;
     color: var(--shadow-color);
     position: absolute;
     z-index: -2;
   }
   &[data-brand="twitter"]::before,
   &[data-brand="twitter"]::after {
-    @include icon("brand", "\F099");
+    @include icon("brand", "\E61B");
   }
   &[data-brand="youtube"]::before,
   &[data-brand="youtube"]::after {
@@ -637,15 +654,16 @@ $link-height: 60rpx;
 }
 
 .history-list {
-  row-gap: 15rpx;
+  row-gap: 16rpx;
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 
 .history-date {
-  margin-block-end: 5rpx;
-  font-size: 80%;
+  margin-block-end: 4rpx;
+  font-size: 12rpx;
+  letter-spacing: 0.05em;
   opacity: 0.75;
   display: block;
 }
@@ -671,7 +689,7 @@ $link-height: 60rpx;
 }
 
 .announcement-block {
-  margin-block-start: 50rpx;
+  margin-block-start: 48rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -685,14 +703,14 @@ $link-height: 60rpx;
   @include nonsmall-screen {
     width: $home-width;
     max-width: $home-max-width * 0.5;
-    column-gap: 40rpx;
+    column-gap: 48rpx;
     flex-direction: row;
   }
   @include small-screen {
     width: 100%;
     max-width: none;
     padding-inline: $main-smartphone-horizontal-padding;
-    row-gap: 30rpx;
+    row-gap: 32rpx;
     flex-direction: column;
     box-sizing: border-box;
   }
@@ -717,25 +735,25 @@ $link-height: 60rpx;
 
 .announcement-header {
   margin-block-end: 15rpx;
-  font-size: 150%;
+  font-size: 24rpx;
   color: var(--primary-color);
   letter-spacing: 0.1em;
 }
 
 .announcement-message {
-  margin-block-end: 15rpx;
+  margin-block-end: 16rpx;
   line-height: $line-height;
   text-align: justify;
 }
 
 .announcement-button-list {
-  column-gap: 20rpx;
+  column-gap: 24rpx;
   display: flex;
   align-items: center;
 }
 
 .button {
-  padding-inline: 10rpx;
+  padding-inline: 12rpx;
   padding-block: 1rpx;
   color: white;
   line-height: $line-height;

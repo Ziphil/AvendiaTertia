@@ -22,6 +22,10 @@ $monospace-font-size: 92%;
 $monospace-letter-spacing: -0.08em;
 
 
+@function alpha($color, $alpha) {
+  @return oklch(from $color l c h / $alpha);
+}
+
 @function single-color($color) {
   @return linear-gradient($color, $color);
 }

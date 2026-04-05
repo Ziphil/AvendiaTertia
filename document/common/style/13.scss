@@ -62,8 +62,8 @@ body {
 }
 
 .top {
-  padding-block-start: 60rpx;
-  padding-block-end: 60rpx;
+  padding-block-start: 64rpx;
+  padding-block-end: 64rpx;
   display: flex;
   @include desktop {
     width: $home-width;
@@ -75,11 +75,11 @@ body {
     box-sizing: border-box;
   }
   @include nonsmall-screen {
-    column-gap: 100rpx;
+    column-gap: 96rpx;
     flex-direction: row;
   }
   @include small-screen {
-    row-gap: 50rpx;
+    row-gap: 48rpx;
     flex-direction: column;
   }
 }
@@ -98,7 +98,7 @@ body {
 }
 
 .visual {
-  height: 350rpx;
+  height: 336rpx;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,7 @@ body {
 
 .visual-logo {
   height: 100%;
-  opacity: 0.2;
+  opacity: 0.25;
 }
 
 .visual-content {
@@ -132,8 +132,8 @@ body {
   font-family: var(--special-font-family);
   font-weight: 400;
   color: var(--logo-color);
-  -webkit-text-stroke: 4rpx oklch(from black l c h / 0.5);
-  filter:  drop-shadow(0rpx 2rpx 10rpx oklch(from white l c h / 0.2)) drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
+  -webkit-text-stroke: 4rpx alpha(black, 0.5);
+  filter: drop-shadow(0rpx 2rpx 10rpx alpha(white, 0.25)) drop-shadow(0rpx 2rpx 5rpx alpha(black, 0.25));
   paint-order: stroke;
   text-transform: uppercase;
   @include desktop {
@@ -148,16 +148,16 @@ body {
 }
 
 .visual-flavor {
-  margin-block-start: 10rpx;
-  margin-block-end: -10rpx;
+  margin-block-start: 12rpx;
+  margin-block-end: -12rpx;
   font-size: 24rpx;
   font-family: var(--special-font-family);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-indent: 0.1em;
   color: var(--logo-color);
-  -webkit-text-stroke: 3rpx oklch(from black l c h / 0.5);
-  filter: drop-shadow(0rpx 0rpx 2rpx oklch(from black l c h / 0.3));
+  -webkit-text-stroke: 3rpx alpha(black, 0.5);
+  filter: drop-shadow(0rpx 0rpx 2rpx alpha(black, 0.25));
   line-height: $small-line-height;
   text-align: center;
   white-space: nowrap;
@@ -166,14 +166,14 @@ body {
 }
 
 .catch {
-  margin-block-end: -5rpx;
-  row-gap: 10rpx;
+  margin-block-end: -6rpx;
+  row-gap: 12rpx;
   font-size: 32rpx;
   font-family: var(--special-font-family);
   font-weight: 400;
   color: var(--page-dark-background-color);
-  -webkit-text-stroke: 1rpx oklch(from black l c h / 0.5);
-  text-shadow: 0rpx 1rpx 3px oklch(from white l c h / 0.1);
+  -webkit-text-stroke: 1rpx alpha(black, 0.5);
+  text-shadow: 0rpx 1rpx 3rpx alpha(white, 0.1);
   line-height: 1.5;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -195,9 +195,9 @@ body {
 .catch-line {
 }
 
-$card-item-height: 130rpx;
-$card-item-title-height: 42rpx;
-$card-item-gap: 30rpx;
+$card-item-height: 136rpx;
+$card-item-title-height: 44rpx;
+$card-item-gap: 24rpx;
 
 .card-table {
   row-gap: $card-item-gap;
@@ -208,12 +208,12 @@ $card-item-gap: 30rpx;
   flex: 1 1 auto;
   z-index: 0;
   @include nonsmall-screen {
-    margin-inline-end: -60rpx;
+    margin-inline-end: -64rpx;
     &::before {
-      inset-inline-start: 60rpx;
+      inset-inline-start: 64rpx;
       inset-inline-end: -100vi;
-      inset-block-start: -60rpx;
-      inset-block-end: -60rpx;
+      inset-block-start: -64rpx;
+      inset-block-end: -64rpx;
       background-color: var(--primary-color);
       transform: skew($skew-angle);
       opacity: 0.25;
@@ -229,11 +229,6 @@ $card-item-gap: 30rpx;
   inset-block-end: 0rpx;
   position: absolute;
   z-index: -1;
-}
-
-.card-table-image {
-  height: 1500rpx;
-  opacity: 0.5;
 }
 
 .card-item {
@@ -255,22 +250,22 @@ $card-item-gap: 30rpx;
     --background-position: 0%;
   }
   &:hover {
-    translate: calc(var(--base-offset) - 30rpx) 0rpx;
+    translate: calc(var(--base-offset) - 32rpx) 0rpx;
     --background-position: 100%;
   }
 }
 
 .card-background {
   inset: 0rpx;
-  border: solid 1rpx oklch(from var(--primary-color) l c h / 0.8);
+  border: solid 1rpx alpha(var(--primary-color), 0.75);
   background-color: var(--main-background-color);
-  background-image: linear-gradient(to right, transparent 50%, oklch(from var(--secondary-color) l c h / 0.05) 50%);
+  background-image: linear-gradient(to right, transparent 50%, alpha(var(--secondary-color), 0.05) 50%);
   background-position: var(--background-position) 0%;
   background-size: 200% 100%;
   background-repeat: no-repeat;
   transform: skew($skew-angle);
-  filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
-  backdrop-filter: blur(5rpx);
+  filter: drop-shadow(0rpx 2rpx 4rpx alpha(black, 0.25));
+  backdrop-filter: blur(4rpx);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -286,18 +281,18 @@ $card-item-gap: 30rpx;
 }
 
 .card-title {
-  margin-inline-start: 25rpx;
+  margin-inline-start: 24rpx;
   height: $card-item-title-height;
   color: var(--main-background-color);
-  font-size: 130%;
+  font-size: 22rpx;
   display: flex;
   align-items: center;
   flex: 0 0 auto;
 }
 
 .card-explanation {
-  margin-inline-start: 20rpx;
-  margin-inline-end: 25rpx;
+  margin-inline-start: 18rpx;
+  margin-inline-end: 24rpx;
   line-height: $line-height;
   display: flex;
   align-items: center;
@@ -305,11 +300,11 @@ $card-item-gap: 30rpx;
 }
 
 .introduction-block {
-  margin-inline: -100rpx;
-  padding-inline: 100rpx;
-  padding-block: 60rpx;
+  margin-inline: -128rpx;
+  padding-inline: 128rpx;
+  padding-block: 64rpx;
   background-color: var(--main-background-color);
-  box-shadow: 0rpx 0rpx 50rpx oklch(from black l c h / 0.3) inset;
+  box-shadow: 0rpx 0rpx 48rpx alpha(black, 0.25) inset;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,23 +325,23 @@ $card-item-gap: 30rpx;
 }
 
 .introduction-header {
-  margin-block-end: 30rpx;
-  font-size: 200%;
+  margin-block-end: 32rpx;
+  font-size: 32rpx;
   color: var(--primary-color);
   letter-spacing: 0.1em;
   &:not(:first-child) {
-    margin-block-start: 50rpx;
+    margin-block-start: 48rpx;
   }
 }
 
 .introduction-content {
   display: grid;
   @include desktop {
-    column-gap: 40rpx;
+    column-gap: 48rpx;
     grid-template-columns: 4fr 3fr;
   }
   @include mobile {
-    row-gap: 20rpx;
+    row-gap: 24rpx;
     grid-template-columns: 1fr;
   }
 }
@@ -356,9 +351,9 @@ $card-item-gap: 30rpx;
     line-height: $line-height;
   }
   &[data-language="fennese"] {
-    font-size: 90%;
+    font-size: 14rpx;
     font-family: var(--special-font-family);
-    color: oklch(from var(--primary-color) l c h / 0.5);
+    color: alpha(var(--primary-color), 0.5);
     line-height: 1.5;
     letter-spacing: -0.05em;
     font-variant-caps: small-caps;
@@ -369,15 +364,15 @@ $card-item-gap: 30rpx;
 .introduction-paragraph {
   text-align: justify;
   & +& {
-    margin-block-start: 10rpx;
+    margin-block-start: 12rpx;
   }
 }
 
-$contact-item-height: 100rpx;
-$contact-item-gap: 20rpx;
+$contact-item-height: 104rpx;
+$contact-item-gap: 16rpx;
 $contact-item-count: 3;
 
-$history-item-gap: 10rpx;
+$history-item-gap: 12rpx;
 $history-item-count: 4;
 $history-item-height: div($contact-item-height * $contact-item-count + $contact-item-gap * ($contact-item-count - 1) - $history-item-gap * ($history-item-count - 1), $history-item-count);
 
@@ -389,18 +384,17 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 }
 
 .other {
-  padding-block-start: 50rpx;
-  padding-block-end: 60rpx;
+  padding-block: 64rpx;
   display: grid;
   @include desktop {
     width: $home-width;
     max-width: $home-max-width;
-    column-gap: 40rpx;
+    column-gap: 32rpx;
     grid-template-columns: 4fr 3fr;
   }
   @include mobile {
     width: 100%;
-    row-gap: 50rpx;
+    row-gap: 48rpx;
     padding-inline: $main-smartphone-horizontal-padding;
     grid-template-columns: 1fr;
     box-sizing: border-box;
@@ -412,12 +406,11 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   container-type: inline-size;
   position: relative;
   @include desktop {
-    --additional-gap: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1) - $history-item-height * 0.5) * tan($skew-angle)} + 20rpx);
+    --additional-gap: calc(#{($contact-item-height * ($contact-item-count - 0.5) + $contact-item-gap * ($contact-item-count - 1) - $history-item-height * 0.5) * tan($skew-angle)} + 16rpx);
     &:nth-child(2)::before {
-      inset-inline-start: calc(100cqi - 125rpx);
+      inset-inline-start: calc(100cqi - 120rpx);
       inset-inline-end: -100vi;
-      inset-block-start: -50rpx;
-      inset-block-end: -60rpx;
+      inset-block: -64rpx;
       background-color: var(--primary-color);
       transform: skew($skew-angle);
       opacity: 0.25;
@@ -435,8 +428,8 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 }
 
 .other-header {
-  margin-block-end: 30rpx;
-  font-size: 150%;
+  margin-block-end: 32rpx;
+  font-size: 24rpx;
   color: var(--primary-color);
   letter-spacing: 0.1em;
   @include desktop {
@@ -454,8 +447,8 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 
 .contact-item {
   height: $contact-item-height;
-  padding-inline: 25rpx;
-  column-gap: 20rpx;
+  padding-inline: 24rpx;
+  column-gap: 24rpx;
   transition: translate 0.2s;
   display: flex;
   flex-direction: row;
@@ -474,15 +467,15 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     inset-block: 0rpx;
     inset-inline-start: 0rpx;
     inset-inline-end: 0rpx;
-    border: solid 1rpx oklch(from var(--primary-color) l c h / 0.8);
+    border: solid 1rpx alpha(var(--primary-color), 0.75);
     background-color: var(--main-background-color);
-    background-image: linear-gradient(to right, transparent 50%, oklch(from var(--secondary-color) l c h / 0.05) 50%);
+    background-image: linear-gradient(to right, transparent 50%, alpha(var(--secondary-color), 0.05) 50%);
     background-position: var(--background-position) 0%;
     background-size: 200% 100%;
     background-repeat: no-repeat;
     transform: skew($skew-angle);
-    filter: drop-shadow(0rpx 2rpx 5rpx oklch(from black l c h / 0.3));
-    backdrop-filter: blur(5rpx);  
+    filter: drop-shadow(0rpx 2rpx 4rpx alpha(black, 0.25));
+    backdrop-filter: blur(4rpx);  
     transition: background-position 0.2s;
     content: "";
     position: absolute;
@@ -493,14 +486,14 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     --background-position: 0%;
   }
   &:hover {
-    translate: calc(var(--base-offset) - 20rpx) 0rpx;
+    translate: calc(var(--base-offset) - 16rpx) 0rpx;
     --background-position: 100%;
   }
 }
 
 .contact-icon {
-  width: 70rpx;
-  font-size: 400%;
+  width: 72rpx;
+  font-size: 64rpx;
   font-weight: normal;
   color: var(--primary-color);
   display: flex;
@@ -509,7 +502,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   flex: 0 0 auto;
   order: 2;
   &[data-brand="twitter"]::before {
-    @include icon("brand", "\F099");
+    @include icon("brand", "\E61B");
   }
   &[data-brand="youtube"]::before {
     @include icon("brand", "\F167");
@@ -552,7 +545,7 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
     inset-block: 0rpx;
     inset-inline-start: -100vi;
     inset-inline-end: var(--base-offset, 0rpx);
-    background-color: oklch(from var(--main-background-color) l c h / 0.3);
+    background-color: alpha(var(--main-background-color), 0.25);
     transform: skew($skew-angle);
     content: "";
     position: absolute;
@@ -561,8 +554,9 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 }
 
 .history-date {
-  margin-block-end: 5rpx;
-  font-size: 80%;
+  margin-block-end: 4rpx;
+  font-size: 12rpx;
+  letter-spacing: 0.05em;
   opacity: 0.75;
   display: block;
 }
