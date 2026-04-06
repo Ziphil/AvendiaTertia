@@ -167,6 +167,45 @@
         >
       >
 
+      \footer|class="footer"|<
+        \div|class="footer-inner"|<
+          \p|class="footer-flavor"|<
+            Hic situs est omnis divisus in partes tres…
+          >
+          \nav|class="footer-site-list"|<
+            \a|class="footer-site-item",href="/shaleian/"|<
+              \div|class="footer-site-title",data-scheme="shaleian"|<
+                \span|class="footer-site-title-text",data-size="single"|<Avendia>
+              >
+              \div|class="footer-site-description"|<シャレイア語>
+            >
+            \a|class="footer-site-item",href="/fennese/"|<
+              \div|class="footer-site-title",data-scheme="fennese"|<
+                \span|class="footer-site-title-text",data-size="single"|<Лофжучло>
+              >
+              \div|class="footer-site-description"|<フェンナ語>
+            >
+            \a|class="footer-site-item",href="/other/"|<
+              \div|class="footer-site-title",data-scheme="other"|<
+                \span|class="footer-site-title-text",data-size="small"|<ΤΑ ΖΙΦΙΛΟΥ>
+                \span|class="footer-site-title-text",data-size="large"|<ΒΙΒΛΙΑ>
+              >
+              \div|class="footer-site-description"|<自然言語 · 数理科学>
+            >
+          >
+          \address|class="footer-icon-list"|<
+            \a|class="footer-icon-item",data-brand="twitter",href="https://twitter.com/Ziphil",target="_blank",rel="noopener noreferrer"|;
+            \a|class="footer-icon-item",data-brand="youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank",rel="noopener noreferrer"|;
+            \a|class="footer-icon-item",data-brand="discord",href="https://discord.gg/qdRyE2ZExf",target="_blank",rel="noopener noreferrer"|;
+            \a|class="footer-icon-item",data-brand="github",href="https://github.com/Ziphil",target="_blank",rel="noopener noreferrer"|;
+          >
+          \small|class="footer-copyright"|<
+            \span|class="footer-copyright-year"|<© 2009–2026>
+            \span|class="footer-copyright-author"|<Ziphil>
+          >
+        >
+      >
+
     >
   >
 >

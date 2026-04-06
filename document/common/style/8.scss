@@ -1,13 +1,14 @@
 @charset "utf-8";
 
 @use "sass:math" as *;
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:wght@400;700&family=Josefin+Sans:wght@100..700&family=Ysabeau:wght@1..1000&display=swap");
 @import "util/reset.scss";
 @import "util/common.scss";
 @import "util/font.scss";
 @import "main-module/variable.scss";
 @import "main-module/color.scss";
 @import "main-module/inline/common.scss";
+@import "main-module/core/footer.scss";
 
 
 $home-width: 85cqi;
@@ -47,7 +48,6 @@ html {
 body {
   @include text-size-adjust;
   @include shaleian-scheme;
-  margin-block: 48rpx;
   color: var(--text-color);
   font-family: $serif-font-family;
   font-weight: normal;
@@ -67,6 +67,7 @@ body {
 }
 
 .header-block {
+  margin-block: 48rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -785,6 +786,10 @@ $link-item-height: 64rpx;
   &:hover {
     color: var(--secondary-active-color);
     background-image: single-color(var(--secondary-active-color));
+  }
+  &:focus-visible {
+    outline: solid 2rpx alpha(var(--secondary-color), 0.5);
+    outline-offset: 1rpx;
   }
 }
 

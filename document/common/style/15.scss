@@ -1,13 +1,14 @@
 @charset "utf-8";
 
 @use "sass:math" as *;
-@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:wght@400;700");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:wght@400;700&family=Josefin+Sans:wght@100..700&family=Ysabeau:wght@1..1000&display=swap");
 @import "util/reset.scss";
 @import "util/common.scss";
 @import "util/font.scss";
 @import "main-module/variable.scss";
 @import "main-module/color.scss";
 @import "main-module/inline/common.scss";
+@import "main-module/core/footer.scss";
 
 
 $home-width: 85cqi;
@@ -381,6 +382,16 @@ body {
   @include mobile {
     width: calc(100% - #{$main-smartphone-horizontal-padding * 2});
   }
+}
+
+.footer-flavor {
+  margin-block-end: 12rpx;
+  font-size: 12rpx;
+  font-family: var(--special-font-family);
+  color: var(--footer-text-color);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  text-transform: uppercase;
 }
 
 .link,
