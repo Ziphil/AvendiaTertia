@@ -340,7 +340,7 @@ $link-item-height: 64rpx;
 }
 
 .ad {
-  background-image: linear-gradient(-45deg, transparent 25%, alpha(var(--primary-color), 0.25) 25%, alpha(var(--primary-color), 0.25) 50%, transparent 50%, transparent 75%, alpha(var(--primary-color), 0.25) 75%, alpha(var(--primary-color), 0.25));
+  background-image: linear-gradient(-45deg, transparent 25%, alpha(var(--primary-color), 0.125) 25%, alpha(var(--primary-color), 0.125) 50%, transparent 50%, transparent 75%, alpha(var(--primary-color), 0.125) 75%, alpha(var(--primary-color), 0.125));
   background-size: 16rpx 16rpx;
   @include nonsmall-screen {
     width: $home-width;

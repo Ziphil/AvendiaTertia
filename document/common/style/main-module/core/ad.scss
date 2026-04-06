@@ -25,4 +25,6 @@
 
 .ad-inner {
   width: 100%;
+  background-image: linear-gradient(-45deg, transparent 25%, alpha(var(--main-background-color), 0.5) 25%, alpha(var(--main-background-color), 0.5) 50%, transparent 50%, transparent 75%, alpha(var(--main-background-color), 0.5) 75%, alpha(var(--main-background-color), 0.5));
+  background-size: 16rpx 16rpx;
 }
