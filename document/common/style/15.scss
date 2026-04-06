@@ -160,7 +160,7 @@ body {
     margin-block-start: 10rpx;
     margin-inline-start: -2rpx;
     font-size: 18rpx;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.5em;
     color: var(--gray-color);
     grid-row: 3 / 4;
   }
@@ -277,7 +277,8 @@ body {
     font-size: 28rpx;
     font-family: var(--special-font-family);
     color: var(--primary-color);
-    letter-spacing: 0.4em;
+    letter-spacing: 0.25em;
+    word-spacing: -0.2em;
     text-transform: uppercase;
     grid-row: 1 / 2;
   }
@@ -285,7 +286,7 @@ body {
     margin-block-start: 8rpx;
     margin-inline-start: 0rpx;
     font-size: 16rpx;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.5em;
     color: var(--gray-color);
     grid-row: 2 / 3;
   }

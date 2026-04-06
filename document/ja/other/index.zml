@@ -32,7 +32,7 @@
           \section|class="catalog-column"|<
             \h1|class="catalog-heading"|<
               \div|class="catalog-heading-number"|<1>
-              \div|class="catalog-heading-text",data-lang="greek"|<Γλωτται>
+              \div|class="catalog-heading-text",data-lang="greek"|<Γλωττικα>
               \div|class="catalog-heading-text",data-lang="normal"|<自然言語>
             >
             \section|class="catalog-section"|<
@@ -86,7 +86,7 @@
           \section|class="catalog-column"|<
             \h1|class="catalog-heading"|<
               \div|class="catalog-heading-number"|<2>
-              \div|class="catalog-heading-text",data-lang="greek"|<Μαθηματικη>
+              \div|class="catalog-heading-text",data-lang="greek"|<Μαθηματικα>
               \div|class="catalog-heading-text",data-lang="normal"|<数理科学>
             >
             \section|class="catalog-section"|<
@@ -118,7 +118,7 @@
             >
             \h1|class="catalog-heading"|<
               \div|class="catalog-heading-number"|<3>
-              \div|class="catalog-heading-text",data-lang="greek"|<Αλλα>
+              \div|class="catalog-heading-text",data-lang="greek"|<Συμμεικτα>
               \div|class="catalog-heading-text",data-lang="normal"|<その他>
             >
             \section|class="catalog-section"|<
@@ -142,7 +142,7 @@
         \div|class="other"|<
           \section|class="other-column"|<
             \h1|class="other-heading"|<
-              \div|class="other-heading-text",data-lang="greek"|<Επικοινωνια>
+              \div|class="other-heading-text",data-lang="greek"|<Προς τον επιμελητην>
               \div|class="other-heading-text",data-lang="normal"|<連絡先>
             >
             \div|class="contact-table"|<
@@ -159,7 +159,7 @@
           >
           \div|class="other-column"|<
             \h1|class="other-heading"|<
-              \div|class="other-heading-text",data-lang="greek"|<Ιστορικον>
+              \div|class="other-heading-text",data-lang="greek"|<Τα νεωτατα>
               \div|class="other-heading-text",data-lang="normal"|<更新履歴>
             >
             \history|size="5"|;
