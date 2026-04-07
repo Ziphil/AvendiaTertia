@@ -11,6 +11,7 @@
   margin-block-end: 0rpx;
   color: var(--footer-text-color);
   background-color: var(--footer-background-color);
+  backdrop-filter: blur(6rpx);
 }
 
 .footer-inner {
