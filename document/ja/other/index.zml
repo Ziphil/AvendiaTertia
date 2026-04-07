@@ -123,6 +123,11 @@
             >
             \section|class="catalog-section"|<
               \nav|class="card-table"|<
+                \a|class="card-item",href="/other/game/"|<
+                  \div|class="card-title"|<
+                    ゲーム
+                  >
+                >
                 \a|class="card-item",href="/other/other/"|<
                   \div|class="card-title"|<
                     その他

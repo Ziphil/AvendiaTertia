@@ -52,7 +52,8 @@
       "programming": {"ja": "プログラミング", "en": "Programming"},
       "programming-diary": {"ja": "日記 / プログラミング", "en": "Diary / Programming"},
       "application": {"ja": "アプリケーション", "en": "Applications"},
-      "game-diary": {"ja": "日記 / ゲーム製作", "en": "Diary / Game"},
+      "game": {"ja": "ゲーム", "en": "Games"},
+      "game-diary": {"ja": "日記 / ゲーム製作", "en": "Diary / Games"},
       "other": {"ja": "その他", "en": "Others"}
     },
     "error": {
