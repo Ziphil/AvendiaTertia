@@ -409,4 +409,8 @@ body {
     color: var(--secondary-active-color);
     background-image: single-color(var(--secondary-active-color));
   }
+  &:focus-visible {
+    outline: solid 2rpx alpha(var(--secondary-color), 0.5);
+    outline-offset: 1rpx;
+  }
 }
