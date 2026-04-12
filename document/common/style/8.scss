@@ -55,6 +55,8 @@ body {
   line-height: 1;
   text-decoration-skip-ink: none;
   background-color: var(--page-background-color);
+  background-image: radial-gradient(circle at center, var(--page-background-color) 20%, var(--page-dark-background-color));
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   overflow-x: auto;
