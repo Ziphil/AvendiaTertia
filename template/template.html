@@ -8,14 +8,15 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Ziphil">
     <meta property="og:url" content="{{= it.environments.configs.getRemoteUrl(it.variables.path, it.variables.language) }}">
-    <meta property="og:title" content="{{= it.variables.title }}">
-    <meta property="og:description" content="{{= it.variables.title }}">
-    <meta property="og:image" content="{{= it.environments.configs.getRemoteDomain(it.variables.language) }}/material/logo/1.png">
+    <meta property="og:title" content="{{= it.variables.ogpTitle }}">
+    <meta property="og:description" content="{{= it.variables.ogpDescription }}">
+    <meta property="og:image" content="{{= it.environments.configs.getRemoteDomain(it.variables.language) + it.variables.opgImagePath }}">
+    <link rel="icon" href="{{= it.environments.configs.getRemoteDomain(it.variables.language) + it.variables.ogpImagePath }}">
 {{= it.variables.headNode?.toString() }}
     <link rel="stylesheet" href="https://kit.fontawesome.com/5081c7f16b.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/style/1.css">
     <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508" crossorigin="anonymous" async></script>
-    <title>{{= it.variables.pageTitle }}</title>
+    <title>{{= it.variables.title }}</title>
   </head>
   <body data-scheme="{{= it.variables.scheme }}">
 
@@ -59,7 +60,7 @@
               </span>
             </div>
             <div class="footer-site-description">
-              {{= it.translations.description.shaleian[it.variables.language] }}
+              {{= it.translations.label.shaleian[it.variables.language] }}
             </div>
           </a>
           <a class="footer-site-item" href="/fennese/">
@@ -69,7 +70,7 @@
               </span>
             </div>
             <div class="footer-site-description">
-              {{= it.translations.description.fennese[it.variables.language] }}
+              {{= it.translations.label.fennese[it.variables.language] }}
             </div>
           </a>
           <a class="footer-site-item" href="/other/">
@@ -82,7 +83,7 @@
               </span>
             </div>
             <div class="footer-site-description">
-              {{= it.translations.description.other[it.variables.language] }}
+              {{= it.translations.label.other[it.variables.language] }}
             </div>
           </a>
         </nav>
@@ -93,7 +94,8 @@
           <a class="footer-icon-item" data-brand="github" href="https://github.com/Ziphil" target="_blank" rel="noopener noreferrer"></a>
         </address>
         <small class="footer-copyright">
-          <span class="footer-copyright-year">© 2009–{{= new Date().getFullYear() }}</span><span class="footer-copyright-author">Ziphil</span>
+          <span class="footer-copyright-year">© 2009–{{= new Date().getFullYear() }}</span>
+          <span class="footer-copyright-author">Ziphil</span>
         </small>
       </div>
     </footer>

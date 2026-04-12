@@ -7,6 +7,7 @@ declare module "~/template/translations.json" {
   type TranslationsJson = {
     language: Translations,
     title: {[K in string]?: Translations},
+    description: {[K in string]?: Translations},
     page: {top: Translations} & {[K in string]?: {[L in string]?: Translations}},
     math: {proof: Translations, equation: Translations} & {[K in string]?: Translations}
   };

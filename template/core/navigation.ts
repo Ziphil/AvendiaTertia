@@ -14,6 +14,16 @@ function getVersionLatest(content: string, scheme?: string): boolean {
   }
 }
 
+function getOgpImagePath(scheme?: string): string {
+  if (scheme === "shaleian") {
+    return "/material/ogp/1.png";
+  } else if (scheme === "fennese") {
+    return "/material/ogp/2.png";
+  } else {
+    return "/material/ogp/3.png";
+  }
+}
+
 manager.registerElementFactory("navigation", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const scheme = transformer.variables.scheme;
@@ -66,8 +76,10 @@ manager.registerElementFactory("navigation", (transformer, document, element) =>
       }
     }
   }));
-  transformer.variables.title = title;
-  transformer.variables.pageTitle = ((title) ? title + " — " : "") + TRANSLATIONS.title[scheme!]![language];
+  transformer.variables.ogpTitle = title;
+  transformer.variables.ogpDescription = TRANSLATIONS.description[scheme!]![language];
+  transformer.variables.ogpImagePath = getOgpImagePath(scheme);
+  transformer.variables.title = ((title) ? title + " — " : "") + TRANSLATIONS.title[scheme!]![language];
   return self;
 });
 

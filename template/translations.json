@@ -1,11 +1,16 @@
 {
   "language": {"ja": "日本語", "en": "English"},
   "title": {
-    "shaleian": {"ja": "Avendia : シャレイア語公式サイト", "en": "Avendia : Official Website of Shaleian Language"},
-    "fennese": {"ja": "Лофжучло : フェンナ語公式サイト", "en": "Лофжучло : Official Website of Fennese Language"},
+    "shaleian": {"ja": "Avendia", "en": "Avendia"},
+    "fennese": {"ja": "Лофжучло", "en": "Лофжучло"},
     "other": {"ja": "Τὰ Ζιφίλου Βιβλία", "en": "Τὰ Ζιφίλου Βιβλία"}
   },
   "description": {
+    "shaleian": {"ja": "人工言語「シャレイア語」公式サイト", "en": "Official website of the Shaleian constructed language"},
+    "fennese": {"ja": "人工言語「フェンナ語」公式サイト", "en": "Official website of the Fennese constructed language"},
+    "other": {"ja": "自然言語と数理科学の学習ノート", "en": "Personal notes on natural languages and mathematical science"}
+  },
+  "label": {
     "shaleian": {"ja": "シャレイア語", "en": "Shaleian Language"},
     "fennese": {"ja": "フェンナ語", "en": "Fennese Language"},
     "other": {"ja": "自然言語 · 数理科学", "en": "Miscelleneous"}

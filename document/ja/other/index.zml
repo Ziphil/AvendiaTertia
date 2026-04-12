@@ -10,8 +10,9 @@
     \meta|name="twitter:site",content="@Ziphil"|;
     \meta|property="og:url",content="https://ziphil.com/other"|;
     \meta|property="og:title",content="Τὰ Ζιφίλου Βιβλία"|;
-    \meta|property="og:description",content=""|;
-    \meta|property="og:image",content="http://ziphil.com/material/logo/1.png"|;
+    \meta|property="og:description",content="自然言語と数理科学の学習ノート"|;
+    \meta|property="og:image",content="https://ziphil.com/material/ogp/3.png"|;
+    \link|rel="icon",href="https://ziphil.com/material/ogp/3.png"|;
     \script|src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9429549748934508",crossorigin="anonymous",async|;
     \link|rel="stylesheet",href="https://kit.fontawesome.com/5081c7f16b.css",crossorigin="anonymous"|;
     \link|rel="stylesheet",type="text/css",href="/style/15.css"|;
