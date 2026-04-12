@@ -326,7 +326,7 @@
             \h1|class="other-header"|<
               \div|class="other-header-text"|<更新履歴>
             >
-            \history|size="5"|;
+            \history|size="5",scheme="shaleian"|;
           >
         >
       >

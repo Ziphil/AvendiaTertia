@@ -10,13 +10,14 @@ manager.registerElementRule("history", ["page", "html"], (transformer, document,
   const self = document.createDocumentFragment();
   const language = transformer.variables.language;
   const size = parseInt(element.getAttribute("size"));
+  const scheme = element.getAttribute("scheme") || null;
   const indexPath = transformer.environments.configs.getHistoryIndexPath(language);
-  const entries = fs.readFileSync(indexPath, {encoding: "utf-8"}).trim().split("\n").reverse().slice(0, size);
+  const entries = fs.readFileSync(indexPath, {encoding: "utf-8"}).trim().split("\n").reverse().map((entry) => entry.split(/\s*;\s*/, 3));
+  const filteredEntries = entries.filter((entry) => scheme === null || entry[1] === scheme).slice(0, size);
   self.appendElement("ul", (self) => {
     self.addClassName("history-list");
     self.setBlockType("text", "text");
-    for (const entry of entries) {
-      const [dateString, content] = entry.split(/\s*;\s*/, 2);
+    for (const [dateString, , content] of filteredEntries) {
       self.appendElement("li", (self) => {
         self.addClassName("history-item");
         self.appendElement("span", (self) => {

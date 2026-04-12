@@ -187,8 +187,9 @@ export class AvendiaGenerator {
     const inputDocument = this.parser.tryParse(inputString);
     const date = dayjs().subtract(6, "hour");
     const dateString = (outputLanguage === "ja") ? date.format("YYYY/MM/DD") : date.format("DD/MMM/YYYY");
+    const scheme = this.configs.getSplitRelativeDocumentPath(documentPath, outputLanguage)[0];
     const outputString = this.transformer.transform(inputDocument, {initialScope, initialVariables}).toString().trim() + "\n";
-    const finalOutputString = dateString + "; " + outputString;
+    const finalOutputString = dateString + "; " + scheme + "; " + outputString;
     await fs.mkdir(pathUtil.dirname(outputPath), {recursive: true});
     await fs.appendFile(outputPath, finalOutputString, {encoding: "utf-8"});
   }

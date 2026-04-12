@@ -168,7 +168,7 @@
               \div|class="other-heading-text",data-lang="greek"|<Τα νεωτατα>
               \div|class="other-heading-text",data-lang="normal"|<更新履歴>
             >
-            \history|size="5"|;
+            \history|size="4",scheme="other"|;
           >
         >
       >

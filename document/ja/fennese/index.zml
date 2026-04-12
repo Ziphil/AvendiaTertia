@@ -181,7 +181,7 @@
             \h1|class="other-header"|<
               \div|class="other-header-text"|<更新履歴>
             >
-            \history|size="4"|;
+            \history|size="4",scheme="fennese"|;
           >
           \div|class="other-column",data-position="right"|<
             \h1|class="other-header"|<
