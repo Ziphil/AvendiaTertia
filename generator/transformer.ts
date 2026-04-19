@@ -82,7 +82,6 @@ export type AvendiaTransformerEnvironments = {
 export type AvendiaTransformerVariables = {
   path: string,
   language: AvendiaOutputLanguage,
-  foreignLanguage?: AvendiaOutputLanguage,
   mode?: "page" | "html",
   ogpTitle?: string,
   ogpDescription?: string,

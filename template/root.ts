@@ -32,10 +32,8 @@ function getScheme(path: string, transformer: AvendiaLightTransformer): string {
 manager.registerElementRule("page", "", (transformer, document, element) => {
   const path = transformer.variables.path;
   const language = transformer.variables.language;
-  const foreignLanguage = (language === "ja") ? "en" : "ja";
   const scheme = getScheme(path, transformer);
   const transparent = getTransparent(path, language, transformer);
-  transformer.variables.foreignLanguage = foreignLanguage;
   transformer.variables.mode = "page";
   transformer.variables.scheme = scheme;
   const headNode = document.createDocumentFragment();
@@ -43,11 +41,9 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   const titleNode = document.createDocumentFragment();
   const linkNode = document.createDocumentFragment();
   const mainNode = document.createDocumentFragment();
-  headNode.appendChild(transformer.call("analytics", element));
-  headNode.appendChild(transformer.apply(element, "head"));
-  navigationNode.appendChild(transformer.call("navigation", element));
-  navigationNode.appendChild(transformer.apply(element, "navigation"));
-  titleNode.appendChild(transformer.call("title", element));
+  headNode.appendChild(transformer.call("core-head", element));
+  navigationNode.appendChild(transformer.call("core-navigation", element));
+  titleNode.appendChild(transformer.call("core-title", element));
   mainNode.appendChild(transformer.call("series", element));
   mainNode.appendElement("article", (self) => {
     self.addClassName("main");
@@ -67,63 +63,17 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
 });
 
 manager.registerElementRule("html", "", (transformer, document, element) => {
-  const self = document.createDocumentFragment();
+  const path = transformer.variables.path;
   const language = transformer.variables.language;
+  const scheme = getScheme(path, transformer);
   transformer.variables.mode = "html";
-  self.appendElement("html", (self) => {
+  transformer.variables.scheme = scheme;
+  const mainNode = document.createDocumentFragment();
+  mainNode.appendElement("html", (self) => {
     self.setAttribute("lang", language);
     self.appendChild(transformer.apply(element, "html"));
   });
-  return self;
-});
-
-manager.registerElementFactory("title", (transformer, document, element) => {
-  const scheme = transformer.variables.scheme;
-  const self = document.createDocumentFragment();
-  if (scheme === "shaleian") {
-    self.appendElement("span", (self) => {
-      self.addClassName("header-title-text");
-      self.setAttribute("data-size", "single");
-      self.appendTextNode("Avendia");
-    });
-  } else if (scheme === "fennese") {
-    self.appendElement("span", (self) => {
-      self.addClassName("header-title-text");
-      self.setAttribute("data-size", "single");
-      self.appendTextNode("Лофжучло");
-    });
-  } else {
-    self.appendElement("span", (self) => {
-      self.addClassName("header-title-text");
-      self.setAttribute("data-size", "small");
-      self.appendTextNode("ΤΑ ΖΙΦΙΛΟΥ");
-    });
-    self.appendElement("span", (self) => {
-      self.addClassName("header-title-text");
-      self.setAttribute("data-size", "large");
-      self.appendTextNode("ΒΙΒΛΙΑ");
-    });
-  }
-  return self;
-});
-
-manager.registerElementFactory("analytics", (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendElement("script", (self) => {
-    self.setAttribute("async", "async");
-    self.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-TGGC8V3L3P");
-  });
-  self.appendElement("script", (self) => {
-    self.appendTextNode(`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-TGGC8V3L3P");
-    `, (self) => self.options.raw = true);
-  });
-  return self;
+  return mainNode;
 });
 
 export default manager;

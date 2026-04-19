@@ -5,6 +5,32 @@ import {AvendiaTemplateManager} from "../../generator/transformer";
 
 const manager = new AvendiaTemplateManager();
 
+manager.registerElementFactory("core-head", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendChild(transformer.call("analytics", element));
+  self.appendChild(transformer.apply(element, "head"));
+  return self;
+});
+
+manager.registerElementFactory("analytics", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("script", (self) => {
+    self.setAttribute("async", "async");
+    self.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-TGGC8V3L3P");
+  });
+  self.appendElement("script", (self) => {
+    self.appendTextNode(`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-TGGC8V3L3P");
+    `, (self) => self.options.raw = true);
+  });
+  return self;
+});
+
 manager.registerElementRule("use-script", "head", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("script", (self) => {

@@ -24,6 +24,13 @@ function getOgpImagePath(scheme?: string): string {
   }
 }
 
+manager.registerElementFactory("core-navigation", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendChild(transformer.call("navigation", element));
+  self.appendChild(transformer.apply(element, "navigation"));
+  return self;
+});
+
 manager.registerElementFactory("navigation", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const scheme = transformer.variables.scheme;
