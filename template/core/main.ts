@@ -1,9 +1,41 @@
 //
 
-import {AvendiaTemplateManager} from "../../generator/transformer";
+import {AvendiaOutputLanguage} from "generator/configs";
+import {AvendiaLightTransformer, AvendiaTemplateManager} from "../../generator/transformer";
 
 
 const manager = new AvendiaTemplateManager();
+
+function getTransparent(path: string, language: AvendiaOutputLanguage, transformer: AvendiaLightTransformer): boolean {
+  const splitRelativePath = transformer.environments.configs.getSplitRelativeDocumentPath(path, language);
+  const depth = splitRelativePath.length - 1;
+  if (depth >= 1 && depth <= 2 && path.match(/index\.zml$/)) {
+    return true;
+  } else if (depth === 2 && path.match(/error/)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+manager.registerElementFactory("core-main", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const path = transformer.variables.path;
+  const language = transformer.variables.language;
+  const transparent = getTransparent(path, language, transformer);
+  self.appendChild(transformer.call("series", element));
+  self.appendElement("article", (self) => {
+    self.addClassName("main");
+    self.appendElement("div", (self) => {
+      self.addClassName("main-inner");
+      if (transparent) {
+        self.setAttribute("data-transparent", "");
+      }
+      self.appendChild(transformer.apply(element, "page"));
+    });
+  });
+  return self;
+});
 
 manager.registerElementFactory("series", (transformer, document, element) => {
   const self = document.createDocumentFragment();
