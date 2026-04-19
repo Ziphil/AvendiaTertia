@@ -14,11 +14,18 @@ manager.registerElementFactory("core-footer", (transformer, document, element) =
 
 manager.registerElementFactory("footer", (transformer, document, element) => {
   const self = document.createDocumentFragment();
+  const scheme = transformer.variables.scheme;
   const language = transformer.variables.language;
   self.appendElement("footer", (self) => {
     self.addClassName("footer");
     self.appendElement("div", (self) => {
       self.addClassName("footer-inner");
+      if (scheme === "other") {
+        self.appendElement("p", (self) => {
+          self.addClassName("footer-flavor");
+          self.appendTextNode("Hic situs est omnis divisus in partes tres…");
+        });
+      }
       self.appendElement("nav", (self) => {
         self.addClassName("footer-site-list");
         self.appendElement("a", (self) => {

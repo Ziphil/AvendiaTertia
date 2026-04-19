@@ -18,7 +18,7 @@ manager.registerElementRule("head", "html", (transformer, document, element) => 
   return self;
 });
 
-manager.registerElementRule("footer", "html", (transformer, document, element) => {
+manager.registerElementRule("common-footer", "html", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendChild(transformer.call("footer", element));
   return self;
