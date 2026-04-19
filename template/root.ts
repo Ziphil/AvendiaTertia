@@ -25,15 +25,18 @@ manager.registerElementRule("page", "", (transformer, document, element) => {
   const navigationNode = document.createDocumentFragment();
   const titleNode = document.createDocumentFragment();
   const linkNode = document.createDocumentFragment();
+  const footerNode = document.createDocumentFragment();
   const mainNode = document.createDocumentFragment();
   headNode.appendChild(transformer.call("core-head", element));
   navigationNode.appendChild(transformer.call("core-navigation", element));
   titleNode.appendChild(transformer.call("core-title", element));
   mainNode.appendChild(transformer.call("core-main", element));
+  footerNode.appendChild(transformer.call("core-footer", element));
   transformer.variables.headNode = headNode;
   transformer.variables.navigationNode = navigationNode;
   transformer.variables.titleNode = titleNode;
   transformer.variables.linkNode = linkNode;
+  transformer.variables.footerNode = footerNode;
   return mainNode;
 });
 

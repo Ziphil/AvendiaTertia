@@ -50,55 +50,7 @@
 
 {{= it.document.toString() }}
 
-    <footer class="footer">
-      <div class="footer-inner">
-        <nav class="footer-site-list">
-          <a class="footer-site-item" href="/shaleian/">
-            <div class="footer-site-title" data-scheme="shaleian">
-              <span class="footer-site-title-text" data-size="single">
-                Avendia
-              </span>
-            </div>
-            <div class="footer-site-description">
-              {{= it.translations.label.shaleian[it.variables.language] }}
-            </div>
-          </a>
-          <a class="footer-site-item" href="/fennese/">
-            <div class="footer-site-title" data-scheme="fennese">
-              <span class="footer-site-title-text" data-size="single">
-                Лофжучло
-              </span>
-            </div>
-            <div class="footer-site-description">
-              {{= it.translations.label.fennese[it.variables.language] }}
-            </div>
-          </a>
-          <a class="footer-site-item" href="/other/">
-            <div class="footer-site-title" data-scheme="other">
-              <span class="footer-site-title-text" data-size="small">
-                ΤΑ ΖΙΦΙΛΟΥ
-              </span>
-              <span class="footer-site-title-text" data-size="large">
-                ΒΙΒΛΙΑ
-              </span>
-            </div>
-            <div class="footer-site-description">
-              {{= it.translations.label.other[it.variables.language] }}
-            </div>
-          </a>
-        </nav>
-        <address class="footer-icon-list">
-          <a class="footer-icon-item" data-brand="twitter" href="https://twitter.com/Ziphil" target="_blank" rel="noopener noreferrer"></a>
-          <a class="footer-icon-item" data-brand="youtube" href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/" target="_blank" rel="noopener noreferrer"></a>
-          <a class="footer-icon-item" data-brand="discord" href="https://discord.gg/qdRyE2ZExf" target="_blank" rel="noopener noreferrer"></a>
-          <a class="footer-icon-item" data-brand="github" href="https://github.com/Ziphil" target="_blank" rel="noopener noreferrer"></a>
-        </address>
-        <small class="footer-copyright">
-          <span class="footer-copyright-year">© 2009–{{= new Date().getFullYear() }}</span>
-          <span class="footer-copyright-author">Ziphil</span>
-        </small>
-      </div>
-    </footer>
+{{= it.variables.footerNode?.toString() }}
 
   </body>
 </html>

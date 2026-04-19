@@ -21,6 +21,7 @@ import blockSectionManager from "./block/section";
 import blockSectionTableManager from "./block/section-table";
 import blockSentenceListManager from "./block/sentence-list";
 import blockTranslationListManager from "./block/translation-list";
+import coreFooterManager from "./core/footer";
 import coreHeadManager from "./core/head";
 import coreHtmlManager from "./core/html";
 import coreMainManager from "./core/main";
@@ -46,6 +47,7 @@ export default [
   coreNavigationManager,
   coreTitleManager,
   coreMainManager,
+  coreFooterManager,
   blockErrorManager,
   blockContentTableManager,
   blockSectionManager,
