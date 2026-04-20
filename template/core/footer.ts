@@ -96,6 +96,13 @@ manager.registerElementFactory("footer", (transformer, document, element) => {
         });
         self.appendElement("a", (self) => {
           self.addClassName("footer-icon-item");
+          self.setAttribute("data-brand", "note");
+          self.setAttribute("href", "https://note.com/ziphil");
+          self.setAttribute("target", "_blank");
+          self.setAttribute("rel", "noopener noreferrer");
+        });
+        self.appendElement("a", (self) => {
+          self.addClassName("footer-icon-item");
           self.setAttribute("data-brand", "youtube");
           self.setAttribute("href", "https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/");
           self.setAttribute("target", "_blank");
