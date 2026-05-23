@@ -44,6 +44,8 @@
   font-size: $monospace-font-size;
   font-weight: $monospace-font-weight;
   letter-spacing: $monospace-letter-spacing;
+  font-feature-settings: "lnum" 0, "palt" 0, "pkna" 0;
+  text-autospace: no-autospace;
   white-space: pre-wrap;
 }
 
@@ -53,6 +55,8 @@
   font-weight: $monospace-font-weight;
   letter-spacing: $monospace-letter-spacing;
   background-color: var(--block-background-color);
+  font-feature-settings: "lnum" 0, "palt" 0, "pkna" 0;
+  text-autospace: no-autospace;
   white-space: pre-wrap;
 }
 

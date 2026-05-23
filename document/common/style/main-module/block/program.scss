@@ -62,6 +62,8 @@ $program-line-horizontal-padding: 12rpx;
   font-weight: $monospace-font-weight;
   line-height: $program-line-height;
   letter-spacing: $monospace-letter-spacing;
+  font-feature-settings: "lnum" 0, "palt" 0, "pkna" 0;
+  text-autospace: no-autospace;
   white-space: pre-wrap;
   &:first-of-type {
     padding-block-start: $block-vertical-padding;
