@@ -4,7 +4,7 @@
 
 \page<
   \name<文字>
-  \ver<β.30 期>
+  \ver<β.31 期>
 
   \h1|tag="tdo"|<基層形の表記>
   \h2|tag="tpp"|<キリル文字表記>
@@ -17,50 +17,50 @@
   \side<
     \table<
       \tr<\th<文字>\th<発音>>
-      \tr<\td<\mk;[к]>\td<`/k`/>>
-      \tr<\td<\mk;[г]>\td<`/ɡ`/>>
-      \tr<\td<\mk;[х]>\td<`/χ`/>>
-      \tr<\td<\mk;[ҕ]>\td<`/ʁ`/>>
-      \tr<\td<\mk;[т]>\td<`/t`/>>
-      \tr<\td<\mk;[д]>\td<`/d`/>>
-      \tr<\td<\mk;[с]>\td<`/θ`/>>
-      \tr<\td<\mk;[з]>\td<`/ð`/>>
-      \tr<\td<\mk;[п]>\td<`/p`/>>
-      \tr<\td<\mk;[б]>\td<`/b`/>>
-      \tr<\td<\mk;[ф]>\td<`/f`/>>
-      \tr<\td<\mk;[в]>\td<`/v`/>>
+      \tr<\td<\mk;[к]>\td<\ch|ds|;k\ch|ds|;>>
+      \tr<\td<\mk;[г]>\td<\ch|ds|;ɡ\ch|ds|;>>
+      \tr<\td<\mk;[х]>\td<\ch|ds|;χ\ch|ds|;>>
+      \tr<\td<\mk;[ҕ]>\td<\ch|ds|;ʁ\ch|ds|;>>
+      \tr<\td<\mk;[т]>\td<\ch|ds|;t\ch|ds|;>>
+      \tr<\td<\mk;[д]>\td<\ch|ds|;d\ch|ds|;>>
+      \tr<\td<\mk;[с]>\td<\ch|ds|;θ\ch|ds|;>>
+      \tr<\td<\mk;[з]>\td<\ch|ds|;ð\ch|ds|;>>
+      \tr<\td<\mk;[п]>\td<\ch|ds|;p\ch|ds|;>>
+      \tr<\td<\mk;[б]>\td<\ch|ds|;b\ch|ds|;>>
+      \tr<\td<\mk;[ф]>\td<\ch|ds|;f\ch|ds|;>>
+      \tr<\td<\mk;[в]>\td<\ch|ds|;v\ch|ds|;>>
     >
     \table<
       \tr<\th<文字>\th<発音>>
-      \tr<\td<\mk;[ҫ]>\td<`/s`/>>
-      \tr<\td<\mk;[ҙ]>\td<`/z`/>>
-      \tr<\td<\mk;[ш]>\td<`/ʃ`/>>
-      \tr<\td<\mk;[ж]>\td<`/ʒ`/>>
-      \tr<\td<\mk;[ц]>\td<`/t͡s`/>>
-      \tr<\td<\mk;[ӟ]>\td<`/d͡z`/>>
-      \tr<\td<\mk;[ч]>\td<`/t͡ʃ`/>>
-      \tr<\td<\mk;[ӝ]>\td<`/d͡ʒ`/>>
+      \tr<\td<\mk;[ҫ]>\td<\ch|ds|;s\ch|ds|;>>
+      \tr<\td<\mk;[ҙ]>\td<\ch|ds|;z\ch|ds|;>>
+      \tr<\td<\mk;[ш]>\td<\ch|ds|;ʃ\ch|ds|;>>
+      \tr<\td<\mk;[ж]>\td<\ch|ds|;ʒ\ch|ds|;>>
+      \tr<\td<\mk;[ц]>\td<\ch|ds|;t͡s\ch|ds|;>>
+      \tr<\td<\mk;[ӟ]>\td<\ch|ds|;d͡z\ch|ds|;>>
+      \tr<\td<\mk;[ч]>\td<\ch|ds|;t͡ʃ\ch|ds|;>>
+      \tr<\td<\mk;[ӝ]>\td<\ch|ds|;d͡ʒ\ch|ds|;>>
     >
     \table<
       \tr<\th<文字>\th<発音>>
-      \tr<\td<\mk;[ӈ]>\td<`/ŋ`/>>
-      \tr<\td<\mk;[н]>\td<`/n`/>>
-      \tr<\td<\mk;[м]>\td<`/m`/>>
-      \tr<\td<\mk;[л]>\td<`/l`/>>
-      \tr<\td<\mk;[р]>\td<`/ɾ`/>>
-      \tr<\td<\mk;[й]>\td<`/j`/>>
-      \tr<\td<\mk;[ў]>\td<`/w`/>>
-      \tr<\td<\mk;[ъ]>\td<`/ʕ`/>>
+      \tr<\td<\mk;[ӈ]>\td<\ch|ds|;ŋ\ch|ds|;>>
+      \tr<\td<\mk;[н]>\td<\ch|ds|;n\ch|ds|;>>
+      \tr<\td<\mk;[м]>\td<\ch|ds|;m\ch|ds|;>>
+      \tr<\td<\mk;[л]>\td<\ch|ds|;l\ch|ds|;>>
+      \tr<\td<\mk;[р]>\td<\ch|ds|;ɾ\ch|ds|;>>
+      \tr<\td<\mk;[й]>\td<\ch|ds|;j\ch|ds|;>>
+      \tr<\td<\mk;[ў]>\td<\ch|ds|;w\ch|ds|;>>
+      \tr<\td<\mk;[ъ]>\td<\ch|ds|;ʕ\ch|ds|;>>
     >
     \table<
       \tr<\th<文字>\th<発音>>
-      \tr<\td<\mk;[е]>\td<`/e`/>>
-      \tr<\td<\mk;[о]>\td<`/o`/>>
-      \tr<\td<\mk;[а]>\td<`/a`/>>
-      \tr<\td<\mk;[е̂], \mk;[ѐ]>\td<`/eː`/>>
-      \tr<\td<\mk;[и̂]>\td<`/iː`/>>
-      \tr<\td<\mk;[о̂], \mk;[о̀]>\td<`/oː`/>>
-      \tr<\td<\mk;[у̂]>\td<`/uː`/>>
+      \tr<\td<\mk;[е]>\td<\ch|ds|;e\ch|ds|;>>
+      \tr<\td<\mk;[о]>\td<\ch|ds|;o\ch|ds|;>>
+      \tr<\td<\mk;[а]>\td<\ch|ds|;a\ch|ds|;>>
+      \tr<\td<\mk;[е̂], \mk;[ѐ]>\td<\ch|ds|;eː\ch|ds|;>>
+      \tr<\td<\mk;[и̂]>\td<\ch|ds|;iː\ch|ds|;>>
+      \tr<\td<\mk;[о̂], \mk;[о̀]>\td<\ch|ds|;oː\ch|ds|;>>
+      \tr<\td<\mk;[у̂]>\td<\ch|ds|;uː\ch|ds|;>>
     >
   >
   \h3|tag="tbx"|<ダイアクリティカルマーク>
@@ -83,50 +83,50 @@
   \side<
     \table<
       \tr<\th<文字>\th<発音>>
-      \tr<\td<\mk;[k]>\td<`/k`/>>
-      \tr<\td<\mk;[g]>\td<`/ɡ`/>>
-      \tr<\td<\mk;[h]>\td<`/χ`/>>
-      \tr<\td<\mk;[ġ]>\td<`/ʁ`/>>
-      \tr<\td<\mk;[t]>\td<`/t`/>>
-      \tr<\td<\mk;[d]>\td<`/d`/>>
-      \tr<\td<\mk;[s]>\td<`/θ`/>>
-      \tr<\td<\mk;[z]>\td<`/ð`/>>
-      \tr<\td<\mk;[p]>\td<`/p`/>>
-      \tr<\td<\mk;[b]>\td<`/b`/>>
-      \tr<\td<\mk;[f]>\td<`/f`/>>
-      \tr<\td<\mk;[v]>\td<`/v`/>>
+      \tr<\td<\mk;[k]>\td<\ch|ds|;k\ch|ds|;>>
+      \tr<\td<\mk;[g]>\td<\ch|ds|;ɡ\ch|ds|;>>
+      \tr<\td<\mk;[h]>\td<\ch|ds|;χ\ch|ds|;>>
+      \tr<\td<\mk;[ġ]>\td<\ch|ds|;ʁ\ch|ds|;>>
+      \tr<\td<\mk;[t]>\td<\ch|ds|;t\ch|ds|;>>
+      \tr<\td<\mk;[d]>\td<\ch|ds|;d\ch|ds|;>>
+      \tr<\td<\mk;[s]>\td<\ch|ds|;θ\ch|ds|;>>
+      \tr<\td<\mk;[z]>\td<\ch|ds|;ð\ch|ds|;>>
+      \tr<\td<\mk;[p]>\td<\ch|ds|;p\ch|ds|;>>
+      \tr<\td<\mk;[b]>\td<\ch|ds|;b\ch|ds|;>>
+      \tr<\td<\mk;[f]>\td<\ch|ds|;f\ch|ds|;>>
+      \tr<\td<\mk;[v]>\td<\ch|ds|;v\ch|ds|;>>
     >
     \table<
       \tr<\th<文字>\th<発音>>
-      \tr<\td<\mk;[ș]>\td<`/s`/>>
-      \tr<\td<\mk;[z̦]>\td<`/z`/>>
-      \tr<\td<\mk;[š]>\td<`/ʃ`/>>
-      \tr<\td<\mk;[ž]>\td<`/ʒ`/>>
-      \tr<\td<\mk;[c]>\td<`/t͡s`/>>
-      \tr<\td<\mk;[ẕ]>\td<`/d͡z`/>>
-      \tr<\td<\mk;[č]>\td<`/t͡ʃ`/>>
-      \tr<\td<\mk;[ẕ̌]>\td<`/d͡ʒ`/>>
+      \tr<\td<\mk;[ș]>\td<\ch|ds|;s\ch|ds|;>>
+      \tr<\td<\mk;[z̦]>\td<\ch|ds|;z\ch|ds|;>>
+      \tr<\td<\mk;[š]>\td<\ch|ds|;ʃ\ch|ds|;>>
+      \tr<\td<\mk;[ž]>\td<\ch|ds|;ʒ\ch|ds|;>>
+      \tr<\td<\mk;[c]>\td<\ch|ds|;t͡s\ch|ds|;>>
+      \tr<\td<\mk;[ẕ]>\td<\ch|ds|;d͡z\ch|ds|;>>
+      \tr<\td<\mk;[č]>\td<\ch|ds|;t͡ʃ\ch|ds|;>>
+      \tr<\td<\mk;[ẕ̌]>\td<\ch|ds|;d͡ʒ\ch|ds|;>>
     >
     \table<
       \tr<\th<文字>\th<発音>>
-      \tr<\td<\mk;[ṅ]>\td<`/ŋ`/>>
-      \tr<\td<\mk;[n]>\td<`/n`/>>
-      \tr<\td<\mk;[m]>\td<`/m`/>>
-      \tr<\td<\mk;[l]>\td<`/l`/>>
-      \tr<\td<\mk;[r]>\td<`/ɾ`/>>
-      \tr<\td<\mk;[ĭ]>\td<`/j`/>>
-      \tr<\td<\mk;[ŭ]>\td<`/w`/>>
-      \tr<\td<\mk;[ʕ]>\td<`/ʕ`/>>
+      \tr<\td<\mk;[ṅ]>\td<\ch|ds|;ŋ\ch|ds|;>>
+      \tr<\td<\mk;[n]>\td<\ch|ds|;n\ch|ds|;>>
+      \tr<\td<\mk;[m]>\td<\ch|ds|;m\ch|ds|;>>
+      \tr<\td<\mk;[l]>\td<\ch|ds|;l\ch|ds|;>>
+      \tr<\td<\mk;[r]>\td<\ch|ds|;ɾ\ch|ds|;>>
+      \tr<\td<\mk;[ĭ]>\td<\ch|ds|;j\ch|ds|;>>
+      \tr<\td<\mk;[ŭ]>\td<\ch|ds|;w\ch|ds|;>>
+      \tr<\td<\mk;[ʕ]>\td<\ch|ds|;ʕ\ch|ds|;>>
     >
     \table<
       \tr<\th<文字>\th<発音>>
-      \tr<\td<\mk;[e]>\td<`/e`/>>
-      \tr<\td<\mk;[o]>\td<`/o`/>>
-      \tr<\td<\mk;[a]>\td<`/a`/>>
-      \tr<\td<\mk;[ê], [è]>\td<`/eː`/>>
-      \tr<\td<\mk;[î]>\td<`/iː`/>>
-      \tr<\td<\mk;[ô], [ò]>\td<`/oː`/>>
-      \tr<\td<\mk;[û]>\td<`/uː`/>>
+      \tr<\td<\mk;[e]>\td<\ch|ds|;e\ch|ds|;>>
+      \tr<\td<\mk;[o]>\td<\ch|ds|;o\ch|ds|;>>
+      \tr<\td<\mk;[a]>\td<\ch|ds|;a\ch|ds|;>>
+      \tr<\td<\mk;[ê], [è]>\td<\ch|ds|;eː\ch|ds|;>>
+      \tr<\td<\mk;[î]>\td<\ch|ds|;iː\ch|ds|;>>
+      \tr<\td<\mk;[ô], [ò]>\td<\ch|ds|;oː\ch|ds|;>>
+      \tr<\td<\mk;[û]>\td<\ch|ds|;uː\ch|ds|;>>
     >
   >
   \p<
