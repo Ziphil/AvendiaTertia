@@ -95,6 +95,11 @@ manager.registerElementRule("ch", true, (transformer, document, element) => {
     if (query === "nbsp") {
       self.appendTextNode(String.fromCodePoint(0xA0));
     }
+  } else if (element.hasAttribute("ds")) {
+    self.appendElement("span", (self) => {
+      self.addClassName("doubleslash");
+      self.appendTextNode("//");
+    });
   } else if (element.hasAttribute("dz")) {
     const query = element.getAttribute("dz");
     const kind = (query === "x") ? "ten" : "eleven";
