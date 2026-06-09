@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## tlm まで使用
+  ## tly まで使用
   \hb<初めに>
   \pb<
     \ab|href="16.html",ignore|<初めに>
@@ -30,8 +30,8 @@
     \ab|href="4.html"|<特殊な語基の語形>
     \ab|href="24.html"|<他言語の受容>
     \ab|href="29.html"|<借用語基と外来語基の屈折>
-    \ab|href="6.html"|<合成語>
-    \ab|href="5.html"|<数詞>
+    \ab|href="31.html"|<複合語基>
+    \ab|href="5.html"|<数体言>
     \ab|href="7.html"|<弱母音の消失>
   >
   \hb<統語論>
