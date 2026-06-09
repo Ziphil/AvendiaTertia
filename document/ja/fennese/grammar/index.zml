@@ -5,7 +5,7 @@
 \page<
   \use-script|src="17.js"|;
 
-  ## tlf まで使用
+  ## tlm まで使用
   \hb<初めに>
   \pb<
     \ab|href="16.html",ignore|<初めに>
@@ -20,10 +20,13 @@
     \ab|href="18.html"|<表層化> 
     \ab|href="27.html"|<約物>
   >
+  \hb<特有の理論>
+  \pb<
+    \ab|href="37.html"|<語と辞とその分類>
+  >
   \hb<形態論>
   \pb<
-    \ab|href="37.html"|<形態論で用いる用語法>
-    \ab|href="2.html"|<語形>
+    \ab|href="2.html"|<語幹と屈折>
     \ab|href="4.html"|<特殊な単語の語形>
     \ab|href="24.html"|<他言語の受容>
     \ab|href="29.html"|<借用語と外来語の語形変化>
@@ -33,7 +36,6 @@
   >
   \hb<統語論>
   \pb<
-    \ab|href="22.html"|<品詞>
     \ab|href="3.html"|<基本語順>
     \ab|href="11.html"|<類>
     \ab|href="17.html"|<格>
