@@ -10,7 +10,7 @@
   \h2|tag="tvy"|<構成>
   \p<
     複数の語基が結合することで新たな語素をもったものを、1 つの語基と見なして「\rterm|key="ふくごうごき",id="compound-base"|<複合語基\fl<compound base>>」と呼ぶ。
-    これに対し、それ以上分割できない語基を「\rterm|key="たんじゅんき",id="simplex-base"|<単純語基\fl<simplex base>>」と呼ぶ。
+    これに対し、それ以上分割できない語基を「\rterm|key="たんじゅんごき",id="simple-base"|<単純語基\fl<simple base>>」と呼ぶ。
   > 
   \p<
     複合語基の語形は、それを構成する語基の語形を表層で連結することで作られる。
