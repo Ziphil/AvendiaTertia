@@ -4,7 +4,7 @@
 
 \page<
   \name<表層化>
-  \ver<β.31 期>
+  \ver<β.32 期>
 
   \h1|tag="tsk"|<表層化>
   \h2|tag="tsg"|<連続軽音節の回避>
@@ -30,60 +30,60 @@
     空欄になっている箇所では変化は起こらない。
   >
   \table<
-    \tr<\th;\th<\mk;[-к]>\th<\mk;[-г]>\th<\mk;[-х]>\th<\mk;[-ҕ]>\th<\mk;[-т]>\th<\mk;[-д]>\th<\mk;[-с]>\th<\mk;[-з]>\th<\mk;[-п]>\th<\mk;[-б]>\th<\mk;[-ф]>\th<\mk;[-в]>>
-    \tr<\th<\mk;[к-]>\td<>\td<\mk;[гг]>\td<\mk;[хх]>\td<\mk;[ҕҕ]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[г-]>\td<\mk;[кк]>\td<>\td<\mk;[хх]>\td<\mk;[ҕҕ]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[х-]>\td<\mk;[кк]>\td<\mk;[гг]>\td<>\td<\mk;[ҕҕ]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ҕ-]>\td<\mk;[кк]>\td<\mk;[гг]>\td<\mk;[хх]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[т-]>\td<>\td<>\td<>\td<>\td<>\td<\mk;[дд]>\td<\mk;[сс]>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[д-]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<>\td<\mk;[сс]>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[с-]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<\mk;[дд]>\td<>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[з-]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<\mk;[дд]>\td<\mk;[сс]>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[п-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[бб]>\td<\mk;[фф]>\td<\mk;[вв]>>
-    \tr<\th<\mk;[б-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[пп]>\td<>\td<\mk;[фф]>\td<\mk;[вв]>>
-    \tr<\th<\mk;[ф-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[пп]>\td<\mk;[бб]>\td<>\td<\mk;[вв]>>
-    \tr<\th<\mk;[в-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[пп]>\td<\mk;[бб]>\td<\mk;[фф]>\td<>>
-    \tr<\th<\mk;[ҫ-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ҙ-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ш-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ж-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ц-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ӟ-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ч-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ӝ-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ӈ-]>\td<>\td<>\td<>\td<>\td<\mk;[нт]>\td<\mk;[нд]>\td<\mk;[нс]>\td<\mk;[нз]>\td<\mk;[мп]>\td<\mk;[мб]>\td<\mk;[мф]>\td<\mk;[мв]>>
-    \tr<\th<\mk;[н-]>\td<\mk;[ӈк]>\td<\mk;[ӈг]>\td<\mk;[ӈх]>\td<\mk;[ӈҕ]>\td<>\td<>\td<>\td<>\td<\mk;[мп]>\td<\mk;[мб]>\td<\mk;[мф]>\td<\mk;[мв]>>
-    \tr<\th<\mk;[м-]>\td<\mk;[ӈк]>\td<\mk;[ӈг]>\td<\mk;[ӈх]>\td<\mk;[ӈҕ]>\td<\mk;[нт]>\td<\mk;[нд]>\td<\mk;[нс]>\td<\mk;[нз]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[л-]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<\mk;[дд]>\td<\mk;[сс]>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[р-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th;\th<\mk;[‧к]>\th<\mk;[‧г]>\th<\mk;[‧х]>\th<\mk;[‧ҕ]>\th<\mk;[‧т]>\th<\mk;[‧д]>\th<\mk;[‧с]>\th<\mk;[‧з]>\th<\mk;[‧п]>\th<\mk;[‧б]>\th<\mk;[‧ф]>\th<\mk;[‧в]>>
+    \tr<\th<\mk;[к‧]>\td<>\td<\mk;[гг]>\td<\mk;[хх]>\td<\mk;[ҕҕ]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[г‧]>\td<\mk;[кк]>\td<>\td<\mk;[хх]>\td<\mk;[ҕҕ]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[х‧]>\td<\mk;[кк]>\td<\mk;[гг]>\td<>\td<\mk;[ҕҕ]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ҕ‧]>\td<\mk;[кк]>\td<\mk;[гг]>\td<\mk;[хх]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[т‧]>\td<>\td<>\td<>\td<>\td<>\td<\mk;[дд]>\td<\mk;[сс]>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[д‧]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<>\td<\mk;[сс]>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[с‧]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<\mk;[дд]>\td<>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[з‧]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<\mk;[дд]>\td<\mk;[сс]>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[п‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[бб]>\td<\mk;[фф]>\td<\mk;[вв]>>
+    \tr<\th<\mk;[б‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[пп]>\td<>\td<\mk;[фф]>\td<\mk;[вв]>>
+    \tr<\th<\mk;[ф‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[пп]>\td<\mk;[бб]>\td<>\td<\mk;[вв]>>
+    \tr<\th<\mk;[в‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[пп]>\td<\mk;[бб]>\td<\mk;[фф]>\td<>>
+    \tr<\th<\mk;[ҫ‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ҙ‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ш‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ж‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ц‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ӟ‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ч‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ӝ‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ӈ‧]>\td<>\td<>\td<>\td<>\td<\mk;[нт]>\td<\mk;[нд]>\td<\mk;[нс]>\td<\mk;[нз]>\td<\mk;[мп]>\td<\mk;[мб]>\td<\mk;[мф]>\td<\mk;[мв]>>
+    \tr<\th<\mk;[н‧]>\td<\mk;[ӈк]>\td<\mk;[ӈг]>\td<\mk;[ӈх]>\td<\mk;[ӈҕ]>\td<>\td<>\td<>\td<>\td<\mk;[мп]>\td<\mk;[мб]>\td<\mk;[мф]>\td<\mk;[мв]>>
+    \tr<\th<\mk;[м‧]>\td<\mk;[ӈк]>\td<\mk;[ӈг]>\td<\mk;[ӈх]>\td<\mk;[ӈҕ]>\td<\mk;[нт]>\td<\mk;[нд]>\td<\mk;[нс]>\td<\mk;[нз]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[л‧]>\td<>\td<>\td<>\td<>\td<\mk;[тт]>\td<\mk;[дд]>\td<\mk;[сс]>\td<\mk;[зз]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[р‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
   >
   \table<
-    \tr<\th;\th<\mk;[-ҫ]>\th<\mk;[-ҙ]>\th<\mk;[-ш]>\th<\mk;[-ж]>\th<\mk;[-ц]>\th<\mk;[-ӟ]>\th<\mk;[-ч]>\th<\mk;[-ӝ]>\th<\mk;[-ӈ]>\th<\mk;[-н]>\th<\mk;[-м]>\th<\mk;[-л]>\th<\mk;[-р]>>
-    \tr<\th<\mk;[к-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[г-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[х-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ҕ-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[т-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<\mk;[лл]>\td<>>
-    \tr<\th<\mk;[д-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<\mk;[лл]>\td<>>
-    \tr<\th<\mk;[с-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<\mk;[лл]>\td<>>
-    \tr<\th<\mk;[з-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<\mk;[лл]>\td<>>
-    \tr<\th<\mk;[п-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[мм]>\td<>\td<>>
-    \tr<\th<\mk;[б-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[мм]>\td<>\td<>>
-    \tr<\th<\mk;[ф-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[мм]>\td<>\td<>>
-    \tr<\th<\mk;[в-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[мм]>\td<>\td<>>
-    \tr<\th<\mk;[ҫ-]>\td<>\td<\mk;[ҙҙ]>\td<\mk;[шш]>\td<\mk;[жж]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ҙ-]>\td<\mk;[ҫҫ]>\td<>\td<\mk;[шш]>\td<\mk;[жж]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ш-]>\td<\mk;[ҫҫ]>\td<\mk;[ҙҙ]>\td<>\td<\mk;[жж]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ж-]>\td<\mk;[ҫҫ]>\td<\mk;[ҙҙ]>\td<\mk;[шш]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ц-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ӟ-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ч-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<>\td<\mk;[ӝӝ]>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ӝ-]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<>\td<>\td<>\td<>\td<>\td<>>
-    \tr<\th<\mk;[ӈ-]>\td<\mk;[нҫ]>\td<\mk;[нҙ]>\td<\mk;[нш]>\td<\mk;[нж]>\td<\mk;[нц]>\td<\mk;[нӟ]>\td<\mk;[нч]>\td<\mk;[нӝ]>\td<>\td<\mk;[нн]>\td<\mk;[мм]>\td<\mk;[нл]>\td<>>
-    \tr<\th<\mk;[н-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<\mk;[мм]>\td<>\td<>>
-    \tr<\th<\mk;[м-]>\td<\mk;[нҫ]>\td<\mk;[нҙ]>\td<\mk;[нш]>\td<\mk;[нж]>\td<\mk;[нц]>\td<\mk;[нӟ]>\td<\mk;[нч]>\td<\mk;[нӝ]>\td<\mk;[ӈӈ]>\td<\mk;[нн]>\td<>\td<\mk;[нл]>\td<>>
-    \tr<\th<\mk;[л-]>\td<>\td<>\td<>\td<>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<>\td<\mk;[рр]>>
-    \tr<\th<\mk;[р-]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[лл]>\td<>>
+    \tr<\th;\th<\mk;[‧ҫ]>\th<\mk;[‧ҙ]>\th<\mk;[‧ш]>\th<\mk;[‧ж]>\th<\mk;[‧ц]>\th<\mk;[‧ӟ]>\th<\mk;[‧ч]>\th<\mk;[‧ӝ]>\th<\mk;[‧ӈ]>\th<\mk;[‧н]>\th<\mk;[‧м]>\th<\mk;[‧л]>\th<\mk;[‧р]>>
+    \tr<\th<\mk;[к‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[г‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[х‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ҕ‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[т‧]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<\mk;[лл]>\td<>>
+    \tr<\th<\mk;[д‧]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<\mk;[лл]>\td<>>
+    \tr<\th<\mk;[с‧]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<\mk;[лл]>\td<>>
+    \tr<\th<\mk;[з‧]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<\mk;[лл]>\td<>>
+    \tr<\th<\mk;[п‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[мм]>\td<>\td<>>
+    \tr<\th<\mk;[б‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[мм]>\td<>\td<>>
+    \tr<\th<\mk;[ф‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[мм]>\td<>\td<>>
+    \tr<\th<\mk;[в‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[мм]>\td<>\td<>>
+    \tr<\th<\mk;[ҫ‧]>\td<>\td<\mk;[ҙҙ]>\td<\mk;[шш]>\td<\mk;[жж]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ҙ‧]>\td<\mk;[ҫҫ]>\td<>\td<\mk;[шш]>\td<\mk;[жж]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ш‧]>\td<\mk;[ҫҫ]>\td<\mk;[ҙҙ]>\td<>\td<\mk;[жж]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ж‧]>\td<\mk;[ҫҫ]>\td<\mk;[ҙҙ]>\td<\mk;[шш]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ц‧]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ӟ‧]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ч‧]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<>\td<\mk;[ӝӝ]>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ӝ‧]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<>\td<>\td<>\td<>\td<>\td<>>
+    \tr<\th<\mk;[ӈ‧]>\td<\mk;[нҫ]>\td<\mk;[нҙ]>\td<\mk;[нш]>\td<\mk;[нж]>\td<\mk;[нц]>\td<\mk;[нӟ]>\td<\mk;[нч]>\td<\mk;[нӝ]>\td<>\td<\mk;[нн]>\td<\mk;[мм]>\td<\mk;[нл]>\td<>>
+    \tr<\th<\mk;[н‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[ӈӈ]>\td<>\td<\mk;[мм]>\td<>\td<>>
+    \tr<\th<\mk;[м‧]>\td<\mk;[нҫ]>\td<\mk;[нҙ]>\td<\mk;[нш]>\td<\mk;[нж]>\td<\mk;[нц]>\td<\mk;[нӟ]>\td<\mk;[нч]>\td<\mk;[нӝ]>\td<\mk;[ӈӈ]>\td<\mk;[нн]>\td<>\td<\mk;[нл]>\td<>>
+    \tr<\th<\mk;[л‧]>\td<>\td<>\td<>\td<>\td<\mk;[цц]>\td<\mk;[ӟӟ]>\td<\mk;[чч]>\td<\mk;[ӝӝ]>\td<>\td<\mk;[нн]>\td<>\td<>\td<\mk;[рр]>>
+    \tr<\th<\mk;[р‧]>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<>\td<\mk;[лл]>\td<>>
   >
   \h2|tag="tsv"|<弱子音の消失>
   \p<
@@ -96,40 +96,40 @@
     短母音の場合のみ記してあるが、被融合部に長母音が含まれていれば融合後は対応する長母音になり、長母音が 1 つも含まれていなければ融合後は短母音になる。
   >
   \table<
-    \tr<\th;\th<\mk;[-а], \mk;[-аъ]>\th<\mk;[-е], \mk;[-еъ]>\th<\mk;[-и], \mk;[-иъ]>\th<\mk;[-о], \mk;[-оъ]>\th<\mk;[-у], \mk;[-уъ]>>
-    \tr<\th<\mk;[ай-], \mk;[й-]>\td<[е]>\td<[и]>\td<[и]>\td<[е]>\td<[о]>>
-    \tr<\th<\mk;[ей-]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[о]>>
-    \tr<\th<\mk;[ий-]>\td<[и]>\td<[и]>\td<>\td<[и]>\td<>>
-    \tr<\th<\mk;[ой-]>\td<[е]>\td<[и]>\td<[и]>\td<[е]>\td<[у]>>
-    \tr<\th<\mk;[уй-]>\td<[о]>\td<[е], [о]>\td<>\td<[у]>\td<>>
-    \tr<\th<\mk;[аў-], \mk;[ў-]>\td<[о]>\td<[о]>\td<[е]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[еў-]>\td<[о]>\td<[о]>\td<[и]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[иў-]>\td<[е]>\td<[и]>\td<>\td<[е], [о]>\td<>>
-    \tr<\th<\mk;[оў-]>\td<[у]>\td<[у]>\td<[е]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[уў-]>\td<[у]>\td<[у]>\td<>\td<[у]>\td<>>
-    \tr<\th<\mk;[аъ-], \mk;[ъ-]>\td<[а]>\td<[е]>\td<[и]>\td<[о]>\td<[у]>>
-    \tr<\th<\mk;[еъ-]>\td<[е]>\td<[и]>\td<[и]>\td<[е], [о]>\td<[у]>>
-    \tr<\th<\mk;[иъ-]>\td<[и]>\td<[и]>\td<>\td<[и]>\td<>>
-    \tr<\th<\mk;[оъ-]>\td<[о]>\td<[е], [о]>\td<[и]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[уъ-]>\td<[у]>\td<[у]>\td<>\td<[у]>\td<>>
+    \tr<\th;\th<\mk;[‧а], \mk;[‧аъ]>\th<\mk;[‧е], \mk;[‧еъ]>\th<\mk;[‧и], \mk;[‧иъ]>\th<\mk;[‧о], \mk;[‧оъ]>\th<\mk;[‧у], \mk;[‧уъ]>>
+    \tr<\th<\mk;[ай‧], \mk;[й‧]>\td<[е]>\td<[и]>\td<[и]>\td<[е]>\td<[о]>>
+    \tr<\th<\mk;[ей‧]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[о]>>
+    \tr<\th<\mk;[ий‧]>\td<[и]>\td<[и]>\td<>\td<[и]>\td<>>
+    \tr<\th<\mk;[ой‧]>\td<[е]>\td<[и]>\td<[и]>\td<[е]>\td<[у]>>
+    \tr<\th<\mk;[уй‧]>\td<[о]>\td<[е], [о]>\td<>\td<[у]>\td<>>
+    \tr<\th<\mk;[аў‧], \mk;[ў‧]>\td<[о]>\td<[о]>\td<[е]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[еў‧]>\td<[о]>\td<[о]>\td<[и]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[иў‧]>\td<[е]>\td<[и]>\td<>\td<[е], [о]>\td<>>
+    \tr<\th<\mk;[оў‧]>\td<[у]>\td<[у]>\td<[е]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[уў‧]>\td<[у]>\td<[у]>\td<>\td<[у]>\td<>>
+    \tr<\th<\mk;[аъ‧], \mk;[ъ‧]>\td<[а]>\td<[е]>\td<[и]>\td<[о]>\td<[у]>>
+    \tr<\th<\mk;[еъ‧]>\td<[е]>\td<[и]>\td<[и]>\td<[е], [о]>\td<[у]>>
+    \tr<\th<\mk;[иъ‧]>\td<[и]>\td<[и]>\td<>\td<[и]>\td<>>
+    \tr<\th<\mk;[оъ‧]>\td<[о]>\td<[е], [о]>\td<[и]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[уъ‧]>\td<[у]>\td<[у]>\td<>\td<[у]>\td<>>
   >
   \table<
-    \tr<\th;\th<\mk;[-ай]>\th<\mk;[-ей]>\th<\mk;[-ий]>\th<\mk;[-ой]>\th<\mk;[-уй]>\th<\mk;[-аў]>\th<\mk;[-еў]>\th<\mk;[-иў]>\th<\mk;[-оў]>\th<\mk;[-уў]>>
-    \tr<\th<\mk;[ай-], \mk;[й-]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[е]>\td<[е], [о]>\td<[е]>\td<[и]>\td<[о]>\td<[у]>>
-    \tr<\th<\mk;[ей-]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[е]>\td<[и]>\td<[и]>\td<[е], [о]>\td<[у]>>
-    \tr<\th<\mk;[ий-]>\td<[и]>\td<[и]>\td<[]>\td<[и]>\td<[]>\td<[и]>\td<[и]>\td<[]>\td<[и]>\td<[]>>
-    \tr<\th<\mk;[ой-]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[е]>\td<[о]>\td<[е], [о]>\td<[и]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[уй-]>\td<[е]>\td<[и]>\td<[]>\td<[е]>\td<[]>\td<[у]>\td<[у]>\td<[]>\td<[у]>\td<[]>>
-    \tr<\th<\mk;[аў-], \mk;[ў-]>\td<[е], [о]>\td<[е]>\td<[и]>\td<[о]>\td<[у]>\td<[у]>\td<[у]>\td<[о]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[еў-]>\td<[е]>\td<[и]>\td<[и]>\td<[е], [о]>\td<[у]>\td<[у]>\td<[у]>\td<[о]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[иў-]>\td<[и]>\td<[и]>\td<[]>\td<[и]>\td<[]>\td<[о]>\td<[о]>\td<[]>\td<[у]>\td<[]>>
-    \tr<\th<\mk;[оў-]>\td<[о]>\td<[е], [о]>\td<[и]>\td<[у]>\td<[у]>\td<[у]>\td<[у]>\td<[у]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[уў-]>\td<[у]>\td<[у]>\td<[]>\td<[у]>\td<[]>\td<[у]>\td<[у]>\td<[]>\td<[у]>\td<[]>>
-    \tr<\th<\mk;[аъ-], \mk;[ъ-]>\td<[е]>\td<[и]>\td<[и]>\td<[е]>\td<[о]>\td<[о]>\td<[о]>\td<[е]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[еъ-]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[о]>\td<[о]>\td<[о]>\td<[и]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[иъ-]>\td<[и]>\td<[и]>\td<[]>\td<[и]>\td<[]>\td<[е]>\td<[и]>\td<[]>\td<[е]>\td<[]>>
-    \tr<\th<\mk;[оъ-]>\td<[е]>\td<[и]>\td<[и]>\td<[е]>\td<[у]>\td<[у]>\td<[у]>\td<[е]>\td<[у]>\td<[у]>>
-    \tr<\th<\mk;[уъ-]>\td<[о]>\td<[о]>\td<[]>\td<[у]>\td<[]>\td<[у]>\td<[у]>\td<[]>\td<[у]>\td<[]>>
+    \tr<\th;\th<\mk;[‧ай]>\th<\mk;[‧ей]>\th<\mk;[‧ий]>\th<\mk;[‧ой]>\th<\mk;[‧уй]>\th<\mk;[‧аў]>\th<\mk;[‧еў]>\th<\mk;[‧иў]>\th<\mk;[‧оў]>\th<\mk;[‧уў]>>
+    \tr<\th<\mk;[ай‧], \mk;[й‧]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[е]>\td<[е], [о]>\td<[е]>\td<[и]>\td<[о]>\td<[у]>>
+    \tr<\th<\mk;[ей‧]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[е]>\td<[и]>\td<[и]>\td<[е], [о]>\td<[у]>>
+    \tr<\th<\mk;[ий‧]>\td<[и]>\td<[и]>\td<[]>\td<[и]>\td<[]>\td<[и]>\td<[и]>\td<[]>\td<[и]>\td<[]>>
+    \tr<\th<\mk;[ой‧]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[е]>\td<[о]>\td<[е], [о]>\td<[и]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[уй‧]>\td<[е]>\td<[и]>\td<[]>\td<[е]>\td<[]>\td<[у]>\td<[у]>\td<[]>\td<[у]>\td<[]>>
+    \tr<\th<\mk;[аў‧], \mk;[ў‧]>\td<[е], [о]>\td<[е]>\td<[и]>\td<[о]>\td<[у]>\td<[у]>\td<[у]>\td<[о]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[еў‧]>\td<[е]>\td<[и]>\td<[и]>\td<[е], [о]>\td<[у]>\td<[у]>\td<[у]>\td<[о]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[иў‧]>\td<[и]>\td<[и]>\td<[]>\td<[и]>\td<[]>\td<[о]>\td<[о]>\td<[]>\td<[у]>\td<[]>>
+    \tr<\th<\mk;[оў‧]>\td<[о]>\td<[е], [о]>\td<[и]>\td<[у]>\td<[у]>\td<[у]>\td<[у]>\td<[у]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[уў‧]>\td<[у]>\td<[у]>\td<[]>\td<[у]>\td<[]>\td<[у]>\td<[у]>\td<[]>\td<[у]>\td<[]>>
+    \tr<\th<\mk;[аъ‧], \mk;[ъ‧]>\td<[е]>\td<[и]>\td<[и]>\td<[е]>\td<[о]>\td<[о]>\td<[о]>\td<[е]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[еъ‧]>\td<[и]>\td<[и]>\td<[и]>\td<[и]>\td<[о]>\td<[о]>\td<[о]>\td<[и]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[иъ‧]>\td<[и]>\td<[и]>\td<[]>\td<[и]>\td<[]>\td<[е]>\td<[и]>\td<[]>\td<[е]>\td<[]>>
+    \tr<\th<\mk;[оъ‧]>\td<[е]>\td<[и]>\td<[и]>\td<[е]>\td<[у]>\td<[у]>\td<[у]>\td<[е]>\td<[у]>\td<[у]>>
+    \tr<\th<\mk;[уъ‧]>\td<[о]>\td<[о]>\td<[]>\td<[у]>\td<[]>\td<[у]>\td<[у]>\td<[]>\td<[у]>\td<[]>>
   >
   \p<
     融合後の母音が 2 つ書かれている箇所については、どちらに融合するかは次のようにして決まる。
@@ -153,15 +153,15 @@
   >
   \h2|tag="tsb"|<半母音の挿入>
   \p<
-    弱子音の消失によって母音が連続するようになった場合、その間に緩衝音として `/j`/ や `/w`/ が挿入される。
+    弱子音の消失によって語頭が母音になったり語中で母音が連続するようになったりした場合、緩衝音として `/j`/ や `/w`/ が挿入される。
     挿入される子音は以下の通りである。
     なお、これは前後の母音の長短によらないので、以下の表では短母音の場合のみ記してある。
   >
   \table<
-    \tr<\th;\th<[-а]>\th<[-е], [-и]>\th<[-о], [-у]>>
-    \tr<\th<[а-]>\td<∅>\td<`/j`/>\td<`/w`/>>
-    \tr<\th<[е-], [и-]>\td<`/j`/>\td<`/j`/>\td<`/w`/>>
-    \tr<\th<[о-], [у-]>\td<`/w`/>\td<`/j`/>\td<`/w`/>>
+    \tr<\th;\th<[‧а]>\th<[‧е], [‧и]>\th<[‧о], [‧у]>>
+    \tr<\th<[а‧], 語頭>\td<∅>\td<`/j`/>\td<`/w`/>>
+    \tr<\th<[е‧], [и‧]>\td<`/j`/>\td<`/j`/>\td<`/w`/>>
+    \tr<\th<[о‧], [у‧]>\td<`/w`/>\td<`/j`/>\td<`/w`/>>
   >
 
 >
