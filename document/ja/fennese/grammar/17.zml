@@ -8,8 +8,7 @@
 
   \h1|tag="tkp"|<格>
   \p<
-    名詞と修飾語との意味的な関係の分類を「\rterm|key="かく",id="case"|<格\fl<case>>」と呼ぶ。
-    以下の 6 つの格が区別され、体言の屈折によって表される。
+    名詞と修飾語との意味的な関係の分類を「\rterm|key="かく",id="case"|<格\fl<case>>」と呼び、以下の 6 つが区別される。
   >
   \ul|col="2"|<
     \li<\rterm|key="しゅかく",id="nominative-case"|<主格\fl<nominative case>>>
@@ -18,6 +17,9 @@
     \li<\rterm|key="だっかく",id="ablative-case"|<奪格\fl<ablative case>>>
     \li<\rterm|key="ぐかく",id="instrumental-case"|<具格\fl<instrumental case>>>
     \li<\rterm|key="しょかく",id="locative-case"|<処格\fl<locative case>>>
+  >
+  \p<
+    格は、体言の屈折によって常に義務的に表される。
   >
   \p<
     格は名詞の意味的役割であるが、1 つの格が表す具体的な役割は複数ある。
