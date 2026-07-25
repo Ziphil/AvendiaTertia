@@ -82,7 +82,7 @@
     >
   >
   \p<
-    余 Eilenberg–Moore 圏ともとの圏の間には、次のような標準的な随伴が存在する。
+    余 Eilenberg–Moore 圏と元の圏の間には、次のような標準的な随伴が存在する。
   >
   \thm|type="prp",id="emadj"|<
     \p<
@@ -290,14 +290,14 @@
     >
   >
   \p<
-    コモナドから始めて余 Eilenberg–Moore 圏もしくは余 Kleisli 圏との随伴を作り、そこから再びコモナドを作り直すと、もとのコモナドと同じものが得られる。
+    コモナドから始めて余 Eilenberg–Moore 圏もしくは余 Kleisli 圏との随伴を作り、そこから再びコモナドを作り直すと、元のコモナドと同じものが得られる。
     すなわち、全てのコモナドは何らかの随伴対から標準的に得られるということである。
     実際、余 Kleisli 圏は、この「全てのコモナドは何らかの随伴対から標準的に得られるか」という問いに対する答えとして Kleisli\mref|type="bib",ref="kesc"|; が考案したものである。
   >
   \thm|type="prp"|<
     \p<
       圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> を考える。
-      余 Eilenberg–Moore 圏との随伴 &m<\sp<F><!> \dashv; \sp<G><!>: \sp<\scr<C>><!> \to; \scr<C>> と余 Kleisli 圏との随伴 &m<\sb<F><!> \dashv; \sb<G><!>: \sb<\scr<C>><!> \to; \scr<C>> は、いずれも上記の標準的な構成でもとのコモナド &m<(!, `d, `e)> を生成する。
+      余 Eilenberg–Moore 圏との随伴 &m<\sp<F><!> \dashv; \sp<G><!>: \sp<\scr<C>><!> \to; \scr<C>> と余 Kleisli 圏との随伴 &m<\sb<F><!> \dashv; \sb<G><!>: \sb<\scr<C>><!> \to; \scr<C>> は、いずれも上記の標準的な構成で元のコモナド &m<(!, `d, `e)> を生成する。
     >
   >
   \prf<
@@ -315,7 +315,7 @@
   >
   \p<
     では逆に、随伴対から始めてコモナドを作り、そのコモナドから余 Eilenberg–Moore 圏や余 Kleisli 圏を作るともとに戻るかと言うと、こちらは残念ながらそうはならない。
-    しかし、次のような意味で、もとの随伴対は余 Eilenberg–Moore 圏と余 Kleisli 圏の中間には位置する。
+    しかし、次のような意味で、元の随伴対は余 Eilenberg–Moore 圏と余 Kleisli 圏の中間には位置する。
   >
   \thm|type="prp",id="comp"|<
     \p<
