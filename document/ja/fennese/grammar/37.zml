@@ -75,9 +75,9 @@
     これとは別の軸として、用途に注目して次の 3 つに分類することもできる。
   >
   \el|type="par"|<
-    \li<\et<派生辞\fl<derivational affix>>\ed<語根に付いて語幹を作る>>
-    \li<\et<屈折辞\fl<inflectional affix>>\ed<語幹や辞に付いて屈折した語形を作る>>
-    \li<\et<連結辞\fl<conjunction>>\ed<複数の語を繋いで句を作る>>
+    \li<\rterm|key="はせいじ",id="derivational-affix"|<\et<派生辞\fl<derivational affix>>>\ed<語根に付いて語幹を作る>>
+    \li<\rterm|key="くっせつじ",id="inflectional-affix"|<\et<屈折辞\fl<inflectional affix>>>\ed<語幹や辞に付いて屈折した語形を作る>>
+    \li<\et<連結辞\fl<conjunction>>\ed<複数の句を繋いで大きな句を作る>>
   >
   \p<
     派生辞は全て融辞であり、連結辞は全て離辞であるが、屈折辞には融辞のものと離辞のものがある。
