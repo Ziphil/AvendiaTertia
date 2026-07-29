@@ -22,10 +22,10 @@
           \div|class="title-main"|<Ловгудоо SCP>
           \div|class="title-catch"|<
             \span|class="nowrap"|<Возицла · Севсихла · Дазула>
-            \span|class="nowrap"|<— Лозуннако Лефинно>
+            \span|class="nowrap"|<— Лозуннако Лофинно>
           >
         >
-        \div|class="version"|<β.27>
+        \div|class="version"|<β.32>
       >
     >
 
@@ -34,7 +34,7 @@
         \div|class="information"|<
           \dl|class="information-left"|<
             \div|class="information-left-item"|<
-              \dt|class="information-left-label"|<Лоттусар Литҕев>
+              \dt|class="information-left-label"|<Леттусар Литҕев>
               \dd|class="information-left-value"|<
                 \span|class="information-left-number"|<55>
               >
@@ -42,45 +42,47 @@
           >
           \dl|class="information-right"|<
             \div|class="information-right-item",data-level="5"|<
-              \dt|class="information-right-label"|<Локуггал Лесевсихар>
+              \dt|class="information-right-label"|<Лекуггал Лесевсихар>
               \dd|class="information-right-value"|<Кетер>
             >
           >
         >
         \article|class="article"|<
           \h1|class="heading"|<
-            \span|class="heading-main"|<Лебезхидо Лиггамо Лесевсихро>
+            \span|class="heading-main"|<Лобезхидо Лиггамо Лосевсихро>
           >
           \p|class="paragraph"|<
             ## Object is kept within a 5 by 5 by 2.5 meter square room constructed of cement (50 centimeter thickness), with a Faraday cage surrounding the cement walls.
-            {Лескип-}\sbr<55>{ доззалу ве чедике гине \sbr<\nw<5 М> : \nw<5 М> : \nw<2·Д М>>, доҕлузре чиллавут себгитковзам ӈиллут \sbr<\nw<·Д М>> и́ векуҕажжот-‵фарадеı рацурротез лечиллава.}
+            {Лескип-}\sbr<55>{ доззалу ве чедике гине \sbr<\nw<5 М> : \nw<5 М> : \nw<2·Д М>>, доҕлузре чиллавут сегитковзам ӈиллатут \sbr<\nw<·Д М>> и́ векуҕажжот-‵фарадеı рацурротез лочиллава.}
             ## Access is via a heavy containment door measuring 2 by 2.5 meters constructed on bearings to ensure door closes and locks automatically unless held open deliberately.
-            {Лечдикус авсух гобча гибча диҕна хинда \sbr<\nw<2 М> : \nw<2·Д М>>, доҕлузрезам це (ベアリング) чел (保証する) кох легибач догаззум и́ довегтук зозибцоӈ лозз’ ажжа дозлуале доффусар (意図的に).}
+            {Лочдикус авсух гобча гибчот диҕнот хиндот \sbr<\nw<2 М> : \nw<2·Д М>>, доҕлузрот це (ベアリング) чел (保証する) кох легибач догаззум и́ довезку зозибцоӈ лозз’ ажжа дозлуале доффусар веззухлут.}
             ## Security guards are not to be posted outside SCP-055’s room.
-            {Версусаффа ажж’ абузуц зине лечдикувзам лескипев-}\nw<\sbr<55>{.}>
+            {Версусаффа ажж’ абузуц лезине лочдикувзам лескипев-}\nw<\sbr<55>{.}>
             ## It is further advised that all personnel maintaining or studying other SCP objects in the vicinity try to maintain a distance of at least 50 meters from the geometric center of the room, as long as this is reasonably practical.
-            {Асесвур себуӈхук кох луззе аддесусак везлуар у́ сезуӈар бивассе аскипа лесимреве заух залуала хивта фечча \sbr<\nw<50 М>> локуҕжевзам лолгуткаревзам лечдикув, лоззеок тoсо еко тудо.}
+            ## TODO: аддесусак の定性
+            {Асесвур себуӈхук кох луцзе аддесусак векфуар у́ сезуӈар бивассе аскипа лесимреве заух залуала хивта фечча \sbr<\nw<50 М>> лекуҕжевзам лелгуткаревзам лочдикув, лоззеок тосо еко тудо.}
           >
           \h1|class="heading"|<
-            \span|class="heading-main"|<Леболсико>
+            \span|class="heading-main"|<Лоболсико>
           >
           \p|class="paragraph"|<
             ## SCP-055 is a “self-keeping secret” or “anti-meme”.
-            {Лескип-}\sbr<55>{ ек “фегузам залуар лозуса” у “шетхиндарекодкахузар”.}
+            {Лескип-}\sbr<55>{ ек “фегузам залуар лезуса” у́ “кодкахузар-шетхинда”.}
             ## Information about SCP-055’s physical appearance as well as its nature, behavior, and origins is self-classifying.
-            {Чиҕсо лескипеве-}\sbr<55>{ дофегзумо зозибцоӈ теч ленлисевзам леззиллевзам и́ левзиловзам и́ ловсуковзам и́ лонцунтевзам.}
+            ## TODO: この теч の使い方
+            {Чиҕсо лескипеве-}\sbr<55>{ дофегзумо зозибцоӈ теч ленлисевзам леддизлевзам и́ левзиловзам и́ ловсуковзам и́ ленцунтевзам.}
           >
           \ul|class="normal-list"|<
             \li|class="normal-item"|<
               \p|class="paragraph"|<
                 ## How Site 19 originally acquired SCP-055 is unknown.
-                {Тожуло еко кук вецоинно цинтук ноччоӈ лескипа-}\sbr<55>{ лодитҕос-}\sbr<19>{.}
+                {Тожуло еко кук вецаенно цинтук ледитҕо-}\sbr<19>{ лескипа-}\sbr<55>{ анноччоӈ.}
               >
             >
             \li|class="normal-item"|<
               \p|class="paragraph"|<
                 ## When SCP-055 was obtained, and by whom, is unknown.
-                {Тожуло бал еко кук авцоитан лескипа-}\sbr<55>{ аннодде и́ ’ннес.}
+                {Тожуло бал еко кук авцаетан лескипа-}\sbr<55>{ аннодде и́ ’ннес.}
               >
             >
             \li|class="normal-item"|<
@@ -88,51 +90,51 @@
                 ## SCP-055's physical appearance is unknown.
                 {Тожул бал ек ленлиса лескипев-}\sbr<55>{.}
                 ## It is not indescribable, or invisible.
-                {Ажжок ек ӈа дожуззал у́ молжиса.}
+                {Eк ӈ’ ажжa дожуззал у́ можжиса.}
                 ## Individuals are perfectly capable of entering SCP-055’s container and observing it, taking mental or written notes, making sketches, taking photographs, and even making audio/video recordings.
-                {Пехе фес таду (完璧に) васухла левниссасос лескипевас-}\sbr<55>{, иса колласила ех, и́ уззефуцла и аддазилоӈ у́ вешунуӈ, и́ латогокла ех, и́ вендуц ех, и́ жос буззуцла ех дез ридда у́ везибца.}
+                {Пехе фес таду (完璧に) васухла ловниссасос лескипевас-}\sbr<55>{, иса кодовисла ех, и́ оззефуцла и аддизлоӈ у́ вешунуӈ, и́ латогукла ех, и́ вендуц ех, и́ жо̀с буззуцла ех дез ридда у́ везибца.}
                 ## An extensive log of such observations is on file. 
-                {Адуззуцо цам буззуцко безветучло точчо леколласиковах.}
+                {Адуззуцо цам буззуцко безветучло точчо локодовисковах.}
                 ## However, information about SCP-055’s physical appearance “leaks” out of a human mind soon after such an observation.
-                {(しかしながら), чиҕсо ленлисеве леззиллеве лескипев-}\sbr<55>{ “зорисоз” лешибкозам фунлев седфусре хед колласиле точчоӈ.}
+                {(しかしながら), чиҕсо ленлисеве леддизлеве лескипев-}\sbr<55>{ “зорисоз” лошибкозам лофунларозам седфусре хед кодовисле точчоӈ.}
                 ## Individuals tasked with describing SCP-055 afterwards find their minds wandering and lose interest in the task.
-                {Eвас дофозуц болсила лескипа-}\sbr<55>{ (後で) зале лешибкут хаддилут иса мануж лосаддубак лофзуцковзам.}
+                {Евас дофозуцар болсила лескипа-}\sbr<55>{ (後で) зале лошибкут далислут иса мануж лесаддубак лофозуцковзам.}
                 ## Individuals tasked with sketching a copy of a photograph of SCP-055 are unable to remember what the photograph looks like, as are researchers overseeing these tests.
-                {Eвас дофозуц надефуцла бавуска венуццовах лескипевах-}\sbr<55>{ ажжа таду везлуала кок молсиз ноччоӈ ловенуццо, и́ точ бал лосезсуӈ лефовисар то̀ лекоззахифла.}
+                {Евас дофозуцар надефуцла бавуска венуццовах лескипевах-}\sbr<55>{ ажжа таду везлуала кок молсиз ноччоӈ ловнуццо, и́ точ бал лесезсуӈ лефовисар то̀ локоззахифла.}
                 ## Security personnel who have observed SCP-055 via closed-circuit television cameras emerge after a full shift exhausted and effectively amnesiac about the events of the previous hours.
-                {Аддесусак берсусаффе колласир лескипа-}\sbr<55>{ лос везибцареболуса ведҕин хед безкахузле шутоӈ, и́ бамуҕҕез са манужлос ловоззуцко сеф каивкове лонучаммове зебизховот диссаровот.}
+                {Аддесусак версусаффе кодовисар лескипа-}\sbr<55>{ лос везибцареболусот ведҕин хед безкахузле шутоӈ, и́ бамуҕҕез са манужлос ловоззуцко сеф локаивкове лонучаммове зебизховот диссаровот.}
               >
             >
             \li|class="normal-item"|<
               \p|class="paragraph"|<
                 ## Who authorized the construction of SCP-055’s containment room, why it was constructed in this way, or what the purpose of the described Containment Procedures may be, are all unknown.
-                {Тожуло бал еко, кук нес фездун ҕалузла лечдико лесевсихра лескипевах-}\sbr<55>{, ибав кук гох носозам ҕалунно тосо точчоӈ, ибав кук нос ек лоззух лебезхидовас лесевсихровас ледошбуккаровас идди.}
+                {Тожуло бал еко, кук нес фездун ҕалулла лочдико лосевсихра лескипевах-}\sbr<55>{, ибав кук гох носозам ҕалунно тосо точчоӈ, ибав кук нос ек леззух лобезхидовас лосевсихровас лодошбуккаровас идди.}
               >
             >
             \li|class="normal-item"|<
               \p|class="paragraph"|<
                 ## Despite SCP-055’s container being easily accessible, all personnel at Site 19 claim no knowledge of SCP-055’s existence when challenged.
-                {Левниссасос лескипев-}\sbr<55>{ адду васухла хунаддук, и́ луззе кад аддесусак лодитҕове-}\sbr<19>{ (主張する) кок зале ажжо̀ тулкут лескипеве-}\sbr<55>{ до домфикле.}
+                {Ловниссасос лескипевас-}\sbr<55>{ адду васухла сулаххук, и́ луцзе кад аддесусак ледитҕове-}\sbr<19>{ аокиз кок зале ажжо̀ тулкут лескипеве-}\sbr<55>{ до домфикле.}
               >
             >
           >
           \p|class="paragraph"|<
             ## All of these facts are periodically rediscovered, usually by chance readers of this file, causing a great deal of alarm.
-            {То̀ лекиаво безриццалук дозбиҕҕо, жиффасук фесезам катушрезам биттачук ѐ ловедуска, и́ сауко ех са нахимра вокуззака (多大な).}
+            {То̀ локиаво безриццалук дозбиҕҕо, жиффасук фесезам катушрезам биттачук ѐ ловдуска, и́ сауко ех са нахимра вокуззака (多大な).}
             ## This state of concern lasts minutes at most, before the matter is simply forgotten about.
             {Ѐ лечез залуез гона зебизхи чодулви, и́ лохудае ӈа зоннуж (問題).}
           >
           \p|class="paragraph"|<
             ## A great deal of scientific data has been recorded from SCP-055, but cannot be studied.
-            {Зи̂ӈко ребуцласо бизковот (多大な) добуззуцо сеф лескипеве-}\sbr<55>{, и́ ’жжок адду ӈa сезунла ох.}
+            {Зиӈко ребуцласо бизековот (多大な) добуззуцо сеф лескипеве-}\sbr<55>{, и́ ’жж’ адду ӈа сезунла ох.}
           >
           \p|class="paragraph"|<
             ## At least one attempt has been made to destroy SCP-055, or possibly move it from containment at Site 19 to another site, meeting failure for reasons unknown.
-            {Аффес захифан фечча шитот риццалот бобдуддала лескипа-}\sbr<55>{ у́ сенсилла ех лодитҕозам-}\sbr<19>{ фосос бивассос, и́ жаммуҕан ох ҕа гох ку̂хаззозам тожулозам.}
+            {Аффес захифан фечча шитот риццалот бобдуддала лескипа-}\sbr<55>{ у́ сенсилла ех ледитҕозам-}\sbr<19>{ фосос бивассос, и́ жаммуҕан ох ӈа гох кухаззозам тожулозам.}
           >
           \p|class="paragraph"|<
             ## SCP-055 may present a major physical threat and indeed may have killed many hundreds of personnel, and we would not know it.
-            {Лескип-}\sbr<55>{ (かもしれない) каху̂ззе (脅威) аддазила (重大な) и́ (かもしれない) (実際に) жаӈубан аддесуска бизихебиндевот, и́ ’жжок ӈа бамедду тулла кок точ ну́ ’жжоч.}
+            {Лескип-}\sbr<55>{ (かもしれない) каху̂ззе (脅威) аддизла (重大な) и́ (かもしれない) (実際に) жаӈубан аддесуска бизихебиндевот, и́ ’жжа бамедду ӈа тулла кок точ ну́ ’жжоч.}
             ## Certainly it presents a gigantic memetic/mental threat, hence its Keter classification.
             ## TODO: шетхиндара と шибкара は形容詞形で良いか (別個の形容詞を用意すべきではないか)
             {(確実に) чаб сук саукар (脅威) шетхиндара у́ шибкара (多大な), и́ докаггул саг ‵кетер.}
@@ -171,7 +173,7 @@
             \div|class="document-main"|<
               \p|class="paragraph"|<
                 ## Hey, if this thing really is an “anti-meme”, why doesn’t the fact that it’s an “anti-meme” get wiped?
-                {Вех, сомеок ѝ лосук ек иктук “шетхиндарекодкахузар”, гох носозам ажжа доздуфо лочиҕсо кук тос ек “шетхиндарекодкахузар”?}
+                {Вех, сомеок ѝ лесук ек иктук “кодкахузар-шетхинда”, гох носозам ажжа доздуфо лочиҕсо кук тос ек “кодкахузар-шетхинда”?}
                 ## We must be wrong about that somehow.
                 {(見過ごす) (違いない) аффосе.}
                 ## Wait a minute, what if we were to keep notes about what it isn’t?
@@ -193,7 +195,7 @@
             \div|class="document-main"|<
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  {Лешгибко ‵хıуз}[ `;]
+                  {Лошгибко ‵хıуз}[ `;]
                 >
                 ## Okay, I’m going to need to ask you some questions about number 55 now.
                 {Цанулла, едде езаухо нафикла шес зебизха сеф литҕеве лессимрессимреве.}
@@ -207,7 +209,7 @@
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  {Лешгибко ‵хıуз}[ `;]
+                  {Лошгибко ‵хıуз}[ `;]
                 >
                 ## SCP object 55.
                 {Литаҕ лескип лессимрессимар.}
@@ -219,16 +221,16 @@
                   \span|class="redaction"|<       >[ `;]
                 >
                 ## Um, I don’t know what you’re talking about.
-                {Е, ажжок илси кок теришо сеф носе.}
+                {Е, ажж’ илси кок теришо сеф носе.}
                 ## I don’t think we have a 55.
-                {Ишбик кок ажжок бамезле ассимрессимра.}
+                {Ишбик кок ажжa бамезле ассимрессимра.}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  {Лешгибко ‵хıуз}[ `;]
+                  {Лошгибко ‵хıуз}[ `;]
                 >
                 ## Okay, then, ███████, I’d like you to tell me what you’ve been doing for the past two hours.
-                {(よし) (では), \span|class="redaction"|<       >, езоро шес чаҕилла цос коса тесукан видар ух до лебивсе ледиссаре левнучамме.}
+                {(よし) (では), \span|class="redaction"|<       >, езоро шес чаҕилла цос коса тесукан видар ух до лобивсе лодиссаре ловнучамме.}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
@@ -237,14 +239,14 @@
                 ## What?
                 {Аннос?}
                 ## I… (subject appears uncomfortable) I don’t know.
-                {Ем…, \span|class="depiction"|<(ливас молсиз цадожуссар)> aжжок итул.}
+                {Ем…, \span|class="depiction"|<(ливас молсиз цадожуссар)> ажжок итул.}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  {Лешгибко ‵хıуз}[ `;]
+                  {Лошгибко ‵хıуз}[ `;]
                 >
                 ## Okay, then, do you remember that we all agreed that it wasn’t spherical?
-                {(よし) (では), нок тевезлуе кок бамошетеришно леҕиддут кок хое екан ажжа фисар?}
+                {(よし) (では), нок тевезлуе кок бамошетеришно леҕиддот кок хое екан ажжа фисар?}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
@@ -261,7 +263,7 @@
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  {Лешгибко ‵хıуз}[ `;]
+                  {Лошгибко ‵хıуз}[ `;]
                 >
                 ## So you remember it now?
                 {Ита тевенцикке ех, ноч?}
@@ -273,20 +275,20 @@
                 ## Well, no.
                 {Ем, ажжоч.}
                 ## I mean, I don’t know what it is, but I know there is one.
-                {(つまり), aжжок итул кок нос ек хое, иӈ’ итул кок бокив хое.}
+                {(つまり), ажж’ итул кок нос ек хое, иӈ’ итул кок бокив хое.}
                 ## It’s something you can’t remember.
-                {Ек кос aжжок адду залуала воззуцка сеф уве.}
+                {Ек кос ажж’ адду залуала воззуцка сеф уве.}
                 ## And it’s not a sphere.
                 {Ибав ек ажжа фисар.}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  {Лешгибко ‵хıуз}[ `;]
+                  {Лошгибко ‵хıуз}[ `;]
                 >
                 ## Wait a minute.
                 {Залуала тижноӈ.}
                 ## What’s not a sphere?
-                {Аннос ек aжжа фисар?}
+                {Аннос ек ажжа фисар?}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
@@ -297,7 +299,7 @@
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  {Лешгибко ‵хıуз}[ `;]
+                  {Лошгибко ‵хıуз}[ `;]
                 >
                 ## Object what?
                 {Литаҕ аннос?}
@@ -307,11 +309,11 @@
                   \span|class="redaction"|<       >[ `;]
                 >
                 ## Doc, do you remember agreeing that something wasn’t shaped like a sphere?
-                {Лешгибко, нок товезлуо кок бамешетеришан кок аффос aжжа зален дизлут фисрут?}
+                {Лошгибко, нок товезлуо кок бамешетеришан кок аффос ажжа зален дизлут фисрут?}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
-                  {Лешгибко ‵хıуз}[ `;]
+                  {Лошгибко ‵хıуз}[ `;]
                 >
                 ## Oh, right!
                 {Ох, точ!}
