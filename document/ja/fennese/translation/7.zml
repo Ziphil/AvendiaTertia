@@ -145,7 +145,7 @@
           >
           \p|class="paragraph"|<
             ## The author puts forward the hypothesis that SCP-055 was never formally acquired by ████████████ ████████ and is in fact an autonomous or remotely-controlled agent, inserted at Site 19 by an unidentified third party for one or all of the following purposes:
-            {Лессуак сафиц лобехиска кок, лескип-}\sbr<55>{ довецаетан жодевук (公的に) ви ‵\span|class="redaction"|<            >-\span|class="redaction"|<        >, и́ ек киавук кѐ зозсих вешибак у́ можиспареобуттаҕ севӈуцан ух ледитҕос-}\sbr<19>{ аффѐ кодбивассе коттожичал чел шитес у́ луцзес ѝ леззухев.⹀}
+            {Лессуак исфиц лобехиска кок, лескип-}\sbr<55>{ довецаетан жодевук (公的に) ви ‵\span|class="redaction"|<            >-\span|class="redaction"|<        >, и́ ек киавук кѐ зозсих вешибак у́ можиспареобуттаҕ севӈуцан ух ледитҕос-}\sbr<19>{ аффѐ кодбивассе коттожичал чел шитес у́ луцзес ѝ леззухев.⹀}
           >
           \ul|class="normal-list"|<
             \li|class="normal-item"|<
@@ -171,6 +171,7 @@
           >
           \p|class="paragraph"|<
             ## No action to counter any of these potential threats is suggested, or indeed theoretically possible.
+            {Ажжа досецусно зихассо (対抗する) те (脅威) (潜在的), у́ лоцунтозам еко ажжа туду.}
           >
           \h1|class="heading"|<
             \span|class="heading-main"|<(補遺)>
@@ -181,7 +182,7 @@
                 ## Hey, if this thing really is an “anti-meme”, why doesn’t the fact that it’s an “anti-meme” get wiped?
                 {Вех, сомеок ѝ лесук ек иктук “кодкахузар-шетхинда”, гох носозам ажжа доздуфо лочиҕсо кук тос ек “кодкахузар-шетхинда”?}
                 ## We must be wrong about that somehow.
-                {Егтукко кок (見過ごす) аффосе.}
+                {Егтукко кок бамозолси аффосе.}
                 ## Wait a minute, what if we were to keep notes about what it isn’t?
                 {Залуала тижноӈ, анночча сомеок бамосауко офуззаца сеф косеве ажж’ ек хое?}
                 ## Would we remember those?
@@ -196,6 +197,13 @@
           \h1|class="heading"|<
             \span|class="heading-main"|<Ловдуско 2>
             \span|class="heading-sub"|<{— Зочҕиско ви лешгибкев ‵жон-‵марачек}>
+          >
+          \p|class="paragraph"|<
+            ## Survey team #19-055-127BXE was successfully able to enter SCP-055’s container and ascertain the appearance and, to some degree, the nature of the object.
+            ## Notes were taken according to the project methodology (see ████████████), after which the container was sealed again.
+          >
+          \p|class="paragraph"|<
+            ## Excerpt from a transcript of personnel debriefing follows:
           >
           \section|class="document"|<
             \div|class="document-main"|<
@@ -229,7 +237,7 @@
                 ## Um, I don’t know what you’re talking about.
                 {Е, ажж’ илси кок теришо сеф носе.}
                 ## I don’t think we have a 55.
-                {Ишбик кок ажжa бамезле ассимрессимра.}
+                {Ишбик кок ажжa бамезле лессимрессимра.}
               >
               \p|class="paragraph"|<
                 \span|class="speaker"|<
@@ -263,7 +271,7 @@
                 ## Oh, right!
                 {Ох, точ!}
                 ## It isn’t round at all!
-                {Хое екан (確かに) ажжа фисар!}
+                {Коччук теришно, хое екан ажжа фисар!}
                 ## Object 55 isn’t round!
                 {Литҕеве лессимрессимреве ек ажжа фисар!}
               >
@@ -325,6 +333,16 @@
                 {Ох, точ!}
               >
             >
+          >
+          \p|class="paragraph"|<
+            ## It appears to be possible to remember what SCP-055 is not (negations of fact), and to repeatedly deduce its existence from these memories.
+          >
+          \p|class="paragraph"|<
+            ## Personnel involved in Survey #19-055-127BXE reported moderate levels of disorientation and psychological trauma associated with cycles of repeated memory and forgetfulness of SCP-055.
+            ## However, no long-term behavioral or health problems were observed, and psych assessments of survey personnel showed consistent reports of this distress fading over time.
+          >
+          \p|class="paragraph"|<
+            ## Recommendations: It may be worthwhile to post at least one staff member capable of remembering the existence of SCP-055 to each critical site.
           >
         >
       >
