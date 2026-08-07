@@ -24,7 +24,7 @@ manager.registerElementRule("slide", "page", (transformer, document, element) =>
     self.appendElement("script", (self) => {
       self.addClassName("speakerdeck-embed");
       self.setAttribute("async", "async");
-      self.setAttribute("data-id", element.getAttribute("code"));
+      self.setAttribute("data-id", element.getAttribute("code") ?? "");
       self.setAttribute("data-ratio", "1.33333333333333");
       self.setAttribute("src", "http://speakerdeck.com/assets/embed.js");
     });
@@ -42,6 +42,19 @@ manager.registerElementRule("youtube", "page", (transformer, document, element) 
       self.setAttribute("allowfullscreen", "allowfullscreen");
       self.setAttribute("frameborder", "0");
       self.setAttribute("src", "https://www.youtube.com/embed/" + element.getAttribute("code"));
+    });
+  });
+  return self;
+});
+
+manager.registerElementRule("nicovideo", "page", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("div", (self) => {
+    self.addClassName("nicovideo");
+    self.setBlockType("bordered", "bordered");
+    self.appendElement("script", (self) => {
+      self.setAttribute("type", "text/javascript");
+      self.setAttribute("src", "https://embed.nicovideo.jp/watch/" + element.getAttribute("code") + "/script");
     });
   });
   return self;

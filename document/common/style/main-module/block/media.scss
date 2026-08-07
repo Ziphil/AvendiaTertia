@@ -38,3 +38,16 @@
     height: 100%;
   }
 }
+
+.nicovideo {
+  width: 100%;
+  max-width: $main-max-width * 0.75;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  box-sizing: border-box;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
