@@ -515,6 +515,9 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
   &[data-brand="github"]::before {
     @include icon("brand", "\F09B");
   }
+  &[data-brand="note"]::before {
+    @include custom-icon("note");
+  }
 }
 
 .contact-explanation {

@@ -104,6 +104,20 @@ $monospace-letter-spacing: -0.05em;
   }
 }
 
+@mixin custom-icon($kind) {
+  aspect-ratio: 1;
+  display: block;
+  background-color: currentcolor;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  content: "";
+  @if $kind == "note" {
+    width: 0.85em;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='139.57 140.72 213.86 211.56'%3E%3Cpath d='m139.57,142.06c41.19,0,97.6-2.09,138.1-1.04,54.34,1.39,74.76,25.06,75.45,83.53.69,33.06,0,127.73,0,127.73h-58.79c0-82.83.35-96.5,0-122.6-.69-22.97-7.25-33.92-24.9-36.01-18.69-2.09-71.07-.35-71.07-.35v158.96h-58.79v-210.22Z'/%3E%3C/svg%3E");
+  }
+}
+
 @mixin text-size-adjust {
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

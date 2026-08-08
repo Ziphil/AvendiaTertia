@@ -137,6 +137,9 @@ $footer-site-title-unit: 5.6rpx;
   &[data-brand="github"]::before {
     @include icon("brand", "\F09B");
   }
+  &[data-brand="note"]::before {
+    @include custom-icon("note");
+  }
 }
 
 .footer-copyright {
