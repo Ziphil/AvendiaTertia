@@ -10,18 +10,18 @@ manager.registerElementRule("img", "page", (transformer, document, element, scop
   self.appendElement("img", (self) => {
     self.addClassName("image");
     if (element.hasAttribute("src")) {
-      self.setAttribute("src", element.getAttribute("src"));
+      self.setAttribute("src", element.getAttribute("src")!);
     }
     if (element.hasAttribute("alt")) {
-      self.setAttribute("alt", element.getAttribute("alt"));
+      self.setAttribute("alt", element.getAttribute("alt")!);
     } else {
       self.setAttribute("alt", "");
     }
     if (element.hasAttribute("width")) {
-      self.setAttribute("width", element.getAttribute("width"));
+      self.setAttribute("width", element.getAttribute("width")!);
     }
     if (element.hasAttribute("height")) {
-      self.setAttribute("height", element.getAttribute("height"));
+      self.setAttribute("height", element.getAttribute("height")!);
     }
   });
   if (!args?.contained) {
@@ -46,13 +46,13 @@ manager.registerElementRule("svg", "page", (transformer, document, element) => {
       self.setAttribute("data-inline", "");
     }
     if (element.hasAttribute("viewbox")) {
-      self.setAttribute("viewBox", element.getAttribute("viewbox"));
+      self.setAttribute("viewBox", element.getAttribute("viewbox")!);
     }
     if (element.hasAttribute("width")) {
-      self.setAttribute("width", element.getAttribute("width"));
+      self.setAttribute("width", element.getAttribute("width")!);
     }
     if (element.hasAttribute("height")) {
-      self.setAttribute("height", element.getAttribute("height"));
+      self.setAttribute("height", element.getAttribute("height")!);
     }
     self.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     self.appendChild(transformer.apply(element, "svg"));

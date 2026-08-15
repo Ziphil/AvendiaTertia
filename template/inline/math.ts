@@ -15,7 +15,7 @@ manager.registerElementRule("math-inline", "page", (transformer, document, eleme
 manager.registerElementRule("math-block", "page", (transformer, document, element, scope, args) => {
   const self = document.createDocumentFragment();
   const markElement = element.searchXpath("math-root/math-mark")[0];
-  const id = element.getAttribute("id");
+  const id = element.getAttribute("id") ?? "";
   if (element.hasAttribute("id")) {
     setNumber(transformer, element, "equation", id);
   }
@@ -57,7 +57,7 @@ manager.registerElementRule("def", "page", (transformer, document, element) => {
 
 manager.registerElementRule("mref", "page", (transformer, document, element, scope, args) => {
   const self = document.createDocumentFragment();
-  const refId = element.getAttribute("ref");
+  const refId = element.getAttribute("ref") ?? "";
   const rawType = element.getAttribute("type");
   const type = (rawType === "thm") ? "theorem" : (rawType === "eq") ? "equation" : "bibliography" as NumberRefType;
   const noLink = element.hasAttribute("nolink") || rawType !== "thm";

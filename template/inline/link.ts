@@ -11,7 +11,7 @@ manager.registerElementRule(["a", "ae", "an"], "page", (transformer, document, e
   self.appendElement("a", (self) => {
     self.addClassName(className);
     if (element.hasAttribute("href")) {
-      self.setAttribute("href", element.getAttribute("href"));
+      self.setAttribute("href", element.getAttribute("href")!);
     }
     if (element.tagName === "ae" || element.hasAttribute("blank")) {
       self.setAttribute("target", "_blank");

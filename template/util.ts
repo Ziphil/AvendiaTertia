@@ -56,7 +56,7 @@ export function getNumber(transformer: AvendiaLightTransformer, element: Element
 
 function createNamePrefix(transformer: AvendiaLightTransformer, element: Element, type: NumberRefType): string | null {
   if (type === "theorem") {
-    const theoremType = element.getAttribute("type");
+    const theoremType = element.getAttribute("type") ?? "";
     const prefix = TRANSLATIONS.math[theoremType]?.[transformer.variables.language] ?? null;
     return prefix;
   } else if (type === "equation") {

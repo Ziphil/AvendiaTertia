@@ -41,7 +41,7 @@ manager.registerElementFactory("series", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const seriesElement = element.searchXpath("/page/series")[0] as Element | undefined;
   if (seriesElement !== undefined) {
-    const number = seriesElement.getAttribute("num");
+    const number = seriesElement.getAttribute("num") ?? "";
     const previousHref = seriesElement.getAttribute("prev");
     const nextHref = seriesElement.getAttribute("next");
     self.appendElement("nav", (self) => {

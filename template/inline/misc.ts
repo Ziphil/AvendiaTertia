@@ -18,8 +18,8 @@ const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("ms", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const rawType = element.getAttribute("t");
-  const [className, type, text] = MUSIC_SYMBOL_SPECS.get(rawType)!;
+  const rawType = element.getAttribute("t") ?? "";
+  const [className, type, text] = MUSIC_SYMBOL_SPECS.get(rawType) ?? ["", "", ""];
   self.appendElement("span", (self) => {
     self.addClassName(className);
     self.setAttribute("data-type", type);
@@ -63,10 +63,10 @@ manager.registerElementRule("box", "page", (transformer, document, element) => {
   self.appendElement("span", (self) => {
     self.addClassName("box");
     if (element.hasAttribute("num")) {
-      self.appendTextNode(element.getAttribute("num"));
+      self.appendTextNode(element.getAttribute("num")!);
     }
     if (element.hasAttribute("tag")) {
-      self.appendTextNode(element.getAttribute("tag").toUpperCase());
+      self.appendTextNode(element.getAttribute("tag")!.toUpperCase());
     }
     self.appendChild(transformer.apply());
   });

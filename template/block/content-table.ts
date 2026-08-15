@@ -40,7 +40,7 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
       self.setAttribute("data-disabled", "");
     }
     if (element.hasAttribute("date")) {
-      const date = element.getAttribute("date");
+      const date = element.getAttribute("date")!;
       self.appendElement("div", (self) => {
         self.addClassName("content-date");
         if (date.match(/^\d+$/)) {
@@ -58,7 +58,7 @@ manager.registerElementRule(["ab", "abo", "aba", "abd"], "page", (transformer, d
       });
     }
     if (element.hasAttribute("href")) {
-      self.setAttribute("href", element.getAttribute("href"));
+      self.setAttribute("href", element.getAttribute("href")!);
     }
     if (element.hasAttribute("blank")) {
       self.setAttribute("target", "_blank");

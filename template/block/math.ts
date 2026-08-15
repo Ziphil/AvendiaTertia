@@ -9,7 +9,7 @@ const manager = new AvendiaTemplateManager();
 
 manager.registerElementRule("thm", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const id = element.getAttribute("id");
+  const id = element.getAttribute("id") ?? "";
   const nameElement = element.getChildElements("name")[0];
   setNumber(transformer, element, "theorem", id);
   self.appendElement("div", (self) => {

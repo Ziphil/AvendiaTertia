@@ -15,7 +15,7 @@ manager.registerElementRule(["h1", "h2", "h3"], "page", (transformer, document, 
     self.setAttribute("data-section", "");
     self.setBlockType(blockType, blockType);
     if (element.hasAttribute("id")) {
-      self.setAttribute("id", element.getAttribute("id"));
+      self.setAttribute("id", element.getAttribute("id")!);
     }
     self.appendElement("div", (self) => {
       innerSelf = self;
@@ -26,17 +26,17 @@ manager.registerElementRule(["h1", "h2", "h3"], "page", (transformer, document, 
       });
     });
     if (element.hasAttribute("tag")) {
-      self.setAttribute("id", element.getAttribute("tag"));
+      self.setAttribute("id", element.getAttribute("tag")!);
       innerSelf.insertHead(document.createElement("span", (self) => {
         self.addClassName(`${className}-tag`);
-        self.appendTextNode("#" + element.getAttribute("tag").toUpperCase() + ".");
+        self.appendTextNode("#" + element.getAttribute("tag")!.toUpperCase() + ".");
       }));
     }
     if (element.hasAttribute("num")) {
-      self.setAttribute("id", element.getAttribute("num"));
+      self.setAttribute("id", element.getAttribute("num")!);
       innerSelf.insertHead(document.createElement("span", (self) => {
         self.addClassName(`${className}-number`);
-        self.appendTextNode("§" + element.getAttribute("num") + ".");
+        self.appendTextNode("§" + element.getAttribute("num")! + ".");
       }));
     }
   });

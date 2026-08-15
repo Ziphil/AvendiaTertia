@@ -17,7 +17,7 @@ manager.registerElementRule("page", "reference-section", (transformer, document,
   let currentSectionSpec = null as ReferenceSectionSpec | null;
   let currentSubsectionSpec = null as ReferenceSectionSpec | null;
   for (const sectionElement of sectionElements) {
-    const tag = sectionElement.getAttribute("tag");
+    const tag = sectionElement.getAttribute("tag") ?? "";
     const href = (tag) ? baseHref + "#" + tag : "";
     const content = transformer.apply(sectionElement, "page").toString();
     if (sectionElement.tagName === "h1") {
@@ -55,8 +55,8 @@ manager.registerElementRule("page", "reference-term", (transformer, document, el
   const termElements = element.searchXpath("//rterm") as Array<Element>;
   const termSpecs = [] as Array<ReferenceTermSpec>;
   for (const termElement of termElements) {
-    const key = termElement.getAttribute("key");
-    const id = termElement.getAttribute("id");
+    const key = termElement.getAttribute("key") ?? "";
+    const id = termElement.getAttribute("id") ?? "";
     const href = (id) ? baseHref + "#" + id : "";
     const content = transformer.apply(termElement, "page").toString();
     termSpecs.push({href, key, id, content});

@@ -18,7 +18,7 @@ manager.registerElementRule("p", "page", (transformer, document, element) => {
     if (element.hasAttribute("num")) {
       self.insertHead(document.createElement("span", (self) => {
         self.addClassName("paragraph-number");
-        self.setAttribute("data-number", element.getAttribute("num"));
+        self.setAttribute("data-number", element.getAttribute("num")!);
       }));
     }
   });

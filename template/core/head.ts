@@ -90,7 +90,7 @@ manager.registerElementRule("use-math", "head", (transformer, document, element)
   const mathStyleString = transformer.environments.mathStyleString;
   const mathScriptString = transformer.environments.mathScriptString;
   if (element.hasAttribute("prefix")) {
-    transformer.variables.numberPrefix = element.getAttribute("prefix");
+    transformer.variables.numberPrefix = element.getAttribute("prefix")!;
   }
   self.appendElement("style", (self) => {
     self.appendChild(document.createTextNode(mathStyleString, (self) => self.options.raw = true));
@@ -104,7 +104,7 @@ manager.registerElementRule("use-math", "head", (transformer, document, element)
 manager.registerElementRule("base", "head", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("base", (self) => {
-    self.setAttribute("href", element.getAttribute("href"));
+    self.setAttribute("href", element.getAttribute("href") ?? "");
   });
   self.appendTextNode("\n");
   return self;

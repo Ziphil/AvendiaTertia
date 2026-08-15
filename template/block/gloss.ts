@@ -79,9 +79,9 @@ manager.registerTextRule("page.gloss", (transformer, document, text) => {
   if (text.previousSibling !== null && text.nextSibling !== null) {
     const previousSibling = text.previousSibling;
     const nextSibling = text.nextSibling;
-    if (previousSibling.isElement() && previousSibling.getAttribute("punc").match(/(\(|\[|«|“)$/)) {
+    if (previousSibling.isElement() && (previousSibling.getAttribute("punc") ?? "").match(/(\(|\[|«|“)$/)) {
       content = "";
-    } else if (nextSibling.isElement() && nextSibling.getAttribute("punc").match(/^(\)|\.|,|:|;|·|!|\?)/)) {
+    } else if (nextSibling.isElement() && (nextSibling.getAttribute("punc") ?? "").match(/^(\)|\.|,|:|;|·|!|\?)/)) {
       content = "";
     } else {
       content = text.data;

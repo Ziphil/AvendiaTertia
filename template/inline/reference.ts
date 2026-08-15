@@ -9,7 +9,7 @@ const manager = new AvendiaTemplateManager();
 manager.registerElementRule("rref", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const referenceHrefs = getReferenceIndex(transformer).section.hrefs;
-  const refTag = element.getAttribute("ref");
+  const refTag = element.getAttribute("ref") ?? "";
   const refHref = referenceHrefs[refTag] ?? "";
   self.appendElement("a", (self) => {
     self.addClassName("ref");
@@ -22,7 +22,7 @@ manager.registerElementRule("rref", "page", (transformer, document, element) => 
 
 manager.registerElementRule("rterm", "page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const id = element.getAttribute("id");
+  const id = element.getAttribute("id") ?? "";
   self.appendElement("span", (self) => {
     self.setAttribute("id", id);
     self.appendChild(transformer.apply());

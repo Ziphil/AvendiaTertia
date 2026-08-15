@@ -47,10 +47,10 @@ manager.registerElementRule("input", ["page", "page.form"], (transformer, docume
     self.addClassName("form-input");
     self.setAttribute("type", "text");
     if (element.hasAttribute("id")) {
-      self.setAttribute("id", element.getAttribute("id"));
+      self.setAttribute("id", element.getAttribute("id")!);
     }
     if (element.hasAttribute("size")) {
-      self.setAttribute("size", element.getAttribute("size"));
+      self.setAttribute("size", element.getAttribute("size")!);
     }
     if (element.hasAttribute("width")) {
       self.setAttribute("style", `width: ${element.getAttribute("width")}em;`);
@@ -64,7 +64,7 @@ manager.registerElementRule("button", ["page", "page.form"], (transformer, docum
   const self = document.createDocumentFragment();
   self.appendElement("button", (self) => {
     if (element.hasAttribute("id")) {
-      self.setAttribute("id", element.getAttribute("id"));
+      self.setAttribute("id", element.getAttribute("id")!);
     }
     self.addClassName("form-button");
     self.appendChild(transformer.apply(element, "page"));
@@ -77,7 +77,7 @@ manager.registerElementRule(["a", "ae"], "page.form", (transformer, document, el
   self.appendElement("a", (self) => {
     self.addClassName("form-button");
     if (element.hasAttribute("href")) {
-      self.setAttribute("href", element.getAttribute("href"));
+      self.setAttribute("href", element.getAttribute("href")!);
     }
     if (element.tagName === "ae") {
       self.setAttribute("target", "_blank");

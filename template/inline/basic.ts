@@ -64,7 +64,7 @@ manager.registerElementRule("red", "page", (transformer, document, element) => {
   self.appendElement("span", (self) => {
     self.addClassName("redaction");
     if (element.hasAttribute("len")) {
-      const length = parseInt(element.getAttribute("len"));
+      const length = parseInt(element.getAttribute("len")!);
       self.appendTextNode(" ".repeat(length));
     }
     self.appendChild(transformer.apply());
@@ -77,7 +77,7 @@ manager.registerElementRule("abbr", "page", (transformer, document, element) => 
   self.appendElement("abbr", (self) => {
     self.addClassName("abbreviation");
     if (element.hasAttribute("full")) {
-      const full = element.getAttribute("full");
+      const full = element.getAttribute("full")!;
       self.setAttribute("title", full);
     }
     self.appendChild(transformer.apply());
@@ -88,7 +88,7 @@ manager.registerElementRule("abbr", "page", (transformer, document, element) => 
 manager.registerElementRule("ch", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
   if (element.hasAttribute("c")) {
-    const codePoint = parseInt(element.getAttribute("c"), 16);
+    const codePoint = parseInt(element.getAttribute("c")!, 16);
     self.appendTextNode(String.fromCodePoint(codePoint));
   } else if (element.hasAttribute("n")) {
     const query = element.getAttribute("n");
@@ -125,7 +125,7 @@ const GREEK_DIACRITICS = new Map([["a", "´"], ["g", "`"], ["s", "᾿"], ["sa", 
 
 manager.registerElementRule("d", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const type = element.getAttribute("g") || element.getAttribute("t");
+  const type = (element.getAttribute("g") || element.getAttribute("t")) ?? "";
   self.appendElement("span", (self) => {
     self.addClassName("diacritic");
     self.appendElement("span", (self) => {

@@ -9,7 +9,7 @@ const manager = new AvendiaTemplateManager();
 manager.registerElementRule("history", ["page", "html"], (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const language = transformer.variables.language;
-  const size = parseInt(element.getAttribute("size"));
+  const size = parseInt(element.getAttribute("size") ?? "");
   const scheme = element.getAttribute("scheme") || null;
   const indexPath = transformer.environments.configs.getHistoryIndexPath(language);
   const entries = fs.readFileSync(indexPath, {encoding: "utf-8"}).trim().split("\n").reverse().map((entry) => entry.split(/\s*;\s*/, 3));

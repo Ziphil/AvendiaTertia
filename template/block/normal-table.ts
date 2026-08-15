@@ -46,10 +46,10 @@ manager.registerElementRule(["th", "td"], "page.table.tr", (transformer, documen
   const self = document.createDocumentFragment();
   self.appendElement(element.tagName, (self) => {
     if (element.hasAttribute("row")) {
-      self.setAttribute("rowspan", element.getAttribute("row"));
+      self.setAttribute("rowspan", element.getAttribute("row")!);
     }
     if (element.hasAttribute("col")) {
-      self.setAttribute("colspan", element.getAttribute("col"));
+      self.setAttribute("colspan", element.getAttribute("col")!);
     }
     self.appendChild(transformer.apply(element, "page"));
   });
