@@ -1,7 +1,7 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {Affix, AffixType, Entry, Word} from "ogorasso";
+import {AffixEntry, AffixType, Entry, Word} from "ogorasso";
 import {ReactElement} from "react";
 import {data} from "../util/data";
 import AffixView from "./affix-view";
@@ -26,7 +26,7 @@ const AffixTable = function ({
                 {(affixType === "prefixal") ? (
                   <>語幹前</>
                 ) : (affixType === "infixal") ? (
-                  <>幹母音前</>
+                  <>成幹母音前</>
                 ) : (affixType === "suffixal") ? (
                   <>語幹後</>
                 ) : (affixType === "terminal") ? (
@@ -52,11 +52,11 @@ const AffixTable = function ({
             <div key={affixType} className="affix-header-cell">
               <span>
                 {(affixType === "preposition") ? (
-                  <>前置詞</>
+                  <>前置辞</>
                 ) : (affixType === "special") ? (
-                  <>特殊詞</>
+                  <>汎詞</>
                 ) : (affixType === "particle") ? (
-                  <>小詞</>
+                  <>小辞</>
                 ) : null}
               </span>
             </div>
@@ -84,12 +84,12 @@ const ADDITIONAL_TYPES = ["preposition", "special", "particle"] as const;
 
 type AdditionalType = (typeof ADDITIONAL_TYPES)[number];
 
-function getAffixWords(entries: Array<Entry>): Record<AffixType, Array<Affix>> & Record<AdditionalType, Array<Word>> {
+function getAffixWords(entries: Array<Entry>): Record<AffixType, Array<AffixEntry>> & Record<AdditionalType, Array<Word>> {
   const affixWords = {
-    prefixal: [] as Array<Affix>,
-    infixal: [] as Array<Affix>,
-    suffixal: [] as Array<Affix>,
-    terminal: [] as Array<Affix>,
+    prefixal: [] as Array<AffixEntry>,
+    infixal: [] as Array<AffixEntry>,
+    suffixal: [] as Array<AffixEntry>,
+    terminal: [] as Array<AffixEntry>,
     preposition: [] as Array<Word>,
     special: [] as Array<Word>,
     particle: [] as Array<Word>
@@ -100,11 +100,11 @@ function getAffixWords(entries: Array<Entry>): Record<AffixType, Array<Affix>> &
       if (affixType !== null) {
         affixWords[affixType].push(entry);
       }
-    } else if (entry.kind === "word" && entry.sections[0]?.equivalents[0]?.titles[0] === "前置詞") {
+    } else if (entry.kind === "word" && entry.sections[0]?.equivalents[0]?.titles[0] === "前置辞") {
       affixWords.preposition.push(entry);
-    } else if (entry.kind === "word" && entry.sections[0]?.equivalents[0]?.titles[0] === "特殊詞") {
+    } else if (entry.kind === "word" && entry.sections[0]?.equivalents[0]?.titles[0] === "汎詞") {
       affixWords.special.push(entry);
-    } else if (entry.kind === "word" && entry.sections[0]?.equivalents[0]?.titles[0] === "小詞") {
+    } else if (entry.kind === "word" && entry.sections[0]?.equivalents[0]?.titles[0] === "小辞") {
       affixWords.particle.push(entry);
     }
   }

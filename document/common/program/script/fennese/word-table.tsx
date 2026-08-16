@@ -1,7 +1,7 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {Entry, PATTERN_CATEGORIES, PATTERN_TYPES, RADICALS, Radicals, Word} from "ogorasso";
+import {Entry, PATTERN_SORTS, PATTERN_TYPES, RADICALS, Root, Word} from "ogorasso";
 import {ReactElement} from "react";
 import {Dictionary} from "./word";
 import WordRow from "./word-row";
@@ -20,29 +20,29 @@ const WordTable = function ({
       <div className="word-header-row">
         <div/>
         <div/>
-        {PATTERN_CATEGORIES.map((patternCategory) => PATTERN_TYPES.map((patternType) => (
-          <div key={patternCategory + "-" + patternType} className="word-header-cell">
+        {PATTERN_SORTS.map((patternSort) => PATTERN_TYPES.map((patternType) => (
+          <div key={patternSort + "-" + patternType} className="word-header-cell">
             <span>
-              {(patternCategory === "verbal") ? (
-                <>用言 </>
+              {(patternSort === "verbant") ? (
+                "用言 "
               ) : (
-                <>体言 </>
+                "体言 "
               )}
               {(patternType === "ground") ? (
-                <>G 型</>
+                "G 型"
               ) : (patternType === "doubleMedial") ? (
-                <>D<sub className="sub">2</sub> 型</>
+                "Dm 型"
               ) : (patternType === "doubleFinal") ? (
-                <>D<sub className="sub">3</sub> 型</>
+                "Df 型"
               ) : (patternType === "doubleInitial") ? (
-                <>D<sub className="sub">1</sub> 型</>
+                "Di 型"
               ) : null}
             </span>
           </div>
         )))}
       </div>
-      {wordSpecs.map(([rootNumber, {radicals, words, borrowed, first}]) => (
-        <WordRow key={rootNumber} radicals={radicals} words={words} borrowed={borrowed} first={first}/>
+      {wordSpecs.map(([rootNumber, {root, words, borrowed, first}]) => (
+        <WordRow key={rootNumber} root={root} words={words} borrowed={borrowed} first={first}/>
       ))}
       <div className="word-footer-row">
         <div className="root-count">{dictionary.rootCount}</div>
@@ -73,13 +73,13 @@ function groupEntriess(entries: Array<Entry>): Array<[number, WordSpec]> {
       const rootNumber = entry.anatomy.root.number;
       if (!wordSpecs.has(rootNumber)) {
         const borrowed = borrowedRootNumbers.has(rootNumber);
-        wordSpecs.set(rootNumber, {radicals: entry.anatomy.root.radicals, words: [], borrowed, first: false});
+        wordSpecs.set(rootNumber, {root: entry.anatomy.root.root, words: [], borrowed, first: false});
       }
       wordSpecs.get(rootNumber)!.words.push(entry);
     }
   }
   const wordSpecEntries = Array.from(wordSpecs.entries());
-  wordSpecEntries.sort(([, {radicals: firstRoot}], [, {radicals: secondRoot}]) => {
+  wordSpecEntries.sort(([, {root: firstRoot}], [, {root: secondRoot}]) => {
     if (firstRoot !== null && secondRoot !== null) {
       const firstRootIndices = firstRoot.map((radical) => RADICALS.indexOf(radical).toString().padStart(2, "0"));
       const secondRootIndices = secondRoot.map((radical) => RADICALS.indexOf(radical).toString().padStart(2, "0"));
@@ -90,7 +90,7 @@ function groupEntriess(entries: Array<Entry>): Array<[number, WordSpec]> {
   });
   let currentInitialRadical = "";
   for (const [, wordSpec] of wordSpecEntries) {
-    const initialRadical = wordSpec.radicals[0];
+    const initialRadical = wordSpec.root[0];
     if (initialRadical !== currentInitialRadical) {
       currentInitialRadical = initialRadical;
       wordSpec.first = true;
@@ -100,7 +100,7 @@ function groupEntriess(entries: Array<Entry>): Array<[number, WordSpec]> {
 }
 
 type WordSpec = {
-  radicals: Radicals,
+  root: Root,
   words: Array<Word>,
   borrowed: boolean,
   first: boolean

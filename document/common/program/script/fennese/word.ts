@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import {Entry, convertEntry} from "ogorasso";
+import {Entry, deserializeEntry} from "ogorasso";
 
 
 export interface Dictionary {
@@ -21,7 +21,7 @@ export async function getDictionary(): Promise<Dictionary> {
   const params = new URLSearchParams(window.location.search);
   const apiKey = params.get("key");
   const rawEntries = (!!apiKey) ? await fetchRawEntriesFromZpdic(apiKey) : await fetchRawEntriesFromGoogle();
-  const entries = rawEntries.map(convertEntry);
+  const entries = rawEntries.map(deserializeEntry);
   const rootCount = entries.filter((entry) => entry.kind === "root" && entry.origin === "proper").length;
   const wordCount = entries.filter((entry) => entry.kind === "word").length;
   console.log(`Words fetched from api: ${rootCount} roots, ${wordCount} words`);

@@ -1,14 +1,14 @@
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.d.ts"/>
 /// <reference path="../../../../../node_modules/typescript/lib/lib.dom.iterable.d.ts"/>
 
-import {Affix, Word} from "ogorasso";
+import {AffixEntry, Word} from "ogorasso";
 import {ReactElement} from "react";
 
 
 const AffixView = function ({
   word
 }: {
-  word: Affix | Word
+  word: AffixEntry | Word
 }): ReactElement {
 
   const dictionaryUrl = `https://zpdic.ziphil.com/dictionary/fennese?kind=exact&number=${word.number}`;

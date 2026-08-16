@@ -14,8 +14,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "removeComments": true,
-    "ignoreDeprecations": "6.0"
+    "removeComments": true
   },
   "include": [
     "generator/**/*",
