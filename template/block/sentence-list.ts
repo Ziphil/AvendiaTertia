@@ -33,7 +33,7 @@ manager.registerElementRule("sh", "page.xl.li", (transformer, document, element)
     }
     if (element.hasAttribute("mark")) {
       const mark = element.getAttribute("mark");
-      const markString = (mark === "u") ? "⁎" : "?";
+      const markString = (mark === "u") ? "×" : "?";
       self.insertHead(document.createElement("span", (self) => {
         self.addClassName("sentence-mark");
         self.appendTextNode(markString);
