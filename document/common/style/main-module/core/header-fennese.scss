@@ -96,6 +96,6 @@ $header-title-unit: 16rpx;
   font-size: $header-title-unit * 4;
   color: var(--logo-color);
   text-transform: uppercase;
-  -webkit-text-stroke: ($header-title-unit * 0.25) var(--page-background-color);
+  -webkit-text-stroke: ($header-title-unit * 0.25) alpha(black, 0.5);
   paint-order: stroke;
 }
