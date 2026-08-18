@@ -36,6 +36,7 @@
       "introduction": {"ja": "入門資料", "en": "Introduction"},
       "grammar": {"ja": "文法", "en": "Grammar"},
       "database": {"ja": "データベース", "en": "Database"},
+      "culture": {"ja": "文化", "en": "Culture"},
       "work": {"ja": "創作", "en": "Works"},
       "translation": {"ja": "翻訳", "en": "Translations"},
       "document": {"ja": "資料", "en": "Documents"},

@@ -90,16 +90,6 @@
               >
             >
           >
-          \a|class="card-item",href="/shaleian/culture/"|<
-            \div|class="card-title"|<
-              \div|class="card-title-japanese"|<文化>
-            >
-            \div|class="card-explanation"|<
-              \div|class="card-explanation-text"|<
-                シャレイア語に特有の文化や慣習についてまとめてあります。
-              >
-            >
-          >
           \a|class="card-item",href="/shaleian/document/"|<
             \div|class="card-title"|<
               \div|class="card-title-japanese"|<資料>
@@ -108,6 +98,16 @@
               \div|class="card-explanation-text"|<
                 シャレイア語に関する様々な資料集です。
                 学習に利用できる例文集や単語などの便利な一覧表などがあります。
+              >
+            >
+          >
+          \a|class="card-item",href="/shaleian/culture/"|<
+            \div|class="card-title"|<
+              \div|class="card-title-japanese"|<文化>
+            >
+            \div|class="card-explanation"|<
+              \div|class="card-explanation-text"|<
+                シャレイア語に特有の文化や慣習についてまとめてあります。
               >
             >
           >

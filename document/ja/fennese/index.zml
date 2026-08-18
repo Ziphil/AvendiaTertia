@@ -103,6 +103,17 @@
                 >
               >
             >
+            \a|class="card-item",href="/fennese/culture/"|<
+              \div|class="card-background",aria-hidden="true"|;
+              \div|class="card-title"|<
+                \div|class="card-title-japanese"|<文化>
+              >
+              \div|class="card-explanation"|<
+                \div|class="card-explanation-text"|<
+                  フェンナ語にまつわる文化や慣習についてまとめてあります。
+                >
+              >
+            >
             \a|class="card-item",href="/fennese/diary/"|<
               \div|class="card-background",aria-hidden="true"|;
               \div|class="card-title"|<
