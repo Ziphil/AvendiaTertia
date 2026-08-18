@@ -1,0 +1,452 @@
+@charset "utf-8";
+
+@use "sass:math" as *;
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:wght@400;700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap");
+@import "util/reset.scss";
+@import "util/common.scss";
+@import "util/font.scss";
+@import "main-module/variable.scss";
+@import "main-module/color.scss";
+@import "main-module/inline/common.scss";
+@import "main-module/core/footer.scss";
+
+
+$home-width: 85cqi;
+$home-max-width: 1200rpx;
+
+@mixin nonsmall-screen {
+  @media screen and (min-width: 1201px) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @include text-size-adjust;
+  @include fennese-scheme;
+  color: var(--text-color);
+  font-family: $serif-font-family;
+  font-weight: normal;
+  font-feature-settings: "lnum" 1, "palt" 1, "pkna" 1;
+  line-height: 1;
+  text-decoration-skip-ink: none;
+  background-color: var(--page-background-color);
+  background-image: radial-gradient(circle at center, var(--page-background-color) 20%, var(--page-dark-background-color));
+  background-attachment: fixed;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+$hero-light-width: 320px;
+$hero-light-height: 480px;
+
+.hero {
+  --beam-lower-width: min(960px, 95vw);
+  --beam-upper-width: calc(var(--beam-lower-width) * 0.375);
+  background-color: oklch(from var(--main-background-color) l c h / 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  &::before {
+    width: $hero-light-width;
+    height: $hero-light-height;
+    inset-block-start: -$hero-light-height / 2;
+    inset-inline-start: 50%;
+    translate: -50% 0%;
+    border-radius: 50%;
+    background-color: oklch(from var(--primary-color) l c h / 0.5);
+    filter: blur($hero-light-width / 2);
+    position: absolute;
+    content: "";
+    z-index: 1;
+  }
+  &::after {
+    height: 2px;
+    inset-inline: 0px;
+    inset-block-end: 0px;
+    background-image: linear-gradient(to right, transparent, var(--primary-color) 25%, var(--primary-color) 75%, transparent);
+    position: absolute;
+    content: "";
+    z-index: 1;
+  }
+}
+
+.hero-inner {
+  padding-block-start: 80px;
+  padding-block-end: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  @include desktop {
+    width: $home-width;
+    max-width: $home-max-width;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+$pillar-max-alpha: 0.1;
+$beam-count: 12;
+
+.hero-pillar {
+  width: 1px;
+  inset-block: 0px;
+  inset-inline: 50%;
+  translate: -50% 0%;
+  position: absolute;
+  background-image: linear-gradient(to bottom, transparent, oklch(from var(--primary-color) l c h / #{$pillar-max-alpha}));
+  z-index: 0;
+}
+
+.hero-beam {
+  inset-block: 0px;
+  inset-inline: 0px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-beam-line {
+  --width: calc(var(--position) / #{$beam-count + 1} * (var(--beam-lower-width) - var(--beam-upper-width)) + var(--beam-upper-width));
+  --alpha: calc(var(--position) / #{$beam-count + 1} * #{$pillar-max-alpha});
+  width: var(--width);
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, oklch(from var(--primary-color) l c h / var(--alpha)), transparent);
+}
+
+.hero-top {
+  margin-block-end: 80px;
+  row-gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-top-image {
+  width: 48px;
+}
+
+.hero-top-title {
+  font-size: 16px;
+  font-family: var(--special-font-family);
+  font-weight: 300;
+  color: var(--primary-color);
+  letter-spacing: 0.25em;
+  text-indent: 0.25em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-catch {
+  row-gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-catch-main {
+  font-size: 48px;
+  font-weight: 200;
+  font-family: var(--special-font-family);
+  font-style: italic;
+  color: var(--text-color);
+  letter-spacing: 0.125em;
+  text-indent: 0.125em;
+  line-height: 1.375;
+  text-align: center;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.hero-catch-sub {
+  font-size: 24px;
+  font-weight: 275;
+  font-family: var(--special-font-family);
+  font-style: italic;
+  color: oklch(from var(--text-color) l c h / 0.75);
+  letter-spacing: 0.125em;
+  text-indent: 0.125em;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+$myth-max-width: 640rpx;
+
+.myth {
+  margin-block-start: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myth-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  @include desktop {
+    width: $home-width;
+    max-width: $myth-max-width;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.myth-heading {
+  margin-block-end: 48px;
+  row-gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myth-heading-text {
+  text-align: center;
+  &[data-language="fennese"] {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: var(--special-font-family);
+    color: oklch(from var(--primary-color) l c h / 0.75);
+    letter-spacing: 0.25em;
+    text-indent: 0.25em;
+    text-transform: uppercase;
+  }
+  &[data-language="japanese"] {
+    font-size: 14px;
+    font-weight: 300;
+    color: oklch(from var(--text-color) l c h / 0.5);
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+  }
+}
+
+.myth-content {
+  row-gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.myth-parallel {
+  row-gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.myth-parallel-paragraph {
+  line-height: 1.75;
+  text-align: center;
+  &[data-language="fennese"] {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: var(--special-font-family);
+    color: var(--text-color);
+    letter-spacing: 0.0625em;
+    text-indent: 0.0625em;
+  }
+  &[data-language="japanese"] {
+    font-size: 14px;
+    font-weight: 300;
+    color: oklch(from var(--text-color) l c h / 0.5);
+    letter-spacing: 0.125em;
+    text-indent: 0.125em;
+    word-break: auto-phrase;
+  }
+}
+
+.separator {
+  margin-block-start: 64px;
+  margin-block-end: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &::before {
+    width: 1px;
+    height: 96px;
+    background-image: linear-gradient(to bottom, oklch(from var(--primary-color) l c h / 0.5), transparent);
+    content: "";
+  }
+}
+
+.world {
+  margin-block-start: 24px;
+  margin-block-end: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.world-inner {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  @include desktop {
+    width: $home-width;
+    max-width: $home-max-width;
+  }
+  @include mobile {
+    width: 100%;
+    padding-inline: $main-smartphone-horizontal-padding;
+    box-sizing: border-box;
+  }
+}
+
+.world-heading {
+  margin-block-end: 48px;
+  row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.world-heading-text {
+  &[data-language="fennese"] {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: var(--special-font-family);
+    color: oklch(from var(--text-color) l c h / 0.75);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  &[data-language="japanese"] {
+    font-size: 12px;
+    font-weight: 300;
+    color: oklch(from var(--text-color) l c h / 0.5);
+    letter-spacing: 0.5em;
+  }
+}
+
+.world-content {
+  row-gap: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book {
+  padding-block: 48px;
+  background-color: oklch(from var(--main-background-color) l c h / 0.25);
+  border: solid 1px oklch(from var(--text-color) l c h / 0.25);
+  box-shadow: 4px 4px 8px 0px oklch(from var(--main-background-color) l c h / 0.5);
+  position: relative;
+  &::before {
+    width: var(--spine-width);
+    inset-block: 0px;
+    inset-inline-start: 0px;
+    background-image: repeating-linear-gradient(to bottom, var(--main-background-color) 0px, var(--main-background-color) 31px, transparent 31px, transparent 32px);
+    background-position: 0px -12px;
+    position: absolute;
+    content: "";
+  }
+  @include desktop {
+    --spine-width: 24px;
+    padding-inline-start: calc(40px + var(--spine-width));
+    padding-inline-end: 48px;  
+  }
+  @include mobile {
+    --spine-width: 16px;
+    padding-inline-start: calc(#{$main-smartphone-horizontal-padding} + var(--spine-width));
+    padding-inline-end: $main-smartphone-horizontal-padding;
+  }
+}
+
+.book-heading {
+  margin-block-end: 32px;
+  row-gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-heading-text {
+  &[data-language="fennese"] {
+    font-size: 32px;
+    font-weight: 250;
+    font-family: var(--special-font-family);
+    color: var(--primary-color);
+    @include desktop {
+      letter-spacing: 0.125em;
+    }
+    @include mobile {
+      letter-spacing: 0.09375em; 
+    }
+  }
+  &[data-language="japanese"] {
+    font-size: 14px;
+    font-weight: 250;
+    color: oklch(from var(--text-color) l c h / 0.5);
+    letter-spacing: 0.375em;
+  }
+}
+
+.book-content {
+  row-gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-parallel {
+  row-gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-parallel-paragraph {
+  line-height: 1.75;
+  &[data-language="fennese"] {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: var(--special-font-family);
+    color: var(--text-color);
+    letter-spacing: 0.0625em;
+  }
+  &[data-language="japanese"] {
+    font-size: 14px;
+    font-weight: 300;
+    color: oklch(from var(--text-color) l c h / 0.5);
+    letter-spacing: 0.125em;
+  }
+}
+
+.diacritic {
+  text-indent: 0em;
+  display: inline-block;
+  position: relative;
+  &[data-kind="c"] {
+    --diacritic-char: "ˆ";
+  }
+  &[data-kind="g"] {
+    --diacritic-char: "`";
+  }
+  &[data-kind="a"] {
+    --diacritic-char: "´";
+  }
+  &::before {
+    inset-inline: 0em;
+    inset-block-start: 0em;
+    content: var(--diacritic-char);
+    text-align: center;
+    position: absolute;
+  }
+}
