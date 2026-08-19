@@ -45,6 +45,10 @@ body {
   background-attachment: fixed;
   overflow-x: auto;
   overflow-y: scroll;
+  &::selection {
+    background-color: var(--primary-color);
+    color: var(--page-background-color);
+  }
 }
 
 $hero-light-width: 320px;
