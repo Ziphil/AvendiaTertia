@@ -313,7 +313,6 @@ $myth-max-width: 640rpx;
 
 .world {
   margin-block-start: 24px;
-  margin-block-end: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -382,7 +381,7 @@ $myth-max-width: 640rpx;
   @include desktop {
     --spine-width: 24px;
     padding-inline-start: calc(40px + var(--spine-width));
-    padding-inline-end: 48px;  
+    padding-inline-end: 40px;  
   }
   @include mobile {
     --spine-width: 16px;
@@ -392,8 +391,8 @@ $myth-max-width: 640rpx;
 }
 
 .book-heading {
-  margin-block-end: 32px;
-  row-gap: 16px;
+  margin-block-end: 40px;
+  row-gap: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -413,7 +412,7 @@ $myth-max-width: 640rpx;
   }
   &[data-language="japanese"] {
     font-size: 14px;
-    font-weight: 250;
+    font-weight: 300;
     color: oklch(from var(--text-color) l c h / 0.5);
     letter-spacing: 0.375em;
   }
@@ -448,6 +447,61 @@ $myth-max-width: 640rpx;
   }
 }
 
+.navigation {
+  margin-block-start: 72px;
+  margin-block-end: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation-link {
+  padding-block: 16px;
+  padding-inline: 24px;
+  row-gap: 8px;
+  border: solid 1rpx oklch(from var(--primary-color) l c h / 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.2s;
+  &:not(:hover) {
+    background-color: oklch(from var(--main-background-color) l c h / 0.25);
+  }
+  &:hover {
+    background-color: oklch(from var(--primary-color) l c h / 0.0625);
+  }
+  &:focus-visible {
+    outline: solid 2px oklch(from var(--primary-color) l c h / 0.5);
+    outline-offset: 2px;
+  }
+}
+
+.navigation-link-text {
+  text-align: center;
+  &[data-language="fennese"] {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: var(--special-font-family);
+    color: oklch(from var(--primary-color) l c h / 0.75);
+    letter-spacing: 0.25em;
+    text-indent: 0.25em;
+    text-transform: uppercase;
+  }
+  &[data-language="japanese"] {
+    font-size: 14px;
+    font-weight: 300;
+    color: oklch(from var(--text-color) l c h / 0.5);
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+  }
+}
+
 .diacritic {
   text-indent: 0em;
   display: inline-block;
@@ -468,4 +522,8 @@ $myth-max-width: 640rpx;
     text-align: center;
     position: absolute;
   }
+}
+
+.nowrap {
+  white-space: nowrap;
 }
