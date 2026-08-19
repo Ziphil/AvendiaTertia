@@ -448,7 +448,7 @@ $myth-max-width: 640rpx;
 }
 
 .navigation {
-  margin-block-start: 72px;
+  margin-block-start: 84px;
   margin-block-end: 120px;
   display: flex;
   flex-direction: column;
@@ -462,16 +462,16 @@ $myth-max-width: 640rpx;
 }
 
 .navigation-link {
-  padding-block: 16px;
-  padding-inline: 24px;
-  row-gap: 8px;
-  border: solid 1rpx oklch(from var(--primary-color) l c h / 0.5);
+  padding-block: 20px;
+  padding-inline: 20px;
+  row-gap: 12px;
+  border: solid 1rpx oklch(from var(--primary-color) l c h / 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: background-color 0.2s;
   &:not(:hover) {
-    background-color: oklch(from var(--main-background-color) l c h / 0.25);
+    background-color: oklch(from var(--main-background-color) l c h / 0.125);
   }
   &:hover {
     background-color: oklch(from var(--primary-color) l c h / 0.0625);
