@@ -51,7 +51,7 @@ $hero-light-width: 320px;
 $hero-light-height: 480px;
 
 .hero {
-  --beam-lower-width: min(960px, 95vw);
+  --beam-lower-width: min(1200px, 95vw);
   --beam-upper-width: calc(var(--beam-lower-width) * 0.375);
   background-color: oklch(from var(--main-background-color) l c h / 0.5);
   display: flex;
@@ -84,8 +84,8 @@ $hero-light-height: 480px;
 }
 
 .hero-inner {
-  padding-block-start: 80px;
-  padding-block-end: 124px;
+  padding-block-start: 144px;
+  padding-block-end: 168px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,7 +105,7 @@ $pillar-max-alpha: 0.1;
 $beam-count: 12;
 
 .hero-pillar {
-  width: 1px;
+  width: 2px;
   inset-block: 0px;
   inset-inline: 50%;
   translate: -50% 0%;
@@ -128,14 +128,14 @@ $beam-count: 12;
 
 .hero-beam-line {
   --width: calc(var(--position) / #{$beam-count + 1} * (var(--beam-lower-width) - var(--beam-upper-width)) + var(--beam-upper-width));
-  --alpha: calc(var(--position) / #{$beam-count + 1} * #{$pillar-max-alpha});
+  --alpha: calc(var(--position) / #{$beam-count + 1} * #{$pillar-max-alpha} * 0.75);
   width: var(--width);
   height: 1px;
-  background-image: linear-gradient(to right, transparent, oklch(from var(--primary-color) l c h / var(--alpha)), transparent);
+  background-image: linear-gradient(to right, transparent, oklch(from var(--primary-color) l c h / var(--alpha)) 37.5%, oklch(from var(--primary-color) l c h / var(--alpha)) 62.5%, transparent);
 }
 
 .hero-top {
-  margin-block-end: 80px;
+  margin-block-end: 104px;
   row-gap: 12px;
   display: flex;
   flex-direction: column;
@@ -158,7 +158,7 @@ $beam-count: 12;
 }
 
 .hero-catch {
-  row-gap: 24px;
+  row-gap: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,10 +223,23 @@ $myth-max-width: 640rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 0;
+  &::before {
+    inset-block: 0px;
+    inset-inline: 0px;
+    border-radius: 50%;
+    background-color: oklch(from var(--primary-color) l c h / 0.25);
+    filter: blur(48px);
+    position: absolute;
+    content: "";
+    z-index: 1;
+  }
 }
 
 .myth-heading-text {
   text-align: center;
+  z-index: 1;
   &[data-language="fennese"] {
     font-size: 16px;
     font-weight: 300;
@@ -349,7 +362,7 @@ $myth-max-width: 640rpx;
   padding-block: 48px;
   background-color: oklch(from var(--main-background-color) l c h / 0.25);
   border: solid 1px oklch(from var(--text-color) l c h / 0.25);
-  box-shadow: 4px 4px 8px 0px oklch(from var(--main-background-color) l c h / 0.5);
+  box-shadow: 0px 0px 32px 0px oklch(from var(--primary-color) l c h / 0.125);
   position: relative;
   &::before {
     width: var(--spine-width);
