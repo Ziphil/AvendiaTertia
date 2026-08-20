@@ -462,9 +462,9 @@ $myth-max-width: 640rpx;
 }
 
 .navigation-link {
-  padding-block: 20px;
-  padding-inline: 20px;
-  row-gap: 12px;
+  padding-block: 16px;
+  padding-inline: 16px;
+  row-gap: 8px;
   border: solid 1rpx oklch(from var(--primary-color) l c h / 0.25);
   display: flex;
   flex-direction: column;
@@ -485,7 +485,7 @@ $myth-max-width: 640rpx;
 .navigation-link-text {
   text-align: center;
   &[data-language="fennese"] {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     font-family: var(--special-font-family);
     color: oklch(from var(--primary-color) l c h / 0.75);
@@ -494,7 +494,7 @@ $myth-max-width: 640rpx;
     text-transform: uppercase;
   }
   &[data-language="japanese"] {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
     color: oklch(from var(--text-color) l c h / 0.5);
     letter-spacing: 0.5em;
