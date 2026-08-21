@@ -502,6 +502,18 @@ $myth-max-width: 640rpx;
   }
 }
 
+[data-fade] {
+  transition: opacity 1s, translate 1s;
+  &[data-fade="before"] {
+    opacity: 0;
+    translate: 0px 48px;
+  }
+  &[data-fade="after"] {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+}
+
 .diacritic {
   text-indent: 0em;
   display: inline-block;

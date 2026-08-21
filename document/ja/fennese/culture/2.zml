@@ -13,6 +13,7 @@
     \meta|property="og:description",content="大図書館信仰"|;
     \link|rel="icon",href="https://ziphil.com/material/ogp/2.png"|;
     \link|rel="stylesheet",type="text/css",href="/style/16.css"|;
+    \script|src="/program/script/22.js"|;
     \title<Кедитташрошетоккато — 大図書館信仰>
   >
   \body<
@@ -51,7 +52,7 @@
       >
     >
 
-    \article|class="myth"|<
+    \article|class="myth",data-fade="before"|<
       \div|class="myth-inner"|<
         \hgroup|class="myth-heading"|<
           \h2|class="myth-heading-text",data-language="fennese"|<Лефинареерушшак>
@@ -99,7 +100,7 @@
     \article|class="world"|<
       \div|class="world-inner"|<
         \div|class="world-content"|<
-          \article|class="book"|<
+          \article|class="book",data-fade="before"|<
             \hgroup|class="book-heading"|<
               \h2|class="book-heading-text",data-language="fennese"|<Локдитташо \span|class="diacritic",data-kind="a"|<и> локситташо>
               \div|class="book-heading-text",data-language="japanese"|<図書館と司書>
@@ -139,7 +140,7 @@
               >
             >
           >
-          \article|class="book"|<
+          \article|class="book",data-fade="before"|<
             \hgroup|class="book-heading"|<
               \h2|class="book-heading-text",data-language="fennese"|<Лобӈаддулло зачубревах>
               \div|class="book-heading-text",data-language="japanese"|<死後の選別>
@@ -176,7 +177,7 @@
               >
             >
           >
-          \article|class="book"|<
+          \article|class="book",data-fade="before"|<
             \hgroup|class="book-heading"|<
               \h2|class="book-heading-text",data-language="fennese"|<Носо доззоро>
               \div|class="book-heading-text",data-language="japanese"|<何が問われるのか>
