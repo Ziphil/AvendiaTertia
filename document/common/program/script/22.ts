@@ -11,12 +11,13 @@ export class Executor extends BaseExecutor {
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver((entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) {
+          const passed = entry.boundingClientRect.top <= (entry.rootBounds?.top ?? 0);
+          if (entry.isIntersecting || passed) {
             this.triggerAnimation(entry.target as HTMLElement);
             observer.unobserve(entry.target);
           }
         }
-      }, {rootMargin: "0px 0px -10% 0px"});
+      }, {rootMargin: "0px 0px -48px 0px"});
       for (const element of elements) {
         observer.observe(element);
       }
