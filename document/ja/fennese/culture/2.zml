@@ -14,7 +14,7 @@
     \link|rel="icon",href="https://ziphil.com/material/ogp/2.png"|;
     \link|rel="stylesheet",type="text/css",href="/style/16.css"|;
     \script|src="/program/script/22.js"|;
-    \title<Кедитташрошетоккато — 大図書館信仰>
+    \title<大図書館信仰>
   >
   \body<
 
@@ -41,11 +41,11 @@
         >
         \div|class="hero-catch"|<
           \p|class="hero-catch-main"|<
-            Легубчи,\wbr; кахуз\wbr; лофжучло логгино,\br;
+            Легубчи,\wbr; кахузо\wbr; лофжучло логгино,\br;
             доччалувро\wbr; пех\span|class="diacritic",data-kind="g"|<е> зохука.
           >
           \p|class="hero-catch-sub"|<
-            Кес\wbr; зохукан \span|class="diacritic",data-kind="a"|<и> таулан\wbr; у виктоӈ,\br;
+            Кес\wbr; сезуӈ \span|class="diacritic",data-kind="a"|<и> зохук у\wbr; виктоӈ,\br;
             ч\span|class="diacritic",data-kind="g"|<о>к тес\wbr; довенцик теддес\wbr; хед зачубле.
           >
         >
@@ -55,7 +55,7 @@
     \article|class="myth",data-fade="before"|<
       \div|class="myth-inner"|<
         \hgroup|class="myth-heading"|<
-          \h2|class="myth-heading-text",data-language="fennese"|<Лефинареерушшак>
+          \h2|class="myth-heading-text",data-language="fennese"|<Лофинароерушшако>
           \div|class="myth-heading-text",data-language="japanese"|<創世神話>
         >
         \section|class="myth-content"|<
@@ -73,8 +73,8 @@
           >
           \div|class="myth-parallel"|<
             \p|class="myth-parallel-paragraph",data-language="fennese"|<
-              Саукно хад мицка \span|class="diacritic",data-kind="a"|<и> фунла,\wbr; \span|class="diacritic",data-kind="a"|<и> фозуцно ес ложжадуска зохукла.\br;
-              Екно чел чабуловас лозорка бивсевот,\wbr; вечбилла бозуӈка безветучла\wbr; \span|class="diacritic",data-kind="a"|<и> ҕафила фушка ефинналовас зохукла шет ут.
+              Хекно хад мицка \span|class="diacritic",data-kind="a"|<и> фунла,\wbr; \span|class="diacritic",data-kind="a"|<и> фозуцно ес ложжадуска зохукла.\br;
+              Точ чел чабулос лозорка бивсевот,\wbr; вечбилла бозуӈка безветучла\wbr; \span|class="diacritic",data-kind="a"|<и> ҕафила фушка ефинналовас зохукла шет ут.
             >
             \p|class="myth-parallel-paragraph",data-language="japanese"|<
               そこで神は現世と人間を作り、\wbr;人間に創作の務めを課した。\br;
@@ -83,7 +83,7 @@
           >
           \div|class="myth-parallel"|<
             \p|class="myth-parallel-paragraph",data-language="fennese"|<
-              Чаҕинно лефунлес лецинтес локкисга лоргуцлов,\wbr; \span|class="diacritic",data-kind="a"|<и> сиришно ес са зохукла тосозам финареерушшака.\br;
+              Чаҕинно лефунлес лецинтес локкисга лоргуцлов,\wbr; \span|class="diacritic",data-kind="a"|<и> сиришно ес са зохукла тосозам финароерушшака.\br;
               Тос саукнeз лебзумак лецинат ви лефунлевзам,\wbr; \span|class="diacritic",data-kind="a"|<и> леччалувак лецинат ве лофжучлове.
             >
             \p|class="myth-parallel-paragraph",data-language="japanese"|<
@@ -109,11 +109,11 @@
               \div|class="book-parallel"|<
                 \p|class="book-parallel-paragraph",data-language="fennese"|<
                   Ве “легубчи” сук локдитташо, доччалувро \span|class="nowrap"|<пех\span|class="diacritic",data-kind="g"|<е>> тулка \span|class="diacritic",data-kind="a"|<и> зохука.
-                  Везле лодизла фежучловас лабисровсаз лефиххатес, \span|class="diacritic",data-kind="a"|<и> дуддимо саг “лофжучло” (other than) “локдитташо”.
+                  Везле лодизла фежучловас лабисровсаз лефиххатес, \span|class="diacritic",data-kind="a"|<и> дуддимо саг “лофжучло” себнухроз “локдитташо”.
                 >
                 \p|class="book-parallel-paragraph",data-language="japanese"|<
                   「彼方」には、あらゆる知識と創作物を収める図書館がある。
-                  それは天へ伸びる塔の形をしており、それゆえ「図書館」とは別に「塔」と呼ばれることもある。
+                  それは天へ伸びる塔の形をしており、それゆえ「図書館」に加えて「塔」と呼ばれることもある。
                 >
               >
               \div|class="book-parallel"|<
@@ -128,8 +128,8 @@
               >
               \div|class="book-parallel"|<
                 \p|class="book-parallel-paragraph",data-language="fennese"|<
-                  Коддео лемицки адосаук бозумак, лодуцзук адонниц бавус тосевах ве лекдитташе.
-                  Тедди \span|class="nowrap"|<х\span|class="diacritic",data-kind="g"|<е>д> (lost) гутаккут ажжос.
+                  Коддео лемицки адосаук зохук, лодуцзук адонниц бавус тосевах ве лекдитташе.
+                  Тедди \span|class="nowrap"|<х\span|class="diacritic",data-kind="g"|<е>д> аннужез гутаккут ажжос.
                   Анушар ӈ’ ажжа таду васухла \span|class="nowrap"|<к\span|class="diacritic",data-kind="g"|<е>> лесдукес тево у локдитташо.
                 >
                 \p|class="book-parallel-paragraph",data-language="japanese"|<
@@ -157,18 +157,18 @@
               >
               \div|class="book-parallel"|<
                 \p|class="book-parallel-paragraph",data-language="fennese"|<
-                  Кес сезуӈан и зохукан у биктоӈ, тес тазиӈез (deeply) лефжучлос шет \span|class="diacritic",data-kind="g"|<е> лезохукот донницлут, \span|class="diacritic",data-kind="a"|<и> таду габучла леггибчот.
+                  Кес сезуӈан \span|class="diacritic",data-kind="a"|<и> зохукан у биктоӈ, тес тазиӈез зуӈоӈ лефжучлос шет \span|class="diacritic",data-kind="g"|<е> лезохукот лебизет доччалувлут, \span|class="diacritic",data-kind="a"|<и> таду саг габучла леггибчот.
                   Фес чаб дуҕҕан, тес везлер \span|class="nowrap"|<ажж\span|class="diacritic",data-kind="g"|<о>> тизӈа досокуз вецдулла гожувтук це ловунце лобуддаде, “леруцли” лофжучловзам.
                 >
                 \p|class="book-parallel-paragraph",data-language="japanese"|<
-                  真摯に学び創作した者は、その創作物が収蔵されているため塔との繋がりが深く、門を越えることができる。
+                  真摯に学び創作した者は、その創作物が多く収蔵されているため塔との繋がりが深く、門を越えることができる。
                   怠惰だった者は、そのような繋がりがなく、塔の外の何もない土地に永久に取り残される。
                 >
               >
               \div|class="book-parallel"|<
                 \p|class="book-parallel-paragraph",data-language="fennese"|<
                   Лес аззинозам домоштиорзам еко локдитташо а зедор, кедде зале у \span|class="nowrap"|<луцз\span|class="diacritic",data-kind="g"|<е>> тулкут \span|class="diacritic",data-kind="a"|<и> зохукот суклут це лецути \span|class="diacritic",data-kind="a"|<и> таду у фадунла фидданук зохукла.
-                  Адохеззалуе \span|class="nowrap"|<б\span|class="diacritic",data-kind="g"|<о>в> бозумак зачубрев, \span|class="diacritic",data-kind="a"|<и> лофжучло аччаҕисоз ажжа гавуллут.
+                  Адохеззалуе \span|class="nowrap"|<б\span|class="diacritic",data-kind="g"|<о>в> бозумак зачубрев, \span|class="diacritic",data-kind="a"|<и> лофжучло аччаҕисоз ажжа логвуллут.
                 >
                 \p|class="book-parallel-paragraph",data-language="japanese"|<
                   迎えられた魂にとって、あらゆる知と創作に触れながら自らも創作を続けられる図書館は楽園となる。
@@ -185,12 +185,9 @@
             \div|class="book-content"|<
               \div|class="book-parallel"|<
                 \p|class="book-parallel-paragraph",data-language="fennese"|<
-                  Богун ек ажжа левчез бозуӈкев, та зохукло виктоӈ.
+                  Богун ек ажжа левчез зохукев, та зохукло виктоӈ.
                   \span|class="nowrap"|<Ж\span|class="diacritic",data-kind="g"|<о>с> таурресуак нуззап \span|class="diacritic",data-kind="a"|<и> сезуӈко докаддеро лохудае, сомеок фес асаукан ех диҕанноӈ, доччалув локдитташос.
-                  Адозоцус чаб (sloppy) \span|class="diacritic",data-kind="a"|<и> (cheating).
-                  ## What is asked is not the quality of the work but the honesty of the making.
-                  ## Clumsy exercises, and research later refuted, are shelved all the same if they were made in earnest.
-                  ## Only sloppiness and fraud are left out.
+                  Адозоцус чаб кос асаукан ух фес веззуххар \span|class="diacritic",data-kind="a"|<у> богбучар.
                 >
                 \p|class="book-parallel-paragraph",data-language="japanese"|<
                   問われるのは創作物の質ではなく、創作の誠実さである。
@@ -198,23 +195,12 @@
                   ただし、手抜きや不正は認められない。
                 >
               >
-              ## \div|class="book-parallel"|<
-              ##   \p|class="book-parallel-paragraph",data-language="fennese"|<
-              ##     The content of a work is not judged good or evil, for good and evil are valuations people add afterwards.
-              ##     A work made in the posture of belittling others, however, is not accepted.
-              ##   >
-              ##   \p|class="book-parallel-paragraph",data-language="japanese"|<
-              ##     内容の善悪は問われない。
-              ##     善悪は人間が後から付与する評価にすぎないからである。
-              ##     ただし、他者を貶める姿勢でなされた創作は是とされない。
-              ##   >
-              ## >
               \div|class="book-parallel"|<
                 \p|class="book-parallel-paragraph",data-language="fennese"|<
-                  Додаумо (belittle) суака бивассев.
+                  Адодаумо аосулло суака бивассев.
                   Чел тосозам маг мануж кебиавук зуаха зохукловах \span|class="diacritic",data-kind="a"|<и> занук хекла коса \span|class="nowrap"|<х\span|class="diacritic",data-kind="g"|<е>д> саук ух миффашук сомеок ажжоч. 
-                  Тосо (contradict) лозорка лофинов, кок фуӈал зохук бизоӈ.
-                  Кодфино (gravest) еко бобдуддало суака бивассев коччоӈ ажжа зор ух.
+                  Тосо еко коттуаво лозорковас лофинов, ковасок фуӈал зохук бизоӈ.
+                  Кодфино \span|class="nowrap"|<сегин\span|class="diacritic",data-kind="g"|<о>> гогино еко веззухло бобдуддала суака бивассев ажжа сов \span|class="diacritic",data-kind="g"|<о> зоркос.
                 >
                 \p|class="book-parallel-paragraph",data-language="japanese"|<
                   他者の作品を貶めることは禁じられる。
