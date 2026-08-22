@@ -16,6 +16,8 @@ manager.registerElementFactory("footer", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const scheme = transformer.variables.scheme;
   const language = transformer.variables.language;
+  const licenseElement = element.searchXpath("/page/license") as Array<Element>;
+  const license = licenseElement.length > 0 ? licenseElement[0].textContent ?? "CC BY-NC-ND 4.0" : "CC BY-NC-ND 4.0";
   self.appendElement("footer", (self) => {
     self.addClassName("footer");
     self.appendElement("div", (self) => {
@@ -123,17 +125,36 @@ manager.registerElementFactory("footer", (transformer, document, element) => {
           self.setAttribute("rel", "noopener noreferrer");
         });
       });
-      self.appendElement("small", (self) => {
-        self.addClassName("footer-copyright");
-        self.appendElement("span", (self) => {
-          self.addClassName("footer-copyright-year");
-          self.appendTextNode(`© 2009–${new Date().getFullYear()}`);
+      if (license !== "none") {
+        self.appendElement("small", (self) => {
+          self.addClassName("footer-copyright");
+          self.appendElement("span", (self) => {
+            self.addClassName("footer-copyright-line");
+            self.appendElement("span", (self) => {
+              self.addClassName("footer-copyright-year");
+              if (!license.startsWith("CC0")) {
+                self.appendTextNode("©");
+              }
+              self.appendTextNode(`2009–${new Date().getFullYear()}`);
+            });
+            self.appendElement("span", (self) => {
+              self.addClassName("footer-copyright-author");
+              self.appendTextNode("Ziphil");
+            });
+          });
+          self.appendElement("span", (self) => {
+            self.addClassName("footer-copyright-line");
+            self.appendElement("span", (self) => {
+              self.addClassName("footer-copyright-license");
+              if (!license.startsWith("CC0")) {
+                self.appendTextNode(`Licensed under ${license}`);
+              } else {
+                self.appendTextNode(`Marked ${license}`);
+              }
+            });
+          });
         });
-        self.appendElement("span", (self) => {
-          self.addClassName("footer-copyright-author");
-          self.appendTextNode("Ziphil");
-        });
-      });
+      }
     });
   });
   return self;

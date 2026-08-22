@@ -144,7 +144,11 @@ $footer-site-title-unit: 5.6rpx;
 
 .footer-copyright {
   margin-block-start: 12rpx;
+  row-gap: 4rpx;
   font-size: 12rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-copyright-author {
