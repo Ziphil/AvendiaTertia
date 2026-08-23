@@ -125,36 +125,35 @@ manager.registerElementFactory("footer", (transformer, document, element) => {
           self.setAttribute("rel", "noopener noreferrer");
         });
       });
-      if (license !== "none") {
-        self.appendElement("small", (self) => {
-          self.addClassName("footer-copyright");
+      self.appendElement("small", (self) => {
+        self.addClassName("footer-copyright");
+        if (license !== "none" && !license.startsWith("CC0")) {
           self.appendElement("span", (self) => {
             self.addClassName("footer-copyright-line");
             self.appendElement("span", (self) => {
               self.addClassName("footer-copyright-year");
-              if (!license.startsWith("CC0")) {
-                self.appendTextNode("©");
-              }
-              self.appendTextNode(`2009–${new Date().getFullYear()}`);
+              self.appendTextNode(`© 2009–${new Date().getFullYear()}`);
             });
             self.appendElement("span", (self) => {
               self.addClassName("footer-copyright-author");
               self.appendTextNode("Ziphil");
             });
           });
+        }
+        self.appendElement("span", (self) => {
+          self.addClassName("footer-copyright-line");
           self.appendElement("span", (self) => {
-            self.addClassName("footer-copyright-line");
-            self.appendElement("span", (self) => {
-              self.addClassName("footer-copyright-license");
-              if (!license.startsWith("CC0")) {
-                self.appendTextNode(`Licensed under ${license}`);
-              } else {
-                self.appendTextNode(`Marked ${license}`);
-              }
-            });
+            self.addClassName("footer-copyright-license");
+            if (license === "none") {
+              self.appendTextNode("Not covered by Creative Commons · Contains third-party content");
+            } else if (license.startsWith("CC0")) {
+              self.appendTextNode(`Marked ${license}`);
+            } else {
+              self.appendTextNode(`Licensed under ${license}`);
+            }
           });
         });
-      }
+      });
     });
   });
   return self;
