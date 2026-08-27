@@ -607,3 +607,29 @@ $history-item-height: div($contact-item-height * $contact-item-count + $contact-
 .footer {
   margin-block-start: 0rpx;
 }
+
+.diacritic {
+  text-indent: 0em;
+  display: inline-block;
+  position: relative;
+  &[data-kind="c"] {
+    --diacritic-char: "ˆ";
+  }
+  &[data-kind="g"] {
+    --diacritic-char: "`";
+  }
+  &[data-kind="a"] {
+    --diacritic-char: "´";
+  }
+  &::before {
+    inset-inline: 0em;
+    inset-block-start: 0em;
+    content: var(--diacritic-char);
+    text-align: center;
+    position: absolute;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
