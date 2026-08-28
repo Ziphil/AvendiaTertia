@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./config/**)",
+      "Edit(./config/**)",
+      "Write(./config/**)"
+    ]
+  }
+}
