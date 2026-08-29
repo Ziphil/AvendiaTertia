@@ -4,10 +4,10 @@
 @import "../../main-module/variable.scss";
 
 
-.error-code-container {
-  column-gap: 30rpx;
-  color: var(--primary-color);
+.error {
+  row-gap: 12rpx;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -15,18 +15,11 @@
 .error-code {
   @include special-font;
   margin-block-end: -0.15em;
-  font-size: 80rpx;
-}
-
-.error-message {
-  font-size: 24rpx;
-  font-family: "Gilit Web";
-  font-weight: bold;
-  line-height: 1.2;
+  font-size: 72rpx;
+  color: var(--primary-color);
 }
 
 .error-description {
-  margin-block-start: 10rpx;
   color: color-mix(in oklch, var(--primary-color) 50%, var(--text-color));
   display: flex;
   justify-content: center;

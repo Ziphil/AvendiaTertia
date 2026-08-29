@@ -10,15 +10,8 @@ manager.registerElementRule("error", "page", (transformer, document, element) =>
   self.appendElement("div", (self) => {
     self.addClassName("error");
     self.appendElement("div", (self) => {
-      self.addClassName("error-code-container");
-      self.appendElement("div", (self) => {
-        self.addClassName("error-code");
-        self.appendChild(transformer.apply(element.getChildElements("code")[0], "page.error"));
-      });
-      self.appendElement("div", (self) => {
-        self.addClassName("error-message");
-        self.appendChild(transformer.apply(element.getChildElements("message")[0], "page.error"));
-      });
+      self.addClassName("error-code");
+      self.appendChild(transformer.apply(element.getChildElements("code")[0], "page.error"));
     });
     self.appendElement("div", (self) => {
       self.addClassName("error-description");
