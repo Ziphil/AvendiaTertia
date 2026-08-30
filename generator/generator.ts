@@ -18,7 +18,7 @@ import pluginManagers from "../plugin";
 import templateManagers from "../template";
 import WEBPACK_CONFIGS from "../webpack-document";
 import {CustomFtpClient} from "./client";
-import {AvendiaConfigs, AvendiaLanguage, AvendiaOutputLanguage} from "./configs";
+import {AvendiaConfigs, AvendiaLanguage, AvendiaOutputLanguage, PathSpec, PathSpecs} from "./configs";
 import {AvendiaDocument} from "./dom";
 import services from "./service";
 import {AvendiaTransformer} from "./transformer";
@@ -108,9 +108,10 @@ export class AvendiaGenerator {
   private async executeService(): Promise<void> {
     const name = this.options.service;
     const args = {parser: this.parser, transformer: this.transformer, configs: this.configs};
+    const documentPathSpecs = await this.getDocumentPathSpecs(this.options.documentPaths ?? []);
     const service = services[name];
     if (service !== undefined) {
-      await service("ja", args);
+      await service(documentPathSpecs, args);
     }
   }
 
@@ -394,6 +395,3 @@ function createWebpackPromise(configs: WebpackConfiguration): Promise<void> {
   });
   return promise;
 }
-
-type PathSpec<L> = [string, L];
-type PathSpecs<L> = Array<PathSpec<L>>;

@@ -2,7 +2,7 @@
 
 import fs from "fs/promises";
 import pathUtil from "path";
-import {AvendiaOutputLanguage} from "../configs";
+import {AvendiaLanguage, AvendiaOutputLanguage, PathSpecs} from "../configs";
 import type {AvendiaServiceArgs} from "./index";
 
 
@@ -15,8 +15,9 @@ const ROOT_DOCUMENT_DIRS = [
   "fennese/grammar"
 ];
 
-export default async function execute(outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs): Promise<void> {
+export default async function execute(documentPathSpecs: PathSpecs<AvendiaLanguage>, args: AvendiaServiceArgs): Promise<void> {
   const outputPath = args.configs.getReferenceIndexPath("ja");
+  const outputLanguage = "ja";
   const outputObjectEntries = await Promise.all(ROOT_DOCUMENT_DIRS.map(async (rootDocumentDir) => {
     const outputObject = await createReferenceIndex(rootDocumentDir, outputLanguage, args);
     return [rootDocumentDir, outputObject] as const;

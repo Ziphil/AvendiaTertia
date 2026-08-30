@@ -94,3 +94,6 @@ export class AvendiaConfigs {
 export type AvendiaLanguage = "ja" | "en" | "common";
 export type AvendiaOutputLanguage = Exclude<AvendiaLanguage, "common">;
 export type AvendiaConfigsJson = typeof import("../config/default.json");
+
+export type PathSpec<L> = [string, L];
+export type PathSpecs<L> = Array<PathSpec<L>>;

@@ -1,7 +1,7 @@
 //
 
 import {ZenmlParser} from "@zenml/zenml";
-import {AvendiaConfigs, AvendiaOutputLanguage} from "../configs";
+import {AvendiaConfigs, AvendiaLanguage, PathSpecs} from "../configs";
 import {AvendiaTransformer} from "../transformer";
 import executeReference from "./reference";
 
@@ -15,4 +15,4 @@ export type AvendiaServiceArgs = {
   transformer: AvendiaTransformer,
   configs: AvendiaConfigs
 };
-export type AvendiaService = (outputLanguage: AvendiaOutputLanguage, args: AvendiaServiceArgs) => Promise<void>;
+export type AvendiaService = (documentPathSpecs: PathSpecs<AvendiaLanguage>, args: AvendiaServiceArgs) => Promise<void>;
