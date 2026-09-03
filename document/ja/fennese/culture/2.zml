@@ -41,12 +41,12 @@
         >
         \div|class="hero-catch"|<
           \p|class="hero-catch-main"|<
-            Легубчи,\wbr; кахузо\wbr; лофжучло логгино,\br;
-            доччалувро\wbr; пех\span|class="diacritic",data-kind="g"|<е> зохука.
+            \span|class="nowrap"|<Легубчи,> \span|class="nowrap"|<кахузо> \span|class="nowrap"|<лофжучло логгино,>\br;
+            \span|class="nowrap"|<доччалувро> \span|class="nowrap"|<пех\span|class="diacritic",data-kind="g"|<е> зохука.>
           >
           \p|class="hero-catch-sub"|<
-            Кес\wbr; сезуӈ \span|class="diacritic",data-kind="a"|<и> зохук у\wbr; виктоӈ,\br;
-            ч\span|class="diacritic",data-kind="g"|<о>к тес\wbr; довенцик теддес\wbr; хед зачубле.
+            \span|class="nowrap"|<Кес> \span|class="nowrap"|<сезуӈ \span|class="diacritic",data-kind="a"|<и> зохук у> \span|class="nowrap"|<виктоӈ,>\br;
+            \span|class="nowrap"|<ч\span|class="diacritic",data-kind="g"|<о>к тес> \span|class="nowrap"|<довенцик теддес> \span|class="nowrap"|<хед зачубле.>
           >
         >
       >
@@ -61,34 +61,34 @@
         \section|class="myth-content"|<
           \div|class="myth-parallel"|<
             \p|class="myth-parallel-paragraph",data-language="fennese"|<
-              Афф\span|class="diacritic",data-kind="g"|<е> седуки жуави,\wbr; асукно фино шитевот.\br;
-              Вифунно зохукла,\wbr; \span|class="diacritic",data-kind="a"|<и> ҕалунно тедди фежучла гогина\wbr; чел хеззалуалос бозуӈка.\br;
-              Еро ӈа шожитао,\wbr; тадун саинла суака ч\span|class="diacritic",data-kind="g"|<о>к чикковот вебуссевот,\wbr; \span|class="diacritic",data-kind="a"|<и> зален бал ажжесот шелласиловас ех ут.
+              \span|class="nowrap"|<Афф\span|class="diacritic",data-kind="g"|<е> седуки жуави,> \span|class="nowrap"|<асукно фино шитевот.>\br;
+              \span|class="nowrap"|<Вифунно зохукла,> \span|class="nowrap"|<\span|class="diacritic",data-kind="a"|<и> ҕалунно тедди фежучла гогина> \span|class="nowrap"|<чел хеззалуалос бозуӈка.>\br;
+              \span|class="nowrap"|<Еро ӈа шожитао,> \span|class="nowrap"|<тадун саинла суака ч\span|class="diacritic",data-kind="g"|<о>к чикковот вебуссевот,> \span|class="nowrap"|<\span|class="diacritic",data-kind="a"|<и> зален бал ажжесот шелласиловас ех ут.>
             >
             \p|class="myth-parallel-paragraph",data-language="japanese"|<
-              何もない空の地に、\wbr;1 人の神がいた。\br;
-              神は創作を愛し、\wbr;創作物を保管するための塔をそこに作った。\br;
-              しかし神一人では、\wbr;味わえる作品にも限りがあり、\wbr;それを分かち合う相手もいなかった。
+              \span|class="nowrap"|<何もない空の地に、>\wbr;\span|class="nowrap"|<1 人の神がいた。>\br;
+              \span|class="nowrap"|<神は創作を愛し、>\wbr;\span|class="nowrap"|<創作物を保管するための塔をそこに作った。>\br;
+              \span|class="nowrap"|<しかし神一人では、>\wbr;\span|class="nowrap"|<味わえる作品にも限りがあり、>\wbr;\span|class="nowrap"|<それを分かち合う相手もいなかった。>
             >
           >
           \div|class="myth-parallel"|<
             \p|class="myth-parallel-paragraph",data-language="fennese"|<
-              Хекно хад мицка \span|class="diacritic",data-kind="a"|<и> фунла,\wbr; \span|class="diacritic",data-kind="a"|<и> фозуцно ес ложжадуска зохукла.\br;
-              Точ чел чабулос лозорка бивсевот,\wbr; вечбилла бозуӈка безветучла\wbr; \span|class="diacritic",data-kind="a"|<и> ҕафила фушка ефинналовас зохукла шет ут.
+              \span|class="nowrap"|<Хекно хад мицка \span|class="diacritic",data-kind="a"|<и> фунла,> \span|class="nowrap"|<\span|class="diacritic",data-kind="a"|<и> фозуцно ес ложжадуска зохукла.>\br;
+              \span|class="nowrap"|<Точ чел чабулос лозорка бивсевот,> \span|class="nowrap"|<вечбилла бозуӈка безветучла> \span|class="nowrap"|<\span|class="diacritic",data-kind="a"|<и> ҕафила фушка ефинналовас зохукла шет ут.>
             >
             \p|class="myth-parallel-paragraph",data-language="japanese"|<
-              そこで神は現世と人間を作り、\wbr;人間に創作の務めを課した。\br;
-              多様な創作を享受したいという願いと、\wbr;創作を共に楽しむ仲間を得たいという願い、\wbr;その 2 つを同時に満たすためである。
+              \span|class="nowrap"|<そこで神は現世と人間を作り、>\wbr;\span|class="nowrap"|<人間に創作の務めを課した。>\br;
+              \span|class="nowrap"|<多様な創作を享受したいという願いと、>\wbr;\span|class="nowrap"|<創作を共に楽しむ仲間を得たいという願い、>\wbr;\span|class="nowrap"|<その 2 つを同時に満たすためである。>
             >
           >
           \div|class="myth-parallel"|<
             \p|class="myth-parallel-paragraph",data-language="fennese"|<
-              Чаҕинно лефунлес лецинтес локкисга лоргуцлов,\wbr; \span|class="diacritic",data-kind="a"|<и> сиришно ес са зохукла тосозам финароерушшака.\br;
-              Тос саукнeз лебзумак лецинат ви лефунлевзам,\wbr; \span|class="diacritic",data-kind="a"|<и> леччалувак лецинат ве лофжучлове.
+              \span|class="nowrap"|<Чаҕинно лефунлес лецинтес локкисга лоргуцлов,> \span|class="nowrap"|<\span|class="diacritic",data-kind="a"|<и> сиришно ес са зохукла тосозам финароерушшака.>\br;
+              \span|class="nowrap"|<Тос саукнeз лебзумак лецинат ви лефунлевзам,> \span|class="nowrap"|<\span|class="diacritic",data-kind="a"|<и> леччалувак лецинат ве лофжучлове.>
             >
             \p|class="myth-parallel-paragraph",data-language="japanese"|<
-              神は最初の人間に世界の構造を教え、\wbr;それをもとに神話を作るよう命じた。\br;
-              これが人間による最初の作品、\wbr;そして塔の最初の収蔵品となった。\br;
+              \span|class="nowrap"|<神は最初の人間に世界の構造を教え、>\wbr;\span|class="nowrap"|<それをもとに神話を作るよう命じた。>\br;
+              \span|class="nowrap"|<これが人間による最初の作品、>\wbr;\span|class="nowrap"|<そして塔の最初の収蔵品となった。>\br;
             >
           >
         >

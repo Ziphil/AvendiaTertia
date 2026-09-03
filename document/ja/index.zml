@@ -31,7 +31,7 @@
           >
           \div|class="shaleian-visual-content"|<
             \h1|class="shaleian-visual-title"|<Avendia>
-            \div|class="shaleian-visual-flavor"|<Official Website of\wbr; Shaleian Language>
+            \div|class="shaleian-visual-flavor"|<\span|class="nowrap"|<Official Website of> \span|class="nowrap"|<Shaleian Language>>
           >
         >
         \div|class="link-message",data-direction="vertical"|<
@@ -52,7 +52,7 @@
           >
           \div|class="fennese-visual-content"|<
             \h1|class="fennese-visual-title"|<Лофжучло>
-            \div|class="fennese-visual-flavor"|<Official Website of\wbr; Fennese Language>
+            \div|class="fennese-visual-flavor"|<\span|class="nowrap"|<Official Website of> \span|class="nowrap"|<Fennese Language>>
           >
         >
         \div|class="link-message",data-direction="vertical"|<

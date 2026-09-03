@@ -178,7 +178,6 @@ $beam-count: 12;
   text-indent: 0.125em;
   line-height: 1.375;
   text-align: center;
-  white-space: nowrap;
   word-break: keep-all;
 }
 
@@ -192,7 +191,6 @@ $beam-count: 12;
   text-indent: 0.125em;
   line-height: 1.5;
   text-align: center;
-  white-space: nowrap;
   word-break: keep-all;
 }
 
@@ -277,7 +275,6 @@ $myth-max-width: 640rpx;
 .myth-parallel-paragraph {
   line-height: 1.75;
   text-align: center;
-  white-space: nowrap;
   word-break: keep-all;
   &[data-language="fennese"] {
     font-size: 18px;
@@ -293,7 +290,6 @@ $myth-max-width: 640rpx;
     color: oklch(from var(--text-color) l c h / 0.5);
     letter-spacing: 0.125em;
     text-indent: 0.125em;
-    word-break: auto-phrase;
   }
 }
 

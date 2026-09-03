@@ -121,7 +121,6 @@ body {
   line-height: $small-line-height;
   text-align: center;
   text-transform: uppercase;
-  white-space: nowrap;
   -webkit-text-stroke: relative(4rpx) var(--page-background-color);
   paint-order: stroke;
 }
@@ -189,7 +188,6 @@ body {
   line-height: $small-line-height;
   letter-spacing: 0.005em;
   text-transform: uppercase;
-  white-space: nowrap;
   -webkit-text-stroke: relative(2rpx) var(--page-background-color);
   paint-order: stroke;
 }
