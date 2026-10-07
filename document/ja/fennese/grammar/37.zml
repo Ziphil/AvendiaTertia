@@ -4,7 +4,7 @@
 
 \page<
   \name<語と辞とその分類>
-  \ver<β.31 期>
+  \ver<β.33 期>
 
   \h1|tag="tld"|<単語の階層>
   \p<
@@ -72,16 +72,16 @@
     一方 \mk;[ве] は離辞であるため、\mk;[ўоги̂наз] に付いてもそれぞれが個別に表層化を受けるので [ве уги̂наз] という表層形になり、[воги̂наз] とはならない。
   >
   \p<
-    これとは別の軸として、用途に注目して次の 3 つに分類することもできる。
+    これとは別の軸として、用途に注目して次の 2 つに分類することもできる。
   >
   \el|type="par"|<
-    \li<\rterm|key="はせいじ",id="derivational-affix"|<\et<派生辞\fl<derivational affix>>>\ed<語根に付いて語幹を作る>>
-    \li<\rterm|key="くっせつじ",id="inflectional-affix"|<\et<屈折辞\fl<inflectional affix>>>\ed<語幹や辞に付いて屈折した語形を作る>>
-    \li<\et<連結辞\fl<conjunction>>\ed<複数の句を繋いで大きな句を作る>>
+    \li<\et<\rterm|key="はせいじ",id="derivational-affix"|<派生辞\fl<derivational affix>>>\ed<語根に付いて語幹を作る>>
+    \li<\et<\rterm|key="くっせつじ",id="inflectional-affix"|<屈折辞\fl<inflectional affix>>>\ed<語幹や辞に付いて屈折した語形を作る>>
   >
   \p<
-    派生辞は全て融辞であり、連結辞は全て離辞であるが、屈折辞には融辞のものと離辞のものがある。
-    派生融辞の詳細や具体例は \rref|ref="tsx"|; や \rref|ref="tsj"|; などで、屈折融辞の詳細や具体例は \rref|ref="tsm"|; と \rref|ref="tsa"|; で、連結辞の詳細は \rref|ref="???"|; でそれぞれ後述する。
+    派生辞は全て融辞であるが、屈折辞には融辞のものと離辞のものがある。
+    派生融辞の詳細や具体例は \rref|ref="tsx"|; や \rref|ref="tsj"|; などで、屈折融辞の詳細や具体例は \rref|ref="tsm"|; と \rref|ref="tsa"|; でそれぞれ後述する。
+    また、屈折離辞については \rref|ref="tbb"|;, \rref|ref="trh"|;, \rref|ref="tdf"|; などで後述する。
   >
   \h1|tag="tlv"|<分類>
   \h2|tag="tlp"|<語基>
